@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>K Beauty Basics · Facials, Waxing &amp; Lash Lifts in Chattanooga</title>
+<meta name="description" content="K Beauty Basics: esthetician services in Chattanooga, TN. Facials, dermaplaning, waxing, and lash lift and tint at 7053 Lee Hwy, Suite 303.">
+<meta name="theme-color" content="#f4ece2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f4ece2;
+  --sand-2:#ebdfd0;
+  --linen:#fbf7f2;
+  --clay:#d9a796;
+  --clay-deep:#b9786a;
+  --blush:#f0d5ca;
+  --espresso:#2e211b;
+  --espresso-2:#4a372d;
+  --muted:#7a6559;
+  --sage:#8a9d7f;
+  --sage-deep:#62765a;
+  --line:rgba(46,33,27,.12);
+  --radius:22px;
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--sand);color:var(--espresso);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* concept banner */
+.concept{background:var(--espresso);color:#efe4d8;font-size:12px;letter-spacing:.02em;text-align:center;padding:8px 14px;line-height:1.4}
+.concept b{color:var(--blush);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(244,236,226,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:34px;height:34px}
+.brand-name{font-family:var(--serif);font-size:23px;font-weight:500;letter-spacing:.01em;line-height:1}
+.brand-name i{font-style:italic;color:var(--clay-deep)}
+.nav-links{display:none;gap:30px;font-size:14px;font-weight:500;color:var(--espresso-2)}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--clay-deep);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav-links a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:600;font-size:15px;padding:14px 24px;transition:transform .2s ease,background .25s,box-shadow .25s,color .25s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-dark{background:var(--espresso);color:var(--linen);box-shadow:0 10px 24px -12px rgba(46,33,27,.55)}
+.btn-dark:hover{background:var(--espresso-2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(46,33,27,.28);color:var(--espresso)}
+.btn-ghost:hover{background:rgba(255,255,255,.55);transform:translateY(-2px)}
+.btn-sm{padding:10px 18px;font-size:14px}
+.nav .btn-sm{display:none}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:46px 0 70px;isolation:isolate}
+.orb{position:absolute;border-radius:50%;filter:blur(46px);opacity:.75;z-index:-1;will-change:transform}
+.orb.o1{width:340px;height:340px;background:radial-gradient(circle,#f3c9b8 0%,rgba(243,201,184,0) 70%);top:-80px;right:-120px;animation:drift1 22s ease-in-out infinite}
+.orb.o2{width:280px;height:280px;background:radial-gradient(circle,#fff6ea 0%,rgba(255,246,234,0) 70%);top:180px;left:-110px;animation:drift2 26s ease-in-out infinite}
+.orb.o3{width:220px;height:220px;background:radial-gradient(circle,rgba(160,182,148,.55) 0%,rgba(160,182,148,0) 70%);bottom:-40px;right:10%;animation:drift3 30s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,50px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,-30px)}}
+@keyframes drift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,-40px) scale(1.12)}}
+.hero-grid{display:grid;gap:34px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--sage-deep)}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,12.4vw,92px);line-height:.98;letter-spacing:-.015em;margin:18px 0 20px}
+h1 em{font-style:italic;color:var(--clay-deep);font-weight:400}
+.lede{font-size:17px;color:var(--espresso-2);max-width:470px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero .hero-cta .btn{flex:1 1 150px;padding:14px 10px;gap:7px;font-size:14.5px}
+@media (min-width:900px){.hero .hero-cta .btn{flex:0 0 auto;padding:14px 24px}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:13px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px rgba(138,157,127,.2)}
+.dot.closed{background:var(--clay-deep);box-shadow:0 0 0 4px rgba(185,120,106,.18)}
+
+.hero-art{position:relative;max-width:min(320px,82%);width:100%;margin:0 auto;aspect-ratio:4/5}
+.arch{position:absolute;inset:0;border-radius:999px 999px 28px 28px;background:linear-gradient(170deg,#f6dccf 0%,#ead0c2 45%,#dcb9a7 100%);overflow:hidden;box-shadow:0 40px 70px -40px rgba(74,55,45,.55), inset 0 0 0 1px rgba(255,255,255,.4)}
+.arch::before{content:"";position:absolute;inset:14px;border-radius:999px 999px 18px 18px;border:1px solid rgba(255,255,255,.55)}
+.arch .glow{position:absolute;width:70%;height:55%;left:15%;top:8%;border-radius:50%;background:radial-gradient(circle,rgba(255,250,243,.95) 0%,rgba(255,250,243,0) 70%);animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+.arch .botanical{position:absolute;inset:0;width:100%;height:100%}
+.draw path{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 4.2s ease forwards}
+.draw path:nth-child(2){animation-delay:.3s}.draw path:nth-child(3){animation-delay:.6s}.draw path:nth-child(4){animation-delay:.9s}.draw path:nth-child(5){animation-delay:1.2s}.draw path:nth-child(6){animation-delay:1.5s}.draw path:nth-child(7){animation-delay:1.8s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.price-chip{position:absolute;background:rgba(251,247,242,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:16px;padding:12px 16px;box-shadow:0 16px 30px -18px rgba(46,33,27,.45);font-size:13px;line-height:1.3;animation:float 7s ease-in-out infinite}
+.price-chip b{display:block;font-family:var(--serif);font-size:24px;font-weight:600;color:var(--espresso)}
+.price-chip small{color:var(--muted);font-size:12px}
+.chip-a{left:-6px;bottom:18%}
+.chip-b{right:-6px;top:16%;animation-delay:-3.5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* section shared */
+section{position:relative}
+.sec{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:38px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,9vw,58px);line-height:1.02;letter-spacing:-.01em;margin-top:14px}
+h2 em{font-style:italic;color:var(--clay-deep);font-weight:400}
+.sec-head p{margin-top:14px;color:var(--espresso-2)}
+
+/* marquee */
+.ribbon{background:var(--espresso);color:var(--sand-2);overflow:hidden;padding:16px 0;border-block:1px solid rgba(255,255,255,.06)}
+.ribbon-track{display:flex;gap:42px;width:max-content;animation:scroll 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:22px;white-space:nowrap}
+.ribbon-track span{display:inline-flex;align-items:center;gap:42px}
+.ribbon-track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* menu */
+.menu{background:var(--linen)}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:4px;background:var(--sand);border-radius:999px;width:max-content;max-width:100%;margin-bottom:30px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;color:var(--muted);transition:background .25s,color .25s;white-space:nowrap}
+.tab:hover{color:var(--espresso)}
+.tab[aria-selected="true"]{background:var(--espresso);color:var(--linen)}
+.panel{display:grid;gap:14px}
+.panel[hidden]{display:none}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 22px 40px -28px rgba(74,55,45,.45);border-color:rgba(185,120,106,.35)}
+.svc-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.svc h3{font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.12}
+.price{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--clay-deep);white-space:nowrap}
+.dur{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--sage-deep);text-transform:uppercase}
+.dur svg{width:14px;height:14px}
+.svc p{margin-top:10px;font-size:14.5px;color:var(--espresso-2)}
+.svc .book-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13.5px;font-weight:700;color:var(--espresso);border-bottom:1px solid var(--clay);padding-bottom:2px;transition:gap .25s,color .25s}
+.svc .book-link:hover{gap:10px;color:var(--clay-deep)}
+.svc.feature{background:linear-gradient(160deg,#fff 0%,#fbefe8 100%);border-color:rgba(185,120,106,.35)}
+.tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:rgba(138,157,127,.16);color:var(--sage-deep);padding:5px 10px;border-radius:999px;margin-bottom:10px}
+.menu-note{margin-top:22px;font-size:13px;color:var(--muted)}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+.why{padding:26px 24px;border-radius:var(--radius);background:rgba(251,247,242,.65);border:1px solid var(--line)}
+.why-ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--clay-deep);margin-bottom:16px}
+.why-ico svg{width:22px;height:22px}
+.why h3{font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.15}
+.why p{margin-top:8px;font-size:14.5px;color:var(--espresso-2)}
+
+/* journey */
+.journey{background:var(--espresso);color:var(--sand);overflow:hidden}
+.journey h2{color:var(--linen)}
+.journey h2 em{color:var(--clay)}
+.journey .eyebrow{color:#b3c4a8}
+.journey .sec-head p{color:#d8c8ba}
+.steps{display:grid;gap:0;counter-reset:s;border-top:1px solid rgba(255,255,255,.12)}
+.step{display:grid;grid-template-columns:54px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-style:italic;font-size:30px;color:var(--clay);line-height:1}
+.step h3{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--linen);line-height:1.15}
+.step p{font-size:14.5px;color:#d8c8ba;margin-top:4px}
+.journey .leaf-bg{position:absolute;right:-60px;top:40px;width:340px;opacity:.13;pointer-events:none}
+
+/* visit */
+.visit-grid{display:grid;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px}
+.card h3{font-family:var(--serif);font-weight:600;font-size:28px;margin-bottom:14px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15px;transition:background .3s}
+.hours li span:last-child{color:var(--espresso-2);font-variant-numeric:tabular-nums}
+.hours li.off span:last-child{color:var(--muted)}
+.hours li.today{background:var(--blush);font-weight:700}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--espresso);color:var(--linen);padding:3px 8px;border-radius:999px;vertical-align:2px}
+.status{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:14px;font-weight:600;color:var(--espresso-2)}
+.contact-list{display:grid;gap:12px;margin-bottom:20px}
+.contact-list a,.contact-list div{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.45}
+.contact-list a:hover{color:var(--clay-deep)}
+.contact-list svg{flex:none;width:20px;height:20px;margin-top:1px;color:var(--sage-deep)}
+.contact-list small{display:block;color:var(--muted);font-size:13px}
+.break{word-break:break-all}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:300px;background:var(--sand-2)}
+.map iframe{display:block;width:100%;height:100%;min-height:300px;border:0;filter:sepia(.25) saturate(.85)}
+.card-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* cta band */
+.cta-band{padding:30px 0 90px}
+.cta-inner{position:relative;overflow:hidden;border-radius:32px;background:linear-gradient(140deg,#e9c3b3 0%,#f3ddd1 55%,#e5d8c5 100%);padding:52px 26px;text-align:center;isolation:isolate}
+.cta-inner h2{max-width:640px;margin:0 auto}
+.cta-inner p{margin:14px auto 26px;max-width:460px;color:var(--espresso-2)}
+.cta-inner .hero-cta{justify-content:center}
+.cta-inner .orb{opacity:.7}
+
+/* footer */
+footer{background:var(--espresso);color:#cdbcae;padding:54px 0 40px;font-size:14px}
+.foot-grid{display:grid;gap:26px}
+footer .brand-name{color:var(--linen);font-size:28px}
+footer a:hover{color:var(--blush)}
+.foot-col h4{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#b3c4a8;margin-bottom:10px;font-weight:700}
+.foot-col p,.foot-col a{display:block;line-height:1.8}
+.foot-note{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#a8968a}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.35fr;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:rgba(251,247,242,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(46,33,27,.4)}
+.bar .btn{padding:14px 10px;width:100%}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .panel{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (min-width:900px){
+  .hero-art{max-width:420px}
+  .wrap{padding:0 36px}
+  .nav-links{display:flex}
+  .nav .btn-sm{display:inline-flex}
+  .bar{display:none}
+  body{padding-bottom:0}
+  .hero{padding:70px 0 110px}
+  .hero-grid{grid-template-columns:1.08fr .92fr;gap:60px}
+  .lede{font-size:18.5px}
+  .sec{padding:120px 0}
+  .panel{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .journey-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+  .visit-grid{grid-template-columns:1fr 1fr 1.2fr}
+  .map,.map iframe{min-height:100%}
+  .cta-inner{padding:80px 40px}
+  .chip-a{left:-34px}.chip-b{right:-30px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .draw path{stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for K Beauty Basics. Not live.</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="K Beauty Basics home">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" stroke="#2e211b" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="#b9786a" stroke-opacity=".55"/>
+        <path d="M20 31V12"/>
+        <path d="M20 16c-4-1-7-4-7.5-7.5 4 .3 7 3 7.5 7.5Z" fill="#f0d5ca"/>
+        <path d="M20 21c4-1 7-4 7.5-7.5-4 .3-7 3-7.5 7.5Z" fill="#cfdcc6" stroke="#62765a"/>
+        <path d="M20 26c-3.5-.8-6-3.4-6.4-6.4 3.4.3 6 2.8 6.4 6.4Z" fill="#f0d5ca"/>
+      </svg>
+      <span class="brand-name">K <i>Beauty</i> Basics</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#menu">Treatments</a>
+      <a href="#why">Approach</a>
+      <a href="#visit">Hours &amp; Visit</a>
+    </nav>
+    <a class="btn btn-dark btn-sm" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book online</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Esthetician · Chattanooga, TN</span>
+        <h1>Skin care, <em>beautifully</em> basic.</h1>
+        <p class="lede">Facials, dermaplaning, waxing and lash lifts with Kylie at K Beauty Basics, a calm suite on Lee Highway where clear, glowing skin starts with the fundamentals done right.</p>
+        <div class="hero-cta">
+          <a class="btn btn-dark" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            Book your facial
+          </a>
+          <a class="btn btn-ghost" href="tel:+14236472696">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            (423) 647-2696
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span><i class="dot" id="statusDot"></i><span id="heroStatus">Open Wed–Sat, 8am–7pm</span></span>
+          <span>Suite 303 · 7053 Lee Hwy</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="arch">
+          <div class="glow"></div>
+          <svg class="botanical draw" viewBox="0 0 400 500" fill="none" stroke="#7a5446" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M200 500 C198 420 205 340 196 260 C190 205 196 160 214 110"/>
+            <path d="M199 410 C160 395 128 360 120 318 C160 324 192 360 199 410 Z" fill="rgba(255,248,240,.35)"/>
+            <path d="M201 350 C240 338 272 304 280 262 C240 268 208 302 201 350 Z" fill="rgba(207,220,198,.45)" stroke="#62765a"/>
+            <path d="M197 290 C164 280 140 252 134 220 C166 226 192 252 197 290 Z" fill="rgba(255,248,240,.35)"/>
+            <path d="M200 232 C228 222 250 198 256 170 C228 176 205 200 200 232 Z" fill="rgba(207,220,198,.45)" stroke="#62765a"/>
+            <path d="M210 128 C190 112 182 88 186 66 C206 80 214 104 210 128 Z" fill="rgba(255,248,240,.4)"/>
+            <path d="M120 318 C150 340 172 370 199 410 M280 262 C252 290 228 316 201 350 M134 220 C158 240 178 262 197 290 M256 170 C236 192 218 210 200 232"/>
+          </svg>
+        </div>
+        <div class="price-chip chip-a"><small>Basic Facial</small><b>$60</b><small>1 hr</small></div>
+        <div class="price-chip chip-b"><small>Lash Lift &amp; Tint</small><b>$45</b><small>1 hr</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      <span>Basic Facial</span><span>Deep Cleaning</span><span>Resurfacing</span><span>Dermaplaning</span><span>Anti-Aging &amp; Acne</span><span>Back Facial</span><span>Lash Lift &amp; Tint</span><span>Brow · Lip · Chin</span>
+      <span>Basic Facial</span><span>Deep Cleaning</span><span>Resurfacing</span><span>Dermaplaning</span><span>Anti-Aging &amp; Acne</span><span>Back Facial</span><span>Lash Lift &amp; Tint</span><span>Brow · Lip · Chin</span>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section class="menu sec" id="menu">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The treatment menu</span>
+        <h2>Honest prices. <em>Real</em> results.</h2>
+        <p>The facials start from one thorough foundation, then get layered with exactly what your skin is asking for.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Service categories">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p-facials" id="t-facials">Facials</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-skin" id="t-skin">Glow &amp; Lashes</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-wax" id="t-wax">Waxing</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-facials" aria-labelledby="t-facials">
+        <article class="svc">
+          <span class="tag">Where it starts</span>
+          <div class="svc-top"><h3>Basic Facial</h3><span class="price">$60</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr</span>
+          <p>Pre-cleanse and skin analysis, double cleanse, exfoliation, mask, tone, moisturizer and SPF. Boosts circulation for that glow, and it is perfect for relaxation.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Deep Cleaning Facial</h3><span class="price">$75</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 30 min</span>
+          <p>Everything in the basic facial plus gentle facial suction to clear clogged pores of dirt, oil and those pesky blackheads. Who doesn't love a deep clean?</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc feature">
+          <span class="tag">Best of both worlds</span>
+          <div class="svc-top"><h3>Anti-Aging or Acne Treatment Facial</h3><span class="price">$80</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 15 min</span>
+          <p>The basic facial plus high-frequency current that targets acne-causing bacteria and calms inflammation, while gently warming the skin to soften fine lines and puffy eyes.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Resurfacing Facial</h3><span class="price">$90</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 min</span>
+          <p>The basic facial with microdermabrasion added, for uneven tone, hyperpigmentation, fine lines and wrinkles, sun damage and age spots.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc feature">
+          <span class="tag">Save $40</span>
+          <div class="svc-top"><h3>Resurfacing Series</h3></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 treatments</span>
+          <p>Three resurfacing treatments. Microdermabrasion works best with consistency. If this is the treatment for you and you want the best results, this is the series for you. See series pricing when you book.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">See series pricing →</a>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Back Facial</h3><span class="price">$75</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 30 min</span>
+          <p>Cleanse, exfoliate, massage, mask and tone, all the facial care for the skin you can't reach.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-skin" aria-labelledby="t-skin" hidden>
+        <article class="svc feature">
+          <span class="tag">New glow</span>
+          <div class="svc-top"><h3>Dermaplaning</h3><span class="price">$70</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 30 min</span>
+          <p>Perfect for dull skin. Removes peach fuzz and dead skin and gives you a new glow.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc">
+          <span class="tag">Bye, mascara</span>
+          <div class="svc-top"><h3>Lash Lift &amp; Tint</h3><span class="price">$45</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr</span>
+          <p>Enhances your natural lashes, curling and darkening them for a wide-awake look without the mascara.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-wax" aria-labelledby="t-wax" hidden>
+        <article class="svc feature">
+          <span class="tag">Combo</span>
+          <div class="svc-top"><h3>Brow, Lip &amp; Chin</h3><span class="price">$20</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+          <p>All three in one tidy appointment.</p>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Eyebrow Wax</h3><span class="price">$10</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Lip Wax</h3><span class="price">$8</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 min</span>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+        <article class="svc">
+          <div class="svc-top"><h3>Chin Wax</h3><span class="price">$8</span></div>
+          <span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20 min</span>
+          <a class="book-link" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book this →</a>
+        </article>
+      </div>
+
+      <p class="menu-note">Prices and durations as listed on the K Beauty Basics booking page.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The approach</span>
+        <h2>The basics, <em>done beautifully.</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></div>
+          <h3>Analysis first</h3>
+          <p>Every basic facial begins with a pre-cleanse and a skin analysis before anything else touches your skin.</p>
+        </div>
+        <div class="why reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3v18M5 8h14M7 14h10"/></svg></div>
+          <h3>A treatment for every goal</h3>
+          <p>High-frequency for acne and fine lines, suction for congested pores, microdermabrasion for tone and texture.</p>
+        </div>
+        <div class="why reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg></div>
+          <h3>Unhurried time</h3>
+          <p>Deep cleaning, back facials and dermaplaning are each booked for a full hour and a half.</p>
+        </div>
+        <div class="why reveal">
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div>
+          <h3>Booking in a tap</h3>
+          <p>Pick your treatment and time online, or call Kylie directly at (423) 647-2696.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="journey sec">
+    <svg class="leaf-bg" viewBox="0 0 200 300" fill="none" stroke="#f0d5ca" stroke-width="1.2" aria-hidden="true">
+      <path d="M100 300C98 220 104 140 96 60"/>
+      <path d="M99 240c-30-8-50-32-54-62 30 6 50 30 54 62ZM101 190c30-8 50-32 54-62-30 6-50 30-54 62ZM98 140c-26-8-42-28-46-54 26 6 42 26 46 54ZM97 90c20-10 30-30 30-52-20 10-30 30-30 52Z"/>
+    </svg>
+    <div class="wrap journey-grid">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Inside the basic facial</span>
+        <h2>Every step, <em>for your glow.</em></h2>
+        <p>The foundation the deep cleaning, resurfacing and anti-aging or acne facials all build on.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><div><h3>Pre-cleanse &amp; skin analysis</h3><p>A first look at what your skin needs today.</p></div></div>
+        <div class="step"><div><h3>Double cleanse</h3><p>Lifting away makeup, oil and the day.</p></div></div>
+        <div class="step"><div><h3>Exfoliate</h3><p>Smoothing away dull surface cells.</p></div></div>
+        <div class="step"><div><h3>Mask</h3><p>Treating and calming.</p></div></div>
+        <div class="step"><div><h3>Tone, moisturize &amp; SPF</h3><p>Balanced, hydrated and protected, then toned once more to finish.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="sec" id="visit">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Hours &amp; visit</span>
+        <h2>Find us on <em>Lee Highway.</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card reveal">
+          <h3>Hours</h3>
+          <div class="status"><i class="dot" id="statusDot2"></i><span id="openStatus">Wednesday – Saturday</span></div>
+          <ul class="hours" id="hours">
+            <li data-d="0" class="off"><span>Sunday</span><span>Closed</span></li>
+            <li data-d="1" class="off"><span>Monday</span><span>Closed</span></li>
+            <li data-d="2" class="off"><span>Tuesday</span><span>Closed</span></li>
+            <li data-d="3"><span>Wednesday</span><span>8am – 7pm</span></li>
+            <li data-d="4"><span>Thursday</span><span>8am – 7pm</span></li>
+            <li data-d="5"><span>Friday</span><span>8am – 7pm</span></li>
+            <li data-d="6"><span>Saturday</span><span>8am – 7pm</span></li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Contact</h3>
+          <div class="contact-list">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=7053+Lee+Hwy+Suite+303+Chattanooga+TN+37421" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>7053 Lee Hwy, Suite 303<br>Chattanooga, TN 37421</span>
+            </a>
+            <a href="tel:+14236472696">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              <span>(423) 647-2696<small>Tap to call</small></span>
+            </a>
+            <a href="mailto:kyliegrominger@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span class="break">kyliegrominger@gmail.com</span>
+            </a>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-dark btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=7053+Lee+Hwy+Suite+303+Chattanooga+TN+37421" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost btn-sm" href="tel:+14236472696">Call now</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Map to K Beauty Basics, 7053 Lee Hwy Suite 303, Chattanooga TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=7053+Lee+Hwy+Suite+303,+Chattanooga,+TN+37421&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <div class="orb o2" style="left:auto;right:-60px;top:-60px"></div>
+        <span class="eyebrow">Ready when you are</span>
+        <h2 style="margin-top:14px">Your skin, <em>reset.</em></h2>
+        <p>Choose a treatment and grab a time Wednesday through Saturday.</p>
+        <div class="hero-cta">
+          <a class="btn btn-dark" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book online</a>
+          <a class="btn btn-ghost" href="tel:+14236472696">Call (423) 647-2696</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <span class="brand-name">K <i>Beauty</i> Basics</span>
+        <p style="margin-top:10px;max-width:320px">Facials, dermaplaning, waxing and lash lifts in Chattanooga, Tennessee.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <p>7053 Lee Hwy, Suite 303<br>Chattanooga, TN 37421</p>
+        <p>Wed – Sat · 8am – 7pm</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+14236472696">(423) 647-2696</a>
+        <a class="break" href="mailto:kyliegrominger@gmail.com">kyliegrominger@gmail.com</a>
+        <a href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">Book online →</a>
+      </div>
+    </div>
+    <p class="foot-note">Concept site by Code Craft Media, made for K Beauty Basics. Not live. Services, prices and hours from the K Beauty Basics booking page.</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ghost" href="tel:+14236472696">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call
+  </a>
+  <a class="btn btn-dark" href="https://square.site/book/L04Q2ZRWHAMXB/k-beauty-basics-chattanooga-tn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book a treatment
+  </a>
+</div>
+
+<script>
+(function(){
+  var d=document;
+  d.documentElement.classList.add('js');
+  // nav border on scroll
+  var nav=d.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8)},{passive:true});
+
+  // tabs
+  var tabs=[].slice.call(d.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');d.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    t.setAttribute('aria-selected','true');d.getElementById(t.getAttribute('aria-controls')).hidden=false;
+  })});
+
+  // hours, today + open now (Chattanooga = America/New_York)
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var day=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+    var li=d.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+    var openDay=day>=3&&day<=6, open=openDay&&h>=8&&h<19;
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var msg;
+    if(open) msg='Open now · until 7pm';
+    else if(openDay&&h<8) msg='Opens today at 8am';
+    else { var n=day; do{n=(n+1)%7}while(n<3); msg='Closed now · opens '+(n===(day+1)%7?'tomorrow':names[n])+' at 8am'; }
+    d.getElementById('openStatus').textContent=msg;
+    d.getElementById('heroStatus').textContent=msg;
+    if(!open){d.getElementById('statusDot').classList.add('closed');d.getElementById('statusDot2').classList.add('closed');}
+  }catch(e){}
+
+  // reveal
+  var els=[].slice.call(d.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>
