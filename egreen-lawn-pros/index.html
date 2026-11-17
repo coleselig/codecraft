@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>eGreen Lawn Pros | All-Electric, Solar-Powered Lawn Care in Chattanooga</title>
+<meta name="description" content="Chattanooga's all-electric, solar-powered lawn care. Weekly or biweekly mowing from $30, cleanups, mulch, shrub trimming and electric pressure washing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lawn:#3fae2a; --lawn-2:#57c63e; --lawn-soft:#e7f6e1;
+  --pine:#0f3b2c; --pine-2:#174d3a; --pine-3:#0a2a1f;
+  --white:#ffffff; --cream:#f7faf4; --sun:#ffd23f; --sun-2:#ffbf1f;
+  --ink:#10261d; --muted:#4a6157; --line:#d6e6d0;
+  --display:'Outfit','Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Sans 3','Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--white);font-size:17px;line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* concept banner */
+.concept{background:var(--pine-3);color:#cfe8d6;font-size:12.5px;text-align:center;padding:7px 14px;line-height:1.35}
+.concept b{color:var(--sun)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;color:var(--pine);white-space:nowrap}
+.logo .e{color:var(--lawn)}
+.logo-mark{width:34px;height:34px;flex:none}
+.nav-links{display:none;gap:26px;font-weight:600;font-size:15.5px}
+.nav-links a{text-decoration:none;color:var(--pine);position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:3px;border-radius:3px;background:var(--lawn);transition:right .25s}
+.nav-links a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;border:2px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-sun{background:var(--sun);color:var(--pine-3);box-shadow:0 6px 0 var(--sun-2)}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--sun-2)}
+.btn-green{background:var(--lawn);color:#fff;box-shadow:0 6px 0 #2c8a1c}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 0 #2c8a1c}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:18px;height:18px}
+.nav .btn{padding:10px 16px;font-size:14.5px;box-shadow:0 4px 0 #2c8a1c}
+
+/* hero */
+.hero{position:relative;background:var(--pine);color:#fff;overflow:hidden;padding:46px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 380px at 85% 10%,rgba(255,210,63,.22),transparent 60%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 60px,transparent 60px 120px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:28px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,210,63,.14);border:1px solid rgba(255,210,63,.45);color:var(--sun);border-radius:999px;padding:6px 14px;font-weight:700;font-size:13.5px;letter-spacing:.02em}
+.pill svg{width:16px;height:16px}
+.hero h1{font-size:clamp(40px,11vw,76px);font-weight:800;margin:16px 0 14px}
+.hero h1 .hl{color:var(--lawn-2);position:relative;white-space:nowrap}
+.hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.14em;background:var(--sun);border-radius:4px;z-index:-1;transform-origin:left;animation:mow 1.2s .5s cubic-bezier(.6,.1,.2,1) both}
+.hero h1 .hl{z-index:0}
+@keyframes mow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero p.lead{font-size:19px;color:#d4ecdc;max-width:540px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 18px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-weight:600;font-size:15px;color:#bfe3c9}
+.hero-facts span{display:inline-flex;align-items:center;gap:6px}
+.hero-facts svg{width:16px;height:16px;color:var(--sun)}
+.hero-art{position:relative;min-height:110px}
+.sun{position:absolute;right:6%;top:0;width:86px;height:86px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 14px rgba(255,210,63,.18),0 0 0 30px rgba(255,210,63,.08);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 18px rgba(255,210,63,.22),0 0 0 38px rgba(255,210,63,.06)}}
+.panel{position:absolute;left:4%;top:10px;width:110px;transform:skewX(-8deg)}
+.mower{position:absolute;bottom:56px;z-index:2;left:0;width:210px;color:#fff;animation:push 9s linear infinite}
+@keyframes push{0%{transform:translateX(-230px)}100%{transform:translateX(calc(100vw + 40px))}}
+.mower .wheel{transform-box:fill-box;transform-origin:center;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ground{position:relative;height:150px;margin-top:20px;overflow:hidden}
+.stripes{position:absolute;left:0;right:0;bottom:0;height:70px;background:repeating-linear-gradient(90deg,var(--lawn) 0 70px,var(--lawn-2) 70px 140px)}
+.grass{position:absolute;left:0;right:0;bottom:62px;height:40px;overflow:hidden}
+.grass svg{width:100%;height:40px}
+.blade{transform-box:fill-box;transform-origin:bottom center;animation:sway 3s ease-in-out infinite}
+.blade:nth-child(3n){animation-delay:-1s}.blade:nth-child(3n+1){animation-delay:-2s}.blade:nth-child(4n){animation-duration:3.8s}
+@keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(7deg)}}
+
+/* section base */
+section{padding:72px 0}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lawn);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:4px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--lawn) 0 7px,var(--lawn-2) 7px 14px)}
+.sec-title{font-size:clamp(32px,8vw,52px);font-weight:800;color:var(--pine);margin:12px 0 14px}
+.sec-sub{color:var(--muted);font-size:18px;max-width:620px}
+
+/* mow-in stripe divider */
+.mowline{height:22px;background:repeating-linear-gradient(90deg,var(--lawn) 0 50px,var(--lawn-2) 50px 100px);transform-origin:left;transform:scaleX(1)}
+.js .mowline{transform:scaleX(0);transition:transform 1.4s cubic-bezier(.6,.1,.2,1)}
+.js .mowline.in{transform:scaleX(1)}
+
+/* electric strip */
+.volt{background:var(--lawn-soft)}
+.volt-grid{display:grid;gap:16px;margin-top:34px}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
+.vcard:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(15,59,44,.45)}
+.vicon{flex:none;width:52px;height:52px;border-radius:16px;background:var(--pine);color:var(--sun);display:grid;place-items:center}
+.vicon svg{width:28px;height:28px}
+.vcard h3{font-size:20px;color:var(--pine);margin-bottom:4px}
+.vcard p{color:var(--muted);font-size:16px}
+
+/* services */
+.svc-grid{display:grid;gap:16px;margin-top:36px}
+.svc{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:24px 22px 22px;overflow:hidden;transition:border-color .2s,transform .2s,box-shadow .2s}
+.svc::before{content:"";position:absolute;left:0;top:0;height:6px;width:100%;background:repeating-linear-gradient(90deg,var(--lawn) 0 26px,var(--lawn-2) 26px 52px);transform:scaleX(.18);transform-origin:left;transition:transform .5s cubic-bezier(.6,.1,.2,1)}
+.svc:hover{border-color:var(--lawn);transform:translateY(-3px);box-shadow:0 16px 34px -20px rgba(15,59,44,.5)}
+.svc:hover::before{transform:scaleX(1)}
+.svc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.svc h3{font-size:21px;color:var(--pine)}
+.svc .ic{flex:none;width:46px;height:46px;border-radius:14px;background:var(--lawn-soft);color:var(--pine);display:grid;place-items:center}
+.svc .ic svg{width:26px;height:26px}
+.svc p{color:var(--muted);font-size:16px;margin:8px 0 16px}
+.price{display:flex;align-items:baseline;gap:6px;font-family:var(--display)}
+.price small{font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.price b{font-size:30px;color:var(--pine);font-weight:800}
+.price .quote{font-size:20px;color:var(--lawn);font-weight:800}
+.svc.feature{background:var(--pine);border-color:var(--pine);color:#fff}
+.svc.feature h3,.svc.feature .price b{color:#fff}
+.svc.feature p,.svc.feature .price small{color:#bfe3c9}
+.svc.feature .ic{background:var(--sun);color:var(--pine)}
+.tag{display:inline-block;background:var(--sun);color:var(--pine-3);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:-4px 0 16px}
+.chips span{font-size:13.5px;font-weight:600;border-radius:999px;padding:4px 10px;background:rgba(255,255,255,.1);color:#dff3e4}
+.svc-note{margin-top:22px;color:var(--muted);font-size:15px}
+
+/* compare */
+.compare{background:var(--pine);color:#fff;position:relative;overflow:hidden}
+.compare .sec-title{color:#fff}
+.compare .sec-sub{color:#bfe3c9}
+.cmp{display:grid;gap:16px;margin-top:34px}
+.cmp-col{border-radius:var(--r);padding:26px}
+.cmp-gas{background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.25)}
+.cmp-e{background:#fff;color:var(--ink)}
+.cmp-col h3{font-size:22px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.cmp-e h3{color:var(--pine)}
+.cmp-col ul{list-style:none;display:grid;gap:10px}
+.cmp-col li{display:flex;gap:10px;align-items:flex-start;font-size:16.5px}
+.cmp-col li svg{flex:none;width:20px;height:20px;margin-top:3px}
+.cmp-gas li{color:#c9dccf}
+.cmp-gas li svg{color:#e98a7a}
+.cmp-e li svg{color:var(--lawn)}
+.freq{display:grid;gap:14px;margin-top:22px}
+.freq div{background:rgba(255,255,255,.07);border-radius:16px;padding:18px 20px;border-left:5px solid var(--sun)}
+.freq b{font-family:var(--display);font-size:19px;display:block;color:var(--sun)}
+.freq span{color:#d4ecdc}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:34px;counter-reset:w}
+.why{display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:var(--r);background:var(--cream);border:1px solid var(--line)}
+.why::before{counter-increment:w;content:"0" counter(w);font-family:var(--display);font-weight:800;font-size:28px;color:var(--lawn);line-height:1;min-width:42px}
+.why h3{font-size:19px;color:var(--pine);margin-bottom:4px}
+.why p{color:var(--muted);font-size:16px}
+
+/* area */
+.area{background:var(--lawn-soft)}
+.area-grid{display:grid;gap:22px;margin-top:30px}
+.map{border-radius:var(--r);overflow:hidden;border:4px solid #fff;box-shadow:0 18px 40px -26px rgba(15,59,44,.6);background:#cfe3c8;min-height:300px}
+.map iframe{display:block;width:100%;height:340px;border:0}
+.area-card{background:#fff;border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.area-card h3{font-size:24px;color:var(--pine);margin-bottom:8px}
+.area-card p{color:var(--muted)}
+.sched{margin-top:18px;display:grid;gap:10px}
+.sched div{display:flex;gap:12px;align-items:center;font-weight:600;color:var(--pine)}
+.sched svg{width:22px;height:22px;color:var(--lawn);flex:none}
+
+/* contact */
+.contact{background:var(--white)}
+.cta-box{position:relative;background:var(--pine);color:#fff;border-radius:28px;padding:38px 24px;overflow:hidden}
+.cta-box::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:repeating-linear-gradient(90deg,var(--lawn) 0 46px,var(--lawn-2) 46px 92px)}
+.cta-box h2{font-size:clamp(32px,8vw,50px);font-weight:800;margin:10px 0 12px}
+.cta-box p{color:#d4ecdc;max-width:560px}
+.cta-box .eyebrow{color:var(--sun)}
+.c-links{display:grid;gap:12px;margin-top:26px}
+.c-link{display:flex;align-items:center;gap:14px;text-decoration:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px 18px;transition:background .2s,transform .2s;min-width:0}
+.c-link:hover{background:rgba(255,255,255,.15);transform:translateX(4px)}
+.c-link .ci{flex:none;width:46px;height:46px;border-radius:14px;background:var(--sun);color:var(--pine);display:grid;place-items:center}
+.c-link .ci svg{width:22px;height:22px}
+.c-link small{display:block;font-size:13px;color:#a9d3b6;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.c-link b{font-family:var(--display);font-size:19px;overflow-wrap:anywhere}
+.cta-mower{position:absolute;right:-10px;bottom:16px;width:150px;opacity:.16;color:#fff;pointer-events:none}
+
+footer{background:var(--pine-3);color:#9cc5aa;padding:34px 0 30px;font-size:15px}
+footer .wrap{display:flex;flex-direction:column;gap:12px}
+footer .logo{color:#fff}
+footer a{color:#d4ecdc}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,42,31,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:3px solid var(--lawn)}
+.mbar .btn{padding:13px 10px;font-size:15.5px;box-shadow:none}
+@media (max-width:899px){body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.reveal-all .rv{opacity:1!important;transform:none!important}
+
+@media (min-width:600px){
+  .volt-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .c-links{grid-template-columns:1fr 1fr}
+  .freq{grid-template-columns:1fr 1fr}
+}
+@media (min-width:900px){
+  .mbar{display:none}
+  .nav-links{display:flex}
+  section{padding:100px 0}
+  .hero{padding-top:70px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+  .hero-art{min-height:340px}
+  .mower{width:250px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .svc.feature{grid-column:span 2}
+  .volt-grid{grid-template-columns:repeat(3,1fr)}
+  .cmp{grid-template-columns:1fr 1.2fr}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .area-grid{grid-template-columns:1.4fr 1fr;align-items:stretch}
+  .map iframe{height:100%;min-height:380px}
+  .cta-box{padding:60px 56px 70px}
+  .c-links{grid-template-columns:repeat(3,1fr)}
+  .cta-mower{width:260px;opacity:.2;right:30px}
+  footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}
+}
+@media (max-width:380px){.logo{font-size:18px}.nav .btn{padding:9px 12px;font-size:13.5px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  .js .mowline{transform:none}
+  .mower{transform:translateX(30px)}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for eGreen Lawn Pros. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="eGreen Lawn Pros home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#0f3b2c"/><path d="M20 31c0-8 0-12-6-17 6 1 9 4 9 9 1-6 4-9 9-10-5 4-6 9-6 18" fill="#57c63e"/><path d="M22 7l-5 9h5l-3 7 7-10h-5l3-6z" fill="#ffd23f"/></svg>
+      <span><span class="e">e</span>Green Lawn Pros</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#electric">Electric</a><a href="#services">Services</a><a href="#why">Why us</a><a href="#area">Service area</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-green" href="tel:+14232252294"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Intro">
+  <div class="wrap">
+    <div>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>100% battery-powered &middot; solar-charged</span>
+      <h1>A greener lawn. <span class="hl">Zero</span> gas.</h1>
+      <p class="lead">Chattanooga&rsquo;s all-electric, all solar-powered lawn care. Weekly or biweekly mowing, edging, trimming and cleanup with quiet equipment that emits zero air pollution.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-sun" href="tel:+14232252294"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (423) 225-2294</a>
+        <a class="btn btn-ghost" href="#services">See services &amp; prices</a>
+      </div>
+      <div class="hero-facts">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mowing from $30</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Weekly or biweekly</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quieter than gas</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="sun"></div>
+      <svg class="panel" viewBox="0 0 120 80"><rect x="2" y="2" width="116" height="64" rx="6" fill="#0a2a1f" stroke="#ffd23f" stroke-width="3"/><g stroke="#3a6e5a" stroke-width="2"><path d="M31 4v60M60 4v60M89 4v60M4 24h112M4 45h112"/></g><path d="M56 66v12M44 78h32" stroke="#ffd23f" stroke-width="3" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+  <div class="ground" aria-hidden="true">
+  <div class="grass">
+    <svg viewBox="0 0 400 40" preserveAspectRatio="none" id="grassSvg"></svg>
+  </div>
+  <svg class="mower" viewBox="0 0 220 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M10 8h22l58 62"/>
+    <path d="M20 4l-6 10"/>
+    <path d="M70 70h110a16 16 0 0 1 16 16v6H62l8-22z" fill="#0f3b2c"/>
+    <path d="M118 56h40l8 14h-56z" fill="#3fae2a"/>
+    <path d="M132 50l-6 10h8l-4 8 10-12h-8l4-6z" fill="#ffd23f" stroke="#ffd23f" stroke-width="1.5"/>
+    <path d="M196 80h12"/>
+    <g class="wheel"><circle cx="84" cy="96" r="15" fill="#0a2a1f"/><path d="M84 84v24M72 96h24"/></g>
+    <g class="wheel"><circle cx="176" cy="98" r="13" fill="#0a2a1f"/><path d="M176 88v20M166 98h20"/></g>
+  </svg>
+  <div class="stripes"></div>
+  </div>
+</section>
+
+<section class="volt" id="electric">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Powered by the sun</span>
+      <h2 class="sec-title">Lawn care, minus the fumes &amp; roar.</h2>
+      <p class="sec-sub">eGreen&rsquo;s mowers, trimmers and blowers run on batteries charged with solar power, so your yard gets a pro finish without the gas smell or the early-morning racket.</p>
+    </div>
+    <div class="volt-grid">
+      <div class="vcard rv"><div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div><div><h3>Solar-charged</h3><p>100% battery-powered equipment, charged with solar power.</p></div></div>
+      <div class="vcard rv"><div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.2-6"/></svg></div><div><h3>Zero emissions</h3><p>The mowers emit zero air pollution. Nothing to breathe in on the patio.</p></div></div>
+      <div class="vcard rv"><div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg></div><div><h3>Substantially quieter</h3><p>Much quieter than gas-powered equipment. Your neighbors will thank you.</p></div></div>
+    </div>
+  </div>
+</section>
+<div class="mowline" aria-hidden="true"></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Services &amp; starting prices</span>
+      <h2 class="sec-title">Everything your yard needs.</h2>
+      <p class="sec-sub">Published starting prices. Call for an exact quote for your property.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc feature rv">
+        <span class="tag">Most popular</span>
+        <div class="svc-top"><h3>Deluxe Weekly or Biweekly Lawn Service</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l6 9h11v4H5z"/><circle cx="8" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg></span></div>
+        <p>Eco-friendly service with solar-powered mowers, trimmers and blowers. Weekly keeps a consistent look; biweekly offers a lower monthly budget.</p>
+        <div class="chips"><span>Mowing</span><span>Edging</span><span>Trimming</span><span>Leaf removal</span></div>
+        <div class="price"><small>Starting at</small><b>$30</b></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Spring Yard Cleanup</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c0-4 2-7 7-8-1 5-3 8-7 8zM12 14c0-3-2-6-6-6 0 4 2 6 6 6z"/></svg></span></div>
+        <p>Get the yard reset and ready for the growing season.</p>
+        <div class="price"><small>Starting at</small><b>$90</b></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Electric Pressure Washing</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9l3 3h3"/><path d="M18 11l3-2M18 11l3 0M18 11l3 2"/><path d="M6 8V5h4v3M8 8v11"/></svg></span></div>
+        <p>Electric-powered pressure washing for a fresh, clean finish.</p>
+        <div class="price"><small>Starting at</small><b>$50</b></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Mulch Installation</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19h20"/><path d="M4 19c1-3 3-4 5-4s3 1 4 0 3-2 5-1 2 3 2 5"/><path d="M12 15V8M12 8c0-2 1-4 4-4 0 3-2 4-4 4zM12 10c0-2-1-3-3-3 0 2 1 3 3 3z"/></svg></span></div>
+        <p>Fresh mulch for clean, finished garden beds.</p>
+        <div class="price"><small>Starting at</small><b>$100</b></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Shrub Trimming</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></span></div>
+        <p>Tidy, shaped shrubs that frame the house.</p>
+        <div class="price"><small>Starting at</small><b>$10</b></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Leaf Removal / Fall Clean-up</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.2-6"/></svg></span></div>
+        <p>Clear the leaves and get the lawn ready for winter.</p>
+        <div class="price"><small>Starting at</small><b>$90</b></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Lawn Fertilization</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 5H8z"/><path d="M8 8l-2 13h12L16 8"/><path d="M10 13h4"/></svg></span></div>
+        <p>Feed the lawn for thicker, greener turf.</p>
+        <div class="price"><span class="quote">Priced by quote</span></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Weed Control</h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c-3 0-5-2-5-5 3 0 5 2 5 5zM12 13c3 0 5-2 5-5-3 0-5 2-5 5z"/><path d="M4 4l16 16"/></svg></span></div>
+        <p>Keep weeds out so the grass can take over.</p>
+        <div class="price"><span class="quote">Priced by quote</span></div>
+      </article>
+    </div>
+    <p class="svc-note rv">Prices are published &ldquo;starting at&rdquo; rates. Final pricing depends on your yard.</p>
+  </div>
+</section>
+<div class="mowline" aria-hidden="true"></div>
+
+<section class="compare" id="why-electric">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow" style="color:var(--sun)">Gas vs. eGreen</span>
+      <h2 class="sec-title">Same sharp cut. None of the noise.</h2>
+      <p class="sec-sub">eGreen&rsquo;s electric equipment performs comparably to gas-powered tools, with less noise and pollution.</p>
+    </div>
+    <div class="cmp">
+      <div class="cmp-col cmp-gas rv">
+        <h3>Typical gas crew</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Exhaust fumes in the yard</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Loud engines</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Runs on gasoline</li>
+        </ul>
+      </div>
+      <div class="cmp-col cmp-e rv">
+        <h3>eGreen Lawn Pros</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Zero air pollution from the mowers</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Substantially quieter than gas equipment</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Batteries charged with solar power</li>
+        </ul>
+      </div>
+    </div>
+    <div class="freq">
+      <div class="rv"><b>Weekly</b><span>A consistent, freshly-cut look all season.</span></div>
+      <div class="rv"><b>Biweekly</b><span>A lower monthly budget, still sharp.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Why eGreen</span>
+      <h2 class="sec-title">The lawn guys who show up.</h2>
+      <p class="sec-sub">eGreen was built around fixing what frustrates people about lawn care: missed appointments, lack of communication and incorrect billing.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div><h3>On schedule</h3><p>No missed appointments. Your yard gets done on the day it&rsquo;s due.</p></div></div>
+      <div class="why rv"><div><h3>Clear communication</h3><p>Communication is a priority. Reach out by phone or email.</p></div></div>
+      <div class="why rv"><div><h3>Billing that&rsquo;s right</h3><p>Published starting prices and correct invoices, no surprises.</p></div></div>
+      <div class="why rv"><div><h3>All-electric fleet</h3><p>Every tool is battery-powered and solar-charged.</p></div></div>
+      <div class="why rv"><div><h3>Full-service visits</h3><p>Mowing, edging, trimming and leaf removal in one stop.</p></div></div>
+      <div class="why rv"><div><h3>5-star standard</h3><p>The goal on every visit: 5-star service, every time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Service area</span>
+      <h2 class="sec-title">Mowing Chattanooga, block by block.</h2>
+    </div>
+    <div class="area-grid">
+      <div class="map rv"><iframe title="Map of Chattanooga, TN service area" loading="lazy" src="https://www.google.com/maps?q=Chattanooga%2C%20TN&amp;output=embed"></iframe></div>
+      <div class="area-card rv">
+        <h3>Chattanooga, TN</h3>
+        <p>eGreen Lawn Pros comes to you. All service is on location at your property.</p>
+        <div class="sched">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Weekly or biweekly routes</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to check your street &amp; availability</div>
+        </div>
+        <div style="margin-top:22px"><a class="btn btn-green" href="tel:+14232252294">Call (423) 225-2294</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <span class="eyebrow">Get on the schedule</span>
+      <h2>Ready for your first quiet cut?</h2>
+      <p>Contact eGreen today to schedule your first appointment. Call, email, or browse the service list online.</p>
+      <div class="c-links">
+        <a class="c-link" href="tel:+14232252294"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>(423) 225-2294</b></span></a>
+        <a class="c-link" href="mailto:james@egreenlawnpros.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span><small>Email</small><b>james@egreenlawnpros.com</b></span></a>
+        <a class="c-link" href="https://james10267.wixsite.com/egreen-lawn-pros-1/book-online" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></span><span><small>Book online</small><b>Service list</b></span></a>
+      </div>
+      <svg class="cta-mower" viewBox="0 0 220 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 8h22l58 62"/><path d="M70 70h110a16 16 0 0 1 16 16v6H62l8-22z"/><path d="M118 56h40l8 14h-56z"/><circle cx="84" cy="96" r="15"/><circle cx="176" cy="98" r="13"/></svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#174d3a"/><path d="M20 31c0-8 0-12-6-17 6 1 9 4 9 9 1-6 4-9 9-10-5 4-6 9-6 18" fill="#57c63e"/><path d="M22 7l-5 9h5l-3 7 7-10h-5l3-6z" fill="#ffd23f"/></svg><span><span class="e" style="color:#57c63e">e</span>Green Lawn Pros</span></a>
+    <div>&copy; 2026 eGreen Lawn Pros &middot; Concept by Code Craft Media</div>
+    <div><a href="tel:+14232252294">(423) 225-2294</a> &middot; <a href="mailto:james@egreenlawnpros.com">Email us</a></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="btn btn-sun" href="tel:+14232252294">Call now</a>
+  <a class="btn btn-green" href="https://james10267.wixsite.com/egreen-lawn-pros-1/book-online" target="_blank" rel="noopener">Book online</a>
+</nav>
+
+<script>
+(function(){
+  // grass blades
+  var g=document.getElementById('grassSvg');
+  if(g){var s='';for(var i=0;i<80;i++){var x=i*5+Math.random()*3,h=18+Math.random()*20,c=Math.random()<.5?'#3fae2a':'#57c63e';
+    s+='<path class="blade" fill="'+c+'" d="M'+x.toFixed(1)+' 40 Q'+(x+1.5).toFixed(1)+' '+(40-h*.6).toFixed(1)+' '+(x+2.5).toFixed(1)+' '+(40-h).toFixed(1)+' Q'+(x+3).toFixed(1)+' '+(40-h*.5).toFixed(1)+' '+(x+4.5).toFixed(1)+' 40Z"/>';}
+    g.innerHTML=s;}
+  var els=document.querySelectorAll('.rv,.mowline');
+  function all(){document.documentElement.classList.add('reveal-all');els.forEach(function(e){e.classList.add('in')})}
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){all();return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

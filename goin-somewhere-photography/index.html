@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Goin' Somewhere Photography &amp; Gifts | Corryton, TN</title>
+<meta name="description" content="Natural-light family, newborn, maternity, senior and holiday sessions plus handcrafted gifts in Corryton, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --amber:#d98a2b;--amber-d:#b5691a;--gold:#f1b85a;--teal:#4f8580;--teal-d:#2f5754;
+  --cream:#f8eedb;--paper:#fdf7ea;--ink:#2b2420;--muted:#6b5d52;--line:#e6d5b5;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Lato","Helvetica Neue",Arial,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.13;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--teal-d);color:var(--cream);font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+header.nav{position:sticky;top:0;z-index:40;background:rgba(253,247,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand b{font-family:var(--display);font-size:18px;line-height:1.1;white-space:nowrap}
+.brand small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.links{display:none;gap:26px;font-weight:700;font-size:14px}
+.links a{text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--amber);transition:width .25s}
+.links a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent;cursor:pointer}
+.btn-amber{background:var(--amber);color:#fff;box-shadow:0 6px 0 var(--amber-d)}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--amber-d)}
+.btn-amber:active{transform:translateY(4px);box-shadow:0 2px 0 var(--amber-d)}
+.btn-ghost{border-color:var(--teal);color:var(--teal-d);background:transparent}
+.btn-ghost:hover{background:var(--teal);color:#fff}
+.nav .btn{padding:9px 16px;font-size:13px;box-shadow:none}
+/* HERO */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 80% at 80% 0%,rgba(241,184,90,.55),transparent 60%),
+  radial-gradient(90% 70% at 0% 100%,rgba(79,133,128,.28),transparent 60%),
+  linear-gradient(180deg,#fbe7c2 0%,var(--paper) 100%);padding:42px 0 56px}
+.hero .wrap{display:grid;gap:34px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-d)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--amber)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,10vw,72px);line-height:1.02;margin:14px 0 16px;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:500;color:var(--amber-d)}
+.lead{font-size:17.5px;color:var(--muted);max-width:34em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.65);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+/* camera */
+.stage{position:relative;max-width:440px;width:100%;margin:0 auto}
+.camera{width:100%;height:auto;filter:drop-shadow(0 18px 24px rgba(91,55,20,.18))}
+.camera .shutter{transform-origin:200px 168px;transition:transform .12s}
+.flash{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#fff,rgba(255,240,200,0) 65%);opacity:0;pointer-events:none}
+.stage.click .flash{animation:flash .55s ease-out}
+.stage.click .shutter{animation:shut .35s ease-in-out}
+.stage.click .btn-top{animation:press .3s}
+@keyframes flash{0%{opacity:.95}100%{opacity:0}}
+@keyframes shut{0%,100%{transform:scale(1)}45%{transform:scale(.08) rotate(60deg)}}
+@keyframes press{50%{transform:translateY(4px)}}
+.click-hint{text-align:center;font-size:12px;color:var(--muted);margin-top:4px;font-style:italic}
+.road{position:absolute;left:-10%;right:-10%;bottom:4px;height:90px;pointer-events:none;opacity:.8}
+.road path{stroke-dasharray:3 11;stroke-linecap:round;animation:drive 6s linear infinite}
+@keyframes drive{to{stroke-dashoffset:-140}}
+/* film strip */
+.strip{background:#231d1a;padding:14px 0;position:relative;overflow:hidden}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,transparent 0 10px,var(--cream) 10px 22px,transparent 22px 30px);opacity:.75}
+.strip::before{top:3px}.strip::after{bottom:3px}
+.reel{display:flex;gap:12px;width:max-content;animation:roll 40s linear infinite}
+.reel span{font-family:var(--display);font-style:italic;color:var(--gold);font-size:18px;padding:8px 20px;border:1px solid rgba(241,184,90,.35);border-radius:4px;white-space:nowrap}
+@keyframes roll{to{transform:translateX(-50%)}}
+section{padding:70px 0}
+.sec-head{max-width:640px;margin-bottom:34px}
+h2{font-family:var(--display);font-size:clamp(30px,7vw,46px);line-height:1.1;margin:10px 0 12px}
+h2 em{color:var(--amber-d);font-weight:500}
+.sec-head p{color:var(--muted)}
+/* sessions grid */
+.grid{display:grid;gap:20px}
+.frame{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px 12px 18px;box-shadow:0 2px 0 var(--line),0 14px 30px -18px rgba(91,55,20,.35);transition:transform .3s,box-shadow .3s}
+.frame:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 2px 0 var(--line),0 22px 36px -18px rgba(91,55,20,.45)}
+.frame:nth-child(even):hover{transform:translateY(-4px) rotate(.6deg)}
+.pic{aspect-ratio:4/3;border-radius:3px;position:relative;overflow:hidden;display:grid;place-items:center}
+.pic svg{width:58%;height:auto;opacity:.92}
+.pic::after{content:"";position:absolute;inset:8px;border:1px dashed rgba(255,255,255,.55);border-radius:2px}
+.p1{background:linear-gradient(160deg,#f6c77b,#d98a2b 55%,#8c5a2b)}
+.p2{background:linear-gradient(160deg,#cfe0dc,#7aa6a0 55%,#3d6a66)}
+.p3{background:linear-gradient(160deg,#fbe2c8,#e7a982 60%,#b56d4c)}
+.p4{background:linear-gradient(160deg,#e9d3a6,#c09a5a 55%,#6f5636)}
+.p5{background:linear-gradient(160deg,#2f4f6b,#4f8580 50%,#d98a2b)}
+.p6{background:linear-gradient(160deg,#d6b48a,#9a3f2a 55%,#4a2a20)}
+.p7{background:linear-gradient(160deg,#fde9b8,#f1b85a 55%,#d98a2b)}
+.p8{background:linear-gradient(160deg,#e9e0cc,#b9a383 55%,#6b5d52)}
+.frame h3{font-family:var(--display);font-size:22px;margin:14px 4px 4px}
+.frame p{font-size:14.5px;color:var(--muted);margin:0 4px}
+.tag{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:12px 4px 0}
+.note{margin-top:26px;background:var(--cream);border-left:4px solid var(--amber);padding:14px 18px;border-radius:4px;font-size:15px}
+/* gifts */
+.gifts{background:linear-gradient(180deg,var(--teal-d),#24423f);color:var(--cream);position:relative;overflow:hidden}
+.gifts h2 em{color:var(--gold)}
+.gifts .sec-head p{color:#d9e4e0}
+.gift-wrap{display:grid;gap:30px;align-items:center}
+.gift-card{background:rgba(253,247,234,.06);border:1px solid rgba(241,184,90,.35);border-radius:10px;padding:24px}
+.gift-card li{list-style:none;padding:9px 0;border-bottom:1px dashed rgba(241,184,90,.3);display:flex;gap:10px}
+.gift-card li:last-child{border:0}
+.gift-card li::before{content:"✦";color:var(--gold)}
+/* why */
+.why{display:grid;gap:16px}
+.why div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;position:relative}
+.why .num{font-family:var(--display);font-style:italic;font-size:34px;color:var(--amber);line-height:1}
+.why h3{font-family:var(--display);font-size:21px;margin:8px 0 6px}
+.why p{color:var(--muted);font-size:15px}
+/* area */
+.area{display:grid;gap:26px;align-items:stretch}
+.map{border-radius:10px;overflow:hidden;border:6px solid #fff;box-shadow:0 14px 30px -18px rgba(91,55,20,.5);min-height:320px;background:var(--cream)}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.area-card{background:var(--cream);border-radius:10px;padding:26px;position:relative;overflow:hidden}
+.area-card svg.trip{width:100%;height:auto;margin-top:12px}
+.trip path{stroke-dasharray:4 10;stroke-linecap:round;animation:drive 5s linear infinite}
+/* contact */
+.contact{background:radial-gradient(100% 90% at 100% 0%,rgba(241,184,90,.45),transparent 60%),var(--cream)}
+.c-grid{display:grid;gap:16px}
+.c-tile{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px;text-decoration:none;transition:transform .2s,border-color .2s;min-width:0}
+.c-tile:hover{transform:translateY(-3px);border-color:var(--amber)}
+.c-ico{flex:0 0 48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--amber);color:#fff}
+.c-tile small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--teal)}
+.c-tile b{font-size:16px;word-break:break-word;overflow-wrap:anywhere}
+footer{background:#231d1a;color:#cdbfa9;padding:34px 0 30px;font-size:14px;text-align:center}
+footer b{font-family:var(--display);color:var(--cream);font-size:20px;display:block;margin-bottom:6px}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(35,29,26,.95);backdrop-filter:blur(6px)}
+.bar a{flex:1;padding:13px 10px;font-size:15px}
+.bar .btn-ghost{border-color:var(--gold);color:var(--gold)}
+@media (max-width:899px){body{padding-bottom:84px}}
+@media (min-width:900px){
+  .bar{display:none}
+  .links{display:flex}
+  .hero{padding:80px 0 90px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center}
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .gift-wrap{grid-template-columns:1fr 1fr}
+  .why{grid-template-columns:repeat(4,1fr)}
+  .area{grid-template-columns:1.2fr .8fr}
+  .c-grid{grid-template-columns:repeat(3,1fr)}
+  section{padding:100px 0}
+}
+@media (max-width:899px){.hero{padding-top:22px}.hero .wrap{gap:6px}.stage{order:-1;max-width:210px}.click-hint{display:none}.lead{font-size:16px}h1{margin-top:8px}}
+@media (min-width:560px) and (max-width:899px){.grid{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Goin' Somewhere Photography &amp; Gifts. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Goin' Somewhere home">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="11" width="34" height="23" rx="4" fill="none" stroke="#2f5754" stroke-width="2.4"/><rect x="13" y="6" width="12" height="6" rx="1.5" fill="#d98a2b"/><circle cx="20" cy="22.5" r="7" fill="none" stroke="#d98a2b" stroke-width="2.4"/><circle cx="20" cy="22.5" r="2.6" fill="#2f5754"/></svg>
+      <span><b>Goin' Somewhere</b><small>Photography &amp; Gifts</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#sessions">Sessions</a><a href="#gifts">Gifts</a><a href="#why">Why Us</a><a href="#area">Area</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-amber" href="tel:+18657054253">Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Corryton, Tennessee</span>
+      <h1>Your family, in that <em>golden hour</em> light.</h1>
+      <p class="lead">Natural-light outdoor sessions in East Tennessee: newborns and Fresh 48s, maternity, cake smashes, seniors, holidays, and the whole crew with the grandparents. Plus handcrafted gifts made to keep the moment.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="tel:+18657054253">Call to Book a Session</a>
+        <a class="btn btn-ghost" href="#sessions">See the Sessions</a>
+      </div>
+      <div class="chips"><span class="chip">Outdoor &amp; natural light</span><span class="chip">Mini sessions</span><span class="chip">Knox County</span></div>
+    </div>
+    <div class="stage" id="stage" role="button" tabindex="0" aria-label="Click the camera shutter">
+      <svg class="camera" viewBox="0 0 400 300" aria-hidden="true">
+        <g fill="none" stroke="#2b2420" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+          <rect class="btn-top" x="74" y="54" width="44" height="18" rx="4" fill="#d98a2b"/>
+          <path d="M150 86 l18-34 h64 l18 34" fill="#f8eedb"/>
+          <rect x="40" y="84" width="320" height="176" rx="22" fill="#fdf7ea"/>
+          <rect x="40" y="120" width="320" height="104" fill="#4f8580" stroke-width="4"/>
+          <path d="M40 132 h320 M40 212 h320" stroke="#2f5754" stroke-width="2" stroke-dasharray="2 8"/>
+          <circle cx="200" cy="168" r="78" fill="#fdf7ea"/>
+          <circle cx="200" cy="168" r="60" fill="#2b2420"/>
+          <circle cx="200" cy="168" r="44" fill="#3a3330" stroke="#f1b85a" stroke-width="3"/>
+          <rect x="290" y="96" width="44" height="22" rx="4" fill="#f1b85a"/>
+          <circle cx="82" cy="104" r="8" fill="#d98a2b"/>
+        </g>
+        <g class="shutter">
+          <path d="M200 132 L232 150 L232 186 L200 204 L168 186 L168 150Z" fill="#d98a2b" opacity=".9"/>
+          <path d="M200 132 L232 150 L200 168Z M232 186 L200 204 L200 168Z M168 186 L168 150 L200 168Z" fill="#b5691a"/>
+        </g>
+        <circle cx="186" cy="150" r="8" fill="#fff" opacity=".7"/>
+      </svg>
+      <div class="flash"></div>
+      <p class="click-hint">tap the camera</p>
+    </div>
+  </div>
+  <svg class="road" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 C200 20 360 90 560 50 S900 10 1200 60" fill="none" stroke="#b5691a" stroke-width="3"/></svg>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="reel">
+    <span>Newborn &amp; Fresh 48</span><span>Maternity</span><span>Cake Smash</span><span>Seniors &amp; Blue Hour</span><span>Families &amp; Grandparents</span><span>Couples</span><span>Holiday Minis</span><span>Handcrafted Gifts</span>
+    <span>Newborn &amp; Fresh 48</span><span>Maternity</span><span>Cake Smash</span><span>Seniors &amp; Blue Hour</span><span>Families &amp; Grandparents</span><span>Couples</span><span>Holiday Minis</span><span>Handcrafted Gifts</span>
+  </div>
+</div>
+
+<section id="sessions">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The sessions</span>
+      <h2>Every chapter, <em>one frame at a time</em></h2>
+      <p>From the first 48 hours to the senior year, outdoors in soft natural light. Here's what Goin' Somewhere photographs.</p>
+    </div>
+    <div class="grid">
+      <article class="frame reveal"><div class="pic p3"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M20 55 q30 -30 60 0 q-30 18 -60 0z"/><circle cx="68" cy="44" r="9"/><path d="M30 62 h40"/></svg></div><span class="tag">Newborn</span><h3>Newborn &amp; Fresh 48</h3><p>Those first days, including the tiny details: fingers, toes and all.</p></article>
+      <article class="frame reveal"><div class="pic p7"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><circle cx="50" cy="22" r="9"/><path d="M50 31 v10 q18 6 12 26 h-20 v-36"/><path d="M38 44 l12 6"/></svg></div><span class="tag">Maternity</span><h3>Maternity</h3><p>Glowing bump portraits, with options for siblings and couples.</p></article>
+      <article class="frame reveal"><div class="pic p1"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="26" y="40" width="48" height="26" rx="4"/><path d="M26 52 q12 6 24 0 t24 0"/><path d="M50 40 v-12"/><path d="M50 22 q-4 -6 0 -10 q4 4 0 10z"/></svg></div><span class="tag">First birthday</span><h3>Cake Smash</h3><p>One candle, one cake, and a whole lot of frosting.</p></article>
+      <article class="frame reveal"><div class="pic p5"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 34 l20 -10 20 10 -20 10z"/><path d="M38 38 v10 q12 8 24 0 v-10"/><path d="M70 34 v14"/><circle cx="78" cy="16" r="4"/></svg></div><span class="tag">Seniors</span><h3>Senior Portraits</h3><p>Class-of portraits, including a moody blue hour option.</p></article>
+      <article class="frame reveal"><div class="pic p2"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><circle cx="30" cy="28" r="7"/><circle cx="50" cy="24" r="8"/><circle cx="70" cy="30" r="6"/><path d="M20 66 q10 -28 20 0 M38 66 q12 -34 24 0 M62 66 q8 -24 16 0"/></svg></div><span class="tag">Families</span><h3>Family &amp; Grandparents</h3><p>The whole family together, grandparents included.</p></article>
+      <article class="frame reveal"><div class="pic p4"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 62 C20 44 26 18 42 22 c5 1 8 6 8 6 s3 -5 8 -6 c16 -4 22 22 -8 40z"/></svg></div><span class="tag">Couples</span><h3>Couples &amp; Kids</h3><p>Couple and child portraits, relaxed and outdoors.</p></article>
+      <article class="frame reveal"><div class="pic p6"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 12 l14 22 h-8 l12 18 h-10 l12 18 h-40 l12 -18 h-10 l12 -18 h-8z"/><path d="M50 70 v6"/></svg></div><span class="tag">Holidays</span><h3>Holiday Sessions</h3><p>Christmas, Thanksgiving and Halloween themed sessions.</p></article>
+      <article class="frame reveal"><div class="pic p8"><svg viewBox="0 0 100 80" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><circle cx="50" cy="40" r="22"/><path d="M50 26 v14 l9 6"/></svg></div><span class="tag">Quick &amp; easy</span><h3>Mini Sessions</h3><p>Built for busy families who want great photos without a long shoot.</p></article>
+    </div>
+    <p class="note reveal"><strong>Pricing &amp; dates:</strong> call <a href="tel:+18657054253">(865) 705-4253</a> or email for current session availability and details.</p>
+  </div>
+</section>
+
+<section class="gifts" id="gifts">
+  <div class="wrap gift-wrap">
+    <div class="sec-head reveal" style="margin-bottom:0">
+      <span class="eyebrow" style="color:var(--gold)">&amp; Gifts</span>
+      <h2>Made by hand, <em>made to keep</em></h2>
+      <p>The "&amp; Gifts" half of Goin' Somewhere: handcrafted pieces alongside the photography. Ask what's available right now.</p>
+      <div class="cta-row"><a class="btn btn-amber" href="mailto:goinsomewherephotoandgifts@gmail.com?subject=Handcrafted%20gifts">Ask About Gifts</a></div>
+    </div>
+    <div class="gift-card reveal">
+      <ul>
+        <li>Handcrafted gifts, made locally in Corryton</li>
+        <li>A natural pairing with your session photos</li>
+        <li>Message or call to see current pieces</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Goin' Somewhere</span>
+      <h2>Real light. <em>Real moments.</em></h2>
+    </div>
+    <div class="why">
+      <div class="reveal"><span class="num">01</span><h3>Natural light, outdoors</h3><p>Sessions are shot outside in natural light for warm, honest photos.</p></div>
+      <div class="reveal"><span class="num">02</span><h3>Every stage of life</h3><p>Newborn, maternity, first birthday, seniors, couples and families.</p></div>
+      <div class="reveal"><span class="num">03</span><h3>Minis for busy families</h3><p>Mini sessions keep it short and easy when schedules are full.</p></div>
+      <div class="reveal"><span class="num">04</span><h3>Local to Corryton</h3><p>Based right here in Knox County, Tennessee.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Based in <em>Corryton, TN</em></h2>
+      <p>Outdoor sessions around Corryton and East Tennessee. Location details are set when you book.</p>
+    </div>
+    <div class="area">
+      <div class="map reveal"><iframe title="Map of Corryton, TN" loading="lazy" src="https://www.google.com/maps?q=Corryton%2C%20TN%2037721&output=embed"></iframe></div>
+      <div class="area-card reveal">
+        <h3 style="font-family:var(--display);font-size:24px">Where are we goin'?</h3>
+        <p style="color:var(--muted);margin-top:6px">Tell us the moment you want to remember and we'll find the light for it.</p>
+        <svg class="trip" viewBox="0 0 300 140" aria-hidden="true"><path d="M20 110 C80 30 140 140 200 60 S280 40 280 30" fill="none" stroke="#4f8580" stroke-width="3"/><circle cx="20" cy="110" r="7" fill="#d98a2b"/><path d="M280 14 c-9 0 -14 7 -14 13 c0 10 14 22 14 22 s14 -12 14 -22 c0 -6 -5 -13 -14 -13z" fill="#d98a2b"/><circle cx="280" cy="27" r="4" fill="#fdf7ea"/><text x="10" y="134" font-family="Lato,Arial,sans-serif" font-size="12" fill="#6b5d52" font-weight="700">You</text><text x="232" y="70" font-family="Lato,Arial,sans-serif" font-size="12" fill="#6b5d52" font-weight="700">Your session</text></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Book your session</span>
+      <h2>Let's go <em>somewhere.</em></h2>
+      <p>Call, text or email to check dates and book. Hours aren't posted, so reach out anytime and you'll hear back.</p>
+    </div>
+    <div class="c-grid">
+      <a class="c-tile reveal" href="tel:+18657054253"><span class="c-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>(865) 705-4253</b></span></a>
+      <a class="c-tile reveal" href="mailto:goinsomewherephotoandgifts@gmail.com"><span class="c-ico" style="background:var(--teal)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span><small>Email</small><b>goinsomewherephotoandgifts@gmail.com</b></span></a>
+      <a class="c-tile reveal" href="https://www.facebook.com/goinsomewherephotographyandgifts/" target="_blank" rel="noopener"><span class="c-ico" style="background:var(--amber-d)"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></span><span><small>Facebook</small><b>See recent sessions</b></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <b>Goin' Somewhere Photography &amp; Gifts</b>
+  Corryton, TN 37721 · <a href="tel:+18657054253">(865) 705-4253</a><br>
+  © 2026 Goin' Somewhere Photography &amp; Gifts · Concept by Code Craft Media
+</footer>
+
+<div class="bar">
+  <a class="btn btn-amber" href="tel:+18657054253">Call Now</a>
+  <a class="btn btn-ghost" href="mailto:goinsomewherephotoandgifts@gmail.com?subject=Session%20booking">Email to Book</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if(!('IntersectionObserver' in window)){all();return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(all,1500);
+  var s=document.getElementById('stage');
+  function click(){s.classList.remove('click');void s.offsetWidth;s.classList.add('click')}
+  s.addEventListener('click',click);
+  s.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();click()}});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(click,900)}
+})();
+</script>
+</body>
+</html>

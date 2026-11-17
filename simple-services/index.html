@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Simple Services | Painting, Pressure Washing &amp; Handyman in Chattanooga</title>
+<meta name="description" content="Simple Services LLC: interior and exterior painting, pressure washing, TV mounting and carpet cleaning in Chattanooga, TN. Free estimates. Call 615-801-1155.">
+<meta name="theme-color" content="#2c3e57">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2c3e57; --slate-d:#223148; --slate-l:#3a5070;
+  --orange:#f26b1d; --orange-d:#d9570c;
+  --concrete:#e6e3dd; --concrete-d:#d6d2ca; --paper:#f4f2ee;
+  --graphite:#1b1f24; --ink:#2a2f36; --muted:#5a6270;
+  --display:"Chivo","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.04;letter-spacing:-.02em;margin:0;color:var(--graphite)}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+/* concept banner */
+.concept{background:var(--graphite);color:#e9e6e0;font-size:12.5px;text-align:center;padding:7px 14px;line-height:1.4;letter-spacing:.01em}
+.concept b{color:#ffb98f;font-weight:600}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(244,242,238,.94);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid rgba(27,31,36,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--graphite)}
+.logo-mark{width:38px;height:38px;border-radius:9px;background:var(--slate);display:grid;place-items:center;box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
+.logo-txt{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em;line-height:1}
+.logo-txt small{display:block;font-family:var(--mono);font-weight:500;font-size:10.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-top:3px}
+.nav-links{display:none;gap:4px;align-items:center}
+.nav-links a{text-decoration:none;font-weight:500;font-size:15px;padding:8px 12px;border-radius:8px;transition:background .2s,color .2s}
+.nav-links a:hover{background:var(--concrete);color:var(--slate)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:700;font-size:16px;text-decoration:none;border-radius:10px;padding:14px 22px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s;line-height:1.15}
+.btn svg{flex:none}
+.btn-orange{background:var(--orange);color:var(--graphite);box-shadow:0 4px 0 var(--orange-d),0 10px 22px -8px rgba(242,107,29,.6)}
+.btn-orange:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--orange-d),0 14px 26px -8px rgba(242,107,29,.7)}
+.btn-orange:active{transform:translateY(3px);box-shadow:0 1px 0 var(--orange-d)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-dark{background:var(--graphite);color:#fff}
+.btn-dark:hover{background:var(--slate);transform:translateY(-2px)}
+.nav .btn{padding:10px 16px;font-size:15px}
+.nav-call{display:none}
+@media(min-width:900px){.nav-links{display:flex}.nav-call{display:inline-flex}}
+
+/* HERO pegboard */
+.hero{position:relative;background-color:var(--slate);color:#fff;overflow:hidden;
+  background-image:radial-gradient(circle at 50% 50%, #17222f 0 3.2px, rgba(255,255,255,.07) 3.6px 4.4px, transparent 4.8px);
+  background-size:28px 28px;background-position:14px 14px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.05),transparent 40%,rgba(0,0,0,.28));pointer-events:none}
+.hero-grid{position:relative;display:grid;gap:26px;padding-top:44px;padding-bottom:56px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--graphite);color:#ffb98f;padding:7px 11px;font-size:11px;border-radius:6px;box-shadow:0 2px 0 rgba(0,0,0,.3)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--orange);display:inline-block}
+.hero h1{color:#fff;font-size:clamp(42px,11.5vw,92px);margin:18px 0 18px;line-height:.96;font-weight:800}
+.hero h1 .hl{color:var(--orange);position:relative;white-space:nowrap}
+.hero h1 .strike{position:relative;display:inline-block;color:#c6d0dc}
+.hero h1 .strike::after{content:"";position:absolute;left:-4%;right:-4%;top:54%;height:.11em;background:var(--orange);border-radius:4px;transform:rotate(-3deg)}
+.hero p.lead{font-size:18.5px;color:#dbe2ea;max-width:34em;margin-bottom:26px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctas .btn{flex:1 1 220px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;padding:0;list-style:none;font-size:14.5px;color:#c9d3df}
+.hero-facts li{display:flex;align-items:center;gap:8px}
+.hero-facts svg{color:var(--orange)}
+
+.board{position:relative;min-height:330px}
+.board svg.tools{width:100%;height:auto;filter:drop-shadow(0 14px 14px rgba(0,0,0,.35))}
+.tool{transform-origin:var(--ox) var(--oy);transform-box:view-box}
+@media (prefers-reduced-motion:no-preference){
+  .tool{animation:sway 6s ease-in-out infinite}
+  .tool.t2{animation-delay:-1.4s;animation-duration:7s}
+  .tool.t3{animation-delay:-2.6s;animation-duration:5.4s}
+  .tool.t4{animation-delay:-.6s;animation-duration:6.6s}
+  .tool.t5{animation-delay:-3.3s}
+  .tool.t6{animation-delay:-2s;animation-duration:7.4s}
+}
+@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+.sticky-note{position:absolute;right:2%;bottom:4%;width:min(210px,52%);background:#fdf7e6;color:var(--graphite);padding:16px 16px 14px;border-radius:3px;transform:rotate(3deg);box-shadow:0 18px 30px -12px rgba(0,0,0,.55);font-size:14px;line-height:1.35}
+.sticky-note::before{content:"";position:absolute;top:-10px;left:50%;width:70px;height:22px;transform:translateX(-50%) rotate(-4deg);background:rgba(242,107,29,.85)}
+.sticky-note b{font-family:var(--display);font-weight:800;font-size:17px;display:block;margin-bottom:6px}
+.sticky-note ul{list-style:none;margin:0;padding:0}
+.sticky-note li{display:flex;gap:7px;align-items:center;padding:2px 0}
+.sticky-note li s{color:#6b6f75}
+.sticky-note .box{width:14px;height:14px;border:2px solid var(--graphite);border-radius:3px;flex:none;position:relative}
+.sticky-note .box.on::after{content:"";position:absolute;left:3px;top:-2px;width:5px;height:10px;border:solid var(--orange);border-width:0 3px 3px 0;transform:rotate(40deg)}
+
+@media(min-width:900px){
+  .hero-grid{grid-template-columns:1.08fr .92fr;align-items:center;padding-top:76px;padding-bottom:92px;gap:40px}
+  .hero h1{font-size:clamp(56px,5.4vw,82px)}
+  .tag{font-size:12px;letter-spacing:.14em}
+  .hero-ctas .btn{flex:0 0 auto}
+}
+
+/* measuring-tape ruler divider */
+.tape{position:relative;height:46px;background:var(--orange);overflow:hidden;border-top:2px solid var(--graphite);border-bottom:2px solid var(--graphite);
+  background-image:
+    repeating-linear-gradient(90deg,var(--graphite) 0 2px,transparent 2px 80px),
+    repeating-linear-gradient(90deg,var(--graphite) 0 1.5px,transparent 1.5px 40px),
+    repeating-linear-gradient(90deg,var(--graphite) 0 1px,transparent 1px 10px);
+  background-size:100% 20px,100% 13px,100% 8px;background-repeat:no-repeat;background-position:0 0,0 0,0 0}
+.tape.alt{background-color:#f5c518}
+.tape .nums{position:absolute;left:0;bottom:3px;display:flex;font-family:var(--mono);font-weight:600;font-size:13px;color:var(--graphite);white-space:nowrap}
+.tape .nums span{width:80px;padding-left:5px;flex:none}
+.tape .brand{position:absolute;right:16px;top:50%;transform:translateY(-35%);font-family:var(--display);font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;background:var(--graphite);color:var(--orange);padding:3px 8px;border-radius:3px}
+.tape.alt .brand{color:#f5c518}
+
+/* sections */
+section{position:relative}
+.sec{padding:72px 0}
+.eyebrow{font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-d);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:3px;background:currentColor;border-radius:2px}
+.sec h2{font-size:clamp(34px,8vw,58px);margin-bottom:16px}
+.sec-intro{font-size:18px;color:var(--muted);max-width:40em}
+
+/* services */
+.svc-grid{display:grid;gap:18px;margin-top:38px}
+.svc{position:relative;background:#fff;border-radius:var(--r);padding:26px 22px 22px;border:1px solid rgba(27,31,36,.08);box-shadow:0 1px 0 rgba(27,31,36,.04),0 18px 30px -24px rgba(27,31,36,.4);transition:transform .25s ease,box-shadow .25s ease;overflow:hidden}
+.svc::after{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+.svc:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(27,31,36,.04),0 26px 36px -22px rgba(27,31,36,.5)}
+.svc:hover::after{transform:scaleY(1)}
+.svc-ic{width:56px;height:56px;border-radius:12px;background:var(--slate);display:grid;place-items:center;margin-bottom:18px;color:var(--concrete);
+  background-image:radial-gradient(circle,#1d2b3d 1.6px,transparent 2px);background-size:9px 9px}
+.svc h3{font-size:23px;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:16px;margin-bottom:12px}
+.svc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.svc li{font-size:13.5px;font-weight:500;background:var(--concrete);color:var(--graphite);padding:4px 10px;border-radius:30px}
+.svc .q{font-family:var(--display);font-weight:800;color:var(--slate);font-size:15px;margin:-2px 0 8px}
+@media(min-width:700px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.svc-grid{grid-template-columns:repeat(3,1fr)}.svc.wide{grid-column:span 1}}
+
+/* honey-do list */
+.honey{background:var(--concrete);
+  background-image:radial-gradient(circle,rgba(27,31,36,.13) 2.2px,transparent 2.8px);background-size:26px 26px}
+.honey-grid{display:grid;gap:30px;align-items:start}
+.pad{position:relative;background:#fffdf6;border-radius:6px;box-shadow:0 30px 50px -28px rgba(27,31,36,.55),0 2px 0 rgba(0,0,0,.05);padding:58px 18px 22px;
+  background-image:linear-gradient(90deg,transparent 7px,rgba(242,107,29,.45) 7px 9px,transparent 9px)}
+.pad::before{content:"";position:absolute;top:0;left:0;right:0;height:38px;background:var(--slate);border-radius:6px 6px 0 0;
+  background-image:radial-gradient(circle,#0f1720 4px,transparent 4.5px);background-size:34px 38px;background-position:center}
+.pad h3{font-size:24px;margin:0 0 10px 2px}
+.list{list-style:none;margin:0;padding:0}
+.list li{border-bottom:1px dashed rgba(44,62,87,.18)}.list li:last-child{border-bottom:0}
+.chk{display:flex;align-items:flex-start;gap:16px;width:100%;text-align:left;background:none;border:0;padding:10px 6px 10px 2px;font:inherit;color:var(--ink);cursor:pointer;border-radius:8px;min-height:44px;transition:background .15s}
+.chk:hover{background:rgba(242,107,29,.08)}
+.chk .bx{flex:none;width:26px;height:26px;border:2.5px solid var(--graphite);border-radius:6px;background:#fff;position:relative;margin-top:1px;transition:background .15s}
+.chk .bx::after{content:"";position:absolute;left:7px;top:1px;width:7px;height:14px;border:solid var(--graphite);border-width:0 3.5px 3.5px 0;transform:rotate(42deg) scale(0);transition:transform .18s cubic-bezier(.5,1.8,.6,1)}
+.chk[aria-pressed="true"] .bx{background:var(--orange)}
+.chk[aria-pressed="true"] .bx::after{transform:rotate(42deg) scale(1)}
+.chk .t{display:block;font-weight:600;font-size:16.5px;line-height:1.3}
+.chk .d{display:block;font-size:14px;color:var(--muted);line-height:1.35;margin-top:2px}
+.chk[aria-pressed="true"] .t{text-decoration:line-through;text-decoration-color:var(--orange);text-decoration-thickness:3px}
+.list-foot{margin-top:18px;padding-top:16px;border-top:2px dashed rgba(27,31,36,.2);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.count{font-family:var(--mono);font-weight:600;font-size:14px;color:var(--slate);flex:1 1 100%}
+.list-foot .btn{flex:1 1 150px;padding:13px 16px;font-size:15.5px}
+.honey-side h2{margin-bottom:16px}
+.honey-side p{color:var(--ink);font-size:17.5px}
+.steps{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px;counter-reset:s}
+.steps li{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:12px;padding:14px 16px;box-shadow:0 10px 20px -18px rgba(27,31,36,.6)}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:8px;background:var(--graphite);color:var(--orange);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:17px}
+.steps b{display:block;color:var(--graphite)}
+.steps span{font-size:15px;color:var(--muted)}
+@media(min-width:900px){.honey-grid{grid-template-columns:.9fr 1.1fr;gap:56px}.pad{padding:62px 30px 28px}.honey-side{position:sticky;top:100px}}
+
+/* why */
+.why{background:var(--graphite);color:#d8dde3;overflow:hidden}
+.why h2{color:#fff}
+.why .sec-intro{color:#aeb6c0}
+.why .eyebrow{color:#ff9a5c}
+.why-grid{display:grid;gap:16px;margin-top:38px}
+.wcard{border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:24px 22px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0))}
+.wcard .n{font-family:var(--mono);font-size:12.5px;color:var(--orange);letter-spacing:.12em;margin-bottom:12px;display:block}
+.wcard h3{color:#fff;font-size:23px;margin-bottom:8px}
+.wcard p{margin:0;font-size:16px;color:#b9c1cb}
+.quote{margin:22px 0 0;position:relative;background:var(--slate);border-radius:var(--r);padding:30px 24px 24px;overflow:hidden;
+  background-image:radial-gradient(circle,#1d2b3d 2.4px,transparent 3px);background-size:24px 24px}
+.quote blockquote{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(28px,6.4vw,44px);color:#fff;line-height:1.1}
+.quote blockquote::before{content:"\201C";color:var(--orange)}
+.quote blockquote::after{content:"\201D";color:var(--orange)}
+.quote figcaption{margin-top:14px;font-size:15px;color:#cdd6e0}
+.quote figcaption small{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#b8c5d4;margin-top:4px}
+@media(min-width:800px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* hours + area */
+.hrs-grid{display:grid;gap:22px;margin-top:38px}
+.card{background:#fff;border-radius:var(--r);border:1px solid rgba(27,31,36,.08);box-shadow:0 20px 34px -28px rgba(27,31,36,.55);overflow:hidden}
+.timecard{padding:0}
+.timecard .head{background:var(--slate);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.timecard .head h3{color:#fff;font-size:22px}
+.status{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:30px;background:rgba(255,255,255,.12);white-space:nowrap}
+.status.open{background:#2f9e5b;color:#fff}
+.status.closed{background:rgba(255,255,255,.14);color:#e6e3dd}
+.days{list-style:none;margin:0;padding:8px 10px 12px}
+.days li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:9px;font-size:16px;border-bottom:1px dashed rgba(27,31,36,.12)}
+.days li:last-child{border-bottom:0}
+.days li .dn{font-weight:600;color:var(--graphite)}
+.days li .tm{font-family:var(--mono);font-size:14.5px;color:var(--muted)}
+.days li.today{background:var(--orange);border-bottom-color:transparent}
+.days li.today .dn,.days li.today .tm{color:var(--graphite)}
+.days li.today .dn::after{content:"Today";margin-left:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--graphite);color:#fff;padding:3px 7px;border-radius:4px;vertical-align:2px}
+.timecard .note{padding:0 22px 20px;font-size:14.5px;color:var(--muted);margin:0}
+.map-card{display:flex;flex-direction:column}
+.map-frame{position:relative;aspect-ratio:4/3;background:var(--concrete-d)}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.05)}
+.map-card .body{padding:20px 22px 22px}
+.map-card h3{font-size:22px;margin-bottom:6px}
+.map-card p{margin:0;color:var(--muted);font-size:16px}
+@media(min-width:900px){.hrs-grid{grid-template-columns:.85fr 1.15fr}.map-frame{aspect-ratio:auto;flex:1;min-height:340px}}
+
+/* contact */
+.contact{background:var(--orange);color:var(--graphite);overflow:hidden;
+  background-image:radial-gradient(circle,rgba(27,31,36,.16) 2.4px,transparent 3px);background-size:28px 28px}
+.contact .eyebrow{color:var(--graphite)}
+.contact h2{font-size:clamp(38px,10vw,76px)}
+.contact-grid{display:grid;gap:26px;align-items:center}
+.contact p.big{font-size:19px;max-width:30em;font-weight:500}
+.dial{background:var(--graphite);color:#fff;border-radius:18px;padding:24px;box-shadow:0 30px 50px -26px rgba(0,0,0,.6)}
+.dial a.num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(34px,10vw,52px);color:#fff;text-decoration:none;letter-spacing:-.01em;line-height:1.05;margin:6px 0 4px}
+.dial a.num:hover{color:#ffb98f}
+.dial .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9aa4b1}
+.dial .mail{display:inline-block;color:#ffb98f;font-weight:600;word-break:break-all;margin-top:4px;text-decoration:none;border-bottom:2px solid rgba(255,185,143,.35)}
+.dial .mail:hover{border-color:#ffb98f}
+.dial .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.dial .row .btn{flex:1 1 140px}
+.dial hr{border:0;border-top:1px dashed rgba(255,255,255,.18);margin:20px 0 16px}
+@media(min-width:900px){.contact-grid{grid-template-columns:1.1fr .9fr;gap:60px}.dial{padding:34px}}
+
+footer{background:var(--graphite);color:#9aa4b1;padding:40px 0 34px;font-size:14.5px}
+.foot{display:grid;gap:22px}
+footer .logo{color:#fff}
+footer .logo-txt small{color:#8892a0}
+footer a{color:#d8dde3;text-decoration:none}
+footer a:hover{color:var(--orange)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:13px}
+@media(min-width:900px){.foot{grid-template-columns:1fr auto;align-items:center}}
+
+/* sticky mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(27,31,36,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:3px solid var(--orange)}
+.mbar .btn{flex:1;padding:13px 10px;font-size:15.5px}
+.mbar .btn-ghost{border-color:rgba(255,255,255,.35)}
+@media(max-width:899px){body{padding-bottom:calc(84px + env(safe-area-inset-bottom));background:var(--graphite)}}
+main{background:var(--paper)}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Simple Services. Not live.</div>
+
+<header class="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Simple Services home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="14" height="6" rx="1.5" fill="#f26b1d"/><path d="M17 7h2.5a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1H11v2.5" stroke="#e6e3dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="9.2" y="14.5" width="3.6" height="7" rx="1.2" fill="#e6e3dd"/></svg>
+      </span>
+      <span class="logo-txt">Simple Services<small>Chattanooga, TN</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#list">Honey-do list</a>
+      <a href="#why">Why us</a>
+      <a href="#hours">Hours &amp; area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-orange nav-call" href="tel:+16158011155">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      615-801-1155
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag"><i></i>Painters / Handyman &middot; Chattanooga, TN</span>
+      <h1 id="h1">That <span class="strike">to-do list?</span><br>We make it <span class="hl">simple.</span></h1>
+      <p class="lead">Interior and exterior painting, pressure washing, TV mounting and carpet cleaning for Chattanooga homes and businesses. One call, a free estimate, and it's <strong style="color:#fff">100% worry-free from start to finish.</strong></p>
+      <div class="hero-ctas">
+        <a class="btn btn-orange" href="tel:+16158011155">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Get a free estimate
+        </a>
+        <a class="btn btn-ghost" href="#list">Build your honey-do list &rarr;</a>
+      </div>
+      <ul class="hero-facts">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Free estimates</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Service guaranteed</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Homes &amp; businesses</li>
+      </ul>
+    </div>
+
+    <div class="board" aria-hidden="true">
+      <svg class="tools" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#cfd5dc"/><stop offset=".5" stop-color="#f1f3f5"/><stop offset="1" stop-color="#aab3bd"/></linearGradient>
+          <linearGradient id="wood" x1="0" x2="1"><stop offset="0" stop-color="#c98a4b"/><stop offset="1" stop-color="#a86b33"/></linearGradient>
+        </defs>
+        <!-- pegboard hooks -->
+        <g fill="none" stroke="#9fb0c3" stroke-width="5" stroke-linecap="round">
+          <path d="M70 36v22q0 10 10 10"/><path d="M180 36v18"/><path d="M290 36v18"/><path d="M400 36v22q0 10 10 10"/><path d="M110 236v16"/><path d="M360 236v16"/>
+        </g>
+        <!-- hammer -->
+        <g class="tool t1" style="--ox:80px;--oy:62px">
+          <rect x="71" y="74" width="18" height="170" rx="8" fill="url(#wood)"/>
+          <rect x="71" y="200" width="18" height="44" rx="8" fill="#1b1f24"/>
+          <path d="M40 60h68a8 8 0 0 1 8 8v14a8 8 0 0 1-8 8H58c-14 0-24-8-28-18z" fill="url(#steel)"/>
+          <path d="M116 66q18 0 24 18l-24 0z" fill="#aab3bd"/>
+        </g>
+        <!-- paint roller -->
+        <g class="tool t2" style="--ox:180px;--oy:54px">
+          <rect x="140" y="56" width="92" height="40" rx="10" fill="#f26b1d"/>
+          <rect x="140" y="56" width="92" height="12" rx="6" fill="#ff8c4a" opacity=".7"/>
+          <path d="M232 76h14v40h-60v34" fill="none" stroke="#e6e3dd" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+          <rect x="176" y="146" width="20" height="96" rx="9" fill="#1b1f24"/>
+          <circle cx="186" cy="232" r="4" fill="#3a5070"/>
+        </g>
+        <!-- wrench -->
+        <g class="tool t3" style="--ox:290px;--oy:54px">
+          <path d="M282 60c-16 4-24 22-16 36l10-2 6 10-6 8c12 10 32 6 38-8 3-7 3-14 0-20l-12 2 2-14z" fill="url(#steel)" transform="rotate(0)"/>
+          <rect x="283" y="108" width="16" height="130" rx="8" fill="url(#steel)"/>
+          <circle cx="291" cy="226" r="6" fill="#2c3e57"/>
+        </g>
+        <!-- tape measure -->
+        <g class="tool t4" style="--ox:410px;--oy:66px">
+          <rect x="360" y="74" width="108" height="100" rx="22" fill="#f5c518"/>
+          <rect x="360" y="74" width="108" height="100" rx="22" fill="none" stroke="#1b1f24" stroke-width="5"/>
+          <circle cx="414" cy="124" r="26" fill="#1b1f24"/>
+          <circle cx="414" cy="124" r="9" fill="#f5c518"/>
+          <rect x="444" y="160" width="30" height="16" rx="3" fill="#1b1f24"/>
+          <path d="M468 164h22v10h-22" fill="#e6e3dd"/>
+          <path d="M478 164v5M486 164v5" stroke="#1b1f24" stroke-width="2"/>
+        </g>
+        <!-- brush -->
+        <g class="tool t5" style="--ox:110px;--oy:250px">
+          <rect x="102" y="252" width="16" height="70" rx="8" fill="url(#wood)"/>
+          <rect x="96" y="318" width="28" height="20" rx="3" fill="url(#steel)"/>
+          <path d="M94 338h32v34q-16 10-32 0z" fill="#e6e3dd"/>
+          <path d="M94 362q16 10 32 0v10q-16 10-32 0z" fill="#f26b1d"/>
+        </g>
+        <!-- screwdriver -->
+        <g class="tool t6" style="--ox:360px;--oy:250px">
+          <rect x="348" y="254" width="24" height="64" rx="10" fill="#f26b1d"/>
+          <path d="M352 266h16M352 280h16M352 294h16" stroke="#c24f0c" stroke-width="3"/>
+          <rect x="356" y="318" width="8" height="70" fill="url(#steel)"/>
+          <path d="M356 388h8l-2 12h-4z" fill="#aab3bd"/>
+        </g>
+        <!-- level -->
+        <g>
+          <rect x="190" y="276" width="140" height="30" rx="6" fill="#e6e3dd"/>
+          <rect x="190" y="276" width="140" height="30" rx="6" fill="none" stroke="#1b1f24" stroke-width="4"/>
+          <rect x="246" y="282" width="28" height="18" rx="9" fill="#9fe0b3" stroke="#1b1f24" stroke-width="3"/>
+          <circle cx="262" cy="291" r="4" fill="#fff"/>
+          <circle cx="204" cy="291" r="5" fill="#1b1f24"/><circle cx="316" cy="291" r="5" fill="#1b1f24"/>
+        </g>
+      </svg>
+      <div class="sticky-note">
+        <b>Honey-do</b>
+        <ul>
+          <li><span class="box on"></span><s>Paint the living room</s></li>
+          <li><span class="box on"></span><s>Wash the driveway</s></li>
+          <li><span class="box"></span>Mount the new TV</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tape" aria-hidden="true"><div class="nums" data-start="1"></div><span class="brand">Simple</span></div>
+
+<!-- SERVICES -->
+<section class="sec" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="eyebrow">What we do</div>
+    <h2 id="svc-h" class="rv">Paint, wash, mount, clean.</h2>
+    <p class="sec-intro rv">Everything below comes straight from the Simple Services lineup. Not sure if your job fits? Call 615-801-1155 and ask.</p>
+
+    <div class="svc-grid">
+      <article class="svc rv">
+        <div class="svc-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="14" height="6" rx="1.5"/><path d="M17 6h3v5H11v3"/><rect x="9.5" y="14" width="3" height="7" rx="1"/></svg></div>
+        <h3>Interior painting</h3>
+        <p>Custom interior painting, planned with you step by step so the room comes out the way you pictured it.</p>
+        <ul><li>Walls &amp; rooms</li><li>Cabinets</li><li>Crown molding &amp; trim</li><li>Color consultation</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+        <h3>Exterior painting</h3>
+        <p>Their stated mission: make your next painting project <em>stress-free and affordable</em>. Curb appeal, without the weekend on a ladder.</p>
+        <ul><li>House exteriors</li><li>Residential</li><li>Free estimate</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l6-4 6 4v13"/><path d="M15 12h6v9"/><path d="M7 11h4M7 15h4"/></svg></div>
+        <h3>Commercial painting</h3>
+        <p>Painting for commercial properties, with work done on spec, on time and on budget.</p>
+        <ul><li>Condos &amp; apartments</li><li>Property managers</li><li>Retail spaces</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h9l3-3h3v6h-3l-3-3"/><path d="M6 9v3"/><path d="M19 14c0 1.5-1 3-2 4M21 15c0 2-1 4-2.5 5.5M17 13c0 1-.5 2-1 2.5"/></svg></div>
+        <h3>Pressure washing</h3>
+        <p>Residential, commercial and industrial pressure washing, including condos and apartment communities.</p>
+        <ul><li>Wood decks</li><li>Driveways</li><li>Garage floors</li><li>Stairs &amp; walkways</li><li>Fencing</li><li>Home exteriors</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>TV mounting</h3>
+        <p class="q">"No Mount? No Problem!"</p>
+        <p>They bring their own heavy-duty steel mounts for any TV, and they're "quicker than commercials."</p>
+        <ul><li>Any size TV</li><li>Steel mounts on hand</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 20v-4h12v4"/><path d="M12 16V4"/><path d="M9 4h6"/></svg></div>
+        <h3>Carpet cleaning</h3>
+        <p>Quality home services for the Chattanooga area: the most professional work at fair rates. Schedule an appointment or ask for an estimate.</p>
+        <ul><li>Homes</li><li>Estimates available</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="tape alt" aria-hidden="true"><div class="nums" data-start="13"></div><span class="brand">Measure twice</span></div>
+
+<!-- HONEY-DO LIST -->
+<section class="sec honey" id="list" aria-labelledby="list-h">
+  <div class="wrap honey-grid">
+    <div class="honey-side">
+      <div class="eyebrow">The honey-do list</div>
+      <h2 id="list-h" class="rv">Check it off. Send it over.</h2>
+      <p class="rv">Tap everything on your list. We'll bundle it into one message so Simple Services can give you a free estimate on the whole thing, not one chore at a time.</p>
+      <ol class="steps rv">
+        <li><div><b>Check your jobs</b><span>Pick from their real services.</span></div></li>
+        <li><div><b>Text or email the list</b><span>It's pre-written for you. Just hit send.</span></div></li>
+        <li><div><b>Get a free estimate</b><span>Then cross it all off for good.</span></div></li>
+      </ol>
+    </div>
+
+    <div class="pad rv">
+      <h3>My honey-do list</h3>
+      <ul class="list" id="hd">
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Interior painting"><span class="bx"></span><span><span class="t">Paint a room (or three)</span><span class="d">Interior painting</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Exterior house painting"><span class="bx"></span><span><span class="t">Freshen up the outside of the house</span><span class="d">Exterior painting</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Cabinet refinishing/repainting"><span class="bx"></span><span><span class="t">Redo the kitchen cabinets</span><span class="d">Cabinet refinishing &amp; repainting</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Crown molding / trim"><span class="bx"></span><span><span class="t">Add crown molding or trim</span><span class="d">Mantels, baseboards, door casings</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Color consultation"><span class="bx"></span><span><span class="t">Finally pick the paint color</span><span class="d">Color consultation</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Pressure washing (driveway/deck/house)"><span class="bx"></span><span><span class="t">Pressure wash the driveway, deck or siding</span><span class="d">Pressure washing</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="TV mounting"><span class="bx"></span><span><span class="t">Get the TV on the wall</span><span class="d">TV mounting, they bring the steel mount</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Carpet cleaning"><span class="bx"></span><span><span class="t">Deep-clean the carpets</span><span class="d">Carpet cleaning</span></span></button></li>
+        <li><button type="button" class="chk" aria-pressed="false" data-item="Commercial painting"><span class="bx"></span><span><span class="t">Repaint the shop, office or units</span><span class="d">Commercial painting</span></span></button></li>
+      </ul>
+      <div class="list-foot">
+        <span class="count" id="hd-count" aria-live="polite">0 jobs checked. Tap to add.</span>
+        <a class="btn btn-orange" id="hd-sms" href="sms:+16158011155">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Text my list</a>
+        <a class="btn btn-dark" id="hd-mail" href="mailto:Simpleservicesllc@yahoo.com?subject=Free%20estimate%20request">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email it</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tape" aria-hidden="true"><div class="nums" data-start="25"></div><span class="brand">Simple</span></div>
+
+<!-- WHY -->
+<section class="sec why" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="eyebrow">Why Simple Services</div>
+    <h2 id="why-h" class="rv">Straight answers. Solid work.</h2>
+    <p class="sec-intro rv">No runaround, no guesswork. Here's what Simple Services puts in writing.</p>
+    <div class="why-grid">
+      <div class="wcard rv"><span class="n">01 / GUARANTEE</span><h3>Service guaranteed</h3><p>"We guarantee our service, and we'll ensure you're more than satisfied with our results."</p></div>
+      <div class="wcard rv"><span class="n">02 / ESTIMATES</span><h3>Free estimates</h3><p>Know the scope before anything starts. Call, text or email to schedule yours.</p></div>
+      <div class="wcard rv"><span class="n">03 / PEACE OF MIND</span><h3>Worry-free, start to finish</h3><p>They plan each step with you so the job runs efficient and reliable, small task or large.</p></div>
+      <div class="wcard rv"><span class="n">04 / LOCAL</span><h3>Chattanooga-based</h3><p>Serving Chattanooga and the surrounding areas, for homeowners, renters and property managers alike.</p></div>
+    </div>
+    <figure class="quote rv">
+      <blockquote>Very professional and quick.</blockquote>
+      <figcaption>Jean D., Chattanooga, TN<small>Testimonial from the current Simple Services website</small></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- HOURS + AREA -->
+<section class="sec" id="hours" aria-labelledby="hrs-h">
+  <div class="wrap">
+    <div class="eyebrow">Hours &amp; service area</div>
+    <h2 id="hrs-h" class="rv">Weekdays, all over Chattanooga.</h2>
+    <p class="sec-intro rv">Call during business hours, or text and email any time and they'll get back to you.</p>
+    <div class="hrs-grid">
+      <div class="card timecard rv">
+        <div class="head"><h3>Time card</h3><span class="status" id="status">Mon&ndash;Fri</span></div>
+        <ul class="days" id="days">
+          <li data-d="1"><span class="dn">Monday</span><span class="tm">8am &ndash; 5pm</span></li>
+          <li data-d="2"><span class="dn">Tuesday</span><span class="tm">8am &ndash; 5pm</span></li>
+          <li data-d="3"><span class="dn">Wednesday</span><span class="tm">8am &ndash; 5pm</span></li>
+          <li data-d="4"><span class="dn">Thursday</span><span class="tm">8am &ndash; 5pm</span></li>
+          <li data-d="5"><span class="dn">Friday</span><span class="tm">8am &ndash; 5pm</span></li>
+          <li data-d="6"><span class="dn">Saturday</span><span class="tm">Closed</span></li>
+          <li data-d="0"><span class="dn">Sunday</span><span class="tm">Closed</span></li>
+        </ul>
+        <p class="note">Hours as listed on the Simple Services contact page.</p>
+      </div>
+      <div class="card map-card rv">
+        <div class="map-frame">
+          <iframe title="Map of Chattanooga, TN, the Simple Services service area" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Chattanooga%2C%20TN&output=embed"></iframe>
+        </div>
+        <div class="body">
+          <h3>Chattanooga &amp; surrounding areas</h3>
+          <p>Not sure if you're in range? Give them a call and ask. It takes a minute.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tape alt" aria-hidden="true"><div class="nums" data-start="37"></div><span class="brand">Measure twice</span></div>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact" aria-labelledby="ct-h">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Get a free estimate</div>
+      <h2 id="ct-h" class="rv">Let's make it simple.</h2>
+      <p class="big rv">Tell them what needs doing, from one room to a whole building. You'll get a free estimate and a straight answer.</p>
+    </div>
+    <div class="dial rv">
+      <span class="lbl">Call or text</span>
+      <a class="num" href="tel:+16158011155">615-801-1155</a>
+      <hr>
+      <span class="lbl">Email</span><br>
+      <a class="mail" href="mailto:Simpleservicesllc@yahoo.com">Simpleservicesllc@yahoo.com</a>
+      <div class="row">
+        <a class="btn btn-orange" href="tel:+16158011155">Call now</a>
+        <a class="btn btn-ghost" href="sms:+16158011155">Send a text</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" class="logo" aria-label="Back to top">
+        <span class="logo-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="14" height="6" rx="1.5" fill="#f26b1d"/><path d="M17 7h2.5a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1H11v2.5" stroke="#e6e3dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="9.2" y="14.5" width="3.6" height="7" rx="1.2" fill="#e6e3dd"/></svg></span>
+        <span class="logo-txt">Simple Services LLC<small>We make it simple</small></span>
+      </a>
+      <div class="foot-links">
+        <a href="#services">Services</a><a href="#list">Honey-do list</a><a href="#hours">Hours</a><a href="tel:+16158011155">615-801-1155</a><a href="mailto:Simpleservicesllc@yahoo.com">Email</a>
+      </div>
+    </div>
+    <div class="foot-bottom" style="margin-top:22px">
+      <span>&copy; <span id="yr">2026</span> Simple Services LLC &middot; Chattanooga, TN</span>
+      <span>Concept design by Code Craft Media</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="btn btn-orange" href="tel:+16158011155"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call</a>
+  <a class="btn btn-ghost" href="#list">Free estimate</a>
+</nav>
+
+<script>
+(function(){
+  // ruler numbers
+  document.querySelectorAll('.tape .nums').forEach(function(el){
+    var s=parseInt(el.getAttribute('data-start'),10)||1, h='';
+    for(var i=0;i<40;i++){h+='<span>'+(s+i)+'</span>';}
+    el.innerHTML=h;
+  });
+  // year
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+
+  // hours: today + open status (Chattanooga = America/New_York)
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+    var wd=parts.find(function(p){return p.type==='weekday'}).value;
+    var hr=parseInt(parts.find(function(p){return p.type==='hour'}).value,10)%24;
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}, d=map[wd];
+    var li=document.querySelector('#days li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+    var st=document.getElementById('status');
+    var open=d>=1&&d<=5&&hr>=8&&hr<17;
+    st.textContent=open?'Open now':'Closed now';
+    st.classList.add(open?'open':'closed');
+  }catch(e){}
+
+  // honey-do list
+  var btns=[].slice.call(document.querySelectorAll('#hd .chk'));
+  var cnt=document.getElementById('hd-count'), sms=document.getElementById('hd-sms'), mail=document.getElementById('hd-mail');
+  function upd(){
+    var sel=btns.filter(function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.getAttribute('data-item')});
+    var n=sel.length;
+    cnt.textContent=n? n+(n===1?' job':' jobs')+' on your list. Ready to send.' : '0 jobs checked. Tap to add.';
+    var body='Hi Simple Services! I\'d like a free estimate for:\n'+(n?sel.map(function(s){return '- '+s}).join('\n'):'- (my project)')+'\n\nMy address/area: ';
+    var ios=/iPad|iPhone|iPod/.test(navigator.userAgent);
+    sms.href='sms:+16158011155'+(ios?'&':'?')+'body='+encodeURIComponent(body);
+    mail.href='mailto:Simpleservicesllc@yahoo.com?subject='+encodeURIComponent('Free estimate request')+'&body='+encodeURIComponent(body);
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');upd();});});
+  upd();
+
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

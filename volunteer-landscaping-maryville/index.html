@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Volunteer Landscaping · Maryville, TN</title>
+<meta name="description" content="Lawn care, gardening, seasonal work and clean-ups in Maryville, Tennessee. Call (865) 320-4598.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ridge1:#cfe0dc;--ridge2:#9fc0bb;--ridge3:#6d9a96;--ridge4:#43716f;--ridge5:#24494a;--deep:#14302f;
+  --stone:#e9e1d3;--stone2:#d8ccb7;--stone3:#b9a88c;--ink:#1b2a29;--muted:#566463;
+  --orange:#e07a2a;--orange-d:#b85f1b;--cream:#f7f3ea;
+  --display:"Libre Caslon Display","Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --body:"Inter Tight","Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.banner{background:var(--deep);color:#d9e7e4;font-size:12.5px;text-align:center;padding:8px 14px;letter-spacing:.01em}
+.banner b{color:#f3b37c;font-weight:600}
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(247,243,234,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(36,73,74,.12)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand span{font-family:var(--display);font-size:20px;line-height:1.05;color:var(--ridge5)}
+.brand small{display:block;font-family:var(--body);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.links{display:none;gap:26px;font-size:14.5px;font-weight:500}
+.links a{text-decoration:none;color:var(--ridge5);position:relative}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--orange);transition:right .3s}
+.links a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:600;font-size:15.5px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 8px 20px -8px rgba(184,95,27,.7)}
+.btn-o:hover{background:var(--orange-d);transform:translateY(-2px)}
+.btn-g{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-g:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.btn-d{background:var(--ridge5);color:#fff}
+.btn-d:hover{background:var(--deep);transform:translateY(-2px)}
+.nav-call{display:none}
+/* hero */
+.hero{position:relative;min-height:640px;background:linear-gradient(180deg,#f6dcc0 0%,#e9e3d2 26%,var(--ridge1) 52%);overflow:hidden;color:#fff}
+.sun{position:absolute;left:68%;top:90px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#f8c48f 0%,#f2a35e 55%,rgba(242,163,94,0) 72%);opacity:.85}
+.layer{position:absolute;left:-5%;width:110%;bottom:0;will-change:transform}
+.layer svg{width:100%;height:auto}
+.mist{position:absolute;left:0;right:0;height:80px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.35),rgba(255,255,255,0))}
+.hero-inner{position:relative;z-index:5;padding:118px 20px 150px;max-width:1140px;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ridge5);background:rgba(255,255,255,.6);padding:7px 13px;border-radius:999px}
+.kicker svg{width:14px;height:14px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,12vw,92px);line-height:.98;color:var(--deep);margin:20px 0 16px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--orange-d)}
+.hero p.lede{font-size:17.5px;color:#22403f;max-width:520px;margin-bottom:28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn-g{color:var(--deep);border-color:rgba(20,48,47,.4);background:rgba(255,255,255,.5)}
+.hero-foot{position:absolute;z-index:6;left:0;right:0;bottom:22px;text-align:center;color:#d6e6e2;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase}
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange-d);display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.eyebrow svg{width:16px;height:16px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,8vw,56px);line-height:1.04;color:var(--deep);margin-bottom:16px}
+.sub{color:var(--muted);max-width:560px;font-size:16.5px}
+/* path */
+.path-col{position:absolute;left:0;top:0;bottom:0;width:100%;pointer-events:none;z-index:0}
+/* services */
+.services{background:var(--cream)}
+.grid{display:grid;gap:16px;margin-top:38px;position:relative;z-index:1}
+.card{background:#fff;border:1px solid rgba(36,73,74,.12);border-radius:20px;padding:26px 24px 24px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(20,48,47,.35)}
+.card::before{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:var(--ridge1);opacity:.55;transition:transform .5s}
+.card:hover::before{transform:scale(1.25)}
+.ic{position:relative;width:52px;height:52px;border-radius:15px;background:var(--ridge5);display:grid;place-items:center;margin-bottom:18px}
+.ic svg{width:28px;height:28px;color:#f3e9d6}
+.card:hover .ic svg{animation:sway 1.2s ease-in-out}
+@keyframes sway{0%,100%{transform:rotate(0)}30%{transform:rotate(-10deg)}65%{transform:rotate(7deg)}}
+.card h3{font-family:var(--display);font-weight:400;font-size:27px;color:var(--deep);margin-bottom:6px;position:relative}
+.card p{color:var(--muted);font-size:15px;position:relative}
+.card a.more{position:relative;display:inline-flex;margin-top:16px;font-weight:600;font-size:14.5px;color:var(--orange-d);text-decoration:none;gap:6px;align-items:center}
+.card a.more:hover{gap:10px}
+.card.wide{background:var(--ridge5);color:#e6efec;border-color:transparent}
+.card.wide h3{color:#fff}.card.wide p{color:#c8dbd7}
+.card.wide::before{background:var(--ridge4)}
+.card.wide .ic{background:var(--orange)}
+.card.wide a.more{color:#f6b882}
+/* why */
+.why{background:linear-gradient(180deg,var(--stone) 0%,#efe8db 100%);overflow:hidden}
+.why-grid{display:grid;gap:34px;align-items:center}
+.quote{font-family:var(--display);font-size:clamp(28px,6.5vw,44px);line-height:1.15;color:var(--deep)}
+.quote span{color:var(--orange-d);font-style:italic}
+.facts{display:grid;gap:14px}
+.fact{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.65);border-radius:16px;padding:18px}
+.fact .dot{flex:none;width:40px;height:40px;border-radius:12px;background:var(--deep);display:grid;place-items:center}
+.fact .dot svg{width:20px;height:20px;color:#f3b37c}
+.fact h4{font-size:16.5px;font-weight:600;color:var(--deep)}
+.fact p{font-size:14.5px;color:var(--muted)}
+/* area */
+.area{background:var(--deep);color:#dbe8e5;overflow:hidden}
+.area h2{color:#fff}
+.area .sub{color:#a9c4bf}
+.area-grid{display:grid;gap:26px;margin-top:34px}
+.map{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:var(--ridge5);min-height:300px}
+.map iframe{width:100%;height:340px;border:0;display:block;filter:saturate(.85)}
+.hours{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px}
+.hours h3{font-family:var(--display);font-weight:400;font-size:26px;color:#fff;margin-bottom:8px}
+.hours p{color:#b6cdc9;font-size:15px;margin-bottom:16px}
+.daypills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.daypills span{font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);color:#cfe0dc}
+.daypills span.today{background:var(--orange);color:#fff}
+.todaynote{font-size:14px;color:#f3c9a2;margin-bottom:18px}
+/* contact */
+.contact{background:var(--cream);overflow:hidden}
+.c-grid{display:grid;gap:14px;margin-top:34px;position:relative;z-index:1}
+.c-card{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid rgba(36,73,74,.14);border-radius:18px;padding:20px;text-decoration:none;transition:transform .25s,border-color .25s;min-width:0}
+.c-card:hover{transform:translateY(-3px);border-color:var(--orange)}
+.c-card .dot{flex:none;width:48px;height:48px;border-radius:14px;background:var(--ridge5);display:grid;place-items:center}
+.c-card .dot svg{width:22px;height:22px;color:#fff}
+.c-card small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.c-card strong{display:block;font-size:17px;color:var(--deep);font-weight:600;overflow-wrap:anywhere;word-break:break-word}
+footer{background:var(--deep);color:#9fb9b5;font-size:13.5px;padding:0 0 30px}
+footer .ridgef svg{width:100%;height:auto}
+footer .wrap{display:flex;flex-direction:column;gap:8px;padding-top:18px}
+footer a{color:#f3b37c;text-decoration:none}
+/* sticky bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,48,47,.96);backdrop-filter:blur(8px)}
+.mbar .btn{flex:1;padding:13px 10px;font-size:15px}
+body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+/* leaves */
+.leaf-fall{position:absolute;z-index:4;width:18px;height:18px;color:var(--orange);opacity:.0;animation:fall 11s linear infinite}
+@keyframes fall{0%{transform:translate(0,-40px) rotate(0);opacity:0}10%{opacity:.8}90%{opacity:.7}100%{transform:translate(60px,520px) rotate(320deg);opacity:0}}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in,.reveal-all .rv{opacity:1!important;transform:none!important}
+.stone{transition:opacity .5s ease,transform .5s ease}
+.js .stone{opacity:0;transform:scale(.6)}
+.js .stone.on,.reduce-stone .stone{opacity:1;transform:scale(1)}
+@media (min-width:700px){
+  .grid{grid-template-columns:1fr 1fr}
+  .c-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:900px){
+  .links{display:flex}.nav-call{display:inline-flex;padding:11px 20px;font-size:14.5px}
+  .mbar{display:none}body{padding-bottom:0}
+  .hero{min-height:760px}.hero-inner{padding-top:150px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .card.wide{grid-column:span 2}
+  .why-grid{grid-template-columns:1.1fr 1fr;gap:60px}
+  .area-grid{grid-template-columns:1.5fr 1fr}
+  .map iframe{height:400px}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv,.js .stone{opacity:1!important;transform:none!important}
+  .leaf-fall{display:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5C11 3.6 4.5 8.4 4.5 15.2c0 1.6.4 3 1.1 4.2L3.5 21.5l1.1 1 2.2-2.2c1.2.7 2.6 1 4 1 6.8 0 10.3-7.4 9.7-17.8zM8.4 18.1c1.7-4.5 4.8-7.7 9-9.7-3.4 2.9-6 6.2-7.6 10.4-.5-.1-1-.4-1.4-.7z"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4 7.4V17h16V7.4l-8 4.8zM4.6 7l7.4 4.4L19.4 7H4.6z"/></symbol>
+  <symbol id="cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3V2zm12 8H5v9h14v-9zM5 6v2h14V6H5zm2 6h4v4H7v-4z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 4.5A2.5 2.5 0 1 0 12 11.5 2.5 2.5 0 0 0 12 6.5z"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 5.3 20 12l-6.8 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></symbol>
+</svg>
+
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Volunteer Landscaping. Not live.</div>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Volunteer Landscaping home">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#24494a"/><path d="M4 28l9-10 6 6 6-9 11 13z" fill="#6d9a96"/><path d="M4 31l10-7 8 4 6-3 8 6v1H4z" fill="#cfe0dc"/><circle cx="28" cy="12" r="3.4" fill="#e07a2a"/></svg>
+    <span>Volunteer<small>Landscaping · Maryville</small></span>
+  </a>
+  <div class="links"><a href="#services">Services</a><a href="#why">About</a><a href="#area">Service area</a><a href="#contact">Contact</a></div>
+  <a class="btn btn-o nav-call" href="tel:+18653204598"><svg><use href="#phone"/></svg>(865) 320-4598</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="sun" data-speed="0.05"></div>
+  <div class="layer" data-speed="0.08" style="bottom:210px"><svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="#bcd3ce" d="M0 190 120 140 230 170 360 100 470 150 600 80 720 140 840 90 980 150 1100 70 1230 130 1340 95 1440 120V260H0z"/></svg></div>
+  <div class="layer" data-speed="0.16" style="bottom:140px"><svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="#93b8b2" d="M0 200 140 130 260 180 400 120 520 170 660 110 800 175 930 125 1060 185 1200 120 1320 165 1440 130V260H0z"/></svg></div>
+  <div class="mist" style="bottom:170px"></div>
+  <div class="layer" data-speed="0.26" style="bottom:70px"><svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="#5f8c88" d="M0 170 160 110 300 175 450 120 600 190 760 130 900 180 1050 115 1200 175 1330 140 1440 160V260H0z"/></svg></div>
+  <div class="layer" data-speed="0.38" style="bottom:0"><svg viewBox="0 0 1440 220" preserveAspectRatio="none"><path fill="#33605f" d="M0 140 180 90 340 150 520 95 700 160 860 105 1020 150 1200 100 1340 135 1440 115V220H0z"/>
+    <g fill="#24494a"><path d="M210 112l10-30 10 30zM240 118l8-24 8 24zM900 120l11-32 11 32zM930 126l8-22 8 22zM1250 112l9-28 9 28z"/></g></svg></div>
+  <div class="layer" data-speed="0" style="bottom:-2px"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f7f3ea" d="M0 50C240 20 480 70 720 45s480-30 720 0V80H0z"/></svg></div>
+  <svg class="leaf-fall" style="left:12%;top:120px;animation-delay:0s"><use href="#leaf"/></svg>
+  <svg class="leaf-fall" style="left:55%;top:60px;animation-delay:4s;color:#b85f1b"><use href="#leaf"/></svg>
+  <svg class="leaf-fall" style="left:82%;top:140px;animation-delay:7.5s"><use href="#leaf"/></svg>
+
+  <div class="hero-inner">
+    <span class="kicker"><svg><use href="#pin"/></svg>Maryville, Tennessee</span>
+    <h1>Ready.<br>Set. <em>Mow.</em></h1>
+    <p class="lede">Lawn care, gardening, seasonal work and clean-ups for Maryville yards, done with hard work and an eye for what makes your outdoor space beautiful.</p>
+    <div class="cta-row">
+      <a class="btn btn-o" href="tel:+18653204598"><svg><use href="#phone"/></svg>Call (865) 320-4598</a>
+      <a class="btn btn-g" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener"><svg><use href="#cal"/></svg>Book online</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec services" id="services">
+  <svg class="path-col" id="pathsvg" aria-hidden="true"></svg>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="eyebrow rv"><svg><use href="#leaf"/></svg>What we do</div>
+    <h2 class="rv">Every season,<br>every corner of the yard.</h2>
+    <p class="sub rv">Pick the job, then book a time online or give us a call to talk it through.</p>
+    <div class="grid">
+      <article class="card wide rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 17h2l1-5h9l1 5h2v2H3v-2zm4.6-7L9 4h2l-1.3 6h-2.1zM7 21a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></div>
+        <h3>Mowing, edging &amp; blowing</h3>
+        <p>The full curb-appeal routine: a clean cut, crisp edges along walks and beds, and clippings blown off the hard surfaces before we leave.</p>
+        <a class="more" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener">Book this service <svg width="16" height="16"><use href="#arrow"/></svg></a>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg><use href="#leaf"/></svg></div>
+        <h3>Lawn care</h3>
+        <p>Keeping your grass healthy, green and looking its best through the growing season.</p>
+        <a class="more" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener">Book lawn care <svg width="16" height="16"><use href="#arrow"/></svg></a>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 22c-.6 0-1-.4-1-1v-6.1A6 6 0 0 1 6 9V8h1a6 6 0 0 1 4.3 1.8A7 7 0 0 1 17 3h1v1a7 7 0 0 1-5 6.7V21c0 .6-.4 1-1 1z"/></svg></div>
+        <h3>Gardening</h3>
+        <p>Beds, plantings and the detail work that lets nature show off its beauty.</p>
+        <a class="more" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener">Book gardening <svg width="16" height="16"><use href="#arrow"/></svg></a>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.4 4.6L19 7.4l-3.4 3.4.8 4.9L12 13.4l-4.4 2.3.8-4.9L5 7.4l4.6-.8zM5 19h14v2H5z"/></svg></div>
+        <h3>Seasonal</h3>
+        <p>Spring wake-ups and fall wind-downs: the work each East Tennessee season calls for.</p>
+        <a class="more" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener">Book seasonal work <svg width="16" height="16"><use href="#arrow"/></svg></a>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M19.4 3 21 4.6l-6.3 6.3 1.4 1.4-1.4 1.4-.7-.7L9 18l-1 4-5-5 4-1 5-5-.7-.7 1.4-1.4 1.4 1.4zM6.5 17.5l-1.2.3 1 1 .3-1.2z"/></svg></div>
+        <h3>Clean-ups</h3>
+        <p>Leaves, debris and overgrowth cleared out so your property looks cared for again.</p>
+        <a class="more" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener">Book a clean-up <svg width="16" height="16"><use href="#arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="eyebrow rv"><svg><use href="#leaf"/></svg>About us</div>
+      <p class="quote rv">“It’s no secret that we <span>love what we do.</span>”</p>
+      <p class="sub rv" style="margin-top:18px">Volunteer Landscaping is built on a passion for working with nature to showcase its beauty. Every yard gets the same thing: hard work, dedication and creativity.</p>
+    </div>
+    <div class="facts">
+      <div class="fact rv"><div class="dot"><svg><use href="#leaf"/></svg></div><div><h4>Hard work</h4><p>We show up and put in the effort your property deserves.</p></div></div>
+      <div class="fact rv"><div class="dot"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4 7 4c2.1 0 3.6 1.1 5 3 1.4-1.9 2.9-3 5-3 4 0 6.1 4.3 4.6 7.7C19.5 16.4 12 21 12 21z"/></svg></div><div><h4>Dedication</h4><p>Local to Maryville and committed to the yards we care for.</p></div></div>
+      <div class="fact rv"><div class="dot"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 1 4 12.7V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.3A7 7 0 0 1 12 2zm-3 18h6v2H9z"/></svg></div><div><h4>Creativity</h4><p>Ideas for transforming your outdoor space, not just maintaining it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:#f3b37c"><svg><use href="#pin"/></svg>Service area</div>
+    <h2 class="rv">Rooted in Maryville,<br>in the shadow of the Smokies.</h2>
+    <p class="sub rv">Based in Maryville, Tennessee. Not sure if we reach your street? Call or email and ask.</p>
+    <div class="area-grid">
+      <div class="map rv"><iframe title="Map of Maryville, Tennessee" loading="lazy" src="https://www.google.com/maps?q=Maryville%2C%20TN&output=embed"></iframe></div>
+      <div class="hours rv">
+        <h3>Scheduling</h3>
+        <p>Set hours aren’t published. Book a time online, or call to check availability.</p>
+        <div class="daypills" id="days"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <p class="todaynote" id="todaynote">Planning a yard project? Call today.</p>
+        <a class="btn btn-o" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener"><svg><use href="#cal"/></svg>See open times</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow rv"><svg><use href="#leaf"/></svg>Get in touch</div>
+    <h2 class="rv">Let’s transform<br>your outdoor space.</h2>
+    <p class="sub rv">Tell us about your yard. We’d love to hear what you have in mind.</p>
+    <div class="c-grid">
+      <a class="c-card rv" href="tel:+18653204598"><div class="dot"><svg><use href="#phone"/></svg></div><div><small>Call or text</small><strong>(865) 320-4598</strong></div></a>
+      <a class="c-card rv" href="mailto:volunteerlandscaping1@gmail.com"><div class="dot"><svg><use href="#mail"/></svg></div><div><small>Email</small><strong>volunteerlandscaping1<wbr>@gmail.com</strong></div></a>
+      <a class="c-card rv" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener"><div class="dot" style="background:var(--orange)"><svg><use href="#cal"/></svg></div><div><small>Book online</small><strong>Choose a service &amp; time</strong></div></a>
+    </div>
+    <p class="rv" style="margin-top:22px;font-size:14.5px;color:var(--muted)">Follow along on <a href="https://www.facebook.com/volunteerlandscaping865/" target="_blank" rel="noopener" style="color:var(--orange-d);font-weight:600">Facebook</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="ridgef"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><rect width="1440" height="90" fill="#f7f3ea"/><path fill="#6d9a96" d="M0 60 200 25 360 55 560 15 760 50 960 20 1160 55 1320 30 1440 45V90H0z"/><path fill="#14302f" d="M0 75 180 50 380 72 600 45 820 70 1020 48 1240 72 1440 55V90H0z"/></svg></div>
+  <div class="wrap"><span>© 2026 Volunteer Landscaping · Maryville, TN</span><span>Concept by <a href="#top">Code Craft Media</a></span></div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-o" href="tel:+18653204598"><svg><use href="#phone"/></svg>Call</a>
+  <a class="btn btn-g" href="https://volunteerlandscapi.wixsite.com/website/book-online" target="_blank" rel="noopener"><svg><use href="#cal"/></svg>Book</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // today highlight
+  try{var i=new Date().getDay();var s=document.querySelectorAll('#days span');if(s[i])s[i].classList.add('today');
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    document.getElementById('todaynote').textContent='Happy '+names[i]+'! Call today to get on the schedule.';}catch(e){}
+  // stone path
+  var svg=document.getElementById('pathsvg'),stones=[];
+  function buildPath(){
+    if(!svg)return;svg.innerHTML='';stones=[];
+    var sec=svg.parentNode,w=sec.clientWidth,h=sec.clientHeight;
+    svg.setAttribute('viewBox','0 0 '+w+' '+h);svg.setAttribute('width',w);svg.setAttribute('height',h);
+    var n=Math.max(10,Math.round(h/70)),ns='http://www.w3.org/2000/svg';
+    var base=w<700?w-10:w-60, amp=w<700?2:22;
+    for(var k=0;k<n;k++){
+      var y=40+k*(h-80)/(n-1),x=base+Math.sin(k*.9)*amp;
+      var rx=w<700?5:15,ry=w<700?7:10;
+      var e=document.createElementNS(ns,'ellipse');
+      e.setAttribute('cx',x);e.setAttribute('cy',y);e.setAttribute('rx',rx+(k%3));e.setAttribute('ry',ry);
+      e.setAttribute('fill',['#d8ccb7','#c9b99e','#e2d8c6'][k%3]);e.setAttribute('stroke','#a8977a');e.setAttribute('stroke-width','1.2');
+      e.setAttribute('transform','rotate('+((k%2?-1:1)*12)+' '+x+' '+y+')');
+      e.setAttribute('class','stone');e.style.transformOrigin=x+'px '+y+'px';
+      svg.appendChild(e);stones.push(e);
+    }
+  }
+  buildPath();
+  if(reduce){d.classList.add('reveal-all');return;}
+  d.classList.add('js');
+  setTimeout(function(){d.classList.add('reveal-all')},1500);
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    rv.forEach(function(el){io.observe(el)});
+  }else{d.classList.add('reveal-all')}
+  var layers=document.querySelectorAll('[data-speed]');
+  function onScroll(){
+    var y=window.scrollY;
+    if(y<1000)layers.forEach(function(l){l.style.transform='translate3d(0,'+(y*parseFloat(l.dataset.speed))+'px,0)'});
+    if(svg){var r=svg.parentNode.getBoundingClientRect(),vh=innerHeight;
+      var p=Math.min(1,Math.max(0,(vh*.85-r.top)/r.height));var on=Math.round(p*stones.length);
+      stones.forEach(function(s,k){s.classList.toggle('on',k<on)});}
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var t;addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){buildPath();onScroll()},200)});
+})();
+</script>
+</body>
+</html>
