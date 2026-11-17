@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Swept Away Cleaning | Knoxville, TN</title>
+<meta name="description" content="Swept Away: residential and office cleaning in Knoxville, TN. Deep clean. Keep clean. Call (865) 679-0719 for an in-home estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#cfe8f5; --sky-2:#e7f4fb; --sky-3:#f5fbfe; --navy:#13294b; --navy-2:#1e3a66; --sun:#ffcf5c; --sun-2:#ffe3a1;
+  --ink:#13294b; --muted:#45597a; --line:rgba(19,41,75,.12);
+  --r:22px; --shadow:0 18px 40px -22px rgba(19,41,75,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"DM Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--sky-3);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* concept banner */
+.concept{background:var(--navy);color:#dbeaf5;font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.concept b{color:var(--sun)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(245,251,254,.82);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Fraunces",serif;font-weight:800;font-size:21px;color:var(--navy)}
+.logo svg{width:34px;height:34px}
+.logo em{font-style:italic;font-weight:400}
+.links{display:none;gap:26px;font-weight:500;font-size:15px}
+.links a{text-decoration:none;position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--sun);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.links a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 15px/1 "DM Sans",sans-serif;text-decoration:none;border-radius:999px;padding:15px 22px;transition:transform .2s,box-shadow .2s,background .2s;position:relative;overflow:hidden;border:0;cursor:pointer}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-sun{background:var(--sun);color:var(--navy);box-shadow:0 10px 24px -12px rgba(201,140,0,.8)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.7);color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.nav .btn{padding:11px 16px;font-size:14px}
+
+/* sparkle glint (hover) */
+.glint{position:relative}
+.glint::before{content:"";position:absolute;top:-30%;left:-60%;width:40%;height:160%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);transition:left .6s ease;pointer-events:none}
+.glint:hover::before{left:130%}
+.spark{position:absolute;width:14px;height:14px;pointer-events:none;opacity:0;transform:scale(.3) rotate(0);transition:opacity .25s,transform .45s cubic-bezier(.2,1.6,.4,1)}
+.spark path{fill:var(--sun)}
+.has-spark:hover .spark,.has-spark:focus-within .spark{opacity:1;transform:scale(1) rotate(45deg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 80% at 85% 0%,#fff 0,rgba(255,255,255,0) 55%),
+  linear-gradient(180deg,var(--sky) 0%,var(--sky-2) 70%,var(--sky-3) 100%);padding:40px 0 36px}
+.wind{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.wind path{fill:none;stroke:#7fb8dc;stroke-linecap:round;stroke-width:2.4;opacity:.75;stroke-dasharray:240 1400;animation:gust 9s linear infinite}
+.wind path.n{stroke:#fff;opacity:1;stroke-width:3}
+.wind path:nth-child(2){animation-delay:-2s;animation-duration:11s}
+.wind path:nth-child(3){animation-delay:-5s}
+.wind path:nth-child(4){animation-delay:-7s;animation-duration:12s}
+.wind path:nth-child(5){animation-delay:-3.5s;animation-duration:10s}
+.wind path:nth-child(6){animation-delay:-8s}
+@keyframes gust{from{stroke-dashoffset:1640}to{stroke-dashoffset:0}}
+.bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.bubble{position:absolute;bottom:-60px;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 9%,rgba(255,255,255,.25) 22%,rgba(207,232,245,.15) 55%,rgba(255,207,92,.25) 78%,rgba(160,200,255,.35) 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.75),inset -4px -6px 12px rgba(120,170,220,.25);animation:rise linear infinite}
+@keyframes rise{0%{transform:translate(0,0) scale(.8);opacity:0}10%{opacity:1}50%{transform:translate(40px,-50vh) scale(1)}100%{transform:translate(-10px,-110vh) scale(1.05);opacity:0}}
+.hero-grid{position:relative;display:grid;gap:34px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-2);background:rgba(255,255,255,.75);padding:7px 13px;border-radius:999px;box-shadow:0 0 0 1px var(--line)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(255,207,92,.35)}
+.hero h1{font-size:clamp(44px,12.5vw,92px);font-weight:800;margin:18px 0 16px;color:var(--navy)}
+.hero h1 .soft{font-style:italic;font-weight:400;position:relative;white-space:nowrap}
+.hero h1 .soft svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.35em;overflow:visible}
+.hero h1 .soft svg path{fill:none;stroke:var(--sun);stroke-width:7;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:0}
+.js .hero h1 .soft svg path{animation:draw 1.4s .5s cubic-bezier(.6,0,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
+.lede{font-size:18px;color:var(--muted);max-width:33em;margin:0 0 26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.cta-row .btn{flex:1 1 200px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{width:16px;height:16px;color:var(--navy)}
+
+.scene{position:relative;max-width:520px;margin:0 auto;width:100%}
+.scene svg{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(19,41,75,.18))}
+.float{animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.twinkle{transform-box:fill-box;transform-origin:center;animation:tw 2.6s ease-in-out infinite}
+.twinkle.b{animation-delay:-1.2s}.twinkle.c{animation-delay:-.6s}
+@keyframes tw{0%,100%{transform:scale(.4) rotate(0);opacity:.3}50%{transform:scale(1) rotate(45deg);opacity:1}}
+.tag{position:absolute;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:var(--shadow);font-size:13px;font-weight:700;display:flex;gap:9px;align-items:center;color:var(--navy)}
+.tag small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.tag .dot{width:30px;height:30px;border-radius:10px;background:var(--sun);display:grid;place-items:center;flex:none}
+.tag .dot svg{width:17px;height:17px}
+.tag.t1{left:-4px;bottom:4%}
+.tag.t2{right:-4px;top:8%}
+
+/* wave divider */
+.wave{display:block;width:100%;height:60px;margin-top:-1px}
+
+/* sections */
+section{position:relative}
+.sec{padding:76px 0}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2f6ea6;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.kicker svg{width:26px;height:12px}
+.sec h2{font-size:clamp(34px,8.4vw,56px);font-weight:600;color:var(--navy);max-width:16ch}
+.sec h2 em{font-weight:400}
+.sec-intro{color:var(--muted);font-size:17px;max-width:38em;margin:14px 0 0}
+
+/* services */
+.cleans{display:grid;gap:18px;margin-top:38px}
+.card{background:#fff;border-radius:var(--r);padding:26px 24px 24px;box-shadow:0 0 0 1px var(--line),var(--shadow);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 0 0 1px rgba(19,41,75,.18),0 26px 50px -24px rgba(19,41,75,.55)}
+.card .ic{width:62px;height:62px;border-radius:18px;background:var(--sky);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:38px;height:38px}
+.card h3{font-size:26px;font-weight:600;margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.card ul{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:7px}
+.card li{font-size:13.5px;font-weight:500;background:var(--sky-2);border-radius:999px;padding:6px 11px}
+.card li.plus{background:var(--sun-2)}
+.card.feature{background:var(--navy);color:#e6f0f8}
+.card.feature h3{color:#fff}
+.card.feature p{color:#b9cde0}
+.card.feature .ic{background:rgba(255,207,92,.18)}
+.card.feature li{background:rgba(255,255,255,.1);color:#fff}
+.card.feature li.plus{background:var(--sun);color:var(--navy)}
+.card .badge{position:absolute;top:18px;right:18px;background:var(--sun);color:var(--navy);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.card .spark{top:22px;right:24px}
+.card .spark.s2{top:auto;bottom:26px;right:40%;width:10px;height:10px;transition-delay:.08s}
+
+/* frequency */
+.freq{margin-top:44px;background:linear-gradient(135deg,#fff,var(--sky-2));border-radius:var(--r);padding:28px 22px;box-shadow:0 0 0 1px var(--line)}
+.freq h3{font-size:24px;font-weight:600}
+.freq p{margin:6px 0 18px;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:0;font:600 15px "DM Sans",sans-serif;color:var(--navy);background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);border-radius:999px;padding:11px 16px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.pill:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.pill[aria-pressed="true"]{background:var(--navy);color:#fff;box-shadow:none}
+.pill .d{width:8px;height:8px;border-radius:50%;background:var(--sun)}
+.freq-note{margin-top:16px;font-size:15px;color:var(--navy-2);min-height:1.6em;font-weight:500}
+
+/* why */
+.why{background:var(--navy);color:#dce8f3;overflow:hidden}
+.why .kicker{color:var(--sun)}
+.why h2{color:#fff}
+.why .sec-intro{color:#aac2da}
+.why-grid{display:grid;gap:16px;margin-top:36px}
+.why-item{border-radius:var(--r);padding:24px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);position:relative;transition:background .3s}
+.why-item:hover{background:rgba(255,255,255,.09)}
+.why-item .n{font-family:"Fraunces",serif;font-style:italic;font-size:15px;color:var(--sun)}
+.why-item h3{font-size:24px;font-weight:600;color:#fff;margin:6px 0 8px}
+.why-item p{margin:0;color:#aac2da}
+.why-item .spark{top:22px;right:22px}
+.quote{margin-top:44px;display:grid;gap:22px;align-items:center}
+.quote blockquote{margin:0;font-family:"Fraunces",serif;font-size:clamp(26px,6.4vw,40px);line-height:1.2;color:#fff;font-weight:400}
+.quote blockquote em{color:var(--sun)}
+.quote cite{display:block;margin-top:14px;font-family:"DM Sans",sans-serif;font-style:normal;font-size:15px;color:#aac2da}
+.why .wind path{stroke:#7fb8dc;opacity:.35}
+
+/* paws */
+.paws{display:grid;gap:22px;align-items:center;background:#fff;border-radius:28px;padding:30px 24px;box-shadow:0 0 0 1px var(--line),var(--shadow);overflow:hidden;position:relative}
+.paws h2{font-size:clamp(30px,7.4vw,46px)}
+.paws svg.pet{width:100%;max-width:300px;margin:0 auto}
+
+/* steps / hours */
+.steps{display:grid;gap:14px;margin-top:34px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:18px;padding:18px;box-shadow:0 0 0 1px var(--line)}
+.step::before{counter-increment:s;content:counter(s);flex:none;width:40px;height:40px;border-radius:50%;background:var(--sun);color:var(--navy);display:grid;place-items:center;font:800 18px "Fraunces",serif}
+.step h3{font-size:20px;font-weight:600;margin-bottom:2px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+.hours{margin-top:40px;background:#fff;border-radius:var(--r);box-shadow:0 0 0 1px var(--line),var(--shadow);padding:24px 20px}
+.hours h3{font-size:24px;font-weight:600}
+.hours > p{margin:6px 0 18px;color:var(--muted);font-size:15px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{text-align:center;border-radius:14px;padding:10px 0;background:var(--sky-2);font-size:13px;font-weight:700;color:var(--navy-2);position:relative}
+.day small{display:block;font-weight:500;font-size:10.5px;color:var(--muted);margin-top:2px}
+.day.today{background:var(--navy);color:#fff}
+.day.today small{color:var(--sun)}
+.today-line{margin-top:16px;font-size:15px;font-weight:500;color:var(--navy)}
+
+/* contact */
+.contact{background:linear-gradient(180deg,var(--sky-3),var(--sky));overflow:hidden}
+.c-grid{display:grid;gap:18px;margin-top:34px}
+.c-card{display:flex;gap:16px;align-items:center;text-decoration:none;background:#fff;border-radius:20px;padding:20px;box-shadow:0 0 0 1px var(--line),var(--shadow);transition:transform .25s;position:relative;overflow:hidden}
+.c-card:hover{transform:translateY(-3px)}
+.c-card .ic{width:52px;height:52px;border-radius:16px;background:var(--sun);display:grid;place-items:center;flex:none}
+.c-card .ic svg{width:24px;height:24px}
+.c-card small{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#2f6ea6}
+.c-card b{font-size:16px;overflow-wrap:anywhere}
+.c-card .spark{right:20px;top:20px}
+.area{margin-top:22px;border-radius:var(--r);background:var(--navy);color:#dbe8f4;padding:26px 22px;position:relative;overflow:hidden}
+.area h3{color:#fff;font-size:24px;font-weight:600}
+.area p{margin:8px 0 0;color:#aac2da}
+.area .ask{margin-top:16px;font-size:14.5px;color:#dbe8f4}
+.area .ask b{color:var(--sun)}
+.area svg.compass{position:absolute;right:-30px;bottom:-30px;width:170px;opacity:.12}
+.jobs{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;justify-content:space-between;background:rgba(255,255,255,.7);border-radius:18px;padding:18px 20px;box-shadow:0 0 0 1px var(--line)}
+.jobs p{margin:0;font-weight:500}
+.jobs a{font-weight:700;color:var(--navy);text-decoration-color:var(--sun);text-decoration-thickness:3px;text-underline-offset:4px}
+
+footer{background:var(--navy);color:#9fb6cd;padding:46px 0 34px;font-size:14px}
+.f-grid{display:grid;gap:22px}
+footer .logo{color:#fff}
+footer a{color:#dbe8f4}
+footer .tag-line{font-family:"Fraunces",serif;font-style:italic;font-size:22px;color:#fff;margin:10px 0 0}
+.f-links{display:flex;flex-wrap:wrap;gap:10px 20px}
+.f-bottom{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(19,41,75,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -10px 30px -12px rgba(0,0,0,.4)}
+.callbar .btn{flex:1;padding:15px 10px}
+@media (max-width:899px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .cleans{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .c-grid{grid-template-columns:repeat(3,1fr)}
+  .c-card{flex-direction:column;align-items:flex-start}
+  .paws{grid-template-columns:1.3fr 1fr;padding:40px}
+}
+@media (min-width:900px){
+  .wrap{padding:0 32px}
+  .links{display:flex}
+  .callbar{display:none}
+  .hero{padding:64px 0 80px}
+  .hero-grid{grid-template-columns:1.1fr 1fr;gap:40px}
+  .cta-row .btn{flex:0 0 auto}
+  .cleans{grid-template-columns:repeat(3,1fr)}
+  .sec{padding:110px 0}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .quote{grid-template-columns:1.4fr 1fr}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .hours{margin-top:0}
+  .f-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .bubbles{display:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sp" viewBox="0 0 24 24"><path d="M12 0c.8 6.4 4.8 10.6 12 12-7.2 1.4-11.2 5.6-12 12-.8-6.4-4.8-10.6-12-12C7.2 10.6 11.2 6.4 12 0z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8h3.3z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></g></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="i-swirl" viewBox="0 0 26 12"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1 8c6 0 10-6 15-6 3 0 4 2 3 3.5S15 7 15 5M1 11h18"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Swept Away. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Swept Away home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#cfe8f5"/><path d="M8 24c6 0 9-9 16-9 4 0 6 3 4.5 5.5S23 22 23 19" fill="none" stroke="#13294b" stroke-width="2.6" stroke-linecap="round"/><path d="M8 29h20" stroke="#13294b" stroke-width="2.6" stroke-linecap="round"/><use href="#sp" x="25" y="5" width="10" height="10" fill="#ffcf5c"/></svg>
+      <span>Swept <em>Away</em></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#estimate">Estimates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-sun glint" href="tel:+18656790719"><svg><use href="#i-phone"/></svg><span>(865) 679-0719</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="wind" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-100 180C200 120 360 260 620 210s380-170 560-60c120 74 60 170-30 140-80-27-40-120 60-120 140 0 260 60 400 40"/>
+    <path class="n" d="M-100 330C220 300 420 400 700 350s420-160 820-90"/>
+    <path d="M-100 470c260-40 420 70 700 20 200-36 300-120 420-60 90 46 40 130-40 110-60-15-30-90 50-90 120 0 220 50 410 30"/>
+    <path class="n" d="M-100 90C260 60 520 140 820 110s420-60 720 0"/>
+    <path d="M-100 600c300-30 560 40 820 0s420-110 720-60"/>
+    <path class="n" d="M-100 260C300 230 500 300 760 270s500-90 780-30"/>
+  </svg>
+  <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow"><i></i>House &amp; office cleaning · Knoxville, TN</span>
+      <h1>Deep clean.<br><span class="soft">Keep clean.<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20C60 6 120 26 170 14S260 4 296 16"/></svg></span></h1>
+      <p class="lede">Swept Away brings a fresh breeze through Knoxville homes and offices. Weekly, monthly or once-a-year deep cleans, priced honestly after a walkthrough of <em>your</em> space.</p>
+      <div class="cta-row">
+        <a class="btn btn-navy glint" href="tel:+18656790719"><svg><use href="#i-phone"/></svg>Call or text for an estimate</a>
+        <a class="btn btn-ghost" href="#services">See the cleans</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg><use href="#i-home"/></svg>Free in-home estimates</span>
+        <span><svg><use href="#i-cal"/></svg>Weekly to annual</span>
+        <span><svg><use href="#i-pin"/></svg>Knoxville, TN</span>
+      </div>
+    </div>
+    <div class="scene rv">
+      <svg viewBox="0 0 520 470" role="img" aria-label="Illustration of a sparkling clean living room with a breeze blowing through an open window">
+        <defs>
+          <linearGradient id="wall" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#eef7fc"/></linearGradient>
+          <linearGradient id="win" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#9fd0ec"/><stop offset="1" stop-color="#e4f3fb"/></linearGradient>
+          <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f6e4c2"/><stop offset="1" stop-color="#ecd2a3"/></linearGradient>
+          <clipPath id="room"><rect x="30" y="30" width="460" height="400" rx="34"/></clipPath>
+        </defs>
+        <g clip-path="url(#room)">
+          <rect x="30" y="30" width="460" height="400" fill="url(#wall)"/>
+          <rect x="30" y="330" width="460" height="100" fill="url(#floor)"/>
+          <g stroke="#e2c38b" stroke-width="1.5" opacity=".6"><path d="M30 360h460M30 395h460M120 330v30M260 360v35M380 330v30M190 395v35M330 395v35"/></g>
+          <!-- floor shine -->
+          <path d="M70 345l60 0 -25 20h-60z" fill="#fff" opacity=".45"/>
+          <path d="M300 400l90 0 -30 18h-90z" fill="#fff" opacity=".35"/>
+          <!-- window -->
+          <rect x="70" y="70" width="170" height="190" rx="14" fill="#13294b"/>
+          <rect x="80" y="80" width="150" height="170" rx="8" fill="url(#win)"/>
+          <circle cx="195" cy="118" r="20" fill="#ffcf5c"/>
+          <path d="M92 210c20-14 40-14 60 0s40 14 66 0v40H92z" fill="#bfe2f3"/>
+          <path d="M80 165h150M155 80v170" stroke="#13294b" stroke-width="6"/>
+          <!-- curtain blowing -->
+          <path class="float" d="M62 64c30 40 6 90 40 130s-10 70 10 90H62z" fill="#ffcf5c" opacity=".9"/>
+          <!-- breeze through window -->
+          <g fill="none" stroke="#7fb8dc" stroke-width="3" stroke-linecap="round">
+            <path d="M210 150c60-10 110 20 170 0 30-10 40-40 15-45s-30 20-10 26"/>
+            <path d="M220 200c70 0 120 18 200 6" opacity=".6"/>
+          </g>
+          <!-- frame art -->
+          <rect x="300" y="80" width="140" height="96" rx="8" fill="#13294b"/>
+          <rect x="309" y="89" width="122" height="78" rx="4" fill="#cfe8f5"/>
+          <path d="M309 150l34-30 26 22 22-16 40 30v11H309z" fill="#7fb8dc"/>
+          <circle cx="408" cy="110" r="9" fill="#ffcf5c"/>
+          <!-- sofa -->
+          <rect x="270" y="250" width="200" height="70" rx="22" fill="#1e3a66"/>
+          <rect x="280" y="224" width="180" height="56" rx="20" fill="#13294b"/>
+          <rect x="294" y="236" width="64" height="40" rx="12" fill="#ffcf5c"/>
+          <rect x="366" y="236" width="64" height="40" rx="12" fill="#cfe8f5"/>
+          <rect x="282" y="318" width="12" height="16" rx="4" fill="#13294b"/>
+          <rect x="446" y="318" width="12" height="16" rx="4" fill="#13294b"/>
+          <!-- plant -->
+          <path d="M246 330c-8-40 6-70 4-96M246 330c-30-30-36-60-30-80M246 330c26-26 40-60 30-86" stroke="#2f7d6b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="216" cy="252" rx="12" ry="7" fill="#3c9b83" transform="rotate(-40 216 252)"/>
+          <ellipse cx="276" cy="246" rx="12" ry="7" fill="#3c9b83" transform="rotate(40 276 246)"/>
+          <ellipse cx="250" cy="234" rx="11" ry="7" fill="#3c9b83" transform="rotate(-80 250 234)"/>
+          <path d="M226 330h40l-6 40h-28z" fill="#e8a33d"/>
+        </g>
+        <!-- broom leaning -->
+        <g transform="translate(330 -30)"><g class="float" style="animation-delay:-2s">
+          <path d="M120 300 70 440" stroke="#b9772c" stroke-width="7" stroke-linecap="round"/>
+          <path d="M52 420l40 14-6 22c-14 4-34-2-44-12z" fill="#ffcf5c" stroke="#13294b" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M60 438l-6 14M70 442l-4 14M80 446l-2 12" stroke="#13294b" stroke-width="2"/>
+        </g></g>
+        <!-- spray bottle -->
+        <g transform="translate(150 336)">
+          <rect x="0" y="22" width="34" height="50" rx="10" fill="#cfe8f5" stroke="#13294b" stroke-width="3"/>
+          <path d="M6 22v-10h20v10" fill="#13294b"/>
+          <path d="M8 8h24l6 6h-12" fill="#ffcf5c" stroke="#13294b" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="6" y="38" width="22" height="14" rx="3" fill="#fff"/>
+        </g>
+        <!-- sparkles -->
+        <use class="twinkle" href="#sp" x="430" y="200" width="30" height="30" fill="#ffcf5c"/>
+        <use class="twinkle b" href="#sp" x="96" y="330" width="22" height="22" fill="#ffcf5c"/>
+        <use class="twinkle c" href="#sp" x="360" y="40" width="20" height="20" fill="#fff"/>
+        <use class="twinkle b" href="#sp" x="470" y="300" width="18" height="18" fill="#7fb8dc"/>
+      </svg>
+      <div class="tag t1"><span class="dot"><svg><use href="#i-home"/></svg></span><span>Homes &amp; offices<small>Basic, deep, move-in/out</small></span></div>
+      <div class="tag t2"><span class="dot"><svg viewBox="0 0 24 24"><use href="#sp"/></svg></span><span>Deep clean.<small>Keep clean.</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="kicker rv"><svg><use href="#i-swirl"/></svg>The cleans</div>
+    <h2 class="rv">Three ways to get <em>swept away.</em></h2>
+    <p class="sec-intro rv">Pick the clean that fits the moment. Every estimate is done in person, so you pay for your home, not a guess based on square footage.</p>
+    <div class="cleans">
+      <article class="card has-spark rv">
+        <svg class="spark"><use href="#sp"/></svg><svg class="spark s2"><use href="#sp"/></svg>
+        <div class="ic"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 32h24M12 32V18h16v14" fill="none" stroke="#13294b" stroke-width="2.6" stroke-linejoin="round"/><path d="M15 18v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#13294b" stroke-width="2.6"/><circle cx="20" cy="25" r="3" fill="#ffcf5c"/></svg></div>
+        <h3>Basic clean</h3>
+        <p>The everyday reset that keeps a home feeling good between deep cleans.</p>
+        <ul><li>Kitchen</li><li>Bathrooms</li><li>Dusting</li><li>Floors</li></ul>
+      </article>
+      <article class="card feature has-spark rv">
+        <span class="badge">Most thorough</span>
+        <svg class="spark s2"><use href="#sp"/></svg>
+        <div class="ic"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#sp" x="6" y="6" width="20" height="20" fill="#ffcf5c"/><use href="#sp" x="22" y="20" width="12" height="12" fill="#fff"/></svg></div>
+        <h3>Deep clean</h3>
+        <p>Everything in the basic clean, plus the spots that quietly collect dust all year.</p>
+        <ul><li>Everything basic</li><li class="plus">Blinds</li><li class="plus">Cabinets</li><li class="plus">Doors</li><li class="plus">Air vents</li><li class="plus">Light fixtures</li></ul>
+      </article>
+      <article class="card has-spark rv">
+        <svg class="spark"><use href="#sp"/></svg><svg class="spark s2"><use href="#sp"/></svg>
+        <div class="ic"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="14" width="18" height="16" rx="2" fill="none" stroke="#13294b" stroke-width="2.6"/><path d="M7 20h18" stroke="#13294b" stroke-width="2.6"/><path d="M27 22h7m-3-3 3 3-3 3" fill="none" stroke="#13294b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="11" r="2.5" fill="#ffcf5c"/></svg></div>
+        <h3>Move-in / move-out</h3>
+        <p>Hand back the keys with confidence, or walk into a fresh start in your new place.</p>
+        <ul><li>Empty-home clean</li><li>Homes &amp; offices</li></ul>
+      </article>
+    </div>
+
+    <div class="freq rv">
+      <h3>How often should we come by?</h3>
+      <p>Tap a rhythm. Swept Away offers all of these.</p>
+      <div class="pills" role="group" aria-label="Cleaning frequency">
+        <button class="pill" type="button" data-n="Weekly visits keep busy households permanently guest-ready." aria-pressed="false"><span class="d"></span>Weekly</button>
+        <button class="pill" type="button" data-n="Biweekly: every other week, the sweet spot for most homes." aria-pressed="true"><span class="d"></span>Biweekly</button>
+        <button class="pill" type="button" data-n="Monthly: a reliable reset once a month." aria-pressed="false"><span class="d"></span>Monthly</button>
+        <button class="pill" type="button" data-n="Bimonthly visits for lighter-traffic homes and offices." aria-pressed="false"><span class="d"></span>Bimonthly</button>
+        <button class="pill" type="button" data-n="Biannual deep cleans: a spring and fall refresh." aria-pressed="false"><span class="d"></span>Biannual deep clean</button>
+        <button class="pill" type="button" data-n="An annual deep clean: once a year, top to bottom." aria-pressed="false"><span class="d"></span>Annual deep clean</button>
+      </div>
+      <p class="freq-note" id="freqNote" aria-live="polite">Biweekly: every other week, the sweet spot for most homes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <svg class="wind" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-100 140C260 90 480 220 760 170s420-120 780-40"/>
+    <path d="M-100 560c300-50 520 50 800 10s440-120 840-50"/>
+  </svg>
+  <div class="wrap" style="position:relative">
+    <div class="kicker rv"><svg><use href="#i-swirl"/></svg>Why Swept Away</div>
+    <h2 class="rv">Small, personal, and <em>serious about clean.</em></h2>
+    <p class="sec-intro rv">Swept Away describes its services as smart, flexible and affordable, and is committed to exceeding your needs. Here is what that looks like.</p>
+    <div class="why-grid">
+      <div class="why-item has-spark rv"><svg class="spark"><use href="#sp"/></svg><span class="n">01</span><h3>Founder-led estimates</h3><p>The owner does every in-home estimate personally, so you meet the person behind the business.</p></div>
+      <div class="why-item has-spark rv"><svg class="spark"><use href="#sp"/></svg><span class="n">02</span><h3>Priced by walkthrough</h3><p>Quotes come from seeing your home, not from square footage alone.</p></div>
+      <div class="why-item has-spark rv"><svg class="spark"><use href="#sp"/></svg><span class="n">03</span><h3>Flexible schedules</h3><p>From weekly visits to a once-a-year deep clean, you choose the rhythm.</p></div>
+      <div class="why-item has-spark rv"><svg class="spark"><use href="#sp"/></svg><span class="n">04</span><h3>Homes &amp; offices</h3><p>Residential and office cleaning across Knoxville.</p></div>
+    </div>
+    <div class="quote rv">
+      <blockquote>“I founded Swept Away out of a pure passion for helping people get <em>clean and organized</em> in their lives.”<cite>Londa Jones, founder</cite></blockquote>
+      <svg viewBox="0 0 300 160" aria-hidden="true" style="max-width:320px"><g fill="none" stroke="#ffcf5c" stroke-width="3" stroke-linecap="round"><path d="M10 90c50 0 80-60 140-60 40 0 56 30 40 50s-56 10-40-20"/><path d="M10 120h220" opacity=".5"/><path d="M60 145h200" opacity=".3"/></g><use class="twinkle" href="#sp" x="240" y="20" width="34" height="34" fill="#ffcf5c"/><use class="twinkle b" href="#sp" x="210" y="80" width="18" height="18" fill="#fff"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="paws rv">
+      <div>
+        <div class="kicker"><svg><use href="#i-swirl"/></svg>Pets welcome</div>
+        <h2>All animals are created equal.</h2>
+        <p class="sec-intro">Dogs, cats, whoever shares your couch: with Swept Away, you can trust that all are in great hands.</p>
+      </div>
+      <svg class="pet" viewBox="0 0 260 200" aria-hidden="true">
+        <ellipse cx="130" cy="182" rx="100" ry="12" fill="#cfe8f5"/>
+        <path d="M70 180c-6-50 10-90 60-90s66 40 60 90z" fill="#e8a33d"/>
+        <circle cx="130" cy="80" r="44" fill="#f0b552"/>
+        <path d="M92 58 84 18l30 26zM168 58l8-40-30 26z" fill="#e8a33d"/>
+        <circle cx="114" cy="78" r="5" fill="#13294b"/><circle cx="146" cy="78" r="5" fill="#13294b"/>
+        <path d="M124 92h12l-6 7z" fill="#13294b"/>
+        <path d="M130 99c-3 6-10 6-12 2M130 99c3 6 10 6 12 2" fill="none" stroke="#13294b" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M190 160c30 0 40-30 26-40" fill="none" stroke="#e8a33d" stroke-width="10" stroke-linecap="round"/>
+        <g fill="#13294b" opacity=".35"><circle cx="30" cy="70" r="5"/><circle cx="22" cy="58" r="3"/><circle cx="32" cy="54" r="3"/><circle cx="40" cy="60" r="3"/></g>
+        <use class="twinkle" href="#sp" x="200" y="30" width="26" height="26" fill="#ffcf5c"/>
+        <use class="twinkle c" href="#sp" x="40" y="120" width="16" height="16" fill="#7fb8dc"/>
+        <circle cx="220" cy="90" r="12" fill="none" stroke="#7fb8dc" stroke-width="2"/><circle cx="216" cy="86" r="3" fill="#fff"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="estimate">
+  <div class="wrap split">
+    <div>
+      <div class="kicker rv"><svg><use href="#i-swirl"/></svg>Getting started</div>
+      <h2 class="rv">From first call to <em>fresh air.</em></h2>
+      <div class="steps">
+        <div class="step rv"><div><h3>Call, text or email</h3><p>Share your name, address and when you are free for a walkthrough.</p></div></div>
+        <div class="step rv"><div><h3>In-home walkthrough</h3><p>Swept Away visits to see your space in person and build your estimate.</p></div></div>
+        <div class="step rv"><div><h3>Pick your clean &amp; rhythm</h3><p>Basic, deep or move-in/out, weekly through annual.</p></div></div>
+      </div>
+    </div>
+    <div class="hours rv" id="hours">
+      <h3>Scheduling</h3>
+      <p>Hours aren’t posted online. Walkthroughs and cleans are booked by appointment, so call or text to find a time that works.</p>
+      <div class="week" id="week">
+        <div class="day" data-d="1">Mon<small>By appt.</small></div>
+        <div class="day" data-d="2">Tue<small>By appt.</small></div>
+        <div class="day" data-d="3">Wed<small>By appt.</small></div>
+        <div class="day" data-d="4">Thu<small>By appt.</small></div>
+        <div class="day" data-d="5">Fri<small>By appt.</small></div>
+        <div class="day" data-d="6">Sat<small>Ask</small></div>
+        <div class="day" data-d="0">Sun<small>Ask</small></div>
+      </div>
+      <p class="today-line" id="todayLine">Call (865) 679-0719 to set up your walkthrough.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="kicker rv"><svg><use href="#i-swirl"/></svg>Say hello</div>
+    <h2 class="rv">Let’s get you <em>swept away.</em></h2>
+    <p class="sec-intro rv">Tell Swept Away your address, cleaning frequency, the type of clean you want and when you are free for a home walkthrough.</p>
+    <div class="c-grid">
+      <a class="c-card has-spark glint rv" href="tel:+18656790719"><svg class="spark"><use href="#sp"/></svg><span class="ic"><svg><use href="#i-phone"/></svg></span><span><small>Call or text</small><b>(865) 679-0719</b></span></a>
+      <a class="c-card has-spark glint rv" href="mailto:sweptawaycs1@gmail.com?subject=Cleaning%20estimate"><svg class="spark"><use href="#sp"/></svg><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>sweptawaycs1@gmail.com</b></span></a>
+      <a class="c-card has-spark glint rv" href="https://www.facebook.com/swept.away.581" target="_blank" rel="noopener"><svg class="spark"><use href="#sp"/></svg><span class="ic"><svg><use href="#i-fb"/></svg></span><span><small>Facebook</small><b>Swept Away</b></span></a>
+    </div>
+    <div class="area rv">
+      <svg class="compass" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#fff" stroke-width="3"/><path d="M50 10 58 50 50 90 42 50z" fill="#fff"/></svg>
+      <h3>Serving Knoxville, TN</h3>
+      <p>Residential and office cleaning in and around Knoxville. Not sure if you’re in range? Just ask.</p>
+      <p class="ask">Want directions? Swept Away comes to <b>you</b>, so there’s no storefront to find.</p>
+    </div>
+    <div class="jobs rv">
+      <p>Love a clean space? Swept Away accepts resumes.</p>
+      <a href="mailto:sweptawaycs1@gmail.com?subject=Resume">Email your resume</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1e3a66"/><path d="M8 24c6 0 9-9 16-9 4 0 6 3 4.5 5.5S23 22 23 19" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M8 29h20" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><use href="#sp" x="25" y="5" width="10" height="10" fill="#ffcf5c"/></svg><span>Swept <em>Away</em></span></a>
+        <p class="tag-line">Deep clean. Keep clean.</p>
+      </div>
+      <div><b style="color:#fff">Contact</b><br><a href="tel:+18656790719">(865) 679-0719</a><br><a href="mailto:sweptawaycs1@gmail.com">sweptawaycs1@gmail.com</a><br>Knoxville, TN</div>
+      <div class="f-links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#estimate">Estimates</a><a href="#contact">Contact</a><a href="https://www.facebook.com/swept.away.581" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="f-bottom">© <span id="yr">2026</span> Swept Away · Knoxville, TN · Concept design by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-sun" href="tel:+18656790719"><svg><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-ghost" style="background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)" href="mailto:sweptawaycs1@gmail.com?subject=Cleaning%20estimate"><svg><use href="#i-mail"/></svg>Email</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(showAll,1500);
+
+  // bubbles
+  var b=document.getElementById('bubbles');
+  if(b && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    for(var i=0;i<14;i++){
+      var s=document.createElement('span'); s.className='bubble';
+      var z=10+Math.random()*34;
+      s.style.width=s.style.height=z+'px';
+      s.style.left=(Math.random()*96)+'%';
+      s.style.animationDuration=(9+Math.random()*10)+'s';
+      s.style.animationDelay=(-Math.random()*18)+'s';
+      b.appendChild(s);
+    }
+  }
+
+  // frequency pills
+  var pills=document.querySelectorAll('.pill'), note=document.getElementById('freqNote');
+  [].forEach.call(pills,function(p){p.addEventListener('click',function(){
+    [].forEach.call(pills,function(q){q.setAttribute('aria-pressed','false')});
+    p.setAttribute('aria-pressed','true'); note.textContent=p.getAttribute('data-n');
+  })});
+
+  // today
+  var t=new Date().getDay(), names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var el=document.querySelector('.day[data-d="'+t+'"]');
+  if(el){el.classList.add('today');}
+  document.getElementById('todayLine').innerHTML='Happy '+names[t]+'! Call or text <a href="tel:+18656790719" style="white-space:nowrap;font-weight:700">(865) 679-0719</a> to book your walkthrough.';
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

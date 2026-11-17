@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ray's Fade Factory · Barbershop on Clinton Hwy, Knoxville</title>
+<meta name="description" content="Ray's Fade Factory — fades, lineups, beard work and full transformations at 5101 Clinton Hwy, Knoxville, TN. 5.0 on Google across 252 reviews.">
+<meta name="theme-color" content="#16161a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#16161a;
+  --char-2:#1d1d22;
+  --concrete:#26262c;
+  --steel:#3a3a42;
+  --line:rgba(236,230,218,.12);
+  --bone:#ece6da;
+  --mute:#a29d93;
+  --brass:#c9a35c;
+  --brass-hi:#efd394;
+  --brass-lo:#8a6a2e;
+  --orange:#ff5a1f;
+  --orange-hi:#ff7a45;
+  --display:"Big Shoulders Display","Anton","Oswald","Arial Narrow",Impact,sans-serif;
+  --stencil:"Big Shoulders Stencil Display","Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --text:"Archivo","Inter Tight","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,4vw,56px);
+  --max:1360px;
+  --banner:34px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--char);color:var(--bone);font-family:var(--text);font-size:clamp(16px,1.05vw,17px);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--orange);color:var(--char)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+/* concrete grain over everything */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.marquee{position:relative;z-index:2}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- concept banner ---------- */
+.concept{position:fixed;top:0;left:0;right:0;z-index:60;height:var(--banner);display:flex;align-items:center;justify-content:center;gap:10px;padding:0 12px;
+  background:var(--orange);color:#140b06;font-size:12px;font-weight:600;letter-spacing:.02em;text-align:center;line-height:1.2}
+.concept b{font-weight:800}
+.concept i{font-style:normal;display:inline-block;width:8px;height:8px;background:#140b06;transform:rotate(45deg);flex:none}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:var(--banner);left:0;right:0;z-index:50;transition:background .35s,padding .35s,border-color .35s;border-bottom:1px solid transparent}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .35s}
+.nav.condensed{background:rgba(22,22,26,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
+.nav.condensed .wrap{height:58px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-word{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:22px;letter-spacing:.02em;line-height:.9}
+.brand-word small{display:block;font-family:var(--text);font-size:9.5px;font-weight:600;letter-spacing:.28em;color:var(--brass);margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:12px 14px;color:var(--bone);position:relative;transition:color .2s}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+.nav-links a:not(.btn):hover{color:var(--brass-hi)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border:0;cursor:pointer;text-decoration:none;
+  font-family:var(--text);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;position:relative;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-hot{background:var(--orange);color:#140b06;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}
+.btn-hot:hover{background:var(--orange-hi);transform:translateY(-2px)}
+.btn-line{color:var(--bone);background:transparent;box-shadow:inset 0 0 0 1.5px rgba(236,230,218,.4)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--brass);color:var(--brass-hi);transform:translateY(-2px)}
+.btn-brass{background:linear-gradient(100deg,var(--brass-lo),var(--brass) 30%,var(--brass-hi) 50%,var(--brass) 70%,var(--brass-lo));background-size:220% 100%;color:#1a1408;transition:background-position .6s,transform .2s}
+.btn-brass:hover{background-position:100% 0;transform:translateY(-2px)}
+.nav .btn{min-height:44px;padding:0 18px;font-size:12px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;padding:calc(var(--banner) + 120px) 0 0;overflow:hidden;
+  background:
+    radial-gradient(1100px 600px at 82% 30%,rgba(201,163,92,.13),transparent 60%),
+    radial-gradient(700px 500px at 0% 100%,rgba(255,90,31,.08),transparent 60%),
+    linear-gradient(180deg,#1b1b20,var(--char))}
+.hero-grid{position:absolute;inset:0;pointer-events:none;opacity:.6;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:88px 88px;
+  -webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--brass)}
+.kicker::before{content:"";width:34px;height:2px;background:var(--orange)}
+.hero h1{font-family:var(--display);font-weight:900;text-transform:uppercase;margin:22px 0 0;line-height:.82;letter-spacing:-.005em;font-size:clamp(78px,12.4vw,196px)}
+.hero h1 .row{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .row>span{display:inline-block;transform:translateY(105%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .row:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .row:nth-child(3)>span{animation-delay:.24s}
+.hero h1 .brass{background:linear-gradient(100deg,var(--brass-lo),var(--brass) 25%,var(--brass-hi) 48%,var(--brass) 70%,var(--brass-lo));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--bone)}
+.hero h1 .dot{color:var(--orange)}
+@keyframes rise{to{transform:none}}
+.hero-sub{max-width:520px;margin:30px 0 0;font-size:clamp(17px,1.35vw,20px);color:#cfc9bd;line-height:1.55}
+.hero-sub strong{color:var(--bone);font-weight:700}
+.stars{color:var(--orange);letter-spacing:.12em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.hero-meta div{padding:18px 28px 0 0;margin-right:28px;border-right:1px solid var(--line)}
+.hero-meta div:last-child{border:0}
+.hero-meta dt{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.hero-meta dd{margin:4px 0 0;font-family:var(--display);font-weight:800;font-size:30px;line-height:1;text-transform:uppercase}
+
+/* gear / pole machine */
+.machine{position:relative;aspect-ratio:1;width:112%;max-width:640px;justify-self:end;margin-right:-4%}
+.machine svg{width:100%;height:100%;overflow:visible}
+.gear-spin{transform-origin:300px 300px;animation:spin 38s linear infinite}
+.gear-spin-rev{transform-origin:300px 300px;animation:spin 24s linear infinite reverse}
+.cog-small{transform-box:fill-box;transform-origin:center;animation:spin 9s linear infinite reverse}
+.pole-stripes{animation:pole 1.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pole{to{transform:translateY(-56px)}}
+.plate{position:absolute;left:-6%;bottom:9%;background:var(--bone);color:var(--char);padding:14px 18px 12px;transform:rotate(-4deg);box-shadow:0 18px 40px rgba(0,0,0,.45);
+  font-family:var(--stencil);text-transform:uppercase;line-height:.9}
+.plate b{display:block;font-size:44px;font-weight:900;letter-spacing:.02em}
+.plate span{display:block;font-family:var(--text);font-size:10px;font-weight:700;letter-spacing:.28em;margin-top:6px}
+.plate::before,.plate::after{content:"";position:absolute;top:8px;width:7px;height:7px;border-radius:50%;background:#8b857a;box-shadow:inset 1px 1px 0 rgba(0,0,0,.35)}
+.plate::before{left:7px}.plate::after{right:7px}
+.scroll-cue{position:absolute;right:var(--gut);bottom:100px;writing-mode:vertical-rl;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:12px}
+.scroll-cue::after{content:"";width:1px;height:60px;background:linear-gradient(var(--orange),transparent)}
+
+/* ---------- hazard + marquee ---------- */
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--orange) 0 16px,#141417 16px 32px);position:relative;z-index:2}
+.hazard.brass{background:repeating-linear-gradient(-45deg,var(--brass) 0 16px,#141417 16px 32px);height:10px}
+.marquee{background:var(--bone);color:var(--char);overflow:hidden;border-block:3px solid #141417;margin-top:88px}
+.marquee-track{display:flex;width:max-content;animation:marq 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee ul{display:flex;align-items:center;margin:0;padding:0;list-style:none}
+.marquee li{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(28px,3.4vw,46px);line-height:1;padding:18px 0;white-space:nowrap;display:flex;align-items:center}
+.marquee li::after{content:"";width:16px;height:16px;margin:0 28px;background:var(--orange);transform:rotate(45deg)}
+.marquee li:nth-child(even){color:transparent;-webkit-text-stroke:1.5px var(--char)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- section scaffolding ---------- */
+section{position:relative}
+.sec{padding:clamp(88px,11vw,170px) 0}
+.sec-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);align-items:end;margin-bottom:clamp(44px,6vw,84px)}
+.stencil-no{font-family:var(--stencil);font-weight:900;font-size:clamp(96px,14vw,220px);line-height:.72;color:rgba(201,163,92,.08);-webkit-text-stroke:2px rgba(201,163,92,.7);letter-spacing:-.02em;user-select:none}
+.sec-head .lab{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:12px}
+.sec-head .lab::after{content:"";flex:1;height:1px;background:var(--line);max-width:240px}
+.sec-head h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.86;margin:14px 0 0;font-size:clamp(50px,7vw,112px);letter-spacing:-.005em}
+.sec-head h2 em{font-style:normal;color:var(--brass)}
+
+/* ---------- services spec sheet ---------- */
+.line-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(32px,5vw,90px);align-items:start}
+.line-aside{position:sticky;top:120px}
+.line-aside p{color:#cfc9bd;margin:0 0 22px;max-width:380px;font-size:17px}
+.quote-card{position:relative;padding:28px 26px 24px;background:linear-gradient(160deg,#24242a,#1a1a1f);border:1px solid var(--line);margin-bottom:26px}
+.quote-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--orange)}
+.quote-card q{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(28px,2.6vw,38px);line-height:.98;quotes:none}
+.quote-card small{display:block;margin-top:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.spec{border-top:3px solid var(--bone)}
+.spec-row{display:grid;grid-template-columns:62px minmax(0,1fr) auto auto;align-items:center;gap:18px;padding:24px 4px;border-bottom:1px solid var(--line);position:relative;transition:background .25s,padding .25s}
+.spec-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--orange);transition:width .3s}
+.spec-row:hover{background:rgba(236,230,218,.03);padding-left:18px}
+.spec-row:hover::before{width:4px}
+.spec-code{font-family:var(--stencil);font-weight:800;font-size:22px;color:var(--brass);letter-spacing:.04em}
+.spec-name{font-family:var(--display);font-weight:800;font-size:clamp(26px,2.5vw,36px);text-transform:uppercase;line-height:1}
+.spec-name small{display:block;font-family:var(--text);font-weight:500;text-transform:none;font-size:14px;color:var(--mute);margin-top:6px;line-height:1.4}
+.spec-time{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);white-space:nowrap;display:flex;align-items:center;gap:8px}
+.spec-time svg{width:14px;height:14px}
+.spec-price{font-family:var(--display);font-weight:900;font-size:clamp(34px,3.2vw,48px);line-height:1;min-width:84px;text-align:right}
+.spec-price sup{font-size:.48em;vertical-align:.7em;margin-right:2px;color:var(--brass)}
+.spec-row.feature .spec-name{color:var(--brass-hi)}
+.spec-row.feature .spec-price{color:var(--orange)}
+.spec-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;margin-top:28px;font-size:13px;color:var(--mute)}
+
+/* ---------- why / QC ---------- */
+.qc{background:var(--concrete);overflow:hidden}
+.qc::before{content:"";position:absolute;inset:0;opacity:.45;background:
+  radial-gradient(circle at 15% 20%,rgba(0,0,0,.25),transparent 40%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.04),transparent 40%)}
+.qc .wrap{position:relative}
+.qc-board{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2px;background:#141417;border:2px solid #141417}
+.qc-cell{background:var(--concrete);padding:clamp(26px,3vw,44px);position:relative;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.qc-cell:hover{background:#2c2c33}
+.qc-cell .tag{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between;gap:12px}
+.qc-cell .tag b{color:var(--orange);font-weight:700}
+.qc-cell .big{font-family:var(--display);font-weight:900;line-height:.8;font-size:clamp(110px,14vw,230px);letter-spacing:-.02em;margin-top:24px}
+.qc-cell .big.brass{background:linear-gradient(100deg,var(--brass-lo),var(--brass) 30%,var(--brass-hi) 50%,var(--brass) 70%,var(--brass-lo));-webkit-background-clip:text;background-clip:text;color:transparent}
+.qc-cell h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(30px,2.8vw,42px);line-height:.95;margin:20px 0 10px}
+.qc-cell p{margin:0;color:#cfc9bd;max-width:440px}
+.c-rate{grid-column:span 7}
+.c-rev{grid-column:span 5;background:var(--orange);color:#140b06}
+.c-rev:hover{background:var(--orange-hi)}
+.c-rev .tag{color:#3a1708}.c-rev .tag b{color:#140b06}
+.c-rev .big{color:#140b06}
+.c-rev p{color:#2a1206}
+.c-a{grid-column:span 4}.c-b{grid-column:span 4}.c-c{grid-column:span 4}
+.icon{width:54px;height:54px;color:var(--brass)}
+.stars-row{display:flex;gap:6px;margin-top:16px}
+.stars-row svg{width:28px;height:28px;color:var(--orange)}
+
+/* ---------- hours ---------- */
+.hours-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,90px);align-items:start}
+.board{background:#101013;border:1px solid var(--line);padding:clamp(20px,2.4vw,34px);position:relative;box-shadow:inset 0 0 0 6px #18181c, 0 30px 60px rgba(0,0,0,.35)}
+.board::before{content:"SHIFT BOARD";position:absolute;top:-11px;left:24px;background:var(--char);padding:0 10px;font-size:11px;font-weight:700;letter-spacing:.3em;color:var(--brass)}
+.day{display:grid;grid-template-columns:110px minmax(0,1fr) auto;align-items:center;gap:14px;padding:16px 14px;border-bottom:1px dashed rgba(236,230,218,.12);transition:background .25s}
+.day:last-child{border-bottom:0}
+.day:hover{background:rgba(236,230,218,.03)}
+.day .d{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:28px;line-height:1;letter-spacing:.02em}
+.day .t{font-size:14px;color:var(--mute);display:flex;align-items:center;gap:12px}
+.day .t::before{content:"";flex:1;max-width:160px;height:2px;background:repeating-linear-gradient(90deg,rgba(236,230,218,.22) 0 8px,transparent 8px 14px)}
+.day.today .t::before{background:var(--orange);max-width:40px}
+.day .flag{font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;padding:6px 10px;opacity:0}
+.day.today{background:linear-gradient(90deg,rgba(255,90,31,.16),transparent 80%);box-shadow:inset 4px 0 0 var(--orange)}
+.day.today .d{color:var(--orange)}
+.day.today .t{color:var(--bone)}
+.day.today .flag{opacity:1;background:var(--orange);color:#140b06}
+.hours-copy p{color:#cfc9bd;font-size:17px;max-width:460px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid rgba(201,163,92,.45);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-hi);margin-bottom:22px}
+.pill i{width:9px;height:9px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 4px rgba(201,163,92,.18)}
+.hours-copy .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.call-big{display:block;text-decoration:none;font-family:var(--display);font-weight:900;font-size:clamp(46px,6vw,92px);line-height:.9;letter-spacing:-.005em;margin:18px 0 6px;transition:color .2s}
+.call-big:hover{color:var(--orange)}
+
+/* ---------- location ---------- */
+.loc{background:#121215}
+.loc-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:0;border:2px solid #000;background:#000}
+.loc-info{background:var(--bone);color:var(--char);padding:clamp(28px,3.4vw,52px);display:flex;flex-direction:column;justify-content:space-between;gap:30px;position:relative}
+.loc-info .lab{font-size:11px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:#7a4a12}
+.loc-info address{font-style:normal;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(46px,5.2vw,82px);line-height:.86;margin-top:14px}
+.loc-info address span{display:block;font-family:var(--text);font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:none;line-height:1.5;margin-top:16px;color:#3c3a36}
+.loc-info .rows{display:grid;gap:0;border-top:2px solid var(--char)}
+.loc-info .rows a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:60px;text-decoration:none;border-bottom:1px solid rgba(22,22,26,.2);font-weight:700;letter-spacing:.06em;transition:padding .25s,color .2s}
+.loc-info .rows a:hover{padding-left:10px;color:#b23a0a}
+.loc-info .rows a span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#6b6760;font-weight:700}
+.loc-info .rows svg{width:20px;height:20px;flex:none}
+.map-frame{position:relative;min-height:520px;overflow:hidden;background:#1a1a1f}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9) brightness(.92) sepia(.25) hue-rotate(-12deg)}
+.map-frame::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 10px #121215, inset 0 0 0 11px rgba(201,163,92,.5);background:linear-gradient(180deg,rgba(18,18,21,.25),transparent 25%,transparent 75%,rgba(18,18,21,.35))}
+.map-tag{position:absolute;left:24px;top:24px;z-index:3;background:var(--orange);color:#140b06;font-family:var(--stencil);font-weight:900;font-size:22px;letter-spacing:.04em;padding:8px 14px;text-transform:uppercase}
+
+/* ---------- CTA band ---------- */
+.band{padding:clamp(80px,10vw,150px) 0;overflow:hidden;position:relative}
+.band h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(64px,11vw,190px);line-height:.82;margin:0;letter-spacing:-.01em}
+.band h2 .outline{color:transparent;-webkit-text-stroke:2px var(--bone)}
+.band h2 .o{color:var(--orange)}
+.band-row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);gap:40px;align-items:end}
+.band p{color:#cfc9bd;margin:0 0 24px;font-size:17px}
+.band .btns{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.band-gear{position:absolute;right:-140px;top:-120px;width:460px;opacity:.07;pointer-events:none}
+.band-gear svg{animation:spin 60s linear infinite}
+
+/* ---------- footer ---------- */
+footer{background:#0e0e10;border-top:1px solid var(--line);padding:64px 0 40px}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
+.foot h4{margin:0 0 14px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:700}
+.foot p,.foot a{margin:0;color:#c7c1b5;font-size:15px;text-decoration:none;line-height:1.7}
+.foot a{display:inline-flex;align-items:center;min-height:44px;transition:color .2s}
+.foot a:hover{color:var(--orange)}
+.foot .wordmark{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(44px,5vw,72px);line-height:.84;color:var(--bone)}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);letter-spacing:.06em}
+.foot-base a{color:var(--brass);text-decoration:none}
+.foot-base a:hover{color:var(--orange)}
+
+/* ---------- mobile call bar ---------- */
+.callbar{display:none}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.clip{transform:none;clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.7,0,.2,1),opacity .4s}
+.rv.in{opacity:1;transform:none}
+.rv.clip.in{clip-path:inset(0 0 0 0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .hero .wrap{grid-template-columns:1fr}
+  .machine{max-width:420px;justify-self:center;margin-top:10px}
+  .scroll-cue{display:none}
+  .line-grid,.hours-grid,.band-row{grid-template-columns:1fr}
+  .line-aside{position:static}
+  .loc-grid{grid-template-columns:1fr}
+  .c-rate,.c-rev{grid-column:span 12}
+  .c-a,.c-b,.c-c{grid-column:span 12}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--banner:40px}
+  .concept{font-size:11px}
+  .nav-links a:not(.btn){display:none}
+  .nav .wrap{height:64px}
+  .hero{padding-top:calc(var(--banner) + 96px);min-height:auto}
+  .hero h1{font-size:28vw;margin-top:18px}
+  .hero h1 .outline{-webkit-text-stroke:1.5px var(--bone)}
+  .kicker .k-long{display:none}
+  .hero-cta .btn{flex:1 1 100%}
+  .hero-meta div{padding-right:18px;margin-right:18px}
+  .hero-meta dd{font-size:26px}
+  .machine{max-width:330px;margin-top:20px}
+  .plate{left:-2%;bottom:4%}
+  .plate b{font-size:34px}
+  .marquee{margin-top:56px}
+  .sec-head{grid-template-columns:1fr;gap:6px}
+  .stencil-no{font-size:110px}
+  .spec-row{grid-template-columns:44px minmax(0,1fr) auto;gap:6px 12px;padding:20px 2px}
+  .spec-row:hover{padding-left:10px}
+  .spec-time{grid-column:2;grid-row:2}
+  .spec-price{grid-row:1 / span 2;grid-column:3;min-width:0}
+  .spec-code{font-size:18px;align-self:start;padding-top:4px}
+  .qc-cell{min-height:0}
+  .day{grid-template-columns:72px minmax(0,1fr) auto;padding:14px 10px;gap:10px}
+  .day .d{font-size:22px}
+  .day .t{font-size:13px}
+  .map-frame{min-height:360px}
+  .foot{grid-template-columns:1fr}
+  .band-gear{width:300px;right:-120px;top:-60px}
+  .band h2{font-size:21vw}
+  .machine{margin-top:0;width:100%;margin-right:0}
+  .hero-meta{margin-top:44px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#0e0e10;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .callbar a{min-height:52px;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+  .callbar svg{width:18px;height:18px}
+  .callbar .c1{background:var(--orange);color:#140b06}
+  .callbar .c2{box-shadow:inset 0 0 0 1.5px rgba(236,230,218,.35);color:var(--bone)}
+  footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .hero h1 .row>span{transform:none}
+  .rv{opacity:1;transform:none;clip-path:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+
+<div class="concept" role="note"><i aria-hidden="true"></i><span>Concept site by <b>Code Craft Media</b>, made for Ray's Fade Factory. Not live.</span></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ray's Fade Factory, back to top">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <defs><linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efd394"/><stop offset=".5" stop-color="#c9a35c"/><stop offset="1" stop-color="#8a6a2e"/></linearGradient></defs>
+        <path fill="url(#bg1)" d="M17.6 1h4.8l.9 4.3 3 1.2 3.7-2.4 3.4 3.4-2.4 3.7 1.2 3 4.3.9v4.8l-4.3.9-1.2 3 2.4 3.7-3.4 3.4-3.7-2.4-3 1.2-.9 4.3h-4.8l-.9-4.3-3-1.2-3.7 2.4-3.4-3.4 2.4-3.7-1.2-3L1 22.4v-4.8l4.3-.9 1.2-3-2.4-3.7 3.4-3.4 3.7 2.4 3-1.2z"/>
+        <circle cx="20" cy="20" r="8.5" fill="#16161a"/>
+        <rect x="17" y="12" width="6" height="16" rx="3" fill="#ece6da"/>
+        <path d="M17 16l6-3v3l-6 3zM17 22l6-3v3l-6 3z" fill="#ff5a1f"/>
+      </svg>
+      <span class="brand-word">Ray's Fade Factory<small>Clinton Hwy · Knoxville</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#line">The Line</a>
+      <a href="#qc">Quality</a>
+      <a href="#hours">Hours</a>
+      <a href="#location">Location</a>
+      <a class="btn btn-hot" href="tel:+18653400305">Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker"><span><span class="k-long">Barbershop&nbsp;·&nbsp;</span>5101 Clinton Hwy</span></span>
+      <h1 id="hero-title">
+        <span class="row"><span>Fades</span></span>
+        <span class="row"><span class="outline">Built</span> <span class="brass">to</span></span>
+        <span class="row"><span>Spec<span class="dot">.</span></span></span>
+      </h1>
+      <p class="hero-sub"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google across 252 reviews.</strong> Sharp fades, clean lineups, beard work and full transformations, finished off the line on Clinton Highway in North Knoxville.</p>
+      <div class="hero-cta">
+        <a class="btn btn-hot" href="tel:+18653400305">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+          (865) 340-0305
+        </a>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=5101%20Clinton%20Hwy%2C%20Knoxville%2C%20TN%2037912" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+          Directions
+        </a>
+      </div>
+      <dl class="hero-meta">
+        <div><dt>Google</dt><dd>5.0 ★</dd></div>
+        <div><dt>Reviews</dt><dd>252</dd></div>
+        <div><dt>Cuts from</dt><dd>$25</dd></div>
+      </dl>
+    </div>
+
+    <div class="machine" aria-hidden="true">
+      <svg viewBox="0 0 600 600">
+        <defs>
+          <linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f3dca4"/><stop offset=".3" stop-color="#c9a35c"/><stop offset=".55" stop-color="#8a6a2e"/><stop offset=".8" stop-color="#d9b672"/><stop offset="1" stop-color="#7a5b24"/>
+          </linearGradient>
+          <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4a4a53"/><stop offset=".5" stop-color="#2a2a30"/><stop offset="1" stop-color="#3d3d45"/>
+          </linearGradient>
+          <linearGradient id="glass" x1="0" x2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".25" stop-color="#fff" stop-opacity=".35"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <clipPath id="poleClip"><rect x="264" y="186" width="72" height="228" rx="36"/></clipPath>
+          <pattern id="brush" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><rect width="6" height="6" fill="none"/><line x1="0" y1="0" x2="0" y2="6" stroke="#fff" stroke-opacity=".07" stroke-width="1"/></pattern>
+        </defs>
+
+        <!-- outer brass gear -->
+        <g class="gear-spin">
+          <path fill="url(#brass)" d="M276 22h48l7 40 27 9 32-25 39 28-14 38 17 23 41-1 15 46-34 23 1 29 34 23-15 46-41-1-17 23 14 38-39 28-32-25-27 9-7 40h-48l-7-40-27-9-32 25-39-28 14-38-17-23-41 1-15-46 34-23-1-29-34-23 15-46 41 1 17-23-14-38 39-28 32 25 27-9z" transform="translate(0 0)"/>
+          <path fill="url(#brush)" d="M276 22h48l7 40 27 9 32-25 39 28-14 38 17 23 41-1 15 46-34 23 1 29 34 23-15 46-41-1-17 23 14 38-39 28-32-25-27 9-7 40h-48l-7-40-27-9-32 25-39-28 14-38-17-23-41 1-15-46 34-23-1-29-34-23 15-46 41 1 17-23-14-38 39-28 32 25 27-9z"/>
+          <circle cx="300" cy="300" r="200" fill="#16161a"/>
+          <circle cx="300" cy="300" r="200" fill="none" stroke="#c9a35c" stroke-opacity=".5" stroke-width="2"/>
+          <g fill="#c9a35c" opacity=".9">
+            <circle cx="300" cy="118" r="6"/><circle cx="482" cy="300" r="6"/><circle cx="300" cy="482" r="6"/><circle cx="118" cy="300" r="6"/>
+            <circle cx="429" cy="171" r="6"/><circle cx="429" cy="429" r="6"/><circle cx="171" cy="429" r="6"/><circle cx="171" cy="171" r="6"/>
+          </g>
+        </g>
+
+        <!-- inner rotating text ring -->
+        <g class="gear-spin-rev">
+          <path id="ring" fill="none" d="M300 300m-158 0a158 158 0 1 1 316 0a158 158 0 1 1-316 0"/>
+          <text font-family="Big Shoulders Stencil Display, Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="24" fill="#ece6da" fill-opacity=".82">
+            <textPath href="#ring" textLength="985" lengthAdjust="spacing">RAY'S FADE FACTORY ✦ KNOXVILLE TN ✦ FRESH FADES ✦ CLEAN LINEUPS ✦</textPath>
+          </text>
+        </g>
+        <circle cx="300" cy="300" r="132" fill="url(#steel)" stroke="#000" stroke-opacity=".5" stroke-width="3"/>
+        <circle cx="300" cy="300" r="132" fill="none" stroke="#c9a35c" stroke-opacity=".35" stroke-width="1" stroke-dasharray="2 8"/>
+
+        <!-- barber pole -->
+        <rect x="252" y="168" width="96" height="18" rx="4" fill="url(#brass)"/>
+        <rect x="252" y="414" width="96" height="18" rx="4" fill="url(#brass)"/>
+        <circle cx="300" cy="157" r="11" fill="url(#brass)"/>
+        <circle cx="300" cy="443" r="11" fill="url(#brass)"/>
+        <g clip-path="url(#poleClip)">
+          <rect x="262" y="180" width="76" height="240" fill="#ece6da"/>
+          <g class="pole-stripes">
+            <g id="stripes">
+              <path d="M262 150l76-38v22l-76 38z" fill="#ff5a1f"/>
+              <path d="M262 178l76-38v22l-76 38z" fill="#16161a"/>
+            </g>
+            <use href="#stripes" y="56"/><use href="#stripes" y="112"/><use href="#stripes" y="168"/><use href="#stripes" y="224"/><use href="#stripes" y="280"/><use href="#stripes" y="336"/>
+          </g>
+          <rect x="262" y="180" width="76" height="240" fill="url(#glass)"/>
+        </g>
+        <rect x="264" y="186" width="72" height="228" rx="36" fill="none" stroke="#000" stroke-opacity=".4" stroke-width="2"/>
+
+        <!-- small satellite cog -->
+        <g transform="translate(470 470)">
+          <g class="cog-small">
+            <path fill="#ff5a1f" d="M-9-58h18l3 15 11 5 13-9 13 13-9 13 5 11 15 3v18l-15 3-5 11 9 13-13 13-13-9-11 5-3 15h-18l-3-15-11-5-13 9-13-13 9-13-5-11-15-3V-9l15-3 5-11-9-13 13-13 13 9 11-5z"/>
+            <circle r="20" fill="#16161a"/>
+            <circle r="7" fill="#ff5a1f"/>
+          </g>
+        </g>
+      </svg>
+      <div class="plate"><b>No. 5101</b><span>Clinton Hwy · Knox TN</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll the floor</div>
+
+  <div class="marquee" aria-label="Fresh fades, Clinton Hwy, 5.0 on Google, 252 reviews, Walk out fresh">
+    <div class="marquee-track" aria-hidden="true">
+      <ul><li>Fresh fades</li><li>Clinton Hwy</li><li>5.0 on Google</li><li>252 reviews</li><li>Clean lineups</li><li>Beard work</li><li>Knoxville TN</li></ul>
+      <ul><li>Fresh fades</li><li>Clinton Hwy</li><li>5.0 on Google</li><li>252 reviews</li><li>Clean lineups</li><li>Beard work</li><li>Knoxville TN</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 01 THE LINE -->
+<section class="sec" id="line" aria-labelledby="line-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stencil-no rv" aria-hidden="true">01</div>
+      <div class="rv d1">
+        <div class="lab">The production line</div>
+        <h2 id="line-title">Pick your <em>spec.</em></h2>
+      </div>
+    </div>
+
+    <div class="line-grid">
+      <aside class="line-aside rv">
+        <div class="quote-card">
+          <q>Our goal is simple: give you a fresh, clean cut every time you sit in our chair.</q>
+          <small>The shop's own words</small>
+        </div>
+        <p>Every service, straight from the shop's booking page. Lock in a time online, or call the shop to check the chair.</p>
+        <a class="btn btn-brass" href="https://booksy.com/en-us/1058371_raysfadefactory_barber-shop_35902_knoxville" target="_blank" rel="noopener">
+          Book on Booksy
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </aside>
+
+      <div>
+        <div class="spec" role="list">
+          <div class="spec-row feature rv" role="listitem">
+            <span class="spec-code">A·01</span>
+            <span class="spec-name">Haircut<small>The house cut. Fade, taper or classic, finished clean.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+            <span class="spec-price"><sup>$</sup>40</span>
+          </div>
+          <div class="spec-row rv" role="listitem">
+            <span class="spec-code">A·02</span>
+            <span class="spec-name">Haircut + Beard<small>Cut plus a shaped, lined beard.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>40 min</span>
+            <span class="spec-price"><sup>$</sup>50</span>
+          </div>
+          <div class="spec-row feature rv" role="listitem">
+            <span class="spec-code">A·03</span>
+            <span class="spec-name">Haircut &amp; Beard +<small>Beard trim, razor lineup and a hot towel.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 min</span>
+            <span class="spec-price"><sup>$</sup>55</span>
+          </div>
+          <div class="spec-row rv" role="listitem">
+            <span class="spec-code">B·01</span>
+            <span class="spec-name">Kids Cut<small>Ages 15 and under.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+            <span class="spec-price"><sup>$</sup>25</span>
+          </div>
+          <div class="spec-row rv" role="listitem">
+            <span class="spec-code">C·01</span>
+            <span class="spec-name">Lineup<small>Edges reset. Razor if you want it.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20 min</span>
+            <span class="spec-price"><sup>$</sup>20</span>
+          </div>
+          <div class="spec-row rv" role="listitem">
+            <span class="spec-code">C·02</span>
+            <span class="spec-name">Hair Wash<small>Add it to any cut.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 min</span>
+            <span class="spec-price"><sup>$</sup>10</span>
+          </div>
+          <div class="spec-row rv" role="listitem">
+            <span class="spec-code">C·03</span>
+            <span class="spec-name">Eyebrow Lineup<small>Cleaned up with the razor.</small></span>
+            <span class="spec-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 min</span>
+            <span class="spec-price"><sup>$</sup>10</span>
+          </div>
+        </div>
+        <div class="spec-foot">
+          <span>Prices and times as listed on the shop's Booksy page. Confirm when you book.</span>
+          <a class="btn btn-line" href="tel:+18653400305">Call the shop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard" aria-hidden="true"></div>
+
+<!-- 02 QUALITY CONTROL -->
+<section class="sec qc" id="qc" aria-labelledby="qc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stencil-no rv" aria-hidden="true">02</div>
+      <div class="rv d1">
+        <div class="lab">Quality control</div>
+        <h2 id="qc-title">Inspected by <em>Knoxville.</em></h2>
+      </div>
+    </div>
+
+    <div class="qc-board">
+      <div class="qc-cell c-rate rv clip">
+        <div class="tag"><span>QC-01 · Google rating</span><b>Pass</b></div>
+        <div>
+          <div class="big brass">5.0</div>
+          <div class="stars-row" aria-label="Five out of five stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg>
+          </div>
+          <p style="margin-top:18px">A perfect score on Google. Not a rounding error: a full 5.0.</p>
+        </div>
+      </div>
+      <div class="qc-cell c-rev rv clip d1">
+        <div class="tag"><span>QC-02 · Reviews logged</span><b>Verified</b></div>
+        <div>
+          <div class="big">252</div>
+          <p style="margin-top:14px">Google reviews and counting. That many people took the time to sign off on their cut.</p>
+        </div>
+      </div>
+      <div class="qc-cell c-a rv">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="15" y="14" width="18" height="30" rx="6"/><path d="M13 6h22v8H13z"/><path d="M16 9v2M20 9v2M24 9v2M28 9v2M32 9v2" stroke="#ff5a1f"/><path d="M20 24h8M20 30h8" stroke="#ff5a1f"/></svg>
+        <div><h3>Sharp fades</h3><p>Tight, seamless blends. The fade is the whole job.</p></div>
+      </div>
+      <div class="qc-cell c-b rv d1">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 34L34 6l8 8-28 28H6z"/><path d="M28 12l8 8" stroke="#ff5a1f"/><path d="M6 42h36"/></svg>
+        <div><h3>Clean lineups</h3><p>Razor-crisp edges that hold their shape for days.</p></div>
+      </div>
+      <div class="qc-cell c-c rv d2">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M10 14c0 18 6 28 14 28s14-10 14-28"/><path d="M16 26c2 4 5 6 8 6s6-2 8-6" stroke="#ff5a1f"/><path d="M10 14c4 4 9 6 14 6s10-2 14-6"/></svg>
+        <div><h3>Beard work</h3><p>Trims, shape-ups and full transformations.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard brass" aria-hidden="true"></div>
+
+<!-- 03 HOURS -->
+<section class="sec" id="hours" aria-labelledby="hours-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stencil-no rv" aria-hidden="true">03</div>
+      <div class="rv d1">
+        <div class="lab">Shift schedule</div>
+        <h2 id="hours-title">Clock <em>in.</em></h2>
+      </div>
+    </div>
+
+    <div class="hours-grid">
+      <div class="board rv" id="board" aria-label="Weekly schedule. Hours are not published; call for current hours.">
+        <div class="day" data-day="1"><span class="d">Mon</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+        <div class="day" data-day="2"><span class="d">Tue</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+        <div class="day" data-day="3"><span class="d">Wed</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+        <div class="day" data-day="4"><span class="d">Thu</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+        <div class="day" data-day="5"><span class="d">Fri</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+        <div class="day" data-day="6"><span class="d">Sat</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+        <div class="day" data-day="0"><span class="d">Sun</span><span class="t">Call to confirm</span><span class="flag">Today</span></div>
+      </div>
+
+      <div class="hours-copy rv d1">
+        <span class="pill"><i></i>Call for current hours</span>
+        <p>The schedule runs by appointment on the shop's Booksy page, where open chairs show up in real time. Or skip the guesswork and call.</p>
+        <a class="call-big" href="tel:+18653400305">(865) 340&#8209;0305</a>
+        <div class="btns">
+          <a class="btn btn-hot" href="https://booksy.com/en-us/1058371_raysfadefactory_barber-shop_35902_knoxville" target="_blank" rel="noopener">See open times</a>
+          <a class="btn btn-line" href="tel:+18653400305">Call now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 LOCATION -->
+<section class="sec loc" id="location" aria-labelledby="loc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stencil-no rv" aria-hidden="true">04</div>
+      <div class="rv d1">
+        <div class="lab">Loading dock</div>
+        <h2 id="loc-title">Find the <em>floor.</em></h2>
+      </div>
+    </div>
+
+    <div class="loc-grid rv clip">
+      <div class="loc-info">
+        <div>
+          <div class="lab">Ray's Fade Factory</div>
+          <address>5101 Clinton Hwy<span>Knoxville, TN 37912</span></address>
+        </div>
+        <div class="rows">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=5101%20Clinton%20Hwy%2C%20Knoxville%2C%20TN%2037912" target="_blank" rel="noopener"><span>Route</span>Get directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+18653400305"><span>Phone</span>(865) 340-0305 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <span class="map-tag">You are here</span>
+        <iframe title="Map showing Ray's Fade Factory at 5101 Clinton Hwy, Knoxville" src="https://maps.google.com/maps?q=5101%20Clinton%20Hwy%2C%20Knoxville%2C%20TN%2037912&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="band" aria-labelledby="band-title">
+  <div class="band-gear" aria-hidden="true">
+    <svg viewBox="0 0 600 600"><path fill="#c9a35c" d="M276 22h48l7 40 27 9 32-25 39 28-14 38 17 23 41-1 15 46-34 23 1 29 34 23-15 46-41-1-17 23 14 38-39 28-32-25-27 9-7 40h-48l-7-40-27-9-32 25-39-28 14-38-17-23-41 1-15-46 34-23-1-29-34-23 15-46 41 1 17-23-14-38 39-28 32 25 27-9zM300 140a160 160 0 1 0 0 320a160 160 0 1 0 0-320z" fill-rule="evenodd"/></svg>
+  </div>
+  <div class="wrap band-row">
+    <h2 id="band-title" class="rv"><span class="outline">Walk in</span><br>rough.<br>Roll out <span class="o">fresh.</span></h2>
+    <div class="rv d1">
+      <p>Your next cut is one tap away.</p>
+      <div class="btns">
+        <a class="btn btn-hot" href="tel:+18653400305">Call (865) 340-0305</a>
+        <a class="btn btn-brass" href="https://booksy.com/en-us/1058371_raysfadefactory_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book on Booksy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="wordmark">Ray's<br>Fade<br>Factory</div></div>
+      <div><h4>Floor</h4><p>5101 Clinton Hwy<br>Knoxville, TN 37912</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=5101%20Clinton%20Hwy%2C%20Knoxville%2C%20TN%2037912" target="_blank" rel="noopener">Directions →</a></div>
+      <div><h4>Line</h4><a href="tel:+18653400305">(865) 340-0305</a><br><a href="https://booksy.com/en-us/1058371_raysfadefactory_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book on Booksy</a></div>
+      <div><h4>Follow</h4><p>5.0 ★ on Google · 252 reviews</p></div>
+    </div>
+    <div class="foot-base">
+      <span>© <span id="yr">2026</span> Ray's Fade Factory · Knoxville, TN</span>
+      <span>Concept by <a href="#top">Code Craft Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c1" href="tel:+18653400305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="c2" href="https://www.google.com/maps/dir/?api=1&amp;destination=5101%20Clinton%20Hwy%2C%20Knoxville%2C%20TN%2037912" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  // condensed nav
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('condensed',window.scrollY>40)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // reveal on scroll
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('in')}) }
+
+  // today in Knoxville
+  try{
+    var wd=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short'}).format(new Date());
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var row=document.querySelector('.day[data-day="'+map[wd]+'"]');
+    if(row){row.classList.add('today');row.setAttribute('aria-current','date')}
+  }catch(e){}
+
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+<style id="netlify-badge-clearance">
+/* keep sticky CTA + footer clear of the hosting badge (bottom-right) */
+footer{padding-bottom:96px!important}
+@media (max-width:899px){
+  .callbar{bottom:calc(70px + env(safe-area-inset-bottom))!important;left:10px!important;right:10px!important;border-radius:18px!important;overflow:hidden}
+  footer{padding-bottom:170px!important}
+  body{padding-bottom:0!important}
+}
+</style>
+</body>
+</html>

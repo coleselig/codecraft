@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Único Barber Studio | Barber Shop in Knoxville, TN</title>
+<meta name="description" content="Único Barber Studio — haircuts, beard trims, designs and kids cuts on Kingston Pike in West Knoxville. 5.0 on Booksy. Book online 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a0b; --ink2:#121214; --ink3:#1a1a1d;
+  --gold:#c9a45c; --gold-hi:#ecd49a; --gold-lo:#8a6a2f;
+  --cream:#f3ead8; --muted:#b9b1a2; --line:rgba(201,164,92,.35);
+  --serif:"Cinzel","Trajan Pro",Georgia,serif; --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --brushed:linear-gradient(100deg,#8a6a2f 0%,#c9a45c 18%,#f1dca4 32%,#b88f45 48%,#e6c983 64%,#9c7835 82%,#d8b871 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+/* marble texture */
+.marble{position:relative;background-color:var(--ink);
+  background-image:
+   radial-gradient(ellipse 120% 60% at 10% 0%,rgba(255,255,255,.05),transparent 60%),
+   radial-gradient(ellipse 80% 50% at 90% 100%,rgba(201,164,92,.06),transparent 60%),
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M-20 80 C 90 120 140 40 240 110 S 400 210 470 160 S 580 120 640 190' stroke='%23ffffff' stroke-opacity='.07' stroke-width='1.2'/%3E%3Cpath d='M-20 90 C 100 140 150 70 250 130 S 390 230 480 190' stroke='%23ffffff' stroke-opacity='.035' stroke-width='3'/%3E%3Cpath d='M60 620 C 120 500 90 430 180 360 S 260 220 340 200 S 470 90 520 -20' stroke='%23c9a45c' stroke-opacity='.16' stroke-width='.8'/%3E%3Cpath d='M180 360 C 230 380 290 350 330 400 S 420 470 470 450' stroke='%23ffffff' stroke-opacity='.05' stroke-width='.7'/%3E%3Cpath d='M-20 420 C 60 400 110 470 200 450 S 330 520 400 610' stroke='%23ffffff' stroke-opacity='.045' stroke-width='1'/%3E%3Cpath d='M340 200 C 380 240 450 230 500 280 S 560 360 640 350' stroke='%23c9a45c' stroke-opacity='.09' stroke-width='.6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:auto,auto,600px 600px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.gold-text{background:var(--brushed);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold-hi) 50%,var(--gold) 80%,transparent);border:0}
+.eyebrow{font-family:var(--serif);letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;color:var(--gold);display:flex;align-items:center;gap:14px}
+.eyebrow::before,.eyebrow::after{content:"";height:1px;width:34px;background:var(--gold);opacity:.7}
+.center .eyebrow{justify-content:center}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.04em;line-height:1.15}
+h2{font-size:clamp(1.8rem,5.5vw,3rem);margin:14px 0 14px}
+.lead{color:var(--muted);max-width:620px;font-size:1.02rem}
+.center{text-align:center}.center .lead{margin:0 auto}
+section{padding:88px 0;position:relative}
+
+/* banner */
+.concept{background:#000;border-bottom:1px solid var(--line);color:var(--muted);font-size:.74rem;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.concept b{color:var(--gold-hi);font-weight:500}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(10,10,11,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:38px;height:38px}
+.brand span{font-family:var(--serif);font-weight:600;letter-spacing:.16em;font-size:.95rem}
+.brand small{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.34em;color:var(--gold);font-weight:500}
+.nav ul{display:none;list-style:none;gap:30px}
+.nav ul a{text-decoration:none;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--gold-hi)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:2px;transition:transform .2s,box-shadow .25s,background .25s,color .25s;cursor:pointer;white-space:nowrap}
+.btn-gold{background:var(--brushed);background-size:200% 100%;color:#14100a;box-shadow:0 0 0 1px rgba(236,212,154,.4) inset,0 10px 30px -10px rgba(201,164,92,.55)}
+.btn-gold:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 0 0 1px rgba(236,212,154,.7) inset,0 16px 40px -12px rgba(201,164,92,.75)}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold-hi);background:transparent}
+.btn-ghost:hover{background:rgba(201,164,92,.1);transform:translateY(-2px)}
+.btn-sm{padding:10px 16px;font-size:.7rem}
+.nav .btn-sm{display:none}
+
+/* hero */
+.hero{padding:70px 0 90px;overflow:hidden;min-height:calc(100svh - 96px);display:flex;align-items:center}
+.hero .wrap{display:grid;gap:44px;align-items:center;width:100%}
+.crest-wrap{position:relative;width:min(300px,72vw);margin:0 auto;aspect-ratio:1}
+.crest-wrap svg{width:100%;height:100%}
+.crest-wrap::after{content:"";position:absolute;inset:-12%;border-radius:50%;background:radial-gradient(circle,rgba(201,164,92,.18),transparent 62%);z-index:-1}
+.spin{transform-origin:50% 50%;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(2.35rem,8.4vw,5rem);font-weight:600;margin:18px 0 18px}
+.hero h1 em{font-style:normal;display:block}
+.hero p.lead{font-size:1.06rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.badges{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;color:var(--muted);font-size:.82rem}
+.badges span{display:flex;align-items:center;gap:8px}
+.stars{color:var(--gold-hi);letter-spacing:2px}
+.shine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(236,212,154,.07) 50%,transparent 60%);background-size:250% 100%;animation:shine 7s ease-in-out infinite}
+@keyframes shine{0%{background-position:150% 0}60%,100%{background-position:-50% 0}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);background:var(--ink2);overflow:hidden;padding:16px 0}
+.marquee div{display:flex;gap:46px;width:max-content;animation:mq 34s linear infinite;font-family:var(--serif);letter-spacing:.3em;font-size:.8rem;color:var(--gold);text-transform:uppercase}
+.marquee i{font-style:normal;color:var(--gold-lo)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* menu */
+.menu-grid{display:grid;gap:22px;margin-top:48px}
+.card{position:relative;background:linear-gradient(180deg,rgba(26,26,29,.9),rgba(14,14,16,.92));border:1px solid var(--line);padding:30px 24px 26px}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,164,92,.14);pointer-events:none}
+.card h3{font-size:1.02rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-hi);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.card h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px dashed rgba(201,164,92,.16)}
+.item:last-child{border-bottom:0}
+.item .n{font-weight:500}
+.item .n small{display:block;color:var(--muted);font-size:.76rem;font-weight:400}
+.item .dots{flex:1;border-bottom:1px dotted rgba(201,164,92,.35);transform:translateY(-4px);min-width:16px}
+.item .p{font-family:var(--serif);font-weight:600;color:var(--gold-hi);font-size:1.08rem}
+.card.after{background:linear-gradient(180deg,#17130b,#0f0d09)}
+.card.after .tag{position:absolute;top:-11px;left:22px;background:var(--brushed);color:#14100a;font-size:.62rem;font-weight:700;letter-spacing:.2em;padding:4px 10px;text-transform:uppercase}
+.fine{color:var(--muted);font-size:.8rem;margin-top:22px}
+.joke{margin-top:34px;text-align:center;font-size:.86rem;color:var(--muted);border:1px dashed var(--line);padding:14px 16px;max-width:560px;margin-inline:auto}
+.joke b{color:var(--gold-hi);font-weight:500}
+
+/* why */
+.why-grid{display:grid;gap:18px;margin-top:46px}
+.why{display:flex;gap:18px;align-items:flex-start;padding:22px;border:1px solid var(--line);background:rgba(18,18,20,.7);transition:border-color .25s,transform .25s}
+.why:hover{border-color:var(--gold);transform:translateY(-3px)}
+.why svg{flex:none;width:42px;height:42px}
+.why h3{font-size:.98rem;letter-spacing:.12em;margin-bottom:6px;color:var(--gold-hi)}
+.why p{color:var(--muted);font-size:.92rem}
+.big-rating{display:grid;gap:24px;align-items:center;margin-top:56px;padding:34px 24px;border-block:1px solid var(--line);text-align:center}
+.big-rating .num{font-family:var(--serif);font-size:clamp(3.4rem,14vw,6rem);line-height:1}
+.big-rating p{color:var(--muted)}
+
+/* barber */
+.barber{display:grid;gap:30px;align-items:center;margin-top:44px;border:1px solid var(--line);padding:30px 24px;background:rgba(14,14,16,.85);position:relative}
+.barber .mono{width:120px;height:120px;margin:0 auto}
+.barber h3{font-size:1.5rem;letter-spacing:.08em}
+.barber .role{color:var(--gold);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;margin:6px 0 14px}
+.barber p{color:var(--muted)}
+.barber .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+
+/* hours */
+.hours-grid{display:grid;gap:22px;margin-top:44px}
+.hcard{border:1px solid var(--line);padding:26px 22px;background:rgba(18,18,20,.8)}
+.hcard h3{font-size:.9rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:12px}
+.hcard p{color:var(--muted);font-size:.94rem}
+.hcard .today{margin-top:14px;font-family:var(--serif);color:var(--cream);font-size:1.05rem;letter-spacing:.06em}
+.hcard .today b{color:var(--gold-hi);font-weight:600}
+
+/* visit */
+.visit{display:grid;gap:26px;margin-top:44px}
+.map{border:1px solid var(--line);padding:6px;background:var(--ink2);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:306px;border:0;filter:grayscale(1) invert(.92) contrast(.9) sepia(.25);display:block}
+.addr{padding:28px 24px;border:1px solid var(--line);background:rgba(18,18,20,.85)}
+.addr address{font-style:normal;font-family:var(--serif);font-size:1.25rem;letter-spacing:.04em;line-height:1.5;margin:12px 0 20px}
+.addr ul{list-style:none;color:var(--muted);font-size:.9rem;display:grid;gap:8px;margin-bottom:24px}
+.addr li::before{content:"◆";color:var(--gold);font-size:.6rem;margin-right:10px;vertical-align:2px}
+.addr .ctas{display:flex;flex-wrap:wrap;gap:10px}
+
+/* final */
+.final{text-align:center;padding:96px 0}
+.final h2{font-size:clamp(2rem,7vw,3.6rem)}
+
+footer{border-top:1px solid var(--line);padding:42px 0 34px;text-align:center;color:var(--muted);font-size:.82rem;background:#070708}
+footer .brand{justify-content:center;margin-bottom:16px}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:14px 0 18px}
+footer a{color:var(--gold-hi);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* sticky bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--gold);box-shadow:0 -10px 30px rgba(0,0,0,.6)}
+.sticky a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:10px 4px calc(10px + env(safe-area-inset-bottom));text-decoration:none;background:#0b0b0c;color:var(--cream);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.sticky a svg{width:20px;height:20px}
+.sticky a.main{background:var(--brushed);color:#14100a;font-size:.74rem}
+body{padding-bottom:72px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:420px){.eyebrow{letter-spacing:.22em;font-size:.66rem;gap:10px}.eyebrow::before,.eyebrow::after{width:20px}.hero .eyebrow::after{display:none}}
+@media (min-width:700px){
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .hours-grid{grid-template-columns:1fr 1fr}
+  .barber{grid-template-columns:150px 1fr;text-align:left;padding:38px}
+  .big-rating{grid-template-columns:auto 1fr;text-align:left;gap:40px}
+}
+@media (min-width:900px){
+  .sticky{display:none}
+  body{padding-bottom:0}
+  .nav ul{display:flex}
+  .nav .btn-sm{display:inline-flex}
+  .hero .wrap{grid-template-columns:1.25fr .9fr}
+  .crest-wrap{width:min(420px,100%)}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit{grid-template-columns:1.3fr 1fr}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .menu-grid .card.wide{grid-column:span 1}
+  section{padding:110px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Único Barber Studio. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a6a2f"/><stop offset=".3" stop-color="#f1dca4"/><stop offset=".55" stop-color="#b88f45"/><stop offset=".78" stop-color="#ecd49a"/><stop offset="1" stop-color="#9c7835"/>
+    </linearGradient>
+    <symbol id="mono" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="47" fill="none" stroke="url(#gGold)" stroke-width="2"/>
+      <circle cx="50" cy="50" r="41" fill="none" stroke="url(#gGold)" stroke-width=".7"/>
+      <path d="M33 28h12M55 28h12M38 28v26c0 8 5 14 12 14s12-6 12-14V28" fill="none" stroke="url(#gGold)" stroke-width="4.2" stroke-linecap="square"/>
+      <path d="M50 77l3 3-3 3-3-3z" fill="url(#gGold)"/>
+      <path d="M50 17l2.4 2.4L50 21.8l-2.4-2.4z" fill="url(#gGold)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Único Barber Studio home">
+      <svg aria-hidden="true"><use href="#mono"/></svg>
+      <span>ÚNICO<small>BARBER STUDIO</small></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">The Studio</a></li>
+      <li><a href="#barber">Barber</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-gold btn-sm" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero marble">
+  <div class="shine" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">West Knoxville · Kingston Pike</div>
+      <h1><em class="gold-text">Sharp Cuts.</em><em>One Standard.</em><em>Único.</em></h1>
+      <p class="lead">Precision haircuts, clean beard work and sharp designs at Suite 22 on Kingston Pike — backed by a 5.0 rating across 326 Booksy reviews.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book on Booksy</a>
+        <a class="btn btn-ghost" href="#menu">View the Menu</a>
+      </div>
+      <div class="badges">
+        <span><span class="stars">★★★★★</span> 5.0 on Booksy · 326 reviews</span>
+        <span>◆ Booksy Recommended</span>
+        <span>◆ Book online 24/7</span>
+      </div>
+    </div>
+    <div class="crest-wrap" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <path id="ring" d="M200 200 m-150 0 a150 150 0 1 1 300 0 a150 150 0 1 1 -300 0"/>
+        </defs>
+        <g class="spin">
+          <circle cx="200" cy="200" r="188" fill="none" stroke="url(#gGold)" stroke-width=".8" stroke-dasharray="2 6"/>
+          <text font-family="Cinzel,Georgia,serif" font-size="14" letter-spacing="5.2" textLength="930" lengthAdjust="spacing" fill="url(#gGold)"><textPath href="#ring">ÚNICO BARBER STUDIO ◆ KNOXVILLE · TENNESSEE ◆ KINGSTON PIKE ◆</textPath></text>
+        </g>
+        <circle cx="200" cy="200" r="132" fill="#0e0e10" stroke="url(#gGold)" stroke-width="2.5"/>
+        <circle cx="200" cy="200" r="122" fill="none" stroke="url(#gGold)" stroke-width=".8"/>
+        <path d="M134 138h44M222 138h44M156 138v88c0 26 19 46 44 46s44-20 44-46v-88" fill="none" stroke="url(#gGold)" stroke-width="13" stroke-linecap="square"/>
+        <path d="M200 92l7 7-7 7-7-7z M200 290l7 7-7 7-7-7z" fill="url(#gGold)"/>
+        <!-- razor & comb flourish -->
+        <g stroke="url(#gGold)" fill="none" stroke-width="1.6" opacity=".85">
+          <path d="M96 200h26M278 200h26"/>
+          <path d="M108 194l-8 6 8 6M292 194l8 6-8 6"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Haircuts</span><i>◆</i><span>Beard Trims</span><i>◆</i><span>Designs</span><i>◆</i><span>Eyebrow Shape-Ups</span><i>◆</i><span>Kids Cuts</span><i>◆</i><span>After-Hours Appointments</span><i>◆</i>
+  <span>Haircuts</span><i>◆</i><span>Beard Trims</span><i>◆</i><span>Designs</span><i>◆</i><span>Eyebrow Shape-Ups</span><i>◆</i><span>Kids Cuts</span><i>◆</i><span>After-Hours Appointments</span><i>◆</i>
+</div></div>
+
+<section id="menu" class="marble">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">The Menu</div>
+      <h2>Services &amp; <span class="gold-text">Pricing</span></h2>
+      <p class="lead">Straight from the studio's Booksy menu. Pick your service, pick your time, done.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="card rv">
+        <h3>Adults</h3>
+        <div class="item"><span class="n">Haircut<small>25 min</small></span><span class="dots"></span><span class="p">$35</span></div>
+        <div class="item"><span class="n">Haircut with Design<small>30 min</small></span><span class="dots"></span><span class="p">$45</span></div>
+        <div class="item"><span class="n">Haircut &amp; Beard Trim<small>30 min</small></span><span class="dots"></span><span class="p">$45</span></div>
+        <div class="item"><span class="n">Beard Trim<small>15 min</small></span><span class="dots"></span><span class="p">$20</span></div>
+        <div class="item"><span class="n">Eyebrow Shape-Up<small>15 min</small></span><span class="dots"></span><span class="p">$20</span></div>
+      </div>
+      <div class="card rv">
+        <h3>Kids</h3>
+        <div class="item"><span class="n">Kids Haircut<small>Ages 12 &amp; under · 25 min</small></span><span class="dots"></span><span class="p">$30</span></div>
+        <p class="fine">Child-friendly studio — bring the little ones along.</p>
+      </div>
+      <div class="card after rv">
+        <span class="tag">After Hours</span>
+        <h3>After Hours</h3>
+        <div class="item"><span class="n">Haircut<small>25 min</small></span><span class="dots"></span><span class="p">$55</span></div>
+        <div class="item"><span class="n">Haircut &amp; Beard Trim<small>30 min</small></span><span class="dots"></span><span class="p">$65</span></div>
+        <div class="item"><span class="n">Kids Haircut<small>25 min</small></span><span class="dots"></span><span class="p">$50</span></div>
+        <p class="fine">Can't make regular hours? Book an after-hours slot on Booksy.</p>
+      </div>
+    </div>
+    <p class="joke rv">Also on the menu: <b>"Complaining client — $1."</b> It comes with a referral to a chain shop. We like a studio with a sense of humor.</p>
+    <div class="center rv" style="margin-top:34px"><a class="btn btn-gold" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">See Open Times</a></div>
+  </div>
+</section>
+
+<section id="why" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">The Studio</div>
+      <h2>Why <span class="gold-text">Único</span></h2>
+      <p class="lead">Único means "one of a kind." Here's what's true about the chair on Kingston Pike.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l5.6 12.4L43 18l-10 9.2L35.6 41 24 34.4 12.4 41 15 27.2 5 18l13.4-1.6z" fill="none" stroke="url(#gGold)" stroke-width="1.8"/></svg>
+        <div><h3>5.0 on Booksy</h3><p>A perfect average across 326 Booksy reviews, and a "Booksy Recommended" badge.</p></div>
+      </div>
+      <div class="why rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="32" fill="none" stroke="url(#gGold)" stroke-width="1.8"/><path d="M6 18h36M15 5v8M33 5v8M15 27h6M27 27h6M15 34h6" stroke="url(#gGold)" stroke-width="1.8"/></svg>
+        <div><h3>Book 24/7</h3><p>Real-time availability online, any hour — plus after-hours appointments when your schedule needs them.</p></div>
+      </div>
+      <div class="why rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38l18-18M22 12a8 8 0 1 0 14 14" fill="none" stroke="url(#gGold)" stroke-width="1.8"/><circle cx="10" cy="36" r="4" fill="none" stroke="url(#gGold)" stroke-width="1.8"/></svg>
+        <div><h3>Designs &amp; Detail</h3><p>Haircut designs, beard trims and eyebrow shape-ups — the finishing work that makes a cut yours.</p></div>
+      </div>
+      <div class="why rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34V20l16-10 16 10v14H8z" fill="none" stroke="url(#gGold)" stroke-width="1.8"/><path d="M14 34v-8h8v8M28 26h6" stroke="url(#gGold)" stroke-width="1.8"/></svg>
+        <div><h3>Easy Parking</h3><p>Parking space on site — pull in, sit down, walk out sharp.</p></div>
+      </div>
+      <div class="why rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="2" fill="none" stroke="url(#gGold)" stroke-width="1.8"/><path d="M6 19h36M12 29h8" stroke="url(#gGold)" stroke-width="1.8"/></svg>
+        <div><h3>Cards Accepted</h3><p>Credit cards welcome, plus free Wi-Fi while you wait.</p></div>
+      </div>
+      <div class="why rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="9" r="4" fill="none" stroke="url(#gGold)" stroke-width="1.8"/><path d="M24 14v13h10l4 10M24 20h9M18 22a10 10 0 1 0 12 15" fill="none" stroke="url(#gGold)" stroke-width="1.8"/></svg>
+        <div><h3>Accessible &amp; Family-Friendly</h3><p>Accessible for people with disabilities and child-friendly, so the whole family can get cut in one trip.</p></div>
+      </div>
+    </div>
+    <div class="big-rating rv">
+      <div class="num gold-text">5.0</div>
+      <div>
+        <div class="stars" style="font-size:1.3rem">★★★★★</div>
+        <p style="margin-top:6px">326 reviews on Booksy for Único Barber Studio. 321 of them five stars.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="barber" class="marble">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">In the Chair</div>
+      <h2>Meet Your <span class="gold-text">Barber</span></h2>
+    </div>
+    <div class="barber rv">
+      <svg class="mono" aria-hidden="true"><use href="#mono"/></svg>
+      <div>
+        <h3>Luis (Tito) Rodriguez</h3>
+        <div class="role">Barber · Único Barber Studio</div>
+        <p>The barber named on the studio's Booksy reviews. Follow along on Instagram for fresh cuts, then lock in your spot.</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book with Tito</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/luis954/" target="_blank" rel="noopener">@luis954</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">Hours</div>
+      <h2>When to <span class="gold-text">Come In</span></h2>
+      <p class="lead">The schedule lives on Booksy, so you always see real open times — no phone tag.</p>
+    </div>
+    <div class="hours-grid">
+      <div class="hcard rv">
+        <h3>Regular Hours</h3>
+        <p>Check live availability and book any open slot on Booksy, 24 hours a day.</p>
+        <p class="today" id="today">Today: <b>see open times on Booksy</b></p>
+        <div style="margin-top:18px"><a class="btn btn-gold btn-sm" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Check Today's Times</a></div>
+      </div>
+      <div class="hcard rv">
+        <h3>After Hours</h3>
+        <p>Schedule full or working late? After-hours haircuts ($55), haircut &amp; beard ($65) and kids cuts ($50) are bookable on Booksy.</p>
+        <div style="margin-top:18px"><a class="btn btn-ghost btn-sm" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book After Hours</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="marble">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">Visit</div>
+      <h2>Find the <span class="gold-text">Studio</span></h2>
+    </div>
+    <div class="visit">
+      <div class="map rv">
+        <iframe title="Map to Único Barber Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=10536%20Kingston%20Pike%2C%20Suite%2022%2C%20Knoxville%2C%20TN%2037922&output=embed"></iframe>
+      </div>
+      <div class="addr rv">
+        <div class="eyebrow">Address</div>
+        <address>10536 Kingston Pike<br>Suite 22<br>Knoxville, TN 37922</address>
+        <ul>
+          <li>Parking on site</li>
+          <li>Credit cards accepted</li>
+          <li>Accessible for people with disabilities</li>
+          <li>Child-friendly · Free Wi-Fi</li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&destination=10536%20Kingston%20Pike%2C%20Suite%2022%2C%20Knoxville%2C%20TN%2037922" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/luis954/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" style="background:var(--ink2)">
+  <div class="wrap rv">
+    <svg aria-hidden="true" style="width:64px;height:64px;margin:0 auto 18px"><use href="#mono"/></svg>
+    <h2>Your Next Cut Is <span class="gold-text">One Tap Away</span></h2>
+    <p class="lead" style="margin:0 auto 30px">Pick a service, choose a time, show up sharp.</p>
+    <a class="btn btn-gold" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Book on Booksy</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg aria-hidden="true"><use href="#mono"/></svg><span>ÚNICO<small>BARBER STUDIO</small></span></a>
+    <div>10536 Kingston Pike, Suite 22 · Knoxville, TN 37922</div>
+    <nav>
+      <a href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener">Booksy</a>
+      <a href="https://www.instagram.com/luis954/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=10536%20Kingston%20Pike%2C%20Suite%2022%2C%20Knoxville%2C%20TN%2037922" target="_blank" rel="noopener">Directions</a>
+    </nav>
+    <div class="rule" style="max-width:240px;margin:0 auto 16px"></div>
+    <div>Concept by <a href="#top">Code Craft Media</a> · Not affiliated with or live for Único Barber Studio.</div>
+  </div>
+</footer>
+
+<nav class="sticky" aria-label="Quick actions">
+  <a href="https://www.google.com/maps/dir/?api=1&destination=10536%20Kingston%20Pike%2C%20Suite%2022%2C%20Knoxville%2C%20TN%2037922" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+  <a class="main" href="https://booksy.com/en-us/887828_unico-barber-studio_barber-shop_35902_knoxville" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book Now</a>
+  <a href="https://www.instagram.com/luis954/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=document.getElementById('today');
+  if(t){t.innerHTML='Today, '+days[new Date().getDay()]+': <b>see open times on Booksy</b>';}
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if(!('IntersectionObserver' in window)){all();return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Rise N Shine Pressure Washing | Knoxville, TN</title>
+<meta name="description" content="Rise N Shine Pressure Washing — home, patio, automotive and commercial pressure washing in the Knoxville area. Call or text (865) 900-5939.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#1a1b4b; --indigo-2:#2a2470; --plum:#5b2a6e; --orange:#ff8a3d; --gold:#ffc46b;
+  --aqua:#38c6d9; --aqua-d:#1798ab; --white:#fff; --cream:#fff8f1; --ink:#1a1b4b; --muted:#5d5f86;
+  --line:rgba(26,27,75,.12);
+  --sunrise:linear-gradient(180deg,#1a1b4b 0%,#3a2a6e 38%,#9b3f6a 66%,#ff8a3d 100%);
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow-x:hidden}
+h1,h2,h3,.sora{font-family:Sora,system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em;margin:0}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.concept{background:#0f1033;color:#cfd0f5;font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.concept b{color:var(--gold)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(26,27,75,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand svg{width:38px;height:38px}
+.brand b{font-family:Sora,system-ui,sans-serif;font-weight:800;font-size:17px;letter-spacing:-.02em;display:block;line-height:1}
+.brand small{display:block;font-size:11px;color:var(--aqua);letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-top:3px}
+.links{display:none;gap:26px;align-items:center}
+.links a{color:#e3e3ff;text-decoration:none;font-weight:700;font-size:15px}
+.links a:hover{color:var(--gold)}
+.hero .cta-row .btn{padding:14px 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;text-decoration:none;border-radius:999px;padding:14px 22px;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s;border:0;cursor:pointer;font-family:inherit}
+.btn:active{transform:scale(.97)}
+.btn-sun{background:linear-gradient(135deg,var(--gold),var(--orange));color:#2a1405;box-shadow:0 10px 28px -8px rgba(255,138,61,.7)}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(255,138,61,.85)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.btn svg{width:18px;height:18px}
+.nav .btn{padding:10px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;background:var(--sunrise);color:#fff;overflow:hidden;padding:30px 0 0}
+@media (max-width:899px){.hero-grid{gap:4px!important}.hero-copy{padding-bottom:0}}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1.5px 1.5px at 12% 14%,#fff8,transparent),radial-gradient(1px 1px at 28% 8%,#fff9,transparent),radial-gradient(1.5px 1.5px at 66% 12%,#fff7,transparent),radial-gradient(1px 1px at 84% 22%,#fffa,transparent),radial-gradient(1px 1px at 46% 20%,#fff6,transparent),radial-gradient(1px 1px at 92% 6%,#fff8,transparent);pointer-events:none}
+.hero-grid{position:relative;display:grid;gap:26px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 13px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.04em}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 4px rgba(56,198,217,.25)}
+.hero h1{font-size:clamp(38px,10.5vw,74px);font-weight:800;margin:16px 0 14px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:17.5px;color:#e7e4ff;max-width:34ch;margin:0 0 22px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;margin:0 -20px}
+.hero-art svg{width:100%;height:auto;overflow:visible}
+.sun-rise{animation:rise 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(70px);opacity:.3}to{transform:none;opacity:1}}
+.rays{transform-origin:300px 140px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.drop{animation:drip 2.4s ease-in infinite;opacity:0}
+@keyframes drip{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx,30px),70px)}}
+.hero-strip{position:relative;background:#fff;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:18px;background:#fff;box-shadow:0 20px 40px -24px rgba(26,27,75,.5);transform:translateY(-30px);overflow:hidden;border:1px solid var(--line)}
+.facts div{padding:16px 10px;text-align:center;border-right:1px solid var(--line)}
+.facts div:last-child{border:0}
+.facts b{display:block;font-family:Sora,system-ui,sans-serif;font-weight:800;font-size:19px;color:var(--indigo)}
+.facts span{white-space:nowrap;font-size:12px;color:var(--muted);font-weight:700;line-height:1.3;display:block}
+
+section{padding:64px 0}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:22px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--orange),var(--aqua))}
+h2{font-size:clamp(30px,7.5vw,48px);font-weight:800;margin-bottom:14px}
+.sub{color:var(--muted);max-width:56ch;margin:0}
+
+/* before/after */
+.ba{padding-top:20px}
+.ba-card{margin-top:26px;background:var(--indigo);border-radius:28px;padding:16px;box-shadow:0 30px 60px -30px rgba(26,27,75,.7);position:relative;overflow:hidden}
+.ba-card svg{width:100%;height:auto;border-radius:18px}
+.ba-labels{display:flex;justify-content:space-between;color:#fff;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px 6px 4px}
+.ba-labels span:last-child{color:var(--aqua)}
+.ba-ctrl{display:flex;align-items:center;gap:12px;padding:6px 6px 2px;color:#cfd0f5;font-size:14px}
+.ba-ctrl input{flex:1;accent-color:var(--aqua);height:28px}
+.ba-note{font-size:13px;color:#9fa1d6;padding:6px 6px 0}
+
+/* services */
+.services{background:#fff}
+.svc-grid{display:grid;gap:18px;margin-top:30px}
+.svc{position:relative;border-radius:var(--r);padding:26px 22px 24px;background:var(--cream);border:1px solid var(--line);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(26,27,75,.45)}
+.svc .ico{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--sunrise);margin-bottom:18px;box-shadow:0 10px 20px -10px rgba(91,42,110,.7)}
+.svc .ico svg{width:36px;height:36px}
+.svc h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.svc p{margin:0 0 14px;color:var(--muted)}
+.svc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font-size:13px;font-weight:700;background:#fff;border:1px solid var(--line);padding:5px 11px;border-radius:999px}
+.svc .num{position:absolute;top:16px;right:20px;font-family:Sora,system-ui,sans-serif;font-weight:800;font-size:44px;color:rgba(26,27,75,.06)}
+.svc-foot{margin-top:22px;font-size:15px;color:var(--muted)}
+.svc-foot a{font-weight:800;color:var(--aqua-d)}
+
+/* why */
+.why{background:var(--indigo);color:#fff;position:relative;overflow:hidden}
+.why::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-220px;bottom:-300px;background:radial-gradient(circle,rgba(255,138,61,.55),rgba(255,138,61,0) 65%)}
+.why .sub{color:#c9caf0}
+.why-grid{position:relative;z-index:1;display:grid;gap:16px;margin-top:30px}
+.why-item{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.why-item .badge{flex:0 0 46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(56,198,217,.16);color:var(--aqua)}
+.why-item .badge svg{width:24px;height:24px}
+.why-item h3{font-size:18px;font-weight:700;margin-bottom:4px}
+.why-item p{margin:0;color:#c9caf0;font-size:15.5px}
+
+/* process */
+.steps{display:grid;gap:14px;margin-top:28px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:Sora,system-ui,sans-serif;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--orange),#c94f6e)}
+.step b{display:block;font-family:Sora,system-ui,sans-serif;font-size:17px}
+.step span{color:var(--muted);font-size:15px}
+
+/* hours */
+.hours{background:#fff}
+.hours-grid{display:grid;gap:22px;margin-top:28px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{border-radius:14px;padding:12px 2px;text-align:center;background:var(--cream);border:1px solid var(--line);font-weight:800;font-size:13px;color:var(--muted);position:relative}
+.day.today{background:var(--sunrise);color:#fff;border-color:transparent;box-shadow:0 10px 22px -10px rgba(155,63,106,.8)}
+.day.today::after{content:"Today";position:absolute;left:50%;bottom:-20px;transform:translateX(-50%);font-size:10.5px;color:var(--orange);letter-spacing:.08em;text-transform:uppercase}
+.hours-card{background:var(--cream);border-radius:var(--r);padding:24px;border:1px solid var(--line)}
+.hours-card h3{font-size:20px;margin-bottom:8px}
+.hours-card p{margin:0 0 6px;color:var(--muted)}
+#todayMsg{font-weight:800;color:var(--ink)}
+
+/* area */
+.map-wrap{margin-top:26px;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -30px rgba(26,27,75,.55);background:#e8e6f5;position:relative}
+.map-wrap iframe{display:block;width:100%;height:340px;border:0;filter:saturate(.9)}
+.map-tag{position:absolute;left:14px;top:14px;background:var(--indigo);color:#fff;font-weight:800;font-size:13px;padding:8px 13px;border-radius:999px}
+
+/* contact */
+.contact{background:var(--sunrise);color:#fff;position:relative;overflow:hidden}
+.contact .sub{color:#eadff5}
+.c-grid{display:grid;gap:14px;margin-top:28px;position:relative;z-index:1}
+.c-card{display:flex;align-items:center;gap:16px;padding:20px;border-radius:20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);text-decoration:none;color:#fff;transition:background .2s,transform .2s;min-width:0}
+.c-card:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.c-card .ci{flex:0 0 50px;height:50px;border-radius:16px;display:grid;place-items:center;background:#fff;color:var(--indigo)}
+.c-card .ci svg{width:24px;height:24px}
+.c-card small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.c-card b{display:block;font-family:Sora,system-ui,sans-serif;font-size:18px;overflow-wrap:anywhere}
+.c-ill{position:absolute;right:-30px;bottom:-10px;width:300px;opacity:.18;pointer-events:none}
+
+footer{background:#0f1033;color:#a9aad6;padding:36px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:16px}
+footer .brand{color:#fff}
+footer a{color:#fff;text-decoration:none;font-weight:700}
+footer .fine{font-size:12.5px;color:#7b7cb0}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.25fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,16,51,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px}
+.callbar a svg{width:20px;height:20px}
+.callbar .cb-call{background:linear-gradient(135deg,var(--gold),var(--orange));color:#2a1405}
+.callbar .cb-mail{background:var(--aqua);color:#08303a}
+@media (max-width:899px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:640px){
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .c-grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .step{flex-direction:column;align-items:flex-start}
+}
+@media (min-width:900px){
+  .callbar{display:none}
+  .links{display:flex}
+  .hero{padding-top:70px}
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:end}
+  .hero-copy{padding-bottom:90px}
+  .hero-art{margin:0}
+  .facts{max-width:760px;margin:0 auto}
+  .ba-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+  .ba-card{margin-top:0}
+  .hours-grid{grid-template-columns:1.1fr 1fr;align-items:center}
+  section{padding:96px 0}
+  .map-wrap iframe{height:420px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Rise N Shine Pressure Washing. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Rise N Shine Pressure Washing home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc46b"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs><circle cx="20" cy="24" r="11" fill="url(#lg)"/><g stroke="#ffc46b" stroke-width="2.2" stroke-linecap="round"><path d="M20 5v4M7 11l3 3M33 11l-3 3M3 24h4M33 24h4"/></g><path d="M4 30 L20 19 L36 30" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M2 34h36" stroke="#38c6d9" stroke-width="3" stroke-linecap="round"/></svg>
+      <span><b>Rise N Shine</b><small>Pressure Washing</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a><a href="#why">Why us</a><a href="#hours">Hours</a><a href="#contact">Contact</a>
+      <a class="btn btn-sun" href="tel:+18659005939">Call (865) 900-5939</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><i></i>Serving the Knoxville area since 2022</span>
+      <h1 id="h1">Wake up to a house that <em>shines.</em></h1>
+      <p class="lead">Rise N Shine Pressure Washing blasts away the grime on Knoxville homes, patios, vehicles and commercial properties, so the place looks brand new by morning.</p>
+      <div class="cta-row">
+        <a class="btn btn-sun" href="tel:+18659005939"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call for a quote</a>
+        <a class="btn btn-ghost" href="#services">See services</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 -10 600 430" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <radialGradient id="sunG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#ffc46b"/><stop offset="1" stop-color="#ff8a3d"/></radialGradient>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb35a" stop-opacity=".7"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient>
+          <linearGradient id="houseG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2470"/><stop offset="1" stop-color="#1a1b4b"/></linearGradient>
+          <linearGradient id="win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd58a"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+          <linearGradient id="spray" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bff3fa"/><stop offset="1" stop-color="#38c6d9" stop-opacity="0"/></linearGradient>
+        </defs>
+        <circle cx="300" cy="140" r="260" fill="url(#glow)"/>
+        <g class="rays" opacity=".35" stroke="#ffd58a" stroke-width="6" stroke-linecap="round">
+          <path d="M300 -60v40M300 300v40M100 140h40M460 140h40M159 -1l28 28M413 253l28 28M441 -1l-28 28M187 253l-28 28"/>
+        </g>
+        <g class="sun-rise"><circle cx="300" cy="130" r="105" fill="url(#sunG)"/></g>
+        <!-- house -->
+        <g>
+          <path d="M70 420V262L300 118l230 144v158z" fill="url(#houseG)"/>
+          <path d="M40 276 300 112l260 164" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+          <rect x="400" y="140" width="36" height="70" fill="#1a1b4b"/><rect x="394" y="132" width="48" height="14" rx="3" fill="#fff"/>
+          <rect x="140" y="292" width="88" height="70" rx="6" fill="url(#win)"/><path d="M184 292v70M140 327h88" stroke="#1a1b4b" stroke-width="5"/>
+          <rect x="372" y="292" width="88" height="70" rx="6" fill="url(#win)"/><path d="M416 292v70M372 327h88" stroke="#1a1b4b" stroke-width="5"/>
+          <rect x="262" y="300" width="76" height="120" rx="8" fill="#38c6d9"/><circle cx="324" cy="362" r="5" fill="#fff"/>
+          <circle cx="300" cy="226" r="26" fill="url(#win)"/><path d="M300 200v52M274 226h52" stroke="#1a1b4b" stroke-width="4"/>
+          <!-- clean stripe on siding -->
+          <path d="M84 262 300 128" stroke="#fff" stroke-opacity=".08" stroke-width="30"/>
+        </g>
+        <!-- wand + spray -->
+        <g transform="translate(520 340) rotate(-28)">
+          <path d="M0 0h-120" stroke="url(#spray)" stroke-width="26" stroke-linecap="round" opacity=".8"/>
+          <rect x="0" y="-7" width="70" height="14" rx="7" fill="#fff"/>
+          <rect x="60" y="-12" width="22" height="34" rx="6" fill="#ff8a3d"/>
+        </g>
+        <g fill="#38c6d9">
+          <path class="drop" style="--dx:-40px;animation-delay:0s" d="M420 300c5 8 8 12 8 16a8 8 0 0 1-16 0c0-4 3-8 8-16z"/>
+          <path class="drop" style="--dx:-60px;animation-delay:.6s" d="M440 284c4 6 6 9 6 12a6 6 0 0 1-12 0c0-3 2-6 6-12z"/>
+          <path class="drop" style="--dx:-20px;animation-delay:1.2s" d="M400 312c4 6 6 9 6 12a6 6 0 0 1-12 0c0-3 2-6 6-12z"/>
+          <path class="drop" style="--dx:-80px;animation-delay:1.8s" d="M455 300c5 8 8 12 8 16a8 8 0 0 1-16 0c0-4 3-8 8-16z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="facts rv">
+        <div><b>3</b><span>service lines</span></div>
+        <div><b>2022</b><span>opened in Knoxville</span></div>
+        <div><b>Call/Text</b><span>865-900-5939</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ba" aria-labelledby="ba-h">
+  <div class="wrap ba-wrap">
+    <div class="rv">
+      <div class="kicker">The clean stripe</div>
+      <h2 id="ba-h">One pass, and you can see the difference.</h2>
+      <p class="sub">Driveways, walkways and patios in East Tennessee collect mildew, red clay and tire marks. Watch the wand do its thing, or drag the slider yourself.</p>
+    </div>
+    <div class="ba-card rv">
+      <svg id="baSvg" viewBox="0 0 640 380" role="img" aria-label="Illustration of a concrete driveway being pressure washed, dirty on one side and clean on the other">
+        <defs>
+          <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a8"/><stop offset="1" stop-color="#ffefe0"/></linearGradient>
+          <linearGradient id="conc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eef3"/><stop offset="1" stop-color="#cfd8e1"/></linearGradient>
+          <filter id="grime" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="4" seed="7"/><feColorMatrix values="0 0 0 0 .28  0 0 0 0 .26  0 0 0 0 .16  0 0 0 -2.1 1.55"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+          <clipPath id="driveClip"><path d="M150 380 260 170h120l110 210z"/></clipPath>
+          <clipPath id="dirtyClip"><rect id="dirtyRect" x="0" y="0" width="640" height="380"/></clipPath>
+        </defs>
+        <rect width="640" height="380" fill="url(#sky2)"/>
+        <circle cx="520" cy="80" r="44" fill="#ffb35a"/>
+        <!-- house -->
+        <path d="M170 200V110l150-70 150 70v90z" fill="#2a2470"/>
+        <path d="M150 118 320 36l170 82" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+        <rect x="255" y="120" width="130" height="80" rx="4" fill="#ecebfa"/><path d="M255 140h130M255 160h130M255 180h130" stroke="#c9c7ea" stroke-width="3"/>
+        <rect x="190" y="132" width="44" height="36" rx="4" fill="#ffc46b"/><rect x="406" y="132" width="44" height="36" rx="4" fill="#ffc46b"/>
+        <!-- lawn -->
+        <path d="M0 200h640v180H0z" fill="#4fa35d"/><path d="M0 200h640v12H0z" fill="#3e8a4b"/>
+        <!-- driveway clean -->
+        <g clip-path="url(#driveClip)">
+          <rect width="640" height="380" fill="url(#conc)"/>
+          <g stroke="#b9c4cf" stroke-width="2"><path d="M232 225h176M205 278h230M176 335h290"/></g>
+          <!-- dirty overlay -->
+          <g clip-path="url(#dirtyClip)">
+            <rect width="640" height="380" fill="#7a6e4e"/>
+            <rect width="640" height="380" fill="#fff" filter="url(#grime)"/>
+            <g stroke="#5f5844" stroke-width="2"><path d="M232 225h176M205 278h230M176 335h290"/></g>
+            <ellipse cx="300" cy="310" rx="40" ry="14" fill="#3d3a2e" opacity=".45"/>
+            <ellipse cx="360" cy="250" rx="26" ry="9" fill="#3d3a2e" opacity=".35"/>
+          </g>
+        </g>
+        <!-- wand -->
+        <g id="wand">
+          <path d="M0 -95 v65" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+          <rect x="-11" y="-112" width="22" height="30" rx="6" fill="#ff8a3d"/>
+          <path d="M-22 40 0 -30 22 40z" fill="#bff3fa" opacity=".75"/>
+          <g fill="#38c6d9"><circle cx="-26" cy="34" r="4"/><circle cx="24" cy="28" r="3"/><circle cx="-14" cy="48" r="3"/><circle cx="16" cy="50" r="4"/><circle cx="32" cy="42" r="2.5"/></g>
+        </g>
+      </svg>
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <div class="ba-ctrl"><label for="baRange">Spray</label><input id="baRange" type="range" min="0" max="100" value="50" aria-label="Before and after slider"></div>
+      <div class="ba-note">Illustration only. Ask for photos of real Rise N Shine jobs when you call.</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Services</div>
+      <h2 id="svc-h">Three ways we make things shine.</h2>
+      <p class="sub">Not sure which one fits? Call or text and describe the job. Every quote is built around your property.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv">
+        <span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17 18 6l14 11"/><path d="M8 14v16h20V14"/><path d="M15 30v-8h6v8"/></svg></div>
+        <h3>Home &amp; Patio</h3>
+        <p>Freshen up the outside of your home and the spaces where you actually spend your evenings.</p>
+        <ul><li>House exteriors</li><li>Patios</li><li>Back yards</li><li>Steps &amp; stairs</li></ul>
+      </article>
+      <article class="svc rv">
+        <span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22v-5l3-7h20l3 7v5z"/><path d="M5 17h26"/><circle cx="11" cy="24" r="3"/><circle cx="25" cy="24" r="3"/></svg></div>
+        <h3>Automotive</h3>
+        <p>Road grime, pollen and East Tennessee mud, rinsed off your vehicles. Call to see what we can take on.</p>
+        <ul><li>Vehicles</li><li>Ask what we can wash</li></ul>
+      </article>
+      <article class="svc rv">
+        <span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 36 36" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="14" height="24"/><path d="M20 14h10v16H20"/><path d="M10 11h2M14 11h2M10 16h2M14 16h2M10 21h2M14 21h2M24 19h2M24 24h2"/></svg></div>
+        <h3>Commercial</h3>
+        <p>First impressions matter for your business. A clean exterior and walkway tells customers you care.</p>
+        <ul><li>Commercial properties</li><li>Quotes per job</li></ul>
+      </article>
+    </div>
+    <p class="svc-foot rv">Have something else that needs a wash? <a href="tel:+18659005939">Call (865) 900-5939</a> and ask.</p>
+  </div>
+</section>
+
+<section class="why" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Why Rise N Shine</div>
+      <h2 id="why-h">Local, reachable, and focused on the details.</h2>
+      <p class="sub">A Knoxville business you can call directly. No call center, no runaround.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item rv"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><h3>Rooted in Knoxville</h3><p>Opened in 2022 and serving the Knoxville area ever since.</p></div></div>
+      <div class="why-item rv"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><div><h3>Homes, cars &amp; businesses</h3><p>One call covers your house, your patio, your vehicle and your storefront.</p></div></div>
+      <div class="why-item rv"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><div><h3>Reach us directly</h3><p>Call or text (865) 900-5939, or email PWRiseNShine@gmail.com.</p></div></div>
+      <div class="why-item rv"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 5 6 8.5 6 11a6 6 0 0 1-12 0c0-2.5 2-6 6-11z"/></svg></div><div><h3>Quotes built for your job</h3><p>Every property is different. Describe yours and get a quote that fits it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">How it works</div>
+      <h2 id="how-h">Clean in three easy steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div><b>Reach out</b><span>Call, text or email with what needs washing.</span></div></div>
+      <div class="step rv"><div><b>Get your quote</b><span>We talk through the job and set a time.</span></div></div>
+      <div class="step rv"><div><b>Rise and shine</b><span>We wash. You enjoy the clean stripe.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hours" aria-labelledby="hours-h">
+  <div class="wrap hours-grid">
+    <div class="rv">
+      <div class="kicker">Hours</div>
+      <h2 id="hours-h">Booking by appointment.</h2>
+      <p class="sub">Rise N Shine works on scheduled jobs, so the best way to find an open day is to reach out directly.</p>
+      <div class="week" id="week" style="margin-top:26px" aria-label="Days of the week">
+        <div class="day" data-d="1">Mon</div><div class="day" data-d="2">Tue</div><div class="day" data-d="3">Wed</div><div class="day" data-d="4">Thu</div><div class="day" data-d="5">Fri</div><div class="day" data-d="6">Sat</div><div class="day" data-d="0">Sun</div>
+      </div>
+    </div>
+    <div class="hours-card rv">
+      <h3>Want a spot on the schedule?</h3>
+      <p id="todayMsg">Call or text to check availability.</p>
+      <p>Hours aren't posted online. A quick call or text to (865) 900-5939 is the fastest way to book.</p>
+      <div class="cta-row" style="margin-top:16px"><a class="btn btn-sun" href="tel:+18659005939">Call now</a><a class="btn" style="background:var(--indigo);color:#fff" href="sms:+18659005939">Send a text</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" aria-labelledby="area-h" style="padding-top:20px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Service area</div>
+      <h2 id="area-h">Proudly serving the Knoxville area.</h2>
+      <p class="sub">Not sure if you're in range? Just ask when you call.</p>
+    </div>
+    <div class="map-wrap rv">
+      <span class="map-tag">Knoxville, TN</span>
+      <iframe title="Map of Knoxville, Tennessee" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Knoxville%2C%20TN&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="c-h">
+  <svg class="c-ill" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="120" r="60" fill="#ffc46b"/><path d="M10 160 100 90l90 70" fill="none" stroke="#fff" stroke-width="10" stroke-linejoin="round"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker" style="color:var(--gold)">Get a quote</div>
+      <h2 id="c-h">Ready to see it shine?</h2>
+      <p class="sub">Tell us what needs washing. Home, patio, vehicle or business, we'll get back to you with a quote.</p>
+    </div>
+    <div class="c-grid">
+      <a class="c-card rv" href="tel:+18659005939"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>(865) 900-5939</b></span></a>
+      <a class="c-card rv" href="sms:+18659005939"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span><small>Text</small><b>Send a photo of the job</b></span></a>
+      <a class="c-card rv" href="mailto:PWRiseNShine@gmail.com?subject=Pressure%20washing%20quote"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span><small>Email</small><b>PWRiseNShine@gmail.com</b></span></a>
+    </div>
+    <div class="cta-row rv" style="margin-top:22px"><a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Knoxville%2C%20TN">Directions to Knoxville</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="24" r="11" fill="#ff8a3d"/><path d="M4 30 L20 19 L36 30" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M2 34h36" stroke="#38c6d9" stroke-width="3" stroke-linecap="round"/></svg><span><b>Rise N Shine</b><small>Pressure Washing</small></span></a>
+    <div>Pressure washing for homes, patios, vehicles and businesses in the Knoxville, TN area.<br><a href="tel:+18659005939">(865) 900-5939</a> · <a href="mailto:PWRiseNShine@gmail.com">PWRiseNShine@gmail.com</a></div>
+    <div class="fine">© <span id="yr">2026</span> Rise N Shine Pressure Washing. Concept design by Code Craft Media. Not the official website.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="cb-call" href="tel:+18659005939"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
+  <a class="cb-mail" href="mailto:PWRiseNShine@gmail.com?subject=Pressure%20washing%20quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+
+  try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
+  // today
+  var t=new Date().getDay(), names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var day=document.querySelector('.day[data-d="'+t+'"]'); if(day) day.classList.add('today');
+  var m=document.getElementById('todayMsg'); if(m) m.textContent='Today is '+names[t]+'. Call or text to check availability.';
+
+  // before/after wipe: dirty rect covers right side ("before" left, "after" right)
+  var rect=document.getElementById('dirtyRect'), wand=document.getElementById('wand'), range=document.getElementById('baRange');
+  // driveway spans x≈150..490 at bottom; map 0-100 to 140..500
+  function set(p){var x=140+3.6*p; rect.setAttribute('width',x); wand.setAttribute('transform','translate('+x+' 290)'); range.value=p}
+  var auto=true, p=0, dir=1, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  set(50);
+  if(!reduce){
+    (function loop(){ if(!auto) return; p+=dir*.35; if(p>=100){p=100;dir=-1} if(p<=0){p=0;dir=1} set(p); requestAnimationFrame(loop)})();
+  }
+  range.addEventListener('input',function(){auto=false; set(+range.value)});
+})();
+</script>
+</body>
+</html>

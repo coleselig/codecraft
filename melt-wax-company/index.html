@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Melt Wax Company | Waxing Studio in Knoxville, TN</title>
+<meta name="description" content="Melt Wax Company: full body waxing, brow tint and lamination, and vajacials in Knoxville, TN. Now inside Novara Skin Studio, 5750 Western Ave.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#EFEBE3; --bone-2:#E4DED2; --paper:#F8F6F1; --sage:#9DB09A; --sage-deep:#5F7A5E; --sage-ink:#3D5440; --sage-soft:#CFDACB;
+  --ink:#141614; --ink-2:#2A2E2A; --muted:#5C625B; --line:rgba(20,22,20,.12);
+  --disp:"Unbounded", "Arial Black", system-ui, sans-serif; --sans:"Inter Tight", system-ui, -apple-system, Segoe UI, sans-serif;
+  --r:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.concept{background:var(--ink);color:var(--bone);font-size:12.5px;text-align:center;padding:8px 16px;letter-spacing:.01em}
+.concept b{color:var(--sage);font-weight:600}
+
+header.nav{position:sticky;top:0;z-index:40;background:rgba(239,235,227,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:32px;height:32px}
+.logo span{font-family:var(--disp);font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1;text-transform:lowercase}
+.logo small{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:4px;font-weight:600}
+.nav ul{display:none;list-style:none;gap:6px;font-size:14.5px;font-weight:500}
+.nav ul a{text-decoration:none;padding:8px 14px;border-radius:999px;transition:background .2s}
+.nav ul a:hover{background:var(--bone-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:15.5px;text-decoration:none;border-radius:999px;padding:15px 26px;transition:transform .2s, background .2s, color .2s;cursor:pointer;border:0;white-space:nowrap}
+.btn-ink{background:var(--ink);color:var(--bone)}
+.btn-ink:hover{background:var(--sage-ink);transform:translateY(-2px)}
+.btn-sage{background:var(--sage);color:var(--ink)}
+.btn-sage:hover{background:var(--sage-soft);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--bone)}
+.btn:active{transform:scale(.97)}
+.btn .arr{width:26px;height:26px;border-radius:50%;background:var(--sage);color:var(--ink);display:grid;place-items:center;margin-right:-10px;transition:transform .25s}
+.btn:hover .arr{transform:rotate(-45deg)}
+.nav .btn{padding:10px 18px;font-size:14px}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:48px 0 104px}
+.hero-grid{position:relative;display:grid;gap:28px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-ink)}
+.kicker i{width:10px;height:10px;border-radius:50%;background:var(--sage-deep);display:inline-block;box-shadow:0 0 0 4px var(--sage-soft)}
+.hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(44px,13vw,128px);line-height:.92;letter-spacing:-.045em;margin:20px 0 0;position:relative;z-index:2}
+.hero h1 .o{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hero h1 .s{color:var(--sage-deep)}
+.orb{position:absolute;z-index:0;border-radius:50%;background:var(--sage);right:-110px;top:40px;width:240px;height:240px}
+.orb::after{content:"";position:absolute;inset:34px;border-radius:50%;border:1.5px solid rgba(20,22,20,.25)}
+.curve{position:absolute;z-index:1;left:0;right:0;bottom:0;width:100%;height:70px;pointer-events:none}
+.curve path{stroke-dasharray:2400;stroke-dashoffset:0}
+.js .curve path{animation:draw 2.4s cubic-bezier(.6,.1,.2,1) both .2s}
+@keyframes draw{from{stroke-dashoffset:2400}to{stroke-dashoffset:0}}
+.hero-bottom{position:relative;z-index:2;display:grid;gap:24px;margin-top:28px}
+.hero .lead{font-size:18px;color:var(--ink-2);max-width:31em}
+.hero .lead b{font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.pchips{display:flex;flex-wrap:wrap;gap:8px}
+.pchip{display:inline-flex;align-items:baseline;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:500}
+.pchip b{font-family:var(--disp);font-weight:600;font-size:14px}
+.pchip.dark{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.pchip.dark b{color:var(--sage)}
+.rating{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--muted)}
+.rating .big{font-family:var(--disp);font-size:34px;font-weight:600;color:var(--ink);letter-spacing:-.03em}
+.rating .stars{color:var(--sage-deep);letter-spacing:2px;font-size:15px}
+@media(min-width:900px){
+  .hero{padding:72px 0 150px}
+  .orb{width:560px;height:560px;right:-40px;top:40px}
+  .orb::after{inset:60px}
+  .curve{height:110px}
+  .hero-bottom{grid-template-columns:1.1fr .9fr;align-items:end;margin-top:44px}
+  .hero-side{justify-self:end;display:grid;gap:18px;justify-items:end}
+}
+
+/* marquee strip */
+.strip{background:var(--ink);color:var(--bone);overflow:hidden;padding:16px 0;white-space:nowrap}
+.strip .track{display:inline-flex;gap:36px;align-items:center;font-family:var(--disp);font-size:20px;font-weight:500;letter-spacing:-.01em}
+.js .strip .track{animation:mq 38s linear infinite}
+.strip .dot{width:12px;height:12px;border-radius:50%;background:var(--sage);display:inline-block}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding:84px 0}
+.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:780px}
+.idx{font-family:var(--disp);font-size:13px;font-weight:500;color:var(--sage-deep);display:flex;align-items:center;gap:10px}
+.idx::after{content:"";width:48px;height:1.5px;background:currentColor}
+.sec-head h2{font-family:var(--disp);font-weight:600;font-size:clamp(32px,8.4vw,64px);line-height:1;letter-spacing:-.04em}
+.sec-head h2 .s{color:var(--sage-deep)}
+.sec-head p{color:var(--muted);font-size:17px;max-width:36em}
+
+/* services */
+#services{background:var(--paper)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:28px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 14px var(--sans);color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:9px 18px;cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.menu-grid{display:grid;gap:16px}
+.menu-card{background:var(--bone);border-radius:var(--r);padding:26px 22px;position:relative;overflow:hidden}
+.menu-card.feature{background:var(--sage)}
+.menu-card h3{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.03em;display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.menu-card h3 .num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-size:12px;font-weight:500;letter-spacing:0}
+.menu-card .sub{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+.menu-card.feature .sub{color:var(--sage-ink)}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-top:1px solid var(--line)}
+.item .n{font-weight:600;font-size:16px}
+.item .p{font-family:var(--disp);font-size:16px;font-weight:600;text-align:right;white-space:nowrap;letter-spacing:-.02em}
+.item .d{grid-column:1/-1;font-size:14px;color:var(--muted);line-height:1.5}
+.menu-card.feature .item .d,.menu-card.feature .item .t{color:var(--sage-ink)}
+.item .t{font-size:12.5px;color:var(--muted)}
+.item .tag{display:inline-block;margin-left:6px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--bone);background:var(--sage-ink);border-radius:999px;padding:2px 8px;vertical-align:2px}
+.menu-card[hidden]{display:none}
+.menu-note{margin-top:28px;font-size:14.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+@media(min-width:900px){.menu-grid{grid-template-columns:repeat(2,1fr)}.menu-grid.show-all .wide{grid-column:span 2}}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+.why{background:var(--paper);border-radius:var(--r);padding:28px 24px;transition:transform .25s, background .25s}
+.why:hover{transform:translateY(-4px);background:#fff}
+.why .ic{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--sage-soft);margin-bottom:20px}
+.why .ic svg{width:24px;height:24px}
+.why h3{font-family:var(--disp);font-weight:600;font-size:19px;letter-spacing:-.03em;line-height:1.2;margin-bottom:8px}
+.why p{color:var(--muted);font-size:15px}
+.why.big{background:var(--ink);color:var(--bone)}
+.why.big:hover{background:var(--ink-2)}
+.why.big .ic{background:var(--sage)}
+.why.big p{color:#B9BFB7}
+.why.big .score{font-family:var(--disp);font-size:56px;font-weight:600;letter-spacing:-.05em;line-height:1;color:var(--sage);margin-bottom:8px}
+.quote{margin-top:16px;padding:34px 26px;border-radius:var(--r);background:var(--sage);position:relative;overflow:hidden}
+.quote::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1.5px solid rgba(20,22,20,.2);right:-90px;bottom:-130px}
+.quote p{font-family:var(--disp);font-weight:500;font-size:clamp(20px,4.6vw,32px);line-height:1.2;letter-spacing:-.03em;max-width:24em;position:relative}
+.quote small{display:block;margin-top:14px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--sage-ink);position:relative}
+@media(min-width:900px){.why-grid{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+
+/* training */
+.train{display:grid;gap:26px;align-items:center;background:var(--ink);color:var(--bone);border-radius:36px;padding:34px 24px;position:relative;overflow:hidden}
+.train::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:var(--sage);opacity:.16;right:-140px;top:-140px}
+.train .kicker{color:var(--sage)}
+.train .kicker i{background:var(--sage);box-shadow:0 0 0 4px rgba(157,176,154,.25)}
+.train h3{font-family:var(--disp);font-weight:600;font-size:clamp(28px,6.4vw,48px);line-height:1;letter-spacing:-.04em;margin-top:14px;position:relative}
+.train ul{list-style:none;display:grid;gap:10px;margin:20px 0 24px;color:#C9CEC6;position:relative}
+.train li{display:flex;gap:12px;align-items:flex-start}
+.train li::before{content:"";flex:0 0 10px;height:10px;margin-top:8px;border-radius:50%;border:2px solid var(--sage)}
+.train .price-big{font-family:var(--disp);font-size:64px;font-weight:600;letter-spacing:-.05em;line-height:1;color:var(--sage);position:relative}
+.train .price-big small{font-family:var(--sans);font-size:14px;font-weight:500;color:#C9CEC6;display:block;margin-top:10px;letter-spacing:0}
+@media(min-width:900px){.train{grid-template-columns:1.4fr .6fr;padding:56px}}
+
+/* visit */
+.visit-grid{display:grid;gap:16px}
+.card{background:var(--paper);border-radius:var(--r);padding:28px 24px}
+.card h3{font-family:var(--disp);font-weight:600;font-size:22px;letter-spacing:-.03em;margin-bottom:14px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 14px;border-radius:999px;font-size:15.5px}
+.hours li span:last-child{font-weight:600}
+.hours li.closed span:last-child{color:var(--muted);font-weight:500}
+.hours li.today{background:var(--sage)}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--bone);padding:2px 8px;border-radius:999px;vertical-align:2px}
+.status{margin-top:14px;font-size:14px;color:var(--muted);min-height:1.4em}
+.status b{color:var(--sage-ink)}
+.addr{font-size:17px;line-height:1.5}
+.addr strong{display:block;font-family:var(--disp);font-weight:600;font-size:20px;letter-spacing:-.03em}
+.inside{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;font-weight:600;background:var(--sage-soft);border-radius:999px;padding:6px 14px;color:var(--sage-ink)}
+.contact-list{list-style:none;margin:18px 0 20px;display:grid;gap:8px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:500;padding:12px 16px;border:1.5px solid var(--line);border-radius:999px;transition:.2s}
+.contact-list a:hover{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.contact-list svg{width:20px;height:20px;flex:0 0 auto}
+.map{border-radius:var(--r);overflow:hidden;min-height:340px;background:var(--bone-2)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.6) contrast(1.05)}
+.policy{font-size:13.5px;color:var(--muted);margin-top:16px;line-height:1.55}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1fr 1.2fr}}
+
+/* final */
+.final{background:var(--sage);text-align:center;padding:96px 0;overflow:hidden;position:relative}
+.final .ring{position:absolute;border-radius:50%;border:1.5px solid rgba(20,22,20,.18);left:50%;top:50%;transform:translate(-50%,-50%)}
+.final h2{font-family:var(--disp);font-weight:600;font-size:clamp(40px,11vw,104px);line-height:.95;letter-spacing:-.05em;position:relative}
+.final p{color:var(--sage-ink);margin:18px auto 30px;max-width:30em;position:relative;font-weight:500}
+.final .ctas{justify-content:center;position:relative}
+
+footer{background:var(--ink);color:#A9AFA7;font-size:14px;padding:36px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center}
+footer a{color:var(--bone);text-decoration:none}
+footer a:hover{color:var(--sage)}
+footer .soc{display:flex;gap:18px}
+
+.sticky{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:50;display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:6px;padding:6px;background:var(--ink);border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45)}
+.sticky a{display:flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;color:var(--bone);font-size:14px;font-weight:600;padding:12px 6px;border-radius:999px}
+.sticky a svg{width:18px;height:18px;flex:0 0 auto}
+.sticky a.main{background:var(--sage);color:var(--ink)}
+.sticky a:active{transform:scale(.96)}
+@media(max-width:899px){body{padding-bottom:84px;background:linear-gradient(var(--bone),var(--bone)) top/100% calc(100% - 84px) no-repeat,var(--ink)}}
+@media(min-width:900px){.sticky{display:none}}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .js .curve path,.js .strip .track{animation:none}
+  .btn,.why{transition:none}
+}
+:focus-visible{outline:2.5px solid var(--sage-deep);outline-offset:3px;border-radius:8px}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Melt Wax Company. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Melt Wax Company home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#9DB09A"/><path d="M8 24c5-10 9-10 12 0s7 10 12 0" stroke="#141614" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+      <div><span>melt</span><small>Wax Company</small></div>
+    </a>
+    <ul>
+      <li><a href="#services">Menu</a></li>
+      <li><a href="#why">About</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-ink" href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="orb" aria-hidden="true"></div>
+  <svg class="curve" viewBox="0 0 1440 340" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 260C200 260 260 60 470 60s260 220 470 220 300-200 520-200" fill="none" stroke="#141614" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="kicker"><i></i>Now on Western Ave, Knoxville</span>
+      <h1>New <span class="o">address.</span><br>Same <span class="s">smooth.</span></h1>
+    </div>
+    <div class="hero-bottom">
+      <div class="rv">
+        <p class="lead">Melt Wax Company is now inside <b>Novara Skin Studio at 5750 Western Ave</b>. Full body waxing, brow tint and lamination, and soothing vajacials by a licensed esthetician.</p>
+        <div class="ctas" style="margin-top:26px">
+          <a class="btn btn-ink" href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener">Book your wax <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="btn btn-line" href="tel:+18654665351">Call (865) 466-5351</a>
+        </div>
+      </div>
+      <div class="hero-side rv">
+        <div class="pchips">
+          <span class="pchip">Brow Wax <b>$20</b></span>
+          <span class="pchip">Brazilian <b>$65</b></span>
+          <span class="pchip dark">Brazilian Wax Pass <b>3 for $180</b></span>
+        </div>
+        <div class="rating"><span class="big">5.0</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>26 reviews on Birdeye</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track">
+  <span>Brazilian</span><span class="dot"></span><span>Brow Lamination</span><span class="dot"></span><span>Soothing Vajacial</span><span class="dot"></span><span>Brow Tint</span><span class="dot"></span><span>Full Body Waxing</span><span class="dot"></span><span>Wax Passes</span><span class="dot"></span>
+  <span>Brazilian</span><span class="dot"></span><span>Brow Lamination</span><span class="dot"></span><span>Soothing Vajacial</span><span class="dot"></span><span>Brow Tint</span><span class="dot"></span><span>Full Body Waxing</span><span class="dot"></span><span>Wax Passes</span><span class="dot"></span>
+</div></div>
+
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="idx">01 / Menu</span>
+      <h2>Every service. <span class="s">Every price.</span></h2>
+      <p>Prices and times as published on the Melt Wax Company booking page. Tap a category to filter.</p>
+    </div>
+
+    <div class="tabs rv" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="brows">Brows</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="intimate">Brazilian &amp; Bikini</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="face">Face</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="body">Body</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="passes">Wax Passes</button>
+    </div>
+
+    <div class="menu-grid" id="menu">
+      <article class="menu-card rv" data-cat="brows">
+        <h3><span class="num">01</span>Brows</h3>
+        <p class="sub">Wax, tint and lamination, alone or stacked.</p>
+        <div class="item"><span class="n">Brow Wax</span><span class="p">$20</span><span class="t">20 min</span></div>
+        <div class="item"><span class="n">Brow Tint</span><span class="p">$25</span><span class="t">25 min</span></div>
+        <div class="item"><span class="n">Brow Wax + Tint</span><span class="p">$45</span><span class="t">30 min</span></div>
+        <div class="item"><span class="n">Brow Wax + Lamination</span><span class="p">$85</span><span class="t">Brow lamination and wax</span></div>
+        <div class="item"><span class="n">Brow Wax + Tint + Lamination</span><span class="p">$100</span><span class="t">30 min</span></div>
+      </article>
+
+      <article class="menu-card feature rv" data-cat="intimate">
+        <h3><span class="num">02</span>Brazilian &amp; Bikini</h3>
+        <p class="sub">Plus a soothing vajacial to calm post-wax redness.</p>
+        <div class="item"><span class="n">Brazilian (Female)</span><span class="p">$65</span><span class="d">Completely smooth front to back, including the butt strip.</span><span class="t">20 min</span></div>
+        <div class="item"><span class="n">Brazilian + Soothing Vajacial</span><span class="p">$100</span><span class="d">Brazilian wax with an instant-soothe vajacial.</span><span class="t">50 min</span></div>
+        <div class="item"><span class="n">Soothing Vajacial <span class="tag">Treatment only</span></span><span class="p">$40</span><span class="d">A gentle, restorative treatment for the bikini area that cleanses, exfoliates, and soothes post-wax redness and irritation.</span><span class="t">35 min</span></div>
+        <div class="item"><span class="n">Bikini Full (Female)</span><span class="p">$55</span><span class="d">Front and sides, with the option to leave a strip or triangle. No butt strip.</span><span class="t">20 min</span></div>
+        <div class="item"><span class="n">Bikini Line</span><span class="p">$35</span><span class="d">Along the sides of the underwear line for a clean, natural look.</span><span class="t">20 min</span></div>
+      </article>
+
+      <article class="menu-card rv" data-cat="face">
+        <h3><span class="num">03</span>Face</h3>
+        <p class="sub">Quick, precise details. Most visits take about 20 minutes.</p>
+        <div class="item"><span class="n">Lip</span><span class="p">$10</span></div>
+        <div class="item"><span class="n">Ears</span><span class="p">$10</span></div>
+        <div class="item"><span class="n">Chin</span><span class="p">$12</span></div>
+        <div class="item"><span class="n">Cheeks</span><span class="p">$15</span></div>
+        <div class="item"><span class="n">Nose</span><span class="p">$15</span></div>
+        <div class="item"><span class="n">Sideburns</span><span class="p">$15</span></div>
+        <div class="item"><span class="n">Neck</span><span class="p">$15</span></div>
+        <div class="item"><span class="n">Full Face</span><span class="p">$55</span></div>
+      </article>
+
+      <article class="menu-card rv" data-cat="body">
+        <h3><span class="num">04</span>Body</h3>
+        <p class="sub">Head to toe, from a quick strip to a full leg.</p>
+        <div class="item"><span class="n">Underarms</span><span class="p">$20</span></div>
+        <div class="item"><span class="n">Nipples</span><span class="p">$10</span></div>
+        <div class="item"><span class="n">Chest Strip / Chest (Full)</span><span class="p">$15 / $25</span></div>
+        <div class="item"><span class="n">Stomach Strip / Full Stomach</span><span class="p">$10 / $35</span></div>
+        <div class="item"><span class="n">Shoulders</span><span class="p">$20</span></div>
+        <div class="item"><span class="n">Half Arm / Full Arm</span><span class="p">$35 / $45</span><span class="t">30 min</span></div>
+        <div class="item"><span class="n">Lower Back / Upper Back</span><span class="p">$20 / $30</span></div>
+        <div class="item"><span class="n">Full Back</span><span class="p">$70</span></div>
+        <div class="item"><span class="n">Butt Strip / Full Butt</span><span class="p">$20 / $25</span></div>
+        <div class="item"><span class="n">Inner Thigh</span><span class="p">$20</span></div>
+        <div class="item"><span class="n">Half Leg</span><span class="p">$45</span><span class="t">30 min</span></div>
+        <div class="item"><span class="n">Full Leg</span><span class="p">$90</span><span class="t">45 min &middot; $30 deposit to book</span></div>
+      </article>
+
+      <article class="menu-card rv wide" data-cat="passes">
+        <h3><span class="num">05</span>Wax Passes</h3>
+        <p class="sub">Stay on schedule and save.</p>
+        <div class="item"><span class="n">Wax Pass Brazilian</span><span class="p">3 for $180</span><span class="d">Three Brazilian waxes for $180 ($195 value). $60 deposit to book.</span></div>
+        <div class="item"><span class="n">Wax Pass (Male)</span><span class="p">$205</span><span class="t">30 min</span></div>
+      </article>
+    </div>
+
+    <div class="menu-note rv">
+      <span>Buy Now, Pay Later available in person on bookings from $50 to $4,000 (approval before your appointment).</span>
+      <a class="btn btn-ink" href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener">See times &amp; book</a>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="idx">02 / Why Melt</span>
+      <h2>First wax or hundredth, <span class="s">you're covered.</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why big rv">
+        <div class="score">5.0</div>
+        <h3>On Birdeye</h3>
+        <p>A perfect average across 26 client reviews.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141614" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+        <h3>Licensed, 6+ years</h3>
+        <p>Donna is a licensed esthetician with more than six years of experience.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141614" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1.2 1.5 2.5 2 4 2s2.8-.5 4-2"/></svg></div>
+        <h3>Comfort first</h3>
+        <p>A judgment-free space built so every client feels confident and cared for.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141614" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 15c3-6 6-6 9 0s6 6 9 0"/></svg></div>
+        <h3>Aftercare built in</h3>
+        <p>A soothing vajacial on the menu to calm post-wax redness and irritation.</p>
+      </div>
+    </div>
+    <div class="quote rv">
+      <p>Full body waxing, vajacials and brow tinting: the three things Donna specializes in.</p>
+      <small>From the Melt Wax Company about page</small>
+    </div>
+  </div>
+</section>
+
+<section id="training" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="train rv">
+      <div>
+        <span class="kicker"><i></i>For estheticians</span>
+        <h3>Hard Wax 101. One-on-one training.</h3>
+        <ul>
+          <li>Personalized, hands-on training with Melt Wax Company</li>
+          <li>For beginners or licensed pros looking to level up</li>
+          <li>Open to licensed estheticians and cosmetologists</li>
+        </ul>
+        <a class="btn btn-sage" href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener">Reserve a training day</a>
+      </div>
+      <div class="price-big">$600<small>8-hour session &middot; $250 deposit</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="idx">03 / Visit</span>
+      <h2>Find us inside <span class="s">Novara Skin Studio.</span></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card rv">
+        <h3>Hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="0"><span>Sunday</span><span>10 AM &ndash; 4 PM</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>10 AM &ndash; 3 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10 AM &ndash; 3 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>10 AM &ndash; 3 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10 AM &ndash; 5 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+        </ul>
+        <p class="status" id="status"></p>
+      </div>
+      <div class="card rv">
+        <h3>Location</h3>
+        <p class="addr"><strong>5750 Western Ave</strong>Knoxville, TN 37921</p>
+        <span class="inside">Inside Novara Skin Studio</span>
+        <ul class="contact-list">
+          <li><a href="tel:+18654665351"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(865) 466-5351</a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=5750+Western+Ave%2C+Knoxville%2C+TN+37921" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Get directions</a></li>
+          <li><a href="https://www.instagram.com/meltwaxcompany" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@meltwaxcompany</a></li>
+          <li><a href="https://www.facebook.com/meltwaxcompany" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg>Facebook</a></li>
+        </ul>
+        <p class="policy">Please cancel or reschedule at least 12 hours ahead. Cancellations within 12 hours are charged 50% of the service to the card on file.</p>
+      </div>
+      <div class="map rv">
+        <iframe title="Map to Melt Wax Company, 5750 Western Ave, Knoxville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=5750%20Western%20Ave%2C%20Knoxville%2C%20TN%2037921&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <span class="ring" style="width:420px;height:420px" aria-hidden="true"></span>
+  <span class="ring" style="width:720px;height:720px" aria-hidden="true"></span>
+  <span class="ring" style="width:1040px;height:1040px" aria-hidden="true"></span>
+  <div class="wrap rv">
+    <h2>Book the<br>smooth.</h2>
+    <p>Pick your service and time online in under a minute.</p>
+    <div class="ctas">
+      <a class="btn btn-ink" href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-line" href="tel:+18654665351">Call (865) 466-5351</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; Melt Wax Company &middot; 5750 Western Ave, Knoxville, TN 37921</div>
+    <div class="soc"><a href="https://www.instagram.com/meltwaxcompany" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/meltwaxcompany" target="_blank" rel="noopener">Facebook</a><a href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener">Book</a></div>
+    <div>Concept by <a href="#top">Code Craft Media</a></div>
+  </div>
+</footer>
+
+<nav class="sticky" aria-label="Quick actions">
+  <a href="tel:+18654665351"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="main" href="https://donnagilmore.glossgenius.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=5750+Western+Ave%2C+Knoxville%2C+TN+37921" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+
+  var hrs={0:[10,16],2:[10,15],3:[10,15],4:[10,15],5:[10,17]};
+  var now; try{now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}))}catch(e){now=new Date()}
+  var d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), t=hrs[d];
+  function fmt(x){return (x>12?x-12:x)+(x>=12?' PM':' AM')}
+  if(t && h>=t[0] && h<t[1]) st.innerHTML='<b>Open now</b> until '+fmt(t[1])+'.';
+  else st.textContent='Closed right now. Book online any time.';
+
+  var tabs=document.querySelectorAll('.tab'), cards=document.querySelectorAll('.menu-card'), grid=document.getElementById('menu');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')}); b.setAttribute('aria-selected','true');
+    var f=b.getAttribute('data-f');
+    cards.forEach(function(c){c.hidden=!(f==='all'||c.getAttribute('data-cat')===f); c.classList.add('in')});
+    grid.classList.toggle('show-all',f==='all');
+  })});
+  grid.classList.add('show-all');
+})();
+</script>
+</body>
+</html>

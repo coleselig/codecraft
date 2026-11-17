@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Knoxville Mowing Service</title>
+<meta name="description" content="Veteran-owned lawn mowing for Knoxville homes and businesses since 2011. Free estimates. Call (865) 566-4316.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#9bd43a; --lime-2:#86bf2a; --lime-soft:#e4f3c8;
+  --char:#1b1f1a; --char-2:#262b24; --char-3:#343a31;
+  --cream:#fbf8ef; --cream-2:#f2edde; --ink:#1b1f1a; --muted:#5b6156;
+  --line:rgba(27,31,26,.12);
+  --r:20px;
+  --head:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.6 var(--body);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);line-height:1.02;letter-spacing:-.02em;margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--lime-2)}
+.eyebrow::before{content:"";width:18px;height:3px;border-radius:2px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font:700 16px/1 var(--body);text-decoration:none;transition:transform .2s, box-shadow .2s, background .2s;border:2px solid transparent}
+.btn svg{width:18px;height:18px}
+.btn-lime{background:var(--lime);color:var(--char);box-shadow:0 6px 0 var(--lime-2)}
+.btn-lime:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--lime-2)}
+.btn-lime:active{transform:translateY(4px);box-shadow:0 2px 0 var(--lime-2)}
+.btn-ghost{border-color:rgba(251,248,239,.35);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+
+/* concept banner */
+.concept{background:var(--lime);color:var(--char);font:600 12.5px/1.35 var(--body);text-align:center;padding:8px 16px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(27,31,26,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--cream);border-bottom:1px solid rgba(155,212,58,.15)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand b{font:800 18px/1 var(--head);letter-spacing:-.01em;display:block}
+.brand small{display:block;font:500 11px/1.2 var(--body);color:#b9c0b2;letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+.nav-links{display:none;gap:26px;font-weight:500;font-size:15px}
+.nav-links a{text-decoration:none;opacity:.8;transition:opacity .2s,color .2s}
+.nav-links a:hover{opacity:1;color:var(--lime)}
+.nav-call{display:none;text-decoration:none;font-weight:700;color:var(--char);background:var(--lime);padding:10px 16px;border-radius:999px;font-size:14px}
+
+/* hero */
+.hero{position:relative;background:var(--char);color:var(--cream);overflow:hidden;isolation:isolate}
+.hero-lawn{position:absolute;inset:0;z-index:-1;
+  background:
+   repeating-linear-gradient(135deg, rgba(155,212,58,.075) 0 46px, rgba(155,212,58,0) 46px 92px),
+   radial-gradient(120% 80% at 80% 0%, #2b3424 0%, var(--char) 60%);}
+.hero-lawn::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.9;pointer-events:none}
+.hero .wrap{padding-top:44px;padding-bottom:0;position:relative}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;font:600 12.5px/1 var(--body);padding:8px 12px;border-radius:999px;background:rgba(155,212,58,.12);color:var(--lime);border:1px solid rgba(155,212,58,.28)}
+.pill svg{width:14px;height:14px}
+.hero h1{font-size:clamp(44px, 12.5vw, 104px);font-weight:800;max-width:11ch}
+.hero h1 .stripe{position:relative;display:inline-block;color:var(--char);padding:0 .12em;z-index:0}
+.hero h1 .stripe::before{content:"";position:absolute;inset:.08em -.02em .02em;background:repeating-linear-gradient(135deg,var(--lime) 0 14px,#a9dd52 14px 28px);border-radius:.12em;z-index:-1;transform:skew(-6deg)}
+.hero p.lede{font-size:18px;color:#d3d8cc;max-width:34ch;margin:22px 0 28px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 28px;margin-top:30px;font-size:14px;color:#b9c0b2}
+.hero-meta strong{display:block;font:800 26px/1 var(--head);color:var(--cream);margin-bottom:4px}
+/* lawn scene */
+.scene{position:relative;margin-top:8px;height:190px}
+.scene svg.field{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%}
+.mowed{transform-origin:left;transform:scaleX(1)}
+.js .mowed{transform:scaleX(0);animation:mow 6s cubic-bezier(.45,.05,.4,1) .4s forwards}
+.mower{position:absolute;bottom:44px;left:calc(100% - 150px);width:150px;height:auto}
+.js .mower{left:-150px;animation:drive 6s cubic-bezier(.45,.05,.4,1) .4s forwards}
+.mower .wheel{transform-box:fill-box;transform-origin:center;animation:spin .6s linear infinite}
+.mower .bob{animation:bob .35s ease-in-out infinite alternate}
+.clip{animation:clip 1s linear infinite}
+@keyframes mow{to{transform:scaleX(1)}}
+@keyframes drive{to{left:calc(100% - 150px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{to{transform:translateY(-1.5px)}}
+@keyframes clip{0%{opacity:0;transform:translate(0,0)}30%{opacity:1}100%{opacity:0;transform:translate(-26px,-18px) rotate(-90deg)}}
+@media (prefers-reduced-motion:reduce){.js .mowed{animation:none;transform:none}.js .mower{animation:none;left:calc(100% - 150px)}.mower .wheel,.mower .bob,.clip{animation:none}}
+
+/* grass divider */
+.blades{display:block;width:100%;height:46px;margin-top:-1px}
+.blades.flip{transform:scaleY(-1)}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:76px 0}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head h2{font-size:clamp(34px,8.5vw,58px);font-weight:800;margin-top:12px}
+.sec-head p{color:var(--muted);font-size:17px;margin:14px 0 0}
+
+/* services */
+.svc-grid{display:grid;gap:14px}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px 22px;overflow:hidden;transition:transform .25s, box-shadow .25s, border-color .25s}
+.svc::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:repeating-linear-gradient(135deg,var(--lime-soft) 0 10px,transparent 10px 20px);opacity:.8;transition:transform .5s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(27,31,26,.35);border-color:rgba(134,191,42,.6)}
+.svc:hover::after{transform:rotate(45deg) scale(1.15)}
+.svc-ico{position:relative;z-index:1;width:54px;height:54px;border-radius:16px;background:var(--char);display:grid;place-items:center;margin-bottom:18px}
+.svc-ico svg{width:30px;height:30px}
+.svc h3{position:relative;z-index:1;font-size:24px;font-weight:700}
+.svc p{position:relative;z-index:1;margin:8px 0 0;color:var(--muted);font-size:15.5px}
+.svc.feature{background:var(--char);color:var(--cream);border-color:var(--char)}
+.svc.feature p{color:#c3c9bb}
+.svc.feature .svc-ico{background:var(--lime)}
+.svc.feature::after{background:repeating-linear-gradient(135deg,rgba(155,212,58,.18) 0 10px,transparent 10px 20px)}
+.who{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.who span{font:600 14px/1 var(--body);padding:11px 15px;border-radius:999px;background:var(--cream-2);border:1px solid var(--line)}
+
+/* plans */
+.plans{background:var(--char);color:var(--cream);position:relative;overflow:hidden}
+.plans::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(155,212,58,.05) 0 60px,transparent 60px 120px);pointer-events:none}
+.plans .sec-head p{color:#b9c0b2}
+.plan-grid{display:grid;gap:14px;position:relative}
+.plan{border:1px solid rgba(251,248,239,.14);border-radius:var(--r);padding:26px 22px;background:rgba(251,248,239,.03);transition:border-color .25s, background .25s}
+.plan:hover{border-color:var(--lime);background:rgba(155,212,58,.06)}
+.plan .tag{font:700 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.plan h3{font-size:30px;font-weight:800;margin:12px 0 10px}
+.plan p{margin:0;color:#c3c9bb}
+.plan .meter{display:flex;gap:5px;margin-top:20px}
+.plan .meter i{flex:1;height:8px;border-radius:4px;background:rgba(251,248,239,.12)}
+.plan .meter i.on{background:var(--lime)}
+.plan .meter-l{font-size:12.5px;color:#9aa293;margin-top:8px}
+.plan.best{background:var(--lime);color:var(--char);border-color:var(--lime)}
+.plan.best .tag{color:var(--char)}
+.plan.best p{color:#2c3326}
+.plan.best .meter i{background:rgba(27,31,26,.15)}
+.plan.best .meter i.on{background:var(--char)}
+.plan.best .meter-l{color:#2c3326}
+.plans-note{position:relative;margin-top:22px;color:#b9c0b2;font-size:15px}
+.plans-note a{color:var(--lime);font-weight:600}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+.why{display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+.why-n{flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--lime-soft);color:var(--char)}
+.why-n svg{width:26px;height:26px}
+.why h3{font-size:21px;font-weight:700}
+.why p{margin:6px 0 0;color:var(--muted);font-size:15.5px}
+.vet{margin-top:14px;display:grid;gap:18px;align-items:center;padding:26px 22px;border-radius:var(--r);background:var(--cream-2);border:1px dashed rgba(27,31,26,.25)}
+.vet h3{font-size:26px;font-weight:800}
+.vet p{margin:8px 0 0;color:var(--muted)}
+.vet svg{width:84px;height:84px}
+
+/* tips */
+.tips{background:var(--lime-soft);position:relative;overflow:hidden}
+.tip-row{display:grid;gap:12px;grid-template-columns:1fr}
+.tip{background:var(--cream);border-radius:18px;padding:20px;border:1px solid rgba(27,31,26,.08);display:flex;gap:14px}
+.tip b{flex:none;font:800 34px/1 var(--head);color:var(--lime-2);width:44px}
+.tip h3{font-size:19px;font-weight:700}
+.tip p{margin:5px 0 0;font-size:15px;color:var(--muted)}
+.height-card{margin-top:14px;background:var(--char);color:var(--cream);border-radius:var(--r);padding:24px 22px;display:grid;gap:18px}
+.height-card h3{font-size:22px}
+.gauge{display:flex;align-items:flex-end;gap:18px;height:120px}
+.gauge div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:8px;text-align:center;font-size:13px;color:#c3c9bb}
+.gauge .bar{display:block;flex:none;width:100%;max-width:90px;border-radius:10px 10px 4px 4px;background:repeating-linear-gradient(135deg,var(--lime) 0 10px,#a9dd52 10px 20px)}
+.gauge strong{font:800 20px/1 var(--head);color:var(--cream)}
+.src{font-size:13px;color:var(--muted);margin-top:16px}
+
+/* hours + area */
+.ha-grid{display:grid;gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 22px}
+.card h3{font-size:26px;font-weight:800;margin-bottom:6px}
+.clock{display:flex;align-items:center;gap:18px;margin:18px 0}
+.clock svg{width:96px;height:96px;flex:none}
+.clock .big{font:800 28px/1.05 var(--head);white-space:nowrap}
+.clock .sm{color:var(--muted);font-size:14px;margin-top:6px}
+.status{display:inline-flex;align-items:center;gap:8px;font:600 14px/1.3 var(--body);padding:10px 14px;border-radius:12px;background:var(--cream-2)}
+.status i{width:10px;height:10px;border-radius:50%;background:#9aa293;flex:none}
+.status.open{background:var(--lime-soft)}
+.status.open i{background:#4c9a12;box-shadow:0 0 0 4px rgba(76,154,18,.2)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:16px}
+.days span{text-align:center;font:600 12px/1 var(--body);padding:9px 0;border-radius:8px;background:var(--cream-2);color:var(--muted)}
+.days span.today{background:var(--char);color:var(--lime)}
+.fine{font-size:13px;color:var(--muted);margin:12px 0 0}
+.area-map{margin:14px 0 4px;border-radius:16px;overflow:hidden;background:var(--char)}
+.area-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.area-list span{font:600 14px/1 var(--body);padding:10px 14px;border-radius:999px;background:var(--lime-soft)}
+
+/* contact */
+.contact{background:var(--char);color:var(--cream);position:relative;overflow:hidden}
+.contact .lawn{position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(155,212,58,.06) 0 46px,transparent 46px 92px);pointer-events:none}
+.contact h2{font-size:clamp(40px,10vw,76px);font-weight:800;max-width:12ch}
+.contact h2 em{font-style:normal;color:var(--lime)}
+.contact p.lede{color:#c3c9bb;font-size:17px;max-width:40ch;margin:16px 0 30px}
+.c-grid{display:grid;gap:12px;position:relative}
+.contact .btn{margin-bottom:28px}
+.c-item{display:flex;align-items:center;gap:16px;padding:20px;border-radius:18px;background:rgba(251,248,239,.05);border:1px solid rgba(251,248,239,.12);text-decoration:none;transition:background .2s,border-color .2s,transform .2s;min-width:0}
+.c-item:hover{background:rgba(155,212,58,.1);border-color:var(--lime);transform:translateX(4px)}
+.c-item .ci{flex:none;width:48px;height:48px;border-radius:14px;background:var(--lime);display:grid;place-items:center}
+.c-item .ci svg{width:22px;height:22px}
+.c-item small{display:block;color:#9aa293;font-size:13px}
+.c-item b{display:block;font:700 18px/1.25 var(--head);overflow-wrap:anywhere}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1.1fr!important}.c-item b{font-size:16px}}
+
+footer{background:#121511;color:#9aa293;padding:36px 0 40px;font-size:14px}
+footer .wrap{display:grid;gap:18px}
+footer .brand b{color:var(--cream)}
+footer a{color:#c3c9bb}
+.foot-links{display:flex;flex-wrap:wrap;gap:10px 20px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(27,31,26,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(155,212,58,.25)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;font:700 15px/1 var(--body);text-decoration:none}
+.callbar svg{width:18px;height:18px}
+.callbar .cb-call{background:var(--lime);color:var(--char)}
+.callbar .cb-mail{background:rgba(251,248,239,.08);color:var(--cream);border:1px solid rgba(251,248,239,.2)}
+@media (max-width:899px){footer{padding-bottom:calc(116px + env(safe-area-inset-bottom))}}
+
+@media (min-width:640px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .tip-row{grid-template-columns:1fr 1fr}
+  .c-grid{grid-template-columns:1fr 1fr}
+  .vet{grid-template-columns:auto 1fr}
+}
+@media (min-width:900px){
+  .callbar{display:none}
+  .nav-links,.nav-call{display:flex}
+  .wrap{padding:0 32px}
+  .hero .wrap{padding-top:56px}
+  .hero h1{font-size:clamp(60px,6.4vw,92px);max-width:12ch}
+  .hero-grid{align-items:center!important}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
+  .scene{height:230px;margin-top:20px}
+  .mower,.js .mower{width:200px}
+  .mower{left:calc(100% - 200px)}
+  @keyframes drive{to{left:calc(100% - 200px)}}
+  .sec{padding:110px 0}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .svc.feature{grid-column:span 2}
+  .plan-grid{grid-template-columns:repeat(3,1fr)}
+  .tip-row{grid-template-columns:repeat(2,1fr)}
+  .tips-layout{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:start}
+  .height-card{margin-top:0}
+  .ha-grid{grid-template-columns:1fr 1.2fr}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .contact .c-grid{grid-template-columns:1fr 1fr}
+  .contact .btn{margin-bottom:0}
+  footer .wrap{grid-template-columns:1fr auto;align-items:center}
+}
+.hero-aside{display:none}
+@media (min-width:900px){
+  .hero-aside{display:block;background:rgba(251,248,239,.04);border:1px solid rgba(251,248,239,.12);border-radius:24px;padding:26px;backdrop-filter:blur(4px)}
+  .hero-aside h3{font-size:22px;margin-bottom:14px}
+  .hero-aside ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .hero-aside li{display:flex;gap:12px;align-items:center;color:#d3d8cc;font-size:15px}
+  .hero-aside li svg{width:22px;height:22px;flex:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by Code Craft Media, made for Knoxville Mowing Service. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Knoxville Mowing Service home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#9bd43a"/><path d="M0 40 40 0" stroke="#86bf2a" stroke-width="9"/><path d="M-10 30 30-10M10 50 50 10" stroke="#86bf2a" stroke-width="9"/><path d="M9 31c1.5-6 3-10 3-16M15 31c.5-5 1.5-9 4-13M21 31c0-6 .5-11-1-17M27 31c-.5-4 0-8 3-11" stroke="#1b1f1a" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+      <span><b>Knoxville Mowing</b><small>Service · Since 2011</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#services">Services</a><a href="#plans">Plans</a><a href="#why">Why us</a><a href="#tips">Lawn tips</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-call" href="tel:+18655664316">(865) 566-4316</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <div class="hero-lawn" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="badge-row">
+          <span class="pill"><svg><use href="#i-star"/></svg>U.S. Veteran Owned</span>
+          <span class="pill"><svg><use href="#i-check"/></svg>Free estimates</span>
+        </div>
+        <h1>Knoxville lawns, cut <span class="stripe">clean</span> since 2011.</h1>
+        <p class="lede">Residential and commercial mowing from a veteran-owned crew that’ll go the extra mile. Affordable price. Great service. No job too big or too small.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-lime" href="tel:+18655664316"><svg><use href="#i-phone"/></svg>Call for a free estimate</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>2011</strong>Mowing Knoxville since</div>
+          <div><strong>8–8</strong>Phone answered</div>
+          <div><strong>100%</strong>Satisfaction guaranteed</div>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="At a glance">
+        <h3>Every visit, the basics done right</h3>
+        <ul>
+          <li><svg><use href="#i-check" style="color:#9bd43a"/></svg>Mowing, trimming &amp; weeding</li>
+          <li><svg><use href="#i-check" style="color:#9bd43a"/></svg>Mulching &amp; tree trimming</li>
+          <li><svg><use href="#i-check" style="color:#9bd43a"/></svg>Homes and commercial properties</li>
+          <li><svg><use href="#i-check" style="color:#9bd43a"/></svg>Knoxville, Maryville &amp; Lenoir City</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <svg class="field" viewBox="0 0 1440 280" preserveAspectRatio="none">
+      <defs>
+        <pattern id="tall" width="24" height="40" patternUnits="userSpaceOnUse">
+          <path d="M3 40 Q5 20 2 6 M10 40 Q11 22 14 4 M17 40 Q16 24 19 10 M22 40 Q21 26 23 14" stroke="#6ea52a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        </pattern>
+        <pattern id="stripes" width="160" height="200" patternUnits="userSpaceOnUse" patternTransform="skewX(-35)">
+          <rect width="80" height="200" fill="#8cc934"/><rect x="80" width="80" height="200" fill="#a4db4c"/>
+        </pattern>
+      </defs>
+      <rect x="0" y="120" width="1440" height="160" fill="#4f7d1f"/>
+      <rect x="0" y="80" width="1440" height="60" fill="url(#tall)"/>
+      <rect x="0" y="120" width="1440" height="160" fill="url(#tall)" opacity=".7"/>
+      <g class="mowed">
+        <rect x="0" y="118" width="1440" height="162" fill="url(#stripes)"/>
+        <rect x="0" y="118" width="1440" height="4" fill="#bfe97a" opacity=".7"/>
+      </g>
+    </svg>
+    <svg class="mower" viewBox="0 0 200 130">
+      <g class="bob">
+        <path d="M20 22 L70 66" stroke="#fbf8ef" stroke-width="6" stroke-linecap="round"/>
+        <path d="M10 18 h22" stroke="#fbf8ef" stroke-width="8" stroke-linecap="round"/>
+        <path d="M58 64 h112 a14 14 0 0 1 14 14 v14 H50 v-14 a14 14 0 0 1 8-14z" fill="#9bd43a"/>
+        <path d="M78 46 h62 a10 10 0 0 1 10 10 v8 H72 v-12 a6 6 0 0 1 6-6z" fill="#1b1f1a" stroke="#9bd43a" stroke-width="3"/>
+        <rect x="88" y="52" width="10" height="6" rx="2" fill="#9bd43a"/>
+        <path d="M50 92 h134" stroke="#1b1f1a" stroke-width="5"/>
+        <path d="M184 76 h10 v14 h-10" fill="#86bf2a"/>
+      </g>
+      <g class="wheel"><circle cx="70" cy="104" r="17" fill="#1b1f1a" stroke="#fbf8ef" stroke-width="3"/><path d="M70 92 v24 M58 104 h24" stroke="#9bd43a" stroke-width="3"/></g>
+      <g class="wheel"><circle cx="164" cy="108" r="13" fill="#1b1f1a" stroke="#fbf8ef" stroke-width="3"/><path d="M164 99 v18 M155 108 h18" stroke="#9bd43a" stroke-width="3"/></g>
+      <g fill="#a4db4c">
+        <rect class="clip" x="44" y="96" width="3" height="8" rx="1"/>
+        <rect class="clip" x="48" y="100" width="3" height="7" rx="1" style="animation-delay:.3s"/>
+        <rect class="clip" x="42" y="102" width="3" height="6" rx="1" style="animation-delay:.6s"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<svg class="blades flip" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)"><path fill="#8cc934" d="M0 46 L0 34 Q3.4 30.8 6.8 26.1 Q7.9 30.8 11.3 34 Q14.1 26.8 14.9 16.1 Q17.9 26.8 20.8 34 Q23.6 27.1 21.8 16.8 Q27.4 27.1 30.2 34 Q33.8 31.7 32.9 28.2 Q38.6 31.7 42.2 34 Q45.8 23.8 45.2 8.5 Q50.6 23.8 54.2 34 Q57.4 25.9 63.1 13.7 Q61.6 25.9 64.7 34 Q68.7 28.3 75.1 19.7 Q73.9 28.3 77.8 34 Q80.6 23.5 80.8 7.7 Q84.3 23.5 87.1 34 Q90.1 31.2 90.6 26.9 Q94.1 31.2 97.1 34 Q101.5 30.5 105.1 25.3 Q107.4 30.5 111.8 34 Q115.9 28.5 119.0 20.3 Q121.3 28.5 125.3 34 Q128.1 31.8 127.7 28.5 Q131.9 31.8 134.8 34 Q138.9 28.0 140.1 18.9 Q144.4 28.0 148.5 34 Q152.4 27.7 153.5 18.2 Q157.7 27.7 161.6 34 Q166.0 25.1 166.8 11.8 Q171.8 25.1 176.2 34 Q180.1 26.9 185.7 16.3 Q185.3 26.9 189.2 34 Q193.4 29.4 200.1 22.5 Q199.1 29.4 203.3 34 Q206.2 28.1 210.3 19.1 Q210.2 28.1 213.1 34 Q216.1 27.3 214.5 17.3 Q220.2 27.3 223.2 34 Q227.3 24.4 230.6 10.1 Q232.8 24.4 236.9 34 Q241.4 29.1 246.0 21.8 Q247.5 29.1 252.0 34 Q255.9 26.4 258.2 14.9 Q261.2 26.4 265.2 34 Q269.6 22.6 272.4 5.4 Q275.6 22.6 280.0 34 Q284.1 31.8 288.5 28.4 Q289.6 31.8 293.7 34 Q297.7 22.1 303.0 4.2 Q303.2 22.1 307.2 34 Q310.5 28.4 314.1 20.0 Q314.9 28.4 318.2 34 Q321.0 27.6 320.1 18.0 Q324.6 27.6 327.4 34 Q330.3 31.8 334.4 28.5 Q334.2 31.8 337.2 34 Q340.2 29.8 341.3 23.6 Q344.1 29.8 347.1 34 Q351.6 31.6 354.2 27.9 Q357.7 31.6 362.2 34 Q366.0 23.2 371.2 7.0 Q371.2 23.2 375.0 34 Q379.6 29.5 381.9 22.8 Q385.6 29.5 390.1 34 Q393.5 23.2 399.5 7.0 Q398.1 23.2 401.6 34 Q404.6 30.6 404.5 25.4 Q408.6 30.6 411.7 34 Q414.8 27.4 417.7 17.4 Q419.1 27.4 422.3 34 Q425.5 32.4 427.1 29.9 Q429.9 32.4 433.1 34 Q436.6 26.5 442.5 15.3 Q441.2 26.5 444.7 34 Q448.9 27.0 452.6 16.6 Q454.4 27.0 458.5 34 Q462.7 31.8 468.6 28.6 Q468.2 31.8 472.3 34 Q476.6 23.3 481.9 7.3 Q482.4 23.3 486.7 34 Q490.3 28.3 489.4 19.6 Q495.0 28.3 498.5 34 Q502.5 31.8 501.7 28.4 Q507.9 31.8 511.9 34 Q515.1 30.7 515.9 25.8 Q519.2 30.7 522.4 34 Q525.2 32.4 524.3 30.0 Q528.9 32.4 531.8 34 Q534.7 28.6 532.8 20.5 Q538.5 28.6 541.5 34 Q546.0 26.0 546.2 14.0 Q552.0 26.0 556.6 34 Q559.8 28.8 560.9 21.0 Q564.1 28.8 567.3 34 Q570.3 23.6 576.2 7.9 Q574.3 23.6 577.2 34 Q580.9 27.4 580.0 17.4 Q585.8 27.4 589.5 34 Q592.4 28.8 592.4 21.1 Q596.3 28.8 599.2 34 Q603.6 30.7 602.8 25.8 Q609.5 30.7 614.0 34 Q618.7 26.9 619.0 16.3 Q624.9 26.9 629.6 34 Q633.5 32.1 636.3 29.3 Q638.6 32.1 642.4 34 Q647.2 23.4 651.9 7.6 Q653.5 23.4 658.3 34 Q661.5 28.6 661.0 20.5 Q665.9 28.6 669.1 34 Q673.4 26.9 678.6 16.2 Q679.2 26.9 683.5 34 Q686.9 30.1 691.7 24.2 Q691.4 30.1 694.8 34 Q699.6 23.5 705.2 7.8 Q706.0 23.5 710.7 34 Q715.1 24.7 715.9 10.8 Q721.0 24.7 725.5 34 Q729.2 28.7 728.0 20.8 Q734.3 28.7 738.1 34 Q740.8 29.5 740.8 22.7 Q744.5 29.5 747.3 34 Q751.4 22.5 753.8 5.1 Q757.0 22.5 761.1 34 Q765.8 22.1 772.5 4.3 Q772.0 22.1 776.7 34 Q780.1 30.1 780.3 24.3 Q784.8 30.1 788.2 34 Q791.3 30.3 794.4 24.7 Q795.5 30.3 798.6 34 Q803.2 23.7 806.1 8.1 Q809.3 23.7 813.9 34 Q818.0 24.1 817.4 9.2 Q823.4 24.1 827.5 34 Q831.6 22.9 836.6 6.3 Q837.0 22.9 841.1 34 Q845.4 27.4 845.7 17.6 Q851.1 27.4 855.4 34 Q859.7 28.9 865.0 21.4 Q865.5 28.9 869.9 34 Q874.6 28.3 877.0 19.7 Q880.9 28.3 885.7 34 Q890.4 24.9 890.9 11.2 Q896.6 24.9 901.3 34 Q904.3 30.8 909.5 26.1 Q908.2 30.8 911.2 34 Q915.6 30.9 921.1 26.2 Q921.5 30.9 925.8 34 Q930.6 25.6 932.6 12.9 Q937.0 25.6 941.7 34 Q945.6 31.0 944.2 26.6 Q950.7 31.0 954.6 34 Q959.3 25.6 962.7 13.1 Q965.6 25.6 970.3 34 Q975.0 27.9 981.1 18.7 Q981.2 27.9 985.9 34 Q990.3 30.2 991.3 24.5 Q996.2 30.2 1000.7 34 Q1004.0 29.9 1006.9 23.7 Q1008.4 29.9 1011.7 34 Q1015.0 28.0 1014.2 19.1 Q1019.3 28.0 1022.5 34 Q1027.1 28.7 1029.9 20.8 Q1033.3 28.7 1037.9 34 Q1041.8 23.0 1043.8 6.5 Q1047.1 23.0 1051.0 34 Q1055.6 27.2 1059.0 17.0 Q1061.8 27.2 1066.4 34 Q1070.2 32.2 1072.3 29.5 Q1075.3 32.2 1079.1 34 Q1082.2 32.4 1086.6 29.9 Q1086.3 32.4 1089.4 34 Q1092.4 27.5 1096.3 17.7 Q1096.5 27.5 1099.6 34 Q1103.4 29.0 1106.2 21.5 Q1108.6 29.0 1112.5 34 Q1116.3 24.2 1115.8 9.6 Q1121.5 24.2 1125.3 34 Q1129.2 29.8 1130.0 23.5 Q1134.4 29.8 1138.3 34 Q1142.6 27.1 1146.0 16.8 Q1148.4 27.1 1152.7 34 Q1157.0 22.9 1159.4 6.3 Q1162.7 22.9 1167.0 34 Q1171.0 27.1 1173.7 16.9 Q1176.3 27.1 1180.3 34 Q1184.4 27.7 1187.5 18.2 Q1190.0 27.7 1194.1 34 Q1197.8 22.6 1201.9 5.5 Q1202.8 22.6 1206.5 34 Q1211.0 22.6 1212.1 5.5 Q1217.1 22.6 1221.6 34 Q1225.5 22.6 1230.8 5.5 Q1230.7 22.6 1234.5 34 Q1237.5 31.1 1239.0 26.8 Q1241.5 31.1 1244.5 34 Q1247.3 29.9 1245.8 23.7 Q1251.1 29.9 1254.0 34 Q1258.1 24.2 1264.0 9.6 Q1263.6 24.2 1267.7 34 Q1270.7 25.0 1274.0 11.4 Q1274.7 25.0 1277.8 34 Q1280.8 23.2 1286.5 7.0 Q1284.8 23.2 1287.8 34 Q1290.9 22.5 1292.2 5.2 Q1295.1 22.5 1298.3 34 Q1302.0 22.1 1307.2 4.3 Q1307.0 22.1 1310.7 34 Q1313.8 27.9 1315.9 18.8 Q1317.8 27.9 1320.8 34 Q1324.3 30.4 1325.1 24.9 Q1328.8 30.4 1332.2 34 Q1336.4 32.2 1339.7 29.5 Q1342.1 32.2 1346.3 34 Q1349.9 32.2 1351.0 29.5 Q1354.7 32.2 1358.4 34 Q1362.4 27.1 1361.6 16.7 Q1367.7 27.1 1371.7 34 Q1376.5 24.2 1383.4 9.5 Q1382.9 24.2 1387.6 34 Q1390.5 29.6 1388.8 23.1 Q1394.4 29.6 1397.4 34 Q1401.7 29.6 1401.6 23.0 Q1407.5 29.6 1411.8 34 Q1415.4 22.9 1420.3 6.3 Q1420.2 22.9 1423.8 34 Q1427.0 30.8 1432.5 26.1 Q1431.3 30.8 1434.6 34 Q1438.5 25.1 1437.8 11.8 Q1443.7 25.1 1447.6 34 L1440 46Z"/></svg>
+
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-service lawn care, one call.</h2>
+      <p>From a quick weekly cut to beds, shrubs and limbs — the whole yard handled by one local, veteran-owned crew.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc feature rv">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24h20l3-7H8z" fill="#1b1f1a"/><circle cx="9" cy="26" r="3" fill="#1b1f1a"/><circle cx="23" cy="26" r="3" fill="#1b1f1a"/><path d="M8 17 3 7" stroke="#1b1f1a" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <h3>Lawn mowing</h3>
+        <p>Full-service residential and commercial mowing. We cut at the right height for your grass, keep blades sharp, and overlap every pass so you never get missed strips.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 22 10" stroke="#9bd43a" stroke-width="3" stroke-linecap="round"/><path d="M22 10l4-4M20 6l6 6" stroke="#9bd43a" stroke-width="2.5" stroke-linecap="round"/><path d="M5 22c2 1 3 3 3 5" stroke="#9bd43a" stroke-width="2" fill="none"/></svg></div>
+        <h3>Trimming</h3>
+        <p>Crisp edges along walks, beds, fences and the spots a mower can’t reach.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26c4-6 20-6 24 0z" fill="#9bd43a"/><path d="M10 20c0-4 1-8 3-10M16 19c0-5 0-9 2-12M22 20c0-4-1-7-3-9" stroke="#9bd43a" stroke-width="2.3" stroke-linecap="round" fill="none"/></svg></div>
+        <h3>Mulching</h3>
+        <p>Fresh mulch for beds and borders that holds moisture and finishes the look.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28V14" stroke="#9bd43a" stroke-width="2.5" stroke-linecap="round"/><path d="M16 16c-6 0-9-4-9-9 6 0 9 3 9 9zM16 14c5 0 8-3 8-8-5 0-8 3-8 8z" fill="#9bd43a"/><path d="M8 28h16" stroke="#9bd43a" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <h3>Weeding</h3>
+        <p>Beds and borders cleared out so your plants, not the weeds, get the attention.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="8" fill="#9bd43a"/><circle cx="10" cy="15" r="5" fill="#9bd43a"/><circle cx="22" cy="15" r="5" fill="#9bd43a"/><path d="M16 18v10" stroke="#9bd43a" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3>Tree trimming</h3>
+        <p>Low limbs and overgrowth cut back to keep the yard open, tidy and mowable.</p>
+      </article>
+    </div>
+    <div class="who rv"><span>Residential</span><span>Commercial</span><span>No job too big or too small</span></div>
+  </div>
+</section>
+
+<section id="plans" class="sec plans">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" style="color:#9bd43a">Pick your cut</span>
+      <h2>Three ways to keep it sharp.</h2>
+      <p>Knoxville Mowing offers two standard options and one premium, extra-detail program. Call for a free estimate on any of them.</p>
+    </div>
+    <div class="plan-grid">
+      <article class="plan rv">
+        <span class="tag">Standard</span>
+        <h3>Affordable Mowing</h3>
+        <p>Our everyday option: a quality cut at our lowest rates.</p>
+        <div class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+        <div class="meter-l">Detail level</div>
+      </article>
+      <article class="plan rv">
+        <span class="tag">Standard</span>
+        <h3>Mow and Go</h3>
+        <p>In, cut, out. Fast, no-fuss mowing for lawns that just need to stay in shape.</p>
+        <div class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+        <div class="meter-l">Detail level</div>
+      </article>
+      <article class="plan best rv">
+        <span class="tag">Premium · Most detail</span>
+        <h3>4H Program</h3>
+        <p>Our more detailed program for owners who want every corner and edge just right.</p>
+        <div class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        <div class="meter-l">Detail level</div>
+      </article>
+    </div>
+    <p class="plans-note rv">Prices aren’t published. Every lawn is different, so estimates are always free. <a href="tel:+18655664316">Call (865) 566-4316</a>.</p>
+  </div>
+</section>
+
+<section id="why" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Why Knoxville Mowing</span>
+      <h2>Local, veteran-owned, and guaranteed.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div class="why-n"><svg><use href="#i-check"/></svg></div><div><h3>Satisfaction guaranteed</h3><p>If the cut isn’t right, we make it right. That’s the promise.</p></div></div>
+      <div class="why rv"><div class="why-n"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.3-5 3.3c0 4.7 10 2.4 10 7.4 0 2-2.2 3.3-5 3.3s-5-1.2-5-3"/></svg></div><div><h3>Lowest rates, free estimates</h3><p>Affordable price, great service. You’ll know the cost before we start.</p></div></div>
+      <div class="why rv"><div class="why-n"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg></div><div><h3>Homes &amp; businesses</h3><p>Residential yards and commercial properties. No job too big or too small.</p></div></div>
+      <div class="why rv"><div class="why-n"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></div><div><h3>Knoxville since 2011</h3><p>Over a decade cutting East Tennessee lawns, and willing to go the extra mile.</p></div></div>
+    </div>
+    <div class="vet rv">
+      <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#1b1f1a"/><circle cx="42" cy="42" r="32" fill="none" stroke="#9bd43a" stroke-width="2" stroke-dasharray="3 5"/><path fill="#9bd43a" d="m42 20 6.5 13.5 14.5 2-10.5 10 2.5 14.5L42 53l-13 7 2.5-14.5L21 35.5l14.5-2z"/></svg>
+      <div><h3>U.S. Veteran Owned</h3><p>Military discipline, applied to your lawn: show up, do it right, finish clean.</p></div>
+    </div>
+  </div>
+</section>
+
+<svg class="blades" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)"><path fill="#e4f3c8" d="M0 46 L0 34 Q2.8 25.2 4.1 12.1 Q6.6 25.2 9.4 34 Q12.3 22.6 15.2 5.6 Q16.1 22.6 18.9 34 Q23.3 31.5 29.1 27.8 Q29.1 31.5 33.5 34 Q36.4 23.4 37.9 7.6 Q40.1 23.4 43.0 34 Q46.4 26.6 52.1 15.6 Q50.9 26.6 54.4 34 Q57.6 31.1 60.0 26.6 Q62.0 31.1 65.2 34 Q68.4 31.3 67.9 27.2 Q72.7 31.3 75.9 34 Q78.7 30.3 79.1 24.8 Q82.5 30.3 85.3 34 Q88.6 24.5 89.1 10.3 Q93.1 24.5 96.4 34 Q100.1 30.5 101.4 25.4 Q105.1 30.5 108.9 34 Q111.6 29.8 109.6 23.5 Q115.3 29.8 118.0 34 Q122.3 26.7 122.6 15.7 Q127.9 26.7 132.2 34 Q135.8 22.7 135.2 5.7 Q140.8 22.7 144.5 34 Q148.9 27.9 151.8 18.8 Q154.8 27.9 159.2 34 Q163.7 28.3 166.7 19.8 Q169.6 28.3 174.1 34 Q178.2 22.2 179.7 4.5 Q183.7 22.2 187.9 34 Q192.3 25.1 196.4 11.6 Q198.2 25.1 202.7 34 Q206.2 28.8 205.0 21.0 Q211.0 28.8 214.5 34 Q217.5 31.7 221.4 28.2 Q221.5 31.7 224.4 34 Q227.7 30.7 226.5 25.8 Q232.0 30.7 235.2 34 Q239.7 23.3 244.0 7.4 Q245.6 23.3 250.1 34 Q253.4 29.9 253.9 23.7 Q257.8 29.9 261.1 34 Q264.7 30.8 266.8 25.9 Q269.6 30.8 273.3 34 Q276.6 22.4 282.5 5.0 Q280.9 22.4 284.1 34 Q288.0 29.9 294.3 23.6 Q293.1 29.9 297.0 34 Q300.3 28.7 298.6 20.7 Q304.8 28.7 308.1 34 Q311.6 27.5 314.0 17.7 Q316.3 27.5 319.8 34 Q322.9 27.2 321.1 16.9 Q327.1 27.2 330.2 34 Q333.5 31.5 334.8 27.7 Q337.8 31.5 341.1 34 Q343.9 32.2 344.1 29.4 Q347.6 32.2 350.4 34 Q353.5 26.3 355.9 14.8 Q357.8 26.3 361.0 34 Q365.3 25.6 369.8 12.9 Q371.0 25.6 375.2 34 Q379.8 28.3 381.4 19.9 Q385.8 28.3 390.4 34 Q395.2 30.8 400.1 26.1 Q401.5 30.8 406.3 34 Q410.3 31.9 415.7 28.9 Q415.7 31.9 419.8 34 Q424.4 25.9 429.3 13.7 Q430.5 25.9 435.0 34 Q439.4 31.0 442.6 26.4 Q445.3 31.0 449.7 34 Q453.5 23.7 458.4 8.3 Q458.5 23.7 462.3 34 Q466.7 26.3 472.8 14.8 Q472.6 26.3 477.0 34 Q481.2 25.2 481.8 12.0 Q486.7 25.2 490.8 34 Q493.6 31.0 494.3 26.5 Q497.3 31.0 500.0 34 Q503.0 23.7 505.4 8.3 Q506.8 23.7 509.8 34 Q513.8 25.9 517.9 13.7 Q519.1 25.9 523.2 34 Q526.9 32.4 531.8 29.9 Q531.9 32.4 535.6 34 Q539.9 27.2 543.0 16.9 Q545.6 27.2 549.8 34 Q553.9 31.7 558.5 28.3 Q559.4 31.7 563.4 34 Q566.7 31.6 566.9 28.1 Q571.0 31.6 574.2 34 Q578.4 30.3 583.2 24.7 Q584.1 30.3 588.3 34 Q593.1 27.3 595.3 17.2 Q599.4 27.3 604.1 34 Q607.8 25.3 612.5 12.2 Q612.8 25.3 616.5 34 Q620.5 25.7 619.8 13.3 Q625.8 25.7 629.8 34 Q632.8 29.8 636.8 23.4 Q636.8 29.8 639.8 34 Q643.2 26.5 641.5 15.2 Q647.6 26.5 651.0 34 Q653.8 29.6 657.1 23.0 Q657.6 29.6 660.4 34 Q664.6 25.4 665.7 12.4 Q670.1 25.4 674.2 34 Q678.0 27.6 680.3 17.9 Q683.1 27.6 686.9 34 Q689.8 23.1 689.4 6.8 Q693.7 23.1 696.7 34 Q701.4 22.7 700.8 5.7 Q707.8 22.7 712.5 34 Q716.2 23.9 722.4 8.7 Q721.1 23.9 724.8 34 Q728.4 29.6 728.5 23.0 Q733.3 29.6 736.9 34 Q741.6 30.2 745.4 24.5 Q747.8 30.2 752.5 34 Q755.5 26.9 761.1 16.4 Q759.5 26.9 762.5 34 Q765.5 23.9 767.5 8.7 Q769.5 23.9 772.4 34 Q777.0 25.1 777.9 11.7 Q783.1 25.1 787.6 34 Q792.2 27.3 791.5 17.4 Q798.3 27.3 802.9 34 Q805.6 27.3 807.0 17.2 Q809.2 27.3 812.0 34 Q815.3 30.9 816.3 26.3 Q819.7 30.9 823.1 34 Q826.4 23.7 824.7 8.2 Q830.9 23.7 834.3 34 Q838.6 23.7 838.4 8.2 Q844.3 23.7 848.5 34 Q853.2 25.0 859.5 11.5 Q859.4 25.0 864.0 34 Q867.3 28.5 868.7 20.3 Q871.7 28.5 875.0 34 Q879.8 26.3 881.9 14.7 Q886.2 26.3 891.0 34 Q894.6 29.5 893.4 22.8 Q899.4 29.5 903.0 34 Q906.0 23.7 906.2 8.3 Q909.8 23.7 912.7 34 Q917.4 29.8 918.6 23.5 Q923.6 29.8 928.3 34 Q932.1 30.4 933.6 25.1 Q937.1 30.4 940.9 34 Q945.6 23.2 951.2 7.0 Q951.9 23.2 956.6 34 Q960.6 22.9 966.8 6.3 Q966.0 22.9 970.0 34 Q973.8 24.9 972.8 11.3 Q979.0 24.9 982.8 34 Q987.1 27.7 991.9 18.3 Q992.7 27.7 997.0 34 Q1001.0 29.4 1000.1 22.6 Q1006.4 29.4 1010.5 34 Q1015.1 31.1 1018.0 26.7 Q1021.3 31.1 1026.0 34 Q1029.4 29.3 1033.6 22.3 Q1033.9 29.3 1037.4 34 Q1042.1 29.7 1046.5 23.2 Q1048.4 29.7 1053.2 34 Q1056.5 26.6 1057.9 15.5 Q1061.0 26.6 1064.3 34 Q1067.4 30.7 1067.0 25.8 Q1071.4 30.7 1074.5 34 Q1079.1 27.2 1079.9 17.1 Q1085.2 27.2 1089.8 34 Q1094.4 22.0 1097.1 4.1 Q1100.6 22.0 1105.2 34 Q1108.1 30.4 1106.9 25.0 Q1112.1 30.4 1115.1 34 Q1118.6 31.5 1118.7 27.6 Q1123.1 31.5 1126.5 34 Q1129.8 26.5 1135.0 15.2 Q1134.1 26.5 1137.3 34 Q1141.6 28.1 1143.8 19.3 Q1147.3 28.1 1151.6 34 Q1155.4 28.5 1156.6 20.2 Q1160.5 28.5 1164.3 34 Q1167.1 29.5 1172.7 22.8 Q1170.9 29.5 1173.7 34 Q1176.7 27.2 1179.7 16.9 Q1180.6 27.2 1183.6 34 Q1188.1 30.2 1189.3 24.4 Q1194.1 30.2 1198.6 34 Q1201.8 28.2 1203.5 19.6 Q1206.1 28.2 1209.3 34 Q1214.1 23.6 1220.2 7.9 Q1220.3 23.6 1225.0 34 Q1227.8 32.1 1231.3 29.2 Q1231.4 32.1 1234.2 34 Q1238.8 27.5 1242.5 17.7 Q1244.9 27.5 1249.4 34 Q1252.1 28.3 1257.4 19.8 Q1255.7 28.3 1258.4 34 Q1262.9 23.5 1269.6 7.8 Q1268.8 23.5 1273.2 34 Q1276.4 31.3 1275.8 27.2 Q1280.7 31.3 1284.0 34 Q1287.8 25.3 1293.8 12.3 Q1292.8 25.3 1296.6 34 Q1300.8 25.7 1305.8 13.2 Q1306.5 25.7 1310.7 34 Q1314.3 26.7 1313.1 15.7 Q1319.2 26.7 1322.9 34 Q1327.2 30.0 1333.5 24.0 Q1333.0 30.0 1337.4 34 Q1341.4 29.2 1341.1 22.1 Q1346.8 29.2 1350.9 34 Q1354.1 25.8 1357.8 13.5 Q1358.4 25.8 1361.6 34 Q1364.6 31.7 1366.7 28.2 Q1368.5 31.7 1371.4 34 Q1375.3 28.4 1375.7 19.9 Q1380.6 28.4 1384.5 34 Q1388.5 32.3 1389.5 29.7 Q1393.7 32.3 1397.7 34 Q1401.4 22.4 1405.0 5.1 Q1406.3 22.4 1409.9 34 Q1414.5 27.5 1415.4 17.6 Q1420.6 27.5 1425.1 34 Q1428.3 22.4 1432.1 5.0 Q1432.6 22.4 1435.8 34 Q1439.2 32.2 1441.4 29.4 Q1443.7 32.2 1447.0 34 L1440 46Z"/></svg>
+
+<section id="tips" class="sec tips">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">From the crew</span>
+      <h2>Mow like a pro between visits.</h2>
+      <p>Improper mowing is one of the most common causes of lawn problems, and one of the easiest to fix. A few rules we live by:</p>
+    </div>
+    <div class="tips-layout">
+      <div class="tip-row">
+        <div class="tip rv"><b>⅓</b><div><h3>The one-third rule</h3><p>Never remove more than a third of the blade at once. Overgrown? Cut a third, rest 3–4 days, repeat.</p></div></div>
+        <div class="tip rv"><b>01</b><div><h3>Height, not calendar</h3><p>Mow when grass is about a third above its ideal height, not on a fixed day.</p></div></div>
+        <div class="tip rv"><b>02</b><div><h3>Don’t scalp it</h3><p>Cutting too low leaves grass thin and open to heat, drought, pests and disease.</p></div></div>
+        <div class="tip rv"><b>03</b><div><h3>Change direction</h3><p>Vary your pattern so grass stands upright and the soil doesn’t rut.</p></div></div>
+        <div class="tip rv"><b>04</b><div><h3>Skip wet grass</h3><p>Wet lawns cut unevenly and clog the mower. Wait for it to dry.</p></div></div>
+        <div class="tip rv"><b>05</b><div><h3>Sharp blades</h3><p>Dull blades rip grass instead of cutting it. Overlap passes by 3 inches.</p></div></div>
+      </div>
+      <div class="height-card rv">
+        <h3>Ideal cutting heights</h3>
+        <div class="gauge" role="img" aria-label="Cool-season grasses 2 to 3 inches; Bermuda 3/4 to 1 inch">
+          <div><span class="bar" style="height:64px"></span><strong>2–3″</strong>Fescue, bluegrass, rye</div>
+          <div><span class="bar" style="height:22px"></span><strong>¾–1″</strong>Bermuda</div>
+        </div>
+        <p style="margin:0;color:#c3c9bb;font-size:14px">Not sure what you’ve got? We’ll tell you on the free estimate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="blades flip" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)"><path fill="#e4f3c8" d="M0 46 L0 34 Q4.1 28.0 4.9 19.1 Q9.6 28.0 13.7 34 Q17.8 22.8 18.4 5.9 Q23.3 22.8 27.4 34 Q30.2 28.9 31.4 21.2 Q33.9 28.9 36.6 34 Q40.8 30.3 45.9 24.8 Q46.3 30.3 50.4 34 Q54.7 27.1 55.1 16.9 Q60.3 27.1 64.6 34 Q69.3 29.2 75.0 21.9 Q75.6 29.2 80.4 34 Q83.6 30.1 87.8 24.2 Q87.8 30.1 91.0 34 Q94.3 22.5 96.5 5.2 Q98.7 22.5 102.1 34 Q105.1 30.1 106.5 24.2 Q109.3 30.1 112.4 34 Q116.5 22.5 116.4 5.3 Q121.9 22.5 126.0 34 Q129.5 30.2 135.7 24.5 Q134.2 30.2 137.8 34 Q140.8 31.9 139.3 28.7 Q144.8 31.9 147.8 34 Q151.3 23.1 156.7 6.6 Q156.0 23.1 159.5 34 Q163.8 22.0 170.0 4.1 Q169.4 22.0 173.7 34 Q177.0 30.5 182.8 25.2 Q181.6 30.5 185.0 34 Q189.2 32.1 193.4 29.2 Q194.9 32.1 199.2 34 Q202.7 28.5 203.7 20.3 Q207.3 28.5 210.8 34 Q213.9 32.4 214.2 29.9 Q218.0 32.4 221.0 34 Q224.5 22.5 223.7 5.2 Q229.0 22.5 232.5 34 Q237.2 30.2 239.2 24.6 Q243.5 30.2 248.2 34 Q252.7 23.9 255.1 8.6 Q258.6 23.9 263.0 34 Q265.8 27.5 266.6 17.7 Q269.5 27.5 272.3 34 Q277.0 30.4 279.0 25.0 Q283.1 30.4 287.8 34 Q292.3 32.1 294.7 29.2 Q298.5 32.1 303.0 34 Q307.4 24.4 306.7 10.1 Q313.3 24.4 317.7 34 Q320.5 31.7 325.7 28.4 Q324.2 31.7 327.0 34 Q330.2 24.6 335.6 10.6 Q334.5 24.6 337.8 34 Q341.2 29.6 347.1 22.9 Q345.7 29.6 349.1 34 Q353.1 29.7 357.5 23.2 Q358.5 29.7 362.5 34 Q365.8 29.5 364.1 22.8 Q370.3 29.5 373.7 34 Q378.0 22.9 381.9 6.2 Q383.7 22.9 388.0 34 Q392.6 32.1 393.6 29.4 Q398.9 32.1 403.6 34 Q407.3 22.4 413.4 5.1 Q412.2 22.4 415.9 34 Q419.4 29.8 421.2 23.5 Q424.1 29.8 427.6 34 Q431.3 22.7 431.3 5.9 Q436.3 22.7 440.0 34 Q444.4 24.7 449.9 10.8 Q450.3 24.7 454.7 34 Q459.0 26.1 460.5 14.2 Q464.8 26.1 469.1 34 Q472.4 28.6 477.0 20.6 Q476.9 28.6 480.3 34 Q483.2 30.3 487.1 24.9 Q487.0 30.3 489.9 34 Q493.1 31.7 491.5 28.3 Q497.4 31.7 500.6 34 Q504.5 29.0 510.9 21.5 Q509.6 29.0 513.5 34 Q518.0 22.1 519.2 4.3 Q524.1 22.1 528.6 34 Q531.5 31.4 533.4 27.5 Q535.4 31.4 538.2 34 Q542.4 27.8 543.1 18.4 Q548.0 27.8 552.2 34 Q555.8 25.9 559.6 13.9 Q560.5 25.9 564.1 34 Q568.4 23.6 572.6 8.0 Q574.1 23.6 578.4 34 Q581.3 23.7 581.6 8.1 Q585.3 23.7 588.2 34 Q592.1 28.5 596.6 20.3 Q597.3 28.5 601.2 34 Q604.3 29.8 604.3 23.6 Q608.5 29.8 611.6 34 Q614.6 23.2 617.2 7.0 Q618.6 23.2 621.6 34 Q625.0 28.3 631.2 19.7 Q629.5 28.3 632.9 34 Q636.7 30.0 641.7 24.0 Q641.7 30.0 645.5 34 Q649.6 22.1 649.1 4.2 Q655.0 22.1 659.1 34 Q662.8 23.9 667.9 8.7 Q667.7 23.9 671.4 34 Q676.0 32.0 677.4 29.0 Q682.2 32.0 686.8 34 Q689.7 30.4 695.5 25.1 Q693.7 30.4 696.6 34 Q700.5 22.7 702.1 5.8 Q705.8 22.7 709.7 34 Q714.2 27.7 715.3 18.3 Q720.2 27.7 724.8 34 Q729.1 22.6 728.8 5.4 Q734.9 22.6 739.2 34 Q743.2 26.0 743.5 13.9 Q748.4 26.0 752.4 34 Q755.8 30.9 755.8 26.3 Q760.5 30.9 764.0 34 Q767.2 26.2 770.6 14.4 Q771.5 26.2 774.7 34 Q777.9 32.3 778.6 29.7 Q782.0 32.3 785.2 34 Q789.3 30.5 790.5 25.2 Q794.8 30.5 798.9 34 Q802.0 24.1 804.5 9.3 Q806.2 24.1 809.3 34 Q812.2 31.3 813.2 27.4 Q815.9 31.3 818.8 34 Q822.6 25.8 821.9 13.4 Q827.8 25.8 831.6 34 Q834.7 25.2 836.0 11.9 Q838.7 25.2 841.8 34 Q845.1 29.2 850.9 22.0 Q849.5 29.2 852.8 34 Q856.1 26.5 857.2 15.3 Q860.6 26.5 863.9 34 Q867.5 23.4 873.9 7.5 Q872.3 23.4 875.9 34 Q879.3 30.3 883.5 24.9 Q883.9 30.3 887.4 34 Q890.5 32.3 895.8 29.8 Q894.7 32.3 897.8 34 Q901.4 23.9 903.1 8.7 Q906.2 23.9 909.8 34 Q914.4 27.6 914.7 18.0 Q920.4 27.6 925.0 34 Q927.7 26.7 930.7 15.7 Q931.4 26.7 934.1 34 Q938.7 31.5 942.7 27.7 Q944.8 31.5 949.5 34 Q952.9 27.2 952.4 16.9 Q957.6 27.2 961.0 34 Q964.3 27.0 969.9 16.4 Q968.7 27.0 972.0 34 Q975.0 27.3 979.3 17.2 Q978.9 27.3 981.8 34 Q986.5 30.3 986.7 24.9 Q992.8 30.3 997.6 34 Q1002.2 22.3 1005.2 4.6 Q1008.5 22.3 1013.2 34 Q1016.0 22.8 1017.0 5.9 Q1019.7 22.8 1022.5 34 Q1027.1 25.9 1032.8 13.9 Q1033.3 25.9 1037.9 34 Q1040.9 24.2 1040.7 9.6 Q1044.9 24.2 1048.0 34 Q1051.5 23.6 1056.5 8.0 Q1056.3 23.6 1059.8 34 Q1062.9 30.1 1064.2 24.3 Q1067.0 30.1 1070.1 34 Q1073.9 28.4 1073.4 20.0 Q1078.9 28.4 1082.7 34 Q1085.9 24.9 1091.3 11.2 Q1090.2 24.9 1093.5 34 Q1096.2 26.6 1100.2 15.4 Q1100.0 26.6 1102.7 34 Q1105.5 23.7 1104.3 8.2 Q1109.2 23.7 1112.0 34 Q1116.0 26.7 1119.6 15.7 Q1121.2 26.7 1125.2 34 Q1128.5 28.0 1131.4 19.1 Q1133.0 28.0 1136.3 34 Q1139.9 25.5 1141.9 12.9 Q1144.7 25.5 1148.3 34 Q1151.9 32.2 1155.3 29.4 Q1156.8 32.2 1160.4 34 Q1164.1 30.0 1168.7 23.9 Q1169.1 30.0 1172.8 34 Q1177.2 27.6 1177.5 18.1 Q1182.9 27.6 1187.3 34 Q1191.0 31.3 1190.5 27.2 Q1195.9 31.3 1199.6 34 Q1203.2 31.4 1205.1 27.6 Q1208.0 31.4 1211.6 34 Q1215.4 32.0 1219.0 28.9 Q1220.4 32.0 1224.2 34 Q1227.1 24.8 1231.2 10.9 Q1230.9 24.8 1233.8 34 Q1237.5 31.8 1240.1 28.6 Q1242.6 31.8 1246.3 34 Q1249.8 22.5 1249.2 5.3 Q1254.5 22.5 1258.0 34 Q1262.5 22.0 1267.3 4.1 Q1268.5 22.0 1273.0 34 Q1277.4 30.4 1284.2 25.0 Q1283.3 30.4 1287.7 34 Q1291.4 22.5 1297.2 5.1 Q1296.4 22.5 1300.1 34 Q1303.2 24.2 1308.7 9.5 Q1307.2 24.2 1310.3 34 Q1313.1 28.8 1317.1 20.9 Q1316.9 28.8 1319.7 34 Q1322.8 23.1 1323.0 6.7 Q1326.8 23.1 1329.9 34 Q1334.3 30.9 1337.2 26.3 Q1340.2 30.9 1344.6 34 Q1349.2 30.2 1350.4 24.6 Q1355.4 30.2 1360.0 34 Q1363.8 29.1 1362.6 21.7 Q1368.8 29.1 1372.5 34 Q1375.6 30.7 1381.2 25.8 Q1379.7 30.7 1382.8 34 Q1386.9 23.1 1387.0 6.7 Q1392.5 23.1 1396.6 34 Q1400.9 31.2 1404.1 27.0 Q1406.7 31.2 1411.1 34 Q1415.1 28.7 1420.8 20.6 Q1420.5 28.7 1424.5 34 Q1428.4 26.4 1434.0 14.9 Q1433.5 26.4 1437.4 34 Q1440.3 22.1 1443.3 4.2 Q1444.2 22.1 1447.1 34 L1440 46Z"/></svg>
+
+<section id="hours" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Hours &amp; area</span>
+      <h2>Call 8 to 8. We’ll come to you.</h2>
+    </div>
+    <div class="ha-grid">
+      <div class="card rv">
+        <h3>Phone hours</h3>
+        <div class="clock">
+          <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="44" fill="#1b1f1a"/><path d="M48 48 L48 4 A44 44 0 0 1 48 92 Z" fill="#9bd43a" opacity=".9"/><circle cx="48" cy="48" r="44" fill="none" stroke="#1b1f1a" stroke-width="4"/><g id="hand"><path d="M48 48 L48 18" stroke="#fbf8ef" stroke-width="4" stroke-linecap="round"/></g><circle cx="48" cy="48" r="5" fill="#fbf8ef"/></svg>
+          <div><div class="big">8 AM – 8 PM</div><div class="sm">Calls answered</div></div>
+        </div>
+        <div class="status" id="status"><i></i><span>Call (865) 566-4316 between 8 AM and 8 PM.</span></div>
+        <div class="days" id="days" aria-label="Days of the week"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <p class="fine">Phone hours as published by Knoxville Mowing; days of the week aren’t listed, so call or email to confirm. Mowing is by appointment.</p>
+      </div>
+      <div class="card rv">
+        <h3>Service area</h3>
+        <p style="margin:0;color:var(--muted)">Based in West Knoxville, serving Knoxville and the surrounding area.</p>
+        <div class="area-map">
+          <svg viewBox="0 0 400 220" aria-hidden="true">
+            <defs><pattern id="ms" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="28" fill="#232821"/></pattern></defs>
+            <rect width="400" height="220" fill="#1b1f1a"/><rect width="400" height="220" fill="url(#ms)"/>
+            <path d="M-10 70 C80 60 120 120 200 110 S320 60 410 90" stroke="#3a5a6a" stroke-width="10" fill="none" opacity=".8"/>
+            <path d="M60 210 C120 170 160 160 200 110" stroke="#3a5a6a" stroke-width="6" fill="none" opacity=".6"/>
+            <circle cx="210" cy="90" r="64" fill="#9bd43a" opacity=".12"/><circle cx="210" cy="90" r="64" fill="none" stroke="#9bd43a" stroke-width="1.5" stroke-dasharray="4 5"/>
+            <g font-family="Inter,system-ui,sans-serif" font-weight="700" font-size="13">
+              <circle cx="232" cy="78" r="6" fill="#fbf8ef"/><text x="244" y="74" fill="#fbf8ef">Knoxville</text>
+              <circle cx="186" cy="92" r="9" fill="#9bd43a"/><circle cx="186" cy="92" r="16" fill="none" stroke="#9bd43a" stroke-width="2"/><text x="80" y="126" fill="#9bd43a">West Knoxville</text>
+              <circle cx="262" cy="170" r="6" fill="#fbf8ef"/><text x="274" y="175" fill="#fbf8ef">Maryville</text>
+              <circle cx="104" cy="170" r="6" fill="#fbf8ef"/><text x="40" y="198" fill="#fbf8ef">Lenoir City</text>
+            </g>
+          </svg>
+        </div>
+        <div class="area-list"><span>Knoxville</span><span>West Knoxville</span><span>Maryville</span><span>Lenoir City</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact sec">
+  <div class="lawn" aria-hidden="true"></div>
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <span class="eyebrow" style="color:#9bd43a">Free estimate</span>
+      <h2 style="margin-top:12px">Ready for the <em>sharpest</em> lawn on the street?</h2>
+      <p class="lede">Call or email Knoxville Mowing Service for a free estimate. Residential or commercial, big or small.</p>
+      <a class="btn btn-lime" href="tel:+18655664316"><svg><use href="#i-phone"/></svg>Call (865) 566-4316</a>
+    </div>
+    <div class="c-grid">
+      <a class="c-item rv" href="tel:+18655664316"><span class="ci"><svg><use href="#i-phone"/></svg></span><span><small>Call · 8 AM–8 PM</small><b>(865) 566-4316</b></span></a>
+      <a class="c-item rv" href="sms:+18655664316"><span class="ci"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg></span><span><small>Text</small><b>Send a text</b></span></a>
+      <a class="c-item rv" href="mailto:knoxvillemowers@yahoo.com?subject=Free%20mowing%20estimate"><span class="ci"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>knoxvillemowers@yahoo.com</b></span></a>
+      <a class="c-item rv" href="#hours"><span class="ci"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/></svg></span><span><small>Serving</small><b>Knoxville &amp; nearby</b></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#9bd43a"/><path d="M9 31c1.5-6 3-10 3-16M15 31c.5-5 1.5-9 4-13M21 31c0-6 .5-11-1-17M27 31c-.5-4 0-8 3-11" stroke="#1b1f1a" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span><b>Knoxville Mowing Service</b><small>Affordable price. Great service.</small></span></a>
+      <p style="margin:14px 0 0">U.S. Veteran Owned · Mowing Knoxville since 2011 · <a href="tel:+18655664316">(865) 566-4316</a></p>
+    </div>
+    <div class="foot-links">
+      <a href="#services">Services</a><a href="#plans">Plans</a><a href="#tips">Lawn tips</a><a href="#contact">Contact</a>
+    </div>
+    <p style="margin:0;font-size:12.5px">© <span id="yr">2026</span> Knoxville Mowing Service. Concept design by Code Craft Media.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="cb-call" href="tel:+18655664316"><svg><use href="#i-phone"/></svg>Call now</a>
+  <a class="cb-mail" href="mailto:knoxvillemowers@yahoo.com?subject=Free%20mowing%20estimate"><svg><use href="#i-mail"/></svg>Email</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+  try{
+    var now=new Date(), h=now.getHours();
+    var days=document.querySelectorAll('#days span'); if(days[now.getDay()]) days[now.getDay()].classList.add('today');
+    var hand=document.getElementById('hand'); hand.setAttribute('transform','rotate('+((h%12)*30+now.getMinutes()/2)+' 48 48)');
+    var st=document.getElementById('status'), names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var t=now.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'});
+    if(h>=8&&h<20){st.classList.add('open');st.querySelector('span').textContent='It’s '+t+' on '+names[now.getDay()]+', within calling hours. Give us a ring.'}
+    else{st.querySelector('span').textContent='It’s '+t+'. Calls are answered 8 AM–8 PM, or email anytime.'}
+    document.getElementById('yr').textContent=now.getFullYear();
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

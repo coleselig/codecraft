@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Melt Wax Bar | Waxing Studio in Farragut &amp; West Knoxville, TN</title>
+<meta name="description" content="Melt Wax Bar: Brazilian, body and face waxing by licensed esthetician Shannon in Farragut, TN. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf3e6; --cream-2:#f4e6cf; --honey:#e3a33b; --honey-deep:#c47f1a; --amber:#a85d12;
+  --plum:#3b1f2b; --plum-2:#532c3c; --rose:#e9b8a7; --ink:#2a1820; --muted:#6e5560; --line:rgba(59,31,43,.14);
+  --serif:"Fraunces", Georgia, "Times New Roman", serif; --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .15 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--plum);color:#f6e7d3;font-size:12.5px;text-align:center;padding:8px 16px;letter-spacing:.02em;position:relative;z-index:30}
+.concept b{color:var(--honey)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:25;background:rgba(251,243,230,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;color:var(--plum)}
+.logo i{font-style:italic;font-weight:400;color:var(--honey-deep)}
+.logo svg{width:26px;height:30px}
+.nav ul{display:none;list-style:none;gap:28px;font-size:14px;font-weight:600}
+.nav ul a{text-decoration:none;color:var(--plum-2);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--honey);transition:right .3s}
+.nav ul a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s, box-shadow .25s, background .25s;border:0;cursor:pointer;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-honey{background:linear-gradient(180deg,#f0b24c,#d98c22);color:#2a1508;box-shadow:0 8px 22px -8px rgba(196,127,26,.7), inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-honey:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(196,127,26,.85), inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-ghost{background:transparent;color:var(--plum);border:1.5px solid rgba(59,31,43,.35)}
+.btn-ghost:hover{background:var(--plum);color:var(--cream);border-color:var(--plum)}
+.nav .btn{padding:10px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:56px 0 0;background:
+  radial-gradient(120% 70% at 85% 0%, rgba(227,163,59,.28), transparent 60%),
+  radial-gradient(90% 60% at 0% 30%, rgba(233,184,167,.45), transparent 60%), var(--cream)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:currentColor}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,12vw,104px);line-height:.95;letter-spacing:-.035em;color:var(--plum);margin:16px 0 20px;font-variation-settings:"opsz" 144}
+h1 em{font-style:italic;font-weight:400;background:linear-gradient(180deg,#e7a84a 10%,#a85d12 90%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.lede{font-size:18px;max-width:34em;color:var(--muted)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid var(--line);color:var(--plum-2)}
+.chip svg{width:14px;height:14px}
+.stars{color:var(--honey-deep);letter-spacing:1px}
+
+/* wax pot illustration */
+.pot{position:relative;max-width:min(440px,78vw);width:100%;margin:0 auto;aspect-ratio:1/1}
+.pot svg{width:100%;height:100%;overflow:visible}
+.swirl{transform-origin:220px 190px;animation:swirl 14s linear infinite}
+@keyframes swirl{to{transform:rotate(360deg)}}
+.steam path{stroke-dasharray:6 10;animation:steam 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.6s}.steam path:nth-child(3){animation-delay:1.2s}
+@keyframes steam{0%{opacity:0;transform:translateY(10px)}40%{opacity:.7}100%{opacity:0;transform:translateY(-22px)}}
+.drop{animation:drop 3.6s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes drop{0%,30%{transform:translateY(0) scaleY(1)}70%{transform:translateY(16px) scaleY(1.25)}100%{transform:translateY(0) scaleY(1)}}
+
+/* drip divider */
+.drip{display:block;width:100%;height:90px;margin-top:-1px}
+.drip-wrap{position:relative;z-index:3;margin-top:24px;line-height:0}
+
+/* sections */
+section{position:relative;z-index:2}
+.sec{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:40px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,7vw,58px);line-height:1.02;letter-spacing:-.025em;color:var(--plum);margin-top:12px}
+h2 em{font-style:italic;font-weight:400;color:var(--honey-deep)}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+
+/* menu */
+.menu{background:var(--plum);color:#f6e7d3}
+.menu h2{color:#fbf0df}.menu h2 em{color:var(--honey)}
+.menu .sec-head p{color:#d9c3b7}.menu .eyebrow{color:var(--honey)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:26px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 14px var(--sans);padding:10px 18px;border-radius:999px;border:1px solid rgba(246,231,211,.25);background:transparent;color:#f6e7d3;cursor:pointer;transition:.25s}
+.tab:hover{border-color:var(--honey)}
+.tab[aria-selected="true"]{background:var(--honey);color:#2a1508;border-color:var(--honey)}
+.panel{display:grid;gap:0}
+.panel[hidden]{display:none}
+.js .panel-title{display:none}
+.panel-title{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--honey);margin:26px 0 8px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:16px 0;border-bottom:1px dashed rgba(246,231,211,.2)}
+.svc h3{font:600 16.5px/1.35 var(--sans);color:#fbf0df}
+.svc .price{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--honey);text-align:right;white-space:nowrap}
+.svc .price small{font-size:14px;opacity:.75}
+.svc p{grid-column:1/-1;font-size:13.5px;color:#cbb3a8}
+.svc .dur{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#2a1508;background:rgba(227,163,59,.85);border-radius:6px;padding:1px 7px;margin-right:8px;vertical-align:1px}
+.feature{background:linear-gradient(135deg,rgba(227,163,59,.16),rgba(233,184,167,.08));border:1px solid rgba(227,163,59,.35);border-radius:var(--r);padding:22px;margin-bottom:12px}
+.feature .tag{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--honey)}
+.menu-note{margin-top:28px;font-size:13.5px;color:#cbb3a8;display:flex;gap:10px;align-items:flex-start}
+.menu-note svg{flex:0 0 18px;margin-top:3px}
+.menu-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.menu .btn-ghost{color:#f6e7d3;border-color:rgba(246,231,211,.4)}
+.menu .btn-ghost:hover{background:#f6e7d3;color:var(--plum)}
+
+/* why */
+.why-grid{display:grid;gap:16px}
+.card{background:#fffaf2;border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .3s, box-shadow .3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(59,31,43,.45)}
+.card .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(160deg,#f6d08f,#e3a33b);margin-bottom:18px}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--plum);line-height:1.15;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+.card.big{background:linear-gradient(160deg,#3b1f2b,#5a3042);color:#f6e7d3;border:0}
+.card.big h3{color:#fbf0df;font-size:30px}
+.card.big p{color:#dcc6bb}
+.card.big .rating{font-family:var(--serif);font-size:72px;line-height:1;color:var(--honey);letter-spacing:-.03em}
+.card.big .stars{font-size:22px;color:var(--honey)}
+
+/* prep */
+.prep{background:var(--cream-2)}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;padding:20px;background:rgba(255,255,255,.55);border-radius:18px;border:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--serif);font-style:italic;font-size:30px;color:var(--honey-deep);line-height:1}
+.step h3{font-size:16.5px;color:var(--plum);margin-bottom:4px}
+.step p{font-size:15px;color:var(--muted)}
+.policy{margin-top:28px;padding:22px;border-radius:18px;border:1.5px dashed rgba(168,93,18,.45);font-size:14.5px;color:var(--plum-2)}
+.policy strong{color:var(--plum)}
+.policy ul{margin:10px 0 0 18px;display:grid;gap:4px}
+
+/* visit */
+.visit-grid{display:grid;gap:20px}
+.hours{background:#fffaf2;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.hours h3,.loc h3{font-family:var(--serif);font-weight:500;font-size:26px;color:var(--plum);margin-bottom:14px}
+.hours table{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:11px 10px;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+.hours td{padding:11px 8px}
+@media (max-width:399px){.hours{padding:22px 16px}.hours table{font-size:14.5px}.hours tr.today td:first-child::after{margin-left:6px}}
+.hours tr.closed td:last-child{color:#9a8790;font-weight:500}
+.hours tr.today td{background:rgba(227,163,59,.22);font-weight:700;color:var(--plum)}
+.hours tr.today td:first-child{border-radius:10px 0 0 10px}
+.hours tr.today td:last-child{border-radius:0 10px 10px 0}
+.hours tr.today td:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--plum);color:var(--cream);padding:2px 7px;border-radius:5px;vertical-align:2px}
+.hours .fine{margin-top:14px;font-size:13px;color:var(--muted)}
+.loc{background:#fffaf2;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.loc .in{padding:26px}
+.loc address{font-style:normal;font-size:17px;color:var(--plum-2);margin-bottom:18px}
+.loc .acts{display:flex;flex-wrap:wrap;gap:10px}
+.map{width:100%;height:300px;border:0;display:block;filter:sepia(.25) saturate(.9);background:var(--cream-2)}
+
+/* final cta */
+.final{padding:0 0 90px}
+.final .box{position:relative;overflow:hidden;border-radius:30px;padding:48px 26px;text-align:center;background:
+  radial-gradient(80% 120% at 50% 0%, #f6c773, #e3a33b 45%, #b9711a)}
+.final h2{color:#2a1508;margin:0 auto 14px;max-width:14em}
+.final h2 em{color:#fff4e0}
+.final p{color:#4a2a12;max-width:30em;margin:0 auto 26px;font-size:17px}
+.final .btn-dark{background:var(--plum);color:var(--cream)}
+.final .btn-dark:hover{background:#24121a;transform:translateY(-2px)}
+.final .btn-line{border:1.5px solid rgba(42,21,8,.5);color:#2a1508;background:rgba(255,255,255,.15)}
+.final .btn-line:hover{background:rgba(255,255,255,.35)}
+.final .row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.bubbles span{position:absolute;border-radius:50%;background:rgba(255,248,232,.35)}
+
+/* footer */
+footer{background:var(--plum);color:#d9c3b7;padding:52px 0 36px;font-size:14px}
+footer .wrap{display:grid;gap:26px}
+footer .logo{color:#fbf0df}
+footer a{text-decoration:none}
+footer a:hover{color:var(--honey)}
+.socials{display:flex;gap:10px}
+.socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(246,231,211,.25);transition:.25s}
+.socials a:hover{background:var(--honey);border-color:var(--honey);color:#2a1508}
+.socials svg{width:19px;height:19px}
+.foot-bottom{border-top:1px solid rgba(246,231,211,.15);padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:#b59f95}
+
+/* sticky bar */
+.sticky{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:6px;padding:6px;border-radius:20px;background:rgba(59,31,43,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 16px 36px -12px rgba(0,0,0,.5)}
+.sticky a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:9px 4px;border-radius:14px;text-decoration:none;color:#f6e7d3;font-size:12px;font-weight:700}
+.sticky a svg{width:19px;height:19px}
+.sticky a.book{background:linear-gradient(180deg,#f0b24c,#d98c22);color:#2a1508;font-size:14px;flex-direction:row;gap:8px}
+body{padding-bottom:88px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.reveal-all .reveal{opacity:1 !important;transform:none !important}
+
+@media (min-width:640px){
+  .why-grid{grid-template-columns:1fr 1fr}
+  .card.big{grid-column:1/-1}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (min-width:900px){
+  .wrap{padding:0 32px}
+  .nav ul{display:flex}
+  .hero{padding-top:72px}
+  h1{font-size:clamp(64px,6.4vw,92px)}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+  .sec{padding:120px 0}
+  .menu-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+  .menu-layout .sec-head{position:sticky;top:110px}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .card.big{grid-column:span 1;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .step{grid-template-columns:1fr}
+  .visit-grid{grid-template-columns:.9fr 1.1fr}
+  .map{height:340px}
+  .final .box{padding:80px 40px}
+  footer .wrap{grid-template-columns:1.4fr 1fr 1fr}
+  .foot-bottom{grid-column:1/-1}
+  .sticky{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Melt Wax Bar. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Melt Wax Bar home">
+      <svg viewBox="0 0 26 30" aria-hidden="true"><path d="M13 1C13 1 3 13 3 19.5A10 10 0 0 0 23 19.5C23 13 13 1 13 1Z" fill="url(#lg)"/><path d="M8.5 19.5a4.5 4.5 0 0 0 4.5 4.5" stroke="#fff6e5" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".8"/><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0b24c"/><stop offset="1" stop-color="#a85d12"/></linearGradient></defs></svg>
+      <span>Melt <i>Wax Bar</i></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">Why Melt</a></li>
+      <li><a href="#prep">Prep</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-honey" href="https://meltwaxbar.glossgenius.com/book" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Waxing studio · Farragut, TN</span>
+      <h1>Smooth skin,<br><em>zero judgement.</em></h1>
+      <p class="lede">Brazilians, brows and full-body waxing from Shannon, a licensed esthetician with 5+ years of experience, in a clean, judgement-free studio on Kingston Pike.</p>
+      <div class="hero-cta">
+        <a class="btn btn-honey" href="https://meltwaxbar.glossgenius.com/book" target="_blank" rel="noopener">Book your wax
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Birdeye · 95 reviews</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Brazilians from $50</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Licensed esthetician</span>
+      </div>
+    </div>
+
+    <div class="pot" aria-hidden="true">
+      <svg viewBox="0 0 440 440">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6c773" stop-opacity=".55"/><stop offset="1" stop-color="#f6c773" stop-opacity="0"/></radialGradient>
+          <linearGradient id="potg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a3042"/><stop offset="1" stop-color="#2a1520"/></linearGradient>
+          <radialGradient id="waxg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffd98e"/><stop offset=".55" stop-color="#e9a23c"/><stop offset="1" stop-color="#b7701a"/></radialGradient>
+          <linearGradient id="stick" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e8d2b0"/><stop offset="1" stop-color="#c9a77a"/></linearGradient>
+        </defs>
+        <circle cx="220" cy="230" r="210" fill="url(#glow)"/>
+        <circle cx="220" cy="230" r="168" fill="none" stroke="#c47f1a" stroke-opacity=".25" stroke-dasharray="2 8"/>
+        <circle cx="220" cy="230" r="196" fill="none" stroke="#3b1f2b" stroke-opacity=".1"/>
+        <g class="steam" fill="none" stroke="#a85d12" stroke-width="3" stroke-linecap="round" opacity=".6">
+          <path d="M180 120c-10-16 10-26 0-44"/><path d="M220 110c-10-16 10-26 0-44"/><path d="M260 120c-10-16 10-26 0-44"/>
+        </g>
+        <!-- pot -->
+        <ellipse cx="220" cy="372" rx="132" ry="18" fill="#3b1f2b" opacity=".18"/>
+        <path d="M100 190h240l-18 160a24 24 0 0 1-24 21H142a24 24 0 0 1-24-21Z" fill="url(#potg)"/>
+        <path d="M118 220h204" stroke="#e3a33b" stroke-opacity=".5" stroke-width="2"/>
+        <text x="220" y="300" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="38" fill="#f6c773">melt</text>
+        <ellipse cx="220" cy="190" rx="124" ry="28" fill="#2a1520"/>
+        <ellipse cx="220" cy="190" rx="112" ry="22" fill="url(#waxg)"/>
+        <g class="swirl" opacity=".55"><path d="M170 190c20-14 70-14 100 0M190 194c14-8 46-8 60 0" stroke="#fff3d6" stroke-width="3" fill="none" stroke-linecap="round" transform="translate(0 -4)"/></g>
+        <!-- drips over rim -->
+        <path d="M128 196c0 18 4 34 12 34s10-14 10-28z" fill="#e3a33b"/>
+        <path d="M292 196c0 26 5 46 13 46s9-20 9-40z" fill="#d48d27"/>
+        <g class="drop"><ellipse cx="305" cy="256" rx="7" ry="9" fill="#e9a23c"/></g>
+        <!-- spatula -->
+        <g transform="rotate(24 300 120)"><rect x="288" y="40" width="22" height="170" rx="11" fill="url(#stick)"/><path d="M288 150h22v40a11 11 0 0 1-22 0z" fill="#e3a33b"/></g>
+        <!-- sparkles -->
+        <g fill="#c47f1a"><path d="M70 120l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M372 300l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" opacity=".7"/><path d="M380 110l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" opacity=".6"/></g>
+      </svg>
+    </div>
+  </div>
+  <div class="drip-wrap" aria-hidden="true">
+    <svg class="drip" viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#3b1f2b" d="M0 30C80 30 90 60 120 60s40-30 90-30 60 52 96 52 30-52 90-52 100 14 150 14 50-14 110-14 40 40 80 40 30-40 90-40 70 22 130 22 60-22 110-22 30 56 70 56 40-56 100-56 70 18 120 18 70-18 84-18V90H0Z"/></svg>
+  </div>
+</section>
+
+<section class="menu sec" id="menu" style="padding-top:40px">
+  <div class="wrap menu-layout">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Every service, <em>every price.</em> Right here.</h2>
+      <p>No digging through a booking app. Prices marked “+” are starting prices. New clients, allow a little extra time for your first visit.</p>
+      <div class="menu-cta">
+        <a class="btn btn-honey" href="https://meltwaxbar.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
+        <a class="btn btn-ghost" href="sms:+18655826835">Text 865-582-6835</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="tabs" role="tablist" aria-label="Service categories">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p1" id="t1">Brazilian &amp; Bikini</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2">Face &amp; Brows</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3">Arms, Back &amp; Body</button>
+      </div>
+
+      <div class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+        <h3 class="panel-title">Brazilian &amp; Bikini</h3>
+        <div class="feature">
+          <span class="tag">Most booked combos</span>
+          <div class="svc" style="border-bottom-style:solid"><h3>Women’s Brazilian + Eyebrows</h3><span class="price">$65<small>+</small></span><p><span class="dur">30+ min</span>Brazilian plus brow shaping.</p></div>
+          <div class="svc" style="border-bottom-style:solid"><h3>Women’s Brazilian + Underarms</h3><span class="price">$68<small>+</small></span><p><span class="dur">30+ min</span>Brazilian plus underarms.</p></div>
+          <div class="svc" style="border:0"><h3>Women’s Brazilian + Full Butt</h3><span class="price">$60<small>+</small></span><p><span class="dur">30+ min</span>Brazilian plus full butt.</p></div>
+        </div>
+        <div class="svc"><h3>Women’s Brazilian</h3><span class="price">$50<small>+</small></span><p><span class="dur">15+ min</span>Front to back. Hair about ¼ inch long is ideal.</p></div>
+        <div class="svc"><h3>Brazilian + Underarms + Eyebrows</h3><span class="price">$83<small>+</small></span><p><span class="dur">30+ min</span>The full trio. Women’s service.</p></div>
+        <div class="svc"><h3>Women’s Brazilian + Stomach Strip</h3><span class="price">$57<small>+</small></span><p><span class="dur">15+ min</span>Brazilian plus the strip below the navel.</p></div>
+        <div class="svc"><h3>Women’s Full Bikini</h3><span class="price">$40<small>+</small></span><p><span class="dur">15+ min</span>The front of the bikini area.</p></div>
+        <div class="svc"><h3>Women’s Bikini Line</h3><span class="price">$30<small>+</small></span><p><span class="dur">15+ min</span>Sides and top, for swimsuit coverage.</p></div>
+        <div class="svc"><h3>Women’s Full Butt</h3><span class="price">$25<small>+</small></span><p><span class="dur">15+ min</span>The entire area.</p></div>
+        <div class="svc"><h3>Women’s Butt Strip</h3><span class="price">$15<small>+</small></span><p><span class="dur">15+ min</span>Strip only.</p></div>
+        <div class="svc"><h3>Inner Thigh</h3><span class="price">$15</span><p><span class="dur">15 min</span>Bikini line not included when booked alone.</p></div>
+        <div class="svc"><h3>Stomach Strip</h3><span class="price">$7</span><p><span class="dur">5 min</span>Navel down.</p></div>
+      </div>
+
+      <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2">
+        <h3 class="panel-title">Face &amp; Brows</h3>
+        <div class="svc"><h3>Eyebrows</h3><span class="price">$15<small>+</small></span><p><span class="dur">15+ min</span>Wax, tweeze, trim and optional styling gel.</p></div>
+        <div class="svc"><h3>Eyebrow + Upper Lip</h3><span class="price">$25<small>+</small></span><p><span class="dur">15+ min</span>Brows and lip together.</p></div>
+        <div class="svc"><h3>Eyebrow + Upper Lip + Chin</h3><span class="price">$35<small>+</small></span><p><span class="dur">15+ min</span>Brows, lip and chin.</p></div>
+        <div class="svc"><h3>Women’s Full Face</h3><span class="price">$50<small>+</small></span><p><span class="dur">30+ min</span>Brows, lips, nose, cheeks, sideburns, chin and front of neck.</p></div>
+        <div class="svc"><h3>Upper Lip</h3><span class="price">$10</span><p><span class="dur">15 min</span></p></div>
+        <div class="svc"><h3>Chin</h3><span class="price">$10</span><p><span class="dur">15 min</span>Includes lower lip, not neck.</p></div>
+        <div class="svc"><h3>Sideburns</h3><span class="price">$10</span><p><span class="dur">15 min</span></p></div>
+        <div class="svc"><h3>Cheeks</h3><span class="price">$12</span><p><span class="dur">15 min</span></p></div>
+        <div class="svc"><h3>Nose</h3><span class="price">$12</span><p><span class="dur">15 min</span>Inside the nostrils.</p></div>
+        <div class="svc"><h3>Ears</h3><span class="price">$20</span><p><span class="dur">15 min</span>Inside and outside.</p></div>
+      </div>
+
+      <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3">
+        <h3 class="panel-title">Arms, Back &amp; Body</h3>
+        <div class="svc"><h3>Underarms</h3><span class="price">$18<small>+</small></span><p><span class="dur">15+ min</span>Hair about ¼ inch long is ideal.</p></div>
+        <div class="svc"><h3>Shoulders</h3><span class="price">$20</span><p><span class="dur">15 min</span></p></div>
+        <div class="svc"><h3>Upper Half Arm</h3><span class="price">$35</span><p><span class="dur">20 min</span>Elbow to shoulder.</p></div>
+        <div class="svc"><h3>Lower Half Arm</h3><span class="price">$30</span><p><span class="dur">30 min</span>Elbow to fingers.</p></div>
+        <div class="svc"><h3>Full Arm</h3><span class="price">$60<small>+</small></span><p><span class="dur">30+ min</span>Shoulder to fingers.</p></div>
+        <div class="svc"><h3>Lower Back</h3><span class="price">$30</span><p><span class="dur">10 min</span>Lower third of the back.</p></div>
+        <div class="svc"><h3>Full Back</h3><span class="price">$80<small>+</small></span><p><span class="dur">10+ min</span>The entire back.</p></div>
+        <div class="svc"><h3>Full Chest</h3><span class="price">$50</span><p><span class="dur">30 min</span></p></div>
+        <div class="svc"><h3>Full Stomach</h3><span class="price">$45</span><p><span class="dur">30 min</span></p></div>
+      </div>
+
+      <p class="menu-note"><svg viewBox="0 0 24 24" fill="none" stroke="#e3a33b" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5"/></svg>Face waxing: stop retinol 7 days before and after, and wait 6 months after stopping Accutane. Prices from the Melt Wax Bar booking page; confirm when you book.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Melt</span>
+      <h2>Your first wax <em>or</em> your fiftieth, it’s easy here.</h2>
+    </div>
+    <div class="why-grid">
+      <article class="card big reveal">
+        <div>
+          <div class="rating">5.0</div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        </div>
+        <div>
+          <h3>95 reviews, all-star average</h3>
+          <p>Melt Wax Bar holds a 5.0 rating across 95 reviews on Birdeye.</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3b1f2b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></div>
+        <h3>Licensed, 5+ years in</h3>
+        <p>Shannon is a licensed esthetician in Knoxville with more than five years of waxing experience.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3b1f2b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></div>
+        <h3>Clean &amp; judgement-free</h3>
+        <p>That’s the promise of the space: relaxed, private and zero awkwardness.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3b1f2b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div>
+        <h3>Upfront pricing</h3>
+        <p>Thirty-plus services with published prices, from a $7 stomach strip to the full Brazilian trio.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3b1f2b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/></svg></div>
+        <h3>Aftercare, sorted</h3>
+        <p>Ingrown-hair oil and exfoliation advice at every visit, with aftercare products sold at your appointment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="prep sec" id="prep">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Before you come in</span>
+      <h2>Prep like <em>a pro.</em></h2>
+      <p>Straight from Melt’s FAQ.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div><h3>Grow it out</h3><p>Let hair grow at least 2 weeks, about ¼ inch.</p></div></div>
+      <div class="step reveal"><div><h3>Dress comfy</h3><p>Wear loose, breathable clothing to your appointment.</p></div></div>
+      <div class="step reveal"><div><h3>Check your skincare</h3><p>No retinol 7 days before and after; 6 months off Accutane before waxing.</p></div></div>
+      <div class="step reveal"><div><h3>Rebook in 4 weeks</h3><p>Wax every 4 weeks. Use ingrown oil daily and exfoliate 3× a week.</p></div></div>
+    </div>
+    <div class="policy reveal">
+      <strong>Good to know:</strong> waxing on your period is fine with a tampon, disc or cup, and waxing during pregnancy is OK too.
+      <ul>
+        <li>Running late? Text 865-582-6835. More than 7 minutes late may mean rescheduling.</li>
+        <li>Please cancel at least 24 hours ahead.</li>
+        <li>No-call, no-shows pay for the missed service in full before booking again.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visit</span>
+      <h2>Find us on <em>Kingston Pike.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <table>
+          <tbody>
+            <tr data-d="1" class="closed"><td>Monday</td><td>Closed</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>1:00 – 6:00 PM</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>9:30 AM – 1:30 PM</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>11:00 AM – 4:30 PM</td></tr>
+            <tr data-d="5"><td>Friday</td><td>9:30 AM – 1:30 PM</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>9:00 AM – 12:00 PM</td></tr>
+            <tr data-d="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="fine">By appointment. See live availability on the booking page.</p>
+      </div>
+      <div class="loc reveal">
+        <iframe class="map" title="Map to Melt Wax Bar" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=11410%20Kingston%20Pike%20Suite%20100%2C%20Farragut%2C%20TN%2037934&output=embed"></iframe>
+        <div class="in">
+          <h3>Melt Wax Bar</h3>
+          <address>11410 Kingston Pike, Suite 100<br>Farragut, TN 37934</address>
+          <div class="acts">
+            <a class="btn btn-honey" href="tel:+18655826835">Call 865-582-6835</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=11410%20Kingston%20Pike%20Suite%20100%2C%20Farragut%2C%20TN%2037934" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="box reveal">
+      <div class="bubbles" aria-hidden="true"><span style="width:120px;height:120px;left:-30px;top:-30px"></span><span style="width:70px;height:70px;right:8%;top:20%"></span><span style="width:180px;height:180px;right:-60px;bottom:-80px"></span></div>
+      <h2 style="position:relative">Ready to <em>melt</em> into smooth?</h2>
+      <p style="position:relative">Pick your service and time in under a minute. Follow @meltwaxbarknox for updates and giveaways.</p>
+      <div class="row" style="position:relative">
+        <a class="btn btn-dark" href="https://meltwaxbar.glossgenius.com/book" target="_blank" rel="noopener">Book online</a>
+        <a class="btn btn-line" href="https://www.instagram.com/meltwaxbarknox" target="_blank" rel="noopener">@meltwaxbarknox</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#top" class="logo"><span>Melt <i>Wax Bar</i></span></a>
+      <p style="margin-top:12px;max-width:26em">Waxing studio in Farragut, serving West Knoxville. Licensed esthetician, clean and judgement-free.</p>
+    </div>
+    <div>
+      <p><a href="tel:+18655826835">865-582-6835</a></p>
+      <p>11410 Kingston Pike, Suite 100<br>Farragut, TN 37934</p>
+      <p style="margin-top:8px"><a href="https://meltwaxbar.glossgenius.com/book" target="_blank" rel="noopener">Book on GlossGenius →</a></p>
+    </div>
+    <div>
+      <div class="socials">
+        <a href="https://www.instagram.com/meltwaxbarknox" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+        <a href="https://www.facebook.com/meltwaxbarknox" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Melt Wax Bar</span>
+      <span>Concept by Code Craft Media</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="sticky" aria-label="Quick actions">
+  <a href="tel:+18655826835"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call</a>
+  <a class="book" href="https://meltwaxbar.glossgenius.com/book" target="_blank" rel="noopener">Book now</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=11410%20Kingston%20Pike%20Suite%20100%2C%20Farragut%2C%20TN%2037934" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+  // today highlight
+  try{
+    var d=new Date().getDay();
+    var row=document.querySelector('.hours tr[data-d="'+d+'"]');
+    if(row) row.classList.add('today');
+  }catch(e){}
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(t){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected',on);
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t)})});
+  show(tabs[0]);
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  var reduce=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){root.classList.add('reveal-all');return;}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){root.classList.add('reveal-all')},1500);
+})();
+</script>
+</body>
+</html>

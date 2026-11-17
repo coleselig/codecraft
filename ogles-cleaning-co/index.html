@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Ogles Cleaning Co. | Cabin &amp; Rental Cleaning in Sevier County, TN</title>
+<meta name="description" content="Rental cleanings, rental maintenance and rental inspections for vacation cabins and homes in Sevierville, Pigeon Forge and Gatlinburg, TN. Call 865-705-2440.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#6f8597; --mist-l:#a9b8c4; --mist-xl:#dce3e8;
+  --pine:#2f4a3a; --pine-d:#1f3328; --pine-l:#4d6b58;
+  --cream:#f6efe2; --cream-d:#ece2cf; --paper:#fbf7ef;
+  --amber:#e0a24a; --amber-d:#b97d2a;
+  --ink:#1d2a24; --ink-soft:#4a5751;
+  --r:18px;
+  --serif:"Young Serif", Georgia, "Times New Roman", serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-d);display:inline-flex;align-items:center;gap:.6em}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+
+/* concept banner */
+.concept{background:var(--pine-d);color:#d9e2da;font-size:.78rem;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.concept b{color:var(--amber);font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(246,239,226,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(47,74,58,.1)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand span{font-family:var(--serif);font-size:1.15rem;color:var(--pine);line-height:1}
+.brand small{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-top:3px}
+.nav ul{display:none;list-style:none;gap:28px;align-items:center}
+.nav ul a{text-decoration:none;font-weight:600;font-size:.94rem;color:var(--pine);position:relative}
+.nav ul a.btn{color:var(--cream)}
+.nav ul a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:not(.btn):hover::after{transform:scaleX(1)}
+.nav .call-mini{font-weight:700;color:var(--pine);text-decoration:none;font-size:.92rem;display:inline-flex;gap:6px;align-items:center;background:#fff;border:1px solid rgba(47,74,58,.15);padding:8px 12px;border-radius:99px}
+@media (min-width:900px){.nav ul{display:flex}.nav .call-mini{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:1rem;text-decoration:none;border-radius:99px;padding:15px 26px;transition:transform .2s, box-shadow .2s, background .2s;cursor:pointer;border:0}
+.btn svg{width:18px;height:18px}
+.btn-amber{background:var(--amber);color:var(--pine-d);box-shadow:0 8px 22px -8px rgba(185,125,42,.7)}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(185,125,42,.8);background:#e8ad58}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-pine{background:var(--pine);color:var(--cream)}
+.btn-pine:hover{background:var(--pine-d);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(180deg,#4f6576 0%,#6f8597 40%,#9fb0bd 70%,#d9dcd8 100%);padding:58px 0 0}
+.hero .sun{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,226,170,.85) 0%,rgba(255,214,150,.35) 40%,rgba(255,214,150,0) 70%);top:40px;right:-60px;pointer-events:none}
+.hero-copy{position:relative;z-index:5;max-width:640px}
+.hero .eyebrow{color:var(--cream)}
+.hero h1{font-size:clamp(2.35rem,9.4vw,4.4rem);margin:16px 0 18px;color:#fff;text-shadow:0 2px 24px rgba(31,51,40,.35)}
+.hero h1 em{font-style:normal;color:var(--pine-d);background:linear-gradient(transparent 62%,rgba(224,162,74,.75) 62%,rgba(224,162,74,.75) 92%,transparent 92%);padding:0 .08em;text-shadow:none}
+.hero p.lead{font-size:1.1rem;max-width:520px;color:#fdfaf4;text-shadow:0 1px 12px rgba(31,51,40,.45)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.towns span{font-size:.82rem;font-weight:600;background:rgba(31,51,40,.45);border:1px solid rgba(255,255,255,.3);padding:6px 12px;border-radius:99px;backdrop-filter:blur(4px)}
+.scene{position:relative;margin-top:-10px;height:340px}
+.scene svg.ridges{position:absolute;inset:auto 0 0 0;width:100%;height:100%}
+.mist{position:absolute;left:-30%;width:160%;height:60px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.75) 0%,rgba(255,255,255,0) 70%);filter:blur(6px);pointer-events:none}
+.mist.m1{top:44%;animation:drift 26s ease-in-out infinite alternate}
+.mist.m2{top:64%;opacity:.7;animation:drift 34s ease-in-out infinite alternate-reverse}
+.mist.m3{top:24%;opacity:.55;height:40px;animation:drift 40s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translateX(-8%)}to{transform:translateX(8%)}}
+.cabin{position:absolute;bottom:22px;right:6%;width:190px;z-index:3}
+.sparkle{transform-origin:center;transform-box:fill-box;animation:twinkle 2.6s ease-in-out infinite}
+.sparkle.s2{animation-delay:1.1s}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1.1) rotate(20deg)}}
+.smoke{animation:smoke 6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+@keyframes smoke{0%{opacity:0;transform:translateY(6px) scale(.8)}30%{opacity:.7}100%{opacity:0;transform:translateY(-22px) scale(1.4)}}
+@media (min-width:900px){
+  .hero{padding-top:90px}
+  .scene{height:420px;margin-top:-120px}
+  .cabin{width:250px;right:9%;bottom:34px}
+  .hero .sun{width:520px;height:520px;right:4%;top:20px}
+}
+
+/* linen texture */
+.linen{background-color:var(--paper);background-image:
+  repeating-linear-gradient(0deg,rgba(111,133,151,.035) 0 1px,transparent 1px 4px),
+  repeating-linear-gradient(90deg,rgba(111,133,151,.035) 0 1px,transparent 1px 4px),
+  linear-gradient(135deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,0) 30%,rgba(111,133,151,.06) 30.2%,rgba(255,255,255,0) 52%,rgba(255,255,255,.5) 52.2%,rgba(255,255,255,0) 75%,rgba(111,133,151,.05) 75.2%,rgba(255,255,255,0) 100%)}
+
+section{padding:76px 0;position:relative}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head h2{font-size:clamp(1.9rem,6.6vw,2.9rem);color:var(--pine);margin-top:12px}
+.sec-head p{color:var(--ink-soft);margin-top:12px;font-size:1.05rem}
+
+/* tagline strip */
+.strip{background:var(--pine);color:var(--cream);padding:22px 0;overflow:hidden}
+.strip .wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+.strip q{font-family:var(--serif);font-size:clamp(1.2rem,4.6vw,1.6rem);quotes:none}
+.strip .dot{color:var(--amber)}
+
+/* services */
+.svc-grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media (min-width:760px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:#fff;border-radius:var(--r);padding:28px 24px 26px;border:1px solid rgba(47,74,58,.1);box-shadow:0 1px 0 rgba(47,74,58,.05),0 20px 40px -30px rgba(31,51,40,.4);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;overflow:hidden}
+.card::after{content:"";position:absolute;right:-1px;top:-1px;width:46px;height:46px;background:linear-gradient(225deg,var(--cream) 50%,var(--cream-d) 50%);border-bottom-left-radius:10px;box-shadow:-3px 3px 6px rgba(47,74,58,.08);transition:width .35s,height .35s}
+.card:hover{transform:translateY(-5px);box-shadow:0 1px 0 rgba(47,74,58,.05),0 30px 50px -28px rgba(31,51,40,.5)}
+.card:hover::after{width:58px;height:58px}
+.card .ic{width:64px;height:64px;border-radius:16px;background:var(--cream);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:40px;height:40px}
+.card h3{font-size:1.45rem;color:var(--pine);margin-bottom:8px}
+.card p{color:var(--ink-soft)}
+.card ul{list-style:none;margin-top:14px;display:grid;gap:7px}
+.card li{display:flex;gap:9px;align-items:flex-start;font-size:.95rem;font-weight:500}
+.card li::before{content:"";flex:none;width:16px;height:16px;margin-top:4px;border-radius:50%;background:var(--amber) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%231f3328' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.card .num{position:absolute;top:22px;right:60px;font-family:var(--serif);color:var(--mist-l);font-size:.95rem}
+.svc-note{margin-top:22px;font-size:.95rem;color:var(--ink-soft);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.svc-note a{font-weight:700;color:var(--pine)}
+
+/* why */
+.why{background:linear-gradient(180deg,var(--cream) 0%,#efe6d5 100%);overflow:hidden}
+.why-grid{display:grid;gap:34px;align-items:center}
+@media (min-width:900px){.why-grid{grid-template-columns:1fr 1.05fr;gap:60px}}
+.why-art{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#b9c6cf,#e9e3d6);aspect-ratio:5/4;box-shadow:0 30px 60px -40px rgba(31,51,40,.6)}
+.why-art > svg{position:absolute;inset:0;width:100%;height:100%}
+.why-art .badge{position:absolute;left:16px;bottom:16px;background:rgba(251,247,239,.94);color:var(--pine);border-radius:14px;padding:10px 14px;font-size:.85rem;font-weight:600;display:flex;gap:10px;align-items:center;box-shadow:0 10px 24px -14px rgba(0,0,0,.4);max-width:calc(100% - 32px)}
+.why-art .badge b{font-family:var(--serif);font-weight:400;font-size:1.05rem;display:block;line-height:1.1}
+.why-list{display:grid;gap:14px}
+.why-item{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.65);border:1px solid rgba(47,74,58,.08);border-radius:16px;padding:18px;transition:background .3s, transform .3s}
+.why-item:hover{background:#fff;transform:translateX(4px)}
+.why-item .n{flex:none;width:44px;height:44px;border-radius:12px;background:var(--pine);color:var(--amber);display:grid;place-items:center}
+.why-item .n svg{width:24px;height:24px}
+.why-item h3{font-size:1.15rem;color:var(--pine);margin-bottom:4px}
+.why-item p{color:var(--ink-soft);font-size:.97rem}
+.mission{margin-top:26px;font-family:var(--serif);font-size:1.3rem;color:var(--pine);line-height:1.35;padding-left:18px;border-left:3px solid var(--amber)}
+
+/* process */
+.steps{display:grid;gap:14px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr);gap:20px}}
+.step{position:relative;padding:24px 22px;border-radius:var(--r);background:#fff;border:1px dashed rgba(111,133,151,.5)}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--serif);font-size:2.4rem;color:var(--amber);line-height:1;display:block;margin-bottom:8px}
+.step h3{font-size:1.2rem;color:var(--pine);margin-bottom:4px}
+.step p{color:var(--ink-soft);font-size:.96rem}
+
+/* area + hours */
+.area{background:var(--pine);color:var(--cream);overflow:hidden}
+.area .sec-head h2{color:var(--cream)}
+.area .sec-head p{color:#c7d3ca}
+.area .eyebrow{color:var(--amber)}
+.area-grid{display:grid;gap:20px}
+@media (min-width:900px){.area-grid{grid-template-columns:1.3fr 1fr}}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.15);background:var(--pine-l);min-height:300px;position:relative}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:saturate(.75) contrast(1.02)}
+.panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:24px}
+.panel h3{font-size:1.35rem;margin-bottom:12px;color:var(--cream)}
+.town-list{display:grid;gap:10px;margin-bottom:22px}
+.town-list div{display:flex;align-items:center;gap:12px;padding:12px 14px;background:rgba(0,0,0,.14);border-radius:12px;font-weight:600}
+.town-list svg{width:22px;height:22px;flex:none;color:var(--amber)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:14px 0 10px}
+.days span{text-align:center;font-size:.78rem;font-weight:700;padding:8px 0;border-radius:9px;background:rgba(0,0,0,.16);color:#c7d3ca}
+.days span.today{background:var(--amber);color:var(--pine-d)}
+.hours-note{font-size:.95rem;color:#d9e2da}
+.hours-note strong{color:var(--amber)}
+
+/* contact */
+.contact{overflow:hidden}
+.contact-card{position:relative;background:var(--pine-d);color:var(--cream);border-radius:28px;padding:40px 24px 0;overflow:hidden}
+.contact-card h2{font-size:clamp(2rem,7vw,3.2rem);color:#fff;max-width:620px}
+.contact-card p{color:#c7d3ca;margin-top:12px;max-width:520px}
+.c-actions{display:grid;gap:12px;margin-top:26px;position:relative;z-index:2}
+@media (min-width:760px){.c-actions{grid-template-columns:repeat(3,1fr)}}
+.c-act{display:flex;gap:14px;align-items:center;text-decoration:none;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px;transition:background .25s,transform .25s;min-width:0}
+.c-act:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
+.c-act .ci{flex:none;width:46px;height:46px;border-radius:12px;background:var(--amber);color:var(--pine-d);display:grid;place-items:center}
+.c-act .ci svg{width:22px;height:22px}
+.c-act small{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist-l);font-weight:700}
+.c-act b{display:block;font-size:clamp(.9rem,3.9vw,1.02rem);color:#fff;font-weight:600;overflow-wrap:anywhere}
+.contact-ridge{margin:36px -24px 0;height:110px}
+.contact-ridge svg{width:100%;height:100%}
+
+footer{background:var(--pine-d);color:#a9b8b0;padding:30px 0 34px;font-size:.88rem;border-top:1px solid rgba(255,255,255,.06)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center}
+footer a{color:var(--cream);text-decoration:none}
+footer .brand span{color:var(--cream)}
+
+@media (max-width:420px){.contact-card{padding:34px 18px 0}.contact-ridge{margin:30px -18px 0}.c-act{padding:13px;gap:12px}.c-act b{font-size:.9rem}}
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.3fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(31,51,40,.96);backdrop-filter:blur(8px);box-shadow:0 -10px 30px -10px rgba(0,0,0,.35)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;border-radius:14px;padding:14px 8px;font-size:1rem}
+.callbar svg{width:19px;height:19px}
+.callbar .c1{background:var(--amber);color:var(--pine-d)}
+.callbar .c2{background:rgba(255,255,255,.1);color:var(--cream);border:1px solid rgba(255,255,255,.2)}
+@media (max-width:899px){body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Ogles Cleaning Co. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.7 8.7 0 0 1-3.8-.9L3 21l1.9-5.2a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5A8.4 8.4 0 0 1 21 11.5z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1C9.5 14.4 12 13 13 12"/></g></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/><path fill="currentColor" d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+    <symbol id="i-mtn" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></g></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9zM9 12l2 2 4-4M9 17h6"/></g></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ogles Cleaning Co. home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2f4a3a"/><path d="M4 28 13 17l5 6 6-9 12 14z" fill="#6f8597"/><path d="M4 30 12 23l6 4 7-6 11 9v2H4z" fill="#f6efe2" opacity=".9"/><path d="M28 9l.9 2.4 2.4.9-2.4.9L28 15.6l-.9-2.4-2.4-.9 2.4-.9z" fill="#e0a24a"/></svg>
+      <span>Ogles Cleaning Co.<small>Sevier County, TN</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Ogles</a></li>
+      <li><a href="#area">Service area</a></li>
+      <li><a class="btn btn-pine" style="padding:11px 20px;font-size:.92rem" href="tel:+18657052440"><svg><use href="#i-phone"/></svg>865-705-2440</a></li>
+    </ul>
+    <a class="call-mini" href="tel:+18657052440" aria-label="Call Ogles Cleaning Co."><svg width="16" height="16"><use href="#i-phone"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy rv">
+      <span class="eyebrow">Rental &amp; house cleaning in the Smokies</span>
+      <h1>Cabins guest-ready, <em>without</em> the stress.</h1>
+      <p class="lead">Ogles Cleaning Co. handles rental cleanings, maintenance and inspections across Sevierville, Pigeon Forge and Gatlinburg, so every check-in feels like the first.</p>
+      <div class="ctas">
+        <a class="btn btn-amber" href="tel:+18657052440"><svg><use href="#i-phone"/></svg>Call for a quote</a>
+        <a class="btn btn-ghost" href="#services">See services</a>
+      </div>
+      <div class="towns" aria-label="Towns served"><span>Sevierville</span><span>Pigeon Forge</span><span>Gatlinburg</span></div>
+    </div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <div class="mist m3"></div>
+    <svg class="ridges" viewBox="0 0 1440 420" preserveAspectRatio="none">
+      <path d="M0 170 C120 130 200 120 300 150 S480 90 600 110 S800 60 920 100 S1150 70 1260 110 S1400 120 1440 105 V420 H0Z" fill="#8a9cab" opacity=".75"/>
+      <path d="M0 220 C100 190 220 170 340 200 S540 150 680 180 S900 140 1040 175 S1300 150 1440 175 V420 H0Z" fill="#6f8597" opacity=".85"/>
+      <path d="M0 280 C140 250 260 240 380 262 S600 220 760 252 S1000 222 1160 250 S1360 240 1440 250 V420 H0Z" fill="#4f6676"/>
+      <path d="M0 330 C160 305 300 300 460 320 S760 290 940 312 S1240 296 1440 312 V420 H0Z" fill="#3a5446"/>
+      <g fill="#2f4a3a">
+        <path d="M60 340 l14-40 14 40z M95 345 l18-52 18 52z M140 342 l12-34 12 34z M1180 336 l15-44 15 44z M1215 340 l12-34 12 34z M1370 334 l16-46 16 46z M1405 338 l12-32 12 32z M520 335 l11-30 11 30z"/>
+      </g>
+      <path d="M0 370 C220 350 420 352 720 364 S1200 352 1440 360 V420 H0Z" fill="#2f4a3a"/>
+      <path d="M0 400 C300 388 600 392 900 398 S1300 390 1440 396 V420 H0Z" fill="#f6efe2"/>
+    </svg>
+    <div class="mist m1"></div>
+    <div class="mist m2"></div>
+    <svg class="cabin" viewBox="0 0 260 200">
+      <path class="smoke" d="M184 30c-6-6 4-10-2-16 8 2 6 10 10 12-4 2-4 6-8 4z" fill="#eef1f3"/>
+      <rect x="176" y="40" width="16" height="36" fill="#5b4636"/>
+      <rect x="173" y="36" width="22" height="7" rx="2" fill="#4a382b"/>
+      <path d="M30 108 130 38 230 108z" fill="#3a2c22"/>
+      <path d="M44 106 130 46 216 106z" fill="#6b4f3b"/>
+      <rect x="48" y="104" width="164" height="78" fill="#8a6548"/>
+      <g stroke="#6b4f3b" stroke-width="2.2" opacity=".85"><path d="M48 116h164M48 128h164M48 140h164M48 152h164M48 164h164M48 176h164"/></g>
+      <rect x="112" y="128" width="36" height="54" rx="3" fill="#2f4a3a"/>
+      <circle cx="141" cy="157" r="2.4" fill="#e0a24a"/>
+      <rect x="64" y="124" width="34" height="30" rx="2" fill="#ffd690"/>
+      <rect x="64" y="124" width="34" height="30" rx="2" fill="none" stroke="#3a2c22" stroke-width="3"/>
+      <path d="M81 124v30M64 139h34" stroke="#3a2c22" stroke-width="2.4"/>
+      <rect x="162" y="124" width="34" height="30" rx="2" fill="#ffe4b0"/>
+      <rect x="162" y="124" width="34" height="30" rx="2" fill="none" stroke="#3a2c22" stroke-width="3"/>
+      <path d="M179 124v30M162 139h34" stroke="#3a2c22" stroke-width="2.4"/>
+      <path d="M166 128l8 0-12 12z" fill="#fff" opacity=".55"/>
+      <path class="sparkle" d="M190 112l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#fff"/>
+      <path class="sparkle s2" d="M72 116l1.6 4.2 4.2 1.6-4.2 1.6-1.6 4.2-1.6-4.2-4.2-1.6 4.2-1.6z" fill="#fff"/>
+      <rect x="40" y="180" width="180" height="6" rx="3" fill="#3a2c22"/>
+      <path d="M100 186h60l6 10H94z" fill="#5b4636"/>
+      <g fill="#2f4a3a"><path d="M8 186l14-48 14 48z"/><path d="M226 186l13-40 13 40z"/></g>
+    </svg>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap"><q>We clean your stress away.</q><span class="dot" aria-hidden="true">&#10022;</span><span style="font-size:.95rem;opacity:.85">Serving vacation rentals &amp; homes in Sevier County</span></div></div>
+
+<section id="services" class="linen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What we do</span>
+      <h2>Three ways we keep your rental running smoothly.</h2>
+      <p>From the turnover clean to the hot tub to a written condition report, Ogles covers the jobs that keep your guests happy and your property in shape.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="card rv">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V22L24 9l16 13v18z" fill="#dce3e8"/><path d="M8 22 24 9l16 13" fill="none" stroke="#2f4a3a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="19" y="27" width="10" height="13" rx="1.5" fill="#2f4a3a"/><path d="M36 6l1.4 3.6L41 11l-3.6 1.4L36 16l-1.4-3.6L31 11l3.6-1.4z" fill="#e0a24a"/></svg></div>
+        <h3>Rental Cleanings</h3>
+        <p>We take care of the mess so your guests don't have to. Every visit follows our deep cleaning system for a healthy, thorough clean.</p>
+        <ul><li>Vacation rental turnovers</li><li>House cleaning</li><li>Environmentally friendly products</li></ul>
+      </article>
+      <article class="card rv">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="30" rx="18" ry="9" fill="#dce3e8"/><ellipse cx="24" cy="28" rx="18" ry="9" fill="none" stroke="#2f4a3a" stroke-width="3"/><path d="M12 28c3-2 6 2 9 0s6 2 9 0 6 2 6 0" fill="none" stroke="#6f8597" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="14" r="2.6" fill="#6f8597"/><circle cx="25" cy="10" r="2" fill="#6f8597"/><circle cx="31" cy="16" r="3" fill="#e0a24a"/></svg></div>
+        <h3>Rental Maintenance</h3>
+        <p>Maintenance management for your rental, including jacuzzi cleanings, appliances and more, so small issues don't turn into guest complaints.</p>
+        <ul><li>Jacuzzi &amp; hot tub cleanings</li><li>Appliance care</li><li>Ongoing maintenance management</li></ul>
+      </article>
+      <article class="card rv">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="7" width="28" height="35" rx="3" fill="#dce3e8" stroke="#2f4a3a" stroke-width="3"/><rect x="18" y="4" width="12" height="7" rx="2" fill="#2f4a3a"/><path d="M16 22l4 4 8-8" fill="none" stroke="#e0a24a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 33h16" stroke="#6f8597" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3>Rental Inspections</h3>
+        <p>We'll walk your property and provide a report on your rental's condition, so you know exactly where things stand, even from out of town.</p>
+        <ul><li>Property condition reports</li><li>Peace of mind between stays</li><li>Ideal for remote owners</li></ul>
+      </article>
+    </div>
+    <p class="svc-note rv"><svg width="20" height="20" style="color:var(--amber-d)" aria-hidden="true"><use href="#i-chat"/></svg>Pricing depends on your property. <a href="tel:+18657052440">Call or text 865-705-2440</a> for a quote.</p>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap why-grid">
+    <div class="why-art rv" aria-hidden="true">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="lin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf8"/><stop offset="1" stop-color="#ece2cf"/></linearGradient>
+        </defs>
+        <path d="M0 170 C80 130 160 140 240 160 S400 110 500 140 V400 H0Z" fill="#8a9cab" opacity=".6"/>
+        <path d="M0 210 C90 190 180 180 270 200 S420 170 500 190 V400 H0Z" fill="#6f8597" opacity=".7"/>
+        <rect x="0" y="250" width="500" height="150" fill="#efe6d5"/>
+        <g>
+          <rect x="110" y="292" width="280" height="44" rx="6" fill="#d6dee4"/>
+          <path d="M110 300h280" stroke="#b9c6cf" stroke-width="2"/>
+          <rect x="120" y="254" width="260" height="44" rx="6" fill="url(#lin)" stroke="#e0d4bd" stroke-width="2"/>
+          <path d="M130 268c40 6 80-6 120 0s80 6 120 0" fill="none" stroke="#e5dac4" stroke-width="2"/>
+          <rect x="140" y="218" width="220" height="40" rx="6" fill="#f6efe2" stroke="#e0d4bd" stroke-width="2"/>
+          <path d="M150 238h200" stroke="#ece2cf" stroke-width="2" stroke-dasharray="6 6"/>
+          <rect x="226" y="208" width="48" height="140" fill="#2f4a3a" opacity=".92"/>
+          <path d="M226 208h48" stroke="#e0a24a" stroke-width="3"/>
+        </g>
+        <path class="sparkle" d="M390 190l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#e0a24a"/>
+        <path class="sparkle s2" d="M110 220l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff"/>
+      </svg>
+      <div class="badge"><svg width="26" height="26" style="color:var(--pine-l)"><use href="#i-leaf"/></svg><span><b>Earth-friendly products</b>Gentle on cabins, guests and the Smokies</span></div>
+    </div>
+    <div>
+      <div class="sec-head rv" style="margin-bottom:24px">
+        <span class="eyebrow">Why Ogles</span>
+        <h2>A local crew that treats your cabin like it's theirs.</h2>
+      </div>
+      <div class="why-list">
+        <div class="why-item rv"><div class="n"><svg><use href="#i-spark"/></svg></div><div><h3>A deep cleaning system</h3><p>Our approach is built for a healthy, thorough clean with every single visit.</p></div></div>
+        <div class="why-item rv"><div class="n"><svg><use href="#i-leaf"/></svg></div><div><h3>Environmentally friendly products</h3><p>We use cleaning products that are friendly to the environment.</p></div></div>
+        <div class="why-item rv"><div class="n"><svg><use href="#i-house"/></svg></div><div><h3>Built for vacation rentals</h3><p>Cleaning, maintenance and inspections under one roof, from one team.</p></div></div>
+        <div class="why-item rv"><div class="n"><svg><use href="#i-mtn"/></svg></div><div><h3>Right here in Sevier County</h3><p>Serving Sevierville, Pigeon Forge and Gatlinburg.</p></div></div>
+      </div>
+      <p class="mission rv">"Our mission is not only to meet your expectations, but to exceed them."</p>
+    </div>
+  </div>
+</section>
+
+<section class="linen" aria-label="How it works">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Getting started</span>
+      <h2>Simple from the first call.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>Call, text or email</h3><p>Tell us about your home or rental and what it needs: cleanings, maintenance, an inspection, or all three.</p></div>
+      <div class="step rv"><h3>Get your quote</h3><p>We'll talk through your property and put together pricing that fits it.</p></div>
+      <div class="step rv"><h3>Relax</h3><p>We clean your stress away, so guests walk into a fresh, guest-ready cabin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="area" class="area">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Service area &amp; scheduling</span>
+      <h2>Across the foothills of the Smokies.</h2>
+      <p>Ogles Cleaning Co. serves vacation rentals and homes throughout Sevier County, Tennessee.</p>
+    </div>
+    <div class="area-grid">
+      <div class="map rv"><iframe title="Map of Sevier County, Tennessee service area" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sevier%20County%2C%20TN&amp;output=embed"></iframe></div>
+      <div class="panel rv">
+        <h3>Where we clean</h3>
+        <div class="town-list">
+          <div><svg><use href="#i-pin"/></svg>Sevierville</div>
+          <div><svg><use href="#i-pin"/></svg>Pigeon Forge</div>
+          <div><svg><use href="#i-pin"/></svg>Gatlinburg</div>
+        </div>
+        <h3>Hours</h3>
+        <div class="days" id="days" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <p class="hours-note">Scheduled by appointment. <strong id="today-line">Call or text today</strong> at <a href="tel:+18657052440" style="color:#fff;font-weight:700">865-705-2440</a> to check availability for your turnover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact linen">
+  <div class="wrap">
+    <div class="contact-card rv">
+      <span class="eyebrow" style="color:var(--amber)">Let's talk</span>
+      <h2 style="margin-top:12px">Ready for check-in day to feel easy?</h2>
+      <p>Call or text for a quote on rental cleanings, maintenance or inspections anywhere in Sevier County.</p>
+      <div class="c-actions">
+        <a class="c-act" href="tel:+18657052440"><span class="ci"><svg><use href="#i-phone"/></svg></span><span><small>Call or text</small><b>(865) 705-2440</b></span></a>
+        <a class="c-act" href="mailto:Oglescleaning@yahoo.com?subject=Cleaning%20quote%20request"><span class="ci"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>Oglescleaning@yahoo.com</b></span></a>
+        <a class="c-act" href="https://www.google.com/maps/search/?api=1&amp;query=Sevier%20County%2C%20TN" target="_blank" rel="noopener"><span class="ci"><svg><use href="#i-pin"/></svg></span><span><small>Service area</small><b>Sevier County, TN</b></span></a>
+      </div>
+      <div class="contact-ridge" aria-hidden="true">
+        <svg viewBox="0 0 1200 110" preserveAspectRatio="none">
+          <path d="M0 60 C150 30 260 40 380 55 S620 20 780 45 S1050 25 1200 40 V110 H0Z" fill="#6f8597" opacity=".35"/>
+          <path d="M0 80 C180 60 340 66 520 78 S860 56 1020 70 S1150 64 1200 68 V110 H0Z" fill="#2f4a3a"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2f4a3a" stroke="#4d6b58"/><path d="M4 28 13 17l5 6 6-9 12 14z" fill="#6f8597"/><path d="M4 30 12 23l6 4 7-6 11 9v2H4z" fill="#f6efe2" opacity=".9"/><path d="M28 9l.9 2.4 2.4.9-2.4.9L28 15.6l-.9-2.4-2.4-.9 2.4-.9z" fill="#e0a24a"/></svg><span>Ogles Cleaning Co.</span></a>
+    <span>Rental cleanings · Maintenance · Inspections · Sevier County, TN</span>
+    <span><a href="tel:+18657052440">865-705-2440</a> &nbsp;·&nbsp; <a href="mailto:Oglescleaning@yahoo.com">Oglescleaning@yahoo.com</a></span>
+    <span style="opacity:.7">© <span id="yr">2026</span> Ogles Cleaning Co. Concept design by Code Craft Media.</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c1" href="tel:+18657052440"><svg><use href="#i-phone"/></svg>Call now</a>
+  <a class="c2" href="mailto:Oglescleaning@yahoo.com?subject=Cleaning%20quote%20request"><svg><use href="#i-mail"/></svg>Email</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  setTimeout(showAll,1400);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  var t=new Date().getDay(), ds=document.querySelectorAll('#days span');
+  if(ds[t]){ds[t].classList.add('today')}
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var tl=document.getElementById('today-line'); if(tl) tl.textContent='Call or text this '+names[t];
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

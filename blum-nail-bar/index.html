@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Blum Nail Bar — concept site</title>
+<meta name="description" content="Concept site for Blum Nail Bar, 3010 S Mall Rd, Knoxville, TN. Nails, lashes, brows, waxing and facials.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5EDE3; --paper2:#EFE3D5; --ink:#3E1220; --ink2:#5B2533; --blush:#E7B3A8; --rose:#C9776B;
+  --sage:#7F8F6E; --gold:#B48A4F; --line:rgba(62,18,32,.18); --muted:#7A5A60;
+  --disp:"Gloock","Bodoni 72","Didot",Georgia,serif; --ital:"Instrument Serif","Times New Roman",serif;
+  --sans:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .24 0 0 0 0 .07 0 0 0 0 .12 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header.top,footer,.banner{position:relative;z-index:1}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:var(--paper);font-size:12.5px;letter-spacing:.02em;text-align:center;padding:8px 16px}
+.banner b{font-weight:600;color:var(--blush)}
+
+/* nav */
+header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;max-width:1180px;margin:0 auto}
+.logo{font-family:var(--disp);font-size:28px;letter-spacing:-.01em;text-decoration:none;display:flex;align-items:baseline;gap:8px}
+.logo i{font-family:var(--ital);font-size:17px;color:var(--rose)}
+nav.links{display:none;gap:28px;font-size:14px}
+nav.links a{text-decoration:none;opacity:.8}
+nav.links a:hover{opacity:1;color:var(--rose)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;
+  padding:15px 22px;border-radius:999px;border:1.5px solid var(--ink);transition:transform .25s,background .25s,color .25s}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--ink2);transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:17px;height:17px}
+.top .btn{padding:11px 16px;font-size:14px}
+
+/* hero */
+.hero{padding:18px 0 56px}
+.hero .wrap{display:grid;gap:34px}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(56px,17vw,124px);line-height:.92;letter-spacing:-.025em;margin:18px 0 22px}
+h1 em{font-family:var(--ital);font-style:italic;color:var(--rose);letter-spacing:-.01em}
+.lede{font-size:18px;max-width:30em;color:var(--ink2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@media (max-width:520px){.hero .cta .btn{flex:1 1 100%}}
+.meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:14px;color:var(--muted)}
+.meta span{display:flex;align-items:center;gap:8px}
+.meta .star{color:var(--gold)}
+.arch{position:relative;aspect-ratio:4/5;max-width:300px;width:100%;justify-self:center;border-radius:999px 999px 18px 18px;
+  background:radial-gradient(120% 80% at 50% 100%,#E9B9AE 0%,#D99487 45%,#8E3B45 100%);overflow:hidden;
+  box-shadow:0 30px 60px -30px rgba(62,18,32,.55), inset 0 0 0 10px rgba(245,237,227,.25)}
+.arch::after{content:"";position:absolute;inset:18px;border-radius:999px 999px 10px 10px;border:1px solid rgba(245,237,227,.55)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.bloom .pt{transform-origin:200px 250px;animation:sway 9s ease-in-out infinite}
+.bloom .pt:nth-child(2n){animation-delay:-3s}
+@keyframes sway{0%,100%{transform:rotate(0)}50%{transform:rotate(3deg)}}
+.spin{transform-origin:200px 250px;animation:turn 80s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}}
+.tag{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);background:var(--paper);color:var(--ink);border-radius:999px;
+  padding:10px 18px;font-size:13px;white-space:nowrap;display:flex;gap:8px;align-items:center;box-shadow:0 10px 24px -12px rgba(0,0,0,.4)}
+.tag b{font-family:var(--disp);font-weight:400;font-size:18px}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;padding:16px 0;background:var(--paper2)}
+.marq .row{display:flex;gap:40px;width:max-content;animation:mq 38s linear infinite;font-family:var(--ital);font-style:italic;font-size:28px;color:var(--ink2)}
+.marq span{display:flex;align-items:center;gap:40px;white-space:nowrap}
+.marq span::after{content:"\273F";font-style:normal;font-size:16px;color:var(--rose)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section.blk{padding:84px 0}
+.num{font-family:var(--ital);font-style:italic;font-size:18px;color:var(--rose)}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(38px,9vw,72px);line-height:1;letter-spacing:-.02em;margin:10px 0 16px}
+h2 em{font-family:var(--ital);font-style:italic;color:var(--rose)}
+.sub{max-width:34em;color:var(--ink2)}
+
+/* menu */
+.menu-card{margin-top:40px;background:#FBF6EF;border:1px solid var(--line);border-radius:28px;position:relative;overflow:hidden}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px;border-bottom:1px solid var(--line);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.menu-card::before{content:"";position:absolute;right:0;top:0;width:40px;height:68px;background:linear-gradient(90deg,rgba(251,246,239,0),#FBF6EF);pointer-events:none;z-index:2;border-top-right-radius:28px}
+@media (min-width:900px){.menu-card::before{display:none}}
+.tab{flex:0 0 auto;font:500 14px/1 var(--sans);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:11px 16px;cursor:pointer;transition:.2s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab:hover{border-color:var(--ink)}
+.panels{padding:8px 20px 28px}
+.panel{padding-top:22px}
+.panel header{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+.panel h3{font-family:var(--disp);font-weight:400;font-size:32px;letter-spacing:-.01em}
+.panel header p{font-family:var(--ital);font-style:italic;font-size:19px;color:var(--muted)}
+.list{list-style:none;display:grid;gap:0 48px}
+.list li{display:flex;align-items:baseline;gap:10px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+.list .it{flex:0 1 auto}
+.list .dots{flex:1 1 20px;border-bottom:1px dotted rgba(62,18,32,.35);transform:translateY(-4px);min-width:14px}
+.list .pr{font-family:var(--disp);font-size:18px;white-space:nowrap;color:var(--ink)}
+.js .panel{display:none}
+.js .panel.on{display:block;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.fine{font-size:13px;color:var(--muted);margin-top:16px}
+
+/* why */
+.why{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.why h2 em{color:var(--blush)}
+.why .sub{color:rgba(245,237,227,.8)}
+.why .num{color:var(--blush)}
+.why-grid{display:grid;gap:18px;margin-top:44px}
+.big{border:1px solid rgba(245,237,227,.2);border-radius:28px;padding:30px 26px;position:relative}
+.big:first-child{padding-bottom:150px;background:linear-gradient(160deg,rgba(231,179,168,.08),transparent 60%)}
+.score{font-family:var(--disp);font-size:clamp(96px,26vw,170px);line-height:.85;letter-spacing:-.04em;color:var(--blush)}
+.stars{display:flex;gap:4px;margin:14px 0 8px;color:var(--gold)}
+.stars svg{width:22px;height:22px}
+.big p{color:rgba(245,237,227,.8)}
+.big h3{font-family:var(--disp);font-weight:400;font-size:28px;margin-bottom:10px;line-height:1.1}
+.pour{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pour span{border:1px solid rgba(245,237,227,.28);border-radius:999px;padding:7px 13px;font-size:13.5px}
+.big .mini{position:absolute;right:22px;bottom:22px;width:110px;opacity:.9}
+.why .deco{position:absolute;right:-90px;top:-70px;width:340px;opacity:.13}
+
+/* visit */
+.visit-grid{display:grid;gap:22px;margin-top:40px}
+.hours{background:#FBF6EF;border:1px solid var(--line);border-radius:28px;padding:10px 24px 24px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font-size:16px}
+.hours li:last-child{border-bottom:0}
+.hours li .d{font-family:var(--disp);font-size:20px}
+.hours li.today{color:var(--rose)}
+.hours li.today .d::after{content:"Today";font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;background:var(--rose);color:#fff;border-radius:999px;padding:5px 8px;margin-left:10px;vertical-align:4px}
+.status{font-size:14px;color:var(--muted);padding:16px 0 4px;display:flex;align-items:center;gap:8px;min-height:20px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--sage);display:inline-block}
+.status.closed i{background:var(--rose)}
+.addr{font-family:var(--disp);font-size:clamp(28px,6vw,40px);line-height:1.1;margin:6px 0 14px}
+.map{border-radius:28px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--paper2)}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:sepia(.25) saturate(.85)}
+.contact{display:grid;gap:4px;margin:18px 0 22px;font-size:15px}
+.contact a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact a:hover{color:var(--rose)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:46px 0 40px;font-size:14px;color:var(--muted)}
+footer .wrap{display:grid;gap:18px}
+footer .logo{font-size:44px;color:var(--ink)}
+footer .cc{color:var(--ink)}
+
+/* call bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:8px;
+  background:rgba(62,18,32,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;padding:7px;box-shadow:0 16px 36px -14px rgba(0,0,0,.55)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--paper);text-decoration:none;font:600 15px/1 var(--sans);padding:14px 10px;border-radius:999px}
+.callbar a:first-child{background:var(--blush);color:var(--ink)}
+.callbar svg{width:17px;height:17px}
+@media (max-width:899px){body{padding-bottom:92px}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+@media (min-width:700px){
+  .list{display:block;columns:2;column-gap:48px}.list li{break-inside:avoid}
+  .why-grid{grid-template-columns:1.1fr 1fr}
+  .why-grid .big:first-child{grid-row:span 2}
+}
+@media (min-width:900px){
+  .arch{max-width:460px}
+  .callbar{display:none}
+  nav.links{display:flex}
+  .hero{padding:40px 0 90px}
+  .hero .wrap{grid-template-columns:1.25fr 1fr;align-items:center;gap:60px}
+  .visit-grid{grid-template-columns:1fr 1.2fr;align-items:start}
+  .panels{padding:8px 36px 36px}
+  .tabs{padding:18px 22px;flex-wrap:wrap}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+  section.blk{padding:120px 0}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Blum Nail Bar. Not live.</div>
+
+<header class="top">
+  <a class="logo" href="#">Blum <i>nail bar</i></a>
+  <nav class="links" aria-label="Main"><a href="#menu">Menu</a><a href="#why">Why Blum</a><a href="#visit">Hours &amp; Visit</a></nav>
+  <a class="btn solid" href="tel:+18656868888"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Knoxville &middot; S Mall Rd</div>
+      <h1>Where elegance <em>blossoms.</em></h1>
+      <p class="lede">Manicures, spa pedicures, Gel-X, lashes, brows and facials, with a glass of something complimentary while you sit. Open seven days on South Mall Road.</p>
+      <div class="cta">
+        <a class="btn solid" href="tel:+18656868888"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Book: (865) 686-8888</a>
+        <a class="btn ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="meta">
+        <span><span class="star">&#9733;</span> 4.8 on Google &middot; 1,138 reviews</span>
+        <span>Walk-ins welcome</span>
+      </div>
+    </div>
+    <div class="arch rv" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="pg" cx="50%" cy="90%" r="90%"><stop offset="0" stop-color="#FBE9E2"/><stop offset=".6" stop-color="#F2C7BC"/><stop offset="1" stop-color="#E29F92"/></radialGradient>
+          <radialGradient id="pg2" cx="50%" cy="90%" r="90%"><stop offset="0" stop-color="#F7DCD3"/><stop offset="1" stop-color="#C9776B"/></radialGradient>
+        </defs>
+        <g class="spin" opacity=".22" fill="none" stroke="#F5EDE3">
+          <circle cx="200" cy="250" r="150"/><circle cx="200" cy="250" r="176" stroke-dasharray="2 7"/>
+        </g>
+        <path d="M200 300 C 196 360, 210 420, 196 520" stroke="#5E6B4F" stroke-width="5" fill="none"/>
+        <path d="M200 392 C 240 372, 276 380, 300 352 C 268 344, 230 352, 200 392Z" fill="#7F8F6E"/>
+        <path d="M199 430 C 160 414, 126 420, 100 396 C 136 386, 172 396, 199 430Z" fill="#6B7A5C"/>
+        <g class="bloom">
+          <g class="pt"><path d="M200 250 C 140 220, 120 140, 200 96 C 280 140, 260 220, 200 250Z" fill="url(#pg2)"/></g>
+          <g class="pt"><path d="M200 250 C 130 260, 70 210, 92 140 C 168 130, 210 190, 200 250Z" fill="url(#pg2)"/></g>
+          <g class="pt"><path d="M200 250 C 270 260, 330 210, 308 140 C 232 130, 190 190, 200 250Z" fill="url(#pg2)"/></g>
+          <g class="pt"><path d="M200 252 C 120 270, 90 330, 130 360 C 190 350, 214 300, 200 252Z" fill="url(#pg)"/></g>
+          <g class="pt"><path d="M200 252 C 280 270, 310 330, 270 360 C 210 350, 186 300, 200 252Z" fill="url(#pg)"/></g>
+          <g class="pt"><path d="M200 256 C 150 240, 150 170, 200 150 C 250 170, 250 240, 200 256Z" fill="url(#pg)"/></g>
+        </g>
+        <circle cx="200" cy="232" r="16" fill="#B48A4F"/>
+        <g fill="#F5EDE3"><circle cx="190" cy="226" r="2.4"/><circle cx="207" cy="224" r="2.4"/><circle cx="200" cy="240" r="2.4"/><circle cx="211" cy="236" r="2"/><circle cx="189" cy="238" r="2"/></g>
+        <g fill="#F5EDE3" opacity=".7"><circle cx="70" cy="90" r="2"/><circle cx="330" cy="70" r="1.6"/><circle cx="345" cy="300" r="2"/><circle cx="58" cy="320" r="1.5"/></g>
+      </svg>
+      <div class="tag"><b>4.8</b>&#9733; &middot; 1,138 Google reviews</div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="row">
+  <span>Blum Gel Manicure</span><span>Luxe Garden Pedicure</span><span>Gel-X Extensions</span><span>Russian Volume Lashes</span><span>Eyebrow Lamination</span><span>Hydra Facial</span><span>Chrome &amp; Cat Eye</span>
+  <span>Blum Gel Manicure</span><span>Luxe Garden Pedicure</span><span>Gel-X Extensions</span><span>Russian Volume Lashes</span><span>Eyebrow Lamination</span><span>Hydra Facial</span><span>Chrome &amp; Cat Eye</span>
+</div></div>
+
+<section class="blk" id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <div class="num">No. 01 &mdash; The Menu</div>
+      <h2>Every service, <em>every price.</em></h2>
+      <p class="sub">The full Blum menu, out in the open. Pick a section; prices marked + start there and depend on length and design.</p>
+    </div>
+    <div class="menu-card rv">
+      <div class="tabs" role="tablist" aria-label="Service categories"><button class="tab" role="tab" data-t="mani" aria-selected="false">Manicure</button><button class="tab" role="tab" data-t="pedi" aria-selected="true">Pedicure</button><button class="tab" role="tab" data-t="enh" aria-selected="false">Enhancements</button><button class="tab" role="tab" data-t="add" aria-selected="false">Add-ons</button><button class="tab" role="tab" data-t="kids" aria-selected="false">Little Blossoms</button><button class="tab" role="tab" data-t="lash" aria-selected="false">Lash & Brow</button><button class="tab" role="tab" data-t="wax" aria-selected="false">Waxing</button><button class="tab" role="tab" data-t="skin" aria-selected="false">Facial & Body</button></div>
+      <div class="panels"><section class="panel" id="p-mani" data-p="mani"><header><h3>Manicure</h3><p>Hands, tended slowly.</p></header><ul class="list"><li><span class="it">Blum Classic Manicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$25</span></li><li><span class="it">Blum Signature Manicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$35</span></li><li><span class="it">Blum Gel Manicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$40</span></li></ul></section><section class="panel on" id="p-pedi" data-p="pedi"><header><h3>Pedicure</h3><p>Five tiers, from blossom to full garden. Add gel to any for +$15.</p></header><ul class="list"><li><span class="it">Blossom Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$40</span></li><li><span class="it">Elegant Bloom Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$55</span></li><li><span class="it">Radiant Rose Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$70</span></li><li><span class="it">Luxe Garden Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$85</span></li><li><span class="it">Signature Blum Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$98</span></li></ul></section><section class="panel" id="p-enh" data-p="enh"><header><h3>Enhancements</h3><p>Dip, Gel-X, acrylic, sculpted.</p></header><ul class="list"><li><span class="it">Dipping Powder on Natural Nails</span><span class="dots" aria-hidden="true"></span><span class="pr">$45+</span></li><li><span class="it">Dipping Powder Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$50+</span></li><li><span class="it">Liquid Gel Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$60</span></li><li><span class="it">Liquid Gel Refill</span><span class="dots" aria-hidden="true"></span><span class="pr">$45</span></li><li><span class="it">Gel-X Extensions, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$60</span></li><li><span class="it">Gel-X Extensions, Fill-in</span><span class="dots" aria-hidden="true"></span><span class="pr">$45</span></li><li><span class="it">Regular Acrylic Full Set / Fill-in</span><span class="dots" aria-hidden="true"></span><span class="pr">$45+ / $35+</span></li><li><span class="it">Acrylic with Gel Full Set / Fill-in</span><span class="dots" aria-hidden="true"></span><span class="pr">$55+ / $45+</span></li><li><span class="it">Pink &amp; White Full Set / Fill-in</span><span class="dots" aria-hidden="true"></span><span class="pr">$65+ / $55</span></li><li><span class="it">White Tips</span><span class="dots" aria-hidden="true"></span><span class="pr">$45</span></li><li><span class="it">Sculpted Toe Extensions</span><span class="dots" aria-hidden="true"></span><span class="pr">$50</span></li><li><span class="it">Sculpted Toe Fill</span><span class="dots" aria-hidden="true"></span><span class="pr">$45</span></li></ul></section><section class="panel" id="p-add" data-p="add"><header><h3>Add-ons</h3><p>The finishing details.</p></header><ul class="list"><li><span class="it">Gel Color with Service</span><span class="dots" aria-hidden="true"></span><span class="pr">$15</span></li><li><span class="it">Chrome</span><span class="dots" aria-hidden="true"></span><span class="pr">$15</span></li><li><span class="it">Cat Eye</span><span class="dots" aria-hidden="true"></span><span class="pr">$15</span></li><li><span class="it">Ombre</span><span class="dots" aria-hidden="true"></span><span class="pr">$10+</span></li><li><span class="it">Glow in the Dark</span><span class="dots" aria-hidden="true"></span><span class="pr">$10</span></li><li><span class="it">French / American</span><span class="dots" aria-hidden="true"></span><span class="pr">$5+</span></li><li><span class="it">Design</span><span class="dots" aria-hidden="true"></span><span class="pr">$5+</span></li><li><span class="it">Special Shapes</span><span class="dots" aria-hidden="true"></span><span class="pr">$5+</span></li><li><span class="it">Length</span><span class="dots" aria-hidden="true"></span><span class="pr">$5+</span></li><li><span class="it">Add Tips</span><span class="dots" aria-hidden="true"></span><span class="pr">$5+</span></li><li><span class="it">Collagen Gloves or Socks</span><span class="dots" aria-hidden="true"></span><span class="pr">$10</span></li><li><span class="it">Paraffin</span><span class="dots" aria-hidden="true"></span><span class="pr">$10</span></li><li><span class="it">Manicure (add-on)</span><span class="dots" aria-hidden="true"></span><span class="pr">$10</span></li><li><span class="it">Nail Repair</span><span class="dots" aria-hidden="true"></span><span class="pr">$3+</span></li><li><span class="it">Nail / Toenail Cut &amp; Shape</span><span class="dots" aria-hidden="true"></span><span class="pr">$10+</span></li><li><span class="it">Reg. Polish Change Hands / Toes</span><span class="dots" aria-hidden="true"></span><span class="pr">$15 / $20</span></li><li><span class="it">Gel Polish Change Hands / Toes</span><span class="dots" aria-hidden="true"></span><span class="pr">$25 / $25</span></li><li><span class="it">Gel/Dip Removal only / with service</span><span class="dots" aria-hidden="true"></span><span class="pr">$10 / $5</span></li><li><span class="it">Acrylic/Liquid Gel Removal only / with service</span><span class="dots" aria-hidden="true"></span><span class="pr">$10 / $5</span></li><li><span class="it">Strip Lash Application</span><span class="dots" aria-hidden="true"></span><span class="pr">$12</span></li><li><span class="it">Strip Lash Luxury</span><span class="dots" aria-hidden="true"></span><span class="pr">$20</span></li><li><span class="it">Remove Lash Clusters</span><span class="dots" aria-hidden="true"></span><span class="pr">$10</span></li><li><span class="it">Remove Lash Extensions</span><span class="dots" aria-hidden="true"></span><span class="pr">$20</span></li></ul></section><section class="panel" id="p-kids" data-p="kids"><header><h3>Little Blossoms</h3><p>Kid services, 10 years old &amp; under.</p></header><ul class="list"><li><span class="it">Little Blossom Regular Manicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$20</span></li><li><span class="it">Little Glam Gel Manicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$30</span></li><li><span class="it">Tiny Toes Treat Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$30</span></li><li><span class="it">Sparkle &amp; Shine Gel Pedicure</span><span class="dots" aria-hidden="true"></span><span class="pr">$40</span></li><li><span class="it">Gel Polish Change Hands / Toes</span><span class="dots" aria-hidden="true"></span><span class="pr">$20 / $20</span></li><li><span class="it">Reg. Polish Change Hands / Toes</span><span class="dots" aria-hidden="true"></span><span class="pr">$13 / $15</span></li></ul></section><section class="panel" id="p-lash" data-p="lash"><header><h3>Lash & Brow</h3><p>Full sets, fills, lifts and tints.</p></header><ul class="list"><li><span class="it">Cluster Lashes, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$50+</span></li><li><span class="it">Customized Lashes, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$75+</span></li><li><span class="it">Bottom Lashes</span><span class="dots" aria-hidden="true"></span><span class="pr">$40</span></li><li><span class="it">Classic Lashes, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$130</span></li><li><span class="it">Hybrid Lashes, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$175+</span></li><li><span class="it">Ombre Lashes, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$200</span></li><li><span class="it">Russian Volume, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$230</span></li><li><span class="it">Mega Volume, Full Set</span><span class="dots" aria-hidden="true"></span><span class="pr">$260</span></li><li><span class="it">Classic Fill</span><span class="dots" aria-hidden="true"></span><span class="pr">$60–$90</span></li><li><span class="it">Hybrid / Ombre Fill</span><span class="dots" aria-hidden="true"></span><span class="pr">$70–$110</span></li><li><span class="it">Russian Volume Fill</span><span class="dots" aria-hidden="true"></span><span class="pr">$90–$150</span></li><li><span class="it">Mega Volume Fill</span><span class="dots" aria-hidden="true"></span><span class="pr">$100–$160</span></li><li><span class="it">Eyelash Tinting</span><span class="dots" aria-hidden="true"></span><span class="pr">$40</span></li><li><span class="it">Eyelash Lift</span><span class="dots" aria-hidden="true"></span><span class="pr">$50</span></li><li><span class="it">Eyelash Lift &amp; Tint</span><span class="dots" aria-hidden="true"></span><span class="pr">$80</span></li><li><span class="it">Eyebrow Tinting</span><span class="dots" aria-hidden="true"></span><span class="pr">$50</span></li><li><span class="it">Eyebrow Lamination</span><span class="dots" aria-hidden="true"></span><span class="pr">$90</span></li><li><span class="it">Eyebrow Lamination &amp; Tint</span><span class="dots" aria-hidden="true"></span><span class="pr">$120</span></li></ul></section><section class="panel" id="p-wax" data-p="wax"><header><h3>Waxing</h3></header><ul class="list"><li><span class="it">Eyebrows</span><span class="dots" aria-hidden="true"></span><span class="pr">$12+</span></li><li><span class="it">Upper Lip</span><span class="dots" aria-hidden="true"></span><span class="pr">$10+</span></li><li><span class="it">Chin</span><span class="dots" aria-hidden="true"></span><span class="pr">$15+</span></li><li><span class="it">Sideburns</span><span class="dots" aria-hidden="true"></span><span class="pr">$12+</span></li><li><span class="it">Full Face</span><span class="dots" aria-hidden="true"></span><span class="pr">$40+</span></li><li><span class="it">Underarms</span><span class="dots" aria-hidden="true"></span><span class="pr">$20+</span></li><li><span class="it">Half Arms</span><span class="dots" aria-hidden="true"></span><span class="pr">$30+</span></li><li><span class="it">Full Arms</span><span class="dots" aria-hidden="true"></span><span class="pr">$50+</span></li><li><span class="it">Half Legs</span><span class="dots" aria-hidden="true"></span><span class="pr">$35+</span></li><li><span class="it">Full Legs</span><span class="dots" aria-hidden="true"></span><span class="pr">$60+</span></li><li><span class="it">Full Chest</span><span class="dots" aria-hidden="true"></span><span class="pr">$60+</span></li><li><span class="it">Full Back</span><span class="dots" aria-hidden="true"></span><span class="pr">$60+</span></li></ul></section><section class="panel" id="p-skin" data-p="skin"><header><h3>Facial & Body</h3><p>Facials, body facials and vajacials.</p></header><ul class="list"><li><span class="it">Newday Express Facial</span><span class="dots" aria-hidden="true"></span><span class="pr">$60</span></li><li><span class="it">Microdermabrasion</span><span class="dots" aria-hidden="true"></span><span class="pr">$70</span></li><li><span class="it">Dermaplane Facial</span><span class="dots" aria-hidden="true"></span><span class="pr">$80</span></li><li><span class="it">Hydra Facial</span><span class="dots" aria-hidden="true"></span><span class="pr">$100</span></li><li><span class="it">Acne Facial</span><span class="dots" aria-hidden="true"></span><span class="pr">$120–$150</span></li><li><span class="it">Desembre 24K Gold Therapy</span><span class="dots" aria-hidden="true"></span><span class="pr">$125</span></li><li><span class="it">Micro-Needling Main Treatment</span><span class="dots" aria-hidden="true"></span><span class="pr">$150</span></li><li><span class="it">Mesotherapy &amp; Anti-Ageing</span><span class="dots" aria-hidden="true"></span><span class="pr">$250</span></li><li><span class="it">Underarm Detox</span><span class="dots" aria-hidden="true"></span><span class="pr">$80</span></li><li><span class="it">24K Gold Therapy, Back</span><span class="dots" aria-hidden="true"></span><span class="pr">$95</span></li><li><span class="it">Peachy Acne Treatment</span><span class="dots" aria-hidden="true"></span><span class="pr">$150</span></li><li><span class="it">Acne Bacial Treatment</span><span class="dots" aria-hidden="true"></span><span class="pr">$150+</span></li><li><span class="it">Vajacial Basic</span><span class="dots" aria-hidden="true"></span><span class="pr">$50</span></li><li><span class="it">Vajacial with Enzyme</span><span class="dots" aria-hidden="true"></span><span class="pr">$80</span></li><li><span class="it">Vajacial Detox</span><span class="dots" aria-hidden="true"></span><span class="pr">$120</span></li><li><span class="it">Vajacial Micro-Needling</span><span class="dots" aria-hidden="true"></span><span class="pr">$150</span></li></ul></section>
+        <p class="fine">Prices as published on blumnailbarknoxville.com. Call (865) 686-8888 to confirm before your visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk why" id="why">
+  <svg class="deco" viewBox="0 0 200 200" aria-hidden="true"><g fill="#E7B3A8"><path d="M100 100C70 85 60 40 100 18c40 22 30 67 0 82Z"/><path d="M100 100C85 130 40 140 18 100c22-40 67-30 82 0Z"/><path d="M100 100c30 15 40 60 0 82-40-22-30-67 0-82Z"/><path d="M100 100c15-30 60-40 82 0-22 40-67 30-82 0Z"/></g></svg>
+  <div class="wrap">
+    <div class="rv">
+      <div class="num">No. 02 &mdash; Why Blum</div>
+      <h2>Knoxville already <em>said it.</em></h2>
+      <p class="sub">Over a thousand Google reviews. Here is what you are walking into.</p>
+    </div>
+    <div class="why-grid">
+      <div class="big rv">
+        <div class="score">4.8</div>
+        <div class="stars" aria-label="4.8 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+        </div>
+        <p>Average across <strong style="color:#F5EDE3">1,138 Google reviews</strong>. That many people do not agree by accident.</p>
+        <svg class="mini" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#E7B3A8" stroke-width="1.5"><path d="M100 100C70 85 60 40 100 18c40 22 30 67 0 82Z"/><path d="M100 100C85 130 40 140 18 100c22-40 67-30 82 0Z"/><path d="M100 100c30 15 40 60 0 82-40-22-30-67 0-82Z"/><path d="M100 100c15-30 60-40 82 0-22 40-67 30-82 0Z"/></g><circle cx="100" cy="100" r="9" fill="#B48A4F"/></svg>
+      </div>
+      <div class="big rv">
+        <h3>A drink while you dry.</h3>
+        <p>Complimentary with your visit:</p>
+        <div class="pour"><span>Wine</span><span>Cocktails</span><span>Coffee</span><span>Tea</span><span>Soft drinks</span><span>Ice cream</span></div>
+      </div>
+      <div class="big rv">
+        <h3>One stop, head to toe.</h3>
+        <p>Nails, lashes, brow lamination, waxing and facials under one roof, seven days a week. Walk-ins welcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="num">No. 03 &mdash; Visit</div>
+      <h2>Come <em>bloom</em> with us.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <div class="hours">
+          <div class="status" id="status" aria-live="polite"></div>
+          <ul id="hours">
+            <li data-d="1"><span class="d">Monday</span><span>9:00 AM – 7:30 PM</span></li>
+            <li data-d="2"><span class="d">Tuesday</span><span>9:00 AM – 7:30 PM</span></li>
+            <li data-d="3"><span class="d">Wednesday</span><span>9:00 AM – 7:30 PM</span></li>
+            <li data-d="4"><span class="d">Thursday</span><span>9:00 AM – 7:30 PM</span></li>
+            <li data-d="5"><span class="d">Friday</span><span>9:00 AM – 7:30 PM</span></li>
+            <li data-d="6"><span class="d">Saturday</span><span>9:00 AM – 7:30 PM</span></li>
+            <li data-d="0"><span class="d">Sunday</span><span>11:00 AM – 5:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="addr">3010 S Mall Rd<br>Knoxville, TN 37917</div>
+        <div class="contact">
+          <a href="tel:+18656868888">(865) 686-8888</a>
+          <a href="mailto:blumnailbar37917@gmail.com">blumnailbar37917@gmail.com</a>
+        </div>
+        <div class="cta" style="margin:0 0 22px">
+          <a class="btn solid" href="tel:+18656868888">Call to book</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=3010+S+Mall+Rd%2C+Knoxville%2C+TN+37917" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="map"><iframe title="Map to Blum Nail Bar" loading="lazy" src="https://www.google.com/maps?q=3010%20S%20Mall%20Rd%2C%20Knoxville%2C%20TN%2037917&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo">Blum <i>nail bar</i></div>
+      <p style="margin-top:10px">3010 S Mall Rd, Knoxville, TN 37917 &middot; <a href="tel:+18656868888">(865) 686-8888</a></p>
+    </div>
+    <p class="cc">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a href="tel:+18656868888"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=3010+S+Mall+Rd%2C+Knoxville%2C+TN+37917" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), panels=[].slice.call(document.querySelectorAll('.panel'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+    panels.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-p')===t.getAttribute('data-t'))});
+  })});
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else all();
+  setTimeout(all,2500);
+  // hours (America/New_York)
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var g=function(k){return (parts.filter(function(p){return p.type===k})[0]||{}).value};
+    var day={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[g('weekday')];
+    var mins=(parseInt(g('hour'),10)%24)*60+parseInt(g('minute'),10);
+    var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+    var open=day===0?[660,1020]:[540,1170];
+    var s=document.getElementById('status'), isOpen=mins>=open[0]&&mins<open[1];
+    s.innerHTML='<i></i>'+(isOpen?'Open now · until '+(day===0?'5:00 PM':'7:30 PM'):'Closed now · see hours below');
+    if(!isOpen) s.classList.add('closed');
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

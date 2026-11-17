@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Cleaning with Integrity | Commercial Cleaning in Knoxville, TN</title>
+<meta name="description" content="Commercial cleaning for offices, medical facilities, Airbnbs and realtor showings in Knoxville and surrounding areas. Free estimates. Call (865) 281-1852.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mint:#bfe6d3; --mint-2:#dff2e9; --teal:#0f4c4a; --teal-2:#176461; --teal-ink:#0a3735;
+  --white:#fbfdfc; --coral:#f0846b; --coral-d:#d9654b; --ink:#123432; --muted:#4d6b68;
+  --line:rgba(15,76,74,.14); --shadow:0 18px 40px -18px rgba(15,76,74,.35);
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Lora",Georgia,serif;font-size:17px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4,.f-o{font-family:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.01em;line-height:1.12;margin:0}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* concept banner */
+.concept{background:var(--teal-ink);color:#d7efe4;font:500 12.5px/1.4 "Outfit",system-ui,sans-serif;text-align:center;padding:8px 14px;letter-spacing:.02em}
+.concept b{color:var(--mint)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(251,253,252,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Outfit",sans-serif;font-weight:700;color:var(--teal);font-size:17px;line-height:1.05}
+.brand small{display:block;font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.brand svg{width:36px;height:40px;flex:none}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:28px;font:500 15px "Outfit",sans-serif}
+.nav ul a{text-decoration:none;color:var(--teal);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--coral);transition:right .3s}
+.nav ul a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:600 16px "Outfit",sans-serif;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;border:0;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-coral{background:var(--coral);color:#fff;box-shadow:0 10px 22px -10px rgba(240,132,107,.9)}
+.btn-coral:hover{background:var(--coral-d);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+.btn-ghost:hover{background:var(--teal);color:#fff}
+.nav .btn{padding:10px 16px;font-size:14.5px}
+.nav .btn span{display:none}
+
+/* hero */
+.hero{position:relative;background:
+  radial-gradient(120% 70% at 85% 10%,rgba(191,230,211,.85),transparent 60%),
+  radial-gradient(80% 60% at 0% 100%,rgba(191,230,211,.55),transparent 60%),
+  var(--white);overflow:hidden;padding:40px 0 64px}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(15,76,74,.09) 1px,transparent 1.4px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 75%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 75%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:34px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 12.5px "Outfit",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);background:#fff;border:1px solid var(--line);padding:7px 14px 7px 9px;border-radius:999px;box-shadow:0 6px 16px -10px rgba(15,76,74,.4)}
+.eyebrow i{width:20px;height:20px;border-radius:50%;background:var(--mint);display:grid;place-items:center}
+.eyebrow i svg{width:12px;height:12px}
+.hero h1{font-size:clamp(40px,10.5vw,68px);font-weight:800;color:var(--teal);margin:18px 0 18px}
+.hero h1 .gleam{position:relative;display:inline-block;color:var(--teal)}
+.hero h1 .gleam::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.06em;height:.28em;background:var(--mint);z-index:-1;border-radius:6px;transform-origin:left;animation:swipe 1.1s .4s cubic-bezier(.7,0,.2,1) both}
+.hero h1 em{font-family:"Lora",serif;font-style:italic;font-weight:500;color:var(--coral-d)}
+.lede{font-size:clamp(17px,2.4vw,20px);color:var(--muted);max-width:34em;margin:0 0 26px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font:500 14.5px "Outfit",sans-serif;color:var(--teal)}
+.hero-facts span{display:inline-flex;align-items:center;gap:7px}
+.hero-facts svg{width:18px;height:18px;flex:none}
+@keyframes swipe{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* hero art */
+.art{position:relative;max-width:460px;width:100%;margin:0 auto;aspect-ratio:1/1}
+.art .blob{position:absolute;inset:6%;border-radius:46% 54% 50% 50%/52% 46% 54% 48%;background:linear-gradient(150deg,var(--mint),#e9f7f0 70%);box-shadow:inset 0 -20px 50px rgba(15,76,74,.08);animation:morph 12s ease-in-out infinite}
+@keyframes morph{50%{border-radius:56% 44% 42% 58%/44% 58% 42% 56%}}
+.art svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.spark{transform-origin:center;transform-box:fill-box;animation:twinkle 2.6s ease-in-out infinite}
+.spark.d2{animation-delay:.8s}.spark.d3{animation-delay:1.5s}.spark.d4{animation-delay:2s}
+@keyframes twinkle{0%,100%{transform:scale(.4) rotate(0);opacity:.25}50%{transform:scale(1) rotate(45deg);opacity:1}}
+.mist circle{animation:mist 2.8s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.mist circle:nth-child(2){animation-delay:.3s}.mist circle:nth-child(3){animation-delay:.6s}.mist circle:nth-child(4){animation-delay:.9s}.mist circle:nth-child(5){animation-delay:1.2s}
+@keyframes mist{0%{opacity:0;transform:translate(0,0) scale(.4)}30%{opacity:.9}100%{opacity:0;transform:translate(-46px,-10px) scale(1.4)}}
+.bottle{transform-origin:60% 90%;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-2deg)}}
+.badge-float{position:absolute;left:0;bottom:3%;background:#fff;border-radius:18px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow);font:600 14px/1.2 "Outfit",sans-serif;color:var(--teal);animation:bob 6s ease-in-out infinite reverse}
+.badge-float svg{width:34px;height:38px}
+.badge-float small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+
+/* sections */
+section{position:relative}
+.sec{padding:76px 0}
+.kicker{font:600 12.5px "Outfit",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--coral-d);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.kicker::before{content:"";width:22px;height:2px;background:var(--coral);border-radius:2px}
+.sec h2{font-size:clamp(31px,6.4vw,48px);font-weight:700;color:var(--teal);max-width:16em}
+.sec .intro{color:var(--muted);max-width:36em;margin:14px 0 0}
+
+/* wave divider */
+.wave{display:block;width:100%;height:46px}
+
+/* spaces */
+.spaces{background:var(--teal);color:#e6f5ee}
+.spaces h2{color:#fff}
+.spaces .intro{color:#b9dccd}
+.spaces .kicker{color:var(--mint)}
+.spaces .kicker::before{background:var(--mint)}
+.space-grid{display:grid;gap:14px;margin-top:36px;grid-template-columns:1fr 1fr}
+.space{position:relative;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(191,230,211,.2);border-radius:var(--r);padding:20px 16px 18px;transition:transform .3s,background .3s}
+.space:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.space svg{width:46px;height:46px;margin-bottom:14px}
+.space h3{font-size:18px;color:#fff;font-weight:600}
+.space p{margin:6px 0 0;font-size:14.5px;line-height:1.5;color:#b9dccd}
+
+/* gleam wipe on cards */
+.wipe{position:relative;overflow:hidden}
+.wipe::after{content:"";position:absolute;top:-20%;bottom:-20%;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg) translateX(0);pointer-events:none;opacity:0}
+.wipe.in::after{animation:gleam 1.2s .15s ease-out forwards}
+.wipe:hover::after{animation:gleam 1s ease-out}
+@keyframes gleam{0%{opacity:1;transform:skewX(-18deg) translateX(0)}85%{opacity:1}100%{opacity:0;transform:skewX(-18deg) translateX(560%)}}
+
+/* packages */
+.pk-grid{display:grid;gap:18px;margin-top:38px}
+.pk{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px 24px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.pk-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.pk-tag{font:600 11.5px "Outfit",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);background:var(--mint-2);padding:6px 11px;border-radius:999px}
+.pk-num{font:800 44px/1 "Outfit",sans-serif;color:var(--mint)}
+.pk h3{font-size:27px;color:var(--teal);font-weight:700;margin:10px 0 8px}
+.pk .sub{color:var(--muted);font-size:15.5px;margin:0 0 18px}
+.pk ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:9px}
+.pk li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.pk li svg{width:20px;height:20px;flex:none;margin-top:1px}
+.pk li.plus{font-family:"Outfit",sans-serif;font-weight:600;color:var(--teal)}
+.pk .btn{margin-top:auto;align-self:flex-start}
+.pk.feature{background:linear-gradient(165deg,var(--teal) 0%,var(--teal-ink) 100%);color:#e6f5ee;border-color:transparent}
+.pk.feature h3{color:#fff}.pk.feature .sub{color:#b9dccd}
+.pk.feature .pk-tag{background:var(--coral);color:#fff}
+.pk.feature .pk-num{color:rgba(191,230,211,.35)}
+.pk.feature li.plus{color:var(--mint)}
+.pk-note{margin-top:22px;font-size:15px;color:var(--muted);font-style:italic;text-align:center}
+
+/* why */
+.why{background:var(--mint-2)}
+.why-grid{display:grid;gap:34px;align-items:center}
+.shield-big{max-width:300px;margin:0 auto;width:72%}
+.pillars{display:grid;gap:14px;margin-top:30px}
+.pillar{display:flex;gap:16px;background:#fff;border-radius:20px;padding:20px 18px;border:1px solid var(--line)}
+.pillar .ic{width:48px;height:48px;border-radius:14px;background:var(--mint);display:grid;place-items:center;flex:none}
+.pillar .ic svg{width:26px;height:26px}
+.pillar h3{font-size:19px;color:var(--teal);font-weight:600}
+.pillar p{margin:4px 0 0;font-size:15.5px;color:var(--muted);line-height:1.5}
+.quote{margin:34px 0 0;padding:24px 22px;border-left:4px solid var(--coral);background:#fff;border-radius:0 18px 18px 0;font-style:italic;font-size:19px;color:var(--teal);line-height:1.5}
+.quote cite{display:block;margin-top:10px;font:500 13px "Outfit",sans-serif;font-style:normal;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+
+/* how to book */
+.steps{display:grid;gap:14px;margin-top:36px;counter-reset:s}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 20px 20px 74px;min-height:96px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font:700 18px "Outfit",sans-serif;box-shadow:0 0 0 6px var(--mint-2)}
+.step h3{font-size:19px;color:var(--teal);font-weight:600}
+.step p{margin:5px 0 0;font-size:15.5px;color:var(--muted);line-height:1.5}
+.step a{color:var(--teal);font-weight:600;text-decoration-color:var(--coral);text-underline-offset:3px;word-break:break-word}
+
+/* hours + area */
+.hours-area{display:grid;gap:18px;margin-top:36px}
+.card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px 22px;box-shadow:var(--shadow)}
+.card h3{font-size:22px;color:var(--teal);font-weight:700;display:flex;align-items:center;gap:10px}
+.card h3 svg{width:26px;height:26px}
+.hours{list-style:none;padding:0;margin:16px 0 0}
+.hours li{display:flex;justify-content:space-between;gap:10px;padding:11px 12px;border-radius:12px;font-family:"Outfit",sans-serif;font-size:16px;color:var(--ink)}
+.hours li+li{border-top:1px dashed var(--line)}
+.hours li span:last-child{color:var(--muted)}
+.hours li.today{background:var(--mint-2);border-top-color:transparent;font-weight:600}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--coral);color:#fff;padding:2px 8px;border-radius:99px;vertical-align:2px}
+.hours li.today span:last-child{color:var(--teal)}
+.ribbon{margin-top:16px;display:flex;gap:12px;align-items:center;background:var(--teal);color:#fff;border-radius:16px;padding:14px 16px;font:500 15px/1.35 "Outfit",sans-serif}
+.ribbon svg{width:30px;height:30px;flex:none}
+.ribbon b{color:var(--mint)}
+.map{margin-top:16px;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--mint-2)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.small{font-size:14.5px;color:var(--muted);margin:12px 0 0}
+
+/* contact */
+.contact{background:linear-gradient(170deg,var(--teal),var(--teal-ink));color:#e6f5ee;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(191,230,211,.12) 1px,transparent 1.5px);background-size:24px 24px;pointer-events:none}
+.contact .wrap{position:relative}
+.contact h2{color:#fff}
+.contact .kicker{color:var(--mint)}.contact .kicker::before{background:var(--mint)}
+.contact .intro{color:#b9dccd}
+.c-grid{display:grid;gap:12px;margin-top:32px}
+.c-item{display:flex;align-items:center;gap:16px;text-decoration:none;background:rgba(255,255,255,.07);border:1px solid rgba(191,230,211,.22);border-radius:20px;padding:18px;transition:background .25s,transform .25s;min-width:0}
+.c-item:hover{background:rgba(255,255,255,.13);transform:translateY(-3px)}
+.c-item .ic{width:50px;height:50px;border-radius:15px;background:var(--mint);display:grid;place-items:center;flex:none}
+.c-item .ic svg{width:24px;height:24px}
+.c-item small{display:block;font:600 11.5px "Outfit",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mint)}
+.c-item strong{display:block;font:600 18px/1.25 "Outfit",sans-serif;color:#fff;overflow-wrap:anywhere}
+.c-item div{min-width:0}
+
+footer{background:var(--teal-ink);color:#9cc7b8;padding:40px 0 34px;font:400 14px/1.6 "Outfit",sans-serif}
+footer .wrap{display:grid;gap:18px}
+footer .brand{color:#fff}
+footer .brand small{color:#9cc7b8}
+footer a{color:#d7efe4}
+.fnote{border-top:1px solid rgba(191,230,211,.15);padding-top:16px;font-size:12.5px}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,253,252,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(15,76,74,.5)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:15px;font:600 16px "Outfit",sans-serif;text-decoration:none}
+.callbar svg{width:20px;height:20px}
+.callbar .call{background:var(--coral);color:#fff}
+.callbar .mail{background:var(--teal);color:#fff}
+footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:600px){
+  .space-grid{grid-template-columns:repeat(4,1fr)}
+  .c-grid{grid-template-columns:repeat(3,1fr)}
+  .nav .btn span{display:inline}
+}
+@media (min-width:900px){
+  footer{padding-bottom:34px}
+  .callbar{display:none}
+  .nav ul{display:flex}
+  .hero{padding:72px 0 96px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center}
+  .sec{padding:110px 0}
+  .pk-grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:.8fr 1.2fr;gap:64px}
+  .shield-big{width:100%}
+  .pillars{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .hours-area{grid-template-columns:1fr 1fr}
+  footer .wrap{grid-template-columns:1fr auto;align-items:center}
+  .space{padding:26px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="shield" viewBox="0 0 40 44">
+      <path d="M20 2 4 8v12c0 10.5 6.8 18.6 16 22 9.2-3.4 16-11.5 16-22V8L20 2z" fill="#0f4c4a"/>
+      <path d="M20 6.4 8 11v9.2c0 8.2 5 14.6 12 17.6 7-3 12-9.4 12-17.6V11L20 6.4z" fill="#bfe6d3"/>
+      <path d="m13.5 21.5 4.6 4.6 9-9.6" fill="none" stroke="#0f4c4a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="chk" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#bfe6d3"/><path d="m6 10.3 2.7 2.7L14.2 7.4" fill="none" stroke="#0f4c4a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="plus" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#f0846b"/><path d="M10 5.5v9M5.5 10h9" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.2V17h16V7.2l-8 5.6-8-5.6zM5.6 7l6.4 4.5L18.4 7H5.6z" fill="currentColor"/></symbol>
+    <symbol id="spk" viewBox="0 0 20 20"><path d="M10 0c.6 5.2 4.8 9.4 10 10-5.2.6-9.4 4.8-10 10-.6-5.2-4.8-9.4-10-10C5.2 9.4 9.4 5.2 10 0z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Cleaning with Integrity. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Cleaning with Integrity, home">
+      <svg viewBox="0 0 40 44" aria-hidden="true"><use href="#shield"/></svg>
+      <span>Cleaning with Integrity<small>Knoxville, TN</small></span>
+    </a>
+    <ul>
+      <li><a href="#spaces">Spaces</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#why">Why us</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-coral" href="tel:+18652811852"><svg aria-hidden="true"><use href="#phone"/></svg>Call<span>&nbsp;(865) 281-1852</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><i><svg viewBox="0 0 20 20" style="color:#0f4c4a"><use href="#spk"/></svg></i>Commercial cleaning · Knoxville &amp; nearby</span>
+      <h1>Spotless spaces, <span class="gleam">done honestly.</span> <em>Every visit.</em></h1>
+      <p class="lede">Offices, medical facilities, Airbnbs and listings ready for showings. Cleaning with Integrity brings over 10 years of industry experience and a safe, efficient process built around full disinfection.</p>
+      <div class="ctas">
+        <a class="btn btn-coral" href="tel:+18652811852"><svg aria-hidden="true"><use href="#phone"/></svg>Call for a free estimate</a>
+        <a class="btn btn-ghost" href="#packages">See the packages</a>
+      </div>
+      <div class="hero-facts">
+        <span><svg aria-hidden="true"><use href="#chk"/></svg>10+ years experience</span>
+        <span><svg aria-hidden="true"><use href="#chk"/></svg>Free estimates</span>
+        <span><svg aria-hidden="true"><use href="#chk"/></svg>Service available 24/7</span>
+      </div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <div class="blob"></div>
+      <svg class="scene" viewBox="0 0 400 400">
+        <!-- window with gleam -->
+        <g transform="translate(60 70)">
+          <rect x="0" y="0" width="150" height="170" rx="14" fill="#fbfdfc" stroke="#0f4c4a" stroke-width="5"/>
+          <path d="M75 0v170M0 85h150" stroke="#0f4c4a" stroke-width="5"/>
+          <clipPath id="wclip"><rect x="3" y="3" width="144" height="164" rx="11"/></clipPath>
+          <g clip-path="url(#wclip)">
+            <rect x="-80" y="-20" width="34" height="230" fill="#bfe6d3" opacity=".9" transform="rotate(22)">
+              <animate attributeName="x" values="-80;230;230" keyTimes="0;.45;1" dur="4.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="-120" y="-20" width="12" height="230" fill="#bfe6d3" opacity=".7" transform="rotate(22)">
+              <animate attributeName="x" values="-120;190;190" keyTimes="0;.45;1" dur="4.5s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+          <rect x="-12" y="168" width="174" height="12" rx="6" fill="#0f4c4a"/>
+        </g>
+        <!-- squeegee swipe trail -->
+        <path d="M70 300c40-26 90-26 130 0" fill="none" stroke="#fbfdfc" stroke-width="12" stroke-linecap="round" opacity=".9"/>
+        <!-- spray bottle -->
+        <g transform="translate(236 140) scale(1.2)"><g class="bottle">
+          <g class="mist" fill="#bfe6d3" stroke="#0f4c4a" stroke-width="1.5">
+            <circle cx="-6" cy="34" r="5"/><circle cx="-10" cy="26" r="4"/><circle cx="-12" cy="40" r="4.5"/><circle cx="-4" cy="44" r="3.5"/><circle cx="-14" cy="32" r="3"/>
+          </g>
+          <path d="M14 22h40l6 18H8z" fill="#f0846b" stroke="#0f4c4a" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M8 30h-6v10h8" fill="#f0846b" stroke="#0f4c4a" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M44 40l6 22" stroke="#0f4c4a" stroke-width="4" stroke-linecap="round"/>
+          <rect x="20" y="40" width="34" height="18" rx="4" fill="#0f4c4a"/>
+          <path d="M18 58h38c6 18 10 34 10 58 0 20-8 28-20 28H28c-12 0-20-8-20-28 0-24 4-40 10-58z" fill="#fbfdfc" stroke="#0f4c4a" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M12 100c10 6 40 6 50 0v18c0 14-6 20-16 20H28c-10 0-16-6-16-20z" fill="#bfe6d3"/>
+          <g transform="translate(21 72) scale(.8)"><use href="#shield" width="40" height="44"/></g>
+          <path d="M20 66c-2 10-4 22-3 34" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+        </g></g>
+        <!-- sparkles -->
+        <g style="color:#f0846b"><use class="spark" href="#spk" x="40" y="40" width="26" height="26"/></g>
+        <g style="color:#0f4c4a"><use class="spark d2" href="#spk" x="330" y="96" width="22" height="22"/></g>
+        <g style="color:#f0846b"><use class="spark d3" href="#spk" x="190" y="58" width="16" height="16"/></g>
+        <g style="color:#0f4c4a"><use class="spark d4" href="#spk" x="96" y="320" width="18" height="18"/></g>
+        <g style="color:#fbfdfc"><use class="spark d2" href="#spk" x="150" y="120" width="20" height="20"/></g>
+      </svg>
+      <div class="badge-float"><svg viewBox="0 0 40 44"><use href="#shield"/></svg><span>Full disinfection<small>Safe, efficient process</small></span></div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--white)"><path d="M0 46V22C240 0 480 0 720 18s480 30 720 4v24z" fill="#0f4c4a"/></svg>
+<section class="sec spaces" id="spaces" style="padding-top:44px">
+  <div class="wrap">
+    <div class="kicker rv">Who we clean for</div>
+    <h2 class="rv">Commercial specialists, serving Knoxville and the surrounding areas.</h2>
+    <p class="intro rv">Four kinds of spaces where a clean first impression matters most.</p>
+    <div class="space-grid">
+      <div class="space wipe rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="4" fill="#bfe6d3"/><rect x="10" y="14" width="28" height="16" rx="2" fill="#0f4c4a"/><path d="M18 40h12M24 34v6" stroke="#bfe6d3" stroke-width="3" stroke-linecap="round"/><use href="#spk" x="30" y="2" width="12" height="12" style="color:#f0846b"/></svg>
+        <h3>Office detailing</h3><p>Commercial office detailing for workplaces.</p>
+      </div>
+      <div class="space wipe rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 22 24 9l16 13v18H8z" fill="#bfe6d3"/><rect x="20" y="28" width="8" height="12" fill="#0f4c4a"/><rect x="28" y="4" width="14" height="10" rx="2" fill="#f0846b"/><path d="M31 9h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Realtor viewings</h3><p>Listings cleaned and ready to show.</p>
+      </div>
+      <div class="space wipe rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="22" width="36" height="14" rx="4" fill="#bfe6d3"/><rect x="10" y="16" width="12" height="8" rx="3" fill="#fbfdfc"/><path d="M6 36v6M42 36v6" stroke="#bfe6d3" stroke-width="3" stroke-linecap="round"/><circle cx="36" cy="12" r="6" fill="#f0846b"/><path d="M36 9v6M33 12h6" stroke="#fff" stroke-width="0"/><rect x="34" y="11" width="9" height="3" rx="1.5" fill="#f0846b" transform="rotate(45 36 12)"/><circle cx="36" cy="12" r="2.5" fill="#fff"/></svg>
+        <h3>Airbnb cleaning</h3><p>Turnovers that guests notice.</p>
+      </div>
+      <div class="space wipe rv">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="8" fill="#bfe6d3"/><path d="M24 15v18M15 24h18" stroke="#0f4c4a" stroke-width="5" stroke-linecap="round"/><use href="#spk" x="34" y="30" width="12" height="12" style="color:#f0846b"/></svg>
+        <h3>Medical facilities</h3><p>Disinfection-focused cleaning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--white)"><path d="M0 0v24c240 22 480 22 720 4S1200-2 1440 24V0z" fill="#0f4c4a"/></svg>
+
+<section class="sec" id="packages">
+  <div class="wrap">
+    <div class="kicker rv">Packages</div>
+    <h2 class="rv">Pick the level of shine your space needs.</h2>
+    <p class="intro rv">Every package starts from a free estimate. No surprises, just fair prices for the work your space actually needs.</p>
+    <div class="pk-grid">
+      <article class="pk wipe rv">
+        <div class="pk-top"><span class="pk-tag">The essentials</span><span class="pk-num">01</span></div>
+        <h3>Welcome Package</h3>
+        <p class="sub">A thorough clean of every surface that matters day to day.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Sweeping &amp; mopping</li>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>High dusting</li>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Surface disinfecting</li>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Windows (limited)</li>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Wood polish</li>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Stainless steel shine</li>
+        </ul>
+        <a class="btn btn-ghost" href="tel:+18652811852">Get an estimate</a>
+      </article>
+      <article class="pk feature wipe rv">
+        <div class="pk-top"><span class="pk-tag">Step it up</span><span class="pk-num">02</span></div>
+        <h3>Premium Perfection</h3>
+        <p class="sub">Everything in the Welcome Package, plus the edges that make a room look finished.</p>
+        <ul>
+          <li class="plus"><svg aria-hidden="true"><use href="#chk"/></svg>Everything in Welcome</li>
+          <li><svg aria-hidden="true"><use href="#plus"/></svg>Baseboards</li>
+          <li><svg aria-hidden="true"><use href="#plus"/></svg>Doors</li>
+        </ul>
+        <a class="btn btn-coral" href="tel:+18652811852">Get an estimate</a>
+      </article>
+      <article class="pk wipe rv">
+        <div class="pk-top"><span class="pk-tag">Top to bottom</span><span class="pk-num">03</span></div>
+        <h3>Show Room Stopper</h3>
+        <p class="sub">The most detail-focused service, for spaces that need to impress.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Detail-focused, top to bottom</li>
+          <li><svg aria-hidden="true"><use href="#chk"/></svg>Full details on request: just ask when you call</li>
+        </ul>
+        <a class="btn btn-ghost" href="mailto:Cleaningwithintegrityllc@gmail.com?subject=Show%20Room%20Stopper%20details">Ask for details</a>
+      </article>
+    </div>
+    <p class="pk-note rv">Fair prices, guaranteed. Pricing is quoted per space after a free estimate.</p>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap why-grid">
+    <div class="rv">
+      <svg class="shield-big" viewBox="0 0 240 260" aria-hidden="true">
+        <circle cx="120" cy="128" r="112" fill="#bfe6d3"/>
+        <circle cx="120" cy="128" r="112" fill="none" stroke="#0f4c4a" stroke-width="2" stroke-dasharray="4 10" opacity=".5">
+          <animateTransform attributeName="transform" type="rotate" from="0 120 128" to="360 120 128" dur="40s" repeatCount="indefinite"/>
+        </circle>
+        <g transform="translate(46 34) scale(3.7)"><use href="#shield" width="40" height="44"/></g>
+        <g style="color:#f0846b"><use class="spark" href="#spk" x="186" y="34" width="28" height="28"/></g>
+        <g style="color:#0f4c4a"><use class="spark d3" href="#spk" x="22" y="186" width="20" height="20"/></g>
+        <g style="color:#fbfdfc"><use class="spark d2" href="#spk" x="96" y="70" width="16" height="16"/></g>
+      </svg>
+    </div>
+    <div>
+      <div class="kicker rv">Why Cleaning with Integrity</div>
+      <h2 class="rv">The name is the promise.</h2>
+      <p class="intro rv">Dedicated to providing high-quality services to the Knoxville area, with a process you can count on.</p>
+      <div class="pillars">
+        <div class="pillar rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v9l6 3" fill="none" stroke="#0f4c4a" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="12" r="9.5" fill="none" stroke="#0f4c4a" stroke-width="2.2"/></svg></span><div><h3>10+ years of experience</h3><p>Over a decade in the cleaning industry.</p></div></div>
+        <div class="pillar rv"><span class="ic"><svg viewBox="0 0 40 44" aria-hidden="true"><use href="#shield"/></svg></span><div><h3>Full disinfection</h3><p>A safe, efficient cleaning process designed to disinfect thoroughly.</p></div></div>
+        <div class="pillar rv"><span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true" style="color:#0f4c4a"><use href="#spk"/></svg></span><div><h3>Clean that lasts longer</h3><p>Multi-tasking products chosen so the results hold up between visits.</p></div></div>
+        <div class="pillar rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5" fill="none" stroke="#0f4c4a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Fair prices, guaranteed</h3><p>Every job starts with a free estimate.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="book">
+  <div class="wrap">
+    <div class="kicker rv">How to book</div>
+    <h2 class="rv">Getting a spotless space is simple.</h2>
+    <div class="steps">
+      <div class="step wipe rv"><h3>Reach out</h3><p>Call <a href="tel:+18652811852">(865) 281-1852</a> or email <a href="mailto:Cleaningwithintegrityllc@gmail.com">Cleaningwithintegrityllc@gmail.com</a></p></div>
+      <div class="step wipe rv"><h3>Get your free estimate</h3><p>Tell us about your space and the package you have in mind.</p></div>
+      <div class="step wipe rv"><h3>Enjoy the shine</h3><p>Cleaning service is available 24/7, so it can fit around your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hours" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker rv">Hours &amp; service area</div>
+    <h2 class="rv">Office hours for questions. Cleaning around the clock.</h2>
+    <div class="hours-area">
+      <div class="card rv">
+        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="#bfe6d3" stroke="#0f4c4a" stroke-width="2"/><path d="M12 7v5.5l3.5 2" fill="none" stroke="#0f4c4a" stroke-width="2.2" stroke-linecap="round"/></svg>Office hours</h3>
+        <ul class="hours" id="hours-list">
+          <li data-d="1"><span>Monday</span><span>10am – 6pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>10am – 6pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10am – 6pm</span></li>
+          <li data-d="4"><span>Thursday</span><span>10am – 6pm</span></li>
+          <li data-d="5"><span>Friday</span><span>10am – 6pm</span></li>
+          <li data-d="6"><span>Saturday</span><span>Office closed</span></li>
+          <li data-d="0"><span>Sunday</span><span>Office closed</span></li>
+        </ul>
+        <div class="ribbon"><svg viewBox="0 0 40 44" aria-hidden="true"><use href="#shield"/></svg><span>Cleaning service available <b>24/7</b>. Ask about scheduling outside office hours.</span></div>
+      </div>
+      <div class="card rv">
+        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7z" fill="#f0846b"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>Service area</h3>
+        <p class="small" style="margin-top:8px">Knoxville, TN and surrounding areas. We come to you.</p>
+        <div class="map"><iframe title="Map of Knoxville, TN service area" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Knoxville%2C%20TN&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="kicker rv">Free estimate</div>
+    <h2 class="rv">Let's make your space shine.</h2>
+    <p class="intro rv">Call during office hours or send an email anytime. Tell us what you need cleaned and we'll put together a free estimate.</p>
+    <div class="c-grid">
+      <a class="c-item rv" href="tel:+18652811852"><span class="ic"><svg aria-hidden="true" style="color:#0f4c4a"><use href="#phone"/></svg></span><div><small>Call</small><strong>(865) 281-1852</strong></div></a>
+      <a class="c-item rv" href="mailto:Cleaningwithintegrityllc@gmail.com?subject=Free%20estimate%20request"><span class="ic"><svg aria-hidden="true" style="color:#0f4c4a"><use href="#mail"/></svg></span><div><small>Email</small><strong>Cleaningwithintegrityllc@gmail.com</strong></div></a>
+      <a class="c-item rv" href="https://www.google.com/maps/search/?api=1&amp;query=Knoxville%2C%20TN" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7z" fill="#0f4c4a"/><circle cx="12" cy="9" r="2.6" fill="#bfe6d3"/></svg></span><div><small>Service area</small><strong>Knoxville, TN &amp; nearby</strong></div></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 40 44" aria-hidden="true"><use href="#shield"/></svg><span>Cleaning with Integrity<small>Commercial cleaning · Knoxville, TN</small></span></a>
+    <div><a href="tel:+18652811852">(865) 281-1852</a> · <a href="mailto:Cleaningwithintegrityllc@gmail.com">Email us</a> · <a href="https://www.facebook.com/libbymoulder7609" target="_blank" rel="noopener">Facebook</a></div>
+    <div class="fnote">© <span id="yr">2026</span> Cleaning with Integrity. Concept design by Code Craft Media. Not the live site.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="call" href="tel:+18652811852"><svg aria-hidden="true"><use href="#phone"/></svg>Call</a>
+  <a class="mail" href="mailto:Cleaningwithintegrityllc@gmail.com?subject=Free%20estimate%20request"><svg aria-hidden="true"><use href="#mail"/></svg>Email</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  try{var t=new Date().getDay();var li=document.querySelector('#hours-list li[data-d="'+t+'"]');if(li)li.classList.add('today');document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if(!('IntersectionObserver' in window)){showAll();return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var e=x.target;var sib=[].slice.call(e.parentNode.children).filter(function(c){return c.classList.contains('rv')});var i=Math.max(0,sib.indexOf(e));e.style.transitionDelay=Math.min(i*70,350)+'ms';e.classList.add('in');io.unobserve(e);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

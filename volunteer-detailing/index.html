@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Volunteer Mobile Detail | Mobile Auto Detailing in Knoxville, TN</title>
+<meta name="description" content="Volunteer Mobile Detail: mobile car detailing, ceramic coatings, interior details and wheels-off deep cleans in Knoxville, Tennessee.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Oxanium:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#ff8200;--orange-2:#ffa640;--orange-deep:#c95f00;
+  --carbon:#0e0f11;--carbon-2:#16181c;--carbon-3:#1f2228;--line:rgba(255,255,255,.09);
+  --chrome:linear-gradient(180deg,#ffffff 0%,#d9dde3 28%,#8d949e 52%,#e9ecf0 70%,#a7aeb8 100%);
+  --text:#eef0f3;--muted:#a3a9b3;--silver:#c9ced6;
+  --r:18px;--max:1180px;
+  --hf:"Oxanium",ui-sans-serif,system-ui,sans-serif;--bf:"Barlow",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--carbon);color:var(--text);font-family:var(--bf);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--hf);line-height:1.08;letter-spacing:-.01em}
+.chrome-text{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-family:var(--hf);font-weight:600;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);box-shadow:0 0 10px var(--orange)}
+/* carbon weave texture */
+.carbon-tex{background-color:var(--carbon);background-image:
+  linear-gradient(45deg,rgba(255,255,255,.025) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.025) 75%),
+  linear-gradient(45deg,rgba(255,255,255,.025) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.025) 75%);
+  background-size:8px 8px;background-position:0 0,4px 4px}
+
+/* concept banner */
+.concept{background:var(--orange);color:#1a0d00;font-size:.82rem;font-weight:600;text-align:center;padding:7px 14px;line-height:1.35}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(14,15,17,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-name{font-family:var(--hf);font-weight:700;font-size:1.02rem;line-height:1.05;letter-spacing:.02em;white-space:nowrap}
+.brand-name small{display:block;font-weight:500;font-size:.66rem;letter-spacing:.24em;color:var(--orange);text-transform:uppercase}
+.nav-links{display:none;gap:28px;font-weight:600;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--silver);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--hf);font-weight:700;letter-spacing:.04em;text-decoration:none;border-radius:999px;padding:14px 24px;font-size:1rem;transition:transform .2s,box-shadow .25s,background .25s;position:relative;overflow:hidden;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-orange{background:linear-gradient(180deg,var(--orange-2),var(--orange) 55%,var(--orange-deep));color:#140900;box-shadow:0 10px 30px -8px rgba(255,130,0,.6),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-orange::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn-orange:hover::after{left:120%}
+.btn-orange:hover{transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(255,130,0,.75),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-ghost{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.nav .btn{padding:10px 18px;font-size:.9rem;display:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:34px 0 20px;isolation:isolate}
+@media (max-width:420px){.hero .eyebrow{letter-spacing:.14em;font-size:.72rem}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(70% 55% at 75% 35%,rgba(255,130,0,.22),transparent 65%),
+  radial-gradient(60% 50% at 10% 90%,rgba(170,180,195,.12),transparent 70%)}
+.beads{position:absolute;inset:0;z-index:-1;opacity:.55;pointer-events:none}
+.hero-grid{display:grid;gap:28px;align-items:center}
+.hero h1{font-size:clamp(2.35rem,9.6vw,4.6rem);font-weight:800;text-transform:uppercase;margin:16px 0 18px}
+.hero h1 .o{color:var(--orange);text-shadow:0 0 28px rgba(255,130,0,.45)}
+.hero p.lead{color:var(--muted);font-size:1.1rem;max-width:520px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-size:.85rem;font-weight:600;color:var(--silver);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:6px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 8px var(--orange)}
+
+.car-stage{position:relative;aspect-ratio:16/10;width:100%}
+.car-stage svg.car{width:100%;height:auto;position:relative;z-index:2;filter:drop-shadow(0 30px 30px rgba(0,0,0,.6))}
+.floor{position:absolute;left:4%;right:4%;bottom:6%;height:22%;background:radial-gradient(50% 50% at 50% 50%,rgba(255,130,0,.28),transparent 70%);filter:blur(6px);z-index:1}
+.sweep{animation:sweep 5.5s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes sweep{0%{transform:translateX(-700px)}55%,100%{transform:translateX(900px)}}
+.bubble{position:absolute;border-radius:50%;z-index:3;pointer-events:none;
+  background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 5%,rgba(255,255,255,.12) 16%,rgba(255,190,120,.05) 50%,rgba(255,220,180,.18) 64%,rgba(255,255,255,.55) 70%,transparent 72%);
+  animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.wheel-spin{transform-box:fill-box;transform-origin:center;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* marquee */
+.strip{border-block:1px solid var(--line);background:var(--carbon-2);overflow:hidden;white-space:nowrap;padding:14px 0}
+.strip-inner{display:inline-flex;gap:38px;animation:marq 28s linear infinite;font-family:var(--hf);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;color:var(--silver)}
+.strip-inner span{display:inline-flex;align-items:center;gap:38px}
+.strip-inner span::after{content:"";width:8px;height:8px;transform:rotate(45deg);background:var(--orange)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:76px 0;position:relative}
+.sec-head{max-width:660px;margin-bottom:38px}
+.sec-head h2{font-size:clamp(2rem,7vw,3.1rem);font-weight:800;text-transform:uppercase;margin:12px 0 12px}
+.sec-head p{color:var(--muted)}
+
+/* services */
+.svc-grid{display:grid;gap:18px}
+.svc{position:relative;border-radius:var(--r);padding:26px 24px 24px;background:linear-gradient(160deg,var(--carbon-3),var(--carbon-2) 60%);border:1px solid var(--line);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.svc::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(255,255,255,.4),transparent 35%,transparent 65%,rgba(255,130,0,.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.6}
+.svc::after{content:"";position:absolute;top:-50%;left:-80%;width:50%;height:200%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.07),transparent);transform:rotate(12deg);transition:left .8s}
+.svc:hover{transform:translateY(-4px);border-color:rgba(255,130,0,.45);box-shadow:0 20px 40px -20px rgba(255,130,0,.4)}
+.svc:hover::after{left:130%}
+.svc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.svc-ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#3a3f47,#15171a);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+.svc-ico svg{width:30px;height:30px}
+.svc-num{font-family:var(--hf);font-weight:800;font-size:2.2rem;line-height:1;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.35}
+.svc h3{font-size:1.45rem;text-transform:uppercase;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:1rem}
+.svc ul{list-style:none;margin-top:16px;display:grid;gap:7px}
+.svc li{display:flex;gap:10px;font-size:.95rem;color:var(--silver)}
+.svc li::before{content:"";flex:none;width:14px;height:14px;margin-top:5px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 12%,var(--orange) 40%,var(--orange-deep));}
+.svc.feature{background:linear-gradient(160deg,#2a1803,#16181c 55%)}
+.tag{font-family:var(--hf);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#140900;background:var(--orange);padding:4px 10px;border-radius:999px}
+.quote-note{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;border-radius:var(--r);background:var(--carbon-2);border:1px dashed rgba(255,130,0,.4)}
+.quote-note p{color:var(--silver);font-weight:500;max-width:560px}
+
+/* ceramic band */
+.ceramic{background:linear-gradient(180deg,var(--carbon) 0%,#121418 100%);overflow:hidden}
+.ceramic-grid{display:grid;gap:34px;align-items:center}
+.panel{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:5/4;border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(135deg,#ff9a2e 0%,#ff8200 30%,#b85400 62%,#2a1400 100%);box-shadow:0 30px 60px -30px rgba(255,130,0,.5)}
+.panel .gloss{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.45) 42%,transparent 50%);animation:gloss 6s ease-in-out infinite}
+@keyframes gloss{0%,100%{transform:translateX(-30%)}50%{transform:translateX(30%)}}
+.panel svg{position:absolute;inset:0;width:100%;height:100%}
+.panel-label{position:absolute;left:16px;bottom:14px;font-family:var(--hf);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#fff;background:rgba(14,15,17,.6);padding:6px 11px;border-radius:999px;backdrop-filter:blur(6px)}
+.facts{display:grid;gap:14px;margin-top:24px}
+.fact{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.fact b{font-family:var(--hf);display:block;font-size:1.05rem;letter-spacing:.02em}
+.fact span{color:var(--muted);font-size:.96rem}
+.fact .dot{flex:none;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0 10%,rgba(255,200,140,.6) 24%,#ff8200 62%,#8a3f00);box-shadow:0 0 14px rgba(255,130,0,.35)}
+
+/* why */
+.why-grid{display:grid;gap:16px}
+.why{padding:26px 22px;border-radius:var(--r);background:var(--carbon-2);border:1px solid var(--line);position:relative;overflow:hidden}
+.why h3{font-size:1.2rem;text-transform:uppercase;margin:14px 0 8px}
+.why p{color:var(--muted);font-size:.98rem}
+.why .big{font-family:var(--hf);font-weight:800;font-size:2.4rem;line-height:1;color:var(--orange)}
+.mission{margin-top:30px;padding:30px 24px;border-radius:22px;position:relative;overflow:hidden;background:linear-gradient(120deg,#1b1d22,#0f1013);border:1px solid rgba(255,255,255,.1)}
+.mission blockquote{font-family:var(--hf);font-size:clamp(1.3rem,4.8vw,1.9rem);font-weight:600;line-height:1.3}
+.mission cite{display:block;margin-top:14px;font-style:normal;color:var(--orange);font-weight:600;font-size:.92rem;letter-spacing:.06em}
+
+/* schedule */
+.sched-grid{display:grid;gap:26px;align-items:start}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{text-align:center;padding:14px 0 12px;border-radius:12px;background:var(--carbon-2);border:1px solid var(--line);font-family:var(--hf);font-weight:700;font-size:.85rem;letter-spacing:.06em;color:var(--silver);transition:all .3s}
+.day small{display:block;font-family:var(--bf);font-weight:500;font-size:.68rem;letter-spacing:0;color:var(--muted);margin-top:3px}
+.day.today{background:linear-gradient(180deg,var(--orange-2),var(--orange));color:#140900;border-color:transparent;box-shadow:0 10px 24px -8px rgba(255,130,0,.6)}
+.day.today small{color:#3a1d00}
+.sched-card{padding:26px 22px;border-radius:var(--r);background:var(--carbon-2);border:1px solid var(--line)}
+.sched-card h3{font-size:1.3rem;text-transform:uppercase;margin-bottom:10px}
+.sched-card p{color:var(--muted)}
+.steps{counter-reset:s;display:grid;gap:12px;margin-top:18px;list-style:none}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;color:var(--silver)}
+.steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--hf);font-weight:800;font-size:.9rem;color:#140900;background:var(--chrome)}
+.today-line{margin-top:14px;font-weight:600;color:var(--orange);min-height:1.6em}
+
+/* area */
+.area{display:grid;gap:22px;align-items:center}
+.map-art{border-radius:22px;border:1px solid var(--line);overflow:hidden;background:var(--carbon-2)}
+.map-art svg{width:100%;height:auto}
+
+/* contact */
+.contact{background:radial-gradient(80% 60% at 50% 0%,rgba(255,130,0,.18),transparent 70%),var(--carbon)}
+.contact-card{border-radius:26px;padding:34px 22px;text-align:center;background:linear-gradient(170deg,#1c1f24,#111215);border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden}
+.contact-card h2{font-size:clamp(2rem,8vw,3.4rem);text-transform:uppercase;font-weight:800;margin:12px 0}
+.contact-card p{color:var(--muted);max-width:520px;margin:0 auto}
+.c-actions{display:grid;gap:12px;margin-top:26px}
+.c-link{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);text-decoration:none;text-align:left;transition:background .25s,border-color .25s,transform .2s}
+.c-link:hover{background:rgba(255,130,0,.1);border-color:rgba(255,130,0,.45);transform:translateY(-2px)}
+.c-link .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--orange);color:#140900}
+.c-link .ic svg{width:22px;height:22px}
+.c-link small{display:block;color:var(--muted);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.c-link b{font-family:var(--hf);font-size:1.08rem;overflow-wrap:anywhere}
+.c-link .em{font-family:var(--bf);font-weight:700;font-size:clamp(.88rem,4vw,1.05rem);letter-spacing:-.01em}
+
+footer{border-top:1px solid var(--line);padding:34px 0 30px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:grid;gap:16px}
+footer .brand-name{font-size:1.1rem}
+footer a{color:var(--silver)}
+
+/* mobile bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(14,15,17,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font-family:var(--hf);font-weight:700;text-decoration:none;font-size:1rem;letter-spacing:.03em}
+.callbar svg{width:19px;height:19px}
+.callbar .cb-call{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff}
+.callbar .cb-book{background:linear-gradient(180deg,var(--orange-2),var(--orange));color:#140900}
+@media (max-width:899px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:600px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .c-actions{grid-template-columns:repeat(3,1fr)}
+  .c-link{flex-direction:column;text-align:center}
+}
+@media (min-width:900px){
+  .callbar{display:none}
+  .nav-links{display:flex}
+  .nav .btn{display:inline-flex}
+  .hero{padding:80px 0 60px}
+  .hero-grid{grid-template-columns:1.02fr 1fr}
+  section{padding:110px 0}
+  .ceramic-grid,.sched-grid,.area{grid-template-columns:1fr 1fr;gap:60px}
+  .svc{padding:32px 30px}
+  .contact-card{padding:60px 50px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+
+<div class="concept">Concept site by Code Craft Media, made for Volunteer Mobile Detail. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Volunteer Mobile Detail home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <defs><linearGradient id="bm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#8d949e"/><stop offset="1" stop-color="#e3e6ea"/></linearGradient></defs>
+        <path d="M20 2 36 10v20L20 38 4 30V10z" fill="#16181c" stroke="url(#bm)" stroke-width="1.6"/>
+        <path d="M11 13h5l4 11 4-11h5l-7 16h-4z" fill="#ff8200"/>
+        <path d="M8 13l12-6 12 6" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+      </svg>
+      <span class="brand-name">VOLUNTEER<small>Mobile Detail</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a><a href="#ceramic">Ceramic</a><a href="#why">Why Us</a><a href="#schedule">Booking</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-orange" href="https://volunteermobiledetail.square.site" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero carbon-tex" aria-labelledby="h1">
+  <svg class="beads" aria-hidden="true" width="100%" height="100%">
+    <defs>
+      <radialGradient id="bd" cx=".35" cy=".3" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".25" stop-color="#fff" stop-opacity=".15"/><stop offset=".8" stop-color="#9aa3ad" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></radialGradient>
+      <pattern id="beadpat" width="140" height="120" patternUnits="userSpaceOnUse">
+        <circle cx="20" cy="18" r="5" fill="url(#bd)"/><circle cx="74" cy="40" r="3" fill="url(#bd)"/><circle cx="118" cy="14" r="2.2" fill="url(#bd)"/>
+        <circle cx="46" cy="86" r="6.5" fill="url(#bd)"/><circle cx="104" cy="96" r="3.6" fill="url(#bd)"/><circle cx="8" cy="64" r="2" fill="url(#bd)"/><circle cx="132" cy="62" r="4" fill="url(#bd)"/>
+      </pattern>
+      <linearGradient id="beadfade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".15"/><stop offset=".6" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff"/></linearGradient>
+      <mask id="beadmask"><rect width="100%" height="100%" fill="url(#beadfade)"/></mask>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#beadpat)" mask="url(#beadmask)"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow">Mobile detailing &middot; Knoxville, TN</span>
+      <h1 id="h1"><span class="chrome-text">Showroom gloss.</span><br><span class="o">Your driveway.</span></h1>
+      <p class="lead">Volunteer Mobile Detail brings the wash bay to you: exterior details, ceramic coatings, full interiors and a wheels-off deep clean, all done on site in Knoxville.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-orange" href="https://volunteermobiledetail.square.site" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book on Square</a>
+        <a class="btn btn-ghost" href="tel:+18654667338">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>865-466-7338</a>
+      </div>
+      <div class="chips"><span class="chip"><i></i>We come to you</span><span class="chip"><i></i>Ceramic coatings</span><span class="chip"><i></i>Wheels-off deep clean</span></div>
+    </div>
+
+    <div class="car-stage rv" aria-hidden="true">
+      <div class="floor"></div>
+      <span class="bubble" style="width:46px;height:46px;left:4%;top:8%"></span>
+      <span class="bubble" style="width:24px;height:24px;left:16%;top:30%;animation-delay:-2s"></span>
+      <span class="bubble" style="width:34px;height:34px;right:8%;top:4%;animation-delay:-4s"></span>
+      <span class="bubble" style="width:16px;height:16px;right:22%;top:22%;animation-delay:-1s"></span>
+      <span class="bubble" style="width:58px;height:58px;right:-2%;bottom:18%;animation-delay:-3s"></span>
+      <svg class="car" viewBox="0 0 640 300">
+        <defs>
+          <linearGradient id="paint" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffb05a"/><stop offset=".3" stop-color="#ff8200"/><stop offset=".62" stop-color="#c25a00"/><stop offset=".64" stop-color="#ff9b33"/><stop offset="1" stop-color="#4a2200"/>
+          </linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b4048"/><stop offset=".5" stop-color="#101216"/><stop offset="1" stop-color="#2a2e35"/></linearGradient>
+          <linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#8d949e"/><stop offset=".55" stop-color="#5d636c"/><stop offset="1" stop-color="#e6e9ed"/></linearGradient>
+          <radialGradient id="rim" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e9ecf0"/><stop offset=".55" stop-color="#7d848e"/><stop offset=".8" stop-color="#2a2d33"/><stop offset="1" stop-color="#0b0c0e"/></radialGradient>
+          <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <clipPath id="bodyclip"><path id="bodyp" d="M40 196c-6-24 4-40 30-46l70-12c26-6 52-34 92-50 34-14 74-18 124-16 46 2 82 14 112 34l32 22c40 4 74 10 92 22 14 10 16 28 12 46l-6 16H54c-8 0-12-6-14-16z"/></clipPath>
+        </defs>
+        <ellipse cx="330" cy="276" rx="300" ry="14" fill="#000" opacity=".6"/>
+        <use href="#bodyp" fill="url(#paint)"/>
+        <g clip-path="url(#bodyclip)"><circle cx="160" cy="236" r="47" fill="#0a0b0d"/><circle cx="500" cy="236" r="47" fill="#0a0b0d"/><path d="M110 218a50 50 0 0 1 100 0M450 218a50 50 0 0 1 100 0" fill="none" stroke="#ffc27a" stroke-opacity=".5" stroke-width="2"/></g>
+        <g clip-path="url(#bodyclip)">
+          <path d="M60 182h540" stroke="#ffd29e" stroke-opacity=".55" stroke-width="2"/>
+          <path d="M240 98c32-14 74-18 120-16 42 2 76 12 104 30l20 14H222z" fill="url(#glass)"/>
+          <path d="M352 82l-6 58" stroke="#0e0f11" stroke-width="7"/>
+          <path d="M262 100c30-10 60-12 80-12l-4 46h-104z" fill="#fff" opacity=".06"/>
+          <g class="sweep"><rect x="-200" y="0" width="120" height="300" fill="url(#shine)" transform="skewX(-22)"/></g>
+          <path d="M300 152h34M420 152h30" stroke="url(#chr)" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <path d="M586 172c10 2 18 6 22 10l-4 10-24-6z" fill="#fff6e0"/>
+        <path d="M44 172l22-4v14l-24 4z" fill="#ff2a12" opacity=".9"/>
+        <path d="M60 236h520" stroke="url(#chr)" stroke-width="3" opacity=".7"/>
+        <g><circle cx="160" cy="236" r="40" fill="#0b0c0e"/><circle cx="160" cy="236" r="28" fill="url(#rim)"/>
+          <g class="wheel-spin"><circle cx="160" cy="236" r="22" fill="none" stroke="#1b1d21" stroke-width="2"/><path d="M160 214v44M138 236h44M144 220l32 32M176 220l-32 32" stroke="#2b2f35" stroke-width="5" stroke-linecap="round"/></g>
+          <circle cx="160" cy="236" r="6" fill="#ff8200"/></g>
+        <g><circle cx="500" cy="236" r="40" fill="#0b0c0e"/><circle cx="500" cy="236" r="28" fill="url(#rim)"/>
+          <g class="wheel-spin"><circle cx="500" cy="236" r="22" fill="none" stroke="#1b1d21" stroke-width="2"/><path d="M500 214v44M478 236h44M484 220l32 32M516 220l-32 32" stroke="#2b2f35" stroke-width="5" stroke-linecap="round"/></g>
+          <circle cx="500" cy="236" r="6" fill="#ff8200"/></g>
+        <g fill="#fff" opacity=".85">
+          <circle cx="410" cy="170" r="3"/><circle cx="430" cy="160" r="2"/><circle cx="380" cy="176" r="2.4"/><circle cx="520" cy="166" r="2.6"/><circle cx="270" cy="168" r="2"/><circle cx="200" cy="170" r="3"/><circle cx="560" cy="178" r="1.8"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="strip-inner">
+  <span>Car Detailing</span><span>Ceramic Coatings</span><span>Interior Detail</span><span>Deep Clean</span><span>Knoxville, TN</span><span>We Come To You</span>
+  <span>Car Detailing</span><span>Ceramic Coatings</span><span>Interior Detail</span><span>Deep Clean</span><span>Knoxville, TN</span><span>We Come To You</span>
+</div></div>
+
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">The menu</span>
+      <h2 id="svc-h">Four ways to <span class="chrome-text">bring back the shine</span></h2>
+      <p>From a basic wash to a deep clean, there's a service for every vehicle and every budget.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv">
+        <div class="svc-top"><div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff8200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-4l3-6h14l5 6h2v4z"/><circle cx="10" cy="22" r="2.5" fill="#0e0f11"/><circle cx="23" cy="22" r="2.5" fill="#0e0f11"/><path d="M14 5c0 2-2 2-2 4M20 4c0 2-2 2-2 4" stroke="#c9ced6"/></svg></div><span class="svc-num">01</span></div>
+        <h3>Car Detailing</h3>
+        <p>Various exterior detailing options to suit your needs, from basic washes to deep cleans.</p>
+        <ul><li>Basic exterior washes</li><li>Fuller exterior details</li><li>Done at your home or work</li></ul>
+      </article>
+      <article class="svc feature rv">
+        <div class="svc-top"><div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff8200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l10 4v8c0 7-5 11-10 14C11 26 6 22 6 15V7z"/><path d="M16 11c-2 3-3 4-3 6a3 3 0 0 0 6 0c0-2-1-3-3-6z" stroke="#c9ced6"/></svg></div><span class="tag">Protection</span></div>
+        <h3>Ceramic Coatings</h3>
+        <p>Several coating options, from windows, to seat protection, to the exterior of your vehicle. Extremely hydrophobic.</p>
+        <ul><li>Helps preserve paint</li><li>Increases gloss &amp; depth</li><li>Adds value to the vehicle</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff8200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 27V12a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v8h5a2 2 0 0 1 2 2v5z"/><path d="M12 8V5h4v3" stroke="#c9ced6"/></svg></div><span class="svc-num">03</span></div>
+        <h3>Interior Detail</h3>
+        <p>From simple wipe downs all the way up to a full carpet shampoo.</p>
+        <ul><li>Full carpet shampoo</li><li>Leather conditioning</li><li>Protectants on all interior pieces</li></ul>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff8200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="4" stroke="#c9ced6"/><path d="M16 5v7M16 20v7M5 16h7M20 16h7"/></svg></div><span class="tag">Best of the best</span></div>
+        <h3>Deep Clean</h3>
+        <p>Full wheel removal to reveal everything behind the wheels. Great for removing salt and mud and preventing rust.</p>
+        <ul><li>Wheels come off</li><li>Road grime cleared from wheel arches</li><li>Suspension components cleaned</li></ul>
+      </article>
+    </div>
+    <div class="quote-note rv">
+      <p>Pricing depends on your vehicle and the package you choose. See current options and open times on the Square booking page, or call or text for a quote.</p>
+      <a class="btn btn-orange" href="https://volunteermobiledetail.square.site" target="_blank" rel="noopener">See packages</a>
+    </div>
+  </div>
+</section>
+
+<section id="ceramic" class="ceramic" aria-labelledby="cer-h">
+  <div class="wrap ceramic-grid">
+    <div class="panel rv" aria-hidden="true">
+      <div class="gloss"></div>
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="drop" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".18" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#ffcf99" stop-opacity=".12"/><stop offset=".9" stop-color="#3a1a00" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></radialGradient>
+        </defs>
+        <g fill="url(#drop)">
+          <ellipse cx="80" cy="70" rx="22" ry="19"/><ellipse cx="170" cy="120" rx="12" ry="10"/><ellipse cx="300" cy="60" rx="30" ry="26"/><ellipse cx="420" cy="110" rx="16" ry="14"/>
+          <ellipse cx="60" cy="210" rx="14" ry="12"/><ellipse cx="200" cy="240" rx="36" ry="31"/><ellipse cx="340" cy="200" rx="10" ry="9"/><ellipse cx="440" cy="250" rx="26" ry="22"/>
+          <ellipse cx="110" cy="330" rx="24" ry="20"/><ellipse cx="270" cy="340" rx="13" ry="11"/><ellipse cx="390" cy="350" rx="20" ry="17"/><ellipse cx="250" cy="150" rx="7" ry="6"/>
+          <ellipse cx="130" cy="160" rx="6" ry="5"/><ellipse cx="470" cy="40" rx="8" ry="7"/><ellipse cx="30" cy="290" rx="7" ry="6"/><ellipse cx="320" cy="270" rx="6" ry="5"/>
+        </g>
+      </svg>
+      <span class="panel-label">Hydrophobic finish</span>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Ceramic coatings</span>
+      <h2 style="font-size:clamp(2rem,7vw,3.1rem);font-weight:800;text-transform:uppercase;margin:12px 0">Water beads.<br><span class="chrome-text">Dirt slides.</span></h2>
+      <p style="color:var(--muted)">A ceramic coating adds an extra layer of protection over your paint. Water beads up and rolls off instead of sitting on the finish. Volunteer Mobile Detail offers several coating options, from glass to seats to paint.</p>
+      <div class="facts">
+        <div class="fact"><span class="dot"></span><div><b>Preserves paint</b><span>An extra protective layer between your clear coat and the road.</span></div></div>
+        <div class="fact"><span class="dot"></span><div><b>Gloss &amp; depth</b><span>That wet, deep-mirror look, and it lasts.</span></div></div>
+        <div class="fact"><span class="dot"></span><div><b>Windows, seats, exterior</b><span>Coating options for more than just the paint.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Why Volunteer</span>
+      <h2 id="why-h">Honest &amp; <span class="chrome-text">efficient work</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><span class="big">01</span><h3>We come to you</h3><p>A fully mobile detail based in Knoxville. No drop-off and no waiting room. Your car gets cleaned where it's parked.</p></div>
+      <div class="why rv"><span class="big">02</span><h3>Built for each vehicle</h3><p>"We go above and beyond to cater to each vehicle's specific needs," from a quick wash to a wheels-off deep clean.</p></div>
+      <div class="why rv"><span class="big">03</span><h3>Clear communication</h3><p>Book online through Square, or call, text or email and get a straight answer from the person doing the work.</p></div>
+    </div>
+    <div class="mission rv">
+      <blockquote>"Our mission is simple: to provide high-quality services for our valued clients."</blockquote>
+      <cite>Volunteer Mobile Detail</cite>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="carbon-tex" aria-labelledby="sch-h">
+  <div class="wrap sched-grid">
+    <div class="rv">
+      <span class="eyebrow">Hours &amp; booking</span>
+      <h2 id="sch-h" style="font-size:clamp(2rem,7vw,3.1rem);font-weight:800;text-transform:uppercase;margin:12px 0 14px">By <span class="chrome-text">appointment</span></h2>
+      <p style="color:var(--muted);margin-bottom:22px">Volunteer Mobile Detail works by appointment. Open times are listed live on the Square booking page. Prefer to talk first? Call or text 865-466-7338.</p>
+      <div class="days" id="days">
+        <div class="day" data-d="1">MON<small>Appt</small></div><div class="day" data-d="2">TUE<small>Appt</small></div><div class="day" data-d="3">WED<small>Appt</small></div><div class="day" data-d="4">THU<small>Appt</small></div><div class="day" data-d="5">FRI<small>Appt</small></div><div class="day" data-d="6">SAT<small>Appt</small></div><div class="day" data-d="0">SUN<small>Appt</small></div>
+      </div>
+      <p class="today-line" id="todayLine"></p>
+    </div>
+    <div class="sched-card rv">
+      <h3>How it works</h3>
+      <p>Three steps from dirty to detailed.</p>
+      <ol class="steps">
+        <li>Choose your service and an open time on Square, or call or text.</li>
+        <li>We pull up at your home or workplace in Knoxville.</li>
+        <li>You get your car back clean, protected and glossy.</li>
+      </ol>
+      <a class="btn btn-orange" style="margin-top:22px" href="https://volunteermobiledetail.square.site" target="_blank" rel="noopener">Check open times</a>
+    </div>
+  </div>
+</section>
+
+<section id="area" aria-labelledby="area-h">
+  <div class="wrap area">
+    <div class="rv">
+      <span class="eyebrow">Service area</span>
+      <h2 id="area-h" style="font-size:clamp(2rem,7vw,3.1rem);font-weight:800;text-transform:uppercase;margin:12px 0 14px">Based in <span class="chrome-text">Knoxville</span></h2>
+      <p style="color:var(--muted)">Volunteer Mobile Detail is a mobile detailer, so there's no shop to visit. Tell us where the car is when you book. Outside central Knoxville? Call or text to check if your area is covered.</p>
+    </div>
+    <div class="map-art rv" aria-hidden="true">
+      <svg viewBox="0 0 520 320">
+        <defs>
+          <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0v26" fill="none" stroke="rgba(255,255,255,.05)"/></pattern>
+          <radialGradient id="glow"><stop offset="0" stop-color="#ff8200" stop-opacity=".45"/><stop offset="1" stop-color="#ff8200" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="520" height="320" fill="url(#grid)"/>
+        <path d="M-10 230c70-30 110 10 170-20s90-70 160-60 120 50 210 20" fill="none" stroke="#2a4a66" stroke-width="14" stroke-linecap="round" opacity=".7"/>
+        <path d="M0 120h520M150 0v320M360 0v320M0 60l520 200" stroke="rgba(201,206,214,.22)" stroke-width="5"/>
+        <path d="M60 0l120 320M520 40L240 320" stroke="rgba(201,206,214,.12)" stroke-width="3"/>
+        <circle cx="260" cy="150" r="120" fill="url(#glow)"/>
+        <circle cx="260" cy="150" r="78" fill="none" stroke="#ff8200" stroke-dasharray="6 8" stroke-opacity=".7"/>
+        <path d="M260 104c-18 0-30 13-30 29 0 22 30 49 30 49s30-27 30-49c0-16-12-29-30-29z" fill="#ff8200"/>
+        <circle cx="260" cy="133" r="10" fill="#0e0f11"/>
+        <text x="260" y="214" text-anchor="middle" fill="#eef0f3" font-family="Oxanium,sans-serif" font-weight="700" font-size="16" letter-spacing="3">KNOXVILLE, TN</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <div class="contact-card rv">
+      <span class="eyebrow">Get in touch</span>
+      <h2 id="ct-h">Ready for <span style="color:var(--orange)">the gloss?</span></h2>
+      <p>Book online, or reach out with questions about any service.</p>
+      <div class="c-actions">
+        <a class="c-link" href="tel:+18654667338"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call or text</small><b>865-466-7338</b></span></a>
+        <a class="c-link" href="mailto:volautodetail@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span><small>Email</small><b class="em">volautodetail@gmail.com</b></span></a>
+        <a class="c-link" href="https://volunteermobiledetail.square.site" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><small>Book online</small><b>Square booking</b></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand-name">VOLUNTEER<small>Mobile Detail</small></div>
+      <p style="margin-top:8px">Mobile auto detailing in Knoxville, Tennessee.</p>
+    </div>
+    <div>
+      <a href="tel:+18654667338">865-466-7338</a> &middot; <a href="mailto:volautodetail@gmail.com">volautodetail@gmail.com</a>
+      <p style="margin-top:6px;font-size:.8rem">&copy; <span id="yr">2026</span> Volunteer Mobile Detail &middot; Concept by Code Craft Media</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="cb-call" href="tel:+18654667338"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="cb-book" href="https://volunteermobiledetail.square.site" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement;d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+  var now=new Date(),t=now.getDay();
+  var el=document.querySelector('.day[data-d="'+t+'"]');
+  if(el){el.classList.add('today');el.querySelector('small').textContent='Today';}
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var tl=document.getElementById('todayLine');if(tl)tl.textContent='Looking for a '+names[t]+' slot? Check Square for today’s openings.';
+  document.getElementById('yr').textContent=now.getFullYear();
+})();
+</script>
+</body>
+</html>

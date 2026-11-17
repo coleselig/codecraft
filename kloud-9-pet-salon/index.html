@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kloud-9 Pet Salon &amp; Spa | Knoxville Dog Grooming</title>
+<meta name="description" content="Kloud-9, Pet Salon & Spa: grooming, baths and nail trims at 6720 Jubilee Center Way, Knoxville. Rated 4.8 on Google. Call (865) 947-4477.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#27295a;
+  --ink-soft:#4d4f86;
+  --sky-1:#cfe0ff;
+  --sky-2:#e8dcff;
+  --sky-3:#ffe3ec;
+  --dawn:#ffd9b8;
+  --cloud:#ffffff;
+  --coral:#ff7a6b;
+  --coral-deep:#e85a4b;
+  --sun:#ffc94d;
+  --mint:#9fe3d0;
+  --lilac:#b9a6ff;
+  --night:#1d1f48;
+  --radius:28px;
+  --shadow:0 18px 40px -18px rgba(39,41,90,.35);
+  --display:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--ink);background:#f6f4ff;line-height:1.55;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;font-weight:600;letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:12px}
+
+/* concept banner */
+.concept{background:var(--night);color:#e9e7ff;font-size:13px;text-align:center;padding:8px 16px;line-height:1.35}
+.concept b{color:#fff;font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(246,244,255,.78);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(39,41,90,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:40px;height:40px;flex:none}
+.brand-name{font-family:var(--display);font-weight:600;font-size:21px;line-height:1}
+.brand-name small{display:block;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+.nav-links{display:none;gap:28px;font-weight:600;font-size:15px}
+.nav-links a{text-decoration:none;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;border-radius:3px;background:var(--coral);transform:scaleX(0);transition:transform .25s ease}
+.nav-links a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--display);font-weight:600;font-size:17px;text-decoration:none;border-radius:999px;padding:14px 24px;border:0;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-coral{background:var(--coral);color:#fff;box-shadow:0 10px 24px -10px rgba(232,90,75,.75)}
+.btn-coral:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.btn-cloud{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+.btn-cloud:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.nav .btn{padding:10px 18px;font-size:15px}
+.nav-call-text{display:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,var(--sky-3) 0%,transparent 55%),
+  radial-gradient(90% 60% at 0% 30%,var(--sky-1) 0%,transparent 60%),
+  linear-gradient(180deg,#d9e6ff 0%,var(--sky-2) 55%,#fff0e6 100%);
+  padding:36px 0 96px}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:34px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.85);border-radius:999px;padding:7px 14px 7px 8px;font-weight:600;font-size:14px;box-shadow:0 6px 18px -10px rgba(39,41,90,.4)}
+.chip .stars{display:inline-flex;gap:1px;color:#f5a623}
+.chip .stars svg{width:15px;height:15px}
+.chip .score{background:var(--ink);color:#fff;border-radius:999px;padding:3px 9px;font-size:13px}
+.hero h1{font-size:clamp(44px,12.5vw,96px);margin:18px 0 18px;font-weight:600}
+.hero h1 .nine{display:inline-block;color:var(--coral);position:relative}
+.hero h1 .nine::after{content:"";position:absolute;left:4%;right:4%;bottom:.04em;height:.16em;background:var(--sun);border-radius:99px;z-index:-1;opacity:.75}
+.hero h1 .line{display:block}
+.hero-lede{font-size:clamp(17px,4.4vw,20px);color:var(--ink-soft);max-width:34ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14.5px;font-weight:600;color:var(--ink-soft)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{width:17px;height:17px;color:var(--coral)}
+
+.hero-art{position:relative;width:100%;max-width:520px;margin:0 auto;aspect-ratio:1/0.92}
+.hero-art svg{width:100%;height:100%;overflow:visible}
+.float{animation:float 6s ease-in-out infinite}
+.float-slow{animation:float 9s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.wag{transform-origin:350px 210px;animation:wag 1.4s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(10deg)}}
+.blink{transform-origin:center;transform-box:fill-box;animation:blink 5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+
+/* drifting clouds */
+.drift{position:absolute;z-index:1;pointer-events:none;opacity:.95}
+.drift svg{width:100%;height:auto}
+.d1{width:220px;top:14%;left:-60px;animation:drift 38s linear infinite}
+.d2{width:150px;top:58%;right:-40px;animation:drift 46s linear infinite reverse;opacity:.75}
+.d3{width:120px;top:6%;right:18%;animation:drift 52s linear infinite;opacity:.6}
+@keyframes drift{0%{transform:translateX(0)}50%{transform:translateX(60px)}100%{transform:translateX(0)}}
+
+/* bubbles */
+.bubbles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.bubbles i{position:absolute;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.95),rgba(255,255,255,.25) 45%,rgba(185,166,255,.28) 70%,rgba(255,255,255,.55) 100%);border:1px solid rgba(255,255,255,.8);animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-110vh) translateX(30px);opacity:0}}
+
+.hero-edge{position:absolute;left:0;right:0;bottom:-1px;z-index:3;line-height:0}
+.hero-edge svg{width:100%;height:90px}
+
+/* sections */
+section{position:relative}
+.section{padding:84px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--coral-deep)}
+.eyebrow::before{content:"";width:22px;height:10px;border-radius:10px;background:var(--coral);box-shadow:8px -4px 0 -1px var(--sun)}
+.h2{font-size:clamp(34px,8.5vw,60px);margin:12px 0 14px}
+.sub{color:var(--ink-soft);font-size:18px;max-width:52ch}
+
+/* services */
+.services{background:linear-gradient(180deg,#fff 0%,#f4f1ff 30%,#f4f1ff 100%)}
+.svc-grid{display:grid;gap:58px;margin-top:64px}
+.svc{position:relative;padding:34px 26px 28px;background:#fff;border-radius:44px 44px 34px 34px;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease;isolation:isolate}
+.svc::before,.svc::after{content:"";position:absolute;border-radius:50%;background:inherit;z-index:-1;background:#fff}
+.svc::before{width:96px;height:96px;top:-34px;left:34px;box-shadow:58px -6px 0 12px #fff}
+.svc::after{width:70px;height:70px;top:-20px;right:40px}
+.svc:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 50px -20px rgba(39,41,90,.45)}
+.svc-icon{width:64px;height:64px;border-radius:22px;display:grid;place-items:center;margin-bottom:16px}
+.svc-icon svg{width:36px;height:36px}
+.svc h3{font-size:27px;margin-bottom:8px}
+.svc p{color:var(--ink-soft)}
+.svc ul{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font-size:13.5px;font-weight:600;background:#fff;border:1.5px solid #e6e1ff;border-radius:999px;padding:5px 12px}
+.svc-note{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;background:var(--sky-2);border-radius:24px;padding:20px 22px;font-weight:600}
+.svc-note p{flex:1 1 260px}
+
+/* why */
+.why{background:linear-gradient(180deg,#fff 0%,#eef3ff 100%)}
+.why-grid{display:grid;gap:18px;margin-top:40px}
+.why-card{background:#fff;border-radius:26px;padding:26px;box-shadow:0 10px 30px -18px rgba(39,41,90,.35);display:flex;gap:18px;align-items:flex-start;transition:transform .25s ease}
+.why-card:hover{transform:translateY(-4px)}
+.why-num{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:22px;color:#fff;background:var(--lilac)}
+.why-card h3{font-size:22px;margin-bottom:6px}
+.why-card p{color:var(--ink-soft);font-size:16px}
+.rating-hero{margin-top:40px;border-radius:34px;padding:34px 26px;color:#fff;background:
+  radial-gradient(60% 90% at 100% 0%,rgba(255,122,107,.55),transparent 60%),
+  radial-gradient(60% 80% at 0% 100%,rgba(185,166,255,.6),transparent 60%),var(--night);
+  display:grid;gap:18px;align-items:center;overflow:hidden;position:relative}
+.rating-big{font-family:var(--display);font-size:clamp(76px,22vw,128px);font-weight:600;line-height:.9}
+.rating-big span{font-size:.35em;color:#c9c4ff;margin-left:6px}
+.rating-hero .stars{display:flex;gap:4px;color:var(--sun)}
+.rating-hero .stars svg{width:26px;height:26px}
+.rating-hero p{color:#dcd9ff;font-size:17px;max-width:40ch}
+.rating-hero strong{color:#fff}
+
+/* hours + visit */
+.visit{background:#eef3ff}
+.visit-grid{display:grid;gap:26px;margin-top:40px}
+.hours-card{background:#fff;border-radius:32px;padding:28px 22px;box-shadow:var(--shadow)}
+.hours-card h3{font-size:26px;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;border-radius:999px;padding:6px 12px;background:#eef0f7;margin:8px 0 18px}
+.status i{width:9px;height:9px;border-radius:50%;background:#9aa0b8}
+.status.open{background:#dcf7ee;color:#0f6b4f}
+.status.open i{background:#18b07f;box-shadow:0 0 0 4px rgba(24,176,127,.2);animation:pulse 1.8s infinite}
+.status.closed{background:#ffe9e6;color:#a8392d}
+.status.closed i{background:var(--coral)}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(24,176,127,0)}}
+.hours{list-style:none;padding:0;margin:0}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:16px;font-weight:500}
+.hours li+li{margin-top:2px}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.hours li.today{background:linear-gradient(90deg,#ffe3ec,#e8dcff);font-weight:700}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--coral);color:#fff;border-radius:999px;padding:3px 8px;vertical-align:2px}
+.hours li.off span:last-child{color:#8a8db0}
+.hours-note{font-size:14px;color:var(--ink-soft);margin-top:14px}
+.map-card{background:#fff;border-radius:32px;padding:10px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.map-card iframe{width:100%;height:320px;border:0;border-radius:24px;display:block;background:#dfe6fb}
+.map-info{padding:20px 14px 14px;display:grid;gap:16px}
+.map-info address{font-style:normal;font-size:18px;font-weight:600;line-height:1.4}
+.map-info .row{display:flex;flex-wrap:wrap;gap:10px}
+.map-info .btn{flex:1 1 180px}
+.tel-big{font-family:var(--display);font-size:clamp(28px,7vw,36px);font-weight:600;text-decoration:none;color:var(--coral-deep)}
+.tel-big:hover{text-decoration:underline}
+
+/* cta band */
+.cta{background:linear-gradient(135deg,#ffd9b8 0%,#ffc9d6 45%,#d6c8ff 100%);overflow:hidden}
+.cta .wrap{position:relative;z-index:2;text-align:center;padding:80px 20px}
+.cta h2{font-size:clamp(36px,9vw,66px);max-width:14ch;margin:0 auto 16px}
+.cta p{font-size:18px;color:var(--ink-soft);max-width:44ch;margin:0 auto 28px}
+.cta .row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+
+/* footer */
+footer{background:var(--night);color:#cfccf5;padding:52px 0 40px;font-size:15px}
+footer .wrap{display:grid;gap:28px}
+footer .brand-name{color:#fff}
+footer .brand-name small{color:#a9a5e0}
+footer a{color:#fff;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+footer a:hover{text-decoration-color:var(--coral)}
+.foot-cols{display:grid;gap:22px}
+.foot-cols h4{margin:0 0 8px;font-family:var(--display);font-weight:600;color:#fff;font-size:17px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:13.5px;color:#a9a5e0}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(39,41,90,.1);box-shadow:0 -10px 30px -16px rgba(39,41,90,.4)}
+.callbar .btn{flex:1;padding:14px 10px;font-size:16px}
+body{padding-bottom:0}
+footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+
+/* reveal (gated on .js) */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .reveal.d-1{transition-delay:.08s}.js .reveal.d-2{transition-delay:.16s}.js .reveal.d-3{transition-delay:.24s}
+
+@media (min-width:640px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .nav-call-text{display:inline}
+}
+@media (min-width:900px){
+  .wrap{padding:0 32px}
+  .nav-links{display:flex}
+  .callbar{display:none}
+  footer{padding-bottom:40px}
+  .hero{padding:64px 0 150px}
+  .hero h1{font-size:clamp(60px,5.6vw,84px)}
+  .hero-art{transform:scale(1.12);transform-origin:center}
+  .hero .wrap{grid-template-columns:1.08fr .92fr;align-items:center}
+  .hero-art{max-width:none}
+  .svc-grid{grid-template-columns:repeat(3,1fr);gap:30px}
+  .why-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+  .rating-hero{grid-template-columns:auto 1fr;gap:34px;padding:40px 44px;margin-top:0}
+  .visit-grid{grid-template-columns:.85fr 1.15fr}
+  .map-card iframe{height:100%;min-height:360px;flex:1}
+  .foot-cols{grid-template-columns:1.3fr 1fr 1fr 1fr}
+  .section{padding:110px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for <b>Kloud-9, Pet Salon &amp; Spa</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kloud-9 Pet Salon and Spa home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a8b"/><stop offset="1" stop-color="#b9a6ff"/></linearGradient></defs>
+        <circle cx="24" cy="24" r="24" fill="url(#bm)"/>
+        <path d="M13 31a6 6 0 0 1 1.6-11.8A8 8 0 0 1 30 17.5a6.5 6.5 0 0 1 5.8 13.5z" fill="#fff"/>
+        <text x="24" y="29.5" text-anchor="middle" font-family="Fredoka,Trebuchet MS,sans-serif" font-weight="700" font-size="12" fill="#27295a">9</text>
+      </svg>
+      <span class="brand-name">Kloud-9<small>Pet Salon &amp; Spa</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#why">Why Kloud-9</a>
+      <a href="#visit">Hours &amp; Visit</a>
+    </nav>
+    <a class="btn btn-coral" href="tel:+18659474477" aria-label="Call Kloud-9 at (865) 947-4477">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      <span class="nav-call-text">(865) 947-4477</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="bubbles" aria-hidden="true" id="bubbles"></div>
+  <div class="drift d1" aria-hidden="true"><svg viewBox="0 0 220 90"><path d="M30 80a28 28 0 0 1 4-55 40 40 0 0 1 74-12 34 34 0 0 1 62 8 30 30 0 0 1 22 59z" fill="#fff"/></svg></div>
+  <div class="drift d2" aria-hidden="true"><svg viewBox="0 0 220 90"><path d="M30 80a28 28 0 0 1 4-55 40 40 0 0 1 74-12 34 34 0 0 1 62 8 30 30 0 0 1 22 59z" fill="#fff"/></svg></div>
+  <div class="drift d3" aria-hidden="true"><svg viewBox="0 0 220 90"><path d="M30 80a28 28 0 0 1 4-55 40 40 0 0 1 74-12 34 34 0 0 1 62 8 30 30 0 0 1 22 59z" fill="#fff"/></svg></div>
+
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="chip reveal">
+        <span class="score">4.8</span>
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg>
+        </span>
+        265 Google reviews
+      </div>
+      <h1 class="reveal d-1"><span class="line">Every pup</span><span class="line">goes home on</span><span class="line">cloud <span class="nine">nine.</span></span></h1>
+      <p class="hero-lede reveal d-2">Baths, nail trims and full grooms at Kloud-9, Pet Salon &amp; Spa on Jubilee Center Way in Knoxville. Fresh, fluffy, and a little bit proud of it.</p>
+      <div class="hero-cta reveal d-3">
+        <a class="btn btn-coral" href="tel:+18659474477">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Call to book
+        </a>
+        <a class="btn btn-cloud" href="#services">See the spa menu</a>
+      </div>
+      <div class="hero-meta reveal d-3">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mon to Sat, 9 to 3</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Knoxville, TN 37912</span>
+      </div>
+    </div>
+
+    <!-- bubble dog on a cloud -->
+    <div class="hero-art reveal d-2" aria-hidden="true">
+      <svg viewBox="0 0 520 480">
+        <defs>
+          <radialGradient id="bub" cx="35%" cy="30%" r="75%">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset=".55" stop-color="#f3efff"/>
+            <stop offset="1" stop-color="#d9cfff"/>
+          </radialGradient>
+          <radialGradient id="bub2" cx="35%" cy="30%" r="75%">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset=".6" stop-color="#ffeef2"/>
+            <stop offset="1" stop-color="#ffc9d6"/>
+          </radialGradient>
+          <linearGradient id="cloudg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#ece6ff"/>
+          </linearGradient>
+          <filter id="soft" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#27295a" flood-opacity=".18"/></filter>
+        </defs>
+
+        <!-- sun halo -->
+        <circle cx="390" cy="110" r="78" fill="#ffe2a8" opacity=".75"/>
+        <circle cx="390" cy="110" r="52" fill="#ffd27a" opacity=".8"/>
+
+        <!-- big '9' sticker -->
+        <g class="float-slow">
+          <circle cx="96" cy="96" r="46" fill="#ff7a6b"/>
+          <text x="96" y="114" text-anchor="middle" font-family="Fredoka,Trebuchet MS,sans-serif" font-weight="700" font-size="54" fill="#fff">9</text>
+        </g>
+
+        <g class="float">
+          <!-- cloud bed -->
+          <g filter="url(#soft)">
+            <path d="M70 400a52 52 0 0 1 18-100 70 70 0 0 1 120-38 62 62 0 0 1 106-6 58 58 0 0 1 104 34 50 50 0 0 1 22 110z" fill="url(#cloudg)"/>
+          </g>
+
+          <!-- bubble dog -->
+          <g>
+            <!-- tail -->
+            <g class="wag">
+              <circle cx="372" cy="196" r="16" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+              <circle cx="388" cy="174" r="13" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+              <circle cx="398" cy="154" r="10" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+            </g>
+            <!-- body -->
+            <circle cx="300" cy="250" r="56" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <circle cx="346" cy="236" r="40" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <circle cx="250" cy="262" r="44" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <!-- legs -->
+            <circle cx="232" cy="306" r="22" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <circle cx="276" cy="312" r="22" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <circle cx="330" cy="306" r="22" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <!-- head -->
+            <circle cx="196" cy="196" r="62" fill="url(#bub)" stroke="#fff" stroke-width="3"/>
+            <!-- ears -->
+            <ellipse cx="146" cy="168" rx="24" ry="40" transform="rotate(22 146 168)" fill="url(#bub2)" stroke="#fff" stroke-width="3"/>
+            <ellipse cx="244" cy="152" rx="22" ry="36" transform="rotate(-28 244 152)" fill="url(#bub2)" stroke="#fff" stroke-width="3"/>
+            <!-- snout -->
+            <circle cx="172" cy="226" r="30" fill="#fff" stroke="#efeaff" stroke-width="2"/>
+            <ellipse cx="160" cy="214" rx="11" ry="8" fill="#27295a"/>
+            <path d="M160 222v10m0 0c-6 7-14 6-18 1m18-1c6 7 14 6 18 1" stroke="#27295a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <!-- tongue -->
+            <path d="M156 240c0 10 10 12 12 2" fill="#ff8a99" stroke="#e85a6b" stroke-width="2"/>
+            <!-- eyes -->
+            <ellipse class="blink" cx="196" cy="186" rx="8" ry="10" fill="#27295a"/>
+            <circle cx="199" cy="182" r="3" fill="#fff"/>
+            <!-- cheek -->
+            <circle cx="214" cy="214" r="9" fill="#ffb3c2" opacity=".7"/>
+            <!-- bow -->
+            <g transform="translate(218 128) rotate(14)">
+              <path d="M0 0l-22-13v26z" fill="#ff7a6b"/>
+              <path d="M0 0l22-13v26z" fill="#ff7a6b"/>
+              <circle r="7" fill="#ffc94d"/>
+            </g>
+            <!-- shine highlights -->
+            <ellipse cx="176" cy="160" rx="14" ry="7" transform="rotate(-30 176 160)" fill="#fff" opacity=".9"/>
+            <ellipse cx="282" cy="214" rx="16" ry="7" transform="rotate(-24 282 214)" fill="#fff" opacity=".9"/>
+          </g>
+
+          <!-- foam bubbles on cloud -->
+          <circle cx="110" cy="352" r="14" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+          <circle cx="132" cy="336" r="9" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+          <circle cx="420" cy="346" r="16" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+          <circle cx="444" cy="326" r="8" fill="url(#bub)" stroke="#fff" stroke-width="2"/>
+        </g>
+
+        <!-- little bubble cat peeking -->
+        <g transform="translate(418 214)"><g class="float-slow">
+          <path d="M-26-20l6-26 14 18z" fill="url(#bub2)" stroke="#fff" stroke-width="2.5"/>
+          <path d="M26-20l-6-26-14 18z" fill="url(#bub2)" stroke="#fff" stroke-width="2.5"/>
+          <circle r="32" fill="url(#bub2)" stroke="#fff" stroke-width="3"/>
+          <path d="M-14-4q4-5 8 0M6-4q4-5 8 0" stroke="#27295a" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M-4 8l4 3 4-3" stroke="#27295a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M-34 6h-12M-34 12l-11 4M34 6h12M34 12l11 4" stroke="#27295a" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+        </g></g>
+
+        <!-- sparkles -->
+        <g fill="#ffc94d">
+          <path class="float" d="M470 250l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+          <path class="float-slow" d="M60 230l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-edge" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 60c60-30 120-30 180 0s120 30 180 0 120-30 180 0 120 30 180 0 120-30 180 0 120 30 180 0 120-30 180 0 120 30 180 0V90H0z" fill="#fff"/></svg>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+  <div class="wrap">
+    <span class="eyebrow reveal">The spa menu</span>
+    <h2 class="h2 reveal d-1">Bubbles, brushes<br>&amp; happy paws.</h2>
+    <p class="sub reveal d-2">From a quick freshen-up to a full breed-style cut, every visit is built around your pet and what you ask for.</p>
+
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc-icon" style="background:#ffe3ec">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#e85a4b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="5"/><circle cx="11" cy="29" r="5"/><path d="M15 15l19 13M15 27l19-13"/></svg>
+        </div>
+        <h3>Full Groom</h3>
+        <p>Bath, brush, clip and style, cut to breed standard or to exactly how you like it.</p>
+        <ul><li>Breed-style cuts</li><li>Your-way trims</li><li>Coat &amp; skin check</li></ul>
+      </article>
+      <article class="svc reveal d-1">
+        <div class="svc-icon" style="background:#e8dcff">
+          <svg viewBox="0 0 40 40" fill="none" stroke="#6b55d8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20h28v4a9 9 0 0 1-9 9H15a9 9 0 0 1-9-9z"/><path d="M10 20V9a4 4 0 0 1 7.5-2"/><circle cx="24" cy="10" r="2.5"/><circle cx="30" cy="14" r="1.8"/><path d="M12 33l-2 3M28 33l2 3"/></svg>
+        </div>
+        <h3>Bath &amp; Brush</h3>
+        <p>A sudsy spa bath and a thorough brush-out, so they come home soft, clean and smelling amazing.</p>
+        <ul><li>Spa bath</li><li>Brush-out</li><li>Fresh-smell finish</li></ul>
+      </article>
+      <article class="svc reveal d-2">
+        <div class="svc-icon" style="background:#dcf7ee">
+          <svg viewBox="0 0 40 40" fill="#18a074" aria-hidden="true"><ellipse cx="20" cy="27" rx="8" ry="7"/><ellipse cx="9.5" cy="17" rx="3.6" ry="4.6"/><ellipse cx="16" cy="10.5" rx="3.6" ry="4.6"/><ellipse cx="24" cy="10.5" rx="3.6" ry="4.6"/><ellipse cx="30.5" cy="17" rx="3.6" ry="4.6"/></svg>
+        </div>
+        <h3>Nail Trims</h3>
+        <p>Tidy, comfortable nails with a calm, patient touch, a small thing that makes a big difference.</p>
+        <ul><li>Nail clipping</li><li>Gentle handling</li></ul>
+      </article>
+    </div>
+
+    <div class="svc-note reveal">
+      <p>Pricing depends on breed, size and coat. Give us a call and we will get your pet on the schedule.</p>
+      <a class="btn btn-coral" href="tel:+18659474477">Call (865) 947-4477</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why section" id="why">
+  <div class="wrap">
+    <div class="why-layout">
+      <div>
+        <span class="eyebrow reveal">Why Kloud-9</span>
+        <h2 class="h2 reveal d-1">Knoxville pet parents already said it.</h2>
+        <p class="sub reveal d-2">Hundreds of Google reviews, and the same themes keep coming up.</p>
+      </div>
+      <div class="rating-hero reveal d-2">
+        <div class="rating-big">4.8<span>/5</span></div>
+        <div>
+          <div class="stars" aria-label="4.8 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg>
+          </div>
+          <p style="margin-top:10px">Rated <strong>4.8 stars</strong> across <strong>265 Google reviews</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-num" style="background:#ff9a8b">01</div>
+        <div><h3>Gentle with nervous pups</h3><p>Reviewers keep mentioning dogs who used to dread grooming and now walk in calm. Seniors get the tender care they need, too.</p></div>
+      </div>
+      <div class="why-card reveal d-1">
+        <div class="why-num" style="background:#b9a6ff">02</div>
+        <div><h3>They listen to you</h3><p>Tell us the look you want. Cuts follow breed standards or your own preferences, and owners note the team takes time to hear them out.</p></div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num" style="background:#5fcfae">03</div>
+        <div><h3>Eyes on their health</h3><p>Every groom includes a look at coat and skin, and reviewers say the team has spotted issues owners had missed.</p></div>
+      </div>
+      <div class="why-card reveal d-1">
+        <div class="why-num" style="background:#ffc94d;color:#27295a">04</div>
+        <div><h3>Home smelling amazing</h3><p>The most common compliment of all: pets come home looking great and smelling fresh long after the visit.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit section" id="visit">
+  <div class="wrap">
+    <span class="eyebrow reveal">Hours &amp; visit</span>
+    <h2 class="h2 reveal d-1">Float on over.</h2>
+    <p class="sub reveal d-2">Find us in Jubilee Center, Suite 101, on Jubilee Center Way in Knoxville.</p>
+
+    <div class="visit-grid">
+      <div class="hours-card reveal">
+        <h3>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e85a4b" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Salon hours
+        </h3>
+        <div class="status" id="status"><i></i><span>Open Mon to Sat, 9am to 3pm</span></div>
+        <ul class="hours" id="hours">
+          <li data-day="1"><span>Monday</span><span>9am – 3pm</span></li>
+          <li data-day="2"><span>Tuesday</span><span>9am – 3pm</span></li>
+          <li data-day="3"><span>Wednesday</span><span>9am – 3pm</span></li>
+          <li data-day="4"><span>Thursday</span><span>9am – 3pm</span></li>
+          <li data-day="5"><span>Friday</span><span>9am – 3pm</span></li>
+          <li data-day="6"><span>Saturday</span><span>9am – 3pm</span></li>
+          <li data-day="0" class="off"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="hours-note">Hours can change around holidays. Please call ahead to book.</p>
+      </div>
+
+      <div class="map-card reveal d-1">
+        <iframe title="Map to Kloud-9 Pet Salon and Spa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=6720%20Jubilee%20Center%20Way%20%23101%2C%20Knoxville%2C%20TN%2037912&output=embed"></iframe>
+        <div class="map-info">
+          <address>Kloud-9, Pet Salon &amp; Spa<br>6720 Jubilee Center Way #101<br>Knoxville, TN 37912</address>
+          <a class="tel-big" href="tel:+18659474477">(865) 947-4477</a>
+          <div class="row">
+            <a class="btn btn-coral" href="tel:+18659474477">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+              Call to book
+            </a>
+            <a class="btn btn-cloud" style="border:2px solid #e6e1ff" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=6720%20Jubilee%20Center%20Way%20%23101%2C%20Knoxville%2C%20TN%2037912">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+              Get directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="bubbles" aria-hidden="true" id="bubbles2"></div>
+  <div class="wrap">
+    <h2 class="reveal">Ready for a fluffier best friend?</h2>
+    <p class="reveal d-1">One call gets your pup on the books. We will handle the bubbles.</p>
+    <div class="row reveal d-2">
+      <a class="btn btn-coral" href="tel:+18659474477">Call (865) 947-4477</a>
+      <a class="btn btn-cloud" href="https://www.facebook.com/Kloud9PetSalonAndSpa/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg>
+        Follow on Facebook
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:12px">
+          <span class="brand-name">Kloud-9<small>Pet Salon &amp; Spa</small></span>
+        </a>
+        <p style="max-width:32ch">Grooming, baths and nail trims for Knoxville pets, rated 4.8 on Google.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>6720 Jubilee Center Way #101<br>Knoxville, TN 37912</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon – Sat: 9am – 3pm<br>Sun: Closed</p>
+      </div>
+      <div>
+        <h4>Say hi</h4>
+        <p><a href="tel:+18659474477">(865) 947-4477</a><br><a href="https://www.facebook.com/Kloud9PetSalonAndSpa/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Kloud-9, Pet Salon &amp; Spa</span>
+      <span>Concept by Code Craft Media</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="btn btn-coral" href="tel:+18659474477">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+    Call
+  </a>
+  <a class="btn btn-cloud" style="border:2px solid #e6e1ff;box-shadow:none" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=6720%20Jubilee%20Center%20Way%20%23101%2C%20Knoxville%2C%20TN%2037912">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+    Directions
+  </a>
+</nav>
+
+<script>
+(function(){
+  // year
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+
+  // hours: highlight today + open/closed status (salon local time, America/New_York)
+  try{
+    var now=new Date();
+    var parts={};
+    try{
+      new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false})
+        .formatToParts(now).forEach(function(p){parts[p.type]=p.value;});
+    }catch(e){}
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var day=parts.weekday in map?map[parts.weekday]:now.getDay();
+    var hr=parts.hour!=null?parseInt(parts.hour,10)%24:now.getHours();
+    var mn=parts.minute!=null?parseInt(parts.minute,10):now.getMinutes();
+    var li=document.querySelector('#hours li[data-day="'+day+'"]');
+    if(li) li.classList.add('today');
+    var st=document.getElementById('status');
+    var mins=hr*60+mn, open=day>=1&&day<=6&&mins>=540&&mins<900;
+    if(st){
+      st.classList.add(open?'open':'closed');
+      var txt;
+      if(open) txt='Open now · until 3pm';
+      else if(day>=1&&day<=6&&mins<540) txt='Closed now · opens 9am today';
+      else txt='Closed now · opens '+((day===6||day===0)?'Monday':'tomorrow')+' at 9am';
+      st.querySelector('span').textContent=txt;
+    }
+  }catch(e){}
+
+  // bubbles
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function blow(id,n){
+    var el=document.getElementById(id); if(!el||reduce) return;
+    for(var i=0;i<n;i++){
+      var b=document.createElement('i'), s=8+Math.random()*30;
+      b.style.width=b.style.height=s+'px';
+      b.style.left=(Math.random()*100)+'%';
+      b.style.animationDuration=(9+Math.random()*12)+'s';
+      b.style.animationDelay=(-Math.random()*18)+'s';
+      el.appendChild(b);
+    }
+  }
+  blow('bubbles',16); blow('bubbles2',12);
+
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in');});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e);});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

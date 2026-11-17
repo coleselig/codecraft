@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>IrisBrows — concept site</title>
+<meta name="description" content="Nano hairstroke brows, ombre, combo brows, eyeliner and lip blushing in Maryville, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F5EFE7; --paper:#FBF8F3; --sand:#E9DFD2; --ink:#2A1E19; --cocoa:#5E4234;
+  --brow:#7A5644; --copper:#B07A55; --iris:#7F7B9C; --muted:#6F625A; --line:rgba(42,30,25,.16);
+  --display:'Italiana', 'Didot', 'Bodoni 72', Georgia, serif;
+  --serif:'Cormorant Garamond', 'Garamond', Georgia, serif;
+  --sans:'Figtree', 'Helvetica Neue', Arial, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* concept banner */
+.concept{background:var(--ink);color:#EADFD3;font-size:12px;letter-spacing:.04em;text-align:center;padding:8px 14px}
+.concept b{color:#fff;font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(245,239,231,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:40px;height:22px}
+.logo span{font-family:var(--display);font-size:26px;letter-spacing:.06em}
+.nav ul{display:none;list-style:none;gap:30px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:999px;border:1px solid var(--ink);transition:background .3s,color .3s,transform .3s}
+.btn-dark{background:var(--ink);color:var(--bone)}
+.btn-dark:hover{background:var(--cocoa);border-color:var(--cocoa);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--bone)}
+.nav .btn{padding:10px 18px;font-size:11.5px}
+
+/* hero */
+.hero{position:relative;padding:48px 0 40px;overflow:hidden}
+.hero .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brow);display:flex;align-items:center;gap:12px}
+.hero .eyebrow::before{content:"";width:34px;height:1px;background:var(--brow)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(50px,13.5vw,124px);line-height:.92;letter-spacing:-.01em;margin:22px 0 0}
+.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--brow);letter-spacing:-.02em}
+.hero-art{position:relative;margin:0 -40px 10px -30px;aspect-ratio:16/7.2}
+.hero-grid>div+div{margin-top:22px}
+.hero-art svg{width:100%;height:100%;overflow:visible}
+.draw{stroke-dasharray:var(--len,1400);stroke-dashoffset:0}
+.js .draw{stroke-dashoffset:var(--len,1400);animation:draw 2.6s cubic-bezier(.6,.05,.25,1) forwards}
+.js .draw.d2{animation-delay:.35s}.js .draw.d3{animation-delay:.7s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hairs line{stroke:var(--brow);stroke-width:1.2;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.js .hairs line{opacity:0;animation:fade .5s ease forwards}
+@keyframes fade{to{opacity:1}}
+.hero p.lede{font-family:var(--serif);font-size:23px;line-height:1.35;color:var(--cocoa);max-width:30ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.rating{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.rating .num{font-family:var(--display);font-size:44px;line-height:1;color:var(--ink)}
+.stars{color:var(--copper);letter-spacing:3px;font-size:15px}
+
+/* marquee */
+.ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);overflow:hidden;white-space:nowrap}
+.ribbon .track{display:inline-flex;gap:38px;padding:16px 0;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--cocoa);animation:scroll 34s linear infinite}
+.ribbon .track span::after{content:"·";margin-left:38px;color:var(--copper);font-style:normal}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ribbon .track{animation:none}.js .draw{animation:none;stroke-dashoffset:0}.js .hairs line{animation:none;opacity:1}}
+
+/* sections */
+section{padding:84px 0}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brow);margin-bottom:16px;display:flex;gap:14px;align-items:center}
+.kicker i{font-style:normal;font-family:var(--serif);font-size:18px;letter-spacing:0;color:var(--copper)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(40px,9vw,76px);line-height:1;letter-spacing:-.005em}
+h2 em{font-family:var(--serif);font-style:italic;color:var(--brow)}
+.sub{font-family:var(--serif);font-size:21px;color:var(--cocoa);max-width:44ch;margin-top:16px;line-height:1.4}
+
+/* menu */
+.menu{margin-top:46px;border-top:1px solid var(--ink)}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 18px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.item h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.15}
+.item .price{font-family:var(--display);font-size:28px;white-space:nowrap}
+.item .price small{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;text-align:right}
+.item p{grid-column:1/-1;color:var(--muted);font-size:15px;max-width:60ch}
+.item .tag{display:inline-block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--iris);border:1px solid currentColor;border-radius:999px;padding:3px 9px;margin-left:8px;vertical-align:4px;font-family:var(--sans);font-weight:600}
+.item.feature{background:var(--ink);color:var(--bone);margin:0 -22px;padding:30px 22px;border:0}
+.item.feature p,.item.feature .price small{color:#CDBFB3}
+.item.feature .tag{color:#D8B49A}
+.more{display:grid;grid-template-columns:1fr;gap:0;margin-top:40px}
+.more h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brow);margin-bottom:8px;font-weight:600}
+.more ul{list-style:none}
+.more li{font-family:var(--serif);font-size:22px;padding:12px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:14px}
+.more li span{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--muted);align-self:center;text-align:right}
+.note{margin-top:28px;font-size:14px;color:var(--muted);max-width:62ch}
+
+/* iris feature */
+.iris{background:var(--ink);color:var(--bone);position:relative;overflow:hidden}
+.iris h2 em{color:#D8B49A}
+.iris .sub{color:#D6C9BD}
+.iris-grid{display:grid;gap:44px;align-items:center}
+.iris-art{max-width:420px;margin:0 auto;width:100%}
+.iris-art svg{width:100%;height:auto}
+.spin{transform-origin:200px 200px;animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.facts{list-style:none;margin-top:34px;display:grid;gap:0}
+.facts li{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:20px 0;border-top:1px solid rgba(245,239,231,.16)}
+.facts .n{font-family:var(--display);font-size:38px;line-height:1;color:#D8B49A}
+.facts b{display:block;font-weight:600;letter-spacing:.02em;margin-bottom:2px}
+.facts span{color:#CDBFB3;font-size:15px}
+
+/* hours + visit */
+.visit-grid{display:grid;gap:44px;margin-top:44px}
+.hours{list-style:none;border-top:1px solid var(--ink)}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:15px 14px;border-bottom:1px solid var(--line);font-size:16px;transition:background .3s}
+.hours li .d{font-family:var(--serif);font-size:22px}
+.hours li.closed .t{color:var(--muted);font-style:italic;font-family:var(--serif);font-size:19px}
+.hours li.today{background:var(--ink);color:var(--bone);border-radius:2px}
+.hours li.today .d::after{content:"Today";font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--copper);color:#fff;padding:3px 8px;border-radius:999px;margin-left:10px;vertical-align:4px}
+.hours li.today.closed .t{color:#CDBFB3}
+.addr{font-family:var(--serif);font-size:26px;line-height:1.3;margin-bottom:18px}
+.addr small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brow);margin-bottom:8px}
+.map{position:relative;border:1px solid var(--ink);padding:8px;background:var(--paper)}
+.map iframe{display:block;width:100%;height:320px;border:0;filter:grayscale(.85) sepia(.18) contrast(.95)}
+.visit-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0}
+.pay{margin-top:26px;padding:20px 22px;border:1px dashed var(--brow);font-size:14.5px;color:var(--cocoa)}
+.pay b{display:block;font-family:var(--serif);font-size:21px;font-weight:500;color:var(--ink);margin-bottom:4px}
+
+/* book band */
+.book{background:var(--sand);text-align:center;position:relative;overflow:hidden}
+.book h2{max-width:14ch;margin:0 auto}
+.book .sub{margin:18px auto 0}
+.book .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+.book .arch{width:min(560px,100%);margin:0 auto 26px}
+
+footer{background:var(--ink);color:#CDBFB3;padding:56px 0 40px;font-size:14px}
+footer .top{display:grid;gap:30px}
+footer .logo span{color:var(--bone)}
+footer .logo svg path{stroke:#D8B49A}
+footer h5{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#D8B49A;margin-bottom:10px;font-weight:600}
+footer a{text-decoration:none;color:var(--bone)}
+footer a:hover{color:#D8B49A}
+footer .social{display:flex;gap:18px}
+footer .bottom{margin-top:44px;padding-top:20px;border-top:1px solid rgba(245,239,231,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr 1.2fr;background:var(--ink);border-top:1px solid rgba(255,255,255,.1);padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 6px;color:var(--bone);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.callbar a+a{border-left:1px solid rgba(255,255,255,.12)}
+.callbar a.bk{background:var(--copper);color:#fff}
+.callbar svg{width:16px;height:16px}
+body{padding-bottom:64px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (min-width:900px){
+  .callbar{display:none} body{padding-bottom:0}
+  .nav ul{display:flex}
+  .wrap{padding:0 40px}
+  .hero{padding:70px 0 70px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:end}
+  .hero-art{grid-column:1/-1;order:-1;margin:-50px 0 -10px;aspect-ratio:16/4}
+  .hero-grid>div+div{margin-top:0}
+  .hero h1{font-size:104px}
+  .hero p.lede{font-size:27px}
+  section{padding:120px 0}
+  .menu-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}
+  .menu{margin-top:0}
+  .item.feature{margin:0 -28px;padding:32px 28px}
+  .more{grid-template-columns:1fr 1fr;gap:40px}
+  .iris-grid{grid-template-columns:1fr 1fr;gap:80px}
+  .visit-grid{grid-template-columns:.9fr 1.1fr;gap:70px}
+  .map iframe{height:420px}
+  footer .top{grid-template-columns:1.4fr 1fr 1fr 1fr}
+  .sticky{position:sticky;top:110px}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for <b>IrisBrows</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="IrisBrows home">
+      <svg viewBox="0 0 80 44" fill="none" aria-hidden="true"><path d="M4 32 C 22 8, 52 4, 76 18" stroke="#7A5644" stroke-width="3" stroke-linecap="round"/><circle cx="40" cy="34" r="6" stroke="#7F7B9C" stroke-width="2"/></svg>
+      <span>IrisBrows</span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Iris</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-dark" href="https://irisbrows.glossgenius.com/book" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-top:20px">
+  <div class="wrap hero-grid">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1000 330" fill="none" preserveAspectRatio="xMidYMid meet">
+        <!-- brow arch -->
+        <path class="draw" style="--len:1100" d="M40 250 C 230 70, 560 30, 960 140" stroke="#7A5644" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="draw d2" style="--len:1100" d="M70 262 C 260 108, 560 72, 930 160" stroke="#B07A55" stroke-width="1" stroke-linecap="round" opacity=".7"/>
+        <!-- hair strokes along arch -->
+        <g class="hairs" id="hairs"></g>
+        <!-- eye line + iris -->
+        <path class="draw d3" style="--len:900" d="M300 318 C 420 250, 600 250, 720 318" stroke="#2A1E19" stroke-width="1.4" stroke-linecap="round"/>
+        <circle class="draw d3" style="--len:200" cx="510" cy="300" r="30" stroke="#7F7B9C" stroke-width="1.4"/>
+        <circle cx="510" cy="300" r="9" fill="#2A1E19"/>
+      </svg>
+    </div>
+    <div>
+      <div class="eyebrow">Permanent makeup · Maryville, TN</div>
+      <h1>Brows,<br><em>drawn</em> one<br>hair at a time.</h1>
+    </div>
+    <div>
+      <p class="lede">Nano hairstroke, ombre and combo brows, eyeliner and lip blushing, by appointment off Sevierville Road.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="https://irisbrows.glossgenius.com/book" target="_blank" rel="noopener">Book a free consult</a>
+        <a class="btn btn-ghost" href="tel:+18658008668">(865) 800-8668</a>
+      </div>
+      <div class="rating">
+        <div class="num">5.0</div>
+        <div><div class="stars" aria-label="5 out of 5 stars">★★★★★</div>from 80 Google reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div class="track">
+  <span>Nano Hairstroke</span><span>Ombre Brows</span><span>Combo Brows</span><span>Eyeliner</span><span>Lip Blushing</span><span>Brow Correction</span>
+  <span>Nano Hairstroke</span><span>Ombre Brows</span><span>Combo Brows</span><span>Eyeliner</span><span>Lip Blushing</span><span>Brow Correction</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap menu-grid">
+    <div class="reveal">
+      <div class="sticky">
+        <div class="kicker"><i>i.</i> The menu</div>
+        <h2>Services &amp; <em>starting</em> prices</h2>
+        <p class="sub">Every set of brows starts with a conversation. The consultation is free, so you can see your shape before you commit.</p>
+      </div>
+    </div>
+    <div>
+      <div class="menu reveal">
+        <div class="item">
+          <h3>Let's Talk Brows <span class="tag">Free</span></h3>
+          <div class="price">$0<small>20 min</small></div>
+          <p>A free consultation to talk through shape, technique and what will suit you.</p>
+        </div>
+        <div class="item feature">
+          <h3>Nano Hairstroke <span class="tag">Signature</span></h3>
+          <div class="price">$650+<small>150+ min</small></div>
+          <p>A semi-permanent technique using a digital machine with ultra-fine needles to create hair-like brow strokes. Similar to microblading.</p>
+        </div>
+        <div class="item">
+          <h3>Correction Eyebrows</h3>
+          <div class="price">$500+<small>120+ min</small></div>
+          <p>For existing brow work that needs to be reshaped or refreshed.</p>
+        </div>
+      </div>
+      <div class="more reveal">
+        <div>
+          <h4>Also offered</h4>
+          <ul>
+            <li>Ombre Brows <span>Ask for pricing</span></li>
+            <li>Combo Eyebrow <span>Ask for pricing</span></li>
+            <li>Eyeliner <span>Ask for pricing</span></li>
+            <li>Lip Blushing <span>Ask for pricing</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Touch-ups</h4>
+          <ul>
+            <li>New Clients Touch Up</li>
+            <li>Touch-Up Eyebrows <span>Returning clients</span></li>
+            <li>Touch-Up Half Year</li>
+            <li>Touch-Up Yearly <span>Returning clients</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note reveal">Prices shown are starting prices as listed on IrisBrows' booking page. Call (865) 800-8668 or book online for current pricing on every service.</p>
+    </div>
+  </div>
+</section>
+
+<section class="iris" id="why">
+  <div class="wrap iris-grid">
+    <div class="iris-art reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="186" stroke="rgba(216,180,154,.25)"/>
+        <circle cx="200" cy="200" r="150" stroke="rgba(216,180,154,.45)"/>
+        <g class="spin" id="spokes" stroke="#D8B49A" stroke-width=".8" opacity=".75"></g>
+        <circle cx="200" cy="200" r="62" stroke="#A9A5C4" stroke-width="1.2"/>
+        <circle cx="200" cy="200" r="40" fill="#F5EFE7"/>
+        <circle cx="200" cy="200" r="22" fill="#2A1E19"/>
+        <circle cx="210" cy="190" r="5" fill="#F5EFE7" opacity=".9"/>
+      </svg>
+    </div>
+    <div class="reveal">
+      <div class="kicker" style="color:#D8B49A"><i>ii.</i> Why IrisBrows</div>
+      <h2>Precise work, <em>quietly</em> five stars.</h2>
+      <p class="sub">A brow and permanent makeup studio in Maryville: free consultations, online booking and flexible payment.</p>
+      <ul class="facts">
+        <li><div class="n">5.0</div><div><b>Rated 5.0 on Google</b><span>Across 80 Google reviews.</span></div></li>
+        <li><div class="n">$0</div><div><b>Free consultation</b><span>Twenty minutes to plan your shape before anything is drawn.</span></div></li>
+        <li><div class="n">5</div><div><b>Five specialties</b><span>Nano hairstroke, ombre, combo brows, eyeliner and lip blushing, plus corrections.</span></div></li>
+        <li><div class="n" style="font-size:26px;padding-top:6px">BNPL</div><div><b>Buy now, pay later</b><span>Available in person for bookings from $50 to $4,000, approved before your appointment.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker"><i>iii.</i> Visit</div>
+      <h2>Hours &amp; <em>finding us</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <ul class="hours" id="hours">
+          <li data-day="1"><span class="d">Monday</span><span class="t">10 AM – 6 PM</span></li>
+          <li data-day="2"><span class="d">Tuesday</span><span class="t">10 AM – 6 PM</span></li>
+          <li data-day="3"><span class="d">Wednesday</span><span class="t">9:30 AM – 1 PM</span></li>
+          <li data-day="4"><span class="d">Thursday</span><span class="t">9 AM – 1 PM</span></li>
+          <li data-day="5" class="closed"><span class="d">Friday</span><span class="t">Closed</span></li>
+          <li data-day="6"><span class="d">Saturday</span><span class="t">1 PM – 5 PM</span></li>
+          <li data-day="0" class="closed"><span class="d">Sunday</span><span class="t">Closed</span></li>
+        </ul>
+        <div class="pay"><b>Buy now, pay later</b>Available in person for bookings from $50 to $4,000. Get approved before your appointment.</div>
+      </div>
+      <div class="reveal">
+        <p class="addr"><small>Studio</small>1905 Sevierville Rd<br>Maryville, TN 37804</p>
+        <div class="map">
+          <iframe title="Map to IrisBrows, 1905 Sevierville Rd, Maryville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1905%20Sevierville%20Rd%2C%20Maryville%2C%20TN%2037804&output=embed"></iframe>
+        </div>
+        <div class="visit-ctas">
+          <a class="btn btn-dark" href="tel:+18658008668">Call (865) 800-8668</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=1905%20Sevierville%20Rd%2C%20Maryville%2C%20TN%2037804" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+  <div class="wrap reveal">
+    <svg class="arch" viewBox="0 0 560 90" fill="none" aria-hidden="true"><path d="M20 80 C 150 0, 360 -6, 540 50" stroke="#7A5644" stroke-width="2" stroke-linecap="round"/><g id="hairs2" stroke="#7A5644" stroke-width="1" stroke-linecap="round"></g></svg>
+    <h2>Wake up with <em>your</em> brows done.</h2>
+    <p class="sub">Start with the free 20-minute consultation and pick a time that suits you, right from your phone.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="https://irisbrows.glossgenius.com/book" target="_blank" rel="noopener">Book on GlossGenius</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/irisbrows_tennessee" target="_blank" rel="noopener">See the work on Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 80 44" fill="none" aria-hidden="true"><path d="M4 32 C 22 8, 52 4, 76 18" stroke-width="3" stroke-linecap="round"/><circle cx="40" cy="34" r="6" stroke="#A9A5C4" stroke-width="2"/></svg><span>IrisBrows</span></a>
+        <p style="margin-top:14px;max-width:32ch">Brows and permanent makeup in Maryville, Tennessee.</p>
+      </div>
+      <div><h5>Studio</h5>1905 Sevierville Rd<br>Maryville, TN 37804</div>
+      <div><h5>Contact</h5><a href="tel:+18658008668">(865) 800-8668</a><br><a href="https://irisbrows.glossgenius.com/book" target="_blank" rel="noopener">Book online</a></div>
+      <div><h5>Follow</h5><div class="social"><a href="https://www.instagram.com/irisbrows_tennessee" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61565126213112" target="_blank" rel="noopener">Facebook</a></div></div>
+    </div>
+    <div class="bottom"><span>© IrisBrows · Maryville, TN</span><span>Concept by Code Craft Media</span></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a href="tel:+18658008668"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=1905%20Sevierville%20Rd%2C%20Maryville%2C%20TN%2037804" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+  <a class="bk" href="https://irisbrows.glossgenius.com/book" target="_blank" rel="noopener">Book</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var NS='http://www.w3.org/2000/svg';
+  // hair strokes along a cubic bezier
+  function bez(p,t){var u=1-t;return [u*u*u*p[0]+3*u*u*t*p[2]+3*u*t*t*p[4]+t*t*t*p[6], u*u*u*p[1]+3*u*u*t*p[3]+3*u*t*t*p[5]+t*t*t*p[7]];}
+  function hairs(id,p,n,len,anim){
+    var g=document.getElementById(id); if(!g) return;
+    for(var i=0;i<n;i++){
+      var t=0.04+i/n*0.9, a=bez(p,t), b=bez(p,Math.min(t+.01,1));
+      var ang=Math.atan2(b[1]-a[1],b[0]-a[0]);
+      var tilt=ang-1.1+ (t*0.9); var L=len*(1-Math.abs(t-.35)*1.1)*(0.7+((i*37)%10)/25);
+      var l=document.createElementNS(NS,'line');
+      var off=((i*53)%7)-3;
+      l.setAttribute('x1',(a[0]+off).toFixed(1)); l.setAttribute('y1',(a[1]+4).toFixed(1));
+      l.setAttribute('x2',(a[0]+off+Math.cos(tilt)*L).toFixed(1)); l.setAttribute('y2',(a[1]+4+Math.sin(tilt)*L).toFixed(1));
+      if(anim) l.style.animationDelay=(0.6+t*2.0).toFixed(2)+'s';
+      g.appendChild(l);
+    }
+  }
+  hairs('hairs',[40,250,230,70,560,30,960,140],64,30,true);
+  hairs('hairs2',[20,80,150,0,360,-6,540,50],34,16,false);
+  // iris spokes
+  var s=document.getElementById('spokes');
+  if(s){for(var k=0;k<96;k++){var an=k/96*Math.PI*2,r1=66,r2=140-((k*29)%5)*9;var ln=document.createElementNS(NS,'line');
+    ln.setAttribute('x1',(200+Math.cos(an)*r1).toFixed(1));ln.setAttribute('y1',(200+Math.sin(an)*r1).toFixed(1));
+    ln.setAttribute('x2',(200+Math.cos(an+.08)*r2).toFixed(1));ln.setAttribute('y2',(200+Math.sin(an+.08)*r2).toFixed(1));s.appendChild(ln);}}
+  // today
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-day="'+d+'"]'); if(li) li.classList.add('today');
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,2500);
+})();
+</script>
+</body>
+</html>

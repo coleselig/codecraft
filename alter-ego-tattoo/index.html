@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Alter Ego Tattoo &amp; Piercing — concept site</title>
+<meta name="description" content="Concept site for Alter Ego Tattoo & Piercing, 7013 Kingston Pike, Knoxville TN. Est. 2001.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Chivo+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f0d0c; --ink2:#1a1715; --bone:#efe6d3; --bone2:#e3d7bf; --blood:#b3261e; --blood2:#d23a2f;
+  --teal:#1f6f6b; --gold:#c9a24a; --muted:#8c8273; --line:rgba(239,230,211,.16);
+  --display:"Pirata One","UnifrakturMaguntia","Old English Text MT",Georgia,serif;
+  --body:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --mono:"Chivo Mono","SFMono-Regular",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.72rem}
+
+/* grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.concept{background:var(--gold);color:var(--ink);text-align:center;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:7px 14px;line-height:1.4}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(15,13,12,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1;letter-spacing:.01em}
+.brand small{font-family:var(--mono);font-size:.6rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;display:block;margin-top:3px}
+.nav ul{display:none;list-style:none;gap:26px}
+.nav ul a{text-decoration:none;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bone2)}
+.nav ul a:hover{color:var(--blood2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--mono);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:15px 22px;border:1.5px solid var(--bone);border-radius:2px;transition:transform .2s, background .2s, color .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn.red{background:var(--blood);border-color:var(--blood);color:#fff}
+.btn.red:hover{background:var(--blood2);border-color:var(--blood2)}
+.btn.ghost:hover{background:var(--bone);color:var(--ink)}
+.nav .btn{padding:10px 14px;font-size:.7rem}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .split{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;pointer-events:none}
+.hero .split i:first-child{background:radial-gradient(120% 80% at 0% 0%, #2a1614 0%, transparent 60%)}
+.hero .split i:last-child{background:var(--bone);opacity:.035}
+.hero .wrap{position:relative;padding-top:56px;padding-bottom:64px}
+.eyebrow{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;color:var(--gold)}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--blood2);display:inline-block}
+.h-title{font-family:var(--display);font-weight:400;line-height:.86;margin:22px 0 0;font-size:clamp(4.6rem,22vw,12.5rem);letter-spacing:-.01em}
+.h-title .alter{display:block}
+.h-title .ego{display:block;color:transparent;-webkit-text-stroke:1.5px var(--bone);position:relative;padding-left:.5em}
+.h-title .ego::after{content:"Ego";position:absolute;left:.5em;top:0;color:var(--blood);clip-path:inset(0 0 52% 0);-webkit-text-stroke:0}
+.h-sub{max-width:34ch;position:relative;font-size:clamp(1.15rem,4.4vw,1.55rem);line-height:1.35;margin-top:34px;font-weight:600}
+.h-sub em{font-style:normal;color:var(--blood2)}
+.h-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.h-meta{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+.h-meta div{padding-right:22px;margin-right:22px;border-right:1px solid var(--line)}
+.h-meta div:last-child{border:0;margin:0;padding:0}
+.h-meta strong{display:block;font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1;color:var(--bone)}
+.h-meta span{color:var(--muted)}
+.stars{color:var(--gold);letter-spacing:2px;font-size:.8rem}
+.hero-art{position:absolute;right:-130px;top:30px;width:280px;opacity:.11;pointer-events:none}
+@media(min-width:900px){
+  .hero .wrap{padding-top:90px;padding-bottom:100px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+  .hero-art{position:relative;right:auto;top:auto;width:100%;max-width:360px;opacity:1;justify-self:end}
+  .h-title .ego{padding-left:.9em}.h-title .ego::after{left:.9em}
+}
+
+/* marquee */
+.marquee{background:var(--blood);color:#fff;overflow:hidden;white-space:nowrap;border-block:1px solid #000}
+.marquee .track{display:inline-flex;gap:0;animation:mq 38s linear infinite;padding:12px 0}
+.marquee span{font-family:var(--display);font-size:1.5rem;padding:0 22px;display:inline-flex;align-items:center;gap:22px}
+.marquee span::after{content:"✦";font-family:var(--body);font-size:.8rem;color:var(--ink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+/* sections */
+section{padding:84px 0;position:relative}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.sec-head .num{color:var(--blood2)}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.8rem,11vw,5rem);line-height:.95}
+.sec-head p{color:var(--bone2);max-width:52ch}
+@media(min-width:900px){.sec-head{flex-direction:row;align-items:end;justify-content:space-between}.sec-head p{text-align:right;max-width:40ch}}
+
+/* flash sheet */
+.paper{background:var(--bone);color:var(--ink)}
+.paper .sec-head p{color:#4a423a}
+.paper .sec-head .num{color:var(--blood)}
+.flash{display:grid;grid-template-columns:1fr;border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:4px;margin:6px}
+.piece{position:relative;padding:28px 22px 30px;border-bottom:1.5px dashed rgba(15,13,12,.4);display:grid;grid-template-columns:58px 1fr;gap:16px;align-items:start}
+.piece:last-child{border-bottom:0}
+.piece .tag{position:absolute;top:12px;right:14px;font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;color:#6d6357}
+.piece svg{width:58px;height:58px}
+@media(min-width:760px){.piece{grid-template-columns:84px 1fr}.piece svg{width:84px;height:84px}}
+.piece h3{font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1;margin-bottom:8px}
+.piece p{font-size:1rem;color:#3a332c}
+.piece .chip{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--bone);padding:6px 10px}
+.piece .chip.red{background:var(--blood);color:#fff}
+@media(min-width:760px){
+  .flash{grid-template-columns:1fr 1fr}
+  .piece{border-right:1.5px dashed rgba(15,13,12,.4)}
+  .piece:nth-child(2n){border-right:0}
+  .piece:nth-last-child(-n+2){border-bottom:0}
+}
+@media(min-width:1100px){.piece{grid-template-columns:110px 1fr;padding:38px 34px}.piece svg{width:110px;height:110px}}
+.note{margin-top:26px;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:#5b5248}
+
+/* why */
+.why-grid{display:grid;gap:0;border-top:1px solid var(--line)}
+.why{display:grid;grid-template-columns:clamp(96px,28vw,150px) 1fr;gap:6px 22px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.why .big{font-family:var(--display);font-size:clamp(3.6rem,15vw,5.6rem);line-height:.85;color:var(--bone);}
+.why .big.red{color:var(--blood2)}
+.why h3{font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+.why p{color:var(--bone2);grid-column:2;font-size:.98rem}
+.why .src{grid-column:2;color:var(--muted);font-size:.62rem;margin-top:4px}
+@media(min-width:900px){.why-grid{grid-template-columns:1fr 1fr;column-gap:60px}}
+blockquote.mark{margin-top:56px;font-family:var(--display);font-size:clamp(2.1rem,8vw,3.6rem);line-height:1.05;max-width:20ch}
+blockquote.mark span{color:var(--blood2)}
+blockquote.mark cite{display:block;margin-top:14px;font-style:normal;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* process / first visit */
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{border:1px solid var(--line);padding:24px 22px;position:relative;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);color:var(--blood2);font-size:.75rem;letter-spacing:.12em}
+.step h3{font-family:var(--display);font-weight:400;font-size:1.9rem;margin:6px 0 6px;line-height:1}
+.step p{color:var(--bone2);font-size:.98rem}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* visit */
+.visit{background:var(--ink2);border-top:1px solid var(--line)}
+.visit-grid{display:grid;gap:30px}
+.hours{list-style:none;border-top:2px solid var(--bone)}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.9rem;letter-spacing:.04em}
+.hours li .d{text-transform:uppercase}
+.hours li.closed .t{color:var(--muted)}
+.hours li.today{background:var(--blood);color:#fff;padding-left:14px;padding-right:14px;border-bottom-color:var(--blood)}
+.hours li.today .t{color:#fff}
+.hours li.today .d::after{content:" · today";font-size:.7rem;opacity:.85}
+.status{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bone2);min-height:1em}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.status.open i{background:#4cc38a;box-shadow:0 0 0 4px rgba(76,195,138,.18)}
+.small{color:var(--muted);font-size:.85rem;margin-top:14px}
+.addr{font-family:var(--display);font-size:2.4rem;line-height:1;margin:6px 0 4px}
+.contact-list{list-style:none;margin:22px 0;border-top:1px solid var(--line)}
+.contact-list li{border-bottom:1px solid var(--line)}
+.contact-list a{display:flex;justify-content:space-between;gap:12px;padding:15px 2px;text-decoration:none;font-size:1rem;flex-wrap:wrap}
+.contact-list a span:first-child{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);align-self:center}
+.contact-list a:hover span:last-child{color:var(--blood2)}
+.map{border:1.5px solid var(--bone);padding:6px;background:var(--ink) repeating-linear-gradient(45deg,transparent 0 14px,rgba(239,230,211,.05) 14px 15px)}
+.map iframe{width:100%;height:320px;border:0;filter:grayscale(1) contrast(1.1) invert(.9) hue-rotate(180deg);display:block}
+.v-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:60px}.map iframe{height:440px}}
+
+footer{border-top:1px solid var(--line);padding:46px 0 40px}
+footer .wrap{display:flex;flex-direction:column;gap:18px}
+footer .fbrand{font-family:var(--display);font-size:3rem;line-height:1}
+footer .row{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--muted)}
+footer a{text-decoration:none;color:var(--bone2)}
+footer a:hover{color:var(--blood2)}
+footer .credit{color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--line);padding-top:18px}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#000;border-top:1px solid #000;padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:9px;padding:17px 10px;font-family:var(--mono);font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;background:var(--ink2);color:var(--bone)}
+.callbar a.call{background:var(--blood);color:#fff}
+.callbar svg{width:17px;height:17px}
+@media(max-width:899px){body{padding-bottom:70px}}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal: only hidden once JS adds .js-reveal to html */
+.js-reveal .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js-reveal .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js-reveal .rv{opacity:1;transform:none;transition:none}}
+.draw path,.draw circle,.draw line{stroke-dasharray:600;stroke-dashoffset:0}
+.js-reveal .draw.in path,.js-reveal .draw.in circle,.js-reveal .draw.in line{animation:draw 2.2s ease forwards}
+@keyframes draw{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Alter Ego Tattoo &amp; Piercing. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Alter Ego Tattoo & Piercing, home">
+      <span><b>Alter Ego</b><small>Tattoo &amp; Piercing · Est. 2001</small></span>
+    </a>
+    <ul>
+      <li><a href="#work">Tattoo &amp; Piercing</a></li>
+      <li><a href="#why">Why Alter Ego</a></li>
+      <li><a href="#first">First Visit</a></li>
+      <li><a href="#visit">Hours &amp; Map</a></li>
+    </ul>
+    <a class="btn red" href="tel:+18653300006">Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="split" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow mono rv"><span class="dot"></span><span>Kingston Pike · Knoxville, TN</span><span>Since 2001</span></div>
+      <h1 class="h-title rv" aria-label="Alter Ego"><span class="alter">Alter</span><span class="ego" aria-hidden="true">Ego</span></h1>
+      <p class="h-sub rv">The version of you that's been waiting under the skin. <em>Custom tattoos and piercing</em> in Knoxville, done right since 2001.</p>
+      <div class="h-cta rv">
+        <a class="btn red" href="tel:+18653300006">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          (865) 330-0006</a>
+        <a class="btn ghost" href="https://www.instagram.com/alteregoknox/" target="_blank" rel="noopener">See the work on IG</a>
+      </div>
+      <div class="h-meta rv">
+        <div><strong>4.7</strong><span class="stars" aria-hidden="true">★★★★★</span><br><span class="mono">Google rating</span></div>
+        <div><strong>813</strong><span class="mono">Google reviews</span></div>
+        <div><strong>2001</strong><span class="mono">Established</span></div>
+      </div>
+    </div>
+    <!-- mirrored mask / eye: the alter ego -->
+    <svg class="hero-art draw rv" viewBox="0 0 400 480" fill="none" aria-hidden="true">
+      <rect x="10" y="10" width="380" height="460" stroke="#efe6d3" stroke-opacity=".35"/>
+      <rect x="20" y="20" width="360" height="440" stroke="#efe6d3" stroke-opacity=".2"/>
+      <path d="M200 60 L330 240 L200 420 L70 240 Z" stroke="#efe6d3" stroke-width="2"/>
+      <path d="M200 60 L200 420" stroke="#b3261e" stroke-width="2"/>
+      <path d="M110 240 Q200 150 290 240 Q200 330 110 240 Z" stroke="#efe6d3" stroke-width="2.5"/>
+      <circle cx="200" cy="240" r="38" stroke="#b3261e" stroke-width="3"/>
+      <circle cx="200" cy="240" r="14" fill="#b3261e" stroke="#b3261e"/>
+      <path d="M200 60 L190 30 M200 60 L210 30 M200 60 L200 22" stroke="#c9a24a" stroke-width="2"/>
+      <path d="M200 420 L190 450 M200 420 L210 450 M200 420 L200 458" stroke="#c9a24a" stroke-width="2"/>
+      <path d="M70 240 L36 240 M330 240 L364 240" stroke="#c9a24a" stroke-width="2"/>
+      <path d="M128 140 l10 -4 M122 160 l12 -2 M272 140 l-10 -4 M278 160 l-12 -2" stroke="#efe6d3" stroke-opacity=".6" stroke-width="2"/>
+      <path d="M140 330 q60 40 120 0" stroke="#efe6d3" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <text x="200" y="476" fill="#8c8273" font-family="monospace" font-size="10" text-anchor="middle" letter-spacing="3">— SHEET Nº 01 —</text>
+    </svg>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Custom Tattoos</span><span>Body Piercing</span><span>Cover-up Consults</span><span>Est. 2001</span><span>Kingston Pike</span><span>Knoxville, TN</span>
+  <span>Custom Tattoos</span><span>Body Piercing</span><span>Cover-up Consults</span><span>Est. 2001</span><span>Kingston Pike</span><span>Knoxville, TN</span>
+</div></div>
+
+<section class="paper" id="work">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="mono num">Nº 02 — The flash sheet</div><h2>What we put<br>on skin.</h2></div>
+      <p>Two crafts under one roof. Bring an idea, a reference, or an old piece that needs saving. We'll take it from there.</p>
+    </div>
+    <div class="flash rv">
+      <article class="piece">
+        <span class="tag">A-01</span>
+        <svg class="draw" viewBox="0 0 100 100" fill="none" stroke="#0f0d0c" stroke-width="2.4" aria-hidden="true">
+          <path d="M50 8 L57 62 L50 72 L43 62 Z"/><path d="M32 62 H68"/><path d="M50 72 V84"/><circle cx="50" cy="90" r="5"/>
+          <path d="M50 20 L50 58" stroke="#b3261e"/><path d="M26 30 q10 6 14 18 M74 30 q-10 6 -14 18" stroke="#b3261e"/>
+        </svg>
+        <div><h3>Custom Tattoos</h3><p>Your idea, drawn into a one-off piece. In our words: <em>"Let us turn your idea into a masterpiece!"</em></p><span class="chip">Custom design</span></div>
+      </article>
+      <article class="piece">
+        <span class="tag">A-02</span>
+        <svg class="draw" viewBox="0 0 100 100" fill="none" stroke="#0f0d0c" stroke-width="2.4" aria-hidden="true">
+          <circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="18" stroke="#b3261e"/><circle cx="50" cy="20" r="5" fill="#0f0d0c"/>
+          <path d="M50 80 v12 M44 92 h12"/>
+        </svg>
+        <div><h3>Body Piercing</h3><p>"We pierce everything above the belt." Clean, precise, and done by our piercer.</p><span class="chip red">Above the belt</span></div>
+      </article>
+      <article class="piece">
+        <span class="tag">A-03</span>
+        <svg class="draw" viewBox="0 0 100 100" fill="none" stroke="#0f0d0c" stroke-width="2.4" aria-hidden="true">
+          <path d="M50 84 C20 64 14 40 30 28 C40 20 50 28 50 36 C50 28 60 20 70 28 C86 40 80 64 50 84 Z"/>
+          <path d="M22 50 L78 50" stroke="#b3261e" stroke-dasharray="5 5"/><path d="M30 18 l-6 -8 M70 18 l6 -8 M50 14 v-8" stroke="#b3261e"/>
+        </svg>
+        <div><h3>Cover-ups &amp; Fixes</h3><p>Got an old tattoo you regret? Come by the shop so an artist can see it in person and tell you honestly whether it can be covered or fixed.</p><span class="chip">In-person consult</span></div>
+      </article>
+      <article class="piece">
+        <span class="tag">A-04</span>
+        <svg class="draw" viewBox="0 0 100 100" fill="none" stroke="#0f0d0c" stroke-width="2.4" aria-hidden="true">
+          <path d="M50 12 L82 26 V50 C82 70 66 84 50 90 C34 84 18 70 18 50 V26 Z"/>
+          <path d="M36 50 L46 60 L66 38" stroke="#b3261e" stroke-width="3"/>
+        </svg>
+        <div><h3>Clean &amp; Safe</h3><p>Every session is done under the strictest sanitary conditions available in Tennessee. Aftercare guidance comes with every piece, because healing matters as much as the art.</p><span class="chip">Aftercare included</span></div>
+      </article>
+    </div>
+    <p class="note">Tattoo minimum is $100. Final price depends on size, detail, placement and time. Call (865) 330-0006 for a quote.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="mono num">Nº 03 — The record</div><h2>Why Knoxville<br>keeps coming back.</h2></div>
+      <p>No hype. Just the numbers and the promises we stand behind.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div class="big red">4.7</div><h3>Stars on Google</h3><p>Rated by our clients, one session at a time.</p></div>
+      <div class="why rv"><div class="big">813</div><h3>Google reviews</h3><p>Hundreds of people who sat in our chairs and took the time to say so.</p></div>
+      <div class="why rv"><div class="big">'01</div><h3>Established 2001</h3><p>Alter Ego has been putting ink on Knoxville since 2001.</p></div>
+      <div class="why rv"><div class="big red">1</div><h3>The only one</h3><p>We're the only Alter Ego Tattoo in the Knoxville area. Accept no imitations.</p></div>
+    </div>
+    <blockquote class="mark rv"><span>&ldquo;</span>Quality work isn't cheap!<span>&rdquo;</span><cite>Straight from the Alter Ego FAQ</cite></blockquote>
+  </div>
+</section>
+
+<section id="first" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="mono num">Nº 04 — Your first visit</div><h2>From idea<br>to ink.</h2></div>
+      <p>Nervous? Everyone is the first time. Here's how it goes.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>Call or stop in</h3><p>Tell us what you're thinking: a design, a placement, a piercing. Ring (865) 330-0006 to check availability.</p></div>
+      <div class="step rv"><h3>Talk it through</h3><p>Pricing depends on size, detail, placement and time, with a $100 minimum. An artist looks at cover-ups in person.</p></div>
+      <div class="step rv"><h3>Heal it right</h3><p>Yes, it hurts a little. It's bearable. Then follow our aftercare and your piece stays sharp for years.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="mono num">Nº 05 — Find the shop</div><h2>Come see us.</h2></div>
+      <p>West Knoxville, right on Kingston Pike.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <p class="status" id="status" aria-live="polite"></p>
+        <ul class="hours" id="hours">
+          <li data-day="2"><span class="d">Tuesday</span><span class="t">12 pm – 8 pm</span></li>
+          <li data-day="3"><span class="d">Wednesday</span><span class="t">12 pm – 8 pm</span></li>
+          <li data-day="4"><span class="d">Thursday</span><span class="t">12 pm – 8 pm</span></li>
+          <li data-day="5"><span class="d">Friday</span><span class="t">12 pm – 8 pm</span></li>
+          <li data-day="6"><span class="d">Saturday</span><span class="t">12 pm – 8 pm</span></li>
+          <li data-day="0" class="closed"><span class="d">Sunday</span><span class="t">Closed</span></li>
+          <li data-day="1" class="closed"><span class="d">Monday</span><span class="t">Closed</span></li>
+        </ul>
+        <p class="small">Hours can change around holidays. Call ahead to confirm.</p>
+
+        <div style="margin-top:34px">
+          <div class="mono" style="color:var(--muted)">Address</div>
+          <div class="addr">7013 Kingston Pike</div>
+          <div style="color:var(--bone2)">Knoxville, TN 37919</div>
+        </div>
+        <ul class="contact-list">
+          <li><a href="tel:+18653300006"><span>Phone</span><span>(865) 330-0006</span></a></li>
+          <li><a href="mailto:alteregoknox@gmail.com"><span>Email</span><span>alteregoknox@gmail.com</span></a></li>
+          <li><a href="https://www.instagram.com/alteregoknox/" target="_blank" rel="noopener"><span>Instagram</span><span>@alteregoknox</span></a></li>
+          <li><a href="https://www.facebook.com/alteregotattooknox/" target="_blank" rel="noopener"><span>Facebook</span><span>/alteregotattooknox</span></a></li>
+        </ul>
+        <div class="v-cta">
+          <a class="btn red" href="tel:+18653300006">Call the shop</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=7013+Kingston+Pike%2C+Knoxville%2C+TN+37919" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map to Alter Ego Tattoo & Piercing" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=7013%20Kingston%20Pike%2C%20Knoxville%2C%20TN%2037919&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Alter Ego</div>
+    <div class="row"><span>Tattoo &amp; Piercing</span><span>7013 Kingston Pike, Knoxville, TN 37919</span><a href="tel:+18653300006">(865) 330-0006</a></div>
+    <div class="row"><a href="https://www.instagram.com/alteregoknox/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alteregotattooknox/" target="_blank" rel="noopener">Facebook</a><a href="mailto:alteregoknox@gmail.com">Email</a></div>
+    <div class="credit">Concept by Code Craft Media · Not affiliated, not live</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="call" href="tel:+18653300006"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=7013+Kingston+Pike%2C+Knoxville%2C+TN+37919" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  // hours: highlight today in shop's timezone
+  var now;
+  try{ now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'})); }catch(e){ now=new Date(); }
+  var day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-day="'+day+'"]');
+  if(li) li.classList.add('today');
+  var st=document.getElementById('status');
+  var openDay=day>=2&&day<=6, open=openDay&&h>=12&&h<20;
+  if(st){
+    st.innerHTML='<i></i>'+(open?'Open now · until 8 pm':(openDay&&h<12?'Opens today at 12 pm':'Closed now · Tue–Sat 12–8'));
+    if(open) st.classList.add('open');
+  }
+  // reveals: hidden only once JS runs; fallback after 2.5s
+  var root=document.documentElement, els=[].slice.call(document.querySelectorAll('.rv'));
+  root.classList.add('js-reveal');
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,2500);
+})();
+</script>
+</body>
+</html>

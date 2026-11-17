@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Godbey Clean | Soft Wash &amp; Pressure Washing in Maryville, TN</title>
+<meta name="description" content="Godbey Clean LLC: family-owned soft washing and pressure washing in Maryville, TN since 2018. House washing, roof stain removal, concrete, gutters, decks and commercial. Rated 5.0 on Google. Call (865) 268-4272.">
+<meta name="theme-color" content="#0E2B33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800;900&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E2B33; --ink-2:#163C46; --ink-soft:#40585E;
+  --aqua:#22C7CC; --aqua-deep:#07717A; --aqua-pale:#D8F4F4; --aqua-mist:#EEFAFA;
+  --concrete:#E7E8E4; --concrete-2:#D6D8D2; --concrete-3:#B9BCB5; --stone:#6E7774;
+  --yellow:#FFD21F; --yellow-deep:#E8B800;
+  --white:#FFFFFF;
+  --display:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --body:'Geist',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:18px; --banner:32px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em;margin:0}
+p{margin:0}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+
+/* concrete texture */
+.tex{background-color:var(--concrete);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .32 0 0 0 0 .3 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* banner */
+.banner{position:fixed;top:0;left:0;right:0;z-index:60;height:var(--banner);display:flex;align-items:center;justify-content:center;gap:8px;background:var(--yellow);color:var(--ink);font-size:12.5px;font-weight:600;padding:0 12px;text-align:center;line-height:1.2}
+.banner b{font-weight:800}
+.banner i{width:7px;height:7px;border-radius:50%;background:var(--ink);flex:none;font-style:normal}
+
+/* nav */
+.nav{position:sticky;top:var(--banner);z-index:50;margin-top:var(--banner);background:rgba(14,43,51,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.logo svg{width:34px;height:34px;flex:none}
+.logo span{font-family:var(--display);font-weight:900;font-size:19px;letter-spacing:-.01em;line-height:1}
+.logo small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;font-weight:500;color:var(--aqua);margin-top:3px}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:4px}
+.nav ul a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;text-decoration:none;font-weight:500;font-size:15px;border-radius:999px;color:#d9e6e8;transition:background .2s,color .2s}
+.nav ul a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav-call{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;background:var(--yellow);color:var(--ink);font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap;transition:transform .2s}
+.nav-call:hover{transform:translateY(-1px)}
+.nav-call svg{width:17px;height:17px}
+.nav-call .t-long{display:none}
+@media (min-width:980px){.nav ul{display:flex}.nav-call .t-long{display:inline}.nav-call .t-short{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-weight:700;font-size:16.5px;text-decoration:none;border:2px solid transparent;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-y{background:var(--yellow);color:var(--ink);box-shadow:0 6px 0 var(--yellow-deep)}
+.btn-y:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--yellow-deep)}
+.btn-y:active{transform:translateY(3px);box-shadow:0 2px 0 var(--yellow-deep)}
+.btn-o{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-o:hover{background:var(--ink);color:#fff}
+.btn-w{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-w:hover{background:#fff;color:var(--ink)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:40px 0 56px}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--aqua-deep);margin-bottom:18px}
+.hero-eyebrow::before{content:"";width:28px;height:3px;background:var(--aqua);border-radius:2px}
+.hero h1{font-size:clamp(44px,11.5vw,92px);font-weight:900;letter-spacing:-.035em;line-height:.95}
+.hero h1 .hl{position:relative;display:inline-block;color:var(--ink);z-index:0}
+.hero h1 .hl::after{content:"";position:absolute;left:-4px;right:-6px;bottom:.06em;height:.34em;background:var(--yellow);z-index:-1;border-radius:3px;transform-origin:left;animation:swipe 1s .5s cubic-bezier(.7,0,.2,1) both}
+@keyframes swipe{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero h1 .aq{color:var(--aqua-deep)}
+.hero-sub{margin-top:22px;font-size:clamp(17px,2.1vw,19.5px);max-width:34em;color:var(--ink-soft)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.rating{display:inline-flex;align-items:center;gap:12px;margin-top:28px;padding:10px 16px 10px 12px;background:#fff;border-radius:14px;box-shadow:0 1px 0 var(--concrete-3);text-decoration:none}
+.rating .g{width:30px;height:30px;flex:none}
+.rating .stars{display:flex;gap:2px;color:#F4B400}
+.rating .stars svg{width:16px;height:16px}
+.rating strong{font-family:var(--display);font-size:22px;font-weight:900;line-height:1}
+.rating small{display:block;font-size:13px;color:var(--ink-soft);line-height:1.3}
+@media (min-width:1020px){.hero{padding:64px 0 84px}.hero .wrap{grid-template-columns:1fr 1.08fr;gap:56px}}
+
+/* before / after */
+.ba-shell{position:relative}
+.ba{position:relative;aspect-ratio:800/560;border-radius:22px;overflow:hidden;background:#cfd3cf;box-shadow:0 30px 60px -30px rgba(14,43,51,.55),0 0 0 6px #fff;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;--x:50%}
+.ba svg{position:absolute;inset:0;width:100%;height:100%}
+.ba-dirty{position:absolute;inset:0;clip-path:inset(0 0 0 var(--x));-webkit-clip-path:inset(0 0 0 var(--x))}
+.ba-tag{position:absolute;top:14px;z-index:3;padding:6px 10px;border-radius:8px;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.12em;pointer-events:none}
+.ba-tag.after{left:14px;background:var(--aqua);color:var(--ink)}
+.ba-tag.before{right:14px;background:rgba(14,43,51,.82);color:#fff}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--x);width:0;z-index:4}
+.ba-handle .line{position:absolute;top:0;bottom:0;left:-2px;width:4px;background:#fff;box-shadow:0 0 0 1px rgba(14,43,51,.15),0 0 18px rgba(34,199,204,.8)}
+.ba-knob{position:absolute;top:50%;left:0;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--yellow);border:4px solid #fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(14,43,51,.35);cursor:grab;outline:none}
+.ba-knob:focus-visible{box-shadow:0 0 0 4px var(--ink),0 8px 20px rgba(14,43,51,.35)}
+.ba-knob svg{width:28px;height:28px;position:static}
+.ba.drag .ba-knob{cursor:grabbing;transform:scale(1.06)}
+.spray{position:absolute;top:0;left:-60px;width:120px;height:56%;pointer-events:none}
+.spray svg{position:static;width:100%;height:100%}
+.spray .jet{stroke:#fff;stroke-width:2.2;stroke-linecap:round;fill:none;stroke-dasharray:6 12;animation:jet .55s linear infinite;opacity:.9}
+.spray .jet.b{stroke:var(--aqua);animation-duration:.42s;stroke-dasharray:3 10}
+@keyframes jet{to{stroke-dashoffset:-36}}
+.ba-meter{position:absolute;right:14px;bottom:14px;z-index:3;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(14,43,51,.82);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.06em;pointer-events:none}
+.ba-meter .bar{width:64px;height:6px;border-radius:3px;background:rgba(255,255,255,.2);overflow:hidden}
+.ba-meter .bar i{display:block;height:100%;width:var(--x);background:var(--aqua)}
+.ba-hint{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;color:var(--ink-soft);font-size:14px}
+.ba-hint svg{width:22px;height:22px;color:var(--aqua-deep)}
+.twinkle{animation:tw 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.twinkle.d2{animation-delay:.8s}.twinkle.d3{animation-delay:1.6s}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
+
+/* marquee */
+.marquee{background:var(--ink);color:#fff;overflow:hidden;border-top:4px solid var(--yellow)}
+.marquee .track{display:flex;width:max-content;animation:mq 50s linear infinite}
+.marquee ul{display:flex;list-style:none;margin:0;padding:16px 0;gap:0}
+.marquee li{display:flex;align-items:center;gap:22px;padding-right:22px;font-family:var(--display);font-weight:800;font-size:20px;white-space:nowrap;letter-spacing:-.01em}
+.marquee li::after{content:"";width:10px;height:14px;background:var(--aqua);clip-path:path('M5 0C5 0 0 6 0 9a5 5 0 0010 0C10 6 5 0 5 0z')}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:80px 0}
+.sec-head{display:grid;gap:16px;margin-bottom:40px;max-width:760px}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--aqua-deep)}
+.kicker .n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--ink);color:var(--yellow);font-size:11.5px}
+.sec h2{font-size:clamp(36px,7vw,64px);font-weight:900;letter-spacing:-.035em}
+.sec-head p{color:var(--ink-soft);font-size:18px;max-width:38em}
+
+/* spray divider */
+.divider{height:46px;overflow:hidden}
+.divider svg{width:100%;height:46px}
+.divider path{fill:none;stroke-linecap:round;stroke-dasharray:2 14;animation:jet 1.4s linear infinite}
+
+/* services */
+.svc{background:#fff}
+.svc-group{margin-top:8px}
+.svc-group + .svc-group{margin-top:48px}
+.svc-group h3.grp{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone);display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.svc-group h3.grp::after{content:"";flex:1;height:1px;background:var(--concrete-2)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1020px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;overflow:hidden;border-radius:var(--r);background:var(--concrete);padding:24px 22px 22px;display:flex;flex-direction:column;gap:10px;min-height:200px;isolation:isolate;transition:transform .3s,box-shadow .3s}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,var(--aqua-pale) 0 48%,rgba(216,244,244,0) 52%);background-size:220% 100%;background-position:100% 0;transition:background-position .7s cubic-bezier(.6,0,.2,1)}
+.card:hover,.card:focus-within{transform:translateY(-4px);box-shadow:0 18px 30px -20px rgba(14,43,51,.45)}
+.card:hover::before{background-position:0 0}
+.card .ic{width:52px;height:52px;border-radius:14px;background:var(--ink);color:var(--aqua);display:grid;place-items:center;margin-bottom:6px}
+.card .ic svg{width:30px;height:30px}
+.card h4{font-family:var(--display);font-size:23px;font-weight:800;letter-spacing:-.02em;margin:0;line-height:1.1}
+.card p{color:var(--ink-soft);font-size:16px}
+.card .tag{position:absolute;top:22px;right:20px;font-family:var(--mono);font-size:11px;color:var(--stone);letter-spacing:.1em}
+.card.feature{background:var(--ink);color:#fff}
+.card.feature::before{background:linear-gradient(100deg,var(--ink-2) 0 48%,rgba(22,60,70,0) 52%);background-size:220% 100%;background-position:100% 0}
+.card.feature p{color:#C9D9DC}
+.card.feature .ic{background:var(--yellow);color:var(--ink)}
+.card.feature .tag{color:var(--aqua)}
+.svc-note{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:20px 22px;border-radius:var(--r);border:2px dashed var(--concrete-3)}
+.svc-note p{flex:1 1 280px;color:var(--ink-soft)}
+.svc-note strong{color:var(--ink)}
+
+/* method */
+.method .wrap{display:grid;gap:22px}
+.modes{display:grid;gap:16px}
+@media (min-width:860px){.modes{grid-template-columns:1fr 1fr}}
+.mode{border-radius:22px;padding:28px 24px;background:#fff;display:grid;gap:14px;box-shadow:0 1px 0 var(--concrete-3)}
+.mode.soft{background:var(--aqua-mist)}
+.mode .gauge{width:150px;height:96px}
+.mode h3{font-size:clamp(28px,4vw,36px);font-weight:900}
+.mode p{color:var(--ink-soft)}
+.mode ul{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.mode li{display:inline-flex;align-items:center;min-height:34px;line-height:1.2;padding:6px 12px;border-radius:999px;background:#fff;font-size:14px;font-weight:600;box-shadow:inset 0 0 0 1.5px var(--concrete-2)}
+.mode.soft li{box-shadow:inset 0 0 0 1.5px #b9e6e7}
+.needle{transform-origin:75px 82px;transition:transform 1.2s cubic-bezier(.3,1.4,.5,1)}
+.mode.soft .needle{transform:rotate(-55deg)}
+.mode.power .needle{transform:rotate(55deg)}
+html.js .mode:not(.in) .needle{transform:rotate(-88deg)}
+.quote-own{margin-top:6px;padding:22px 24px;border-left:5px solid var(--yellow);background:#fff;border-radius:0 16px 16px 0;font-family:var(--display);font-weight:700;font-size:clamp(20px,2.6vw,25px);line-height:1.25;letter-spacing:-.01em}
+.quote-own small{display:block;margin-top:10px;font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone)}
+
+/* why */
+.why{background:var(--ink);color:#fff;overflow:hidden}
+.why .sec-head p{color:#B9CDD1}
+.why .kicker{color:var(--aqua)}
+.why .kicker .n{background:var(--yellow);color:var(--ink)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (min-width:900px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{border-radius:var(--r);background:var(--ink-2);padding:22px 20px;display:grid;gap:6px;align-content:start;border:1px solid rgba(255,255,255,.06)}
+.stat b{font-family:var(--display);font-size:clamp(38px,6vw,58px);font-weight:900;line-height:1;color:var(--aqua);letter-spacing:-.04em}
+.stat span{font-size:15px;color:#D2E0E3;line-height:1.35}
+.stat.y{background:var(--yellow);color:var(--ink)}
+.stat.y b{color:var(--ink)}
+.stat.y span{color:var(--ink)}
+.facts{margin-top:14px;display:grid;gap:12px}
+@media (min-width:760px){.facts{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.facts{grid-template-columns:repeat(3,1fr)}}
+.fact{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.fact svg{width:26px;height:26px;flex:none;color:var(--yellow);margin-top:2px}
+.fact h4{margin:0 0 2px;font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-.01em}
+.fact p{font-size:15px;color:#B9CDD1;line-height:1.5}
+.why-bg{position:absolute;right:-80px;top:-40px;width:420px;opacity:.08;pointer-events:none}
+
+/* area */
+.area .wrap{display:grid;gap:30px}
+@media (min-width:980px){.area .wrap{grid-template-columns:1fr 1.2fr;align-items:center}}
+.counties{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.counties span{padding:10px 16px;border-radius:12px;background:var(--ink);color:#fff;font-family:var(--display);font-weight:800;font-size:17px}
+.towns{display:flex;flex-wrap:wrap;gap:8px}
+.towns span{padding:8px 14px;border-radius:999px;background:#fff;font-size:15px;font-weight:500;box-shadow:inset 0 0 0 1.5px var(--concrete-2);transition:background .2s,box-shadow .2s}
+.towns span:hover{background:var(--aqua-pale);box-shadow:inset 0 0 0 1.5px var(--aqua)}
+.towns span.home{background:var(--yellow);box-shadow:none;font-weight:700}
+
+/* visit */
+.visit{background:#fff}
+.visit .wrap{display:grid;gap:22px}
+@media (min-width:980px){.visit .wrap{grid-template-columns:.9fr 1.1fr;align-items:stretch}}
+.panel{border-radius:22px;background:var(--concrete);padding:26px 22px}
+.panel h3{font-size:26px;font-weight:900;margin-bottom:6px}
+.status{display:inline-flex;align-items:center;gap:8px;margin:6px 0 16px;padding:6px 12px;border-radius:999px;background:#fff;font-size:14px;font-weight:600}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--stone)}
+.status.open i{background:#1BA672;box-shadow:0 0 0 4px rgba(27,166,114,.18)}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:10px;font-size:16px;border-bottom:1px dashed var(--concrete-3)}
+.hours li:last-child{border-bottom:0}
+.hours li span:last-child{font-family:var(--mono);font-size:14px;letter-spacing:.02em}
+.hours li.today{background:var(--ink);color:#fff;border-bottom-color:transparent;font-weight:700}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;padding:2px 8px;border-radius:6px;background:var(--yellow);color:var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;vertical-align:2px}
+.contact-list{display:grid;gap:10px;margin-top:20px}
+.contact-list a{display:flex;align-items:center;gap:14px;min-height:56px;padding:10px 14px;border-radius:14px;background:#fff;text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s;word-break:break-word}
+.contact-list a:hover{transform:translateX(4px);box-shadow:0 0 0 2px var(--aqua)}
+.contact-list svg{width:22px;height:22px;flex:none;color:var(--aqua-deep)}
+.contact-list small{display:block;font-weight:500;color:var(--ink-soft);font-size:13px}
+.mapbox{border-radius:22px;overflow:hidden;position:relative;min-height:380px;background:var(--concrete-2);display:flex;flex-direction:column}
+.mapbox iframe{border:0;width:100%;flex:1;min-height:340px;filter:saturate(.85)}
+.mapbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--ink);color:#fff}
+.mapbar p{font-size:15px}
+.mapbar .btn{min-height:46px;padding:0 18px;font-size:15px}
+
+/* cta band */
+.cta-band{background:var(--aqua);color:var(--ink);overflow:hidden}
+.cta-band .wrap{display:grid;gap:24px;padding-top:64px;padding-bottom:64px;position:relative;z-index:1}
+.cta-band h2{font-size:clamp(38px,7.5vw,76px);font-weight:900;letter-spacing:-.04em;max-width:13em}
+.cta-band p{font-size:18px;max-width:34em}
+.cta-band .row{display:flex;flex-wrap:wrap;gap:14px}
+.cta-band .btn-o{border-color:var(--ink)}
+.drops{position:absolute;inset:0;pointer-events:none;opacity:.35}
+
+/* footer */
+footer{background:var(--ink);color:#C9D9DC;padding:56px 0 170px}
+@media (min-width:900px){footer{padding-bottom:110px}}
+footer .wrap{display:grid;gap:30px}
+@media (min-width:900px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr}}
+footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin:0 0 12px;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+footer ul a{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#fff}
+footer ul a:hover{color:var(--yellow)}
+footer ul svg{width:20px;height:20px}
+footer .logo{color:#fff;margin-bottom:12px}
+.fine{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:13.5px;color:#9FB6BB}
+
+/* sticky mobile cta */
+.mcta{position:fixed;left:10px;right:10px;bottom:calc(70px + env(safe-area-inset-bottom));z-index:55;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border-radius:18px;background:rgba(14,43,51,.96);box-shadow:0 14px 34px rgba(14,43,51,.4);transform:translateY(0);transition:transform .35s,opacity .35s}
+.mcta a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px}
+.mcta a svg{width:18px;height:18px}
+.mcta .c{background:var(--yellow);color:var(--ink)}
+.mcta .d{background:rgba(255,255,255,.1);color:#fff}
+html.js .mcta.hide{transform:translateY(180%);opacity:0;pointer-events:none}
+@media (min-width:900px){.mcta{display:none}}
+
+@media (max-width:640px){
+  :root{--banner:40px}
+  .banner{font-size:11.5px;padding:0 14px}
+  .card{min-height:0;padding:20px 18px 18px;display:grid;grid-template-columns:48px 1fr;column-gap:14px;row-gap:6px;align-items:center}
+  .card .ic{width:48px;height:48px;margin:0}
+  .card .ic svg{width:26px;height:26px}
+  .card h4{font-size:21px}
+  .card p{grid-column:1/-1}
+  .card .tag{position:static;grid-column:1/-1;order:-1}
+  .sec{padding:64px 0}
+  .hero{padding-top:28px}
+}
+/* reveal */
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+html.js .reveal.in{opacity:1;transform:none}
+html.js .reveal.d1{transition-delay:.08s}html.js .reveal.d2{transition-delay:.16s}html.js .reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<script>document.documentElement.classList.add('js');setTimeout(function(){var l=document.querySelectorAll('.reveal,.mode');for(var i=0;i<l.length;i++)l[i].classList.add('in')},2500)</script>
+
+<div class="banner" role="note"><i aria-hidden="true"></i><span>Concept site by <b>Code Craft Media</b>, made for Godbey Clean LLC. Not live.</span></div>
+
+<!-- shared icons + scene -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="glassC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BFF1F2"/><stop offset=".55" stop-color="#63CDD6"/><stop offset="1" stop-color="#2B8E9C"/></linearGradient>
+    <linearGradient id="algaeTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E5A2A" stop-opacity=".75"/><stop offset="1" stop-color="#5D6B33" stop-opacity="0"/></linearGradient>
+    <linearGradient id="algaeBot" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3F4A22" stop-opacity=".85"/><stop offset="1" stop-color="#55632D" stop-opacity="0"/></linearGradient>
+    <linearGradient id="drip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2A1E" stop-opacity=".75"/><stop offset="1" stop-color="#2A2A1E" stop-opacity="0"/></linearGradient>
+    <filter id="grime" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011 0.05" numOctaves="3" seed="7"/>
+      <feColorMatrix values="0 0 0 0 .27  0 0 0 0 .31  0 0 0 0 .16  1.9 0 0 0 -.85"/>
+    </filter>
+    <filter id="speck" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="3"/>
+      <feColorMatrix values="0 0 0 0 .12  0 0 0 0 .14  0 0 0 0 .08  2.6 0 0 0 -1.55"/>
+    </filter>
+    <symbol id="scene" viewBox="0 0 800 560">
+      <rect class="s-soff" x="0" y="0" width="800" height="46"/>
+      <g class="s-soffl"><rect x="0" y="10" width="800" height="1.5"/><rect x="0" y="22" width="800" height="1.5"/><rect x="0" y="34" width="800" height="1.5"/></g>
+      <rect class="s-trim" x="0" y="44" width="800" height="16"/>
+      <rect class="s-gut" x="-4" y="58" width="808" height="28" rx="3"/>
+      <rect class="s-gutsh" x="-4" y="80" width="808" height="6"/>
+      <rect class="s-gutsh" x="-4" y="62" width="808" height="2"/>
+      <rect class="s-sid" x="0" y="86" width="800" height="400"/>
+      <g class="s-sidsh">
+        <rect x="0" y="86" width="800" height="5"/><rect x="0" y="116" width="800" height="5"/><rect x="0" y="146" width="800" height="5"/><rect x="0" y="176" width="800" height="5"/><rect x="0" y="206" width="800" height="5"/><rect x="0" y="236" width="800" height="5"/><rect x="0" y="266" width="800" height="5"/><rect x="0" y="296" width="800" height="5"/><rect x="0" y="326" width="800" height="5"/><rect x="0" y="356" width="800" height="5"/><rect x="0" y="386" width="800" height="5"/><rect x="0" y="416" width="800" height="5"/><rect x="0" y="446" width="800" height="5"/>
+      </g>
+      <rect class="s-trim" x="770" y="86" width="22" height="400"/>
+      <!-- shutters + window -->
+      <rect class="s-shut" x="196" y="132" width="48" height="262" rx="2"/>
+      <rect class="s-shut" x="456" y="132" width="48" height="262" rx="2"/>
+      <g class="s-shutl">
+        <rect x="202" y="146" width="36" height="4"/><rect x="202" y="160" width="36" height="4"/><rect x="202" y="174" width="36" height="4"/><rect x="202" y="188" width="36" height="4"/><rect x="202" y="202" width="36" height="4"/><rect x="202" y="216" width="36" height="4"/><rect x="202" y="230" width="36" height="4"/><rect x="202" y="244" width="36" height="4"/>
+        <rect x="202" y="276" width="36" height="4"/><rect x="202" y="290" width="36" height="4"/><rect x="202" y="304" width="36" height="4"/><rect x="202" y="318" width="36" height="4"/><rect x="202" y="332" width="36" height="4"/><rect x="202" y="346" width="36" height="4"/><rect x="202" y="360" width="36" height="4"/><rect x="202" y="374" width="36" height="4"/>
+        <rect x="462" y="146" width="36" height="4"/><rect x="462" y="160" width="36" height="4"/><rect x="462" y="174" width="36" height="4"/><rect x="462" y="188" width="36" height="4"/><rect x="462" y="202" width="36" height="4"/><rect x="462" y="216" width="36" height="4"/><rect x="462" y="230" width="36" height="4"/><rect x="462" y="244" width="36" height="4"/>
+        <rect x="462" y="276" width="36" height="4"/><rect x="462" y="290" width="36" height="4"/><rect x="462" y="304" width="36" height="4"/><rect x="462" y="318" width="36" height="4"/><rect x="462" y="332" width="36" height="4"/><rect x="462" y="346" width="36" height="4"/><rect x="462" y="360" width="36" height="4"/><rect x="462" y="374" width="36" height="4"/>
+      </g>
+      <rect class="s-trim" x="250" y="126" width="200" height="272" rx="3"/>
+      <rect x="264" y="140" width="172" height="244" fill="url(#glassC)"/>
+      <path d="M276 140h46l-58 110v-46z M340 140h22l-98 186v-22z" fill="#fff" opacity=".32"/>
+      <rect class="s-trim" x="347" y="140" width="6" height="244"/>
+      <rect class="s-trim" x="264" y="258" width="172" height="7"/>
+      <rect class="s-trim" x="238" y="396" width="224" height="13" rx="2"/>
+      <rect class="s-gutsh" x="238" y="406" width="224" height="3"/>
+      <!-- downspout -->
+      <rect class="s-gut" x="706" y="84" width="24" height="402"/>
+      <rect class="s-gutsh" x="724" y="84" width="6" height="402"/>
+      <rect class="s-gut" x="700" y="150" width="36" height="8" rx="2"/>
+      <rect class="s-gut" x="700" y="330" width="36" height="8" rx="2"/>
+      <path class="s-gut" d="M706 470h24v34h-34l-14 8v-24l14-6h10z"/>
+      <!-- hose bib -->
+      <rect class="s-fdn" x="590" y="404" width="26" height="26" rx="4"/>
+      <circle cx="603" cy="417" r="7" fill="#8E9A9A"/>
+      <rect x="600" y="400" width="6" height="12" fill="#C9A23A"/>
+      <!-- foundation + slab -->
+      <rect class="s-fdn" x="0" y="486" width="800" height="28"/>
+      <rect class="s-fdnl" x="0" y="486" width="800" height="3"/>
+      <rect class="s-conc" x="0" y="514" width="800" height="46"/>
+      <g class="s-concj"><rect x="0" y="514" width="800" height="3"/><rect x="330" y="514" width="3" height="46"/><rect x="660" y="514" width="3" height="46"/></g>
+      <!-- shrub -->
+      <g>
+        <ellipse cx="70" cy="520" rx="110" ry="22" fill="#000" opacity=".12"/>
+        <circle cx="28" cy="452" r="56" fill="#22603D"/>
+        <circle cx="104" cy="470" r="50" fill="#2C7348"/>
+        <circle cx="60" cy="420" r="44" fill="#348553"/>
+        <circle cx="134" cy="500" r="30" fill="#22603D"/>
+        <circle cx="10" cy="500" r="36" fill="#2C7348"/>
+        <circle cx="72" cy="406" r="16" fill="#46A066" opacity=".8"/>
+        <circle cx="112" cy="448" r="12" fill="#46A066" opacity=".7"/>
+        <circle cx="30" cy="430" r="10" fill="#46A066" opacity=".7"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Godbey Clean home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#22C7CC"/><path d="M20 7c0 0-9 10.5-9 17a9 9 0 0018 0C29 17.5 20 7 20 7z" fill="#0E2B33"/><path d="M15.5 25.5a4.5 4.5 0 004.5 4.5" stroke="#FFD21F" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+      <span>GODBEY CLEAN<small>POWER &amp; SOFT WASH</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#method">Soft vs. power</a></li>
+      <li><a href="#why">Why Godbey</a></li>
+      <li><a href="#area">Service area</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+18652684272"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><span class="t-short">Call</span><span class="t-long">(865) 268-4272</span></a>
+  </div>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero tex" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="hero-eyebrow mono">Power &amp; soft wash · Maryville, TN</p>
+      <h1 id="h1">Under the green is <span class="hl">the house</span> <span class="aq">you&nbsp;fell&nbsp;for.</span></h1>
+      <p class="hero-sub">Godbey Clean soft washes siding and roofs and power washes concrete for homes and businesses across Maryville, Knoxville, Sevierville and the towns in between. Family-owned and fully licensed &amp; insured since 2018.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-y" href="tel:+18652684272"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>Call (865) 268-4272</a>
+        <a class="btn btn-o" href="https://www.godbeyclean.com/schedule-your-estimate" target="_blank" rel="noopener">Free onsite estimate<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Godbey+Clean+LLC+Maryville+TN" target="_blank" rel="noopener">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 15.4 19.2 12 24 12c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 15.6 2 8.4 6.8 4.9 13.6z" opacity="0"/></svg>
+        <div><div style="display:flex;align-items:center;gap:8px"><strong>5.0</strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z"/></svg></span></div><small>202 Google reviews</small></div>
+      </a>
+    </div>
+
+    <div class="ba-shell">
+      <div class="ba" id="ba">
+        <!-- AFTER (clean) -->
+        <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" style="--sid:#F7F9F8;--sidsh:#D5DEDD;--trim:#FFFFFF;--soff:#ECF1F0;--soffl:#D9E1E0;--gut:#FFFFFF;--gutsh:#D3DCDB;--shut:#14505C;--shutl:#0D3E48;--fdn:#C2C6C1;--fdnl:#A9AEA8;--conc:#DADCD7;--concj:#B4B8B2" role="img" aria-label="Illustration: the same wall after a Godbey Clean wash, bright white siding and clean concrete">
+          <style>.s-sid{fill:var(--sid)}.s-sidsh{fill:var(--sidsh)}.s-trim{fill:var(--trim)}.s-soff{fill:var(--soff)}.s-soffl{fill:var(--soffl)}.s-gut{fill:var(--gut)}.s-gutsh{fill:var(--gutsh)}.s-shut{fill:var(--shut)}.s-shutl{fill:var(--shutl)}.s-fdn{fill:var(--fdn)}.s-fdnl{fill:var(--fdnl)}.s-conc{fill:var(--conc)}.s-concj{fill:var(--concj)}</style>
+          <use href="#scene" width="800" height="560"/>
+          <g fill="#fff">
+            <path class="twinkle" d="M300 175l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>
+            <path class="twinkle d2" d="M405 300l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+            <path class="twinkle d3" d="M560 210l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="#22C7CC"/>
+            <path class="twinkle d2" d="M190 528l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#22C7CC"/>
+            <path class="twinkle" d="M520 66l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#22C7CC"/>
+          </g>
+        </svg>
+        <!-- BEFORE (dirty) -->
+        <div class="ba-dirty" aria-hidden="true">
+          <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" style="--sid:#CFCDB2;--sidsh:#A6A486;--trim:#D9D5BE;--soff:#C4C2AA;--soffl:#A8A68C;--gut:#D2CEB8;--gutsh:#9E9A82;--shut:#2C443F;--shutl:#203431;--fdn:#8E9081;--fdnl:#6F7163;--conc:#9C9B8C;--concj:#77766A">
+            <use href="#scene" width="800" height="560"/>
+            <rect x="0" y="0" width="800" height="514" filter="url(#grime)" opacity=".7"/>
+            <rect x="0" y="86" width="800" height="170" fill="url(#algaeTop)"/>
+            <rect x="0" y="360" width="800" height="130" fill="url(#algaeBot)"/>
+            <rect x="0" y="0" width="800" height="560" filter="url(#speck)" opacity=".8"/>
+            <!-- gutter tiger stripes -->
+            <g fill="#3A3726" opacity=".55">
+              <rect x="40" y="62" width="5" height="24"/><rect x="88" y="62" width="3" height="24"/><rect x="150" y="62" width="7" height="24"/><rect x="232" y="62" width="4" height="24"/><rect x="300" y="62" width="6" height="24"/><rect x="371" y="62" width="3" height="24"/><rect x="430" y="62" width="8" height="24"/><rect x="520" y="62" width="4" height="24"/><rect x="590" y="62" width="6" height="24"/><rect x="650" y="62" width="3" height="24"/>
+            </g>
+            <!-- drip streaks -->
+            <g fill="url(#drip)">
+              <rect x="120" y="86" width="9" height="150"/><rect x="290" y="86" width="5" height="40"/><rect x="540" y="86" width="12" height="190"/><rect x="610" y="86" width="6" height="120"/><rect x="742" y="86" width="8" height="230"/>
+              <rect x="268" y="409" width="7" height="72"/><rect x="330" y="409" width="5" height="58"/><rect x="398" y="409" width="9" height="78"/><rect x="440" y="409" width="5" height="50"/>
+            </g>
+            <!-- grimy glass -->
+            <rect x="264" y="140" width="172" height="244" fill="#6C6A4C" opacity=".42"/>
+            <g fill="#4A4834" opacity=".5"><circle cx="300" cy="360" r="14"/><circle cx="400" cy="210" r="9"/><circle cx="380" cy="350" r="20"/><circle cx="290" cy="180" r="6"/></g>
+            <!-- cobweb -->
+            <g stroke="#F2F0E2" stroke-width="1.2" fill="none" opacity=".75"><path d="M264 140l46 46M264 140l52 20M264 140l20 52"/><path d="M276 152q10-2 14 2M270 162q16-2 22 6M268 176q22 0 32 12"/></g>
+            <!-- concrete stains -->
+            <g fill="#4E4D3F" opacity=".5"><ellipse cx="460" cy="540" rx="80" ry="14"/><ellipse cx="600" cy="530" rx="34" ry="8"/><ellipse cx="760" cy="545" rx="60" ry="12"/><ellipse cx="250" cy="534" rx="40" ry="9"/></g>
+            <rect x="0" y="514" width="800" height="12" fill="#3F4A22" opacity=".45"/>
+            <!-- roof algae runoff on soffit -->
+            <rect x="0" y="0" width="800" height="46" fill="#3E3B28" opacity=".22"/>
+          </svg>
+        </div>
+        <span class="ba-tag after">AFTER</span>
+        <span class="ba-tag before">BEFORE</span>
+        <div class="ba-handle">
+          <div class="line"></div>
+          <div class="spray" aria-hidden="true">
+            <svg viewBox="0 0 120 300" preserveAspectRatio="none">
+              <path class="jet" d="M60 0 L60 300"/>
+              <path class="jet b" d="M60 0 L44 300"/>
+              <path class="jet b" d="M60 0 L76 300"/>
+              <path class="jet" d="M60 0 L28 300" style="animation-delay:-.2s"/>
+              <path class="jet" d="M60 0 L92 300" style="animation-delay:-.35s"/>
+            </svg>
+          </div>
+          <div class="ba-knob" id="baKnob" role="slider" tabindex="0" aria-label="Before and after wash comparison. Use arrow keys to wash more or less of the wall." aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent washed">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#0E2B33" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 8l-6 6 6 6M18 8l6 6-6 6"/></svg>
+          </div>
+        </div>
+        <div class="ba-meter" aria-hidden="true"><span id="baPct">50%</span><span class="bar"><i></i></span><span>CLEAN</span></div>
+      </div>
+      <p class="ba-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V5.5a1.5 1.5 0 013 0V12M11 11.5v-2a1.5 1.5 0 013 0V12M14 10.5a1.5 1.5 0 013 0V12M17 11.5a1.5 1.5 0 013 0V16a6 6 0 01-6 6h-2a6 6 0 01-5.2-3L5 15.5a1.5 1.5 0 012.6-1.5L8 15"/></svg>Drag the wand across the wall. Illustration, not a real job photo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-label="Towns served">
+  <div class="track">
+    <ul><li>Maryville</li><li>Alcoa</li><li>Knoxville</li><li>Sevierville</li><li>Farragut</li><li>Lenoir City</li><li>Townsend</li><li>Pigeon Forge</li><li>Tellico Village</li><li>Loudon</li><li>Louisville</li><li>Friendsville</li><li>Walland</li><li>Seymour</li><li>Hardin Valley</li><li>Vonore</li></ul>
+    <ul aria-hidden="true"><li>Maryville</li><li>Alcoa</li><li>Knoxville</li><li>Sevierville</li><li>Farragut</li><li>Lenoir City</li><li>Townsend</li><li>Pigeon Forge</li><li>Tellico Village</li><li>Loudon</li><li>Louisville</li><li>Friendsville</li><li>Walland</li><li>Seymour</li><li>Hardin Valley</li><li>Vonore</li></ul>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec svc" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker mono"><span class="n">01</span>What we wash</span>
+      <h2 id="svc-h">Roofline to driveway. Front porch to playground.</h2>
+      <p>One crew, the right pressure for every surface. Here's everything Godbey Clean takes on, straight from their own service list.</p>
+    </div>
+
+    <div class="svc-group">
+      <h3 class="grp">Residential</h3>
+      <div class="grid">
+        <article class="card feature reveal">
+          <span class="tag">SOFT WASH</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15L16 5l12 10"/><path d="M7 13v14h18V13"/><path d="M13 27v-7h6v7"/><path d="M10 9V5h3"/></svg></div>
+          <h4>House Washing</h4>
+          <p>Soft wash techniques that safely lift dirt, algae and stains off your siding. A gentle, cost-effective way to keep the whole exterior looking its best.</p>
+        </article>
+        <article class="card reveal d1">
+          <span class="tag">SOFT WASH</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20L16 7l13 13"/><path d="M8 15l4 4M12 11l5 5M17 11l3 3"/><path d="M6 25h20"/></svg></div>
+          <h4>Roof Stain Removal</h4>
+          <p>Those dark, streaky, moldy stains running down your shingles, cleaned off so the roof reads like new again from the street.</p>
+        </article>
+        <article class="card reveal d2">
+          <span class="tag">POWER WASH</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 27l5-22h12l5 22z"/><path d="M16 5v4M16 13v4M16 21v6"/></svg></div>
+          <h4>Concrete Services</h4>
+          <p>Driveways, patios and walkways brought back from weathered and stained to bright, even concrete.</p>
+        </article>
+        <article class="card reveal">
+          <span class="tag">POWER WASH</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h10l2 3h4"/><path d="M14 8v5H9"/><path d="M20 11l4 2M20 11l5-1M20 11l4 5" stroke-dasharray="2 2.5"/><path d="M9 13v13"/></svg></div>
+          <h4>Pressure Washing</h4>
+          <p>Heavy-duty power washing for the hard, durable surfaces around your property that need real muscle to come clean.</p>
+        </article>
+        <article class="card reveal d1">
+          <span class="tag">DEBRIS</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h26v5a3 3 0 01-3 3H6a3 3 0 01-3-3z"/><path d="M23 17v10"/><path d="M8 6c1-2 3-2 4 0M15 5c1-2 3-2 4 0"/></svg></div>
+          <h4>Gutter Cleaning</h4>
+          <p>Leaves and debris cleared out of gutters and downspouts so rainwater goes where it's supposed to.</p>
+        </article>
+        <article class="card reveal d2">
+          <span class="tag">WOOD · VINYL · STONE</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 27V9l3-4 3 4v18M14 27V9l3-4 3 4v18M22 27V9l3-4 3 4v18"/><path d="M3 14h27M3 22h27"/></svg></div>
+          <h4>Decks, Patios &amp; Fences</h4>
+          <p>Wood, vinyl, concrete or stone: decks, patios and fences cleaned with the method that suits each surface.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="svc-group">
+      <h3 class="grp">Commercial &amp; community</h3>
+      <div class="grid">
+        <article class="card reveal">
+          <span class="tag">BUSINESS</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 28V8l11-4v24M16 12l11 3v13"/><path d="M9 11h3M9 16h3M9 21h3M20 18h3M20 23h3"/><path d="M3 28h26"/></svg></div>
+          <h4>Commercial Services</h4>
+          <p>From a single building to multi-unit facilities: dirt and stains removed and storefronts and facades restored.</p>
+        </article>
+        <article class="card reveal d1">
+          <span class="tag">MULTI-UNIT</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="24" height="23" rx="1"/><path d="M9 10h3M14.5 10h3M20 10h3M9 15h3M14.5 15h3M20 15h3M9 20h3M20 20h3"/><path d="M14 28v-6h4v6"/></svg></div>
+          <h4>Apartment Complexes</h4>
+          <p>Building exteriors across your whole property washed and restored, so the complex looks cared-for to every resident and prospect.</p>
+        </article>
+        <article class="card reveal d2">
+          <span class="tag">SANITIZE</span>
+          <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 28V10h8v18"/><path d="M5 10l4-5 4 5"/><path d="M13 14c6 0 8 4 10 9l3 5"/><path d="M5 18h8"/></svg></div>
+          <h4>Playgrounds</h4>
+          <p>Soft wash cleaning that sanitizes play equipment and surfaces, a smart call for schools, churches, parks and HOAs.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="svc-note reveal">
+      <p><strong>Free onsite estimates.</strong> Godbey Clean comes out, looks at the job, and quotes it in person. Military members and veterans: ask about their discount when you request yours.</p>
+      <a class="btn btn-y" href="https://www.godbeyclean.com/schedule-your-estimate" target="_blank" rel="noopener">Request an estimate</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider tex" aria-hidden="true">
+  <svg viewBox="0 0 1200 46" preserveAspectRatio="none"><path d="M0 14 Q300 2 600 14 T1200 14" stroke="#22C7CC" stroke-width="3"/><path d="M0 30 Q300 42 600 30 T1200 30" stroke="#0E2B33" stroke-width="2" style="animation-direction:reverse"/></svg>
+</div>
+
+<!-- METHOD -->
+<section class="sec method tex" id="method" aria-labelledby="m-h" style="padding-top:44px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker mono"><span class="n">02</span>The method</span>
+      <h2 id="m-h">Soft where it counts. Power where it's tough.</h2>
+      <p>Blasting everything with high pressure is how siding gets etched and shingles get damaged. Godbey Clean carries both soft wash and power wash equipment and matches the method to the surface.</p>
+    </div>
+    <div class="modes">
+      <article class="mode soft reveal">
+        <svg class="gauge" viewBox="0 0 150 96" aria-hidden="true"><path d="M12 82a63 63 0 01126 0" fill="none" stroke="#CFE9EA" stroke-width="12" stroke-linecap="round"/><path d="M12 82a63 63 0 0141-59" fill="none" stroke="#22C7CC" stroke-width="12" stroke-linecap="round"/><text x="12" y="96" font-family="monospace" font-size="10" fill="#07717A" font-weight="700">SOFT</text><text x="138" y="96" text-anchor="end" font-family="monospace" font-size="10" fill="#6E7774">HIGH</text><g class="needle"><path d="M75 82V28" stroke="#0E2B33" stroke-width="5" stroke-linecap="round"/></g><circle cx="75" cy="82" r="8" fill="#0E2B33"/><circle cx="75" cy="82" r="3" fill="#FFD21F"/></svg>
+        <span class="mono" style="color:var(--aqua-deep)">Soft wash</span>
+        <h3>Gentle on the house. Rough on the algae.</h3>
+        <p>Low pressure plus Godbey Clean's own proprietary soft wash solution, which they describe as gentle and very effective. It deep-cleans siding, roofs and play equipment without forcing water where it doesn't belong.</p>
+        <ul><li>Siding</li><li>Roofs</li><li>Playgrounds</li><li>Building facades</li></ul>
+      </article>
+      <article class="mode power reveal d1">
+        <svg class="gauge" viewBox="0 0 150 96" aria-hidden="true"><path d="M12 82a63 63 0 01126 0" fill="none" stroke="#E2E3DE" stroke-width="12" stroke-linecap="round"/><path d="M97 23a63 63 0 0141 59" fill="none" stroke="#FFD21F" stroke-width="12" stroke-linecap="round"/><text x="12" y="96" font-family="monospace" font-size="10" fill="#6E7774">SOFT</text><text x="138" y="96" text-anchor="end" font-family="monospace" font-size="10" fill="#0E2B33" font-weight="700">HIGH</text><g class="needle"><path d="M75 82V28" stroke="#0E2B33" stroke-width="5" stroke-linecap="round"/></g><circle cx="75" cy="82" r="8" fill="#0E2B33"/><circle cx="75" cy="82" r="3" fill="#FFD21F"/></svg>
+        <span class="mono" style="color:var(--stone)">Power wash</span>
+        <h3>Full force for flatwork.</h3>
+        <p>Driveways, walkways and patios can take it, and they need it. Power washing cuts through ground-in dirt and staining on concrete and other hard surfaces.</p>
+        <ul><li>Driveways</li><li>Walkways</li><li>Patios</li><li>Hard surfaces</li></ul>
+      </article>
+    </div>
+    <blockquote class="quote-own reveal" style="margin:0">&ldquo;We were blown away with the soft wash technology and how it deep cleans in a gentle manner.&rdquo;<small>Godbey Clean, on why they built the business around it</small></blockquote>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why" aria-labelledby="w-h">
+  <svg class="why-bg" viewBox="0 0 100 120" aria-hidden="true"><path d="M50 0S0 58 0 78a50 50 0 00100 0C100 58 50 0 50 0z" fill="#22C7CC"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker mono"><span class="n">03</span>Why Godbey</span>
+      <h2 id="w-h">A perfect 5.0 across 202 reviews doesn't happen by accident.</h2>
+      <p>Every number here comes from Godbey Clean's own site and their Google listing. No fluff, just the record.</p>
+    </div>
+    <div class="stats">
+      <div class="stat y reveal"><b>5.0</b><span>Google rating, across 202 reviews</span></div>
+      <div class="stat reveal d1"><b data-count="2000" data-suffix="+">2,000+</b><span>Clients served</span></div>
+      <div class="stat reveal d2"><b>2018</b><span>Started by the family that still runs it</span></div>
+      <div class="stat reveal d3"><b data-count="15">15</b><span>Zip codes serviced</span></div>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9.3-8 11-4.5-1.7-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><h4>Fully licensed &amp; insured</h4><p>Stated plainly on their own site. Ask for proof; they'll have it.</p></div></div>
+      <div class="fact reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M12 20v-5"/><circle cx="12" cy="12.5" r="1.5"/></svg><div><h4>Local &amp; family-owned</h4><p>A Maryville family business, not a franchise call center.</p></div></div>
+      <div class="fact reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c0 0-6 7-6 11a6 6 0 0012 0c0-4-6-11-6-11z"/><path d="M9.5 15a2.5 2.5 0 002.5 2.5"/></svg><div><h4>Their own soft wash solution</h4><p>A proprietary mix built to be gentle on surfaces and tough on grime.</p></div></div>
+      <div class="fact reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8.5 14.5l2 2 4-4"/></svg><div><h4>Free onsite estimates</h4><p>They come look before they quote, so the price fits the actual job.</p></div></div>
+      <div class="fact reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 15.4 6.8 18l1-5.8L3.5 8.2l5.9-.9z"/></svg><div><h4>Military &amp; veteran discounts</h4><p>Just ask when you request your estimate.</p></div></div>
+      <div class="fact reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M15 14.5a5 5 0 016.5 5"/></svg><div><h4>Blount Chamber member</h4><p>Invested in the same community they wash for.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="sec area tex" id="area" aria-labelledby="a-h">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:0">
+      <span class="kicker mono"><span class="n">04</span>Service area</span>
+      <h2 id="a-h">Based in Maryville. Washing five counties.</h2>
+      <p>Blount County is home, and the trucks roll from the Smokies foothills to West Knoxville and down to Tellico.</p>
+      <div class="counties"><span>Blount</span><span>Knox</span><span>Loudon</span><span>Monroe</span><span>Sevier</span></div>
+    </div>
+    <div class="towns reveal d1" aria-label="Towns served">
+      <span class="home">Maryville</span><span>Alcoa</span><span>Knoxville</span><span>South Knoxville</span><span>West Knoxville</span><span>Sevierville</span><span>Pigeon Forge</span><span>Wears Valley</span><span>Townsend</span><span>Walland</span><span>Seymour</span><span>Farragut</span><span>Hardin Valley</span><span>Karns</span><span>Powell</span><span>Concord</span><span>Lenoir City</span><span>Loudon</span><span>Tellico Village</span><span>Vonore</span><span>Friendsville</span><span>Louisville</span><span>Rockford</span><span>Arline</span>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT / CONTACT -->
+<section class="sec visit" id="contact" aria-labelledby="c-h">
+  <div class="wrap">
+    <div class="panel reveal">
+      <span class="kicker mono"><span class="n">05</span>Hours &amp; contact</span>
+      <h3 id="c-h" style="margin-top:14px">Call, and it's handled.</h3>
+      <div class="status" id="status"><i></i><span>Mon–Sat, 7am–8pm</span></div>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Monday</span><span>7:00 am – 8:00 pm</span></li>
+        <li data-d="2"><span>Tuesday</span><span>7:00 am – 8:00 pm</span></li>
+        <li data-d="3"><span>Wednesday</span><span>7:00 am – 8:00 pm</span></li>
+        <li data-d="4"><span>Thursday</span><span>7:00 am – 8:00 pm</span></li>
+        <li data-d="5"><span>Friday</span><span>7:00 am – 8:00 pm</span></li>
+        <li data-d="6"><span>Saturday</span><span>7:00 am – 8:00 pm</span></li>
+        <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <div class="contact-list">
+        <a href="tel:+18652684272"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><span>(865) 268-4272<small>Tap to call</small></span></a>
+        <a href="mailto:sales@godbeyclean.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg><span>sales@godbeyclean.com<small>Email the office</small></span></a>
+        <a href="https://www.godbeyclean.com/schedule-your-estimate" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span>Schedule your estimate<small>Online request form</small></span></a>
+      </div>
+    </div>
+    <div class="mapbox reveal d1">
+      <iframe title="Map: Godbey Clean, 1529 Claremont Dr, Maryville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1529%20Claremont%20Dr%2C%20Maryville%2C%20TN&amp;output=embed"></iframe>
+      <div class="mapbar"><p><strong>1529 Claremont Dr</strong><br>Maryville, TN</p><a class="btn btn-y" href="https://www.google.com/maps/dir/?api=1&amp;destination=1529%20Claremont%20Dr%2C%20Maryville%2C%20TN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Directions</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" aria-labelledby="cta-h">
+  <svg class="drops" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#0E2B33"><path d="M1040 40s-40 48-40 74a40 40 0 0080 0c0-26-40-74-40-74z"/><path d="M1130 210s-22 27-22 41a22 22 0 0044 0c0-14-22-41-22-41z"/><path d="M930 250s-14 17-14 26a14 14 0 0028 0c0-9-14-26-14-26z"/></g></svg>
+  <div class="wrap">
+    <h2 id="cta-h" class="reveal">Let the neighbors wonder if you repainted.</h2>
+    <p class="reveal d1">Book a free onsite estimate with Godbey Clean. Monday through Saturday, 7am to 8pm.</p>
+    <div class="row reveal d2">
+      <a class="btn btn-y" href="tel:+18652684272" style="box-shadow:0 6px 0 #0E2B33">Call (865) 268-4272</a>
+      <a class="btn btn-o" href="https://www.godbeyclean.com/schedule-your-estimate" target="_blank" rel="noopener">Request online</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#top" class="logo" aria-label="Godbey Clean, back to top">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#22C7CC"/><path d="M20 7c0 0-9 10.5-9 17a9 9 0 0018 0C29 17.5 20 7 20 7z" fill="#0E2B33"/><path d="M15.5 25.5a4.5 4.5 0 004.5 4.5" stroke="#FFD21F" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+        <span>GODBEY CLEAN<small>POWER &amp; SOFT WASH</small></span>
+      </a>
+      <p style="max-width:28em">Godbey Clean LLC. Family-owned soft washing and pressure washing for homes and businesses in Maryville and East Tennessee.</p>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul>
+        <li><a href="tel:+18652684272"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>(865) 268-4272</a></li>
+        <li><a href="mailto:sales@godbeyclean.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>sales@godbeyclean.com</a></li>
+        <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=1529%20Claremont%20Dr%2C%20Maryville%2C%20TN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 00-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>1529 Claremont Dr, Maryville, TN</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow the work</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/godbeyclean/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@godbeyclean</a></li>
+        <li><a href="https://facebook.com/GodbeyClean" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2h-3c-3.3 0-4 2.4-4 4v2.5H8V12h2v10h4V12h2.7l.4-3.5z"/></svg>Facebook</a></li>
+        <li><a href="https://www.godbeyclean.com/schedule-your-estimate" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Estimate request</a></li>
+      </ul>
+    </div>
+    <p class="fine">Concept design by Code Craft Media for Godbey Clean LLC. Illustrations are artwork, not photos of real jobs. Rating and review count from Google.</p>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta">
+  <a class="c" href="tel:+18652684272"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>Call</a>
+  <a class="d" href="https://www.google.com/maps/dir/?api=1&amp;destination=1529%20Claremont%20Dr%2C%20Maryville%2C%20TN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Directions</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveal */
+  var els = [].slice.call(document.querySelectorAll('.reveal, .mode'));
+  function showAll(){ els.forEach(function(e){ e.classList.add('in'); }); }
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+    els.forEach(function(e){ io.observe(e); });
+  } else { showAll(); }
+  setTimeout(showAll, 2500);
+
+  /* before / after */
+  var ba = document.getElementById('ba'), knob = document.getElementById('baKnob'), pct = document.getElementById('baPct');
+  var cur = 50, dragging = false, userTouched = false;
+  function set(p){
+    p = Math.max(0, Math.min(100, p)); cur = p;
+    ba.style.setProperty('--x', p + '%');
+    var r = Math.round(p);
+    pct.textContent = r + '%';
+    knob.setAttribute('aria-valuenow', r);
+    knob.setAttribute('aria-valuetext', r + ' percent washed');
+  }
+  function fromEvent(e){ var b = ba.getBoundingClientRect(); return (e.clientX - b.left) / b.width * 100; }
+  ba.addEventListener('pointerdown', function(e){
+    userTouched = true; dragging = true; ba.classList.add('drag');
+    try{ ba.setPointerCapture(e.pointerId); }catch(_){}
+    set(fromEvent(e));
+  });
+  ba.addEventListener('pointermove', function(e){ if(dragging) set(fromEvent(e)); });
+  function end(){ dragging = false; ba.classList.remove('drag'); }
+  ba.addEventListener('pointerup', end); ba.addEventListener('pointercancel', end);
+  knob.addEventListener('keydown', function(e){
+    var k = e.key, step = e.shiftKey ? 10 : 4;
+    if (k === 'ArrowRight' || k === 'ArrowUp'){ set(cur + step); e.preventDefault(); }
+    else if (k === 'ArrowLeft' || k === 'ArrowDown'){ set(cur - step); e.preventDefault(); }
+    else if (k === 'Home'){ set(0); e.preventDefault(); }
+    else if (k === 'End'){ set(100); e.preventDefault(); }
+    userTouched = true;
+  });
+  /* intro sweep: wand washes from left to past the middle */
+  if (!reduce){
+    set(8);
+    var t0 = null, from = 8, to = 58, dur = 2200;
+    function step(ts){
+      if (userTouched) return;
+      if (!t0) t0 = ts;
+      var k = Math.min(1, (ts - t0) / dur);
+      var ease = k < .5 ? 4*k*k*k : 1 - Math.pow(-2*k + 2, 3)/2;
+      set(from + (to - from) * ease);
+      if (k < 1) requestAnimationFrame(step);
+    }
+    setTimeout(function(){ requestAnimationFrame(step); }, 600);
+  } else { set(55); }
+
+  /* counters */
+  var counters = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && !reduce){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return; co.unobserve(en.target);
+        var el = en.target, n = +el.dataset.count, suf = el.dataset.suffix || '', s = null;
+        function tick(ts){ if(!s) s = ts; var k = Math.min(1,(ts-s)/1400); var v = Math.round(n*(1-Math.pow(1-k,3))); el.textContent = v.toLocaleString('en-US') + suf; if(k<1) requestAnimationFrame(tick); }
+        requestAnimationFrame(tick);
+      });
+    }, {threshold:.4});
+    counters.forEach(function(c){ co.observe(c); });
+  }
+
+  /* hours: today + open status in Eastern time */
+  try{
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var map = {}; parts.forEach(function(p){ map[p.type] = p.value; });
+    var days = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var d = days[map.weekday], h = (+map.hour) % 24, m = +map.minute, mins = h*60 + m;
+    var li = document.querySelector('#hours li[data-d="'+d+'"]'); if (li) li.classList.add('today');
+    var st = document.getElementById('status'), open = d !== 0 && mins >= 420 && mins < 1200;
+    st.classList.toggle('open', open);
+    st.querySelector('span').textContent = open ? 'Open now · until 8:00 pm' : (d === 0 ? 'Closed today · back Monday 7:00 am' : (mins < 420 ? 'Closed now · opens 7:00 am' : (d === 6 ? 'Closed now · back Monday 7:00 am' : 'Closed now · opens 7:00 am tomorrow')));
+  }catch(_){}
+
+  /* sticky cta: hide while hero CTA visible and near footer */
+  var mcta = document.getElementById('mcta'), hero = document.querySelector('.hero-ctas'), foot = document.querySelector('footer');
+  if ('IntersectionObserver' in window){
+    var heroVis = true, footVis = false;
+    function upd(){ mcta.classList.toggle('hide', heroVis || footVis); }
+    new IntersectionObserver(function(en){ heroVis = en[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function(en){ footVis = en[0].isIntersecting; upd(); }).observe(foot);
+  }
+})();
+</script>
+</body>
+</html>

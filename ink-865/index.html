@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ink 865 — concept site</title>
+<meta name="description" content="Ink 865 — custom tattoos, flash, and permanent makeup by Carrie Traylor in a private studio in Powell / Karns, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500;1,6..96,700&family=Space+Mono:wght@400;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2E8D3; --paper2:#EADDC2; --ink:#1C1712; --ink2:#4A4036;
+  --red:#C2321E; --gold:#D49A2E; --teal:#2C6658; --rule:rgba(28,23,18,.22);
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --mono:"Space Mono",ui-monospace,"Courier New",monospace;
+  --script:"Mrs Saint Delafield","Snell Roundhand","Brush Script MT",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.55;overflow-x:hidden;
+  background-image:radial-gradient(rgba(28,23,18,.05) 1px,transparent 1.2px),radial-gradient(rgba(194,50,30,.035) 1px,transparent 1.2px);
+  background-size:7px 7px,13px 13px;background-position:0 0,3px 5px}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-align:center;padding:7px 14px}
+.banner b{color:var(--gold);font-weight:700}
+
+/* nav */
+nav.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1.5px solid var(--ink)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:40px;height:40px}
+.logo span{font-weight:800;font-size:24px;letter-spacing:-.01em}
+.logo span i{color:var(--red);font-style:italic}
+nav.top ul{display:none;list-style:none;gap:28px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.12em}
+nav.top ul a{text-decoration:none}
+nav.top ul a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);box-shadow:4px 4px 0 var(--red);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--red)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:4px 4px 0 var(--gold)}
+.btn.sm{padding:10px 14px;font-size:11.5px;box-shadow:3px 3px 0 var(--red)}
+
+/* hero */
+.hero{padding:38px 0 30px;position:relative}
+.hero-grid{display:grid;gap:26px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:10px}
+.kicker:before{content:"";width:26px;height:2px;background:var(--red)}
+h1{font-size:clamp(52px,15vw,112px);line-height:.9;font-weight:800;letter-spacing:-.025em;margin:16px 0 6px}
+h1 em{font-style:italic;font-weight:500;color:var(--red)}
+h1 .amp{font-family:var(--script);font-weight:400;color:var(--teal);font-size:1.05em;line-height:0;vertical-align:-.05em;padding:0 .04em}
+.lede{font-size:19px;max-width:36ch;color:var(--ink2);margin:14px 0 24px}
+.lede strong{color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.sig{font-family:var(--script);font-size:46px;color:var(--red);line-height:1;margin-top:22px;transform:rotate(-4deg);transform-origin:left}
+.sig small{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink2);text-transform:uppercase;display:block;transform:rotate(4deg);margin-top:14px}
+
+.sheet{position:relative;border:1.5px solid var(--ink);background:var(--paper2);padding:14px;box-shadow:8px 8px 0 var(--ink)}
+.sheet:before{content:"";position:absolute;inset:6px;border:1px dashed var(--rule);pointer-events:none}
+.sheet-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:2px 4px 8px;border-bottom:1px solid var(--rule)}
+.sheet svg.hero-art{width:100%;height:auto}
+.tape{position:absolute;width:86px;height:24px;background:rgba(212,154,46,.55);top:-12px;transform:rotate(-6deg)}
+.tape.l{left:18px}.tape.r{right:18px;transform:rotate(7deg)}
+
+/* marquee */
+.ticker{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:11px 0}
+.ticker div{display:inline-block;animation:tick 38s linear infinite}
+.ticker span{padding:0 18px}
+.ticker .s{color:var(--gold)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}}
+
+section{padding:64px 0}
+.sec-head{display:flex;flex-direction:column;gap:8px;margin-bottom:30px}
+.num{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--red);text-transform:uppercase}
+h2{font-size:clamp(36px,8vw,64px);line-height:.95;font-weight:800;letter-spacing:-.02em}
+h2 em{font-style:italic;font-weight:500}
+.sec-sub{color:var(--ink2);max-width:52ch}
+
+/* flash sheet services */
+.flash{display:grid;grid-template-columns:1fr;border-top:1.5px solid var(--ink);border-left:1.5px solid var(--ink)}
+.piece{border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:20px 18px 18px;position:relative;display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:start;background:transparent;transition:background .2s}
+.piece:hover{background:rgba(255,255,255,.35)}
+.piece svg{width:84px;height:84px}
+.piece h3{font-size:22px;line-height:1.1;font-weight:800;letter-spacing:-.01em}
+.piece p{font-size:15px;color:var(--ink2);margin-top:6px}
+.tag{display:inline-flex;gap:10px;align-items:baseline;margin-top:10px;font-family:var(--mono);font-size:12px;letter-spacing:.06em}
+.tag b{font-size:15px;background:var(--ink);color:var(--paper);padding:3px 8px;transform:rotate(-2deg);display:inline-block}
+.tag.red b{background:var(--red)}
+.tag span{color:var(--ink2)}
+.pno{position:absolute;top:10px;right:12px;font-family:var(--mono);font-size:10.5px;color:var(--ink2);letter-spacing:.1em}
+.flash-note{font-family:var(--mono);font-size:12px;color:var(--ink2);margin-top:16px;line-height:1.6}
+
+.group-label{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin:40px 0 12px;display:flex;align-items:center;gap:12px}
+.group-label:after{content:"";flex:1;height:1px;background:var(--rule)}
+.group-label:first-of-type{margin-top:0}
+
+/* two trades */
+.duo{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.duo h2{color:var(--paper)}
+.duo .num{color:var(--gold)}
+.duo .sec-sub{color:#cfc3ad}
+.duo-grid{display:grid;gap:18px}
+.trade{border:1.5px solid rgba(242,232,211,.4);padding:24px;position:relative}
+.trade h3{font-size:30px;font-style:italic;font-weight:500;margin:10px 0 8px;color:var(--gold)}
+.trade p{color:#e3d8c2;font-size:16px}
+.trade ul{list-style:none;margin-top:14px;font-family:var(--mono);font-size:13px;line-height:2}
+.trade li:before{content:"✦ ";color:var(--red)}
+.trade svg{width:64px;height:64px}
+
+/* facts */
+.facts{display:grid;gap:0;border:1.5px solid var(--ink)}
+.fact{padding:24px 20px;border-bottom:1.5px solid var(--ink)}
+.fact:last-child{border-bottom:0}
+.fact .big{font-size:58px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.fact .big em{font-style:italic;color:var(--red);font-weight:500}
+.fact .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px;color:var(--ink2)}
+.stars{color:var(--gold);letter-spacing:3px;font-size:22px}
+
+/* policies */
+.rules{counter-reset:r;display:grid;gap:14px}
+.rule{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 0;border-top:1px dashed var(--rule)}
+.rule:before{counter-increment:r;content:counter(r,upper-roman);font-family:var(--serif);font-style:italic;font-size:28px;color:var(--red);line-height:1}
+.rule h4{font-size:19px;font-weight:800}
+.rule p{color:var(--ink2);font-size:15.5px;margin-top:4px}
+
+/* hours / visit */
+.visit-grid{display:grid;gap:26px}
+.hours{border:1.5px solid var(--ink);background:var(--paper2)}
+.hours h3{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:14px 18px;border-bottom:1.5px solid var(--ink);display:flex;justify-content:space-between}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:12px 18px;border-bottom:1px dashed var(--rule);font-size:17px}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right;font-family:var(--mono);font-size:14px}
+.hours tr.today{background:var(--ink);color:var(--paper)}
+.hours tr.today td:first-child:after{content:" · today";font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.1em}
+.hours .appt{padding:12px 18px;font-family:var(--mono);font-size:12px;color:var(--red);border-top:1.5px solid var(--ink)}
+.addr{font-size:26px;font-weight:800;line-height:1.15;margin:4px 0 6px}
+.addr-note{color:var(--ink2);font-size:15.5px;margin-bottom:18px}
+.map{border:1.5px solid var(--ink);box-shadow:8px 8px 0 var(--teal);margin-top:22px;filter:grayscale(.35) sepia(.25) contrast(1.05)}
+.map iframe{width:100%;height:320px;border:0;display:block}
+.channels{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;font-family:var(--mono);font-size:13px}
+.channels a{border:1.5px solid var(--ink);padding:8px 12px;text-decoration:none}
+.channels a:hover{background:var(--ink);color:var(--paper)}
+
+/* big book */
+.book{text-align:center;padding:80px 0;border-top:1.5px solid var(--ink);position:relative;overflow:hidden}
+.book h2{font-size:clamp(44px,11vw,104px)}
+.book p{color:var(--ink2);max-width:46ch;margin:16px auto 28px}
+.book .bnpl{font-family:var(--mono);font-size:12px;letter-spacing:.08em;margin-top:22px;color:var(--ink2)}
+
+footer{background:var(--ink);color:#cfc3ad;padding:34px 0 40px;font-family:var(--mono);font-size:12px;line-height:1.8}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer b{color:var(--paper)}
+footer a{color:var(--gold)}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--ink);border-top:2px solid var(--red)}
+.callbar a{color:var(--paper);text-decoration:none;font-family:var(--mono);font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:16px 4px;display:flex;align-items:center;justify-content:center;gap:7px}
+.callbar a+a{border-left:1px solid rgba(242,232,211,.2)}
+.callbar a.b{background:var(--red)}
+body{padding-bottom:58px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+.draw path,.draw circle,.draw ellipse{stroke-dasharray:var(--len,600);stroke-dashoffset:0}
+.js .draw.pending path,.js .draw.pending circle,.js .draw.pending ellipse{stroke-dashoffset:var(--len,600)}
+.draw path,.draw circle,.draw ellipse{transition:stroke-dashoffset 2.2s ease}
+
+@media(min-width:700px){
+  .flash{grid-template-columns:1fr 1fr}
+  .duo-grid{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .fact{border-bottom:0;border-right:1.5px solid var(--ink)}
+  .fact:last-child{border-right:0}
+  .rules{grid-template-columns:1fr 1fr;column-gap:40px}
+}
+@media(min-width:900px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  nav.top ul{display:flex}
+  .hero{padding:60px 0 50px}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
+  .flash{grid-template-columns:repeat(3,1fr)}
+  .piece{grid-template-columns:1fr;padding:26px 22px}
+  .piece svg{width:96px;height:96px;margin-bottom:4px}
+  .visit-grid{grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+  .map{margin-top:0}
+  .map iframe{height:440px}
+  section{padding:96px 0}
+  .sec-head{flex-direction:row;align-items:end;justify-content:space-between;gap:40px}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Ink 865. Not live.</div>
+
+<div class="wrap">
+  <nav class="top">
+    <a class="logo" href="#top" aria-label="Ink 865 home">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#1C1712" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 3 C26 12 31 18 31 25 a11 11 0 0 1-22 0 C9 18 14 12 20 3Z" fill="#C2321E" stroke="#1C1712"/>
+        <path d="M15 26 a5 5 0 0 0 5 5" stroke="#F2E8D3"/>
+      </svg>
+      <span>Ink <i>865</i></span>
+    </a>
+    <ul>
+      <li><a href="#flash">Services</a></li>
+      <li><a href="#studio">Studio</a></li>
+      <li><a href="#policies">Policies</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn sm" href="https://ink865.glossgenius.com/" target="_blank" rel="noopener">Book</a>
+  </nav>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="kicker">Private tattoo studio · Powell / Karns, TN</div>
+      <h1>Fine <em>line</em> <span class="amp">&amp;</span><br>fine brows.</h1>
+      <p class="lede">Custom tattoos, flash, cover-ups <strong>and</strong> permanent makeup — lip blushing, brows, lash liner — all by one artist, in one private, by-appointment studio.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://ink865.glossgenius.com/" target="_blank" rel="noopener">Book on GlossGenius →</a>
+        <a class="btn ghost" href="sms:+18657428600">Text the studio</a>
+      </div>
+      <div class="sig">Carrie Traylor<small>Tattoo artist · Ink 865</small></div>
+    </div>
+
+    <div class="sheet reveal" aria-label="Illustrated flash sheet">
+      <span class="tape l"></span><span class="tape r"></span>
+      <div class="sheet-head"><span>Flash · Sheet Nº 865</span><span>Powell, TN</span></div>
+      <svg class="hero-art draw pending" viewBox="0 0 400 420" fill="none" stroke="#1C1712" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Line-art flash: swallow, rose, dagger, brow and lips">
+        <!-- swallow -->
+        <g transform="translate(20,20)">
+          <path d="M20 70 C50 40 90 36 120 52 C140 30 168 22 190 26 C170 36 158 50 152 64 C170 66 182 76 186 90 C166 84 148 86 132 96 C110 110 74 110 52 96 C40 90 28 82 20 70Z" fill="#2C6658" fill-opacity=".85"/>
+          <path d="M120 52 C112 62 106 74 104 88"/>
+          <path d="M52 96 L20 120 L44 98 L10 104 Z" fill="#1C1712"/>
+          <circle cx="160" cy="44" r="2.6" fill="#1C1712"/>
+          <path d="M184 34 L198 34"/>
+          <path d="M60 78 C76 84 92 84 104 80" stroke="#F2E8D3" stroke-width="1.6"/>
+        </g>
+        <!-- rose -->
+        <g transform="translate(232,40)">
+          <circle cx="70" cy="62" r="48" fill="#C2321E" fill-opacity=".9"/>
+          <path d="M70 34 C54 36 46 50 52 62 C58 74 82 76 88 62 C94 48 82 40 72 46 C64 50 66 60 74 60" stroke="#1C1712"/>
+          <path d="M30 52 C36 30 56 18 78 18 C100 20 116 34 118 54"/>
+          <path d="M26 72 C30 98 52 112 74 110 C96 108 114 92 116 72"/>
+          <path d="M40 104 C30 120 18 128 4 130 C16 118 22 108 26 98" fill="#2C6658"/>
+          <path d="M104 104 C116 118 130 124 140 124 C132 112 124 104 114 98" fill="#2C6658"/>
+        </g>
+        <!-- dagger -->
+        <g transform="translate(176,150)">
+          <path d="M24 0 L32 0 L36 150 L28 172 L20 150 Z" fill="#F2E8D3"/>
+          <path d="M28 10 L28 150" stroke-width="1.4"/>
+          <path d="M0 -6 L56 -6 L52 4 L4 4 Z" fill="#D49A2E"/>
+          <path d="M22 -6 L22 -38 L34 -38 L34 -6" fill="#1C1712"/>
+          <circle cx="28" cy="-46" r="8" fill="#D49A2E"/>
+        </g>
+        <!-- banner -->
+        <g transform="translate(40,252)">
+          <path d="M0 30 L22 14 L22 46 Z" fill="#C2321E"/>
+          <path d="M320 30 L298 14 L298 46 Z" fill="#C2321E"/>
+          <path d="M20 10 C110 -4 210 -4 300 10 L300 50 C210 36 110 36 20 50 Z" fill="#F2E8D3"/>
+          <text x="160" y="36" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-style="italic" font-weight="700" font-size="26" fill="#1C1712" stroke="none">Ink 865</text>
+        </g>
+        <!-- brow -->
+        <g transform="translate(26,330)">
+          <path d="M4 40 C30 14 76 4 120 16 C138 22 150 30 156 38 C136 30 108 26 84 28 C54 30 28 36 4 40Z" fill="#1C1712" fill-opacity=".85"/>
+          <path d="M20 36 L28 22 M36 32 L44 18 M52 30 L60 15 M68 28 L76 14 M84 27 L92 15 M100 26 L108 16 M116 26 L124 19" stroke="#F2E8D3" stroke-width="1.2"/>
+          <ellipse cx="80" cy="64" rx="44" ry="12"/>
+          <circle cx="80" cy="64" r="9" fill="#1C1712"/>
+        </g>
+        <!-- lips -->
+        <g transform="translate(222,328)">
+          <path d="M6 40 C26 20 48 12 64 24 C80 12 104 20 124 40 C104 62 84 72 64 72 C44 72 24 62 6 40Z" fill="#C2321E" fill-opacity=".9"/>
+          <path d="M6 40 C40 46 88 46 124 40"/>
+          <path d="M44 56 C56 60 72 60 84 56" stroke="#F2E8D3" stroke-width="1.6"/>
+        </g>
+        <!-- sparkles -->
+        <g stroke="#D49A2E" stroke-width="2">
+          <path d="M210 30 l0 16 M202 38 l16 0"/>
+          <path d="M150 210 l0 12 M144 216 l12 0"/>
+          <path d="M360 230 l0 14 M353 237 l14 0"/>
+          <path d="M370 330 l0 12 M364 336 l12 0"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>Custom tattoos</span><span class="s">✦</span><span>Carrie's flash</span><span class="s">✦</span><span>Fine line &amp; illustrative</span><span class="s">✦</span><span>Cover-ups</span><span class="s">✦</span><span>Lip blushing</span><span class="s">✦</span><span>Brows</span><span class="s">✦</span><span>Lash enhancement liner</span><span class="s">✦</span><span>Permanent jewelry</span><span class="s">✦</span>
+  <span>Custom tattoos</span><span class="s">✦</span><span>Carrie's flash</span><span class="s">✦</span><span>Fine line &amp; illustrative</span><span class="s">✦</span><span>Cover-ups</span><span class="s">✦</span><span>Lip blushing</span><span class="s">✦</span><span>Brows</span><span class="s">✦</span><span>Lash enhancement liner</span><span class="s">✦</span><span>Permanent jewelry</span><span class="s">✦</span>
+</div></div>
+
+<section id="flash">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="num">01 — The flash wall</div><h2>Pick your <em>piece.</em></h2></div>
+      <p class="sec-sub">Published starting prices from Ink 865's booking page. Custom work is priced by size, placement, detail, color and time.</p>
+    </div>
+
+    <div class="group-label reveal">Tattoo</div>
+    <div class="flash">
+      <article class="piece reveal">
+        <span class="pno">Nº 01</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 76 L64 32" /><path d="M64 32 L74 18 L80 24 L68 36 Z" fill="#D49A2E"/><path d="M20 76 L14 84 L22 80" fill="#1C1712"/><path d="M30 70 C40 50 56 46 72 54" stroke="#C2321E" stroke-dasharray="3 5"/><circle cx="74" cy="60" r="10" fill="#C2321E"/></svg>
+        <div><h3>Custom Tattoo Appointment</h3><p>Your idea, drawn for you. Most work runs about $150/hour; text reference images after booking.</p><div class="tag red"><b>$90+</b><span>45+ min</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 02</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 14 L56 38 L82 38 L61 53 L69 78 L48 63 L27 78 L35 53 L14 38 L40 38 Z" fill="#D49A2E"/><path d="M48 30 L48 56" stroke="#F2E8D3"/></svg>
+        <div><h3>Carrie's Flash Tattoos</h3><p>Pre-drawn designs from Carrie's collections, booked by appointment. Send a screenshot of your pick after booking.</p><div class="tag"><b>$80+</b><span>60+ min</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 03</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 80 C20 62 12 44 20 30 C28 18 44 20 48 34 C52 20 68 18 76 30 C84 44 76 62 48 80Z" fill="#C2321E"/><path d="M30 34 C34 28 40 28 42 32" stroke="#F2E8D3"/><path d="M8 50 L22 50 M74 50 L88 50" stroke="#D49A2E"/></svg>
+        <div><h3>The Dolly Collection</h3><p>"Come get a little Dolly in your life." Three options on the booking page.</p><div class="tag"><b>$65+</b><span>15+ min</span></div></div>
+      </article>
+    </div>
+
+    <div class="group-label reveal">Permanent makeup</div>
+    <div class="flash">
+      <article class="piece reveal">
+        <span class="pno">Nº 04</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 50 C24 30 40 24 48 34 C56 24 72 30 88 50 C72 70 58 76 48 76 C38 76 24 70 8 50Z" fill="#C2321E"/><path d="M8 50 C34 56 62 56 88 50"/><path d="M36 64 C44 67 52 67 60 64" stroke="#F2E8D3"/></svg>
+        <div><h3>Lip Blushing Tattoo</h3><p>A pigment wash that enhances your natural lip color. Consultation required first.</p><div class="tag red"><b>$600</b><span>180 min · $100 deposit</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 05</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 52 C24 32 52 24 76 32 C84 36 88 40 90 44 C76 40 58 38 44 40 C30 42 18 46 8 52Z" fill="#1C1712"/><path d="M18 48 L24 38 M30 45 L36 34 M42 42 L48 32 M54 40 L60 31 M66 39 L72 32" stroke="#F2E8D3" stroke-width="1.3"/><ellipse cx="50" cy="68" rx="26" ry="8"/><circle cx="50" cy="68" r="5" fill="#2C6658"/></svg>
+        <div><h3>Eyebrows</h3><p>Shaped and colored with microblading, powder brows, or a combination. Consultation required first.</p><div class="tag"><b>$550</b><span>150 min · $100 deposit</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 06</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 50 C28 30 68 30 86 50 C68 70 28 70 10 50Z"/><circle cx="48" cy="50" r="12" fill="#2C6658"/><circle cx="48" cy="50" r="4" fill="#1C1712"/><path d="M14 46 C30 32 66 32 82 46" stroke-width="3.5"/><path d="M22 38 L18 30 M34 33 L32 24 M48 31 L48 22 M62 33 L64 24 M74 38 L78 30"/></svg>
+        <div><h3>Lash Enhancement Liner</h3><p>Subtle "baby liner" along the lash line. Consultation required first.</p><div class="tag"><b>$300</b><span>120 min · $50 deposit</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 07</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 46 C24 28 52 22 76 30 C84 34 88 38 90 42 C76 38 58 36 44 38 C30 40 18 42 8 46Z" fill="#1C1712" fill-opacity=".25"/><path d="M8 60 C24 42 52 36 76 44 C84 48 88 52 90 56 C76 52 58 50 44 52 C30 54 18 56 8 60Z" fill="#1C1712"/><path d="M48 16 L48 28 M42 22 L54 22" stroke="#C2321E" stroke-width="2.4"/></svg>
+        <div><h3>Eyebrow Correction</h3><p>Shape or color correction for brows done by another artist.</p><div class="tag"><b>$350</b><span>150 min · $50 deposit</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 08</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 54 C24 34 52 28 76 36 C84 40 88 44 90 48 C76 44 58 42 44 44 C30 46 18 50 8 54Z" fill="#1C1712"/><path d="M70 16 a14 14 0 1 1 -14 14" stroke="#D49A2E" stroke-width="2.4"/><path d="M56 22 L56 30 L64 30" stroke="#D49A2E" stroke-width="2.4"/></svg>
+        <div><h3>Eyebrow Touch Up</h3><p>Refreshes existing permanent brows. Existing Ink 865 clients only.</p><div class="tag"><b>$200</b><span>120 min · $50 deposit</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 09</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 54 C24 34 40 28 48 38 C56 28 72 34 88 54 C72 74 58 80 48 80 C38 80 24 74 8 54Z" fill="#C2321E" fill-opacity=".55"/><path d="M8 54 C34 60 62 60 88 54"/><path d="M70 10 a12 12 0 1 1 -12 12" stroke="#D49A2E" stroke-width="2.4"/><path d="M58 16 L58 22 L64 22" stroke="#D49A2E" stroke-width="2.4"/></svg>
+        <div><h3>Lip Blushing Touch Up</h3><p>Touch-up session for existing lip-blush clients.</p><div class="tag"><b>$250</b><span>150 min</span></div></div>
+      </article>
+    </div>
+
+    <div class="group-label reveal">Before &amp; after</div>
+    <div class="flash">
+      <article class="piece reveal">
+        <span class="pno">Nº 10</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20 L76 20 L76 64 L56 64 L44 78 L44 64 L20 64 Z" fill="#F2E8D3"/><path d="M32 36 L64 36 M32 48 L56 48" stroke="#C2321E"/></svg>
+        <div><h3>Consultations</h3><p>Required before any permanent makeup. Recommended for large, detailed, cover-up or complex tattoos.</p><div class="tag"><b>Free</b><span>10+ min</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 11</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M48 12 L80 26 L80 48 C80 66 66 78 48 86 C30 78 16 66 16 48 L16 26 Z" fill="#2C6658"/><path d="M34 48 L44 58 L64 38" stroke="#F2E8D3" stroke-width="3"/></svg>
+        <div><h3>Follow Up Appt</h3><p>For existing clients with a healed tattoo. Contact Carrie for approval before booking.</p><div class="tag"><b>$0+</b><span>60+ min</span></div></div>
+      </article>
+      <article class="piece reveal">
+        <span class="pno">Nº 12</span>
+        <svg viewBox="0 0 96 96" fill="none" stroke="#1C1712" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="26" width="60" height="44" rx="4" fill="#D49A2E"/><path d="M18 38 L78 38" stroke-width="5"/><path d="M28 56 L46 56" stroke="#1C1712"/><path d="M60 52 l6 6 M66 52 l-6 6" stroke="#C2321E"/></svg>
+        <div><h3>Buy Now, Pay Later</h3><p>Available in person for bookings from $50 to $4,000 — get approved before your appointment.</p><div class="tag"><b>$50–$4K</b><span>approve first</span></div></div>
+      </article>
+    </div>
+    <p class="flash-note reveal">Prices as published on ink865.glossgenius.com. Custom tattoo deposits must be paid within 24 hours to hold your spot. Final pricing confirmed by the studio.</p>
+  </div>
+</section>
+
+<section class="duo" id="studio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="num">02 — Two trades, one chair</div><h2>Tattoo artist. <em>Brow artist.</em></h2></div>
+      <p class="sec-sub">Ink 865 is a private, welcoming studio where Carrie Traylor does both — so your forearm piece and your brows can come from the same steady hand.</p>
+    </div>
+    <div class="duo-grid">
+      <div class="trade reveal">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#D49A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 50 L42 22"/><path d="M42 22 L50 12 L54 16 L46 26 Z" fill="#C2321E"/><path d="M14 50 L10 56 L16 52"/><circle cx="48" cy="44" r="6"/></svg>
+        <h3>The tattoo side</h3>
+        <p>Custom designs, premade flash, fine line and illustrative work, and cover-ups.</p>
+        <ul><li>Custom tattoos</li><li>Carrie's flash collections</li><li>Fine line &amp; illustrative</li><li>Cover-ups</li></ul>
+      </div>
+      <div class="trade reveal">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#D49A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30 C18 18 40 14 58 22 C48 20 34 20 24 24 C16 26 10 28 6 30Z" fill="#D49A2E"/><path d="M8 44 C18 34 26 32 32 38 C38 32 46 34 56 44 C46 54 38 56 32 56 C26 56 18 54 8 44Z" fill="#C2321E"/></svg>
+        <h3>The cosmetic side</h3>
+        <p>Permanent makeup that wakes up with you, plus permanent jewelry.</p>
+        <ul><li>Lip blushing</li><li>Microblading &amp; powder brows</li><li>Lash enhancement liner</li><li>Permanent jewelry</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="num">03 — By the numbers</div><h2>Word gets <em>around.</em></h2></div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><div class="big">6<em>days</em></div><div class="lbl">Open Tue–Sun, by appointment</div></div>
+      <div class="fact"><div class="big">$0</div><div class="lbl">Consultations before permanent makeup</div></div>
+      <div class="fact"><div class="big">2<em>-in-</em>1</div><div class="lbl">Tattoo + permanent makeup studio</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="policies" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="num">04 — House rules</div><h2>Good to <em>know.</em></h2></div>
+      <p class="sec-sub">Straight from the studio's published policies. By appointment only.</p>
+    </div>
+    <div class="rules">
+      <div class="rule reveal"><div><h4>Deposits hold your slot</h4><p>Deposits are non-refundable. Cancelling or rescheduling forfeits it — a 2–4 hour slot is hard to fill on short notice.</p></div></div>
+      <div class="rule reveal"><div><h4>Be on time</h4><p>More than 30 minutes late means rescheduling and forfeiting the deposit. Documented emergencies may be considered.</p></div></div>
+      <div class="rule reveal"><div><h4>Consult before cosmetics</h4><p>Every permanent makeup service starts with a free consultation.</p></div></div>
+      <div class="rule reveal"><div><h4>Come ready</h4><p>No sunburn or fresh tan, disclose any skin conditions, and arrive sober — the studio may refuse service otherwise.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:var(--paper2);border-top:1.5px solid var(--ink)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="num">05 — Find the studio</div><h2>Come <em>see us.</em></h2></div>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <div class="kicker">Address</div>
+        <p class="addr">7429 Tamron Way<br>Powell, TN 37849</p>
+        <p class="addr-note">In Karns, across from Karns Elementary School. Private studio — open by appointment only.</p>
+        <div class="cta-row">
+          <a class="btn" href="tel:+18657428600">Call (865) 742-8600</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=7429%20Tamron%20Way%2C%20Powell%2C%20TN%2037849" target="_blank" rel="noopener">Directions</a>
+        </div>
+        <div class="hours" style="margin-top:28px">
+          <h3><span>Hours</span><span>By appt.</span></h3>
+          <table id="hours">
+            <tr data-d="1"><td>Monday</td><td>Closed</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>10:30a – 6:30p</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>11a – 6:30p</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>11a – 4p</td></tr>
+            <tr data-d="5"><td>Friday</td><td>11a – 7p</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>10a – 3:30p</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>11a – 3p</td></tr>
+          </table>
+          <div class="appt">Appointments only — book online or text first.</div>
+        </div>
+        <div class="channels">
+          <a href="https://ink865.glossgenius.com/" target="_blank" rel="noopener">GlossGenius ↗</a>
+          <a href="https://www.instagram.com/ink865tattoos/" target="_blank" rel="noopener">@ink865tattoos ↗</a>
+          <a href="https://www.facebook.com/Ink865tattoos" target="_blank" rel="noopener">Facebook ↗</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Ink 865" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=7429%20Tamron%20Way%2C%20Powell%2C%20TN%2037849&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+  <div class="wrap reveal">
+    <div class="num">06 — Your turn</div>
+    <h2>Got an idea?<br><em style="color:var(--red)">Let's ink it.</em></h2>
+    <p>Book a custom session, claim a flash piece, or start with a free consultation for brows, lips or liner.</p>
+    <a class="btn" href="https://ink865.glossgenius.com/" target="_blank" rel="noopener">Book on GlossGenius →</a>
+    <div class="bnpl">Buy Now, Pay Later available in person · $50–$4,000</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Ink 865</b> · 7429 Tamron Way, Powell, TN 37849 · <a href="tel:+18657428600">(865) 742-8600</a></div>
+    <div>Services, prices, hours &amp; policies from ink865.glossgenius.com.</div>
+    <div>Concept by <a href="#">Code Craft Media</a> — not affiliated with or endorsed by Ink 865.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a href="tel:+18657428600">Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=7429%20Tamron%20Way%2C%20Powell%2C%20TN%2037849" target="_blank" rel="noopener">Directions</a>
+  <a class="b" href="https://ink865.glossgenius.com/" target="_blank" rel="noopener">Book</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var r=document.querySelector('#hours tr[data-d="'+d+'"]'); if(r) r.classList.add('today');
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  var draws=[].slice.call(document.querySelectorAll('.draw'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});draws.forEach(function(s){s.classList.remove('pending')});}
+  if(!('IntersectionObserver' in window)){showAll();return;}
+  els.forEach(function(e){e.style.opacity='';});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+  document.body.classList.add('rv');
+  els.forEach(function(e){io.observe(e)});
+  draws.forEach(function(s){
+    [].forEach.call(s.querySelectorAll('path,circle,ellipse'),function(p){try{p.style.setProperty('--len',Math.ceil(p.getTotalLength()+2))}catch(e){}});
+    requestAnimationFrame(function(){requestAnimationFrame(function(){s.classList.remove('pending')})});
+  });
+  setTimeout(showAll,2500);
+})();
+</script>
+</body>
+</html>

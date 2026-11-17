@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Crusty Cruisers Grooming — Mobile Grooming for Senior Pets</title>
+<meta name="description" content="Concept site: Crusty Cruisers Grooming, mobile pet grooming with a soft spot for senior pets, serving Knox, Sevier and Jefferson Counties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf3e4; --paper:#fffaf0; --ink:#2b2420; --muted:#6b5d52;
+  --teal:#2f8f86; --teal-d:#1f6660; --coral:#e8674a; --coral-d:#c94f33;
+  --mustard:#f2b33d; --sky:#cfe9e4; --line:#e9dcc6;
+  --r:22px; --shadow:0 18px 40px -18px rgba(43,36,32,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 Nunito,system-ui,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+.display{font-family:Shrikhand,Fraunces,Georgia,serif;font-weight:400;letter-spacing:.3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.concept{background:var(--ink);color:#f6e9d3;font-size:13px;text-align:center;padding:7px 14px;line-height:1.35}
+.concept b{color:var(--mustard)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(251,243,228,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .display{font-size:22px;color:var(--coral);line-height:1}
+.brand small{display:block;font:800 10px/1 Nunito,sans-serif;letter-spacing:2.4px;text-transform:uppercase;color:var(--teal-d);margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:800;font-size:15px;color:var(--ink);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;border-radius:3px;background:var(--coral);transform:scaleX(0);transition:transform .25s}
+.nav ul a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:800 16px/1 Nunito,sans-serif;text-decoration:none;padding:15px 24px;border-radius:999px;border:2.5px solid var(--ink);transition:transform .18s,box-shadow .18s,background .18s;box-shadow:4px 4px 0 var(--ink);cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-cream{background:var(--paper);color:var(--ink)}
+.btn-sm{padding:11px 18px;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:56px 0 0;background:
+  radial-gradient(circle at 85% 10%,rgba(242,179,61,.35),transparent 40%),
+  radial-gradient(circle at 5% 90%,rgba(47,143,134,.18),transparent 45%),var(--cream)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(43,36,32,.07) 1.2px,transparent 1.3px);background-size:18px 18px;pointer-events:none}
+.hero-grid{position:relative;padding-bottom:40px;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px;letter-spacing:1.2px;text-transform:uppercase}
+.eyebrow i{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(47,143,134,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(47,143,134,0)}100%{box-shadow:0 0 0 0 rgba(47,143,134,0)}}
+.hero h1{font-size:clamp(42px,6vw,74px);margin:20px 0 18px;color:var(--ink)}
+.hero h1 .display{color:var(--coral);display:block;font-size:.92em;transform:rotate(-2deg);transform-origin:left;margin-top:6px}
+.hero p.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:33ch;margin:0 0 28px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-weight:700;font-size:15px;color:var(--teal-d)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{width:18px;height:18px}
+.bus-stage{position:relative}
+.bus-stage .sun{position:absolute;right:6%;top:-4%;width:42%;aspect-ratio:1;border-radius:50%;background:repeating-linear-gradient(0deg,var(--mustard) 0 14px,transparent 14px 22px);opacity:.9;-webkit-mask:radial-gradient(circle,#000 69%,transparent 70%);mask:radial-gradient(circle,#000 69%,transparent 70%)}
+.bus{position:relative;animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.wheel{transform-box:fill-box;transform-origin:center;animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bubble{animation:float 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.bubble:nth-of-type(2){animation-delay:-1.5s}.bubble:nth-of-type(3){animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0);opacity:.95}50%{transform:translateY(-14px);opacity:.6}}
+.tail{transform-box:fill-box;transform-origin:0% 100%;animation:wag .45s ease-in-out infinite alternate}
+@keyframes wag{from{transform:rotate(-14deg)}to{transform:rotate(16deg)}}
+.road{position:relative;height:64px;background:var(--ink);margin-top:-6px}
+.road::after{content:"";position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,var(--mustard) 0 38px,transparent 38px 76px);animation:road 1.6s linear infinite}
+@keyframes road{to{background-position:-76px 0}}
+
+/* marquee */
+.ticker{background:var(--teal);color:#fff;overflow:hidden;border-block:3px solid var(--ink)}
+.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite}
+.ticker span{font:400 22px/1 Shrikhand,Georgia,serif;padding:16px 22px;white-space:nowrap;display:inline-flex;align-items:center;gap:22px}
+.ticker span::after{content:"✦";color:var(--mustard);font-size:16px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:88px 0;position:relative}
+.sec-head{max-width:640px;margin-bottom:40px}
+.kicker{font-weight:800;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--coral-d)}
+.sec-head h2{font-size:clamp(34px,4.6vw,54px);margin:10px 0 14px}
+.sec-head p{color:var(--muted);margin:0;font-size:18px}
+
+/* services */
+.svc{background:var(--paper);border-top:3px solid var(--ink)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.tab{font:800 15px/1 Nunito,sans-serif;padding:12px 18px;border-radius:999px;border:2.5px solid var(--ink);background:var(--cream);cursor:pointer;transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--cream);border:2.5px solid var(--ink);border-radius:var(--r);padding:26px 24px 24px;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column;transition:transform .25s}
+.card:hover{transform:translateY(-4px) rotate(-.4deg)}
+.card .ico{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;border:2.5px solid var(--ink);margin-bottom:16px}
+.card h3{font-size:26px;margin-bottom:8px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:15.5px}
+.card.feature{background:var(--coral);color:#fff}
+.card.feature p{color:#fff3ec}
+.price-list{list-style:none;margin:auto 0 0;padding:0;border-top:2px dashed currentColor}
+.price-list li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(43,36,32,.12);font-weight:700;font-size:15.5px}
+.card.feature .price-list li{border-color:rgba(255,255,255,.25)}
+.price-list li b{font-family:Fraunces,serif;font-size:19px}
+.price-list li.on{background:rgba(242,179,61,.28);margin:0 -10px;padding:9px 10px;border-radius:10px}
+.card.feature .price-list li.on{background:rgba(255,255,255,.2)}
+.weight-pick{margin:0 0 26px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-weight:800}
+.weight-pick button{font:800 14px/1 Nunito,sans-serif;padding:10px 14px;border-radius:12px;border:2px solid var(--ink);background:var(--paper);cursor:pointer}
+.weight-pick button[aria-pressed="true"]{background:var(--mustard)}
+.addons{margin-top:44px;display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.addon-box{background:var(--sky);border:2.5px solid var(--ink);border-radius:var(--r);padding:26px}
+.addon-box h3{font-size:24px;margin-bottom:14px}
+.addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.addon-grid div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed rgba(43,36,32,.3);font-size:15.5px;font-weight:600}
+.addon-grid b{white-space:nowrap}
+.nail{background:var(--mustard)}
+.nail .big{font:400 60px/1 Shrikhand,Georgia,serif;margin:6px 0}
+.fine{font-size:14px;color:var(--muted);margin-top:18px}
+
+/* story */
+.story{background:var(--teal);color:#fff;overflow:hidden}
+.story::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1.5px,transparent 1.6px);background-size:22px 22px}
+.story-grid{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.story .kicker{color:var(--mustard)}
+.story h2{font-size:clamp(34px,4.6vw,54px);margin:10px 0 18px}
+.story p{color:#e3f3f0;font-size:18px;margin:0 0 16px}
+.quote{font-family:Fraunces,serif;font-size:clamp(22px,2.6vw,28px);line-height:1.3;border-left:5px solid var(--mustard);padding-left:18px;margin:24px 0 0;color:#fff}
+.quote small{display:block;font:700 14px Nunito,sans-serif;color:var(--mustard);margin-top:8px}
+.portrait{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:28px;padding:22px;box-shadow:10px 10px 0 var(--ink);color:var(--ink);transform:rotate(1.5deg)}
+.portrait .tag{position:absolute;top:-16px;left:22px;background:var(--coral);color:#fff;border:2.5px solid var(--ink);border-radius:999px;padding:6px 14px;font:800 13px Nunito,sans-serif;letter-spacing:1px;text-transform:uppercase}
+.portrait p{color:var(--muted);font-size:15px;text-align:center;margin:10px 0 0}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why{background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--r);padding:24px}
+.why .n{font:400 40px/1 Shrikhand,Georgia,serif;color:var(--coral)}
+.why h3{font-size:21px;margin:10px 0 8px}
+.why p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* policies */
+.pol{background:var(--paper);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.pol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.pol details{background:var(--cream);border:2px solid var(--ink);border-radius:16px;padding:0 20px}
+.pol summary{cursor:pointer;list-style:none;font:700 18px Fraunces,serif;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pol summary::-webkit-details-marker{display:none}
+.pol summary::after{content:"+";font:400 26px/1 Shrikhand,serif;color:var(--coral);transition:transform .25s}
+.pol details[open] summary::after{transform:rotate(45deg)}
+.pol details p{margin:0 0 18px;color:var(--muted);font-size:15.5px}
+
+/* area */
+.area-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:stretch}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.towns span{background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:9px 16px;font-weight:800;font-size:15px;transition:background .2s,transform .2s}
+.towns span:hover{background:var(--mustard);transform:rotate(-2deg)}
+.counties{font-weight:700;color:var(--teal-d)}
+.map{border:3px solid var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:8px 8px 0 var(--ink);min-height:360px;background:var(--sky)}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+.hours-box{margin-top:26px;background:var(--paper);border:2.5px dashed var(--ink);border-radius:18px;padding:20px 22px}
+.hours-box h3{font-size:21px;margin-bottom:6px}
+.hours-box p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* cta */
+.cta{background:var(--coral);color:#fff;text-align:center;border-top:3px solid var(--ink);overflow:hidden}
+.cta h2{font-size:clamp(40px,7vw,80px)}
+.cta p{font-size:19px;margin:16px auto 30px;max-width:40ch;color:#fff3ec}
+.cta .phone{font:400 clamp(34px,6vw,56px)/1 Shrikhand,Georgia,serif;color:#fff;text-decoration:none;display:inline-block;margin-bottom:26px;text-shadow:4px 4px 0 var(--ink)}
+.cta .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.paws{position:absolute;inset:0;pointer-events:none;opacity:.14}
+
+footer{background:var(--ink);color:#d9cbb6;padding:48px 0 40px;font-size:15px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer .display{color:var(--mustard);font-size:26px}
+footer h4{font:800 13px Nunito,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#fff;margin:0 0 12px}
+footer a{color:#d9cbb6;text-decoration:none}
+footer a:hover{color:var(--mustard)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.socials{display:flex;gap:10px;margin-top:16px}
+.socials a{width:42px;height:42px;border-radius:12px;border:2px solid #d9cbb6;display:grid;place-items:center;transition:background .2s,color .2s}
+.socials a:hover{background:var(--mustard);color:var(--ink);border-color:var(--mustard)}
+.socials svg{width:20px;height:20px}
+.copy{border-top:1px solid rgba(217,203,182,.2);margin-top:34px;padding-top:20px;font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* call bar */
+.callbar{display:none}
+@media (max-width:899px){
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(43,36,32,.96);border-top:3px solid var(--mustard)}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font:800 16px Nunito,sans-serif;text-decoration:none}
+  .callbar a svg{width:20px;height:20px}
+  .callbar .c1{background:var(--coral);color:#fff}
+  .callbar .c2{background:var(--cream);color:var(--ink)}
+  .nav ul{display:none}
+  .hero-grid,.story-grid,.area-grid,.addons{grid-template-columns:1fr}
+  .svc-grid,.pol-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr}
+  .hero{padding-top:36px}
+  .bus-stage{max-width:520px;margin:0 auto;width:100%}
+  section{padding:68px 0}
+}
+@media (max-width:520px){
+  .wrap{padding:0 16px}
+  .addon-grid{grid-template-columns:1fr}
+  .why{padding:18px}.why h3{font-size:18px}.why p{font-size:14.5px}
+  .eyebrow{font-size:11.5px;letter-spacing:.8px}
+  .nav .btn-sm span{display:none}
+  .hero-ctas .btn{flex:1 1 100%}
+  .brand .display{font-size:19px}
+}
+
+/* reveal (JS-gated) */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})},1500);</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Crusty Cruisers Grooming. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Crusty Cruisers Grooming home">
+      <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="19" fill="#f2b33d" stroke="#2b2420" stroke-width="2.5"/><g fill="#2b2420"><ellipse cx="21" cy="25" rx="6.5" ry="5.5"/><ellipse cx="13" cy="18" rx="2.8" ry="3.6"/><ellipse cx="29" cy="18" rx="2.8" ry="3.6"/><ellipse cx="17.5" cy="12.5" rx="2.6" ry="3.4"/><ellipse cx="24.5" cy="12.5" rx="2.6" ry="3.4"/></g></svg>
+      <span><span class="display">Crusty Cruisers</span><small>Mobile Grooming</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#policies">Policies</a></li>
+      <li><a href="#area">Service Area</a></li>
+    </ul>
+    <a class="btn btn-coral btn-sm" href="tel:+18655569689"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Book a Groom</span></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow"><i></i>Grooming that comes to your door</span>
+      <h1>Gentle grooms for gray muzzles<span class="display">&amp; every pup.</span></h1>
+      <p class="lead">A cozy grooming bus that pulls up at your home, with a groomer who has 10 years of experience and a soft spot for senior pets. No car rides, no kennels, no stress.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-coral" href="tel:+18655569689"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call (865) 556-9689</a>
+        <a class="btn btn-cream" href="#services">See services &amp; prices</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Knox · Sevier · Jefferson Counties</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The Crust-Free Guarantee</span>
+      </div>
+    </div>
+    <div class="bus-stage rv" aria-hidden="true">
+      <div class="sun"></div>
+      <svg class="bus" viewBox="0 0 560 360" role="img">
+        <!-- bubbles -->
+        <g fill="#fff" stroke="#2b2420" stroke-width="2.5">
+          <circle class="bubble" cx="470" cy="70" r="16"/><circle class="bubble" cx="505" cy="34" r="10"/><circle class="bubble" cx="440" cy="30" r="7"/>
+        </g>
+        <!-- shadow -->
+        <ellipse cx="280" cy="346" rx="230" ry="10" fill="#2b2420" opacity=".18"/>
+        <!-- body -->
+        <path d="M40 120 Q40 86 74 86 H430 Q470 86 490 120 L520 190 Q528 206 528 222 V290 Q528 310 508 310 H52 Q32 310 32 290 V140 Q32 120 40 120Z" fill="#2f8f86" stroke="#2b2420" stroke-width="4"/>
+        <path d="M32 232 H528 V290 Q528 310 508 310 H52 Q32 310 32 290Z" fill="#fbf3e4" stroke="#2b2420" stroke-width="4"/>
+        <rect x="32" y="222" width="496" height="14" fill="#e8674a" stroke="#2b2420" stroke-width="4"/>
+        <!-- roof rack -->
+        <rect x="90" y="70" width="300" height="16" rx="6" fill="#f2b33d" stroke="#2b2420" stroke-width="4"/>
+        <!-- windows -->
+        <g fill="#cfe9e4" stroke="#2b2420" stroke-width="4">
+          <rect x="62" y="112" width="74" height="70" rx="12"/>
+          <rect x="150" y="112" width="74" height="70" rx="12"/>
+          <path d="M398 112 H458 Q470 112 476 124 L498 176 Q500 182 494 182 H398Z"/>
+        </g>
+        <!-- dog in window -->
+        <g>
+          <path class="tail" d="M206 160 q14 -16 8 -34" fill="none" stroke="#2b2420" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="185" cy="166" rx="24" ry="16" fill="#f6e1bf" stroke="#2b2420" stroke-width="3.5"/>
+          <circle cx="180" cy="142" r="20" fill="#f6e1bf" stroke="#2b2420" stroke-width="3.5"/>
+          <path d="M162 132 q-10 6 -6 24 q8 -4 10 -14z" fill="#9b6a43" stroke="#2b2420" stroke-width="3"/>
+          <path d="M198 132 q10 6 6 24 q-8 -4 -10 -14z" fill="#9b6a43" stroke="#2b2420" stroke-width="3"/>
+          <circle cx="173" cy="140" r="2.8" fill="#2b2420"/><circle cx="187" cy="140" r="2.8" fill="#2b2420"/>
+          <ellipse cx="180" cy="149" rx="4.5" ry="3.4" fill="#2b2420"/>
+          <path d="M174 154 q6 5 12 0" fill="none" stroke="#2b2420" stroke-width="2.4" stroke-linecap="round"/>
+          <!-- gray muzzle -->
+          <path d="M170 150 q10 10 20 0" fill="none" stroke="#fff" stroke-width="3" opacity=".9"/>
+        </g>
+        <!-- cat in window peeking (coming soon) -->
+        <g>
+          <path d="M80 182 v-26 q0 -18 19 -18 q19 0 19 18 v26z" fill="#4b4039" stroke="#2b2420" stroke-width="3.5"/>
+          <path d="M82 146 l4 -16 l10 10z M116 146 l-4 -16 l-10 10z" fill="#4b4039" stroke="#2b2420" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="92" cy="155" r="3" fill="#f2b33d"/><circle cx="106" cy="155" r="3" fill="#f2b33d"/>
+        </g>
+        <!-- door -->
+        <rect x="250" y="112" width="58" height="120" rx="8" fill="#26786f" stroke="#2b2420" stroke-width="4"/>
+        <line x1="279" y1="112" x2="279" y2="232" stroke="#2b2420" stroke-width="3"/>
+        <!-- side lettering -->
+        <text x="356" y="160" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="27" fill="#fbf3e4" stroke="#2b2420" stroke-width="1.2">Crusty</text>
+        <text x="356" y="192" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="23" fill="#f2b33d" stroke="#2b2420" stroke-width="1.2">Cruisers</text>
+        <text x="200" y="272" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="18" letter-spacing="3" fill="#2b2420">MOBILE GROOMING</text>
+        <!-- lights -->
+        <circle cx="514" cy="252" r="9" fill="#f2b33d" stroke="#2b2420" stroke-width="3"/>
+        <rect x="34" y="248" width="10" height="20" rx="3" fill="#e8674a" stroke="#2b2420" stroke-width="3"/>
+        <!-- wheels -->
+        <g>
+          <circle cx="130" cy="310" r="36" fill="#2b2420"/>
+          <g class="wheel"><circle cx="130" cy="310" r="18" fill="#fbf3e4" stroke="#2b2420" stroke-width="3"/><path d="M130 294 v32 M114 310 h32" stroke="#2b2420" stroke-width="4"/></g>
+          <circle cx="430" cy="310" r="36" fill="#2b2420"/>
+          <g class="wheel"><circle cx="430" cy="310" r="18" fill="#fbf3e4" stroke="#2b2420" stroke-width="3"/><path d="M430 294 v32 M414 310 h32" stroke="#2b2420" stroke-width="4"/></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="road" aria-hidden="true"></div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>Bath &amp; Brush</span><span>Partial Groom</span><span>Full Groom</span><span>Nail Trims</span><span>Senior-Pet Specialists</span><span>We Come to You</span>
+  <span>Bath &amp; Brush</span><span>Partial Groom</span><span>Full Groom</span><span>Nail Trims</span><span>Senior-Pet Specialists</span><span>We Come to You</span>
+</div></div>
+
+<!-- SERVICES -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Services &amp; Pricing</span>
+      <h2>Clear prices, by weight.</h2>
+      <p>Every groom starts with the full bath &amp; brush treatment. Tap your dog's weight to highlight your price.</p>
+    </div>
+
+    <div class="weight-pick rv" role="group" aria-label="Pick your dog's weight">
+      <span>My dog weighs:</span>
+      <button type="button" data-w="0" aria-pressed="false">0–25 lb</button>
+      <button type="button" data-w="1" aria-pressed="false">26–50 lb</button>
+      <button type="button" data-w="2" aria-pressed="false">51–80 lb</button>
+      <button type="button" data-w="3" aria-pressed="false">81–110 lb</button>
+      <button type="button" data-w="4" aria-pressed="false">111+ lb</button>
+    </div>
+
+    <div class="svc-grid">
+      <article class="card rv">
+        <div class="ico" style="background:var(--sky)"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2b2420" stroke-width="2.5" stroke-linecap="round"><path d="M4 16h24v4a7 7 0 0 1-7 7H11a7 7 0 0 1-7-7z" fill="#fff"/><path d="M8 16V7a3 3 0 0 1 6 0"/><circle cx="20" cy="9" r="2"/><circle cx="25" cy="5" r="1.5"/></svg></div>
+        <h3>Bath &amp; Brush</h3>
+        <p>Shampoo &amp; conditioning, blow out, 15-minute brush out, nail trim &amp; grind, teeth brushing, ear plucking &amp; cleaning, paw pad &amp; sanitary trim.</p>
+        <ul class="price-list">
+          <li>0–25 lb<b>$80</b></li><li>26–50 lb<b>$100</b></li><li>51–80 lb<b>$130</b></li><li>81–110 lb<b>$160</b></li><li>111+ lb<b>$180</b></li>
+        </ul>
+      </article>
+      <article class="card feature rv">
+        <div class="ico" style="background:var(--mustard)"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2b2420" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="23" r="4" fill="#fff"/><circle cx="23" cy="23" r="4" fill="#fff"/><path d="M11.5 20 24 4M20.5 20 8 4"/></svg></div>
+        <h3>Partial Groom</h3>
+        <p>Everything in Bath &amp; Brush, plus a tidy face, feet and sanitary trim. The in-between freshen-up.</p>
+        <ul class="price-list">
+          <li>0–25 lb<b>$90</b></li><li>26–50 lb<b>$115</b></li><li>51–80 lb<b>$145</b></li><li>81–110 lb<b>$180</b></li><li>111+ lb<b>$200</b></li>
+        </ul>
+      </article>
+      <article class="card rv">
+        <div class="ico" style="background:#f6d2c6"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2b2420" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l3.5 7.2 7.9 1.1-5.7 5.6 1.3 7.9L16 22l-7 3.8 1.3-7.9-5.7-5.6 7.9-1.1z" fill="#fff"/></svg></div>
+        <h3>Full Groom</h3>
+        <p>Everything in Bath &amp; Brush, plus the haircut of your choice. Complicated or time-consuming cuts may cost extra.</p>
+        <ul class="price-list">
+          <li>0–25 lb<b>$100</b></li><li>26–50 lb<b>$150</b></li><li>51–80 lb<b>$200</b></li><li>81–110 lb<b>$250</b></li><li>111+ lb<b>$300</b></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="addons">
+      <div class="addon-box rv">
+        <h3>Add-ons &amp; extras</h3>
+        <div class="addon-grid">
+          <div>Medicated Bath<b>$10–30</b></div>
+          <div>Flea Bath<b>$10–30</b></div>
+          <div>Matted Shave Down<b>$30–100</b></div>
+          <div>Nail Polish<b>$10</b></div>
+          <div>Nose &amp; Paw Balm<b>$10</b></div>
+          <div>Clean Feet / Face<b>$10–20</b></div>
+          <div>Anal Glands<b>$10–15</b></div>
+          <div>Behavior<b>$5–30</b></div>
+          <div>Deshedding / Extra Brushing<b>$5 / 5 min</b></div>
+          <div>Dematting<b>$5 / 5 min</b></div>
+          <div>Hand Scissoring<b>$5 / 5 min</b></div>
+        </div>
+        <p class="fine">Extra brushing is charged after the included 15 minutes if the coat is still shedding, matted or thick.</p>
+      </div>
+      <div class="addon-box nail rv">
+        <h3>Just the nails?</h3>
+        <div class="big">$50</div>
+        <p style="margin:0;font-weight:700">Nail trim for up to 2 pets, plus $20 for each additional pet. Great for multi-dog households.</p>
+        <a class="btn btn-cream btn-sm" style="margin-top:20px" href="tel:+18655569689">Call to book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="rv">
+      <div class="portrait">
+        <span class="tag">In loving memory</span>
+        <svg viewBox="0 0 420 260" aria-hidden="true">
+          <rect x="0" y="200" width="420" height="60" rx="14" fill="#cfe9e4"/>
+          <!-- heart -->
+          <path d="M210 60 c-14 -24 -50 -14 -46 12 c3 18 46 42 46 42 s43 -24 46 -42 c4 -26 -32 -36 -46 -12z" fill="#e8674a" stroke="#2b2420" stroke-width="3.5"/>
+          <!-- dog 1 (sitting) -->
+          <g stroke="#2b2420" stroke-width="3.5" stroke-linejoin="round">
+            <path d="M80 220 q-6 -60 30 -76 q36 16 30 76z" fill="#d9a46b"/>
+            <circle cx="110" cy="122" r="28" fill="#d9a46b"/>
+            <path d="M84 110 q-14 10 -6 36 q12 -6 14 -22z M136 110 q14 10 6 36 q-12 -6 -14 -22z" fill="#8a5a35"/>
+            <path d="M98 134 q12 12 24 0" fill="#eee" stroke-width="2.5"/>
+          </g>
+          <circle cx="101" cy="119" r="3.4" fill="#2b2420"/><circle cx="119" cy="119" r="3.4" fill="#2b2420"/><ellipse cx="110" cy="130" rx="5" ry="4" fill="#2b2420"/>
+          <!-- dog 2 (lying) -->
+          <g stroke="#2b2420" stroke-width="3.5" stroke-linejoin="round">
+            <path d="M250 222 q0 -38 50 -38 h40 q34 0 34 38z" fill="#5a4b42"/>
+            <circle cx="272" cy="178" r="26" fill="#5a4b42"/>
+            <path d="M250 166 q-12 14 -2 30 q10 -6 12 -18z M294 166 q12 14 2 30 q-10 -6 -12 -18z" fill="#3a2f29"/>
+            <path d="M262 190 q10 10 20 0" fill="#ddd" stroke-width="2.5"/>
+          </g>
+          <circle cx="264" cy="176" r="3.2" fill="#fff"/><circle cx="280" cy="176" r="3.2" fill="#fff"/><ellipse cx="272" cy="186" rx="4.5" ry="3.5" fill="#2b2420"/>
+          <text x="110" y="250" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="20" fill="#2b2420">Spittles</text>
+          <text x="310" y="250" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="20" fill="#2b2420">Murdock</text>
+        </svg>
+        <p>The two senior pups who started it all (illustration).</p>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="kicker">Meet the groomer</span>
+      <h2>Built for the old souls.</h2>
+      <p>Ivy has been grooming pets for 10 years. Her love for senior pets started at home, with her own dogs Spittles and Murdock, who needed extra care and patience as they got older.</p>
+      <p>That patience is the whole idea behind Crusty Cruisers: a cozy grooming bus that comes to you, so older and anxious pets skip the car ride and the busy salon. Ivy's fiancé, Hunter, backed the mobile idea from day one.</p>
+      <p class="quote">"We will always prioritize the pet's welfare, safety, and comfort over style preferences."<small>From the Crusty Cruisers policies</small></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Why Crusty Cruisers</span>
+      <h2>Less stress. More snuggles.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div class="n">01</div><h3>We come to you</h3><p>The grooming bus parks at your home. No drop-offs, no waiting rooms, no long car rides.</p></div>
+      <div class="why rv"><div class="n">02</div><h3>Senior-pet focus</h3><p>Mobile grooming built around older pets who need a gentler pace and extra patience.</p></div>
+      <div class="why rv"><div class="n">03</div><h3>10 years' experience</h3><p>A longtime groomer handles every groom, from a quick nail trim to a full haircut.</p></div>
+      <div class="why rv"><div class="n">04</div><h3>Comfort first</h3><p>No sedation, ever, and the pet's comfort and safety always come before style.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POLICIES -->
+<section class="pol" id="policies">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Good to know</span>
+      <h2>Before your first groom.</h2>
+      <p>The short version of our policies, so booking is easy.</p>
+    </div>
+    <div class="pol-grid">
+      <details class="rv" open><summary>First-visit deposit</summary><p>First-time clients pay a $50 deposit to hold their appointment slot. It's credited toward the final groom price.</p></details>
+      <details class="rv"><summary>Vaccinations</summary><p>Proof of up-to-date vaccinations is needed 48 hours before service, or the appointment will be canceled.</p></details>
+      <details class="rv"><summary>Cancellations</summary><p>Please give 24 hours' notice. Late cancellations carry a $50 fee.</p></details>
+      <details class="rv"><summary>Be home on arrival</summary><p>If no one is present when the bus arrives, the appointment is canceled with a fee.</p></details>
+      <details class="rv"><summary>No sedation</summary><p>Crusty Cruisers never sedates pets, since we aren't licensed veterinarians.</p></details>
+      <details class="rv"><summary>Pregnant &amp; nursing pets</summary><p>To avoid stress risks, we don't groom pregnant or nursing pets.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section id="area">
+  <div class="wrap area-grid">
+    <div class="rv">
+      <span class="kicker">Where we roll</span>
+      <h2 style="font-size:clamp(34px,4.6vw,54px);margin:10px 0 14px">East Tennessee, at your curb.</h2>
+      <p class="counties">Serving Knox, Sevier &amp; Jefferson Counties</p>
+      <div class="towns"><span>Knoxville</span><span>Farragut</span><span>Powell</span><span>Sevierville</span><span>Strawberry Plains</span><span>Jefferson County</span></div>
+      <a class="btn btn-coral" href="tel:+18655569689">Check if we reach you</a>
+      <div class="hours-box">
+        <h3>Hours &amp; scheduling</h3>
+        <p>Grooms are by appointment. Call or email to find a time that works for you and your pup.</p>
+      </div>
+    </div>
+    <div class="map rv">
+      <iframe title="Crusty Cruisers service area around Knoxville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Knoxville%2C%20TN&amp;z=9&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="book">
+  <svg class="paws" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><g id="pw"><ellipse cx="0" cy="6" rx="8" ry="7"/><ellipse cx="-9" cy="-4" rx="3" ry="4"/><ellipse cx="9" cy="-4" rx="3" ry="4"/><ellipse cx="-4" cy="-10" rx="3" ry="4"/><ellipse cx="4" cy="-10" rx="3" ry="4"/></g></defs><g fill="#2b2420"><use href="#pw" x="40" y="40" transform="rotate(-20 40 40)"/><use href="#pw" x="80" y="80"/><use href="#pw" x="50" y="140" transform="rotate(15 50 140)"/><use href="#pw" x="340" y="50" transform="rotate(25 340 50)"/><use href="#pw" x="370" y="120"/><use href="#pw" x="320" y="170" transform="rotate(-10 320 170)"/></g></svg>
+  <div class="wrap" style="position:relative">
+    <h2 class="display rv">Ready to roll?</h2>
+    <p class="rv">Call today to book your appointment. Cat grooming is on the way, too.</p>
+    <a class="phone rv" href="tel:+18655569689">(865) 556-9689</a>
+    <div class="row rv">
+      <a class="btn btn-cream" href="tel:+18655569689">Tap to call</a>
+      <a class="btn btn-cream" href="mailto:crustycruisersgrooming@gmail.com">Email us</a>
+      <a class="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&amp;destination=Knoxville%2C%20TN" target="_blank" rel="noopener">Directions</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="display">Crusty Cruisers</div>
+        <p style="margin:8px 0 0;max-width:36ch">Mobile pet grooming with a soft spot for senior pets. Knox, Sevier &amp; Jefferson Counties, Tennessee.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/crustycruisersgrooming" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/crustycruisersgrooming" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="https://www.tiktok.com/@crustycruisersgrooming" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.4 2.3 1.8 3.8 4 4v3.2c-1.5 0-2.9-.4-4-1.2V15a6 6 0 1 1-6-6v3.3A2.7 2.7 0 1 0 12.7 15V3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+18655569689">(865) 556-9689</a></li>
+          <li><a href="mailto:crustycruisersgrooming@gmail.com" style="word-break:break-all">crustycruisersgrooming@gmail.com</a></li>
+          <li>By appointment</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#services">Services &amp; Pricing</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#policies">Policies</a></li>
+          <li><a href="#area">Service Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© Crusty Cruisers Grooming</span><span>Concept design by Code Craft Media</span></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c1" href="tel:+18655569689"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="c2" href="sms:+18655569689"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text</a>
+</nav>
+
+<script>
+(function(){
+  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+  document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+  var btns=document.querySelectorAll('.weight-pick button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var w=+b.dataset.w;
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    document.querySelectorAll('.price-list').forEach(function(ul){
+      ul.querySelectorAll('li').forEach(function(li,i){li.classList.toggle('on',i===w)});
+    });
+  })});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Revival Vintage Market &amp; Art Gallery — concept site</title>
+<meta name="description" content="Vintage clothing, oddities, guitars and local art at 825 Locust St, Suite 103, in Knoxville's Medical Arts Building.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Martian+Mono:wght@400;600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3e9d6; --paper2:#eadcc1; --ink:#1d1a2e; --ink2:#3b3550;
+  --tomato:#d9482b; --mustard:#e8a93a; --teal:#1f7a74; --beam:#c9f27a;
+  --muted:#6b6276;
+  --display:'Shrikhand', 'Cooper Black', 'Georgia', serif;
+  --mono:'Martian Mono', ui-monospace, 'Courier New', monospace;
+  --sans:'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden;
+  background-image:radial-gradient(rgba(29,26,46,.06) 1px,transparent 1.2px);background-size:14px 14px}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* concept banner */
+.concept{background:var(--ink);color:var(--paper);text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;padding:8px 14px;line-height:1.5}
+.concept b{color:var(--mustard);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(243,233,214,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:38px;height:38px;flex:none}
+.logo span{font-family:var(--display);font-size:1.35rem;line-height:1;color:var(--tomato)}
+.logo small{display:block;font-family:var(--mono);font-size:.5rem;letter-spacing:.18em;color:var(--ink);margin-top:3px;text-transform:uppercase}
+.navlinks{display:none;gap:26px;align-items:center}
+.navlinks a{text-decoration:none;font-weight:600;font-size:.92rem}
+.navlinks a:hover{color:var(--tomato)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:700;text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:13px 22px;font-size:.98rem;transition:transform .18s ease, box-shadow .18s ease;box-shadow:4px 4px 0 var(--ink);background:var(--paper);color:var(--ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.red{background:var(--tomato);color:#fff8ee}
+.btn.mus{background:var(--mustard)}
+.btn.sm{padding:8px 16px;font-size:.85rem;box-shadow:3px 3px 0 var(--ink)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:40px 0 0}
+.hero-grid{display:grid;gap:28px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--beam);padding:7px 12px;border-radius:4px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--beam);box-shadow:0 0 10px var(--beam);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,11vw,5.2rem);line-height:.92;letter-spacing:-.01em;margin:18px 0 18px;color:var(--ink)}
+h1 em{font-style:normal;color:var(--tomato);display:inline-block;transform:rotate(-2deg)}
+h1 .u{background:linear-gradient(transparent 62%,var(--mustard) 62%,var(--mustard) 90%,transparent 90%);padding:0 .06em}
+.lede{font-size:1.1rem;max-width:34ch;color:var(--ink2)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 10px}
+.addr-chip{display:inline-flex;gap:8px;align-items:center;margin-top:8px;color:var(--muted)}
+.addr-chip svg{width:16px;height:16px;flex:none}
+
+.stage{position:relative;aspect-ratio:1/1;max-width:340px;width:100%;margin:0 auto}
+.hide-sm{display:none}
+@media (min-width:480px){.hide-sm{display:inline}}
+@media (max-width:899px){.tag{padding:10px 12px 10px 26px}.tag b{font-size:1.4rem}.hero-cta .btn{flex:1 1 220px}}
+.stage svg{width:100%;height:100%}
+.ufo{animation:hover 5s ease-in-out infinite;transform-origin:260px 120px}
+@keyframes hover{50%{transform:translateY(-10px) rotate(1.5deg)}}
+.beam{animation:beam 3.2s ease-in-out infinite;transform-origin:260px 150px}
+@keyframes beam{50%{opacity:.55}}
+.float-boot{animation:lift 5s ease-in-out infinite}
+@keyframes lift{50%{transform:translateY(-14px)}}
+.spin{animation:spin 40s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* price-tag sticker */
+.tag{position:absolute;right:4%;bottom:6%;background:var(--mustard);border:2px solid var(--ink);padding:14px 18px 14px 30px;border-radius:6px 6px 6px 6px;transform:rotate(7deg);box-shadow:4px 4px 0 var(--ink);clip-path:polygon(16px 0,100% 0,100% 100%,16px 100%,0 50%)}
+.tag::before{content:"";position:absolute;left:14px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.tag b{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1;display:block}
+.tag span{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* marquee */
+.marquee{margin-top:36px;background:var(--tomato);color:#fff8ee;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);width:104%;margin-left:-2%}
+.marquee-track{display:inline-flex;gap:28px;padding:12px 0;animation:mq 34s linear infinite;font-family:var(--display);font-size:1.35rem}
+.marquee-track span{display:inline-flex;align-items:center;gap:28px}
+.marquee-track span::after{content:"✦";font-size:.9rem;color:var(--mustard)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:84px 0}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:38px}
+.sec-head .mono{color:var(--tomato)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,7.5vw,3.8rem);line-height:.98;max-width:16ch}
+.sec-head p{max-width:52ch;color:var(--ink2)}
+
+/* aisles: a numbered directory, not a card grid */
+.aisles{border-top:2px solid var(--ink)}
+.aisle{display:grid;grid-template-columns:56px 1fr;gap:6px 16px;padding:22px 0;border-bottom:2px dashed rgba(29,26,46,.35);align-items:start;position:relative}
+.aisle .no{font-family:var(--display);font-size:2.2rem;line-height:1;color:var(--teal)}
+.aisle h3{font-family:var(--sans);font-size:1.3rem;font-weight:700;letter-spacing:-.01em}
+.aisle p{grid-column:2;color:var(--ink2);font-size:.98rem;max-width:56ch}
+.aisle .ico{display:none}
+.aisle:hover .no{color:var(--tomato)}
+
+/* oddities band */
+.band{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.band h2{color:var(--paper)}
+.band .sec-head p{color:#c9c1d6}
+.band .mono{color:var(--beam)}
+.stars{position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(1.4px 1.4px at 12% 20%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 78% 12%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 40% 70%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 88% 64%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 22% 88%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 60% 34%,#fff 50%,transparent 51%),radial-gradient(1.3px 1.3px at 95% 92%,#fff 50%,transparent 51%)}
+.makers{display:grid;gap:18px;position:relative}
+.maker{border:2px solid var(--paper);border-radius:14px;padding:22px;position:relative;background:rgba(243,233,214,.03)}
+.maker .medium{color:var(--mustard)}
+.maker h3{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.05;margin:8px 0 8px}
+.maker p{color:#d6cfe0;font-size:.96rem}
+.maker svg{position:absolute;right:16px;top:16px;width:44px;height:44px;opacity:.9}
+.footnote{font-size:.82rem;color:#a79fb5;margin-top:22px;position:relative}
+.footnote a{color:var(--beam)}
+
+/* facts / why */
+.facts{display:grid;gap:0;border:2px solid var(--ink);border-radius:18px;overflow:hidden;background:var(--paper)}
+.fact{padding:26px 22px;border-bottom:2px solid var(--ink)}
+.fact:last-child{border-bottom:0}
+.fact b{display:block;font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1;color:var(--tomato);margin-bottom:6px}
+.fact:nth-child(2) b{color:var(--teal)}
+.fact:nth-child(3) b{color:var(--ink)}
+.fact:nth-child(4) b{color:#b87a10}
+.fact p{color:var(--ink2);font-size:.97rem}
+
+.rent{margin-top:34px;display:grid;gap:18px;align-items:center;background:var(--mustard);border:2px solid var(--ink);border-radius:18px;padding:28px 24px;box-shadow:6px 6px 0 var(--ink)}
+.rent h3{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.02}
+.rent p{color:var(--ink);margin-top:6px}
+
+/* visit */
+.visit-grid{display:grid;gap:26px}
+.hours{border:2px solid var(--ink);border-radius:18px;background:var(--paper);overflow:hidden}
+.hours-head{background:var(--ink);color:var(--paper);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hours-head .mono{color:var(--beam)}
+#openNow{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;border:1.5px solid currentColor;white-space:nowrap}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 20px;border-bottom:1px dashed rgba(29,26,46,.3);font-weight:500}
+.hours li:last-child{border-bottom:0}
+.hours li .t{font-family:var(--mono);font-size:.82rem}
+.hours li.closed .t{color:var(--muted)}
+.hours li.today{background:var(--beam);font-weight:700;position:relative}
+.hours li.today .d::after{content:"Today";margin-left:10px;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--beam);padding:3px 7px;border-radius:999px;vertical-align:2px}
+.hours .note{padding:14px 20px;font-size:.82rem;color:var(--muted);background:var(--paper2)}
+.contact{display:grid;gap:12px;margin-top:18px}
+.cline{display:flex;gap:14px;align-items:center;text-decoration:none;padding:14px 16px;border:2px solid var(--ink);border-radius:14px;background:var(--paper);transition:background .2s}
+.cline:hover{background:var(--paper2)}
+.cline svg{width:22px;height:22px;flex:none;color:var(--tomato)}
+.cline small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cline span{font-weight:600;word-break:break-word}
+.map{border:2px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:var(--paper2) repeating-linear-gradient(45deg,transparent 0 14px,rgba(29,26,46,.06) 14px 15px);min-height:340px;position:relative}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:saturate(.8) contrast(1.02)}
+.map-label{position:absolute;left:14px;top:14px;background:var(--tomato);color:#fff8ee;padding:8px 12px;border:2px solid var(--ink);border-radius:8px;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;z-index:2;pointer-events:none}
+
+/* footer */
+footer{background:var(--ink);color:var(--paper);padding:56px 0 40px;border-top:2px solid var(--ink)}
+.foot-big{font-family:var(--display);font-size:clamp(2.4rem,10vw,5.5rem);line-height:.92;color:var(--paper)}
+.foot-big em{font-style:normal;color:var(--tomato)}
+.foot-row{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:28px;font-size:.92rem;color:#cfc7db}
+.foot-row a{text-decoration:none;border-bottom:1px solid rgba(243,233,214,.35)}
+.credit{margin-top:34px;padding-top:18px;border-top:1px solid rgba(243,233,214,.18);font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#9a91aa;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(29,26,46,.96);border-top:2px solid var(--ink)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;border:2px solid var(--paper)}
+.callbar a svg{width:18px;height:18px}
+.callbar .c1{background:var(--tomato);color:#fff8ee;border-color:var(--tomato)}
+.callbar .c2{background:transparent;color:var(--paper)}
+body{padding-bottom:84px}
+
+/* reveal (JS-only) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+@media (min-width:700px){
+  .makers{grid-template-columns:repeat(3,1fr)}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact:nth-child(odd){border-right:2px solid var(--ink)}
+  .fact:nth-child(3){border-bottom:0}
+  .rent{grid-template-columns:1fr auto}
+}
+@media (min-width:900px){
+  .navlinks{display:flex}
+  .callbar{display:none}
+  body{padding-bottom:0}
+  .hero{padding:64px 0 0}
+  .hero-grid{grid-template-columns:1.05fr .95fr}
+  .stage{max-width:520px}
+  .aisles{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .aisle{grid-template-columns:72px 1fr}
+  .aisle .no{font-size:2.8rem}
+  .visit-grid{grid-template-columns:.9fr 1.1fr;align-items:stretch}
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .fact{border-bottom:0;border-right:2px solid var(--ink)}
+  .fact:last-child{border-right:0}
+  section{padding:110px 0}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for The Revival Vintage Market &amp; Art Gallery. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Revival home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#e8a93a" stroke="#1d1a2e" stroke-width="2"/>
+        <ellipse cx="20" cy="22" rx="14" ry="5" fill="#d9482b" stroke="#1d1a2e" stroke-width="2"/>
+        <path d="M12 21a8 7 0 0 1 16 0" fill="#c9f27a" stroke="#1d1a2e" stroke-width="2"/>
+      </svg>
+      <div><span>The Revival</span><small>Vintage · Art · Oddities</small></div>
+    </a>
+    <div class="navlinks">
+      <a href="#shop">The Aisles</a>
+      <a href="#makers">Local Art</a>
+      <a href="#visit">Visit</a>
+      <a class="btn sm red" href="tel:+17203762377">Call the shop</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow mono"><i></i>Downtown Knoxville<span class="hide-sm">&nbsp;· Medical Arts Bldg</span></span>
+      <h1>Two-dollar <em>finds.</em> Thousand-dollar <span class="u">treasures.</span></h1>
+      <p class="lede">Vintage clothing from the ’60s to the ’90s, guitars, oddities and work by local artists, all in one room in Suite&nbsp;103.</p>
+      <div class="hero-cta">
+        <a class="btn red" href="https://www.google.com/maps/dir/?api=1&destination=825+Locust+St+Suite+103+Knoxville+TN+37902">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Get directions</a>
+        <a class="btn" href="https://www.instagram.com/revivalknoxville/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          See new arrivals</a>
+      </div>
+      <div class="addr-chip mono">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Wed–Sun · 11am–9pm
+      </div>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <svg viewBox="0 0 520 520">
+        <defs>
+          <linearGradient id="bm" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c9f27a" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#c9f27a" stop-opacity="0"/>
+          </linearGradient>
+          <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="8" stroke="#1d1a2e" stroke-width="1.4" opacity=".18"/>
+          </pattern>
+        </defs>
+        <!-- sunburst disc -->
+        <g class="spin">
+          <circle cx="260" cy="280" r="220" fill="#e8a93a" stroke="#1d1a2e" stroke-width="3"/>
+          <g fill="#f0bd5c">
+            <path d="M260 280 L260 60 L290 62Z"/><path d="M260 280 L415 125 L435 147Z"/><path d="M260 280 L480 280 L478 310Z"/>
+            <path d="M260 280 L415 435 L393 455Z"/><path d="M260 280 L260 500 L230 498Z"/><path d="M260 280 L105 435 L85 413Z"/>
+            <path d="M260 280 L40 280 L42 250Z"/><path d="M260 280 L105 125 L127 105Z"/>
+          </g>
+        </g>
+        <circle cx="260" cy="280" r="220" fill="url(#hatch)"/>
+        <!-- beam -->
+        <path class="beam" d="M225 150 L295 150 L380 440 L140 440 Z" fill="url(#bm)"/>
+        <!-- floating goods in beam -->
+        <g class="float-boot">
+          <!-- cowboy boot -->
+          <path d="M228 300 l0 -62 q0 -8 8 -8 l26 0 q8 0 8 8 l0 44 q0 8 8 10 l26 6 q14 4 14 16 l0 6 l-90 0 z" fill="#d9482b" stroke="#1d1a2e" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M236 248 l26 0 M236 262 l26 0" stroke="#1d1a2e" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M228 320 l90 0" stroke="#1d1a2e" stroke-width="3"/>
+        </g>
+        <!-- guitar -->
+        <g transform="translate(330 330) rotate(24)">
+          <rect x="-6" y="-120" width="12" height="80" rx="3" fill="#1d1a2e"/>
+          <rect x="-11" y="-140" width="22" height="26" rx="5" fill="#1d1a2e"/>
+          <path d="M0 -44 c-32 0 -36 22 -26 38 c-16 14 -16 50 26 52 c42 -2 42 -38 26 -52 c10 -16 6 -38 -26 -38z" fill="#1f7a74" stroke="#1d1a2e" stroke-width="3"/>
+          <circle cx="0" cy="0" r="9" fill="#1d1a2e"/>
+          <rect x="-12" y="22" width="24" height="5" rx="2" fill="#1d1a2e"/>
+        </g>
+        <!-- framed painting -->
+        <g transform="translate(110 340) rotate(-12)">
+          <rect x="-46" y="-56" width="92" height="112" fill="#f3e9d6" stroke="#1d1a2e" stroke-width="4"/>
+          <rect x="-36" y="-46" width="72" height="92" fill="#1f7a74"/>
+          <circle cx="10" cy="-12" r="16" fill="#e8a93a"/>
+          <path d="M-36 30 q20 -30 40 -8 q16 -18 32 4 l0 20 l-72 0z" fill="#d9482b"/>
+        </g>
+        <!-- ufo -->
+        <g class="ufo">
+          <ellipse cx="260" cy="150" rx="40" ry="10" fill="#1d1a2e" opacity=".25"/>
+          <path d="M210 112 a50 46 0 0 1 100 0" fill="#c9f27a" stroke="#1d1a2e" stroke-width="3.5"/>
+          <path d="M228 98 a30 24 0 0 1 22 -20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+          <ellipse cx="260" cy="126" rx="112" ry="26" fill="#d9482b" stroke="#1d1a2e" stroke-width="3.5"/>
+          <ellipse cx="260" cy="118" rx="80" ry="12" fill="#f06a4c" opacity=".7"/>
+          <g fill="#e8a93a" stroke="#1d1a2e" stroke-width="2.5">
+            <circle cx="178" cy="130" r="6"/><circle cx="218" cy="138" r="6"/><circle cx="260" cy="141" r="6"/><circle cx="302" cy="138" r="6"/><circle cx="342" cy="130" r="6"/>
+          </g>
+        </g>
+        <!-- sparkles -->
+        <g fill="#1d1a2e">
+          <path d="M70 120 l5 14 14 5 -14 5 -5 14 -5 -14 -14 -5 14 -5z"/>
+          <path d="M455 230 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/>
+          <path d="M420 60 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+        </g>
+      </svg>
+      <div class="tag"><b>$2–$1K</b><span>Thrift &amp; vintage rack</span></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>’60s–’90s clothing</span><span>Vintage shoes</span><span>Guitars &amp; gear</span><span>Oddities</span><span>Local art</span><span>Stained glass</span><span>Ceramics</span><span>Card games</span><span>Jackets &amp; sweaters</span>
+      <span>’60s–’90s clothing</span><span>Vintage shoes</span><span>Guitars &amp; gear</span><span>Oddities</span><span>Local art</span><span>Stained glass</span><span>Ceramics</span><span>Card games</span><span>Jackets &amp; sweaters</span>
+    </div>
+  </div>
+</header>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono">Store directory</span>
+      <h2>Come in and see what turns up.</h2>
+      <p>Six sections of merchandise plus guest vendors, so the room keeps changing. Here’s roughly where things are.</p>
+    </div>
+    <div class="aisles">
+      <div class="aisle rv"><span class="no">01</span><h3>Thrift &amp; vintage clothing</h3><p>Clothes from the 1960s through the 1990s, plus a few current pieces, priced from $2 up to $1,000.</p></div>
+      <div class="aisle rv"><span class="no">02</span><h3>Vintage shoes</h3><p>A longtime specialty for the shop: footwear picked with a reseller’s eye.</p></div>
+      <div class="aisle rv"><span class="no">03</span><h3>Guitars &amp; equipment</h3><p>Guitars and related gear. The shop plans to grow this section.</p></div>
+      <div class="aisle rv"><span class="no">04</span><h3>Art &amp; oddities</h3><p>Odd and strange objects from a collector’s shelves, shown next to original artwork.</p></div>
+      <div class="aisle rv"><span class="no">05</span><h3>Hats, tees, jackets &amp; sweaters</h3><p>Everyday layers and statement outerwear for whatever the weather does next.</p></div>
+      <div class="aisle rv"><span class="no">06</span><h3>Card games &amp; trinkets</h3><p>Card games and small collectibles. Good for gifts and for anyone who likes to dig.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="makers">
+  <div class="stars"></div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono">The gallery side</span>
+      <h2>Art made close to home.</h2>
+      <p>The Revival is part shop, part gallery. These are the artists who showed work when the doors opened:</p>
+    </div>
+    <div class="makers">
+      <article class="maker rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#e8a93a" stroke-width="2.5"><path d="M14 8h20l-3 12H17z"/><path d="M17 20c-4 6-4 14 0 20h14c4-6 4-14 0-20"/><path d="M24 40v4"/></svg>
+        <span class="mono medium">Ceramics</span>
+        <h3>Garrett Durland</h3>
+        <p>3D-printed ceramic work, light fixtures included.</p>
+      </article>
+      <article class="maker rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#c9f27a" stroke-width="2.5"><path d="M24 4a18 18 0 0 1 18 18v22H6V22A18 18 0 0 1 24 4z"/><path d="M24 4v40M6 26h36M12 12l12 14 12-14"/></svg>
+        <span class="mono medium">Stained glass</span>
+        <h3>Susan Watson</h3>
+        <p>Stained glass that has been shown at Dollywood.</p>
+      </article>
+      <article class="maker rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#d9482b" stroke-width="2.5"><path d="M8 40c6-2 8-8 14-14l14-14 4 4-14 14c-6 6-12 8-14 14z"/><path d="M30 10l8 8"/></svg>
+        <span class="mono medium">Painting &amp; murals</span>
+        <h3>Swartz Brothers Art</h3>
+        <p>David paints animals and John paints people, in a loose, liquid style. They paint murals too.</p>
+      </article>
+    </div>
+    <p class="footnote">Artist list from <a href="https://insideofknoxville.com/2025/06/the-revival-vintage-and-art-shop-opens-at-825-locust-street/">Inside of Knoxville</a> (June 2025). Ask the shop who’s showing now.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono">Why it’s worth the detour</span>
+      <h2>A different kind of vintage shop.</h2>
+    </div>
+    <div class="facts rv">
+      <div class="fact"><b>$2</b><p>The lowest price on the thrift and vintage rack, so there’s always something to take home.</p></div>
+      <div class="fact"><b>’60s–’90s</b><p>Four decades of clothing, plus some current pieces mixed in.</p></div>
+      <div class="fact"><b>6 + 3</b><p>Six merchandise sections and three guest vendors in one space.</p></div>
+      <div class="fact"><b>9pm</b><p>Open until 9 at night, Wednesday through Sunday, so you can stop by after dinner downtown.</p></div>
+    </div>
+
+    <div class="rent rv">
+      <div>
+        <span class="mono">Host something here</span>
+        <h3>The space is available to rent for events.</h3>
+        <p>Pop-ups, gatherings or launches with vintage all around. Email the shop with your date and idea.</p>
+      </div>
+      <a class="btn" href="mailto:revivalknoxville@gmail.com?subject=Event%20rental%20inquiry">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        Ask about rentals</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono">Find us</span>
+      <h2>Suite 103, Medical Arts Building.</h2>
+      <p>825 Locust Street in downtown Knoxville, inside the Medical Arts Building. Look for Suite 103.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <div class="hours">
+          <div class="hours-head"><span class="mono">Shop hours</span><span id="openNow" hidden></span></div>
+          <ul id="hoursList">
+            <li data-d="1" class="closed"><span class="d">Monday</span><span class="t">Closed</span></li>
+            <li data-d="2" class="closed"><span class="d">Tuesday</span><span class="t">Closed</span></li>
+            <li data-d="3"><span class="d">Wednesday</span><span class="t">11am – 9pm</span></li>
+            <li data-d="4"><span class="d">Thursday</span><span class="t">11am – 9pm</span></li>
+            <li data-d="5"><span class="d">Friday</span><span class="t">11am – 9pm</span></li>
+            <li data-d="6"><span class="d">Saturday</span><span class="t">11am – 9pm</span></li>
+            <li data-d="0"><span class="d">Sunday</span><span class="t">11am – 9pm</span></li>
+          </ul>
+          <div class="note">Hours as published at opening. Check Instagram or call before a special trip.</div>
+        </div>
+        <div class="contact">
+          <a class="cline" href="tel:+17203762377"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><small>Call</small><span>720-376-2377</span></div></a>
+          <a class="cline" href="mailto:revivalknoxville@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><small>Email</small><span>revivalknoxville@gmail.com</span></div></a>
+          <a class="cline" href="https://www.instagram.com/revivalknoxville/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg><div><small>Instagram</small><span>@revivalknoxville</span></div></a>
+        </div>
+      </div>
+      <div class="map rv">
+        <span class="map-label">825 Locust St · Ste 103</span>
+        <iframe title="Map to The Revival, 825 Locust St Suite 103, Knoxville" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=825%20Locust%20St%2C%20Suite%20103%2C%20Knoxville%2C%20TN%2037902&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-big">Find something <em>strange</em> this week.</div>
+    <div class="foot-row">
+      <span>The Revival Vintage Market &amp; Art Gallery</span>
+      <span>825 Locust St, Suite 103, Knoxville, TN 37902</span>
+      <a href="tel:+17203762377">720-376-2377</a>
+      <a href="https://www.instagram.com/revivalknoxville/">@revivalknoxville</a>
+    </div>
+    <div class="credit"><span>Concept by Code Craft Media</span><span>Illustrations are original, not photos of the shop</span></div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+17203762377"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="c2" href="https://www.google.com/maps/dir/?api=1&destination=825+Locust+St+Suite+103+Knoxville+TN+37902"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+</div>
+
+<script>
+(function(){
+  // Today highlight (Knoxville time)
+  try{
+    var now = new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var d = now.getDay(), h = now.getHours();
+    var li = document.querySelector('#hoursList li[data-d="'+d+'"]');
+    if(li) li.classList.add('today');
+    var open = d>=3 || d===0 ? (h>=11 && h<21) : false;
+    var b = document.getElementById('openNow');
+    b.textContent = open ? 'Open now' : 'Closed now';
+    b.style.color = open ? '#c9f27a' : '#f3a08e';
+    b.hidden = false;
+  }catch(e){}
+  // Reveal
+  var els = [].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el,i){ el.style.transitionDelay = (i%3)*70+'ms'; io.observe(el); });
+  setTimeout(function(){ els.forEach(function(el){ el.classList.add('in'); }); }, 2500);
+})();
+</script>
+</body>
+</html>

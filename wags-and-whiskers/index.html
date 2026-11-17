@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Wags &amp; Whiskers Pet Grooming | Shop + Mobile Grooming in Knoxville, TN</title>
+<meta name="description" content="Wags & Whiskers Pet Grooming on Hilton Rd in Knoxville, plus Whiskers A-Go-Go mobile grooming that comes to your driveway. Baths, haircuts, cat lion cuts and add-ons for dogs and cats. Call or text (865) 745-9550.">
+<meta name="theme-color" content="#F2661B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Righteous&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E2429;
+  --ink-2:#2A4248;
+  --cream:#FFF3DF;
+  --paper:#FBE6C4;
+  --tang:#F2661B;
+  --tang-d:#B4440A;
+  --turq:#17A39B;
+  --turq-d:#0A6E69;
+  --coral:#F7A68A;
+  --white:#fff;
+  --display:"Shrikhand","Cooper Black","Cooper Std","Georgia",serif;
+  --retro:"Righteous","Futura","Trebuchet MS","Arial Rounded MT Bold",sans-serif;
+  --body:"Rubik","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --r:22px;
+  --shadow:6px 6px 0 var(--ink);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;padding-top:var(--bh,46px);background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.05}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* concept banner */
+.concept{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:var(--cream);font:500 12.5px/1.3 var(--body);text-align:center;padding:7px 12px;letter-spacing:.01em}
+.concept b{color:#FFC59E;font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:var(--bh,46px);z-index:50;background:rgba(255,243,223,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:3px solid var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-badge{width:46px;height:46px;flex:none}
+.brand-name{font-family:var(--display);font-size:21px;line-height:1;color:var(--ink)}
+.brand-sub{display:block;font:400 11.5px/1.2 var(--retro);letter-spacing:.08em;color:var(--turq-d);text-transform:uppercase;margin-top:3px}
+.nav-links{display:none;gap:4px;align-items:center}
+.nav-links a{font:400 15px var(--retro);text-decoration:none;padding:13px 14px;min-height:44px;display:inline-flex;align-items:center;border-radius:99px;transition:background .2s}
+.nav-links a:hover{background:var(--paper)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border-radius:99px;border:3px solid var(--ink);font:400 16px/1 var(--retro);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .2s;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-tang{background:var(--tang);color:var(--ink)}
+.btn-turq{background:var(--turq);color:var(--ink)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn svg{width:18px;height:18px}
+.nav .btn{min-height:44px;padding:10px 16px;font-size:15px}
+.nav-call span.long{display:none}
+@media(min-width:900px){.nav-links{display:flex}.nav-call span.long{display:inline}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--cream);padding:56px 0 0;border-bottom:3px solid var(--ink)}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.mod{position:absolute;border-radius:50%}
+.mod-1{width:440px;height:440px;right:-250px;top:-210px;background:repeating-radial-gradient(circle,var(--tang) 0 28px,var(--cream) 28px 44px,var(--turq) 44px 72px,var(--cream) 72px 88px);opacity:.95}
+.mod-2{width:240px;height:240px;left:-150px;bottom:110px;background:repeating-radial-gradient(circle,var(--turq) 0 18px,var(--cream) 18px 30px,var(--coral) 30px 48px,var(--cream) 48px 60px);opacity:.9}
+.mod-3{width:70px;height:70px;right:24px;top:58%;background:var(--coral);opacity:.55}
+.dots{position:absolute;inset:0;background-image:radial-gradient(var(--ink) 1.3px,transparent 1.6px);background-size:22px 22px;opacity:.07}
+.spin{animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-inner{position:relative;z-index:2;display:grid;gap:28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:400 13px/1 var(--retro);letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:9px 14px;border-radius:99px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--tang);display:inline-block;box-shadow:0 0 0 3px rgba(242,102,27,.35)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,11.5vw,104px);line-height:.98;letter-spacing:-.005em;margin:18px 0 18px;color:var(--ink);text-wrap:balance}
+.hero h1 .o{color:var(--tang);-webkit-text-stroke:0;text-shadow:3px 3px 0 var(--ink)}
+.hero h1 .t{color:var(--turq);text-shadow:3px 3px 0 var(--ink)}
+.lede{font-size:clamp(17px,2.1vw,20px);max-width:36ch;color:var(--ink-2)}
+.rating{display:inline-flex;align-items:center;gap:10px;background:var(--white);border:3px solid var(--ink);border-radius:16px;padding:9px 14px;box-shadow:4px 4px 0 var(--ink);text-decoration:none;font-weight:600;margin-top:6px}
+.rating .stars{color:var(--tang-d);letter-spacing:1px;font-size:17px;white-space:nowrap}
+.rating > span:last-child{white-space:nowrap}
+.rating small{font-weight:500;color:var(--ink-2);font-size:14px}
+
+.paths{display:grid;gap:16px;margin-top:6px}
+.path{position:relative;display:block;text-decoration:none;border:3px solid var(--ink);border-radius:var(--r);padding:20px 20px 18px 92px;box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease;min-height:118px}
+.path:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+.path:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.path-shop{background:var(--tang)}
+.path-mobile{background:var(--turq)}
+.path .ico{position:absolute;left:16px;top:18px;width:60px;height:60px;border-radius:50%;background:var(--cream);border:3px solid var(--ink);display:grid;place-items:center}
+.path .ico svg{width:36px;height:36px}
+.path .k{font:400 12px/1 var(--retro);letter-spacing:.14em;text-transform:uppercase}
+.path h2{font-family:var(--display);font-weight:400;font-size:27px;margin:6px 0 6px}
+.path p{margin:0;font-size:15px;font-weight:500;line-height:1.4}
+.path .go{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;transition:transform .2s}
+.path:hover .go{transform:rotate(-45deg)}
+.path .go svg{width:18px;height:18px}
+
+/* road + van */
+.road{position:relative;z-index:1;height:150px;margin-top:34px}
+.road::before{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:var(--ink)}
+.road::after{content:"";position:absolute;left:0;right:0;bottom:21px;height:4px;background:repeating-linear-gradient(90deg,var(--paper) 0 34px,transparent 34px 68px);animation:lane 1.1s linear infinite}
+@keyframes lane{to{background-position:-68px 0}}
+.van{position:absolute;bottom:22px;left:0;width:250px;animation:drive 14s linear infinite;will-change:transform}
+@keyframes drive{0%{transform:translateX(-280px)}100%{transform:translateX(calc(100vw + 40px))}}
+.van .body{animation:bob .45s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-2px)}}
+.wheel{transform-box:fill-box;transform-origin:center;animation:spin .6s linear infinite}
+.bubble{position:absolute;border-radius:50%;border:2px solid var(--turq-d);background:rgba(255,255,255,.6);animation:float 3.4s ease-in infinite;opacity:0}
+@keyframes float{0%{opacity:0;transform:translateY(0) scale(.6)}15%{opacity:1}100%{opacity:0;transform:translateY(-110px) scale(1.15)}}
+.ear{transform-origin:72% 20%;animation:flap .5s ease-in-out infinite alternate}
+@keyframes flap{to{transform:rotate(-14deg)}}
+
+/* marquee */
+.ticker{background:var(--tang);border-bottom:3px solid var(--ink);overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:0;animation:tick 32s linear infinite;padding:14px 0}
+.ticker span{font:400 19px/1 var(--retro);letter-spacing:.04em;padding:0 18px;display:inline-flex;align-items:center;gap:18px}
+.ticker span::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--cream);border:3px solid var(--ink)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+.kicker{font:400 13px/1 var(--retro);letter-spacing:.16em;text-transform:uppercase;color:var(--turq-d);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.kicker::before{content:"";width:26px;height:10px;border-radius:99px;background:var(--tang);border:2px solid var(--ink)}
+.sec h2.big{font-family:var(--display);font-weight:400;font-size:clamp(38px,7.5vw,68px);line-height:1;text-wrap:balance}
+.sec-head{display:grid;gap:14px;margin-bottom:38px}
+.sec-head p{max-width:56ch;color:var(--ink-2);margin:0}
+
+/* two ways */
+.ways{background:var(--paper);border-bottom:3px solid var(--ink)}
+.ways-grid{display:grid;gap:22px}
+.way{background:var(--cream);border:3px solid var(--ink);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:110px}
+.way-top{padding:24px 22px 20px;border-bottom:3px solid var(--ink);display:flex;align-items:center;gap:16px}
+.way-shop .way-top{background:var(--tang)}
+.way-mob .way-top{background:var(--turq)}
+.way-top svg{width:76px;height:76px;flex:none}
+.way-top h3{font-family:var(--display);font-weight:400;font-size:30px}
+.way-top .k{font:400 12px var(--retro);letter-spacing:.14em;text-transform:uppercase}
+.way-body{padding:22px}
+.facts{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:12px}
+.facts li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.facts li::before{content:"";width:22px;height:22px;margin-top:2px;border-radius:50%;border:3px solid var(--ink);background:radial-gradient(circle,var(--ink) 0 3px,var(--tang) 3.5px)}
+.way-mob .facts li::before{background:radial-gradient(circle,var(--ink) 0 3px,var(--turq) 3.5px)}
+.facts b{font-weight:600}
+.status{display:inline-flex;align-items:center;gap:8px;font:600 14px/1.2 var(--body);padding:8px 12px;border-radius:99px;border:2px solid var(--ink);margin-bottom:16px}
+.status i{width:10px;height:10px;border-radius:50%;flex:none}
+.status.ok{background:#D9F3E6}.status.ok i{background:#178A52}
+.status.wait{background:#FFE3CC}.status.wait i{background:var(--tang-d)}
+.way .btn{width:100%}
+.way-actions{display:grid;gap:10px}
+.deposit{margin-top:26px;border:3px dashed var(--ink);border-radius:22px;padding:20px 22px;background:var(--cream);display:grid;gap:8px}
+.deposit h3{font:400 20px var(--retro)}
+.deposit p{margin:0;color:var(--ink-2)}
+.deposit .amts{display:flex;flex-wrap:wrap;gap:10px}
+.amt{font:400 17px var(--retro);background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:8px 12px}
+.amt b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--tang-d)}
+
+/* services */
+.svc{background:var(--cream);overflow:hidden}
+.svc .mod-svc{position:absolute;width:420px;height:420px;left:-230px;bottom:-120px;border-radius:50%;background:repeating-radial-gradient(circle,var(--paper) 0 22px,transparent 22px 44px);pointer-events:none}
+.tabs{display:inline-flex;border:3px solid var(--ink);border-radius:99px;padding:4px;background:var(--white);gap:4px;margin-bottom:28px;box-shadow:4px 4px 0 var(--ink)}
+.tab{font:400 17px var(--retro);border:0;background:transparent;color:var(--ink);border-radius:99px;min-height:46px;padding:10px 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--cream)}
+.tab svg{width:22px;height:22px}
+.pkgs{display:grid;gap:18px}
+.pkg{position:relative;background:var(--white);border:3px solid var(--ink);border-radius:var(--r);padding:24px 22px 22px;box-shadow:var(--shadow);transition:transform .2s ease}
+.pkg:hover{transform:translateY(-4px) rotate(-.4deg)}
+.pkg .num{position:absolute;right:16px;top:-22px;width:52px;height:52px;border-radius:50%;border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:22px;background:var(--tang)}
+.pkg:nth-child(2) .num{background:var(--turq)}
+.pkg:nth-child(3) .num{background:var(--coral)}
+.pkg h3{font-family:var(--display);font-weight:400;font-size:30px;margin-bottom:4px}
+.pkg .tag{font:400 14px var(--retro);color:var(--turq-d);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.pkg ul{margin:0;padding-left:20px}
+.pkg li{margin:4px 0}
+.pkg li::marker{color:var(--tang-d)}
+.pkg .note{margin:14px 0 0;font-size:14.5px;color:var(--ink-2);border-top:2px dotted var(--ink-2);padding-top:12px}
+.panel[hidden]{display:none}
+.addons{margin-top:44px}
+.addons h3{font-family:var(--display);font-weight:400;font-size:32px;margin-bottom:6px}
+.addons > p{color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;padding:0;list-style:none}
+.chip{display:flex;align-items:center;gap:10px;border:2.5px solid var(--ink);border-radius:99px;padding:9px 16px 9px 10px;background:var(--cream);font-weight:500;font-size:15.5px;transition:background .2s,transform .2s}
+.chip:hover{background:var(--paper);transform:translateY(-2px)}
+.chip i{width:26px;height:26px;border-radius:50%;border:2px solid var(--ink);flex:none;background:var(--turq)}
+.chip:nth-child(3n+2) i{background:var(--tang)}
+.chip:nth-child(3n) i{background:var(--coral)}
+.addon-feat{display:grid;gap:16px;margin-top:24px}
+.feat{border:3px solid var(--ink);border-radius:20px;padding:18px 20px;background:var(--paper)}
+.feat h4{margin:0 0 6px;font:400 19px var(--retro)}
+.feat p{margin:0;font-size:15.5px;color:var(--ink-2)}
+.price-note{margin-top:26px;display:flex;gap:14px;align-items:center;background:var(--ink);color:var(--cream);border-radius:20px;padding:18px 20px}
+.price-note p{margin:0}
+.price-note a{color:#FFC59E;font-weight:600}
+.price-note svg{width:40px;height:40px;flex:none}
+
+/* why */
+.why{background:var(--turq);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden}
+.why .kicker{color:var(--ink)}
+.why .kicker::before{background:var(--cream)}
+.why .sec-head p{color:var(--ink)}
+.why-bg{position:absolute;inset:0;pointer-events:none;background:
+ radial-gradient(circle at 92% 12%,rgba(255,243,223,.35) 0 80px,transparent 81px),
+ radial-gradient(circle at 92% 12%,transparent 0 110px,rgba(255,243,223,.25) 111px 128px,transparent 129px),
+ radial-gradient(circle at 4% 96%,#F2661B 0 90px,#0E2429 91px 94px,transparent 95px 112px,#FFF3DF 113px 126px,transparent 127px)}
+.why-grid{display:grid;gap:18px;position:relative}
+.why-card{background:var(--cream);border:3px solid var(--ink);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.why-card .big{font-family:var(--display);font-size:52px;line-height:1;color:var(--tang-d)}
+.why-card .big small{font-size:22px;color:var(--ink)}
+.why-card h3{font:400 21px/1.2 var(--retro);margin:10px 0 6px}
+.why-card p{margin:0;color:var(--ink-2);font-size:15.5px}
+.why-card svg{width:58px;height:58px}
+
+/* hours */
+.hours{background:var(--cream)}
+.hours-grid{display:grid;gap:20px}
+.hcard{border:3px solid var(--ink);border-radius:var(--r);background:var(--white);box-shadow:var(--shadow);overflow:hidden}
+.hcard header{padding:16px 20px;border-bottom:3px solid var(--ink);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hcard:nth-child(1) header{background:var(--tang)}
+.hcard:nth-child(2) header{background:var(--turq)}
+.hcard:nth-child(3) header{background:var(--paper)}
+.hcard h3{font:400 20px var(--retro)}
+.hcard header small{font:600 12.5px var(--body);background:var(--cream);border:2px solid var(--ink);padding:4px 9px;border-radius:99px;white-space:nowrap}
+.hcard table{width:100%;border-collapse:collapse}
+.hcard td{padding:10px 20px;border-bottom:1px dashed #C9B48F;font-size:15.5px}
+.hcard tr:last-child td{border-bottom:0}
+.hcard td:last-child{text-align:right;font-weight:500}
+.hcard tr.today td{background:#FFE3CC;font-weight:700}
+.hcard tr.today td:first-child::after{content:"Today";margin-left:8px;font:400 11px var(--retro);letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:3px 8px;border-radius:99px;vertical-align:2px}
+.closed{color:#6B5A44}
+.hours-note{margin-top:20px;color:var(--ink-2);font-size:15px}
+
+/* visit */
+.visit{background:var(--paper);border-top:3px solid var(--ink)}
+.visit-grid{display:grid;gap:24px;align-items:stretch}
+.map{border:3px solid var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);min-height:320px;background:
+ repeating-linear-gradient(45deg,#F6D9AE 0 14px,#FBE6C4 14px 28px)}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.contact-card{background:var(--ink);color:var(--cream);border-radius:var(--r);padding:28px 18px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--tang);display:flex;flex-direction:column;gap:18px}
+.contact-card h3{font-family:var(--display);font-weight:400;font-size:34px;color:var(--cream)}
+.cline{display:flex;gap:14px;align-items:flex-start;text-decoration:none;padding:6px 0}
+.cline .ci{width:44px;height:44px;flex:none;border-radius:50%;background:var(--tang);border:2px solid var(--cream);display:grid;place-items:center}
+.cline:nth-of-type(2) .ci{background:var(--turq)}
+.cline .ci svg{width:22px;height:22px;color:var(--ink)}
+.cline small{display:block;font:400 12px var(--retro);letter-spacing:.14em;text-transform:uppercase;color:#FFC59E}
+.cline span{font-size:14px;font-weight:500;overflow-wrap:anywhere}
+@media(min-width:420px){.cline span{font-size:17px}}
+a.cline{min-height:44px}
+a.cline:hover span{text-decoration:underline;text-underline-offset:3px}
+.contact-card .btns{display:grid;gap:10px;margin-top:auto}
+.contact-card .btn{box-shadow:4px 4px 0 var(--cream);border-color:var(--cream)}
+
+/* footer */
+footer{background:var(--ink);color:var(--cream);padding:56px 0 170px;position:relative;overflow:hidden}
+footer .fgrid{display:grid;gap:28px;position:relative}
+footer .fname{font-family:var(--display);font-size:34px;line-height:1}
+footer .fname em{display:block;font:400 15px var(--retro);font-style:normal;color:#FFC59E;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+footer h4{font:400 13px var(--retro);letter-spacing:.16em;text-transform:uppercase;color:#7FE0D8;margin:0 0 10px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+footer a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;gap:10px}
+footer a:hover{text-decoration:underline;text-underline-offset:3px}
+footer a svg{width:20px;height:20px}
+.fine{margin-top:34px;padding-top:20px;border-top:1px solid #35525A;font-size:13.5px;color:#C9D6D3;position:relative}
+.foot-circles{position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:repeating-radial-gradient(circle,#F2661B 0 16px,transparent 16px 34px,#17A39B 34px 50px,transparent 50px 68px);opacity:.9;pointer-events:none}
+
+/* sticky cta */
+.mcta{position:fixed;left:10px;right:10px;bottom:calc(70px + env(safe-area-inset-bottom));z-index:55;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:var(--ink);padding:8px;border-radius:20px;box-shadow:0 10px 30px rgba(14,36,41,.35);border:2px solid var(--cream)}
+.mcta a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:14px;font:400 16px var(--retro);text-decoration:none;color:var(--ink);border:2px solid var(--ink)}
+.mcta a:first-child{background:var(--tang)}
+.mcta a:last-child{background:var(--turq)}
+.mcta svg{width:18px;height:18px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js.reveal-all .rv{opacity:1;transform:none}
+
+@media(min-width:640px){
+  .paths{grid-template-columns:1fr 1fr}
+  .pkgs{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .addon-feat{grid-template-columns:repeat(3,1fr)}
+  .way-actions{grid-template-columns:1fr 1fr}
+  footer .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:900px){
+  :root{--bh:30px}
+  .mcta{display:none}
+  footer{padding-bottom:110px}
+  .hero{padding-top:44px}
+  .hero h1{font-size:clamp(60px,6.4vw,88px);margin:16px 0 14px}
+  .hero-inner{grid-template-columns:1.45fr 1fr;align-items:end;gap:48px}
+  .mod-2{left:-120px;bottom:auto;top:280px}
+  .mod-3{right:auto;left:46%;top:40px;width:90px;height:90px}
+  .road{margin-top:18px}
+  .paths{grid-template-columns:1fr}
+  .ways-grid{grid-template-columns:1fr 1fr}
+  .pkgs{grid-template-columns:repeat(3,1fr)}
+  .pkgs.two{grid-template-columns:repeat(2,1fr);max-width:800px}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .hours-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1.4fr 1fr}
+  .map,.map iframe{min-height:460px}
+  .sec{padding:110px 0}
+  .sec-head{grid-template-columns:1fr 1fr;align-items:end;gap:40px}
+  .road{height:150px}
+  .van{width:270px}
+  footer .fgrid{grid-template-columns:1.4fr 1fr 1fr}
+  .mod-1{width:720px;height:720px;right:-220px;top:-220px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .van{transform:translateX(calc(50vw - 125px))}
+  .js .rv{opacity:1;transform:none}
+  .bubble{display:none}
+}
+</style>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<body>
+<div class="concept" role="note">Concept site by <b>Code Craft Media</b>, made for Wags &amp; Whiskers Pet Grooming. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Wags and Whiskers home">
+      <svg class="brand-badge" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#F2661B" stroke="#0E2429" stroke-width="3"/>
+        <circle cx="32" cy="32" r="21" fill="#17A39B" stroke="#0E2429" stroke-width="3"/>
+        <circle cx="32" cy="32" r="12" fill="#FFF3DF" stroke="#0E2429" stroke-width="3"/>
+        <g fill="#0E2429"><ellipse cx="32" cy="35" rx="4.4" ry="3.6"/><circle cx="26.8" cy="29.5" r="1.9"/><circle cx="30.4" cy="27.2" r="1.9"/><circle cx="33.6" cy="27.2" r="1.9"/><circle cx="37.2" cy="29.5" r="1.9"/></g>
+      </svg>
+      <span><span class="brand-name">Wags &amp; Whiskers</span><span class="brand-sub">+ Whiskers A-Go-Go</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#ways">Shop or Mobile</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-tang nav-call" href="tel:+18657459550" aria-label="Call (865) 745-9550">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Call<span class="long"> (865) 745-9550</span></span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="dots"></div>
+    <div class="mod mod-1 spin"></div>
+    <div class="mod mod-2 spin"></div>
+    <div class="mod mod-3"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="rv">
+      <span class="eyebrow"><i></i>Hilton Rd &middot; Knoxville, TN</span>
+      <h1 id="hero-h">Fresh <span class="o">pups</span>, fluffed <span class="t">cats</span> &amp; a groovy little van.</h1>
+      <p class="lede">Book a groom at our shop on Hilton Road, or let Whiskers A-Go-Go roll right up to your driveway. Baths, breed cuts, lion cuts and all the little extras, for dogs <em>and</em> cats.</p>
+      <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Wags%20%26%20Whiskers%20Pet%20Grooming%201219%20Hilton%20Rd%20Knoxville%20TN" target="_blank" rel="noopener">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>4.8 on Google <small>&middot; 83 reviews</small></span>
+      </a>
+    </div>
+    <div class="paths rv">
+      <a class="path path-shop" href="#shop">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M5 17h30v18H5z" fill="#FFF3DF" stroke="#0E2429" stroke-width="2.6" stroke-linejoin="round"/><path d="M3 17l4-10h26l4 10" fill="#F2661B" stroke="#0E2429" stroke-width="2.6" stroke-linejoin="round"/><path d="M3 17c0 2.5 2 4 4.2 4s4.2-1.5 4.2-4c0 2.5 2 4 4.2 4s4.2-1.5 4.2-4c0 2.5 2 4 4.2 4s4.2-1.5 4.2-4c0 2.5 2 4 4.2 4S37 19.5 37 17" fill="#17A39B" stroke="#0E2429" stroke-width="2.6" stroke-linejoin="round"/><rect x="16" y="25" width="8" height="10" fill="#F2661B" stroke="#0E2429" stroke-width="2.6"/></svg></span>
+        <span class="k">Path one</span>
+        <h2>Visit the shop</h2>
+        <p>1219 Hilton Rd, Suite J. Mon&ndash;Sat, 9&ndash;4, by appointment. Taking new clients.</p>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="path path-mobile" href="#mobile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M4 28V15c0-3 2-5 5-5h17c3 0 5 1.5 6.5 4L36 20v8z" fill="#F2661B" stroke="#0E2429" stroke-width="2.6" stroke-linejoin="round"/><path d="M4 21h32" stroke="#0E2429" stroke-width="2.6"/><path d="M4 21v7h32v-7z" fill="#FFF3DF" stroke="#0E2429" stroke-width="2.6" stroke-linejoin="round"/><rect x="9" y="13" width="7" height="5" rx="1.5" fill="#17A39B" stroke="#0E2429" stroke-width="2.2"/><rect x="19" y="13" width="7" height="5" rx="1.5" fill="#17A39B" stroke="#0E2429" stroke-width="2.2"/><circle cx="12" cy="29" r="4" fill="#0E2429"/><circle cx="29" cy="29" r="4" fill="#0E2429"/></svg></span>
+        <span class="k">Path two</span>
+        <h2>Mobile: we come to you</h2>
+        <p>Whiskers A-Go-Go grooms in your driveway, 7 days a week, by appointment.</p>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="road" aria-hidden="true">
+    <div class="van">
+      <span class="bubble" style="left:-6px;bottom:70px;width:16px;height:16px;animation-delay:0s"></span>
+      <span class="bubble" style="left:14px;bottom:90px;width:11px;height:11px;animation-delay:.9s"></span>
+      <span class="bubble" style="left:-18px;bottom:56px;width:20px;height:20px;animation-delay:1.7s"></span>
+      <span class="bubble" style="left:4px;bottom:100px;width:9px;height:9px;animation-delay:2.4s"></span>
+      <svg viewBox="0 0 260 130" width="100%">
+        <g class="body">
+          <!-- body -->
+          <path d="M14 100 V52 C14 30 26 20 48 20 H178 C200 20 214 28 226 46 L246 76 C250 82 251 88 251 94 V100 Z" fill="#F2661B" stroke="#0E2429" stroke-width="4" stroke-linejoin="round"/>
+          <!-- cream lower two-tone with V -->
+          <path d="M14 70 H120 L134 86 L148 70 H249 V100 H14 Z" fill="#FFF3DF" stroke="#0E2429" stroke-width="4" stroke-linejoin="round"/>
+          <!-- windows -->
+          <rect x="30" y="32" width="38" height="26" rx="8" fill="#17A39B" stroke="#0E2429" stroke-width="3.5"/>
+          <rect x="78" y="32" width="38" height="26" rx="8" fill="#17A39B" stroke="#0E2429" stroke-width="3.5"/>
+          <path d="M178 32 H196 C204 32 210 36 215 44 L224 58 H178 Z" fill="#17A39B" stroke="#0E2429" stroke-width="3.5" stroke-linejoin="round"/>
+          <!-- dog in window -->
+          <g>
+            <path d="M190 58 C186 46 192 36 202 36 C212 36 216 46 214 58 Z" fill="#E9B98A" stroke="#0E2429" stroke-width="3" stroke-linejoin="round"/>
+            <path class="ear" d="M195 40 C188 38 184 44 186 52 C190 50 193 46 195 40 Z" fill="#8B5A3C" stroke="#0E2429" stroke-width="2.6" stroke-linejoin="round"/>
+            <circle cx="205" cy="45" r="2.4" fill="#0E2429"/>
+            <ellipse cx="214" cy="49" rx="3.4" ry="2.6" fill="#0E2429"/>
+            <path d="M206 53 C208 56 211 56 213 53" fill="none" stroke="#0E2429" stroke-width="2" stroke-linecap="round"/>
+            <path d="M209 55 C209 60 213 61 213 56" fill="#F7A68A" stroke="#0E2429" stroke-width="1.8"/>
+          </g>
+          <!-- door line -->
+          <path d="M126 28 V70" stroke="#0E2429" stroke-width="3"/>
+          <circle cx="166" cy="62" r="3" fill="#0E2429"/>
+          <path d="M138 28 V70" stroke="#0E2429" stroke-width="3"/>
+          <!-- mod circle logo on side -->
+          <circle cx="152" cy="46" r="11" fill="#17A39B" stroke="#0E2429" stroke-width="3"/>
+          <circle cx="152" cy="46" r="5" fill="#FFF3DF" stroke="#0E2429" stroke-width="2.5"/>
+          <!-- side text -->
+          <text x="66" y="92" text-anchor="middle" font-family="Shrikhand,Cooper Black,Georgia,serif" font-size="15" fill="#0E2429">A-Go-Go!</text>
+          <!-- headlight & bumper -->
+          <circle cx="242" cy="80" r="5" fill="#FFE27A" stroke="#0E2429" stroke-width="2.5"/>
+          <rect x="226" y="98" width="30" height="8" rx="4" fill="#C9D6D3" stroke="#0E2429" stroke-width="3"/>
+          <rect x="6" y="98" width="24" height="8" rx="4" fill="#C9D6D3" stroke="#0E2429" stroke-width="3"/>
+          <!-- roof rack -->
+          <rect x="40" y="12" width="110" height="8" rx="4" fill="#0E2429"/>
+          <circle cx="62" cy="10" r="6" fill="#F7A68A" stroke="#0E2429" stroke-width="2.5"/>
+          <circle cx="78" cy="9" r="4" fill="#FFF3DF" stroke="#0E2429" stroke-width="2.5"/>
+        </g>
+        <!-- wheels -->
+        <g class="wheel"><circle cx="62" cy="104" r="19" fill="#0E2429"/><circle cx="62" cy="104" r="9" fill="#FFF3DF"/><path d="M62 95 V113 M53 104 H71" stroke="#0E2429" stroke-width="3"/></g>
+        <g class="wheel"><circle cx="200" cy="104" r="19" fill="#0E2429"/><circle cx="200" cy="104" r="9" fill="#FFF3DF"/><path d="M200 95 V113 M191 104 H209" stroke="#0E2429" stroke-width="3"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Baths</span><span>Breed cuts</span><span>Lion cuts</span><span>Deshedding</span><span>Teeth brushing</span><span>Nail Dremel</span><span>Aloe treatment</span><span>We come to you</span>
+    <span>Baths</span><span>Breed cuts</span><span>Lion cuts</span><span>Deshedding</span><span>Teeth brushing</span><span>Nail Dremel</span><span>Aloe treatment</span><span>We come to you</span>
+  </div>
+</div>
+
+<section class="sec ways" id="ways" aria-labelledby="ways-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">Pick your path</div>
+        <h2 class="big" id="ways-h">Two ways to get groomed, <span style="white-space:nowrap">A-Go-Go</span> style.</h2>
+      </div>
+      <p>Bring your pet to the shop on Hilton Road, or have the Whiskers A-Go-Go grooming van come to your place. Both run by appointment.</p>
+    </div>
+
+    <div class="ways-grid">
+      <article class="way way-shop rv" id="shop">
+        <div class="way-top">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#FFF3DF" stroke="#0E2429" stroke-width="2"/><path d="M9 18h22v13H9z" fill="#fff" stroke="#0E2429" stroke-width="2" stroke-linejoin="round"/><path d="M7.5 18l3-7h19l3 7" fill="#F2661B" stroke="#0E2429" stroke-width="2" stroke-linejoin="round"/><path d="M7.5 18c0 2 1.5 3 3 3s3-1 3-3c0 2 1.5 3 3 3s3-1 3-3c0 2 1.5 3 3 3s3-1 3-3c0 2 1.5 3 3 3s3-1 3-3" fill="#17A39B" stroke="#0E2429" stroke-width="2" stroke-linejoin="round"/><rect x="17" y="24" width="6" height="7" fill="#F2661B" stroke="#0E2429" stroke-width="2"/></svg>
+          <div><div class="k">In-shop grooming</div><h3>Visit the shop</h3></div>
+        </div>
+        <div class="way-body">
+          <span class="status ok"><i></i>Now taking new clients</span>
+          <ul class="facts">
+            <li><span><b>1219 Hilton Rd, Suite J</b>, Knoxville, TN 37921</span></li>
+            <li><span><b>Monday&ndash;Saturday, 9am&ndash;4pm</b>, by appointment</span></li>
+            <li><span>Dogs and cats: baths, partial trims, full haircuts &amp; lion cuts</span></li>
+          </ul>
+          <div class="way-actions">
+            <a class="btn btn-tang" href="tel:+18657459550">Call to book</a>
+            <a class="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&amp;destination=1219%20Hilton%20Rd%20Suite%20J%2C%20Knoxville%2C%20TN%2037921" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="way way-mob rv" id="mobile">
+        <div class="way-top">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#FFF3DF" stroke="#0E2429" stroke-width="2"/><path d="M7 26V17c0-2.5 1.6-4 4-4h13c2.5 0 4 1.2 5.2 3.2L32 21v5z" fill="#F2661B" stroke="#0E2429" stroke-width="2" stroke-linejoin="round"/><path d="M7 21.5v4.5h25v-4.5z" fill="#fff" stroke="#0E2429" stroke-width="2" stroke-linejoin="round"/><rect x="10" y="15" width="5.5" height="4" rx="1" fill="#17A39B" stroke="#0E2429" stroke-width="1.6"/><rect x="18" y="15" width="5.5" height="4" rx="1" fill="#17A39B" stroke="#0E2429" stroke-width="1.6"/><circle cx="13" cy="27" r="3" fill="#0E2429"/><circle cx="26.5" cy="27" r="3" fill="#0E2429"/></svg>
+          <div><div class="k">Whiskers A-Go-Go</div><h3>We come to you</h3></div>
+        </div>
+        <div class="way-body">
+          <span class="status wait"><i></i>Mobile is on a waiting list right now</span>
+          <ul class="facts">
+            <li><span><b>Sunday&ndash;Saturday, 9am&ndash;5:30pm</b>, by appointment</span></li>
+            <li><span>The full groom happens in the van, right outside your door</span></li>
+            <li><span>Join the waiting list and the team reaches out when an opening comes up</span></li>
+          </ul>
+          <div class="way-actions">
+            <a class="btn btn-turq" href="sms:+18657459550">Text to join the list</a>
+            <a class="btn btn-cream" href="mailto:wwpetgrooming.agogo@gmail.com?subject=Mobile%20grooming%20waiting%20list">Email us</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="deposit rv">
+      <h3>New here? A quick note on deposits</h3>
+      <p>New clients pay a one-time deposit that goes toward the price of the groom. It&rsquo;s refundable (minus a $5 processing fee) if you cancel more than 48 hours before your appointment.</p>
+      <div class="amts"><span class="amt">In-shop <b>$25</b></span><span class="amt">Mobile <b>$50</b></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svc" id="services" aria-labelledby="svc-h">
+  <div class="mod-svc" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">The menu</div>
+        <h2 class="big" id="svc-h">Every groom starts with a proper bath.</h2>
+      </div>
+      <p>Shampoo matched to your pet&rsquo;s skin and coat, then build up from there: a tidy-up, or the whole haircut.</p>
+    </div>
+
+    <div class="tabs rv" role="tablist" aria-label="Choose pet">
+      <button class="tab" role="tab" id="tab-dogs" aria-controls="panel-dogs" aria-selected="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><ellipse cx="12" cy="15.5" rx="5" ry="4"/><circle cx="5.5" cy="10" r="2.2"/><circle cx="9.5" cy="6.5" r="2.2"/><circle cx="14.5" cy="6.5" r="2.2"/><circle cx="18.5" cy="10" r="2.2"/></g></svg>Dogs</button>
+      <button class="tab" role="tab" id="tab-cats" aria-controls="panel-cats" aria-selected="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l3.5 3h9L20 8v12z" fill="currentColor"/><circle cx="9" cy="14.5" r="1.2" fill="#0E2429"/><circle cx="15" cy="14.5" r="1.2" fill="#0E2429"/></svg>Cats</button>
+    </div>
+
+    <div class="panel" id="panel-dogs" role="tabpanel" aria-labelledby="tab-dogs">
+      <div class="pkgs">
+        <article class="pkg rv">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Bath</h3>
+          <div class="tag">The foundation</div>
+          <ul>
+            <li>Shampoo for their skin &amp; coat type</li>
+            <li>Blow dry and brush out</li>
+            <li>Eye &amp; ear cleaning, ear hair removal</li>
+            <li>Nail clip</li>
+            <li>Sanitary trim &amp; pad trim</li>
+            <li>Anal glands, if needed</li>
+          </ul>
+        </article>
+        <article class="pkg rv">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Partial</h3>
+          <div class="tag">Bath + tidy-up</div>
+          <ul>
+            <li>Everything in the Bath</li>
+            <li>Face trim</li>
+            <li>Feet trim</li>
+            <li>Silhouette trim, depending on breed</li>
+          </ul>
+        </article>
+        <article class="pkg rv">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>Full</h3>
+          <div class="tag">Bath + the haircut</div>
+          <ul>
+            <li>Everything in the Bath</li>
+            <li>A haircut of your choice, when it suits your dog&rsquo;s coat &amp; breed</li>
+          </ul>
+          <p class="note">Specialty grooms, doodles and other designer breeds are an additional cost.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-cats" role="tabpanel" aria-labelledby="tab-cats" hidden>
+      <div class="pkgs two">
+        <article class="pkg">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Bath</h3>
+          <div class="tag">Clean &amp; comfy</div>
+          <ul>
+            <li>Shampoo, blow dry &amp; brush out</li>
+            <li>Eye &amp; ear cleaning</li>
+            <li>Nail clip</li>
+            <li>Sanitary trim &amp; pad trim</li>
+            <li>Anal glands, if needed</li>
+          </ul>
+        </article>
+        <article class="pkg">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Full</h3>
+          <div class="tag">Bath + the cut</div>
+          <ul>
+            <li>Everything in the Bath</li>
+            <li>Lion cut or cat clip</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <p class="rv" style="margin-top:22px;color:var(--ink-2);font-size:15px">De-matting, flea shampoo and de-shedding are extra on bath packages.</p>
+
+    <div class="addons rv">
+      <h3>Groovy add-ons</h3>
+      <p>Mix any of these into your pet&rsquo;s appointment.</p>
+      <ul class="chips">
+        <li class="chip"><i></i>Nail trim</li>
+        <li class="chip"><i></i>Nail file / Dremel</li>
+        <li class="chip"><i></i>Deshedding treatment</li>
+        <li class="chip"><i></i>Aloe treatment</li>
+        <li class="chip"><i></i>Flea &amp; tick treatment</li>
+        <li class="chip"><i></i>Teeth brushing</li>
+        <li class="chip"><i></i>Potty patch / sanitary trim</li>
+        <li class="chip"><i></i>Face &amp; head trim</li>
+        <li class="chip"><i></i>Eye &amp; visor trim</li>
+        <li class="chip"><i></i>Feet trim</li>
+        <li class="chip"><i></i>Poodle feet shave</li>
+      </ul>
+      <div class="addon-feat">
+        <div class="feat"><h4>Deshedding</h4><p>Deshedding shampoo and conditioner, plus up to 20 minutes of extra brushing.</p></div>
+        <div class="feat"><h4>Aloe treatment</h4><p>A deep conditioner with aloe vera, jojoba and vitamins A, D &amp; E for itchy or dry skin and coat.</p></div>
+        <div class="feat"><h4>Teeth brushing</h4><p>Enzymatic toothpaste to cut odor-causing bacteria and help control plaque and tartar.</p></div>
+      </div>
+    </div>
+
+    <div class="price-note rv">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#F2661B" stroke="#FFF3DF" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-family="Shrikhand,Georgia,serif" font-size="20" fill="#0E2429">$</text></svg>
+      <p>Pricing depends on your pet&rsquo;s breed, size and coat. <a style="display:inline-block;padding:10px 0;margin:-10px 0" href="tel:+18657459550">Call or text (865) 745-9550</a> for a quote.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why" aria-labelledby="why-h">
+  <div class="why-bg" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">Why Knoxville books us</div>
+        <h2 class="big" id="why-h">Far-out care, real-deal groomers.</h2>
+      </div>
+      <p>No fluff (well, lots of fluff). Here&rsquo;s what pet parents get.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <div class="big">4.8<small> &#9733;</small></div>
+        <h3>83 Google reviews</h3>
+        <p>A 4.8-star average from Knoxville pet parents on Google.</p>
+      </div>
+      <div class="why-card rv">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#F2661B" stroke="#0E2429" stroke-width="3"/><path d="M12 40V27c0-3 2-5 5-5h19c3 0 5 1.4 6.5 3.8L47 33v7z" fill="#FFF3DF" stroke="#0E2429" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="41" r="4.5" fill="#0E2429"/><circle cx="39" cy="41" r="4.5" fill="#0E2429"/><rect x="16" y="25" width="8" height="6" rx="1.5" fill="#17A39B" stroke="#0E2429" stroke-width="2"/></svg>
+        <h3>Shop <em>or</em> driveway</h3>
+        <p>A storefront on Hilton Road plus a mobile grooming van, Whiskers A-Go-Go, that runs seven days a week.</p>
+      </div>
+      <div class="why-card rv">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#F7A68A" stroke="#0E2429" stroke-width="3"/><path d="M17 44V22l8 7h10l8-7v22z" fill="#FFF3DF" stroke="#0E2429" stroke-width="3" stroke-linejoin="round"/><circle cx="25" cy="35" r="2" fill="#0E2429"/><circle cx="35" cy="35" r="2" fill="#0E2429"/><path d="M28 39h4l-2 2z" fill="#0E2429"/></svg>
+        <h3>Cats welcome, too</h3>
+        <p>Cat baths and lion cuts or cat clips, not just dogs.</p>
+      </div>
+      <div class="why-card rv">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#FFF3DF" stroke="#0E2429" stroke-width="3"/><circle cx="21" cy="25" r="7" fill="#F2661B" stroke="#0E2429" stroke-width="2.5"/><circle cx="39" cy="25" r="7" fill="#17A39B" stroke="#0E2429" stroke-width="2.5"/><path d="M10 47c2-7 6-10 11-10s9 3 11 10M28 47c2-7 6-10 11-10s9 3 11 10" fill="none" stroke="#0E2429" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>A whole team of groomers</h3>
+        <p>From bathers to stylists with 10+ and 20+ years at the table, plus breed cuts and drop coats.</p>
+      </div>
+      <div class="why-card rv">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#17A39B" stroke="#0E2429" stroke-width="3"/><path d="M30 13c-6 9-10 15-10 21a10 10 0 0 0 20 0c0-6-4-12-10-21z" fill="#FFF3DF" stroke="#0E2429" stroke-width="3" stroke-linejoin="round"/><path d="M25 35a5 5 0 0 0 5 5" fill="none" stroke="#0E2429" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Natural flea &amp; tick option</h3>
+        <p>Flea and tick treatment uses natural shampoo solutions, plus an aloe conditioner for itchy, dry skin.</p>
+      </div>
+      <div class="why-card rv">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#FFF3DF" stroke="#0E2429" stroke-width="3"/><rect x="15" y="17" width="30" height="28" rx="4" fill="#F2661B" stroke="#0E2429" stroke-width="3"/><path d="M15 25h30" stroke="#0E2429" stroke-width="3"/><path d="M22 13v7M38 13v7" stroke="#0E2429" stroke-width="3" stroke-linecap="round"/><path d="M23 35l5 4 9-9" fill="none" stroke="#0E2429" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Book any time</h3>
+        <p>Call or text during business hours, or send an appointment request online day or night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec hours" id="hours" aria-labelledby="hours-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">When to find us</div>
+        <h2 class="big" id="hours-h">Hours for the shop, the van &amp; the phones.</h2>
+      </div>
+      <p>Grooming is by appointment in the shop and the van. The phones are answered during business hours.</p>
+    </div>
+    <div class="hours-grid">
+      <div class="hcard rv">
+        <header><h3>Shop grooming</h3><small>By appt.</small></header>
+        <table data-hours>
+          <tr data-d="1"><td>Monday</td><td>9am &ndash; 4pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>9am &ndash; 4pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>9am &ndash; 4pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>9am &ndash; 4pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>9am &ndash; 4pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>9am &ndash; 4pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+      </div>
+      <div class="hcard rv">
+        <header><h3>Mobile grooming</h3><small>By appt.</small></header>
+        <table data-hours>
+          <tr data-d="1"><td>Monday</td><td>9am &ndash; 5:30pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>9am &ndash; 5:30pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>9am &ndash; 5:30pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>9am &ndash; 5:30pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>9am &ndash; 5:30pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>9am &ndash; 5:30pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>9am &ndash; 5:30pm</td></tr>
+        </table>
+      </div>
+      <div class="hcard rv">
+        <header><h3>Business office</h3><small>Phones</small></header>
+        <table data-hours>
+          <tr data-d="1"><td>Monday</td><td>9am &ndash; 5pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>9am &ndash; 5pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>9am &ndash; 5pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>9am &ndash; 5pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>9am &ndash; 5pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td class="closed">Closed</td></tr>
+          <tr data-d="0"><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="hours-note rv">Holiday schedules can change. When in doubt, give us a call.</p>
+  </div>
+</section>
+
+<section class="sec visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">Come on by</div>
+        <h2 class="big" id="visit-h">Find the shop on Hilton Road.</h2>
+      </div>
+      <p>Suite J at 1219 Hilton Rd in West Knoxville. Booking for the van? Just call, text or email.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="map rv">
+        <iframe title="Map to Wags and Whiskers Pet Grooming, 1219 Hilton Rd Suite J, Knoxville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1219%20Hilton%20Rd%20J%2C%20Knoxville%2C%20TN%2037921&amp;output=embed"></iframe>
+      </div>
+      <div class="contact-card rv">
+        <h3>Say hi!</h3>
+        <a class="cline" href="tel:+18657459550"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call or text</small>(865) 745-9550</span></a>
+        <a class="cline" href="mailto:wwpetgrooming.agogo@gmail.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><span><small>Email</small>wwpetgrooming.agogo@gmail.com</span></a>
+        <a class="cline" href="https://www.google.com/maps/dir/?api=1&amp;destination=1219%20Hilton%20Rd%20Suite%20J%2C%20Knoxville%2C%20TN%2037921" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small>Shop address</small>1219 Hilton Rd, Suite J<br>Knoxville, TN 37921</span></a>
+        <div class="btns">
+          <a class="btn btn-tang" href="tel:+18657459550">Call (865) 745-9550</a>
+          <a class="btn btn-turq" href="https://www.google.com/maps/dir/?api=1&amp;destination=1219%20Hilton%20Rd%20Suite%20J%2C%20Knoxville%2C%20TN%2037921" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot-circles" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fname">Wags &amp; Whiskers<em>Pet Grooming &amp; Whiskers A-Go-Go Mobile Grooming</em></div>
+        <p style="margin-top:16px;color:#C9D6D3;max-width:38ch">Shop and mobile grooming for dogs and cats in Knoxville, Tennessee.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+18657459550">(865) 745-9550</a></li>
+          <li><a href="mailto:wwpetgrooming.agogo@gmail.com">wwpetgrooming.agogo@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=1219%20Hilton%20Rd%20Suite%20J%2C%20Knoxville%2C%20TN%2037921" target="_blank" rel="noopener">1219 Hilton Rd, Suite J</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow along</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/wwpetgrooming" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.6V1.6L14 1.6c-4 0-4.9 3-4.9 4.9v2H6.8v4h2.3V22H14v-9.5h3.3l.4-4z"/></svg>Facebook</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#hours">Hours</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">&copy; <span id="yr">2026</span> Wags &amp; Whiskers Pet Grooming &middot; Knoxville, TN &middot; Concept site by Code Craft Media, not live.</div>
+  </div>
+</footer>
+
+<nav class="mcta" aria-label="Quick contact">
+  <a href="tel:+18657459550"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1219%20Hilton%20Rd%20Suite%20J%2C%20Knoxville%2C%20TN%2037921" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+  var bn=document.querySelector('.concept');function bh(){root.style.setProperty('--bh',bn.offsetHeight+'px')}bh();window.addEventListener('resize',bh);
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){root.classList.add('reveal-all');els.forEach(function(e){e.classList.add('in')})}
+  if(reduce||!('IntersectionObserver' in window)){showAll()}else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(showAll,2500);
+  // today
+  var d=new Date().getDay();
+  document.querySelectorAll('[data-hours] tr[data-d="'+d+'"]').forEach(function(tr){tr.classList.add('today')});
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(n);n.focus()}
+    });
+  });
+  function select(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  // sticky cta
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
