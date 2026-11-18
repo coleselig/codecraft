@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ivana Garcia · Makeup Artist, Cleveland TN</title>
+<meta name="description" content="Ivana Garcia: natural glam, full coverage, bridal, prom, quinceañera and photo shoot makeup in Cleveland, TN. Travel available. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#3d1838; --plum-2:#56254f; --plum-3:#7a3a6e; --ink:#2a1027;
+  --champ:#f5ead6; --champ-2:#ecdcbc; --gold:#c9a66b; --gold-2:#a8834a;
+  --peach:#f4c3a8; --peach-2:#f9dccb; --blush:#e9a4a8; --cream:#fffaf2;
+  --text:#3a2236; --muted:#7a6274;
+  --serif:'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  --sans:'Figtree', system-ui, -apple-system, Segoe UI, sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden;padding-bottom:84px}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* concept banner */
+.concept{background:var(--ink);color:var(--champ-2);font-size:12px;text-align:center;padding:7px 16px;letter-spacing:.02em}
+.concept b{color:var(--peach);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(255,250,242,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(61,24,56,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--serif);font-style:italic;font-weight:500;font-size:27px;color:var(--plum);line-height:1;display:flex;align-items:center;gap:9px}
+.logo small{display:block;font-family:var(--sans);font-style:normal;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2);margin-top:4px;font-weight:600}
+.logo svg{width:30px;height:30px;flex:none}
+.navlinks{display:none;gap:30px;font-size:14px;font-weight:500;color:var(--plum-2)}
+.navlinks a{position:relative;padding:4px 0}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--peach);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.navlinks a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:600;font-size:15px;padding:14px 24px;transition:transform .2s, box-shadow .25s, background .25s;cursor:pointer;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-plum{background:var(--plum);color:var(--champ);box-shadow:0 10px 24px -10px rgba(61,24,56,.6)}
+.btn-plum:hover{background:var(--plum-2);transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(61,24,56,.65)}
+.btn-ghost{border:1.5px solid rgba(61,24,56,.25);color:var(--plum)}
+.btn-ghost:hover{border-color:var(--plum);background:rgba(61,24,56,.04)}
+.btn-sm{padding:10px 18px;font-size:13.5px}
+.btn svg{width:17px;height:17px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 100% 0%, rgba(244,195,168,.55), transparent 60%),
+  radial-gradient(80% 60% at 0% 100%, rgba(233,164,168,.28), transparent 60%),
+  linear-gradient(180deg,#fff7ee, var(--champ));padding:34px 0 46px}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--plum-3)}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--plum);line-height:1.02;letter-spacing:-.01em}
+h1{font-size:clamp(50px,13.6vw,104px);margin:14px 0 18px}
+h1 em,h2 em{font-style:italic;font-weight:500}
+.lede{font-size:16.5px;max-width:30em;color:var(--text)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero .cta-row .btn{padding:14px 20px}
+.hero-blobs{position:absolute;right:-50px;top:-10px;width:230px;z-index:1;pointer-events:none;opacity:.9}
+@media(min-width:980px){.hero-blobs{display:none}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:12.5px;font-weight:600;color:var(--plum-2);background:rgba(255,255,255,.7);border:1px solid rgba(61,24,56,.1);padding:7px 13px;border-radius:999px;display:inline-flex;gap:7px;align-items:center}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--peach);display:inline-block;box-shadow:0 0 0 3px rgba(244,195,168,.35)}
+
+/* brush reveal: decorative swipe behind words, text always visible */
+.brush{position:relative;display:inline-block;z-index:0;white-space:nowrap}
+.brush::before{content:"";position:absolute;z-index:-1;left:-4%;right:-5%;top:30%;bottom:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M6 34c40-22 110-26 190-24 70 2 140 4 198 14 6 1 5 9-1 10-40 6-70 3-110 7-60 6-140 10-210 9C40 49 4 48 3 42c-1-3 1-6 3-8z' fill='%23f4c3a8'/%3E%3Cpath d='M20 44c80-6 210-10 360-8' stroke='%23e9a4a8' stroke-width='3' fill='none' opacity='.6'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  transform-origin:left center;transform:scaleX(1);opacity:.95}
+.brush.light::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M6 34c40-22 110-26 190-24 70 2 140 4 198 14 6 1 5 9-1 10-40 6-70 3-110 7-60 6-140 10-210 9C40 49 4 48 3 42c-1-3 1-6 3-8z' fill='%237a3a6e'/%3E%3C/svg%3E");opacity:.8}
+.js .brush::before{transform:scaleX(0)}
+.js .brush.on::before{animation:swipe 1.05s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes swipe{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+
+/* hero art */
+.hero-art{position:relative;margin:4px auto 0;width:100%;max-width:520px}
+.hero-art svg{width:100%;height:auto;overflow:visible}
+.float{animation:float 7s ease-in-out infinite}
+.float2{animation:float 9s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.spin{transform-origin:center;transform-box:fill-box;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-swirl{position:absolute;z-index:1;pointer-events:none;opacity:.55}
+
+/* sections */
+section{position:relative;padding:76px 0}
+.sec-head{max-width:640px;margin-bottom:34px}
+h2{font-size:clamp(42px,10.5vw,70px);margin:12px 0 14px}
+.sec-head p{color:var(--muted);font-size:16px}
+
+/* occasions marquee */
+.ribbon{background:var(--plum);color:var(--champ);padding:18px 0;overflow:hidden;position:relative}
+.ribbon .track{display:flex;gap:34px;width:max-content;animation:marq 34s linear infinite;font-family:var(--serif);font-style:italic;font-size:26px;white-space:nowrap}
+.ribbon .track span{display:inline-flex;align-items:center;gap:34px}
+.ribbon .track span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--peach);opacity:.9}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* menu */
+.menu{background:var(--cream)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;overflow-x:auto;scrollbar-width:none;padding:4px 2px 14px;margin:0 -2px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1.5px solid rgba(61,24,56,.16);background:#fff;color:var(--plum-2);font:600 14px var(--sans);padding:11px 18px;border-radius:999px;cursor:pointer;transition:all .25s}
+.tab:hover{border-color:var(--plum-3)}
+.tab[aria-selected=true]{background:var(--plum);border-color:var(--plum);color:var(--champ);box-shadow:0 8px 18px -10px rgba(61,24,56,.7)}
+.panel{display:grid;gap:14px}
+.panel[hidden]{display:none}
+.svc{position:relative;background:#fff;border-radius:var(--r);padding:22px 22px 20px 22px;border:1px solid rgba(61,24,56,.08);box-shadow:0 14px 32px -24px rgba(61,24,56,.45);overflow:hidden;transition:transform .3s, box-shadow .3s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(61,24,56,.55)}
+.svc .sw{position:absolute;right:-48px;bottom:-50px;width:130px;height:96px;opacity:.28;pointer-events:none}
+.svc-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;position:relative}
+.svc h3{font-size:28px;line-height:1.08}
+.price{font-family:var(--serif);font-weight:600;font-size:34px;color:var(--plum-3);line-height:1;white-space:nowrap}
+.price sup{font-size:.5em;vertical-align:.7em;margin-right:1px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:13px;color:var(--muted);font-weight:500;position:relative}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta svg{width:14px;height:14px;color:var(--gold-2)}
+.svc p{margin-top:10px;font-size:15px;color:var(--text);position:relative;max-width:34em}
+.tag{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--plum-3);background:var(--peach-2);padding:4px 10px;border-radius:999px;margin-bottom:10px;position:relative}
+.menu-foot{margin-top:24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--champ);border-radius:var(--r);padding:20px 22px}
+.menu-foot p{font-size:14.5px;color:var(--plum-2);max-width:36em}
+
+/* looks compare */
+.looks{background:linear-gradient(180deg,var(--champ),#fbefe2)}
+.look-grid{display:grid;gap:18px}
+.look{border-radius:28px;padding:28px 24px 26px;position:relative;overflow:hidden;min-height:250px}
+.look.nat{background:linear-gradient(160deg,#fff6ef,#f9dccb)}
+.look.full{background:linear-gradient(160deg,#5a2853,#2f1130);color:var(--champ)}
+.look.full h3{color:var(--champ)}
+.look h3{font-size:44px;font-style:italic}
+.look .price{margin-top:6px}
+.look.full .price{color:var(--peach)}
+.look blockquote{margin-top:16px;font-size:16px;max-width:24em;position:relative;z-index:2}
+.look blockquote::before{content:"From Ivana's menu";display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.65;margin-bottom:6px}
+.look .art{position:absolute;right:-30px;bottom:-30px;width:210px;opacity:.9;z-index:1}
+.look .btn{margin-top:20px;position:relative;z-index:2}
+.look.full .btn{background:var(--champ);color:var(--plum)}
+
+/* why */
+.why{background:var(--plum);color:var(--champ);overflow:hidden}
+.why h2{color:var(--champ)}
+.why .sec-head p{color:rgba(245,234,214,.72)}
+.why-grid{display:grid;gap:14px;position:relative;z-index:2}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(245,234,214,.14);border-radius:var(--r);padding:24px 22px;transition:background .3s, transform .3s}
+.why-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.why-card .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--peach),var(--blush));color:var(--plum);margin-bottom:16px}
+.why-card .ic svg{width:26px;height:26px}
+.why-card h3{color:var(--champ);font-size:30px;font-style:italic}
+.why-card p{margin-top:8px;color:rgba(245,234,214,.82);font-size:15px}
+.why .bg-swirl{position:absolute;right:-120px;top:-60px;width:460px;opacity:.16;z-index:1}
+
+/* visit */
+.visit{background:var(--cream)}
+.visit-grid{display:grid;gap:18px}
+.card{background:#fff;border-radius:var(--r);border:1px solid rgba(61,24,56,.08);box-shadow:0 14px 34px -26px rgba(61,24,56,.5);padding:24px 22px}
+.card h3{font-size:30px;margin-bottom:12px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15px;border-bottom:1px dashed rgba(61,24,56,.1)}
+.hours li:last-child{border-bottom:0}
+.hours li.today{background:linear-gradient(90deg,var(--peach-2),rgba(249,220,203,.3));font-weight:700;color:var(--plum);border-bottom-color:transparent}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--plum);color:var(--champ);padding:3px 7px;border-radius:999px;vertical-align:2px}
+.hours .closed{color:var(--muted)}
+.status{margin-top:12px;font-size:14px;font-weight:600;color:var(--plum-3);display:flex;align-items:center;gap:8px}
+.status i{width:9px;height:9px;border-radius:50%;background:#7bb48a;box-shadow:0 0 0 4px rgba(123,180,138,.2)}
+.status.shut i{background:#c98b8b;box-shadow:0 0 0 4px rgba(201,139,139,.2)}
+.contact-list{list-style:none;display:grid;gap:4px}
+.contact-list a{display:flex;gap:14px;align-items:center;padding:12px 10px;border-radius:14px;transition:background .2s}
+.contact-list a:hover{background:var(--champ)}
+.contact-list .ci{width:42px;height:42px;flex:none;border-radius:13px;background:var(--champ);display:grid;place-items:center;color:var(--plum)}
+.contact-list .ci svg{width:20px;height:20px}
+.contact-list b{display:block;font-size:15.5px;color:var(--plum);overflow-wrap:anywhere}
+.contact-list a[href^=mailto] b{font-size:13.5px}
+.contact-list small{color:var(--muted);font-size:12.5px}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(61,24,56,.1);min-height:300px;background:
+  repeating-linear-gradient(45deg,rgba(61,24,56,.03) 0 10px,transparent 10px 20px),var(--champ);position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;position:relative;z-index:1}
+.map .pin{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--plum-2);font-size:14px;z-index:0}
+.map .pin b{font-family:var(--serif);font-style:italic;font-size:30px;display:block;color:var(--plum)}
+
+/* final cta */
+.final{background:radial-gradient(90% 80% at 50% 0%,rgba(244,195,168,.6),transparent 70%),var(--champ);text-align:center;overflow:hidden}
+.final h2{max-width:12em;margin:12px auto 14px}
+.final p{max-width:32em;margin:0 auto;color:var(--plum-2)}
+.final .cta-row{justify-content:center}
+.gift{margin:34px auto 0;max-width:560px;display:flex;gap:16px;align-items:center;text-align:left;background:#fff;border-radius:var(--r);padding:18px 20px;border:1px dashed rgba(122,58,110,.35)}
+.gift svg{width:54px;height:54px;flex:none}
+.gift b{font-family:var(--serif);font-size:24px;font-style:italic;color:var(--plum);display:block;line-height:1.1}
+.gift span{font-size:14px;color:var(--muted)}
+
+footer{background:var(--ink);color:rgba(245,234,214,.7);padding:46px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:22px}
+footer .logo{color:var(--champ)}
+footer a:hover{color:var(--peach)}
+.foot-links{display:flex;flex-wrap:wrap;gap:10px 22px}
+.fine{font-size:12px;color:rgba(245,234,214,.45);border-top:1px solid rgba(245,234,214,.12);padding-top:18px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,250,242,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(61,24,56,.1)}
+.bar a{flex:1;padding:14px 10px;font-size:15px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:720px){
+  .panel{grid-template-columns:1fr 1fr}
+  .look-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .visit-grid .map{grid-column:1/-1}
+}
+@media (min-width:980px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .navlinks{display:flex}
+  .hero{padding:70px 0 90px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+  .hero-art{max-width:620px;transform:scale(1.12);transform-origin:center}
+  .panel{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .visit-grid{grid-template-columns:1fr 1fr 1.3fr}
+  .visit-grid .map{grid-column:auto}
+  section{padding:110px 0}
+  footer .wrap{grid-template-columns:1.4fr 1fr;align-items:end}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .brush::before{transform:scaleX(1)}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Ivana Garcia. Not live.</div>
+
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="wc" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="0.6"/>
+    </filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 0.24  0 0 0 0 0.09  0 0 0 0 0.22  0 0 0 .18 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <radialGradient id="gPeach" cx="40%" cy="40%"><stop offset="0" stop-color="#fbd9c6"/><stop offset=".7" stop-color="#f4c3a8"/><stop offset="1" stop-color="#eaa98c"/></radialGradient>
+    <radialGradient id="gBlush" cx="40%" cy="40%"><stop offset="0" stop-color="#f6c4c4"/><stop offset=".7" stop-color="#e9a4a8"/><stop offset="1" stop-color="#d4858c"/></radialGradient>
+    <radialGradient id="gPlum" cx="40%" cy="35%"><stop offset="0" stop-color="#9b5590"/><stop offset=".7" stop-color="#6b2d61"/><stop offset="1" stop-color="#3d1838"/></radialGradient>
+    <radialGradient id="gChamp" cx="40%" cy="35%"><stop offset="0" stop-color="#fff4e0"/><stop offset=".6" stop-color="#ecd5aa"/><stop offset="1" stop-color="#c9a66b"/></radialGradient>
+    <linearGradient id="gGold" x1="0" x2="1"><stop offset="0" stop-color="#a8834a"/><stop offset=".5" stop-color="#ead2a0"/><stop offset="1" stop-color="#a8834a"/></linearGradient>
+    <symbol id="swatch" viewBox="0 0 120 90"><path filter="url(#wc)" d="M14 46c4-20 26-34 52-32 26 2 44 16 42 34-2 20-26 30-52 28C28 74 10 64 14 46z"/></symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Ivana Garcia home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="url(#gPeach)"/><path d="M11 25c5-9 13-13 19-11-6 2-10 6-12 13" fill="none" stroke="#3d1838" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span>Ivana Garcia<small>Makeup Artist</small></span>
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#looks">Looks</a><a href="#why">Why Ivana</a><a href="#visit">Hours &amp; Contact</a></div>
+    <a class="btn btn-plum btn-sm" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="hero-blobs" viewBox="0 0 230 200" aria-hidden="true"><g filter="url(#wc)"><path d="M70 40c30-26 100-30 130 0s10 80-30 90-120-10-120-40 0-34 20-50z" fill="#f4c3a8" opacity=".55"/><path d="M120 120c20-14 70-12 86 6s-6 44-36 44-66-6-66-24 4-18 16-26z" fill="#e9a4a8" opacity=".45"/><path d="M150 20c14-8 40-6 50 4s-4 22-20 22-36-2-38-12 2-10 8-14z" fill="#c9a66b" opacity=".4"/></g><g fill="#c9a66b"><path d="M60 150l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" opacity=".8"/></g></svg>
+  <svg class="hero-swirl" style="left:-140px;top:120px;width:360px" viewBox="0 0 300 300" aria-hidden="true"><path class="spin" d="M150 40c70 0 110 50 100 110s-70 90-120 70-60-80-20-100 70 10 60 40" fill="none" stroke="#e9a4a8" stroke-width="2" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Makeup Artist · Cleveland, TN</span>
+      <h1>Makeup for the days you'll <em class="brush">remember.</em></h1>
+      <p class="lede">Soft natural glam or a bold, bronzed full-coverage look, for brides and bridal parties, prom, quinceañeras, photo shoots and cheer. And Ivana can come to you.</p>
+      <div class="cta-row">
+        <a class="btn btn-plum" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book your look</a>
+        <a class="btn btn-ghost" href="tel:+14239337255">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call Ivana</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><i></i>Looks from $45</span>
+        <span class="chip"><i></i>Mon–Sat · 7am–5pm</span>
+        <span class="chip"><i></i>Travel available</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 430">
+        <!-- big wash -->
+        <ellipse cx="270" cy="220" rx="225" ry="180" fill="#f9dccb" opacity=".55" filter="url(#wc)"/>
+        <!-- palette -->
+        <g class="float">
+          <rect x="70" y="88" width="380" height="250" rx="34" fill="#3d1838"/>
+          <rect x="70" y="88" width="380" height="250" rx="34" fill="#000" opacity=".0" filter="url(#grain)"/>
+          <rect x="84" y="102" width="352" height="222" rx="24" fill="#4c1f47"/>
+          <path d="M90 104h340" stroke="url(#gGold)" stroke-width="2" opacity=".6"/>
+          <!-- pans -->
+          <g>
+            <circle cx="150" cy="168" r="44" fill="url(#gChamp)"/><circle cx="150" cy="168" r="44" fill="none" stroke="url(#gGold)" stroke-width="3"/>
+            <circle cx="260" cy="168" r="44" fill="url(#gPeach)"/><circle cx="260" cy="168" r="44" fill="none" stroke="url(#gGold)" stroke-width="3"/>
+            <circle cx="370" cy="168" r="44" fill="url(#gBlush)"/><circle cx="370" cy="168" r="44" fill="none" stroke="url(#gGold)" stroke-width="3"/>
+            <rect x="110" y="236" width="300" height="66" rx="20" fill="url(#gPlum)"/><rect x="110" y="236" width="300" height="66" rx="20" fill="none" stroke="url(#gGold)" stroke-width="3"/>
+            <path d="M128 162c8-14 22-20 34-16" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".55" fill="none"/>
+            <path d="M238 162c8-14 22-20 34-16" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".5" fill="none"/>
+            <path d="M348 162c8-14 22-20 34-16" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".5" fill="none"/>
+            <path d="M134 256c60-10 140-12 250-4" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".25" fill="none"/>
+            <!-- swiped marks in pans -->
+            <path d="M232 186c16-6 34-6 52 2" stroke="#eaa98c" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7"/>
+            <path d="M342 188c16-8 34-6 52 2" stroke="#d4858c" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7"/>
+          </g>
+        </g>
+        <!-- watercolor swatches -->
+        <g filter="url(#wc)">
+          <path d="M20 330c30-26 90-30 140-14 30 10 26 34-6 40-46 8-110 6-132-6-10-6-8-14-2-20z" fill="#e9a4a8" opacity=".7"/>
+          <path d="M330 360c40-18 120-16 160 0 16 8 8 22-14 26-50 6-110 6-140-6-14-6-12-14-6-20z" fill="#f4c3a8" opacity=".85"/>
+          <path d="M380 40c26-12 70-8 90 10 10 10 0 22-20 22-30 0-58-4-70-14-6-6-6-14 0-18z" fill="#c9a66b" opacity=".5"/>
+        </g>
+        <!-- brush -->
+        <g class="float2">
+          <g transform="rotate(-32 300 300)">
+            <rect x="220" y="372" width="230" height="16" rx="8" fill="#2a1027"/>
+            <rect x="190" y="368" width="40" height="24" rx="5" fill="url(#gGold)"/>
+            <path d="M190 370c-40-6-66 2-80 10 14 8 40 16 80 10z" fill="#f2d3b8"/>
+            <path d="M120 380c-10 0-16 0-22 0" stroke="#e9a4a8" stroke-width="10" stroke-linecap="round"/>
+          </g>
+        </g>
+        <!-- sparkles -->
+        <g fill="#c9a66b">
+          <path d="M470 120l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>
+          <path d="M44 120l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" opacity=".8"/>
+          <path d="M300 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" opacity=".7"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" aria-label="Occasions">
+  <div class="track">
+    <span>Bridal</span><span>Bridesmaids</span><span>Mother of the Bride</span><span>Prom</span><span>Quinceañera</span><span>Photo Shoots</span><span>School Dances</span><span>Cheer</span><span>Natural Glam</span><span>Full Coverage</span>
+    <span>Bridal</span><span>Bridesmaids</span><span>Mother of the Bride</span><span>Prom</span><span>Quinceañera</span><span>Photo Shoots</span><span>School Dances</span><span>Cheer</span><span>Natural Glam</span><span>Full Coverage</span>
+  </div>
+</div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">The menu</span>
+      <h2>Every look, <em class="brush">one tap</em> away.</h2>
+      <p>Prices and times straight from Ivana's booking page. Pick an occasion, then book the exact service online.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-glam" id="t-glam">Everyday glam</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-bridal" id="t-bridal">Bridal party</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-events" id="t-events">Prom &amp; events</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-teams" id="t-teams">Dance &amp; cheer</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-glam" aria-labelledby="t-glam">
+      <article class="svc rv"><svg class="sw" fill="#f4c3a8"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Natural Glam</h3><div class="price"><sup>$</sup>65</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+        <p>“This glam look is ideal for clients that are seeking a soft natural makeup look.”</p>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#7a3a6e"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Full Coverage</h3><div class="price"><sup>$</sup>75</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+        <p>“This ideal for clients that are seeking a bolder bronzed dramatic makeup look.”</p>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#e9a4a8"><use href="#swatch"/></svg>
+        <span class="tag">Add-on</span>
+        <div class="svc-top"><h3>Strip Lash</h3><div class="price"><sup>$</sup>10</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 min</span></div>
+        <p>Add strip lashes to any look for extra lift.</p>
+      </article>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-bridal" aria-labelledby="t-bridal" hidden>
+      <article class="svc rv"><svg class="sw" fill="#c9a66b"><use href="#swatch"/></svg>
+        <span class="tag">The bride</span>
+        <div class="svc-top"><h3>Bridal Makeup</h3><div class="price"><sup>$</sup>85</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#f4c3a8"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Bridesmaids Makeup</h3><div class="price"><sup>$</sup>75</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#e9a4a8"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Mother of the Bride</h3><div class="price"><sup>$</sup>75</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-events" aria-labelledby="t-events" hidden>
+      <article class="svc rv"><svg class="sw" fill="#c9a66b"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Quinceañera Makeup</h3><div class="price"><sup>$</sup>80</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#7a3a6e"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Photo Shoot Makeup</h3><div class="price"><sup>$</sup>80</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#f4c3a8"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Prom Makeup</h3><div class="price"><sup>$</sup>65</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#e9a4a8"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>School Dances</h3><div class="price"><sup>$</sup>50</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+      </article>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-teams" aria-labelledby="t-teams" hidden>
+      <article class="svc rv"><svg class="sw" fill="#f4c3a8"><use href="#swatch"/></svg>
+        <div class="svc-top"><h3>Cheerleading</h3><div class="price"><sup>$</sup>50</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span></div>
+        <p>Please have your school name ready when you book.</p>
+      </article>
+      <article class="svc rv"><svg class="sw" fill="#e9a4a8"><use href="#swatch"/></svg>
+        <span class="tag">Ages 6–14</span>
+        <div class="svc-top"><h3>Girls' Dance &amp; Cheer</h3><div class="price"><sup>$</sup>45</div></div>
+        <div class="meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 10 min</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Travel available</span></div>
+        <p>For recitals, competitions, games and more.</p>
+      </article>
+    </div>
+
+    <div class="menu-foot rv">
+      <p><b>On location?</b> Most looks are marked “traveling available.” Her booking page lists the travel fee after 5 miles as <b>Free</b>.</p>
+      <a class="btn btn-plum btn-sm" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">See times &amp; book</a>
+    </div>
+  </div>
+</section>
+
+<section class="looks" id="looks">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Two signature looks</span>
+      <h2>Soft &amp; natural, or <em class="brush">bold</em> &amp; bronzed.</h2>
+      <p>Not sure which to book? Here's how Ivana describes them.</p>
+    </div>
+    <div class="look-grid">
+      <div class="look nat rv">
+        <h3>Natural Glam</h3>
+        <div class="price"><sup>$</sup>65</div>
+        <blockquote>“This glam look is ideal for clients that are seeking a soft natural makeup look.”</blockquote>
+        <a class="btn btn-plum btn-sm" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">Book Natural Glam</a>
+        <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><g filter="url(#wc)"><circle cx="110" cy="110" r="70" fill="#f4c3a8" opacity=".7"/><circle cx="70" cy="140" r="44" fill="#fff" opacity=".6"/><circle cx="140" cy="80" r="30" fill="#e9a4a8" opacity=".5"/></g></svg>
+      </div>
+      <div class="look full rv">
+        <h3>Full Coverage</h3>
+        <div class="price"><sup>$</sup>75</div>
+        <blockquote>“This ideal for clients that are seeking a bolder bronzed dramatic makeup look.”</blockquote>
+        <a class="btn btn-sm" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">Book Full Coverage</a>
+        <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><g filter="url(#wc)"><circle cx="110" cy="110" r="70" fill="#c9a66b" opacity=".45"/><circle cx="70" cy="140" r="44" fill="#e9a4a8" opacity=".35"/><circle cx="140" cy="80" r="30" fill="#f4c3a8" opacity=".5"/></g></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="bg-swirl" viewBox="0 0 300 300" aria-hidden="true"><path class="spin" d="M150 30c80 0 120 60 110 120s-80 100-130 76-66-90-20-112 80 10 66 46" fill="none" stroke="#f4c3a8" stroke-width="3" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" style="color:var(--peach)">Why book Ivana</span>
+      <h2>Made for <em class="brush light">your</em> big moments.</h2>
+      <p>Simple, honest reasons, straight from how she works.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <h3>She comes to you</h3><p>Ten of her services are travel-available, from bridal mornings to prom night at home.</p></div>
+      <div class="why-card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Early starts</h3><p>Appointments from 7am, Monday to Saturday, so you're ready long before the photos.</p></div>
+      <div class="why-card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h3>Clear pricing</h3><p>Every look has a set price, from $45 to $85, with lashes as a $10 add-on.</p></div>
+      <div class="why-card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16v12H4zM2 8h20M12 8v12M12 8c-2-5-7-4-6-1s6 1 6 1c2-5 7-4 6-1s-6 1-6 1"/></svg></div>
+        <h3>Gift cards</h3><p>Treat a bride, a mom or a best friend. Gift cards are sold through her booking page.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Hours &amp; contact</span>
+      <h2>Let's get you <em class="brush">ready.</em></h2>
+      <p>Based in Cleveland, Tennessee. Book online, or call or email Ivana with questions.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="card rv">
+        <h3>Hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>7am – 5pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>7am – 5pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>7am – 5pm</span></li>
+          <li data-d="4"><span>Thursday</span><span>7am – 5pm</span></li>
+          <li data-d="5"><span>Friday</span><span>7am – 5pm</span></li>
+          <li data-d="6"><span>Saturday</span><span>7am – 5pm</span></li>
+          <li data-d="0"><span>Sunday</span><span class="closed">Closed</span></li>
+        </ul>
+        <div class="status" id="status"><i></i><span>Mon–Sat, 7am to 5pm</span></div>
+      </div>
+      <div class="card rv">
+        <h3>Reach Ivana</h3>
+        <ul class="contact-list">
+          <li><a href="tel:+14239337255"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><b>(423) 933-7255</b><small>Tap to call</small></span></a></li>
+          <li><a href="mailto:spaservicesesthetics@yahoo.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg></span><span><b>spaservicesesthetics@yahoo.com</b><small>Email</small></span></a></li>
+          <li><a href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><b>Book online</b><small>Live availability</small></span></a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cleveland%2C%20TN%2037323" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><b>Cleveland, TN 37323</b><small>Directions</small></span></a></li>
+        </ul>
+      </div>
+      <div class="map rv">
+        <div class="pin"><div><b>Cleveland, TN</b>Map loads here</div></div>
+        <iframe title="Map of Cleveland, TN" loading="lazy" src="https://www.google.com/maps?q=Cleveland%2C%20TN%2037323&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow rv">Your chair is waiting</span>
+    <h2 class="rv">Book the look. <em class="brush">Then just glow.</em></h2>
+    <p class="rv">Pick your service, choose a time and you're set. It takes about a minute.</p>
+    <div class="cta-row rv">
+      <a class="btn btn-plum" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">Book your look</a>
+      <a class="btn btn-ghost" href="tel:+14239337255">Call (423) 933-7255</a>
+    </div>
+    <a class="gift rv" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 60 60" aria-hidden="true"><rect x="6" y="20" width="48" height="34" rx="6" fill="url(#gPeach)"/><rect x="4" y="14" width="52" height="10" rx="4" fill="#3d1838"/><rect x="27" y="14" width="6" height="40" fill="#c9a66b"/><path d="M30 14c-4-10-14-10-13-4s13 4 13 4c4-10 14-10 13-4s-13 4-13 4" fill="none" stroke="#c9a66b" stroke-width="2.5"/></svg>
+      <span><b>Give the gift of glam</b><span>“Purchase a gift card for your next visit, or as a gift for a friend.”</span></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="url(#gPeach)"/><path d="M11 25c5-9 13-13 19-11-6 2-10 6-12 13" fill="none" stroke="#3d1838" stroke-width="2.2" stroke-linecap="round"/></svg><span>Ivana Garcia<small>Makeup Artist · Cleveland TN</small></span></div>
+      <p style="margin-top:14px;max-width:30em">Natural glam, full coverage, bridal, prom, quinceañera, photo shoot, dance and cheer makeup. Mon–Sat, 7am–5pm.</p>
+    </div>
+    <div class="foot-links">
+      <a href="tel:+14239337255">(423) 933-7255</a>
+      <a href="mailto:spaservicesesthetics@yahoo.com">Email</a>
+      <a href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener">Book online</a>
+    </div>
+    <div class="fine" style="grid-column:1/-1">© Ivana Garcia · Cleveland, TN. Concept design by Code Craft Media. Not live.</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ghost" href="tel:+14239337255"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="btn btn-plum" href="https://square.site/book/S5FDC8ET6A9EQ/ivana-garcia-cleveland-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  function showAll(){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});document.querySelectorAll('.brush').forEach(function(e){e.classList.add('on')});}
+  setTimeout(showAll,2500);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add(e.target.classList.contains('brush')?'on':'in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('.rv,.brush').forEach(function(e){io.observe(e)});
+  } else showAll();
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true;});
+    t.setAttribute('aria-selected','true');var p=document.getElementById(t.getAttribute('aria-controls'));p.hidden=false;
+    p.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});
+  });});
+  // hours
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), open=day!==0 && h>=7 && h<17;
+  if(st){ st.querySelector('span').textContent = open ? 'Open now until 5pm' : (day===0 ? 'Closed today. Book online anytime' : (h<7 ? 'Opens today at 7am' : 'Closed now. Book online anytime')); if(!open) st.classList.add('shut'); }
+})();
+</script>
+</body>
+</html>

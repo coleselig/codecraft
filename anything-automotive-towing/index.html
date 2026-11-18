@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Anything Automotive Towing — Knoxville</title>
+<meta name="description" content="Concept site for Anything Automotive Towing, Knoxville TN. In-town tows, lock outs and jump starts. Call (865) 607-0378.">
+<meta name="theme-color" content="#16181c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#16181c; --asphalt-2:#1d2026; --asphalt-3:#252932;
+  --amber:#ffb000; --amber-dim:#cc8d00; --steel:#8a93a0; --steel-2:#b4bbc5;
+  --white:#ffffff; --line:rgba(255,255,255,.09);
+  --hz:repeating-linear-gradient(-45deg,var(--amber) 0 14px,var(--asphalt) 14px 28px);
+  --bar-h:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--asphalt);color:var(--white);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:"Oswald",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* concept banner */
+.concept{background:#0d0e11;color:var(--steel-2);font-family:"Oswald",sans-serif;font-size:clamp(9.5px,2.75vw,13px);letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid var(--line)}
+.concept b{color:var(--white);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(22,24,28,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{flex:none}
+.brand .bt{font-family:"Oswald";font-weight:600;font-size:17px;line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.brand .bt small{display:block;font-size:11px;letter-spacing:.24em;color:var(--amber);font-weight:500;margin-top:3px}
+.links{display:none;gap:28px;font-size:14px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--steel-2);transition:color .2s}
+.links a:hover{color:var(--amber)}
+.navcall{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:var(--asphalt);font-family:"Oswald";font-weight:600;font-size:16px;letter-spacing:.03em;text-decoration:none;padding:9px 14px;border-radius:4px;transition:transform .15s,background .2s}
+.navcall:hover{background:#ffc233;transform:translateY(-1px)}
+.navcall .full{display:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:40px 0 0;background:
+  radial-gradient(120% 70% at 85% 0%,rgba(255,176,0,.16),transparent 60%),
+  radial-gradient(90% 60% at 0% 100%,rgba(138,147,160,.10),transparent 60%),var(--asphalt)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;gap:28px}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:"Oswald";font-weight:500;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+.beacon{position:relative;width:10px;height:10px;border-radius:50%;background:var(--amber);flex:none}
+.beacon:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--amber);animation:ping 1.6s ease-out infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.hero h1{font-size:clamp(46px,13vw,104px);font-weight:700;margin:14px 0 16px}
+.hero h1 .amb{color:var(--amber)}
+.hero h1 .out{-webkit-text-stroke:2px var(--white);color:transparent}
+.hero .sub{font-size:18px;color:var(--steel-2);max-width:34ch}
+.hero .sub b{color:var(--white);font-weight:600}
+
+/* huge phone */
+.bigcall{position:relative;display:block;margin-top:26px;text-decoration:none;background:var(--amber);color:var(--asphalt);border-radius:6px;padding:16px 18px 18px;overflow:hidden;box-shadow:0 0 0 0 rgba(255,176,0,.5);animation:glow 2.4s ease-in-out infinite;transition:transform .15s}
+.bigcall:hover{transform:translateY(-2px)}
+.bigcall:active{transform:scale(.99)}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(255,176,0,.45)}50%{box-shadow:0 0 0 12px rgba(255,176,0,0)}}
+.bigcall .lbl{display:flex;align-items:center;gap:10px;font-family:"Oswald";font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+.bigcall .lbl .beacon{background:var(--asphalt)}
+.bigcall .lbl .beacon:after{border-color:var(--asphalt)}
+.bigcall .num{display:block;font-family:"Oswald";font-weight:700;font-size:clamp(40px,12.4vw,78px);line-height:1;letter-spacing:-.005em;margin-top:6px;white-space:nowrap}
+.bigcall .tap{position:absolute;right:16px;top:14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.bigcall:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(-45deg,var(--asphalt) 0 8px,transparent 8px 16px)}
+.hero .alt{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px;font-size:15px;color:var(--steel-2)}
+.hero .alt a{color:var(--white);text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:4px}
+.hero .alt a:hover{color:var(--amber)}
+
+/* hero art */
+.art{position:relative;margin:0 -20px}
+.art svg{display:block;width:100%;height:auto}
+.wheel{transform-box:fill-box;transform-origin:center;animation:spin 1.2s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dash{animation:road 1s linear infinite}
+@keyframes road{to{stroke-dashoffset:-96}}
+.lightbar{animation:flash 1s steps(2) infinite}
+@keyframes flash{50%{opacity:.25}}
+
+.hazard{height:14px;background:var(--hz)}
+.hazard.thin{height:8px;background:repeating-linear-gradient(-45deg,var(--amber) 0 8px,var(--asphalt) 8px 16px)}
+
+/* sections */
+section{padding:72px 0}
+.eyebrow{display:flex;align-items:center;gap:12px;font-family:"Oswald";font-weight:500;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.eyebrow:before{content:"";width:28px;height:3px;background:var(--amber)}
+h2{font-size:clamp(36px,9vw,64px);font-weight:700;margin-bottom:14px}
+.lead{color:var(--steel-2);max-width:56ch}
+
+/* services */
+.svc{display:grid;gap:16px;margin-top:34px}
+.card{position:relative;background:var(--asphalt-2);border:1px solid var(--line);border-radius:6px;padding:24px 22px 22px;overflow:hidden;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:rgba(255,176,0,.5)}
+.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--hz)}
+.card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.card .ico{width:52px;height:52px;flex:none;display:grid;place-items:center;background:var(--asphalt-3);border-radius:6px}
+.card h3{font-size:30px;font-weight:600;margin:18px 0 6px}
+.card p{color:var(--steel-2);font-size:16px}
+.price{text-align:right}
+.price .p{font-family:"Oswald";font-weight:700;font-size:40px;line-height:1;color:var(--amber)}
+.price .n{display:block;font-size:12px;color:var(--steel);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+.card .meta{display:flex;align-items:center;gap:8px;margin-top:16px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.14);font-size:14px;color:var(--steel-2)}
+.card .meta svg{flex:none}
+.note{margin-top:22px;font-size:14px;color:var(--steel)}
+
+/* promise */
+.promise{background:var(--asphalt-2);position:relative;overflow:hidden}
+.promise .roadline{position:absolute;right:10px;top:0;bottom:0;width:6px;background:repeating-linear-gradient(to bottom,rgba(255,176,0,.18) 0 40px,transparent 40px 80px);pointer-events:none}
+.promise .wrap{position:relative}
+.why{display:grid;gap:14px;margin-top:34px}
+.why .it{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;background:var(--asphalt);border:1px solid var(--line);border-radius:6px;padding:20px}
+.why .k{font-family:"Oswald";font-weight:700;font-size:30px;line-height:1;color:var(--amber)}
+.why h3{font-size:22px;font-weight:600;margin-bottom:4px}
+.why p{color:var(--steel-2);font-size:16px}
+.quote{margin-top:34px;border-left:4px solid var(--amber);padding:6px 0 6px 18px}
+.quote p{font-family:"Oswald";font-weight:500;font-size:clamp(24px,6vw,36px);line-height:1.2;text-transform:none}
+.quote cite{display:block;margin-top:10px;font-style:normal;font-size:14px;color:var(--steel);letter-spacing:.06em;text-transform:uppercase}
+
+/* hours */
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:30px}
+.day{background:var(--asphalt-2);border:1px solid var(--line);border-radius:5px;text-align:center;padding:14px 0 12px;font-family:"Oswald";font-weight:500;font-size:15px;letter-spacing:.06em;color:var(--steel-2);transition:all .2s}
+.day i{display:block;font-style:normal;font-family:"IBM Plex Sans";font-size:10px;letter-spacing:.08em;margin-top:4px;color:var(--steel)}
+.day.today{background:var(--amber);color:var(--asphalt);border-color:var(--amber);transform:translateY(-4px)}
+.day.today i{color:var(--asphalt);font-weight:600}
+.hoursbox{margin-top:20px;display:grid;gap:14px;background:var(--asphalt-2);border:1px solid var(--line);border-radius:6px;padding:22px}
+.hoursbox h3{font-size:24px;font-weight:600;margin-bottom:6px}
+.hoursbox p{color:var(--steel-2);font-size:16px;overflow-wrap:anywhere}
+.hoursbox a.btn{justify-self:start}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:"Oswald";font-weight:600;font-size:18px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:14px 22px;border-radius:5px;transition:transform .15s,background .2s,color .2s}
+.btn.amber{background:var(--amber);color:var(--asphalt)}
+.btn.amber:hover{background:#ffc233;transform:translateY(-2px)}
+.btn.ghost{border:2px solid rgba(255,255,255,.25);color:var(--white)}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+
+/* area */
+.map{margin-top:30px;border-radius:6px;overflow:hidden;border:1px solid var(--line);position:relative;background:var(--asphalt-2)}
+.map:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(-45deg,var(--amber) 0 8px,var(--asphalt) 8px 16px);z-index:1}
+.map iframe{display:block;width:100%;height:340px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+.area-cta{display:grid;gap:12px;margin-top:20px}
+
+/* final cta */
+.final{text-align:center;background:radial-gradient(80% 90% at 50% 0%,rgba(255,176,0,.18),transparent 70%),var(--asphalt)}
+.final h2{font-size:clamp(40px,11vw,84px)}
+.final .lead{margin:0 auto}
+.final .bigcall{max-width:640px;margin:30px auto 0;text-align:left}
+
+/* footer */
+footer{background:#0d0e11;padding:44px 0 34px;font-size:14px;color:var(--steel)}
+footer .wrap{display:grid;gap:22px}
+footer .fb{display:flex;align-items:center;gap:10px}
+footer a{color:var(--steel-2);text-decoration:none}
+footer a:hover{color:var(--amber)}
+footer .cols{display:grid;gap:8px}
+footer .socials{display:flex;gap:16px;flex-wrap:wrap}
+footer .cc{padding-top:18px;border-top:1px solid var(--line);font-size:13px}
+
+/* sticky call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr auto;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(13,14,17,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:3px solid transparent;border-image:repeating-linear-gradient(-45deg,var(--amber) 0 8px,var(--asphalt) 8px 16px) 3}
+.bar a{display:flex;align-items:center;justify-content:center;gap:10px;height:54px;border-radius:5px;text-decoration:none;font-family:"Oswald";font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.bar .c{background:var(--amber);color:var(--asphalt);font-size:20px}
+.bar .e{border:2px solid rgba(255,255,255,.22);color:var(--white);font-size:15px;padding:0 16px}
+.bar .c .beacon{background:var(--asphalt)}
+.bar .c .beacon:after{border-color:var(--asphalt)}
+
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+
+/* reveal (content visible without JS) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in,.reveal-all .rv{opacity:1!important;transform:none!important}
+
+@media (max-width:419px){.bigcall .tap{display:none}}
+@media (min-width:760px){
+  .links{display:flex}
+  .navcall .full{display:inline}.navcall .short{display:none}
+  .svc{grid-template-columns:repeat(3,1fr)}
+  .why{grid-template-columns:repeat(3,1fr)}
+  .why .it{grid-template-columns:1fr}
+  .area-cta{grid-template-columns:auto auto;justify-content:start}
+  .hoursbox{grid-template-columns:1fr auto;align-items:center}
+  .hoursbox a.btn{justify-self:end}
+  footer .wrap{grid-template-columns:1.3fr 1fr 1fr;align-items:start}
+  footer .cc{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .hero{padding-top:64px}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:center}
+  .art{margin:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .hero .wrap>div:first-child{padding-bottom:56px}
+  section{padding:104px 0}
+  .map iframe{height:420px}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by Code Craft Media, made for <b>Anything Automotive Towing</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Anything Automotive Towing, home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="5" fill="#ffb000"/><path d="M17 6v9.5a5.5 5.5 0 1 1-5.5 5.5" fill="none" stroke="#16181c" stroke-width="3.2" stroke-linecap="round"/><circle cx="17" cy="6" r="2.4" fill="#16181c"/></svg>
+      <span class="bt">Anything Automotive<small>Towing · Knoxville</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a><a href="#promise">Our Promise</a><a href="#hours">Hours</a><a href="#area">Service Area</a>
+    </nav>
+    <a class="navcall" href="tel:+18656070378" aria-label="Call (865) 607-0378">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span class="short">Call</span><span class="full">(865) 607-0378</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div>
+      <span class="tag"><span class="beacon" aria-hidden="true"></span>Knoxville &amp; surrounding areas</span>
+      <h1>Stuck in<br>Knoxville?<br><span class="out">Call</span> <span class="amb">Paul.</span></h1>
+      <p class="sub">In-town tows, lock outs and jump starts at <b>$80.00</b>, from an owner-operator with <b>more than 15 years</b> of towing experience.</p>
+      <a class="bigcall" href="tel:+18656070378" aria-label="Call Anything Automotive Towing at (865) 607-0378">
+        <span class="lbl"><span class="beacon" aria-hidden="true"></span>For towing, call now</span>
+        <span class="num">(865) 607-0378</span>
+        <span class="tap" aria-hidden="true">Tap to call</span>
+      </a>
+      <div class="alt">
+        <a href="#services">See tow pricing</a>
+        <a href="mailto:anything.automotive@yahoo.com">anything.automotive@yahoo.com</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 600 380" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16181c" stop-opacity="0"/><stop offset="1" stop-color="#0f1013"/></linearGradient>
+          <radialGradient id="glowA" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffb000" stop-opacity=".55"/><stop offset="1" stop-color="#ffb000" stop-opacity="0"/></radialGradient>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6d6" stop-opacity=".45"/><stop offset="1" stop-color="#fff6d6" stop-opacity="0"/></linearGradient>
+        </defs>
+        <!-- skyline hint -->
+        <g fill="#20232a">
+          <rect x="20" y="150" width="34" height="90"/><rect x="58" y="120" width="26" height="120"/><rect x="88" y="168" width="40" height="72"/>
+          <path d="M140 240V110l14-24 14 24v130z"/><rect x="176" y="140" width="30" height="100"/><rect x="420" y="160" width="30" height="80"/>
+          <rect x="455" y="128" width="40" height="112"/><rect x="500" y="175" width="30" height="65"/><rect x="535" y="150" width="46" height="90"/>
+        </g>
+        <circle cx="154" cy="78" r="9" fill="#2a2e36"/>
+        <g fill="#ffb000" opacity=".5"><rect x="64" y="132" width="4" height="5"/><rect x="74" y="150" width="4" height="5"/><rect x="462" y="140" width="4" height="5"/><rect x="480" y="168" width="4" height="5"/><rect x="545" y="164" width="4" height="5"/><rect x="186" y="160" width="4" height="5"/></g>
+        <rect x="0" y="0" width="600" height="380" fill="url(#sky)"/>
+        <!-- road -->
+        <rect x="0" y="292" width="600" height="88" fill="#101114"/>
+        <rect x="0" y="290" width="600" height="3" fill="#2b2f37"/>
+        <line class="dash" x1="0" y1="340" x2="640" y2="340" stroke="#ffb000" stroke-width="5" stroke-dasharray="48 48"/>
+        <rect x="0" y="372" width="600" height="3" fill="#8a93a0" opacity=".35"/>
+        <!-- light glow -->
+        <ellipse cx="300" cy="120" rx="140" ry="70" fill="url(#glowA)" class="lightbar"/>
+        <!-- headlight beam -->
+        <path d="M520 248 L600 222 L600 296 Z" fill="url(#beam)"/>
+        <!-- tow truck -->
+        <g>
+          <!-- bed -->
+          <rect x="120" y="214" width="250" height="34" rx="3" fill="#2b2f37"/>
+          <rect x="120" y="214" width="250" height="10" fill="#ffb000"/>
+          
+          <path d="M120 236h250v12H120z" fill="url(#hzp)"/>
+          <!-- boom -->
+          <path d="M150 214 L118 148 L132 142 L170 214 Z" fill="#8a93a0"/>
+          <rect x="112" y="140" width="26" height="12" rx="3" fill="#b4bbc5"/>
+          <line x1="118" y1="150" x2="78" y2="226" stroke="#b4bbc5" stroke-width="2.5"/>
+          <!-- hook -->
+          <path d="M78 226 v10 a8 8 0 1 1 -8 8" fill="none" stroke="#ffb000" stroke-width="4" stroke-linecap="round"/>
+          <!-- wheel lift -->
+          <rect x="70" y="252" width="56" height="8" rx="2" fill="#8a93a0"/>
+          <!-- cab -->
+          <path d="M370 172 h86 l46 46 h30 a10 10 0 0 1 10 10 v24 H370 Z" fill="#ffb000"/>
+          <path d="M384 184 h66 l36 36 h-102 z" fill="#16181c"/>
+          <path d="M392 190 h52 l26 26 h-78 z" fill="#2f3540"/>
+          <rect x="370" y="236" width="172" height="6" fill="#16181c" opacity=".25"/>
+          <rect x="530" y="232" width="12" height="9" rx="2" fill="#fff6d6"/>
+          <rect x="420" y="226" width="14" height="4" rx="2" fill="#16181c"/>
+          <!-- light bar -->
+          <rect x="384" y="162" width="64" height="10" rx="3" fill="#2b2f37"/>
+          <rect class="lightbar" x="388" y="164" width="26" height="6" rx="2" fill="#ffb000"/>
+          <rect class="lightbar" x="418" y="164" width="26" height="6" rx="2" fill="#ffb000" style="animation-delay:.5s"/>
+          <!-- chassis -->
+          <rect x="110" y="248" width="436" height="16" rx="3" fill="#1d2026"/>
+          <!-- wheels -->
+          <g class="wheel"><circle cx="190" cy="272" r="26" fill="#0b0c0e"/><circle cx="190" cy="272" r="13" fill="#8a93a0"/><path d="M190 259v26M177 272h26" stroke="#16181c" stroke-width="4"/></g>
+          <g class="wheel"><circle cx="262" cy="272" r="26" fill="#0b0c0e"/><circle cx="262" cy="272" r="13" fill="#8a93a0"/><path d="M262 259v26M249 272h26" stroke="#16181c" stroke-width="4"/></g>
+          <g class="wheel"><circle cx="476" cy="272" r="26" fill="#0b0c0e"/><circle cx="476" cy="272" r="13" fill="#8a93a0"/><path d="M476 259v26M463 272h26" stroke="#16181c" stroke-width="4"/></g>
+        </g>
+        <defs>
+          <pattern id="hzp" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="16" fill="#ffb000"/><rect x="8" width="8" height="16" fill="#16181c"/></pattern>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+<div class="hazard" role="presentation"></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Tow pricing</p>
+      <h2>Straight prices.<br><span style="color:var(--amber)">No guessing.</span></h2>
+      <p class="lead">Three services, one number to call. These are the prices Anything Automotive publishes today.</p>
+    </div>
+    <div class="svc">
+      <article class="card rv">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 4v10a6 6 0 1 1-6 6" fill="none" stroke="#ffb000" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="4" r="2.5" fill="#ffb000"/></svg></div>
+          <div class="price"><span class="p">$80.00</span><span class="n">In town</span></div>
+        </div>
+        <h3>In Town Tows</h3>
+        <p>$80.00 in-town tows within 10 miles of their location. Going farther? Call for an estimate.</p>
+        <div class="meta"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#ffb000" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Within 10 miles</div>
+      </article>
+      <article class="card rv">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32"><circle cx="11" cy="16" r="6" fill="none" stroke="#ffb000" stroke-width="3"/><path d="M17 16h12M24 16v5M28 16v4" stroke="#ffb000" stroke-width="3" stroke-linecap="round"/></svg></div>
+          <div class="price"><span class="p">$80.00</span><span class="n">Rates vary</span></div>
+        </div>
+        <h3>Lock Outs</h3>
+        <p>Keys locked in the car? Call and they'll come get you back in.</p>
+        <div class="meta"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#ffb000" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Rates vary by location</div>
+      </article>
+      <article class="card rv">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32"><path d="M18 3 7 18h8l-2 11 12-16h-8z" fill="#ffb000"/></svg></div>
+          <div class="price"><span class="p">$80.00</span><span class="n">Rates vary</span></div>
+        </div>
+        <h3>Jump Starts</h3>
+        <p>Dead battery? Call for a jump start and get back on the road.</p>
+        <div class="meta"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#ffb000" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Rates vary by location</div>
+      </article>
+    </div>
+    <p class="note rv">Prices as listed on Anything Automotive's current site. Call (865) 607-0378 to confirm your rate.</p>
+  </div>
+</section>
+
+<div class="hazard thin" role="presentation"></div>
+
+<section id="promise" class="promise">
+  <div class="roadline" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Why call Paul</p>
+      <h2>Fair prices,<br>tied to the pump.</h2>
+      <p class="lead">When fuel prices went up, towing prices went up too. Anything Automotive started with a different idea: keep towing priced to match what fuel actually costs.</p>
+    </div>
+    <div class="why">
+      <div class="it rv"><span class="k">01</span><div><h3>15+ years towing</h3><p>Owned and operated by Paul Huntress, who has more than 15 years of towing experience.</p></div></div>
+      <div class="it rv"><span class="k">02</span><div><h3>Priced to fuel</h3><p>Their promise: prices always reflect the fuel market and stay competitive.</p></div></div>
+      <div class="it rv"><span class="k">03</span><div><h3>Treated with respect</h3><p>Every customer is treated with respect and dignity, whether it's a tow or a jump.</p></div></div>
+    </div>
+    <blockquote class="quote rv">
+      <p>"When we started Anything Automotive &amp; Towing we had a mission to bring people the most affordable prices."</p>
+      <cite>Our Mission · Anything Automotive &amp; Towing</cite>
+    </blockquote>
+  </div>
+</section>
+
+<div class="hazard thin" role="presentation"></div>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Hours</p>
+      <h2>Need a tow today?</h2>
+      <p class="lead">Hours aren't posted online, so the quickest way to check is to call.</p>
+    </div>
+    <div class="days rv" id="days" aria-label="Days of the week">
+      <div class="day" data-d="1">Mon<i>Call</i></div><div class="day" data-d="2">Tue<i>Call</i></div><div class="day" data-d="3">Wed<i>Call</i></div><div class="day" data-d="4">Thu<i>Call</i></div><div class="day" data-d="5">Fri<i>Call</i></div><div class="day" data-d="6">Sat<i>Call</i></div><div class="day" data-d="0">Sun<i>Call</i></div>
+    </div>
+    <div class="hoursbox rv">
+      <div>
+        <h3 id="todayline">Call to check availability</h3>
+        <p>Call (865) 607-0378 or email anything.automotive@yahoo.com.</p>
+      </div>
+      <a class="btn amber" href="tel:+18656070378">Call (865) 607-0378</a>
+    </div>
+  </div>
+</section>
+
+<section id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Service area</p>
+      <h2>Knoxville &amp;<br>surrounding areas.</h2>
+      <p class="lead">Based in Knoxville, TN. In-town tows cover up to 10 miles from their location. For anything farther, call for an estimate.</p>
+    </div>
+    <div class="map rv">
+      <iframe title="Map of Knoxville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Knoxville%2C%20TN&amp;output=embed"></iframe>
+    </div>
+    <div class="area-cta rv">
+      <a class="btn amber" href="tel:+18656070378">Tap to call</a>
+      <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Knoxville%2C%20TN" target="_blank" rel="noopener">Directions to Knoxville</a>
+    </div>
+  </div>
+</section>
+
+<div class="hazard" role="presentation"></div>
+
+<section class="final">
+  <div class="wrap rv">
+    <p class="eyebrow" style="justify-content:center">Broken down?</p>
+    <h2>One call.<br><span style="color:var(--amber)">Back on the road.</span></h2>
+    <p class="lead">In-town tows, lock outs and jump starts across Knoxville and the surrounding areas.</p>
+    <a class="bigcall" href="tel:+18656070378" aria-label="Call Anything Automotive Towing at (865) 607-0378">
+      <span class="lbl"><span class="beacon" aria-hidden="true"></span>Call now</span>
+      <span class="num">(865) 607-0378</span>
+      <span class="tap" aria-hidden="true">Tap to call</span>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fb">
+        <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="5" fill="#ffb000"/><path d="M17 6v9.5a5.5 5.5 0 1 1-5.5 5.5" fill="none" stroke="#16181c" stroke-width="3.2" stroke-linecap="round"/><circle cx="17" cy="6" r="2.4" fill="#16181c"/></svg>
+        <strong style="color:#fff;font-family:Oswald;text-transform:uppercase;font-size:18px;letter-spacing:.02em">Anything Automotive Towing</strong>
+      </div>
+      <p style="margin-top:10px">Owned and operated by Paul Huntress. Serving Knoxville and surrounding areas.</p>
+    </div>
+    <div class="cols">
+      <a href="tel:+18656070378">(865) 607-0378</a>
+      <a href="mailto:anything.automotive@yahoo.com">anything.automotive@yahoo.com</a>
+      <span>Knoxville, TN</span>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/anything.automtive/" target="_blank" rel="noopener">Facebook</a>
+      <a href="http://www.yelp.com/biz/anything-automotive-and-towing-knoxville" target="_blank" rel="noopener">Yelp</a>
+    </div>
+    <p class="cc">© <span id="yr">2026</span> Anything Automotive Towing · Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="c" href="tel:+18656070378"><span class="beacon" aria-hidden="true"></span>Call (865) 607-0378</a>
+  <a class="e" href="mailto:anything.automotive@yahoo.com">Email</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  try{
+    var t=new Date().getDay();
+    var el=document.querySelector('.day[data-d="'+t+'"]');
+    if(el){el.classList.add('today');el.querySelector('i').textContent='Today';el.setAttribute('aria-current','date');}
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var tl=document.getElementById('todayline'); if(tl) tl.textContent=names[t]+': call to check availability';
+    document.getElementById('yr').textContent=new Date().getFullYear();
+  }catch(e){}
+  if('IntersectionObserver' in window){
+    d.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(n){io.observe(n);});
+  }
+  setTimeout(function(){d.classList.add('reveal-all');},1500);
+})();
+</script>
+</body>
+</html>

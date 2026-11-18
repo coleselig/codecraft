@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Reliable Lawn Services — Cleveland, TN</title>
+<meta name="description" content="Lawn mowing, hedge trimming and mulch installation in Cleveland, Tennessee. Call or text 423-464-9333 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1f5130;--green-d:#163b23;--green-dd:#0f2a19;--lime:#9bd14f;--lime-d:#7fb534;
+  --cream:#f6f3e8;--cream-d:#ebe5d1;--soil:#5a3d2b;--ink:#1a2a1f;--muted:#52604f;
+  --r:22px;--bar:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Rubik,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1.02;letter-spacing:-.02em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.concept{background:var(--soil);color:#f3e6d8;font-size:10px;letter-spacing:-.015em;text-align:center;padding:7px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:600}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:40;background:rgba(31,81,48,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--cream)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Fraunces,serif;font-weight:800;font-size:19px;letter-spacing:-.01em}
+.brand svg{flex:none}
+.brand small{display:block;font-family:Rubik;font-weight:500;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-top:2px}
+.links{display:none;gap:28px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;opacity:.85;transition:opacity .2s,color .2s}
+.links a:hover{opacity:1;color:var(--lime)}
+.navcall{display:inline-flex;align-items:center;gap:8px;background:var(--lime);color:var(--green-dd);font-weight:700;text-decoration:none;padding:10px 16px;border-radius:999px;font-size:14.5px;transition:transform .2s,background .2s}
+.navcall:hover{background:#b0e066;transform:translateY(-1px)}
+@media(min-width:900px){.links{display:flex}.concept{font-size:12px}}
+@media(max-width:899px){.navcall{display:none}}
+
+/* HERO */
+.hero{position:relative;background:var(--green);color:var(--cream);overflow:hidden;isolation:isolate}
+.stripes{position:absolute;inset:0;z-index:-2;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.055) 0 46px,rgba(0,0,0,.07) 46px 92px);
+}
+.stripes::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 85% 0%,rgba(155,209,79,.28),transparent 60%),linear-gradient(180deg,transparent 40%,rgba(15,42,25,.55))}
+.sun{position:absolute;z-index:-1;right:-120px;top:-110px;width:300px;height:300px;opacity:.85}
+.sun .rays{transform-origin:165px 165px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .wrap{padding-top:48px;padding-bottom:150px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);background:rgba(15,42,25,.45);border:1px solid rgba(155,209,79,.35);padding:7px 13px;border-radius:999px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(155,209,79,.25)}
+.hero h1{font-size:clamp(46px,12.5vw,104px);margin:20px 0 18px;font-weight:900;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--lime);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;bottom:-.12em;width:100%;height:.28em}
+.hero p.sub{font-size:18px;max-width:34ch;color:#dfe8d6}
+.hero p.sub b{color:#fff;font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16.5px;text-decoration:none;padding:16px 24px;border-radius:16px;transition:transform .2s,box-shadow .2s,background .2s;min-height:56px}
+.btn-lime{background:var(--lime);color:var(--green-dd);box-shadow:0 10px 0 -2px var(--lime-d),0 18px 30px rgba(0,0,0,.25)}
+.btn-lime:hover{transform:translateY(-2px)}
+.btn-lime:active{transform:translateY(4px);box-shadow:0 4px 0 -2px var(--lime-d)}
+.btn-ghost{color:var(--cream);border:2px solid rgba(246,243,232,.45)}
+.btn-ghost:hover{background:rgba(246,243,232,.1);border-color:var(--cream)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.chip{font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:999px;background:rgba(246,243,232,.1);border:1px solid rgba(246,243,232,.18)}
+.mower{position:absolute;bottom:58px;left:-140px;width:120px;animation:mow 16s linear infinite;z-index:1}
+@keyframes mow{to{transform:translateX(calc(100vw + 300px))}}
+.blades{position:absolute;left:0;right:0;bottom:-1px;height:56px;z-index:2;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60' preserveAspectRatio='none'><path fill='%23f6f3e8' d='M0 60V34L6 6L12 30L19 2L26 28L33 10L39 30L47 0L54 28L61 8L67 30L75 4L82 28L89 12L95 30L103 2L110 28L116 10L120 34V60z'/></svg>") repeat-x left bottom/120px 56px}
+@media(min-width:900px){
+  .hero .wrap{padding-top:96px;padding-bottom:170px}
+  .sun{width:520px;height:520px;right:4%;top:40px}
+  .hero p.sub{font-size:21px}
+  .blades{height:80px;background-size:160px 80px}
+  .mower{bottom:84px}
+}
+@media(prefers-reduced-motion:reduce){.sun .rays,.mower{animation:none}.mower{display:none}}
+
+section{position:relative}
+.sec{padding:72px 0}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--soil);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:3px;border-radius:3px;background:var(--lime-d)}
+h2{font-size:clamp(36px,8.5vw,64px);margin:14px 0 14px;color:var(--green)}
+.lead{color:var(--muted);font-size:17px;max-width:52ch}
+
+/* SERVICES */
+.grid{display:grid;gap:18px;margin-top:36px}
+@media(min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:#fff;border-radius:var(--r);padding:26px 24px 24px;border:1px solid var(--cream-d);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -18px rgba(31,81,48,.35)}
+.card .ico{width:66px;height:66px;border-radius:18px;background:var(--green);display:grid;place-items:center;margin-bottom:20px;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 8px,transparent 8px 16px)}
+.card h3{font-size:28px;color:var(--green);margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px dashed var(--cream-d);font-size:14px}
+.card .meta span{color:var(--soil);font-weight:600}
+.card .meta a{font-weight:700;color:var(--green);text-decoration:none}
+.card .meta a:hover{color:var(--lime-d)}
+.card::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:rgba(155,209,79,.14)}
+.note{margin-top:22px;font-size:14.5px;color:var(--muted)}
+.note b{color:var(--soil)}
+
+/* WHY */
+.why{background:var(--green-d);color:var(--cream);overflow:hidden}
+.why::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 60px,transparent 60px 120px);pointer-events:none}
+.why h2{color:var(--cream)}
+.why .kicker{color:var(--lime)}
+.why .kicker::before{background:var(--lime)}
+.promise{font-family:Fraunces,serif;font-weight:800;font-size:clamp(26px,6.4vw,44px);line-height:1.12;margin:18px 0 34px;max-width:22ch}
+.promise span{color:var(--lime)}
+.pillars{display:grid;gap:14px}
+@media(min-width:820px){.pillars{grid-template-columns:repeat(4,1fr)}}
+.pill{background:rgba(246,243,232,.06);border:1px solid rgba(246,243,232,.14);border-radius:18px;padding:20px;transition:background .25s,border-color .25s}
+.pill:hover{background:rgba(155,209,79,.1);border-color:rgba(155,209,79,.45)}
+.pill b{display:block;font-family:Fraunces,serif;font-size:21px;margin:10px 0 4px}
+.pill p{font-size:14.5px;color:#cbd7c4}
+.pill .n{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--lime)}
+
+/* HOURS + MAP */
+.visit{display:grid;gap:22px;margin-top:34px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.15fr}}
+.panel{background:#fff;border:1px solid var(--cream-d);border-radius:var(--r);padding:24px}
+.week{list-style:none;display:grid;gap:6px;margin:16px 0 18px}
+.week li{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:12px;font-size:15.5px;background:var(--cream)}
+.week li span:last-child{color:var(--muted);font-size:14px}
+.week li.today{background:var(--green);color:var(--cream);font-weight:600}
+.week li.today span:last-child{color:var(--lime)}
+.week li.today span:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--lime);color:var(--green-dd);padding:3px 7px;border-radius:999px;vertical-align:2px}
+.small{font-size:13.5px;color:var(--muted)}
+.contact-list{list-style:none;display:grid;gap:10px;margin-top:6px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:14px;border-radius:14px;border:1px solid var(--cream-d);font-weight:600;transition:border-color .2s,background .2s;word-break:break-word}
+.contact-list a:hover{border-color:var(--lime-d);background:#fbfdf6}
+.contact-list svg{flex:none}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--cream-d);min-height:340px;background:var(--cream-d);display:flex;flex-direction:column}
+.map iframe{border:0;width:100%;flex:1;min-height:300px;display:block}
+.map .bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;background:#fff;font-size:14.5px}
+.map .bar a{font-weight:700;color:var(--green);text-decoration:none;white-space:nowrap}
+
+/* FINAL CTA */
+.final{background:var(--lime);color:var(--green-dd);overflow:hidden;text-align:center}
+.final .wrap{padding-top:70px;padding-bottom:70px;position:relative}
+.final h2{color:var(--green-dd);max-width:14ch;margin:0 auto 14px}
+.final p{max-width:40ch;margin:0 auto;font-size:17px}
+.final .ctas{justify-content:center}
+.final .btn-dark{background:var(--green-dd);color:var(--cream)}
+.final .btn-dark:hover{background:var(--green);transform:translateY(-2px)}
+.final .btn-line{border:2px solid var(--green-dd);color:var(--green-dd)}
+.final .btn-line:hover{background:rgba(15,42,25,.08)}
+.final .stripes2{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 40px,transparent 40px 80px);pointer-events:none}
+
+footer{background:var(--green-dd);color:#b9c8b3;font-size:14px;padding:34px 0 30px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
+footer b{color:var(--cream);font-family:Fraunces,serif;font-size:18px}
+footer a{color:var(--lime);text-decoration:none}
+
+/* MOBILE BAR */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,42,25,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(155,209,79,.3)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font-weight:700;text-decoration:none;font-size:15.5px}
+.mbar .c{background:var(--lime);color:var(--green-dd)}
+.mbar .q{border:1.5px solid rgba(246,243,232,.5);color:var(--cream)}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--lime-d);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Reliable Lawn Services. Not live.</div>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Reliable Lawn Services home">
+      <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#9bd14f"/><path d="M8 30c2-7 3-12 3-17 2 5 3 11 3 17M15 30c1-6 3-11 5-15 0 5 0 10 1 15M22 30c1-5 3-9 7-13-2 4-2 9-1 13" fill="none" stroke="#1f5130" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Reliable Lawn<small>Cleveland, TN</small></span>
+    </a>
+    <div class="links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#visit">Hours &amp; area</a><a href="#quote">Free quote</a></div>
+    <a class="navcall" href="tel:+14234649333"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>423-464-9333</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stripes"></div>
+  <svg class="sun" viewBox="0 0 330 330" aria-hidden="true">
+    <g class="rays" stroke="#9bd14f" stroke-width="5" stroke-linecap="round" opacity=".55">
+      <line x1="165" y1="10" x2="165" y2="40"/><line x1="165" y1="290" x2="165" y2="320"/><line x1="10" y1="165" x2="40" y2="165"/><line x1="290" y1="165" x2="320" y2="165"/>
+      <line x1="55" y1="55" x2="76" y2="76"/><line x1="254" y1="254" x2="275" y2="275"/><line x1="55" y1="275" x2="76" y2="254"/><line x1="254" y1="76" x2="275" y2="55"/>
+    </g>
+    <circle cx="165" cy="165" r="92" fill="none" stroke="#9bd14f" stroke-width="2" stroke-dasharray="4 10" opacity=".6"/>
+    <circle cx="165" cy="165" r="70" fill="#9bd14f" opacity=".9"/>
+    <circle cx="165" cy="165" r="70" fill="url(#sg)"/>
+    <defs><radialGradient id="sg" cx=".35" cy=".3"><stop offset="0" stop-color="#e9f8c9"/><stop offset="1" stop-color="#9bd14f" stop-opacity="0"/></radialGradient></defs>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow"><i></i>Cleveland, Tennessee</span>
+    <h1>Cleveland lawns, cut <em>clean.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14c40-9 110-12 194-6" fill="none" stroke="#9bd14f" stroke-width="5" stroke-linecap="round"/></svg></em></h1>
+    <p class="sub">Mowing, hedge trimming and mulch from Reliable Lawn Services. <b>Quality work, reliable service, affordable pricing</b>, with a free quote built around your property.</p>
+    <div class="ctas">
+      <a class="btn btn-lime" href="tel:+14234649333"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call 423-464-9333</a>
+      <a class="btn btn-ghost" href="#quote">Get a free quote</a>
+    </div>
+    <div class="chips"><span class="chip">Lawn Mowing</span><span class="chip">Hedge Trimming</span><span class="chip">Mulch Installation</span></div>
+  </div>
+  <svg class="mower" viewBox="0 0 120 70" aria-hidden="true">
+    <path d="M18 24 4 6" stroke="#f6f3e8" stroke-width="4" stroke-linecap="round"/><path d="M0 6h10" stroke="#f6f3e8" stroke-width="4" stroke-linecap="round"/>
+    <rect x="18" y="22" width="80" height="30" rx="12" fill="#9bd14f"/><rect x="34" y="14" width="40" height="14" rx="6" fill="#5a3d2b"/>
+    <rect x="18" y="38" width="80" height="6" fill="#7fb534"/>
+    <circle cx="32" cy="56" r="11" fill="#0f2a19"/><circle cx="32" cy="56" r="4" fill="#f6f3e8"/><circle cx="86" cy="56" r="11" fill="#0f2a19"/><circle cx="86" cy="56" r="4" fill="#f6f3e8"/>
+  </svg>
+  <div class="blades" aria-hidden="true"></div>
+</header>
+
+<main>
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="rv"><span class="kicker">Services</span>
+    <h2>Three jobs, done right.</h2>
+    <p class="lead">Every yard is different, so every price is quoted for your property. Call, text or email and Reliable Lawn Services will put together a custom quote.</p></div>
+    <div class="grid">
+      <article class="card rv">
+        <div class="ico"><svg width="38" height="38" viewBox="0 0 40 40" fill="none" stroke="#9bd14f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20 6 8M4 8h5"/><rect x="11" y="18" width="24" height="10" rx="4"/><circle cx="15" cy="31" r="3.5"/><circle cx="31" cy="31" r="3.5"/></svg></div>
+        <h3>Lawn Mowing</h3>
+        <p>Clean, even cuts that keep your yard looking sharp from the curb to the back fence.</p>
+        <div class="meta"><span>Custom quote</span><a href="#quote">Request &rarr;</a></div>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg width="38" height="38" viewBox="0 0 40 40" fill="none" stroke="#9bd14f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30c0-8 3-14 14-14s14 6 14 14z"/><path d="M14 16c0-4 2-8 6-8s6 4 6 8"/><path d="M20 30v4"/></svg></div>
+        <h3>Hedge Trimming</h3>
+        <p>Shrubs and hedges shaped back into tidy lines so the whole property looks cared for.</p>
+        <div class="meta"><span>Custom quote</span><a href="#quote">Request &rarr;</a></div>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg width="38" height="38" viewBox="0 0 40 40" fill="none" stroke="#9bd14f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 30h30"/><path d="M8 30c2-5 6-8 12-8s10 3 12 8"/><path d="M20 22V10m0 0c-3 0-6-2-6-5 3 0 6 2 6 5zm0 0c3 0 6-2 6-5-3 0-6 2-6 5z"/></svg></div>
+        <h3>Mulch Installation</h3>
+        <p>Fresh mulch laid in your beds for a finished look around trees, shrubs and borders.</p>
+        <div class="meta"><span>Custom quote</span><a href="#quote">Request &rarr;</a></div>
+      </article>
+    </div>
+    <p class="note rv">Pricing: <b>“Price Varies”</b>. Cost depends on individual factors at each property, so quotes are free and made to fit.</p>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="rv"><span class="kicker">Why Reliable</span>
+    <p class="promise">Quality work. <span>Reliable service.</span> Affordable pricing.</p></div>
+    <div class="pillars">
+      <div class="pill rv"><span class="n">01</span><b>Free quotes</b><p>Call or message for a free quote. No cost to find out what your yard needs.</p></div>
+      <div class="pill rv"><span class="n">02</span><b>Priced per property</b><p>No one-size price list. Your quote reflects your lawn, beds and hedges.</p></div>
+      <div class="pill rv"><span class="n">03</span><b>Easy to reach</b><p>Call, text or email, whichever is easiest for you.</p></div>
+      <div class="pill rv"><span class="n">04</span><b>Local to Cleveland</b><p>Lawn mowing and lawn care right here in Cleveland, Tennessee.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="rv"><span class="kicker">Hours &amp; area</span>
+    <h2>Book your spot on the schedule.</h2>
+    <p class="lead">Serving Cleveland, TN. Hours aren't posted online, so the quickest way to get on the schedule is a call or text.</p></div>
+    <div class="visit">
+      <div class="panel rv">
+        <h3 style="font-size:24px;color:var(--green)">This week</h3>
+        <ul class="week" id="week">
+          <li data-d="1"><span>Monday</span><span>Call or text</span></li>
+          <li data-d="2"><span>Tuesday</span><span>Call or text</span></li>
+          <li data-d="3"><span>Wednesday</span><span>Call or text</span></li>
+          <li data-d="4"><span>Thursday</span><span>Call or text</span></li>
+          <li data-d="5"><span>Friday</span><span>Call or text</span></li>
+          <li data-d="6"><span>Saturday</span><span>Call or text</span></li>
+          <li data-d="0"><span>Sunday</span><span>Call or text</span></li>
+        </ul>
+        <ul class="contact-list">
+          <li><a href="tel:+14234649333"><svg width="22" height="22" viewBox="0 0 24 24" fill="#1f5130" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>423-464-9333</a></li>
+          <li><a href="sms:+14234649333"><svg width="22" height="22" viewBox="0 0 24 24" fill="#1f5130" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z"/></svg>Text 423-464-9333</a></li>
+          <li><a href="mailto:reliablelawnservicesTN@gmail.com?subject=Free%20quote%20request"><svg width="22" height="22" viewBox="0 0 24 24" fill="#1f5130" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7 8-5H4z"/></svg>reliablelawnservicesTN@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="map rv">
+        <iframe title="Map of Cleveland, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cleveland%2C%20TN&amp;output=embed"></iframe>
+        <div class="bar"><span>Service area: <b>Cleveland, TN</b></span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cleveland%2C%20TN" target="_blank" rel="noopener">Directions &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="quote">
+  <div class="stripes2"></div>
+  <div class="wrap rv">
+    <span class="kicker" style="justify-content:center;color:var(--green-dd)">Free quote</span>
+    <h2>Let's get your yard looking sharp.</h2>
+    <p>Tell Reliable Lawn Services what you need (mowing, hedges or mulch) and get a free, custom quote.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="tel:+14234649333">Call 423-464-9333</a>
+      <a class="btn btn-line" href="mailto:reliablelawnservicesTN@gmail.com?subject=Free%20quote%20request&amp;body=Hi!%20I'd%20like%20a%20free%20quote%20for%3A%20">Email for a quote</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Reliable Lawn Services</b><br>Cleveland, TN · <a href="tel:+14234649333">423-464-9333</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="c" href="tel:+14234649333"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call now</a>
+  <a class="q" href="#quote">Free quote</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#week li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Sprays &amp; Makeup by Briley — Knoxville</title>
+<meta name="description" content="Concept site: luxury mobile and in-studio spray tans and bridal + formal makeup in Knoxville, TN. By appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#f4d6d2; --blush-2:#f9e6e2; --ink:#141114; --ink-2:#3a3236; --gold:#c9a46a; --gold-d:#8a6a35; --white:#fffaf6;
+  --muted:#6b5e62; --line:rgba(201,164,106,.55);
+  --serif:"Playfair Display", Georgia, serif; --sans:"Manrope", system-ui, -apple-system, sans-serif;
+  --barH:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--gold-d);outline-offset:3px;border-radius:4px}
+
+/* concept banner */
+.concept{background:var(--ink);color:#e9dccb;font-size:11.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--gold);font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(255,250,246,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,164,106,.28)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.brand .m{font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:-.01em}
+.brand .m i{color:var(--gold-d)}
+.brand .s{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.links{display:none;gap:28px;font-size:14px;font-weight:500}
+.links a{text-decoration:none;position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.links a:hover::after{transform:scaleX(1)}
+.nav .book-sm{font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--ink);border-radius:999px;padding:8px 16px;transition:.25s}
+.nav .book-sm:hover{background:var(--ink);color:var(--white)}
+@media(min-width:900px){.links{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--white)}
+.mist{position:absolute;inset:-20% -30% auto -30%;height:140%;pointer-events:none;
+  background:
+   radial-gradient(40% 32% at 78% 26%, rgba(244,214,210,.95), transparent 70%),
+   radial-gradient(34% 28% at 14% 70%, rgba(244,214,210,.8), transparent 70%),
+   radial-gradient(26% 22% at 60% 78%, rgba(201,164,106,.22), transparent 70%);
+  filter:blur(6px);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(-3%,2%,0) scale(1.04)}}
+.grain{position:absolute;inset:0;opacity:.35;pointer-events:none;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .42 0 0 0 0 .4 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;gap:34px;padding-top:44px;padding-bottom:56px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-d)}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,12.2vw,92px);line-height:.98;letter-spacing:-.025em;margin:18px 0 18px}
+h1 em{font-style:italic;color:var(--gold-d);font-weight:400}
+h1 .stroke{position:relative;display:inline-block;isolation:isolate}
+h1 .stroke svg{position:absolute;left:-4%;right:-4%;width:108%;bottom:-.08em;height:.42em;z-index:-1}
+.sub{font-size:17px;color:var(--ink-2);max-width:31ch}
+.sub strong{font-weight:600;color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s ease, box-shadow .25s ease, background .25s}
+.btn-dark{background:var(--ink);color:var(--white);box-shadow:0 10px 24px -12px rgba(20,17,20,.6)}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(20,17,20,.7)}
+.btn-line{border:1px solid var(--ink);color:var(--ink);background:rgba(255,250,246,.6)}
+.btn-line:hover{background:var(--blush)}
+.btn:active{transform:scale(.98)}
+.hero .ctas{flex-wrap:nowrap}.hero .ctas .btn{padding:0 20px}.hero .ctas .btn-line .full{display:none}
+@media(min-width:420px){.hero .ctas .btn-line .full{display:inline}.hero .ctas .btn-line .short{display:none}}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:13px;color:var(--muted)}
+.meta span{display:inline-flex;align-items:center;gap:7px}
+.meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+/* hero art: framed card */
+.art{position:relative;max-width:300px;width:86%;justify-self:center;margin-top:8px}
+@media(min-width:900px){.art{max-width:420px;width:100%}}
+.frame{position:relative;aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden;
+  background:linear-gradient(170deg,#f9e6e2 0%,#f4d6d2 45%,#e9bfae 100%)}
+.frame::after{content:"";position:absolute;inset:12px;border:1px solid rgba(138,106,53,.55);border-radius:210px 210px 10px 10px;pointer-events:none}
+.frame svg{position:absolute;inset:0;width:100%;height:100%}
+.outer{position:absolute;inset:-12px;border:1px solid var(--line);border-radius:232px 232px 26px 26px;pointer-events:none}
+.tag{position:absolute;left:-6px;bottom:30px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 18px 40px -22px rgba(20,17,20,.35)}
+.tag .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.tag .v{font-family:var(--serif);font-size:22px;line-height:1.1}
+.tag .v i{color:var(--gold-d)}
+.tag2{bottom:auto;top:34px;left:-10px}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:80px;padding-bottom:110px}
+  .sub{font-size:19px}
+  .tag{left:-40px}.tag2{left:-48px;top:60px}
+}
+
+/* ticker */
+.ribbon{background:var(--ink);color:var(--blush);overflow:hidden;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.ribbon .t{display:flex;gap:40px;white-space:nowrap;padding:14px 0;animation:tick 28s linear infinite;width:max-content}
+.ribbon span{font-family:var(--serif);font-style:italic;font-size:19px}
+.ribbon b{color:var(--gold);font-weight:400}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:76px 0;position:relative}
+.head{max-width:640px;margin-bottom:36px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8.6vw,58px);line-height:1.04;letter-spacing:-.02em;margin-top:14px}
+h2 em{font-style:italic;color:var(--gold-d)}
+.lead{color:var(--ink-2);margin-top:14px;font-size:16.5px}
+
+/* menu */
+#menu{background:linear-gradient(180deg,var(--white),var(--blush-2) 60%,var(--white))}
+.loc-tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.loc-tabs button{font:600 13px var(--sans);letter-spacing:.04em;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer;transition:.25s}
+.loc-tabs button[aria-selected="true"]{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.loc-tabs button:hover{border-color:var(--ink)}
+.locnote{font-size:13.5px;color:var(--muted);margin:-6px 0 18px}
+.cards{display:grid;gap:18px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{position:relative;background:var(--white);border-radius:18px;padding:30px 24px 26px;transition:transform .3s ease, box-shadow .3s ease;
+  box-shadow:0 1px 0 rgba(201,164,106,.4), 0 24px 50px -36px rgba(20,17,20,.4)}
+.card::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:12px;pointer-events:none}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(201,164,106,.4), 0 32px 60px -34px rgba(20,17,20,.5)}
+.card .row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.1}
+.card h3 i{color:var(--gold-d)}
+.price{font-family:var(--serif);font-size:34px;line-height:1;white-space:nowrap}
+.price small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right;margin-top:6px}
+.sq{font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:4px}
+.card ul{list-style:none;margin-top:18px;display:grid;gap:9px;font-size:14.5px;color:var(--ink-2)}
+.card li{padding-left:20px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--gold)}
+.card .go{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:600;font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+.card .go:hover{color:var(--gold-d)}
+.panel[hidden]{display:none}
+.makeup{margin-top:18px;background:var(--ink);color:var(--white);border-radius:18px;padding:34px 24px;position:relative;overflow:hidden}
+.makeup::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,164,106,.55);border-radius:12px;pointer-events:none}
+.makeup .deco{display:none;position:absolute;right:40px;top:50%;transform:translateY(-50%);width:340px;pointer-events:none}
+@media(min-width:900px){.makeup .deco{display:block}.makeup p{max-width:44ch}}
+.makeup .glow{position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(244,214,210,.35),transparent 70%)}
+.makeup h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.05;position:relative}
+.makeup h3 em{color:var(--gold)}
+.makeup p{color:#e7dbd6;margin-top:10px;max-width:46ch;position:relative}
+.makeup .ctas{position:relative}
+.makeup .btn-gold{background:var(--gold);color:var(--ink)}
+.makeup .btn-gold:hover{background:#d8b77f;transform:translateY(-2px)}
+.makeup .btn-ghost{border:1px solid rgba(255,250,246,.5);color:var(--white)}
+.makeup .btn-ghost:hover{background:rgba(255,250,246,.08)}
+@media(min-width:760px){.makeup{padding:44px 44px}.makeup h3{font-size:42px}}
+
+/* rinse guide */
+.guide{margin-top:44px;background:var(--white);border-radius:18px;padding:28px 22px;border:1px solid var(--line)}
+.guide h3{font-family:var(--serif);font-weight:400;font-size:26px}
+.guide h3 em{color:var(--gold-d)}
+.guide p{font-size:14px;color:var(--muted);margin-top:6px}
+.scale{margin-top:26px;position:relative}
+.bar{height:14px;border-radius:999px;background:linear-gradient(90deg,#f6e2d4,#e2b48f 40%,#b97b4f 72%,#7c4a2c)}
+.ticks{display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px;font-size:13px}
+.ticks div{border-left:1px solid var(--gold);padding-left:10px}
+.ticks b{display:block;font-family:var(--serif);font-weight:500;font-size:19px}
+.ticks span{color:var(--muted)}
+.verb{font-size:12px;color:var(--muted);margin-top:16px;font-style:italic}
+
+/* why */
+.why{display:grid;gap:14px}
+@media(min-width:760px){.why{grid-template-columns:repeat(3,1fr)}}
+.why .w{padding:26px 22px;border-top:1px solid var(--gold);position:relative}
+.why .n{font-family:var(--serif);font-style:italic;color:var(--gold-d);font-size:15px}
+.why h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-top:6px;line-height:1.15}
+.why p{color:var(--ink-2);font-size:15px;margin-top:8px}
+.why svg{width:40px;height:40px;margin-bottom:12px}
+
+/* hours + visit */
+#visit{background:var(--blush)}
+#visit::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 90% 0%,rgba(255,250,246,.7),transparent 70%);pointer-events:none}
+.visit{display:grid;gap:22px;position:relative}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.1fr;align-items:start}}
+.hours{background:var(--white);border-radius:18px;padding:26px 22px;position:relative}
+.hours::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:12px;pointer-events:none}
+.hours h3,.contact h3{font-family:var(--serif);font-weight:400;font-size:28px}
+.hours table{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
+.hours td{padding:11px 10px;border-bottom:1px solid rgba(201,164,106,.25)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr:last-child td{border-bottom:0}
+.hours tr.today td{background:var(--ink);color:var(--white)}
+.hours tr.today td:first-child{border-radius:10px 0 0 10px;font-weight:600}
+.hours tr.today td:last-child{border-radius:0 10px 10px 0}
+.hours tr.today td:first-child::after{content:"Today";margin-left:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.hours .note{font-size:12.5px;color:var(--muted);margin-top:12px}
+.contact{display:grid;gap:14px;align-content:start}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--blush-2);aspect-ratio:16/11;position:relative}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;border:0;display:block;filter:saturate(.75) sepia(.12)}
+.map .fb{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:
+  repeating-linear-gradient(35deg,transparent 0 38px,rgba(201,164,106,.18) 38px 39px),repeating-linear-gradient(-55deg,transparent 0 54px,rgba(201,164,106,.14) 54px 55px),var(--blush-2)}
+.map .fb b{display:block;font-family:var(--serif);font-weight:400;font-size:26px}
+.map .fb span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.map .fb svg{width:34px;height:34px;margin:0 auto 8px}
+.clist{display:grid;gap:10px}
+.cl{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:14px;padding:14px 16px;text-decoration:none;transition:transform .2s, box-shadow .2s;min-height:60px}
+.cl:hover{transform:translateX(3px);box-shadow:0 10px 24px -18px rgba(20,17,20,.5)}
+.cl .ic{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blush-2);border:1px solid var(--line)}
+.cl .ic svg{width:17px;height:17px}
+.cl .tx{min-width:0}
+.cl .tx small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.cl .tx b{font-weight:600;font-size:15px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* closing */
+.closing{text-align:center;padding:90px 0;background:var(--ink);color:var(--white);overflow:hidden}
+.closing .mist2{position:absolute;inset:0;background:radial-gradient(40% 60% at 50% 120%,rgba(244,214,210,.32),transparent 70%),radial-gradient(30% 40% at 15% 0%,rgba(201,164,106,.18),transparent 70%)}
+.closing h2{color:var(--white);position:relative;max-width:16ch;margin:14px auto 0}
+.closing h2 em{color:var(--gold)}
+.closing p{position:relative;color:#d9cdc8;margin:14px auto 0;max-width:40ch}
+.closing .ctas{justify-content:center;position:relative}
+.closing .btn-gold{background:var(--gold);color:var(--ink)}
+.closing .btn-gold:hover{background:#d8b77f;transform:translateY(-2px)}
+.closing .btn-ghost{border:1px solid rgba(255,250,246,.5);color:var(--white)}
+.closing .eyebrow{color:var(--gold)}
+
+footer{background:var(--ink);color:#a99ba0;font-size:13px;border-top:1px solid rgba(201,164,106,.3)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding-top:26px;padding-bottom:calc(26px + var(--barH) + env(safe-area-inset-bottom))}
+@media(min-width:900px){footer .wrap{padding-bottom:26px}}
+footer a{color:#e9dccb}
+
+/* sticky bar */
+.bar-m{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,250,246,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.bar-m a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
+.bar-m .c{border:1px solid var(--ink);color:var(--ink)}
+.bar-m .b{background:var(--ink);color:var(--white)}
+.bar-m svg{width:16px;height:16px}
+@media(min-width:900px){.bar-m{display:none}}
+
+/* reveal */
+.rv{transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by <b>Code Craft Media</b>, made for Sprays &amp; Makeup by Briley. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sprays &amp; Makeup by Briley, home"><span class="m">Sprays <i>&amp;</i> Makeup</span><span class="s">by Briley</span></a>
+    <nav class="links" aria-label="Main"><a href="#menu">Spray tans</a><a href="#makeup">Makeup</a><a href="#why">Why Briley</a><a href="#visit">Hours &amp; contact</a></nav>
+    <a class="book-sm" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="mist" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Knoxville, TN · By appointment</span>
+      <h1 class="rv">Your glow, <em>brought</em> <span class="stroke">to&nbsp;you.<svg viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path d="M4 26 C 60 10, 120 34, 180 18 S 270 14, 296 22" fill="none" stroke="#f4d6d2" stroke-width="20" stroke-linecap="round"/><path d="M10 24 C 70 14, 130 30, 190 19 S 268 16, 292 21" fill="none" stroke="#c9a46a" stroke-width="1.2" stroke-linecap="round" opacity=".8"/></svg></span></h1>
+      <p class="sub rv">Luxury <strong>mobile &amp; in-studio spray tans</strong> plus <strong>bridal + formal makeup</strong> by Briley in Knoxville — by appointment.</p>
+      <div class="ctas rv">
+        <a class="btn btn-dark" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book your tan
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="tel:+18653992473"><span class="short">Call Briley</span><span class="full">Call (865) 399-2473</span></a>
+      </div>
+      <div class="meta rv"><span>Tans from $30</span><span>Rapid &amp; Classic formulas</span><span>Evenings &amp; weekends</span></div>
+    </div>
+
+    <div class="art rv" aria-hidden="true">
+      <div class="outer"></div>
+      <div class="frame">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="sp" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#c9a46a" stop-opacity=".55"/><stop offset=".6" stop-color="#d9a98e" stop-opacity=".25"/><stop offset="1" stop-color="#f4d6d2" stop-opacity="0"/></radialGradient>
+            <linearGradient id="bt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141114"/><stop offset="1" stop-color="#3a3236"/></linearGradient>
+            <linearGradient id="fr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a6a35"/><stop offset=".5" stop-color="#e5c891"/><stop offset="1" stop-color="#8a6a35"/></linearGradient>
+            <filter id="bl"><feGaussianBlur stdDeviation="6"/></filter>
+          </defs>
+          <!-- airbrush mist cloud -->
+          <g filter="url(#bl)">
+            <ellipse cx="205" cy="230" rx="150" ry="120" fill="url(#sp)">
+              <animate attributeName="rx" values="140;160;140" dur="6s" repeatCount="indefinite"/>
+            </ellipse>
+          </g>
+          <g fill="#8a6a35" opacity=".5">
+            <circle cx="150" cy="190" r="1.6"/><circle cx="182" cy="160" r="1.1"/><circle cx="230" cy="175" r="1.4"/><circle cx="262" cy="214" r="1.2"/><circle cx="210" cy="250" r="1.7"/><circle cx="170" cy="240" r="1"/><circle cx="246" cy="268" r="1.3"/><circle cx="128" cy="226" r="1.1"/><circle cx="292" cy="186" r="1"/><circle cx="196" cy="206" r="1.2"/><circle cx="276" cy="246" r="1.5"/><circle cx="140" cy="270" r="1.2"/>
+          </g>
+          <!-- brush stroke swatch -->
+          <path d="M70 395 C 140 360, 230 410, 330 372" fill="none" stroke="#141114" stroke-width="30" stroke-linecap="round" opacity=".9"/>
+          <path d="M80 392 C 150 362, 232 404, 322 374" fill="none" stroke="#c9a46a" stroke-width="1.2" opacity=".9"/>
+          <path d="M76 404 C 150 378, 228 418, 318 386" fill="none" stroke="#fffaf6" stroke-width="1" opacity=".35"/>
+          <!-- makeup brush -->
+          <g transform="translate(262 128) rotate(34) scale(.92)">
+            <path d="M-14 0 C -18 -30, -6 -62, 0 -70 C 6 -62, 18 -30, 14 0 Z" fill="#e8c6b9" stroke="#8a6a35" stroke-width=".8"/>
+            <path d="M-8 -6 C -10 -30, -3 -52, 0 -60" stroke="#fffaf6" stroke-width="1" fill="none" opacity=".7"/>
+            <rect x="-13" y="0" width="26" height="38" rx="3" fill="url(#fr)"/>
+            <line x1="-13" y1="12" x2="13" y2="12" stroke="#6b5222" stroke-width=".6"/>
+            <path d="M-11 38 L 11 38 L 7 190 Q 0 196 -7 190 Z" fill="url(#bt)"/>
+          </g>
+          <!-- gold hairline arcs -->
+          <path d="M40 470 A 160 160 0 0 1 360 470" fill="none" stroke="#c9a46a" stroke-width=".8" opacity=".7"/>
+          <path d="M70 470 A 130 130 0 0 1 330 470" fill="none" stroke="#c9a46a" stroke-width=".6" opacity=".45"/>
+        </svg>
+      </div>
+      <div class="tag"><div class="k">Spray tans from</div><div class="v">$30 <i>·</i> 15–30 min</div></div>
+      <div class="tag tag2"><div class="k">Also offering</div><div class="v">Bridal <i>+</i> Formal</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div class="t">
+  <span>Mobile spray tans <b>✦</b></span><span>In-studio glow <b>✦</b></span><span>Bridal makeup <b>✦</b></span><span>Formal makeup <b>✦</b></span><span>Knoxville &amp; Harriman <b>✦</b></span>
+  <span>Mobile spray tans <b>✦</b></span><span>In-studio glow <b>✦</b></span><span>Bridal makeup <b>✦</b></span><span>Formal makeup <b>✦</b></span><span>Knoxville &amp; Harriman <b>✦</b></span>
+</div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">The tan menu</span>
+      <h2>Two formulas. <em>One flawless</em> glow.</h2>
+      <p class="lead">Pick <b>Rapid</b> to rinse in a few hours, or <b>Classic</b> to sleep in it overnight. Prices exactly as listed on Briley's booking page.</p>
+    </div>
+
+    <div class="loc-tabs rv" role="tablist" aria-label="Location">
+      <button role="tab" id="t-knx" aria-selected="true" aria-controls="p-knx">Knoxville studio</button>
+      <button role="tab" id="t-har" aria-selected="false" aria-controls="p-har">Harriman location</button>
+    </div>
+
+    <div class="panel" id="p-knx" role="tabpanel" aria-labelledby="t-knx">
+      <p class="locnote">Done at Briley's in-home studio in Knoxville — exact address shared when you book.</p>
+      <div class="cards">
+        <article class="card rv">
+          <div class="row"><div><h3>Studio Tan <i>— Rapid</i></h3><div class="sq">KNOXVILLE STUDIO TAN- Rapid</div></div><div class="price">$35<small>15 min</small></div></div>
+          <ul>
+            <li>Rinse after 2–4 hours depending on level of darkness wanted.</li>
+            <li>1.5–2 hours light/medium · 3 medium · 4 dark</li>
+            <li>“HIGHLY recommend the drying powder add on!”</li>
+          </ul>
+          <a class="go" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book Rapid →</a>
+        </article>
+        <article class="card rv">
+          <div class="row"><div><h3>Studio Tan <i>— Classic</i></h3><div class="sq">KNOXVILLE STUDIO TAN- Classic</div></div><div class="price">$30<small>30 min</small></div></div>
+          <ul>
+            <li>Done at Briley's in-home studio in Knoxville.</li>
+            <li>Pick your time slot online.</li>
+          </ul>
+          <a class="go" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book Classic →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="panel" id="p-har" role="tabpanel" aria-labelledby="t-har">
+      <p class="locnote">Harriman location: 220 School St, Harriman, TN 37748 (Garrett &amp; Sons Flooring, after hours).</p>
+      <div class="cards">
+        <article class="card rv">
+          <div class="row"><div><h3>Harriman <i>— Rapid</i></h3><div class="sq">Harriman Location- Rapid Tan</div></div><div class="price">$35<small>15 min</small></div></div>
+          <ul>
+            <li>Rinse after 2–4 hours depending on level of darkness wanted.</li>
+            <li>1.5–2 hours light/medium · 3 medium · 4 dark</li>
+            <li>“HIGHLY recommend the drying powder add on!”</li>
+          </ul>
+          <a class="go" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book Rapid →</a>
+        </article>
+        <article class="card rv">
+          <div class="row"><div><h3>Harriman <i>— Classic</i></h3><div class="sq">Harriman Location Tan- Classic</div></div><div class="price">$30<small>15 min</small></div></div>
+          <ul>
+            <li>Rinse off after 6 or more hours.</li>
+            <li>Two shades: Light/Medium &amp; Medium/Dark</li>
+            <li>Includes drying powder application</li>
+            <li>Safe to sleep in overnight</li>
+          </ul>
+          <a class="go" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book Classic →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="guide rv">
+      <h3>The <em>Rapid</em> rinse guide</h3>
+      <p>Choose your depth by when you rinse.</p>
+      <div class="scale">
+        <div class="bar" role="img" aria-label="Shade deepens from light to dark as rinse time increases"></div>
+        <div class="ticks">
+          <div><b>1.5–2 hrs</b><span>Light / medium</span></div>
+          <div><b>3 hrs</b><span>Medium</span></div>
+          <div><b>4 hrs</b><span>Dark</span></div>
+        </div>
+      </div>
+      <p class="verb">From Briley's Rapid Tan notes: “Rinse after 2-4 hours depending on level of darkness wanted.”</p>
+    </div>
+
+    <div class="makeup rv" id="makeup">
+      <div class="glow" aria-hidden="true"></div>
+      <svg class="deco" viewBox="0 0 340 220" aria-hidden="true">
+        <path d="M20 150 C 90 90, 170 170, 320 96" fill="none" stroke="#f4d6d2" stroke-width="34" stroke-linecap="round" opacity=".9"/>
+        <path d="M30 146 C 100 96, 176 160, 312 100" fill="none" stroke="#c9a46a" stroke-width="1.2"/>
+        <path d="M44 172 C 120 120, 190 186, 300 132" fill="none" stroke="#fffaf6" stroke-width="1" opacity=".3"/>
+        <circle cx="70" cy="60" r="34" fill="none" stroke="#c9a46a" stroke-width=".8" opacity=".7"/>
+        <circle cx="70" cy="60" r="24" fill="#e7b9a8" opacity=".85"/>
+        <circle cx="62" cy="52" r="7" fill="#fffaf6" opacity=".35"/>
+      </svg>
+      <span class="eyebrow" style="color:var(--gold)">Makeup</span>
+      <h3 style="margin-top:12px">Bridal <em>+</em> Formal Makeup</h3>
+      <p>The big day, the formal, the photos — Briley does the makeup too. Makeup isn't on the online booking menu yet, so reach out directly: DM, call, or text to book.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="sms:+18653992473">Text Briley</a>
+        <a class="btn btn-ghost" href="tel:+18653992473">Call (865) 399-2473</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Why Briley</span>
+      <h2>Luxury that <em>fits your week.</em></h2>
+    </div>
+    <div class="why">
+      <div class="w rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#8a6a35" stroke-width="1.2" aria-hidden="true"><rect x="8" y="16" width="12" height="18" rx="2"/><path d="M11 16v-4h6v4M17 12h5l2 2"/><g fill="#8a6a35" stroke="none"><circle cx="28" cy="10" r="1"/><circle cx="32" cy="13" r="1"/><circle cx="30" cy="17" r="1"/><circle cx="34" cy="8" r=".8"/><circle cx="35" cy="17" r=".8"/></g></svg>
+        <div class="n">01</div><h3>Mobile <em>or</em> in-studio</h3>
+        <p>Spray tans on the go or at the Knoxville studio, plus a Harriman location — whichever suits your day.</p>
+      </div>
+      <div class="w rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#8a6a35" stroke-width="1.2" aria-hidden="true"><circle cx="20" cy="20" r="13"/><path d="M20 12v8l5 4"/></svg>
+        <div class="n">02</div><h3>Evenings &amp; weekends</h3>
+        <p>Open weeknight evenings and all day Saturday and Sunday — fit your glow in after work.</p>
+      </div>
+      <div class="w rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#8a6a35" stroke-width="1.2" aria-hidden="true"><rect x="7" y="13" width="26" height="18" rx="2"/><path d="M7 19h26M20 13v18M20 13c-3-6-9-4-6 0M20 13c3-6 9-4 6 0"/></svg>
+        <div class="n">03</div><h3>Book online, gift a glow</h3>
+        <p>Book any tan through Square in seconds — and gift cards are available for a friend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Hours &amp; contact</span>
+      <h2>By appointment, <em>in Knoxville.</em></h2>
+    </div>
+    <div class="visit">
+      <div class="hours rv">
+        <h3>Appointment hours</h3>
+        <table aria-label="Hours">
+          <tbody>
+            <tr data-d="1"><td>Monday</td><td>5:00 – 8:00 PM</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>5:00 – 7:00 PM</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>5:00 – 8:00 PM</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>5:00 – 8:00 PM</td></tr>
+            <tr data-d="5"><td>Friday</td><td>3:30 – 8:00 PM</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>9:00 AM – 8:00 PM</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Appointment only. Hours as listed on Briley's Square booking page.</p>
+      </div>
+      <div class="contact">
+        <div class="map rv"><div class="fb" aria-hidden="true"><div><svg viewBox="0 0 24 24" fill="none" stroke="#8a6a35" stroke-width="1.3"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Knoxville, TN</b><span>Mobile · Studio by appointment</span></div></div><iframe title="Map of Knoxville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Knoxville%2C%20TN&amp;output=embed"></iframe></div>
+        <div class="clist">
+          <a class="cl rv" href="tel:+18653992473"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141114" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="tx"><small>Call or text</small><b>(865) 399-2473</b></span></a>
+          <a class="cl rv" href="mailto:brileynoel1028@outlook.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141114" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="tx"><small>Email</small><b>brileynoel1028@outlook.com</b></span></a>
+          <a class="cl rv" href="https://www.google.com/maps/dir/?api=1&amp;destination=Knoxville%2C%20TN" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141114" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="tx"><small>Directions</small><b>Knoxville, TN · address on booking</b></span></a>
+          <a class="cl rv" href="https://www.instagram.com/spraysbybriley/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141114" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="#141114"/></svg></span><span class="tx"><small>Instagram · DM to book</small><b>@spraysbybriley</b></span></a>
+          <a class="cl rv" href="https://www.facebook.com/spraysmakeupbybriley" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#141114" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></span><span class="tx"><small>Facebook</small><b>/spraysmakeupbybriley</b></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="mist2" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Ready when you are</span>
+    <h2 class="rv">Book the tan. <em>Bring the glow.</em></h2>
+    <p class="rv">Tans from $30 — book online any time, or DM, call, or text Briley.</p>
+    <div class="ctas rv">
+      <a class="btn btn-gold" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book on Square</a>
+      <a class="btn btn-ghost" href="tel:+18653992473">Call (865) 399-2473</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Sprays &amp; Makeup by Briley · Knoxville, TN</span>
+    <span>Concept by <a href="#top">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<nav class="bar-m" aria-label="Quick actions">
+  <a class="c" href="tel:+18653992473"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/LK9R4MHFRD5XF/sprays-makeup-by-briley" target="_blank" rel="noopener">Book a spray tan</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // today's hours
+  var t=new Date().getDay(); var r=document.querySelector('.hours tr[data-d="'+t+'"]'); if(r) r.classList.add('today');
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.loc-tabs [role=tab]'));
+  function sel(b){tabs.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);var p=document.getElementById(x.getAttribute('aria-controls'));if(on){p.removeAttribute('hidden');p.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}else p.setAttribute('hidden','')});}
+  tabs.forEach(function(b){b.addEventListener('click',function(){sel(b)})});
+  sel(tabs[0]);
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

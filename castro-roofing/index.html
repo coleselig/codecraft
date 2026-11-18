@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Castro Roofing &amp; Exteriors — Chattanooga</title>
+<meta name="description" content="Asphalt and metal roofing in Chattanooga, TN: roof inspections, repairs and full replacements for homes and businesses. Call 423-660-1822 for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#23272e; --slate2:#2f343d; --slate3:#3b414c;
+  --copper:#b8652f; --copper-d:#9a5124; --copper-l:#d98a52;
+  --sky:#dbe8f2; --white:#fbf8f3; --paper:#f4efe7; --ink:#1b1e23; --muted:#5b616b;
+  --bar-h:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.92}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+
+/* concept banner */
+.concept{background:#14171b;color:#c9cdd3;font-size:.72rem;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--copper-l);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(35,39,46,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-txt{line-height:1}
+.brand-txt .display{font-size:1.45rem;letter-spacing:.06em}
+.brand-txt small{display:block;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-l);font-weight:600;margin-top:2px}
+.nav-links{display:none;gap:28px;font-size:.88rem;font-weight:500}
+.nav-links a{color:#d7dbe0;text-decoration:none;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--copper);transform:scaleX(0);transition:transform .25s}
+.nav-links a:hover{color:#fff}.nav-links a:hover::after{transform:scaleX(1)}
+.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:9px 14px;border-radius:999px;transition:background .2s,transform .2s}
+.nav-call:hover{background:var(--copper-d);transform:translateY(-1px)}
+.nav-call svg{width:16px;height:16px}
+@media(max-width:420px){.nav-call span{display:none}.nav-call{padding:10px}}
+@media(min-width:900px){.nav-links{display:flex}}
+
+/* hero: storm -> sunshine */
+.hero{position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(172deg,#1c2026 0%,#2c323b 26%,#4c5462 44%,#8d7f74 62%,#d29a68 78%,#f1d2a6 92%,#f7e6c9 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 60% at 85% 98%,rgba(255,214,150,.75),transparent 55%),
+  radial-gradient(80% 40% at 10% 0%,rgba(10,12,16,.6),transparent 70%);pointer-events:none}
+.rain{position:absolute;inset:0 0 45% 0;pointer-events:none;opacity:.35;
+  background-image:repeating-linear-gradient(105deg,transparent 0 22px,rgba(219,232,242,.55) 22px 23px,transparent 23px 46px);
+  -webkit-mask-image:linear-gradient(#000,transparent);mask-image:linear-gradient(#000,transparent);
+  animation:rain 1.4s linear infinite}
+@keyframes rain{to{background-position:-12px 46px}}
+.hero .wrap{position:relative;z-index:2;padding-top:44px;padding-bottom:0}
+.hero .eyebrow{color:#f0b98d;display:flex;align-items:center;gap:10px}
+.hero .eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.hero h1{font-size:clamp(3.4rem,15vw,6.4rem);margin:14px 0 16px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero h1 em{font-style:normal;color:#f2a874;display:block}
+.hero p.sub{max-width:34em;font-size:1.04rem;color:#e7eaee;margin-bottom:26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:1rem;text-decoration:none;padding:15px 22px;border-radius:12px;transition:transform .2s,box-shadow .2s,background .2s;min-height:52px}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-copper{background:var(--copper);color:#fff;box-shadow:0 10px 26px -10px rgba(184,101,47,.9)}
+.btn-copper:hover{background:var(--copper-d);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+@media(max-width:520px){.cta-row .btn{flex:1 1 100%}}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.hero-tags span{font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(20,23,27,.35);border:1px solid rgba(255,255,255,.18);color:#f1f3f5}
+.house{position:relative;z-index:1;margin-top:28px;width:100%;height:auto}
+.house .sun{transform-origin:center;animation:sun 9s ease-in-out infinite}
+@keyframes sun{50%{transform:scale(1.06)}}
+.house .draw{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.4s .3s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media(min-width:900px){
+  .hero h1{font-size:clamp(4rem,6.6vw,6rem)}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:40px;padding-top:70px}
+  .hero-copy{padding-bottom:80px}
+  .house{margin-top:0}
+}
+
+/* shingle texture strip */
+.shingles{height:46px;background-color:var(--slate);
+  background-image:
+   radial-gradient(circle at 50% 0,transparent 15px,var(--slate2) 15.5px,var(--slate2) 17px,transparent 17.5px),
+   radial-gradient(circle at 50% 0,transparent 15px,var(--slate2) 15.5px,var(--slate2) 17px,transparent 17.5px);
+  background-size:34px 18px,34px 18px;background-position:0 0,17px 9px}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:76px 0}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head h2{font-size:clamp(2.6rem,9vw,4.2rem);margin-top:8px;color:var(--slate)}
+.sec-head p{color:var(--muted);margin-top:10px;font-size:1.02rem}
+
+/* services */
+.svc-grid{display:grid;gap:18px}
+@media(min-width:820px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{position:relative;background:#fff;border:1px solid #e7e0d5;border-radius:18px;padding:28px 24px 24px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+.svc::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--copper),var(--copper-l))}
+.svc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -22px rgba(35,39,46,.45);border-color:#d8c6b2}
+.svc-ico{width:56px;height:56px;border-radius:14px;background:var(--sky);display:grid;place-items:center;margin-bottom:18px}
+.svc-ico svg{width:32px;height:32px}
+.svc h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2rem;letter-spacing:.03em;color:var(--slate);line-height:1}
+.svc .meta{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:8px 0 12px}
+.svc p{color:#41464e;font-size:.97rem}
+.svc ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.svc li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;font-weight:500;color:var(--slate)}
+.svc li::before{content:"";flex:none;width:16px;height:16px;margin-top:3px;border-radius:4px;background:var(--copper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.svc .more{margin-top:auto;padding-top:18px;font-weight:700;font-size:.9rem;color:var(--copper-d);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.svc .more:hover{text-decoration:underline}
+
+/* materials band */
+.materials{background:var(--slate);color:#fff;position:relative;overflow:hidden}
+.materials::after{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:radial-gradient(circle at 50% 0,transparent 15px,rgba(255,255,255,.05) 15.5px,rgba(255,255,255,.05) 17px,transparent 17.5px),radial-gradient(circle at 50% 0,transparent 15px,rgba(255,255,255,.05) 15.5px,rgba(255,255,255,.05) 17px,transparent 17.5px);
+  background-size:34px 18px;background-position:0 0,17px 9px}
+.materials .wrap{position:relative;z-index:1}
+.materials .sec-head h2{color:#fff}
+.materials .sec-head p{color:#b9bfc8}
+.mat-grid{display:grid;gap:18px}
+@media(min-width:720px){.mat-grid{grid-template-columns:1fr 1fr}}
+.mat{border-radius:18px;padding:26px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01));display:flex;gap:20px;align-items:center}
+.mat svg{width:96px;height:80px;flex:none;border-radius:12px;background:rgba(219,232,242,.08)}
+.mat h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.9rem;letter-spacing:.04em;line-height:1}
+.mat p{color:#c3c8cf;font-size:.93rem;margin-top:6px}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+@media(min-width:720px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{background:var(--paper);border-radius:16px;padding:24px 22px;border:1px solid #ebe3d6;transition:transform .25s,background .25s}
+.why:hover{transform:translateY(-3px);background:#fff}
+.why .num{font-family:"Bebas Neue",sans-serif;font-size:2.6rem;line-height:1;color:var(--copper)}
+.why h3{font-size:1.06rem;font-weight:800;color:var(--slate);margin:6px 0 6px}
+.why p{font-size:.93rem;color:var(--muted)}
+.quote{margin-top:34px;border-left:4px solid var(--copper);padding:6px 0 6px 20px;max-width:720px}
+.quote p{font-family:"Bebas Neue",sans-serif;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.02;color:var(--slate);letter-spacing:.02em}
+.quote small{display:block;margin-top:8px;color:var(--muted);font-size:.82rem}
+
+/* tell us */
+.tell{background:var(--sky);position:relative;overflow:hidden}
+.tell .wrap{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.tell .wrap{grid-template-columns:1.1fr .9fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}
+.chip{background:#fff;border:1.5px solid #c3d4e2;color:var(--slate);font-weight:600;font-size:.92rem;padding:10px 16px;border-radius:999px;text-decoration:none;transition:all .2s}
+.chip:hover{border-color:var(--copper);color:var(--copper-d);transform:translateY(-2px)}
+.tell .btn-copper{box-shadow:none}
+.pitch{width:100%;max-width:440px;justify-self:center}
+
+/* hours */
+.hours-card{background:#fff;border:1px solid #e7e0d5;border-radius:20px;padding:26px 22px;box-shadow:0 20px 40px -30px rgba(35,39,46,.4)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:18px 0}
+.day{text-align:center;border-radius:10px;padding:10px 0;background:var(--paper);font-weight:700;font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+.day.today{background:var(--copper);color:#fff;box-shadow:0 8px 18px -8px rgba(184,101,47,.9);transform:translateY(-2px)}
+.today-line{font-size:1rem;color:var(--slate)}
+.today-line b{color:var(--copper-d)}
+.note{font-size:.86rem;color:var(--muted);margin-top:10px}
+
+/* contact */
+.contact-grid{display:grid;gap:22px}
+@media(min-width:900px){.contact-grid{grid-template-columns:.9fr 1.1fr}}
+.c-list{display:grid;gap:12px}
+.c-item{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #e7e0d5;border-radius:14px;padding:16px;text-decoration:none;transition:border-color .2s,transform .2s;min-width:0}
+a.c-item:hover{border-color:var(--copper);transform:translateX(3px)}
+.c-ico{width:44px;height:44px;border-radius:12px;background:var(--slate);display:grid;place-items:center;flex:none}
+.c-ico svg{width:20px;height:20px}
+.c-item small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.c-item strong{display:block;font-size:1rem;color:var(--slate);overflow-wrap:anywhere;word-break:break-word}
+.map{position:relative;border-radius:18px;overflow:hidden;border:1px solid #e7e0d5;min-height:300px;background:var(--sky) linear-gradient(160deg,#dbe8f2,#c9dae8)}
+.map::before{content:"Chattanooga, TN";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.06em;color:#23272e;opacity:.55}
+.map iframe{position:relative;z-index:1}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+
+/* final CTA */
+.final{background:linear-gradient(170deg,#23272e 0%,#3a3f49 55%,#b8652f 140%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(3rem,12vw,5.6rem)}
+.final p{color:#d6dae0;max-width:30em;margin:12px auto 26px}
+.final .cta-row{justify-content:center}
+
+footer{background:#14171b;color:#9aa0a8;font-size:.85rem;padding:36px 0 30px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center}
+footer a{color:#d7dbe0;text-decoration:none}
+footer a:hover{color:var(--copper-l)}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(20,23,27,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:12px;font-weight:700;text-decoration:none;font-size:.95rem}
+.callbar svg{width:18px;height:18px}
+.callbar .cb-call{background:var(--copper);color:#fff}
+.callbar .cb-mail{background:#2f343d;color:#fff;border:1px solid rgba(255,255,255,.12)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal (content visible without JS) */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+a:focus-visible{outline:3px solid var(--copper-l);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by Code Craft Media, made for <b>Castro Roofing &amp; Exteriors</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Castro Roofing &amp; Exteriors home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#b8652f"/><path d="M7 22 20 10l13 12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22v9h16v-9" fill="none" stroke="#fbf8f3" stroke-width="2.4" stroke-linejoin="round"/><path d="M17 31v-5h6v5" fill="none" stroke="#fbf8f3" stroke-width="2"/></svg>
+      <span class="brand-txt"><span class="display">Castro Roofing</span><small>&amp; Exteriors LLC</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a><a href="#why">Why Castro</a><a href="#hours">Schedule</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-call" href="tel:+14236601822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>423-660-1822</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="rain" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">Chattanooga, Tennessee</div>
+      <h1 id="h1" class="display">After the storm,<em>a roof done right.</em></h1>
+      <p class="sub">Castro Roofing &amp; Exteriors handles asphalt and metal roofs for Chattanooga homes and businesses: inspections, repairs and complete replacements.</p>
+      <div class="cta-row">
+        <a class="btn btn-copper" href="tel:+14236601822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call for a free quote</a>
+        <a class="btn btn-ghost" href="mailto:castroroofingandexteriors@gmail.com?subject=Free%20roof%20quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email for an estimate</a>
+      </div>
+      <div class="hero-tags"><span>Asphalt shingle</span><span>Metal roofing</span><span>Homes &amp; businesses</span></div>
+    </div>
+    <svg class="house" viewBox="0 0 560 330" aria-hidden="true">
+      <defs>
+        <pattern id="sh" width="28" height="16" patternUnits="userSpaceOnUse">
+          <rect width="28" height="16" fill="#2f343d"/>
+          <path d="M0 16 A14 14 0 0 1 28 16" fill="none" stroke="#454c58" stroke-width="1.6"/>
+          <path d="M-14 8 A14 14 0 0 1 14 8 M14 8 A14 14 0 0 1 42 8" fill="none" stroke="#454c58" stroke-width="1.6"/>
+        </pattern>
+        <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f3"/><stop offset="1" stop-color="#e9dfd1"/></linearGradient>
+        <radialGradient id="sunG"><stop offset="0" stop-color="#fff3d6"/><stop offset=".55" stop-color="#f6c486"/><stop offset="1" stop-color="#f6c486" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle class="sun" cx="440" cy="110" r="90" fill="url(#sunG)"/>
+      <circle cx="440" cy="110" r="34" fill="#ffe2b0"/>
+      <!-- house -->
+      <path d="M90 190 H470 V330 H90 Z" fill="url(#wall)"/>
+      <path d="M48 196 L270 58 L512 196 Z" fill="url(#sh)"/>
+      <path class="draw" d="M40 200 L270 52 L520 200" fill="none" stroke="#b8652f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M270 52 L270 58" stroke="#d98a52" stroke-width="10" stroke-linecap="round"/>
+      <rect x="350" y="80" width="36" height="70" fill="#3b414c"/><rect x="345" y="74" width="46" height="10" rx="2" fill="#b8652f"/>
+      <rect x="236" y="240" width="62" height="90" rx="4" fill="#23272e"/><circle cx="286" cy="288" r="3.5" fill="#d98a52"/>
+      <g fill="#dbe8f2" stroke="#23272e" stroke-width="5"><rect x="128" y="226" width="68" height="56" rx="4"/><rect x="358" y="226" width="68" height="56" rx="4"/></g>
+      <g stroke="#23272e" stroke-width="3"><path d="M162 226v56M128 254h68M392 226v56M358 254h68"/></g>
+      <!-- roof pitch line art -->
+      <g fill="none" stroke="#fbf8f3" stroke-opacity=".7" stroke-width="1.2" stroke-dasharray="4 5">
+        <path d="M70 168 H270"/><path d="M270 168 V64"/>
+      </g>
+      <text x="150" y="186" fill="#fbf8f3" fill-opacity=".75" font-family="Inter,sans-serif" font-size="12" font-weight="600" letter-spacing="2">12</text>
+      <text x="278" y="122" fill="#fbf8f3" fill-opacity=".75" font-family="Inter,sans-serif" font-size="12" font-weight="600" letter-spacing="2">6</text>
+      <path d="M0 330 H560" stroke="#23272e" stroke-width="4"/>
+    </svg>
+  </div>
+</section>
+<div class="shingles" aria-hidden="true"></div>
+
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What we do</div>
+      <h2 class="display">Three ways we keep you covered</h2>
+      <p>From a first look at a suspicious stain to a full tear-off, Castro handles the whole job.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#23272e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16 16 6l12 10"/><circle cx="19" cy="20" r="5" stroke="#b8652f"/><path d="m23 24 4 4" stroke="#b8652f"/></svg></div>
+        <h3>Roof Inspection</h3>
+        <div class="meta">Approx. 1 hr</div>
+        <p>A thorough check of your roof’s condition to spot potential issues, with a detailed report to help keep your roof safe and lasting longer.</p>
+        <ul><li>Leak or insurance inspections</li><li>Detailed condition report</li></ul>
+        <a class="more" href="tel:+14236601822">Call to schedule →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#23272e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 16 6l13 11"/><path d="M7 14v12h18V14"/><path d="M11 20h10M11 23h10" stroke="#b8652f"/></svg></div>
+        <h3>Roof Replacement</h3>
+        <div class="meta">Complete new system</div>
+        <p>Everything from old roof removal and disposal to a complete new roofing system, with upgrades included:</p>
+        <ul><li>Ridge vent</li><li>Drip edge</li><li>Synthetic underlayment</li></ul>
+        <a class="more" href="tel:+14236601822">Get a free quote →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 32 32" fill="none" stroke="#23272e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15 16 5l12 10"/><path d="M16 14c-2 3-3 4.5-3 6a3 3 0 0 0 6 0c0-1.5-1-3-3-6z" stroke="#b8652f"/><path d="M8 27h16"/></svg></div>
+        <h3>Roof Repair</h3>
+        <div class="meta">Approx. 1 hr 30 min</div>
+        <p>Professional repairs for leaks, damaged shingles and other issues, restoring your roof to its best condition efficiently and effectively.</p>
+        <ul><li>Leaks</li><li>Damaged shingles</li></ul>
+        <a class="more" href="tel:+14236601822">Call about a repair →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec materials" aria-labelledby="mat-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Materials</div>
+      <h2 id="mat-h" class="display">Asphalt or metal, installed right</h2>
+      <p>Castro specializes in the two roof types you see most across Chattanooga, for both homes and commercial buildings.</p>
+    </div>
+    <div class="mat-grid">
+      <div class="mat reveal">
+        <svg viewBox="0 0 96 80" aria-hidden="true"><defs><pattern id="ash" width="16" height="10" patternUnits="userSpaceOnUse"><rect width="16" height="10" fill="#4a515d"/><path d="M0 10h16M8 0v5M0 5h16M0 5v5M16 5v5" stroke="#23272e" stroke-width="1.4"/></pattern></defs><path d="M10 50 48 16l38 34Z" fill="url(#ash)"/><path d="M6 52 48 14l42 38" fill="none" stroke="#b8652f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="52" width="56" height="20" fill="#fbf8f3"/><rect x="42" y="58" width="12" height="14" fill="#23272e"/></svg>
+        <div><h3>Asphalt shingle</h3><p>Installations, repairs and inspections on shingle roofs.</p></div>
+      </div>
+      <div class="mat reveal">
+        <svg viewBox="0 0 96 80" aria-hidden="true"><defs><linearGradient id="mt" x1="0" x2="1"><stop offset="0" stop-color="#9aa3ae"/><stop offset=".5" stop-color="#dbe8f2"/><stop offset="1" stop-color="#8b929c"/></linearGradient></defs><path d="M10 50 48 16l38 34Z" fill="url(#mt)"/><g stroke="#5b616b" stroke-width="1.6"><path d="M48 16v34M38 25v25M28 34v16M58 25v25M68 34v16"/></g><path d="M6 52 48 14l42 38" fill="none" stroke="#b8652f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="52" width="56" height="20" fill="#fbf8f3"/><rect x="42" y="58" width="12" height="14" fill="#23272e"/></svg>
+        <div><h3>Metal roofing</h3><p>Installations, repairs and inspections on metal roofs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Why Castro</div>
+      <h2 class="display">Straight answers. Solid work.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="num">01</div><h3>Right the first time</h3><p>Castro takes pride in doing the job right the first time, and keeps quality workmanship front and center.</p></div>
+      <div class="why reveal"><div class="num">02</div><h3>You’re kept in the loop</h3><p>Clients are kept informed throughout each job, with honest communication from start to finish.</p></div>
+      <div class="why reveal"><div class="num">03</div><h3>Free quotes</h3><p>Call or email to get a free quote before any work is scheduled.</p></div>
+      <div class="why reveal"><div class="num">04</div><h3>Local LLC</h3><p>A Chattanooga-based company serving homes and businesses.</p></div>
+    </div>
+    <div class="quote reveal">
+      <p>“We take pride in doing the job right the first time.”</p>
+      <small>From Castro Roofing &amp; Exteriors’ own description of their work</small>
+    </div>
+  </div>
+</section>
+
+<section class="sec tell" aria-labelledby="tell-h">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Start here</div>
+      <h2 id="tell-h" class="display" style="font-size:clamp(2.6rem,9vw,4.2rem);color:var(--slate);margin-top:8px">What’s going on up there?</h2>
+      <p style="color:#3f4650;margin-top:10px">Tap the one that fits and send a quick email. Castro will follow up about next steps.</p>
+      <div class="chips">
+        <a class="chip" href="mailto:castroroofingandexteriors@gmail.com?subject=Roof%20leaking">Roof is leaking</a>
+        <a class="chip" href="mailto:castroroofingandexteriors@gmail.com?subject=Insurance%20inspection">Insurance inspection</a>
+        <a class="chip" href="mailto:castroroofingandexteriors@gmail.com?subject=Damaged%20shingles">Damaged shingles</a>
+        <a class="chip" href="mailto:castroroofingandexteriors@gmail.com?subject=Roof%20replacement%20quote">Need a new roof</a>
+      </div>
+      <a class="btn btn-copper" href="tel:+14236601822">Or call 423-660-1822</a>
+    </div>
+    <svg class="pitch reveal" viewBox="0 0 400 260" aria-hidden="true">
+      <g fill="none" stroke="#23272e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 200 L200 60 L380 200"/>
+        <path d="M60 200 V250 H340 V200" stroke-opacity=".5"/>
+      </g>
+      <path d="M200 60 L380 200" fill="none" stroke="#b8652f" stroke-width="6" stroke-linecap="round"/>
+      <g fill="none" stroke="#23272e" stroke-width="1.5" stroke-dasharray="5 6" stroke-opacity=".6"><path d="M200 200 H380"/><path d="M200 200 V60"/></g>
+      <path d="M232 200 A32 32 0 0 0 226 181" fill="none" stroke="#b8652f" stroke-width="2"/>
+      <text x="246" y="192" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#23272e">pitch</text>
+      <circle cx="200" cy="60" r="7" fill="#b8652f"/>
+      <g stroke="#5e7d96" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M70 30l-8 18M100 20l-8 18M130 34l-8 18M290 22l-8 18"/></g>
+    </svg>
+  </div>
+</section>
+
+<section id="hours" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Scheduling</div>
+      <h2 class="display">Book an inspection</h2>
+      <p>Inspection appointments run about 1 hour; repair appointments about 1 hr 30 min.</p>
+    </div>
+    <div class="hours-card reveal">
+      <p class="today-line" id="today-line">Call <b>423-660-1822</b> to set a time that works for you.</p>
+      <div class="days" id="days">
+        <div class="day">SUN</div><div class="day">MON</div><div class="day">TUE</div><div class="day">WED</div><div class="day">THU</div><div class="day">FRI</div><div class="day">SAT</div>
+      </div>
+      <p class="note">Hours aren’t published, so call or email to confirm availability.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Contact</div>
+      <h2 class="display">Get your free quote</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="c-list reveal">
+        <a class="c-item" href="tel:+14236601822"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d98a52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><strong>423-660-1822</strong></span></a>
+        <a class="c-item" href="mailto:castroroofingandexteriors@gmail.com?subject=Free%20roof%20quote"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d98a52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span><small>Email</small><strong>castroroofingandexteriors@gmail.com</strong></span></a>
+        <a class="c-item" href="https://www.google.com/maps/search/?api=1&amp;query=Chattanooga%2C%20TN" target="_blank" rel="noopener"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d98a52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Based in · Directions</small><strong>Chattanooga, TN</strong></span></a>
+        <a class="c-item" href="https://www.facebook.com/profile.php?id=61588246614691" target="_blank" rel="noopener"><span class="c-ico"><svg viewBox="0 0 24 24" fill="#d98a52"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.7-.6z"/></svg></span><span><small>Facebook</small><strong>Castro Roofing &amp; Exteriors</strong></span></a>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map of Chattanooga, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Chattanooga%2C%20TN&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h" class="display reveal">Clear skies start with a call.</h2>
+    <p class="reveal">Inspections, repairs and full replacements on asphalt and metal roofs. The quote is free.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-copper" href="tel:+14236601822">Call 423-660-1822</a>
+      <a class="btn btn-ghost" href="mailto:castroroofingandexteriors@gmail.com?subject=Free%20roof%20quote">Email us</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Castro Roofing &amp; Exteriors LLC</strong> · Chattanooga, TN · <a href="tel:+14236601822">423-660-1822</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="cb-call" href="tel:+14236601822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call · Free quote</a>
+  <a class="cb-mail" href="mailto:castroroofingandexteriors@gmail.com?subject=Free%20roof%20quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email</a>
+</nav>
+
+<script>
+(function(){
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var d=new Date().getDay();
+  var days=document.querySelectorAll('#days .day');
+  if(days[d]) days[d].classList.add('today');
+  var t=document.getElementById('today-line');
+  if(t) t.innerHTML='Today is <b>'+names[d]+'</b>. Call <b>423-660-1822</b> to set a time that works for you.';
+  var els=document.querySelectorAll('.reveal');
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

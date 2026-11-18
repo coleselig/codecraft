@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TattedGene · Tattoo Artist · Chattanooga, TN</title>
+<meta name="description" content="TattedGene, tattoo artist on Highway 58 in Chattanooga, TN. 51 tattoo sessions with up-front prices. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0b0b; --ink2:#171313; --ink3:#221c1b;
+  --red:#c8102e; --red2:#e0233f; --redDeep:#8e0b20;
+  --bone:#efe6d6; --bone2:#d9cdb8; --mute:#a3988a;
+  --line:rgba(239,230,214,.14);
+  --book:"https://square.site/book/9JKXQXWXZF6YB/tattedgene-chattanooga-tn";
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--bone);font-family:"Space Grotesk",system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;padding-bottom:84px}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.bb{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.92}
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.concept{position:relative;z-index:1}
+
+/* concept banner */
+.concept{background:var(--bone);color:var(--ink);font-size:12px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.concept b{font-weight:700}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(13,11,11,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo .bb{font-size:28px;letter-spacing:.04em}
+.logo .bb span{color:var(--red2)}
+.nav ul{display:none;list-style:none;gap:26px;font-size:14px;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--bone2);transition:color .2s}
+.nav ul a:hover{color:var(--red2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:15px;text-decoration:none;border-radius:2px;padding:14px 22px;transition:transform .15s,background .2s,box-shadow .2s;cursor:pointer;border:0}
+.btn-red{background:var(--red);color:#fff;box-shadow:4px 4px 0 var(--bone)}
+.btn-red:hover{background:var(--red2);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--bone)}
+.btn-red:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--bone)}
+.btn-ghost{border:1.5px solid var(--bone);color:var(--bone);background:transparent}
+.btn-ghost:hover{background:var(--bone);color:var(--ink)}
+.nav .btn{padding:9px 14px;font-size:13px;box-shadow:3px 3px 0 var(--bone)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:30px 0 56px}
+.hero .wrap{position:relative;display:grid;gap:8px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red2)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red2)}
+.hero h1{font-size:clamp(76px,22vw,184px);margin:12px 0 6px;text-transform:uppercase}
+.hero h1 .r{color:var(--red);display:block;position:relative}
+.hero h1 .o{-webkit-text-stroke:1.5px var(--bone);color:transparent}
+.hero p.lead{font-size:17px;color:var(--bone2);max-width:30ch}
+.hero p.lead b{color:var(--bone)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.hero-art{position:absolute;right:-96px;top:40px;width:270px;opacity:.26;pointer-events:none;z-index:0}
+.hero .wrap>div:first-child{position:relative;z-index:1}
+.stamp{position:absolute;width:118px;height:118px;transform:rotate(-14deg);filter:url(#rough);color:var(--red)}
+.hero .stamp{right:18px;bottom:-34px;width:104px;height:104px;z-index:2}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:12px;font-weight:500;letter-spacing:.04em;border:1px solid var(--line);padding:6px 10px;border-radius:99px;color:var(--bone2);background:rgba(255,255,255,.02)}
+.chip i{font-style:normal;color:var(--red2);margin-right:4px}
+
+/* needle draw */
+.draw path,.draw line,.draw circle,.draw polyline,.draw ellipse{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.js .draw .s{stroke-dasharray:var(--len,1200);stroke-dashoffset:var(--len,1200);animation:needle 2.6s cubic-bezier(.6,.05,.3,1) forwards;animation-delay:var(--d,0s)}
+.draw .fillred{fill:var(--red);stroke:none;opacity:.92}
+.js .draw .fillred{opacity:0;animation:inkfill .7s ease forwards;animation-delay:var(--d,2s)}
+@keyframes needle{to{stroke-dashoffset:0}}
+@keyframes inkfill{to{opacity:.92}}
+
+/* ticker */
+.ticker{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink);transform:rotate(-1.4deg);margin:0 -10px}
+.ticker div{display:inline-block;padding:10px 0;font-family:"Bebas Neue";font-size:24px;letter-spacing:.06em;animation:tick 30s linear infinite}
+.ticker span{margin:0 18px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:76px 0;position:relative}
+.sec-head{margin-bottom:30px}
+.sec-head h2{font-size:clamp(52px,13vw,96px);text-transform:uppercase}
+.sec-head h2 em{font-style:normal;color:var(--red)}
+.sec-head p{color:var(--bone2);margin-top:10px;max-width:56ch}
+.num{font-family:"Bebas Neue";color:var(--red2);font-size:18px;letter-spacing:.14em;display:block;margin-bottom:6px}
+
+/* services */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 18px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-family:"Space Grotesk";font-weight:700;font-size:13px;background:transparent;color:var(--bone2);border:1.5px solid var(--line);padding:9px 14px;border-radius:2px;cursor:pointer;transition:all .2s;text-align:left;line-height:1.2}
+.tab small{display:block;font-weight:400;font-size:11px;opacity:.75}
+.tab:hover{border-color:var(--bone2);color:var(--bone)}
+.tab[aria-selected=true]{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.panel{margin-bottom:34px}
+.js .panel{margin-bottom:0}
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--red);padding-bottom:8px;margin-bottom:6px}
+.panel-head h3{font-size:34px}
+.panel-head span{font-size:12px;color:var(--mute);text-align:right}
+.svc{list-style:none}
+.svc li{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:14px 4px;border-bottom:1px dashed var(--line);transition:background .2s,padding .2s}
+.svc li:hover{background:rgba(200,16,46,.08);padding-left:10px}
+.svc .n{font-weight:500}
+.svc .p{font-family:"Bebas Neue";font-size:26px;color:var(--bone);line-height:1;text-align:right}
+.svc .p sup{font-family:"Space Grotesk";font-size:10px;color:var(--red2);vertical-align:top;margin-left:2px;letter-spacing:.04em}
+.svc .m{font-size:12px;color:var(--mute);grid-column:1/-1}
+.svc .m b{color:var(--bone2);font-weight:500}
+.deposit{margin-top:26px;display:flex;gap:14px;align-items:center;border:1.5px dashed var(--red);padding:16px;border-radius:2px;background:rgba(200,16,46,.06)}
+.deposit svg{flex:0 0 44px;color:var(--red2)}
+.deposit p{font-size:14px;color:var(--bone2)}
+.deposit b{color:var(--bone)}
+.svc-cta{margin-top:24px}
+
+/* portfolio */
+.port{background:var(--bone);color:var(--ink)}
+.port .sec-head p{color:#4c4440}
+.port .num{color:var(--red)}
+.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.frame{position:relative;aspect-ratio:4/5;background:#f7f1e6;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);display:flex;align-items:center;justify-content:center;transition:transform .25s,box-shadow .25s;overflow:hidden}
+.frame:nth-child(odd){transform:rotate(-1.2deg)}
+.frame:nth-child(even){transform:rotate(1deg)}
+.frame:hover{transform:rotate(0) translate(-3px,-3px);box-shadow:8px 8px 0 var(--red)}
+.frame svg{width:72%;color:var(--ink)}
+.frame .tag{position:absolute;left:8px;bottom:8px;right:8px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);display:flex;justify-content:space-between}
+.frame .pin{position:absolute;top:8px;left:50%;width:10px;height:10px;border-radius:50%;background:var(--red);transform:translateX(-50%);box-shadow:0 1px 0 rgba(0,0,0,.3)}
+.port-note{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.port-note p{font-size:14px;flex:1 1 240px;color:#4c4440}
+.port .btn-ghost{border-color:var(--ink);color:var(--ink)}
+.port .btn-ghost:hover{background:var(--ink);color:var(--bone)}
+.placeholder-flag{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 8px;margin-bottom:12px;transform:rotate(-2deg)}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+.card{border:1px solid var(--line);background:linear-gradient(160deg,var(--ink2),var(--ink));padding:24px 22px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--red);transform:translateY(-3px)}
+.card .big{font-family:"Bebas Neue";font-size:58px;line-height:.9;color:var(--red)}
+.card h3{font-size:28px;margin:6px 0 8px}
+.card p{font-size:14px;color:var(--bone2)}
+.card svg.corner{position:absolute;right:-8px;top:-8px;width:74px;color:var(--line);opacity:.9}
+
+/* visit */
+.visit-grid{display:grid;gap:18px}
+.hours{border:1px solid var(--line);padding:8px 20px 18px;background:var(--ink2)}
+.hours table{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:11px 0;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;color:var(--bone2)}
+.hours tr.closed td{color:var(--mute)}
+.hours tr.today td{color:var(--bone);font-weight:700}
+.hours tr.today td:first-child::after{content:"TODAY";margin-left:10px;font-size:10px;letter-spacing:.14em;background:var(--red);color:#fff;padding:3px 6px;vertical-align:2px}
+.hours .appt{font-family:"Bebas Neue";font-size:40px;line-height:1;color:var(--red2);margin:12px 0 4px}.hours .appt span{display:block;color:var(--bone2);font-size:24px;margin-top:2px}.hours .hlabel{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+.hours .note{font-size:12px;color:var(--mute);margin-top:14px}
+.addr{font-size:15px;color:var(--bone2);margin:8px 0 18px}
+.addr strong{display:block;font-family:"Bebas Neue";font-size:36px;font-weight:400;color:var(--bone);line-height:1}
+.contact-list{list-style:none;display:grid;gap:10px;margin-bottom:20px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:12px 14px;border:1px solid var(--line);transition:border-color .2s,background .2s;word-break:break-word}
+.contact-list a:hover{border-color:var(--red);background:rgba(200,16,46,.07)}
+.contact-list svg{flex:0 0 22px;color:var(--red2)}
+.contact-list small{display:block;font-size:11px;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+.map{border:2px solid var(--bone);box-shadow:6px 6px 0 var(--red);aspect-ratio:4/3;width:100%;background:var(--ink3)}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(1) contrast(1.05)}
+
+/* final cta */
+.final{text-align:center;padding:84px 0 70px;overflow:hidden}
+.final h2{font-size:clamp(66px,19vw,160px);text-transform:uppercase}
+.final h2 span{color:var(--red)}
+.final p{color:var(--bone2);margin:14px auto 26px;max-width:34ch}
+.final .art{width:230px;margin:0 auto 10px;color:var(--bone)}
+
+footer{border-top:1px solid var(--line);padding:30px 0 34px;font-size:13px;color:var(--mute)}
+footer .wrap{display:grid;gap:12px}
+footer .bb{font-size:30px;color:var(--bone)}
+footer a{color:var(--bone2)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,11,11,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;text-decoration:none;padding:13px 8px;border-radius:2px}
+.bar .call{border:1.5px solid var(--bone);color:var(--bone)}
+.bar .book{background:var(--red);color:#fff}
+.bar a:active{transform:scale(.97)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero{padding:64px 0 90px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+  .hero-art{position:relative;right:auto;top:auto;width:100%;max-width:440px;justify-self:end;opacity:.95}
+  .hero .stamp{right:auto;bottom:auto;left:54%;top:10px;width:140px;height:140px}
+  .hero p.lead{font-size:19px;max-width:40ch}
+  .wall{grid-template-columns:repeat(3,1fr);gap:22px}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .visit-grid{grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .svc{columns:2;column-gap:40px}
+  .svc li{break-inside:avoid}
+  .tabs{margin:0 0 22px;padding:0;flex-wrap:wrap}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+}
+@media (min-width:1100px){
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .draw .s{animation:none;stroke-dashoffset:0}
+  .js .draw .fillred{animation:none;opacity:.92}
+  .ticker div{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="3"/></filter>
+    <symbol id="stamp" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/>
+      <circle cx="60" cy="60" r="47" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path id="arc" d="M60 60 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0" fill="none"/>
+      <text font-family="Bebas Neue, Impact, sans-serif" font-size="13.5" letter-spacing="2.4" fill="currentColor"><textPath href="#arc">★ TATTEDGENE ★ CHATTANOOGA · TN ·</textPath></text>
+      <text x="60" y="58" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="currentColor">BOOK</text>
+      <text x="60" y="78" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="22" fill="currentColor">ONLINE</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for <b>TattedGene</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="TattedGene home">
+      <svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L23 26 L20 37 L17 26 Z" fill="#c8102e"/><rect x="11" y="24" width="18" height="3.5" rx="1" fill="#efe6d6"/><circle cx="20" cy="5" r="2.4" fill="#efe6d6"/></svg>
+      <span class="bb">Tatted<span>Gene</span></span>
+    </a>
+    <ul>
+      <li><a href="#services">Prices</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#why">Why Gene</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-red" href="https://square.site/book/9JKXQXWXZF6YB/tattedgene-chattanooga-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-top:30px">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Tattoo Artist · Chattanooga, TN</span>
+        <h1><span class="o">Get</span> Tatted <span class="r">by Gene.</span></h1>
+        <p class="lead">From a <b>$30 tiny tattoo</b> to a <b>1-day tapout session</b> — 51 sessions, every price posted up front. Highway 58, Chattanooga.</p>
+        <div class="cta-row">
+          <a class="btn btn-red" href="https://square.site/book/9JKXQXWXZF6YB/tattedgene-chattanooga-tn" target="_blank" rel="noopener">Book your session →</a>
+          <a class="btn btn-ghost" href="#services">See prices</a>
+        </div>
+        <div class="chips">
+          <span class="chip"><i>●</i>By appointment</span>
+          <span class="chip"><i>●</i>Walk-ins</span>
+          <span class="chip"><i>●</i>Deposits from $20</span>
+        </div>
+      </div>
+
+      <!-- flash sheet: dagger through rose -->
+      <svg class="hero-art draw" viewBox="0 0 300 420" aria-hidden="true" style="color:var(--bone)">
+        <!-- blade -->
+        <path class="s" style="--len:700;--d:.1s" stroke-width="3.2" d="M150 18 L170 70 L170 250 L150 292 L130 250 L130 70 Z"/>
+        <path class="s" style="--len:300;--d:.5s" stroke-width="2" d="M150 30 L150 280"/>
+        <path class="fillred" style="--d:2.2s" d="M150 30 L168 74 L168 120 L150 112 L132 120 L132 74 Z" opacity=".9"/>
+        <!-- guard -->
+        <path class="s" style="--len:500;--d:.9s" stroke-width="3.2" d="M82 292 Q150 270 218 292 Q224 304 212 310 Q150 292 88 310 Q76 304 82 292 Z"/>
+        <!-- grip -->
+        <path class="s" style="--len:400;--d:1.1s" stroke-width="3.2" d="M136 304 L136 370 Q150 378 164 370 L164 304"/>
+        <path class="s" style="--len:200;--d:1.3s" stroke-width="2" d="M136 320 L164 330 M136 336 L164 346 M136 352 L164 362"/>
+        <circle class="s" style="--len:120;--d:1.4s" stroke-width="3.2" cx="150" cy="390" r="14"/>
+        <circle class="fillred" style="--d:2.4s" cx="150" cy="390" r="7"/>
+        <!-- rose -->
+        <g transform="translate(150 196)">
+          <path class="fillred" style="--d:2.6s" d="M-52 6 Q-60 -40 -18 -54 Q22 -66 46 -36 Q66 -6 46 26 Q20 56 -16 50 Q-50 40 -52 6Z"/>
+          <path class="s" style="--len:420;--d:.7s" stroke-width="3.2" stroke="var(--ink)" d="M-52 6 Q-60 -40 -18 -54 Q22 -66 46 -36 Q66 -6 46 26 Q20 56 -16 50 Q-50 40 -52 6Z"/>
+          <path class="s" style="--len:300;--d:1.2s" stroke-width="2.6" stroke="var(--ink)" d="M-20 -20 Q0 -40 22 -22 Q34 0 16 16 Q-4 26 -16 10 Q-24 -4 -8 -10 Q6 -10 6 2"/>
+          <path class="s" style="--len:200;--d:1.5s" stroke-width="2.4" stroke="var(--ink)" d="M-38 -24 Q-30 4 -10 30 M30 -44 Q44 -14 30 16"/>
+          <path class="s" style="--len:420;--d:.7s" stroke-width="3" d="M-52 6 Q-60 -40 -18 -54 Q22 -66 46 -36 Q66 -6 46 26 Q20 56 -16 50 Q-50 40 -52 6Z"/>
+          <!-- leaves -->
+          <path class="s" style="--len:220;--d:1.6s" stroke-width="3" d="M-46 30 Q-96 30 -110 66 Q-70 76 -46 30Z M-80 54 L-50 36"/>
+          <path class="s" style="--len:220;--d:1.8s" stroke-width="3" d="M44 30 Q92 22 112 56 Q74 72 44 30Z M80 46 L50 34"/>
+        </g>
+        <!-- sparkle dots -->
+        <path class="s" style="--len:60;--d:2s" stroke-width="2.4" d="M52 90 L52 110 M42 100 L62 100 M250 140 L250 156 M242 148 L258 148 M244 330 L244 344 M237 337 L251 337"/>
+      </svg>
+      <svg class="stamp" aria-hidden="true"><use href="#stamp"/></svg>
+    </div>
+  </section>
+
+  <div style="overflow:hidden;padding:8px 0"><div class="ticker" aria-hidden="true"><div>
+    <span>Tiny Tattoos</span>★<span>Coverups</span>★<span>Half Sleeves</span>★<span>Full Sleeves</span>★<span>Back Pieces</span>★<span>Touch-Ups</span>★<span>Tapout Sessions</span>★
+    <span>Tiny Tattoos</span>★<span>Coverups</span>★<span>Half Sleeves</span>★<span>Full Sleeves</span>★<span>Back Pieces</span>★<span>Touch-Ups</span>★<span>Tapout Sessions</span>★
+  </div></div></div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">01 / The Price Sheet</span>
+        <h2>Pick your <em>chair time.</em></h2>
+        <p>All 51 sessions from Gene's booking page, grouped by how long you'll be in the chair. Prices as posted — book the one that fits.</p>
+      </div>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div id="panels"></div>
+
+      <div class="deposit rv">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="22" y="30" text-anchor="middle" font-family="Bebas Neue" font-size="24" fill="currentColor">$</text></svg>
+        <p><b>Deposit locks your spot:</b> $30 for most sessions, $20 for tiny and face tattoos — sent by Cash App to <b>$TattedGene</b> when you book.</p>
+      </div>
+      <div class="svc-cta"><a class="btn btn-red" href="https://square.site/book/9JKXQXWXZF6YB/tattedgene-chattanooga-tn" target="_blank" rel="noopener">Book on Square →</a></div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PLACEHOLDER -->
+  <section class="port" id="work">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">02 / The Wall</span>
+        <span class="placeholder-flag">Concept placeholder</span>
+        <h2>Your work <em>goes here.</em></h2>
+        <p>Right now people booking have nowhere to see what you've done. This wall would pull your latest pieces straight from your Instagram — the frames below are stand-ins, not real work.</p>
+      </div>
+      <div class="wall">
+        <div class="frame rv"><span class="pin"></span>
+          <svg class="draw" viewBox="0 0 120 120" aria-hidden="true"><path class="s" style="--len:300;--d:.5s" stroke-width="3" d="M44 52 Q58 18 104 10 Q90 34 64 58"/><path class="s" style="--len:160;--d:.8s" stroke-width="2.4" d="M56 40 L80 24 M62 46 L90 28"/><path class="fillred" style="--d:1.8s" d="M24 56 Q40 68 60 72 Q40 76 24 60Z"/><path class="s" style="--len:420" stroke-width="3" d="M18 52 Q24 42 36 45 Q52 48 70 62 L104 70 L84 73 L106 88 L78 79 Q56 78 40 68 Q24 62 18 52Z"/><path class="s" style="--len:160;--d:1s" stroke-width="3" d="M50 70 Q52 92 32 106 Q62 96 66 76"/><path class="s" style="--len:20;--d:.2s" stroke-width="3" d="M18 52 L9 53"/><circle cx="29" cy="49" r="2.2" fill="currentColor"/></svg>
+          <span class="tag"><span>Swallow</span><span>Your pic</span></span></div>
+        <div class="frame rv"><span class="pin"></span>
+          <svg class="draw" viewBox="0 0 120 120" aria-hidden="true"><path class="fillred" style="--d:1.6s" d="M60 20 Q84 20 92 44 Q100 70 76 86 Q60 96 44 86 Q20 70 28 44 Q36 20 60 20Z"/><path class="s" style="--len:340" stroke-width="3" d="M60 20 Q84 20 92 44 Q100 70 76 86 Q60 96 44 86 Q20 70 28 44 Q36 20 60 20Z"/><path class="s" style="--len:200;--d:.5s" stroke-width="2.4" d="M46 46 Q60 32 74 46 Q78 62 62 66 Q50 64 54 54 Q62 50 64 56"/><path class="s" style="--len:120;--d:.8s" stroke-width="3" d="M60 92 L60 112 M60 104 Q44 96 38 106 Q50 112 60 104"/></svg>
+          <span class="tag"><span>Rose</span><span>Your pic</span></span></div>
+        <div class="frame rv"><span class="pin"></span>
+          <svg class="draw" viewBox="0 0 120 120" aria-hidden="true"><path class="s" style="--len:300" stroke-width="3" d="M60 8 L68 26 L68 74 L60 86 L52 74 L52 26 Z"/><path class="fillred" style="--d:1.6s" d="M60 12 L66 28 L66 44 L54 44 L54 28 Z"/><path class="s" style="--len:160;--d:.5s" stroke-width="3" d="M34 86 Q60 78 86 86 L84 92 Q60 86 36 92 Z"/><path class="s" style="--len:120;--d:.8s" stroke-width="3" d="M54 92 L54 108 Q60 112 66 108 L66 92"/><circle class="s" style="--len:40;--d:1s" stroke-width="3" cx="60" cy="114" r="4"/></svg>
+          <span class="tag"><span>Dagger</span><span>Your pic</span></span></div>
+        <div class="frame rv"><span class="pin"></span>
+          <svg class="draw" viewBox="0 0 120 120" aria-hidden="true"><path class="fillred" style="--d:1.6s" d="M60 100 Q14 70 18 42 Q22 18 46 22 Q56 24 60 36 Q64 24 74 22 Q98 18 102 42 Q106 70 60 100Z"/><path class="s" style="--len:340" stroke-width="3" d="M60 100 Q14 70 18 42 Q22 18 46 22 Q56 24 60 36 Q64 24 74 22 Q98 18 102 42 Q106 70 60 100Z"/><path class="s" style="--len:200;--d:.6s" stroke-width="3" d="M6 64 Q30 50 60 60 Q90 70 114 54"/><rect x="40" y="52" width="40" height="14" fill="#f7f1e6" stroke="none"/><text x="60" y="63" text-anchor="middle" font-family="Bebas Neue" font-size="11" fill="currentColor">YOUR NAME</text></svg>
+          <span class="tag"><span>Heart</span><span>Your pic</span></span></div>
+        <div class="frame rv"><span class="pin"></span>
+          <svg class="draw" viewBox="0 0 120 120" aria-hidden="true"><path class="s" style="--len:300" stroke-width="3" d="M60 14 L66 46 L98 50 L72 66 L82 100 L60 80 L38 100 L48 66 L22 50 L54 46 Z"/><circle class="fillred" style="--d:1.6s" cx="60" cy="60" r="9"/><path class="s" style="--len:60;--d:.8s" stroke-width="2.4" d="M18 18 L24 24 M102 18 L96 24 M18 104 L24 98"/></svg>
+          <span class="tag"><span>Star</span><span>Your pic</span></span></div>
+        <div class="frame rv"><span class="pin"></span>
+          <svg class="draw" viewBox="0 0 120 120" aria-hidden="true"><path class="s" style="--len:360" stroke-width="3" d="M30 50 Q30 18 60 18 Q90 18 90 50 Q90 66 80 72 L80 86 L40 86 L40 72 Q30 66 30 50Z"/><circle class="fillred" style="--d:1.6s" cx="47" cy="52" r="8"/><circle class="fillred" style="--d:1.7s" cx="73" cy="52" r="8"/><path class="s" style="--len:80;--d:.6s" stroke-width="3" d="M56 70 L60 62 L64 70 M48 86 L48 96 M60 86 L60 98 M72 86 L72 96"/></svg>
+          <span class="tag"><span>Skull</span><span>Your pic</span></span></div>
+      </div>
+      <div class="port-note rv">
+        <p>Follow along for the real thing — new pieces go up on Instagram and Facebook.</p>
+        <a class="btn btn-ghost" href="https://www.instagram.com/tatted_gene/" target="_blank" rel="noopener">@tatted_gene</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/TattedGene" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">03 / Why Gene</span>
+        <h2>No guessing. <em>Just ink.</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="card rv">
+          <svg class="corner" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+          <div class="big">51</div><h3>Prices posted up front</h3>
+          <p>Every session has its price and chair time listed before you book. Know what you're walking into before you sit down.</p>
+        </div>
+        <div class="card rv">
+          <svg class="corner" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 4 L36 24 L56 30 L36 36 L30 56 L24 36 L4 30 L24 24Z" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+          <div class="big">$30</div><h3>Small to start</h3>
+          <p>Tiny tattoos start at $30 with a $20 deposit — an easy first one, or the next one in the collection.</p>
+        </div>
+        <div class="card rv">
+          <svg class="corner" viewBox="0 0 60 60" aria-hidden="true"><rect x="6" y="6" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+          <div class="big">1 day</div><h3>Or go all in</h3>
+          <p>Full sleeves, leg sleeves, back pieces — and a 1-day tapout session when you're ready to sit.</p>
+        </div>
+        <div class="card rv">
+          <svg class="corner" viewBox="0 0 60 60" aria-hidden="true"><path d="M8 52 L52 8 M8 8 L52 52" stroke="currentColor" stroke-width="3"/></svg>
+          <div class="big">Fix it</div><h3>Coverups &amp; touch-ups</h3>
+          <p>Custom coverups, tramp-stamp coverups and touch-ups are all on the menu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">04 / Pull Up</span>
+        <h2>Find the <em>chair.</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="rv">
+          <p class="addr"><strong>Highway 58, #115</strong>Chattanooga, TN 37416</p>
+          <ul class="contact-list">
+            <li><a href="tel:+14233620886"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><small>Call or text</small>(423) 362-0886</span></a></li>
+            <li><a href="mailto:tattedgene1994@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><small>Email</small>tattedgene1994@gmail.com</span></a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Highway+58+%23115+Chattanooga+TN+37416" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg><span><small>Directions</small>Open in Google Maps</span></a></li>
+          </ul>
+          <div class="hours">
+            <p class="appt">By appointment <span>+ walk-ins</span></p>
+            <p class="hlabel">Booking hours (per Square)</p>
+            <table id="hours">
+              <tr data-d="2"><td>Tuesday</td><td>10:30 AM – 7:30 PM</td></tr>
+              <tr data-d="3"><td>Wednesday</td><td>10:30 AM – 7:30 PM</td></tr>
+              <tr data-d="4"><td>Thursday</td><td>10:30 AM – 7:30 PM</td></tr>
+              <tr data-d="5"><td>Friday</td><td>10:30 AM – 7:30 PM</td></tr>
+              <tr data-d="6" class="closed"><td>Saturday</td><td>Closed</td></tr>
+              <tr data-d="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+              <tr data-d="1" class="closed"><td>Monday</td><td>Closed</td></tr>
+            </table>
+            <p class="note">Times can change. Check live openings when you book, or call or text to ask.</p>
+          </div>
+        </div>
+        <div class="map rv">
+          <iframe title="Map to TattedGene, Highway 58 #115, Chattanooga TN" loading="lazy" src="https://www.google.com/maps?q=Highway%2058%20%23115%2C%20Chattanooga%2C%20TN%2037416&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <svg class="art draw" viewBox="0 0 240 120" aria-hidden="true"><g transform="translate(118 0) scale(-1 1)"><path class="s" style="--len:300;--d:.5s" stroke-width="3" d="M44 52 Q58 18 104 10 Q90 34 64 58"/><path class="fillred" style="--d:1.8s" d="M24 56 Q40 68 60 72 Q40 76 24 60Z"/><path class="s" style="--len:420" stroke-width="3" d="M18 52 Q24 42 36 45 Q52 48 70 62 L104 70 L84 73 L106 88 L78 79 Q56 78 40 68 Q24 62 18 52Z"/><path class="s" style="--len:160;--d:1s" stroke-width="3" d="M50 70 Q52 92 32 106 Q62 96 66 76"/><path class="s" style="--len:20;--d:.2s" stroke-width="3" d="M18 52 L9 53"/><circle cx="29" cy="49" r="2.2" fill="currentColor"/></g><g transform="translate(122 0)"><path class="s" style="--len:300;--d:.5s" stroke-width="3" d="M44 52 Q58 18 104 10 Q90 34 64 58"/><path class="fillred" style="--d:1.8s" d="M24 56 Q40 68 60 72 Q40 76 24 60Z"/><path class="s" style="--len:420" stroke-width="3" d="M18 52 Q24 42 36 45 Q52 48 70 62 L104 70 L84 73 L106 88 L78 79 Q56 78 40 68 Q24 62 18 52Z"/><path class="s" style="--len:160;--d:1s" stroke-width="3" d="M50 70 Q52 92 32 106 Q62 96 66 76"/><path class="s" style="--len:20;--d:.2s" stroke-width="3" d="M18 52 L9 53"/><circle cx="29" cy="49" r="2.2" fill="currentColor"/></g></svg>
+      <h2>Your next piece <span>starts here.</span></h2>
+      <p>Pick a session, send the deposit, and get in Gene's chair on Highway 58.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-red" href="https://square.site/book/9JKXQXWXZF6YB/tattedgene-chattanooga-tn" target="_blank" rel="noopener">Book on Square →</a>
+        <a class="btn btn-ghost" href="tel:+14233620886">Call (423) 362-0886</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="bb">Tatted<span style="color:var(--red)">Gene</span></div>
+      <p>Tattoo artist · Highway 58, #115, Chattanooga, TN 37416 · <a href="tel:+14233620886">(423) 362-0886</a></p>
+    </div>
+    <p><a href="https://www.instagram.com/tatted_gene/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/TattedGene" target="_blank" rel="noopener">Facebook</a> · Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+14233620886">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="2"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/9JKXQXWXZF6YB/tattedgene-chattanooga-tn" target="_blank" rel="noopener">Book a session →</a>
+</nav>
+
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+<script>
+(function(){
+  // [name, price, plus(bool), duration, deposit]
+  var G=[
+    {k:"quick",t:"Quick Hits",s:"Under 1 hr",items:[
+      ["Tiny tattoo",30,0,"20 min",20],["Face tattoos",30,0,"25 min",20],["Full neck tattoos",275,0,"30 min",30],
+      ["Facial",50,0,"45 min",30],["Small tattoo",60,1,"45 min",30],["Touch-ups",70,0,"50 min",30]]},
+    {k:"one",t:"One-Sitting Pieces",s:"1 – 2 hrs",items:[
+      ["Small sternum tattoo",85,0,"1 hr",30],["Butt tattoo",100,0,"1 hr",30],["Forearm small piece",125,0,"1 hr 25 min",30],
+      ["Knuckle tattoos",80,0,"1 hr 30 min",30],["Spine piece",150,0,"1 hr 30 min",30],["Decent coverup",160,0,"1 hr 30 min",30],
+      ["Hand piece",130,0,"1 hr 35 min",30],["Neck tattoos",100,0,"1 hr 35 min",30],["Ankle tattoos",135,0,"1 hr 35 min",30],
+      ["Small spine pieces",120,0,"1 hr 35 min",30],["Original sided tattoo piece",100,0,"1 hr 35 min",30],["Thigh tattoo piece",160,0,"1 hr 45 min",30],
+      ["Knee piece",125,0,"1 hr 45 min",30],["Upper arm piece",160,0,"2 hr",30],["Foot piece tattoo",150,0,"2 hr",30],["Under boob piece",160,0,"2 hr",30]]},
+    {k:"statement",t:"Statement Pieces",s:"2 – 3 hrs",items:[
+      ["Forearm less detail piece",175,0,"2 hr 25 min",30],["Rib piece",150,0,"2 hr 30 min",30],["Forearm fill in piece",150,0,"2 hr 30 min",30],
+      ["Quarter sleeve",200,0,"2 hr 35 min",30],["Full detail forearm piece",200,0,"2 hr 35 min",30],["Full spine tattoo",200,0,"2 hr 35 min",30],
+      ["Custom coverup",225,0,"2 hr 35 min",30],["Lower leg piece",200,0,"2 hr 35 min",30],["Decent size sternum tattoo",225,0,"2 hr 35 min",30],
+      ["Butt piece",240,0,"2 hr 40 min",30],["Chest piece tattoo platter",250,1,"2 hr 45 min",30],["Shoulder piece tattoo",200,0,"2 hr 45 min",30],
+      ["Back piece tattoos",250,0,"2 hr 45 min",30],["Thigh piece",200,0,"3 hr",30],["Ankle piece",300,0,"3 hr",30]]},
+    {k:"big",t:"Big Pieces",s:"3 – 4 hrs",items:[
+      ["Tramp stamp coverup",200,0,"3 hr 5 min",30],["Big rib piece",225,0,"3 hr 10 min",30],["Custom shoulder piece",300,0,"3 hr 25 min",30],
+      ["Big thigh pieces",325,0,"3 hr 30 min",30],["Full neck tattoos",250,0,"3 hr 40 min",30],["Decent back platter",325,0,"3 hr 45 min",30],
+      ["Lower leg sleeve",375,0,"4 hr",30]]},
+    {k:"sessions",t:"Sleeves & Sessions",s:"4.5 hrs – all day",items:[
+      ["Half sleeve",375,1,"4 hr 35 min",30],["Back piece platter",425,0,"4 hr 45 min",30],["Full sleeve",475,0,"5 hr",30],
+      ["Full back piece half session",475,0,"5 hr",30],["Thigh sleeve",525,0,"5 hr 35 min",30],["Full leg sleeve",575,0,"6 hr",30],
+      ["Tapout session",600,0,"1 day",30]]}
+  ];
+  var tabs=document.getElementById('tabs'),panels=document.getElementById('panels'),total=0;
+  G.forEach(function(g,i){
+    total+=g.items.length;
+    var b=document.createElement('button');b.className='tab';b.type='button';b.setAttribute('role','tab');
+    b.setAttribute('aria-selected',i===0?'true':'false');b.setAttribute('aria-controls','p-'+g.k);b.id='t-'+g.k;
+    b.innerHTML=g.t+'<small>'+g.s+' · '+g.items.length+'</small>';tabs.appendChild(b);
+    var p=document.createElement('div');p.className='panel';p.id='p-'+g.k;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','t-'+g.k);
+    if(i!==0)p.hidden=true;
+    var h='<div class="panel-head"><h3>'+g.t+'</h3><span>'+g.s+' · '+g.items.length+' sessions</span></div><ul class="svc">';
+    g.items.forEach(function(it){
+      h+='<li><span class="n">'+it[0]+'</span><span class="p">$'+it[1]+(it[2]?'<sup>&amp; UP</sup>':'')+'</span><span class="m"><b>'+it[3]+'</b> · $'+it[4]+' deposit</span></li>';
+    });
+    p.innerHTML=h+'</ul>';panels.appendChild(p);
+    b.addEventListener('click',function(){
+      [].forEach.call(tabs.children,function(x){x.setAttribute('aria-selected','false')});
+      [].forEach.call(panels.children,function(x){x.hidden=true});
+      b.setAttribute('aria-selected','true');p.hidden=false;
+    });
+  });
+  // today's hours
+  var d=new Date().getDay(),r=document.querySelector('#hours tr[data-d="'+d+'"]');if(r)r.classList.add('today');
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else all();
+  setTimeout(all,2500);
+})();
+</script>
+</body>
+</html>

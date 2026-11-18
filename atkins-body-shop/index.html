@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Atkins Body Shop — Madisonville</title>
+<meta name="description" content="Concept site for Atkins Body Shop, Madisonville TN. Body shop &amp; wrecker service serving East Tennessee since 1962. Call 423-442-3860.">
+<meta name="theme-color" content="#14213d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213d; --navy-2:#1b2b4f; --navy-3:#0d1730;
+  --red:#d62828; --red-dk:#a91e1e;
+  --chrome:#c7ccd1; --chrome-dk:#8e959d;
+  --cream:#f7f3ea; --cream-2:#ece5d4; --ink:#14213d; --muted:#4a5672;
+  --bar-h:70px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:"Source Sans 3",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.slab{font-family:"Alfa Slab One",Rockwell,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:.005em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+svg{display:block}
+
+/* banner */
+.concept{background:var(--navy-3);color:var(--chrome);font-size:clamp(10px,2.9vw,13px);text-align:center;padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.concept b{color:#fff;font-weight:700}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(20,33,61,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:3px solid var(--red);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand .bt{font-family:"Alfa Slab One";font-size:18px;line-height:1;white-space:nowrap}
+.brand .bt small{display:block;font-family:"Source Sans 3";font-weight:700;font-size:10.5px;letter-spacing:.2em;color:var(--chrome);margin-top:4px;text-transform:uppercase}
+.links{display:none;gap:26px;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--chrome);transition:color .2s}
+.links a:hover{color:#fff}
+.navcall{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;font-weight:800;font-size:15px;text-decoration:none;padding:9px 13px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 0 var(--red-dk);transition:transform .15s,background .2s}
+.navcall:hover{background:#e53a3a;transform:translateY(-1px)}
+@media(min-width:900px){.links{display:flex}}
+@media(max-width:380px){.navcall .t{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(120% 70% at 85% 10%,rgba(214,40,40,.22),transparent 60%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 46px),
+  linear-gradient(180deg,var(--navy) 0%,var(--navy-3) 100%)}
+.hero .wrap{display:grid;gap:18px;padding-top:24px;padding-bottom:36px}
+.est{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--chrome)}
+.est::before,.est::after{content:"";width:26px;height:2px;background:var(--red)}
+.hero h1{font-size:clamp(38px,10.6vw,76px);margin:12px 0 12px;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+.hero h1 em{font-style:normal;color:var(--red);display:inline-block;position:relative}
+.hero h1 .chrome{background:linear-gradient(180deg,#ffffff 0%,#f1f3f5 45%,#b9c0c7 58%,#eef0f2 78%,#ffffff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 0 rgba(0,0,0,.3))}
+.sub{font-size:clamp(17px,4.4vw,20px);color:#dbe1ea;max-width:34ch}
+.ctas{display:flex;gap:10px;margin-top:20px}
+.ctas .btn{flex:1 1 auto}
+@media(max-width:420px){.ctas .btn{padding:14px 14px;font-size:16px}.ctas .btn-ghost{flex:0 0 auto}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:17px;text-decoration:none;padding:15px 22px;border-radius:12px;transition:transform .15s,box-shadow .2s,background .2s;min-height:52px}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 4px 0 var(--red-dk),0 10px 24px rgba(214,40,40,.35)}
+.btn-red:hover{transform:translateY(-2px);background:#e23434}
+.btn-red:active{transform:translateY(2px);box-shadow:0 1px 0 var(--red-dk)}
+.btn-ghost{border:2px solid var(--chrome);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.trust{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:18px;font-weight:700;font-size:14px;color:var(--chrome)}
+.trust span{display:inline-flex;align-items:center;gap:7px}
+.trust i{width:7px;height:7px;background:var(--red);transform:rotate(45deg);display:inline-block}
+
+.art{position:relative;max-width:560px;width:100%;margin:0 auto}
+.art .panel{width:100%;height:auto}
+.badge-float{position:absolute;left:-4px;top:-6px;width:104px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cap{display:flex;justify-content:space-between;font-weight:800;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--chrome-dk);margin-top:10px;padding:0 4px}
+.cap b{color:var(--chrome)}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:center;padding-top:70px;padding-bottom:80px;gap:40px}
+  .badge-float{width:140px;left:-24px;top:-30px}
+}
+/* sweep anim */
+#seam{animation:seam 6s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes seam{0%,12%{transform:translateX(0)}50%,62%{transform:translateX(250px)}100%{transform:translateX(0)}}
+#reveal{animation:reveal 6s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes reveal{0%,12%{transform:translateX(0)}50%,62%{transform:translateX(250px)}100%{transform:translateX(0)}}
+.glint{animation:glint 3.2s ease-in-out infinite}
+@keyframes glint{0%,100%{opacity:.25}50%{opacity:.9}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* pinstripe divider */
+.pin{display:flex;justify-content:center;padding:6px 0}
+.pin svg{width:min(280px,72vw);height:auto}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-weight:800;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.h2{font-size:clamp(32px,8.4vw,52px);margin:8px 0 12px;color:var(--navy)}
+.lede{color:var(--muted);max-width:56ch;font-size:18px}
+.center{text-align:center}.center .lede{margin:0 auto}
+
+/* services */
+.svc-grid{display:grid;gap:18px;margin-top:34px}
+@media(min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+.card{position:relative;background:#fff;border:2px solid var(--navy);border-radius:16px;padding:24px 20px 22px;box-shadow:6px 6px 0 var(--navy);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--red)}
+.card .ic{width:58px;height:58px;margin-bottom:14px}
+.card h3{font-size:24px;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:16px}
+.card ul{list-style:none;margin-top:10px;display:grid;gap:5px}
+.card li{position:relative;padding-left:18px;font-weight:600;font-size:15.5px}
+.card li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+
+.ins{margin-top:28px;display:grid;gap:16px;align-items:center;background:var(--navy);color:#fff;border-radius:18px;padding:26px 22px;position:relative;overflow:hidden}
+.ins::after{content:"";position:absolute;inset:8px;border:1.5px solid rgba(199,204,209,.35);border-radius:12px;pointer-events:none}
+.ins h3{font-size:clamp(24px,6vw,32px)}
+.ins h3 span{color:var(--red);display:block}
+.ins p{color:#dbe1ea;margin-top:8px}
+@media(min-width:800px){.ins{grid-template-columns:auto 1fr auto;padding:30px 36px;gap:28px}}
+.ins .stamp{width:84px;height:84px}
+
+/* why */
+.why{background:var(--cream-2);position:relative}
+.why::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(20,33,61,.06) 1px,transparent 1.4px) 0 0/14px 14px;pointer-events:none}
+.why .wrap{position:relative}
+.why-grid{display:grid;gap:26px;margin-top:34px;align-items:center}
+@media(min-width:900px){.why-grid{grid-template-columns:.9fr 1.1fr}}
+.signs{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.signs svg{width:min(150px,40vw);height:auto;filter:drop-shadow(0 6px 10px rgba(20,33,61,.25));transition:transform .3s}
+@media(min-width:900px){.signs svg{width:190px}}
+.signs svg:hover{transform:rotate(-4deg) scale(1.04)}
+.facts{display:grid;gap:14px}
+.fact{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;background:var(--cream);border-left:5px solid var(--red);border-radius:10px;padding:16px 16px}
+.fact .n{font-family:"Alfa Slab One";font-size:22px;color:var(--navy);line-height:1;padding-top:3px}
+.fact h3{font-family:"Source Sans 3";font-weight:800;font-size:18px;color:var(--navy);line-height:1.25}
+.fact p{color:var(--muted);font-size:16px;margin-top:3px}
+blockquote{margin-top:26px;font-family:"Alfa Slab One";font-size:clamp(20px,5vw,26px);line-height:1.3;color:var(--navy);text-align:center;max-width:30ch;margin-left:auto;margin-right:auto}
+blockquote span{color:var(--red)}
+blockquote cite{display:block;font-family:"Source Sans 3";font-style:normal;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+/* hours + visit */
+.visit-grid{display:grid;gap:22px;margin-top:30px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.25fr}}
+.hours{background:var(--navy);color:#fff;border-radius:18px;padding:24px 22px;position:relative}
+.hours h3{font-size:26px;margin-bottom:4px}
+.hours .note{font-size:14px;color:var(--chrome);margin-bottom:14px}
+.hrow{display:flex;justify-content:space-between;padding:10px 12px;border-radius:8px;font-weight:600;border-bottom:1px dashed rgba(199,204,209,.22)}
+.hrow:last-child{border-bottom:0}
+.hrow .c{color:var(--chrome-dk)}
+.hrow.today{background:var(--red);border-bottom-color:transparent;color:#fff}
+.hrow.today .c{color:#fff}
+.hrow.today .d::after{content:"Today";margin-left:8px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:#fff;color:var(--red);padding:2px 7px;border-radius:99px;vertical-align:2px}
+.contact{display:grid;gap:12px;margin-top:18px}
+.contact a{display:flex;align-items:center;gap:12px;text-decoration:none;background:rgba(255,255,255,.07);border:1px solid rgba(199,204,209,.25);padding:12px 14px;border-radius:12px;font-weight:700;transition:background .2s;overflow-wrap:anywhere}
+.contact a:hover{background:rgba(255,255,255,.14)}
+.contact small{display:block;font-weight:600;color:var(--chrome);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.mapbox{border:3px solid var(--navy);border-radius:18px;overflow:hidden;box-shadow:6px 6px 0 var(--navy);background:var(--cream-2);min-height:320px;display:flex;flex-direction:column}
+.mapbox iframe{border:0;width:100%;flex:1;min-height:300px}
+.mapbar{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:14px 16px;background:#fff;border-top:3px solid var(--navy)}
+.mapbar b{display:block;color:var(--navy)}
+.mapbar .btn{padding:11px 16px;min-height:44px;font-size:15.5px}
+
+/* footer */
+footer{background:var(--navy-3);color:var(--chrome);padding:44px 0 30px;text-align:center}
+footer .slab{color:#fff;font-size:26px}
+footer p{font-size:15px;margin-top:6px}
+footer .cc{margin-top:22px;font-size:13px;color:var(--chrome-dk)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.4fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,23,48,.97);border-top:3px solid var(--red);backdrop-filter:blur(8px)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:12px;font-weight:800;font-size:16px;text-decoration:none}
+.bar .b1{background:var(--red);color:#fff}
+.bar .b2{border:2px solid var(--chrome);color:#fff}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv.pre{opacity:0;transform:translateY(22px)}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by Code Craft Media, made for <b>Atkins Body Shop</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Atkins Body Shop home">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#d62828" stroke="#c7ccd1" stroke-width="2"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="#f7f3ea" stroke-width="1" stroke-dasharray="2 2"/><text x="20" y="27" text-anchor="middle" font-family="Alfa Slab One,serif" font-size="19" fill="#f7f3ea">A</text></svg>
+      <span class="bt">Atkins Body Shop<small>Body Shop &amp; Wrecker</small></span>
+    </a>
+    <nav class="links" aria-label="Main"><a href="#services">Services</a><a href="#why">Since 1962</a><a href="#visit">Visit</a></nav>
+    <a class="navcall" href="tel:+14234423860" aria-label="Call Atkins Body Shop at 423-442-3860"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span class="t">423-442-3860</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="rv">
+      <span class="est">Madisonville, TN · Est. 1962</span>
+      <h1>Dented, stuck <span class="chrome">or stranded?</span><br><em>Call Atkins.</em></h1>
+      <p class="sub">Family-owned body shop &amp; wrecker service on Anderson Street, serving East Tennessee since 1962.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="tel:+14234423860"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call 423-442-3860</a>
+        <a class="btn btn-ghost" href="#services">See services</a>
+      </div>
+      <div class="trust"><span><i></i>All makes &amp; models</span><span><i></i>Foreign &amp; domestic</span><span><i></i>Insurance claims welcome</span></div>
+    </div>
+
+    <div class="art rv" aria-hidden="true">
+      <svg class="panel" viewBox="0 0 520 326" role="img">
+        <defs>
+          <linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef4b4b"/><stop offset=".45" stop-color="#d62828"/><stop offset="1" stop-color="#8f1717"/></linearGradient>
+          <linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c7ccd1"/><stop offset=".55" stop-color="#7f878f"/><stop offset="1" stop-color="#e5e8eb"/></linearGradient>
+          <linearGradient id="refl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <radialGradient id="dentg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5e0d0d"/><stop offset=".6" stop-color="#9c1a1a"/><stop offset="1" stop-color="#d62828" stop-opacity="0"/></radialGradient>
+          <clipPath id="body"><path d="M40 210 Q38 160 80 150 L150 140 Q190 96 250 86 L350 84 Q400 86 430 136 L470 148 Q492 156 490 200 L488 236 Q486 248 474 248 L56 248 Q42 248 40 236Z"/></clipPath>
+          <clipPath id="leftSide"><rect id="reveal" x="-260" y="0" width="400" height="330"/></clipPath>
+        </defs>
+        <!-- ground shadow -->
+        <ellipse cx="265" cy="290" rx="230" ry="12" fill="#000" opacity=".35"/>
+        <!-- smooth car (base) -->
+        <g clip-path="url(#body)">
+          <rect x="0" y="0" width="520" height="330" fill="url(#paint)"/>
+          <path d="M40 186 L490 176" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+          <path d="M40 192 Q260 186 490 182" stroke="#f7f3ea" stroke-width="1.4" fill="none" stroke-dasharray="0" opacity=".9"/>
+          <rect class="glint" x="200" y="150" width="200" height="22" fill="url(#refl)" transform="skewX(-25)"/>
+        </g>
+        <!-- dented overlay (left of seam) -->
+        <g clip-path="url(#leftSide)">
+          <g clip-path="url(#body)">
+            <rect x="0" y="0" width="520" height="330" fill="#b42222"/>
+            <ellipse cx="150" cy="202" rx="78" ry="42" fill="url(#dentg)"/><ellipse cx="146" cy="204" rx="40" ry="20" fill="#4a0909" opacity=".55"/><path d="M104 214 q40 -30 88 -6" stroke="#ff8a8a" stroke-opacity=".55" stroke-width="2.5" fill="none"/>
+            <path d="M92 182 q30 22 18 40 M130 168 q18 30 -4 58 M170 172 q-10 28 12 52 M205 186 q-26 12 -20 34" stroke="#fff" stroke-opacity=".35" stroke-width="2" fill="none"/>
+            <path d="M108 200 l20 -8 l14 14 l22 -10 l18 12" stroke="#3a0707" stroke-width="2" fill="none" opacity=".7"/>
+            <path d="M40 188 Q120 196 150 206 Q200 186 300 182" stroke="#fff" stroke-opacity=".3" stroke-width="3" fill="none"/>
+            <rect x="0" y="0" width="520" height="330" fill="#0d1730" opacity=".12"/>
+          </g>
+        </g>
+        <!-- windows -->
+        <path d="M166 142 Q200 104 252 98 L300 97 L300 142Z" fill="#14213d" stroke="url(#chr)" stroke-width="4"/>
+        <path d="M312 97 L346 97 Q388 100 412 140 L312 142Z" fill="#14213d" stroke="url(#chr)" stroke-width="4"/>
+        <path d="M180 132 L220 106" stroke="#c7ccd1" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+        <!-- trim -->
+        <path d="M300 144 V226" stroke="#7a1212" stroke-width="2" opacity=".6"/><path d="M44 228 L486 228" stroke="url(#chr)" stroke-width="7" stroke-linecap="round"/>
+        <rect x="470" y="160" width="20" height="14" rx="4" fill="#ffd166"/>
+        <rect x="40" y="168" width="14" height="14" rx="3" fill="#f7f3ea"/>
+        <rect x="300" y="160" width="26" height="5" rx="2.5" fill="url(#chr)"/>
+        <!-- wheels -->
+        <g><circle cx="130" cy="252" r="40" fill="#0d1730"/><circle cx="130" cy="252" r="24" fill="url(#chr)"/><circle cx="130" cy="252" r="8" fill="#14213d"/></g>
+        <g><circle cx="402" cy="252" r="40" fill="#0d1730"/><circle cx="402" cy="252" r="24" fill="url(#chr)"/><circle cx="402" cy="252" r="8" fill="#14213d"/></g>
+        <!-- seam / repair line -->
+        <g id="seam">
+          <line x1="140" y1="70" x2="140" y2="300" stroke="#f7f3ea" stroke-width="2.5" stroke-dasharray="6 6"/>
+          <circle cx="140" cy="306" r="15" fill="#f7f3ea" stroke="#14213d" stroke-width="2"/>
+          <path d="M132 306 h16 M137 301 l-5 5 l5 5 M143 301 l5 5 l-5 5" stroke="#d62828" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <svg class="badge-float" viewBox="0 0 140 140">
+        <defs><path id="circ" d="M70 70 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0"/></defs>
+        <circle cx="70" cy="70" r="68" fill="#f7f3ea" stroke="#c7ccd1" stroke-width="3"/>
+        <circle cx="70" cy="70" r="62" fill="#d62828"/>
+        <text font-family="Source Sans 3,sans-serif" font-weight="800" font-size="11.5" letter-spacing="3.2" fill="#f7f3ea"><textPath href="#circ">BODY SHOP · WRECKER SERVICE · </textPath></text>
+        <circle cx="70" cy="70" r="36" fill="#14213d" stroke="#f7f3ea" stroke-width="2"/>
+        <text x="70" y="64" text-anchor="middle" font-family="Source Sans 3,sans-serif" font-weight="800" font-size="10" letter-spacing="2" fill="#c7ccd1">EST.</text>
+        <text x="70" y="86" text-anchor="middle" font-family="Alfa Slab One,serif" font-size="22" fill="#f7f3ea">1962</text>
+      </svg>
+      <div class="cap"><span><b>Before</b> · dent</span><span>smooth · <b>After</b></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker">What we do</div>
+      <h2 class="h2">From the tow hook to the final coat</h2>
+      <p class="lede">General repairs, specialist repairs &amp; vintage parts. All vehicle makes and models, foreign and domestic.</p>
+    </div>
+    <div class="pin" aria-hidden="true"><svg viewBox="0 0 280 30"><path d="M4 15 C60 15 80 3 110 9 C126 12 128 20 140 15 C152 20 154 12 170 9 C200 3 220 15 276 15" fill="none" stroke="#d62828" stroke-width="2.2" stroke-linecap="round"/><path d="M40 21 C80 21 100 26 140 20 C180 26 200 21 240 21" fill="none" stroke="#14213d" stroke-width="1.4" stroke-linecap="round"/><circle cx="140" cy="15" r="3.5" fill="#14213d"/></svg></div>
+
+    <div class="svc-grid">
+      <article class="card rv">
+        <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#14213d"/><path d="M15 34 q14 -10 28 0" stroke="#d62828" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M18 26 l6 4 M40 26 l-6 4 M29 20 v6" stroke="#c7ccd1" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Body Repair</h3>
+        <p>Collision and body work on all makes and models, foreign and domestic.</p>
+        <ul><li>General repairs</li><li>Specialist repairs</li><li>Vintage parts</li></ul>
+      </article>
+      <article class="card rv">
+        <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#d62828"/><path d="M19 15 h14 l6 14 v14 h-26 v-14z" fill="#f7f3ea"/><rect x="21" y="18" width="10" height="9" fill="#14213d"/><path d="M16 42 h26" stroke="#14213d" stroke-width="3"/></svg>
+        <h3>Paintwork</h3>
+        <p>Paint to finish the job right, so the repair disappears into the rest of the car.</p>
+        <ul><li>Paint after body repair</li><li>Foreign &amp; domestic</li></ul>
+      </article>
+      <article class="card rv">
+        <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#14213d"/><path d="M12 36 h22 v-10 h6 l6 6 v4 z" fill="#c7ccd1"/><path d="M24 26 l-8 -9 M16 17 v8" stroke="#d62828" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="19" cy="38" r="4" fill="#d62828"/><circle cx="39" cy="38" r="4" fill="#d62828"/></svg>
+        <h3>Towing &amp; Wrecker</h3>
+        <p>Wrecker service to get you off the roadway as quickly and safely as possible.</p>
+        <ul><li>Towing</li><li>Winch-out recovery</li></ul>
+      </article>
+      <article class="card rv">
+        <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#d62828"/><path d="M20 30 l7 7 l12 -16" stroke="#f7f3ea" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Roadside Assistance</h3>
+        <p>Stuck on the side of the road? One call covers the small stuff too.</p>
+        <ul><li>Unlocks</li><li>Tire changes</li><li>Jump starts</li></ul>
+      </article>
+    </div>
+
+    <div class="ins rv">
+      <svg class="stamp" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="none" stroke="#c7ccd1" stroke-width="2"/><circle cx="42" cy="42" r="33" fill="#d62828"/><path d="M30 26 h18 l8 8 v24 h-26z" fill="#f7f3ea"/><path d="M35 40 h16 M35 46 h16 M35 52 h10" stroke="#14213d" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div>
+        <h3>Insurance claim? <span>We'll handle the paperwork.</span></h3>
+        <p>Atkins welcomes all insurance claims and can handle the paperwork for you, right in the office on Anderson Street.</p>
+      </div>
+      <a class="btn btn-red" href="tel:+14234423860">Call about a claim</a>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker">Why Atkins</div>
+      <h2 class="h2">A Madisonville name since 1962</h2>
+      <p class="lede">Family-owned and operated, with one simple rule: treat every customer like family.</p>
+    </div>
+    <div class="why-grid">
+      <div class="signs rv" aria-hidden="true">
+        <svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="72" fill="#14213d"/><circle cx="75" cy="75" r="65" fill="none" stroke="#c7ccd1" stroke-width="3"/><circle cx="75" cy="75" r="58" fill="none" stroke="#d62828" stroke-width="1.5" stroke-dasharray="3 4"/><text x="75" y="58" text-anchor="middle" font-family="Source Sans 3" font-weight="800" font-size="10" letter-spacing="2" fill="#c7ccd1">SERVING E. TN</text><text x="75" y="94" text-anchor="middle" font-family="Alfa Slab One" font-size="34" fill="#f7f3ea">1962</text><path d="M40 106 h70" stroke="#d62828" stroke-width="3"/><text x="75" y="122" text-anchor="middle" font-family="Source Sans 3" font-weight="800" font-size="9" letter-spacing="1.4" fill="#c7ccd1">MADISONVILLE</text></svg>
+        <svg viewBox="0 0 150 150"><path d="M75 4 L142 30 V82 Q142 126 75 146 Q8 126 8 82 V30Z" fill="#d62828" stroke="#c7ccd1" stroke-width="4"/><path d="M75 16 L130 37 V82 Q130 116 75 133 Q20 116 20 82 V37Z" fill="none" stroke="#f7f3ea" stroke-width="1.5"/><text x="75" y="62" text-anchor="middle" font-family="Source Sans 3" font-weight="800" font-size="11" letter-spacing="2.4" fill="#f7f3ea">FAMILY</text><text x="75" y="88" text-anchor="middle" font-family="Alfa Slab One" font-size="20" fill="#f7f3ea">OWNED</text><text x="75" y="108" text-anchor="middle" font-family="Source Sans 3" font-weight="800" font-size="10" letter-spacing="2.2" fill="#f7f3ea">&amp; OPERATED</text></svg>
+      </div>
+      <div class="facts">
+        <div class="fact rv"><div class="n">01</div><div><h3>Serving East Tennessee since 1962</h3><p>Atkins Body Shop began serving East Tennessee in 1962, right here in Madisonville.</p></div></div>
+        <div class="fact rv"><div class="n">02</div><div><h3>Family-owned and operated</h3><p>“We believe that our customers should be treated like family.”</p></div></div>
+        <div class="fact rv"><div class="n">03</div><div><h3>Wreck to repair, one shop</h3><p>Tow it in, fix the body, finish the paint, and handle the insurance paperwork under one roof.</p></div></div>
+        <div class="fact rv"><div class="n">04</div><div><h3>Every make, every model</h3><p>Foreign and domestic, general and specialist repairs, plus vintage parts.</p></div></div>
+      </div>
+    </div>
+    <blockquote class="rv">“Getting you off the roadway as quickly and safely as possible is our <span>top priority</span>.”<cite>Atkins Body Shop</cite></blockquote>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker">Find us</div>
+      <h2 class="h2">615 Anderson Street</h2>
+      <p class="lede">Madisonville, Tennessee. Call ahead or swing by the office.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours rv">
+        <h3>Shop Hours</h3>
+        <p class="note">As listed online. Give us a call to confirm.</p>
+        <div id="hrs">
+          <div class="hrow" data-d="1"><span class="d">Monday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="2"><span class="d">Tuesday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="3"><span class="d">Wednesday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="4"><span class="d">Thursday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="5"><span class="d">Friday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="6"><span class="d">Saturday</span><span class="c">Closed</span></div>
+          <div class="hrow" data-d="0"><span class="d">Sunday</span><span class="c">Closed</span></div>
+        </div>
+        <div class="contact">
+          <a href="tel:+14234423860"><svg width="22" height="22" viewBox="0 0 24 24" fill="#d62828" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span><small>Shop</small>423-442-3860</span></a>
+          <a href="tel:+14232614156"><svg width="22" height="22" viewBox="0 0 24 24" fill="#c7ccd1" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span><small>Also</small>(423) 261-4156</span></a>
+          <a href="mailto:donatkinsbodyshop@gmail.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="#c7ccd1" aria-hidden="true"><path d="M3 5h18v14H3z" opacity=".25"/><path d="M3 5h18v14H3zM4.5 7v.3l7.5 5.2 7.5-5.2V7z"/></svg><span><small>Email</small>donatkinsbodyshop@gmail.com</span></a>
+        </div>
+      </div>
+      <div class="mapbox rv">
+        <iframe title="Map to Atkins Body Shop, 615 Anderson St, Madisonville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=615%20Anderson%20St%2C%20Madisonville%2C%20TN%2037354&amp;output=embed"></iframe>
+        <div class="mapbar">
+          <span><b>Atkins Body Shop</b>615 Anderson St, Madisonville, TN 37354</span>
+          <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&amp;destination=615%20Anderson%20St%2C%20Madisonville%2C%20TN%2037354" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="slab">Atkins Body Shop</div>
+    <p>Body Shop &amp; Wrecker Service · 615 Anderson St, Madisonville, TN 37354</p>
+    <p><a href="tel:+14234423860">423-442-3860</a> · <a href="mailto:donatkinsbodyshop@gmail.com">donatkinsbodyshop@gmail.com</a></p>
+    <p class="cc">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="b1" href="tel:+14234423860"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call 423-442-3860</a>
+  <a class="b2" href="https://www.google.com/maps/dir/?api=1&amp;destination=615%20Anderson%20St%2C%20Madisonville%2C%20TN%2037354" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var r=document.querySelector('#hrs [data-d="'+d+'"]'); if(r) r.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var vh=window.innerHeight;
+  els.forEach(function(e){ if(e.getBoundingClientRect().top>vh*0.92) e.classList.add('pre'); });
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

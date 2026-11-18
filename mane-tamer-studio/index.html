@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mane Tamer Studio · Salon in Johnson City, TN</title>
+<meta name="description" content="Cuts, color, highlights, smoothing and K-tip extensions at Mane Tamer Studio, Sunset Plaza, Johnson City, TN. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1d3a2c; --forest-2:#24493a; --deep:#132a1f; --gold:#d9a52b; --gold-2:#e8bf55; --rust:#b8642a;
+  --cream:#f6eedb; --cream-2:#efe3c6; --ink:#1a2a21; --muted:#5b6b5f;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:'Abril Fatface',Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:.005em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--deep);color:var(--cream-2);font-size:12px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.banner b{color:var(--gold-2);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(29,58,44,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--cream)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo span{font-family:'Abril Fatface',serif;font-size:21px;letter-spacing:.01em}
+.logo small{display:block;font-family:'Outfit';font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-2);margin-top:-2px}
+.nav ul{display:none;list-style:none;gap:26px;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.85;transition:opacity .2s,color .2s}
+.nav ul a:hover{opacity:1;color:var(--gold-2)}
+.nav .btn{padding:9px 16px;font-size:14px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;background:var(--gold);color:var(--deep);font-weight:600;text-decoration:none;border-radius:999px;padding:14px 24px;font-size:16px;border:2px solid var(--gold);transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 4px 0 #a97c18}
+.btn:hover{transform:translateY(-2px);background:var(--gold-2);box-shadow:0 6px 0 #a97c18}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #a97c18}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgba(246,238,219,.55);box-shadow:none}
+.btn.ghost:hover{border-color:var(--gold-2);color:var(--gold-2)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;background:var(--forest);color:var(--cream);overflow:hidden;padding:44px 0 0}
+.hero .burst{position:absolute;left:50%;top:330px;width:880px;height:880px;transform:translate(-50%,-50%);pointer-events:none}
+.burst .rays{animation:spin 140s linear infinite;transform-origin:0 0}
+.burst .rays path{fill:var(--forest-2)}
+.burst .mane{animation:spin 220s linear infinite reverse;transform-origin:0 0}
+.burst .mane path{fill:none;stroke-linecap:round}
+.burst .s1{stroke:var(--gold);stroke-width:9;opacity:.5}
+.burst .s2{stroke:var(--rust);stroke-width:6;opacity:.45}
+.burst .s3{stroke:var(--cream);stroke-width:3;opacity:.2}
+.hero::after{content:"";position:absolute;left:50%;top:330px;width:520px;height:640px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(29,58,44,.95) 0,rgba(29,58,44,.88) 50%,rgba(29,58,44,.5) 78%,rgba(29,58,44,0) 100%);z-index:1;pointer-events:none}
+.burst .sway{animation:sway 9s ease-in-out infinite;transform-origin:0 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes sway{0%,100%{transform:rotate(-2deg) scale(1)}50%{transform:rotate(2deg) scale(1.03)}}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2);font-weight:600;background:rgba(19,42,31,.55);padding:7px 14px;border-radius:999px;border:1px solid rgba(232,191,85,.35)}
+.hero h1{font-size:clamp(50px,14.5vw,120px);margin:22px auto 14px;max-width:11ch;text-shadow:0 3px 0 rgba(0,0,0,.18)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:18px;max-width:31ch;text-wrap:balance;margin:0 auto 26px;color:#e9e0c8}
+.hero .ctas{display:flex;flex-direction:column;gap:12px;align-items:center;max-width:330px;margin:0 auto}
+.hero .ctas .btn{width:100%}
+.hero .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:24px 0 0;font-size:14px;color:#d9cfb5}
+.hero .meta span{display:inline-flex;align-items:center;gap:6px}
+.hero .meta i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.wave{display:block;width:100%;height:auto;margin-top:46px;position:relative;z-index:2}
+
+/* retro stripes */
+.stripes{display:block;width:100%;height:40px}
+
+section{padding:76px 0}
+.kicker{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--rust);margin-bottom:10px}
+.sec-h{font-size:clamp(38px,9vw,64px);color:var(--forest);margin-bottom:12px}
+.sec-sub{color:var(--muted);max-width:52ch;font-size:17px}
+
+/* services */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 22px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 15px 'Outfit';padding:11px 18px;border-radius:999px;border:2px solid var(--forest);background:transparent;color:var(--forest);cursor:pointer;transition:background .2s,color .2s}
+.tab:hover{background:var(--cream-2)}
+.tab[aria-selected=true]{background:var(--forest);color:var(--cream)}
+.panel{display:grid;gap:12px}
+.panel[hidden]{display:none}
+.svc{background:#fffaf0;border-radius:var(--r);padding:18px 18px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;border:1px solid #e6d8b6;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 10px 24px -14px rgba(29,58,44,.45);border-color:var(--gold)}
+.svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold);opacity:0;transition:opacity .2s}
+.svc:hover::before{opacity:1}
+.svc h3{font-family:'Outfit';font-weight:600;font-size:18px;line-height:1.25;color:var(--forest)}
+.svc .price{font-family:'Abril Fatface',serif;font-size:24px;color:var(--rust);text-align:right;white-space:nowrap;line-height:1.1}
+.svc .price small{display:block;font-family:'Outfit';font-size:11px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;font-weight:600}
+.svc .desc{grid-column:1/-1;font-size:14.5px;color:var(--muted)}
+.svc .dur{grid-column:1/-1;display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--forest);font-weight:500;margin-top:4px}
+.svc .dur svg{width:14px;height:14px}
+.note{margin-top:18px;font-size:14px;color:var(--muted)}
+.note a{color:var(--forest);font-weight:600}
+
+/* why */
+.why{background:var(--forest);color:var(--cream);position:relative;overflow:hidden}
+.why .sec-h{color:var(--cream)}
+.why .kicker{color:var(--gold-2)}
+.why .sec-sub{color:#d6cdb3}
+.feat{display:grid;gap:14px;margin-top:34px}
+.f{background:rgba(255,255,255,.05);border:1px solid rgba(232,191,85,.25);border-radius:var(--r);padding:22px;display:flex;gap:16px;align-items:flex-start;transition:background .2s,transform .2s}
+.f:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.f .ic{flex:0 0 52px;height:52px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.f .ic svg{width:26px;height:26px;stroke:var(--deep);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.f h3{font-size:24px;color:var(--gold-2);margin-bottom:6px}
+.f p{font-size:15.5px;color:#e3d9bf}
+.why .sun{position:absolute;right:-160px;top:-160px;width:420px;opacity:.12;animation:spin 120s linear infinite}
+
+/* stylist */
+.meet{display:grid;gap:26px;align-items:center}
+.medal{width:220px;height:220px;margin:0 auto;position:relative}
+.medal svg{width:100%;height:100%}
+.medal .spin{animation:spin 60s linear infinite;transform-origin:110px 110px}
+.meet blockquote{font-family:'Abril Fatface',serif;font-size:clamp(28px,6.5vw,40px);color:var(--forest);line-height:1.12}
+.meet blockquote em{font-style:normal;color:var(--rust)}
+
+/* visit */
+.visit{background:var(--cream-2)}
+.vgrid{display:grid;gap:18px;margin-top:30px}
+.card{background:#fffaf0;border-radius:var(--r);padding:24px;border:1px solid #e1d1ab}
+.card h3{font-size:26px;color:var(--forest);margin-bottom:14px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:10px 12px;border-radius:12px;font-size:16px}
+.hours li:nth-child(odd){background:rgba(217,165,43,.08)}
+.hours li.closed span:last-child{color:var(--muted)}
+.hours li.today{background:var(--forest)!important;color:var(--cream);font-weight:600}
+.hours li.today span:last-child{color:var(--gold-2)}
+.hours li.today span:first-child::after{content:" · Today";font-weight:400;font-size:13px;color:var(--gold-2)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-bottom:12px;color:var(--forest)}
+.status i{width:9px;height:9px;border-radius:50%;background:#9aa69c}
+.status.open i{background:#3fa66a;box-shadow:0 0 0 4px rgba(63,166,106,.18)}
+.loc{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed #d9c79c}
+.loc:last-of-type{border-bottom:0}
+.loc .pin{flex:0 0 34px;height:34px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.loc .pin svg{width:18px;height:18px}
+.loc .pin.alt{background:var(--cream-2);border:2px solid var(--gold)}
+.loc b{display:block;color:var(--forest);font-size:16px}
+.loc span{font-size:15px;color:var(--muted)}
+.loc .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);margin-bottom:2px}
+.contact a{display:flex;align-items:center;gap:10px;text-decoration:none;padding:10px 0;font-size:16px;color:var(--forest);font-weight:500;word-break:break-word}
+.contact a:hover{color:var(--rust)}
+.contact svg{flex:0 0 20px;width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.map{border-radius:var(--r);overflow:hidden;border:3px solid var(--forest);min-height:300px;background:var(--forest-2);position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;position:relative;z-index:1}
+.map .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--cream);padding:20px;background:repeating-linear-gradient(0deg,transparent 0 38px,rgba(232,191,85,.12) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(232,191,85,.12) 38px 40px),var(--forest-2)}
+.map .ph svg{width:46px;height:46px;margin:0 auto 8px;display:block}
+.map .ph b{font-family:'Abril Fatface';font-weight:400;font-size:24px;display:block;color:var(--gold-2)}
+.card .btn{margin-top:14px;width:100%}
+
+/* final cta */
+.final{background:var(--gold);text-align:center;position:relative;overflow:hidden}
+.final .sec-h{color:var(--deep)}
+.final p{color:#3c3215;max-width:40ch;margin:0 auto 26px;font-size:17px}
+.final .btn{background:var(--forest);color:var(--cream);border-color:var(--forest);box-shadow:0 4px 0 var(--deep)}
+.final .btn:hover{background:var(--forest-2)}
+.final .arc{position:absolute;left:50%;bottom:-260px;transform:translateX(-50%);width:760px;opacity:.18}
+
+footer{background:var(--deep);color:#cdc3a6;padding:44px 0 118px;font-size:14px}
+footer .wrap{display:grid;gap:18px}
+footer .logo span{color:var(--cream)}
+footer a{color:var(--gold-2);text-decoration:none}
+footer small{opacity:.7}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(19,42,31,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:2px solid var(--gold)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 10px;font-weight:600;text-decoration:none;font-size:15px}
+.bar .call{color:var(--cream);border:2px solid rgba(246,238,219,.4)}
+.bar .book{background:var(--gold);color:var(--deep)}
+.bar svg{width:18px;height:18px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (min-width:720px){
+  .panel{grid-template-columns:1fr 1fr}
+  .feat{grid-template-columns:1fr 1fr}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .meet{grid-template-columns:260px 1fr}
+  .hero .ctas{flex-direction:row;max-width:none;justify-content:center}
+  .hero .ctas .btn{width:auto}
+}
+@media (min-width:980px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .nav ul{display:flex}
+  .panel{grid-template-columns:repeat(3,1fr)}
+  .vgrid{grid-template-columns:1fr 1fr 1.2fr}
+  .map{grid-column:auto}
+  .hero{padding-top:70px}
+  .hero .burst{top:400px;width:1100px;height:1100px}
+  section{padding:104px 0}
+  footer{padding-bottom:36px}
+  .hero::after{top:360px;width:900px;height:700px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Mane Tamer Studio. Not live.</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Mane Tamer Studio home">
+      <svg viewBox="-50 -50 100 100" aria-hidden="true"><g fill="none" stroke-linecap="round"><circle r="44" fill="#d9a52b"/><g stroke="#1d3a2c" stroke-width="5"><path d="M16.0 0.0C23.6 10.0 30.2 -12.8 39.2 7.9"/><path d="M14.8 6.1C18.0 18.2 32.8 -0.2 33.2 22.3"/><path d="M11.3 11.3C9.6 23.7 30.4 12.3 22.1 33.3"/><path d="M6.1 14.8C-0.2 25.6 23.4 23.0 7.7 39.3"/><path d="M0.0 16.0C-10.0 23.6 12.8 30.2 -7.9 39.2"/><path d="M-6.1 14.8C-18.2 18.0 0.2 32.8 -22.3 33.2"/><path d="M-11.3 11.3C-23.7 9.6 -12.3 30.4 -33.3 22.1"/><path d="M-14.8 6.1C-25.6 -0.2 -23.0 23.4 -39.3 7.7"/><path d="M-16.0 0.0C-23.6 -10.0 -30.2 12.8 -39.2 -7.9"/><path d="M-14.8 -6.1C-18.0 -18.2 -32.8 0.2 -33.2 -22.3"/><path d="M-11.3 -11.3C-9.6 -23.7 -30.4 -12.3 -22.1 -33.3"/><path d="M-6.1 -14.8C0.2 -25.6 -23.4 -23.0 -7.7 -39.3"/><path d="M-0.0 -16.0C10.0 -23.6 -12.8 -30.2 7.9 -39.2"/><path d="M6.1 -14.8C18.2 -18.0 -0.2 -32.8 22.3 -33.2"/><path d="M11.3 -11.3C23.7 -9.6 12.3 -30.4 33.3 -22.1"/><path d="M14.8 -6.1C25.6 0.2 23.0 -23.4 39.3 -7.7"/></g><circle r="15" fill="#1d3a2c"/><circle r="6" fill="#d9a52b"/></g></svg>
+      <div><span>Mane Tamer</span><small>Salon Studio</small></div>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Mane Tamer</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn" href="https://square.site/book/L9R7JMHW19JS1/mane-tamer-studio-johnson-city-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="burst" viewBox="-440 -440 880 880" aria-hidden="true">
+    <g class="rays"><path d="M0 0L419.4 -22.0L419.4 22.0Z"/><path d="M0 0L410.8 87.3L399.4 129.8Z"/><path d="M0 0L374.2 190.7L352.2 228.7Z"/><path d="M0 0L312.1 281.0L281.0 312.1Z"/><path d="M0 0L228.7 352.2L190.7 374.2Z"/><path d="M0 0L129.8 399.4L87.3 410.8Z"/><path d="M0 0L22.0 419.4L-22.0 419.4Z"/><path d="M0 0L-87.3 410.8L-129.8 399.4Z"/><path d="M0 0L-190.7 374.2L-228.7 352.2Z"/><path d="M0 0L-281.0 312.1L-312.1 281.0Z"/><path d="M0 0L-352.2 228.7L-374.2 190.7Z"/><path d="M0 0L-399.4 129.8L-410.8 87.3Z"/><path d="M0 0L-419.4 22.0L-419.4 -22.0Z"/><path d="M0 0L-410.8 -87.3L-399.4 -129.8Z"/><path d="M0 0L-374.2 -190.7L-352.2 -228.7Z"/><path d="M0 0L-312.1 -281.0L-281.0 -312.1Z"/><path d="M0 0L-228.7 -352.2L-190.7 -374.2Z"/><path d="M0 0L-129.8 -399.4L-87.3 -410.8Z"/><path d="M0 0L-22.0 -419.4L22.0 -419.4Z"/><path d="M0 0L87.3 -410.8L129.8 -399.4Z"/><path d="M0 0L190.7 -374.2L228.7 -352.2Z"/><path d="M0 0L281.0 -312.1L312.1 -281.0Z"/><path d="M0 0L352.2 -228.7L374.2 -190.7Z"/><path d="M0 0L399.4 -129.8L410.8 -87.3Z"/></g>
+    <g class="mane"><g class="sway"><path class="s1" d="M120.0 0.0C181.9 20.1 244.8 -24.6 299.5 18.0"/><path class="s2" d="M118.5 18.8C187.5 64.9 276.8 -0.8 333.0 86.1"/><path class="s3" d="M114.1 37.1C189.7 98.6 303.5 50.3 356.7 152.6"/><path class="s1" d="M106.9 54.5C154.6 111.6 247.2 85.0 273.6 169.7"/><path class="s2" d="M97.1 70.5C147.8 143.7 256.7 139.7 278.4 237.5"/><path class="s3" d="M84.9 84.9C111.2 145.3 193.5 151.9 196.3 226.8"/><path class="s1" d="M70.5 97.1C96.4 173.4 186.3 204.7 183.4 291.0"/><path class="s2" d="M54.5 106.9C75.6 200.0 166.3 258.8 155.1 355.7"/><path class="s3" d="M37.1 114.1C26.3 188.9 119.4 232.6 69.7 314.4"/><path class="s1" d="M18.8 118.5C-1.6 206.1 88.3 278.5 24.5 365.2"/><path class="s2" d="M0.0 120.0C-28.1 180.8 34.3 243.6 -25.2 298.9"/><path class="s3" d="M-18.8 118.5C-58.6 189.5 -7.5 276.7 -80.1 334.5"/><path class="s1" d="M-37.1 114.1C-92.3 192.9 -59.3 301.8 -146.1 359.4"/><path class="s2" d="M-54.5 106.9C-106.5 158.2 -92.4 244.5 -164.8 276.6"/><path class="s3" d="M-70.5 97.1C-138.7 152.4 -147.3 252.4 -232.5 282.7"/><path class="s1" d="M-84.9 84.9C-150.1 104.7 -144.0 199.4 -231.5 190.8"/><path class="s2" d="M-97.1 70.5C-177.5 88.7 -197.1 194.3 -295.3 176.4"/><path class="s3" d="M-106.9 54.5C-203.1 66.7 -251.9 176.5 -359.3 146.5"/><path class="s1" d="M-114.1 37.1C-187.9 32.5 -236.0 112.3 -313.1 75.3"/><path class="s2" d="M-118.5 18.8C-206.0 5.2 -281.1 79.9 -364.7 31.1"/><path class="s3" d="M-120.0 0.0C-181.7 -22.1 -244.5 27.0 -299.3 -19.8"/><path class="s1" d="M-118.5 -18.8C-191.4 -52.4 -276.3 -15.8 -335.9 -74.1"/><path class="s2" d="M-114.1 -37.1C-188.6 -100.6 -304.0 -47.2 -355.8 -154.7"/><path class="s3" d="M-106.9 -54.5C-153.4 -113.3 -248.0 -82.5 -272.6 -171.4"/><path class="s1" d="M-97.1 -70.5C-146.2 -145.3 -258.0 -137.1 -277.0 -239.2"/><path class="s2" d="M-84.9 -84.9C-109.6 -146.5 -195.0 -149.9 -195.0 -228.0"/><path class="s3" d="M-70.5 -97.1C-94.5 -174.5 -188.3 -202.8 -181.7 -292.1"/><path class="s1" d="M-54.5 -106.9C-73.4 -200.8 -168.9 -257.1 -153.0 -356.6"/><path class="s2" d="M-37.1 -114.1C-38.7 -186.7 -105.2 -239.3 -81.0 -311.7"/><path class="s3" d="M-18.8 -118.5C3.9 -206.1 -91.1 -277.6 -22.3 -365.3"/><path class="s1" d="M-0.0 -120.0C30.1 -180.5 -36.8 -243.2 27.0 -298.8"/><path class="s2" d="M18.8 -118.5C60.7 -188.9 4.7 -276.8 82.1 -334.1"/><path class="s3" d="M37.1 -114.1C94.4 -191.8 56.3 -302.4 148.3 -358.5"/><path class="s1" d="M54.5 -106.9C108.2 -157.0 89.9 -245.4 166.4 -275.6"/><path class="s2" d="M70.5 -97.1C140.4 -150.9 144.8 -253.8 234.2 -281.3"/><path class="s3" d="M84.9 -84.9C142.8 -114.4 155.7 -190.4 224.5 -199.0"/><path class="s1" d="M97.1 -70.5C178.4 -86.7 195.2 -196.3 296.4 -174.6"/><path class="s2" d="M106.9 -54.5C203.9 -64.5 250.1 -179.0 360.1 -144.4"/><path class="s3" d="M114.1 -37.1C188.3 -30.4 234.9 -114.7 313.5 -73.5"/><path class="s1" d="M118.5 -18.8C206.1 -2.9 280.2 -82.7 364.9 -28.9"/></g></g>
+    <circle r="112" fill="#1d3a2c" opacity=".9"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Johnson City, TN · Salon Studio</span>
+    <h1>Tame the <em>mane.</em></h1>
+    <p class="lead">Cuts, color, highlights, smoothing and K‑tip extensions with Sarah at Sunset Plaza.</p>
+    <div class="ctas">
+      <a class="btn" href="https://square.site/book/L9R7JMHW19JS1/mane-tamer-studio-johnson-city-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book online</a>
+      <a class="btn ghost" href="tel:+16314045597"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(631) 404‑5597</a>
+    </div>
+    <div class="meta"><span><i></i>Mon–Fri 9–6</span><span><i></i>Free extension consults</span><span><i></i>Book 24/7 online</span></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 40 C240 110 480 110 720 60 S1200 0 1440 50 V120 H0Z" fill="#d9a52b"/>
+    <path d="M0 62 C240 128 480 126 720 80 S1200 22 1440 72 V120 H0Z" fill="#b8642a"/>
+    <path d="M0 84 C240 140 480 140 720 100 S1200 46 1440 94 V120 H0Z" fill="#f6eedb"/>
+  </svg>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The menu</div>
+      <h2 class="sec-h">Services &amp; prices</h2>
+      <p class="sec-sub">Straight from the studio's booking page: sixteen services, real prices, real appointment lengths.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-p="p-cut">Cut &amp; Style</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p-color">Color &amp; Highlights</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p-ext">Extensions &amp; Smoothing</button>
+    </div>
+
+    <div class="panel" id="p-cut" role="tabpanel">
+      <div class="svc"><h3>Women's hair cut, shampoo, style</h3><div class="price">$60</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hour</span></div>
+      <div class="svc"><h3>Women's dry cut</h3><div class="price">$30</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span></div>
+      <div class="svc"><h3>Bang trim</h3><div class="price">$10</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 minutes</span></div>
+      <div class="svc"><h3>Blow out</h3><div class="price">$45</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hour</span></div>
+      <div class="svc"><h3>Curls</h3><div class="price">$35</div><p class="desc">Curling iron curls only. No shampoo or blow dry.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span></div>
+    </div>
+    <div class="panel" id="p-color" role="tabpanel" hidden>
+      <div class="svc"><h3>All over color</h3><div class="price">$150</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 30 min</span></div>
+      <div class="svc"><h3>Gray cover</h3><div class="price">$100</div><p class="desc">Just the roots.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hour</span></div>
+      <div class="svc"><h3>Toner</h3><div class="price">$45</div><p class="desc">Gloss‑toner‑conditioning treatment.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span></div>
+      <div class="svc"><h3>Face frame highlights</h3><div class="price">$100</div><p class="desc">Highlights on hairline around face.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 30 min</span></div>
+      <div class="svc"><h3>Traditional partial highlight</h3><div class="price"><small>Starting at</small>$150</div><p class="desc">Price increases with extra color mixed.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 hr 30 min</span></div>
+      <div class="svc"><h3>Traditional full highlight</h3><div class="price"><small>Starting at</small>$250</div><p class="desc">Price increases with extra mixed color.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 hours</span></div>
+      <div class="svc"><h3>Custom color</h3><div class="price">Consult</div><p class="desc">Text directly to consult.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 hours</span></div>
+    </div>
+    <div class="panel" id="p-ext" role="tabpanel" hidden>
+      <div class="svc"><h3>Extension consultation</h3><div class="price">Free</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span></div>
+      <div class="svc"><h3>K‑tip extension install</h3><div class="price"><small>Per pack</small>$100</div><p class="desc">Keratin bond extensions installed into hair. $100 per pack to be installed.</p><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 hr 30 min</span></div>
+      <div class="svc"><h3>Extension removal</h3><div class="price">$150</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hr 30 min</span></div>
+      <div class="svc"><h3>Proaddiction Customized smoothing treatment</h3><div class="price">$350</div><span class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 hours</span></div>
+    </div>
+    <p class="note">Highlight prices are starting prices and increase with extra mixed color. Planning something custom? <a href="sms:+16314045597">Text the studio to consult</a>.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="sun" viewBox="-440 -440 880 880" aria-hidden="true"><g fill="#d9a52b"><path d="M0 0L419.4 -22.0L419.4 22.0Z"/><path d="M0 0L410.8 87.3L399.4 129.8Z"/><path d="M0 0L374.2 190.7L352.2 228.7Z"/><path d="M0 0L312.1 281.0L281.0 312.1Z"/><path d="M0 0L228.7 352.2L190.7 374.2Z"/><path d="M0 0L129.8 399.4L87.3 410.8Z"/><path d="M0 0L22.0 419.4L-22.0 419.4Z"/><path d="M0 0L-87.3 410.8L-129.8 399.4Z"/><path d="M0 0L-190.7 374.2L-228.7 352.2Z"/><path d="M0 0L-281.0 312.1L-312.1 281.0Z"/><path d="M0 0L-352.2 228.7L-374.2 190.7Z"/><path d="M0 0L-399.4 129.8L-410.8 87.3Z"/><path d="M0 0L-419.4 22.0L-419.4 -22.0Z"/><path d="M0 0L-410.8 -87.3L-399.4 -129.8Z"/><path d="M0 0L-374.2 -190.7L-352.2 -228.7Z"/><path d="M0 0L-312.1 -281.0L-281.0 -312.1Z"/><path d="M0 0L-228.7 -352.2L-190.7 -374.2Z"/><path d="M0 0L-129.8 -399.4L-87.3 -410.8Z"/><path d="M0 0L-22.0 -419.4L22.0 -419.4Z"/><path d="M0 0L87.3 -410.8L129.8 -399.4Z"/><path d="M0 0L190.7 -374.2L228.7 -352.2Z"/><path d="M0 0L281.0 -312.1L312.1 -281.0Z"/><path d="M0 0L352.2 -228.7L374.2 -190.7Z"/><path d="M0 0L399.4 -129.8L410.8 -87.3Z"/></g></svg>
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Why Mane Tamer</div>
+      <h2 class="sec-h">A studio built for big hair plans</h2>
+      <p class="sec-sub">No guesswork: everything below comes from how the studio actually books.</p>
+    </div>
+    <div class="feat">
+      <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8c3 0 4 2 7 2s4-2 7-2M5 15c3 0 4 2 7 2s4-2 7-2"/></svg></div><div><h3>K‑tip extensions</h3><p>Keratin bond extensions installed into your hair, plus removal. Start with a free 30‑minute consultation.</p></div></div>
+      <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div><div><h3>Color, start to finish</h3><p>Gray cover, gloss toner, face‑frame highlights, partial and full foils, or a fully custom color: text to consult.</p></div></div>
+      <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7c4-3 12-3 16 0M4 12c4-3 12-3 16 0M4 17c4-3 12-3 16 0"/></svg></div><div><h3>Frizz, tamed</h3><p>The Proaddiction Customized smoothing treatment: a four‑hour appointment set aside just for you.</p></div></div>
+      <div class="f rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M8 15l3 3 5-5"/></svg></div><div><h3>Book in a tap</h3><p>See real openings and book any service online, any time. Weekdays 9 to 6 at Sunset Plaza.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="meet">
+  <div class="wrap meet">
+    <div class="medal rv" aria-hidden="true">
+      <svg viewBox="0 0 220 220">
+        <defs><path id="circ" d="M110,110 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/></defs>
+        <circle cx="110" cy="110" r="108" fill="#1d3a2c"/>
+        <g class="spin"><text font-family="Outfit" font-size="14" font-weight="600" letter-spacing="5.2" fill="#e8bf55"><textPath href="#circ">MANE TAMER STUDIO · JOHNSON CITY · TN · </textPath></text></g>
+        <circle cx="110" cy="110" r="66" fill="#d9a52b"/>
+        <g transform="translate(110 110)" fill="none" stroke="#1d3a2c" stroke-width="4" stroke-linecap="round"><path d="M24.0 0.0C36.1 13.2 46.2 -16.9 59.1 10.4"/><path d="M23.0 6.8C30.9 22.8 49.1 -3.2 53.7 26.7"/><path d="M20.2 13.0C23.2 30.6 48.0 10.8 44.1 40.7"/><path d="M15.7 18.1C13.7 35.9 43.0 23.9 30.8 51.5"/><path d="M10.0 21.8C3.0 38.3 34.5 35.0 15.0 58.1"/><path d="M3.4 23.8C-7.9 37.6 23.3 43.3 -1.9 60.0"/><path d="M-3.4 23.8C-18.2 33.8 10.1 48.1 -18.7 57.0"/><path d="M-10.0 21.8C-27.0 27.3 -3.9 49.0 -34.0 49.4"/><path d="M-15.7 18.1C-33.6 18.6 -17.5 46.0 -46.6 37.8"/><path d="M-20.2 13.0C-37.5 8.4 -29.8 39.2 -55.4 23.2"/><path d="M-23.0 6.8C-38.3 -2.5 -39.6 29.2 -59.6 6.6"/><path d="M-24.0 0.0C-36.1 -13.2 -46.2 16.9 -59.1 -10.4"/><path d="M-23.0 -6.8C-30.9 -22.8 -49.1 3.2 -53.7 -26.7"/><path d="M-20.2 -13.0C-23.2 -30.6 -48.0 -10.8 -44.1 -40.7"/><path d="M-15.7 -18.1C-13.7 -35.9 -43.0 -23.9 -30.8 -51.5"/><path d="M-10.0 -21.8C-3.0 -38.3 -34.5 -35.0 -15.0 -58.1"/><path d="M-3.4 -23.8C7.9 -37.6 -23.3 -43.3 1.9 -60.0"/><path d="M3.4 -23.8C18.2 -33.8 -10.1 -48.1 18.7 -57.0"/><path d="M10.0 -21.8C27.0 -27.3 3.9 -49.0 34.0 -49.4"/><path d="M15.7 -18.1C33.6 -18.6 17.5 -46.0 46.6 -37.8"/><path d="M20.2 -13.0C37.5 -8.4 29.8 -39.2 55.4 -23.2"/><path d="M23.0 -6.8C38.3 2.5 39.6 -29.2 59.6 -6.6"/></g>
+        <circle cx="110" cy="110" r="22" fill="#1d3a2c"/>
+        <text x="110" y="118" text-anchor="middle" font-family="Abril Fatface" font-size="24" fill="#e8bf55">S</text>
+      </svg>
+    </div>
+    <div class="rv">
+      <div class="kicker">Your stylist</div>
+      <blockquote>Book with <em>Sarah</em>, the stylist behind Mane Tamer Studio.</blockquote>
+      <p class="sec-sub" style="margin-top:14px">From a ten‑minute bang trim to a four‑hour custom color, every appointment on the menu is with Sarah. Pick a service and a time that suits you.</p>
+      <a class="btn" style="margin-top:22px" href="https://square.site/book/L9R7JMHW19JS1/mane-tamer-studio-johnson-city-tn" target="_blank" rel="noopener">See Sarah's openings</a>
+    </div>
+  </div>
+</section>
+
+<svg class="stripes" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><rect width="1440" height="14" fill="#1d3a2c"/><rect y="14" width="1440" height="12" fill="#d9a52b"/><rect y="26" width="1440" height="14" fill="#b8642a"/></svg>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Hours &amp; visit</div>
+      <h2 class="sec-h">Come see us</h2>
+    </div>
+    <div class="vgrid">
+      <div class="card rv">
+        <h3>Hours</h3>
+        <div class="status" id="status"><i></i><span>Mon–Fri, 9 AM – 6 PM</span></div>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <h3>Find &amp; reach us</h3>
+        <div class="loc"><div class="pin"><svg viewBox="0 0 24 24" fill="#132a1f"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div><div><div class="tag">Booking location</div><b>Sunset Plaza</b><span>109 Broyles Drive<br>Johnson City, TN 37601</span></div></div>
+        <div class="loc"><div class="pin alt"><svg viewBox="0 0 24 24" fill="#b8642a"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div><div><div class="tag">Also listed</div><b>South Roan Street</b><span>407 S Roan St<br>Johnson City, TN 37601</span></div></div>
+        <div class="contact">
+          <a href="tel:+16314045597"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(631) 404‑5597</a>
+          <a href="mailto:Manetamerstudio@gmail.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 6 10-6"/></svg>Manetamerstudio@gmail.com</a>
+          <a href="https://www.instagram.com/manetamerstudio/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@manetamerstudio</a>
+        </div>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=109+Broyles+Drive%2C+Johnson+City%2C+TN+37601" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="map rv">
+        <div class="ph"><div><svg viewBox="0 0 24 24" fill="#d9a52b"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><b>Sunset Plaza</b>109 Broyles Drive, Johnson City</div></div>
+        <iframe title="Map to Mane Tamer Studio, Sunset Plaza" loading="lazy" src="https://www.google.com/maps?q=109%20Broyles%20Drive%2C%20Johnson%20City%2C%20TN%2037601&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="arc" viewBox="-440 -440 880 880" aria-hidden="true"><g fill="#1d3a2c"><path d="M0 0L419.4 -22.0L419.4 22.0Z"/><path d="M0 0L410.8 87.3L399.4 129.8Z"/><path d="M0 0L374.2 190.7L352.2 228.7Z"/><path d="M0 0L312.1 281.0L281.0 312.1Z"/><path d="M0 0L228.7 352.2L190.7 374.2Z"/><path d="M0 0L129.8 399.4L87.3 410.8Z"/><path d="M0 0L22.0 419.4L-22.0 419.4Z"/><path d="M0 0L-87.3 410.8L-129.8 399.4Z"/><path d="M0 0L-190.7 374.2L-228.7 352.2Z"/><path d="M0 0L-281.0 312.1L-312.1 281.0Z"/><path d="M0 0L-352.2 228.7L-374.2 190.7Z"/><path d="M0 0L-399.4 129.8L-410.8 87.3Z"/><path d="M0 0L-419.4 22.0L-419.4 -22.0Z"/><path d="M0 0L-410.8 -87.3L-399.4 -129.8Z"/><path d="M0 0L-374.2 -190.7L-352.2 -228.7Z"/><path d="M0 0L-312.1 -281.0L-281.0 -312.1Z"/><path d="M0 0L-228.7 -352.2L-190.7 -374.2Z"/><path d="M0 0L-129.8 -399.4L-87.3 -410.8Z"/><path d="M0 0L-22.0 -419.4L22.0 -419.4Z"/><path d="M0 0L87.3 -410.8L129.8 -399.4Z"/><path d="M0 0L190.7 -374.2L228.7 -352.2Z"/><path d="M0 0L281.0 -312.1L312.1 -281.0Z"/><path d="M0 0L352.2 -228.7L374.2 -190.7Z"/><path d="M0 0L399.4 -129.8L410.8 -87.3Z"/></g></svg>
+  <div class="wrap rv" style="position:relative">
+    <h2 class="sec-h">Ready for a new mane?</h2>
+    <p>Pick your service, pick your time, done. Questions first? Call or text (631) 404‑5597.</p>
+    <a class="btn" href="https://square.site/book/L9R7JMHW19JS1/mane-tamer-studio-johnson-city-tn" target="_blank" rel="noopener">Book your appointment</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><svg viewBox="-50 -50 100 100" aria-hidden="true"><g fill="none" stroke-linecap="round"><circle r="44" fill="#d9a52b"/><g stroke="#1d3a2c" stroke-width="5"><path d="M16.0 0.0C23.6 10.0 30.2 -12.8 39.2 7.9"/><path d="M14.8 6.1C18.0 18.2 32.8 -0.2 33.2 22.3"/><path d="M11.3 11.3C9.6 23.7 30.4 12.3 22.1 33.3"/><path d="M6.1 14.8C-0.2 25.6 23.4 23.0 7.7 39.3"/><path d="M0.0 16.0C-10.0 23.6 12.8 30.2 -7.9 39.2"/><path d="M-6.1 14.8C-18.2 18.0 0.2 32.8 -22.3 33.2"/><path d="M-11.3 11.3C-23.7 9.6 -12.3 30.4 -33.3 22.1"/><path d="M-14.8 6.1C-25.6 -0.2 -23.0 23.4 -39.3 7.7"/><path d="M-16.0 0.0C-23.6 -10.0 -30.2 12.8 -39.2 -7.9"/><path d="M-14.8 -6.1C-18.0 -18.2 -32.8 0.2 -33.2 -22.3"/><path d="M-11.3 -11.3C-9.6 -23.7 -30.4 -12.3 -22.1 -33.3"/><path d="M-6.1 -14.8C0.2 -25.6 -23.4 -23.0 -7.7 -39.3"/><path d="M-0.0 -16.0C10.0 -23.6 -12.8 -30.2 7.9 -39.2"/><path d="M6.1 -14.8C18.2 -18.0 -0.2 -32.8 22.3 -33.2"/><path d="M11.3 -11.3C23.7 -9.6 12.3 -30.4 33.3 -22.1"/><path d="M14.8 -6.1C25.6 0.2 23.0 -23.4 39.3 -7.7"/></g><circle r="15" fill="#1d3a2c"/><circle r="6" fill="#d9a52b"/></g></svg><div><span>Mane Tamer Studio</span><small>Salon Studio · Johnson City, TN</small></div></a>
+    <div>Sunset Plaza, 109 Broyles Drive, Johnson City, TN 37601<br><a href="tel:+16314045597">(631) 404‑5597</a> · <a href="mailto:Manetamerstudio@gmail.com">Manetamerstudio@gmail.com</a> · <a href="https://www.instagram.com/manetamerstudio/" target="_blank" rel="noopener">Instagram</a></div>
+    <small>Concept site by Code Craft Media. Not affiliated with or published by Mane Tamer Studio. Services and prices from the studio's public Square booking page.</small>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="call" href="tel:+16314045597"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/L9R7JMHW19JS1/mane-tamer-studio-johnson-city-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book now</a>
+</div>
+
+<script>
+(function(){
+  // tabs
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.dataset.p).hidden=true});
+    t.setAttribute('aria-selected','true');document.getElementById(t.dataset.p).hidden=false;
+  })});
+  // hours: today + open status (studio local time, America/New_York)
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[parts.find(function(p){return p.type==='weekday'}).value];
+    var hr=parseInt(parts.find(function(p){return p.type==='hour'}).value,10)%24;
+    var li=document.querySelector('#hours li[data-d="'+wd+'"]'); if(li) li.classList.add('today');
+    var st=document.getElementById('status'), open=wd>=1&&wd<=5&&hr>=9&&hr<18;
+    if(open){st.classList.add('open');st.lastElementChild.textContent='Open now · until 6 PM';}
+    else{st.lastElementChild.textContent='Closed now · book online anytime';}
+  }catch(e){}
+  // reveal
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else all();
+  setTimeout(all,2500);
+})();
+</script>
+</body>
+</html>

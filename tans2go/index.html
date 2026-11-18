@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Tans2go — Sevierville</title>
+<meta name="description" content="Tans2go: mobile airbrush spray tanning in Sevierville, TN. Gluten free and vegan solutions.">
+<meta name="theme-color" content="#2a1a12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bronze:#9c5a2e; --bronze-d:#7e4521; --apricot:#f2a65a; --apricot-l:#f8cf9f;
+  --ivory:#fbf6ee; --sand:#f4e9d8; --cocoa:#2a1a12; --cocoa-2:#4a3226; --muted:#6e5446;
+  --line:rgba(42,26,18,.12);
+  --display:"Cormorant Garamond", Georgia, serif; --body:"Outfit", system-ui, -apple-system, sans-serif;
+  --r:22px; --bar:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ivory);color:var(--cocoa);font-family:var(--body);font-weight:400;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--apricot);outline-offset:3px;border-radius:6px}
+
+/* concept banner */
+.concept{background:var(--cocoa);color:#f3dcc2;font-size:11.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--apricot);font-weight:500}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(251,246,238,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.01em;color:var(--cocoa)}
+.logo em{font-style:italic;color:var(--bronze);font-weight:600}
+.logo svg{width:28px;height:28px}
+.nav ul{display:none;list-style:none;gap:28px;font-size:14.5px}
+.nav ul a{text-decoration:none;color:var(--cocoa-2);position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--bronze);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:hover::after{transform:scaleX(1)}
+.nav .mini{font-size:14px;font-weight:500;text-decoration:none;color:var(--ivory);background:var(--bronze);padding:9px 16px;border-radius:999px;transition:background .2s}
+.nav .mini:hover{background:var(--bronze-d)}
+@media (min-width:900px){.nav ul{display:flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:500;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:999px;transition:transform .2s, box-shadow .25s, background .2s;min-height:52px}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:linear-gradient(135deg,var(--bronze) 0%,#b56a35 55%,#c97d42 100%);color:#fff;box-shadow:0 10px 26px -10px rgba(156,90,46,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(156,90,46,.85)}
+.btn-ghost{background:rgba(255,255,255,.6);color:var(--cocoa);border:1.5px solid rgba(42,26,18,.2)}
+.btn-ghost:hover{background:#fff;border-color:var(--bronze);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:44px 0 56px;
+  background:
+   radial-gradient(120% 70% at 85% 0%, rgba(242,166,90,.55) 0%, rgba(242,166,90,0) 60%),
+   radial-gradient(90% 60% at 0% 100%, rgba(156,90,46,.18) 0%, rgba(156,90,46,0) 70%),
+   linear-gradient(180deg,#fdf1e2 0%, var(--ivory) 100%)}
+.hero::before{ /* grain */
+  content:"";position:absolute;inset:0;z-index:-1;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .35 0 0 0 0 .18 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.sun{position:absolute;z-index:-1;top:-150px;right:-170px;width:520px;height:520px;pointer-events:none}
+.sun .rays{transform-origin:260px 260px;animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-grid{display:grid;gap:26px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);background:rgba(255,255,255,.65);border:1px solid rgba(156,90,46,.22);padding:7px 13px;border-radius:999px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--apricot);box-shadow:0 0 0 4px rgba(242,166,90,.3);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(242,166,90,0)}}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(46px,12.4vw,94px);line-height:.95;letter-spacing:-.015em;margin:20px 0 18px;color:var(--cocoa)}
+.hero h1 em{font-style:italic;font-weight:500;background:linear-gradient(100deg,var(--bronze) 10%,#d0813f 55%,var(--apricot) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.hero p.sub{font-size:17.5px;color:var(--cocoa-2);max-width:520px;font-weight:300}
+.hero p.sub strong{font-weight:500;color:var(--cocoa)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cta-row .btn{flex:1 1 140px;white-space:nowrap;padding:15px 18px}
+@media (min-width:700px){.cta-row .btn{flex:0 0 auto;padding:15px 28px}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;list-style:none}
+.chips li{font-size:13px;color:var(--cocoa-2);background:rgba(255,255,255,.7);border:1px solid var(--line);padding:6px 12px;border-radius:999px;display:flex;align-items:center;gap:7px}
+.chips svg{width:14px;height:14px;color:var(--bronze)}
+.hero-art{position:relative;max-width:360px;width:100%;margin:0 auto}
+@media (min-width:900px){.hero-art{max-width:500px}}
+.hero-art svg{width:100%;height:auto;overflow:visible}
+.mist circle{animation:drift 6s ease-in-out infinite}
+.mist circle:nth-child(3n){animation-delay:-2s}.mist circle:nth-child(3n+1){animation-delay:-4s}
+@keyframes drift{50%{transform:translate(6px,-5px);opacity:.55}}
+.route-path{stroke-dasharray:6 9;animation:dash 2.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-30}}
+.van{animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-3px)}}
+@media (min-width:900px){
+  .hero{padding:80px 0 96px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}
+  .sun{top:-200px;right:-160px;width:720px;height:720px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* section shell */
+section{scroll-margin-top:70px}
+.sec{padding:76px 0}
+.kicker{font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:26px;height:1.5px;background:currentColor}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(38px,9vw,60px);line-height:1;letter-spacing:-.01em;margin:14px 0 14px}
+h2 em{font-style:italic;font-weight:500;color:var(--bronze)}
+.lede{color:var(--muted);font-size:16.5px;max-width:560px;font-weight:300}
+
+/* reveal (content visible without JS) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in, .reveal-all .rv{opacity:1!important;transform:none!important}
+
+/* menu */
+.menu{background:var(--ivory);position:relative}
+.menu-groups{display:grid;gap:22px;margin-top:38px}
+.group{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 22px 10px;position:relative;overflow:hidden;box-shadow:0 20px 40px -32px rgba(42,26,18,.35)}
+.group::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(242,166,90,.28),rgba(242,166,90,0) 70%);pointer-events:none}
+.group h3{font-family:var(--display);font-size:30px;font-weight:600;line-height:1.1;display:flex;align-items:center;gap:10px}
+.group h3 svg{width:26px;height:26px;color:var(--bronze);flex:none}
+.group .gnote{font-size:14px;color:var(--muted);margin:6px 0 10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 0;border-top:1px dashed rgba(42,26,18,.16);transition:background .2s}
+.item:first-of-type{border-top:0}
+.item .nm{font-weight:500;font-size:17px;color:var(--cocoa)}
+.item .pr{font-family:var(--display);font-weight:700;font-size:28px;color:var(--bronze);line-height:1;align-self:start}
+.item .meta{grid-column:1/-1;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.item .meta svg{width:13px;height:13px}
+.item .ds{grid-column:1/-1;font-size:14.5px;color:var(--cocoa-2);font-weight:300;margin-top:4px}
+.tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--bronze);background:#fbeadb;padding:3px 8px;border-radius:6px;margin-left:6px;vertical-align:2px}
+.finish{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.finish span{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--cocoa-2);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 6px;background:var(--ivory)}
+.finish b{width:18px;height:18px;border-radius:50%;display:block}
+.menu-foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--sand);border-radius:var(--r);padding:20px 22px}
+.menu-foot p{font-size:15px;color:var(--cocoa-2);max-width:520px}
+@media (min-width:900px){.menu-groups{grid-template-columns:repeat(3,1fr)}.group{padding:30px 28px 12px}}
+
+/* why */
+.why{background:var(--cocoa);color:#f6e6d3;position:relative;overflow:hidden;isolation:isolate}
+.why::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(70% 55% at 100% 0%,rgba(242,166,90,.35),rgba(242,166,90,0) 70%),radial-gradient(60% 50% at 0% 100%,rgba(156,90,46,.45),rgba(156,90,46,0) 70%)}
+.why .kicker{color:var(--apricot)}
+.why h2{color:#fff}.why h2 em{color:var(--apricot)}
+.why .lede{color:#d9c2ab}
+.why-grid{display:grid;gap:16px;margin-top:38px}
+.card{display:grid;grid-template-columns:46px 1fr;column-gap:16px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px 20px;transition:transform .3s, background .3s, border-color .3s}
+.card:hover{transform:translateY(-4px);background:rgba(255,255,255,.085);border-color:rgba(242,166,90,.45)}
+.card .ic{grid-row:span 2;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--apricot),var(--bronze));color:var(--cocoa)}
+@media (min-width:1000px){.card{grid-template-columns:1fr;padding:26px 24px}.card .ic{grid-row:auto;margin-bottom:16px;width:50px;height:50px}}
+.card .ic svg{width:25px;height:25px}
+.card h3{font-family:var(--display);font-size:26px;font-weight:600;color:#fff;line-height:1.1;margin:4px 0 6px}
+.card p{font-size:15px;color:#dcc6b1;font-weight:300}
+.card q{font-style:italic;color:var(--apricot-l)}
+@media (min-width:700px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* how / route */
+.how{background:linear-gradient(180deg,var(--sand),var(--ivory))}
+.steps{list-style:none;display:grid;gap:0;margin-top:34px;position:relative}
+.steps li{display:grid;grid-template-columns:54px 1fr;gap:16px;padding-bottom:28px;position:relative}
+.steps li:not(:last-child)::before{content:"";position:absolute;left:26px;top:54px;bottom:4px;border-left:2px dashed rgba(156,90,46,.4)}
+.steps .n{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1.5px solid rgba(156,90,46,.35);font-family:var(--display);font-size:26px;font-weight:700;color:var(--bronze);box-shadow:0 8px 18px -12px rgba(156,90,46,.7)}
+.steps h3{font-family:var(--display);font-size:26px;font-weight:600;line-height:1.15;margin-top:8px}
+.steps p{font-size:15px;color:var(--muted);font-weight:300}
+.steps a{color:var(--bronze);font-weight:500}
+@media (min-width:900px){
+  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .steps li{grid-template-columns:1fr;padding:0}
+  .steps li:not(:last-child)::before{left:62px;right:-18px;top:27px;bottom:auto;border-left:0;border-top:2px dashed rgba(156,90,46,.4)}
+}
+
+/* hours + map */
+.visit{background:var(--ivory)}
+.visit-grid{display:grid;gap:22px;margin-top:36px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;box-shadow:0 20px 40px -32px rgba(42,26,18,.35)}
+.hours h3{font-family:var(--display);font-size:28px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.status{font-family:var(--body);font-size:12.5px;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--sand);color:var(--cocoa-2);display:none}
+.status.show{display:inline-block}
+.status.open{background:#e8f3e4;color:#2f5f2a}
+.hours ul{list-style:none;margin-top:14px}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15.5px;color:var(--cocoa-2)}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.hours li.closed span:last-child{color:#9c8a7e}
+.hours li.today{background:linear-gradient(90deg,#fbe4cb,#fdf0e1);color:var(--cocoa);font-weight:500;box-shadow:inset 3px 0 0 var(--bronze)}
+.hours li.today span:first-child::after{content:"Today";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--bronze);padding:2px 7px;border-radius:5px;margin-left:8px;vertical-align:2px}
+.hours .note{font-size:13.5px;color:var(--muted);margin-top:12px;padding:0 12px}
+.mapcard{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;box-shadow:0 20px 40px -32px rgba(42,26,18,.35)}
+.mapcard .mapwrap{position:relative;height:300px;background:#f4e9d8 radial-gradient(circle at 50% 50%,rgba(242,166,90,.35) 0 18px,transparent 19px),repeating-linear-gradient(0deg,transparent 0 39px,#e8d6bf 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,#e8d6bf 39px 40px)}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;filter:sepia(.25) saturate(.9)}
+.mapcard .mbody{padding:20px 22px;display:grid;gap:14px}
+.mapcard .mbody p{font-size:15px;color:var(--cocoa-2)}
+.mapcard .mbody p strong{font-weight:500}
+.mbtns{display:flex;flex-wrap:wrap;gap:10px}
+.mbtns .btn{flex:1 1 150px;font-size:15px;padding:13px 18px;min-height:48px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.85fr 1.15fr}.mapcard .mapwrap{height:auto;min-height:340px;flex:1}}
+
+/* contact strip */
+.contact{padding:0 0 76px;background:var(--ivory)}
+.cbox{position:relative;overflow:hidden;isolation:isolate;border-radius:28px;padding:42px 24px;text-align:center;color:#fff;
+  background:linear-gradient(135deg,#7e4521 0%,var(--bronze) 45%,#cf8443 100%)}
+.cbox::before{content:"";position:absolute;inset:-40%;z-index:-1;background:repeating-conic-gradient(from 0deg at 50% 100%,rgba(255,255,255,.09) 0 6deg,rgba(255,255,255,0) 6deg 14deg);}
+.cbox h2{color:#fff;margin-top:0}
+.cbox h2 em{color:#ffe1bf}
+.cbox p{color:#fbe6d2;max-width:520px;margin:0 auto 24px;font-weight:300}
+.cbox .cta-row{justify-content:center;margin:0 auto;max-width:460px}
+.cbox .btn-primary{background:#fff;color:var(--bronze-d);box-shadow:0 12px 26px -12px rgba(0,0,0,.45)}
+.cbox .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.cbox .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.social{display:flex;justify-content:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#fff;text-decoration:none;opacity:.9;padding:6px 10px;border-radius:999px}
+.social a:hover{opacity:1;background:rgba(255,255,255,.12)}
+.social svg{width:18px;height:18px}
+
+/* footer */
+footer{background:var(--cocoa);color:#cdb59f;padding:44px 0 calc(34px + var(--bar) + env(safe-area-inset-bottom));font-size:14px}
+@media (min-width:900px){footer{padding-bottom:34px}}
+footer .wrap{display:grid;gap:22px}
+footer .logo{color:#fff}
+footer a{color:#f3dcc2;text-decoration:none}
+footer a:hover{color:var(--apricot)}
+.fcols{display:grid;gap:18px}
+.fcols h4{font-family:var(--body);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--apricot);font-weight:500;margin-bottom:6px}
+.fine{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;font-size:12.5px;color:#a68c78;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+@media (min-width:800px){.fcols{grid-template-columns:repeat(3,1fr)}}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(42,26,18,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(242,166,90,.25)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;border-radius:16px;text-decoration:none;font-weight:500;font-size:16px}
+.bar .call{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.bar .book{background:linear-gradient(135deg,var(--apricot),#e28a43);color:var(--cocoa);font-weight:600}
+.bar svg{width:18px;height:18px}
+@media (min-width:900px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by Code Craft Media, made for <b>Tans2go</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Tans2go home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2a65a"/><stop offset="1" stop-color="#9c5a2e"/></linearGradient></defs><circle cx="16" cy="16" r="7" fill="url(#lg)"/><g stroke="#9c5a2e" stroke-width="1.8" stroke-linecap="round"><path d="M16 2.5v3.5M16 26v3.5M2.5 16H6M26 16h3.5M6.4 6.4l2.5 2.5M23.1 23.1l2.5 2.5M6.4 25.6l2.5-2.5M23.1 8.9l2.5-2.5"/></g></svg>
+      <span>Tans<em>2go</em></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">Why Tans2go</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#hours">Hours</a></li>
+    </ul>
+    <a class="mini" href="https://square.site/book/JGKJNSNFN2N7X/tans2go-sevierville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <svg class="sun" viewBox="0 0 520 520" aria-hidden="true">
+    <defs>
+      <radialGradient id="sg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff3df"/><stop offset=".35" stop-color="#f8c486"/><stop offset="1" stop-color="#f2a65a" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="rays" opacity=".55">
+      <g id="ray-set" fill="#f2a65a">
+        <path d="M260 260 L254 0 L266 0Z"/><path d="M260 260 L254 0 L266 0Z" transform="rotate(15 260 260)" opacity=".6"/><path d="M260 260 L254 0 L266 0Z" transform="rotate(30 260 260)"/><path d="M260 260 L254 0 L266 0Z" transform="rotate(45 260 260)" opacity=".6"/><path d="M260 260 L254 0 L266 0Z" transform="rotate(60 260 260)"/><path d="M260 260 L254 0 L266 0Z" transform="rotate(75 260 260)" opacity=".6"/>
+      </g>
+      <use href="#ray-set" transform="rotate(90 260 260)"/><use href="#ray-set" transform="rotate(180 260 260)"/><use href="#ray-set" transform="rotate(270 260 260)"/>
+    </g>
+    <circle cx="260" cy="260" r="200" fill="url(#sg)"/>
+  </svg>
+
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i>Mobile airbrush tanning</span>
+      <h1>Your glow,<br><em>delivered.</em></h1>
+      <p class="sub">Airbrush spray tans that come to you, from Sevierville, TN. Made with <strong>gluten free and vegan solutions</strong>. Book online or just call or text.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://square.site/book/JGKJNSNFN2N7X/tans2go-sevierville-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book your tan</a>
+        <a class="btn btn-ghost" href="tel:+18652023598">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call or text</a>
+      </div>
+      <ul class="chips">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2s7 7.5 7 12.5A7 7 0 0 1 5 14.5C5 9.5 12 2 12 2z"/></svg>Vegan solutions</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Gluten free</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Evenings, Mon–Fri</li>
+      </ul>
+    </div>
+
+    <!-- route-line illustration -->
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 440 400">
+        <defs>
+          <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffaf3"/><stop offset="1" stop-color="#f7e7d2"/></linearGradient>
+          <radialGradient id="glow" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#f2a65a" stop-opacity=".55"/><stop offset="1" stop-color="#f2a65a" stop-opacity="0"/></radialGradient>
+          <linearGradient id="bottle" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c47a3f"/><stop offset="1" stop-color="#7e4521"/></linearGradient>
+          <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2"/></filter>
+        </defs>
+        <circle cx="220" cy="190" r="190" fill="url(#glow)"/>
+        <rect x="30" y="40" width="380" height="320" rx="34" fill="url(#card)" stroke="#e8d3ba"/>
+        <!-- subtle map grid -->
+        <g stroke="#ead7c0" stroke-width="1">
+          <path d="M30 120h380M30 200h380M30 280h380M110 40v320M200 40v320M290 40v320"/>
+        </g>
+        <!-- hills -->
+        <path d="M30 300 C 90 250, 140 270, 190 240 S 300 220, 410 260 V 334 a26 26 0 0 1-26 26 H56 a26 26 0 0 1-26-26Z" fill="#f2a65a" opacity=".18"/>
+        <path d="M30 322 C 110 290, 190 315, 260 290 S 360 290, 410 300 V 334 a26 26 0 0 1-26 26 H56 a26 26 0 0 1-26-26Z" fill="#9c5a2e" opacity=".14"/>
+        <!-- route -->
+        <path class="route-path" d="M86 296 C 120 220, 190 260, 220 190 S 300 120, 352 104" fill="none" stroke="#9c5a2e" stroke-width="3.2" stroke-linecap="round"/>
+        <!-- start pin: Tans2go -->
+        <g transform="translate(86 296)">
+          <circle r="16" fill="#fff" stroke="#9c5a2e" stroke-width="2.5"/>
+          <circle r="6" fill="#f2a65a"/>
+        </g>
+        <text x="64" y="336" font-family="Outfit, sans-serif" font-size="13" fill="#6e5446" font-weight="500">Tans2go</text>
+        <!-- destination: home -->
+        <g transform="translate(352 104)">
+          <circle r="34" fill="#f2a65a" opacity=".22"/>
+          <path d="M-18 4 L0 -13 L18 4 V20 H-18Z" fill="#fff" stroke="#2a1a12" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M-22 6 L0 -16 L22 6" fill="none" stroke="#9c5a2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="-5" y="8" width="10" height="12" rx="2" fill="#9c5a2e"/>
+        </g>
+        <text x="318" y="152" font-family="Outfit, sans-serif" font-size="13" fill="#6e5446" font-weight="500">your place</text>
+        <!-- airbrush bottle traveling -->
+        <g class="van" transform="translate(206 176)">
+          <g transform="rotate(-24)">
+            <rect x="-11" y="-8" width="22" height="40" rx="8" fill="url(#bottle)"/>
+            <rect x="-6" y="-20" width="12" height="13" rx="3" fill="#2a1a12"/>
+            <path d="M6 -16 h16 v5 h-16z" fill="#2a1a12"/>
+            <rect x="-6" y="4" width="12" height="16" rx="3" fill="#f8cf9f" opacity=".8"/>
+          </g>
+          <g class="mist" fill="#f2a65a">
+            <circle cx="34" cy="-36" r="3.4" opacity=".9"/><circle cx="44" cy="-46" r="2.6" opacity=".7"/><circle cx="52" cy="-34" r="2" opacity=".6"/>
+            <circle cx="58" cy="-52" r="3" opacity=".5"/><circle cx="66" cy="-40" r="1.8" opacity=".55"/><circle cx="42" cy="-58" r="1.6" opacity=".5"/>
+            <circle cx="72" cy="-58" r="2.4" opacity=".35"/><circle cx="80" cy="-46" r="1.5" opacity=".35"/><circle cx="52" cy="-66" r="2" opacity=".3"/>
+          </g>
+        </g>
+        <!-- mini sun -->
+        <g transform="translate(92 92)">
+          <circle r="16" fill="#f2a65a"/>
+          <g stroke="#f2a65a" stroke-width="2.4" stroke-linecap="round"><path d="M0-26v-6M0 26v6M-26 0h-6M26 0h6M-18-18l-4-4M18 18l4 4M-18 18l-4 4M18-18l4-4"/></g>
+        </g>
+        <!-- label pill -->
+        <g transform="translate(130 365)">
+          <rect x="0" y="-18" width="180" height="36" rx="18" fill="#2a1a12"/>
+          <text x="90" y="5" text-anchor="middle" font-family="Outfit, sans-serif" font-size="13.5" fill="#fbf6ee" font-weight="500" letter-spacing=".6">WE COME TO YOU</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="sec menu" id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">The menu</span>
+      <h2>Pick your <em>glow.</em></h2>
+      <p class="lede">Services and prices as listed on the Tans2go booking page.</p>
+    </div>
+
+    <div class="menu-groups">
+      <article class="group rv">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>Spray tans</h3>
+        <p class="gnote">Two formulas, one golden result.</p>
+        <div class="item">
+          <span class="nm">Basic Spray Tan</span><span class="pr">$40</span>
+          <span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 min</span>
+          <p class="ds">This is an 8-12 hour/overnight solution. Choose between a golden sun kissed or bronzed goddess tan.</p>
+          <div class="finish" style="grid-column:1/-1"><span><b style="background:linear-gradient(135deg,#f8cf9f,#e3a160)"></b>Golden sun kissed</span><span><b style="background:linear-gradient(135deg,#c47a3f,#7e4521)"></b>Bronzed goddess</span></div>
+        </div>
+        <div class="item">
+          <span class="nm">Rapid tan</span><span class="pr">$50</span>
+          <span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 min</span>
+          <p class="ds">Rapid tan is good for when you are going to be on the go later in the day. It allows you to shower just 4 hours after applied.</p>
+        </div>
+      </article>
+
+      <article class="group rv">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Mobile</h3>
+        <p class="gnote">Same airbrush tan, brought to you.</p>
+        <div class="item">
+          <span class="nm">Mobile Basic Spray Tan</span><span class="pr">$50</span>
+          <span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+        </div>
+        <div class="item">
+          <span class="nm">Mobile Rapid</span><span class="pr">$60</span>
+          <span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+        </div>
+      </article>
+
+      <article class="group rv">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10.5 3 7.5 3 5 6 7 8M12 8s1.5-5 4.5-5S19 6 17 8"/></svg>Packages</h3>
+        <p class="gnote">Stay glowing all season.</p>
+        <div class="item">
+          <span class="nm">6 sprays <span style="font-weight:300;color:var(--muted)">(used in 3 months)</span></span><span class="pr">$275</span>
+          <span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+        </div>
+        <div class="item">
+          <span class="nm">6 sprays WITH drying powder</span><span class="pr">$300</span>
+          <span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 min</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="menu-foot rv">
+      <p>Pick a time online, or call/text <a href="tel:+18652023598" style="color:var(--bronze);font-weight:500">(865) 202-3598</a> and we’ll set it up.</p>
+      <a class="btn btn-primary" href="https://square.site/book/JGKJNSNFN2N7X/tans2go-sevierville-tn" target="_blank" rel="noopener">See open times →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why Tans2go</span>
+      <h2>A tan made <em>around you.</em></h2>
+      <p class="lede">Everything here comes from how Tans2go describes its own service.</p>
+    </div>
+    <div class="why-grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h3>We come to you</h3>
+        <p>Tans2go is a mobile airbrush tanning service, so your tan happens where you’re comfortable.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6"/></svg></div>
+        <h3>Gluten free &amp; vegan</h3>
+        <p>In their words: <q>Gluten free and vegan solutions.</q></p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Rapid option</h3>
+        <p>On the go later? The Rapid tan <q>allows you to shower just 4 hours after applied.</q></p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg></div>
+        <h3>Your shade, your call</h3>
+        <p>Choose between a <q>golden sun kissed</q> or <q>bronzed goddess</q> tan.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+        <h3>After-work hours</h3>
+        <p>Appointments Monday through Thursday 5–8 PM, and Fridays from 4 PM.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Book or just text</h3>
+        <p>Grab a slot online, or call/text <a href="tel:+18652023598" style="color:var(--apricot-l)">(865) 202-3598</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="sec how" id="how">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">How it works</span>
+      <h2>Three steps to <em>bronze.</em></h2>
+    </div>
+    <ol class="steps">
+      <li class="rv"><span class="n">1</span><div><h3>Choose your tan</h3><p>Basic for an overnight develop, Rapid when you’re heading out later. Golden sun kissed or bronzed goddess.</p></div></li>
+      <li class="rv"><span class="n">2</span><div><h3>Book a time</h3><p>Pick an evening slot on the <a href="https://square.site/book/JGKJNSNFN2N7X/tans2go-sevierville-tn" target="_blank" rel="noopener">booking page</a>, or call/text to set it up.</p></div></li>
+      <li class="rv"><span class="n">3</span><div><h3>Glow on</h3><p>Tans2go brings the airbrush. You bring the plans.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- HOURS + MAP -->
+<section class="sec visit" id="hours">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Hours &amp; area</span>
+      <h2>Evening <em>glow hours.</em></h2>
+      <p class="lede">Mobile service based in Sevierville, TN. Call or text to check if they can come to you.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours rv">
+        <h3>Hours <span class="status" id="status"></span></h3>
+        <ul id="hours-list">
+          <li data-d="1"><span>Monday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>4:00 – 8:00 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="note">Hours as listed on the Tans2go booking page.</p>
+      </div>
+      <div class="mapcard rv">
+        <div class="mapwrap"><iframe title="Map of Sevierville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sevierville%2C%20TN&output=embed"></iframe></div>
+        <div class="mbody">
+          <p><strong>Tans2go</strong> · Mobile spray tanning · Sevierville, TN</p>
+          <div class="mbtns">
+            <a class="btn btn-primary" href="tel:+18652023598">Call (865) 202-3598</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Sevierville%2C%20TN" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="wrap">
+    <div class="cbox rv">
+      <h2>Ready to <em>glow?</em></h2>
+      <p>Book your airbrush tan online, or reach out by call, text or email.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://square.site/book/JGKJNSNFN2N7X/tans2go-sevierville-tn" target="_blank" rel="noopener">Book online</a>
+        <a class="btn btn-ghost" href="sms:+18652023598">Text us</a>
+      </div>
+      <div class="social">
+        <a href="https://www.instagram.com/tans2gomobile/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@tans2gomobile</a>
+        <a href="https://www.facebook.com/Tans2goSunlessTanning" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+        <a href="mailto:ka2tbell@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg>Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><span>Tans<em>2go</em></span></a>
+    <div class="fcols">
+      <div><h4>Service</h4><p>Mobile airbrush tanning<br>Gluten free and vegan solutions<br>Sevierville, TN</p></div>
+      <div><h4>Contact</h4><p><a href="tel:+18652023598">(865) 202-3598</a> (call/text)<br><a href="mailto:ka2tbell@gmail.com">ka2tbell@gmail.com</a></p></div>
+      <div><h4>Hours</h4><p>Mon–Thu 5–8 PM<br>Fri 4–8 PM<br>Sat &amp; Sun closed</p></div>
+    </div>
+    <div class="fine"><span>© Tans2go</span><span>Concept by Code Craft Media</span></div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="call" href="tel:+18652023598"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/JGKJNSNFN2N7X/tans2go-sevierville-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book a tan</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  } else { d.classList.add('reveal-all'); }
+  setTimeout(function(){d.classList.add('reveal-all');},1500);
+
+  // today's hours (America/New_York)
+  var now; try{ now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'})); }catch(e){ now=new Date(); }
+  var day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hours-list li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var open={1:[1020,1200],2:[1020,1200],3:[1020,1200],4:[1020,1200],5:[960,1200]}[day];
+  var st=document.getElementById('status');
+  if(open && mins>=open[0] && mins<open[1]){ st.textContent='Open now · until 8 PM'; st.className='status show open'; }
+  else if(open && mins<open[0]){ st.textContent='Opens today at '+(day===5?'4':'5')+' PM'; st.className='status show'; }
+  else { st.textContent='Closed now'; st.className='status show'; }
+})();
+</script>
+</body>
+</html>

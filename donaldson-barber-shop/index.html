@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Donaldson Barber Shop · Morristown, TN</title>
+<meta name="description" content="Donaldson Barber Shop, 204 N. Fairmont Avenue, Morristown, TN. Haircuts, shaves and lineups. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#7a1e24; --ox-d:#5a141a; --navy:#14233f; --navy-d:#0c1729; --cream:#f5ecd9; --cream-d:#e9dcc0;
+  --ink:#1b1b22; --muted:#5b5547; --gold:#c9a45c;
+  --slab:'Alfa Slab One', Georgia, serif; --body:'Barlow', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden;}
+@media(max-width:899px){footer{padding-bottom:110px!important}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .18 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--navy-d);color:#cfd6e4;font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.concept b{color:var(--cream);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(245,236,217,.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--navy)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-name{font-family:var(--slab);font-size:17px;color:var(--navy);line-height:1}
+.brand-name small{display:block;font-family:var(--body);font-weight:600;font-size:10.5px;letter-spacing:.22em;color:var(--ox);margin-top:3px}
+.mini-pole{width:12px;height:34px;border-radius:6px;border:2px solid var(--navy);overflow:hidden;position:relative}
+.mini-pole i{position:absolute;inset:-40px 0 0 0;background:repeating-linear-gradient(-45deg,var(--ox) 0 5px,#fff 5px 10px,var(--navy) 10px 15px,#fff 15px 20px);animation:poleY 1.6s linear infinite}
+@keyframes poleY{to{transform:translateY(28.28px)}}
+.nav-links{display:none;gap:26px;font-weight:600;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--navy);position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--ox);transition:right .25s}
+.nav-links a:hover::after{right:0}
+.nav-cta{font-weight:700;font-size:14px;text-decoration:none;background:var(--ox);color:var(--cream);padding:9px 15px;border-radius:999px;transition:background .2s,transform .2s}
+.nav-cta:hover{background:var(--ox-d);transform:translateY(-1px)}
+@media(min-width:900px){.nav-links{display:flex}}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:var(--cream);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at 80% 20%,rgba(201,164,92,.18),transparent 55%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 44px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:10px;padding-top:28px;padding-bottom:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+.hero h1{font-family:var(--slab);font-weight:400;font-size:clamp(38px,10.6vw,84px);line-height:.98;margin:14px 0 16px;letter-spacing:.005em}
+.hero h1 em{font-style:normal;color:#e8b9a0;display:block}
+.hero p.lede{font-size:17px;color:#d9d2c2;max-width:30ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:16px;text-decoration:none;padding:14px 20px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:18px;height:18px}
+.btn-ox{background:var(--ox);color:var(--cream);box-shadow:0 6px 0 var(--ox-d)}
+.btn-ox:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--ox-d)}
+.btn-ox:active{transform:translateY(4px);box-shadow:0 2px 0 var(--ox-d)}
+.btn-line{border:2px solid rgba(245,236,217,.55);color:var(--cream)}
+.btn-line:hover{background:rgba(245,236,217,.1);border-color:var(--cream)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:#b9c2d4}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+.hero-meta svg{width:15px;height:15px;color:var(--gold)}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#7ec58f;box-shadow:0 0 0 3px rgba(126,197,143,.25)}
+.status-dot.closed{background:#d98276;box-shadow:0 0 0 3px rgba(217,130,118,.25)}
+
+/* big pole */
+.pole{width:62px;justify-self:end;align-self:stretch;display:flex;flex-direction:column;align-items:center;margin-right:-4px}
+.pole .cap{width:46px;height:20px;border-radius:23px 23px 6px 6px;background:linear-gradient(90deg,#9c7d3e,#e9cf8f 40%,#9c7d3e);border:2px solid #0a1222}
+.pole .cap.b{border-radius:6px 6px 23px 23px}
+.pole .knob{width:18px;height:14px;border-radius:9px 9px 0 0;background:linear-gradient(90deg,#9c7d3e,#e9cf8f 40%,#9c7d3e);border:2px solid #0a1222;border-bottom:0}
+.pole .glass{flex:1;min-height:260px;width:38px;border:2px solid #0a1222;border-width:0 2px;position:relative;overflow:hidden;background:#fff}
+.pole .glass i{position:absolute;left:0;right:0;top:-80px;bottom:0;background:repeating-linear-gradient(-35deg,var(--ox) 0 12px,#fff 12px 22px,#2a4a86 22px 34px,#fff 34px 44px);animation:poleBig 2.4s linear infinite}
+.pole .glass::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(255,255,255,.45) 30%,rgba(255,255,255,0) 50%,rgba(0,0,0,.3))}
+@keyframes poleBig{to{transform:translateY(76.7px)}}
+@media(prefers-reduced-motion:reduce){.pole .glass i,.mini-pole i,.badge-ring{animation:none!important}}
+
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--ox) 0 14px,var(--cream) 14px 28px,var(--navy) 28px 42px,var(--cream) 42px 56px)}
+
+/* badge */
+.badge-wrap{display:none}
+.badge-ring{transform-origin:50% 50%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.2fr .8fr auto;padding-top:70px;padding-bottom:80px;gap:30px}
+  .hero p.lede{font-size:19px}
+  .badge-wrap{display:block;width:340px;justify-self:center}
+  .badge-wrap svg{width:100%;height:auto;filter:drop-shadow(0 16px 30px rgba(0,0,0,.35))}
+  .pole{width:80px}
+  .pole .glass{width:50px;min-height:380px}
+  .pole .cap{width:62px}
+}
+
+/* sections */
+section{position:relative}
+.sec{padding:64px 0}
+.sec-head{margin-bottom:28px}
+.kicker{font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ox);display:flex;align-items:center;gap:10px}
+.kicker svg{width:34px;height:12px}
+h2{font-family:var(--slab);font-weight:400;color:var(--navy);font-size:clamp(32px,8.5vw,52px);line-height:1.02;margin-top:8px}
+.sec-head p{color:var(--muted);margin-top:10px;max-width:52ch;font-size:16.5px}
+
+/* menu */
+.tabs{display:flex;gap:6px;background:var(--cream-d);padding:5px;border-radius:999px;margin-bottom:22px;width:max-content;max-width:100%;overflow-x:auto}
+.tab{font:700 14px var(--body);border:0;background:transparent;color:var(--navy);padding:9px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--navy);color:var(--cream)}
+.panel{display:grid;gap:12px}
+.panel[hidden]{display:none}
+@media(min-width:760px){.panel{grid-template-columns:1fr 1fr;gap:14px 18px}}
+.item{position:relative;background:#fbf6ea;border:2px solid var(--navy);border-radius:14px;padding:16px 18px 15px;display:grid;grid-template-columns:1fr auto;gap:2px 14px;box-shadow:4px 4px 0 var(--navy);transition:transform .2s,box-shadow .2s}
+.item:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ox)}
+.item h3{font-family:var(--body);font-weight:700;font-size:17.5px;color:var(--navy);line-height:1.25}
+.item .price{font-family:var(--slab);font-size:24px;color:var(--ox);line-height:1;align-self:start;text-align:right}
+.item .price small{display:block;font-family:var(--body);font-weight:600;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.item .dur{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.item .dur svg{width:14px;height:14px}
+.item .book{grid-column:1/-1;margin-top:10px;font-weight:700;font-size:14px;color:var(--ox);text-decoration:none;display:inline-flex;align-items:center;gap:6px;width:max-content}
+.item .book:hover{text-decoration:underline}
+.menu-note{margin-top:18px;font-size:14px;color:var(--muted)}
+
+/* why */
+.why{background:var(--navy);color:var(--cream);overflow:hidden}
+.why h2{color:var(--cream)}
+.why .kicker{color:var(--gold)}
+.why .sec-head p{color:#c3cad8}
+.cards{display:grid;gap:14px}
+@media(min-width:760px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(4,1fr)}}
+.card{border:1.5px solid rgba(245,236,217,.25);border-radius:14px;padding:20px;background:rgba(255,255,255,.03);transition:border-color .2s,background .2s}
+.card:hover{border-color:var(--gold);background:rgba(255,255,255,.06)}
+.card svg{width:44px;height:44px;color:var(--gold);margin-bottom:12px}
+.card h3{font-family:var(--slab);font-weight:400;font-size:21px;line-height:1.1;margin-bottom:6px}
+.card p{color:#c3cad8;font-size:15.5px}
+
+/* visit */
+.visit-grid{display:grid;gap:20px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.15fr;gap:30px}}
+.hours{background:#fbf6ea;border:2px solid var(--navy);border-radius:16px;padding:8px 18px;box-shadow:4px 4px 0 var(--navy)}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:12px 4px;border-bottom:1px dashed #cbbf9f;font-size:16px}
+.hours li:last-child{border-bottom:0}
+.hours li span:first-child{font-weight:600;color:var(--navy)}
+.hours li.closed span:last-child{color:#9a8f78}
+.hours li.today{background:var(--ox);color:var(--cream);margin:4px -10px;padding:12px 14px;border-radius:10px;border-bottom:0}
+.hours li.today span{color:var(--cream)!important}
+.hours li.today span:first-child::after{content:"Today";font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--cream);color:var(--ox);padding:2px 7px;border-radius:999px;margin-left:8px;vertical-align:2px}
+.addr{margin-top:18px;display:grid;gap:10px}
+.addr a{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;color:var(--navy);padding:12px 14px;border-radius:12px;background:var(--cream-d);transition:background .2s}
+.addr a:hover{background:#e0d0ae}
+.addr svg{width:20px;height:20px;color:var(--ox);flex:none}
+.map{border:2px solid var(--navy);border-radius:16px;overflow:hidden;min-height:320px;background:var(--cream-d);box-shadow:4px 4px 0 var(--ox)}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* final cta */
+.final{background:var(--ox);color:var(--cream);text-align:center;overflow:hidden}
+.final h2{color:var(--cream)}
+.final p{color:#f0d6cc;margin:10px auto 24px;max-width:40ch}
+.final .btn-ox{background:var(--cream);color:var(--ox);box-shadow:0 6px 0 #c9b998}
+.final-emblem{width:150px;height:150px;margin:0 auto 18px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.3))}
+.final .razor-bg{position:absolute;opacity:.08;width:460px;right:-120px;top:-30px;transform:rotate(-18deg);color:#fff}
+
+footer{background:var(--navy-d);color:#aeb7c9;font-size:14px;padding:34px 0 28px}
+footer .wrap{display:grid;gap:14px}
+footer .fname{font-family:var(--slab);color:var(--cream);font-size:20px}
+footer a{color:var(--cream);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.fine{font-size:12px;color:#7d879c;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(12,23,41,.97);border-top:3px solid var(--ox)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15.5px;text-decoration:none;border-radius:12px;padding:13px 10px}
+.bar svg{width:18px;height:18px}
+.bar .call{background:rgba(245,236,217,.1);color:var(--cream);border:1.5px solid rgba(245,236,217,.35)}
+.bar .bk{background:var(--ox);color:var(--cream)}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="0 0 300 300">
+    <path id="circ" d="M150,150 m-111,0 a111,111 0 1,1 222,0 a111,111 0 1,1 -222,0" fill="none"/>
+    <circle cx="150" cy="150" r="146" fill="none" stroke="#c9a45c" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+    <circle cx="150" cy="150" r="136" fill="#7a1e24" stroke="#f5ecd9" stroke-width="3"/>
+    <g class="badge-ring"><text font-family="Barlow" font-weight="700" font-size="17" letter-spacing="4.2" fill="#f5ecd9"><textPath href="#circ">DONALDSON BARBER SHOP ✦ 204 N. FAIRMONT AVE ✦ </textPath></text></g>
+    <circle cx="150" cy="150" r="90" fill="#14233f" stroke="#c9a45c" stroke-width="2.5"/>
+    <circle cx="150" cy="150" r="82" fill="none" stroke="#c9a45c" stroke-width="1" opacity=".5"/>
+    <text x="150" y="112" text-anchor="middle" font-family="Barlow" font-weight="700" font-size="11" letter-spacing="3" fill="#c9a45c">★ CUTS · SHAVES ★</text>
+    <g transform="translate(150 146) rotate(-24) scale(.88)" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-62 -4 H22 a6 6 0 0 1 6 6 v6 H-56 Z" fill="#f5ecd9" stroke="#f5ecd9" stroke-width="2"/>
+      <path d="M-62 -4 L-56 8" stroke="#14233f" stroke-width="1.5"/>
+      <path d="M28 4 H66 a6 6 0 0 1 0 12 H32" fill="#7a1e24" stroke="#c9a45c" stroke-width="2"/>
+      <circle cx="30" cy="6" r="3" fill="#c9a45c"/>
+    </g>
+    <text x="150" y="200" text-anchor="middle" font-family="Alfa Slab One" font-size="15" letter-spacing="2" fill="#f5ecd9">MORRISTOWN</text>
+    <text x="150" y="216" text-anchor="middle" font-family="Barlow" font-weight="700" font-size="10" letter-spacing="3" fill="#c9a45c">TENNESSEE</text>
+  </symbol>
+</svg>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Donaldson Barber Shop. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Donaldson Barber Shop home">
+      <span class="mini-pole" aria-hidden="true"><i></i></span>
+      <span class="brand-name">Donaldson<small>BARBER SHOP</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#menu">Services</a><a href="#why">The Shop</a><a href="#visit">Hours &amp; Map</a>
+    </nav>
+    <a class="nav-cta" href="https://square.site/book/A81P8MZ0AFYJH/donaldson-barber-shop-morristown-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero grain">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Morristown, Tennessee</span>
+      <h1>Sharp cuts. Clean shaves. <em>Fairmont Ave.</em></h1>
+      <p class="lede">Haircuts for men, women, teens and kids, plus shaves and lineups at 204 N. Fairmont Avenue. Pick your service and grab a chair online.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ox" href="https://square.site/book/A81P8MZ0AFYJH/donaldson-barber-shop-morristown-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
+          Book a cut</a>
+        <a class="btn btn-line" href="tel:+14233123546">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+          (423) 312-3546</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="status-dot" id="dot"></i><b id="status">Tue–Fri 9–6 · Sat 9–3</b></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>204 N. Fairmont Ave</span>
+      </div>
+    </div>
+
+    <div class="badge-wrap" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#emblem"/></svg></div>
+
+    <div class="pole" aria-hidden="true">
+      <div class="knob"></div><div class="cap"></div>
+      <div class="glass"><i></i></div>
+      <div class="cap b"></div>
+    </div>
+  </div>
+</section>
+<div class="stripe" aria-hidden="true"></div>
+
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker"><svg viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h20l6-4h5v8h-5l-6-4"/></svg>The Menu</div>
+      <h2>Services &amp; prices</h2>
+      <p>Straight from the shop’s booking page. Tap any service to book it.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="cuts">Haircuts</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="shaves">Shaves</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="extras">Firestick</button>
+    </div>
+    <div class="panel rv" id="cuts" role="tabpanel"></div>
+    <div class="panel" id="shaves" role="tabpanel" hidden></div>
+    <div class="panel" id="extras" role="tabpanel" hidden></div>
+    <p class="menu-note">Prices and times as listed on the shop’s Square booking page. Women’s and men’s haircut prices vary.</p>
+  </div>
+</section>
+
+<section class="sec why grain" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">The Shop</div>
+      <h2>A chair for the whole family</h2>
+      <p>Danny Donaldson’s shop on Fairmont Avenue: straightforward cuts, posted prices, and booking that takes a minute.</p>
+    </div>
+    <div class="cards">
+      <div class="card rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="34" r="6"/><circle cx="34" cy="34" r="6"/><path d="M18 30 36 6M30 30 12 6"/></svg>
+        <h3>Everyone’s welcome</h3><p>Men, women, high-schoolers and kids, each with their own cut on the menu.</p>
+      </div>
+      <div class="card rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 32 30 10a5 5 0 0 1 7 0l1 1a5 5 0 0 1 0 7L15 40Z"/><path d="M15 40 7 46M30 10l12 12"/></svg>
+        <h3>Shaves &amp; lineups</h3><p>Clipper face shaves from $15 and a shave-and-lineup for $20.</p>
+      </div>
+      <div class="card rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 13v11l7 5"/></svg>
+        <h3>In &amp; out fast</h3><p>Most services run 15 to 30 minutes, so a cut fits a lunch break.</p>
+      </div>
+      <div class="card rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="34" height="32" rx="4"/><path d="M7 18h34M16 5v8M32 5v8M17 29l5 5 9-10"/></svg>
+        <h3>Book online, 24/7</h3><p>Pick your service and time on the shop’s booking page, no phone tag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe" aria-hidden="true"></div>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker"><svg viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 6h20l6-4h5v8h-5l-6-4"/></svg>Visit</div>
+      <h2>Hours &amp; directions</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <ul class="hours" id="hours">
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9:00 AM – 3:00 PM</span></li>
+        </ul>
+        <div class="addr">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=204+N+Fairmont+Avenue+Morristown+TN+37814" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>204 N. Fairmont Avenue<br>Morristown, TN 37814</span></a>
+          <a href="tel:+14233123546"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>(423) 312-3546</a>
+          <a href="mailto:ddonaldson03@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ddonaldson03@gmail.com</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map to Donaldson Barber Shop" loading="lazy" src="https://www.google.com/maps?q=204%20N.%20Fairmont%20Avenue%2C%20Morristown%2C%20TN%2037814&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final grain">
+  <svg class="razor-bg" viewBox="0 0 200 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M10 50 140 12a10 10 0 0 1 12 6l2 6a10 10 0 0 1-6 12L22 64Z"/><path d="M22 64 190 70"/></svg>
+  <div class="wrap rv">
+    <svg class="final-emblem" viewBox="0 0 300 300" aria-hidden="true"><use href="#emblem"/></svg>
+    <div class="kicker" style="justify-content:center;color:var(--cream)">Your chair is waiting</div>
+    <h2>Time for a fresh cut?</h2>
+    <p>See open times and book in under a minute, or give the shop a call.</p>
+    <a class="btn btn-ox" href="https://square.site/book/A81P8MZ0AFYJH/donaldson-barber-shop-morristown-tn" target="_blank" rel="noopener">Book your appointment →</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fname">Donaldson Barber Shop</div>
+    <div>204 N. Fairmont Avenue, Morristown, TN 37814<br><a href="tel:+14233123546">(423) 312-3546</a> · <a href="mailto:ddonaldson03@gmail.com">ddonaldson03@gmail.com</a></div>
+    <div class="fine">Concept site by Code Craft Media, made for Donaldson Barber Shop. Not live. Services, prices and hours from the shop’s Square booking page.</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="call" href="tel:+14233123546"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Call</a>
+  <a class="bk" href="https://square.site/book/A81P8MZ0AFYJH/donaldson-barber-shop-morristown-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>Book a cut</a>
+</div>
+
+<script>
+(function(){
+  var BOOK='https://square.site/book/A81P8MZ0AFYJH/donaldson-barber-shop-morristown-tn';
+  var menu={
+    cuts:[["Men's Haircut","$27","20 min",1],["Women's Haircut","$30","30 min",1],["Teens (Highschool) Haircut and Shave","$25","25 min"],["Teens Haircut","$22","30 min"],["Kids Haircut No Razor","$22","20 min"],["Men's Haircut and Shave","$32","25 min"]],
+    shaves:[["Shave and lineup","$20","15 min"],["Clipper Shave-Face ONLY","$15","20 min"],["Men's Haircut and Shave","$32","25 min"],["Teens (Highschool) Haircut and Shave","$25","25 min"]],
+    extras:[["Firestick-program","$30","30 min"],["Firestick-reprogram","$25","25 min"],["Firestick-clean","$20","25 min"]]
+  };
+  var clock='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  Object.keys(menu).forEach(function(k){
+    document.getElementById(k).innerHTML=menu[k].map(function(s){
+      return '<article class="item"><h3>'+s[0]+'</h3><div class="price">'+s[1]+(s[3]?'<small>Price varies</small>':'')+'</div><div class="dur">'+clock+s[2]+'</div><a class="book" href="'+BOOK+'" target="_blank" rel="noopener">Book this →</a></article>';
+    }).join('');
+  });
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t);document.getElementById(x.dataset.t).hidden=(x!==t)});
+  })});
+  // today + open status
+  var d=new Date(),day=d.getDay(),h=d.getHours()+d.getMinutes()/60;
+  var row=document.querySelector('#hours li[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var close={2:18,3:18,4:18,5:18,6:15}[day], st=document.getElementById('status'), dot=document.getElementById('dot');
+  if(close && h>=9 && h<close){st.textContent='Open today until '+(close===18?'6':'3')+' PM';}
+  else{dot.classList.add('closed');
+    var n=day;for(var i=1;i<8;i++){n=(day+i)%7;if(n>=2)break;}
+    if(close && h<9){st.textContent='Opens today at 9 AM';}
+    else{st.textContent='Closed now · opens '+(i===1?'tomorrow':['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][n])+' 9 AM';}
+  }
+  // reveals
+  var root=document.documentElement; root.classList.add('js');
+  var els=document.querySelectorAll('.rv'); function all(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  } else all();
+  setTimeout(all,2500);
+})();
+</script>
+</body>
+</html>

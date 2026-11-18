@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Atomic Hair — Bristol, TN</title>
+<meta name="description" content="Atomic Hair, 807 Edgemont Avenue, Bristol, TN. Blondes, fashion colors and color corrections by Olivia Mayes (hairbyrainbow).">
+<meta name="theme-color" content="#1f7a7a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1f7a7a; --teal-d:#155858; --mustard:#e0a526; --mustard-d:#b9831a;
+  --cream:#f6efe0; --cream-2:#efe4cc; --char:#222; --char-2:#3a3a3a;
+  --coral:#d9644a;
+  --display:'Syne', 'Arial Black', sans-serif;
+  --body:'Space Grotesk', system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--body);background:var(--cream);color:var(--char);line-height:1.55;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:radial-gradient(rgba(34,34,34,.08) 1px,transparent 1.2px);background-size:7px 7px}
+main,header,footer,.banner{position:relative;z-index:1}
+
+/* concept banner */
+.banner{background:var(--char);color:#e9dfc8;font-size:11px;text-align:center;padding:7px 12px;letter-spacing:.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--mustard);font-weight:500}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em}
+.logo svg{width:34px;height:34px}
+.logo svg .spin{transform-origin:50% 50%;animation:spin 14s linear infinite}
+.navlinks{display:none;gap:28px;font-weight:500;font-size:15px}
+.navlinks a{text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--mustard);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.navlinks a:hover::after{transform:scaleX(1)}
+.nav .navcta{display:none}
+@media (min-width:900px){.navlinks{display:flex}.nav .navcta{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:700;font-size:16px;
+  text-decoration:none;border-radius:999px;padding:15px 24px;border:2.5px solid var(--char);transition:transform .18s, box-shadow .18s, background .18s;
+  box-shadow:4px 4px 0 var(--char);min-height:52px}
+.btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--char)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--char)}
+.btn-m{background:var(--mustard);color:var(--char)}
+.btn-t{background:var(--teal);color:#fff}
+.btn-c{background:var(--cream);color:var(--char)}
+.btn svg{width:18px;height:18px}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;padding:18px 0 64px;overflow:hidden}
+.hero-grid{display:grid;gap:28px;align-items:center}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:40px}.hero{padding:30px 0 100px}}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--char);color:var(--cream);padding:7px 13px;border-radius:999px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--mustard);display:block}
+h1{font-family:var(--display);font-weight:800;line-height:.92;letter-spacing:-.035em;font-size:clamp(42px,12.2vw,104px);margin:16px 0 16px}
+h1 .t{color:var(--teal)}
+h1 .m{color:var(--mustard-d);position:relative;white-space:nowrap}
+h1 .m svg{position:absolute;right:-8px;top:-22px;width:26px;height:26px}
+@media (min-width:900px){h1 .m svg{right:-34px;top:-14px;width:34px;height:34px}}
+.sub{font-size:clamp(17px,4.4vw,20px);max-width:34ch;color:var(--char-2)}
+.sub strong{color:var(--char)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+@media (max-width:899px){.hero .btn{padding:13px 20px;min-height:50px;font-size:15.5px}.hero .art{max-width:300px;margin-top:-6px}.hero{padding-bottom:40px}.addr-chip{margin-top:16px}}
+.addr-chip{display:flex;align-items:center;gap:8px;margin-top:22px;font-size:14.5px;font-weight:500;color:var(--char-2)}
+.addr-chip svg{width:18px;height:18px;flex:none;color:var(--teal)}
+
+/* hero art */
+.art{position:relative;aspect-ratio:1/1;max-width:440px;width:100%;margin:0 auto}
+.art svg{width:100%;height:100%;overflow:visible}
+.orbit{transform-origin:200px 200px;animation:spin 40s linear infinite}
+.orbit.r2{animation-duration:58s;animation-direction:reverse}
+.orbit.r3{animation-duration:26s}
+.twinkle{transform-origin:center;transform-box:fill-box;animation:twinkle 3.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:1.2s}.twinkle.d3{animation-delay:2.3s}
+.floaty{animation:floaty 6s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.6) rotate(45deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.bg-boom{position:absolute;pointer-events:none;opacity:.9}
+
+/* marquee strip */
+.strip{background:var(--teal);color:var(--cream);border-block:3px solid var(--char);overflow:hidden;white-space:nowrap}
+.strip-in{display:inline-flex;gap:28px;padding:14px 0;animation:marq 32s linear infinite;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.01em}
+.strip-in span{display:inline-flex;align-items:center;gap:28px}
+.strip-in svg{width:20px;height:20px;color:var(--mustard)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:76px 0}
+.eyebrow{font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--mustard);border-radius:3px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(36px,9vw,64px);line-height:.98;letter-spacing:-.03em;margin:12px 0 14px}
+.lede{max-width:56ch;color:var(--char-2);font-size:17px}
+
+/* menu */
+.menu-grid{display:grid;gap:18px;margin-top:36px}
+@media (min-width:760px){.menu-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.card{background:#fffaf0;border:2.5px solid var(--char);border-radius:22px;padding:22px 22px 10px;box-shadow:6px 6px 0 var(--char);position:relative;overflow:hidden}
+.card h3{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.card h3 svg{width:28px;height:28px;flex:none}
+.card .note{font-size:13.5px;color:var(--char-2);margin-bottom:6px}
+.card.teal{background:var(--teal);color:var(--cream)}
+.card.teal .note{color:#cfe5df}
+.card.teal .svc{border-color:rgba(246,239,224,.25)}
+.card.teal .svc p{color:#d6ebe5}
+.card.teal .price{background:var(--mustard);color:var(--char)}
+.svc{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-top:1.5px dashed rgba(34,34,34,.22)}
+.svc:first-of-type{border-top:0}
+.svc h4{font-weight:700;font-size:16.5px;line-height:1.3}
+.svc p{font-size:13.5px;color:#5a5a5a;margin-top:3px}
+.svc .r{text-align:right;flex:none}
+.price{display:inline-block;font-weight:700;font-size:14.5px;background:var(--char);color:var(--cream);border-radius:999px;padding:4px 11px;white-space:nowrap}
+.price.ask{background:transparent;color:inherit;border:1.5px solid currentColor;font-weight:500;font-size:13px}
+.dur{display:block;font-size:12.5px;margin-top:5px;opacity:.75;white-space:nowrap}
+.card .corner{position:absolute;right:-26px;top:-26px;width:110px;height:110px;opacity:.16;pointer-events:none}
+.menu-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.menu-foot small{color:var(--char-2);font-size:13.5px;max-width:52ch}
+
+/* why */
+.why{background:var(--char);color:var(--cream);position:relative;overflow:hidden}
+.why .eyebrow{color:var(--mustard)}
+.why .lede{color:#cdc5b3}
+.why-grid{display:grid;gap:16px;margin-top:36px}
+@media (min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1050px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.fact{border:2px solid rgba(246,239,224,.22);border-radius:20px;padding:24px 22px;background:rgba(255,255,255,.03);transition:border-color .2s, transform .2s}
+.fact:hover{border-color:var(--mustard);transform:translateY(-3px)}
+.fact .big{font-family:var(--display);font-weight:800;font-size:42px;line-height:1;color:var(--mustard);letter-spacing:-.03em}
+.fact h3{font-family:var(--display);font-weight:700;font-size:20px;margin:12px 0 6px;letter-spacing:-.01em}
+.fact p{font-size:15px;color:#cdc5b3}
+.fact .ic{width:46px;height:46px}
+.quote{margin-top:44px;border-left:5px solid var(--mustard);padding:6px 0 6px 20px;max-width:760px}
+.quote p{font-family:var(--display);font-weight:700;font-size:clamp(22px,5.6vw,32px);line-height:1.15;letter-spacing:-.02em}
+.quote cite{display:block;margin-top:10px;font-style:normal;font-size:13.5px;color:#a9a18f}
+
+/* visit */
+.visit-grid{display:grid;gap:22px;margin-top:34px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr}}
+.hours{background:#fffaf0;border:2.5px solid var(--char);border-radius:22px;padding:22px;box-shadow:6px 6px 0 var(--teal)}
+.hours h3{font-family:var(--display);font-weight:800;font-size:24px;margin-bottom:4px}
+.hours .hnote{font-size:14px;color:var(--char-2);margin-bottom:12px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:12px;font-weight:500;font-size:15.5px}
+.hours li + li{margin-top:2px}
+.hours li span:last-child{font-size:13.5px;color:var(--char-2)}
+.hours li.today{background:var(--mustard);font-weight:700}
+.hours li.today span:last-child{color:var(--char);font-weight:700}
+.hours li.today span:first-child::after{content:" · today";font-weight:500;font-size:13px}
+.map{border:2.5px solid var(--char);border-radius:22px;overflow:hidden;box-shadow:6px 6px 0 var(--mustard);background:var(--cream-2);min-height:300px;display:flex;flex-direction:column}
+.map iframe{width:100%;flex:1;min-height:300px;border:0;display:block}
+.map .mbar{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--cream);border-top:2.5px solid var(--char)}
+.map .mbar b{font-weight:700;font-size:15px;display:block}
+.map .mbar span{font-size:13.5px;color:var(--char-2)}
+.map .mbar a{font-weight:700;font-size:14px;text-decoration:none;background:var(--teal);color:#fff;border-radius:999px;padding:10px 16px;min-height:44px;display:inline-flex;align-items:center}
+.contact-row{display:grid;gap:12px;margin-top:22px}
+@media (min-width:600px){.contact-row{grid-template-columns:1fr 1fr}}
+.contact{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--teal);color:var(--cream);border:2.5px solid var(--char);border-radius:18px;padding:16px 18px;transition:transform .18s, background .18s;min-height:64px}
+.contact:hover{transform:translateY(-3px);background:var(--teal-d)}
+.contact.alt{background:var(--cream);color:var(--char)}
+.contact.alt:hover{background:var(--cream-2)}
+.contact svg{width:26px;height:26px;flex:none}
+.contact small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.contact b{font-size:17px;word-break:break-word}
+
+/* CTA band */
+.band{background:var(--mustard);border-block:3px solid var(--char);text-align:center;position:relative;overflow:hidden}
+.band h2{max-width:16ch;margin:12px auto 18px}
+.band .ctas{justify-content:center}
+.band .eyebrow{justify-content:center;color:var(--char)}
+.band .eyebrow::before{background:var(--char)}
+
+footer{background:var(--char);color:#cdc5b3;padding:40px 0 30px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer .logo{color:var(--cream)}
+footer a{color:var(--mustard)}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(34,34,34,.96);backdrop-filter:blur(8px);border-top:3px solid var(--mustard)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px}
+.callbar .c{background:var(--cream);color:var(--char)}
+.callbar .b{background:var(--mustard);color:var(--char)}
+.callbar svg{width:18px;height:18px}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(26px)}
+.js.all-in .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Atomic Hair. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="star4" viewBox="0 0 40 40"><path d="M20 0 C21.5 14 26 18.5 40 20 C26 21.5 21.5 26 20 40 C18.5 26 14 21.5 0 20 C14 18.5 18.5 14 20 0Z" fill="currentColor"/></symbol>
+    <symbol id="burst" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+      <line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17" y1="17" x2="83" y2="83"/><line x1="83" y1="17" x2="17" y2="83"/>
+      <line x1="50" y1="22" x2="50" y2="78" transform="rotate(22.5 50 50)"/><line x1="50" y1="22" x2="50" y2="78" transform="rotate(67.5 50 50)"/>
+      <line x1="50" y1="22" x2="50" y2="78" transform="rotate(112.5 50 50)"/><line x1="50" y1="22" x2="50" y2="78" transform="rotate(157.5 50 50)"/></g>
+      <g fill="currentColor"><circle cx="50" cy="4" r="4"/><circle cx="50" cy="96" r="4"/><circle cx="4" cy="50" r="4"/><circle cx="96" cy="50" r="4"/>
+      <circle cx="17" cy="17" r="3.4"/><circle cx="83" cy="83" r="3.4"/><circle cx="83" cy="17" r="3.4"/><circle cx="17" cy="83" r="3.4"/><circle cx="50" cy="50" r="7"/></g></symbol>
+    <symbol id="boom" viewBox="0 0 120 60"><path d="M6 50 C20 10 50 4 60 24 C70 4 100 10 114 50 C96 34 76 34 60 44 C44 34 24 34 6 50Z" fill="currentColor"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></g></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="atom" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6"><ellipse cx="24" cy="24" rx="21" ry="8"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(120 24 24)"/></g><circle cx="24" cy="24" r="4.2" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#top" aria-label="Atomic Hair home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><g class="spin" style="color:var(--teal)"><use href="#atom"/></g><circle cx="24" cy="24" r="4.4" fill="#e0a526"/></svg>
+      Atomic&nbsp;Hair
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-m navcta" href="https://square.site/book/1FASF7QA0KJD3/atomic-hair-bristol-tn" target="_blank" rel="noopener">Book online</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="padding-top:8px">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker rv"><i></i>Edgemont Ave · Bristol, TN</span>
+        <h1 class="rv">Blondes.<br><span class="t">Brights.</span><br><span class="m">Rescues.<svg aria-hidden="true" class="twinkle" style="color:var(--teal)"><use href="#star4"/></svg></span></h1>
+        <p class="sub rv"><strong>Olivia Mayes</strong> — aka <strong>@hairbyrainbow</strong> — opened Atomic Hair in June 2018. Blondes, fashion colors and color corrections are her thing.</p>
+        <div class="ctas rv">
+          <a class="btn btn-m" href="https://square.site/book/1FASF7QA0KJD3/atomic-hair-bristol-tn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg>Book an appointment</a>
+          <a class="btn btn-c" href="tel:+12766955853"><svg aria-hidden="true"><use href="#phone"/></svg>(276) 695-5853</a>
+        </div>
+        <div class="addr-chip rv"><svg aria-hidden="true"><use href="#pin"/></svg>807 Edgemont Avenue, Bristol, TN 37620</div>
+      </div>
+
+      <div class="art rv" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e0a526" stop-opacity=".55"/><stop offset="1" stop-color="#e0a526" stop-opacity="0"/></radialGradient>
+            <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#1f7a7a" opacity=".35"/></pattern>
+            <clipPath id="disc"><circle cx="200" cy="200" r="132"/></clipPath>
+          </defs>
+          <circle cx="200" cy="200" r="190" fill="url(#glow)"/>
+          <circle cx="200" cy="200" r="132" fill="#1f7a7a" stroke="#222" stroke-width="4"/>
+          <g clip-path="url(#disc)">
+            <rect x="60" y="60" width="280" height="280" fill="url(#dots)" opacity=".9"/>
+            <!-- wavy hair ribbons -->
+            <path d="M40 250 C110 190 170 300 240 230 S350 190 380 220 L380 400 L40 400Z" fill="#e0a526" stroke="#222" stroke-width="4"/>
+            <path d="M40 292 C110 236 170 340 240 272 S350 236 380 262 L380 400 L40 400Z" fill="#d9644a" stroke="#222" stroke-width="4"/>
+            <path d="M40 334 C110 282 170 378 240 314 S350 282 380 306 L380 400 L40 400Z" fill="#f6efe0" stroke="#222" stroke-width="4"/>
+          </g>
+          <circle cx="200" cy="200" r="132" fill="none" stroke="#222" stroke-width="4"/>
+          <!-- orbits -->
+          <g class="orbit"><ellipse cx="200" cy="200" rx="186" ry="62" fill="none" stroke="#222" stroke-width="3" transform="rotate(-24 200 200)"/><circle cx="378" cy="128" r="11" fill="#e0a526" stroke="#222" stroke-width="3"/></g>
+          <g class="orbit r2"><ellipse cx="200" cy="200" rx="186" ry="62" fill="none" stroke="#1f7a7a" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" transform="rotate(36 200 200)"/><circle cx="52" cy="98" r="9" fill="#1f7a7a" stroke="#222" stroke-width="3"/></g>
+          <g class="orbit r3"><circle cx="200" cy="200" r="160" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round"/><circle cx="200" cy="40" r="6" fill="#d9644a"/></g>
+          <!-- scissors in centre -->
+          <g class="floaty" transform="translate(0 0)">
+            <g transform="translate(200 150) rotate(-35)">
+              <path d="M-6 0 L-4 -86 L4 -86 L6 0Z" fill="#f6efe0" stroke="#222" stroke-width="3.5" stroke-linejoin="round" transform="rotate(9)"/>
+              <path d="M-6 0 L-4 -86 L4 -86 L6 0Z" fill="#fffaf0" stroke="#222" stroke-width="3.5" stroke-linejoin="round" transform="rotate(-9)"/>
+              <circle cx="-15" cy="24" r="14" fill="none" stroke="#222" stroke-width="7"/><circle cx="-15" cy="24" r="14" fill="none" stroke="#e0a526" stroke-width="3"/>
+              <circle cx="15" cy="24" r="14" fill="none" stroke="#222" stroke-width="7"/><circle cx="15" cy="24" r="14" fill="none" stroke="#e0a526" stroke-width="3"/>
+              <circle cx="0" cy="0" r="5" fill="#222"/>
+            </g>
+          </g>
+          <!-- starbursts -->
+          <g style="color:#222" class="twinkle"><use href="#burst" x="300" y="20" width="70" height="70"/></g>
+          <g style="color:#d9644a" class="twinkle d2"><use href="#star4" x="28" y="250" width="34" height="34"/></g>
+          <g style="color:#1f7a7a" class="twinkle d3"><use href="#star4" x="330" y="300" width="26" height="26"/></g>
+          <g style="color:#e0a526" class="twinkle d2"><use href="#burst" x="20" y="20" width="48" height="48"/></g>
+          <g style="color:#222"><use href="#boom" x="240" y="335" width="90" height="45"/></g>
+        </svg>
+      </div>
+    </div>
+    <svg class="bg-boom" style="left:-40px;bottom:6px;width:150px;color:var(--teal);opacity:.18;transform:rotate(-14deg)" aria-hidden="true" viewBox="0 0 120 60"><use href="#boom"/></svg>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="strip-in">
+      <span>Blondes <svg><use href="#star4"/></svg> Fashion color <svg><use href="#star4"/></svg> Color corrections <svg><use href="#star4"/></svg> Balayage <svg><use href="#star4"/></svg> Curl Cult perms <svg><use href="#star4"/></svg> Pedicures <svg><use href="#star4"/></svg></span>
+      <span>Blondes <svg><use href="#star4"/></svg> Fashion color <svg><use href="#star4"/></svg> Color corrections <svg><use href="#star4"/></svg> Balayage <svg><use href="#star4"/></svg> Curl Cult perms <svg><use href="#star4"/></svg> Pedicures <svg><use href="#star4"/></svg></span>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="eyebrow rv">The menu</div>
+      <h2 class="rv">Color first.<br>Then everything else.</h2>
+      <p class="lede rv">Most color starting prices include a Bond Treatment. Starting prices are exactly as listed on Atomic Hair’s booking page.</p>
+
+      <div class="menu-grid">
+        <article class="card teal rv">
+          <svg class="corner" style="color:var(--cream)" aria-hidden="true"><use href="#burst"/></svg>
+          <h3><svg style="color:var(--mustard)" aria-hidden="true"><use href="#star4"/></svg>Color</h3>
+          <p class="note">Starting prices — final price depends on how much product your hair needs.</p>
+          <div class="svc"><div><h4>Highlights / Balayage / Blonding</h4><p>Includes one bowl of lightener, one bowl toner, and Bond Treatment</p></div><div class="r"><span class="price">from $135</span><span class="dur">4 hrs</span></div></div>
+          <div class="svc"><div><h4>Fantasy Color (lightened first)</h4><p>Includes one bowl of lightener, one bowl of semi color, and Bond Treatment</p></div><div class="r"><span class="price">from $160</span><span class="dur">5 hrs</span></div></div>
+          <div class="svc"><div><h4>Fantasy Color Only</h4><p>Starting price includes one bowl</p></div><div class="r"><span class="price">from $60</span><span class="dur">3 hrs</span></div></div>
+          <div class="svc"><div><h4>Basic Color</h4><p>Includes one bowl of color and Bond Builder treatment</p></div><div class="r"><span class="price">from $95</span><span class="dur">2 hrs 30 min</span></div></div>
+          <div class="svc"><div><h4>Mini Foil (15–25 foils)</h4><p>Includes one bowl of color/lightener and Bond Treatment</p></div><div class="r"><span class="price ask">3 options</span></div></div>
+        </article>
+
+        <div style="display:grid;gap:18px">
+          <article class="card rv">
+            <svg class="corner" style="color:var(--teal)" aria-hidden="true"><use href="#atom"/></svg>
+            <h3><svg style="color:var(--teal)" aria-hidden="true"><use href="#star4"/></svg>Cut, curl &amp; wax</h3>
+            <div class="svc"><div><h4>Cuts / Styling</h4><p>Choose your option when you book</p></div><div class="r"><span class="price ask">3 options</span></div></div>
+            <div class="svc"><div><h4>Curl Cult Perm</h4><p>$15 for every extra ounce of product needed</p></div><div class="r"><span class="price ask">2 options</span></div></div>
+            <div class="svc"><div><h4>Waxing</h4><p>Choose your option when you book</p></div><div class="r"><span class="price ask">3 options</span></div></div>
+          </article>
+          <article class="card rv" style="background:#fff3d6">
+            <svg class="corner" style="color:var(--mustard-d)" aria-hidden="true"><use href="#burst"/></svg>
+            <h3><svg style="color:var(--mustard-d)" aria-hidden="true"><use href="#star4"/></svg>Feet &amp; hands</h3>
+            <div class="svc"><div><h4>Pedicure</h4></div><div class="r"><span class="price">$35</span><span class="dur">1 hr 30 min</span></div></div>
+            <div class="svc"><div><h4>Foot Softening Treatment</h4><p>Removal of calluses, paraffin wax dip, and short massage with lotion</p></div><div class="r"><span class="price">$20</span><span class="dur">45 min</span></div></div>
+            <div class="svc"><div><h4>Paraffin Wax (Feet or Hands)</h4></div><div class="r"><span class="price">$12</span><span class="dur">30 min</span></div></div>
+            <div class="svc"><div><h4>Jelly Foot Soak</h4></div><div class="r"><span class="price">$5</span><span class="dur">30 min</span></div></div>
+          </article>
+        </div>
+      </div>
+      <div class="menu-foot rv">
+        <a class="btn btn-t" href="https://square.site/book/1FASF7QA0KJD3/atomic-hair-bristol-tn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg>See options &amp; book</a>
+        <small>Services with several options show their choices on the booking page.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why" id="about">
+    <svg class="bg-boom" style="right:-60px;top:40px;width:260px;color:var(--teal);opacity:.35;transform:rotate(18deg)" aria-hidden="true" viewBox="0 0 120 60"><use href="#boom"/></svg>
+    <div class="wrap" style="position:relative">
+      <div class="eyebrow rv">Why Atomic</div>
+      <h2 class="rv">Her salon.<br>A whole spectrum.</h2>
+      <p class="lede rv">Atomic Hair is a salon run by Olivia Mayes. She opened it by herself in June 2018 — and though color is her specialty, she does most everything.</p>
+      <div class="why-grid">
+        <div class="fact rv"><div class="big">2018</div><h3>Opened in June 2018</h3><p>She started solo: Olivia opened Atomic Hair by herself.</p></div>
+        <div class="fact rv"><svg class="ic" style="color:var(--mustard)" aria-hidden="true"><use href="#burst"/></svg><h3>Blondes &amp; fashion color</h3><p>Her specialties: blondes, fashion colors and color corrections — the tricky stuff.</p></div>
+        <div class="fact rv"><svg class="ic" style="color:var(--mustard)" aria-hidden="true"><use href="#atom"/></svg><h3>Bond Treatment included</h3><p>Basic Color, Highlights/Balayage, Fantasy Color (lightened first) and Mini Foil all include a Bond Treatment in the price.</p></div>
+        <div class="fact rv"><div class="big" style="font-size:36px">LGBTQ+</div><h3>A safe space</h3><p>In the salon’s own words: “We are a safe space for lgbtq+.” Come as you are.</p></div>
+      </div>
+      <blockquote class="quote rv">
+        <p>“She specializes in blondes, fashion colors, and color corrections. Though she does most everything as well.”</p>
+        <cite>— From Atomic Hair’s booking page · find Olivia on Instagram as HairbyRainbow</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="eyebrow rv">Visit</div>
+      <h2 class="rv">807 Edgemont.<br>Bristol, Tennessee side.</h2>
+      <div class="visit-grid">
+        <div class="hours rv">
+          <h3>Booking hours</h3>
+          <p class="hnote">Appointments are booked online — live openings for every day are on Atomic Hair’s booking page.</p>
+          <ul id="hours">
+            <li data-d="0"><span>Sunday</span><span>See booking page</span></li>
+            <li data-d="1"><span>Monday</span><span>See booking page</span></li>
+            <li data-d="2"><span>Tuesday</span><span>See booking page</span></li>
+            <li data-d="3"><span>Wednesday</span><span>See booking page</span></li>
+            <li data-d="4"><span>Thursday</span><span>See booking page</span></li>
+            <li data-d="5"><span>Friday</span><span>See booking page</span></li>
+            <li data-d="6"><span>Saturday</span><span>See booking page</span></li>
+          </ul>
+          <a class="btn btn-m" style="margin-top:16px;width:100%" href="https://square.site/book/1FASF7QA0KJD3/atomic-hair-bristol-tn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg>Check openings</a>
+        </div>
+        <div class="map rv">
+          <iframe title="Map to Atomic Hair, 807 Edgemont Avenue, Bristol, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=807%20Edgemont%20Avenue%2C%20Bristol%2C%20TN%2037620&output=embed"></iframe>
+          <div class="mbar"><div><b>807 Edgemont Avenue</b><span>Bristol, TN 37620</span></div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=807%20Edgemont%20Avenue%2C%20Bristol%2C%20TN%2037620" target="_blank" rel="noopener">Get directions</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <a class="contact rv" href="tel:+12766955853"><svg aria-hidden="true"><use href="#phone"/></svg><span><small>Tap to call</small><b>(276) 695-5853</b></span></a>
+        <a class="contact alt rv" href="mailto:oliviasop@gmail.com"><svg aria-hidden="true"><use href="#mail"/></svg><span><small>Email</small><b>oliviasop@gmail.com</b></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <svg class="bg-boom" style="left:-30px;top:20px;width:170px;color:var(--char);opacity:.1;transform:rotate(-20deg)" aria-hidden="true" viewBox="0 0 120 60"><use href="#boom"/></svg>
+    <svg class="bg-boom" style="right:16px;bottom:18px;width:80px;color:var(--char);opacity:.15" aria-hidden="true" viewBox="0 0 100 100"><use href="#burst"/></svg>
+    <div class="wrap">
+      <div class="eyebrow rv">Ready for a change?</div>
+      <h2 class="rv">Go blonde. Go bright. Go atomic.</h2>
+      <div class="ctas rv">
+        <a class="btn btn-t" href="https://square.site/book/1FASF7QA0KJD3/atomic-hair-bristol-tn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg>Book with Olivia</a>
+        <a class="btn btn-c" href="tel:+12766955853"><svg aria-hidden="true"><use href="#phone"/></svg>Call the salon</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><g style="color:var(--mustard)"><use href="#atom"/></g></svg>Atomic&nbsp;Hair</a>
+    <div>807 Edgemont Avenue, Bristol, TN 37620 · <a href="tel:+12766955853">(276) 695-5853</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c" href="tel:+12766955853"><svg aria-hidden="true"><use href="#phone"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/1FASF7QA0KJD3/atomic-hair-bristol-tn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#cal"/></svg>Book online</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var today=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+today+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else { d.classList.add('all-in'); }
+  setTimeout(function(){d.classList.add('all-in')},1500);
+})();
+</script>
+</body>
+</html>
