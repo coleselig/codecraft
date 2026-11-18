@@ -137,7 +137,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ink)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.petal{display:none}}
 </style>
-<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+</head>
 <body>
 <div class="concept">Concept site by <b>Code Craft Media</b>, made for Dogwood Grooming Spa. Not live.</div>
 
@@ -278,14 +278,5 @@ const P=document.getElementById('petals');if(!matchMedia('(prefers-reduced-motio
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
 </script>
-<style id="netlify-badge-clearance">
-/* keep sticky CTA + footer clear of the hosting badge (bottom-right) */
-footer{padding-bottom:96px!important}
-@media (max-width:899px){
-  .callbar{bottom:calc(70px + env(safe-area-inset-bottom))!important;left:10px!important;right:10px!important;border-radius:18px!important;overflow:hidden}
-  footer{padding-bottom:170px!important}
-  body{padding-bottom:0!important}
-}
-</style>
 </body>
 </html>
