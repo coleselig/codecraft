@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Asian Market — Kingsport</title>
+<meta name="description" content="Asian Market, 1711 Fort Henry Dr, Kingsport TN. Fresh produce brought up from Atlanta every week, plus snacks, tea and frozen goods from across Asia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D7263D; --red-d:#B01E31; --jade:#2A9D8F; --jade-d:#1F7A6F; --gold:#F4C542;
+  --cream:#FBF5EA; --cream-2:#F4EAD7; --ink:#1A1A1A; --ink-2:#4A4540;
+  --serif:"Shippori Mincho", Georgia, serif; --sans:"Zen Kaku Gothic New", "Noto Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 20px}
+.lattice{background-image:
+  linear-gradient(45deg, rgba(26,26,26,.045) 1px, transparent 1px),
+  linear-gradient(-45deg, rgba(26,26,26,.045) 1px, transparent 1px);
+  background-size:26px 26px}
+
+/* banner */
+.concept{background:var(--ink);color:#EDE6D8;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+@media(max-width:420px){.concept{font-size:10.5px;padding:7px 8px;letter-spacing:-.01em}}
+.concept b{color:var(--gold);font-weight:500}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(251,245,234,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(26,26,26,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .seal{width:38px;height:38px;border-radius:8px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:800;font-size:16px;transform:rotate(-4deg);box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
+.logo .nm{font-family:var(--serif);font-weight:800;font-size:19px;line-height:1}
+.logo .nm small{display:block;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--jade-d);margin-top:3px}
+.links{display:none;gap:26px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--red);transition:right .25s}
+.links a:hover::after{right:0}
+.nav .call-sm{display:inline-flex;align-items:center;gap:6px;background:var(--jade);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px;transition:background .2s}
+.nav .call-sm:hover{background:var(--jade-d)}
+@media(min-width:900px){.links{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:42px 0 56px}
+.hero::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(244,197,66,.45),rgba(244,197,66,0) 70%)}
+.hero .grid{position:relative;display:grid;gap:34px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red)}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,11vw,78px);line-height:1.04;letter-spacing:-.01em;margin:14px 0 16px}
+h1 em{font-style:normal;color:var(--red);position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.08em;height:.22em;background:var(--gold);z-index:-1;border-radius:2px;opacity:.75}
+.hero p.sub{font-size:18px;color:var(--ink-2);max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:700;font-size:16px;padding:15px 22px;border-radius:12px;transition:transform .15s, box-shadow .2s, background .2s;min-height:52px}
+.btn:active{transform:translateY(1px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 6px 0 var(--red-d)}
+.btn-red:hover{background:#E0324A}
+.btn-ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn svg{width:19px;height:19px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14px;color:var(--ink-2)}
+.facts span{display:inline-flex;align-items:center;gap:7px}
+.facts i{width:8px;height:8px;border-radius:50%;background:var(--jade)}
+
+/* crate illustration */
+.crate-scene{position:relative;max-width:460px;margin:0 auto;width:100%}
+.crate-scene .tag{position:absolute;top:6%;right:2%;background:var(--gold);color:var(--ink);font-family:var(--serif);font-weight:800;font-size:15px;line-height:1.15;padding:12px 14px;border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;transform:rotate(10deg);box-shadow:0 0 0 4px var(--cream),0 0 0 6px var(--gold);animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:rotate(6deg) translateY(-6px)}}
+.leaf{transform-origin:bottom center;animation:sway 5s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(2.5deg)}}
+
+/* ribbon */
+.ribbon{background:var(--red);color:#fff;overflow:hidden;border-block:3px solid var(--ink)}
+.ribbon .track{display:flex;gap:34px;white-space:nowrap;padding:13px 0;font-family:var(--serif);font-weight:800;font-size:18px;animation:marq 32s linear infinite;width:max-content}
+.ribbon .track span::after{content:"✦";margin-left:34px;color:var(--gold)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:72px 0}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--jade-d)}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(32px,7.4vw,50px);line-height:1.1;margin:8px 0 14px}
+.lede{font-size:17px;color:var(--ink-2);max-width:620px}
+
+/* aisles */
+.aisles{display:grid;gap:18px;margin-top:36px}
+@media(min-width:800px){.aisles{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:#fff;border-radius:18px;padding:28px 24px 26px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);transition:transform .2s, box-shadow .2s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+.card .stamp{position:absolute;top:18px;right:18px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border:2px solid currentColor;border-radius:4px;transform:rotate(6deg)}
+.card .ico{width:74px;height:74px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px}
+.card .ico svg{width:46px;height:46px}
+.card h3{font-family:var(--serif);font-size:24px;font-weight:800;line-height:1.2;margin-bottom:8px}
+.card p{color:var(--ink-2);font-size:15.5px}
+.card.c1 .ico{background:#E2F2EF}.card.c1 .stamp{color:var(--jade-d)}
+.card.c2 .ico{background:#FCE4E7}.card.c2 .stamp{color:var(--red)}
+.card.c3 .ico{background:#FDF2D0}.card.c3 .stamp{color:#9A7300}
+.flags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.flags span{font-size:12.5px;font-weight:700;background:var(--cream);border:1px solid rgba(26,26,26,.15);padding:4px 10px;border-radius:999px}
+
+/* atlanta */
+.run{background:var(--jade);color:#fff;position:relative;overflow:hidden}
+.run .lattice-l{position:absolute;inset:0;background-image:linear-gradient(45deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(-45deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:26px 26px}
+.run .wrap{position:relative;display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.run .wrap{grid-template-columns:1.05fr 1fr}}
+.run .eyebrow{color:var(--gold)}
+.run .lede{color:#E6F4F1}
+.route{background:rgba(0,0,0,.14);border:2px dashed rgba(255,255,255,.4);border-radius:20px;padding:22px}
+.route svg{width:100%;height:auto}
+.quote{margin-top:22px;padding-left:16px;border-left:4px solid var(--gold);font-family:var(--serif);font-size:19px;line-height:1.45}
+.quote small{display:block;font-family:var(--sans);font-size:13px;opacity:.8;margin-top:6px}
+
+/* why */
+.why{display:grid;gap:16px;margin-top:34px}
+@media(min-width:800px){.why{grid-template-columns:repeat(3,1fr)}}
+.why div{background:var(--cream-2);border-radius:16px;padding:24px;border-top:5px solid var(--red)}
+.why div:nth-child(2){border-color:var(--jade)}
+.why div:nth-child(3){border-color:var(--gold)}
+.why .big{font-family:var(--serif);font-weight:800;font-size:40px;line-height:1;color:var(--ink)}
+.why h3{font-size:17px;margin:10px 0 4px}
+.why p{color:var(--ink-2);font-size:15px}
+
+/* visit */
+.visit .grid{display:grid;gap:22px;margin-top:34px}
+@media(min-width:900px){.visit .grid{grid-template-columns:1fr 1.2fr}}
+.hours{background:#fff;border:2px solid var(--ink);border-radius:18px;overflow:hidden}
+.hours h3{background:var(--ink);color:#fff;font-family:var(--serif);font-size:20px;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
+.hours h3 .now{font-family:var(--sans);font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:#444;color:#fff}
+.hours ul{list-style:none;padding:8px 10px 12px}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:10px;font-size:16px}
+.hours li + li{border-top:1px dashed rgba(26,26,26,.12)}
+.hours li.closed span:last-child{color:var(--red);font-weight:700}
+.hours li.today{background:var(--gold);border-top-color:transparent;font-weight:700}
+.hours li.today + li{border-top-color:transparent}
+.hours li.today span:first-child::after{content:" · Today";font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.hours .note{font-size:12.5px;color:var(--ink-2);padding:0 22px 16px}
+.map{position:relative;border-radius:18px;overflow:hidden;border:2px solid var(--ink);min-height:300px;background:var(--cream-2)}
+.map .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-weight:700;color:var(--ink-2);background-image:linear-gradient(45deg,rgba(42,157,143,.12) 1px,transparent 1px),linear-gradient(-45deg,rgba(42,157,143,.12) 1px,transparent 1px);background-size:26px 26px}
+.map .ph svg{width:40px;height:40px;margin:0 auto 8px;color:var(--red)}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.contact{display:grid;gap:12px;margin-top:22px}
+@media(min-width:600px){.contact{grid-template-columns:repeat(3,1fr)}}
+.contact a{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid rgba(26,26,26,.12);border-radius:14px;padding:16px;text-decoration:none;transition:border-color .2s, transform .2s;min-width:0}
+.contact a:hover{border-color:var(--jade);transform:translateY(-2px)}
+.contact .ci{flex:none;width:42px;height:42px;border-radius:12px;background:var(--jade);color:#fff;display:grid;place-items:center}
+.contact .ci svg{width:21px;height:21px}
+.contact small{display:block;font-size:12px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.1em}
+.contact strong{display:block;font-size:15px;overflow-wrap:anywhere}
+
+footer{background:var(--ink);color:#CFC6B6;padding:44px 0 36px;font-size:14px}
+footer .wrap{display:grid;gap:18px}
+footer .fn{font-family:var(--serif);font-size:24px;color:#fff;font-weight:800}
+footer a{color:var(--gold)}
+footer .cc{border-top:1px solid #333;padding-top:16px;font-size:13px;color:#9B9384}
+
+/* mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(26,26,26,.96);backdrop-filter:blur(6px)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15.5px}
+.bar .b1{background:var(--red);color:#fff}
+.bar .b2{background:var(--cream);color:var(--ink)}
+.bar svg{width:18px;height:18px}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal:not(.in){opacity:1;transform:none}}
+
+@media(min-width:900px){
+  .hero{padding:70px 0 90px}
+  .hero .grid{grid-template-columns:1.1fr .9fr;align-items:center}
+  section{padding:100px 0}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Asian Market. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Asian Market home"><span class="seal">AM</span><span class="nm">Asian Market<small>Kingsport, TN</small></span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#aisles">Products</a><a href="#atlanta">Fresh Produce</a><a href="#visit">Opening Hours</a><a href="#about">About</a>
+    </nav>
+    <a class="call-sm" href="tel:+14237651826"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero lattice" style="padding-top:42px">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="kicker">Fort Henry Dr · Kingsport</span>
+      <h1>Atlanta-fresh produce, <em>every week</em>, right here in Kingsport.</h1>
+      <p class="sub">Asian Market goes to Atlanta, Georgia every week for vegetables and seafood, and stocks snacks, coffee and tea from across Asia.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="tel:+14237651826"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (423) 765-1826</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=1711+Fort+Henry+Dr,+Kingsport,+TN+37664" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Get directions</a>
+      </div>
+      <div class="facts"><span><i></i>Open 6 days a week</span><span><i></i>Serving Kingsport since 2012</span></div>
+    </div>
+
+    <div class="crate-scene reveal" aria-hidden="true">
+      <div class="tag">Fresh<br>from<br>Atlanta</div>
+      <svg viewBox="0 0 460 400" fill="none">
+        <ellipse cx="230" cy="372" rx="200" ry="16" fill="#1A1A1A" opacity=".08"/>
+        <!-- bok choy -->
+        <g class="leaf">
+          <path d="M150 230c-30-60-40-120-10-170 18 40 30 100 24 170z" fill="#2A9D8F" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M175 232c-6-70 6-140 46-180 8 50-4 120-24 182z" fill="#3DB5A5" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M200 236c14-60 46-110 92-128-6 50-40 104-74 132z" fill="#2A9D8F" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M160 230c4-50 6-100 2-150M190 232c4-60 12-110 26-160M210 236c18-40 40-80 72-112" stroke="#E8F5E9" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <!-- noodles bowl -->
+        <g>
+          <path d="M296 150c0-26 8-50 8-74M316 150c0-26 8-50 8-74" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+          <path d="M262 168h120a60 60 0 0 1-120 0z" fill="#F4C542" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M282 168c6-10 14-10 20 0s14 10 20 0 14-10 20 0 14 10 20 0" stroke="#FBF5EA" stroke-width="4" stroke-linecap="round"/>
+          <path d="M296 196h52" stroke="#D7263D" stroke-width="5" stroke-linecap="round"/>
+        </g>
+        <!-- rice bag -->
+        <g>
+          <path d="M60 196c0-20 8-34 18-40l-6-12h60l-6 12c10 6 18 20 18 40v56H60z" fill="#FBF5EA" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M72 144c10 6 34 6 48 0" stroke="#1A1A1A" stroke-width="3"/>
+          <rect x="70" y="190" width="64" height="38" rx="6" fill="#D7263D"/>
+          <text x="102" y="216" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="22" fill="#fff">米</text>
+        </g>
+        <!-- crate -->
+        <g>
+          <rect x="40" y="236" width="380" height="124" rx="10" fill="#C98A4B" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M40 276h380M40 318h380" stroke="#1A1A1A" stroke-width="3"/>
+          <path d="M40 236l380 124M420 236L40 360" stroke="#A86E35" stroke-width="2" opacity=".35"/>
+          <rect x="150" y="262" width="160" height="72" rx="6" fill="#FBF5EA" stroke="#1A1A1A" stroke-width="3"/>
+          <rect x="158" y="270" width="144" height="56" rx="3" fill="none" stroke="#D7263D" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="230" y="296" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="16" fill="#D7263D" textLength="128" lengthAdjust="spacingAndGlyphs">ASIAN MARKET</text>
+          <text x="230" y="317" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#1A1A1A">KINGSPORT · TN</text>
+          <circle cx="62" cy="256" r="4" fill="#1A1A1A"/><circle cx="398" cy="256" r="4" fill="#1A1A1A"/><circle cx="62" cy="340" r="4" fill="#1A1A1A"/><circle cx="398" cy="340" r="4" fill="#1A1A1A"/>
+        </g>
+        <!-- produce peeking -->
+        <circle cx="340" cy="226" r="20" fill="#D7263D" stroke="#1A1A1A" stroke-width="3"/>
+        <path d="M340 206c2-8 8-12 14-12" stroke="#2A9D8F" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="380" cy="230" r="16" fill="#F4C542" stroke="#1A1A1A" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div class="track">
+  <span>Fresh vegetables</span><span>Seafood</span><span>Snacks</span><span>Coffee &amp; tea</span><span>Tofu</span><span>Ice cream</span><span>China · Japan · Korea · Vietnam · Philippines</span>
+  <span>Fresh vegetables</span><span>Seafood</span><span>Snacks</span><span>Coffee &amp; tea</span><span>Tofu</span><span>Ice cream</span><span>China · Japan · Korea · Vietnam · Philippines</span>
+</div></div>
+
+<section id="aisles">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">What's on the shelves</span>
+      <h2>Three aisles worth the drive.</h2>
+      <p class="lede">From greens picked up in Atlanta this week to the tofu and frozen treats in the coolers, here's what you'll find on Fort Henry Drive.</p>
+    </div>
+    <div class="aisles">
+      <article class="card c1 reveal">
+        <span class="stamp">Weekly</span>
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1F7A6F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44c-6 0-9-6-9-14 0-10 4-20 9-26 5 6 9 16 9 26 0 8-3 14-9 14z"/><path d="M24 44V12M15 30c-5-2-8-8-8-14 5 1 9 5 10 10M33 30c5-2 8-8 8-14-5 1-9 5-10 10"/></svg></div>
+        <h3>Fresh vegetables &amp; seafood</h3>
+        <p>Bought in Atlanta, Georgia every week so the produce table stays as fresh as it can be.</p>
+      </article>
+      <article class="card c2 reveal">
+        <span class="stamp">Imported</span>
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#B01E31" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24h36a18 18 0 0 1-36 0z"/><path d="M12 24c3-4 6-4 9 0s6 4 9 0 6-4 9 0"/><path d="M28 18l12-14M33 19l11-12"/><path d="M18 42h12"/></svg></div>
+        <h3>Snacks, coffee &amp; tea</h3>
+        <p>Pantry favorites from across Asia, the brands you grew up with or want to try.</p>
+        <div class="flags"><span>China</span><span>Japan</span><span>Korea</span><span>Vietnam</span><span>Philippines</span></div>
+      </article>
+      <article class="card c3 reveal">
+        <span class="stamp">Cold case</span>
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#9A7300" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4v40M7 14l34 20M41 14L7 34"/><path d="M19 7l5 4 5-4M19 41l5-4 5 4M6 20l6-1-2-6M42 28l-6 1 2 6M42 20l-6-1 2-6M6 28l6 1-2 6"/></svg></div>
+        <h3>Frozen &amp; refrigerated</h3>
+        <p>A wide range of frozen and refrigerated goods, from ice cream to tofu.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="run" id="atlanta">
+  <div class="lattice-l"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">The weekly run</span>
+      <h2>Kingsport to Atlanta and back, every single week.</h2>
+      <p class="lede">Asian Market makes the trip to Atlanta every week, so the greens and seafood on the table are as fresh as they can make them.</p>
+      <p class="quote">Every week, a trip to Atlanta, Georgia, for the freshest produce they can provide.<small>Straight from Asian Market's own story</small></p>
+    </div>
+    <div class="route reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 260" fill="none">
+        <path d="M60 40C140 50 150 150 220 160S330 190 340 214" stroke="#F4C542" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <circle cx="60" cy="40" r="12" fill="#D7263D" stroke="#fff" stroke-width="4"/>
+        <circle cx="340" cy="214" r="12" fill="#F4C542" stroke="#fff" stroke-width="4"/>
+        <text x="84" y="56" font-family="Shippori Mincho, serif" font-weight="800" font-size="22" fill="#fff">Kingsport, TN</text>
+        <text x="84" y="78" font-family="Zen Kaku Gothic New, sans-serif" font-size="13" fill="#E6F4F1">the store</text>
+        <text x="318" y="220" text-anchor="end" font-family="Shippori Mincho, serif" font-weight="800" font-size="22" fill="#fff">Atlanta, GA</text>
+        <text x="318" y="240" text-anchor="end" font-family="Zen Kaku Gothic New, sans-serif" font-size="13" fill="#E6F4F1">produce &amp; seafood</text>
+        <g transform="translate(196 122)">
+          <rect x="0" y="6" width="44" height="26" rx="4" fill="#fff" stroke="#1A1A1A" stroke-width="2.5"/>
+          <path d="M44 14h12l8 10v8H44z" fill="#D7263D" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="12" cy="34" r="5" fill="#1A1A1A"/><circle cx="54" cy="34" r="5" fill="#1A1A1A"/>
+        </g>
+        <text x="226" y="112" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif" font-weight="700" font-size="12" letter-spacing="2" fill="#F4C542">EVERY WEEK</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="lattice">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">About the market</span>
+      <h2>A little piece of home on Fort Henry Drive.</h2>
+      <p class="lede">Asian Market opened in October 2012 with a simple goal: carry high-quality ingredients and help Kingsport shoppers feel connected through food. In their own words, "thanks to you guys we are still growing and improving."</p>
+    </div>
+    <div class="why">
+      <div class="reveal"><span class="big">2012</span><h3>Open since October 2012</h3><p>A Kingsport neighborhood grocery with years on Fort Henry Drive.</p></div>
+      <div class="reveal"><span class="big">1×/wk</span><h3>Atlanta produce run</h3><p>Vegetables and seafood picked up in Atlanta every week.</p></div>
+      <div class="reveal"><span class="big">5</span><h3>Countries on the shelves</h3><p>Snacks, coffee and tea from China, Japan, Korea, Vietnam, and the Philippines.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Visit us</span>
+      <h2>Come see what came in this week.</h2>
+      <p class="lede">1711 Fort Henry Dr, Kingsport, TN 37664. Closed Thursdays.</p>
+    </div>
+    <div class="grid">
+      <div class="hours reveal">
+        <h3>Opening hours <span class="now" id="now">Hours</span></h3>
+        <ul id="hours">
+          <li data-d="1"><span>Monday</span><span>9 am – 7 pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9 am – 7 pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9 am – 7 pm</span></li>
+          <li data-d="4" class="closed"><span>Thursday</span><span>Closed</span></li>
+          <li data-d="5"><span>Friday</span><span>10 am – 7 pm</span></li>
+          <li data-d="6"><span>Saturday</span><span>9 am – 8 pm</span></li>
+          <li data-d="0"><span>Sunday</span><span>9 am – 7 pm</span></li>
+        </ul>
+        <p class="note">Hours as listed on Asian Market's website. Call ahead on holidays.</p>
+      </div>
+      <div class="map reveal"><div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>1711 Fort Henry Dr<br>Kingsport, TN 37664</div></div>
+        <iframe title="Map to Asian Market, 1711 Fort Henry Dr, Kingsport TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1711%20Fort%20Henry%20Dr%2C%20Kingsport%2C%20TN%2037664&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="contact">
+      <a href="tel:+14237651826" class="reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><strong>(423) 765-1826</strong></span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=1711+Fort+Henry+Dr,+Kingsport,+TN+37664" target="_blank" rel="noopener" class="reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><small>Directions</small><strong>1711 Fort Henry Dr</strong></span></a>
+      <a href="mailto:Lin.Linda16888@gmail.com" class="reveal"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>Email</small><strong>Lin.Linda16888@gmail.com</strong></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fn">Asian Market</div>
+    <div>1711 Fort Henry Dr, Kingsport, TN 37664 · <a href="tel:+14237651826">(423) 765-1826</a> · <a href="https://www.facebook.com/Asian-Market-Kingsport-TN-365335133550317" target="_blank" rel="noopener">Facebook</a></div>
+    <div class="cc">Concept by Code Craft Media · a design preview, not the official Asian Market website.</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="b1" href="tel:+14237651826"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
+  <a class="b2" href="https://www.google.com/maps/dir/?api=1&destination=1711+Fort+Henry+Dr,+Kingsport,+TN+37664" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+  // hours
+  var hrs={0:[9,19],1:[9,19],2:[9,19],3:[9,19],4:null,5:[10,19],6:[9,20]};
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var t=hrs[day], b=document.getElementById('now');
+  if(t && h>=t[0] && h<t[1]){b.textContent='Open now';b.style.background='#2A9D8F'}
+  else {b.textContent='Closed now';b.style.background='#D7263D'}
+})();
+</script>
+</body>
+</html>

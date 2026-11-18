@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Touch of Beauty — Knoxville</title>
+<meta name="description" content="Touch of Beauty: classic, hybrid and volume lash extensions by Mauricia Lanxter, a home-based certified lash extension artist in Knoxville, TN (37917).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --onyx:#121212; --onyx2:#1b1916; --onyx3:#26221d;
+  --gold:#d4a017; --gold2:#f0c75a; --gold3:#9c7410;
+  --nude:#ecd5c5; --nude2:#f7ebe2; --ink:#2a2018;
+  --line:rgba(212,160,23,.28);
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--onyx);color:var(--nude);font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:.005em}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* banner */
+.concept{position:relative;z-index:5;background:var(--gold);color:var(--onyx);font-size:12px;font-weight:600;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:400px){.concept{font-size:10.5px;letter-spacing:-.01em}}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(18,18,18,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,160,23,.14)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:34px;height:20px}
+.logo b{font-family:"Abril Fatface",serif;font-weight:400;font-size:21px;color:var(--nude2)}
+.logo b i{font-style:normal;color:var(--gold)}
+.links{display:none;gap:30px;font-size:14px;font-weight:600}
+.links a{text-decoration:none;color:var(--nude);opacity:.85;transition:color .2s,opacity .2s}
+.links a:hover{color:var(--gold2);opacity:1}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:inherit;font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:15px 26px;transition:transform .2s,box-shadow .25s,background .25s,color .25s;min-height:48px}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold) 55%,var(--gold3));color:var(--onyx);box-shadow:0 8px 28px -10px rgba(212,160,23,.75)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px -10px rgba(212,160,23,.9)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--nude2)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.btn:active{transform:scale(.97)}
+.nav-cta{padding:10px 18px;min-height:40px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:24px 0 64px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-20% -30% auto auto;width:620px;height:620px;background:radial-gradient(circle,rgba(212,160,23,.22),transparent 62%);z-index:-1}
+.hero::after{content:"";position:absolute;left:-200px;bottom:-240px;width:520px;height:520px;background:radial-gradient(circle,rgba(236,213,197,.10),transparent 65%);z-index:-1}
+.hero-grid{display:grid;gap:8px;align-items:center}
+@media(min-width:900px){.hero{padding:80px 0 110px}.hero-grid{grid-template-columns:1.3fr .7fr;gap:40px}.hero h1{font-size:clamp(64px,7vw,100px)}.hero p.sub{max-width:40ch}}
+.hero h1{font-size:clamp(46px,13.2vw,104px);color:var(--nude2);margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:transparent;background:linear-gradient(100deg,var(--gold2),var(--gold) 40%,#f6dc8e 60%,var(--gold) 80%,var(--gold2));-webkit-background-clip:text;background-clip:text;background-size:200% 100%;animation:shine 6s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.hero p.sub{font-size:18px;max-width:30ch;color:var(--nude);opacity:.92}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--nude2);background:rgba(212,160,23,.06)}
+.curl{order:-1;position:relative;margin:-14px -10px -18px auto;width:min(78vw,330px)}
+@media(min-width:900px){.curl{order:0;margin:0 0 0 auto;width:100%;max-width:520px}}
+.curl svg{width:100%;height:auto;overflow:visible}
+.curl .lash{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 1.4s cubic-bezier(.6,.1,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.curl .float{animation:float 7s ease-in-out infinite;transform-origin:center}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-1.2deg)}}
+.spark{animation:tw 3.2s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.curl .lash{stroke-dashoffset:0}html{scroll-behavior:auto}}
+
+/* marquee */
+.ribbon{border-block:1px solid var(--line);background:var(--onyx2);overflow:hidden;white-space:nowrap}
+.ribbon div{display:inline-flex;gap:34px;padding:14px 0;animation:mq 28s linear infinite;font-family:"Abril Fatface",serif;font-size:20px;color:var(--gold)}
+.ribbon span{display:inline-flex;align-items:center;gap:34px}
+.ribbon span::after{content:"✦";font-size:12px;color:var(--nude);opacity:.6}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{position:relative;z-index:2}
+.sec{padding:84px 0}
+@media(min-width:900px){.sec{padding:120px 0}}
+.sec h2{font-size:clamp(38px,9.5vw,68px);color:var(--nude2);margin:10px 0 14px}
+.sec h2 em{font-style:normal;color:var(--gold)}
+.lede{max-width:52ch;opacity:.88}
+
+/* how booking works */
+.how{background:var(--nude);color:var(--ink)}
+.how h2{color:var(--onyx)}
+.how h2 em{color:var(--gold3)}
+.how .eyebrow{color:var(--gold3)}
+.steps{display:grid;gap:18px;margin-top:40px;counter-reset:s}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr);gap:24px}}
+.step{position:relative;background:var(--nude2);border-radius:26px;padding:28px 24px 26px;border:1px solid rgba(156,116,16,.22);transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(42,32,24,.45)}
+.step .n{font-family:"Abril Fatface",serif;font-size:64px;line-height:1;color:var(--gold3);opacity:.9}
+.step .ic{position:absolute;top:26px;right:22px;width:52px;height:52px;border-radius:50%;background:var(--onyx);display:grid;place-items:center}
+.step .ic svg{width:26px;height:26px}
+.step h3{font-size:27px;color:var(--onyx);margin:10px 0 8px}
+.step p{font-size:16px;color:#4a3a2e}
+.how .note{margin-top:26px;font-size:15px;color:#4a3a2e;max-width:62ch}
+
+/* menu */
+.menu-grid{display:grid;gap:28px;margin-top:44px}
+@media(min-width:900px){.menu-grid{grid-template-columns:repeat(3,1fr);gap:26px}}
+.card{background:linear-gradient(180deg,var(--onyx2),#151412);border:1px solid var(--line);border-radius:28px;padding:28px 22px 18px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(212,160,23,.16),transparent 70%)}
+.card h3{font-size:30px;color:var(--gold2);margin-bottom:4px}
+.card .kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--nude);opacity:.6;margin-bottom:14px}
+.row{display:flex;align-items:baseline;gap:10px;padding:13px 4px;border-top:1px dashed rgba(236,213,197,.16);text-decoration:none;border-radius:10px;transition:background .2s,padding .2s}
+.row:hover{background:rgba(212,160,23,.08);padding-inline:10px}
+.row .nm{font-weight:600;color:var(--nude2);flex:1;min-width:0}
+.row .du{display:block;font-weight:400;font-size:13px;opacity:.6}
+.row .pr{font-family:"Abril Fatface",serif;font-size:24px;color:var(--gold)}
+.menu-foot{margin-top:24px;font-size:14px;opacity:.7}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:40px}
+@media(min-width:700px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{border:1px solid var(--line);border-radius:22px;padding:24px 22px;background:rgba(236,213,197,.03);transition:border-color .25s,transform .25s}
+.why:hover{border-color:var(--gold);transform:translateY(-3px)}
+.why svg{width:34px;height:34px;margin-bottom:14px}
+.why h3{font-family:"Hanken Grotesk",sans-serif;font-weight:700;font-size:19px;color:var(--nude2);margin-bottom:6px;line-height:1.25}
+.why p{font-size:15.5px;opacity:.78}
+
+/* policies */
+.pol{background:var(--onyx2);border-block:1px solid var(--line)}
+.pol ul{list-style:none;display:grid;gap:12px;margin-top:30px}
+@media(min-width:900px){.pol ul{grid-template-columns:1fr 1fr;gap:14px 40px}}
+.pol li{display:flex;gap:14px;align-items:flex-start;font-size:16px;opacity:.9}
+.pol li::before{content:"";flex:none;width:9px;height:9px;margin-top:9px;transform:rotate(45deg);background:var(--gold)}
+
+/* hours & visit */
+.visit-grid{display:grid;gap:22px;margin-top:40px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:28px}}
+.hours{border:1px solid var(--line);border-radius:28px;padding:10px 22px;background:var(--onyx2)}
+.hours li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:14px 4px;border-bottom:1px solid rgba(236,213,197,.1);font-size:16px}
+.hours li:last-child{border-bottom:0}
+.hours li span:last-child{font-variant-numeric:tabular-nums;opacity:.85;white-space:nowrap}
+.hours li span:first-child{white-space:nowrap}
+.hours li.today{background:linear-gradient(90deg,rgba(212,160,23,.2),rgba(212,160,23,.04));margin:4px -12px;padding:14px 12px;border-radius:14px;border-bottom-color:transparent;color:var(--gold2);font-weight:700}
+.hours li.today span:last-child{opacity:1}
+.hours li.today span:first-child::after{content:"Today";margin-left:9px;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--onyx);padding:2px 7px;margin-left:7px;border-radius:999px;vertical-align:2px}
+.mapbox{border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--onyx2);display:flex;flex-direction:column}
+.mapbox iframe{width:100%;height:280px;border:0;display:block;background:radial-gradient(circle at 50% 50%,rgba(212,160,23,.35) 0 6px,transparent 7px),radial-gradient(rgba(212,160,23,.18) 1px,transparent 1.5px) 0 0/18px 18px,#1e1b17;filter:grayscale(.85) invert(.9) hue-rotate(180deg) contrast(.9)}
+.mapbox .info{padding:20px 22px 22px}
+.mapbox .info h3{font-size:26px;color:var(--nude2)}
+.mapbox .info p{font-size:15.5px;opacity:.82;margin:6px 0 16px}
+.mapbox .acts{display:flex;flex-wrap:wrap;gap:10px}
+
+/* final cta */
+.final{text-align:center;overflow:hidden}
+.final h2{font-size:clamp(44px,12vw,96px)}
+.final .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.final .bigcurl{width:min(80vw,380px);margin:0 auto 6px;opacity:.9}
+
+footer{border-top:1px solid var(--line);padding:36px 0 40px;font-size:14px;position:relative;z-index:2}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 30px;justify-content:space-between;align-items:center}
+footer a{text-decoration:none;opacity:.8}
+footer a:hover{color:var(--gold2);opacity:1}
+footer .soc{display:flex;gap:18px;flex-wrap:wrap}
+footer small{opacity:.55;display:block;width:100%}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(18,18,18,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.callbar .btn{padding:12px 10px;font-size:15px;min-height:50px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+.show-all .rv{opacity:1!important;transform:none!important}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="concept">Concept site by Code Craft Media, made for Touch of Beauty. Not live.</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Touch of Beauty home">
+      <svg viewBox="0 0 68 40" fill="none" aria-hidden="true"><path d="M4 30 Q34 4 64 30" stroke="#d4a017" stroke-width="3.2" stroke-linecap="round"/><g stroke="#d4a017" stroke-width="2.2" stroke-linecap="round"><path d="M12 22 q-4 -8 -9 -12"/><path d="M20 17 q-2 -9 -6 -14"/><path d="M29 14 q0 -9 -2 -13"/><path d="M39 14 q2 -9 3 -13"/><path d="M48 17 q4 -8 7 -13"/><path d="M56 22 q5 -7 10 -10"/></g></svg>
+      <b>Touch <i>of</i> Beauty</b>
+    </a>
+    <div class="links"><a href="#how">How it works</a><a href="#menu">Lash menu</a><a href="#policies">Policies</a><a href="#visit">Hours</a></div>
+    <a class="btn btn-gold nav-cta" href="https://square.site/book/LJ4G7BGK8YC8K/touch-of-beauty-knoxville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <div class="eyebrow">Lash extensions · Knoxville, TN</div>
+      <h1>Lashes that are <em>worth&nbsp;it.</em></h1>
+      <p class="sub">Classic, hybrid &amp; volume sets by Mauricia Lanxter, a certified lash extension artist working from her Knoxville home studio.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://square.site/book/LJ4G7BGK8YC8K/touch-of-beauty-knoxville-tn" target="_blank" rel="noopener">Book your set <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="tel:+18657661447">Call (865) 766-1447</a>
+      </div>
+      <div class="chips"><span class="chip">Sets from $75</span><span class="chip">Refills from $40</span><span class="chip">Knoxville 37917</span></div>
+    </div>
+    <div class="curl" aria-hidden="true">
+      <svg viewBox="0 0 420 330" fill="none">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc8e"/><stop offset=".45" stop-color="#d4a017"/><stop offset="1" stop-color="#8a650c"/></linearGradient>
+          <radialGradient id="gl" cx=".5" cy=".55" r=".5"><stop offset="0" stop-color="#d4a017" stop-opacity=".35"/><stop offset="1" stop-color="#d4a017" stop-opacity="0"/></radialGradient>
+        </defs>
+        <ellipse cx="210" cy="210" rx="200" ry="110" fill="url(#gl)"/>
+        <g class="float">
+          <!-- closed eye lid -->
+          <path d="M40 215 Q210 330 380 215" stroke="url(#g1)" stroke-width="9" stroke-linecap="round"/>
+          <path d="M70 232 Q210 300 350 232" stroke="#ecd5c5" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
+          <!-- lashes -->
+          <g stroke="url(#g1)" stroke-linecap="round" fill="none">
+            <path class="lash" style="animation-delay:.05s" stroke-width="5" d="M56 226 C40 210 20 190 8 150"/>
+            <path class="lash" style="animation-delay:.12s" stroke-width="5.5" d="M80 243 C62 215 44 180 40 120"/>
+            <path class="lash" style="animation-delay:.19s" stroke-width="6" d="M106 256 C92 220 82 170 86 92"/>
+            <path class="lash" style="animation-delay:.26s" stroke-width="6.5" d="M134 265 C124 225 122 160 134 70"/>
+            <path class="lash" style="animation-delay:.33s" stroke-width="7" d="M164 270 C160 228 164 150 184 56"/>
+            <path class="lash" style="animation-delay:.40s" stroke-width="7" d="M196 272 C198 228 210 150 240 52"/>
+            <path class="lash" style="animation-delay:.47s" stroke-width="7" d="M228 271 C236 228 256 156 296 64"/>
+            <path class="lash" style="animation-delay:.54s" stroke-width="6.5" d="M260 266 C274 228 300 166 346 88"/>
+            <path class="lash" style="animation-delay:.61s" stroke-width="6" d="M290 258 C308 226 336 184 384 124"/>
+            <path class="lash" style="animation-delay:.68s" stroke-width="5.5" d="M318 246 C338 224 364 200 408 170"/>
+            <path class="lash" style="animation-delay:.75s" stroke-width="4.5" d="M344 232 C360 220 384 206 414 200"/>
+            <!-- fine volume fans -->
+            <path class="lash" style="animation-delay:.3s" stroke-width="2.2" stroke-opacity=".7" d="M150 268 C140 230 140 170 156 98"/>
+            <path class="lash" style="animation-delay:.4s" stroke-width="2.2" stroke-opacity=".7" d="M212 272 C218 230 232 170 266 92"/>
+            <path class="lash" style="animation-delay:.5s" stroke-width="2.2" stroke-opacity=".7" d="M244 269 C256 230 278 176 320 104"/>
+            <path class="lash" style="animation-delay:.2s" stroke-width="2.2" stroke-opacity=".7" d="M120 261 C106 228 100 178 108 112"/>
+          </g>
+        </g>
+        <g fill="#f6dc8e">
+          <path class="spark" d="M370 50 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z"/>
+          <path class="spark" style="animation-delay:1.1s" d="M60 70 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+          <path class="spark" style="animation-delay:2s" d="M300 20 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" aria-hidden="true"><div><span>Classic</span><span>Hybrid</span><span>Volume</span><span>Refills</span><span>Quick Touch Up</span><span>Removal &amp; Lash Bath</span><span>Classic</span><span>Hybrid</span><span>Volume</span><span>Refills</span><span>Quick Touch Up</span><span>Removal &amp; Lash Bath</span></div></div>
+
+<section class="sec how" id="how">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Private home studio</div>
+      <h2>How booking <em>works.</em></h2>
+      <p class="lede">Touch of Beauty is a home-based studio, so the street address isn’t posted online. Here’s exactly what happens after you book.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4"/></svg></div>
+        <div class="n">01</div>
+        <h3>Book online</h3>
+        <p>Pick the exact service you need on Square. Each one has its own time allotment, and a non-refundable deposit holds your spot.</p>
+      </div>
+      <div class="step rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M12 8.2a2.3 2.3 0 0 1 2.3 2.3c0 1.9-2.3 3.9-2.3 3.9s-2.3-2-2.3-3.9A2.3 2.3 0 0 1 12 8.2z"/></svg></div>
+        <div class="n">02</div>
+        <h3>Get the address by text</h3>
+        <p>The studio address is texted to you 24 hours before your appointment. Keep an eye on your phone.</p>
+      </div>
+      <div class="step rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/><path d="M5 7 3.6 5.4M9 5.3 8.4 3.3M15 5.3l.6-2M19 7l1.4-1.6"/></svg></div>
+        <div class="n">03</div>
+        <h3>Arrive &amp; relax</h3>
+        <p>Come solo (no extra guests or children), settle in, and raise any concerns before you leave the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">The lash menu</div>
+      <h2>Every set, every <em>price.</em></h2>
+      <p class="lede">Prices and times exactly as listed on Touch of Beauty’s Square booking page. Tap any service to book it.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="card rv">
+        <h3>Full sets</h3>
+        <div class="kick">Start fresh</div>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=NITWL2QZEXMU6LPB3VRENXNK" target="_blank" rel="noopener"><span class="nm">Classic Lash Set<span class="du">2 hr 15 min</span></span><span class="pr">$75</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=P3LVNCGQLXH723J7UERMJ37X" target="_blank" rel="noopener"><span class="nm">Hybrid Lash Set<span class="du">2 hr 30 min</span></span><span class="pr">$85</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=OCG4SZSM64E52O5CBMRK4KI2" target="_blank" rel="noopener"><span class="nm">Volume Lash Set<span class="du">2 hr 45 min</span></span><span class="pr">$95</span></a>
+      </div>
+      <div class="card rv">
+        <h3>Refills</h3>
+        <div class="kick">Keep them full</div>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=ZLX7MNXJKCDK5XJYOXIKVKOM" target="_blank" rel="noopener"><span class="nm">Classic Lash Refill<span class="du">1 hr</span></span><span class="pr">$40</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=K5CERBMQQYGKZ57AMROV4BZL" target="_blank" rel="noopener"><span class="nm">Hybrid Lash Refill<span class="du">1 hr</span></span><span class="pr">$50</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=QY6WH7HNNZS7C4CCYECK5X75" target="_blank" rel="noopener"><span class="nm">Volume Lash Refill<span class="du">1 hr</span></span><span class="pr">$55</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=6IS23IPQEAY6CTGQYVTU4VWW" target="_blank" rel="noopener"><span class="nm">Quick Touch Up<span class="du">40 min</span></span><span class="pr">$35</span></a>
+      </div>
+      <div class="card rv">
+        <h3>Removal</h3>
+        <div class="kick">Coming from another artist?</div>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=K6JQXC3WB3NLMPGOJDK53I2X" target="_blank" rel="noopener"><span class="nm">Lash Removal &amp; Lash Bath<span class="du">20 min</span></span><span class="pr">$25</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=6D5I6ZSCQQGRU6INX43NMEQR" target="_blank" rel="noopener"><span class="nm">Removal + New Classic Set<span class="du">3 hr</span></span><span class="pr">$95</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=BKUSOQQWD2SJ6VNWQX4WZWMZ" target="_blank" rel="noopener"><span class="nm">Removal + New Hybrid Set<span class="du">3 hr</span></span><span class="pr">$100</span></a>
+        <a class="row" href="https://app.squareup.com/appointments/book/gw5q0r2la1oabj/LJ4G7BGK8YC8K/start?service_id=CDEBOD2E55AU7FD4A45B5BJE" target="_blank" rel="noopener"><span class="nm">Removal + New Volume Set<span class="du">3 hr</span></span><span class="pr">$110</span></a>
+      </div>
+    </div>
+    <p class="menu-foot">Wearing another artist’s extensions? Book a removal + new set; Touch of Beauty doesn’t work over other artists’ lashes.</p>
+  </div>
+</section>
+
+<section class="sec" id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Why Touch of Beauty</div>
+      <h2>One artist. <em>Your</em> lashes.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg><h3>Certified lash extension artist</h3><p>Every set is done by Mauricia Lanxter herself.</p></div>
+      <div class="why rv"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><h3>Private home studio</h3><p>A one-on-one appointment in a home-based studio, no busy salon floor.</p></div>
+      <div class="why rv"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="16" r="3"/></svg><h3>Clear, published pricing</h3><p>Eleven services with prices and times listed up front, from a $25 removal to a $110 removal + volume set.</p></div>
+      <div class="why rv"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><h3>Six days a week</h3><p>Open Monday through Saturday, with online booking any time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pol" id="policies">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Before you book</div>
+      <h2>The <em>fine print,</em> made friendly.</h2>
+    </div>
+    <ul class="rv">
+      <li>Deposits are non-refundable and non-transferable.</li>
+      <li>Up to three refills are allowed before a removal and full set is required. Refills that turn into full sets count toward the three.</li>
+      <li>No work over another artist’s extensions. Please book a removal and new set.</li>
+      <li>No additional guests or children at appointments.</li>
+      <li>Book the specific service you need, since each has a different time allotment.</li>
+      <li>Have a concern? Bring it up before leaving the table.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Hours &amp; location</div>
+      <h2>When to <em>find</em> us.</h2>
+    </div>
+    <div class="visit-grid">
+      <ul class="hours rv" id="hours">
+        <li data-d="1"><span>Monday</span><span>10:00 AM – 4:30 PM</span></li>
+        <li data-d="2"><span>Tuesday</span><span>10:00 AM – 4:30 PM</span></li>
+        <li data-d="3"><span>Wednesday</span><span>10:00 AM – 4:30 PM</span></li>
+        <li data-d="4"><span>Thursday</span><span>10:00 AM – 4:30 PM</span></li>
+        <li data-d="5"><span>Friday</span><span>10:00 AM – 3:00 PM</span></li>
+        <li data-d="6"><span>Saturday</span><span>11:00 AM – 4:30 PM</span></li>
+        <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <div class="mapbox rv">
+        <iframe title="Map of Knoxville, TN 37917" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Knoxville%2C%20TN%2037917&output=embed"></iframe>
+        <div class="info">
+          <h3>Knoxville (37917)</h3>
+          <p>Home-based studio. Your exact address arrives by text 24 hours before your appointment.</p>
+          <div class="acts">
+            <a class="btn btn-gold" href="tel:+18657661447">Call (865) 766-1447</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Knoxville%2C+TN+37917" target="_blank" rel="noopener">Directions to 37917</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final">
+  <div class="wrap rv">
+    <svg class="bigcurl" viewBox="0 0 300 90" fill="none" aria-hidden="true"><path d="M20 70 Q150 -10 280 70" stroke="#d4a017" stroke-width="5" stroke-linecap="round"/><g stroke="#d4a017" stroke-width="3" stroke-linecap="round"><path d="M45 52 q-10 -14 -22 -22"/><path d="M75 36 q-6 -16 -16 -28"/><path d="M110 26 q-2 -16 -8 -26"/><path d="M150 22 q2 -14 2 -22"/><path d="M190 26 q6 -14 12 -24"/><path d="M225 36 q10 -14 20 -24"/><path d="M255 52 q12 -12 26 -18"/></g></svg>
+    <div class="eyebrow">Ready when you are</div>
+    <h2>Your next set is <em>one tap</em> away.</h2>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://square.site/book/LJ4G7BGK8YC8K/touch-of-beauty-knoxville-tn" target="_blank" rel="noopener">Book on Square <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="mailto:mdlanxter@yahoo.com">Email Mauricia</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><b>Touch <i>of</i> Beauty</b></a>
+    <div class="soc">
+      <a href="https://www.instagram.com/worth_it1" target="_blank" rel="noopener">Instagram @worth_it1</a>
+      <a href="https://www.facebook.com/MauriciaLanxter" target="_blank" rel="noopener">Facebook</a>
+      <a href="tel:+18657661447">(865) 766-1447</a>
+    </div>
+    <small>Concept by Code Craft Media · Knoxville, TN</small>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:+18657661447">Call</a>
+  <a class="btn btn-gold" href="https://square.site/book/LJ4G7BGK8YC8K/touch-of-beauty-knoxville-tn" target="_blank" rel="noopener">Book a set</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');
+  if(li)li.classList.add('today');
+  var root=document.documentElement;root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){root.classList.add('show-all')}
+  if(!('IntersectionObserver' in window)){showAll();return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

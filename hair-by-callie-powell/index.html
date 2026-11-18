@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hair by Callie — Powell</title>
+<meta name="description" content="Hair by Callie: cuts, color, balayage, extensions and brows at 2109 W Emory Rd, Powell, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --butter:#d89a4a; --butter-d:#b87a2c; --espresso:#3a2418; --espresso-2:#5a3a28;
+  --oat:#efe6d8; --oat-2:#e6d9c4; --cream:#fbf7f0; --ink:#2b1a11; --muted:#6e5646;
+  --honey:#f1c27d; --rose:#c9826b;
+  --serif:"Young Serif",Georgia,serif; --sans:"Plus Jakarta Sans",system-ui,sans-serif;
+  --r:22px; --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--oat);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--butter-d)}
+/* grain */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .14 0 0 0 0 .09 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* banner */
+.concept{position:relative;z-index:5;background:var(--espresso);color:var(--oat);font-size:.66rem;text-align:center;padding:7px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--honey);font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(239,230,216,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(58,36,24,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:34px;height:34px}
+.logo span{font-family:var(--serif);font-size:1.28rem;color:var(--espresso)}
+.logo em{font-style:normal;color:var(--butter-d)}
+.nav ul{display:none;list-style:none;gap:28px;font-size:.9rem;font-weight:500}
+.nav ul a{text-decoration:none;position:relative}
+.nav ul a:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--butter);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:hover:after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:700;font-size:.95rem;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--espresso);color:var(--oat);box-shadow:0 6px 0 var(--butter-d)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--butter-d)}
+.btn-ghost{background:transparent;color:var(--espresso);border:2px solid var(--espresso)}
+.btn-ghost:hover{background:var(--espresso);color:var(--oat)}
+.btn-sm{padding:10px 18px;font-size:.85rem;box-shadow:0 4px 0 var(--butter-d)}
+
+/* hero */
+.hero{position:relative;padding:34px 0 56px;overflow:hidden}
+.hero .wrap{display:grid;gap:26px}
+.hero h1{font-size:clamp(2.55rem,10.5vw,5.4rem);color:var(--espresso)}
+.hero h1 .grad{background:linear-gradient(95deg,var(--espresso-2) 0%,var(--butter-d) 45%,var(--butter) 70%,#e7b977 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+.hero h1 .scribble{position:relative;display:inline-block}
+.hero h1 .scribble svg{position:absolute;left:-4%;bottom:-.12em;width:108%;height:.32em;overflow:visible}
+.hero h1 .scribble path{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.4s .5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero p.lede{font-size:1.06rem;color:var(--muted);max-width:34ch}
+.hero p.lede strong{color:var(--espresso)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{font-size:.78rem;font-weight:600;background:var(--cream);border:1px solid rgba(58,36,24,.12);border-radius:999px;padding:6px 12px;color:var(--espresso-2)}
+.chip i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0;background:var(--butter)}
+.fan{position:relative;width:100%;max-width:480px;margin:0 auto;aspect-ratio:1/1}
+.fan svg{width:100%;height:100%;overflow:visible}
+.fan .sw{transform-origin:240px 440px;animation:fanIn 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fanIn{from{transform:rotate(0deg);opacity:0}}
+.fan .tag{position:absolute;background:var(--cream);border-radius:14px;padding:10px 14px;font-size:.78rem;font-weight:600;box-shadow:0 10px 30px -12px rgba(58,36,24,.45);color:var(--espresso);line-height:1.3}
+.fan .tag small{display:block;font-weight:500;color:var(--muted);font-size:.7rem}
+.fan .t1{left:-2%;top:16%;transform:rotate(-4deg);animation:bob 5s ease-in-out infinite}
+.fan .t2{right:-2%;top:52%;transform:rotate(3deg);animation:bob 6s 1s ease-in-out infinite}
+@keyframes bob{50%{translate:0 -6px}}
+@media (max-width:759px){.fan .t1{left:auto;right:4%;top:auto;bottom:4%}}
+
+/* ribbon strip divider */
+.ribbon{height:22px;background:linear-gradient(90deg,#2b1a11,#5a3a28 14%,#8a5a32 28%,#b87a2c 42%,#d89a4a 56%,#e7b977 70%,#f1d6a6 84%,#efe6d8);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 22' preserveAspectRatio='none'%3E%3Cpath d='M0 6 C40 0 80 10 120 5 S200 0 240 6 320 10 400 4 V18 C360 22 300 14 260 18 S180 22 140 17 60 14 0 19Z'/%3E%3C/svg%3E") center/100% 100%;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 22' preserveAspectRatio='none'%3E%3Cpath d='M0 6 C40 0 80 10 120 5 S200 0 240 6 320 10 400 4 V18 C360 22 300 14 260 18 S180 22 140 17 60 14 0 19Z'/%3E%3C/svg%3E") center/100% 100%}
+
+section{position:relative;z-index:2}
+.sec{padding:72px 0}
+.sec-head{display:grid;gap:10px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(2rem,7vw,3.3rem);color:var(--espresso)}
+.sec-head p{color:var(--muted);max-width:52ch}
+
+/* before you book */
+.policy{background:var(--espresso);color:var(--oat);position:relative;overflow:hidden}
+.policy .card{background:var(--cream);color:var(--ink);border-radius:28px;padding:30px 24px 26px;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);transform:rotate(-1deg);max-width:760px;margin:0 auto}
+.policy .card:before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:30px;margin-left:-55px;background:rgba(216,154,74,.75);transform:rotate(3deg);border-radius:3px}
+.policy .card h2{font-size:clamp(1.9rem,7vw,2.8rem);color:var(--espresso);margin:6px 0 4px}
+.policy .card > p{color:var(--muted);font-size:.95rem}
+.policy ol{list-style:none;margin-top:22px;display:grid;gap:14px;counter-reset:p}
+.policy li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:16px;border-radius:18px;background:var(--oat);counter-increment:p}
+.policy li .n{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-family:var(--serif);font-size:1.25rem;color:var(--cream)}
+.policy li:nth-child(1) .n{background:var(--espresso-2)}
+.policy li:nth-child(2) .n{background:var(--butter-d)}
+.policy li:nth-child(3) .n{background:var(--butter)}
+.policy li h3{font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--espresso);line-height:1.3}
+.policy li p{font-size:.92rem;color:var(--muted);margin-top:3px}
+.policy .new{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--butter);color:var(--espresso);padding:3px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+.policy .card .foot{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.policy .sig{font-family:var(--serif);font-size:1.4rem;color:var(--butter-d);margin-left:auto}
+.policy .bgstr{position:absolute;left:-10%;bottom:-40px;width:120%;height:160px;opacity:.5;max-width:none}
+
+/* menu */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 22px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 .88rem var(--sans);padding:10px 16px;border-radius:999px;border:1.5px solid rgba(58,36,24,.2);background:transparent;color:var(--espresso);cursor:pointer;transition:.2s;display:flex;align-items:center;gap:8px}
+.tab i{width:12px;height:12px;border-radius:4px}
+.tab[aria-selected="true"]{background:var(--espresso);color:var(--oat);border-color:var(--espresso)}
+.tab:hover{border-color:var(--espresso)}
+.menu-grid{display:grid;gap:18px}
+.group{background:var(--cream);border-radius:var(--r);padding:22px 20px 10px;position:relative;overflow:hidden;border:1px solid rgba(58,36,24,.07)}
+.js .group.hide{display:none}
+.group .strip{position:absolute;left:0;top:0;bottom:0;width:7px}
+.group h3{font-size:1.55rem;color:var(--espresso);margin-bottom:2px}
+.group .sub{font-size:.85rem;color:var(--muted);margin-bottom:10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:13px 0;border-top:1px dashed rgba(58,36,24,.18)}
+.item:first-of-type{border-top:0}
+.item .nm{font-weight:600;color:var(--espresso);line-height:1.35}
+.item .du{font-size:.78rem;color:var(--muted);grid-column:1}
+.item .pr{font-family:var(--serif);font-size:1.15rem;color:var(--butter-d);grid-row:1/3;grid-column:2;align-self:center;text-align:right;white-space:nowrap}
+.item .pr small{display:block;font-family:var(--sans);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right}
+.menu-note{margin-top:20px;font-size:.85rem;color:var(--muted)}
+
+/* why */
+.why{background:var(--oat-2)}
+.why-grid{display:grid;gap:16px}
+.why-card{background:var(--cream);border-radius:var(--r);padding:24px;position:relative;transition:transform .3s,box-shadow .3s}
+.why-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(58,36,24,.5)}
+.why-card .ic{width:52px;height:52px;margin-bottom:14px}
+.why-card h3{font-size:1.35rem;color:var(--espresso);margin-bottom:6px}
+.why-card p{font-size:.94rem;color:var(--muted)}
+.why-card a{font-weight:700;color:var(--butter-d)}
+
+/* hours / visit */
+.visit-grid{display:grid;gap:18px}
+.hours{background:var(--espresso);color:var(--oat);border-radius:var(--r);padding:26px 22px}
+.hours h3{font-size:1.6rem;margin-bottom:14px;color:var(--cream)}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:.95rem}
+.hours li span:last-child{font-weight:600}
+.hours li.closed span:last-child{color:rgba(239,230,216,.5);font-weight:500}
+.hours li.today{background:var(--butter);color:var(--espresso)}
+.hours li.today span:last-child{color:var(--espresso)}
+.hours li.today span:first-child:after{content:" · today";font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.hours .st{margin-top:14px;font-size:.85rem;color:var(--honey)}
+.map{border-radius:var(--r);overflow:hidden;background:var(--oat-2);min-height:300px;border:1px solid rgba(58,36,24,.1)}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;filter:sepia(.25) saturate(.9)}
+.contact{background:var(--cream);border-radius:var(--r);padding:24px 22px;display:grid;gap:14px}
+.contact h3{font-size:1.5rem;color:var(--espresso)}
+.contact .row{display:flex;gap:12px;align-items:flex-start;text-decoration:none;padding:10px;border-radius:14px;transition:background .2s}
+.contact .row:hover{background:var(--oat)}
+.contact .row svg{flex:0 0 22px;width:22px;height:22px;margin-top:2px;color:var(--butter-d)}
+.contact .row b{display:block;color:var(--espresso);font-size:.98rem}
+.contact .row span{font-size:.86rem;color:var(--muted);word-break:break-word}
+
+/* final cta */
+.final{background:linear-gradient(160deg,var(--espresso) 0%,#4a2e1e 55%,#7a4e2a 100%);color:var(--oat);text-align:center;overflow:hidden}
+.final h2{font-size:clamp(2.2rem,8vw,4rem);color:var(--cream);max-width:16ch;margin:0 auto 14px}
+.final p{color:rgba(239,230,216,.8);max-width:44ch;margin:0 auto 26px}
+.final .btn-primary{background:var(--butter);color:var(--espresso);box-shadow:0 6px 0 #8a5a28}
+.final .btn-ghost{border-color:var(--oat);color:var(--oat)}
+.final .btn-ghost:hover{background:var(--oat);color:var(--espresso)}
+.final .ctas{justify-content:center}
+
+footer{background:var(--ink);color:rgba(239,230,216,.7);padding:34px 0 30px;font-size:.85rem;position:relative;z-index:2}
+footer .wrap{display:grid;gap:12px}
+footer a{color:var(--honey)}
+footer .credit{border-top:1px solid rgba(239,230,216,.12);padding-top:14px;font-size:.78rem}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(43,26,17,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+.bar .call{background:transparent;color:var(--oat);border:1.5px solid rgba(239,230,216,.4)}
+.bar .book{background:var(--butter);color:var(--espresso)}
+.bar svg{width:18px;height:18px}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(26px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .concept{font-size:.78rem}
+  .nav ul{display:flex}
+  .hero{padding:60px 0 90px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:40px}
+  .hero h1{font-size:clamp(3rem,5.6vw,4.9rem)}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1fr 1.3fr}
+  .visit-grid .contact{grid-column:1}
+  .visit-grid .map{grid-column:2;grid-row:1/3}
+  .policy .card{padding:44px 44px 36px}
+  .sec{padding:100px 0}
+  .tabs{display:none}
+  .js .group.hide{display:block}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .menu-grid{grid-template-columns:repeat(3,1fr);align-items:start}
+  .menu-grid .group[data-g="color"]{grid-column:1;grid-row:1/3}
+  .menu-grid .group[data-g="cuts"]{grid-column:2;grid-row:1/3}
+  .menu-grid .group[data-g="ext"]{grid-column:3;grid-row:1}
+  .menu-grid .group[data-g="more"]{grid-column:3;grid-row:2}
+  .fan{max-width:540px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Hair by Callie. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Hair by Callie home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2418"/><stop offset=".55" stop-color="#b87a2c"/><stop offset="1" stop-color="#f1c27d"/></linearGradient></defs><rect x="6" y="4" width="9" height="32" rx="4.5" fill="url(#lg)" transform="rotate(-14 10 36)"/><rect x="15.5" y="3" width="9" height="33" rx="4.5" fill="url(#lg)"/><rect x="25" y="4" width="9" height="32" rx="4.5" fill="url(#lg)" transform="rotate(14 30 36)"/></svg>
+      <span>Hair by <em>Callie</em></span>
+    </a>
+    <ul>
+      <li><a href="#before">Before you book</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">Why Callie</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="https://square.site/book/FJ6H4M81KBTYE/callie-rogers-powell-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Hair by Callie · West Emory Rd, Powell</div>
+      <h1 style="margin:14px 0 18px">From root tap to <span class="scribble"><span class="grad">balayage</span><svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C60 6 120 26 180 14 S270 8 296 16" fill="none" stroke="#d89a4a" stroke-width="6" stroke-linecap="round"/></svg></span>, your color lives here.</h1>
+      <p class="lede">Cuts, foils, creative color, extensions and brows with Callie at <strong>2109 W Emory Rd</strong>. Not sure what you want? The consultation is <strong>free</strong>.</p>
+      <div class="ctas" style="margin-top:22px">
+        <a class="btn btn-primary" href="https://square.site/book/FJ6H4M81KBTYE/callie-rogers-powell-tn" target="_blank" rel="noopener">Book online
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+18653338980">Call (865) 333-8980</a>
+      </div>
+      <div class="chips" style="margin-top:20px">
+        <span class="chip"><i></i>Balayage from $135</span>
+        <span class="chip"><i style="background:#5a3a28"></i>Women’s cut $55</span>
+        <span class="chip"><i style="background:#f1c27d"></i>Free consultation</span>
+      </div>
+    </div>
+    <div class="fan rv" aria-hidden="true">
+      <svg viewBox="0 0 480 480">
+        <defs>
+          <linearGradient id="s1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2b1a11"/><stop offset=".35" stop-color="#3a2418"/><stop offset="1" stop-color="#6b4430"/></linearGradient>
+          <linearGradient id="s2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3a2418"/><stop offset=".45" stop-color="#7a4e2a"/><stop offset="1" stop-color="#b87a2c"/></linearGradient>
+          <linearGradient id="s3" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3a2418"/><stop offset=".3" stop-color="#8a5a32"/><stop offset=".7" stop-color="#d89a4a"/><stop offset="1" stop-color="#efc98a"/></linearGradient>
+          <linearGradient id="s4" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5a3a28"/><stop offset=".4" stop-color="#d89a4a"/><stop offset="1" stop-color="#f6e2bd"/></linearGradient>
+          <linearGradient id="s5" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#6b4430"/><stop offset=".5" stop-color="#e7b977"/><stop offset="1" stop-color="#fbf3e2"/></linearGradient>
+          <linearGradient id="s6" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3a2418"/><stop offset=".45" stop-color="#9b5a4a"/><stop offset="1" stop-color="#d98f7a"/></linearGradient>
+          <pattern id="strand" width="6" height="40" patternUnits="userSpaceOnUse"><path d="M3 0 C1 14 5 26 3 40" stroke="rgba(255,255,255,.18)" stroke-width="1" fill="none"/></pattern>
+        </defs>
+        <circle cx="240" cy="260" r="200" fill="#e6d9c4"/>
+        <circle cx="240" cy="260" r="200" fill="none" stroke="#d89a4a" stroke-width="1.5" stroke-dasharray="3 9"/>
+        <g transform="translate(240 440) scale(.8) translate(-240 -440)">
+          <g class="sw" style="transform:rotate(-48deg);animation-delay:.05s"><path d="M222 440 C214 330 218 200 214 92 C213 70 266 70 266 92 C262 200 266 330 258 440Z" fill="url(#s1)"/><path d="M222 440 C214 330 218 200 214 92 C213 70 266 70 266 92 C262 200 266 330 258 440Z" fill="url(#strand)"/></g>
+          <g class="sw" style="transform:rotate(-29deg);animation-delay:.12s"><path d="M222 440 C214 330 218 200 214 80 C213 58 266 58 266 80 C262 200 266 330 258 440Z" fill="url(#s2)"/><path d="M222 440 C214 330 218 200 214 80 C213 58 266 58 266 80 C262 200 266 330 258 440Z" fill="url(#strand)"/></g>
+          <g class="sw" style="transform:rotate(-10deg);animation-delay:.19s"><path d="M222 440 C214 330 218 200 214 70 C213 48 266 48 266 70 C262 200 266 330 258 440Z" fill="url(#s3)"/><path d="M222 440 C214 330 218 200 214 70 C213 48 266 48 266 70 C262 200 266 330 258 440Z" fill="url(#strand)"/></g>
+          <g class="sw" style="transform:rotate(9deg);animation-delay:.26s"><path d="M222 440 C214 330 218 200 214 74 C213 52 266 52 266 74 C262 200 266 330 258 440Z" fill="url(#s4)"/><path d="M222 440 C214 330 218 200 214 74 C213 52 266 52 266 74 C262 200 266 330 258 440Z" fill="url(#strand)"/></g>
+          <g class="sw" style="transform:rotate(28deg);animation-delay:.33s"><path d="M222 440 C214 330 218 200 214 84 C213 62 266 62 266 84 C262 200 266 330 258 440Z" fill="url(#s5)"/><path d="M222 440 C214 330 218 200 214 84 C213 62 266 62 266 84 C262 200 266 330 258 440Z" fill="url(#strand)"/></g>
+          <g class="sw" style="transform:rotate(47deg);animation-delay:.4s"><path d="M222 440 C214 330 218 200 214 96 C213 74 266 74 266 96 C262 200 266 330 258 440Z" fill="url(#s6)"/><path d="M222 440 C214 330 218 200 214 96 C213 74 266 74 266 96 C262 200 266 330 258 440Z" fill="url(#strand)"/></g>
+        </g>
+        <circle cx="240" cy="440" r="20" fill="#3a2418"/><circle cx="240" cy="440" r="8" fill="#d89a4a"/>
+        <path d="M70 120 l6 -14 6 14 14 6 -14 6 -6 14 -6 -14 -14 -6z" fill="#d89a4a"/>
+        <path d="M410 90 l4 -9 4 9 9 4 -9 4 -4 9 -4 -9 -9 -4z" fill="#3a2418"/>
+      </svg>
+      <div class="tag t1">Partial balayage<small>from $135 · 1 hr 30 min</small></div>
+      <div class="tag t2">Face baby lights<small>$100 · 30 min</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"></div>
+
+<section class="policy sec" id="before">
+  <div class="wrap">
+    <div class="card rv">
+      <div class="eyebrow">Read me first</div>
+      <h2>Before you book</h2>
+      <p>Three quick notes from Callie, up front, so your appointment goes exactly the way you want it.</p>
+      <ol>
+        <li><div class="n">1</div><div><h3>Color clients: there’s a new color policy <span class="new">New</span></h3><p>Callie recently updated how color appointments work. Give it a read when you book, or call before your first color visit.</p></div></li>
+        <li><div class="n">2</div><div><h3>Prices depend on your hair</h3><p>All prices are subject to change depending on the thickness and length of your hair. “From” prices are where a service starts.</p></div></li>
+        <li><div class="n">3</div><div><h3>24 hours’ notice to cancel</h3><p>If you need to cancel or reschedule, please give 24 hours’ notice so Callie can offer the spot to another client.</p></div></li>
+      </ol>
+      <div class="foot">
+        <a class="btn btn-primary btn-sm" href="https://square.site/book/FJ6H4M81KBTYE/callie-rogers-powell-tn" target="_blank" rel="noopener">Got it, let’s book</a>
+        <a class="btn btn-ghost btn-sm" style="box-shadow:none" href="tel:+18653338980">Ask a question</a>
+      </div>
+    </div>
+  </div>
+  <svg class="bgstr" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 C200 40 400 130 600 80 S1000 30 1200 80" stroke="#d89a4a" stroke-width="26" fill="none" stroke-linecap="round" opacity=".55"/><path d="M0 120 C220 80 420 150 640 110 S1000 70 1200 115" stroke="#efe6d8" stroke-width="14" fill="none" stroke-linecap="round" opacity=".25"/></svg>
+</section>
+
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">The full menu</div>
+      <h2>Every shade, every service.</h2>
+      <p>Callie’s complete service list, straight from her booking page. Prices may change with hair thickness and length.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-g="color"><i style="background:#d89a4a"></i>Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-g="cuts"><i style="background:#3a2418"></i>Cuts &amp; style</button>
+      <button class="tab" role="tab" aria-selected="false" data-g="ext"><i style="background:#c9826b"></i>Extensions</button>
+      <button class="tab" role="tab" aria-selected="false" data-g="more"><i style="background:#f1c27d"></i>Brows &amp; more</button>
+    </div>
+    <div class="menu-grid">
+      <div class="group wide rv" data-g="color">
+        <div class="strip" style="background:linear-gradient(#3a2418,#b87a2c,#f1c27d)"></div>
+        <h3>Color</h3><div class="sub">Foils, balayage, lightening &amp; gloss</div>
+        <div class="item"><span class="nm">All Over Base Color</span><span class="du">1 hr 45 min · solid color, roots to ends</span><span class="pr">$125</span></div>
+        <div class="item"><span class="nm">Partial Balayage</span><span class="du">1 hr 30 min</span><span class="pr"><small>from</small>$135</span></div>
+        <div class="item"><span class="nm">Balayage</span><span class="du">2 hr</span><span class="pr"><small>from</small>$200</span></div>
+        <div class="item"><span class="nm">Partial Foil</span><span class="du">2 hr</span><span class="pr">$165</span></div>
+        <div class="item"><span class="nm">Full Foil Highlights</span><span class="du">2 hr</span><span class="pr">$200</span></div>
+        <div class="item"><span class="nm">Face Baby Lights</span><span class="du">30 min</span><span class="pr">$100</span></div>
+        <div class="item"><span class="nm">Creative Color</span><span class="du">3 hr</span><span class="pr"><small>from</small>$250</span></div>
+        <div class="item"><span class="nm">Double Process</span><span class="du">3 hr</span><span class="pr"><small>from</small>$285</span></div>
+        <div class="item"><span class="nm">On the Scalp Lightener</span><span class="du">2 hr 30 min</span><span class="pr">$150</span></div>
+        <div class="item"><span class="nm">Bleach New Growth 1”–2”</span><span class="du">45 min</span><span class="pr">$150</span></div>
+        <div class="item"><span class="nm">Root Tap with Service</span><span class="du">30 min</span><span class="pr">$30</span></div>
+        <div class="item"><span class="nm">Lowlights with Color Service</span><span class="du">30 min</span><span class="pr">$25</span></div>
+        <div class="item"><span class="nm">Gloss</span><span class="du">30 min · add-on</span><span class="pr">$25</span></div>
+        <div class="item"><span class="nm">Platnum Card</span><span class="du">30 min</span><span class="pr">$250</span></div>
+      </div>
+      <div class="group rv hide" data-g="cuts">
+        <div class="strip" style="background:linear-gradient(#2b1a11,#5a3a28)"></div>
+        <h3>Cuts &amp; style</h3><div class="sub">For her, him and the little ones</div>
+        <div class="item"><span class="nm">Women’s Haircut</span><span class="du">45 min</span><span class="pr">$55</span></div>
+        <div class="item"><span class="nm">Men’s Haircut</span><span class="du">30 min</span><span class="pr">$25</span></div>
+        <div class="item"><span class="nm">Child’s Haircut under 8</span><span class="du">30 min</span><span class="pr">$25</span></div>
+        <div class="item"><span class="nm">Child’s Braid</span><span class="du">10 min</span><span class="pr"><small>from</small>$20</span></div>
+        <div class="item"><span class="nm">Blowout + Hot Tools</span><span class="du">30 min</span><span class="pr">$45</span></div>
+        <div class="item"><span class="nm">Conditioning Treatment + Blowdry + Style</span><span class="du">45 min</span><span class="pr">$60</span></div>
+        <div class="item"><span class="nm">Scalp Dandruff Treatment + Olaplex</span><span class="du">30 min</span><span class="pr">$100</span></div>
+      </div>
+      <div class="group rv hide" data-g="ext">
+        <div class="strip" style="background:linear-gradient(#5a3a28,#c9826b,#f1c27d)"></div>
+        <h3>Extensions</h3><div class="sub">Hand-tied and tape-in</div>
+        <div class="item"><span class="nm">Hand Tied Install</span><span class="du">2 hr</span><span class="pr">$200</span></div>
+        <div class="item"><span class="nm">New Set Install (Tape-in Extensions)</span><span class="du">1 hr</span><span class="pr">$250</span></div>
+        <div class="item"><span class="nm">Extension Removal</span><span class="du">30 min</span><span class="pr">$50</span></div>
+      </div>
+      <div class="group rv hide" data-g="more">
+        <div class="strip" style="background:linear-gradient(#b87a2c,#f1c27d,#efe6d8)"></div>
+        <h3>Brows &amp; more</h3><div class="sub">Finishing touches, events &amp; first visits</div>
+        <div class="item"><span class="nm">Eyebrow Wax</span><span class="du">15 min</span><span class="pr">$12</span></div>
+        <div class="item"><span class="nm">Brow Tint</span><span class="du">30 min</span><span class="pr">$20</span></div>
+        <div class="item"><span class="nm">Consultation</span><span class="du">30 min</span><span class="pr">Free</span></div>
+        <div class="item"><span class="nm">Event / Wedding Inquiries</span><span class="du">Call for bookings: <a href="tel:+18653338980">(865) 333-8980</a></span><span class="pr"><small>call</small>☎</span></div>
+      </div>
+    </div>
+    <p class="menu-note">Gift cards are available too: <a href="https://app.squareup.com/gift/9AWX8AHEDGCKC/order" target="_blank" rel="noopener" style="color:var(--butter-d);font-weight:700">send one instantly</a>.</p>
+  </div>
+</section>
+
+<section class="why sec" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Why Callie</div>
+      <h2>One chair, the whole color wheel.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><rect x="4" y="10" width="10" height="34" rx="5" fill="#3a2418"/><rect x="18" y="6" width="10" height="38" rx="5" fill="#b87a2c"/><rect x="32" y="10" width="10" height="34" rx="5" fill="#f1c27d"/></svg>
+        <h3>28 services, one stylist</h3>
+        <p>From a $12 brow wax to double process and creative color, plus hand-tied and tape-in extensions. You won’t outgrow her menu.</p>
+      </div>
+      <div class="why-card rv">
+        <svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="#efe6d8" stroke="#3a2418" stroke-width="2.5"/><path d="M17 27l6 6 12-14" fill="none" stroke="#d89a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Free consultations</h3>
+        <p>Thinking about going lighter, adding extensions or trying something creative? Book the free 30-minute consultation and plan it together first.</p>
+      </div>
+      <div class="why-card rv">
+        <svg class="ic" viewBox="0 0 52 52" aria-hidden="true"><rect x="6" y="9" width="40" height="36" rx="8" fill="#3a2418"/><rect x="6" y="9" width="40" height="10" rx="5" fill="#d89a4a"/><circle cx="18" cy="30" r="3" fill="#efe6d8"/><circle cx="26" cy="30" r="3" fill="#efe6d8"/><circle cx="34" cy="30" r="3" fill="#f1c27d"/></svg>
+        <h3>Book any time</h3>
+        <p>Real-time online booking on Callie’s calendar, with appointments Tuesday plus Thursday through Saturday. Or <a href="tel:+18653338980">call Callie</a> for weddings and events.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Visit</div>
+      <h2>Find Callie on West Emory.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours rv">
+        <h3>Hours</h3>
+        <ul id="hours">
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>10 AM – 1 PM</span></li>
+          <li data-d="3" class="closed"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4"><span>Thursday</span><span>10 AM – 6 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10 AM – 6 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>10 AM – 6 PM</span></li>
+        </ul>
+        <p class="st" id="status">Hours as listed on Callie’s booking page.</p>
+      </div>
+      <div class="map rv">
+        <iframe title="Map to 2109 W Emory Rd, Powell, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2109%20W%20Emory%20Rd%2C%20Powell%2C%20TN%2037849&output=embed"></iframe>
+      </div>
+      <div class="contact rv">
+        <h3>Get in touch</h3>
+        <a class="row" href="tel:+18653338980"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><b>(865) 333-8980</b><span>Tap to call</span></div></a>
+        <a class="row" href="https://www.google.com/maps/dir/?api=1&destination=2109%20W%20Emory%20Rd%2C%20Powell%2C%20TN%2037849" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>2109 W Emory Rd</b><span>Powell, TN 37849 · Get directions</span></div></a>
+        <a class="row" href="mailto:hairbycallieworthington@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><b>Email</b><span>hairbycallieworthington@gmail.com</span></div></a>
+        <a class="row" href="https://www.instagram.com/hairby_callie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><b>@hairby_callie</b><span>See her latest work on Instagram</span></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final sec">
+  <div class="wrap rv">
+    <div class="eyebrow" style="color:var(--honey)">Your turn in the chair</div>
+    <h2 style="margin-top:12px">Ready for your next shade?</h2>
+    <p>Book online in a minute, or start with a free consultation and figure it out together.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://square.site/book/FJ6H4M81KBTYE/callie-rogers-powell-tn" target="_blank" rel="noopener">Book with Callie</a>
+      <a class="btn btn-ghost" href="tel:+18653338980">Call (865) 333-8980</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:var(--oat);font-family:var(--serif);font-size:1.2rem;font-weight:400">Hair by Callie</strong><br>2109 W Emory Rd, Powell, TN 37849 · <a href="tel:+18653338980" style="white-space:nowrap">(865) 333-8980</a></div>
+    <div class="credit">Concept by Code Craft Media. Services, prices and hours from Callie’s public booking page.</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+18653338980"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/FJ6H4M81KBTYE/callie-rogers-powell-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book with Callie</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // today highlight
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var open={2:[10,13],4:[10,18],5:[10,18],6:[10,18]}, st=document.getElementById('status');
+  if(open[day]){ st.textContent = (h>=open[day][0]&&h<open[day][1]) ? 'Open now · book online or give Callie a call.' : (h<open[day][0] ? 'Opens today at 10 AM.' : 'Closed for today · online booking is open 24/7.'); }
+  else st.textContent='Closed today · online booking is open 24/7.';
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function show(e){e.classList.add('in')}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(show);
+  setTimeout(function(){els.forEach(show)},1500);
+  // tabs (mobile)
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), groups=[].slice.call(document.querySelectorAll('.group'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+    groups.forEach(function(g){g.classList.toggle('hide',g.dataset.g!==t.dataset.g); if(g.dataset.g===t.dataset.g) show(g);});
+  })});
+})();
+</script>
+</body>
+</html>

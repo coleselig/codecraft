@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Guy Friday's — Oak Ridge, TN</title>
+<meta name="description" content="Guy Friday's: handyman services in Oak Ridge, TN with posted prices and online booking.">
+<meta name="theme-color" content="#14213d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213d; --navy-2:#1c2c50; --navy-3:#0d1730;
+  --yellow:#fca311; --yellow-2:#ffb938;
+  --concrete:#e5e5e5; --concrete-2:#d6d6d4; --paper:#f6f5f1;
+  --ink:#14213d; --muted:#4a5468; --white:#fff;
+  --r:14px;
+  --bar-h:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--concrete);line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+h1,h2,h3,.disp{font-family:"Archivo",system-ui,sans-serif;letter-spacing:-.02em;line-height:1}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+
+/* concept banner */
+.concept{background:var(--yellow);color:var(--navy);font-size:11px;font-weight:600;letter-spacing:-.005em;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(20,33,61,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand-mark{width:38px;height:38px;border-radius:10px;background:var(--yellow);display:grid;place-items:center;flex:none}
+.brand-name{font-family:Archivo;font-weight:900;font-size:19px;letter-spacing:-.01em;line-height:1}
+.brand-name small{display:block;font-family:"IBM Plex Sans";font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#aab3c5;margin-top:3px}
+.nav-links{display:none;gap:28px;align-items:center}
+.nav-links a{color:#d5dbe7;text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--yellow)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:Archivo;font-weight:800;font-size:16px;letter-spacing:.01em;text-decoration:none;border-radius:12px;padding:15px 22px;transition:transform .18s ease,box-shadow .18s ease,background .18s;cursor:pointer;border:0;min-height:52px}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-y{background:var(--yellow);color:var(--navy);box-shadow:0 4px 0 #c27a00}
+.btn-y:hover{background:var(--yellow-2);transform:translateY(-2px);box-shadow:0 6px 0 #c27a00}
+.btn-o{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
+.btn-o:hover{box-shadow:inset 0 0 0 2px var(--yellow);color:var(--yellow)}
+.btn-sm{padding:10px 16px;min-height:42px;font-size:14px;border-radius:10px;box-shadow:0 3px 0 #c27a00}
+.nav .btn-sm{display:none}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+.pegboard{position:absolute;inset:0;z-index:-1;background-color:var(--navy);
+  background-image:radial-gradient(circle at center,var(--navy-3) 0 3.2px,rgba(255,255,255,.06) 3.4px 4.2px,transparent 4.4px);
+  background-size:26px 26px;background-position:13px 13px}
+.pegboard::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 20% 0%,rgba(252,163,17,.10),transparent 60%),linear-gradient(180deg,transparent 60%,rgba(13,23,48,.85))}
+.hero .wrap{padding-top:40px;padding-bottom:56px;display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.hero .wrap>*{min-width:0}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);background:rgba(252,163,17,.1);border:1px solid rgba(252,163,17,.35);padding:7px 12px;border-radius:999px}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgba(252,163,17,.7);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(252,163,17,.6)}70%{box-shadow:0 0 0 9px rgba(252,163,17,0)}100%{box-shadow:0 0 0 0 rgba(252,163,17,0)}}
+.hero h1{font-weight:900;font-size:clamp(50px,14vw,104px);margin:20px 0 14px;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
+.hero h1 .off{color:var(--yellow)}
+.motto{font-family:Archivo;font-weight:800;font-size:clamp(20px,5.6vw,30px);color:#fff;letter-spacing:-.01em;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.motto::before{content:"";width:34px;height:4px;background:var(--yellow);border-radius:2px;flex:none}
+.hero h1 .strike{position:relative;display:inline-block}
+.hero h1 .strike::after{content:"";position:absolute;left:-2%;right:-2%;top:52%;height:.11em;background:var(--yellow);transform-origin:left;transform:scaleX(0);animation:strike .7s .5s cubic-bezier(.7,0,.2,1) forwards;border-radius:3px}
+@keyframes strike{to{transform:scaleX(1)}}
+.lede{font-size:18px;color:#c9d0de;max-width:34ch}
+.lede b{color:#fff;font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.cta-row .btn{flex:1 1 200px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:#aab3c5}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{color:var(--yellow)}
+
+/* hero art: pegboard with tools + ticket */
+.board{position:relative;aspect-ratio:1/1;max-width:340px;width:100%;margin:0 auto}
+@media (min-width:960px){.board{max-width:520px}}
+.board svg.tools{width:100%;height:100%}
+.tool{transform-box:fill-box;transform-origin:50% 6%;animation:sway 6s ease-in-out infinite}
+.tool:nth-child(2n){animation-delay:-2s;animation-duration:7s}
+.tool:nth-child(3n){animation-delay:-4s;animation-duration:5.5s}
+@keyframes sway{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg)}}
+.hero-ticket{position:absolute;right:-4px;bottom:2%;width:66%;min-width:226px;max-width:260px;transform:rotate(4deg);animation:floaty 5s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:rotate(4deg) translateY(0)}50%{transform:rotate(3deg) translateY(-6px)}}
+
+/* ticket base */
+.ticket{position:relative;background:var(--paper);color:var(--navy);border-radius:12px;padding:16px 16px 14px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 14px 30px -14px rgba(13,23,48,.45);
+  --hole:9px}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:44px;border-top:2px dashed rgba(20,33,61,.18)}
+.ticket .t-head{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);height:22px;margin-bottom:16px}
+.ticket .t-no{font-family:"IBM Plex Sans";font-variant-numeric:tabular-nums}
+.ticket .t-title{font-family:Archivo;font-weight:800;font-size:19px;line-height:1.15;letter-spacing:-.01em}
+.ticket .t-foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px;gap:10px}
+.ticket .t-time{white-space:nowrap;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.ticket .t-price{font-family:Archivo;font-weight:900;font-size:26px;line-height:1;white-space:nowrap}
+.ticket .t-price small{display:block;font-family:"IBM Plex Sans";font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;text-align:right}
+.ticket .notch{position:absolute;top:35px;width:18px;height:18px;border-radius:50%;background:var(--concrete)}
+.ticket .notch.l{left:-9px}.ticket .notch.r{right:-9px}
+.hero-ticket .notch{background:var(--navy)}
+.stamp{position:absolute;top:56px;right:12px;font-family:Archivo;font-weight:900;font-size:11px;letter-spacing:.12em;color:#c27a00;border:2px solid #c27a00;border-radius:6px;padding:3px 7px;transform:rotate(-8deg);opacity:.9}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:72px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#a86a00}
+.eyebrow::before{content:"";width:22px;height:3px;background:var(--yellow);border-radius:2px}
+.sec h2{font-weight:900;font-size:clamp(34px,9vw,60px);text-transform:uppercase;letter-spacing:-.03em;margin:12px 0 14px;line-height:.95}
+.sec .intro{color:var(--muted);font-size:17px;max-width:56ch}
+
+/* services */
+.services{background:var(--concrete);position:relative}
+.services::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(20,33,61,.13) 2px,transparent 2.4px);background-size:26px 26px;pointer-events:none;mask-image:linear-gradient(180deg,#000,transparent 340px);-webkit-mask-image:linear-gradient(180deg,#000,transparent 340px)}
+.services .wrap{position:relative}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:26px -20px 8px;padding-left:20px;padding-right:20px;scrollbar-width:none;scroll-snap-type:x proximity}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:none;scroll-snap-align:start;font:600 14px "IBM Plex Sans";padding:10px 15px;border-radius:999px;background:#fff;color:var(--navy);border:1.5px solid rgba(20,33,61,.15);cursor:pointer;transition:all .18s;min-height:42px}
+.chip:hover{border-color:var(--navy)}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chip .n{opacity:.55;margin-left:4px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+.svc{transition:transform .2s ease,box-shadow .2s ease;text-decoration:none;display:block}
+.svc:hover{transform:translateY(-3px) rotate(-.3deg);box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 36px -16px rgba(13,23,48,.5)}
+.svc .t-cat{display:inline-flex;align-items:center;gap:6px;color:var(--navy)}
+.svc .t-cat svg{color:#c27a00}
+.svc .t-note{font-size:13px;color:var(--muted);margin-top:7px;line-height:1.45}
+.svc .t-book{margin-top:8px;font-size:13px;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:5px;border-bottom:2px solid var(--yellow);padding-bottom:1px}
+.svc:hover .t-book{color:#a86a00}
+.svc[hidden]{display:none}
+.t-meta{display:flex;flex-direction:column;align-items:flex-start}
+.ask{background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.ask .notch{background:var(--concrete)}
+.ask::before{border-color:rgba(255,255,255,.18)}
+.ask .t-head{color:var(--yellow)}
+.ask p{color:#c9d0de;font-size:14.5px}
+.ask .t-title{color:#fff}
+.ask .btn{min-height:46px;font-size:15px;padding:11px 16px;align-self:flex-start}
+@media (max-width:639px){.svc .t-book{display:none}.ticket{padding:14px 16px 13px}}
+
+/* why */
+.why{background:var(--navy);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.why .pegboard{opacity:.75}
+.why .eyebrow{color:var(--yellow)}
+.why .intro{color:#b8c1d3}
+.why-grid{display:grid;gap:14px;margin-top:30px}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px;transition:border-color .2s,background .2s}
+.why-card:hover{border-color:rgba(252,163,17,.6);background:rgba(255,255,255,.06)}
+.why-card .ic{width:46px;height:46px;border-radius:12px;background:var(--yellow);color:var(--navy);display:grid;place-items:center;margin-bottom:16px}
+.why-card h3{font-size:22px;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+.why-card p{color:#b8c1d3;font-size:15.5px}
+.big-num{font-family:Archivo;font-weight:900;color:var(--yellow);font-size:56px;line-height:.9;letter-spacing:-.04em}
+
+/* hours + map */
+.visit{background:var(--paper)}
+.visit-grid{display:grid;gap:18px;margin-top:30px}
+.card{background:#fff;border-radius:var(--r);padding:22px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 10px 26px -18px rgba(13,23,48,.4);border:1px solid rgba(20,33,61,.07)}
+.card h3{font-size:22px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--concrete);color:var(--muted);margin:6px 0 14px}
+.status i{width:8px;height:8px;border-radius:50%;background:#9aa2b1}
+.status.open{background:#e6f5ea;color:#17602f}.status.open i{background:#1f9d48}
+.hours{list-style:none;border-top:1px solid #eceae4}
+.hours li{display:flex;justify-content:space-between;padding:12px 12px;border-bottom:1px solid #eceae4;font-size:16px;font-variant-numeric:tabular-nums;border-radius:8px;transition:background .2s}
+.hours li span:first-child{font-weight:600}
+.hours li.closed span:last-child{color:var(--muted)}
+.hours li.today{background:var(--navy);color:#fff;border-color:transparent;position:relative}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--yellow);color:var(--navy);padding:3px 7px;border-radius:5px;vertical-align:2px}
+.hours li.today.closed span:last-child{color:#c9d0de}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(20,33,61,.1);background:var(--navy) radial-gradient(rgba(255,255,255,.12) 2px,transparent 2.4px) 0 0/26px 26px;min-height:300px;position:relative}
+.map .map-fallback{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:8px;color:#fff;font-family:Archivo;font-weight:800;font-size:22px}
+.map .map-fallback svg{color:var(--yellow)}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:300px;border:0;display:block;filter:saturate(.85)}
+.contact-list{list-style:none;display:grid;gap:10px;margin-top:14px}
+.contact-list a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px;border-radius:12px;background:var(--paper);border:1px solid #eceae4;transition:border-color .2s,transform .2s}
+.contact-list a:hover{border-color:var(--yellow);transform:translateX(3px)}
+.contact-list .ic{width:42px;height:42px;border-radius:10px;background:var(--navy);color:var(--yellow);display:grid;place-items:center;flex:none}
+.contact-list b{display:block;font-size:16px;line-height:1.2;word-break:break-word}
+.contact-list small{font-size:13px;color:var(--muted)}
+
+/* final cta */
+.final{background:var(--yellow);color:var(--navy);position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(20,33,61,.16) 2.4px,transparent 2.8px);background-size:26px 26px}
+.final .wrap{position:relative;padding-top:64px;padding-bottom:64px;text-align:center}
+.final h2{font-weight:900;font-size:clamp(38px,10vw,72px);text-transform:uppercase;letter-spacing:-.035em;line-height:.92}
+.final p{font-size:18px;margin:16px auto 26px;max-width:40ch;font-weight:500}
+.final .btn-n{background:var(--navy);color:#fff;box-shadow:0 4px 0 #050b19}
+.final .btn-n:hover{transform:translateY(-2px);box-shadow:0 6px 0 #050b19}
+.final .btn-w{background:#fff;color:var(--navy);box-shadow:0 4px 0 rgba(20,33,61,.35)}
+.final .btn-w:hover{transform:translateY(-2px)}
+.final .cta-row{justify-content:center;max-width:520px;margin:0 auto}
+
+footer{background:var(--navy-3);color:#9aa4b8;font-size:14px}
+footer .wrap{padding-top:36px;padding-bottom:36px;display:grid;gap:18px}
+footer .brand-name{color:#fff}
+footer a{color:#d5dbe7;text-decoration:none}
+footer a:hover{color:var(--yellow)}
+.foot-links{display:flex;flex-wrap:wrap;gap:10px 22px}
+.credit{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;font-size:13px}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,23,48,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);transform:translateY(0);transition:transform .3s}
+.callbar .btn{min-height:50px;font-size:15px;padding:12px}
+.callbar .btn-o{box-shadow:inset 0 0 0 2px rgba(255,255,255,.3)}
+:root{--bar-h:72px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+.js.reveal-all .rv{opacity:1!important;transform:none!important}
+
+@media (min-width:640px){
+  .grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .filters{margin-left:0;margin-right:0;padding-left:2px;padding-right:2px;flex-wrap:wrap}
+}
+@media (min-width:960px){
+  :root{--bar-h:0px}
+  .callbar{display:none}
+  .nav-links{display:flex}
+  .nav .btn-sm{display:inline-flex}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:80px;padding-bottom:96px}
+  .lede{font-size:20px}
+  .cta-row .btn{flex:0 0 auto}
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:1100px){
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .visit-grid{grid-template-columns:1fr 1.25fr;grid-template-areas:"hours map" "contact map"}
+  .visit-grid .hours-card{grid-area:hours}.visit-grid .map{grid-area:map}.visit-grid .contact-card{grid-area:contact}
+  .sec{padding:104px 0}
+  footer .wrap{grid-template-columns:1fr auto;align-items:center}
+  .credit{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM9 14l2 2 4-4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="8" cy="8" r="1.6" fill="currentColor"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+    <!-- category icons -->
+    <symbol id="c-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="c-door" viewBox="0 0 24 24"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M3 21h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="15" cy="12" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="c-light" viewBox="0 0 24 24"><path d="M12 2v4M7 13a5 5 0 0 1 10 0zM5 13h14M10 17a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="c-app" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5 9h14M8 5.5v1M8 12v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="c-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+    <symbol id="logo" viewBox="0 0 24 24"><path fill="#14213d" d="M14.7 3.3a5 5 0 0 0-6 6.3L3 15.3a1.9 1.9 0 0 0 0 2.7l3 3a1.9 1.9 0 0 0 2.7 0l5.7-5.7a5 5 0 0 0 6.3-6l-3.1 3.1-3-.7-.7-3z"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept" role="note">Concept site by Code Craft Media, made for Guy Friday's. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Guy Friday's home">
+      <span class="brand-mark"><svg width="22" height="22"><use href="#logo"/></svg></span>
+      <span class="brand-name">Guy Friday's<small>Oak Ridge, TN</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#why">Why Guy Friday's</a>
+      <a href="#visit">Hours</a>
+      <a href="tel:+17479995396">(747) 999-5396</a>
+      <a class="btn btn-y btn-sm" href="https://square.site/book/PZYA6FBJK0QQ9/guy-friday-s-oak-ridge-tn" target="_blank" rel="noopener">Book online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="pegboard" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag"><i></i> Handyman · Oak Ridge, TN</span>
+      <h1>Cross it <span class="strike off">off</span> the list.</h1>
+      <p class="motto">Your personal help.</p>
+      <p class="lede">TV mounts, doors, light fixtures, appliances and the rest of the to-do list, with <b>19 services priced up front</b> and booking online in a couple of taps.</p>
+      <div class="cta-row">
+        <a class="btn btn-y" href="https://square.site/book/PZYA6FBJK0QQ9/guy-friday-s-oak-ridge-tn" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-cal"/></svg>Book a job</a>
+        <a class="btn btn-o" href="tel:+17479995396"><svg width="19" height="19"><use href="#i-phone"/></svg>(747) 999-5396</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg width="16" height="16"><use href="#i-tag"/></svg>TV mounting from $75</span>
+        <span><svg width="16" height="16"><use href="#i-clock"/></svg>Open Saturdays</span>
+      </div>
+    </div>
+
+    <div class="board rv" aria-hidden="true">
+      <svg class="tools" viewBox="0 0 400 400">
+        <defs>
+          <linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#cfd5df"/><stop offset=".5" stop-color="#f3f5f8"/><stop offset="1" stop-color="#aeb6c3"/></linearGradient>
+        </defs>
+        <!-- outline shadows (shadow-board look) -->
+        <g fill="none" stroke="rgba(252,163,17,.28)" stroke-width="2" stroke-dasharray="5 6">
+          <rect x="30" y="28" width="96" height="214" rx="16"/>
+          <rect x="150" y="28" width="70" height="250" rx="14"/>
+          <rect x="246" y="28" width="124" height="150" rx="16"/>
+        </g>
+        <!-- pegs -->
+        <g fill="#0d1730" stroke="rgba(255,255,255,.25)" stroke-width="1.5">
+          <circle cx="78" cy="44" r="5"/><circle cx="185" cy="44" r="5"/><circle cx="308" cy="44" r="5"/><circle cx="96" cy="282" r="5"/><circle cx="308" cy="214" r="5"/>
+        </g>
+        <!-- hammer -->
+        <g class="tool">
+          <rect x="70" y="60" width="16" height="170" rx="7" fill="#fca311"/>
+          <rect x="70" y="170" width="16" height="60" rx="7" fill="#c27a00"/>
+          <path d="M42 52h70a6 6 0 0 1 6 6v20a6 6 0 0 1-6 6H62c-10 0-18-6-22-14z" fill="url(#steel)"/>
+          <path d="M112 54c8 0 12 6 12 14s-4 14-12 14" fill="none" stroke="#aeb6c3" stroke-width="5"/>
+        </g>
+        <!-- screwdriver -->
+        <g class="tool">
+          <rect x="176" y="52" width="18" height="84" rx="8" fill="#fca311"/>
+          <g stroke="#c27a00" stroke-width="2.5"><path d="M181 62v64M189 62v64"/></g>
+          <rect x="174" y="132" width="22" height="12" rx="3" fill="#0d1730"/>
+          <rect x="181" y="144" width="8" height="112" fill="url(#steel)"/>
+          <path d="M181 256h8l-2 14h-4z" fill="#aeb6c3"/>
+        </g>
+        <!-- wrench -->
+        <g class="tool">
+          <path fill="url(#steel)" d="M308 60c-15 0-27 12-27 27 0 10 5 18 13 23v78c0 8 6 14 14 14s14-6 14-14v-78c8-5 13-13 13-23 0-15-12-27-27-27zm-9 9h18v20h-18z"/>
+          <rect x="301" y="118" width="14" height="66" rx="7" fill="#aeb6c3" opacity=".55"/>
+          <circle cx="308" cy="188" r="5" fill="#14213d"/>
+        </g>
+        <!-- tape measure -->
+        <g class="tool" style="transform-origin:50% 0">
+          <rect x="262" y="218" width="96" height="88" rx="18" fill="#fca311"/>
+          <circle cx="310" cy="262" r="24" fill="#14213d"/><circle cx="310" cy="262" r="10" fill="#fca311"/>
+          <rect x="250" y="288" width="22" height="14" rx="3" fill="#0d1730"/>
+          <path d="M252 298H150v10h102z" fill="#f6f5f1"/>
+          <g stroke="#14213d" stroke-width="1.6"><path d="M160 298v6M170 298v4M180 298v6M190 298v4M200 298v6M210 298v4M220 298v6M230 298v4M240 298v6"/></g>
+        </g>
+        <!-- level -->
+        <g class="tool" style="transform-origin:20% 50%">
+          <rect x="40" y="300" width="190" height="34" rx="6" fill="#f6f5f1"/>
+          <rect x="40" y="300" width="190" height="8" rx="4" fill="#d6d6d4"/>
+          <rect x="116" y="309" width="38" height="17" rx="8" fill="#a7e3b2" stroke="#14213d" stroke-width="2"/>
+          <circle cx="137" cy="317.5" r="4.5" fill="#fff"/>
+          <path d="M128 309v17M146 309v17" stroke="#14213d" stroke-width="1.6"/>
+          <circle cx="62" cy="317" r="7" fill="#14213d"/><circle cx="208" cy="317" r="7" fill="#14213d"/>
+        </g>
+      </svg>
+
+      <div class="ticket hero-ticket">
+        <span class="notch l"></span><span class="notch r"></span>
+        <div class="t-head"><span>Job ticket</span><span class="t-no">#002</span></div>
+        <div class="t-title">TV Mounting - Basic</div>
+        <div class="t-foot">
+          <span class="t-time"><svg width="14" height="14"><use href="#i-clock"/></svg>1 hr 15 min</span>
+          <span class="t-price">$125</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec services" id="services">
+  <div class="wrap">
+    <span class="eyebrow rv">The job board</span>
+    <h2 class="rv">Pick a ticket.<br>See the price.</h2>
+    <p class="intro rv">All 19 services and prices from Guy Friday's booking page. Tap any ticket to book that job.</p>
+
+    <div class="filters" role="toolbar" aria-label="Filter services">
+      <button class="chip" data-f="all" aria-pressed="true">All<span class="n">19</span></button>
+      <button class="chip" data-f="tv" aria-pressed="false">TV Mounting<span class="n">4</span></button>
+      <button class="chip" data-f="door" aria-pressed="false">Doors &amp; Locks<span class="n">3</span></button>
+      <button class="chip" data-f="light" aria-pressed="false">Lighting<span class="n">3</span></button>
+      <button class="chip" data-f="app" aria-pressed="false">Appliances<span class="n">3</span></button>
+      <button class="chip" data-f="home" aria-pressed="false">Around the House<span class="n">6</span></button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="pegboard" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Why Guy Friday's</span>
+    <h2 class="rv">No guesswork.<br>No runaround.</h2>
+    <p class="intro rv">Straight facts from the booking page, not sales talk.</p>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <div class="big-num">19</div>
+        <h3 style="margin-top:12px">Services, priced</h3>
+        <p>From a $75 accessory mount to a $275 wall repair, you see the number before you book.</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ic"><svg width="24" height="24"><use href="#i-cal"/></svg></div>
+        <h3>Book online</h3>
+        <p>Choose a service and pick a time on the booking page. No phone tag needed.</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ic"><svg width="24" height="24"><use href="#i-user"/></svg></div>
+        <h3>Book with Mark</h3>
+        <p>Mark is the person listed for appointments, so you know who you're booking.</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ic"><svg width="24" height="24"><use href="#i-clock"/></svg></div>
+        <h3>Saturdays too</h3>
+        <p>Open Saturday 9 to 5, so weekend projects don't have to wait for a weekday off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <span class="eyebrow rv">Hours &amp; contact</span>
+    <h2 class="rv">When to call.</h2>
+    <p class="intro rv">Serving Oak Ridge, Tennessee.</p>
+    <div class="visit-grid">
+      <div class="card hours-card rv">
+        <h3><svg width="22" height="22" style="color:#c27a00"><use href="#i-clock"/></svg>Hours</h3>
+        <span class="status" id="status"><i></i><span>Mon–Sat, closed Sunday</span></span>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 3:00 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="map rv">
+        <div class="map-fallback" aria-hidden="true"><svg width="38" height="38"><use href="#i-pin"/></svg>Oak Ridge, TN</div>
+        <iframe title="Map of Oak Ridge, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Oak%20Ridge%2C%20TN&output=embed"></iframe>
+      </div>
+      <div class="card contact-card rv">
+        <h3>Get in touch</h3>
+        <ul class="contact-list">
+          <li><a href="tel:+17479995396"><span class="ic"><svg width="20" height="20"><use href="#i-phone"/></svg></span><span><b>(747) 999-5396</b><small>Tap to call</small></span></a></li>
+          <li><a href="https://square.site/book/PZYA6FBJK0QQ9/guy-friday-s-oak-ridge-tn" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20"><use href="#i-cal"/></svg></span><span><b>Book online</b><small>Pick a service &amp; time</small></span></a></li>
+          <li><a href="mailto:mloftus68@gmail.com"><span class="ic"><svg width="20" height="20"><use href="#i-mail"/></svg></span><span><b>mloftus68@gmail.com</b><small>Email</small></span></a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination=Oak%20Ridge%2C%20TN" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20"><use href="#i-pin"/></svg></span><span><b>Oak Ridge, TN</b><small>Directions</small></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv">Got a list?<br>Hand it over.</h2>
+    <p class="rv">Pick your job, see the price, book the time.</p>
+    <div class="cta-row rv">
+      <a class="btn btn-n" href="https://square.site/book/PZYA6FBJK0QQ9/guy-friday-s-oak-ridge-tn" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-cal"/></svg>Book a job</a>
+      <a class="btn btn-w" href="tel:+17479995396"><svg width="19" height="19"><use href="#i-phone"/></svg>Call (747) 999-5396</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark"><svg width="22" height="22"><use href="#logo"/></svg></span><span class="brand-name">Guy Friday's<small>Your personal help.</small></span></a>
+    <div class="foot-links">
+      <a href="tel:+17479995396">(747) 999-5396</a>
+      <a href="mailto:mloftus68@gmail.com">Email</a>
+      <a href="https://www.instagram.com/guyfridays/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/guyFridays/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p class="credit">Concept by Code Craft Media · Knoxville, TN. A design preview for Guy Friday's, not an official site.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="btn btn-o" href="tel:+17479995396"><svg width="18" height="18"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-y" href="https://square.site/book/PZYA6FBJK0QQ9/guy-friday-s-oak-ridge-tn" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#i-cal"/></svg>Book</a>
+</nav>
+
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+<script>
+(function(){
+  var BOOK="https://square.site/book/PZYA6FBJK0QQ9/guy-friday-s-oak-ridge-tn";
+  // Services exactly as listed on the Guy Friday's Square booking page
+  var S=[
+    ["TV Mounting - Accessory Mounting","$75","30 min","tv",""],
+    ["Appliance Installation","$125","1 hr 15 min","app",""],
+    ["Curtain & Window Treatments Installation","$40","1 hr","home","We will mount and install your curtain rods or window blinds, and hang your drapes. Priced per treatment, $75 one-hour minimum; hardware not included."],
+    ["Decorative Hanging","$100","1 hr","home","",1],
+    ["Door Lock & Handle Installation","$100","1 hr","door",""],
+    ["Door Installation - pre-hung, interior","$150","2 hr 30 min","door",""],
+    ["Door Installation - pre-hung, exterior","$250","2 hr 30 min","door",""],
+    ["Furniture Assembly and/or Delivery","$100","1 hr","home","",1],
+    ["Garage Door Opener Install","$250","2 hr 30 min","app",""],
+    ["General Handyman","$100","1 hr","home","",1],
+    ["Kitchen Appliance Installs","$150","1 hr 30 min","app",""],
+    ["Light Fixture - 10ft Install","$125","1 hr 30 min","light",""],
+    ["Light Fixture - 16ft Install","$195","1 hr 30 min","light",""],
+    ["Light Fixture - Wall Sconce Install","$105","1 hr","light",""],
+    ["Shelving Install","$40","1 hr","home","",1],
+    ["TV Mounting - Basic","$125","1 hr 15 min","tv",""],
+    ["TV Mounting - Hide Wires","$175","1 hr","tv",""],
+    ["TV Mounting - Masonry Walls","$155","1 hr 15 min","tv",""],
+    ["Wall Repair","$275","1 hr 15 min","home",""]
+  ];
+  var CAT={tv:["TV Mounting","c-tv"],door:["Doors & Locks","c-door"],light:["Lighting","c-light"],app:["Appliances","c-app"],home:["Around the House","c-home"]};
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+  var ORD=["tv","door","light","app","home"];S.forEach(function(s,i){s[5]=s[5]||0;s[6]=i});S.sort(function(a,b){return ORD.indexOf(a[3])-ORD.indexOf(b[3])||a[6]-b[6]});
+  var g=document.getElementById("grid"),h="";
+  S.forEach(function(s,i){
+    var c=CAT[s[3]],no=("00"+(i+1)).slice(-3);
+    h+='<a class="ticket svc rv" data-c="'+s[3]+'" href="'+BOOK+'" target="_blank" rel="noopener" aria-label="Book '+esc(s[0])+', '+(s[5]?'starting at ':'')+s[1]+'">'+
+      '<span class="notch l"></span><span class="notch r"></span>'+
+      '<div class="t-head"><span class="t-cat"><svg width="15" height="15"><use href="#'+c[1]+'"/></svg>'+c[0]+'</span><span class="t-no">#'+no+'</span></div>'+
+      '<div class="t-title">'+esc(s[0])+'</div>'+
+      (s[4]?'<p class="t-note">'+esc(s[4])+'</p>':'')+
+      '<div class="t-foot"><div class="t-meta"><span class="t-time"><svg width="14" height="14"><use href="#i-clock"/></svg>'+s[2]+'</span><span class="t-book">Book this <svg width="13" height="13"><use href="#i-arrow"/></svg></span></div>'+
+      '<span class="t-price">'+(s[5]?'<small>Starting at</small>':'')+s[1]+'</span></div></a>';
+  });
+  h+='<div class="ticket ask rv"><span class="notch l"></span><span class="notch r"></span><div class="t-head"><span>Something else?</span><span class="t-no">#020</span></div><div><div class="t-title">Not sure which ticket fits?</div><p style="margin-top:8px">"General Handyman" starts at $100, or call and describe the job.</p></div><a class="btn btn-y" href="tel:+17479995396"><svg width="17" height="17"><use href="#i-phone"/></svg>Call (747) 999-5396</a></div>';
+  g.innerHTML=h;
+
+  // filters
+  var chips=document.querySelectorAll(".chip");
+  chips.forEach(function(ch){ch.addEventListener("click",function(){
+    var f=ch.getAttribute("data-f");
+    chips.forEach(function(x){x.setAttribute("aria-pressed",x===ch?"true":"false")});
+    g.querySelectorAll(".svc").forEach(function(t){t.hidden=!(f==="all"||t.getAttribute("data-c")===f);if(!t.hidden)t.classList.add("in")});
+  })});
+
+  // hours: highlight today + open status (Oak Ridge is US Eastern)
+  var now=new Date(),d=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+  try{var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(now),o={};p.forEach(function(x){o[x.type]=x.value});
+    d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(o.weekday);mins=(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10);}catch(e){}
+  var li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add("today");
+  var close=d===0?0:(d===5?900:1020),st=document.getElementById("status");
+  if(d!==0&&mins>=540&&mins<close){st.classList.add("open");st.lastChild.textContent="Open now · until "+(d===5?"3:00 PM":"5:00 PM");}
+  else{st.lastChild.textContent="Closed now · book online anytime";}
+
+  // reveals (content visible without JS; failsafe after 1.5s)
+  var root=document.documentElement;root.classList.add("js");
+  var els=document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+    els.forEach(function(e){io.observe(e)});
+  } else root.classList.add("reveal-all");
+  setTimeout(function(){root.classList.add("reveal-all")},1500);
+})();
+</script>
+</body>
+</html>

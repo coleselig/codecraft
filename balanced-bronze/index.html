@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Balanced Bronze — Greeneville</title>
+<meta name="description" content="Balanced Bronze: Rapid and Sweatproof spray tans in Greeneville, TN with Laiken. Weeknight appointments, 6–8 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terra:#B5552B; --terra-d:#8E3E1C; --saffron:#E7A33E; --saffron-l:#F6D49A;
+  --ivory:#FFF8EE; --ivory-2:#F8EAD6; --plum:#3B1F2B; --plum-2:#55303F;
+  --ink:#2B1720; --muted:#6E5059;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Outfit",system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.08;font-weight:700}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* concept banner */
+.concept{background:var(--plum);color:var(--saffron-l);font-size:10.5px;text-align:center;padding:7px 8px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:500}
+@media(min-width:600px){.concept{font-size:12.5px;letter-spacing:.02em}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(255,248,238,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(181,85,43,.15)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Playfair Display",serif;font-weight:700;font-size:20px;color:var(--plum)}
+.logo svg{width:34px;height:34px}
+.logo em{font-style:italic;color:var(--terra)}
+.nav ul{display:none;list-style:none;gap:28px;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--plum-2);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--saffron);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:hover::after{transform:scaleX(1)}
+@media(min-width:900px){.nav ul{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:"Outfit";font-weight:600;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 22px;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:linear-gradient(135deg,var(--terra),#C9692F 55%,var(--saffron));color:#fff;box-shadow:0 10px 24px -10px rgba(181,85,43,.7)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(181,85,43,.8)}
+.btn-ghost{border-color:var(--plum);color:var(--plum);background:transparent}
+.btn-ghost:hover{background:var(--plum);color:var(--ivory)}
+.btn-sm{padding:9px 16px;font-size:14px}
+.nav .btn{display:none}
+@media(min-width:600px){.nav .btn{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,rgba(231,163,62,.35),transparent 60%),
+  radial-gradient(90% 60% at 0% 100%,rgba(181,85,43,.18),transparent 60%),var(--ivory)}
+.hero .wrap{position:relative;z-index:2;padding-top:44px;padding-bottom:56px;display:grid;gap:34px}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:80px;padding-bottom:96px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:600}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--terra)}
+.hero h1{font-size:clamp(42px,11.5vw,84px);color:var(--plum);margin:16px 0 18px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;font-weight:500;background:linear-gradient(100deg,var(--terra),var(--saffron));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:30em}
+.hero p.lead strong{color:var(--plum);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .cta-row .btn{padding:13px 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:13px;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid rgba(181,85,43,.22);color:var(--plum-2)}
+.chip b{color:var(--terra);font-weight:600}
+
+/* sun mandala */
+.sunbox{position:relative;justify-self:center;width:min(78vw,420px);aspect-ratio:1}
+.sunbox .glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#FBE3B0,var(--saffron) 45%,var(--terra) 100%);box-shadow:0 30px 80px -20px rgba(181,85,43,.6),inset -18px -24px 50px rgba(59,31,43,.25)}
+.sunbox svg.mand{position:absolute;inset:0;width:100%;height:100%;animation:spin 90s linear infinite}
+.sunbox svg.inner{position:absolute;inset:22%;width:56%;height:56%;animation:spin 60s linear infinite reverse}
+.sunbox .badge{position:absolute;right:-2%;bottom:6%;background:var(--plum);color:var(--ivory);border-radius:18px;padding:12px 16px;font-size:13px;line-height:1.3;box-shadow:0 14px 30px -12px rgba(59,31,43,.6);transform:rotate(-4deg)}
+.sunbox .badge b{display:block;font-family:"Playfair Display";font-size:24px;color:var(--saffron)}
+.sunbox .badge2{position:absolute;left:-2%;top:8%;background:#fff;color:var(--plum);border-radius:18px;padding:10px 14px;font-size:13px;line-height:1.3;box-shadow:0 14px 30px -14px rgba(59,31,43,.45);transform:rotate(3deg);border:1px solid rgba(181,85,43,.2)}
+.sunbox .badge2 b{display:block;font-family:"Playfair Display";font-size:22px;color:var(--terra)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.corner{position:absolute;width:150px;height:150px;opacity:.3;z-index:1;pointer-events:none}
+.corner.tl{top:-10px;left:-10px}
+.corner.br{bottom:-10px;right:-10px;transform:rotate(180deg)}
+@media(min-width:900px){.corner{opacity:.55;width:190px;height:190px}}
+
+/* border band */
+.band{height:34px;background-repeat:repeat-x;background-size:68px 34px;background-position:center;opacity:.9}
+
+/* sections */
+section{position:relative}
+.sec{padding:76px 0}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(34px,8.5vw,54px);color:var(--plum);margin:12px 0 12px}
+.sec-head h2 em{font-style:italic;color:var(--terra);font-weight:500}
+.sec-head p{color:var(--muted);font-size:17px}
+
+/* services */
+.menu{display:grid;gap:22px}
+@media(min-width:760px){.menu{grid-template-columns:1fr 1fr}}
+.card{position:relative;background:#fff;border-radius:26px;padding:30px 26px 26px;border:1px solid rgba(181,85,43,.18);box-shadow:0 24px 50px -36px rgba(59,31,43,.45);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 60px -34px rgba(59,31,43,.55)}
+.card .orn{position:absolute;right:-40px;top:-40px;width:170px;height:170px;opacity:.18}
+.card .tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--terra);background:rgba(231,163,62,.16);padding:5px 10px;border-radius:999px}
+.card h3{font-size:32px;color:var(--plum);margin:16px 0 6px}
+.price{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.price b{font-family:"Playfair Display";font-size:44px;color:var(--terra);line-height:1}
+.price span{font-size:14px;color:var(--muted)}
+.card blockquote{font-size:16.5px;color:var(--ink);border-left:3px solid var(--saffron);padding-left:14px;margin:6px 0 20px}
+.card .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.card .meta li{list-style:none;font-size:13px;color:var(--plum-2);background:var(--ivory);border-radius:999px;padding:5px 11px}
+.card.dark{background:linear-gradient(160deg,var(--plum),#2A1520);color:var(--ivory);border-color:transparent}
+.card.dark h3{color:#fff}
+.card.dark .tag{background:rgba(231,163,62,.2);color:var(--saffron)}
+.card.dark .price b{color:var(--saffron)}
+.card.dark .price span{color:#D9C2C8}
+.card.dark blockquote{color:#F4E6DA}
+.card.dark .meta li{background:rgba(255,255,255,.08);color:#F4E6DA}
+.card.dark .orn{opacity:.25}
+.gift{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;background:var(--ivory-2);border-radius:20px;padding:18px 22px;border:1px dashed rgba(181,85,43,.4)}
+.gift p{font-size:15.5px;color:var(--plum-2)}
+.gift p b{font-family:"Playfair Display";font-size:19px;color:var(--plum);display:block}
+
+/* why */
+.why{background:var(--plum);color:var(--ivory);overflow:hidden}
+.why .sec-head h2{color:#fff}
+.why .sec-head h2 em{color:var(--saffron)}
+.why .sec-head p{color:#D9C2C8}
+.why .eyebrow{color:var(--saffron)}
+.why .eyebrow::before{background:var(--saffron)}
+.feats{display:grid;gap:16px;position:relative;z-index:2}
+@media(min-width:760px){.feats{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.feats{grid-template-columns:repeat(4,1fr)}}
+.feat{background:rgba(255,248,238,.05);border:1px solid rgba(231,163,62,.25);border-radius:22px;padding:24px 22px;transition:background .3s,border-color .3s}
+.feat:hover{background:rgba(255,248,238,.09);border-color:var(--saffron)}
+.feat{display:grid;grid-template-columns:46px 1fr;column-gap:16px;align-items:start}
+.feat .ic{grid-row:span 2;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--terra),var(--saffron))}
+@media(min-width:1050px){.feat{display:block}.feat .ic{margin-bottom:16px}}
+.feat .ic svg{width:24px;height:24px}
+.feat h3{font-size:21px;margin:2px 0 4px;color:#fff}
+.feat p{font-size:15px;color:#E4D2D7}
+.why .bigsun{position:absolute;right:-180px;top:-120px;width:520px;height:520px;opacity:.12;z-index:1}
+
+/* note from laiken */
+.note{background:var(--ivory-2)}
+.note .box{position:relative;max-width:760px;margin:0 auto;text-align:center;padding:46px 26px;background:var(--ivory);border-radius:30px;border:1px solid rgba(181,85,43,.2)}
+.note .box .c{position:absolute;width:74px;height:74px;opacity:.75}
+.note .box .c1{top:10px;left:10px}
+.note .box .c2{top:10px;right:10px;transform:scaleX(-1)}
+.note .box .c3{bottom:10px;left:10px;transform:scaleY(-1)}
+.note .box .c4{bottom:10px;right:10px;transform:scale(-1,-1)}
+.note q{display:block;font-family:"Playfair Display";font-style:italic;font-size:clamp(24px,6vw,34px);color:var(--plum);line-height:1.3;quotes:"\201C" "\201D"}
+.note cite{display:block;margin-top:16px;font-style:normal;color:var(--terra);font-weight:600;letter-spacing:.08em}
+.note small{display:block;margin-top:6px;color:var(--muted);font-size:13px}
+.steps{display:grid;gap:14px;margin-top:34px;text-align:left}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step i{flex:none;font-style:normal;width:34px;height:34px;border-radius:50%;background:var(--plum);color:var(--saffron);display:grid;place-items:center;font-family:"Playfair Display";font-weight:700}
+.step p{font-size:15px;color:var(--plum-2)}
+.step p b{display:block;color:var(--plum)}
+
+/* hours + map */
+.visit .grid{display:grid;gap:24px}
+@media(min-width:900px){.visit .grid{grid-template-columns:.9fr 1.1fr}}
+.hours{background:#fff;border-radius:26px;padding:26px;border:1px solid rgba(181,85,43,.18)}
+.hours h3{font-size:26px;color:var(--plum);margin-bottom:6px}
+.hours .now{font-size:14px;color:var(--muted);margin-bottom:16px;min-height:1.4em}
+.hours .now b{color:var(--terra)}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 14px;border-radius:12px;font-size:16px;color:var(--plum-2)}
+.hours li+li{border-top:1px dashed rgba(59,31,43,.12)}
+.hours li span:last-child{font-weight:500}
+.hours li.closed span:last-child{color:#9A8389;font-weight:400}
+.hours li.today{background:linear-gradient(90deg,rgba(231,163,62,.25),rgba(231,163,62,.08));border-top-color:transparent;color:var(--plum);font-weight:600}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--terra);color:#fff;padding:2px 8px;border-radius:999px;vertical-align:2px}
+.hours li.today+li{border-top-color:transparent}
+.contact{display:grid;gap:10px;margin-top:20px}
+.contact a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:13px 16px;border-radius:16px;background:var(--ivory);border:1px solid rgba(181,85,43,.15);font-weight:500;color:var(--plum);transition:background .2s,border-color .2s;overflow-wrap:anywhere}
+.contact a:hover{background:#fff;border-color:var(--terra)}
+.contact svg{flex:none;width:20px;height:20px;color:var(--terra)}
+.mapcard{border-radius:26px;overflow:hidden;border:1px solid rgba(181,85,43,.18);background:#fff;display:flex;flex-direction:column}
+.mapwrap{position:relative;flex:1;min-height:340px;background:radial-gradient(circle at 50% 45%,rgba(231,163,62,.35),transparent 55%),repeating-linear-gradient(45deg,rgba(181,85,43,.06) 0 2px,transparent 2px 22px),repeating-linear-gradient(-45deg,rgba(181,85,43,.06) 0 2px,transparent 2px 22px),var(--ivory-2)}
+.mapwrap .pin{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);text-align:center;font-family:"Playfair Display";font-size:22px;color:var(--plum)}
+.mapwrap .pin svg{width:44px;height:44px;margin:0 auto 6px}
+.mapwrap iframe{position:absolute;inset:0;height:100%!important;min-height:0!important}
+.mapcard iframe{width:100%;height:340px;border:0;display:block;filter:sepia(.25) saturate(1.05)}
+@media(min-width:900px){.mapcard iframe{height:100%;min-height:380px}}
+.mapcard .cap{padding:16px 20px;font-size:14.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.mapcard .cap b{color:var(--plum)}
+
+/* final cta */
+.final{text-align:center;padding:40px 0 80px;background:radial-gradient(80% 90% at 50% 100%,rgba(231,163,62,.45),transparent 70%),var(--ivory);overflow:hidden}
+.final h2{font-size:clamp(36px,9vw,62px);color:var(--plum);max-width:14em;margin:0 auto 14px}
+.final h2 em{font-style:italic;color:var(--terra);font-weight:500}
+.final p{color:var(--muted);margin-bottom:26px}
+.final .cta-row{justify-content:center}
+
+footer{background:var(--plum);color:#D9C2C8;padding:40px 0 calc(30px + var(--bar) + env(safe-area-inset-bottom));font-size:14px}
+@media(min-width:900px){footer{padding-bottom:30px}}
+footer .wrap{display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+footer .logo{color:#fff}
+footer a{color:var(--saffron)}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(59,31,43,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 -10px 30px -10px rgba(0,0,0,.35)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;text-decoration:none;font-weight:600;font-size:15.5px}
+.mbar .call{background:rgba(255,248,238,.1);color:var(--ivory);border:1px solid rgba(255,248,238,.25)}
+.mbar .book{background:linear-gradient(135deg,var(--terra),var(--saffron));color:#fff}
+.mbar svg{width:18px;height:18px}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in,.js.showall .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- henna-style sun corner flourish -->
+    <symbol id="flourish" viewBox="0 0 150 150">
+      <g fill="none" stroke="#B5552B" stroke-width="1.4" stroke-linecap="round">
+        <path d="M6 6 Q70 10 100 60 Q60 40 6 6Z"/>
+        <path d="M6 6 Q10 70 60 100 Q40 60 6 6Z"/>
+        <path d="M20 20 Q60 30 76 62"/><path d="M20 20 Q30 60 62 76"/>
+        <circle cx="38" cy="38" r="9"/><circle cx="38" cy="38" r="4" fill="#E7A33E" stroke="none"/>
+        <path d="M100 60 q14 6 18 20 q-14 -2 -18 -20z" fill="#E7A33E" fill-opacity=".35"/>
+        <path d="M60 100 q6 14 20 18 q-2 -14 -20 -18z" fill="#E7A33E" fill-opacity=".35"/>
+        <path d="M6 30 q20 4 28 22" /><path d="M30 6 q4 20 22 28"/>
+        <circle cx="112" cy="40" r="2.5" fill="#B5552B"/><circle cx="124" cy="30" r="1.6" fill="#B5552B"/><circle cx="134" cy="22" r="1" fill="#B5552B"/>
+        <circle cx="40" cy="112" r="2.5" fill="#B5552B"/><circle cx="30" cy="124" r="1.6" fill="#B5552B"/><circle cx="22" cy="134" r="1" fill="#B5552B"/>
+        <path d="M70 70 q16 -2 26 10 M70 70 q-2 16 10 26" />
+      </g>
+    </symbol>
+    <!-- paisley -->
+    <symbol id="paisley" viewBox="0 0 60 80">
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M30 76 C6 70 4 40 18 26 C30 14 50 16 52 34 C54 50 38 56 30 48 C24 42 30 32 38 36"/>
+        <path d="M30 68 C14 62 12 42 22 32 C30 24 44 26 45 36"/>
+        <circle cx="38" cy="38" r="2" fill="currentColor"/>
+        <path d="M30 76 q8 -2 10 -10"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="concept" role="note">Concept site by <b>Code Craft Media</b>, made for Balanced Bronze. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Balanced Bronze home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="9" fill="url(#lg)"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7A33E"/><stop offset="1" stop-color="#B5552B"/></linearGradient></defs><g stroke="#B5552B" stroke-width="1.6" stroke-linecap="round"><path d="M20 3v5M20 32v5M3 20h5M32 20h5M8 8l3.5 3.5M28.5 28.5L32 32M8 32l3.5-3.5M28.5 11.5L32 8"/></g></svg>
+      <span>Balanced <em>Bronze</em></span>
+    </a>
+    <ul>
+      <li><a href="#tans">Tans</a></li>
+      <li><a href="#why">Why Laiken</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#visit">Hours</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener">Book a tan</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="corner tl" aria-hidden="true"><use href="#flourish"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#flourish"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Spray tans · Greeneville, TN</span>
+      <h1>Golden in <em>15 minutes.</em> Rinse in as little as an hour.</h1>
+      <p class="lead">Rapid and Sweatproof spray tans by <strong>Laiken</strong>, booked online for weeknight evenings, <strong>6 to 8 PM</strong>, right after work or practice.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener">Book your tan
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+14239725234">(423) 972-5234</a>
+      </div>
+      <div class="chips">
+        <span class="chip">Rapid Tan <b>$50</b></span>
+        <span class="chip">Sweatproof Tan <b>$55</b></span>
+        <span class="chip">Gift cards available</span>
+      </div>
+    </div>
+
+    <div class="sunbox rv" aria-hidden="true">
+      <svg class="mand" viewBox="0 0 400 400">
+        <g fill="none" stroke="#B5552B" stroke-width="1.3" stroke-linecap="round" transform="translate(200 200)">
+          <circle r="196" stroke-dasharray="2 6"/>
+          <circle r="182"/>
+          <g id="petals">
+            <path d="M0 -150 C14 -165 14 -180 0 -192 C-14 -180 -14 -165 0 -150Z" fill="#E7A33E" fill-opacity=".25"/>
+            <path d="M0 -160 L0 -184"/>
+            <circle cy="-142" r="2.4" fill="#B5552B"/>
+          </g>
+          <use href="#petals" transform="rotate(22.5)"/><use href="#petals" transform="rotate(45)"/><use href="#petals" transform="rotate(67.5)"/>
+          <use href="#petals" transform="rotate(90)"/><use href="#petals" transform="rotate(112.5)"/><use href="#petals" transform="rotate(135)"/><use href="#petals" transform="rotate(157.5)"/>
+          <use href="#petals" transform="rotate(180)"/><use href="#petals" transform="rotate(202.5)"/><use href="#petals" transform="rotate(225)"/><use href="#petals" transform="rotate(247.5)"/>
+          <use href="#petals" transform="rotate(270)"/><use href="#petals" transform="rotate(292.5)"/><use href="#petals" transform="rotate(315)"/><use href="#petals" transform="rotate(337.5)"/>
+          <circle r="140" stroke-dasharray="1 4"/>
+        </g>
+      </svg>
+      <div class="glow"></div>
+      <svg class="inner" viewBox="0 0 200 200">
+        <g fill="none" stroke="#FFF8EE" stroke-width="1.2" stroke-linecap="round" transform="translate(100 100)" opacity=".9">
+          <circle r="92" stroke-dasharray="1 5"/>
+          <g id="lp"><path d="M0 -30 C10 -50 10 -70 0 -84 C-10 -70 -10 -50 0 -30Z"/><circle cy="-60" r="2" fill="#FFF8EE"/></g>
+          <use href="#lp" transform="rotate(45)"/><use href="#lp" transform="rotate(90)"/><use href="#lp" transform="rotate(135)"/>
+          <use href="#lp" transform="rotate(180)"/><use href="#lp" transform="rotate(225)"/><use href="#lp" transform="rotate(270)"/><use href="#lp" transform="rotate(315)"/>
+          <circle r="22"/><circle r="12" fill="#FFF8EE" fill-opacity=".35"/>
+        </g>
+      </svg>
+      <div class="badge2"><b>15 min</b>per appointment</div>
+      <div class="badge"><b>1–4 hrs</b>to rinse a Rapid Tan</div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true" style="background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 34'%3E%3Cg fill='none' stroke='%23B5552B' stroke-width='1.2'%3E%3Cpath d='M0 17h12M56 17h12'/%3E%3Cpath d='M34 4c8 6 8 20 0 26c-8-6-8-20 0-26z' fill='%23E7A33E' fill-opacity='.35'/%3E%3Cpath d='M12 17c6-8 16-8 22 0c-6 8-16 8-22 0zM34 17c6-8 16-8 22 0c-6 8-16 8-22 0z'/%3E%3Ccircle cx='34' cy='17' r='2.4' fill='%23B5552B'/%3E%3C/g%3E%3C/svg%3E&quot;)"></div>
+
+<section class="sec" id="tans">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">The tan menu</span>
+      <h2>Two tans. <em>Pick your pace.</em></h2>
+      <p>Same 15-minute appointment, two solutions: one for when you need to rinse fast, one for when you're going to sweat.</p>
+    </div>
+    <div class="menu">
+      <article class="card rv">
+        <svg class="orn" style="color:#B5552B" aria-hidden="true"><use href="#paisley"/></svg>
+        <span class="tag">Last-minute friendly</span>
+        <h3>Rapid Tan</h3>
+        <div class="price"><b>$50</b><span>15 minutes</span></div>
+        <blockquote>&ldquo;This is perfect for a last minute tan or my busy moms! This solution you can rinse off in 1-4 hours instead of 8-12!&rdquo;</blockquote>
+        <ul class="meta"><li>Rinse in 1–4 hrs</li><li>Busy moms</li><li>Last-minute plans</li></ul>
+        <a class="btn btn-primary" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener">Book Rapid Tan</a>
+      </article>
+      <article class="card dark rv">
+        <svg class="orn" style="color:#E7A33E" aria-hidden="true"><use href="#paisley"/></svg>
+        <span class="tag">Built to move</span>
+        <h3>Sweatproof Tan</h3>
+        <div class="price"><b>$55</b><span>15 minutes</span></div>
+        <blockquote>&ldquo;This is perfect for athletes, cheerleaders, weddings, and all my gym girlies.&rdquo;</blockquote>
+        <ul class="meta"><li>Athletes</li><li>Cheerleaders</li><li>Weddings</li><li>Gym girlies</li></ul>
+        <a class="btn btn-primary" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener">Book Sweatproof Tan</a>
+      </article>
+    </div>
+    <div class="gift rv">
+      <p><b>Give someone a glow.</b>Gift cards are available for a future visit or as a present.</p>
+      <a class="btn btn-ghost btn-sm" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener">Get a gift card</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <svg class="bigsun" viewBox="0 0 150 150" aria-hidden="true"><use href="#flourish"/></svg>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Why Balanced Bronze</span>
+      <h2>A tan that fits <em>your schedule.</em></h2>
+      <p>Everything here is straight from how Laiken runs her bookings.</p>
+    </div>
+    <div class="feats">
+      <div class="feat rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg></div>
+        <h3>In and out in 15</h3>
+        <p>Both tans are booked as 15-minute appointments.</p>
+      </div>
+      <div class="feat rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
+        <h3>Rinse sooner</h3>
+        <p>The Rapid solution rinses off in 1–4 hours instead of 8–12.</p>
+      </div>
+      <div class="feat rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+        <h3>After-work hours</h3>
+        <p>Appointments run Monday through Friday, 6 to 8 PM.</p>
+      </div>
+      <div class="feat rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></div>
+        <h3>Book from your phone</h3>
+        <p>Pick a time online. Laiken texts you the address once it's accepted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec note" id="how">
+  <div class="wrap">
+    <div class="box rv">
+      <svg class="c c1" viewBox="0 0 150 150" aria-hidden="true"><use href="#flourish"/></svg>
+      <svg class="c c2" viewBox="0 0 150 150" aria-hidden="true"><use href="#flourish"/></svg>
+      <svg class="c c3" viewBox="0 0 150 150" aria-hidden="true"><use href="#flourish"/></svg>
+      <svg class="c c4" viewBox="0 0 150 150" aria-hidden="true"><use href="#flourish"/></svg>
+      <span class="eyebrow">How it works</span>
+      <q style="margin-top:14px">I will text you the address after the booking is accepted! I look forward to seeing you.</q>
+      <cite>— Laiken</cite>
+      <small>From the Balanced Bronze booking page</small>
+      <div class="steps">
+        <div class="step"><i>1</i><p><b>Choose your tan</b>Rapid ($50) or Sweatproof ($55).</p></div>
+        <div class="step"><i>2</i><p><b>Pick a weeknight</b>Monday to Friday, 6–8 PM.</p></div>
+        <div class="step"><i>3</i><p><b>Get the address by text</b>Sent once Laiken accepts your booking.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Hours &amp; contact</span>
+      <h2>Weeknights in <em>Greeneville.</em></h2>
+    </div>
+    <div class="grid">
+      <div class="hours rv">
+        <h3>Appointment hours</h3>
+        <p class="now" id="now">Monday to Friday, 6:00 to 8:00 PM</p>
+        <ul id="hours">
+          <li data-d="1"><span>Monday</span><span>6:00 – 8:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>6:00 – 8:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>6:00 – 8:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>6:00 – 8:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>6:00 – 8:00 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <div class="contact">
+          <a href="tel:+14239725234"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(423) 972-5234</a>
+          <a href="mailto:balancedbronzelc@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>balancedbronzelc@gmail.com</a>
+          <a href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book online</a>
+        </div>
+      </div>
+      <div class="mapcard rv">
+        <div class="mapwrap"><div class="pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#B5552B"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Greeneville, TN</div><iframe title="Map of Greeneville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Greeneville%2C%20TN&amp;output=embed"></iframe></div>
+        <div class="cap"><span><b>Greeneville, TN</b> · exact address texted after booking</span>
+          <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Greeneville%2C%20TN" target="_blank" rel="noopener">Directions</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap rv">
+    <span class="eyebrow">Ready to glow?</span>
+    <h2 style="margin-top:12px">Your next tan is <em>15 minutes</em> away.</h2>
+    <p>Book a weeknight slot, Monday to Friday from 6 to 8 PM.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener">Book with Laiken</a>
+      <a class="btn btn-ghost" href="tel:+14239725234">Call (423) 972-5234</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><span>Balanced <em style="color:var(--saffron)">Bronze</em></span></a>
+    <p>Spray tans in Greeneville, TN · <a href="tel:+14239725234">(423) 972-5234</a></p>
+    <p style="font-size:12.5px;opacity:.8">Concept by Code Craft Media · a design preview, not the official site</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="call" href="tel:+14239725234"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/LX7N5YXH9J9C0/balanced-bronze-greeneville-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a tan</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else d.classList.add('showall');
+  setTimeout(function(){d.classList.add('showall')},1500);
+
+  // today's hours (Eastern time)
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+    var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+    var msg=document.getElementById('now');
+    if(day>=1&&day<=5){
+      if(mins<1080) msg.innerHTML='Today: appointments <b>6:00 – 8:00 PM</b>';
+      else if(mins<1200) msg.innerHTML='<b>Open now</b> until 8:00 PM';
+      else msg.innerHTML='Closed for tonight · '+(day===5?'next appointments Monday at 6 PM':'back tomorrow at 6 PM');
+    } else msg.innerHTML='Closed today · next appointments <b>Monday, 6 PM</b>';
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

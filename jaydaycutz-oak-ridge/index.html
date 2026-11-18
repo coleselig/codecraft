@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>JAYDAYCUTZ — Oak Ridge, TN</title>
+<meta name="description" content="Concept site for JAYDAYCUTZ, barber in Oak Ridge, TN. Book online, call (704) 614-5832.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0b0b; --ink2:#141414; --ink3:#1d1d1d; --line:#2a2a2a;
+  --or:#ff5a1f; --or2:#ff8a4c; --paper:#f4f1ea; --mute:#a9a49b;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--paper);font-family:"Space Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.anton{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;line-height:.92}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+
+/* concept banner */
+.concept{background:var(--paper);color:var(--ink);font-size:clamp(10px,2.75vw,12.5px);text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;letter-spacing:-.01em}
+.concept b{color:#c63d0b}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(11,11,11,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Anton,sans-serif;font-size:24px;text-decoration:none;letter-spacing:.03em;display:flex;align-items:center;gap:10px}
+.logo span{color:var(--or)}
+.logo i{display:block;width:22px;height:22px;border-radius:5px;background:repeating-linear-gradient(90deg,var(--or) 0 3px,transparent 3px 6px);}
+nav ul{display:none;list-style:none;gap:28px;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.08em}
+nav ul a{text-decoration:none;opacity:.8;transition:opacity .2s,color .2s}
+nav ul a:hover{opacity:1;color:var(--or)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;text-decoration:none;border-radius:999px;padding:15px 26px;font-size:16px;letter-spacing:.02em;transition:transform .18s ease,background .2s,color .2s,box-shadow .2s;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-or{background:var(--or);color:var(--ink);box-shadow:0 10px 30px -10px rgba(255,90,31,.7)}
+.btn-or:hover{background:var(--or2);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(244,241,234,.35);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--or);color:var(--or)}
+.btn-sm{padding:9px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:56px 0 64px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:radial-gradient(120% 70% at 100% 0%,rgba(255,90,31,.32),transparent 60%),
+             linear-gradient(180deg,#0b0b0b 0%,#0b0b0b 55%,#1a0d07 100%)}
+.guard{position:absolute;z-index:-1;right:-150px;top:150px;width:300px;height:460px;opacity:.38;transform:rotate(-14deg)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--or)}
+.kicker::before{content:"";width:28px;height:2px;background:var(--or)}
+.hero h1{font-size:clamp(64px,19vw,176px);margin:18px 0 18px}
+.hero h1 .fade{display:block;background:linear-gradient(90deg,var(--paper) 0%,var(--paper) 30%,var(--or) 75%,#7a2400 100%);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:sweep 6s ease-in-out infinite alternate}
+.hero h1 .stroke{display:block;color:transparent;-webkit-text-stroke:1.5px rgba(244,241,234,.75)}
+@keyframes sweep{from{background-position:0 0}to{background-position:100% 0}}
+.hero p.sub{max-width:520px;color:#d9d4ca;font-size:18px}
+.hero p.sub strong{color:var(--paper)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.chip{font-size:13px;border:1px solid var(--line);background:rgba(20,20,20,.7);padding:7px 12px;border-radius:999px;color:#d9d4ca}
+.chip b{color:var(--or)}
+
+/* stripe divider */
+.stripes{height:22px;background:repeating-linear-gradient(-55deg,var(--or) 0 10px,var(--ink) 10px 20px);opacity:.95}
+.ticker{background:var(--or);color:var(--ink);overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink)}
+.ticker div{display:inline-block;padding:12px 0;font-family:Anton,sans-serif;font-size:22px;letter-spacing:.04em;animation:tick 28s linear infinite}
+.ticker span{margin:0 18px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:76px 0}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(48px,12vw,96px)}
+.sec-head h2 em{font-style:normal;color:var(--or)}
+.sec-head p{color:var(--mute);max-width:560px}
+
+/* services */
+#menu{background:var(--ink2);position:relative}
+#menu::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--ink),var(--or),var(--ink))}
+.list{list-style:none;border-top:1px solid var(--line);display:grid}
+.svc{display:grid;grid-template-columns:52px 1fr auto;gap:4px 14px;align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--line);position:relative;transition:background .2s,padding .2s}
+.svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(255,90,31,.18),transparent);transition:width .35s ease;z-index:0}
+.svc:hover::before{width:100%}
+.svc>*{position:relative;z-index:1}
+.num{font-family:Anton,sans-serif;font-size:30px;color:var(--or);line-height:1}
+.svc h3{font-size:24px;line-height:1.05}
+.svc .meta{grid-column:2/4;font-size:14px;color:var(--mute)}
+.price{font-family:Anton,sans-serif;font-size:28px;line-height:1;color:var(--paper);text-align:right}
+.price.small{font-family:"Space Grotesk",sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--or2);border:1px solid rgba(255,138,76,.45);padding:5px 9px;border-radius:999px;white-space:nowrap}
+.svc.feature{background:linear-gradient(100deg,#2a1206,#160b06 60%,var(--ink2));border:1px solid rgba(255,90,31,.5);border-radius:16px;margin:14px 0;padding:22px 16px}
+.svc.feature h3{color:var(--or)}
+.tag{display:inline-block;font-family:"Space Grotesk";font-size:11px;font-weight:700;letter-spacing:.12em;background:var(--or);color:var(--ink);padding:3px 8px;border-radius:4px;vertical-align:middle;margin-left:6px;transform:translateY(-3px)}
+.menu-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;color:var(--mute);font-size:14px}
+
+/* house call */
+.house{position:relative;overflow:hidden;background:var(--or);color:var(--ink)}
+.house .wrap{display:grid;gap:30px;align-items:center}
+.house h2{font-size:clamp(56px,15vw,128px);margin:14px 0 18px}
+.house .kicker::before{background:var(--ink)}
+.house p{font-size:18px;max-width:520px;font-weight:500}
+.house .big{font-family:Anton,sans-serif;font-size:clamp(110px,30vw,220px);line-height:.8;color:var(--ink);letter-spacing:-.01em}
+.house .big small{font-size:.32em;vertical-align:top;margin-right:4px}
+.house .btn-dark{background:var(--ink);color:var(--paper)}
+.house .btn-dark:hover{background:#262626;transform:translateY(-2px)}
+.house-stripes{position:absolute;inset:auto -10% -40px -10%;height:120px;background:repeating-linear-gradient(90deg,rgba(11,11,11,.14) 0 6px,transparent 6px 16px);transform:skewY(-4deg);pointer-events:none}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
+.card:hover{border-color:rgba(255,90,31,.6);transform:translateY(-3px)}
+.card .n{font-family:Anton,sans-serif;font-size:58px;line-height:1;background:linear-gradient(180deg,var(--or),#5a1a00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card h3{font-size:26px;margin:10px 0 8px}
+.card p{color:var(--mute);font-size:15.5px}
+.card::after{content:"";position:absolute;right:-20px;top:-20px;width:110px;height:110px;background:repeating-linear-gradient(90deg,rgba(255,90,31,.16) 0 3px,transparent 3px 9px);border-radius:50%}
+
+/* hours */
+#hours{background:var(--ink2)}
+.hours-grid{display:grid;gap:30px}
+.hours{list-style:none;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line);font-size:16px}
+.hours li:last-child{border-bottom:0}
+.hours .d{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;padding-top:2px}
+.hours .t{text-align:right;color:#d9d4ca}
+.hours li.closed .t{color:var(--mute)}
+.hours li.today{background:linear-gradient(90deg,rgba(255,90,31,.22),rgba(255,90,31,.04));box-shadow:inset 4px 0 0 var(--or)}
+.hours li.today .d::after{content:"Today";margin-left:8px;font-size:10px;background:var(--or);color:var(--ink);padding:2px 6px;border-radius:4px;vertical-align:2px}
+.status{font-family:Anton,sans-serif;font-size:clamp(40px,10vw,64px);line-height:.95;text-transform:uppercase}
+.status span{color:var(--or)}
+.note{color:var(--mute);font-size:14px;margin-top:12px}
+
+/* visit */
+.visit-grid{display:grid;gap:22px}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--ink3);position:relative}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9) hue-rotate(180deg)}
+.contact{display:grid;gap:12px}
+.row{display:flex;align-items:center;gap:16px;padding:18px;border:1px solid var(--line);border-radius:16px;text-decoration:none;background:var(--ink2);transition:border-color .2s,background .2s}
+.row:hover{border-color:var(--or);background:#1a1310}
+.row .ic{flex:0 0 44px;height:44px;border-radius:12px;background:var(--or);display:grid;place-items:center}
+.row .ic svg{width:22px;height:22px}
+.row small{display:block;color:var(--mute);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.row strong{font-size:17px;word-break:break-word}
+
+footer{border-top:1px solid var(--line);padding:40px 0 30px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:14px}
+footer .logo{color:var(--paper)}
+footer a{color:var(--or2)}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(11,11,11,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px}
+.callbar .c{border:1.5px solid rgba(244,241,234,.35)}
+.callbar .b{background:var(--or);color:var(--ink)}
+.callbar svg{width:18px;height:18px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  nav ul{display:flex}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .list{grid-template-columns:1fr 1fr;column-gap:40px}
+  .svc.feature{grid-column:1/-1}
+  .house .wrap{grid-template-columns:1.3fr 1fr}
+  .hours-grid{grid-template-columns:1fr 1.1fr;align-items:center}
+  .visit-grid{grid-template-columns:1.4fr 1fr;align-items:stretch}
+  .map{aspect-ratio:auto;min-height:380px}
+  .guard{right:1%;top:70px;width:400px;height:610px;opacity:.95}
+  .hero{padding:90px 0 110px}
+}
+@media (min-width:1024px){
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for JAYDAYCUTZ. Not live.</div>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top"><i aria-hidden="true"></i><b style="font-weight:400">JAYDAY<span>CUTZ</span></b></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#house">House Call</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#visit">Contact</a></li>
+    </ul>
+    <a class="btn btn-or btn-sm" href="https://square.site/book/LBRM36CE3Q1XJ/jaydaycutz-oak-ridge-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <!-- clipper guard illustration -->
+  <svg class="guard" viewBox="0 0 340 520" aria-hidden="true">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#2a2a2a"/><stop offset=".5" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1a1a1a"/>
+      </linearGradient>
+    </defs>
+    <rect x="70" y="150" width="200" height="360" rx="60" fill="url(#g2)" stroke="#444" />
+    <rect x="96" y="190" width="148" height="120" rx="18" fill="#111" stroke="#333"/>
+    <text x="170" y="265" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="54" fill="#ff5a1f">#1</text>
+    <g fill="url(#g1)">
+      <rect x="78" y="10" width="14" height="150" rx="7"/>
+      <rect x="104" y="0" width="14" height="160" rx="7"/>
+      <rect x="130" y="10" width="14" height="150" rx="7"/>
+      <rect x="156" y="0" width="14" height="160" rx="7"/>
+      <rect x="182" y="10" width="14" height="150" rx="7"/>
+      <rect x="208" y="0" width="14" height="160" rx="7"/>
+      <rect x="234" y="10" width="14" height="150" rx="7"/>
+    </g>
+    <rect x="66" y="140" width="208" height="22" rx="6" fill="#ff5a1f"/>
+    <g stroke="#ff5a1f" stroke-opacity=".35" stroke-width="2">
+      <line x1="110" y1="350" x2="230" y2="350"/><line x1="110" y1="370" x2="230" y2="370"/><line x1="110" y1="390" x2="230" y2="390"/><line x1="110" y1="410" x2="230" y2="410"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="kicker">Barber · Oak Ridge, TN</span>
+    <h1><span class="fade">Fresh cuts.</span><span class="stroke">Sharp lines.</span>Oak Ridge.</h1>
+    <p class="sub">Book <strong>Jayland</strong> online in seconds: men’s, women’s, teens’ and kids’ cuts, designs, line-ups, color and the <strong>$100 Jay Day house call</strong>.</p>
+    <div class="cta">
+      <a class="btn btn-or" href="https://square.site/book/LBRM36CE3Q1XJ/jaydaycutz-oak-ridge-tn" target="_blank" rel="noopener">Book your cut
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="tel:+17046145832">Call (704) 614-5832</a>
+    </div>
+    <div class="chips">
+      <span class="chip"><b>14</b> services</span>
+      <span class="chip">Open <b>Mon–Sat</b></span>
+      <span class="chip">Men’s cuts <b>$40</b></span>
+      <span class="chip">Kids <b>$30</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>MENS CUTS</span>✦<span>WOMEN’S CUTS</span>✦<span>KIDS CUTZ</span>✦<span>DESIGNS</span>✦<span>LINE UPS</span>✦<span>BEARD TRIMS</span>✦<span>HOUSE CALLS</span>✦
+  <span>MENS CUTS</span>✦<span>WOMEN’S CUTS</span>✦<span>KIDS CUTZ</span>✦<span>DESIGNS</span>✦<span>LINE UPS</span>✦<span>BEARD TRIMS</span>✦<span>HOUSE CALLS</span>✦
+</div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">The menu</span>
+      <h2>Pick your <em>cut.</em></h2>
+      <p>Every service and price straight from the JAYDAYCUTZ booking page. Tap Book to pick a time.</p>
+    </div>
+    <ol class="list">
+      <li class="svc rv"><span class="num">01</span><h3>Mens Hair Cuts</h3><span class="price">$40</span><span class="meta">30 min</span></li>
+      <li class="svc rv"><span class="num">02</span><h3>Women’s Haircut</h3><span class="price">$40</span><span class="meta">1 hr</span></li>
+      <li class="svc rv"><span class="num">03</span><h3>Teenage Cutz</h3><span class="price">$30</span><span class="meta">30 min</span></li>
+      <li class="svc rv"><span class="num">04</span><h3>Kids Hair Cutz</h3><span class="price">$30</span><span class="meta">30 min</span></li>
+      <li class="svc rv"><span class="num">05</span><h3>Line Up — No Taper</h3><span class="price">$25</span><span class="meta">Edge up all around only · 15 min</span></li>
+      <li class="svc rv"><span class="num">06</span><h3>Menz Design</h3><span class="price">$10</span><span class="meta">15 min</span></li>
+      <li class="svc rv"><span class="num">07</span><h3>Kidz Design</h3><span class="price">$10</span><span class="meta">15 min</span></li>
+      <li class="svc rv"><span class="num">08</span><h3>Wax</h3><span class="price">$25</span><span class="meta">Ears, nose &amp; face · “15$ for each area” · 15 min</span></li>
+      <li class="svc rv"><span class="num">09</span><h3>Beard Trim</h3><span class="price small">See booking</span><span class="meta">30 min</span></li>
+      <li class="svc rv"><span class="num">10</span><h3>Shampoo Style</h3><span class="price small">Price varies</span><span class="meta">1 hr</span></li>
+      <li class="svc rv"><span class="num">11</span><h3>Scalp Treatment</h3><span class="price small">Price varies</span><span class="meta">45 min</span></li>
+      <li class="svc rv"><span class="num">12</span><h3>Mens Hair Color</h3><span class="price small">See booking</span><span class="meta">30 min</span></li>
+      <li class="svc rv"><span class="num">13</span><h3>Womans Color</h3><span class="price small">See booking</span><span class="meta">30 min</span></li>
+      <li class="svc feature rv"><span class="num">14</span><h3>Jay Day Special <span class="tag">HOUSE CALL</span></h3><span class="price">$100</span><span class="meta">1 hr · Jay comes to you</span></li>
+    </ol>
+    <div class="menu-foot rv">
+      <a class="btn btn-or" href="https://square.site/book/LBRM36CE3Q1XJ/jaydaycutz-oak-ridge-tn" target="_blank" rel="noopener">See times &amp; book</a>
+      <span>Live availability on Square.</span>
+    </div>
+  </div>
+</section>
+
+<section class="house" id="house">
+  <div class="house-stripes" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker" style="color:var(--ink)">The Jay Day Special</span>
+      <h2>The barber comes to you.</h2>
+      <p>Skip the drive. Book the Jay Day Special and get an hour-long house call. Message or call to ask what’s included.</p>
+      <div class="cta">
+        <a class="btn btn-dark" href="https://square.site/book/LBRM36CE3Q1XJ/jaydaycutz-oak-ridge-tn" target="_blank" rel="noopener">Book a house call</a>
+        <a class="btn btn-ghost" style="border-color:rgba(11,11,11,.5);color:var(--ink)" href="tel:+17046145832">Ask Jay</a>
+      </div>
+    </div>
+    <div class="big rv" aria-label="100 dollars, 1 hour"><small>$</small>100<div style="font-size:.2em;letter-spacing:.06em;margin-top:10px">1 HOUR · HOUSE CALL</div></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Why JAYDAYCUTZ</span>
+      <h2>Built for <em>busy</em> people.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="card rv"><div class="n">01</div><h3>Book online</h3><p>Pick your service and your time on the booking page. No phone tag.</p></div>
+      <div class="card rv"><div class="n">02</div><h3>The whole family</h3><p>Men, women, teens and kids, all on one menu with straight-up prices.</p></div>
+      <div class="card rv"><div class="n">03</div><h3>House calls</h3><p>Can’t make it in? The $100 Jay Day Special brings the cut to you.</p></div>
+      <div class="card rv"><div class="n">04</div><h3>Six days a week</h3><p>Open Monday through Saturday, with 9:30 AM slots Thursday to Saturday.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="stripes" aria-hidden="true"></div>
+
+<section id="hours">
+  <div class="wrap hours-grid">
+    <div class="rv">
+      <span class="kicker">Hours</span>
+      <p class="status" id="status" style="margin-top:14px">Mon–Sat.<br><span>Book ahead.</span></p>
+      <p class="note">Hours from the JAYDAYCUTZ booking page. Some days have a midday break. Check Square for open times.</p>
+    </div>
+    <ul class="hours rv" id="hoursList">
+      <li data-d="0" class="closed"><span class="d">Sunday</span><span class="t">Closed</span></li>
+      <li data-d="1"><span class="d">Monday</span><span class="t">1:00 – 5:00 PM</span></li>
+      <li data-d="2"><span class="d">Tuesday</span><span class="t">1:30 – 6:00 PM</span></li>
+      <li data-d="3"><span class="d">Wednesday</span><span class="t">1:00 – 3:30 PM<br>5:30 – 6:30 PM</span></li>
+      <li data-d="4"><span class="d">Thursday</span><span class="t">9:30 – 11:30 AM<br>1:00 – 6:30 PM</span></li>
+      <li data-d="5"><span class="d">Friday</span><span class="t">9:30 – 11:30 AM<br>1:30 – 7:30 PM</span></li>
+      <li data-d="6"><span class="d">Saturday</span><span class="t">9:30 AM – 2:30 PM</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Get in touch</span>
+      <h2>Oak Ridge, <em>TN.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="map rv"><svg aria-hidden="true" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g stroke="#2a2a2a" stroke-width="2" fill="none"><path d="M0 80 Q120 60 200 120 T400 100"/><path d="M0 200 Q150 170 260 220 T400 190"/><path d="M90 0 L140 300"/><path d="M300 0 L260 300"/></g><path d="M200 110c-18 0-32 14-32 32 0 24 32 56 32 56s32-32 32-56c0-18-14-32-32-32z" fill="#ff5a1f"/><circle cx="200" cy="142" r="11" fill="#0b0b0b"/><text x="200" y="240" text-anchor="middle" font-family="Anton,sans-serif" font-size="22" fill="#f4f1ea">OAK RIDGE, TN</text></svg>
+        <iframe title="Map of Oak Ridge, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Oak%20Ridge%2C%20TN%2037830&output=embed"></iframe>
+      </div>
+      <div class="contact">
+        <a class="row rv" href="tel:+17046145832"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><strong>(704) 614-5832</strong></span></a>
+        <a class="row rv" href="https://square.site/book/LBRM36CE3Q1XJ/jaydaycutz-oak-ridge-tn" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><small>Book online</small><strong>Square booking</strong></span></a>
+        <a class="row rv" href="https://www.instagram.com/jay_daycutz/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#0b0b0b"/></svg></span><span><small>Instagram</small><strong>@jay_daycutz</strong></span></a>
+        <a class="row rv" href="mailto:jaydaycutz@icloud.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span><span><small>Email</small><strong>jaydaycutz@icloud.com</strong></span></a>
+        <a class="row rv" href="https://www.google.com/maps/dir/?api=1&destination=Oak%20Ridge%2C%20TN%2037830" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.2"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Directions</small><strong>Oak Ridge, TN 37830</strong></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><i aria-hidden="true"></i><b style="font-weight:400">JAYDAY<span>CUTZ</span></b></a>
+    <p>Barber in Oak Ridge, TN · <a href="tel:+17046145832">(704) 614-5832</a></p>
+    <p>Concept by <a href="#top">Code Craft Media</a>, a UTK student web studio in Knoxville. Not the official JAYDAYCUTZ website.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+17046145832"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/LBRM36CE3Q1XJ/jaydaycutz-oak-ridge-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+
+  // today's hours
+  var hrs={0:null,1:[[13,17]],2:[[13.5,18]],3:[[13,15.5],[17.5,18.5]],4:[[9.5,11.5],[13,18.5]],5:[[9.5,11.5],[13.5,19.5]],6:[[9.5,14.5]]};
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hoursList li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), t=hrs[day];
+  function fmt(x){var hh=Math.floor(x),m=Math.round((x-hh)*60),ap=hh>=12?'PM':'AM';hh=hh%12||12;return hh+(m?':'+(m<10?'0':'')+m:'')+' '+ap}
+  if(st){
+    if(!t){st.innerHTML='Closed today.<br><span>Book for Monday.</span>'}
+    else{
+      var open=t.filter(function(r){return h>=r[0]&&h<r[1]})[0], next=t.filter(function(r){return h<r[0]})[0];
+      if(open) st.innerHTML='Open now<br><span>till '+fmt(open[1])+'.</span>';
+      else if(next) st.innerHTML='Opens at<br><span>'+fmt(next[0])+' today.</span>';
+      else st.innerHTML='Done for today.<br><span>Book ahead.</span>';
+    }
+  }
+})();
+</script>
+</body>
+</html>

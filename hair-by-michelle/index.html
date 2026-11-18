@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hair by Michelle — Knoxville</title>
+<meta name="description" content="Hair by Michelle — customized hair color, cuts and treatments at 4660 Old Broadway in Fountain City, Knoxville.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0f3b3a; --teal-2:#164d4b; --teal-3:#0a2b2a;
+  --champ:#e9d8b4; --champ-2:#d9c08c; --ivory:#faf6ee; --ivory-2:#f3ecdd;
+  --ink:#16302f; --muted:#4f6664;
+  --serif:"DM Serif Display", Georgia, serif; --sans:"Outfit", system-ui, sans-serif;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.6;font-weight:400;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.09;mix-blend-mode:overlay;pointer-events:none;z-index:0}
+.grain>*{position:relative;z-index:1}
+
+/* concept banner */
+.concept{background:var(--teal-3);color:var(--champ);font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+nav.top{position:absolute;left:0;right:0;top:31px;z-index:20}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px}
+.logo{font-family:var(--serif);color:var(--ivory);font-size:22px;text-decoration:none;letter-spacing:.01em;line-height:1}
+.logo em{color:var(--champ);font-style:italic}
+.navlinks{display:none;gap:30px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.navlinks a{color:var(--ivory-2);text-decoration:none;opacity:.85;transition:opacity .2s,color .2s}
+.navlinks a:hover{opacity:1;color:var(--champ)}
+.navcall{font-size:13px;color:var(--champ);text-decoration:none;border:1px solid rgba(233,216,180,.45);padding:8px 14px;border-radius:99px;transition:background .25s,color .25s}
+.navcall:hover{background:var(--champ);color:var(--teal)}
+@media(min-width:900px){.navlinks{display:flex}}
+
+/* hero */
+.hero{background:radial-gradient(120% 80% at 85% 10%, #1d5a57 0%, var(--teal) 48%, var(--teal-3) 100%);color:var(--ivory);padding:122px 0 84px;overflow:hidden;min-height:640px}
+.hero .strands{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.strands path{fill:none;stroke:var(--champ);stroke-linecap:round}
+.strands .s1{stroke-width:1.4;opacity:.55;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.6s cubic-bezier(.6,.1,.2,1) .2s forwards}
+.strands .s2{stroke-width:.9;opacity:.35;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 4.2s cubic-bezier(.6,.1,.2,1) .5s forwards}
+.strands .s3{stroke-width:.7;opacity:.22;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 4.8s cubic-bezier(.6,.1,.2,1) .8s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--champ);font-weight:500}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--champ)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,14vw,100px);line-height:.98;letter-spacing:-.01em;margin:20px 0 22px;max-width:12ch}
+.hero h1 em{color:var(--champ);font-style:italic}
+.hero p.lede{font-size:17.5px;font-weight:300;max-width:34ch;color:#e6ece9}
+.hero p.lede b{font-weight:500;color:var(--ivory)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:15.5px;text-decoration:none;padding:15px 24px;border-radius:99px;transition:transform .2s, background .25s, color .25s, box-shadow .25s;min-height:50px}
+.btn:active{transform:scale(.97)}
+.btn-champ{background:var(--champ);color:var(--teal);box-shadow:0 10px 30px -12px rgba(233,216,180,.6)}
+.btn-champ:hover{background:#f3e6c9;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(233,216,180,.55);color:var(--ivory)}
+.btn-ghost:hover{background:rgba(233,216,180,.12);transform:translateY(-2px)}
+.btn svg{width:17px;height:17px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:38px;font-size:13.5px;color:#cfdcd8}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta i{width:6px;height:6px;border-radius:50%;background:var(--champ);display:inline-block}
+.open-now{color:var(--champ)}
+.hero-quote{display:none}
+@media(min-width:900px){
+  .hero{padding:170px 0 120px;min-height:760px}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
+  .hero-quote{display:block;justify-self:end;max-width:300px;border-left:1px solid rgba(233,216,180,.4);padding:6px 0 6px 26px;margin-bottom:12px}
+  .hero-quote q{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.15;color:var(--champ);quotes:"\201C" "\201D"}
+  .hero-quote small{display:block;margin-top:12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#bcccc8}
+}
+
+/* section basics */
+section{padding:84px 0}
+.sec-head{margin-bottom:38px}
+.sec-head .eyebrow{color:#8a6d36}
+.sec-head .eyebrow::before{background:#8a6d36}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,9vw,58px);line-height:1.02;letter-spacing:-.005em;margin-top:14px;color:var(--teal)}
+h2 em{font-style:italic;color:#9a7a3d}
+.sec-head p{margin-top:14px;color:var(--muted);max-width:52ch;font-size:16.5px}
+
+/* philosophy band */
+.philo{background:var(--ivory-2);padding:70px 0;overflow:hidden}
+.philo .big{font-family:var(--serif);font-size:clamp(40px,11vw,84px);line-height:1;color:var(--teal);letter-spacing:-.01em}
+.philo .big em{font-style:italic;color:#9a7a3d}
+.philo .src{margin-top:18px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.philo svg{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:420px;opacity:.5;z-index:0}
+@media(min-width:900px){.philo{padding:96px 0}.philo svg{width:62%;right:-4%;opacity:.7}}
+.philo svg path{fill:none;stroke:#c9ab6e;stroke-width:1.2}
+
+/* menu */
+.menu-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.menu-tabs a{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:9px 12px;border-radius:99px;border:1px solid #d7ccb4;color:var(--teal);transition:background .2s,color .2s}
+.menu-tabs a:hover{background:var(--teal);color:var(--champ);border-color:var(--teal)}
+.menu-grid{display:grid;gap:22px}
+@media(min-width:900px){.menu-grid{grid-template-columns:1fr 1fr;gap:26px}}
+.menu-card{background:#fffdf8;border:1px solid #ebe1cc;border-radius:22px;padding:28px 24px 14px;scroll-margin-top:24px;transition:box-shadow .3s,transform .3s}
+.menu-card:hover{box-shadow:0 24px 50px -30px rgba(15,59,58,.35);transform:translateY(-3px)}
+.menu-card.feature{background:var(--teal);color:var(--ivory);border-color:var(--teal)}
+.menu-card h3{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--teal);display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.menu-card.feature h3{color:var(--champ)}
+.menu-card h3 svg{width:30px;height:30px;flex:none}
+.menu-card h3 svg path,.menu-card h3 svg circle{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
+.menu-card .note{font-size:14px;color:var(--muted);margin-bottom:8px}
+.menu-card.feature .note{color:#c5d4d0}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:15px 0;border-bottom:1px dashed #e0d5bd;align-items:baseline}
+.menu-card.feature .row{border-color:rgba(233,216,180,.22)}
+.row:last-child{border-bottom:0}
+.row .n{font-weight:500;font-size:16px}
+.row .p{font-family:var(--serif);font-size:21px;color:var(--teal);white-space:nowrap}
+.menu-card.feature .p,.menu-card.feature .p small{color:var(--champ)}
+.row .d{grid-column:1/-1;font-size:13.5px;color:var(--muted)}
+.menu-card.feature .d{color:#b9cbc6}
+.row .p small{font-family:var(--sans);font-size:12px;color:var(--muted);margin-right:4px}
+.menu-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--ivory-2);border-radius:18px;padding:20px 22px}
+.menu-foot p{font-size:14.5px;color:var(--muted);max-width:52ch}
+.btn-teal{background:var(--teal);color:var(--champ)}
+.btn-teal:hover{background:var(--teal-2);transform:translateY(-2px)}
+
+/* why */
+.why{background:var(--teal);color:var(--ivory);overflow:hidden}
+.why h2{color:var(--ivory)} .why h2 em{color:var(--champ)}
+.why .sec-head .eyebrow{color:var(--champ)} .why .sec-head .eyebrow::before{background:var(--champ)}
+.why .sec-head p{color:#c5d4d0}
+.why-grid{display:grid;gap:16px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-card{border:1px solid rgba(233,216,180,.22);border-radius:20px;padding:26px 22px;background:rgba(255,255,255,.03);transition:background .3s,border-color .3s}
+.why-card:hover{background:rgba(233,216,180,.07);border-color:rgba(233,216,180,.5)}
+.why-card .num{font-family:var(--serif);font-style:italic;color:var(--champ);font-size:22px}
+.why-card h3{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.1;margin:10px 0 10px}
+.why-card p{font-size:15px;color:#c9d7d3}
+.why-card q{color:var(--champ);font-style:italic}
+
+/* hours + visit */
+.visit-grid{display:grid;gap:26px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}}
+.hours{background:#fffdf8;border:1px solid #ebe1cc;border-radius:22px;padding:26px 22px}
+.hours h3,.where h3{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--teal);margin-bottom:6px}
+.hours ul{list-style:none;margin-top:10px}
+.hours li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 12px;border-radius:12px;font-size:15px}
+.hours li .t,.hours li .day{white-space:nowrap}
+.visit-grid>*{min-width:0}
+@media(max-width:400px){.hours{padding:24px 16px}.hours li{padding:12px 10px;font-size:14.5px}}
+.hours li+li{border-top:1px solid #f0e8d8}
+.hours li .t{font-variant-numeric:tabular-nums;color:var(--ink)}
+.hours li.closed .t{color:#8a9a98}
+.hours li.today{background:var(--teal);color:var(--ivory);border-top-color:transparent}
+.hours li.today + li{border-top-color:transparent}
+.hours li.today .t{color:var(--champ)}
+.hours li.today .day::after{content:"Today";margin-left:7px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;background:var(--champ);color:var(--teal);padding:3px 6px;border-radius:99px;vertical-align:2px}
+.hours .tip{font-size:13.5px;color:var(--muted);margin-top:14px}
+.where{display:flex;flex-direction:column;gap:16px}
+.map{border-radius:22px;overflow:hidden;border:1px solid #ebe1cc;min-height:300px;flex:1;background:var(--ivory-2) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='%230f3b3a' stroke-width='1.3'><path d='M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z'/><circle cx='12' cy='10' r='2.5'/></svg>") center/60px no-repeat}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{font-size:17px}
+.addr small{display:block;color:var(--muted);font-size:14px}
+.where .ctas{margin-top:4px}
+.btn-line{border:1px solid var(--teal);color:var(--teal)}
+.btn-line:hover{background:var(--teal);color:var(--champ)}
+.contact-list{display:grid;gap:8px;font-size:15px}
+.contact-list a{text-decoration:none;border-bottom:1px solid #d9c9a6;word-break:break-word}
+.contact-list a:hover{color:#8a6d36}
+
+/* final cta */
+.final{background:radial-gradient(100% 120% at 0% 100%, #1d5a57 0%, var(--teal) 55%, var(--teal-3) 100%);color:var(--ivory);text-align:center;overflow:hidden;padding:92px 0}
+.final h2{color:var(--ivory);max-width:14ch;margin:14px auto 0}
+.final h2 em{color:var(--champ)}
+.final p{color:#c9d7d3;margin:16px auto 0;max-width:40ch}
+.final .ctas{justify-content:center}
+.final svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.final svg path{fill:none;stroke:var(--champ);stroke-width:1;opacity:.25}
+
+footer{background:var(--teal-3);color:#a9bcb8;font-size:13.5px;padding:34px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer .logo{font-size:20px}
+footer a{color:var(--champ)}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,43,42,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(233,216,180,.18)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:99px;font-weight:500;font-size:15px;text-decoration:none}
+.callbar .c{border:1px solid rgba(233,216,180,.5);color:var(--ivory)}
+.callbar .b{background:var(--champ);color:var(--teal)}
+.callbar svg{width:17px;height:17px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.js.show-all .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.strands path{stroke-dashoffset:0!important}.js .reveal{opacity:1!important;transform:none!important}}
+a:focus-visible{outline:2px solid var(--champ-2);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Hair by Michelle. Not live.</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top">Hair by <em>Michelle</em></a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#why">Approach</a><a href="#visit">Hours &amp; Visit</a></div>
+    <a class="navcall" href="tel:+18656035882">(865) 603-5882</a>
+  </div>
+</nav>
+
+<header class="hero grain" id="top">
+  <svg class="strands" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="s1" d="M420 40 C 300 120, 360 240, 250 300 S 80 380, 160 500 S 380 600, 260 720 S 60 820, -20 860"/>
+    <path class="s2" d="M440 90 C 320 170, 380 280, 270 340 S 100 420, 180 540 S 400 640, 280 760 S 80 860, 0 900"/>
+    <path class="s3" d="M400 0 C 280 80, 340 200, 230 260 S 60 340, 140 460 S 360 560, 240 680 S 40 780, -40 820"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Fountain City · Knoxville</span>
+      <h1>Color that’s <em>never</em> rushed.</h1>
+      <p class="lede">Customized color, cuts &amp; treatments by <b>Michelle</b>, on Old Broadway in Fountain City.</p>
+      <div class="ctas">
+        <a class="btn btn-champ" href="https://square.site/book/CCRGCX1P07YE3/hair-by-michelle-knoxville-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book online</a>
+        <a class="btn btn-ghost" href="tel:+18656035882">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call (865) 603-5882</a>
+      </div>
+      <div class="hero-meta">
+        <span><i></i>4660 Old Broadway</span>
+        <span class="open-now" id="opennow"><i></i>Open Mon–Thu</span>
+      </div>
+    </div>
+    <div class="hero-quote"><q>Beauty can not be rushed.</q><small>— Michelle</small></div>
+  </div>
+</header>
+
+<section class="philo grain" aria-label="Philosophy">
+  <svg viewBox="0 0 420 300" aria-hidden="true"><path d="M0 250 C 90 240, 120 120, 210 130 S 330 260, 420 60"/><path d="M0 270 C 100 255, 130 150, 220 158 S 340 280, 420 90" opacity=".6"/></svg>
+  <div class="wrap reveal">
+    <p class="big">“Communication <br>is <em>the key!!</em>”</p>
+    <p class="src">Michelle, in her own words</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Services &amp; <em>prices</em></h2>
+      <p>Straight from Michelle’s booking page. Pick a time online, or call if you’re not sure what to book.</p>
+    </div>
+    <div class="menu-tabs reveal"><a href="#m-color">Color</a><a href="#m-cuts">Cuts &amp; style</a><a href="#m-care">Treatments &amp; wax</a></div>
+
+    <div class="menu-grid">
+      <article class="menu-card feature reveal" id="m-color">
+        <h3><svg viewBox="0 0 30 30"><path d="M6 26 C 10 18, 8 12, 15 8 S 24 4, 25 2"/><path d="M9 27 C 13 19, 11 13, 18 9 S 27 6, 28 4"/></svg>Color</h3>
+        <p class="note">Customized coloring is what this chair is built around.</p>
+        <div class="row"><span class="n">Foilage, balayage w/ haircut</span><span class="p">$225</span><span class="d">3 hours · “a cross between balayage and foil highlights”</span></div>
+        <div class="row"><span class="n">Root touch w/ highlights / cut</span><span class="p">$165</span><span class="d">2 hours · lowlights +$12</span></div>
+        <div class="row"><span class="n">Roots</span><span class="p">$112</span><span class="d">2 hours</span></div>
+        <div class="row"><span class="n">Full foil</span><span class="p"><small>2 options</small></span><span class="d">See options on the booking page</span></div>
+        <div class="row"><span class="n">Partial foil</span><span class="p"><small>2 options</small></span><span class="d">See options on the booking page</span></div>
+        <div class="row"><span class="n">Men’s highlight w/ haircut</span><span class="p">$75</span><span class="d">1 hr 15 min</span></div>
+        <div class="row"><span class="n">Glaze w/ haircut</span><span class="p">$70</span><span class="d">1 hr 15 min</span></div>
+        <div class="row"><span class="n">Toner or glaze</span><span class="p">$35</span><span class="d">35 min · toner neutralizes unwanted tones; glaze deposits shades of color</span></div>
+        <div class="row"><span class="n">Perm</span><span class="p">$185</span><span class="d">2 hr 30 min</span></div>
+      </article>
+
+      <div style="display:grid;gap:22px;align-content:start">
+        <article class="menu-card reveal" id="m-cuts">
+          <h3><svg viewBox="0 0 30 30"><circle cx="8" cy="22" r="4"/><circle cx="8" cy="8" r="4"/><path d="M11 10 L27 24M11 20 L27 6"/></svg>Cuts &amp; style</h3>
+          <div class="row"><span class="n">Women’s shampoo, cut &amp; style</span><span class="p">$50<small style="margin-left:4px">varies</small></span><span class="d">50 min</span></div>
+          <div class="row"><span class="n">Men’s haircut</span><span class="p">$30</span><span class="d">30 min</span></div>
+          <div class="row"><span class="n">Dry haircut</span><span class="p">$35</span><span class="d">40 min</span></div>
+          <div class="row"><span class="n">Shampoo &amp; style</span><span class="p">$25<small style="margin-left:4px">varies</small></span><span class="d">30 min</span></div>
+          <div class="row"><span class="n">Girls kids cut</span><span class="p">$35</span><span class="d">35 min · 10 and under</span></div>
+          <div class="row"><span class="n">Boys kids cut</span><span class="p">$25</span><span class="d">25 min</span></div>
+          <div class="row"><span class="n">Bang trim</span><span class="p">$10</span><span class="d">10 min</span></div>
+        </article>
+        <article class="menu-card reveal" id="m-care">
+          <h3><svg viewBox="0 0 30 30"><path d="M15 3 C 20 10, 24 14, 24 19 a9 9 0 0 1-18 0 C 6 14, 10 10, 15 3Z"/></svg>Treatments &amp; wax</h3>
+          <div class="row"><span class="n">Moisture treatment</span><span class="p">$25</span><span class="d">35 min</span></div>
+          <div class="row"><span class="n">Wax brow</span><span class="p">$15</span><span class="d">10 min</span></div>
+          <div class="row"><span class="n">Face wax</span><span class="p">$25</span><span class="d">20 min</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-foot reveal">
+      <p>Prices and times as listed on Michelle’s Square booking page. Gift cards are available there too, an easy present for a friend.</p>
+      <a class="btn btn-teal" href="https://square.site/book/CCRGCX1P07YE3/hair-by-michelle-knoxville-tn" target="_blank" rel="noopener">See times &amp; book →</a>
+    </div>
+  </div>
+</section>
+
+<section class="why grain" id="why">
+  <svg class="strands" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.6">
+    <path d="M-20 520 C 200 420, 380 560, 600 440 S 980 300, 1220 380" style="stroke-width:1;opacity:.35"/>
+  </svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The approach</span>
+      <h2>One stylist. <em>Your</em> time.</h2>
+      <p>No assembly line: just Michelle, her chair, and as long as your hair actually needs.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="num">i.</span><h3>Color made for you</h3><p>The salon is built around <q>customized hair coloring and treatment options</q>, from glazes to full foils.</p></div>
+      <div class="why-card reveal"><span class="num">ii.</span><h3>Time, not a timer</h3><p><q>I will take my time to provide the best service I am able to provide.</q> A balayage is booked for three full hours.</p></div>
+      <div class="why-card reveal"><span class="num">iii.</span><h3>Talk it through first</h3><p><q>Communication is the key!!</q> Tell her what you want, what you don’t, and what your hair has been through.</p></div>
+      <div class="why-card reveal"><span class="num">iv.</span><h3>The whole family</h3><p>Women’s, men’s and kids’ cuts, plus brow and face waxing, all in one Fountain City chair.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Hours &amp; visit</span>
+      <h2>Find the chair on <em>Old Broadway</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <ul id="hours">
+          <li data-d="1"><span class="day">Monday</span><span class="t">11:00 AM – 7:00 PM</span></li>
+          <li data-d="2"><span class="day">Tuesday</span><span class="t">9:00 AM – 3:35 PM</span></li>
+          <li data-d="3"><span class="day">Wednesday</span><span class="t">12:00 PM – 8:10 PM</span></li>
+          <li data-d="4"><span class="day">Thursday</span><span class="t">9:00 AM – 5:00 PM</span></li>
+          <li data-d="5" class="closed"><span class="day">Friday</span><span class="t">Closed</span></li>
+          <li data-d="6" class="closed"><span class="day">Saturday</span><span class="t">Closed</span></li>
+          <li data-d="0" class="closed"><span class="day">Sunday</span><span class="t">Closed</span></li>
+        </ul>
+        <p class="tip">Booking hours from Square. Open slots show live on the booking page.</p>
+      </div>
+      <div class="where reveal">
+        <div class="map"><iframe title="Map to Hair by Michelle, 4660 Old Broadway" loading="lazy" src="https://www.google.com/maps?q=4660%20Old%20Broadway%2C%20Knoxville%2C%20TN%2037918&output=embed"></iframe></div>
+        <p class="addr">4660 Old Broadway<small>Knoxville, TN 37918 · Fountain City</small></p>
+        <div class="contact-list">
+          <a href="tel:+18656035882">(865) 603-5882</a>
+          <a href="mailto:michellesmiles82@yahoo.com">michellesmiles82@yahoo.com</a>
+        </div>
+        <div class="ctas">
+          <a class="btn btn-teal" href="tel:+18656035882">Tap to call</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=4660%20Old%20Broadway%2C%20Knoxville%2C%20TN%2037918" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final grain">
+  <svg viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 400 C 220 300, 420 460, 640 330 S 1000 180, 1220 260"/><path d="M-20 430 C 240 330, 440 490, 660 360 S 1020 210, 1220 290"/></svg>
+  <div class="wrap reveal">
+    <span class="eyebrow">Ready when you are</span>
+    <h2>Your next color, <em>done right.</em></h2>
+    <p>Book a time that fits your week, or call Michelle to talk it through.</p>
+    <div class="ctas">
+      <a class="btn btn-champ" href="https://square.site/book/CCRGCX1P07YE3/hair-by-michelle-knoxville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="tel:+18656035882">Call (865) 603-5882</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top">Hair by <em>Michelle</em></a>
+    <span>4660 Old Broadway, Knoxville, TN 37918 · <a href="https://www.instagram.com/hairbymichelle865/" target="_blank" rel="noopener">@hairbymichelle865</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+18656035882"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/CCRGCX1P07YE3/hair-by-michelle-knoxville-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js');
+  var hrs={1:[660,1140],2:[540,935],3:[720,1210],4:[540,1020]};
+  var now=new Date(), d=now.getDay(), m=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var on=document.getElementById('opennow');
+  if(on){
+    var h=hrs[d], lab=document.querySelector('#hours li[data-d="'+d+'"] .t').textContent;
+    if(h && m>=h[0] && m<h[1]) on.lastChild.textContent='Open today · '+lab.replace('–','until').replace(/^.*until\s*/,'until ');
+    else if(h && m<h[0]) on.lastChild.textContent='Today '+lab;
+  }
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else root.classList.add('show-all');
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

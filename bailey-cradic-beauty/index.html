@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Bailey Cradic Beauty — Clinton, TN</title>
+<meta name="description" content="Bailey Cradic Beauty — cuts, color, highlights, balayage and beaded row extensions at 361 Market Street in Clinton, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mauve:#8e5b6e; --mauve-d:#6f4254; --mauve-l:#c9a3b1; --blush:#ead9dd;
+  --porc:#f7f1ee; --porc-2:#efe5e0; --ink:#231a1f; --muted:#5e4f56;
+  --serif:"Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+  --sans:"Albert Sans", system-ui, -apple-system, sans-serif;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--porc);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+body::before{content:"";position:fixed;inset:0;background-image:var(--grain);opacity:.06;pointer-events:none;z-index:100;mix-blend-mode:multiply}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:2px solid var(--mauve);outline-offset:3px;border-radius:4px}
+
+/* concept banner */
+.concept{background:var(--ink);color:#e9dde2;font-size:clamp(9.4px,2.62vw,12.5px);letter-spacing:0;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden}
+.concept b{color:#fff;font-weight:500}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(247,241,238,.86);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(142,91,110,.16)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .mono{width:36px;height:36px;border:1px solid var(--mauve);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);color:var(--mauve);font-size:15px;letter-spacing:.02em}
+.brand .nm{font-family:var(--serif);font-size:19px;line-height:1}
+.brand .nm small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--mauve);margin-top:4px}
+.nav ul{display:none;list-style:none;gap:28px;font-size:14px}
+.nav ul a{text-decoration:none;color:var(--muted);position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--mauve);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav ul a:hover{color:var(--ink)} .nav ul a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:500 15px/1 var(--sans);text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .25s ease,background .25s ease,box-shadow .25s ease,color .25s;cursor:pointer;border:1px solid transparent;white-space:nowrap}
+.btn svg{width:17px;height:17px}
+.btn-p{background:var(--mauve);color:#fff;box-shadow:0 10px 24px -12px rgba(111,66,84,.8)}
+.btn-p:hover{background:var(--mauve-d);transform:translateY(-2px)}
+.btn-o{border-color:rgba(35,26,31,.25);color:var(--ink);background:transparent}
+.btn-o:hover{border-color:var(--ink);background:var(--ink);color:var(--porc);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.nav .btn{padding:10px 18px;font-size:13.5px}
+
+/* hero */
+.hero{position:relative;padding:34px 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -20% 0 -20%;height:60%;background:radial-gradient(60% 60% at 50% 100%,rgba(201,163,177,.35),transparent 70%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mauve);font-weight:500}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--mauve)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,11.4vw,92px);line-height:.98;letter-spacing:-.015em;margin:18px 0 18px}
+.hero h1 em{font-style:italic;color:var(--mauve)}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:34ch;font-weight:300}
+.hero p.sub strong{font-weight:500;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.cta-hero .btn-o .lg{display:none}
+.hero-grid{display:grid;gap:28px}
+.storefront{position:relative;margin-top:22px}
+.storefront svg{width:100%;height:auto}
+.storefront .draw path,.storefront .draw line,.storefront .draw rect,.storefront .draw circle,.storefront .draw polyline{stroke-dasharray:1400;stroke-dashoffset:0}
+.js .storefront .draw path,.js .storefront .draw line,.js .storefront .draw rect,.js .storefront .draw circle,.js .storefront .draw polyline{animation:draw 2.6s cubic-bezier(.6,.1,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:1400}to{stroke-dashoffset:0}}
+.sign-sway{transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+.street-tag{position:absolute;left:0;top:4%;background:var(--porc);border:1px solid rgba(142,91,110,.35);padding:8px 13px;border-radius:999px;font-size:12px;letter-spacing:.06em;color:var(--mauve-d);box-shadow:0 8px 20px -14px rgba(35,26,31,.5)}
+
+/* ticker */
+.ticker{border-block:1px solid rgba(142,91,110,.2);background:var(--porc-2);overflow:hidden;white-space:nowrap}
+.ticker .track{display:inline-flex;gap:34px;padding:14px 0;animation:tick 34s linear infinite;font-family:var(--serif);font-size:20px;color:var(--mauve-d)}
+.ticker span{display:inline-flex;align-items:center;gap:34px}
+.ticker span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--mauve-l)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:76px 0}
+.sec-h{margin-bottom:34px}
+.sec-h h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8vw,56px);line-height:1.04;letter-spacing:-.01em;margin-top:12px}
+.sec-h h2 em{color:var(--mauve);font-style:italic}
+.sec-h p{color:var(--muted);margin-top:12px;max-width:52ch;font-weight:300}
+
+/* menu */
+.menu{background:var(--porc)}
+.menu-card{background:#fffaf8;border:1px solid rgba(142,91,110,.18);border-radius:22px;padding:28px 20px;position:relative;box-shadow:0 30px 60px -40px rgba(35,26,31,.35)}
+.menu-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(142,91,110,.14);border-radius:16px;pointer-events:none}
+.menu-cols{display:grid;gap:8px 56px}
+.group h3{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:400;font-size:25px;color:var(--mauve-d);margin:20px 0 6px}
+.group:first-child h3{margin-top:0}
+.group h3 svg{width:26px;height:26px;flex:none;color:var(--mauve)}
+.item{padding:13px 0;border-bottom:1px dashed transparent;transition:background .2s}
+.item .row{display:flex;align-items:baseline;gap:8px}
+.item .n{font-weight:500;font-size:16px}
+.item .dots{flex:1;min-width:16px;border-bottom:2px dotted rgba(142,91,110,.45);transform:translateY(-4px)}
+.item .p{font-family:var(--serif);font-size:20px;color:var(--ink);white-space:nowrap}
+.item .p small{font-family:var(--sans);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mauve);margin-right:5px;vertical-align:2px}
+.item .d{font-size:13.5px;color:var(--muted);margin-top:2px;font-weight:300}
+.item .d .t{white-space:nowrap}
+.item:hover .n{color:var(--mauve-d)}
+.menu-note{font-size:13px;color:var(--muted);margin-top:22px;text-align:center;font-weight:300}
+.menu-cta{display:flex;justify-content:center;margin-top:22px}
+
+/* why */
+.why{background:var(--ink);color:#efe4e8;position:relative;overflow:hidden}
+.why .sec-h h2 em{color:var(--mauve-l)}
+.why .sec-h p{color:#bfaeb6}
+.why .eyebrow{color:var(--mauve-l)} .why .eyebrow::before{background:var(--mauve-l)}
+.why-grid{display:grid;gap:14px}
+.why-card{border:1px solid rgba(201,163,177,.22);border-radius:18px;padding:24px 22px;background:linear-gradient(160deg,rgba(142,91,110,.16),rgba(142,91,110,.02));transition:transform .3s ease,border-color .3s}
+.why-card:hover{transform:translateY(-4px);border-color:rgba(201,163,177,.5)}
+.why-card svg{width:34px;height:34px;color:var(--mauve-l);margin-bottom:16px}
+.why-card h3{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15;color:#fff}
+.why-card p{font-size:15px;color:#cdbcc4;margin-top:8px;font-weight:300}
+.why-deco{position:absolute;right:-60px;top:-40px;width:300px;opacity:.07;color:#fff;pointer-events:none}
+
+/* visit */
+.visit-grid{display:grid;gap:22px;align-items:start}
+.hours{background:#fffaf8;border:1px solid rgba(142,91,110,.18);border-radius:22px;padding:24px 20px}
+.hours h3,.where h3{font-family:var(--serif);font-weight:400;font-size:26px;margin-bottom:12px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:12px;font-size:15.5px;border-bottom:1px solid rgba(142,91,110,.1)}
+.hours li:last-child{border-bottom:0}
+.hours li .tm{color:var(--muted)}
+.hours li.closed .tm{color:#9a8a91;font-style:italic;font-weight:300}
+.hours li.today{background:var(--mauve);color:#fff;border-bottom-color:transparent}
+.hours li.today .tm{color:#fff}
+.hours li.today .dy::after{content:"Today";font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,255,255,.2);padding:3px 8px;border-radius:99px;margin-left:10px;vertical-align:2px}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-bottom:10px}
+.status i{width:8px;height:8px;border-radius:50%;background:#b9a7ae}
+.status.open i{background:#4f9a6a;box-shadow:0 0 0 4px rgba(79,154,106,.18)}
+.where{display:flex;flex-direction:column;gap:14px}
+.map{border-radius:22px;overflow:hidden;border:1px solid rgba(142,91,110,.2);aspect-ratio:4/3;background:var(--porc-2)}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.75) sepia(.08)}
+.addr{font-size:17px;line-height:1.5}
+.addr a{text-decoration:none}
+.contact-list{display:grid;gap:10px}
+.contact-list a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px 16px;border:1px solid rgba(142,91,110,.2);border-radius:14px;background:#fffaf8;transition:border-color .25s,transform .25s;min-width:0}
+.contact-list a:hover{border-color:var(--mauve);transform:translateX(3px)}
+.contact-list svg{width:20px;height:20px;color:var(--mauve);flex:none}
+.contact-list span{min-width:0;overflow-wrap:anywhere}
+.contact-list small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mauve)}
+
+/* closing */
+.closing{text-align:center;padding:84px 0;background:linear-gradient(180deg,var(--porc),var(--blush))}
+.closing h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,9vw,64px);line-height:1.02}
+.closing h2 em{color:var(--mauve);font-style:italic}
+.closing p{color:var(--muted);margin:14px auto 0;max-width:40ch;font-weight:300}
+.closing .cta{justify-content:center}
+.closing .shears{width:64px;margin:0 auto 18px;color:var(--mauve)}
+.closing .shears .blade{transform-origin:32px 30px;animation:snip 2.8s ease-in-out infinite}
+.closing .shears .blade.b2{animation-direction:reverse}
+@keyframes snip{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(9deg)}90%{transform:rotate(0)}}
+
+footer{background:var(--ink);color:#bfaeb6;padding:36px 0 28px;font-size:13.5px}
+footer .wrap{display:flex;flex-direction:column;gap:12px}
+footer .fn{font-family:var(--serif);color:#fff;font-size:22px}
+footer a{color:#e9dde2}
+footer .cc{border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin-top:6px;font-size:12px;color:#9c8a92}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(35,26,31,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:14px;font:500 15px var(--sans);text-decoration:none;transition:transform .2s,background .2s}
+.callbar a:active{transform:scale(.97)}
+.callbar svg{width:18px;height:18px}
+.callbar .c{background:rgba(255,255,255,.1);color:#fff}
+.callbar .b{background:var(--mauve);color:#fff}
+
+/* reveal */
+.reveal{opacity:1;transform:none}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero{padding-top:70px}
+  .hero .cta-hero{margin-bottom:56px}
+  .storefront{margin-bottom:6px}
+  .hero-grid{grid-template-columns:1fr 1.12fr;align-items:end;gap:48px}
+  .cta-hero .btn-o .lg{display:inline}.cta-hero .btn-o .sm{display:none}
+  .storefront{margin-top:0}
+  .hero p.sub{font-size:19px}
+  .menu-card{padding:52px 56px}
+  .menu-cols{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:.9fr 1.1fr}
+  section{padding:110px 0}
+  footer .wrap{flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center}
+  footer .cc{flex-basis:100%}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .hero h1{font-size:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal:not(.in){opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by Code Craft Media, made for <b>Bailey Cradic Beauty</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Bailey Cradic Beauty, home">
+      <span class="mono">BC</span>
+      <span class="nm">Bailey Cradic<small>Beauty · Clinton</small></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#why">The chair</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-p" href="https://square.site/book/LCDPK63P7KN3M/bailey-cradic-clinton-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">361 Market Street · Clinton, TN</span>
+      <h1>Your next <em>good&nbsp;hair</em> day starts on Market&nbsp;Street.</h1>
+      <p class="sub">Cuts, color, balayage and beaded row extensions with <strong>Bailey</strong>, in downtown Clinton. Book online in a minute.</p>
+      <div class="cta cta-hero">
+        <a class="btn btn-p" href="https://square.site/book/LCDPK63P7KN3M/bailey-cradic-clinton-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          Book an appointment</a>
+        <a class="btn btn-o" href="tel:+18654550354">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>
+          <span class="sm">Call</span><span class="lg">(865) 455-0354</span></a>
+      </div>
+    </div>
+
+    <div class="storefront reveal" aria-hidden="true">
+      <svg viewBox="0 22 520 408" fill="none" stroke="#231a1f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- sky shapes -->
+        <circle cx="430" cy="70" r="46" fill="#ead9dd" stroke="none"/>
+        <path d="M60 86c10-12 28-12 36 0 8-8 22-5 24 6" stroke="#c9a3b1" stroke-width="1.4"/>
+        <g class="draw">
+          <!-- left neighbor -->
+          <path d="M14 410V170h92v240"/>
+          <path d="M14 170l8-14h76l8 14"/>
+          <rect x="30" y="196" width="22" height="34" rx="11"/><rect x="68" y="196" width="22" height="34" rx="11"/>
+          <rect x="30" y="252" width="22" height="34"/><rect x="68" y="252" width="22" height="34"/>
+          <path d="M24 320h72v90M24 320v90"/>
+          <!-- main building -->
+          <path d="M120 410V112h276v298"/>
+          <path d="M112 112h292M116 100h284v12"/>
+          <path d="M150 100v-12h216v12"/>
+          <!-- cornice dentils -->
+          <path d="M132 122h252"/>
+          <path d="M140 112v10M156 112v10M172 112v10M188 112v10M204 112v10M220 112v10M236 112v10M252 112v10M268 112v10M284 112v10M300 112v10M316 112v10M332 112v10M348 112v10M364 112v10M380 112v10"/>
+          <!-- upper windows arched -->
+          <path d="M150 210v-52a18 18 0 0 1 36 0v52z"/><path d="M168 140v70M150 178h36"/>
+          <path d="M240 210v-52a18 18 0 0 1 36 0v52z"/><path d="M258 140v70M240 178h36"/>
+          <path d="M330 210v-52a18 18 0 0 1 36 0v52z"/><path d="M348 140v70M330 178h36"/>
+          <path d="M144 214h48M234 214h48M324 214h48"/>
+          <!-- sign band -->
+          <rect x="138" y="232" width="240" height="34" rx="3"/>
+          <!-- awning -->
+          <path d="M128 276h260l-14 34H142z"/>
+          <path d="M160 276l-6 34M192 276l-3 34M224 276v34M256 276v34M288 276v34M320 276l3 34M352 276l6 34"/>
+          <path d="M142 310q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0q8 8 16 0" />
+          <!-- storefront windows + door -->
+          <rect x="146" y="324" width="78" height="72"/>
+          <rect x="292" y="324" width="78" height="72"/>
+          <rect x="236" y="320" width="44" height="90"/>
+          <circle cx="272" cy="368" r="2.2"/>
+          <path d="M146 396h78M292 396h78"/>
+          <!-- right neighbor -->
+          <path d="M410 410V196h96v214"/>
+          <path d="M404 196h108"/>
+          <rect x="426" y="218" width="26" height="40"/><rect x="466" y="218" width="26" height="40"/>
+          <rect x="426" y="278" width="26" height="40"/><rect x="466" y="278" width="26" height="40"/>
+          <path d="M422 340h68v70"/>
+          <!-- street -->
+          <path d="M0 410h520"/>
+          <path d="M0 422h70M100 422h120M250 422h90M370 422h150" stroke="#c9a3b1"/>
+          <!-- lamp -->
+          <path d="M108 410V318M100 318h16l-3-14h-10z"/>
+        </g>
+        <!-- awning fill -->
+        <path d="M128 276h260l-14 34H142z" fill="#8e5b6e" fill-opacity=".14" stroke="none"/>
+        <rect x="138" y="232" width="240" height="34" rx="3" fill="#8e5b6e" stroke="none"/>
+        <text x="258" y="255" text-anchor="middle" fill="#f7f1ee" stroke="none" font-family="Libre Caslon Display, Georgia, serif" font-size="17" letter-spacing="2">BAILEY CRADIC</text>
+        <!-- windows tint -->
+        <rect x="146" y="324" width="78" height="72" fill="#ead9dd" fill-opacity=".55" stroke="none"/>
+        <rect x="292" y="324" width="78" height="72" fill="#ead9dd" fill-opacity=".55" stroke="none"/>
+        <!-- scissors in left window -->
+        <g stroke="#8e5b6e" stroke-width="1.6" transform="translate(166 340)">
+          <circle cx="8" cy="30" r="6"/><circle cx="30" cy="30" r="6"/>
+          <path d="M12 26L34 2M26 26L4 2"/>
+        </g>
+        <!-- comb in right window -->
+        <g stroke="#8e5b6e" stroke-width="1.6" transform="translate(306 346)">
+          <rect x="0" y="0" width="50" height="10" rx="3"/>
+          <path d="M6 10v14M12 10v14M18 10v14M24 10v14M30 10v14M36 10v14M42 10v14"/>
+        </g>
+        <!-- hanging blade sign -->
+        <path d="M396 250h40" />
+        <g class="sign-sway" style="transform-origin:428px 250px">
+          <path d="M420 250v8M436 250v8"/>
+          <rect x="410" y="258" width="36" height="36" rx="18" fill="#f7f1ee"/>
+          <g stroke="#8e5b6e" stroke-width="1.4" transform="translate(418 266)">
+            <circle cx="5" cy="16" r="3.2"/><circle cx="15" cy="16" r="3.2"/><path d="M7 13.5L18 1M13 13.5L2 1"/>
+          </g>
+        </g>
+        <!-- planters -->
+        <path d="M150 410v-10h20v10M346 410v-10h20v10" fill="#efe5e0"/>
+        <path d="M160 400c-6-10-2-18 0-22M160 400c6-10 2-18 0-22M356 400c-6-10-2-18 0-22M356 400c6-10 2-18 0-22" stroke="#8e5b6e"/>
+      </svg>
+      <span class="street-tag">Downtown Clinton</span>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Women's cuts</span><span>All over color</span><span>Highlights</span><span>Balayage</span><span>Shadow root</span><span>Glaze</span><span>Money pieces</span><span>Beaded row extensions</span><span>Special occasion hair</span><span>Men's cuts</span>
+  <span>Women's cuts</span><span>All over color</span><span>Highlights</span><span>Balayage</span><span>Shadow root</span><span>Glaze</span><span>Money pieces</span><span>Beaded row extensions</span><span>Special occasion hair</span><span>Men's cuts</span>
+</div></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-h reveal">
+      <span class="eyebrow">The service menu</span>
+      <h2>Sixteen services, <em>one chair.</em></h2>
+      <p>Every service and price below is exactly as Bailey lists them on her booking page, so there are no surprises when you sit down.</p>
+    </div>
+
+    <div class="menu-card reveal">
+      <div class="menu-cols">
+        <div>
+          <div class="group">
+            <h3><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="9" cy="23" r="4.5"/><circle cx="23" cy="23" r="4.5"/><path d="M12 20L27 3M20 20L5 3"/></svg>Cuts &amp; style</h3>
+            <div class="item"><div class="row"><span class="n">Women's Haircut</span><span class="dots"></span><span class="p">$58</span></div><div class="d"><span class="t">1 hour</span></div></div>
+            <div class="item"><div class="row"><span class="n">Men's Haircut</span><span class="dots"></span><span class="p"><small>varies</small>$20</span></div><div class="d"><span class="t">1 hour</span> · Price varies</div></div>
+            <div class="item"><div class="row"><span class="n">Bang trim</span><span class="dots"></span><span class="p">$10</span></div><div class="d"><span class="t">15 minutes</span></div></div>
+            <div class="item"><div class="row"><span class="n">Shampoo Style</span><span class="dots"></span><span class="p"><small>from</small>$40</span></div><div class="d"><span class="t">1 hour</span></div></div>
+            <div class="item"><div class="row"><span class="n">Special Occasion Hair</span><span class="dots"></span><span class="p"><small>from</small>$85</span></div><div class="d"><span class="t">1 hour</span></div></div>
+          </div>
+          <div class="group">
+            <h3><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="26" height="6" rx="2"/><path d="M6 15v10M10 15v10M14 15v10M18 15v10M22 15v10M26 15v10"/></svg>Extensions</h3>
+            <div class="item"><div class="row"><span class="n">Beaded row extension installation</span><span class="dots"></span><span class="p"><small>from</small>$200</span></div><div class="d"><span class="t">2 hours</span></div></div>
+            <div class="item"><div class="row"><span class="n">Beaded row extension removal</span><span class="dots"></span><span class="p"><small>from</small>$50</span></div><div class="d"><span class="t">45 minutes</span></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="group">
+            <h3><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3c4 6 9 11 9 17a9 9 0 0 1-18 0c0-6 5-11 9-17z"/><path d="M12 21a4 4 0 0 0 4 4"/></svg>Color</h3>
+            <div class="item"><div class="row"><span class="n">All over color</span><span class="dots"></span><span class="p"><small>from</small>$130</span></div><div class="d"><span class="t">2 hours</span> · Includes haircut</div></div>
+            <div class="item"><div class="row"><span class="n">Re-touch</span><span class="dots"></span><span class="p">$95</span></div><div class="d"><span class="t">2 hours</span> · Includes haircut</div></div>
+            <div class="item"><div class="row"><span class="n">Shadow root</span><span class="dots"></span><span class="p"><small>from</small>$95</span></div><div class="d"><span class="t">2 hours</span></div></div>
+            <div class="item"><div class="row"><span class="n">Glaze</span><span class="dots"></span><span class="p"><small>from</small>$65</span></div><div class="d"><span class="t">1 hour 30 minutes</span></div></div>
+          </div>
+          <div class="group">
+            <h3><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M8 28c2-8 2-16 0-24M14 28c2-8 2-16 0-24M20 28c2-8 2-16 0-24M26 28c2-8 2-16 0-24"/></svg>Highlights &amp; balayage</h3>
+            <div class="item"><div class="row"><span class="n">Money pieces / Mini highlight</span><span class="dots"></span><span class="p"><small>from</small>$90</span></div><div class="d"><span class="t">1 hour</span></div></div>
+            <div class="item"><div class="row"><span class="n">Partial highlight</span><span class="dots"></span><span class="p"><small>from</small>$190</span></div><div class="d"><span class="t">2 hours</span> · Includes glaze and haircut</div></div>
+            <div class="item"><div class="row"><span class="n">Full highlight</span><span class="dots"></span><span class="p"><small>from</small>$230</span></div><div class="d"><span class="t">2 hours 30 minutes</span> · Includes glaze and haircut</div></div>
+            <div class="item"><div class="row"><span class="n">Partial balayage</span><span class="dots"></span><span class="p"><small>from</small>$225</span></div><div class="d"><span class="t">2 hours 30 minutes</span> · Includes glaze and haircut</div></div>
+            <div class="item"><div class="row"><span class="n">Full Balayage</span><span class="dots"></span><span class="p"><small>from</small>$250</span></div><div class="d"><span class="t">2 hours 30 minutes</span> · Includes glaze &amp; haircut</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="menu-note">Prices and times as listed on Bailey's Square booking page. "From" means the price starts there; final price depends on your hair.</p>
+      <div class="menu-cta"><a class="btn btn-p" href="https://square.site/book/LCDPK63P7KN3M/bailey-cradic-clinton-tn" target="_blank" rel="noopener">Pick a service &amp; time</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="why-deco" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width=".8"><circle cx="9" cy="23" r="4.5"/><circle cx="23" cy="23" r="4.5"/><path d="M12 20L27 3M20 20L5 3"/></svg>
+  <div class="wrap">
+    <div class="sec-h reveal">
+      <span class="eyebrow">Why book with Bailey</span>
+      <h2>Small-town chair, <em>big color menu.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3c4 6 9 11 9 17a9 9 0 0 1-18 0c0-6 5-11 9-17z"/></svg>
+        <h3>Color that includes the cut</h3>
+        <p>All over color and re-touch include a haircut. Highlights and balayage include a glaze and haircut too.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="22" rx="3"/><path d="M4 13h24M11 3v6M21 3v6M11 20l3 3 7-7"/></svg>
+        <h3>Book any time, day or night</h3>
+        <p>See every service, price and open slot online, then lock in your appointment without a phone call.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29s9-8.6 9-15.5a9 9 0 0 0-18 0C7 20.4 16 29 16 29z"/><circle cx="16" cy="13.5" r="3.2"/></svg>
+        <h3>Right on Market Street</h3>
+        <p>Find the chair at 361 Market Street in downtown Clinton, Tennessee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-h reveal">
+      <span class="eyebrow">Hours &amp; location</span>
+      <h2>Come see us <em>downtown.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <div class="status" id="status"><i></i><span>Monday through Thursday</span></div>
+        <ul id="hours">
+          <li data-d="1"><span class="dy">Monday</span><span class="tm">9:00 AM – 4:00 PM</span></li>
+          <li data-d="2"><span class="dy">Tuesday</span><span class="tm">9:00 AM – 6:00 PM</span></li>
+          <li data-d="3"><span class="dy">Wednesday</span><span class="tm">9:00 AM – 2:00 PM</span></li>
+          <li data-d="4"><span class="dy">Thursday</span><span class="tm">9:00 AM – 2:00 PM</span></li>
+          <li data-d="5" class="closed"><span class="dy">Friday</span><span class="tm">Closed</span></li>
+          <li data-d="6" class="closed"><span class="dy">Saturday</span><span class="tm">Closed</span></li>
+          <li data-d="0" class="closed"><span class="dy">Sunday</span><span class="tm">Closed</span></li>
+        </ul>
+      </div>
+      <div class="where reveal">
+        <div class="map"><iframe title="Map to 361 Market Street, Clinton, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=361%20Market%20St%2C%20Clinton%2C%20TN%2037716&output=embed"></iframe></div>
+        <div class="contact-list">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=361%20Market%20St%2C%20Clinton%2C%20TN%2037716" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.7 7-12a7 7 0 0 0-14 0c0 5.3 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <span><small>Directions</small>361 Market Street, Clinton, TN 37716</span></a>
+          <a href="tel:+18654550354">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>
+            <span><small>Call</small>(865) 455-0354</span></a>
+          <a href="mailto:bmonroe97@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg>
+            <span><small>Email</small>bmonroe97@gmail.com</span></a>
+          <a href="https://instagram.com/baileycradicbeauty" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+            <span><small>Instagram</small>@baileycradicbeauty</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap reveal">
+    <svg class="shears" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <g class="blade"><circle cx="18" cy="48" r="8"/><path d="M23 42L52 8"/></g>
+      <g class="blade b2"><circle cx="46" cy="48" r="8"/><path d="M41 42L12 8"/></g>
+    </svg>
+    <h2>Ready for <em>something new?</em></h2>
+    <p>Pick your service and grab an open time on Bailey's calendar.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="https://square.site/book/LCDPK63P7KN3M/bailey-cradic-clinton-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-o" href="tel:+18654550354">Call (865) 455-0354</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fn">Bailey Cradic Beauty</div>
+    <div>361 Market Street, Clinton, TN 37716 · <a href="tel:+18654550354">(865) 455-0354</a></div>
+    <div class="cc">Concept by Code Craft Media, a UTK student web studio in Knoxville. Not the official site of Bailey Cradic Beauty.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c" href="tel:+18654550354"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.3 6.3l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/LCDPK63P7KN3M/bailey-cradic-clinton-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book now</a>
+</nav>
+
+<script>
+(function(){
+  // hours: highlight today (Clinton is US Eastern)
+  var now; try{ now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'})); }catch(e){ now=new Date(); }
+  var d=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var open={1:[540,960],2:[540,1080],3:[540,840],4:[540,840]}, st=document.getElementById('status');
+  var labels={960:'4:00 PM',1080:'6:00 PM',840:'2:00 PM'};
+  if(st){
+    var s=st.querySelector('span');
+    if(open[d] && mins>=open[d][0] && mins<open[d][1]){ st.classList.add('open'); s.textContent='Open now · until '+labels[open[d][1]]; }
+    else { s.textContent='Closed now · book online any time'; }
+  }
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('in')}); }
+  setTimeout(function(){document.documentElement.classList.add('show-all');els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>
