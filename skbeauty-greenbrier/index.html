@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>SKBeauty — Greenbrier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#6b3f1f;--whiskey:#a8642a;--amber:#d39a52;--cream:#f6eddc;--paper:#fbf6ec;--forest:#24412f;--forest2:#1a3123;--ink:#2a1c12;--muted:#6e5a48;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Lato,system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--ink);color:#e9dcc4;font-size:11.5px;text-align:center;padding:7px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+h1,h2,h3{font-family:Rye,Georgia,serif;font-weight:400;line-height:1.08}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(251,246,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e6d6bb}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:Rye,serif;font-size:22px;color:var(--brown);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo svg{width:28px;height:28px}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.navlinks a{text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--whiskey)}
+.navbook{background:var(--forest);color:var(--cream)!important;padding:10px 18px;border-radius:999px}
+@media(max-width:760px){.navlinks a:not(.navbook){display:none}}
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 90% at 80% 0%,#3a6448 0%,var(--forest) 45%,var(--forest2) 100%);color:var(--cream);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9 0 0 0 0 .8 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:84px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+.eyebrow:before{content:"";width:28px;height:2px;background:var(--amber)}
+.hero h1{font-size:clamp(40px,7vw,76px);margin:18px 0 18px;color:#fff6e6}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p.sub{font-size:18px;line-height:1.55;color:#e4d7bf;max-width:30em;font-weight:300}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 24px;border-radius:999px;font-weight:900;font-size:15px;letter-spacing:.04em;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-amber{background:var(--amber);color:var(--ink);box-shadow:0 10px 30px -10px rgba(211,154,82,.8)}
+.btn-amber:hover{background:#e2ab63}
+.btn-ghost{border:1.5px solid rgba(246,237,220,.5);color:var(--cream)}
+.btn-ghost:hover{background:rgba(246,237,220,.1)}
+.heroart{position:relative;display:flex;justify-content:center}
+.heroart svg{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+.spin{transform-origin:200px 200px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blink{transform-origin:200px 214px;animation:blink 6s ease-in-out infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.15)}}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chip{font-size:13px;border:1px solid rgba(246,237,220,.25);padding:7px 13px;border-radius:999px;color:#e4d7bf}
+.wave{display:block;width:100%;height:46px;margin-top:-1px}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:34px;padding-bottom:50px;gap:12px}.heroart{order:-1}.heroart svg{max-width:210px}.hero p.sub{font-size:16.5px}.ctas .btn{flex:1;justify-content:center;padding:14px 12px;font-size:14px}.chips{gap:8px}.chip{font-size:12px}}
+/* sections */
+section{padding:84px 0}
+.kicker{font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--whiskey)}
+h2{font-size:clamp(32px,5vw,50px);color:var(--brown);margin:10px 0 14px}
+.lead{color:var(--muted);font-size:17px;line-height:1.6;max-width:38em}
+/* menu */
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.card{position:relative;background:#fff;border:1px solid #ead9bd;border-radius:18px;padding:24px 24px 22px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(107,63,31,.5);border-color:var(--amber)}
+.card .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.card h3{font-family:Lato,sans-serif;font-weight:900;font-size:18px;color:var(--ink)}
+.price{font-family:Rye,serif;font-size:24px;color:var(--whiskey);white-space:nowrap}
+.dur{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--forest);margin-top:6px}
+.card p{color:var(--muted);font-size:15px;line-height:1.55;margin-top:10px}
+.group{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-top:22px;font-family:Rye,serif;font-size:22px;color:var(--forest)}
+.group:after{content:"";flex:1;height:1px;background:repeating-linear-gradient(90deg,#cdb48e 0 6px,transparent 6px 12px)}
+.group:first-child{margin-top:0}
+@media(max-width:760px){.menu{grid-template-columns:1fr}section{padding:60px 0}}
+/* styles strip */
+.styles{background:var(--cream);border-top:1px solid #ead9bd;border-bottom:1px solid #ead9bd}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.style{text-align:center;padding:10px}
+.style svg{width:150px;height:90px}
+.style h3{font-size:26px;color:var(--brown);margin:8px 0 6px}
+.style p{color:var(--muted);line-height:1.55;font-size:15px}
+@media(max-width:760px){.trio{grid-template-columns:1fr}}
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
+.badge{background:var(--forest);color:var(--cream);border-radius:18px;padding:26px 20px;position:relative;overflow:hidden}
+.badge .stamp{width:54px;height:54px;border:2px dashed var(--amber);border-radius:50%;display:grid;place-items:center;font-family:Rye,serif;color:var(--amber);font-size:20px;margin-bottom:16px}
+.badge h3{font-family:Lato,sans-serif;font-weight:900;font-size:17px;margin-bottom:8px}
+.badge p{font-size:14.5px;line-height:1.55;color:#d6cbb4}
+@media(max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+/* hours/visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;margin-top:38px;align-items:stretch}
+.hours{background:#fff;border:1px solid #ead9bd;border-radius:18px;padding:12px 8px}
+.hrow{display:flex;justify-content:space-between;padding:13px 18px;border-radius:12px;font-size:16px}
+.hrow span:last-child{font-weight:700}
+.hrow.closed span:last-child{color:#a5927d;font-weight:400}
+.hrow.today{background:var(--forest);color:var(--cream)}
+.hrow.today span:first-child:after{content:" · today";font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);font-weight:900}
+.hrow.today.closed span:last-child{color:#cfc3ac}
+.note{font-size:14px;color:var(--muted);padding:12px 18px 6px;line-height:1.5}
+.map{border-radius:18px;overflow:hidden;border:1px solid #ead9bd;min-height:320px;background:var(--cream);display:flex;flex-direction:column}
+.map iframe{background:#efe3cc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h40M20 0v40' stroke='%23e0cfae'/%3E%3C/svg%3E");border:0;width:100%;flex:1;min-height:280px}
+.maplinks{display:flex;gap:10px;padding:14px;flex-wrap:wrap;background:#fff}
+.maplinks a{flex:1;min-width:140px;text-align:center;padding:12px;border-radius:12px;font-weight:900;text-decoration:none;font-size:14px}
+.ml1{background:var(--forest);color:var(--cream)}
+.ml2{border:1.5px solid var(--forest);color:var(--forest)}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+/* cta */
+.final{background:linear-gradient(135deg,var(--brown),#4a2a13);color:var(--cream);text-align:center;border-radius:28px;padding:60px 24px;margin:0 20px;position:relative;overflow:hidden}
+.final h2{color:#fff6e6}
+.final p{color:#e8d8bd;font-size:17px;max-width:32em;margin:0 auto 26px;line-height:1.6}
+.final .ctas{justify-content:center}
+footer{text-align:center;padding:50px 20px 30px;color:var(--muted);font-size:14px;line-height:1.8}
+footer .logo{justify-content:center;margin-bottom:6px}
+/* mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(26,49,35,.96);backdrop-filter:blur(8px)}
+.bar a{flex:1;text-align:center;padding:14px;border-radius:14px;font-weight:900;text-decoration:none;font-size:15px}
+.bar .b1{border:1.5px solid rgba(246,237,220,.5);color:var(--cream)}
+.bar .b2{background:var(--amber);color:var(--ink)}
+@media(min-width:861px){.bar{display:none}body{padding-bottom:0}}
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in,.js.all .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.spin,.blink{animation:none}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.className='js'</script>
+<div class="banner">Concept site by Code Craft Media, made for SKBeauty. Not live.</div>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#a8642a" stroke-width="2" stroke-dasharray="3 3"/><path d="M9 22c4-6 18-6 22 0" fill="none" stroke="#24412f" stroke-width="2.4" stroke-linecap="round"/><g stroke="#24412f" stroke-width="1.8" stroke-linecap="round"><path d="M12 20l-2-4"/><path d="M16 18l-1-4.5"/><path d="M20 17.5v-4.6"/><path d="M24 18l1-4.5"/><path d="M28 20l2-4"/></g></svg>SKBeauty</a>
+  <div class="navlinks"><a href="#menu">Menu</a><a href="#styles">Styles</a><a href="#visit">Hours</a><a class="navbook" href="https://square.site/book/LK1MG7DXDBPNG/skbeauty-llc-greenbrier-tn">Book</a></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Lash studio · Greenbrier, TN</span>
+      <h1>Wake up with your lashes <em>already done.</em></h1>
+      <p class="sub">Classic, hybrid, volume and mega volume lash extensions by Serafina at SKBeauty, booked in the evening after your workday.</p>
+      <div class="ctas">
+        <a class="btn btn-amber" href="https://square.site/book/LK1MG7DXDBPNG/skbeauty-llc-greenbrier-tn">Book your set</a>
+        <a class="btn btn-ghost" href="tel:+14254228011">Call (425) 422-8011</a>
+      </div>
+      <div class="chips"><span class="chip">Mon to Fri · 6 to 9:30 PM</span><span class="chip">Full sets from $175</span><span class="chip">Fills from $50</span></div>
+    </div>
+    <div class="heroart" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs><path id="circ" d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"/></defs>
+        <circle cx="200" cy="200" r="182" fill="#1a3123" stroke="#d39a52" stroke-width="2"/>
+        <circle cx="200" cy="200" r="170" fill="none" stroke="#d39a52" stroke-width="1" stroke-dasharray="2 6"/>
+        <g class="spin"><text font-family="Rye" font-size="21" fill="#d39a52" letter-spacing="5"><textPath href="#circ">SKBEAUTY · LASH STUDIO · GREENBRIER TN · </textPath></text></g>
+        <circle cx="200" cy="200" r="118" fill="#f6eddc"/>
+        <circle cx="200" cy="200" r="110" fill="none" stroke="#a8642a" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <g class="blink">
+          <path d="M118 214c26-34 138-34 164 0" fill="none" stroke="#2a1c12" stroke-width="5" stroke-linecap="round"/>
+          <g stroke="#2a1c12" stroke-width="3" stroke-linecap="round" fill="none">
+            <path d="M126 205q-10-16-22-22"/><path d="M138 196q-6-20-16-30"/><path d="M152 190q-3-22-9-34"/><path d="M167 186q-1-23-4-37"/><path d="M182 184q1-24 0-40"/><path d="M200 183v-42"/><path d="M218 184q-1-24 0-40"/><path d="M233 186q1-23 4-37"/><path d="M248 190q3-22 9-34"/><path d="M262 196q6-20 16-30"/><path d="M274 205q10-16 22-22"/>
+          </g>
+        </g>
+        <path d="M150 246q50 18 100 0" fill="none" stroke="#a8642a" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+        <g fill="#d39a52"><path d="M200 60l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><path d="M200 314l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+      </svg>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v10c-240 36-480 36-720 18S240 0 0 24z" fill="#1a3123" opacity=".0"/><path d="M0 46V20c240 30 480 30 720 12s480-26 720 0v14z" fill="#fbf6ec"/></svg>
+</header>
+
+<section id="menu"><div class="wrap">
+  <div class="rv"><span class="kicker">The lash menu</span>
+  <h2>Every set, every fill, priced up front.</h2>
+  <p class="lead">Straight from SKBeauty's booking page. Pick your look, then pick a time.</p></div>
+  <div class="menu">
+    <div class="group rv">Full sets</div>
+    <div class="card rv"><div class="top"><h3>Full Set Classic</h3><span class="price">$175</span></div><div class="dur">1 hr 30 min</div><p>A natural look, with a single extension placed on each natural lash.</p></div>
+    <div class="card rv"><div class="top"><h3>Full Set Hybrid</h3><span class="price">$175</span></div><div class="dur">1 hr 30 min</div><p>A mix of classic and volume lashes: some volume, still a natural feel.</p></div>
+    <div class="card rv"><div class="top"><h3>Full Set Volume</h3><span class="price">$175</span></div><div class="dur">1 hr 30 min</div><p>Handmade fans placed on each natural lash for a fuller, dramatic look.</p></div>
+    <div class="card rv"><div class="top"><h3>Full Set Mega Volume</h3><span class="price">$175</span></div><div class="dur">1 hr 30 min</div><p>Handmade volume fans on each natural lash for the boldest, most dramatic look.</p></div>
+    <div class="group rv">Fills &amp; touch-ups</div>
+    <div class="card rv"><div class="top"><h3>Classic Fill</h3><span class="price">$75</span></div><div class="dur">45 min</div><p>Needs at least 40% of your lashes remaining. Missing more than 60%? Book a full set.</p></div>
+    <div class="card rv"><div class="top"><h3>Volume Fill</h3><span class="price">$75</span></div><div class="dur">45 min</div><p>Needs at least 40% of your lashes remaining. Missing more than 60%? Book a full set.</p></div>
+    <div class="card rv"><div class="top"><h3>Mega Volume Fill</h3><span class="price">$75</span></div><div class="dur">45 min</div><p>Needs at least 40% of your lashes remaining. Missing more than 60%? Book a full set.</p></div>
+    <div class="card rv"><div class="top"><h3>Mini Fill</h3><span class="price">$50</span></div><div class="dur">25 min</div><p>A quick touch-up to add fullness, usually booked one week after your last appointment.</p></div>
+    <div class="card rv"><div class="top"><h3>Foreign Fill</h3><span class="price">$115</span></div><div class="dur">1 hr</div><p>Coming from another lash artist? Start here. Needs at least 40% of your lashes remaining.</p></div>
+    <div class="card rv"><div class="top"><h3>Lash Extension Removal</h3><span class="price">$40</span></div><div class="dur">30 min</div><p>Safe removal of your current extensions.</p></div>
+  </div>
+</div></section>
+
+<section class="styles" id="styles"><div class="wrap">
+  <div class="rv"><span class="kicker">Find your look</span><h2>Natural, in between, or all in.</h2></div>
+  <div class="trio">
+    <div class="style rv"><svg viewBox="0 0 150 90" aria-hidden="true"><path d="M20 62c30-26 80-26 110 0" fill="none" stroke="#2a1c12" stroke-width="3" stroke-linecap="round"/><g stroke="#2a1c12" stroke-width="2" stroke-linecap="round"><path d="M30 54l-6-12"/><path d="M45 46l-3-14"/><path d="M60 42l-1-15"/><path d="M75 41v-15"/><path d="M90 42l1-15"/><path d="M105 46l3-14"/><path d="M120 54l6-12"/></g></svg><h3>Classic</h3><p>One extension per natural lash. Clean, polished, everyday.</p></div>
+    <div class="style rv"><svg viewBox="0 0 150 90" aria-hidden="true"><path d="M20 62c30-26 80-26 110 0" fill="none" stroke="#2a1c12" stroke-width="3" stroke-linecap="round"/><g stroke="#2a1c12" stroke-width="2" stroke-linecap="round"><path d="M30 54l-6-12"/><path d="M38 50l-6-14"/><path d="M45 46l-3-14"/><path d="M52 44l-4-16"/><path d="M60 42l-1-15"/><path d="M68 41l-1-17"/><path d="M75 41v-15"/><path d="M82 41l1-17"/><path d="M90 42l1-15"/><path d="M98 44l4-16"/><path d="M105 46l3-14"/><path d="M112 50l6-14"/><path d="M120 54l6-12"/></g></svg><h3>Hybrid</h3><p>Classic and volume mixed. A little drama, still soft.</p></div>
+    <div class="style rv"><svg viewBox="0 0 150 90" aria-hidden="true"><path d="M20 62c30-26 80-26 110 0" fill="none" stroke="#2a1c12" stroke-width="3" stroke-linecap="round"/><g stroke="#2a1c12" stroke-width="1.6" stroke-linecap="round"><path d="M30 54l-8-12M30 54l-4-14M30 54l0-14"/><path d="M45 46l-6-14M45 46l-2-16M45 46l2-15"/><path d="M60 42l-4-16M60 42l0-18M60 42l4-16"/><path d="M75 41l-3-17M75 41v-19M75 41l3-17"/><path d="M90 42l-4-16M90 42l0-18M90 42l4-16"/><path d="M105 46l-2-15M105 46l2-16M105 46l6-14"/><path d="M120 54l0-14M120 54l4-14M120 54l8-12"/></g></svg><h3>Volume &amp; Mega</h3><p>Handmade fans on every lash. Full, bold, dramatic.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="rv"><span class="kicker">Why SKBeauty</span><h2>Lashes that fit your schedule.</h2></div>
+  <div class="why">
+    <div class="badge rv"><div class="stamp">PM</div><h3>Evening appointments</h3><p>Open Monday to Friday, 6:00 to 9:30 PM, so you never have to take time off.</p></div>
+    <div class="badge rv"><div class="stamp">$</div><h3>Prices posted</h3><p>Every set and fill has its price listed before you book. No surprises.</p></div>
+    <div class="badge rv"><div class="stamp">4</div><h3>Four full-set styles</h3><p>Classic, hybrid, volume and mega volume, each booked online with Serafina.</p></div>
+    <div class="badge rv"><div class="stamp">↻</div><h3>Switching artists?</h3><p>A dedicated foreign fill for clients coming from another lash artist.</p></div>
+  </div>
+</div></section>
+
+<section id="visit" style="padding-top:20px"><div class="wrap">
+  <div class="rv"><span class="kicker">Hours &amp; location</span><h2>After work, on your way home.</h2></div>
+  <div class="visit">
+    <div class="hours rv" id="hours">
+      <div class="hrow" data-d="1"><span>Monday</span><span>6:00 – 9:30 PM</span></div>
+      <div class="hrow" data-d="2"><span>Tuesday</span><span>6:00 – 9:30 PM</span></div>
+      <div class="hrow" data-d="3"><span>Wednesday</span><span>6:00 – 9:30 PM</span></div>
+      <div class="hrow" data-d="4"><span>Thursday</span><span>6:00 – 9:30 PM</span></div>
+      <div class="hrow" data-d="5"><span>Friday</span><span>6:00 – 9:30 PM</span></div>
+      <div class="hrow closed" data-d="6"><span>Saturday</span><span>Closed</span></div>
+      <div class="hrow closed" data-d="0"><span>Sunday</span><span>Closed</span></div>
+      <p class="note">By appointment in Greenbrier, TN. Book online or call to set up your visit.</p>
+    </div>
+    <div class="map rv">
+      <iframe title="Map of Greenbrier, TN" loading="lazy" src="https://www.google.com/maps?q=Greenbrier%2C%20TN%2037073&output=embed"></iframe>
+      <div class="maplinks"><a class="ml1" href="tel:+14254228011">Call (425) 422-8011</a><a class="ml2" href="https://www.google.com/maps/dir/?api=1&destination=Greenbrier%2C%20TN%2037073">Directions</a></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="final rv">
+  <h2>Ready for your next set?</h2>
+  <p>Pick a style, pick an evening, and you're booked. Questions first? Email 4skbeauty@gmail.com or give Serafina a call.</p>
+  <div class="ctas"><a class="btn btn-amber" href="https://square.site/book/LK1MG7DXDBPNG/skbeauty-llc-greenbrier-tn">Book online</a><a class="btn btn-ghost" href="mailto:4skbeauty@gmail.com">Email us</a></div>
+</div>
+
+<footer>
+  <a class="logo" href="#top">SKBeauty</a>
+  SKBeauty, LLC · Greenbrier, TN · <a href="tel:+14254228011">(425) 422-8011</a><br>
+  <a href="https://www.instagram.com/skbeautyllc">@skbeautyllc</a><br>
+  <small>Concept by Code Craft Media</small>
+</footer>
+
+<div class="bar"><a class="b1" href="tel:+14254228011">Call</a><a class="b2" href="https://square.site/book/LK1MG7DXDBPNG/skbeauty-llc-greenbrier-tn">Book now</a></div>
+
+<script>
+(function(){
+  var d=new Date().getDay(),r=document.querySelector('.hrow[data-d="'+d+'"]');if(r)r.classList.add('today');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})}else{document.documentElement.classList.add('all')}
+  setTimeout(function(){document.documentElement.classList.add('all')},1500);
+})();
+</script>
+</body>
+</html>

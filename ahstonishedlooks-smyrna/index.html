@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>AhstonishedLooks — Smyrna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#4b2a6b;--purple-d:#2e1745;--saffron:#f2a541;--ivory:#fbf7ef;--green:#1f4d3a;--ink:#24152f;--muted:#5d4f68}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3{font-family:"Abril Fatface",Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:.01em}
+.banner{background:var(--ink);color:#e9dff2;font-size:11.5px;text-align:center;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(75,42,107,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:"Abril Fatface",serif;font-size:21px;color:var(--purple);text-decoration:none}
+.logo span{color:var(--saffron)}
+.navlinks{display:flex;gap:26px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--purple);position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--saffron);transition:width .25s}
+.navlinks a:hover::after{width:100%}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+.btn-gold{background:var(--saffron);color:var(--purple-d);box-shadow:0 8px 24px rgba(242,165,65,.35)}
+.btn-gold:hover{box-shadow:0 12px 30px rgba(242,165,65,.5)}
+.btn-ghost{border-color:rgba(251,247,239,.6);color:var(--ivory)}
+.btn-ghost:hover{background:rgba(251,247,239,.12)}
+.nav-cta{padding:9px 18px;font-size:13.5px}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(120% 90% at 80% 10%,#6a3d93 0%,var(--purple) 45%,var(--purple-d) 100%);color:var(--ivory);overflow:hidden;padding:64px 0 90px}
+.weave{width:100%;height:100%}
+.hero .weave{position:absolute;inset:0;opacity:.13}
+.burst{position:absolute;right:-120px;top:-110px;width:440px;height:440px;animation:spin 60s linear infinite;opacity:.9}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);font-weight:600;margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--saffron)}
+.hero h1{font-size:clamp(44px,8vw,86px)}
+.hero h1 em{font-style:normal;color:var(--saffron)}
+.hero p.sub{margin:22px 0 30px;font-size:17px;max-width:520px;color:#eadff3;font-weight:300}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font-size:12.5px;padding:6px 12px;border-radius:999px;background:rgba(251,247,239,.1);border:1px solid rgba(251,247,239,.22)}
+.medal{position:relative;aspect-ratio:1;max-width:380px;margin-left:auto;width:100%}
+.medal svg{width:100%;height:100%;display:block}
+.hero-edge{position:absolute;bottom:-1px;left:0;width:100%;height:46px}
+
+/* SECTIONS */
+section{padding:84px 0;position:relative}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:600}
+h2{font-size:clamp(36px,5.5vw,58px);color:var(--purple);margin:10px 0 14px}
+.lede{color:var(--muted);max-width:620px}
+.divider{width:120px;height:18px;margin:18px 0 0}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{background:#fff;border-radius:22px;padding:28px 26px 26px;border:1px solid rgba(75,42,107,.12);box-shadow:0 10px 30px rgba(46,23,69,.06);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(46,23,69,.13)}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,var(--purple) 0 14px,var(--saffron) 14px 28px,var(--green) 28px 42px)}
+.tag{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#fdf0dc;color:#8a5413;margin-bottom:14px}
+.tag.green{background:#e3efe8;color:var(--green)}
+.card h3{font-size:25px;color:var(--purple);margin-bottom:8px}
+.price{display:flex;align-items:baseline;gap:10px;margin:6px 0 12px}
+.price b{font-family:"Abril Fatface",serif;font-weight:400;font-size:38px;color:var(--green)}
+.price span{font-size:13px;color:var(--muted)}
+.card p{font-size:14.5px;color:var(--muted)}
+.card ul{list-style:none;margin-top:12px;font-size:13.5px;color:var(--ink)}
+.card li{padding-left:20px;position:relative;margin:6px 0}
+.card li::before{content:"✦";position:absolute;left:0;color:var(--saffron)}
+.card .btn{margin-top:auto;align-self:flex-start;padding:10px 18px;font-size:13.5px;background:var(--purple);color:var(--ivory)}
+.card .spacer{flex:1;min-height:18px}
+
+/* WHY */
+.why{background:var(--green);color:var(--ivory);overflow:hidden}
+.why .weave{position:absolute;inset:0;opacity:.08}
+.why h2{color:var(--ivory)}
+.why .kicker{color:var(--saffron)}
+.why .lede{color:#cfe1d7}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;position:relative}
+.pillar{background:rgba(251,247,239,.06);border:1px solid rgba(251,247,239,.16);border-radius:20px;padding:24px}
+.pillar svg{width:44px;height:44px;margin-bottom:12px}
+.pillar h3{font-size:21px;margin-bottom:6px;color:var(--saffron)}
+.pillar p{font-size:14px;color:#dbe9e1}
+
+/* POLICIES */
+.policy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
+.policy{display:flex;gap:16px;padding:20px 22px;border-radius:18px;background:#fff;border:1px solid rgba(75,42,107,.12)}
+.policy .ic{flex:0 0 40px;height:40px;border-radius:50%;background:var(--purple);color:var(--saffron);display:grid;place-items:center;font-family:"Abril Fatface",serif;font-size:18px}
+.policy h3{font-family:Poppins,sans-serif;font-weight:600;font-size:15px;color:var(--purple);margin-bottom:2px}
+.policy p{font-size:14px;color:var(--muted)}
+
+/* HOURS */
+.visit{background:linear-gradient(180deg,#f4ecdf,var(--ivory))}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px;align-items:stretch}
+.hours{background:var(--purple);color:var(--ivory);border-radius:24px;padding:30px;position:relative;overflow:hidden}
+.hours h3{font-size:28px;margin-bottom:16px}
+.hours .burst-sm{position:absolute;right:-60px;bottom:-60px;width:200px;opacity:.25}
+.hrow{display:flex;gap:10px;white-space:nowrap;justify-content:space-between;padding:11px 14px;border-radius:12px;font-size:15px;position:relative}
+.hrow + .hrow{border-top:1px solid rgba(251,247,239,.1)}
+.hrow.closed>span:last-child{color:#b9a6c9}
+.hrow.today{background:var(--saffron);color:var(--purple-d);font-weight:600;border-top-color:transparent}
+.hrow.today>span:last-child{color:var(--purple-d)}
+.hrow.today + .hrow{border-top-color:transparent}
+.today-badge{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:var(--purple-d);color:var(--saffron);padding:2px 7px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.status{margin-top:16px;font-size:13.5px;color:#e5d8f0}
+.mapcard{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(75,42,107,.14);display:flex;flex-direction:column}
+.mapcard iframe{width:100%;flex:1;min-height:280px;border:0;display:block}
+.mapinfo{padding:20px 22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.mapinfo strong{color:var(--purple);font-size:16px}
+.mapinfo small{display:block;color:var(--muted)}
+.mapinfo .btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn-sm{padding:10px 16px;font-size:13.5px}
+.btn-purple{background:var(--purple);color:var(--ivory)}
+.btn-outline{border-color:var(--purple);color:var(--purple)}
+
+/* CTA band */
+.band{background:var(--purple-d);color:var(--ivory);text-align:center;overflow:hidden}
+.band h2{color:var(--ivory)}
+.band h2 em{font-style:normal;color:var(--saffron)}
+.band p{color:#d7c8e4;max-width:560px;margin:0 auto 28px}
+.band .ctas{justify-content:center}
+.band .weave{position:absolute;inset:0;opacity:.1}
+footer{background:var(--ink);color:#bfb1cc;padding:36px 0 30px;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer a{color:var(--saffron);text-decoration:none}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(36,21,47,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(242,165,65,.3)}
+.callbar a{flex:1;padding:13px 10px;font-size:15px}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+
+@media (max-width:900px){
+  .services{grid-template-columns:1fr 1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .navlinks{display:none}
+  .hero{padding:28px 0 80px}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .medal{max-width:170px;margin:0 auto;order:-1}
+  .burst{width:300px;height:300px;right:-110px;top:-90px}
+  .hero p.sub{font-size:16px}
+  .ctas .btn{flex:1}
+  section{padding:64px 0}
+  .services,.pillars,.policy-grid,.visit-grid{grid-template-columns:1fr}
+  .callbar{display:flex}
+  .hrow{font-size:13.5px;padding:11px 10px}
+  .hours{padding:26px 18px}
+  .today-badge{margin-left:6px}
+  body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){.burst{animation:none}.reveal{transition:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for AhstonishedLooks. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="braid" width="60" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 20 C15 0, 15 0, 30 20 S45 40, 60 20" fill="none" stroke="#f2a541" stroke-width="3"/>
+      <path d="M0 20 C15 40, 15 40, 30 20 S45 0, 60 20" fill="none" stroke="#fbf7ef" stroke-width="3"/>
+      <circle cx="30" cy="20" r="2.5" fill="#f2a541"/>
+    </pattern>
+    <symbol id="starburst" viewBox="-100 -100 200 200">
+      <g fill="#f2a541">
+        <polygon points="0,-100 7,-20 0,0 -7,-20"/><polygon points="0,100 7,20 0,0 -7,20"/>
+        <polygon points="-100,0 -20,7 0,0 -20,-7"/><polygon points="100,0 20,7 0,0 20,-7"/>
+        <polygon points="70,-70 18,-6 0,0 6,-18"/><polygon points="-70,70 -18,6 0,0 -6,18"/>
+        <polygon points="-70,-70 -6,-18 0,0 -18,-6"/><polygon points="70,70 6,18 0,0 18,6"/>
+      </g>
+      <g fill="#fbf7ef" opacity=".55">
+        <polygon points="38,-92 8,-14 0,0 2,-16"/><polygon points="-38,92 -8,14 0,0 -2,16"/>
+        <polygon points="-92,-38 -14,-8 0,0 -16,-2"/><polygon points="92,38 14,8 0,0 16,2"/>
+        <polygon points="-38,-92 -2,-16 0,0 -8,-14"/><polygon points="38,92 2,16 0,0 8,14"/>
+        <polygon points="92,-38 16,-2 0,0 14,-8"/><polygon points="-92,38 -16,2 0,0 -14,8"/>
+      </g>
+      <circle r="9" fill="#fbf7ef"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Ahstonished<span>Looks</span></a>
+    <div class="navlinks"><a href="#services">Services</a><a href="#why">About</a><a href="#policies">Policies</a><a href="#visit">Hours</a></div>
+    <a class="btn btn-gold nav-cta" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="weave" aria-hidden="true"><rect width="100%" height="100%" fill="url(#braid)"/></svg>
+  <svg class="burst" aria-hidden="true"><use href="#starburst"/></svg>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Smyrna, Tennessee</div>
+      <h1>Braids &amp; beauty that leave you <em>ah‑stonished.</em></h1>
+      <p class="sub">Licensed esthetician and certified braider — knotless braids, take downs and waxing, booked online Monday through Thursday.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+16154864040">Call (615) 486-4040</a>
+      </div>
+      <div class="chips"><span class="chip">✦ Licensed Esthetician</span><span class="chip">✦ Certified Braider</span><span class="chip">✦ Mon–Thu · 9–5</span></div>
+    </div>
+    <div class="medal reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <radialGradient id="mg" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#7a4ca6"/><stop offset="1" stop-color="#2e1745"/></radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="none" stroke="#f2a541" stroke-width="2" stroke-dasharray="2 8"/>
+        <circle cx="200" cy="200" r="168" fill="url(#mg)" stroke="#f2a541" stroke-width="4"/>
+        <!-- three-strand braid down the middle -->
+        <g fill="none" stroke-width="15" stroke-linecap="round">
+          <path d="M170 70 C230 110, 230 130, 170 170 S110 230, 170 270 S230 330, 200 345" stroke="#f2a541"/>
+          <path d="M230 70 C170 110, 170 130, 230 170 S290 230, 230 270 S170 330, 200 345" stroke="#fbf7ef"/>
+          <path d="M200 60 C200 100, 200 100, 200 120" stroke="#1f4d3a"/>
+        </g>
+        <g fill="none" stroke-width="5" stroke="#2e1745" opacity=".35">
+          <path d="M170 70 C230 110, 230 130, 170 170 S110 230, 170 270"/>
+        </g>
+        <g fill="#f2a541"><circle cx="200" cy="120" r="6"/><circle cx="200" cy="220" r="6"/><circle cx="200" cy="320" r="6"/></g>
+        <g transform="translate(300 105) scale(.32)"><use href="#starburst"/></g>
+        <g transform="translate(100 300) scale(.22)"><use href="#starburst"/></g>
+      </svg>
+    </div>
+  </div>
+  <svg class="hero-edge" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46 L0 22 Q60 0 120 22 T240 22 T360 22 T480 22 T600 22 T720 22 T840 22 T960 22 T1080 22 T1200 22 T1320 22 T1440 22 L1440 46Z" fill="#fbf7ef"/></svg>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">The menu</div>
+      <h2>Services &amp; specials</h2>
+      <p class="lede">Straight from the booking page — every service holds with a $25 non‑refundable deposit that goes towards your final total.</p>
+    </div>
+    <div class="services">
+      <article class="card reveal">
+        <span class="tag">November only</span>
+        <h3>Large Mid Back Knotless</h3>
+        <div class="price"><b>$150</b><span>· 4 hours</span></div>
+        <p>The monthly knotless special.</p>
+        <ul>
+          <li>$25 deposit to book</li>
+          <li>Outre hair used — text 615-486-4040 with your desired color 24hrs before</li>
+          <li>Come washed &amp; blown out (otherwise a $40 additional fee)</li>
+        </ul>
+        <div class="spacer"></div>
+        <a class="btn" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book knotless →</a>
+      </article>
+      <article class="card reveal">
+        <span class="tag green">Prep service</span>
+        <h3>Take Down Service</h3>
+        <div class="price"><b>$45</b><span>· 30 minutes</span></div>
+        <p>Includes take down of your current hair style, shampoo and blow dry only.</p>
+        <ul><li>$25 deposit to book</li></ul>
+        <div class="spacer"></div>
+        <a class="btn" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book take down →</a>
+      </article>
+      <article class="card reveal">
+        <span class="tag">Ends Nov. 30th</span>
+        <h3>Besties &amp; Brazilian</h3>
+        <div class="price"><b>$52.50</b><span>· both services · 1 hour</span></div>
+        <p>Come in with a friend and get 50% off the second wax.</p>
+        <ul><li>Both appointments booked the same day</li><li>Waxing by a licensed esthetician</li></ul>
+        <div class="spacer"></div>
+        <a class="btn" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book with a bestie →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="weave" aria-hidden="true"><rect width="100%" height="100%" fill="url(#braid)"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Why AhstonishedLooks</div>
+      <h2>Skin and hair, one chair.</h2>
+      <p class="lede">“Licensed Esthetician/ Certified Braider, here to serve you.” — from the AhstonishedLooks booking page, where you’ll book with Ashante.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#f2a541" stroke-width="2.5"><circle cx="22" cy="22" r="18"/><path d="M14 22l6 6 10-12"/></svg>
+        <h3>Licensed</h3><p>A licensed esthetician handling your waxing and skin services.</p>
+      </div>
+      <div class="pillar reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#f2a541" stroke-width="2.5" stroke-linecap="round"><path d="M16 4c12 8 12 10 0 18s-12 10 0 18"/><path d="M28 4c-12 8-12 10 0 18s12 10 0 18"/></svg>
+        <h3>Certified braider</h3><p>Knotless braids done by a certified braider, with Outre hair in your color.</p>
+      </div>
+      <div class="pillar reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#f2a541" stroke-width="2.5"><rect x="6" y="9" width="32" height="29" rx="4"/><path d="M6 17h32M15 5v8M29 5v8"/></svg>
+        <h3>Easy online booking</h3><p>Pick your service and time on the booking page — books open monthly on the 5th.</p>
+      </div>
+      <div class="pillar reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#f2a541" stroke-width="2.5"><path d="M22 4l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z"/></svg>
+        <h3>Monthly specials</h3><p>Seasonal deals like the November knotless special and Besties &amp; Brazilian.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="policies">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Good to know</div>
+      <h2>Before you book</h2>
+      <p class="lede">Clear policies so every appointment runs on time.</p>
+    </div>
+    <div class="policy-grid">
+      <div class="policy reveal"><div class="ic">$</div><div><h3>Deposit</h3><p>$25 non‑refundable deposit that goes towards the final total.</p></div></div>
+      <div class="policy reveal"><div class="ic">24</div><div><h3>Cancellations</h3><p>Without a 24hr notice, cancellations and no call no shows are charged full price.</p></div></div>
+      <div class="policy reveal"><div class="ic">15</div><div><h3>Running late?</h3><p>More than 15 mins late? Call or text 615-486-4040 and we can reschedule.</p></div></div>
+      <div class="policy reveal"><div class="ic">↻</div><div><h3>Rescheduling</h3><p>Appointments can be rescheduled once within the same month.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Visit</div>
+      <h2>Hours &amp; location</h2>
+      <p class="lede">By appointment in Smyrna, TN. Book online or call to check availability.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <svg class="burst-sm" viewBox="0 0 200 200" aria-hidden="true"><use href="#starburst"/></svg>
+        <h3>Opening hours</h3>
+        <div id="hours">
+          <div class="hrow" data-d="1"><span>Monday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="3"><span>Wednesday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow closed" data-d="5"><span>Friday</span><span>Closed</span></div>
+          <div class="hrow closed" data-d="6"><span>Saturday</span><span>Closed</span></div>
+          <div class="hrow closed" data-d="0"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <p class="status" id="status">Books open monthly on the 5th.</p>
+      </div>
+      <div class="mapcard reveal">
+        <iframe title="Map of Smyrna, TN" loading="lazy" src="https://www.google.com/maps?q=Smyrna%2C%20TN&output=embed"></iframe>
+        <div class="mapinfo">
+          <div><strong>Smyrna, Tennessee</strong><small>By appointment · Mon–Thu</small></div>
+          <div class="btns">
+            <a class="btn btn-sm btn-purple" href="tel:+16154864040">Call</a>
+            <a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=Smyrna%2C%20TN" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <svg class="weave" aria-hidden="true"><rect width="100%" height="100%" fill="url(#braid)"/></svg>
+  <div class="wrap reveal" style="position:relative">
+    <h2>Your next look, <em>booked.</em></h2>
+    <p>Grab a Monday–Thursday spot online, or reach out at <a href="mailto:ahstonishedlooks@outlook.com" style="color:#f2a541">ahstonishedlooks@outlook.com</a>.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book now</a>
+      <a class="btn btn-ghost" href="tel:+16154864040">(615) 486-4040</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo" style="color:#fbf7ef">Ahstonished<span>Looks</span></span><br>Smyrna, TN · <a href="tel:+16154864040">(615) 486-4040</a> · <a href="https://instagram.com/ahstonishedlooks" target="_blank" rel="noopener">@ahstonishedlooks</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:+16154864040">Call</a>
+  <a class="btn btn-gold" href="https://square.site/book/G50KDRDCTGEQ5/ahstonishedlooks-smyrna-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var row=document.querySelector('.hrow[data-d="'+d+'"]');
+  if(row){row.classList.add('today');var b=document.createElement('span');b.className='today-badge';b.textContent='Today';row.firstElementChild.appendChild(b);
+    var st=document.getElementById('status');
+    if(d>=1&&d<=4){st.textContent='Open today 9:00 AM – 5:00 PM, by appointment.';}else{st.textContent='Closed today — book ahead for Monday–Thursday.';}}
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  var vh=window.innerHeight;
+  els.forEach(function(e){if(e.getBoundingClientRect().top>vh*0.95)e.classList.add('pre');});
+  function showAll(){els.forEach(function(e){e.classList.remove('pre');});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e);});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

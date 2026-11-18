@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Liyah's Lovely Looks — Murfreesboro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#e8c4b8;--esp:#3b2622;--gold:#c8a165;--por:#fbf8f6;--rose-d:#b9786a;--ink:#3b2622;--muted:#6e5650}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--por);color:var(--ink);font-family:Jost,system-ui,sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--esp);color:#f1dfd8;font-size:9.6px;letter-spacing:0;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--gold);font-weight:500}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:1180px;margin:0 auto}
+.logo{font-family:"Bodoni Moda",serif;font-size:20px;font-style:italic;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--gold)}
+.navlinks{display:none;gap:28px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.navlinks a{text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:var(--gold);transition:width .3s}
+.navlinks a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--esp);color:var(--por);box-shadow:0 10px 24px -12px rgba(59,38,34,.7)}
+.btn-dark:hover{background:#523530}
+.btn-line{border:1px solid var(--esp);color:var(--esp)}
+.btn-line:hover{background:var(--esp);color:var(--por)}
+.navcta{padding:10px 18px;font-size:11px}
+/* hero */
+.hero{position:relative;padding:28px 20px 64px;max-width:1180px;margin:0 auto;display:grid;gap:36px;align-items:center}
+.eyebrow{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-d);font-weight:500;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+h1{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(44px,12vw,92px);line-height:.98;letter-spacing:-.02em;margin:18px 0 18px}
+h1 em{font-style:italic;color:var(--rose-d)}
+h1 .gold{background:linear-gradient(100deg,#a9813f,#e6c88c 45%,#b28a4a 70%,#e9d1a0);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+.sub{font-size:17px;color:var(--muted);max-width:30em;font-weight:300}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.mirror{position:relative;width:min(72vw,420px);aspect-ratio:1;margin:0 auto}
+.mirror svg{width:100%;height:100%;overflow:visible}
+.spin{transform-origin:200px 200px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.stroke-draw{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.2s .3s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+/* swatch strip */
+.swatches{display:flex;overflow:hidden;gap:0;border-top:1px solid #ecdcd5;border-bottom:1px solid #ecdcd5;background:#f6ece8}
+.swatches div{flex:1;padding:14px 4px;text-align:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.swatches i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+section{padding:80px 20px;max-width:1180px;margin:0 auto}
+h2{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(34px,8vw,58px);line-height:1.04;letter-spacing:-.015em;margin:14px 0 14px}
+h2 em{font-style:italic;color:var(--rose-d)}
+.lede{color:var(--muted);max-width:34em;font-weight:300}
+/* menu */
+.menu{margin-top:40px;display:grid;gap:16px}
+.card{position:relative;background:#fff;border:1px solid #efe1db;border-radius:22px;padding:24px 22px 22px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(59,38,34,.45);border-color:var(--rose)}
+.card .sw{position:absolute;right:-24px;top:-10px;width:150px;height:70px;opacity:.55;transition:transform .5s}
+.card:hover .sw{transform:translateX(-10px) rotate(-4deg)}
+.card h3{font-family:"Bodoni Moda",serif;font-weight:500;font-size:25px;line-height:1.15;position:relative}
+.meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;position:relative}
+.price{font-family:"Bodoni Moda",serif;font-size:34px;color:var(--esp)}
+.price small{font-family:Jost;font-size:12px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-left:4px}
+.dur{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-d);font-weight:500}
+.note{font-size:14.5px;color:var(--muted);margin-top:10px;font-weight:300;position:relative}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;background:var(--esp);color:var(--gold);padding:5px 10px;border-radius:99px;margin-bottom:12px;position:relative}
+.card.feat{background:var(--esp);color:var(--por);border-color:var(--esp)}
+.card.feat h3,.card.feat .price{color:var(--por)}
+.card.feat .note,.card.feat .price small{color:#d9c3bb}
+.card.feat .dur{color:var(--gold)}
+.card.feat .tag{background:var(--gold);color:var(--esp)}
+.fine{font-size:13px;color:var(--muted);margin-top:22px}
+/* why */
+.why{background:var(--esp);color:var(--por);max-width:none;position:relative;overflow:hidden}
+.why .wrap{max-width:1180px;margin:0 auto;position:relative}
+.why h2 em{color:var(--rose)}
+.why .lede{color:#d9c3bb}
+.why .eyebrow{color:var(--gold)}
+.pts{display:grid;gap:14px;margin-top:38px}
+.pt{border:1px solid rgba(200,161,101,.35);border-radius:999px;padding:20px 24px;display:flex;gap:16px;align-items:center;transition:background .3s}
+.pt:hover{background:rgba(232,196,184,.07)}
+.pt .n{flex:none;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:"Bodoni Moda";font-style:italic;font-size:20px;color:var(--gold)}
+.pt b{display:block;font-weight:500;font-size:16px;letter-spacing:.02em}
+.pt span{font-size:14px;color:#d9c3bb;font-weight:300}
+.whybg{position:absolute;right:-120px;top:-60px;width:520px;opacity:.14;pointer-events:none}
+/* hours */
+.hgrid{display:grid;gap:36px;margin-top:36px}
+.hours{list-style:none;border-top:1px solid #ead9d2}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:15px 14px;border-bottom:1px solid #ead9d2;font-size:15px;border-radius:12px;transition:background .3s}
+.hours li .d{font-weight:500;letter-spacing:.06em;min-width:96px}
+.hours li .t{text-align:right;color:var(--muted)}
+.hours li.closed .t{font-style:italic;color:#a3897f}
+.hours li.today{background:var(--rose);border-bottom-color:transparent}
+.hours li.today .t{color:var(--esp)}
+.hours li.today .d::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--esp);color:var(--gold);padding:3px 8px;border-radius:99px;vertical-align:2px}
+.map{border-radius:28px;overflow:hidden;border:1px solid #ead9d2;aspect-ratio:4/3;background:#f1e5e0}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:sepia(.25) saturate(.85)}
+.contact{display:grid;gap:10px;margin-top:18px}
+.contact a{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border:1px solid #ead9d2;border-radius:999px;text-decoration:none;background:#fff;transition:border-color .25s,transform .25s;word-break:break-word;gap:10px}
+.contact a:hover{border-color:var(--gold);transform:translateX(4px)}
+.contact small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-d)}
+.contact strong{font-weight:500;font-size:15px}
+footer{text-align:center;padding:56px 20px 40px;border-top:1px solid #ead9d2;font-size:13px;color:var(--muted)}
+footer .logo{font-size:28px;display:block;margin-bottom:10px}
+/* bottom bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,248,246,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid #ead9d2}
+.bar a{flex:1;padding:15px 10px;font-size:12px}
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(24px)}
+@media (min-width:860px){
+ body{padding-bottom:0}
+ .bar{display:none}
+ .navlinks{display:flex}
+ .hero{grid-template-columns:1.1fr .9fr;padding:48px 32px 96px}
+ section{padding:110px 32px}
+ .menu{grid-template-columns:repeat(3,1fr)}
+ .pts{grid-template-columns:repeat(2,1fr)}
+ .hgrid{grid-template-columns:1fr 1fr;align-items:start}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.stroke-draw{stroke-dashoffset:0}}
+@media (min-width:600px){.banner{font-size:11.5px;letter-spacing:.04em}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Liyah's Lovely Looks. Not live.</div>
+
+<nav>
+ <a class="logo" href="#top">Liyah's <span>Lovely</span> Looks</a>
+ <div class="navlinks"><a href="#menu">Menu</a><a href="#why">The Chair</a><a href="#hours">Hours</a><a href="#visit">Book</a></div>
+ <a class="btn btn-dark navcta" href="https://square.site/book/K0ZD74D6SRZDN/liyah-s-lovely-looks-murfreesboro-tn">Book</a>
+</nav>
+
+<header class="hero" id="top">
+ <div class="rv">
+  <div class="eyebrow">Makeup artistry · Murfreesboro, TN</div>
+  <h1>Come get <em>more</em> <span class="gold">Lovely.</span></h1>
+  <p class="sub">Natural beats to full glam with lashes, by Aaliyah — open six days a week, with early-morning chairs from 6&nbsp;AM on Fridays and Saturdays.</p>
+  <div class="ctas">
+   <a class="btn btn-dark" href="https://square.site/book/K0ZD74D6SRZDN/liyah-s-lovely-looks-murfreesboro-tn">Book your beat</a>
+   <a class="btn btn-line" href="tel:+19018703846">Call (901) 870-3846</a>
+  </div>
+ </div>
+ <div class="mirror rv" aria-hidden="true">
+  <svg viewBox="0 0 400 400">
+   <defs>
+    <linearGradient id="gf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9813f"/><stop offset=".45" stop-color="#ecd29c"/><stop offset=".7" stop-color="#b28a4a"/><stop offset="1" stop-color="#e9d1a0"/></linearGradient>
+    <radialGradient id="gl" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#f5e3dc"/><stop offset="1" stop-color="#e8c4b8"/></radialGradient>
+    <clipPath id="cl"><circle cx="200" cy="200" r="150"/></clipPath>
+   </defs>
+   <g class="spin"><circle cx="200" cy="200" r="190" fill="none" stroke="#c8a165" stroke-width="1" stroke-dasharray="2 9"/></g>
+   <circle cx="200" cy="200" r="172" fill="url(#gf)"/>
+   <circle cx="200" cy="200" r="163" fill="#3b2622"/>
+   <circle cx="200" cy="200" r="156" fill="none" stroke="url(#gf)" stroke-width="2"/>
+   <circle cx="200" cy="200" r="150" fill="url(#gl)"/>
+   <g clip-path="url(#cl)">
+    <path class="stroke-draw" d="M40 250 C120 180, 210 300, 380 170" stroke="#b9786a" stroke-width="46" fill="none" stroke-linecap="round" opacity=".85"/>
+    <path class="stroke-draw" d="M20 300 C140 250, 240 340, 380 250" stroke="#3b2622" stroke-width="22" fill="none" stroke-linecap="round" opacity=".8" style="animation-delay:.7s"/>
+    <path class="stroke-draw" d="M60 190 C150 150, 230 220, 360 130" stroke="#c8a165" stroke-width="10" fill="none" stroke-linecap="round" style="animation-delay:1.1s"/>
+    <ellipse cx="140" cy="120" rx="70" ry="30" fill="#fff" opacity=".5" transform="rotate(-30 140 120)"/>
+   </g>
+   <g class="float">
+    <g transform="translate(300 60) rotate(28)">
+     <rect x="-14" y="40" width="28" height="70" rx="4" fill="url(#gf)"/>
+     <rect x="-11" y="14" width="22" height="30" fill="#3b2622"/>
+     <path d="M-11 14 L-11 -10 Q0 -26 11 -16 L11 14 Z" fill="#b9786a"/>
+    </g>
+   </g>
+   <text x="200" y="384" text-anchor="middle" font-family="Jost" font-size="11" letter-spacing="5" fill="#6e5650">MURFREESBORO · TN</text>
+  </svg>
+ </div>
+</header>
+
+<div class="swatches" aria-hidden="true">
+ <div><i style="background:#e8c4b8"></i>Natural Beat</div>
+ <div><i style="background:#b9786a"></i>Soft Glam</div>
+ <div><i style="background:#3b2622"></i>Full Glam</div>
+ <div><i style="background:#c8a165"></i>Lashes</div>
+</div>
+
+<section id="menu">
+ <div class="rv">
+  <div class="eyebrow">The menu</div>
+  <h2>Pick your <em>finish.</em></h2>
+  <p class="lede">Every service, price and time below is straight from Liyah's booking page. Book online in a minute — a small deposit holds your spot.</p>
+ </div>
+ <div class="menu">
+  <article class="card rv"><svg class="sw" viewBox="0 0 150 70"><path d="M8 50 C40 10, 90 70, 142 20" stroke="#e8c4b8" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+   <h3>Natural Beat</h3><div class="meta"><span class="price">$30<small>Price varies</small></span><span class="dur">1 hr 10 min</span></div>
+   <p class="note">Lashes not included (add $5 if provided). $10 deposit.</p></article>
+  <article class="card rv"><svg class="sw" viewBox="0 0 150 70"><path d="M8 50 C40 10, 90 70, 142 20" stroke="#dcae9f" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+   <h3>Natural Glam</h3><div class="meta"><span class="price">$37</span><span class="dur">1 hr 30 min</span></div></article>
+  <article class="card rv"><svg class="sw" viewBox="0 0 150 70"><path d="M8 50 C40 10, 90 70, 142 20" stroke="#b9786a" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+   <h3>Soft Glam</h3><div class="meta"><span class="price">$40<small>Price varies</small></span><span class="dur">1 hr 30 min</span></div>
+   <p class="note">Lashes not included (add $5 if provided). $10 deposit.</p></article>
+  <article class="card feat rv"><svg class="sw" viewBox="0 0 150 70"><path d="M8 50 C40 10, 90 70, 142 20" stroke="#c8a165" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+   <span class="tag">Lashes included</span>
+   <h3>Full Glam</h3><div class="meta"><span class="price">$50</span><span class="dur">1 hr 45 min</span></div>
+   <p class="note">Lashes included. $10 deposit.</p></article>
+  <article class="card rv"><svg class="sw" viewBox="0 0 150 70"><path d="M8 50 C40 10, 90 70, 142 20" stroke="#e8c4b8" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+   <span class="tag">Two faces</span>
+   <h3>Bring a Friend Special</h3><div class="meta"><span class="price">$80</span><span class="dur">2 hr 40 min</span></div>
+   <p class="note">Two full glam faces with lashes included. $20 deposit at booking.</p></article>
+  <article class="card rv"><svg class="sw" viewBox="0 0 150 70"><path d="M8 50 C40 10, 90 70, 142 20" stroke="#dcae9f" stroke-width="22" fill="none" stroke-linecap="round"/></svg>
+   <h3>Mannequin Makeover</h3><div class="meta"><span class="price">$45</span><span class="dur">4 hr 30 min</span></div>
+   <p class="note">Lashes not included (add $5 if provided). $10 deposit.</p></article>
+ </div>
+ <p class="fine rv">Just need lashes? <strong>Lash Application Only</strong> — $7, 10 min (lashes not included, $3 deposit).</p>
+</section>
+
+<section class="why" id="why">
+ <svg class="whybg" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="180" fill="none" stroke="#c8a165" stroke-width="2"/><circle cx="200" cy="200" r="150" fill="none" stroke="#e8c4b8" stroke-width="1"/><path d="M40 260 C140 170, 230 300, 380 160" stroke="#e8c4b8" stroke-width="40" fill="none" stroke-linecap="round"/></svg>
+ <div class="wrap">
+  <div class="rv">
+   <div class="eyebrow">Why Liyah's chair</div>
+   <h2>Glam that <em>fits your day.</em></h2>
+   <p class="lede">No guesswork — real prices, real times, and a schedule built around early calls and late nights.</p>
+  </div>
+  <div class="pts">
+   <div class="pt rv"><div class="n">i</div><div><b>Clear, posted pricing</b><span>From a $7 lash application to $50 full glam — no surprises.</span></div></div>
+   <div class="pt rv"><div class="n">ii</div><div><b>Up as early as you are</b><span>Friday &amp; Saturday chairs open at 6 AM.</span></div></div>
+   <div class="pt rv"><div class="n">iii</div><div><b>Evening slots, too</b><span>Sunday, Thursday &amp; Friday run until 9 PM or later.</span></div></div>
+   <div class="pt rv"><div class="n">iv</div><div><b>Bring your bestie</b><span>Two full glam faces with lashes for $80.</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="hours">
+ <div class="rv">
+  <div class="eyebrow">Hours &amp; visit</div>
+  <h2>When the <em>mirror's</em> open.</h2>
+ </div>
+ <div class="hgrid">
+  <ul class="hours rv" id="hrs">
+   <li data-d="0"><span class="d">Sunday</span><span class="t">8:00 AM – 2:00 PM<br>7:00 PM – 9:00 PM</span></li>
+   <li data-d="1"><span class="d">Monday</span><span class="t">8:00 AM – 12:30 PM<br>2:30 PM – 7:30 PM</span></li>
+   <li data-d="2" class="closed"><span class="d">Tuesday</span><span class="t">Closed</span></li>
+   <li data-d="3"><span class="d">Wednesday</span><span class="t">8:00 AM – 12:00 PM<br>12:30 PM – 6:00 PM</span></li>
+   <li data-d="4"><span class="d">Thursday</span><span class="t">11:25 AM – 2:00 PM<br>6:00 PM – 9:00 PM</span></li>
+   <li data-d="5"><span class="d">Friday</span><span class="t">6:00 AM – 11:00 AM<br>2:30 PM – 9:30 PM</span></li>
+   <li data-d="6"><span class="d">Saturday</span><span class="t">6:00 AM – 8:00 PM</span></li>
+  </ul>
+  <div class="rv" id="visit">
+   <div class="map"><iframe title="Map of Murfreesboro, TN" loading="lazy" src="https://www.google.com/maps?q=Murfreesboro%2C%20TN&output=embed"></iframe></div>
+   <div class="contact">
+    <a href="tel:+19018703846"><span><small>Call</small><strong>(901) 870-3846</strong></span><span aria-hidden="true">→</span></a>
+    <a href="mailto:aaliyahmarie.akins@gmail.com"><span><small>Email</small><strong>aaliyahmarie.akins@gmail.com</strong></span><span aria-hidden="true">→</span></a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Murfreesboro%2C%20TN"><span><small>Directions</small><strong>Murfreesboro, TN — exact address on booking</strong></span><span aria-hidden="true">→</span></a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <span class="logo">Liyah's <span style="color:var(--gold)">Lovely</span> Looks</span>
+ Makeup artistry in Murfreesboro, TN · <a href="https://instagram.com/liyahslovelylooks">@liyahslovelylooks</a><br><br>
+ Concept by Code Craft Media
+</footer>
+
+<div class="bar">
+ <a class="btn btn-line" href="tel:+19018703846">Call</a>
+ <a class="btn btn-dark" href="https://square.site/book/K0ZD74D6SRZDN/liyah-s-lovely-looks-murfreesboro-tn">Book now</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var d=new Date().getDay(),li=document.querySelector('#hrs li[data-d="'+d+'"]');if(li)li.classList.add('today');
+ var els=[].slice.call(document.querySelectorAll('.rv'));
+ function all(){els.forEach(function(e){e.classList.add('in')})}
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})}else all();
+ setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Simply Lins — Mount Juliet, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{--oat:#EFE8DD;--oat2:#E6DCCD;--clay:#D7A99A;--clay-d:#A8695A;--ink:#3A3532;--ink2:#6B625C;--white:#fff;--r:28px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Albert Sans",system-ui,sans-serif;background:var(--oat);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+h1,h2,h3,.disp{font-family:Marcellus,Georgia,serif;font-weight:400;letter-spacing:.005em}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.banner{background:var(--ink);color:#E9DFD3;font-size:11px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
+@media(min-width:600px){.banner{font-size:12px;letter-spacing:.02em}}
+.banner b{color:var(--clay);font-weight:500}
+/* nav */
+nav{position:sticky;top:0;z-index:30;background:rgba(239,232,221,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(58,53,50,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:Marcellus,serif;font-size:24px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo svg{width:26px;height:26px}
+.links{display:none;gap:30px;font-size:14px}
+.links a{text-decoration:none;color:var(--ink2);transition:color .2s}
+.links a:hover{color:var(--clay-d)}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:500;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:1.5px solid var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(58,53,50,.45)}
+.btn:active{transform:translateY(0)}
+.btn.solid{background:var(--ink);color:var(--white)}
+.btn.solid:hover{background:#2a2624}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--white)}
+.btn.sm{padding:9px 18px;font-size:13px}
+nav .btn{display:none}@media(min-width:600px){nav .btn{display:inline-flex}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:46px 0 64px}
+.blob{position:absolute;pointer-events:none;z-index:0}
+.b1{width:520px;right:-220px;top:-90px;animation:float 14s ease-in-out infinite}
+.b2{width:300px;left:-160px;bottom:-60px;animation:float 18s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translate(-14px,18px) rotate(6deg)}}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:36px}
+@media(min-width:900px){.hero{padding:90px 0 110px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}.b1{width:760px;right:-200px;top:-160px}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--white);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--ink2)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--clay);display:inline-block}
+.hero h1{font-size:clamp(42px,11.5vw,84px);line-height:1.02;margin:20px 0 18px}
+.hero h1 em{font-style:normal;color:var(--clay-d);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:-4%;bottom:-.12em;width:108%;height:.4em;overflow:visible}
+.hero h1 em path{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s .5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sub{font-size:18px;color:var(--ink2);max-width:30em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.facts span{border:1px solid rgba(58,53,50,.18);border-radius:999px;padding:6px 13px;font-size:13px;color:var(--ink2)}
+/* hero art */
+.art{position:relative;aspect-ratio:1/1.05;max-width:440px;width:100%;justify-self:center}
+.art .shape{position:absolute;inset:0}
+.art .card{position:absolute;background:var(--white);border-radius:22px;padding:14px 18px;box-shadow:0 18px 40px -22px rgba(58,53,50,.5);font-size:13px}
+.art .card b{display:block;font-family:Marcellus,serif;font-weight:400;font-size:22px;color:var(--ink)}
+.art .c1{left:-4px;bottom:16%;animation:bob 6s ease-in-out infinite}
+.art .c2{right:0;top:12%;animation:bob 7s 1s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media(max-width:899px){.art{max-width:280px}.art .card{padding:11px 14px;font-size:12px}.art .card b{font-size:19px}}
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+.eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay-d);font-weight:600;display:flex;align-items:center;gap:10px}
+.eyebrow svg{width:46px;height:12px}
+h2{font-size:clamp(34px,8vw,56px);line-height:1.08;margin:12px 0 14px}
+.lead{color:var(--ink2);font-size:17px;max-width:36em}
+/* menu */
+.menu{background:var(--white);border-radius:40px 40px 0 0}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:28px -2px 8px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1.5px solid rgba(58,53,50,.2);background:transparent;border-radius:999px;padding:9px 18px;font:500 14px "Albert Sans",sans-serif;color:var(--ink);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.groups{display:grid;gap:22px}
+@media(min-width:900px){.groups{grid-template-columns:1fr 1fr}}
+.group{background:var(--oat);border-radius:var(--r);padding:26px 22px 14px}
+.group h3{font-size:26px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
+.group h3 small{font-family:"Albert Sans";font-size:12px;color:var(--ink2);letter-spacing:.06em;text-transform:uppercase}
+.item{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:1px dashed rgba(58,53,50,.18)}
+.item:last-child{border-bottom:0}
+.item{align-items:center}.nm{display:flex;flex-direction:column;line-height:1.35}.item .n{font-weight:500}
+.item .d{font-size:12.5px;color:var(--ink2);white-space:nowrap;margin-top:2px}
+.item .dots{flex:1;min-width:10px}
+.item .p{font-family:Marcellus,serif;font-size:19px;white-space:nowrap}
+.item .p.q{font-family:"Albert Sans";font-size:13px;color:var(--ink2)}
+.js .group.hide{display:none}
+.note{font-size:13px;color:var(--ink2);margin-top:22px}
+/* about */
+.about{background:var(--white);padding-top:24px}
+.about .wrap{display:grid;gap:34px}
+@media(min-width:900px){.about .wrap{grid-template-columns:1fr 1fr;gap:70px;align-items:center}}
+.quote{background:var(--oat);border-radius:200px 200px var(--r) var(--r);padding:70px 30px 34px;position:relative;text-align:center}
+.quote p{font-family:Marcellus,serif;font-size:clamp(23px,5.6vw,30px);line-height:1.3}
+.quote .by{font-size:13px;color:var(--ink2);margin-top:18px;letter-spacing:.06em;text-transform:uppercase}
+.quote svg{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:70px}
+.why{display:grid;gap:14px;margin-top:26px}
+.why li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:20px;background:var(--oat);transition:transform .2s}
+.why li:hover{transform:translateX(4px)}
+.why .ic{flex:none;width:38px;height:38px;border-radius:50%;background:var(--clay);display:grid;place-items:center;color:#fff;font-family:Marcellus,serif;font-size:17px}
+.why b{display:block;font-weight:600}
+.why span{font-size:14.5px;color:var(--ink2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags span{background:#F6EEEA;color:var(--clay-d);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500}
+/* hours */
+.visit{background:var(--oat)}
+.visit .wrap{display:grid;gap:26px}
+@media(min-width:900px){.visit .wrap{grid-template-columns:.9fr 1.1fr;gap:40px}}
+.hours{background:var(--white);border-radius:var(--r);padding:12px 8px}
+.hrow{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-radius:999px;font-size:15.5px;transition:background .3s}
+.hrow .t{color:var(--ink2)}
+.hrow.closed .t{color:#9b918a}
+.hrow.today{background:var(--ink);color:#fff}
+.hrow.today .t{color:#F1D9D0}
+.hrow.today .day::after{content:"Today";margin-left:10px;font-size:11px;background:var(--clay);color:var(--ink);border-radius:999px;padding:2px 9px;vertical-align:2px;font-weight:600}
+.map{border-radius:var(--r);overflow:hidden;background:var(--oat2);min-height:320px;display:flex;flex-direction:column}
+.map{position:relative}.map::before{content:"Map · Mount Juliet, TN";position:absolute;inset:0;display:grid;place-items:center;color:var(--ink2);font-size:14px;letter-spacing:.06em}
+.map iframe{position:relative;border:0;width:100%;flex:1;min-height:300px;filter:saturate(.7) sepia(.12)}
+.contact{display:grid;gap:12px;margin-top:20px}
+.contact a{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:20px;padding:16px 18px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.contact a:hover{transform:translateY(-2px);box-shadow:0 12px 26px -18px rgba(58,53,50,.6)}
+.contact .ic{width:40px;height:40px;border-radius:50%;background:var(--oat);display:grid;place-items:center;flex:none}
+.contact small{display:block;color:var(--ink2);font-size:12.5px}
+.contact strong{font-weight:500;word-break:break-all}
+/* cta */
+.final{padding:84px 0;text-align:center;overflow:hidden;background:var(--clay)}
+.final h2{color:var(--ink)}
+.final p{color:#4d3c35;max-width:30em;margin:0 auto}
+.final .ctas{justify-content:center}
+.final .btn.ghost{border-color:var(--ink)}
+.final .btn.ghost:hover{background:rgba(255,255,255,.45)}
+footer{background:var(--ink);color:#CFC4B9;padding:40px 0 calc(110px + env(safe-area-inset-bottom));font-size:14px}
+@media(min-width:900px){footer{padding-bottom:34px}}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .logo{color:#fff}
+/* bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(58,53,50,.1)}
+.bar a{flex:1;justify-content:center;padding:13px 10px}
+@media(min-width:900px){.bar{display:none}}
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.js.all-in .reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1 em path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<script>document.documentElement.className+=' js';document.body.classList.add('js')</script>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Simply Lins. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Simply Lins home">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M6 23C4 15 9 9 13 6s7-4 8-3M9 23c0-6 3-11 7-14M13 23c1-5 3-8 6-10" stroke="#A8695A" stroke-width="1.4" stroke-linecap="round"/></svg>
+      Simply Lins
+    </a>
+    <div class="links"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Hours &amp; contact</a></div>
+    <a class="btn solid sm" href="https://square.site/book/3Q6Z30FWFBPGC/linsey-malone-salon-revive-lebanon-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="blob b1" viewBox="0 0 600 600" aria-hidden="true"><path fill="#E5C3B6" opacity=".55" d="M421 92c64 40 118 112 113 186s-70 151-140 196-146 57-213 22S60 381 58 300s47-168 117-212 182-36 246 4z"/></svg>
+  <svg class="blob b2" viewBox="0 0 600 600" aria-hidden="true"><path fill="#fff" opacity=".7" d="M440 120c58 52 86 140 60 214s-106 134-190 146-172-24-206-92 0-170 60-230 218-90 276-38z"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="pill"><i></i>Hair studio · Mount Juliet, TN</span>
+      <h1>Low-maintenance color, <em>simply<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14C40 4 80 18 120 9s60-2 78 2" fill="none" stroke="#D7A99A" stroke-width="3" stroke-linecap="round"/></svg></em> done.</h1>
+      <p class="sub">Highlights, color, cuts and weft extensions by Linsey, a cosmetologist with 14 years behind the chair.</p>
+      <div class="ctas">
+        <a class="btn solid" href="https://square.site/book/3Q6Z30FWFBPGC/linsey-malone-salon-revive-lebanon-tn" target="_blank" rel="noopener">Book online
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn ghost" href="tel:+16154788397">Call (615) 478-8397</a>
+      </div>
+      <div class="facts"><span>14 years experience</span><span>Consultations available</span><span>Booking open online</span></div>
+    </div>
+    <div class="art reveal" aria-hidden="true">
+      <svg class="shape" viewBox="0 0 440 460" fill="none">
+        <path d="M220 24c96 0 186 64 196 168s-50 214-150 238S56 400 34 296 124 24 220 24z" fill="#fff"/>
+        <path d="M232 70c70 6 138 58 146 140s-40 170-118 188S100 356 86 270s76-206 146-200z" fill="#E9CFC5"/>
+        <g stroke="#3A3532" stroke-width="1.3" stroke-linecap="round" opacity=".85">
+          <path d="M150 400c-10-90 10-180 70-240s110-70 140-62"/>
+          <path d="M172 404c-6-84 20-164 74-216s96-60 122-54"/>
+          <path d="M196 406c0-78 28-148 76-192s82-48 104-44"/>
+          <path d="M220 406c6-70 34-130 76-166s68-38 86-34"/>
+        </g>
+        <g stroke="#A8695A" stroke-width="1.3" stroke-linecap="round">
+          <path d="M162 402c-8-88 16-172 72-228s104-66 132-58"/>
+          <path d="M208 406c4-74 32-140 76-180s76-42 96-38"/>
+        </g>
+        <circle cx="96" cy="120" r="10" fill="#D7A99A"/><circle cx="370" cy="380" r="6" fill="#3A3532"/>
+      </svg>
+      <div class="card c1"><b>$30</b>Glaze / Toner</div>
+      <div class="card c2"><b>23</b>services, booked online</div>
+    </div>
+  </div>
+</header>
+
+<section class="menu sec" id="menu">
+  <div class="wrap">
+    <div class="eyebrow reveal"><svg viewBox="0 0 46 12" fill="none"><path d="M1 8c8-6 14 4 22-1s14-5 22 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>The menu</div>
+    <h2 class="reveal">Every service, every price, in one place.</h2>
+    <p class="lead reveal">Prices and times exactly as listed on Linsey's booking page. Not sure what you need? Start with a consultation.</p>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="hl">Highlights</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts &amp; styling</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="ext">Extensions &amp; brows</button>
+    </div>
+    <div class="groups">
+      <div class="group reveal" data-g="color">
+        <h3>Color <small>& gloss</small></h3>
+        <div class="item"><span class="nm"><span class="n">Consultation</span><span class="d">30 min</span></span><span class="dots"></span><span class="p q">Ask</span></div>
+        <div class="item"><span class="nm"><span class="n">Root Touch Up</span><span class="d">1 hr 30</span></span><span class="dots"></span><span class="p">$140</span></div>
+        <div class="item"><span class="nm"><span class="n">All Over Color</span><span class="d">1 hr 30</span></span><span class="dots"></span><span class="p">$150</span></div>
+        <div class="item"><span class="nm"><span class="n">Custom Color</span><span class="d">3 hr</span></span><span class="dots"></span><span class="p">$360</span></div>
+        <div class="item"><span class="nm"><span class="n">Glaze/Toner</span><span class="d">45 min</span></span><span class="dots"></span><span class="p">$30</span></div>
+        <div class="item"><span class="nm"><span class="n">Root Shadow <small>(add-on)</small></span><span class="d">1 hr</span></span><span class="dots"></span><span class="p">$40</span></div>
+      </div>
+      <div class="group reveal" data-g="hl">
+        <h3>Highlights <small>& combos</small></h3>
+        <div class="item"><span class="nm"><span class="n">Mini Highlight</span><span class="d">1 hr 45</span></span><span class="dots"></span><span class="p">$140</span></div>
+        <div class="item"><span class="nm"><span class="n">Partial Highlight</span><span class="d">1 hr 45</span></span><span class="dots"></span><span class="p">$160</span></div>
+        <div class="item"><span class="nm"><span class="n">All Over Highlight</span><span class="d">2 hr 45</span></span><span class="dots"></span><span class="p">$220</span></div>
+        <div class="item"><span class="nm"><span class="n">Mini Highlight + Root Color</span><span class="d">1 hr 45</span></span><span class="dots"></span><span class="p">$180</span></div>
+        <div class="item"><span class="nm"><span class="n">Partial Highlight + Root Color</span><span class="d">1 hr 45</span></span><span class="dots"></span><span class="p">$200</span></div>
+        <div class="item"><span class="nm"><span class="n">All Over Highlight + Root Color</span><span class="d">2 hr</span></span><span class="dots"></span><span class="p">$260</span></div>
+      </div>
+      <div class="group reveal" data-g="cut">
+        <h3>Cuts <small>& styling</small></h3>
+        <div class="item"><span class="nm"><span class="n">Women's Dry Haircut</span><span class="d">30 min</span></span><span class="dots"></span><span class="p">$55</span></div>
+        <div class="item"><span class="nm"><span class="n">Women's Haircut + Wash &amp; Style</span><span class="d">45 min</span></span><span class="dots"></span><span class="p">$70</span></div>
+        <div class="item"><span class="nm"><span class="n">Men's Haircut</span><span class="d">30 min</span></span><span class="dots"></span><span class="p">$30</span></div>
+        <div class="item"><span class="nm"><span class="n">Haircut Add-On</span><span class="d">30 min</span></span><span class="dots"></span><span class="p">$50</span></div>
+        <div class="item"><span class="nm"><span class="n">Bang Trim</span><span class="d">10 min</span></span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="item"><span class="nm"><span class="n">Women's Simple Style</span><span class="d">30 min</span></span><span class="dots"></span><span class="p">$40</span></div>
+        <div class="item"><span class="nm"><span class="n">Special Event Styling</span><span class="d">1 hr</span></span><span class="dots"></span><span class="p">$100</span></div>
+      </div>
+      <div class="group reveal" data-g="ext">
+        <h3>Extensions <small>& brows</small></h3>
+        <div class="item"><span class="nm"><span class="n">Sew In (2 rows)</span><span class="d">1 hr 30</span></span><span class="dots"></span><span class="p">$200</span></div>
+        <div class="item"><span class="nm"><span class="n">Weft Move Up</span><span class="d">30 min</span></span><span class="dots"></span><span class="p">$80</span></div>
+        <div class="item"><span class="nm"><span class="n">Brow Wax</span><span class="d">15 min</span></span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="item"><span class="nm"><span class="n">Brow Tint</span><span class="d">5 min</span></span><span class="dots"></span><span class="p">$10</span></div>
+      </div>
+    </div>
+    <p class="note">The consultation has no listed price. Ask Linsey when you book.</p>
+  </div>
+</section>
+
+<section class="about sec" id="about">
+  <div class="wrap">
+    <div class="quote reveal">
+      <svg viewBox="0 0 70 30" fill="none" aria-hidden="true"><path d="M2 22C14 6 24 28 36 14S58 4 68 10" stroke="#A8695A" stroke-width="1.4" stroke-linecap="round"/><path d="M6 28C18 14 28 30 40 20s20-8 26-6" stroke="#3A3532" stroke-width="1.1" stroke-linecap="round" opacity=".5"/></svg>
+      <p>“I have been working as a cosmetologist for 14 years now, and my love for hair and beauty has only grown stronger.”</p>
+      <div class="by">Linsey, Simply Lins</div>
+    </div>
+    <div>
+      <div class="eyebrow reveal"><svg viewBox="0 0 46 12" fill="none"><path d="M1 8c8-6 14 4 22-1s14-5 22 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Why Simply Lins</div>
+      <h2 class="reveal">One stylist. Fourteen years. Still learning.</h2>
+      <ul class="why">
+        <li class="reveal"><span class="ic">14</span><div><b>14 years as a cosmetologist</b><span>In her words, her love for hair and beauty “has only grown stronger.”</span></div></li>
+        <li class="reveal"><span class="ic">✦</span><div><b>Brand-trained education</b><span>She attends seminars to keep up with trends and has trained with “Bellami, Redken, Kerastase, Kenra, Kevin Murphy.”</span></div></li>
+        <li class="reveal"><span class="ic">$</span><div><b>Clear, published pricing</b><span>All 23 services are listed with their price and time, so there are no surprises at checkout.</span></div></li>
+      </ul>
+      <p class="note" style="margin-top:22px">From Linsey's own description, she specializes in:</p>
+      <div class="tags reveal"><span>low-maintenance looks</span><span>grey blending</span><span>highlights</span><span>balayage</span><span>weft extensions</span><span>haircuts</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit sec" id="visit">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow reveal"><svg viewBox="0 0 46 12" fill="none"><path d="M1 8c8-6 14 4 22-1s14-5 22 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Hours</div>
+      <h2 class="reveal">When to find Linsey.</h2>
+      <div class="hours reveal" id="hours">
+        <div class="hrow" data-d="1"><span class="day">Monday</span><span class="t">10:30 AM – 7:00 PM</span></div>
+        <div class="hrow" data-d="2"><span class="day">Tuesday</span><span class="t">10:30 AM – 2:00 PM</span></div>
+        <div class="hrow closed" data-d="3"><span class="day">Wednesday</span><span class="t">Closed</span></div>
+        <div class="hrow" data-d="4"><span class="day">Thursday</span><span class="t">10:30 AM – 2:00 PM</span></div>
+        <div class="hrow" data-d="5"><span class="day">Friday</span><span class="t">8:30 AM – 10:30 AM</span></div>
+        <div class="hrow closed" data-d="6"><span class="day">Saturday</span><span class="t">Closed</span></div>
+        <div class="hrow closed" data-d="0"><span class="day">Sunday</span><span class="t">Closed</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="map reveal">
+        <iframe title="Map of Mount Juliet, TN" loading="lazy" src="https://www.google.com/maps?q=Mount%20Juliet%2C%20TN%2037122&output=embed"></iframe>
+      </div>
+      <div class="contact">
+        <a href="tel:+16154788397"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" stroke="#3A3532" stroke-width="1.5" stroke-linejoin="round"/></svg></span><span><small>Call</small><strong>(615) 478-8397</strong></span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mount%20Juliet%2C%20TN%2037122" target="_blank" rel="noopener"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12z" stroke="#3A3532" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="#3A3532" stroke-width="1.5"/></svg></span><span><small>Directions</small><strong>Mount Juliet, TN 37122</strong></span></a>
+        <a href="mailto:linseywmalone@yahoo.com"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#3A3532" stroke-width="1.5"/><path d="M4 7l8 6 8-6" stroke="#3A3532" stroke-width="1.5"/></svg></span><span><small>Email</small><strong>linseywmalone@yahoo.com</strong></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">Your next appointment is a few taps away.</h2>
+    <p class="reveal">Choose a service, pick a time and you're booked. Start with a consultation if you're planning a big change.</p>
+    <div class="ctas">
+      <a class="btn solid" href="https://square.site/book/3Q6Z30FWFBPGC/linsey-malone-salon-revive-lebanon-tn" target="_blank" rel="noopener">Book with Linsey</a>
+      <a class="btn ghost" href="tel:+16154788397">Call (615) 478-8397</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Simply Lins</span>
+    <span>Mount Juliet, TN · <a href="tel:+16154788397">(615) 478-8397</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn ghost" href="tel:+16154788397">Call</a>
+  <a class="btn solid" href="https://square.site/book/3Q6Z30FWFBPGC/linsey-malone-salon-revive-lebanon-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var r=document.querySelector('.hrow[data-d="'+d+'"]'); if(r) r.classList.add('today');
+  var tabs=document.querySelectorAll('.tab'),groups=document.querySelectorAll('.group');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    var f=t.dataset.f;
+    groups.forEach(function(g){g.classList.toggle('hide',f!=='all'&&g.dataset.g!==f);g.classList.add('in')});
+  })});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else document.documentElement.classList.add('all-in');
+  setTimeout(function(){document.documentElement.classList.add('all-in')},1500);
+})();
+</script>
+</body>
+</html>

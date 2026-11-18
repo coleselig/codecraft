@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Southern Roots Salon &amp; Co. — Jacksboro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terra:#B5603D; --terra-d:#8f4529; --cream:#FAF4EA; --cream-2:#F2E7D5; --olive:#3F4A2C; --olive-d:#2c341f; --mustard:#D9A441;
+  --ink:#2a2418; --muted:#6b5f4c;
+  --serif:"DM Serif Display",Georgia,serif; --sans:"Outfit",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--olive-d);color:#e9e2cf;font-size:11.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept .short{display:none}@media(max-width:560px){.concept .full{display:none}.concept .short{display:inline}}
+.concept b{color:var(--mustard);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(250,244,234,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(63,74,44,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo span{font-family:var(--serif);font-size:20px;color:var(--olive);line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-top:3px}
+.links{display:none;gap:28px;align-items:center}
+.links a{text-decoration:none;font-size:14.5px;color:var(--olive);font-weight:500;position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:1.5px;width:0;background:var(--terra);transition:width .3s}
+.links a:not(.btn):hover::after{width:100%}
+@media(min-width:900px){.links{display:flex}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s, box-shadow .2s, background .2s;border:2px solid transparent;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-terra{background:var(--terra);color:#fff;box-shadow:0 8px 22px -10px rgba(181,96,61,.8)}
+.btn-terra:hover{background:var(--terra-d);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--olive);color:var(--olive)}
+.btn-ghost:hover{background:var(--olive);color:var(--cream)}
+.btn-sm{padding:9px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:38px 0 0}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hero{padding:70px 0 40px}.hero .wrap{grid-template-columns:1.1fr .9fr;gap:60px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:600}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--terra)}
+h1{font-family:var(--serif);font-weight:400;color:var(--olive);font-size:clamp(42px,11.5vw,82px);line-height:1;letter-spacing:-.01em;margin:16px 0 18px}
+h1 em{color:var(--terra);font-style:italic}
+.sub{font-size:17px;color:var(--muted);max-width:30em}
+.sub strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-size:13px;padding:6px 13px;border-radius:999px;background:var(--cream-2);color:var(--olive);border:1px solid rgba(63,74,44,.14)}
+
+.arch{position:relative;margin:0 auto;width:min(100%,420px);max-height:72vh;aspect-ratio:4/5;border-radius:999px 999px 24px 24px;background:linear-gradient(180deg,#e9b98f 0%,#d98a5f 45%,var(--terra) 100%);overflow:hidden;box-shadow:0 30px 60px -30px rgba(63,74,44,.6), inset 0 0 0 10px rgba(250,244,234,.35)}
+.arch::after{content:"";position:absolute;inset:14px;border-radius:999px 999px 16px 16px;border:1.5px solid rgba(250,244,234,.55);pointer-events:none}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.sun{animation:sun 9s ease-in-out infinite alternate}
+@keyframes sun{to{transform:translateY(10px)}}
+.sway{transform-origin:200px 300px;animation:sway 7s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-1.2deg)}to{transform:rotate(1.2deg)}}
+.rootdraw path{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 3.2s ease forwards .4s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.badge{position:absolute;right:-6px;bottom:28px;background:var(--cream);border-radius:18px;padding:12px 16px;box-shadow:0 16px 30px -16px rgba(0,0,0,.35);font-size:12px;color:var(--muted);border:1px solid rgba(63,74,44,.12)}
+.badge b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;color:var(--olive);line-height:1.1}
+.arch-holder{position:relative;max-width:420px;margin:0 auto;width:100%}
+
+.ground{margin-top:36px;height:70px;background:var(--olive);position:relative}
+.ground svg{position:absolute;top:-1px;left:0;width:100%;height:70px}
+
+/* sections */
+section{padding:76px 0;position:relative}
+@media(min-width:900px){section{padding:110px 0}}
+h2{font-family:var(--serif);font-weight:400;color:var(--olive);font-size:clamp(34px,8vw,56px);line-height:1.05;margin:14px 0 14px}
+h2 em{color:var(--terra)}
+.lead{color:var(--muted);max-width:36em;font-size:16.5px}
+
+/* why */
+.why{background:var(--olive);color:var(--cream)}
+.why h2{color:var(--cream)}
+.why h2 em{color:var(--mustard)}
+.why .eyebrow{color:var(--mustard)}.why .eyebrow::before{background:var(--mustard)}
+.why .lead{color:#d9d2bd}
+.macrame{position:absolute;inset:0;opacity:.09;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0 L30 30 L60 0 M0 60 L30 30 L60 60' fill='none' stroke='%23FAF4EA' stroke-width='1.2'/%3E%3Ccircle cx='30' cy='30' r='3' fill='none' stroke='%23FAF4EA'/%3E%3C/svg%3E")}
+.grid4{display:grid;gap:16px;margin-top:40px}
+@media(min-width:700px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid4{grid-template-columns:repeat(4,1fr)}}
+.card{background:rgba(250,244,234,.06);border:1px solid rgba(250,244,234,.16);border-radius:22px;padding:26px 22px;transition:transform .3s, background .3s}
+.card:hover{transform:translateY(-4px);background:rgba(250,244,234,.1)}
+.card .ic{width:46px;height:46px;border-radius:50%;background:var(--mustard);display:grid;place-items:center;margin-bottom:16px}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15;margin-bottom:8px}
+.card p{color:#d9d2bd;font-size:15px}
+.card .num{font-family:var(--serif);font-size:52px;color:var(--mustard);line-height:1}
+
+/* menu */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:30px -20px 0;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-family:var(--sans);font-size:14.5px;font-weight:500;padding:10px 18px;border-radius:999px;border:1.5px solid rgba(63,74,44,.25);background:transparent;color:var(--olive);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--terra);color:var(--terra)}
+.tab[aria-selected="true"]{background:var(--olive);border-color:var(--olive);color:var(--cream)}
+.panel{display:none;margin-top:18px}
+.panel.on{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.no-js .panel{display:block}
+.menu{display:grid;gap:0 48px}
+@media(min-width:800px){.menu{grid-template-columns:1fr 1fr}}
+.item{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-bottom:1px dashed rgba(63,74,44,.25)}
+.item .n{font-weight:500;font-size:16px}
+.item .n small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.item .dots{flex:1}
+.item .p{font-family:var(--serif);font-size:21px;color:var(--terra);white-space:nowrap}
+.item .p.free{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);background:var(--cream-2);padding:3px 10px;border-radius:999px}
+.note{margin-top:22px;font-size:13.5px;color:var(--muted);display:flex;gap:10px;align-items:flex-start;background:var(--cream-2);padding:14px 16px;border-radius:14px}
+.note svg{flex:0 0 18px;margin-top:2px}
+.menu-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* team */
+.team{background:var(--cream-2)}
+.roots-bg{position:absolute;left:0;right:0;bottom:0;height:160px;opacity:.5;pointer-events:none}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px;position:relative}
+@media(min-width:700px){.people{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1000px){.people{grid-template-columns:repeat(7,1fr)}}
+.person{background:var(--cream);border-radius:999px 999px 18px 18px;padding:30px 12px 20px;text-align:center;border:1px solid rgba(63,74,44,.12);transition:transform .3s, box-shadow .3s;text-decoration:none;display:block}
+.person:hover{transform:translateY(-6px);box-shadow:0 20px 30px -20px rgba(63,74,44,.5)}
+.person .mono{width:62px;height:62px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:28px;color:var(--cream)}
+.person:nth-child(3n+1) .mono{background:var(--terra)}
+.person:nth-child(3n+2) .mono{background:var(--olive)}
+.person:nth-child(3n) .mono{background:var(--mustard);color:var(--olive-d)}
+.person h3{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--olive)}
+.person span{font-size:12.5px;color:var(--terra);font-weight:500;letter-spacing:.04em}
+.person.last{grid-column:1/-1;width:calc(50% - 7px);justify-self:center}
+@media(min-width:700px){.person.last{grid-column:auto;width:auto}}
+
+/* visit */
+.visit .wrap{display:grid;gap:34px}
+@media(min-width:900px){.visit .wrap{grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}}
+.hours{margin-top:24px;border-radius:22px;background:#fff;border:1px solid rgba(63,74,44,.12);overflow:hidden}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:13px 20px;border-bottom:1px solid rgba(63,74,44,.08);font-size:15.5px}
+.hours li:last-child{border-bottom:0}
+.hours li.today{background:var(--olive);color:var(--cream);font-weight:600}
+.hours li.today .d::after{content:"Today";margin-left:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--mustard);color:var(--olive-d);padding:2px 8px;border-radius:999px;vertical-align:2px}
+.hours li .closed{color:var(--terra)}
+.hours li.today .closed{color:var(--mustard)}
+.addr{display:grid;gap:14px;margin-top:24px}
+.row{display:flex;gap:14px;align-items:flex-start;text-decoration:none;padding:14px 16px;border-radius:16px;background:#fff;border:1px solid rgba(63,74,44,.12);transition:border-color .2s, transform .2s}
+a.row:hover{border-color:var(--terra);transform:translateX(3px)}
+.row .ic{flex:0 0 40px;height:40px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center}
+.row .ic svg{width:20px;height:20px}
+.row b{display:block;font-weight:600;color:var(--olive)}
+.row span{font-size:14.5px;color:var(--muted);word-break:break-word}
+.mapbox{border-radius:999px 999px 24px 24px;overflow:hidden;border:8px solid #fff;box-shadow:0 30px 50px -30px rgba(63,74,44,.6);aspect-ratio:4/5;max-height:640px;background:var(--cream-2)}
+.mapbox iframe{width:100%;height:100%;border:0;display:block}
+
+/* final cta */
+.final{background:var(--terra);color:#fff;text-align:center;overflow:hidden}
+.final h2{color:#fff}
+.final h2 em{color:var(--mustard)}
+.final p{color:#fbe6da;max-width:30em;margin:0 auto}
+.final .cta{justify-content:center}
+.final .btn-ghost{border-color:#fff;color:#fff}
+.final .btn-ghost:hover{background:#fff;color:var(--terra)}
+.final .btn-cream{background:var(--cream);color:var(--terra)}
+.final .btn-cream:hover{background:#fff;transform:translateY(-2px)}
+
+footer{background:var(--olive-d);color:#cfc8b2;padding:44px 0 36px;font-size:14px}
+footer .wrap{display:grid;gap:18px}
+@media(min-width:800px){footer .wrap{grid-template-columns:1fr auto;align-items:end}}
+footer .logo span{color:var(--cream)}
+footer a{color:var(--mustard)}
+footer .soc{display:flex;gap:16px;flex-wrap:wrap}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,244,234,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(63,74,44,.15)}
+.mbar .btn{padding:13px 10px;font-size:15px}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease, transform .8s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal.pre{opacity:1;transform:none}}
+</style>
+</head>
+<body class="no-js">
+<div class="concept"><span class="full">Concept site by <b>Code Craft Media</b>, made for Southern Roots Salon &amp; Co. Not live.</span><span class="short">Concept site by <b>Code Craft Media</b> for Southern Roots. Not live.</span></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Southern Roots Salon &amp; Co. home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#3F4A2C"/><path d="M20 8v15M20 14c-3-2-6-2-8 0M20 12c3-2 6-2 8 0M20 18c-4-1-7 0-9 2M20 17c4-1 7 0 9 2" stroke="#D9A441" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M20 23c0 4-4 5-7 8M20 23c0 4 4 5 7 8M20 23v9" stroke="#E8B48F" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      <div><span>Southern Roots</span><small>Salon &amp; Co.</small></div>
+    </a>
+    <div class="links">
+      <a href="#menu">Menu</a><a href="#team">Team</a><a href="#visit">Visit</a>
+      <a class="btn btn-terra btn-sm" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener">Book now</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Jacksboro, Tennessee</span>
+      <h1>Hair, nails, lashes &amp; skin — <em>all rooted</em> under one roof.</h1>
+      <p class="sub">Seven stylists on Eagle Bluff Road, open <strong>Monday through Saturday, 10 to 5</strong>. Color, cuts, extensions, facials, waxing and spray tans — all bookable online.</p>
+      <div class="cta">
+        <a class="btn btn-terra" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener">Book an appointment
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+18653563521">Call (865) 356-3521</a>
+      </div>
+      <div class="chips"><span class="chip">Balayage &amp; foilayage</span><span class="chip">Extensions</span><span class="chip">Lashes &amp; brows</span><span class="chip">Facials</span><span class="chip">Free consultations</span></div>
+    </div>
+    <div class="arch-holder reveal">
+      <div class="arch">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a6a3e"/><stop offset="1" stop-color="#3F4A2C"/></linearGradient>
+          </defs>
+          <circle class="sun" cx="200" cy="170" r="70" fill="#F3C870" opacity=".95"/>
+          <circle class="sun" cx="200" cy="170" r="96" fill="none" stroke="#FAF4EA" stroke-opacity=".45" stroke-dasharray="2 8"/>
+          <path d="M0 300 Q90 250 170 285 T400 270 V500 H0Z" fill="#9c5233" opacity=".55"/>
+          <path d="M0 330 Q110 290 210 320 T400 310 V500 H0Z" fill="url(#hill)"/>
+          <g class="sway">
+            <path d="M200 330 C198 280 202 240 200 190" stroke="#2c341f" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M200 250 C180 230 150 225 130 210 M200 235 C225 215 255 212 272 196 M200 215 C190 195 170 185 160 168 M200 205 C215 185 232 176 240 160" stroke="#2c341f" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <g fill="#3F4A2C"><circle cx="200" cy="165" r="52"/><circle cx="148" cy="195" r="38"/><circle cx="254" cy="190" r="40"/><circle cx="175" cy="140" r="34"/><circle cx="228" cy="138" r="34"/></g>
+            <g fill="#D9A441"><circle cx="160" cy="180" r="4"/><circle cx="238" cy="160" r="4"/><circle cx="205" cy="128" r="4"/><circle cx="262" cy="200" r="3.5"/><circle cx="138" cy="205" r="3.5"/><circle cx="190" cy="180" r="3"/></g>
+          </g>
+          <g class="rootdraw" stroke="#E8B48F" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9">
+            <path d="M200 330 C200 370 170 390 130 410 C100 425 80 450 60 480"/>
+            <path d="M200 330 C205 375 235 395 270 410 C300 425 320 450 345 482"/>
+            <path d="M200 330 C198 380 200 420 196 480"/>
+            <path d="M165 395 C150 420 150 445 140 470 M238 398 C255 425 258 448 268 474 M198 420 C180 440 175 460 172 482 M199 430 C215 448 222 466 226 484"/>
+          </g>
+          <g stroke="#FAF4EA" stroke-opacity=".35" fill="none">
+            <path d="M40 470 L70 440 L100 470 L130 440 L160 470 L190 440 L220 470 L250 440 L280 470 L310 440 L340 470 L370 440"/>
+          </g>
+        </svg>
+      </div>
+      <div class="badge"><b>7 stylists</b>Book any of them online</div>
+    </div>
+  </div>
+  <div class="ground">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V18 C1200 60 960 0 720 30 C480 60 240 0 0 34Z" fill="#FAF4EA"/></svg>
+  </div>
+</header>
+
+<section class="why" id="why">
+  <div class="macrame"></div>
+  <div class="wrap" style="position:relative">
+    <span class="eyebrow">Why Southern Roots</span>
+    <h2>One stop for the <em>whole you.</em></h2>
+    <p class="lead">Most salons do hair. Southern Roots does hair, nails, lashes, brows, skin, waxing, makeup and spray tans — so your whole routine lives in one place on Eagle Bluff Road.</p>
+    <div class="grid4">
+      <div class="card reveal"><div class="num">7</div><h3>Stylists to choose from</h3><p>Pick the stylist you love, or whoever has the next open slot — every chair books online.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2c341f" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8c3 0 7 1 7 5M19 8c-3 0-7 1-7 5"/></svg></div><h3>Color that’s rooted in skill</h3><p>Balayage, foilayage, babylights, halo and platinum highlights, vivids and corrective color.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2c341f" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M8 12h8M12 8v8"/></svg></div><h3>Treatments that repair</h3><p>Olaplex, K18, Redken acidic bonding and keratin smoothing to keep hair healthy.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2c341f" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Free consultations</h3><p>Not sure what you need? Book a free 15-minute consult — or a free perm consult — first.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <span class="eyebrow">The menu</span>
+    <h2>Services &amp; <em>prices</em></h2>
+    <p class="lead">A selection from the full menu, with prices as listed on the salon’s booking page. Tap a category.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="hair">Hair</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="treat">Treatments &amp; extensions</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="lash">Lashes, brows &amp; makeup</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="skin">Skin &amp; wax</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="nails">Nails &amp; tans</button>
+    </div>
+
+    <div class="panel on" data-p="hair"><div class="menu">
+      <div class="item"><span class="n">Women’s haircut<small>No shampoo or style</small></span><span class="dots"></span><span class="p">$42</span></div>
+      <div class="item"><span class="n">Shampoo, cut &amp; style<small>Long hair</small></span><span class="dots"></span><span class="p">$60</span></div>
+      <div class="item"><span class="n">Women’s curly cut</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Men’s haircut<small>Beard trim add $5 · shampoo add $3</small></span><span class="dots"></span><span class="p">$25</span></div>
+      <div class="item"><span class="n">Men’s curly cut</span><span class="dots"></span><span class="p">$45</span></div>
+      <div class="item"><span class="n">Child haircut</span><span class="dots"></span><span class="p">$18</span></div>
+      <div class="item"><span class="n">Shampoo &amp; style<small>Above shoulders</small></span><span class="dots"></span><span class="p">$35</span></div>
+      <div class="item"><span class="n">Formal style</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Bang trim</span><span class="dots"></span><span class="p">$10</span></div>
+      <div class="item"><span class="n">Consultation</span><span class="dots"></span><span class="p free">Free</span></div>
+    </div></div>
+
+    <div class="panel" data-p="color"><div class="menu">
+      <div class="item"><span class="n">Balayage<small>Price increases with hair length &amp; density</small></span><span class="dots"></span><span class="p">from $125</span></div>
+      <div class="item"><span class="n">Foilayage<small>Price increases with hair length &amp; density</small></span><span class="dots"></span><span class="p">from $125</span></div>
+      <div class="item"><span class="n">All over color<small>One color</small></span><span class="dots"></span><span class="p">$125</span></div>
+      <div class="item"><span class="n">Root retouch<small>One color</small></span><span class="dots"></span><span class="p">$105</span></div>
+      <div class="item"><span class="n">Highlights — full</span><span class="dots"></span><span class="p">$175</span></div>
+      <div class="item"><span class="n">Highlights — partial</span><span class="dots"></span><span class="p">$155</span></div>
+      <div class="item"><span class="n">Highlights — babylight</span><span class="dots"></span><span class="p">$210</span></div>
+      <div class="item"><span class="n">Highlights — platinum card</span><span class="dots"></span><span class="p">$275</span></div>
+      <div class="item"><span class="n">Money pieces<small>6 foils</small></span><span class="dots"></span><span class="p">$75</span></div>
+      <div class="item"><span class="n">Vivid<small>All over, no lightener</small></span><span class="dots"></span><span class="p">$175</span></div>
+      <div class="item"><span class="n">Corrective color</span><span class="dots"></span><span class="p">from $150/hr</span></div>
+      <div class="item"><span class="n">Root smudge</span><span class="dots"></span><span class="p">$45</span></div>
+    </div></div>
+
+    <div class="panel" data-p="treat"><div class="menu">
+      <div class="item"><span class="n">Keratin smoothing treatment</span><span class="dots"></span><span class="p">$275</span></div>
+      <div class="item"><span class="n">K18 treatment</span><span class="dots"></span><span class="p">$55</span></div>
+      <div class="item"><span class="n">Redken acidic bonding treatment</span><span class="dots"></span><span class="p">$55</span></div>
+      <div class="item"><span class="n">Olaplex treatment<small>Heat styling add $20</small></span><span class="dots"></span><span class="p">from $45</span></div>
+      <div class="item"><span class="n">Glaze<small>Without service</small></span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Hand-tied extension install<small>Hair not included</small></span><span class="dots"></span><span class="p">$250</span></div>
+      <div class="item"><span class="n">Hand-tied extension maintenance</span><span class="dots"></span><span class="p">$75</span></div>
+      <div class="item"><span class="n">Tape-in install<small>1 pack</small></span><span class="dots"></span><span class="p">$150</span></div>
+      <div class="item"><span class="n">Extension removal</span><span class="dots"></span><span class="p">$25</span></div>
+      <div class="item"><span class="n">Feather install</span><span class="dots"></span><span class="p">$12</span></div>
+    </div></div>
+
+    <div class="panel" data-p="lash"><div class="menu">
+      <div class="item"><span class="n">Classic full set<small>Natural lashes</small></span><span class="dots"></span><span class="p">$100</span></div>
+      <div class="item"><span class="n">Hybrid full set<small>A mix of YY lashes and classic lashes</small></span><span class="dots"></span><span class="p">$130</span></div>
+      <div class="item"><span class="n">Volume full set<small>YY lashes</small></span><span class="dots"></span><span class="p">$150</span></div>
+      <div class="item"><span class="n">Classic fill in</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Lash lift + tint</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Hybrid brow tint<small>Stains the skin for up to 10 days</small></span><span class="dots"></span><span class="p">$35</span></div>
+      <div class="item"><span class="n">Brow wax + tint + lamination</span><span class="dots"></span><span class="p">$70</span></div>
+      <div class="item"><span class="n">Event makeup</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Prom / formal makeup</span><span class="dots"></span><span class="p">$70</span></div>
+    </div></div>
+
+    <div class="panel" data-p="skin"><div class="menu">
+      <div class="item"><span class="n">60-minute facial</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">90-minute facial</span><span class="dots"></span><span class="p">$110</span></div>
+      <div class="item"><span class="n">Dermaplane facial</span><span class="dots"></span><span class="p">$80</span></div>
+      <div class="item"><span class="n">Oxygen facial<small>30 min, includes double cleansing</small></span><span class="dots"></span><span class="p">$100</span></div>
+      <div class="item"><span class="n">Hydroderm facial<small>30 min, includes double cleansing</small></span><span class="dots"></span><span class="p">$200</span></div>
+      <div class="item"><span class="n">Brow wax</span><span class="dots"></span><span class="p">$15</span></div>
+      <div class="item"><span class="n">Full face wax</span><span class="dots"></span><span class="p">$35</span></div>
+      <div class="item"><span class="n">Brazilian</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Leg wax</span><span class="dots"></span><span class="p">$70</span></div>
+    </div></div>
+
+    <div class="panel" data-p="nails"><div class="menu">
+      <div class="item"><span class="n">Acrylic — short</span><span class="dots"></span><span class="p">$70</span></div>
+      <div class="item"><span class="n">Acrylic — medium</span><span class="dots"></span><span class="p">$80</span></div>
+      <div class="item"><span class="n">Acrylic — long</span><span class="dots"></span><span class="p">$90</span></div>
+      <div class="item"><span class="n">Acrylic fill in</span><span class="dots"></span><span class="p">$65</span></div>
+      <div class="item"><span class="n">Press-on nails</span><span class="dots"></span><span class="p">$30</span></div>
+      <div class="item"><span class="n">Regular spray tan<small>By NH Sprays</small></span><span class="dots"></span><span class="p">$35</span></div>
+      <div class="item"><span class="n">Rapid spray tan<small>By NH Sprays</small></span><span class="dots"></span><span class="p">$45</span></div>
+    </div></div>
+
+    <p class="note"><svg viewBox="0 0 20 20" fill="none" stroke="#B5603D" stroke-width="1.8"><circle cx="10" cy="10" r="8"/><path d="M10 9v5M10 6v.5" stroke-linecap="round"/></svg>Final price can vary with hair length, density and add-ons. The full menu — 100+ services, including gift cards — is on the booking page.</p>
+    <div class="menu-cta">
+      <a class="btn btn-terra" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener">See the full menu &amp; book</a>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <svg class="roots-bg" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><g stroke="#B5603D" stroke-opacity=".35" fill="none" stroke-width="1.5"><path d="M0 40 C200 80 300 20 500 70 S800 140 1000 90 1300 30 1440 80"/><path d="M100 160 C160 110 260 120 320 70 M700 160 C720 120 780 110 820 60 M1150 160 C1180 120 1240 110 1290 70"/><path d="M0 110 C300 150 600 90 900 130 S1300 110 1440 140"/></g></svg>
+  <div class="wrap">
+    <span class="eyebrow">Meet the team</span>
+    <h2>Seven chairs, <em>one family tree.</em></h2>
+    <p class="lead">Every stylist at Southern Roots takes bookings online — choose your favorite when you book.</p>
+    <div class="people">
+      <a class="person reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">B</div><h3>Brittany</h3><span>Book with Brittany</span></a>
+      <a class="person reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">K</div><h3>Kayla</h3><span>Book with Kayla</span></a>
+      <a class="person reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">N</div><h3>Nicole</h3><span>Book with Nicole</span></a>
+      <a class="person reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">S</div><h3>Sarah</h3><span>Book with Sarah</span></a>
+      <a class="person reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">S</div><h3>Shelby</h3><span>Book with Shelby</span></a>
+      <a class="person reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">T</div><h3>Tara</h3><span>Book with Tara</span></a>
+      <a class="person last reveal" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener"><div class="mono">T</div><h3>Tiffani</h3><span>Book with Tiffani</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Visit us</span>
+      <h2>Find us on <em>Eagle Bluff Road.</em></h2>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span class="d">Monday</span><span>10:00 – 5:00</span></li>
+        <li data-d="2"><span class="d">Tuesday</span><span>10:00 – 5:00</span></li>
+        <li data-d="3"><span class="d">Wednesday</span><span>10:00 – 5:00</span></li>
+        <li data-d="4"><span class="d">Thursday</span><span>10:00 – 5:00</span></li>
+        <li data-d="5"><span class="d">Friday</span><span>10:00 – 5:00</span></li>
+        <li data-d="6"><span class="d">Saturday</span><span>10:00 – 5:00</span></li>
+        <li data-d="0"><span class="d">Sunday</span><span class="closed">Closed</span></li>
+      </ul>
+      <div class="addr">
+        <a class="row" href="https://www.google.com/maps/dir/?api=1&destination=127+Eagle+Bluff+Rd+Suite+3+Jacksboro+TN+37757" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B5603D" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div><b>Get directions</b><span>127 Eagle Bluff Rd, Suite 3, Jacksboro, TN 37757</span></div></a>
+        <a class="row" href="tel:+18653563521"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B5603D" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><b>Call the salon</b><span>(865) 356-3521</span></div></a>
+        <a class="row" href="mailto:tdmass89@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B5603D" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b>Email</b><span>tdmass89@gmail.com</span></div></a>
+      </div>
+    </div>
+    <div class="mapbox reveal">
+      <iframe title="Map to Southern Roots Salon &amp; Co." src="https://www.google.com/maps?q=127%20Eagle%20Bluff%20Rd%20Suite%203%2C%20Jacksboro%2C%20TN%2037757&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="macrame"></div>
+  <div class="wrap" style="position:relative">
+    <span class="eyebrow" style="color:#fbe6da">Ready when you are</span>
+    <h2>Your next appointment is <em>a tap away.</em></h2>
+    <p>Pick a service, pick a stylist, pick a time. Open Monday – Saturday, 10 to 5.</p>
+    <div class="cta">
+      <a class="btn btn-cream" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="tel:+18653563521">(865) 356-3521</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo"><span>Southern Roots Salon &amp; Co.</span></div>
+      <p style="margin-top:8px">127 Eagle Bluff Rd, Suite 3 · Jacksboro, TN 37757 · <a href="tel:+18653563521">(865) 356-3521</a></p>
+      <div class="soc" style="margin-top:10px"><a href="https://www.instagram.com/southernrootssalontn" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/61556400535435" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <p>Concept by <a href="#top">Code Craft Media</a></p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+18653563521">Call</a>
+  <a class="btn btn-terra" href="https://square.site/book/VMX8ZZ2MPKRWT/southern-roots-salon-co-jacksboro-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  var b=document.body; b.classList.remove('no-js'); b.classList.add('js');
+  // today
+  var d=new Date().getDay(); var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  // tabs
+  var tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')}); t.setAttribute('aria-selected','true');
+    panels.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-p')===t.getAttribute('data-t'))});
+  })});
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.remove('pre')})}
+  if('IntersectionObserver' in window){
+    var vh=window.innerHeight;
+    els.forEach(function(e){ if(e.getBoundingClientRect().top>vh*0.9) e.classList.add('pre'); });
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(showAll,1500);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>unique hair designs — Dayton, TN</title>
+<meta name="description" content="Concept site for unique hair designs, a hair salon in Dayton, TN. Cuts, color, balayage and highlights with Pam, Monday to Friday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mint:#BFE3D0; --mint-d:#8FCBAE; --cherry:#C8344A; --cherry-d:#A82A3D;
+  --cream:#FFF8EC; --ink:#1F2430; --ink-2:#4A5060; --line:rgba(31,36,48,.14);
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Nunito",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.display{font-family:"Shrikhand",cursive;font-weight:400;letter-spacing:.2px}
+
+/* concept banner */
+.concept{background:var(--ink);color:#FFF8EC;font-size:11px;letter-spacing:-.15px;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--mint)}
+
+/* checker trim */
+.checker{height:16px;background:
+  conic-gradient(var(--ink) 25%,var(--cream) 0 50%,var(--ink) 0 75%,var(--cream) 0) 0 0/16px 16px}
+.checker.red{background:conic-gradient(var(--cherry) 25%,var(--cream) 0 50%,var(--cherry) 0 75%,var(--cream) 0) 0 0/16px 16px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(255,248,236,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:36px;height:36px}
+.logo span{font-family:"Shrikhand",cursive;font-size:20px;color:var(--cherry);line-height:1}
+.nav nav{display:none;gap:26px;font-weight:800;font-size:15px}
+.nav nav a{text-decoration:none;position:relative}
+.nav nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:3px;background:var(--cherry);border-radius:3px;transition:right .25s}
+.nav nav a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;border:2.5px solid var(--ink);transition:transform .15s,box-shadow .15s,background .2s;box-shadow:4px 4px 0 var(--ink);min-height:48px}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.red{background:var(--cherry);color:#fff}
+.btn.mint{background:var(--mint);color:var(--ink)}
+.btn.cream{background:var(--cream);color:var(--ink)}
+.btn.sm{padding:9px 18px;font-size:14px;min-height:40px;box-shadow:3px 3px 0 var(--ink)}
+.nav .btn.sm{display:none}
+@media (min-width:900px){.nav nav{display:flex}.nav .btn.sm{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;background:var(--mint);overflow:hidden;padding:34px 0 86px}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(31,36,48,.10) 1.4px,transparent 1.6px);background-size:18px 18px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:26px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:5px 14px;font-weight:800;font-size:13px;letter-spacing:.3px;width:max-content;max-width:100%}
+.eyebrow i{width:9px;height:9px;border-radius:50%;background:var(--cherry);display:inline-block;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.5);opacity:.55}}
+.hero h1{font-family:"Shrikhand",cursive;font-weight:400;font-size:clamp(40px,11.4vw,92px);line-height:.98;color:var(--ink);margin-top:16px}
+.hero h1 em{font-style:normal;color:var(--cherry);display:inline-block;position:relative}
+.hero h1 em svg{position:absolute;left:0;right:0;bottom:-8px;width:100%;height:14px}
+.hero p.sub{font-size:18px;font-weight:600;color:var(--ink-2);max-width:30em;margin-top:18px}
+.hero p.sub b{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-weight:800;font-size:14px}
+.facts span{display:inline-flex;align-items:center;gap:6px}
+.facts svg{width:16px;height:16px;flex:none}
+
+.art{position:relative;max-width:min(420px,82vw);width:100%;margin:0 auto;aspect-ratio:1/1}
+.art .burst{position:absolute;right:-6px;top:4%;width:118px;height:118px;animation:spin 22s linear infinite;z-index:3}
+.art .burst-txt{position:absolute;right:-6px;top:4%;width:118px;height:118px;display:grid;place-items:center;text-align:center;z-index:4;color:#fff;font-weight:900;font-size:13px;line-height:1.05;transform:rotate(-10deg)}
+.art .burst-txt b{font-family:"Shrikhand",cursive;font-weight:400;font-size:26px;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (min-width:900px){
+  .hero{padding:70px 0 120px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+  .art{max-width:480px}
+}
+/* scallop edge */
+.scallop{position:absolute;left:0;right:0;bottom:-1px;height:28px;background:
+  radial-gradient(circle at 20px 0,transparent 19px,var(--cream) 20px) 0 0/40px 28px repeat-x}
+.scallop.to-ink{background:radial-gradient(circle at 20px 0,transparent 19px,var(--ink) 20px) 0 0/40px 28px repeat-x}
+.scallop.to-mint{background:radial-gradient(circle at 20px 0,transparent 19px,var(--mint) 20px) 0 0/40px 28px repeat-x}
+
+/* sections */
+section{position:relative}
+.sec{padding:64px 0}
+.kicker{font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12.5px;color:var(--cherry)}
+h2{font-family:"Shrikhand",cursive;font-weight:400;font-size:clamp(34px,8.5vw,56px);line-height:1.05;margin:6px 0 12px}
+.lede{color:var(--ink-2);font-size:17px;max-width:36em}
+
+/* menu */
+.menu-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:26px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{font:inherit;font-weight:800;font-size:14px;border:2px solid var(--ink);background:var(--cream);color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer;transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--cream)}
+.tab:hover{background:var(--mint)}
+.tab[aria-selected="true"]:hover{background:var(--ink)}
+.menu{display:grid;gap:16px}
+@media (min-width:760px){.menu{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:2.5px solid var(--ink);border-radius:22px;padding:18px 18px 16px;box-shadow:5px 5px 0 var(--ink);display:grid;grid-template-columns:1fr auto;gap:4px 14px;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--cherry)}
+.card h3{font-size:19px;font-weight:900;line-height:1.25}
+.card .price{font-family:"Shrikhand",cursive;font-size:24px;color:var(--cherry);line-height:1;text-align:right;white-space:nowrap}
+.card .price small{display:block;font-family:"Nunito",sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-2);margin-bottom:3px}
+.card .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}
+.pill{font-size:12.5px;font-weight:800;background:var(--mint);border-radius:999px;padding:3px 10px;display:inline-flex;align-items:center;gap:5px}
+.pill.cream{background:var(--cream);border:1.5px solid var(--line)}
+.card p{grid-column:1/-1;font-size:14.5px;color:var(--ink-2);margin-top:2px}
+.card[hidden]{display:none}
+.menu-foot{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--mint);border:2.5px dashed var(--ink);border-radius:20px;padding:16px 18px;font-weight:700}
+
+/* why */
+.why{background:var(--ink);color:var(--cream)}
+.why h2{color:var(--cream)}
+.why .lede{color:rgba(255,248,236,.78)}
+.why .kicker{color:var(--mint)}
+.grid3{display:grid;gap:16px;margin-top:30px}
+@media (min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.tile{border:2px solid rgba(255,248,236,.22);border-radius:24px;padding:22px;background:rgba(255,248,236,.04);position:relative;overflow:hidden}
+.tile .ic{width:58px;height:58px;margin-bottom:14px}
+.tile h3{font-weight:900;font-size:20px;margin-bottom:6px}
+.tile p{color:rgba(255,248,236,.78);font-size:15.5px}
+.tile .big{font-family:"Shrikhand",cursive;color:var(--mint);font-size:44px;line-height:1;margin-bottom:6px}
+
+/* hours + visit */
+.visit-grid{display:grid;gap:22px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;align-items:stretch}}
+.hours{background:#fff;border:2.5px solid var(--ink);border-radius:26px;box-shadow:6px 6px 0 var(--ink);padding:22px;position:relative}
+.hours h3{font-family:"Shrikhand",cursive;font-weight:400;font-size:28px;margin-bottom:6px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;border-radius:999px;padding:4px 12px;background:var(--cream);border:1.5px solid var(--line);margin-bottom:12px}
+.status i{width:9px;height:9px;border-radius:50%;background:#999}
+.status.open i{background:#1F9D5B}.status.closed i{background:var(--cherry)}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:10px 12px;border-radius:12px;font-weight:700;border-bottom:1.5px dashed var(--line)}
+.hours li:last-child{border-bottom:0}
+.hours li.off span:last-child{color:var(--ink-2);font-weight:600}
+.hours li.today{background:var(--cherry);color:#fff;border-bottom-color:transparent}
+.hours li.today span:last-child{color:#fff}
+.hours li.today span:first-child::after{content:" · today";font-weight:800;font-size:12px;letter-spacing:.5px;opacity:.9}
+.mapbox{border:2.5px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:var(--mint);display:flex;flex-direction:column}
+.mapbox iframe{width:100%;height:280px;border:0;display:block;filter:saturate(.85)}
+@media (min-width:900px){.mapbox iframe{flex:1;height:auto;min-height:300px}}
+.mapbox .info{padding:18px;display:grid;gap:12px;border-top:2.5px solid var(--ink)}
+.mapbox .info .row{display:flex;flex-wrap:wrap;gap:10px}
+.mapbox .addr{font-weight:800;font-size:17px}
+.mapbox .addr small{display:block;font-weight:600;font-size:14px;color:var(--ink-2)}
+
+/* cta band */
+.band{background:var(--cherry);color:#fff;text-align:center;padding:62px 0 70px;overflow:hidden}
+.band h2{color:#fff;font-size:clamp(36px,10vw,64px)}
+.band p{font-weight:700;font-size:17px;opacity:.95;margin-bottom:24px}
+.band .ctas{justify-content:center}
+.band .btn.cream{box-shadow:4px 4px 0 var(--ink)}
+
+footer{background:var(--ink);color:rgba(255,248,236,.8);padding:34px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:14px}
+footer .logo span{color:var(--mint)}
+footer a{color:var(--mint);text-decoration:none;font-weight:700}
+footer a:hover{text-decoration:underline}
+footer .small{font-size:12.5px;opacity:.7}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--cream);border-top:2.5px solid var(--ink);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:16px;text-decoration:none;border-radius:999px;border:2.5px solid var(--ink);height:50px}
+.bar a.call{background:var(--mint);color:var(--ink)}
+.bar a.book{background:var(--cherry);color:#fff}
+.bar svg{width:18px;height:18px}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .6s ease,transform .6s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+:focus-visible{outline:3px solid var(--cherry);outline-offset:3px;border-radius:8px}
+@media (min-width:600px){.concept{font-size:12.5px}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for unique hair designs. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="unique hair designs home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#C8344A" stroke="#1F2430" stroke-width="2.5"/><path d="M12 25c3-9 6-12 8-12s5 3 8 12" fill="none" stroke="#FFF8EC" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="27" r="2.6" fill="#BFE3D0"/></svg>
+      <span>unique hair designs</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#menu">Services</a><a href="#why">Why Pam</a><a href="#visit">Hours &amp; visit</a>
+    </nav>
+    <a class="btn red sm" href="https://square.site/book/081NRR49A68DT/unique-hair-designs-dayton-tn" target="_blank" rel="noopener">Book online</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow"><i></i> Hair salon · Dayton, TN</span>
+      <h1>Good hair days,<br><em style="white-space:nowrap">Dayton-made.<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 Q 25 1 50 8 T 100 8 T 150 8 T 198 6" fill="none" stroke="#1F2430" stroke-width="4" stroke-linecap="round"/></svg></em></h1>
+      <p class="sub">Cuts, color, balayage and highlights with <b>Pam</b>, booked online in a minute. Open <b>Monday to Friday, 9 to 5</b>.</p>
+      <div class="ctas">
+        <a class="btn red" href="https://square.site/book/081NRR49A68DT/unique-hair-designs-dayton-tn" target="_blank" rel="noopener">Book an appointment
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn cream" href="tel:+14237754500">Call (423) 775-4500</a>
+      </div>
+      <div class="facts">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="#C8344A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>10 services</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="#C8344A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Prices listed up front</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="#C8344A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Men's cuts too</span>
+      </div>
+    </div>
+
+    <div class="art reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 400" width="100%" height="100%">
+        <defs>
+          <pattern id="chk" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#FFF8EC"/><rect width="10" height="10" fill="#1F2430"/><rect x="10" y="10" width="10" height="10" fill="#1F2430"/></pattern>
+          <clipPath id="scal"><path d="M200 22c18 0 26 14 42 18s32-4 44 8 4 28 12 42 26 20 26 38-16 24-18 40 10 30 0 44-28 10-40 20-14 30-32 34-30-10-46-10-28 14-46 10-20-24-32-34-30-6-40-20 2-28 0-44-18-22-18-40 18-24 26-38 0-30 12-42 28-4 44-8 24-18 42-18z"/></clipPath>
+        </defs>
+        <!-- scalloped mirror frame -->
+        <g transform="translate(0 6)">
+          <path d="M200 22c18 0 26 14 42 18s32-4 44 8 4 28 12 42 26 20 26 38-16 24-18 40 10 30 0 44-28 10-40 20-14 30-32 34-30-10-46-10-28 14-46 10-20-24-32-34-30-6-40-20 2-28 0-44-18-22-18-40 18-24 26-38 0-30 12-42 28-4 44-8 24-18 42-18z" fill="#1F2430" transform="translate(8 8)"/>
+          <path d="M200 22c18 0 26 14 42 18s32-4 44 8 4 28 12 42 26 20 26 38-16 24-18 40 10 30 0 44-28 10-40 20-14 30-32 34-30-10-46-10-28 14-46 10-20-24-32-34-30-6-40-20 2-28 0-44-18-22-18-40 18-24 26-38 0-30 12-42 28-4 44-8 24-18 42-18z" fill="#FFF8EC" stroke="#1F2430" stroke-width="4"/>
+          <circle cx="200" cy="190" r="118" fill="#C8344A" stroke="#1F2430" stroke-width="4"/>
+          <circle cx="200" cy="190" r="104" fill="none" stroke="#FFF8EC" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <!-- hair dryer -->
+          <g class="float" style="transform-origin:200px 190px">
+            <path d="M120 150h96a46 46 0 0 1 0 92h-96z" fill="#BFE3D0" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="96" y="168" width="28" height="56" rx="8" fill="#FFF8EC" stroke="#1F2430" stroke-width="4"/>
+            <circle cx="216" cy="196" r="24" fill="#FFF8EC" stroke="#1F2430" stroke-width="4"/>
+            <circle cx="216" cy="196" r="10" fill="#C8344A" stroke="#1F2430" stroke-width="3"/>
+            <path d="M176 238l-10 70a10 10 0 0 0 10 12h22a10 10 0 0 0 10-12l-6-70" fill="#BFE3D0" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="182" y="262" width="20" height="8" rx="4" fill="#1F2430"/>
+            <path d="M84 178h-22M84 196h-30M84 214h-22" stroke="#FFF8EC" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <!-- scissors -->
+          <g transform="translate(262 252) rotate(-28)">
+            <circle cx="0" cy="0" r="14" fill="#FFF8EC" stroke="#1F2430" stroke-width="4"/>
+            <circle cx="30" cy="10" r="14" fill="#FFF8EC" stroke="#1F2430" stroke-width="4"/>
+            <path d="M10 -8 L70 -40 L18 2 M24 -2 L76 -26 L34 6" fill="#FFF8EC" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/>
+          </g>
+          <!-- comb -->
+          <g transform="translate(70 300) rotate(-12)">
+            <rect x="0" y="0" width="96" height="16" rx="6" fill="#1F2430"/>
+            <path d="M8 16v16M18 16v16M28 16v16M38 16v16M48 16v16M58 16v16M68 16v16M78 16v16M88 16v16" stroke="#1F2430" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <!-- sparkles -->
+          <path d="M62 82l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#C8344A" stroke="#1F2430" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M340 316l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#FFF8EC" stroke="#1F2430" stroke-width="3" stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <svg class="burst" viewBox="0 0 100 100"><path fill="#1F2430" transform="translate(2.5 2.5)" d="M50 0l7 12 13-6 2 14 14-1-4 14 13 5-9 11 9 11-13 5 4 14-14-1-2 14-13-6-7 12-7-12-13 6-2-14-14 1 4-14-13-5 9-11-9-11 13-5-4-14 14 1 2-14 13 6z"/><path fill="#C8344A" stroke="#1F2430" stroke-width="2" d="M50 0l7 12 13-6 2 14 14-1-4 14 13 5-9 11 9 11-13 5 4 14-14-1-2 14-13-6-7 12-7-12-13 6-2-14-14 1 4-14-13-5 9-11-9-11 13-5-4-14 14 1 2-14 13 6z"/></svg>
+      <div class="burst-txt"><div>Men's cuts<b>$19</b></div></div>
+    </div>
+  </div>
+  <div class="scallop"></div>
+</section>
+
+<section id="menu" class="sec">
+  <div class="wrap">
+    <div class="menu-head reveal">
+      <div>
+        <div class="kicker">The menu</div>
+        <h2>All ten services,<br>priced up front.</h2>
+        <p class="lede">The full list from Pam's booking page. No guessing, no surprises at the chair.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Filter services">
+        <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts &amp; style</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="care">Care</button>
+      </div>
+    </div>
+
+    <div class="menu">
+      <article class="card reveal" data-c="cut"><h3>Women's Haircut and Blow Dry</h3><div class="price">$30</div><div class="meta"><span class="pill">45 min</span></div></article>
+      <article class="card reveal" data-c="cut"><h3>Men's Haircuts</h3><div class="price">$19</div><div class="meta"><span class="pill">30 min</span></div></article>
+      <article class="card reveal" data-c="cut"><h3>Shampoo and Set</h3><div class="price">$30</div><div class="meta"><span class="pill">30 min</span></div><p>Shampoo, conditioner, and a blowout and style or a roller set.</p></article>
+      <article class="card reveal" data-c="color"><h3>Regrowth Color</h3><div class="price">$70</div><div class="meta"><span class="pill">2 hr</span></div></article>
+      <article class="card reveal" data-c="color"><h3>Balayage</h3><div class="price"><small>from</small>$150</div><div class="meta"><span class="pill">2 hr 30 min</span><span class="pill cream">Varies by length &amp; thickness</span></div></article>
+      <article class="card reveal" data-c="color"><h3>Partial Balayage</h3><div class="price"><small>from</small>$120</div><div class="meta"><span class="pill">2 hr 10 min</span><span class="pill cream">Varies by length &amp; thickness</span></div></article>
+      <article class="card reveal" data-c="color"><h3>Full Highlights</h3><div class="price"><small>from</small>$100</div><div class="meta"><span class="pill">2 hr 30 min</span></div></article>
+      <article class="card reveal" data-c="color"><h3>Partial Highlights</h3><div class="price"><small>from</small>$95</div><div class="meta"><span class="pill">2 hr</span><span class="pill cream">Varies by length &amp; thickness</span></div></article>
+      <article class="card reveal" data-c="care"><h3>Deep Conditioner Treatment</h3><div class="price">$15</div><div class="meta"><span class="pill">30 min</span></div></article>
+      <article class="card reveal" data-c="care"><h3>Wax</h3><div class="price">$10</div><div class="meta"><span class="pill">10 min</span></div></article>
+    </div>
+
+    <div class="menu-foot reveal">
+      <span>Pick a service and a time that suits you, right from your phone.</span>
+      <a class="btn red sm" href="https://square.site/book/081NRR49A68DT/unique-hair-designs-dayton-tn" target="_blank" rel="noopener">See open times</a>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why sec">
+  <div class="checker red" style="position:absolute;top:0;left:0;right:0"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Why unique hair designs</div>
+      <h2>One stylist. One chair.<br>Your whole appointment.</h2>
+      <p class="lede">You book with Pam, and Pam does your hair. Simple as that.</p>
+    </div>
+    <div class="grid3">
+      <div class="tile reveal">
+        <svg class="ic" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="#BFE3D0"/><circle cx="30" cy="24" r="9" fill="#1F2430"/><path d="M14 46c3-9 9-13 16-13s13 4 16 13" fill="#1F2430"/></svg>
+        <h3>Booked straight with Pam</h3>
+        <p>Pam is the stylist on the books, so the person you book is the person behind the chair.</p>
+      </div>
+      <div class="tile reveal">
+        <div class="big">$10 to $150+</div>
+        <h3>Every price, posted</h3>
+        <p>From a $10 wax to balayage from $150, all ten services show their price and time before you book.</p>
+      </div>
+      <div class="tile reveal">
+        <svg class="ic" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="#C8344A"/><rect x="15" y="17" width="30" height="28" rx="5" fill="#FFF8EC"/><rect x="15" y="17" width="30" height="8" rx="3" fill="#1F2430"/><path d="M23 35l5 5 9-10" fill="none" stroke="#C8344A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Book from your phone</h3>
+        <p>Grab a time on the online booking page whenever it suits you. Prefer to talk? Just call.</p>
+      </div>
+    </div>
+  </div>
+  <div class="scallop"></div>
+</section>
+
+<section id="visit" class="sec">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:26px">
+      <div class="kicker">Hours &amp; visit</div>
+      <h2>Weekdays, nine to five.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Opening hours</h3>
+        <div class="status" id="status"><i></i><span>Monday to Friday</span></div>
+        <ul id="hours">
+          <li data-d="1"><span>Monday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="6" class="off"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="off"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="mapbox reveal">
+        <iframe title="Map of Dayton, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Dayton%2C%20TN%2037321&output=embed"></iframe>
+        <div class="info">
+          <div class="addr">Dayton, Tennessee<small>Call or book online for directions to the salon.</small></div>
+          <div class="row">
+            <a class="btn red sm" href="tel:+14237754500">Call (423) 775-4500</a>
+            <a class="btn cream sm" href="https://www.google.com/maps/dir/?api=1&destination=Dayton%2C%20TN%2037321" target="_blank" rel="noopener">Directions</a>
+          </div>
+          <a href="mailto:prmarler01@yahoo.com" style="font-weight:700;font-size:14.5px;color:var(--ink-2)">prmarler01@yahoo.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="checker" style="position:absolute;top:0;left:0;right:0"></div>
+  <div class="wrap reveal">
+    <h2>Your chair is waiting.</h2>
+    <p>Pick a service, pick a time, and you're on Pam's books.</p>
+    <div class="ctas">
+      <a class="btn cream" href="https://square.site/book/081NRR49A68DT/unique-hair-designs-dayton-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn mint" href="tel:+14237754500">Call the salon</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true" width="32" height="32"><circle cx="20" cy="20" r="18" fill="#C8344A" stroke="#FFF8EC" stroke-width="2.5"/><path d="M12 25c3-9 6-12 8-12s5 3 8 12" fill="none" stroke="#FFF8EC" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="27" r="2.6" fill="#BFE3D0"/></svg><span>unique hair designs</span></a>
+    <div>Hair salon in Dayton, TN · <a href="tel:+14237754500">(423) 775-4500</a> · <a href="mailto:prmarler01@yahoo.com">prmarler01@yahoo.com</a></div>
+    <div class="small">Concept by Code Craft Media. Services, prices and hours from the salon's Square booking page.</div>
+  </div>
+</footer>
+
+<div class="bar" role="navigation" aria-label="Quick actions">
+  <a class="call" href="tel:+14237754500"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.250.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/081NRR49A68DT/unique-hair-designs-dayton-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Book now</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // today's hours (salon local time: America/New_York)
+  var d, h;
+  try{
+    var p = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}, o={};
+    p.forEach(function(x){o[x.type]=x.value});
+    d = map[o.weekday]; h = (parseInt(o.hour,10)%24) + parseInt(o.minute,10)/60;
+  }catch(e){ var n=new Date(); d=n.getDay(); h=n.getHours()+n.getMinutes()/60; }
+  var li = document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var st = document.getElementById('status');
+  var open = d>=1 && d<=5 && h>=9 && h<17;
+  st.classList.add(open?'open':'closed');
+  st.querySelector('span').textContent = open ? 'Open now · until 5:00 pm' : 'Closed now · book online';
+
+  // filters
+  var tabs = document.querySelectorAll('.tab'), cards = document.querySelectorAll('.card');
+  tabs.forEach(function(t){ t.addEventListener('click', function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected', x===t?'true':'false')});
+    var f=t.dataset.f; cards.forEach(function(c){ c.hidden = !(f==='all' || c.dataset.c===f); });
+  });});
+
+  // reveal (content visible without JS; fallback after 1.5s)
+  var els = [].slice.call(document.querySelectorAll('.reveal'));
+  function show(e){ e.classList.remove('pre'); }
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){ var r=e.getBoundingClientRect(); if(r.top > window.innerHeight) e.classList.add('pre'); });
+    var io = new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ show(x.target); io.unobserve(x.target);} }); },{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  }
+  setTimeout(function(){ els.forEach(show); }, 1500);
+})();
+</script>
+</body>
+</html>

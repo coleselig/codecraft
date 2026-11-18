@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Ryan Vaughn, Barber — Manchester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Flex:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#2f4a63;--steel-d:#1b2c3c;--steel-dd:#111d29;--steel-l:#6f8ca6;--off:#f5f1e8;--off2:#ebe5d8;--amber:#e8a33d;--amber-d:#b97818;--ink:#16212c;--muted:#5c6b78}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--off);color:var(--ink);font-family:"Roboto Flex",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+h1,h2,h3,.osw{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.02}
+a{color:inherit}
+.banner{background:var(--steel-dd);color:#c9d5e0;font-size:11px;letter-spacing:-.01em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:absolute;left:0;right:0;z-index:5}
+.hero nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:0}
+.mark{font-family:Oswald;font-weight:600;color:var(--off);letter-spacing:.12em;font-size:15px;text-decoration:none}
+.mark span{color:var(--amber)}
+nav .links{display:none;gap:28px}
+nav .links a{color:#dbe4ec;text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+nav .links a:hover{color:var(--amber)}
+/* HERO */
+.hero{position:relative;min-height:760px;background:linear-gradient(180deg,#152536 0%,#2f4a63 46%,#8a7a68 74%,#e8a33d 100%);color:var(--off);overflow:hidden;isolation:isolate}
+.hero svg.sky{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.sun{animation:rise 3.2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(90px);opacity:.3}to{transform:none;opacity:1}}
+.hero .wrap{padding-top:96px;padding-bottom:150px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:Oswald;font-weight:500;letter-spacing:.22em;font-size:13px;color:var(--amber);text-transform:uppercase}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--amber)}
+.hero h1{font-size:clamp(54px,15vw,124px);font-weight:700;margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--amber);display:block}
+.hero p.sub{max-width:520px;font-size:18px;color:#e4ebf1}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:3px;font-family:Oswald;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:15px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s}
+.btn.pri{background:var(--amber);color:var(--steel-dd);box-shadow:0 10px 26px -10px rgba(232,163,61,.8)}
+.btn.pri:hover{background:#f3b553;transform:translateY(-2px)}
+.btn.ghost{border:1.5px solid rgba(245,241,232,.55);color:var(--off)}
+.btn.ghost:hover{background:rgba(245,241,232,.12)}
+.clock{margin-top:44px;padding-top:22px;border-top:1px solid rgba(245,241,232,.25);max-width:320px;display:flex;align-items:center;gap:16px;font-family:Oswald;color:var(--off)}
+.clock b{font-size:46px;font-weight:600;letter-spacing:.02em}
+.clock small{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#f6dfb8;line-height:1.4}
+/* razor rule */
+.razor{display:block;width:100%;height:28px}
+/* sections */
+section{padding:84px 0}
+.kicker{font-family:Oswald;color:var(--amber-d);letter-spacing:.22em;font-size:13px;text-transform:uppercase;font-weight:500}
+h2{font-size:clamp(40px,9vw,68px);font-weight:700;color:var(--steel-d);margin:10px 0 14px}
+.lead{color:var(--muted);max-width:560px}
+/* menu */
+.menu{display:grid;gap:0;margin-top:14px;border-top:2px solid var(--steel-d)}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:22px 4px;border-bottom:1px solid #d6cfbf;transition:background .2s,padding .2s}
+.item:hover{background:var(--off2);padding-left:12px;padding-right:12px}
+.item h3{font-size:22px;font-weight:500;color:var(--steel-d)}
+.item .price{font-family:Oswald;font-size:26px;font-weight:600;color:var(--steel-d)}
+.item .meta{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.item .meta i{font-style:normal;color:var(--amber-d);font-weight:600;letter-spacing:.04em}
+.groups{display:grid;gap:56px}
+.ghead{display:flex;align-items:baseline;gap:14px;margin-top:40px}
+.ghead h3{font-size:16px;letter-spacing:.2em;color:var(--steel-l);font-weight:500}
+/* why */
+.why{background:var(--steel-d);color:var(--off);position:relative;overflow:hidden}
+.why h2{color:var(--off)}
+.why .lead{color:#b8c7d4}
+.cards{display:grid;gap:18px;margin-top:40px}
+.card{border:1px solid rgba(245,241,232,.14);padding:28px 24px;border-radius:4px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,0));transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--amber);transform:translateY(-3px)}
+.card .n{font-family:Oswald;font-size:44px;font-weight:600;color:var(--amber);line-height:1}
+.card h3{font-size:22px;margin:12px 0 8px;font-weight:500}
+.card p{color:#b8c7d4;font-size:15.5px}
+/* hours */
+.hours-grid{display:grid;gap:40px;margin-top:36px}
+.days{list-style:none;border-top:2px solid var(--steel-d)}
+.days li{display:flex;justify-content:space-between;padding:14px 10px;border-bottom:1px solid #d6cfbf;font-family:Oswald;letter-spacing:.06em;text-transform:uppercase;font-size:18px;color:var(--steel-d)}
+.days li.off{color:#9aa3ab}
+.days li.today{background:var(--steel-d);color:var(--off);border-radius:3px;position:relative}
+.days li.today::after{content:"Today";position:absolute;right:auto;left:calc(100% - 210px);display:none}
+.days li.today span:last-child{color:var(--amber)}
+.status{margin-top:16px;font-size:15px;color:var(--muted)}
+.status b{color:var(--steel-d)}
+.map{border:0;width:100%;height:340px;border-radius:4px;filter:grayscale(.35) contrast(1.05);background:var(--off2)}
+.loc{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.btn.dark{background:var(--steel-d);color:var(--off)}
+.btn.dark:hover{background:var(--steel)}
+.btn.line{border:1.5px solid var(--steel-d);color:var(--steel-d)}
+.btn.line:hover{background:var(--off2)}
+/* final */
+.final{background:linear-gradient(180deg,var(--off) 0%,#f3dfba 100%);text-align:center;padding:96px 0 90px}
+.final h2{max-width:760px;margin:10px auto 18px}
+.final .cta{justify-content:center}
+footer{background:var(--steel-dd);color:#9fb0bf;font-size:14px;padding:34px 0;text-align:center}
+footer b{color:var(--off);font-family:Oswald;letter-spacing:.12em;font-weight:500}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,29,41,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(232,163,61,.35)}
+.bar a{padding:13px 10px;font-size:14px}
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+@media(min-width:820px){
+ nav .links{display:flex}
+ .hero{min-height:820px}
+ .hero .wrap{padding-top:170px;padding-bottom:170px}
+ .menu-cols .ghead{margin-top:48px}
+ .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .hours-grid{grid-template-columns:1fr 1.2fr;align-items:start}
+ .map{height:420px}
+ .bar{display:none}
+ body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Ryan Vaughn. Not live.</div>
+
+<header class="hero" id="top">
+ <svg class="sky" viewBox="0 0 400 820" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+   <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd48a" stop-opacity=".95"/><stop offset=".45" stop-color="#e8a33d" stop-opacity=".45"/><stop offset="1" stop-color="#e8a33d" stop-opacity="0"/></radialGradient>
+   <pattern id="stars" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="8" cy="12" r=".9" fill="#fff" opacity=".55"/><circle cx="41" cy="33" r=".6" fill="#fff" opacity=".4"/><circle cx="24" cy="51" r=".5" fill="#fff" opacity=".35"/></pattern>
+   <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+   <mask id="m"><rect width="400" height="820" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="400" height="820" fill="url(#stars)" mask="url(#m)"/>
+  <g class="sun"><circle cx="300" cy="760" r="220" fill="url(#glow)"/><circle cx="300" cy="760" r="70" fill="#f6c46f"/></g>
+    <path d="M0 760 L120 720 L190 742 L270 708 L400 748 L400 820 L0 820Z" fill="#1b2c3c" opacity=".55"/>
+  <path d="M0 790 L90 770 L170 786 L260 762 L340 780 L400 770 L400 820 L0 820Z" fill="#111d29"/>
+ </svg>
+ <nav><div class="wrap"><a class="mark" href="#top">RYAN VAUGHN <span>/</span> BARBER</a>
+  <div class="links"><a href="#menu">Services</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div></div></nav>
+ <div class="wrap">
+  <div class="eyebrow">Manchester, Tennessee</div>
+  <h1>First chair<em>at 7 AM.</em></h1>
+  <p class="sub">Fades, scissor cuts and straight razor shaves from Ryan Vaughn. Open Tuesday, Wednesday, Friday and Saturday, done by 2:30.</p>
+  <div class="cta">
+   <a class="btn pri" href="https://square.site/book/EQCXQKFWN8ATS/ryan-vaughn-manchester-tn">Book a chair</a>
+   <a class="btn ghost" href="tel:+19314341036">Call (931) 434-1036</a>
+  </div>
+  <div class="clock"><b>7:00</b><small>Doors open<br>4 mornings a week</small></div>
+ </div>
+</header>
+
+<svg class="razor" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><rect width="1200" height="28" fill="#f5f1e8"/><line x1="0" y1="14" x2="1200" y2="14" stroke="#2f4a63" stroke-width="1.5"/><path d="M560 14 L600 6 L680 6 L690 14 L680 22 L600 22Z" fill="#2f4a63"/><line x1="604" y1="10" x2="676" y2="10" stroke="#e8a33d" stroke-width="1.2"/></svg>
+
+<section id="menu">
+ <div class="wrap">
+  <div class="kicker rv">The menu</div>
+  <h2 class="rv">Eight services.<br>Every one priced.</h2>
+  <p class="lead rv">Straight from Ryan's booking page. Pick a service, pick a time, done.</p>
+  <div class="menu-cols">
+   <div>
+    <div class="ghead rv"><h3>Cuts</h3></div>
+    <div class="menu rv">
+     <div class="item"><h3>Classic Haircut</h3><span class="price">$30</span><p class="meta"><i>30 min</i> · Fades, clipper cuts, scissors or clippers on top. Includes a blow dried style and straight razor neck shave.</p></div>
+     <div class="item"><h3>Scissor Cut</h3><span class="price">$35</span><p class="meta"><i>30 min</i> · Scissor cut all over, for all scissor cuts, short to long.</p></div>
+     <div class="item"><h3>Haircut + Beard Trim / Lineup</h3><span class="price">$45</span><p class="meta"><i>45 min</i> · The cut and the beard in one sitting.</p></div>
+     <div class="item"><h3>Kids Cut <small style="font-size:.6em;letter-spacing:.1em">Ages 7–12</small></h3><span class="price">$20</span><p class="meta"><i>30 min</i> · Ages 7–12. No fades.</p></div>
+     <div class="item"><h3>Detailed Kids Cut <small style="font-size:.6em;letter-spacing:.1em">Ages 7–12</small></h3><span class="price">$25</span><p class="meta"><i>30 min</i> · Ages 7–12. Fades and hard parts.</p></div>
+    </div>
+   </div>
+   <div>
+    <div class="ghead rv"><h3>Razor &amp; Beard</h3></div>
+    <div class="menu rv">
+     <div class="item"><h3>Beard Trim + Lineup</h3><span class="price">$20</span><p class="meta"><i>30 min</i> · Precision beard trim with hot towel, blow out and straight razor line-up.</p></div>
+     <div class="item"><h3>Head Shave</h3><span class="price">$35</span><p class="meta"><i>30 min</i> · Head shave.</p></div>
+     <div class="item"><h3>Head Shave + Beard Trim</h3><span class="price">$50</span><p class="meta"><i>45 min</i> · Straight razor head shave and a beard trim.</p></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="why">
+ <div class="wrap">
+  <div class="kicker rv" style="color:var(--amber)">Why the early chair</div>
+  <h2 class="rv">Sharp before<br>the workday starts.</h2>
+  <p class="lead rv">Everything below comes straight off Ryan's own booking page.</p>
+  <div class="cards">
+   <div class="card rv"><div class="n">7:00</div><h3>Open at 7 AM</h3><p>Get cut before the job site or the office. Doors open at 7:00 on every working day.</p></div>
+   <div class="card rv"><div class="n">Razor</div><h3>Straight razor finish</h3><p>The Classic Haircut includes a straight razor neck shave. Beard trims get a hot towel and razor line-up.</p></div>
+   <div class="card rv"><div class="n">30</div><h3>In and out in 30</h3><p>Most services are booked as 30 minutes. The combos run 45. Book online any time.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="hours">
+ <div class="wrap">
+  <div class="kicker rv">Hours &amp; location</div>
+  <h2 class="rv">Four mornings<br>a week.</h2>
+  <div class="hours-grid" id="visit">
+   <div class="rv">
+    <ul class="days" id="days">
+     <li data-d="0" class="off"><span>Sunday</span><span>Closed</span></li>
+     <li data-d="1" class="off"><span>Monday</span><span>Closed</span></li>
+     <li data-d="2"><span>Tuesday</span><span>7:00 AM – 2:30 PM</span></li>
+     <li data-d="3"><span>Wednesday</span><span>7:00 AM – 2:30 PM</span></li>
+     <li data-d="4" class="off"><span>Thursday</span><span>Closed</span></li>
+     <li data-d="5"><span>Friday</span><span>7:00 AM – 2:30 PM</span></li>
+     <li data-d="6"><span>Saturday</span><span>7:00 AM – 2:30 PM</span></li>
+    </ul>
+    <p class="status" id="status">Book online any time, day or night.</p>
+   </div>
+   <div class="rv">
+    <iframe class="map" title="Map of Manchester, TN" loading="lazy" src="https://www.google.com/maps?q=Manchester%2C%20TN%2037355&output=embed"></iframe>
+    <div class="loc">
+     <a class="btn dark" href="tel:+19314341036">Call (931) 434-1036</a>
+     <a class="btn line" href="https://www.google.com/maps/dir/?api=1&destination=Manchester%2C%20TN%2037355">Directions</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="wrap">
+  <div class="kicker rv">Manchester, TN</div>
+  <h2 class="rv">Grab the 7 AM chair.</h2>
+  <p class="lead rv" style="margin:0 auto">Online booking takes about a minute.</p>
+  <div class="cta rv"><a class="btn pri" href="https://square.site/book/EQCXQKFWN8ATS/ryan-vaughn-manchester-tn">Book now</a><a class="btn line" href="tel:+19314341036">Call Ryan</a></div>
+ </div>
+</section>
+
+<footer><div class="wrap"><b>RYAN VAUGHN · BARBER</b><br>Manchester, TN · (931) 434-1036<br><span style="opacity:.7">Concept by Code Craft Media</span></div></footer>
+
+<div class="bar"><a class="btn ghost" href="tel:+19314341036">Call</a><a class="btn pri" href="https://square.site/book/EQCXQKFWN8ATS/ryan-vaughn-manchester-tn">Book</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var now=new Date(),d=now.getDay(),li=document.querySelector('#days li[data-d="'+d+'"]');
+ if(li)li.classList.add('today');
+ var open=[2,3,5,6].indexOf(d)>-1,m=now.getHours()*60+now.getMinutes(),s=document.getElementById('status');
+ if(s){s.innerHTML=open&&m>=420&&m<870?'<b>Open now</b> until 2:30 PM. Book online any time.':(open&&m<420?'<b>Opens at 7:00 AM today.</b> Book online any time.':'<b>Closed right now.</b> Book online any time, day or night.');}
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+ setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

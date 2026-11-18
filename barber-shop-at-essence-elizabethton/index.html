@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Barber Shop at Essence — Elizabethton</title>
+<meta name="description" content="Concept site for Barber Shop at Essence, 1000 W G St, Elizabethton, TN. Fades, tapers, hot towel straight razor shaves.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#23392b; --pine-2:#1a2b20; --rust:#b5532c; --rust-2:#9a4422; --parch:#f3ead7; --parch-2:#e8dcc0; --iron:#3a3a3a; --ink:#1f1f1c;
+  --display:"Alfa Slab One", Georgia, serif; --body:"Source Sans 3", system-ui, -apple-system, Segoe UI, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--parch);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;letter-spacing:.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* paper grain */
+.grain{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .16 0 0 0 0 .1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--iron);color:#e9e1cf;font-size:clamp(10px,2.75vw,13px);letter-spacing:0!important;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#f0b190;font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(35,57,43,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--rust)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--parch)}
+.brand span{font-family:var(--display);font-size:clamp(14px,4vw,18px);white-space:nowrap;line-height:1;letter-spacing:.02em}
+.brand small{display:block;font-family:var(--body);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#d9c9a3;margin-top:3px}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}
+.nav ul a{color:var(--parch);text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.nav ul a:hover{border-color:var(--rust)}
+.nav .btn-sm{background:var(--rust);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 14px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s, transform .2s}
+.nav .btn-sm:hover{background:var(--rust-2);transform:translateY(-1px)}
+
+/* hero */
+.hero{position:relative;background:var(--pine);color:var(--parch);overflow:hidden;isolation:isolate}
+.hero .sky{position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 70% at 75% 10%, #355a43 0%, var(--pine) 55%, var(--pine-2) 100%)}
+.hero .sun{position:absolute;z-index:-1;right:-40px;top:40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#c86a40 0%, #b5532c 62%, rgba(181,83,44,0) 64%);opacity:.5;animation:rise 2.4s ease-out both}
+@keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:.5}}
+.hero .inner{padding-top:40px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:#f0b190}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--rust)}
+.hero h1{font-size:clamp(44px,12.5vw,104px);margin:16px 0 0;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+.hero h1 em{font-style:normal;color:#f0b190;display:block}
+.hero .quote{margin:20px 0 0;max-width:34ch;font-size:18px;color:#e7dcc4}
+.hero .quote q{font-weight:700;color:#fff}
+.hero .quote q:before,.hero .quote q:after{color:#f0b190}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 22px;border-radius:5px;font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:transform .18s, background .2s, box-shadow .2s;border:2px solid transparent}
+.btn-rust{background:var(--rust);color:#fff;box-shadow:0 4px 0 var(--rust-2)}
+.btn-rust:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--rust-2)}
+.btn-rust:active{transform:translateY(2px);box-shadow:0 2px 0 var(--rust-2)}
+.btn-ghost{border-color:#d9c9a3;color:var(--parch)}
+.btn-ghost:hover{background:rgba(243,234,215,.1)}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:22px 0 0;padding:0;list-style:none;font-size:14.5px;color:#d9c9a3}
+.hero .facts li{display:flex;align-items:center;gap:7px}
+.hero .facts li:before{content:"";width:7px;height:7px;background:var(--rust);transform:rotate(45deg)}
+.seal-hero{position:absolute;right:14px;bottom:34px;width:82px;height:82px;z-index:2;animation:spin 40s linear infinite;opacity:.95}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mountains{margin-top:56px;width:100%;height:auto}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* rope border */
+.rope{height:16px;background:
+  repeating-linear-gradient(135deg, #8a6a3e 0 6px, #c9a66b 6px 10px, #6e5230 10px 14px);
+  border-top:2px solid var(--iron);border-bottom:2px solid var(--iron)}
+.stitch{border:2px dashed rgba(58,58,58,.45);border-radius:6px}
+
+section{scroll-margin-top:66px}
+.sec{padding:64px 0}
+.kicker{font-weight:700;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--rust)}
+.sec h2{font-size:clamp(34px,8.5vw,58px);margin:10px 0 0;color:var(--pine)}
+.lede{max-width:56ch;color:#4a463d;margin:14px 0 0}
+
+/* menu */
+.menu{margin-top:30px;display:grid;gap:14px}
+.item{position:relative;background:#fbf6ea;padding:20px 18px 18px;border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.06), 0 10px 24px -18px rgba(35,57,43,.5);transition:transform .2s, box-shadow .2s}
+.item:before{content:"";position:absolute;inset:6px;border:1.5px dashed rgba(181,83,44,.45);border-radius:4px;pointer-events:none}
+.item:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(0,0,0,.06), 0 18px 30px -18px rgba(35,57,43,.6)}
+.item .row{display:flex;align-items:baseline;gap:10px}
+.item h3{font-size:21px;color:var(--pine)}
+.item .dots{flex:1;border-bottom:2px dotted #b9a882;transform:translateY(-5px);min-width:16px}
+.item .price{font-family:var(--display);font-size:22px;color:var(--rust)}
+.item p{margin:8px 0 0;color:#4a463d;font-size:15.5px}
+.item .dur{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--iron);background:var(--parch-2);padding:3px 9px;border-radius:3px}
+.item.feature{background:var(--pine);color:var(--parch)}
+.item.feature:before{border-color:rgba(240,177,144,.55)}
+.item.feature h3{color:var(--parch)}
+.item.feature p{color:#d9cfb8}
+.item.feature .dots{border-color:#6f8a74}
+.item.feature .price{color:#f0b190}
+.item.feature .dur{background:#335140;color:#efe5cf}
+.tag{position:absolute;top:-11px;right:14px;background:var(--rust);color:#fff;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;border-radius:3px}
+.menu-note{margin:18px 0 0;font-size:14px;color:#6a6355}
+
+/* house rules band */
+.rules{background:var(--iron);color:var(--parch);position:relative;overflow:hidden}
+.rules .wrap{padding-top:58px;padding-bottom:58px;display:grid;gap:34px;align-items:center}
+.rules blockquote{margin:0;font-family:var(--display);font-size:clamp(30px,8vw,56px);line-height:1.08}
+.rules blockquote span{color:#f0b190}
+.rules cite{display:block;margin-top:14px;font-family:var(--body);font-style:normal;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#bdb39c}
+.why{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.why li{display:flex;gap:14px;align-items:flex-start;background:rgba(243,234,215,.06);border:1.5px dashed rgba(243,234,215,.25);border-radius:6px;padding:16px}
+.why svg{flex:none;width:40px;height:40px}
+.why b{display:block;font-size:17px;color:#fff}
+.why span{color:#cfc6b1;font-size:15px}
+
+/* hours + map */
+.visit{display:grid;gap:22px;margin-top:30px}
+.card{background:#fbf6ea;border-radius:8px;padding:22px 20px;box-shadow:0 10px 24px -18px rgba(35,57,43,.5);position:relative}
+.card:before{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(35,57,43,.35);border-radius:5px;pointer-events:none}
+.card h3{font-size:24px;color:var(--pine)}
+.hours{list-style:none;margin:14px 0 0;padding:0}
+.hours li{display:flex;justify-content:space-between;padding:10px 10px;border-bottom:1px solid #e3d6b8;font-size:16px;border-radius:4px}
+.hours li:last-child{border-bottom:0}
+.hours li .t{font-weight:600}
+.hours li.closed .t{color:#8b8270;font-weight:400}
+.hours li.today{background:var(--pine);color:var(--parch);border-color:transparent}
+.hours li.today .t{color:#f0b190}
+.hours li.today .d:after{content:"Today";margin-left:8px;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--rust);color:#fff;padding:2px 6px;border-radius:3px;vertical-align:2px}
+.status{margin:12px 0 0;font-weight:700;color:var(--rust);font-size:15px;min-height:1.4em}
+.addr{font-size:19px;font-weight:700;margin:12px 0 4px;color:var(--ink)}
+.map{margin-top:14px;border-radius:6px;overflow:hidden;border:3px solid var(--pine);aspect-ratio:4/3;background:var(--parch-2)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.card .ctas{margin-top:16px}
+.btn-pine{background:var(--pine);color:var(--parch);box-shadow:0 4px 0 var(--pine-2)}
+.btn-pine:hover{transform:translateY(-2px)}
+.btn-line{border-color:var(--pine);color:var(--pine)}
+.btn-line:hover{background:rgba(35,57,43,.07)}
+
+/* footer */
+footer{background:var(--pine-2);color:#cfc3a6;text-align:center;padding:40px 0 34px;font-size:14px}
+footer .fname{font-family:var(--display);font-size:24px;color:var(--parch);margin:12px 0 6px}
+footer a{color:#f0b190}
+footer .seal-foot{width:84px;height:84px;margin:0 auto}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(26,43,32,.97);border-top:3px solid var(--rust);box-shadow:0 -10px 24px -12px rgba(0,0,0,.5)}
+.callbar a{flex:1;min-height:50px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;font-size:15px}
+.callbar .c{background:var(--parch);color:var(--pine)}
+.callbar .b{background:var(--rust);color:#fff}
+
+/* reveal (content visible by default) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero .inner{padding-top:84px;padding-right:240px}
+  .seal-hero{width:170px;height:170px;right:6%;top:120px;bottom:auto}
+  .hero .sun{width:420px;height:420px;right:6%;top:60px}
+  .menu{grid-template-columns:1fr 1fr}
+  .menu .feature{grid-column:span 2}
+  .rules .wrap{grid-template-columns:1.1fr 1fr}
+  .visit{grid-template-columns:1fr 1.25fr}
+  .map{aspect-ratio:auto;height:330px}
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+@media (min-width:1100px){.menu{grid-template-columns:repeat(3,1fr)}.menu .feature{grid-column:span 2}.mountains{margin-top:10px}}
+a:focus-visible,.btn:focus-visible{outline:3px solid #f0b190;outline-offset:3px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');document.body.classList.add('js')</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="seal" viewBox="0 0 200 200">
+      <defs><path id="ring" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+      <circle cx="100" cy="100" r="96" fill="#b5532c"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#f3ead7" stroke-width="2" stroke-dasharray="4 5"/>
+      <circle cx="100" cy="100" r="58" fill="none" stroke="#f3ead7" stroke-width="2"/>
+      <text font-family="Source Sans 3, sans-serif" font-weight="700" font-size="15.5" letter-spacing="3.2" fill="#f3ead7"><textPath href="#ring">BARBER SHOP AT ESSENCE ✦ ELIZABETHTON TN ✦</textPath></text>
+      <g transform="translate(100 100)" fill="#f3ead7">
+        <path d="M-34 14 L-14 -16 L-4 -2 L8 -22 L34 14 Z"/>
+        <path d="M-34 14 L-14 -16 L-4 -2 L8 -22 L34 14 Z" fill="none" stroke="#b5532c" stroke-width="2" transform="translate(0 4) scale(.6)"/>
+        <rect x="-30" y="20" width="60" height="4" rx="2"/>
+      </g>
+    </symbol>
+    <symbol id="razor" viewBox="0 0 48 48"><g fill="none" stroke="#f0b190" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30 L30 8 L40 12 L18 34 Z"/><path d="M18 34 L24 42 M24 42 L30 38"/><path d="M14 26 L30 12"/></g></symbol>
+    <symbol id="towel" viewBox="0 0 48 48"><g fill="none" stroke="#f0b190" stroke-width="2.4" stroke-linecap="round"><rect x="8" y="22" width="32" height="18" rx="3"/><path d="M14 22 v18 M34 22 v18"/><path d="M17 16c0-4 4-4 4-8 M24 16c0-4 4-4 4-8 M31 16c0-4 4-4 4-8"/></g></symbol>
+    <symbol id="cal" viewBox="0 0 48 48"><g fill="none" stroke="#f0b190" stroke-width="2.4" stroke-linecap="round"><rect x="7" y="10" width="34" height="30" rx="3"/><path d="M7 18 h34 M16 6 v8 M32 6 v8"/><path d="M17 29 l5 5 l9-10"/></g></symbol>
+    <symbol id="comb" viewBox="0 0 48 48"><g fill="none" stroke="#f0b190" stroke-width="2.4" stroke-linecap="round"><rect x="6" y="14" width="36" height="8" rx="2"/><path d="M10 22 v12 M15 22 v12 M20 22 v12 M25 22 v12 M30 22 v12 M35 22 v12 M40 22 v8"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by Code Craft Media, made for <b>Barber Shop at Essence</b>. Not live.</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Barber Shop at Essence home">
+      <svg width="36" height="36" aria-hidden="true"><use href="#seal"/></svg>
+      <span>Barber Shop at Essence<small>Elizabethton · TN</small></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#why">The Shop</a></li>
+      <li><a href="#visit">Hours &amp; Map</a></li>
+    </ul>
+    <a class="btn-sm" href="https://square.site/book/LB8NYEZS4HWT3/barber-shop-at-essence-elizabethton-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="sky"></div>
+  <div class="sun"></div>
+  <svg class="seal-hero" aria-hidden="true"><use href="#seal"/></svg>
+  <div class="wrap inner">
+    <span class="eyebrow">1000 W G St · Elizabethton</span>
+    <h1>Clean fades.<br>Hot towels.<em>No mullets.</em></h1>
+    <p class="quote">Fades, tapers and two-pass straight razor shaves with Matthew Clark, booked online. <q>No stupid haircuts, no perms.</q></p>
+    <div class="ctas">
+      <a class="btn btn-rust" href="https://square.site/book/LB8NYEZS4HWT3/barber-shop-at-essence-elizabethton-tn" target="_blank" rel="noopener">Book a chair</a>
+      <a class="btn btn-ghost" href="tel:+14233937795">Call (423) 393-7795</a>
+    </div>
+    <ul class="facts">
+      <li>Wed–Fri 9–5</li><li>Sat 9–2</li><li>Cuts from $19.64</li>
+    </ul>
+  </div>
+  <svg class="mountains" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#2d4a37" d="M0 170 L90 110 L150 140 L250 60 L330 120 L410 80 L520 150 L610 70 L700 130 L790 90 L880 150 L980 50 L1080 130 L1170 95 L1260 140 L1350 85 L1440 120 V260 H0Z"/>
+    <g stroke="#3d5f48" stroke-width="2" fill="none" opacity=".7">
+      <path d="M250 60 L232 96 M250 60 L262 92 M250 60 L246 110"/><path d="M610 70 L594 104 M610 70 L626 100"/><path d="M980 50 L962 92 M980 50 L996 88 M980 50 L978 104"/><path d="M1350 85 L1336 112 M1350 85 L1362 110"/>
+    </g>
+    <path fill="#1f3326" d="M0 210 L120 160 L210 190 L330 130 L440 185 L560 150 L660 195 L780 140 L900 190 L1010 150 L1120 200 L1230 160 L1340 190 L1440 165 V260 H0Z"/>
+    <g fill="#16251b">
+      <path d="M60 230 l14 -40 l14 40z M85 236 l10 -30 l10 30z M1300 232 l14 -42 l14 42z M1330 238 l10 -30 l10 30z M700 236 l12 -34 l12 34z M380 236 l10 -28 l10 28z M1040 236 l12 -34 l12 34z"/>
+    </g>
+    <path fill="#b5532c" d="M0 244 H1440 V260 H0Z" opacity=".9"/>
+  </svg>
+</header>
+<div class="rope" aria-hidden="true"></div>
+
+<main>
+<section id="menu" class="sec grain">
+  <div class="wrap">
+    <span class="kicker">The menu</span>
+    <h2 class="reveal">Five services.<br>Done right.</h2>
+    <p class="lede reveal">Straight from the shop's booking page — same names, same prices, same times. Pick one and you're in the chair.</p>
+    <div class="menu">
+      <article class="item feature reveal">
+        <span class="tag">Full service</span>
+        <div class="row"><h3>Shave and Haircut</h3><span class="dots"></span><span class="price">$36.06</span></div>
+        <p>“It's a shave and a haircut.”</p>
+        <span class="dur">75 min</span>
+      </article>
+      <article class="item reveal">
+        <div class="row"><h3>Haircut</h3><span class="dots"></span><span class="price">$19.64</span></div>
+        <p>Standard fade or tapered haircut. No mullets, no perms.</p>
+        <span class="dur">40 min</span>
+      </article>
+      <article class="item reveal">
+        <div class="row"><h3>Hot Towel Straight Razor Shave</h3><span class="dots"></span><span class="price">$20.67</span></div>
+        <p>Hot towel, 2-pass straight razor face shave.</p>
+        <span class="dur">35 min</span>
+      </article>
+      <article class="item reveal">
+        <div class="row"><h3>Haircut and Beard Trim</h3><span class="dots"></span><span class="price">$28.88</span></div>
+        <p>A haircut AND a beard trim, booked together.</p>
+        <span class="dur">60 min</span>
+      </article>
+      <article class="item reveal">
+        <div class="row"><h3>Beard Trim</h3><span class="dots"></span><span class="price">$11.43</span></div>
+        <p>Beard trim with razor finish.</p>
+        <span class="dur">15 min</span>
+      </article>
+    </div>
+    <p class="menu-note">Prices and times as listed on the shop's Square booking page.</p>
+  </div>
+</section>
+
+<section id="why" class="rules">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker" style="color:#f0b190">House rules</span>
+      <blockquote style="margin-top:12px">“No mullets, <span>no stupid haircuts,</span> no perms.”</blockquote>
+      <cite>— The shop's own haircut description</cite>
+    </div>
+    <ul class="why">
+      <li class="reveal"><svg aria-hidden="true"><use href="#comb"/></svg><div><b>Fades &amp; tapers, nothing gimmicky</b><span>The standard cut is a fade or a taper, done clean.</span></div></li>
+      <li class="reveal"><svg aria-hidden="true"><use href="#towel"/></svg><div><b>Real hot towel shaves</b><span>Hot towel and a two-pass straight razor face shave.</span></div></li>
+      <li class="reveal"><svg aria-hidden="true"><use href="#razor"/></svg><div><b>Razor-finished beards</b><span>Every beard trim gets a razor finish on the lines.</span></div></li>
+      <li class="reveal"><svg aria-hidden="true"><use href="#cal"/></svg><div><b>Book online, any time</b><span>Grab a slot up to a year out, and cancel yourself if plans change.</span></div></li>
+    </ul>
+  </div>
+</section>
+<div class="rope" aria-hidden="true"></div>
+
+<section id="visit" class="sec grain">
+  <div class="wrap">
+    <span class="kicker">Find the chair</span>
+    <h2 class="reveal">Hours &amp; directions</h2>
+    <div class="visit">
+      <div class="card reveal">
+        <h3>Shop hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1" class="closed"><span class="d">Monday</span><span class="t">Closed</span></li>
+          <li data-d="2" class="closed"><span class="d">Tuesday</span><span class="t">Closed</span></li>
+          <li data-d="3"><span class="d">Wednesday</span><span class="t">9:00 AM – 5:00 PM</span></li>
+          <li data-d="4"><span class="d">Thursday</span><span class="t">9:00 AM – 5:00 PM</span></li>
+          <li data-d="5"><span class="d">Friday</span><span class="t">9:00 AM – 5:00 PM</span></li>
+          <li data-d="6"><span class="d">Saturday</span><span class="t">9:00 AM – 2:00 PM</span></li>
+          <li data-d="0" class="closed"><span class="d">Sunday</span><span class="t">Closed</span></li>
+        </ul>
+        <p class="status" id="status" aria-live="polite"></p>
+      </div>
+      <div class="card reveal">
+        <h3>The shop</h3>
+        <p class="addr">1000 W G St<br>Elizabethton, TN 37643</p>
+        <div class="map"><iframe title="Map to Barber Shop at Essence" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1000%20W%20G%20St%2C%20Elizabethton%2C%20TN%2037643&output=embed"></iframe></div>
+        <div class="ctas">
+          <a class="btn btn-pine" href="tel:+14233937795">Call (423) 393-7795</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=1000%20W%20G%20St%2C%20Elizabethton%2C%20TN%2037643" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="rope" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <svg class="seal-foot" aria-hidden="true"><use href="#seal"/></svg>
+    <p class="fname">Barber Shop at Essence</p>
+    <p>1000 W G St, Elizabethton, TN 37643 · <a href="tel:+14233937795">(423) 393-7795</a> · <a href="mailto:barbershopatessence@gmail.com">barbershopatessence@gmail.com</a></p>
+    <p style="margin-top:18px;opacity:.75">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c" href="tel:+14233937795">☎ Call</a>
+  <a class="b" href="https://square.site/book/LB8NYEZS4HWT3/barber-shop-at-essence-elizabethton-tn" target="_blank" rel="noopener">Book now</a>
+</nav>
+
+<script>
+(function(){
+  // today's hours in shop time (America/New_York)
+  var hrs={0:null,1:null,2:null,3:[9,17],4:[9,17],5:[9,17],6:[9,14]};
+  var now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(now);
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6},o={};p.forEach(function(x){o[x.type]=x.value});d=map[o.weekday];h=(+o.hour)+(+o.minute)/60;}catch(e){}
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var s=document.getElementById('status'), t=hrs[d];
+  function fmt(x){var hh=x%12||12;return hh+(x<12?' AM':' PM')}
+  if(t&&h>=t[0]&&h<t[1]) s.textContent='Open now · until '+fmt(t[1]);
+  else{var n=d,k=0;do{n=(n+1)%7;k++}while(!hrs[n]&&k<8);
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    s.textContent=(t&&h<t[0])?'Opens today at '+fmt(t[0]):'Closed now · opens '+names[n]+' at '+fmt(hrs[n][0]);}
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

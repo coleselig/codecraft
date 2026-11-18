@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>YourTattedNailTech — Clarksville</title>
+<meta name="description" content="Acrylic sets, fills, gel manicures, spa pedicures and three tiers of nail art by Shelby in downtown Clarksville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rye&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#121212; --ink2:#1c1c1c; --red:#e63946; --bone:#f4ecdf; --teal:#2a9d8f;
+  --bone-dim:#d9cfbf; --muted:#b8ae9f;
+  --bar-h:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--bone);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.92}
+.rye{font-family:"Rye",serif}
+
+/* grain texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--bone);color:var(--ink);font-size:10.5px;letter-spacing:-.015em;text-align:center;padding:6px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{font-weight:700}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(18,18,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid #2a2a2a}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo span{font-family:"Bebas Neue";font-size:24px;letter-spacing:.04em}
+.logo span em{font-style:normal;color:var(--red)}
+.navlinks{display:none;gap:28px;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.08em}
+.navlinks a{text-decoration:none;opacity:.8;transition:opacity .2s,color .2s}
+.navlinks a:hover{opacity:1;color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;border-radius:999px;padding:14px 24px;font-size:15px;letter-spacing:.02em;transition:transform .15s,box-shadow .2s,background .2s;border:2px solid transparent}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff;box-shadow:4px 4px 0 var(--bone)}
+.btn-red:hover{box-shadow:6px 6px 0 var(--bone);transform:translate(-2px,-2px)}
+.btn-ghost{border-color:var(--bone);color:var(--bone)}
+.btn-ghost:hover{background:var(--bone);color:var(--ink)}
+.btn-sm{padding:9px 16px;font-size:13px}
+nav .btn-sm{box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:40px 0 64px;border-bottom:3px solid var(--red)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:28px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:700}
+.kicker::before{content:"";width:22px;height:2px;background:var(--teal)}
+.hero h1{font-size:clamp(64px,19vw,132px);margin:14px 0 18px}
+.hero h1 .red{color:var(--red)}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--bone)}
+.hero p.sub{font-size:18px;max-width:30ch;color:var(--bone-dim)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.hero-art{position:relative;max-width:420px;margin:0 auto;width:100%}
+.hero-art .badge{position:absolute;right:-6px;top:-10px;width:118px;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stars{position:absolute;inset:0;z-index:1;pointer-events:none}
+.twinkle{animation:tw 3s ease-in-out infinite}
+.twinkle:nth-child(2){animation-delay:1s}.twinkle:nth-child(3){animation-delay:2s}
+@keyframes tw{50%{opacity:.25;transform:scale(.85)}}
+.float{animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px) rotate(-2deg)}}
+
+/* marquee */
+.marquee{background:var(--red);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--ink)}
+.marquee div{display:inline-block;padding:10px 0;font-family:"Bebas Neue";font-size:26px;letter-spacing:.06em;animation:mq 28s linear infinite}
+.marquee span{margin:0 18px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:72px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:34px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(46px,12vw,88px)}
+.sec-head h2 em{font-style:normal;color:var(--red)}
+.sec-head p{color:var(--muted);max-width:36ch;font-size:15px}
+.scroll-tag{font-family:"Rye";color:var(--teal);font-size:15px;display:block;margin-bottom:6px}
+
+/* menu */
+.menu{background:var(--bone);color:var(--ink);position:relative}
+.menu .sec-head p{color:#5b5248}
+.menu .scroll-tag{color:#1f7a6f}
+.menu-grid{display:grid;gap:22px}
+.card{background:#fffaf2;border:2px solid var(--ink);border-radius:18px;padding:22px 20px 18px;box-shadow:6px 6px 0 var(--ink);position:relative}
+.card h3{font-family:"Bebas Neue";font-size:34px;letter-spacing:.03em;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.card h3 svg{width:34px;height:34px;flex:none}
+.card .note{font-size:13px;color:#6a6055;margin-bottom:10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:11px 0;border-top:1px dashed #c9bda9}
+.item:first-of-type{border-top:none}
+.item .n{font-weight:700}
+.item .p{font-family:"Bebas Neue";font-size:26px;color:var(--red);line-height:1}
+.item .d{grid-column:1/-1;font-size:13px;color:#6a6055}
+.tiers{display:grid;gap:14px;margin-top:6px}
+.tier{border:2px solid var(--ink);border-radius:14px;padding:14px 16px;background:var(--bone)}
+.tier header{display:flex;justify-content:space-between;align-items:baseline}
+.tier header b{font-family:"Bebas Neue";font-size:26px;letter-spacing:.04em}
+.tier header span{font-family:"Bebas Neue";font-size:28px;color:var(--red)}
+.tier p{font-size:13.5px;color:#4d453d}
+.tier .t{font-size:12px;color:#7a6f63;margin-top:4px}
+.tier.t3{background:var(--ink);color:var(--bone)}
+.tier.t3 p{color:var(--bone-dim)}.tier.t3 .t{color:var(--muted)}
+.stamp{position:absolute;top:-18px;right:14px;background:var(--teal);color:#fff;font-family:"Bebas Neue";font-size:15px;letter-spacing:.1em;padding:5px 12px;border-radius:6px;transform:rotate(4deg);border:2px solid var(--ink)}
+.menu-cta{text-align:center;margin-top:40px}
+.menu-cta .btn-red{box-shadow:4px 4px 0 var(--ink)}
+.menu-cta .btn-red:hover{box-shadow:6px 6px 0 var(--ink)}
+
+/* why */
+.why-grid{display:grid;gap:16px}
+.why{border:2px solid #333;border-radius:18px;padding:24px 22px;position:relative;transition:border-color .2s,transform .2s}
+.why:hover{border-color:var(--red);transform:translateY(-3px)}
+.why .num{font-family:"Bebas Neue";font-size:56px;color:var(--red);line-height:.9}
+.why h3{font-family:"Bebas Neue";font-size:30px;letter-spacing:.03em;margin:6px 0 6px}
+.why p{color:var(--bone-dim);font-size:15px}
+#why{position:relative;overflow:hidden}
+.swallow-deco{position:absolute;right:-20px;top:40px;width:180px;opacity:.9;pointer-events:none}
+@media (min-width:760px){.swallow-deco{width:260px;right:6%;top:70px}}
+.why-grid{position:relative;z-index:1}
+
+/* hours + visit */
+.visit{background:var(--ink2);border-top:1px solid #2a2a2a}
+.visit-grid{display:grid;gap:26px}
+.hours{border:2px solid var(--bone);border-radius:18px;padding:22px;position:relative;align-self:start}
+.hours h3,.where h3{font-family:"Bebas Neue";font-size:34px;letter-spacing:.03em;margin-bottom:10px}
+.hrow{display:flex;justify-content:space-between;padding:10px 12px;border-radius:10px;font-size:15.5px}
+.hrow+.hrow{border-top:1px solid #2c2c2c}
+.hrow .c{color:var(--muted)}
+.hrow.today{background:var(--red);color:#fff;border-top-color:transparent;font-weight:700}
+.hrow.today .c{color:#fff}
+.hrow.today+.hrow{border-top-color:transparent}
+.open-now{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.where{display:flex;flex-direction:column;gap:14px}
+.where address{font-style:normal;font-size:18px}
+.map{border:2px solid var(--bone);border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#222 repeating-linear-gradient(45deg,#1a1a1a 0 10px,#222 10px 20px);position:relative}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+.where .row{display:flex;gap:12px;flex-wrap:wrap}
+.contact-list{list-style:none;display:grid;gap:8px;font-size:15px}
+.contact-list a{text-decoration:none;border-bottom:1px solid #555;transition:border-color .2s,color .2s;overflow-wrap:anywhere}
+.contact-list a:hover{color:var(--red);border-color:var(--red)}
+.contact-list b{color:var(--teal);font-weight:700;display:inline-block;min-width:96px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+
+/* final cta */
+.final{text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(56px,15vw,140px)}
+.final h2 em{font-style:normal;color:var(--red)}
+.final p{color:var(--bone-dim);margin:12px auto 26px;max-width:34ch}
+.final .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:3px solid var(--red);padding:30px 0 36px;font-size:13px;color:var(--muted);text-align:center}
+footer .display{font-size:28px;color:var(--bone);margin-bottom:6px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(18,18,18,.96);border-top:2px solid var(--red);backdrop-filter:blur(8px)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:44px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px}
+.callbar .call{border:2px solid var(--bone)}
+.callbar .book{background:var(--red);color:#fff}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(24px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media (min-width:760px){
+  .navlinks{display:flex}
+  .hero{padding:72px 0 96px}
+  .hero .wrap{grid-template-columns:1.25fr .75fr;align-items:center}
+  .hero-art{max-width:500px}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .menu-grid .wide{grid-column:1/-1}
+  .tiers{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:.8fr 1.2fr}
+  section{padding:104px 0}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for YourTattedNailTech. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="YourTattedNailTech home">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l4.6 10.6L36 15l-8.6 7.6L30 34l-10-6-10 6 2.6-11.4L4 15l11.4-1.4z" fill="var(--red)" stroke="var(--bone)" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>YourTatted<em>NailTech</em></span>
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#art">Nail Art</a><a href="#visit">Hours</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-red btn-sm" href="https://square.site/book/L61TS9HWBSFG2/yourtattednailtech-clarksville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="stars" viewBox="0 0 400 800" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="var(--bone)" opacity=".5">
+      <path class="twinkle" d="M370 330l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+      <path class="twinkle" d="M360 520l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+      <path class="twinkle" d="M300 70l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Downtown Clarksville, TN</span>
+      <h1 class="display">Ink on <span class="red">skin.</span><br>Art on <span class="outline">tips.</span></h1>
+      <p class="sub">Acrylic sets, fills, gel manis and spa pedicures by Shelby, with nail art from French tips to full-on junk nails.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="https://square.site/book/L61TS9HWBSFG2/yourtattednailtech-clarksville-tn" target="_blank" rel="noopener">Book your set</a>
+        <a class="btn btn-ghost" href="tel:+19315613791">Call (931) 561-3791</a>
+      </div>
+    </div>
+
+    <div class="hero-art reveal" aria-hidden="true">
+      <!-- tattoo flash: polish bottle, rose, swallow, banner -->
+      <svg viewBox="0 0 400 440" class="float">
+        <defs>
+          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#121212" stroke-width="1.4"/></pattern>
+        </defs>
+        <!-- sunburst -->
+        <g stroke="var(--bone)" stroke-width="2" opacity=".18">
+          <line x1="200" y1="210" x2="200" y2="10"/><line x1="200" y1="210" x2="340" y2="70"/><line x1="200" y1="210" x2="390" y2="210"/>
+          <line x1="200" y1="210" x2="60" y2="70"/><line x1="200" y1="210" x2="10" y2="210"/><line x1="200" y1="210" x2="340" y2="350"/><line x1="200" y1="210" x2="60" y2="350"/>
+        </g>
+        <circle cx="200" cy="210" r="150" fill="none" stroke="var(--bone)" stroke-width="2" stroke-dasharray="4 8" opacity=".35"/>
+        <!-- bottle cap -->
+        <rect x="170" y="60" width="60" height="90" rx="10" fill="var(--ink)" stroke="var(--bone)" stroke-width="5"/>
+        <rect x="170" y="60" width="60" height="90" rx="10" fill="url(#hatch)" opacity=".0"/>
+        <line x1="185" y1="72" x2="185" y2="138" stroke="var(--bone)" stroke-width="3" opacity=".6"/>
+        <rect x="160" y="146" width="80" height="18" rx="4" fill="var(--bone)" stroke="var(--ink)" stroke-width="3"/>
+        <!-- bottle body -->
+        <path d="M130 170 Q130 160 140 160 H260 Q270 160 270 170 L284 330 Q286 360 256 360 H144 Q114 360 116 330 Z" fill="var(--red)" stroke="var(--bone)" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M148 186 Q146 260 152 330" stroke="var(--bone)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".75"/>
+        <path d="M164 186 Q163 214 165 236" stroke="var(--bone)" stroke-width="4" stroke-linecap="round" fill="none" opacity=".5"/>
+        <!-- label heart -->
+        <path d="M200 300 C160 270 166 236 186 236 C196 236 200 244 200 250 C200 244 204 236 214 236 C234 236 240 270 200 300Z" fill="var(--bone)" stroke="var(--ink)" stroke-width="4" stroke-linejoin="round"/>
+        <!-- rose left -->
+        <g transform="translate(40 300)">
+          <path d="M40 40 C10 50 0 20 20 6 C30 -2 52 -4 64 8 C78 22 70 48 40 40Z" fill="var(--red)" stroke="var(--bone)" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M28 22 C36 10 54 12 56 24 C58 34 44 38 38 30 C34 24 42 20 46 24" fill="none" stroke="var(--bone)" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M8 46 C-14 44 -22 64 -6 74 C10 72 14 58 8 46Z" fill="var(--teal)" stroke="var(--bone)" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M60 44 C80 52 92 70 80 82 C66 80 58 64 60 44Z" fill="var(--teal)" stroke="var(--bone)" stroke-width="3.5" stroke-linejoin="round"/>
+        </g>
+        <!-- swallow right -->
+        <g transform="translate(290 80) rotate(-14)">
+          <path d="M0 30 C20 10 46 6 62 18 C74 6 92 0 104 4 C90 12 82 22 80 32 C96 36 104 48 106 62 C92 52 76 48 64 50 C50 60 28 62 10 52 C20 46 22 40 0 30Z" fill="var(--teal)" stroke="var(--bone)" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M20 40 C34 44 48 44 60 38" fill="none" stroke="var(--bone)" stroke-width="3"/>
+          <circle cx="16" cy="32" r="3" fill="var(--bone)"/>
+          <path d="M10 52 C24 56 40 54 54 48" fill="var(--red)" stroke="var(--bone)" stroke-width="3"/>
+        </g>
+        <!-- banner -->
+        <g transform="translate(70 372)">
+          <path d="M0 18 L24 8 L24 44 L0 34 L12 26Z" fill="var(--ink)" stroke="var(--bone)" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M260 18 L236 8 L236 44 L260 34 L248 26Z" fill="var(--ink)" stroke="var(--bone)" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M24 0 Q130 18 236 0 V40 Q130 58 24 40Z" fill="var(--bone)" stroke="var(--ink)" stroke-width="4" stroke-linejoin="round"/>
+          <text x="130" y="34" text-anchor="middle" font-family="Rye, serif" font-size="20" fill="var(--ink)">Tipped &amp; Tatted</text>
+        </g>
+        <!-- stars -->
+        <path d="M100 120l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="var(--bone)"/>
+        <path d="M320 260l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="var(--red)"/>
+      </svg>
+      <!-- stamped badge -->
+      <svg class="badge" viewBox="0 0 120 120">
+        <defs><path id="circ" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+        <circle cx="60" cy="60" r="57" fill="var(--teal)" stroke="var(--bone)" stroke-width="3"/>
+        <circle cx="60" cy="60" r="34" fill="none" stroke="var(--bone)" stroke-width="2" stroke-dasharray="3 4"/>
+        <text font-family="Bebas Neue" font-size="15" letter-spacing="3.2" fill="var(--bone)"><textPath href="#circ">BOOK ONLINE ★ CLARKSVILLE TN ★ </textPath></text>
+        <path d="M60 44l4.5 10 11 1.2-8.2 7.4 2.4 10.8L60 68l-9.7 5.4 2.4-10.8-8.2-7.4 11-1.2z" fill="var(--red)" stroke="var(--bone)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Acrylic Fullsets</span>★<span>Fill Ins</span>★<span>Gel Manicures</span>★<span>Spa Pedicures</span>★<span>Chrome</span>★<span>3D Art</span>★<span>Junk Nails</span>★<span>Aura Airbrush</span>★
+  <span>Acrylic Fullsets</span>★<span>Fill Ins</span>★<span>Gel Manicures</span>★<span>Spa Pedicures</span>★<span>Chrome</span>★<span>3D Art</span>★<span>Junk Nails</span>★<span>Aura Airbrush</span>★
+</div></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="scroll-tag">The flash sheet</span><h2 class="display">The <em>Menu</em></h2></div>
+      <p>Sets, fills and toe services include solid color with top coat. Add any design tier below to take it further.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="card reveal">
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 36V16C12 8 16 4 20 4s8 4 8 12v20z" fill="var(--red)" stroke="var(--ink)" stroke-width="2.5"/><path d="M16 12c0-3 2-5 4-5" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>Fullsets</h3>
+        <p class="note">No design included.</p>
+        <div class="item"><span class="n">Fullset Overlay</span><span class="p">$55</span><span class="d">2 hrs</span></div>
+        <div class="item"><span class="n">Short Fullset</span><span class="p">$65</span><span class="d">2 hrs</span></div>
+        <div class="item"><span class="n">Medium Fullset</span><span class="p">$75</span><span class="d">2 hrs</span></div>
+        <div class="item"><span class="n">Long Fullset</span><span class="p">$85</span><span class="d">2 hrs 30 min</span></div>
+      </article>
+
+      <article class="card reveal">
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 36V20C12 12 16 8 20 8s8 4 8 12v16z" fill="var(--teal)" stroke="var(--ink)" stroke-width="2.5"/><path d="M12 26h16" stroke="var(--ink)" stroke-width="2.5"/></svg>Fill Ins</h3>
+        <p class="note">No design included.</p>
+        <div class="item"><span class="n">Short Fill In</span><span class="p">$55</span><span class="d">1 hr 45 min</span></div>
+        <div class="item"><span class="n">Medium Fill In</span><span class="p">$65</span><span class="d">1 hr 30 min</span></div>
+        <div class="item"><span class="n">Long Fill In</span><span class="p">$75</span><span class="d">2 hrs 15 min</span></div>
+        <div class="item"><span class="n">Soak Off</span><span class="p">$20</span><span class="d">1 hr 30 min</span></div>
+      </article>
+
+      <article class="card reveal">
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="15" y="4" width="10" height="12" rx="2" fill="var(--ink)"/><path d="M9 18h22l-2 18H11z" fill="var(--red)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/></svg>Manicures</h3>
+        <div class="item"><span class="n">Gel Manicure</span><span class="p">$35</span><span class="d">1 hr 15 min · no design included</span></div>
+        <div class="item"><span class="n">Spa Gel Manicure</span><span class="p">$45</span><span class="d">1 hr 30 min · sugar scrub, hot towels and a hand massage</span></div>
+        <div class="item"><span class="n">Hot Oil Gel Manicure</span><span class="p">$50</span><span class="d">2 hrs</span></div>
+      </article>
+
+      <article class="card reveal">
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4 10 10 1-8 7 3 11-9-6-9 6 3-11-8-7 10-1z" fill="var(--teal)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/></svg>Pedi &amp; Toes</h3>
+        <div class="item"><span class="n">Spa Pedicure</span><span class="p">$65</span><span class="d">2 hrs · callus &amp; cuticle care, scrub, mask, body butter massage and gel polish. Price may change with add-ons.</span></div>
+        <div class="item"><span class="n">Acrylic Toe Fullset</span><span class="p">$45</span><span class="d">1 hr 45 min · no design included</span></div>
+        <div class="item"><span class="n">Acrylic Toe Fill In</span><span class="p">$35</span><span class="d">1 hr 30 min · no design included</span></div>
+      </article>
+
+      <article class="card wide reveal" id="art">
+        <span class="stamp">Add-on</span>
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34C8 26 6 14 13 11c4-2 7 1 7 4 0-3 3-6 7-4 7 3 5 15-7 23z" fill="var(--red)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/></svg>Nail Art Tiers</h3>
+        <p class="note">Stack a design tier on any set, fill or mani.</p>
+        <div class="tiers">
+          <div class="tier"><header><b>Tier One</b><span>$10</span></header><p>French tip, simple nail art, blooming gel, ombré, simple designs, chrome, simple line work, animal print, airbrush (aura nails).</p><div class="t">45 min</div></div>
+          <div class="tier"><header><b>Tier Two</b><span>$20</span></header><p>Everything in Tier One, plus 3D art, chrome, line work, large charms, marble, foil and airbrush.</p><div class="t">1 hr 30 min</div></div>
+          <div class="tier t3"><header><b>Tier Three</b><span>$30</span></header><p>Everything in Tiers One &amp; Two, plus junk nails, unlimited 3D art, full-nail rhinestones, character art and detailed line work.</p><div class="t">3 hrs</div></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="menu-cta reveal"><a class="btn btn-red" href="https://square.site/book/L61TS9HWBSFG2/yourtattednailtech-clarksville-tn" target="_blank" rel="noopener">Pick a time on Square</a></div>
+  </div>
+</section>
+
+<section id="why">
+  <svg class="swallow-deco float" viewBox="0 0 120 80" aria-hidden="true"><g transform="translate(6 6)"><path d="M0 30 C20 10 46 6 62 18 C74 6 92 0 104 4 C90 12 82 22 80 32 C96 36 104 48 106 62 C92 52 76 48 64 50 C50 60 28 62 10 52 C20 46 22 40 0 30Z" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linejoin="round"/><path d="M20 40 C34 44 48 44 60 38" fill="none" stroke="var(--teal)" stroke-width="2.5"/><circle cx="16" cy="32" r="2.5" fill="var(--teal)"/></g></svg>
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="scroll-tag">Straight up</span><h2 class="display">Why book <em>Shelby</em></h2></div></div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="num">01</div><h3>Prices up front</h3><p>Every service is listed with its price and time, so you know your total before you sit down.</p></div>
+      <div class="why reveal"><div class="num">02</div><h3>Art on your terms</h3><p>Three design tiers, from a clean French tip at $10 to junk nails and character art at $30.</p></div>
+      <div class="why reveal"><div class="num">03</div><h3>Book in a minute</h3><p>Choose your service and time online, any hour. Open Tuesday through Saturday on S First St.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="scroll-tag">Come through</span><h2 class="display">Hours &amp; <em>Visit</em></h2></div></div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <div id="hours">
+          <div class="hrow" data-d="2"><span>Tuesday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="3"><span>Wednesday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="4"><span>Thursday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="5"><span>Friday</span><span>9 AM – 5 PM</span></div>
+          <div class="hrow" data-d="6"><span>Saturday</span><span>9 AM – 6 PM</span></div>
+          <div class="hrow" data-d="0"><span>Sunday</span><span class="c">Closed</span></div>
+          <div class="hrow" data-d="1"><span>Monday</span><span class="c">Closed</span></div>
+        </div>
+        <span class="open-now" id="opennow">By appointment, book online</span>
+      </div>
+      <div class="where reveal">
+        <div class="map"><iframe title="Map to 100 S First St, Clarksville, TN" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=100%20S%20First%20St%2C%20Clarksville%2C%20TN%2037042&output=embed"></iframe></div>
+        <address>100 S First St<br>Clarksville, TN 37042</address>
+        <ul class="contact-list">
+          <li><b>Call</b><a href="tel:+19315613791">(931) 561-3791</a></li>
+          <li><b>Email</b><a href="mailto:shelbyjones101@gmail.com">shelbyjones101@gmail.com</a></li>
+          <li><b>Instagram</b><a href="https://www.instagram.com/yourtattednailtech/" target="_blank" rel="noopener">@yourtattednailtech</a></li>
+        </ul>
+        <div class="row">
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=100%20S%20First%20St%2C%20Clarksville%2C%20TN%2037042" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-red" href="tel:+19315613791">Tap to call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <h2 class="display">Get <em>tipped.</em></h2>
+    <p>Pick your set, add your art tier, and lock in a time with Shelby.</p>
+    <div class="ctas">
+      <a class="btn btn-red" href="https://square.site/book/L61TS9HWBSFG2/yourtattednailtech-clarksville-tn" target="_blank" rel="noopener">Book now</a>
+      <a class="btn btn-ghost" href="tel:+19315613791">(931) 561-3791</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="display">YourTattedNailTech</div>
+    <p>100 S First St, Clarksville, TN 37042 · <a href="tel:+19315613791">(931) 561-3791</a></p>
+    <p style="margin-top:10px">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="call" href="tel:+19315613791">Call</a>
+  <a class="book" href="https://square.site/book/L61TS9HWBSFG2/yourtattednailtech-clarksville-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date(), day=d.getDay(), h=d.getHours()+d.getMinutes()/60;
+  var row=document.querySelector('.hrow[data-d="'+day+'"]');
+  if(row){row.classList.add('today');row.firstElementChild.textContent+=' · Today';}
+  var close={2:17,3:17,4:17,5:17,6:18}[day], el=document.getElementById('opennow');
+  if(close&&h>=9&&h<close){el.textContent='Open today until '+(close-12)+' PM';}
+  else if(close&&h<9){el.textContent='Opens today at 9 AM';}
+  else{el.textContent='Closed now · book online anytime';el.style.color='var(--muted)';}
+
+  var root=document.documentElement; root.classList.add('js');
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else root.classList.add('show-all');
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Salon Synergy — Shelbyville</title>
+<meta name="description" content="Concept site for Salon Synergy in Shelbyville, TN: cuts, color, balayage and occasion styling by Savannah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#f6e4de; --blush-2:#efd3ca; --rose:#c98f86; --cream:#fbf6f2;
+  --espresso:#3a2620; --espresso-2:#5a4038; --ink:#2a1b16; --muted:#7a625a;
+  --gold:#b8955a; --gold-2:#d8bd86; --line:rgba(58,38,32,.14);
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Manrope", system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+.concept{background:var(--espresso);color:var(--blush);font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--gold-2);font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:30;background:rgba(251,246,242,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:30px;height:36px}
+.brand-name{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:.01em;line-height:1}
+.brand-name i{font-weight:400;color:var(--gold)}
+.nav ul{display:none;list-style:none;gap:30px;font-size:14px;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--espresso-2);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--gold);transition:right .3s}
+.nav ul a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 14px/1 var(--sans);letter-spacing:.04em;text-decoration:none;border-radius:999px;padding:15px 24px;transition:transform .2s,background .2s,box-shadow .2s,color .2s;cursor:pointer}
+.btn-dark{background:var(--espresso);color:var(--cream);box-shadow:0 10px 24px -12px rgba(58,38,32,.6)}
+.btn-dark:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--espresso);color:var(--espresso)}
+.btn-line:hover{background:var(--espresso);color:var(--cream);transform:translateY(-2px)}
+.btn-sm{padding:11px 18px;font-size:13px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 85% 10%,#fbeee9 0%,var(--blush) 45%,var(--blush-2) 100%)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:34px;padding-top:44px;padding-bottom:56px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--espresso-2)}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,12.5vw,92px);line-height:.95;letter-spacing:-.015em;color:var(--espresso);margin:18px 0 18px}
+h1 em{font-style:italic;color:var(--rose);font-weight:400}
+.lede{font-size:17px;color:var(--espresso-2);max-width:30em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:13px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.arch-wrap{position:relative;justify-self:center;width:min(100%,360px)}
+.arch{position:relative;aspect-ratio:3/4;max-height:440px;margin:0 auto;border-radius:999px 999px 18px 18px;background:linear-gradient(180deg,#fff7f3 0%,#f3d9d0 100%);border:1px solid rgba(184,149,90,.55);box-shadow:0 40px 70px -40px rgba(58,38,32,.55), inset 0 0 0 10px rgba(255,255,255,.45);overflow:hidden}
+.arch::after{content:"";position:absolute;inset:14px;border-radius:999px 999px 10px 10px;border:1px solid rgba(184,149,90,.5);pointer-events:none}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.arch-badge{position:absolute;left:-10px;bottom:28px;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:0 18px 36px -22px rgba(58,38,32,.5);font-size:12.5px;line-height:1.35}
+.arch-badge b{display:block;font-family:var(--serif);font-size:21px;font-weight:600;color:var(--espresso)}
+.arch-badge2{position:absolute;right:-8px;top:40px;background:var(--espresso);color:var(--blush);border-radius:999px;padding:10px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;box-shadow:0 18px 30px -20px rgba(0,0,0,.6)}
+.sprig{position:absolute;opacity:.55;pointer-events:none;z-index:1}
+.draw path{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 3.2s ease forwards .2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:40px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,8vw,58px);line-height:1.02;color:var(--espresso);letter-spacing:-.01em;margin-top:14px}
+h2 em{font-style:italic;color:var(--rose);font-weight:400}
+.sec-head p{margin-top:14px;color:var(--muted)}
+.divider{display:flex;justify-content:center;padding:6px 0;color:var(--gold)}
+
+/* menu */
+.menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:600 13px var(--sans);color:var(--espresso-2);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--gold)}
+.tab[aria-selected="true"]{background:var(--espresso);color:var(--cream);border-color:var(--espresso)}
+.menu-grid{display:grid;gap:18px}
+.menu-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 22px 14px;position:relative;overflow:hidden}
+.menu-card h3{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--espresso);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.menu-card h3 svg{width:26px;height:26px;color:var(--gold)}
+.menu-card .note{font-size:13px;color:var(--muted);margin-bottom:10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 0;border-top:1px dashed rgba(58,38,32,.16);transition:background .2s}
+.item:first-of-type{border-top:0}
+.item .n{font-weight:600;font-size:15.5px;color:var(--ink)}
+.item .p{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--espresso);line-height:1.1;text-align:right}
+.item .d{grid-column:1/-1;font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.item .p.q{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;padding-top:4px}
+.menu-card[hidden]{display:none}
+.menu-foot{margin-top:22px;font-size:13px;color:var(--muted)}
+
+/* about */
+.about{background:var(--espresso);color:var(--blush);overflow:hidden}
+.about h2{color:var(--cream)}
+.about h2 em{color:var(--gold-2)}
+.about .eyebrow{color:var(--gold-2)}
+.about-grid{display:grid;gap:40px;align-items:center}
+.pillars{display:grid;gap:14px}
+.pillar{display:flex;gap:16px;align-items:flex-start;padding:20px;border:1px solid rgba(216,189,134,.25);border-radius:20px;background:rgba(255,255,255,.03);transition:border-color .3s,transform .3s}
+.pillar:hover{border-color:var(--gold-2);transform:translateY(-3px)}
+.pillar .ic{flex:0 0 44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(216,189,134,.14);color:var(--gold-2)}
+.pillar h3{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--cream);line-height:1.15}
+.pillar p{font-size:14px;color:rgba(246,228,222,.78);margin-top:4px}
+.quote-arch{position:relative;border-radius:999px 999px 24px 24px;border:1px solid rgba(216,189,134,.4);padding:64px 28px 36px;text-align:center}
+.quote-arch p{font-family:var(--serif);font-style:italic;font-size:clamp(26px,6vw,36px);line-height:1.2;color:var(--cream)}
+.quote-arch small{display:block;margin-top:18px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2)}
+
+/* hours */
+.visit-grid{display:grid;gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 22px}
+.card h3{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--espresso);margin-bottom:12px}
+.hours li{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;font-size:15px;transition:background .3s}
+.hours li span:last-child{color:var(--muted)}
+.hours li.open span:last-child{color:var(--espresso);font-weight:600}
+.hours li.today{background:var(--blush);box-shadow:inset 0 0 0 1px rgba(184,149,90,.5)}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);background:var(--rose);border-radius:999px;padding:3px 8px;vertical-align:2px}
+.status{margin-top:14px;font-size:13.5px;color:var(--muted)}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:280px;background:var(--blush)}
+.map iframe{width:100%;height:100%;min-height:280px;border:0;display:block;filter:sepia(.25) saturate(.85)}
+.contact-list{display:grid;gap:10px;margin-top:6px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:14px 16px;border:1px solid var(--line);border-radius:14px;transition:border-color .2s,background .2s;font-weight:600;font-size:15px;word-break:break-word}
+.contact-list a:hover{border-color:var(--gold);background:var(--cream)}
+.contact-list svg{flex:0 0 20px;color:var(--gold)}
+.contact-list small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+
+/* final cta */
+.final{text-align:center;background:radial-gradient(90% 120% at 50% 0%,#fbeee9 0%,var(--blush) 60%,var(--blush-2) 100%);overflow:hidden}
+.final h2{max-width:14ch;margin:14px auto 0}
+.final .cta-row{justify-content:center}
+
+footer{background:var(--ink);color:rgba(246,228,222,.7);font-size:13px;padding:36px 0}
+footer .wrap{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+footer .brand-name{color:var(--cream)}
+footer a{color:var(--gold-2)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(42,27,22,.96);backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:10px;box-shadow:0 -10px 30px -15px rgba(0,0,0,.5)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font:700 14px var(--sans);letter-spacing:.03em;text-decoration:none}
+.bar .call{background:transparent;color:var(--cream);border:1px solid rgba(246,228,222,.35)}
+.bar .book{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--ink)}
+
+/* reveal */
+.reveal{transition:opacity .8s ease, transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.reveal-all .reveal{opacity:1!important;transform:none!important}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:80px;padding-bottom:96px}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .menu-tabs{display:none}
+  .menu-card[hidden]{display:block}
+  .about-grid{grid-template-columns:1fr 1fr}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .visit-grid .map{grid-column:1/-1;min-height:340px}
+  .visit-grid .map iframe{min-height:340px}
+  .bar{display:none}
+  body{padding-bottom:0}
+  footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}
+}
+@media (min-width:1080px){
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1fr 1fr 1.2fr}
+  .visit-grid .map{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.draw path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Salon Synergy. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Salon Synergy home">
+      <svg class="brand-mark" viewBox="0 0 30 36" fill="none" stroke="#b8955a" stroke-width="1.2"><path d="M2 35V15a13 13 0 0 1 26 0v20"/><path d="M15 31c0-7 0-12 0-17M15 20c-3-1-5-3-5.5-6 3 0 5 2 5.5 6zM15 17c3-1 5-3 5.5-6-3 0-5 2-5.5 6zM15 25c-2.6-.8-4.3-2.6-4.7-5.2 2.6 0 4.3 2 4.7 5.2z"/></svg>
+      <span class="brand-name">Salon <i>Synergy</i></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#about">The Chair</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn btn-dark btn-sm" href="https://square.site/book/A3PCDCKSQZNTM/salon-synergy-shelbyville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="sprig draw" style="left:-50px;top:40px;width:150px;opacity:.3" viewBox="0 0 180 260" fill="none" stroke="#b8955a" stroke-width="1"><path d="M30 255C60 190 70 120 140 10"/><path d="M58 190c-22-6-36-20-40-42 22 4 36 18 40 42zM74 150c20-10 30-26 30-48-20 10-30 26-30 48zM86 118c-22-4-38-16-44-38 22 2 38 16 44 38zM104 84c18-12 26-30 24-52-18 12-26 30-24 52zM120 50c-18-2-32-12-38-30 18 2 32 12 38 30z"/></svg>
+  <svg class="sprig draw" style="right:-40px;bottom:-20px;width:220px;transform:scaleX(-1)" viewBox="0 0 180 260" fill="none" stroke="#c98f86" stroke-width="1"><path d="M30 255C60 190 70 120 140 10"/><path d="M58 190c-22-6-36-20-40-42 22 4 36 18 40 42zM74 150c20-10 30-26 30-48-20 10-30 26-30 48zM86 118c-22-4-38-16-44-38 22 2 38 16 44 38zM104 84c18-12 26-30 24-52-18 12-26 30-24 52z"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Hair &amp; Beauty · Shelbyville, TN</span>
+      <h1>Your color,<br>your cut, <em>your&nbsp;day.</em></h1>
+      <p class="lede">Cuts, all-over color, balayage, highlights and special-occasion styling with Savannah at Salon Synergy. Pick a time and book online in a minute.</p>
+      <div class="cta-row">
+        <a class="btn btn-dark" href="https://square.site/book/A3PCDCKSQZNTM/salon-synergy-shelbyville-tn" target="_blank" rel="noopener">Book an appointment
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-line" href="tel:+19315804441">Call (931) 580-4441</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="dot"></i>Tuesdays from 7:00 AM</span>
+        <span><i class="dot"></i>Thursdays until 7:00 PM</span>
+        <span><i class="dot"></i>Online booking</span>
+      </div>
+    </div>
+    <div class="arch-wrap reveal">
+      <div class="arch float">
+        <svg viewBox="0 0 300 400" fill="none" preserveAspectRatio="xMidYMid meet">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8bd86"/><stop offset="1" stop-color="#a9823f"/></linearGradient></defs>
+          <circle cx="150" cy="150" r="84" fill="#fbeee9" stroke="#e2c3b8"/>
+          <circle cx="150" cy="150" r="74" stroke="url(#g1)" stroke-width=".8" stroke-dasharray="2 5"/>
+          <text x="150" y="182" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-weight="500" font-size="104" fill="#3a2620">S</text>
+          <g stroke="url(#g1)" stroke-width="1.6" stroke-linecap="round" transform="translate(150 252) rotate(-90) scale(.55)">
+            <path d="M-40 -14l70 30M-40 14l70-30"/><circle cx="-52" cy="-18" r="12"/><circle cx="-52" cy="18" r="12"/>
+          </g>
+          <g class="draw" stroke="#c98f86" stroke-width="1.1">
+            <path d="M40 400C52 330 80 290 118 262"/>
+            <path d="M62 340c-18-3-30-14-33-32 18 3 30 14 33 32z" fill="rgba(201,143,134,.18)"/>
+            <path d="M74 312c15-9 22-22 21-40-15 9-22 22-21 40z" fill="rgba(201,143,134,.18)"/>
+            <path d="M92 286c-16-1-29-9-35-24 16 0 29 9 35 24z" fill="rgba(201,143,134,.18)"/>
+            <path d="M260 400c-12-70-40-110-78-138"/>
+            <path d="M238 340c18-3 30-14 33-32-18 3-30 14-33 32z" fill="rgba(201,143,134,.18)"/>
+            <path d="M226 312c-15-9-22-22-21-40 15 9 22 22 21 40z" fill="rgba(201,143,134,.18)"/>
+            <path d="M208 286c16-1 29-9 35-24-16 0-29 9-35 24z" fill="rgba(201,143,134,.18)"/>
+          </g>
+          <g stroke="#b8955a" stroke-width="1">
+            <path d="M150 290v110"/>
+            <path d="M150 322c-11-4-17-12-18-24 11 2 17 11 18 24zM150 346c11-4 17-12 18-24-11 2-17 11-18 24zM150 370c-11-4-17-12-18-24 11 2 17 11 18 24z" fill="rgba(216,189,134,.25)"/>
+          </g>
+          <g fill="#b8955a"><circle cx="70" cy="110" r="2"/><circle cx="232" cy="96" r="1.6"/><circle cx="246" cy="196" r="2.2"/><circle cx="58" cy="206" r="1.4"/></g>
+          <path d="M226 70l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#d8bd86"/>
+          <path d="M80 60l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#d8bd86"/>
+        </svg>
+      </div>
+      <div class="arch-badge"><b>18 services</b>cuts · color · styling</div>
+      <div class="arch-badge2">Book 24/7</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The Menu</span>
+      <h2>Every service, <em>clearly&nbsp;listed.</em></h2>
+      <p>Straight from Salon Synergy's booking page, with prices where they're published. Everything else shows its appointment length.</p>
+    </div>
+    <div class="menu-tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="cuts">Cuts &amp; Care</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="occ">Occasion</button>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card reveal" data-p="cuts">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16L18 3M16 16L6 3"/></svg>Cuts &amp; Care</h3>
+        <p class="note">+5 for extra long or thick hair on Shampoo Cut And Style.</p>
+        <div class="item"><span class="n">Shampoo Cut And Style</span><span class="p">$30</span><span class="d">1 hour</span></div>
+        <div class="item"><span class="n">Dry Cut</span><span class="p">$17</span><span class="d">30 minutes</span></div>
+        <div class="item"><span class="n">Mens Cut</span><span class="p">$15</span><span class="d">30 minutes</span></div>
+        <div class="item"><span class="n">Shampoo Style</span><span class="p">$17</span><span class="d">45 minutes</span></div>
+        <div class="item"><span class="n">Deep Conditioning Treatment</span><span class="p">$25</span><span class="d">45 minutes</span></div>
+        <div class="item"><span class="n">Brow Wax</span><span class="p">$10</span><span class="d">15 minutes</span></div>
+        <div class="item"><span class="n">Lip Wax</span><span class="p">$5</span><span class="d">5 minutes</span></div>
+      </article>
+      <article class="menu-card reveal" data-p="color" hidden>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg>Color</h3>
+        <p class="note">All Over Color is $70+ depending on length.</p>
+        <div class="item"><span class="n">All Over Color (Same Or Darker)</span><span class="p">$70+</span><span class="d">2 hours 15 minutes</span></div>
+        <div class="item"><span class="n">Balayage</span><span class="p q">See booking</span><span class="d">3 hours 30 minutes</span></div>
+        <div class="item"><span class="n">Highlight</span><span class="p q">See booking</span><span class="d">3 hours 30 minutes</span></div>
+        <div class="item"><span class="n">Highlight And Color Combo</span><span class="p q">See booking</span><span class="d">3 hours 40 minutes</span></div>
+        <div class="item"><span class="n">Color Correction</span><span class="p q">See booking</span><span class="d">4 hours</span></div>
+        <div class="item"><span class="n">Vivid Color</span><span class="p q">See booking</span><span class="d">30 minutes</span></div>
+      </article>
+      <article class="menu-card reveal" data-p="occ" hidden>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l2.2 5.3L20 9l-4.4 3.8L17 19l-5-3-5 3 1.4-6.2L4 9l5.8-.7z"/></svg>Occasion &amp; Extras</h3>
+        <p class="note">Weddings, events and a little sparkle.</p>
+        <div class="item"><span class="n">Makeup</span><span class="p">$60</span><span class="d">1 hour</span></div>
+        <div class="item"><span class="n">Special Occasion Styling</span><span class="p q">See booking</span><span class="d">1 hour</span></div>
+        <div class="item"><span class="n">Wedding</span><span class="p q">See booking</span><span class="d">6 hours 30 minutes</span></div>
+        <div class="item"><span class="n">Feathers 3 For 12$</span><span class="p">$12</span><span class="d">30 minutes</span></div>
+        <div class="item"><span class="n">Tinsel</span><span class="p q">See booking</span><span class="d">30 minutes</span></div>
+      </article>
+    </div>
+    <p class="menu-foot reveal">See live availability and book any service on <a href="https://square.site/book/A3PCDCKSQZNTM/salon-synergy-shelbyville-tn" target="_blank" rel="noopener">Salon Synergy's booking page</a>.</p>
+  </div>
+</section>
+
+<section id="about" class="sec about">
+  <svg class="sprig" style="right:-60px;top:-30px;width:260px;opacity:.18" viewBox="0 0 180 260" fill="none" stroke="#d8bd86" stroke-width="1"><path d="M30 255C60 190 70 120 140 10"/><path d="M58 190c-22-6-36-20-40-42 22 4 36 18 40 42zM74 150c20-10 30-26 30-48-20 10-30 26-30 48zM86 118c-22-4-38-16-44-38 22 2 38 16 44 38zM104 84c18-12 26-30 24-52-18 12-26 30-24 52z"/></svg>
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">The Chair</span>
+      <h2>One stylist, <em>start to finish.</em></h2>
+      <div class="pillars" style="margin-top:28px">
+        <div class="pillar"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><div><h3>Booked with Savannah</h3><p>Savannah is the stylist on Salon Synergy's booking page, so the person you book is the person doing your hair.</p></div></div>
+        <div class="pillar"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg></div><div><h3>Color, up to correction</h3><p>From same-or-darker all-over color to balayage, vivids and full color correction.</p></div></div>
+        <div class="pillar"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div><h3>Early starts, late finishes</h3><p>Tuesdays open at 7:00 AM and Thursdays run to 7:00 PM, so there are early and evening times to choose from.</p></div></div>
+      </div>
+    </div>
+    <div class="quote-arch reveal">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" stroke="#d8bd86" stroke-width="1" style="margin:0 auto 18px"><circle cx="27" cy="27" r="26"/><path d="M27 42V18M27 26c-5-2-8-5-8.5-10 5 .5 8 4 8.5 10zM27 34c5-2 8-5 8.5-10-5 .5-8 4-8.5 10z"/></svg>
+      <p>From a quick dry cut to your wedding morning, it's all on one simple menu.</p>
+      <small>Dry Cut to Wedding · 18 services</small>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Hours &amp; Visit</span>
+      <h2>Find your <em>time.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>Hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2" class="open"><span>Tuesday</span><span>7:00 AM – 6:30 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4" class="open"><span>Thursday</span><span>9:00 AM – 7:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>Closed</span></li>
+          <li data-d="6"><span>Saturday</span><span>Closed</span></li>
+        </ul>
+        <p class="status" id="status">Book online any time, day or night.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Get in touch</h3>
+        <div class="contact-list">
+          <a href="tel:+19315804441"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>(931) 580-4441<small>Tap to call</small></span></a>
+          <a href="mailto:yoessavannah@rocketmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>yoessavannah@rocketmail.com<small>Email</small></span></a>
+          <a href="https://square.site/book/A3PCDCKSQZNTM/salon-synergy-shelbyville-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg><span>Book online<small>Live availability on Square</small></span></a>
+          <a href="https://www.facebook.com/BeautyBySavannahY" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg><span>Facebook<small>BeautyBySavannahY</small></span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Shelbyville%2C%20TN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Shelbyville, TN<small>Directions</small></span></a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map of Shelbyville, TN" loading="lazy" src="https://www.google.com/maps?q=Shelbyville%2C%20TN&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final">
+  <div class="wrap reveal">
+    <div class="divider"><svg width="120" height="24" viewBox="0 0 120 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 12h44M76 12h44"/><path d="M60 22V4M60 10c-4-1-6-3-6.5-7 4 .5 6 3 6.5 7zM60 16c4-1 6-3 6.5-7-4 .5-6 3-6.5 7z"/></svg></div>
+    <span class="eyebrow">Ready when you are</span>
+    <h2>Save your seat with <em>Savannah.</em></h2>
+    <div class="cta-row">
+      <a class="btn btn-dark" href="https://square.site/book/A3PCDCKSQZNTM/salon-synergy-shelbyville-tn" target="_blank" rel="noopener">Book an appointment</a>
+      <a class="btn btn-line" href="tel:+19315804441">Call the salon</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand-name">Salon <i style="color:var(--gold-2)">Synergy</i></span>
+    <span>Shelbyville, TN · <a href="tel:+19315804441">(931) 580-4441</a></span>
+    <span>Concept by <a href="https://coleselig.github.io/codecraft/" target="_blank" rel="noopener">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+19315804441"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/A3PCDCKSQZNTM/salon-synergy-shelbyville-tn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book now</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // hours
+  var now=new Date(), day=now.getDay(), li=document.querySelector('#hours li[data-d="'+day+'"]');
+  if(li) li.classList.add('today');
+  var open={2:[7*60,18*60+30],4:[9*60,19*60]}, m=now.getHours()*60+now.getMinutes(), st=document.getElementById('status');
+  if(open[day] && m>=open[day][0] && m<open[day][1]) st.textContent='Open now. Book online any time, day or night.';
+  else st.textContent='Closed right now. Book online any time, day or night.';
+  // tabs
+  var tabs=document.querySelectorAll('.tab'), cards=document.querySelectorAll('.menu-card');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    cards.forEach(function(c){c.hidden=c.dataset.p!==t.dataset.t; if(!c.hidden) c.classList.add('in')});
+  })});
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  } else d.classList.add('reveal-all');
+  setTimeout(function(){d.classList.add('reveal-all')},1500);
+})();
+</script>
+</body>
+</html>

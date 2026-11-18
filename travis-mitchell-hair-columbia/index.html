@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Travis Mitchell — Columbia, TN</title>
+<meta name="description" content="Travis Mitchell, hair stylist. Level 3, 307 West 11th Street, Columbia, TN. Cuts, Brazilian Blowout, HAIRSKEEN installs. Mon–Thu 10–8.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2f3e46; --slate-2:#26333a; --slate-3:#3b4d56;
+  --sage:#84a98c; --sage-d:#5d8466;
+  --off:#f6f5f1; --off-2:#ecebe5;
+  --copper:#b87333; --copper-l:#d4935a; --copper-d:#94591f;
+  --ink:#1d272c; --muted:#5a676d;
+  --line:rgba(47,62,70,.12); --line-d:rgba(246,245,241,.09);
+  --disp:"Space Grotesk",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--off);color:var(--ink);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:#c9d3cf;font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--copper-l);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(47,62,70,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--off);font-family:var(--disp);font-weight:600;letter-spacing:-.01em;font-size:17px}
+.brand .mk{width:30px;height:30px;border:1.5px solid var(--copper);display:grid;place-items:center;font-size:12px;letter-spacing:.04em;color:var(--copper-l)}
+.links{display:none;gap:28px;font-size:14px}
+.links a{color:#cdd6d2;text-decoration:none;transition:color .2s}
+.links a:hover{color:var(--copper-l)}
+.nbtn{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--slate);background:var(--off);padding:9px 16px;text-decoration:none;transition:background .2s,color .2s}
+.nbtn:hover{background:var(--copper);color:#fff}
+
+/* hero */
+.hero{position:relative;background:var(--slate);color:var(--off);overflow:hidden;isolation:isolate}
+.grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,#000 30%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 100%)}
+.hero .wrap{padding-top:40px;padding-bottom:56px;display:grid;gap:36px}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.tag::before{content:"";width:28px;height:1.5px;background:var(--copper)}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(42px,11.5vw,84px);line-height:.95;letter-spacing:-.035em;margin:18px 0 20px}
+h1 em{font-style:normal;color:var(--copper-l)}
+h1 .thin{font-weight:400;color:#c7d1cd}
+.sub{font-size:16.5px;color:#cbd5d1;max-width:34ch}
+.sub strong{color:var(--off);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;font-family:var(--disp);font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn-cu{background:var(--copper);color:#fff}
+.btn-cu:hover{background:var(--copper-d)}
+.btn-ln{border:1.5px solid rgba(246,245,241,.35);color:var(--off)}
+.btn-ln:hover{border-color:var(--copper-l);color:var(--copper-l)}
+.btn svg{width:18px;height:18px}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px;border-top:1px solid var(--line-d)}
+.meta div{padding:14px 10px 0 0;font-size:12px;color:#9fb0aa;line-height:1.35}
+.meta b{display:block;font-family:var(--disp);font-size:20px;color:var(--off);font-weight:600;margin-bottom:3px;letter-spacing:-.01em}
+
+/* plate / art */
+.plate{position:relative;aspect-ratio:1/1;max-width:min(440px,86vw);width:100%;justify-self:center}
+.plate svg{width:100%;height:100%}
+.spin{transform-origin:220px 220px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blade{transform-origin:220px 236px;animation:snip 3.4s ease-in-out infinite}
+.blade.b2{animation-name:snip2}
+@keyframes snip{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(-7deg)}}
+@keyframes snip2{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(7deg)}}
+.lvl{position:absolute;right:0;top:8%;background:var(--off);color:var(--slate);font-family:var(--disp);padding:10px 14px;line-height:1.1;box-shadow:6px 6px 0 var(--copper)}
+.lvl small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.lvl b{font-size:26px;letter-spacing:-.02em}
+
+/* sections */
+section{padding:76px 0}
+.kicker{font-family:var(--disp);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper-d);display:flex;align-items:center;gap:10px}
+.kicker span{font-variant-numeric:tabular-nums;color:var(--sage-d)}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(32px,8vw,56px);line-height:1;letter-spacing:-.03em;margin:14px 0 14px;color:var(--slate)}
+.lead{color:var(--muted);max-width:52ch}
+
+/* menu */
+.menu{margin-top:40px;display:grid;gap:40px}
+.group h3{font-family:var(--disp);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);padding-bottom:12px;border-bottom:2px solid var(--slate);display:flex;justify-content:space-between}
+.group h3 i{font-style:normal;color:var(--sage-d);font-weight:500}
+.svc{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.svc:hover{background:rgba(132,169,140,.1);padding-left:10px;padding-right:10px}
+.svc .n{font-family:var(--disp);font-weight:500;font-size:18px;color:var(--ink);letter-spacing:-.01em}
+.svc .p{font-family:var(--disp);font-weight:600;font-size:18px;color:var(--copper-d);text-align:right;font-variant-numeric:tabular-nums}
+.svc .p.ask{font-weight:500;font-size:13px;color:var(--muted);letter-spacing:.04em}
+.svc .d{font-size:13px;color:var(--muted);grid-column:1/-1;display:flex;align-items:center;gap:6px}
+.svc .d svg{width:13px;height:13px;opacity:.7}
+.note{margin-top:22px;font-size:13px;color:var(--muted)}
+.menu-cta{margin-top:30px}
+.btn-sl{background:var(--slate);color:var(--off)}
+.btn-sl:hover{background:var(--copper)}
+
+/* why */
+.why{background:var(--off-2);position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;opacity:.6;pointer-events:none}
+.why .wrap{position:relative}
+.cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.card{background:var(--off);padding:28px 24px;transition:background .25s}
+.card:hover{background:#fff}
+.card svg{width:42px;height:42px;margin-bottom:18px}
+.card h4{font-family:var(--disp);font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--slate);margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--slate);color:var(--off);position:relative;overflow:hidden}
+.visit h2{color:var(--off)}
+.visit .kicker{color:var(--copper-l)}
+.visit .kicker span{color:var(--sage)}
+.visit .lead{color:#b8c4bf}
+.vgrid{display:grid;gap:28px;margin-top:40px}
+.hours{border:1px solid var(--line-d)}
+.hrow{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line-d);font-size:15px;transition:background .2s}
+.hrow:last-child{border-bottom:0}
+.hrow .day{font-family:var(--disp);font-weight:500;display:flex;align-items:center;gap:10px}
+.hrow .t{font-variant-numeric:tabular-nums;color:#d9e0dd;white-space:nowrap}
+.hrow.closed .t,.hrow.closed .day{color:#7f918b}
+.hrow.today{background:rgba(184,115,51,.16);box-shadow:inset 3px 0 0 var(--copper)}
+.hrow.today .day::after{content:"Today";font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--copper);color:#fff;padding:3px 7px;font-weight:600}
+.status{margin-top:14px;font-size:13.5px;color:#b8c4bf;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#7f918b;flex:none}
+.dot.on{background:var(--sage);box-shadow:0 0 0 0 rgba(132,169,140,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(132,169,140,0)}100%{box-shadow:0 0 0 0 rgba(132,169,140,0)}}
+.addr{border:1px solid var(--line-d);padding:22px 20px;display:grid;gap:18px}
+.addr .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.addr .v{font-family:var(--disp);font-size:20px;font-weight:500;letter-spacing:-.01em;line-height:1.25;margin-top:4px}
+.addr .v a{text-decoration:none;border-bottom:1px solid rgba(212,147,90,.5);transition:color .2s}
+.addr .v a:hover{color:var(--copper-l)}
+.map{position:relative;border:1px solid var(--line-d);min-height:300px;background:var(--slate-2)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.55) contrast(1.05)}
+.map .pin{position:absolute;left:12px;top:12px;background:var(--off);color:var(--slate);font-family:var(--disp);font-size:12px;font-weight:600;padding:6px 10px;letter-spacing:.04em;z-index:2;box-shadow:4px 4px 0 var(--copper)}
+.vbtns{display:flex;flex-wrap:wrap;gap:10px}
+
+footer{background:var(--ink);color:#8c9b96;padding:40px 0;font-size:13px}
+footer .wrap{display:grid;gap:14px}
+footer .fb{font-family:var(--disp);color:var(--off);font-size:20px;font-weight:600;letter-spacing:-.01em}
+footer a{color:#c9d3cf;text-decoration:none}
+footer a:hover{color:var(--copper-l)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.3fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(29,39,44,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08)}
+.bar a{min-height:50px;font-size:15px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+
+@media (min-width:760px){
+  .links{display:flex}
+  .hero .wrap{grid-template-columns:1.25fr .75fr;align-items:center;padding-top:72px;padding-bottom:88px}
+  .menu{grid-template-columns:1fr 1fr;gap:40px 64px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .map{grid-column:1/-1;min-height:380px}
+  section{padding:110px 0}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+}
+@media (min-width:1100px){.cards{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:900px){ body{padding-bottom:0} .bar{display:none} }
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Travis Mitchell. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mk">TM</span>Travis Mitchell</a>
+    <div class="links"><a href="#menu">Menu</a><a href="#why">Studio</a><a href="#visit">Hours &amp; Map</a></div>
+    <a class="nbtn" href="https://square.site/book/LQEK3YWAECTHQ/travis-mitchell-columbia-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="tag rv">Hair stylist · Columbia, TN</div>
+      <h1 class="rv">Three floors up.<br><span class="thin">One stylist.</span><br><em>Clean lines.</em></h1>
+      <p class="sub rv">Cuts for men, women and kids, plus Brazilian Blowouts, from <strong>Travis Mitchell</strong> on Level 3 at 307 West 11th Street.</p>
+      <div class="ctas rv">
+        <a class="btn btn-cu" href="https://square.site/book/LQEK3YWAECTHQ/travis-mitchell-columbia-tn" target="_blank" rel="noopener">Book online
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ln" href="tel:+17605259909">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          (760) 525-9909</a>
+      </div>
+      <div class="meta rv">
+        <div><b>Mon–Thu</b>book online</div>
+        <div><b>8 PM</b>last close</div>
+        <div><b>11</b>services</div>
+      </div>
+    </div>
+
+    <div class="plate rv" aria-hidden="true">
+      <svg viewBox="0 0 440 440" fill="none">
+        <!-- architectural frame -->
+        <rect x="20.5" y="20.5" width="399" height="399" stroke="rgba(246,245,241,.16)"/>
+        <path d="M20 220h400M220 20v400" stroke="rgba(246,245,241,.08)"/>
+        <path d="M20 110h400M20 330h400M110 20v400M330 20v400" stroke="rgba(246,245,241,.05)"/>
+        <!-- level stack: 3 floors, top highlighted -->
+        <g transform="translate(46 300)">
+          <rect x="0" y="80" width="88" height="26" stroke="rgba(246,245,241,.25)"/>
+          <rect x="0" y="50" width="88" height="26" stroke="rgba(246,245,241,.25)"/>
+          <rect x="0" y="20" width="88" height="26" fill="#b87333"/>
+          <text x="96" y="38" fill="#d4935a" font-family="Space Grotesk" font-size="11" letter-spacing="2">L3</text>
+          <text x="96" y="68" fill="rgba(246,245,241,.35)" font-family="Space Grotesk" font-size="11" letter-spacing="2">L2</text>
+          <text x="96" y="98" fill="rgba(246,245,241,.35)" font-family="Space Grotesk" font-size="11" letter-spacing="2">L1</text>
+        </g>
+        <!-- rotating dial -->
+        <g class="spin">
+          <circle cx="220" cy="220" r="150" stroke="rgba(132,169,140,.45)" stroke-dasharray="2 8"/>
+          <circle cx="220" cy="220" r="118" stroke="rgba(246,245,241,.12)"/>
+        </g>
+        <!-- comb -->
+        <g transform="rotate(-28 220 220)">
+          <rect x="70" y="96" width="300" height="26" rx="3" fill="#84a98c"/>
+          <g stroke="#84a98c" stroke-width="5" stroke-linecap="square">
+            <path d="M84 122v40M100 122v40M116 122v40M132 122v40M148 122v40M164 122v40M180 122v40M196 122v40M212 122v40M228 122v40M244 122v32M260 122v32M276 122v32M292 122v32M308 122v32M324 122v32M340 122v32M356 122v32"/>
+          </g>
+        </g>
+        <!-- shears -->
+        <g transform="translate(0 30)">
+          <g class="blade">
+            <path d="M220 236 L360 150 L366 158 L232 248 Z" fill="#f6f5f1"/>
+            <circle cx="186" cy="282" r="26" stroke="#b87333" stroke-width="7"/>
+            <path d="M204 264 L222 244" stroke="#b87333" stroke-width="7"/>
+          </g>
+          <g class="blade b2">
+            <path d="M220 236 L370 200 L370 210 L228 250 Z" fill="#d9ddd8"/>
+            <circle cx="240" cy="312" r="26" stroke="#b87333" stroke-width="7"/>
+            <path d="M236 286 L226 250" stroke="#b87333" stroke-width="7"/>
+          </g>
+          <circle cx="222" cy="240" r="6" fill="#2f3e46" stroke="#d4935a" stroke-width="3"/>
+        </g>
+        <!-- dimension tick -->
+        <g stroke="#d4935a" stroke-width="1.2">
+          <path d="M300 396h100M300 390v12M400 390v12"/>
+        </g>
+        <text x="350" y="388" text-anchor="middle" fill="#d4935a" font-family="Space Grotesk" font-size="10" letter-spacing="2">307 W 11TH</text>
+      </svg>
+      <div class="lvl"><small>Studio</small><b>Level 3</b></div>
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="kicker rv"><span>01</span> Service menu</div>
+    <h2 class="rv">The menu.</h2>
+    <p class="lead rv">Every service, price and time below is taken straight from Travis's booking page. Where no price is listed, ask or book a consultation.</p>
+
+    <div class="menu">
+      <div class="group rv">
+        <h3>Cuts <i>4</i></h3>
+        <div class="svc"><span class="n">Men's Cut</span><span class="p">$85</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 minutes</span></div>
+        <div class="svc"><span class="n">Women's Cut</span><span class="p">$125</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hour · price varies</span></div>
+        <div class="svc"><span class="n">Boys Cut</span><span class="p">$75</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span></div>
+        <div class="svc"><span class="n">Girls Cut</span><span class="p">$85</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>45 minutes</span></div>
+      </div>
+
+      <div class="group rv">
+        <h3>Smoothing &amp; installs <i>3</i></h3>
+        <div class="svc"><span class="n">Brazilian Blowout, Long Hair</span><span class="p">$300</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 hours</span></div>
+        <div class="svc"><span class="n">Brazilian Blowout, Short Hair</span><span class="p">$150</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 hour</span></div>
+        <div class="svc"><span class="n">HAIRSKEEN Install</span><span class="p ask">ASK</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 hours</span></div>
+      </div>
+
+      <div class="group rv">
+        <h3>Detail work <i>3</i></h3>
+        <div class="svc"><span class="n">Clean Up</span><span class="p">$25</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 minutes</span></div>
+        <div class="svc"><span class="n">Beard Trim</span><span class="p ask">ASK</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 minutes</span></div>
+        <div class="svc"><span class="n">Bang Trim</span><span class="p ask">ASK</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>15 minutes</span></div>
+      </div>
+
+      <div class="group rv">
+        <h3>Start here <i>1</i></h3>
+        <div class="svc"><span class="n">Consultation</span><span class="p ask">ASK</span><span class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</span></div>
+        <p class="note">Not sure between a cut, a Blowout or an install? Book a 30-minute consultation and talk it through first.</p>
+        <div class="menu-cta"><a class="btn btn-sl" href="https://square.site/book/LQEK3YWAECTHQ/travis-mitchell-columbia-tn" target="_blank" rel="noopener">Pick a service &amp; time →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="kicker rv"><span>02</span> The studio</div>
+    <h2 class="rv">Built for the way<br>you actually book.</h2>
+    <div class="cards">
+      <div class="card rv">
+        <svg viewBox="0 0 42 42" fill="none" stroke="#2f3e46" stroke-width="1.6"><rect x="5" y="5" width="32" height="32"/><path d="M5 26h32M5 15.5h32" opacity=".35"/><rect x="5" y="5" width="32" height="10.5" fill="#b87333" stroke="none"/></svg>
+        <h4>Level 3 studio</h4>
+        <p>Up on Level 3 at 307 West 11th Street. You book, and you sit down with Travis himself.</p>
+      </div>
+      <div class="card rv">
+        <svg viewBox="0 0 42 42" fill="none" stroke="#2f3e46" stroke-width="1.6"><circle cx="21" cy="21" r="16"/><path d="M21 11v10l7 4" stroke="#b87333" stroke-width="2"/></svg>
+        <h4>Open till 8 PM</h4>
+        <p>Monday through Thursday, 10 AM to 8 PM. Book after work without taking time off.</p>
+      </div>
+      <div class="card rv">
+        <svg viewBox="0 0 42 42" fill="none" stroke="#2f3e46" stroke-width="1.6"><path d="M7 30 L35 12" stroke="#b87333" stroke-width="2"/><path d="M7 12 L35 30"/><circle cx="21" cy="21" r="3" fill="#84a98c" stroke="none"/></svg>
+        <h4>The whole household</h4>
+        <p>Men's, women's, boys' and girls' cuts, plus beard trims, bang trims and quick clean ups.</p>
+      </div>
+      <div class="card rv">
+        <svg viewBox="0 0 42 42" fill="none" stroke="#2f3e46" stroke-width="1.6"><path d="M8 10c8 0 8 6 16 6s8-6 10-6M8 21c8 0 8 6 16 6s8-6 10-6M8 32c8 0 8 6 16 6" /><path d="M8 10c8 0 8 6 16 6s8-6 10-6" stroke="#b87333" stroke-width="2"/></svg>
+        <h4>Smoothing &amp; installs</h4>
+        <p>Brazilian Blowouts for long or short hair, and HAIRSKEEN installs, each booked with real time set aside.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="kicker rv"><span>03</span> Hours &amp; location</div>
+    <h2 class="rv">Find Level 3.</h2>
+    <p class="lead rv">Head to 307 West 11th Street and up to the third level.</p>
+    <div class="vgrid">
+      <div class="rv">
+        <div class="hours" id="hours">
+          <div class="hrow" data-d="1"><span class="day">Monday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+          <div class="hrow" data-d="2"><span class="day">Tuesday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+          <div class="hrow" data-d="3"><span class="day">Wednesday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+          <div class="hrow" data-d="4"><span class="day">Thursday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+          <div class="hrow closed" data-d="5"><span class="day">Friday</span><span class="t">Closed</span></div>
+          <div class="hrow closed" data-d="6"><span class="day">Saturday</span><span class="t">Closed</span></div>
+          <div class="hrow closed" data-d="0"><span class="day">Sunday</span><span class="t">Closed</span></div>
+        </div>
+        <div class="status"><span class="dot" id="dot"></span><span id="stat">Mon–Thu, 10 AM – 8 PM</span></div>
+      </div>
+      <div class="addr rv">
+        <div><div class="lbl">Studio</div><div class="v">307 West 11th Street<br>Level 3<br>Columbia, TN</div></div>
+        <div><div class="lbl">Call</div><div class="v"><a href="tel:+17605259909">(760) 525-9909</a></div></div>
+        <div><div class="lbl">Email</div><div class="v" style="font-size:17px"><a href="mailto:freetravis@gmail.com">freetravis@gmail.com</a></div></div>
+        <div class="vbtns">
+          <a class="btn btn-cu" href="https://www.google.com/maps/dir/?api=1&amp;destination=307+West+11th+Street+Columbia+TN" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn-ln" href="tel:+17605259909">Call</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <span class="pin">307 W 11TH · LEVEL 3</span>
+        <iframe title="Map to 307 West 11th Street, Columbia, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=307%20West%2011th%20Street%2C%20Columbia%2C%20TN&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fb">Travis Mitchell</div>
+      <div>Hair stylist · 307 West 11th Street, Level 3, Columbia, TN · <a href="tel:+17605259909">(760) 525-9909</a></div>
+    </div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ln" href="tel:+17605259909">Call</a>
+  <a class="btn btn-cu" href="https://square.site/book/LQEK3YWAECTHQ/travis-mitchell-columbia-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date(), day=d.getDay(), h=d.getHours()+d.getMinutes()/60;
+  var row=document.querySelector('.hrow[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var open=day>=1&&day<=4&&h>=10&&h<20, dot=document.getElementById('dot'), st=document.getElementById('stat');
+  if(open){dot.classList.add('on');st.textContent='Open now · until 8 PM';}
+  else{var nx=(day>=1&&day<=4&&h<10)?'today at 10 AM':(day>=1&&day<=3)?'tomorrow at 10 AM':'Monday at 10 AM';st.textContent='Closed now · opens '+nx;}
+  var root=document.documentElement; root.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else root.classList.add('show-all');
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

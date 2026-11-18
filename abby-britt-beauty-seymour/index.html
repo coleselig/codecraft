@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Abby Britt Beauty — Seymour</title>
+<meta name="description" content="Concept site for Abby Britt Beauty, a hair salon at 10339 Chapman Hwy, Seymour, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#6b7f8e; --mist-2:#8fa0ad; --mist-3:#c3ccd3; --mist-4:#dfe4e8;
+  --rose:#a8576b; --rose-d:#8c4357; --rose-l:#e9cfd4;
+  --linen:#f5efe6; --linen-2:#ece3d6; --char:#2d2a2e; --char-2:#4a464c;
+  --bar-h:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--linen);color:var(--char);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3,.display{font-family:"Italiana",Georgia,serif;font-weight:400;letter-spacing:.01em;line-height:1.08}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--rose)}
+/* banner */
+.concept{background:var(--char);color:#e8e2da;font-size:.7rem;text-align:center;padding:7px 12px;letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--rose-l);font-weight:700}
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(245,239,230,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(107,127,142,.18)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Italiana",serif;font-size:1.45rem;text-decoration:none;color:var(--char);display:flex;align-items:center;gap:9px}
+.logo svg{width:30px;height:20px}
+.logo span{color:var(--rose)}
+.navlinks{display:none;gap:28px;font-size:.88rem;font-weight:600}
+.navlinks a{text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;background:var(--rose);transition:right .3s}
+.navlinks a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:.95rem;text-decoration:none;border-radius:999px;padding:14px 26px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-rose{background:var(--rose);color:#fff;box-shadow:0 8px 22px -8px rgba(168,87,107,.7)}
+.btn-rose:hover{background:var(--rose-d);transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(168,87,107,.8)}
+.btn-ghost{background:rgba(255,255,255,.55);color:var(--char);border:1.5px solid var(--char)}
+.btn-ghost:hover{background:var(--char);color:var(--linen)}
+.btn-sm{padding:9px 18px;font-size:.82rem}
+nav .btn-sm{display:none}
+@media(min-width:900px){.navlinks{display:flex}nav .btn-sm{display:inline-flex}}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#e6e9eb 0%,#efebe4 46%,var(--linen) 100%);padding:34px 0 0}
+.hero .wrap{position:relative;z-index:3}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px}
+.hero .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--rose)}
+.hero h1{font-size:clamp(2.7rem,11.5vw,5.6rem);margin:16px 0 18px;color:var(--char);max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--rose);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;bottom:-.12em;width:100%;height:.3em;overflow:visible}
+.hero h1 em path{stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.6s .5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero p.sub{font-size:1.06rem;color:var(--char-2);max-width:34ch;margin-bottom:26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:.84rem;color:var(--mist);font-weight:600}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+.hero-meta i{width:6px;height:6px;border-radius:50%;background:var(--rose);display:inline-block}
+.ridges{position:relative;z-index:1;margin-top:4px;height:190px}
+.ridges svg{position:absolute;bottom:0;left:0;width:100%;height:100%}
+.ridge{animation:drift 14s ease-in-out infinite alternate}
+.ridge.r2{animation-duration:18s;animation-delay:-4s}
+.ridge.r3{animation-duration:22s;animation-delay:-8s}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-26px)}}
+.sun{animation:glow 6s ease-in-out infinite alternate;transform-origin:center}
+@keyframes glow{from{opacity:.55}to{opacity:.9}}
+.mist-band{position:absolute;left:-10%;width:120%;height:30px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);filter:blur(8px);animation:mistmove 16s linear infinite}
+@keyframes mistmove{from{transform:translateX(-20%)}to{transform:translateX(20%)}}
+@media(min-width:900px){
+  .hero{padding-top:90px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:end;gap:40px}
+  .ridges{height:300px;margin-top:-40px}
+  .hero-card{display:block!important}
+}
+.hero-card{display:none;background:rgba(255,255,255,.6);backdrop-filter:blur(6px);border:1px solid rgba(107,127,142,.25);border-radius:22px;padding:26px 26px 22px;box-shadow:0 30px 60px -30px rgba(45,42,46,.35);margin-bottom:30px}
+.hero-card h3{font-size:1.6rem;margin-bottom:12px}
+.hero-card ul{list-style:none;font-size:.92rem}
+.hero-card li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(107,127,142,.35)}
+.hero-card li:last-child{border:0}
+.hero-card li b{color:var(--rose);font-weight:800}
+/* sections */
+section{padding:76px 0;position:relative}
+.sec-head{margin-bottom:34px}
+.sec-head h2{font-size:clamp(2.2rem,8vw,3.6rem);margin-top:10px}
+.sec-head p{color:var(--char-2);max-width:52ch;margin-top:10px}
+/* wave divider */
+.wave{display:block;width:100%;height:60px}
+/* services */
+#services{background:var(--linen)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 22px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1.5px solid var(--mist-3);background:#fff;color:var(--char);border-radius:999px;padding:9px 16px;font:700 .82rem "Nunito Sans",sans-serif;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--mist)}
+.tab[aria-selected=true]{background:var(--char);color:var(--linen);border-color:var(--char)}
+.menu-grid{display:grid;gap:18px}
+@media(min-width:760px){.menu-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1050px){.menu-grid{grid-template-columns:1fr 1fr 1fr}}
+.menu-card{background:#fff;border-radius:20px;padding:24px 22px 14px;border:1px solid rgba(107,127,142,.16);box-shadow:0 18px 40px -28px rgba(45,42,46,.3);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.menu-card:hover{transform:translateY(-4px);box-shadow:0 26px 48px -26px rgba(45,42,46,.38)}
+.menu-card::before{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--mist-4),transparent 70%)}
+.menu-card h3{font-size:1.65rem;margin-bottom:4px;position:relative}
+.menu-card .note{font-size:.78rem;color:var(--mist);font-weight:600;margin-bottom:10px;position:relative}
+.svc{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-top:1px solid var(--linen-2);font-size:.93rem}
+.svc .n{flex:1;font-weight:600}
+.svc .d{font-size:.75rem;color:var(--mist);white-space:nowrap}
+.svc .p{font-weight:800;color:var(--rose);min-width:52px;text-align:right;white-space:nowrap}
+.svc .p small{display:block;font-size:.62rem;font-weight:700;color:var(--mist);letter-spacing:.04em;text-transform:uppercase}
+.menu-card.hide{display:none}
+.menu-foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:.88rem;color:var(--char-2)}
+/* why */
+#why{background:var(--char);color:var(--linen);overflow:hidden}
+#why .eyebrow{color:var(--rose-l)}
+#why .sec-head p{color:#c9c2ba}
+.why-grid{display:grid;gap:16px;position:relative;z-index:2}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{border:1px solid rgba(195,204,211,.2);border-radius:20px;padding:26px 22px;background:linear-gradient(160deg,rgba(107,127,142,.18),rgba(107,127,142,.04));transition:border-color .3s,transform .3s}
+.why:hover{border-color:var(--rose-l);transform:translateY(-3px)}
+.why svg{width:40px;height:40px;margin-bottom:14px}
+.why h3{font-size:1.5rem;margin-bottom:6px;color:#fff}
+.why p{font-size:.9rem;color:#cfc8c0}
+.why-bg{position:absolute;left:0;right:0;bottom:0;height:220px;opacity:.35;z-index:1;pointer-events:none}
+.why-bg svg{width:100%;height:100%}
+/* hours + visit */
+#visit{background:linear-gradient(180deg,var(--linen) 0%,#e9ecee 100%)}
+.visit-grid{display:grid;gap:22px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;align-items:stretch}}
+.hours-card{background:#fff;border-radius:22px;padding:26px 22px;border:1px solid rgba(107,127,142,.16);box-shadow:0 18px 40px -28px rgba(45,42,46,.3)}
+.hours-card h3{font-size:1.8rem;margin-bottom:6px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--mist-4);color:var(--char);margin-bottom:14px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--mist)}
+.status.open{background:#f3e1e5;color:var(--rose-d)}
+.status.open i{background:var(--rose);box-shadow:0 0 0 0 rgba(168,87,107,.6);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(168,87,107,0)}100%{box-shadow:0 0 0 0 rgba(168,87,107,0)}}
+.hrs{list-style:none}
+.hrs li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:.95rem}
+.hrs li:nth-child(odd){background:var(--linen)}
+.hrs li.closed span:last-child{color:var(--mist)}
+.hrs li.today{background:var(--rose)!important;color:#fff;font-weight:800}
+.hrs li.today span:last-child{color:#fff}
+.hrs li.today span:first-child::after{content:" · today";font-weight:600;font-size:.78rem;opacity:.9}
+.map-card{border-radius:22px;overflow:hidden;background:#fff;border:1px solid rgba(107,127,142,.16);box-shadow:0 18px 40px -28px rgba(45,42,46,.3);display:flex;flex-direction:column}
+.map-card iframe{width:100%;height:300px;border:0;display:block;filter:saturate(.75) contrast(1.02)}
+@media(min-width:900px){.map-card iframe{flex:1;height:auto;min-height:320px}}
+.addr{padding:22px}
+.addr h3{font-size:1.6rem}
+.addr p{color:var(--char-2);margin:4px 0 16px}
+.addr .cta-row .btn{flex:1 1 140px}
+/* footer */
+footer{background:var(--char);color:#bdb6ae;padding:46px 0 34px;font-size:.88rem}
+footer .logo{color:var(--linen);margin-bottom:12px}
+.foot-grid{display:grid;gap:20px}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+footer a{text-decoration:none;color:#e8e2da}
+footer a:hover{color:var(--rose-l)}
+footer h4{font-family:"Nunito Sans";font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-l);margin-bottom:8px}
+.credit{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;font-size:.78rem;color:#8f8890}
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(45,42,46,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:999px;font-weight:800;text-decoration:none;font-size:.95rem}
+.callbar .c{background:transparent;color:var(--linen);border:1.5px solid rgba(245,239,230,.5)}
+.callbar .b{background:var(--rose);color:#fff}
+.callbar svg{width:18px;height:18px}
+@media(min-width:900px){.callbar{display:none}}
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal{opacity:0;transform:translateY(22px)}
+.js .reveal.in,.show-all .reveal{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+:focus-visible{outline:2.5px solid var(--rose);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Abby Britt Beauty. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Abby Britt Beauty home">
+      <svg viewBox="0 0 30 20" aria-hidden="true"><path d="M1 18 L9 7 L13 12 L19 3 L29 18" fill="none" stroke="#6b7f8e" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 18 C9 14 13 19 18 15 S26 13 28 16" fill="none" stroke="#a8576b" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Abby Britt <span>Beauty</span>
+    </a>
+    <div class="navlinks"><a href="#services">Menu</a><a href="#why">Why Abby</a><a href="#visit">Hours &amp; Visit</a></div>
+    <a class="btn btn-rose btn-sm" href="https://square.site/book/27KVF4729THDR/abby-britt-beauty-seymour-tn" target="_blank" rel="noopener">Book online</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Hair salon · Seymour, TN</div>
+      <h1>Soft-glam hair, just off <em>Chapman Hwy<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C40 4 70 18 100 10 S165 4 198 12" fill="none" stroke="#a8576b" stroke-width="3" stroke-linecap="round"/></svg></em>.</h1>
+      <p class="sub">Cuts, color, balayage, extensions &amp; brow waxing with Abby, at 10339 Chapman Hwy. Your first consultation is free.</p>
+      <div class="cta-row">
+        <a class="btn btn-rose" href="https://square.site/book/27KVF4729THDR/abby-britt-beauty-seymour-tn" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+18657898350">Call (865) 789-8350</a>
+      </div>
+      <div class="hero-meta"><span><i></i>Mon · Tue · Fri, 9a–7p</span><span><i></i>Free new client consult</span></div>
+    </div>
+    <aside class="hero-card reveal" aria-label="Featured services">
+      <div class="eyebrow">From the menu</div>
+      <h3>A few highlights</h3>
+      <ul>
+        <li>Balayage <b>$110</b></li>
+        <li>Highlights &amp; cut <b>$100</b></li>
+        <li>Brazilian blowout <b>$150</b></li>
+        <li>Updo <b>$75</b></li>
+        <li>New client consultation <b>Free</b></li>
+      </ul>
+    </aside>
+  </div>
+  <div class="ridges" aria-hidden="true">
+    <svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c3ccd3"/><stop offset="1" stop-color="#dfe4e8"/></linearGradient>
+        <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fa0ad"/><stop offset="1" stop-color="#b6c1c9"/></linearGradient>
+        <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b7f8e"/><stop offset="1" stop-color="#8396a3"/></linearGradient>
+        <radialGradient id="sun"><stop offset="0" stop-color="#e9cfd4"/><stop offset="1" stop-color="#e9cfd4" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle class="sun" cx="1100" cy="90" r="120" fill="url(#sun)"/>
+      <g class="ridge r3"><path d="M-40 150 L80 95 L170 130 L290 60 L400 120 L520 70 L640 125 L760 55 L880 110 L1000 65 L1120 120 L1240 50 L1360 105 L1480 80 L1480 300 L-40 300Z" fill="url(#g1)"/></g>
+      <g class="ridge r2"><path d="M-40 190 L60 150 L190 175 L310 115 L440 170 L560 125 L700 180 L820 120 L950 165 L1080 110 L1200 170 L1330 125 L1480 160 L1480 300 L-40 300Z" fill="url(#g2)" opacity=".9"/></g>
+      <g class="ridge"><path d="M-40 235 C80 200 160 215 260 190 C360 165 430 210 540 200 C650 190 720 160 830 175 C940 190 1020 220 1130 200 C1240 180 1320 170 1480 195 L1480 300 L-40 300Z" fill="url(#g3)"/></g>
+      <path d="M-40 262 C120 232 240 280 400 254 S700 226 860 252 S1180 282 1480 244 L1480 300 L-40 300Z" fill="#a8576b" opacity=".18"/>
+      <path d="M-40 276 C140 250 260 292 440 270 S760 246 920 268 S1220 292 1480 262" fill="none" stroke="#a8576b" stroke-width="2" opacity=".55"/>
+      <path d="M-40 284 C160 262 300 298 480 280 S800 258 960 278 S1240 298 1480 272 L1480 300 L-40 300Z" fill="#f5efe6"/>
+    </svg>
+    <div class="mist-band" style="bottom:90px"></div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The menu</div>
+      <h2>Every service, every price</h2>
+      <p>The full list from Abby's booking page, grouped so it's easy to find what you need. Prices as published; a few vary by hair.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts &amp; Styling</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color &amp; Highlights</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="treat">Treatments</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="glam">Wax &amp; Glam</button>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card reveal" data-c="cut">
+        <h3>Cuts &amp; Styling</h3>
+        <div class="note">For women, men &amp; kids</div>
+        <div class="svc"><span class="n">Women's haircut</span><span class="d">30 min</span><span class="p">$30<small>varies</small></span></div>
+        <div class="svc"><span class="n">Women's shampoo, cut &amp; style</span><span class="d">1 hr</span><span class="p">$40</span></div>
+        <div class="svc"><span class="n">Men's haircut</span><span class="d">30 min</span><span class="p">$20<small>varies</small></span></div>
+        <div class="svc"><span class="n">Child's cut</span><span class="d">30 min</span><span class="p">$15</span></div>
+        <div class="svc"><span class="n">Child's cut &amp; style</span><span class="d">45 min</span><span class="p">$25</span></div>
+        <div class="svc"><span class="n">Shampoo &amp; style</span><span class="d">30 min</span><span class="p">$20<small>varies</small></span></div>
+        <div class="svc"><span class="n">Updo</span><span class="d">1 hr 5 min</span><span class="p">$75</span></div>
+      </article>
+      <article class="menu-card reveal" data-c="color">
+        <h3>Highlights &amp; Balayage</h3>
+        <div class="note">Dimension, brightness, lived-in blends</div>
+        <div class="svc"><span class="n">Highlights</span><span class="d">2 hr</span><span class="p">$95</span></div>
+        <div class="svc"><span class="n">Highlights &amp; cut</span><span class="d">2 hr 45 min</span><span class="p">$100</span></div>
+        <div class="svc"><span class="n">Partial highlights</span><span class="d">2 hr</span><span class="p">$75</span></div>
+        <div class="svc"><span class="n">Partial highlights &amp; cut</span><span class="d">2 hr 15 min</span><span class="p">$80</span></div>
+        <div class="svc"><span class="n">Balayage</span><span class="d">2 hr 30 min</span><span class="p">$110</span></div>
+        <div class="svc"><span class="n">Balayage &amp; cut</span><span class="d">3 hr</span><span class="p">$120</span></div>
+        <div class="svc"><span class="n">Toner</span><span class="d">30 min</span><span class="p">$15</span></div>
+      </article>
+      <article class="menu-card reveal" data-c="color">
+        <h3>Color</h3>
+        <div class="note">Roots, all-over &amp; combos</div>
+        <div class="svc"><span class="n">Root touch up</span><span class="d">1 hr 45 min</span><span class="p">$70<small>varies</small></span></div>
+        <div class="svc"><span class="n">Root touch up &amp; cut</span><span class="d">2 hr 15 min</span><span class="p">$80</span></div>
+        <div class="svc"><span class="n">Root touch up &amp; highlights</span><span class="d">2 hr</span><span class="p">$85</span></div>
+        <div class="svc"><span class="n">Root touch up, highlight &amp; cut</span><span class="d">2 hr 45 min</span><span class="p">$95</span></div>
+        <div class="svc"><span class="n">Color &amp; highlights</span><span class="d">2 hr 30 min</span><span class="p">$110</span></div>
+        <div class="svc"><span class="n">Color, highlights &amp; cut</span><span class="d">3 hr</span><span class="p">$120</span></div>
+        <div class="svc"><span class="n">All over color / bleach</span><span class="d">2 hr</span><span class="p">$90</span></div>
+      </article>
+      <article class="menu-card reveal" data-c="treat">
+        <h3>Treatments &amp; Extensions</h3>
+        <div class="note">Smooth, strengthen, add length</div>
+        <div class="svc"><span class="n">New client consultation</span><span class="d">15 min</span><span class="p">Free</span></div>
+        <div class="svc"><span class="n">Brazilian blowout</span><span class="d">2 hr 30 min</span><span class="p">$150</span></div>
+        <div class="svc"><span class="n">Extensions</span><span class="d">2 hr</span><span class="p">$200</span></div>
+        <div class="svc"><span class="n">Conditioning treatment</span><span class="d">30 min</span><span class="p">$25</span></div>
+      </article>
+      <article class="menu-card reveal" data-c="glam">
+        <h3>Wax &amp; Glam</h3>
+        <div class="note">Brows, face, makeup &amp; glow</div>
+        <div class="svc"><span class="n">Eyebrow wax</span><span class="d">15 min</span><span class="p">$15</span></div>
+        <div class="svc"><span class="n">Lip wax</span><span class="d">15 min</span><span class="p">$10</span></div>
+        <div class="svc"><span class="n">Chin wax</span><span class="d">15 min</span><span class="p">$12</span></div>
+        <div class="svc"><span class="n">Full face wax</span><span class="d">35 min</span><span class="p">$35</span></div>
+        <div class="svc"><span class="n">Makeup</span><span class="d">30 min</span><span class="p">Ask</span></div>
+        <div class="svc"><span class="n">Spray tan</span><span class="d">30 min</span><span class="p">$30</span></div>
+      </article>
+    </div>
+    <div class="menu-foot reveal">
+      <a class="btn btn-rose" href="https://square.site/book/27KVF4729THDR/abby-britt-beauty-seymour-tn" target="_blank" rel="noopener">Pick a service &amp; book</a>
+      <span>Not sure what you need? Start with the free 15-minute consultation.</span>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--linen);margin-bottom:-1px"><path d="M0 60 L0 34 C180 6 360 52 540 30 S900 4 1080 26 S1320 48 1440 22 L1440 60Z" fill="#2d2a2e"/><path d="M0 40 C180 14 360 58 540 36 S900 10 1080 32 S1320 54 1440 28" fill="none" stroke="#a8576b" stroke-width="1.5" opacity=".7"/></svg>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Why book with Abby</div>
+      <h2>One chair. One stylist. Your whole look.</h2>
+      <p>No front desk shuffle: Abby is the stylist on the books, from the consultation to the final toner.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#e9cfd4" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="14" r="6"/><path d="M8 34c2-7 7-10 12-10s10 3 12 10"/></svg>
+        <h3>Always Abby</h3>
+        <p>Abby Britt is the stylist you'll book with every time, so she gets to know your hair.</p>
+      </div>
+      <div class="why reveal">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#e9cfd4" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 20h24M20 8v24"/><circle cx="20" cy="20" r="14"/></svg>
+        <h3>Free first visit chat</h3>
+        <p>New here? Book the 15-minute new client consultation at no charge and plan your color together.</p>
+      </div>
+      <div class="why reveal">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#e9cfd4" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 30 C12 18 18 26 22 16 S32 10 34 8"/><path d="M6 36 C12 24 18 32 22 22 S32 16 34 14"/></svg>
+        <h3>The full menu</h3>
+        <p>30+ services: $15 kids' cuts and brow waxes up to balayage, extensions and Brazilian blowouts.</p>
+      </div>
+      <div class="why reveal">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#e9cfd4" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="7" y="9" width="26" height="24" rx="3"/><path d="M7 16h26M14 5v7M26 5v7M14 24l4 4 8-8"/></svg>
+        <h3>Book in a minute</h3>
+        <p>Every service, with price and time, is bookable online. Prefer to talk? Call (865) 789-8350.</p>
+      </div>
+    </div>
+  </div>
+  <div class="why-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 220 L0 120 L120 80 L240 130 L380 60 L500 120 L640 70 L780 140 L900 80 L1040 130 L1180 60 L1320 110 L1440 90 L1440 220Z" fill="#6b7f8e" opacity=".25"/><path d="M0 220 L0 170 C200 130 340 190 540 160 S900 120 1100 160 S1340 180 1440 150 L1440 220Z" fill="#6b7f8e" opacity=".3"/></svg>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--linen);margin-top:-1px"><path d="M0 0 L0 26 C200 52 380 10 560 30 S920 56 1100 30 S1340 8 1440 34 L1440 0Z" fill="#2d2a2e"/><path d="M0 34 C200 60 380 18 560 38 S920 62 1100 38 S1340 16 1440 42" fill="none" stroke="#6b7f8e" stroke-width="1.5" opacity=".5"/></svg>
+
+<section id="visit" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Hours &amp; visit</div>
+      <h2>Find us on Chapman Hwy</h2>
+      <p>On Chapman Highway in Seymour, open three days a week.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours-card reveal">
+        <h3>Salon hours</h3>
+        <div class="status" id="status"><i></i><span>Open Mon, Tue &amp; Fri</span></div>
+        <ul class="hrs" id="hrs">
+          <li data-d="1"><span>Monday</span><span>9:00 AM – 7:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM – 7:00 PM</span></li>
+          <li data-d="3" class="closed"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4" class="closed"><span>Thursday</span><span>Closed</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 7:00 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="map-card reveal">
+        <iframe title="Map to Abby Britt Beauty" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=10339%20Chapman%20Hwy%2C%20Seymour%2C%20TN%2037865&output=embed"></iframe>
+        <div class="addr">
+          <h3>Abby Britt Beauty</h3>
+          <p>10339 Chapman Hwy, Seymour, TN 37865</p>
+          <div class="cta-row">
+            <a class="btn btn-rose" href="tel:+18657898350">Call (865) 789-8350</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=10339%20Chapman%20Hwy%2C%20Seymour%2C%20TN%2037865" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Abby Britt <span style="color:var(--rose-l)">Beauty</span></div>
+        <p>Hair salon at 10339 Chapman Hwy, Seymour, TN 37865.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+18657898350">(865) 789-8350</a><br><a href="mailto:abbyalisa1998@gmail.com">abbyalisa1998@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon, Tue, Fri · 9a–7p<br>Wed, Thu, Sat, Sun · Closed</p>
+      </div>
+    </div>
+    <div class="credit">Concept by Code Craft Media · a design preview made for Abby Britt Beauty, not the official site.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+18657898350"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/27KVF4729THDR/abby-britt-beauty-seymour-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else d.classList.add('show-all');
+  setTimeout(function(){d.classList.add('show-all')},1500);
+  // hours
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hrs li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var openDays=[1,2,5], st=document.getElementById('status');
+  if(openDays.indexOf(day)>-1 && h>=9 && h<19){st.classList.add('open');st.lastChild.textContent='Open now · until 7 PM';}
+  else{
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    for(var i=(openDays.indexOf(day)>-1&&h<9)?0:1;i<8;i++){var nd=(day+i)%7;if(openDays.indexOf(nd)>-1){st.lastChild.textContent='Closed now · opens '+(i===0?'today':names[nd])+' 9 AM';break;}}
+  }
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), cards=[].slice.call(document.querySelectorAll('.menu-card'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    var f=t.dataset.f; cards.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.dataset.c!==f);c.classList.add('in')});
+  })});
+})();
+</script>
+</body>
+</html>

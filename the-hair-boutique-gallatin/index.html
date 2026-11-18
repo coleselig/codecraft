@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Hair Boutique — Gallatin</title>
+<meta name="description" content="Color, foilyage, highlights, cuts and blowouts with Payton Poulter at The Hair Boutique, 122 Goodview Way, Gallatin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terra:#B4532F; --terra-d:#8E3D20; --terra-l:#E7B79C; --blush:#F2D9C8;
+  --ivory:#FAF5EC; --cream:#F3EADB; --olive:#5F6236; --olive-l:#A3A56E;
+  --ink:#2A1F1A; --muted:#6E5C51; --line:rgba(42,31,26,.12);
+  --serif:"DM Serif Display",Georgia,serif; --sans:"Outfit",system-ui,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--ivory);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+
+/* concept banner */
+.concept{background:var(--ink);color:#EADBCB;font-size:11.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--terra-l);font-weight:500}
+.concept .lg{display:none}@media(min-width:520px){.concept .lg{display:inline}.concept .sm{display:none}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(250,245,236,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--serif);font-size:21px;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.logo svg{width:30px;height:30px}
+.logo i{font-style:italic;color:var(--terra)}
+.links{display:none;gap:30px;font-size:14.5px}
+.links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--terra)}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,background .2s,box-shadow .2s,color .2s;cursor:pointer;border:0}
+.btn-terra{background:var(--terra);color:#fff;box-shadow:0 8px 22px -10px rgba(142,61,32,.7)}
+.btn-terra:hover{background:var(--terra-d);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--ivory)}
+.btn-sm{padding:10px 18px;font-size:14px}
+nav .btn-sm{display:none}
+@media(min-width:600px){nav .btn-sm{display:inline-flex}}
+.btn:active{transform:scale(.97)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 70px;background:
+ radial-gradient(120% 70% at 100% 0%,var(--blush) 0%,rgba(242,217,200,0) 60%),
+ radial-gradient(90% 60% at 0% 100%,#EDE4CD 0%,rgba(237,228,205,0) 70%),var(--ivory)}
+.hero .waves{position:absolute;inset:0;pointer-events:none;opacity:.9}
+.hero .waves path{fill:none;stroke-linecap:round}
+.wv{stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.2s cubic-bezier(.6,.1,.2,1) forwards}
+.wv:nth-child(2){animation-delay:.25s}.wv:nth-child(3){animation-delay:.5s}.wv:nth-child(4){animation-delay:.75s}.wv:nth-child(5){animation-delay:1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.wv{animation:none;stroke-dashoffset:0}}
+.hero-grid{position:relative;display:grid;gap:34px}
+@media(min-width:900px){.hero{padding:80px 0 110px}.hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--olive)}
+.eyebrow:before{content:"";width:26px;height:1.5px;background:var(--olive)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,12.4vw,92px);line-height:.98;letter-spacing:-.02em;margin:18px 0 20px}
+h1 em{font-style:italic;color:var(--terra)}
+h1 .amp{font-style:italic;color:var(--olive)}
+.lede{font-size:17.5px;color:var(--muted);max-width:33ch;font-weight:300}
+.lede strong{color:var(--ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:13px;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.65);border:1px solid var(--line);color:var(--muted)}
+.chip b{color:var(--terra);font-weight:600}
+
+/* hero art card */
+.art{position:relative;aspect-ratio:4/5;border-radius:220px 220px 26px 26px;overflow:hidden;background:linear-gradient(170deg,#C9693F 0%,#B4532F 40%,#7E3A1E 100%);box-shadow:0 40px 70px -40px rgba(126,58,30,.7)}
+@media(max-width:899px){.art{max-width:330px;width:86%;margin:0 auto;aspect-ratio:5/6}}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.strand{fill:none;stroke-linecap:round;animation:sway 7s ease-in-out infinite alternate;transform-origin:50% 0}
+.strand:nth-of-type(2n){animation-duration:8.5s}
+.strand:nth-of-type(3n){animation-duration:6.2s;animation-direction:alternate-reverse}
+@keyframes sway{from{transform:skewX(-2.5deg)}to{transform:skewX(2.5deg)}}
+@media (prefers-reduced-motion:reduce){.strand{animation:none}}
+.art .tag{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(250,245,236,.94);border-radius:18px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.art .tag small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);font-weight:500}
+.art .tag span{font-family:var(--serif);font-size:20px;line-height:1.15}
+.art .tag .p{font-family:var(--sans);font-weight:600;color:var(--terra);font-size:18px;white-space:nowrap}
+
+/* marquee */
+.marquee{background:var(--olive);color:#F1EBD8;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:var(--serif);font-size:22px}
+.marquee .track{display:inline-flex;gap:28px;animation:mq 34s linear infinite;padding-left:28px}
+.marquee .track span{display:inline-flex;align-items:center;gap:28px}
+.marquee .track span:after{content:"";width:34px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 10'%3E%3Cpath d='M1 5c4-5 8-5 12 0s8 5 12 0 6-4 8-2' fill='none' stroke='%23E7B79C' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:84px 0;position:relative}
+@media(min-width:900px){section{padding:120px 0}}
+.sec-head{max-width:640px;margin-bottom:44px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,9vw,62px);line-height:1.02;letter-spacing:-.015em;margin-top:14px}
+h2 em{font-style:italic;color:var(--terra)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:16.5px;font-weight:300}
+
+/* menu */
+.tabs{display:flex;gap:8px;margin-bottom:26px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-family:var(--sans);font-size:14px;font-weight:500;padding:10px 15px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--terra);color:var(--terra)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--ivory)}
+.menu-grid{display:grid;gap:14px}
+@media(min-width:760px){.menu-grid{grid-template-columns:1fr 1fr}}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden}
+.svc:hover{transform:translateY(-3px);box-shadow:0 22px 40px -28px rgba(126,58,30,.55);border-color:var(--terra-l)}
+.svc .row{display:flex;align-items:baseline;gap:10px}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15}
+.svc .dots{flex:1;border-bottom:1.5px dotted rgba(42,31,26,.25);transform:translateY(-5px);min-width:14px}
+.svc .price{font-weight:600;font-size:18px;color:var(--terra);white-space:nowrap}
+.svc .price.ask{font-weight:500;font-size:14px;color:var(--olive)}
+.svc p{font-size:14.5px;color:var(--muted);font-weight:300}
+.svc .meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:12.5px;color:var(--muted)}
+.svc .meta .t{display:inline-flex;align-items:center;gap:6px}
+.svc .meta .go{color:var(--terra);font-weight:500;opacity:.75;transition:opacity .2s,transform .2s}
+.svc:hover .go{opacity:1;transform:translateX(3px)}
+.svc.feature{background:linear-gradient(160deg,#FFF 0%,#FBEEE4 100%);border-color:var(--terra-l)}
+.svc .badge{align-self:flex-start;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--terra);color:#fff;padding:4px 10px;border-radius:999px;font-weight:500;margin-bottom:4px}
+.panel[hidden]{display:none}
+.svc.helper{background:var(--olive);border-color:var(--olive);color:#F1EBD8}.svc.helper p,.svc.helper .meta{color:#E1DBC2}.svc.helper .go{color:#fff}
+.note{margin-top:22px;font-size:13.5px;color:var(--muted)}
+
+/* color ladder */
+.ladder{background:var(--cream);overflow:hidden}
+.ladder:before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='60' viewBox='0 0 240 60'%3E%3Cpath d='M0 30c30-26 60-26 90 0s60 26 90 0 45-20 60-10' fill='none' stroke='%235F6236' stroke-opacity='.07' stroke-width='1.5'/%3E%3C/svg%3E") 0 0/240px 60px;pointer-events:none}
+.steps{position:relative;display:grid;gap:14px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:var(--ivory);border-radius:22px;padding:22px 20px;border:1px solid var(--line)}
+.step .sw{height:58px;border-radius:14px;margin-bottom:16px;position:relative;overflow:hidden}
+.step .sw:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.0) 0 7px,rgba(255,255,255,.22) 7px 9px)}
+.step:nth-child(1) .sw{background:linear-gradient(90deg,#4A2A1C,#6B3A22)}
+.step:nth-child(2) .sw{background:linear-gradient(90deg,#5B3522 0%,#5B3522 30%,#C79A6B 100%)}
+.step:nth-child(3) .sw{background:linear-gradient(90deg,#6B4126 0%,#D9B88A 55%,#EBD6B0 100%)}
+.step:nth-child(4) .sw{background:linear-gradient(90deg,#7A5634 0%,#E8D2A8 40%,#F4E8CF 100%)}
+.step small{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);font-weight:500}
+.step h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:4px 0 6px}
+.step p{font-size:14.5px;color:var(--muted);font-weight:300}
+.step .p{margin-top:10px;font-weight:600;color:var(--terra)}
+
+/* why */
+.why-grid{display:grid;gap:16px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{padding:26px 22px;border-radius:22px;background:#fff;border:1px solid var(--line);transition:transform .25s}
+.why:hover{transform:translateY(-4px)}
+.why .ic{width:48px;height:48px;border-radius:50%;background:var(--blush);display:grid;place-items:center;margin-bottom:16px}
+.why .ic svg{width:24px;height:24px;stroke:var(--terra);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.why h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15;margin-bottom:6px}
+.why p{font-size:14.5px;color:var(--muted);font-weight:300}
+
+/* meet */
+.meet{background:var(--terra);color:#FBEFE6;overflow:hidden}
+.meet .waves2{position:absolute;inset:0;width:100%;height:100%;opacity:.35;pointer-events:none}
+.meet-grid{position:relative;display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.meet-grid{grid-template-columns:.8fr 1.2fr;gap:70px}}
+.mono{width:min(260px,70%);aspect-ratio:1;border-radius:50%;margin:0 auto;background:var(--ivory);display:grid;place-items:center;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.mono span{font-family:var(--serif);font-size:110px;color:var(--terra);line-height:1;font-style:italic}
+.mono:after{content:"";position:absolute;inset:-12px;border-radius:50%;border:1.5px dashed rgba(251,239,230,.55);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.meet .eyebrow{color:#F6D6C2}.meet .eyebrow:before{background:#F6D6C2}
+.meet h2 em{color:#FFE3CF}
+.meet p{color:#F7DFD0;font-size:17px;font-weight:300;margin-top:16px;max-width:52ch}
+.meet .cta .btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8)}
+.meet .cta .btn-line:hover{background:#fff;color:var(--terra)}
+.meet .btn-ivory{background:var(--ivory);color:var(--terra-d)}
+.meet .btn-ivory:hover{background:#fff;transform:translateY(-2px)}
+
+/* visit */
+.visit-grid{display:grid;gap:18px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.15fr;gap:28px}}
+.hours{background:#fff;border:1px solid var(--line);border-radius:24px;padding:10px 22px}
+.hours li{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.hours li:last-child{border-bottom:0}
+.hours li .d{font-weight:500}
+.hours li .h{color:var(--muted)}
+.hours li.closed .h{color:#A79A90}
+.hours li.today{margin:0 -12px;padding:13px 12px;border-radius:12px;background:var(--blush);border-color:transparent}
+.hours li.today .d:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--terra);margin-right:9px;vertical-align:2px}
+.hours li.today .h{color:var(--ink);font-weight:500}
+.status{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin:14px 0 4px}
+.status i{width:9px;height:9px;border-radius:50%;background:#A79A90}
+.status.open i{background:#5E8C4A;box-shadow:0 0 0 4px rgba(94,140,74,.18)}
+.mapcard{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#EFE5D3,#F6EEE2);display:flex;flex-direction:column}
+.mapcard .addr{background:#fff}
+.mapcard iframe{width:100%;height:300px;border:0;display:block;filter:sepia(.25) saturate(.85)}
+@media(min-width:900px){.mapcard iframe{height:100%;min-height:340px;flex:1}}
+.addr{padding:20px 22px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.addr strong{font-family:var(--serif);font-weight:400;font-size:22px;display:block}
+.addr span{font-size:14.5px;color:var(--muted)}
+.addr .btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* final cta */
+.final{text-align:center;padding:90px 0 96px;background:var(--ink);color:var(--ivory);overflow:hidden}
+.final h2{color:var(--ivory);max-width:17ch;margin:14px auto 0}
+.final h2 em{color:var(--terra-l)}
+.final p{color:#CDBFB3;margin:16px auto 0;max-width:40ch;font-weight:300}
+.final .cta{justify-content:center}
+.final .btn-line{color:var(--ivory);box-shadow:inset 0 0 0 1.5px rgba(250,245,236,.7)}
+.final .btn-line:hover{background:var(--ivory);color:var(--ink)}
+.final .eyebrow{color:var(--olive-l)}.final .eyebrow:before{background:var(--olive-l)}
+.final svg.fw{position:absolute;left:0;right:0;bottom:0;width:100%;height:140px;opacity:.5}
+
+footer{background:var(--ink);color:#9C8E84;border-top:1px solid rgba(255,255,255,.08);padding:26px 0;font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{color:#E3D3C6;text-decoration:none}
+footer a:hover{color:var(--terra-l)}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,245,236,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mbar .btn{flex:1;padding:14px 10px}
+@media(min-width:900px){.mbar{display:none}}
+.ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js.showall .rv{opacity:1;transform:none}
+:focus-visible{outline:2.5px solid var(--terra);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="concept"><span class="lg">Concept site by Code Craft Media, made for </span><span class="sm">Concept by Code Craft Media for </span><b>The Hair Boutique</b>. Not live.</div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Hair Boutique home">
+      <svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#B4532F"/><path d="M8 9c3 2 3 5 0 7s-3 5 0 7M15 7c3 2.5 3 5.5 0 8s-3 5.5 0 8M22 9c3 2 3 5 0 7s-3 5 0 7" fill="none" stroke="#FAF5EC" stroke-width="1.6" stroke-linecap="round"/></svg>
+      The Hair <i>Boutique</i>
+    </a>
+    <div class="links"><a href="#menu">Menu</a><a href="#color">Color</a><a href="#payton">Payton</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-terra btn-sm" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="waves" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="wv" d="M-40 610 C 180 520, 320 700, 540 600 S 900 470, 1120 560 S 1400 640, 1500 560" stroke="#B4532F" stroke-opacity=".22" stroke-width="2"/>
+    <path class="wv" d="M-40 650 C 200 560, 330 740, 560 640 S 920 510, 1140 600 S 1410 680, 1500 600" stroke="#B4532F" stroke-opacity=".14" stroke-width="1.5"/>
+    <path class="wv" d="M-40 690 C 220 600, 340 780, 580 680 S 940 550, 1160 640 S 1420 720, 1500 640" stroke="#5F6236" stroke-opacity=".16" stroke-width="1.5"/>
+    <path class="wv" d="M-40 140 C 260 60, 420 220, 700 120 S 1100 40, 1500 150" stroke="#5F6236" stroke-opacity=".10" stroke-width="1.5"/>
+    <path class="wv" d="M-40 175 C 280 95, 440 255, 720 155 S 1120 75, 1500 185" stroke="#B4532F" stroke-opacity=".10" stroke-width="1.2"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow rv">Gallatin, TN · with Payton</span>
+      <h1 class="rv">Foilyage, <em>toner</em> <span class="amp">&amp;</span> the perfect blowout.</h1>
+      <p class="lede rv">Color, highlights, cuts and Olaplex treatments by <strong>Payton Poulter</strong> on Goodview Way. Open Sunday, Monday and Wednesday.</p>
+      <div class="cta rv">
+        <a class="btn btn-terra" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book an appointment</a>
+        <a class="btn btn-line" href="tel:+16306693608"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(630) 669-3608</a>
+      </div>
+      <div class="chips rv">
+        <span class="chip">Women's cut <b>$52</b></span>
+        <span class="chip">Blowout <b>$45</b></span>
+        <span class="chip">Full foilyage <b>$185</b></span>
+      </div>
+    </div>
+    <div class="art rv" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A2A16"/><stop offset=".45" stop-color="#C77A4B"/><stop offset="1" stop-color="#F3D7B2"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6B331B"/><stop offset=".5" stop-color="#E2A974"/><stop offset="1" stop-color="#FBE9CF"/></linearGradient>
+          <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A2213"/><stop offset=".6" stop-color="#A9592F"/><stop offset="1" stop-color="#E8B98C"/></linearGradient>
+        </defs>
+        <g stroke-width="7">
+          <path class="strand" stroke="url(#g3)" d="M40 -10 C 10 80, 80 140, 40 230 S 10 380, 60 520"/>
+          <path class="strand" stroke="url(#g1)" d="M80 -10 C 50 90, 120 150, 80 240 S 50 390, 100 520"/>
+          <path class="strand" stroke="url(#g2)" d="M120 -10 C 90 90, 160 160, 120 250 S 90 400, 140 520"/>
+          <path class="strand" stroke="url(#g3)" d="M160 -10 C 130 100, 200 160, 160 255 S 130 400, 180 520"/>
+          <path class="strand" stroke="url(#g2)" d="M200 -10 C 170 100, 240 165, 200 260 S 170 405, 220 520"/>
+          <path class="strand" stroke="url(#g1)" d="M240 -10 C 210 100, 280 160, 240 255 S 210 400, 260 520"/>
+          <path class="strand" stroke="url(#g2)" d="M280 -10 C 250 95, 320 155, 280 250 S 250 395, 300 520"/>
+          <path class="strand" stroke="url(#g3)" d="M320 -10 C 290 90, 360 150, 320 240 S 290 390, 340 520"/>
+          <path class="strand" stroke="url(#g1)" d="M360 -10 C 330 85, 400 145, 360 235 S 330 385, 380 520"/>
+        </g>
+        <g stroke-width="2" stroke="#FFF3E2" stroke-opacity=".45">
+          <path class="strand" d="M100 -10 C 70 90, 140 155, 100 245 S 70 395, 120 520"/>
+          <path class="strand" d="M220 -10 C 190 100, 260 162, 220 258 S 190 402, 240 520"/>
+          <path class="strand" d="M300 -10 C 270 92, 340 152, 300 245 S 270 392, 320 520"/>
+        </g>
+      </svg>
+      <div class="tag"><div><small>Signature</small><span>Full Foilyage</span></div><div class="p">$185</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>All Over Color</span><span>Foilyage</span><span>Highlights</span><span>Toner</span><span>Blowouts</span><span>Curls &amp; Waves</span><span>Olaplex Treatment</span><span>Extensions</span>
+  <span>All Over Color</span><span>Foilyage</span><span>Highlights</span><span>Toner</span><span>Blowouts</span><span>Curls &amp; Waves</span><span>Olaplex Treatment</span><span>Extensions</span>
+</div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">The menu</span>
+      <h2>Every service, <em>every price</em>, in one place.</h2>
+      <p>Tap any service to book it with Payton. Times are how long to plan for in the chair.</p>
+    </div>
+    <div class="tabs rv" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-color" id="t-color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-cut" id="t-cut">Cut &amp; Style</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-care" id="t-care">Extras</button>
+    </div>
+
+    <div class="panel" id="p-color" role="tabpanel" aria-labelledby="t-color">
+      <div class="menu-grid">
+        <a class="svc feature" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><span class="badge">Root shadow + toner</span><div class="row"><h3>Full Foilyage</h3><span class="dots"></span><span class="price">$185</span></div><p>Foilyage or balayage with a root shadow or tap and an end toner.</p><div class="meta"><span class="t">3 hr</span><span class="go">Book →</span></div></a>
+        <a class="svc feature" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><span class="badge">Root shadow + toner</span><div class="row"><h3>Partial Foilyage</h3><span class="dots"></span><span class="price">$155</span></div><p>Foilyage or balayage with a root shadow or tap and an end toner.</p><div class="meta"><span class="t">3 hr</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Full Highlight</h3><span class="dots"></span><span class="price">$165</span></div><p>A standard highlight, finished with toner.</p><div class="meta"><span class="t">3 hr</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Partial Highlight</h3><span class="dots"></span><span class="price">$135</span></div><p>A standard highlight, finished with toner.</p><div class="meta"><span class="t">2 hr</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>All Over Color</h3><span class="dots"></span><span class="price">$110</span></div><p>Includes a root touch-up and an end toner.</p><div class="meta"><span class="t">1 hr 30 min</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Root Touch Up</h3><span class="dots"></span><span class="price">$85</span></div><p>For grey coverage or a root touch-up. No end toner.</p><div class="meta"><span class="t">1 hr 20 min</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Toner</h3><span class="dots"></span><span class="price">$55</span></div><p>For blondes: tone-correct brass or adjust highlight tones. Blowout not included.</p><div class="meta"><span class="t">35 min</span><span class="go">Book →</span></div></a>
+        <a class="svc helper" href="tel:+16306693608"><div class="row"><h3>Not sure which?</h3></div><p>Give the boutique a call and ask about the right color service before you book.</p><div class="meta"><span class="t">(630) 669-3608</span><span class="go">Call →</span></div></a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-cut" role="tabpanel" aria-labelledby="t-cut">
+      <div class="menu-grid">
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Women's Haircut</h3><span class="dots"></span><span class="price">$52</span></div><div class="meta"><span class="t">1 hr</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Blowout</h3><span class="dots"></span><span class="price">$45</span></div><div class="meta"><span class="t">45 min</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Kids Haircut</h3><span class="dots"></span><span class="price">$30</span></div><div class="meta"><span class="t">1 hr</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Curls / Waves</h3><span class="dots"></span><span class="price">$25</span></div><div class="meta"><span class="t">30 min</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Mini HC</h3><span class="dots"></span><span class="price">$10</span></div><div class="meta"><span class="t">30 min</span><span class="go">Book →</span></div></a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-care" role="tabpanel" aria-labelledby="t-care">
+      <div class="menu-grid">
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Treatment</h3><span class="dots"></span><span class="price">$25</span></div><p>Olaplex deep conditioning. Blowout not included.</p><div class="meta"><span class="t">30 min</span><span class="go">Book →</span></div></a>
+        <a class="svc" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><div class="row"><h3>Extensions</h3><span class="dots"></span><span class="price ask">Ask Payton</span></div><p>Plan for about two hours in the chair. Call or book to talk through options.</p><div class="meta"><span class="t">2 hr</span><span class="go">Book →</span></div></a>
+      </div>
+    </div>
+    <p class="note rv">All prices as listed on The Hair Boutique's booking page.</p>
+  </div>
+</section>
+
+<section class="ladder" id="color">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Find your color</span>
+      <h2>From a quick refresh to a <em>full glow-up</em>.</h2>
+      <p>Not sure what to book? Here's how the color menu builds, step by step.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="sw"></div><small>Refresh</small><h3>Root Touch Up</h3><p>Grey coverage or regrowth, between bigger appointments.</p><div class="p">$85 · 1 hr 20 min</div></div>
+      <div class="step rv"><div class="sw"></div><small>Brighten</small><h3>Toner</h3><p>Knocks out brass and resets the tone of your blonde.</p><div class="p">$55 · 35 min</div></div>
+      <div class="step rv"><div class="sw"></div><small>Dimension</small><h3>Highlights</h3><p>Partial or full, always finished with toner.</p><div class="p">from $135</div></div>
+      <div class="step rv"><div class="sw"></div><small>Transform</small><h3>Foilyage</h3><p>Root shadow or tap and end toner, all in one visit.</p><div class="p">from $155</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Why book here</span>
+      <h2>Small boutique. <em>Clear menu.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h3>One stylist</h3><p>You book with Payton, and Payton does your hair.</p></div>
+      <div class="why rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12c3-5 5-5 8 0s5 5 8 0"/><path d="M4 18c3-5 5-5 8 0s5 5 8 0"/><path d="M4 6c3-5 5-5 8 0s5 5 8 0"/></svg></div><h3>Toner built in</h3><p>All over color, foilyage and highlights all come with toner.</p></div>
+      <div class="why rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15" r="1.6"/></svg></div><h3>Sunday hours</h3><p>Open Sunday 9 to 5, plus Monday and Wednesday evenings until 7.</p></div>
+      <div class="why rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div><h3>Olaplex care</h3><p>Add an Olaplex deep conditioning treatment for $25.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="meet" id="payton">
+  <svg class="waves2" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 120 C 240 40, 420 200, 720 110 S 1180 30, 1460 130" fill="none" stroke="#FFE3CF" stroke-width="1.5"/>
+    <path d="M-20 480 C 240 400, 420 560, 720 470 S 1180 390, 1460 490" fill="none" stroke="#FFE3CF" stroke-width="1.5"/>
+    <path d="M-20 520 C 240 440, 420 600, 720 510 S 1180 430, 1460 530" fill="none" stroke="#FFE3CF" stroke-width="1"/>
+  </svg>
+  <div class="wrap meet-grid">
+    <div class="mono rv" aria-hidden="true"><span>P</span></div>
+    <div class="rv">
+      <span class="eyebrow">Your stylist</span>
+      <h2>Meet <em>Payton.</em></h2>
+      <p>Payton Poulter is the stylist behind The Hair Boutique in Gallatin, doing everything from a quick blowout to a full three-hour foilyage. See her latest work on Instagram, then grab a time that suits you.</p>
+      <div class="cta">
+        <a class="btn btn-ivory" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener">Book with Payton</a>
+        <a class="btn btn-line" href="https://www.instagram.com/hairbypaytonn" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>@hairbypaytonn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Visit</span>
+      <h2>Find us on <em>Goodview Way.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="rv">
+        <ul class="hours" id="hours">
+          <li data-d="0"><span class="d">Sunday</span><span class="h">9:00 AM – 5:00 PM</span></li>
+          <li data-d="1"><span class="d">Monday</span><span class="h">9:00 AM – 7:00 PM</span></li>
+          <li data-d="2" class="closed"><span class="d">Tuesday</span><span class="h">Closed</span></li>
+          <li data-d="3"><span class="d">Wednesday</span><span class="h">12:00 PM – 7:00 PM</span></li>
+          <li data-d="4" class="closed"><span class="d">Thursday</span><span class="h">Closed</span></li>
+          <li data-d="5" class="closed"><span class="d">Friday</span><span class="h">Closed</span></li>
+          <li data-d="6" class="closed"><span class="d">Saturday</span><span class="h">Closed</span></li>
+        </ul>
+        <div class="status" id="status"><i></i><span>Open Sun, Mon &amp; Wed</span></div>
+      </div>
+      <div class="mapcard rv">
+        <iframe title="Map to The Hair Boutique" loading="lazy" src="https://www.google.com/maps?q=122%20Goodview%20Way%2C%20Gallatin%2C%20TN%2037066&output=embed"></iframe>
+        <div class="addr">
+          <div><strong>122 Goodview Way</strong><span>Gallatin, TN 37066</span></div>
+          <div class="btns">
+            <a class="btn btn-terra btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=122%20Goodview%20Way%2C%20Gallatin%2C%20TN%2037066" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+            <a class="btn btn-line btn-sm" href="tel:+16306693608">Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap" style="position:relative;z-index:1">
+    <span class="eyebrow">Ready when you are</span>
+    <h2>Your next color starts with <em>one tap.</em></h2>
+    <p>Pick a service, pick a time, and Payton will see you on Goodview Way.</p>
+    <div class="cta">
+      <a class="btn btn-terra" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener">Book an appointment</a>
+      <a class="btn btn-line" href="tel:+16306693608">Call (630) 669-3608</a>
+    </div>
+  </div>
+  <svg class="fw" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 80 C 240 20, 420 130, 720 70 S 1200 10, 1440 80" fill="none" stroke="#B4532F" stroke-width="1.5"/>
+    <path d="M0 105 C 240 45, 420 155, 720 95 S 1200 35, 1440 105" fill="none" stroke="#A3A56E" stroke-width="1.2"/>
+  </svg>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>The Hair Boutique · 122 Goodview Way, Gallatin, TN 37066 · <a href="tel:+16306693608">(630) 669-3608</a> · <a href="mailto:blush.payton@gmail.com">blush.payton@gmail.com</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+16306693608"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="btn btn-terra" href="https://square.site/book/LTNRXE3W65J00/the-hair-boutique-gallatin-tn" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  setTimeout(function(){d.classList.add('showall')},1500);
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { d.classList.add('showall'); }
+  // nav border
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>10)},{passive:true});
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t)})});
+  show(tabs[0]);
+  // today
+  var now=new Date(), day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+  var hrs={0:[540,1020],1:[540,1140],3:[720,1140]};
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), s=st.querySelector('span');
+  if(hrs[day] && mins>=hrs[day][0] && mins<hrs[day][1]){st.classList.add('open');s.textContent='Open now · until '+(day===0?'5:00 PM':'7:00 PM')}
+  else { var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], times={0:'9:00 AM',1:'9:00 AM',3:'12:00 PM'};
+    for(var i=0;i<8;i++){var n=(day+i)%7; if(hrs[n] && (i>0 || mins<hrs[n][0])){s.textContent='Closed now · opens '+(i===0?'today':i===1?'tomorrow':names[n])+' at '+times[n];break}} }
+})();
+</script>
+</body>
+</html>

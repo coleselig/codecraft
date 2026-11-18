@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Singler's Barbershop — Cumberland Gap</title>
+<meta name="description" content="Concept site for Singler's Barbershop, 704 Brooklyn St, Unit 2, Cumberland Gap, TN. Haircuts, beard trims and straight razor shaves by Master Barber Anthony Singler.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#5E1F1E; --ox2:#7a2a28; --parch:#EFE6D2; --parch2:#e5d8bc; --char:#1E1C1A; --brass:#B08D57; --brass2:#c9a874;
+  --ink:#2a2420; --muted:#6b5d4f;
+  --disp:"Abril Fatface", Georgia, serif; --body:"Work Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--parch);color:var(--ink);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.banner{position:relative;z-index:1}
+
+.banner{background:var(--char);color:#cfc3ac;font-size:10px;letter-spacing:-.01em;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--brass2);font-weight:600}
+
+.pole{height:8px;background:repeating-linear-gradient(-45deg,var(--ox) 0 12px,var(--parch) 12px 20px,#24425e 20px 32px,var(--parch) 32px 40px);background-size:56.57px 8px;animation:pole 3s linear infinite}
+@keyframes pole{to{background-position:56.57px 0}}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark .s{width:38px;height:38px;border-radius:50%;background:var(--ox);color:var(--parch);display:grid;place-items:center;font-family:var(--disp);font-size:22px;box-shadow:0 0 0 2px var(--parch),0 0 0 3.5px var(--brass)}
+.mark span{font-family:var(--disp);font-size:20px;letter-spacing:.01em;color:var(--char)}
+.nav ul{display:none;list-style:none;gap:28px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.nav ul a{text-decoration:none;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--ox);transform:scaleX(0);transition:transform .25s}
+.nav ul a:hover::after{transform:scaleX(1)}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:26px 0 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ox)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--brass)}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(44px,12.5vw,104px);line-height:.95;color:var(--char);margin:16px 0 18px;letter-spacing:-.005em}
+.hero h1 em{font-style:normal;color:var(--ox);display:block}
+.hero .sub{font-size:17px;max-width:520px;color:var(--muted)}
+.hero .sub strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 22px}.cta .btn{flex:1 1 auto}@media(min-width:900px){.cta .btn{flex:0 0 auto}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 24px;border-radius:2px;font-weight:700;font-size:15px;letter-spacing:.04em;text-decoration:none;transition:transform .15s,background .2s,box-shadow .2s;min-height:50px}
+.btn.p{background:var(--ox);color:var(--parch);box-shadow:4px 4px 0 var(--char)}
+.btn.p:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--char);background:var(--ox2)}
+.btn.g{border:2px solid var(--char);color:var(--char)}
+.btn.g:hover{background:var(--char);color:var(--parch)}
+.btn:active{transform:translate(2px,2px)!important;box-shadow:1px 1px 0 var(--char)}
+.hero-grid{display:grid;gap:10px;position:relative;z-index:2}
+@media(min-width:900px){.hero{padding-top:50px}.hero h1{font-size:88px}.hero-grid{grid-template-columns:1.5fr .7fr;align-items:center;gap:40px}}
+.badge-wrap{display:flex;justify-content:center;margin:0 0 6px}
+@media(min-width:900px){.badge-wrap{justify-content:flex-end;margin:0}}
+.badge{width:150px;height:150px;animation:spin 40s linear infinite}
+@media(min-width:900px){.badge{width:300px;height:300px}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge .core{animation:spin 40s linear infinite reverse;transform-origin:150px 150px}
+.ridge{position:relative;margin-top:-10px;z-index:1}
+.ridge svg{width:100%;height:auto}
+.ridge-cap .br{display:block}@media(min-width:700px){.ridge-cap .br{display:none}}.ridge-cap{background:var(--char);color:#a99a82;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:0 16px 16px;margin-top:-1px}
+
+/* sections */
+section{padding:72px 0}
+.h2{font-family:var(--disp);font-weight:400;font-size:clamp(34px,8vw,58px);line-height:1;color:var(--char);margin:10px 0 14px}
+.lede{color:var(--muted);max-width:560px}
+
+/* menu */
+#menu{background:var(--char);color:var(--parch)}
+#menu .h2{color:var(--parch)}
+#menu .eyebrow{color:var(--brass2)}
+#menu .lede{color:#b9ab93}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;padding:9px 14px!important;background:none;border:1.5px solid #4a433c;color:#cfc3ac;font:600 13px var(--body);letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;border-radius:40px;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--brass)}
+.tab[aria-selected=true]{background:var(--brass);border-color:var(--brass);color:var(--char)}
+.list{display:grid;gap:0;margin-top:14px}
+@media(min-width:900px){.list{grid-template-columns:1fr 1fr;column-gap:56px}}
+.svc{padding:20px 0;border-bottom:1px dashed #4a433c;transition:background .2s}
+.svc[hidden]{display:none}
+.svc .row{display:flex;align-items:baseline;gap:10px}
+.svc h3{font-family:var(--body);font-weight:600;font-size:17px;color:var(--parch)}
+.svc .dots{flex:1;border-bottom:2px dotted #5d544b;transform:translateY(-4px);min-width:16px}
+.svc .pr{font-family:var(--disp);font-size:26px;color:var(--brass2)}
+.svc p{font-size:14px;color:#a99a82;margin-top:4px;max-width:440px}
+.svc .t{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin-top:6px}
+.menu-foot{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.menu-foot small{color:#8f826d;font-size:13px}
+#menu .btn.p{box-shadow:4px 4px 0 var(--brass)}
+
+/* ritual */
+.ritual{display:grid;gap:18px;margin-top:34px;counter-reset:r}
+@media(min-width:760px){.ritual{grid-template-columns:repeat(4,1fr)}}
+.step{background:#f6efdf;border:1.5px solid var(--parch2);padding:24px 22px;position:relative;transition:transform .25s,box-shadow .25s}
+.step:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(30,28,26,.5)}
+.step::before{counter-increment:r;content:"0" counter(r);font-family:var(--disp);font-size:40px;color:var(--brass);line-height:1}
+.step h3{font-size:17px;margin:10px 0 6px;color:var(--char)}
+.step p{font-size:14.5px;color:var(--muted)}
+.step svg{position:absolute;top:22px;right:20px;width:30px;height:30px;color:var(--ox)}
+
+/* why */
+#why{background:var(--ox);color:var(--parch);position:relative;overflow:hidden}
+#why .h2{color:var(--parch)}
+#why .eyebrow{color:var(--brass2)}
+.facts{display:grid;gap:14px;margin-top:30px}
+@media(min-width:760px){.facts{grid-template-columns:repeat(3,1fr)}}
+.fact{border:1.5px solid rgba(239,230,210,.25);padding:24px;position:relative}
+.fact .big{font-family:var(--disp);font-size:46px;line-height:1;color:var(--brass2)}
+.fact h3{font-size:16px;margin:10px 0 4px}
+.fact p{font-size:14.5px;color:#e6d4c4}
+#why .ghost{position:absolute;right:-30px;bottom:-40px;width:320px;opacity:.07;color:var(--parch);pointer-events:none}
+
+/* hours/visit */
+.visit{display:grid;gap:28px;margin-top:30px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.1fr;gap:48px}}
+.card{background:#f6efdf;border:1.5px solid var(--parch2);padding:26px 22px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:12px 10px;border-bottom:1px solid var(--parch2);font-size:15.5px;border-radius:2px;transition:background .2s}
+.hours li span:first-child{font-weight:600}
+.hours li.closed span:last-child{color:#9a8b77}
+.hours li.today{background:var(--ox);color:var(--parch);border-color:var(--ox)}
+.hours li.today span:last-child{color:var(--parch)}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--brass);color:var(--char);padding:3px 7px;border-radius:20px;vertical-align:2px}
+.addr{font-family:var(--disp);font-size:26px;line-height:1.15;color:var(--char);margin:4px 0 14px}
+.contact{display:grid;gap:10px;margin-top:20px}
+.contact a{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;padding:12px 14px;border:1.5px solid var(--parch2);background:var(--parch);transition:border-color .2s,transform .15s;word-break:break-word}
+.contact a:hover{border-color:var(--ox);transform:translateX(3px)}
+.contact svg{width:20px;height:20px;flex:0 0 20px;color:var(--ox)}
+.map{border:1.5px solid var(--char);box-shadow:6px 6px 0 var(--brass);aspect-ratio:4/3;width:100%;overflow:hidden;background:var(--parch2)}
+.map iframe{width:100%;height:100%;border:0;filter:sepia(.25) contrast(1.05)}
+
+footer{background:var(--char);color:#a99a82;padding:44px 0 calc(100px + env(safe-area-inset-bottom));text-align:center;font-size:14px}
+footer .mark{justify-content:center;margin-bottom:14px}
+footer .mark span{color:var(--parch)}
+footer a{color:var(--brass2)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(30,28,26,.96);backdrop-filter:blur(6px);border-top:3px solid var(--ox)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;font-weight:700;font-size:15px;text-decoration:none;border-radius:2px}
+.bar .c{border:1.5px solid #6b6156;color:var(--parch)}
+.bar .b{background:var(--ox);color:var(--parch)}
+.bar svg{width:18px;height:18px}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveals (content visible without JS) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+@media(min-width:900px){footer{padding-bottom:36px}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Singler's Barbershop. Not live.</div>
+<div class="pole" aria-hidden="true"></div>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a href="#top" class="mark" aria-label="Singler's Barbershop home"><span class="s">S</span><span>Singler's</span></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#shave">The Shave</a></li>
+      <li><a href="#why">Why Singler's</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-bottom:0">
+    <div class="wrap hero-grid">
+      <div class="rv">
+        <div class="eyebrow">Cumberland Gap, Tennessee</div>
+        <h1>A sharp cut in the shadow of <em>the Gap.</em></h1>
+        <p class="sub">Tapered and faded cuts, beard sculpting and <strong>hot-towel straight razor shaves</strong> by Master Barber Anthony Singler, on Brooklyn Street.</p>
+        <div class="cta">
+          <a class="btn p" href="https://square.site/book/VPZ2RYRTW72X8/anthony-singler-sevierville-tn" target="_blank" rel="noopener">Book a chair
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn g" href="tel:+15134179908">Call (513) 417-9908</a>
+        </div>
+      </div>
+      <div class="badge-wrap rv" aria-hidden="true">
+        <svg class="badge" viewBox="0 0 300 300">
+          <defs><path id="circ" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"/></defs>
+          <circle cx="150" cy="150" r="146" fill="none" stroke="#B08D57" stroke-width="2"/>
+          <circle cx="150" cy="150" r="138" fill="#5E1F1E"/>
+          <circle cx="150" cy="150" r="98" fill="none" stroke="#B08D57" stroke-width="1.5" stroke-dasharray="2 5"/>
+          <text font-family="Work Sans, sans-serif" font-weight="700" font-size="15" letter-spacing="3.1" fill="#EFE6D2"><textPath href="#circ">SINGLER'S BARBERSHOP · MASTER BARBER · CUMBERLAND GAP ·</textPath></text>
+          <g class="core">
+            <circle cx="150" cy="150" r="84" fill="#EFE6D2"/>
+            <g transform="translate(150 150)">
+              <!-- straight razor -->
+              <g transform="rotate(-35)">
+                <rect x="-62" y="-9" width="70" height="18" rx="9" fill="#1E1C1A"/>
+                <circle cx="-52" cy="0" r="2.5" fill="#B08D57"/><circle cx="-2" cy="0" r="2.5" fill="#B08D57"/>
+                <path d="M8 -9 L62 -9 Q70 -9 68 0 L64 12 L8 6 Z" fill="#B08D57" stroke="#1E1C1A" stroke-width="2"/>
+                <path d="M12 -4 L60 -4" stroke="#EFE6D2" stroke-width="1.5" opacity=".7"/>
+              </g>
+              <text y="56" text-anchor="middle" font-family="Abril Fatface, serif" font-size="20" fill="#5E1F1E">· TN ·</text>
+              <text y="-40" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#1E1C1A">HOT TOWEL</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="ridge" aria-hidden="true">
+      <svg viewBox="0 0 1440 260" preserveAspectRatio="none" style="height:clamp(120px,22vw,260px)">
+        <path d="M0 150 L80 120 L150 135 L230 92 L300 110 L360 70 L430 98 L500 80 L560 112 L640 66 L700 54 L760 88 L820 118 L870 150 L920 120 L990 84 L1060 100 L1130 62 L1200 90 L1270 72 L1340 104 L1440 86 L1440 260 L0 260 Z" fill="#B08D57" opacity=".35"/>
+        <path d="M0 190 L70 160 L140 176 L210 140 L290 162 L370 122 L440 150 L520 128 L600 160 L680 132 L740 150 L800 178 L860 196 L920 172 L1000 138 L1080 156 L1160 120 L1240 146 L1320 130 L1440 152 L1440 260 L0 260 Z" fill="#5E1F1E"/>
+        <path d="M0 230 L90 208 L180 222 L260 200 L360 218 L460 196 L560 214 L660 204 L760 226 L860 236 L960 214 L1060 202 L1160 220 L1260 206 L1360 222 L1440 210 L1440 260 L0 260 Z" fill="#1E1C1A"/>
+      </svg>
+    </div>
+    <div class="ridge-cap">704 Brooklyn St, Unit 2<span class="br"></span> · Cumberland Gap, TN</div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">The Menu</div>
+        <h2 class="h2">Thirteen ways out the door looking right.</h2>
+        <p class="lede">Every service and price straight from Singler's booking page. Pick one and book it in a few taps.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Filter services">
+        <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="shave">Shaves</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="beard">Beard</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="combo">Combos</button>
+      </div>
+      <div class="list" id="list">
+        <div class="svc" data-c="cut"><div class="row"><h3>Haircut</h3><span class="dots"></span><span class="pr">$20</span></div><p>Tapered or faded sides, scissor-cut top, and a straight razor neck shave. Ages 13 and older.</p><span class="t">30 min</span></div>
+        <div class="svc" data-c="cut"><div class="row"><h3>Kids Cut</h3><span class="dots"></span><span class="pr">$15</span></div><p>For children 12 and younger.</p><span class="t">30 min</span></div>
+        <div class="svc" data-c="cut"><div class="row"><h3>Senior Cut</h3><span class="dots"></span><span class="pr">$15</span></div><p>For customers 65 and older.</p><span class="t">30 min</span></div>
+        <div class="svc" data-c="cut"><div class="row"><h3>Buzz Cut</h3><span class="dots"></span><span class="pr">$10</span></div><p>One clipper guard length all over.</p><span class="t">10 min</span></div>
+        <div class="svc" data-c="shave"><div class="row"><h3>Hot Towel Face Shave</h3><span class="dots"></span><span class="pr">$30</span></div><p>Straight razor face shave with pre-shave lotion, hot towels, and aftershave.</p><span class="t">45 min</span></div>
+        <div class="svc" data-c="shave"><div class="row"><h3>Straight Razor Head Shave</h3><span class="dots"></span><span class="pr">$30</span></div><p>Straight razor head shave with pre-shave, hot towel, and aftershave.</p><span class="t">45 min</span></div>
+        <div class="svc" data-c="shave"><div class="row"><h3>Straight Razor Head &amp; Face Shave</h3><span class="dots"></span><span class="pr">$50</span></div><p>Straight razor shave on the head and face, with pre-shave lotion, hot towels, and aftershave.</p><span class="t">1 hr 30 min</span></div>
+        <div class="svc" data-c="beard"><div class="row"><h3>Beard Trim</h3><span class="dots"></span><span class="pr">$15</span></div><p>Beard sculpt and lineup.</p><span class="t">15 min</span></div>
+        <div class="svc" data-c="beard"><div class="row"><h3>Beard Trim + Hot Towel Shave</h3><span class="dots"></span><span class="pr">$20</span></div><span class="t">30 min</span></div>
+        <div class="svc" data-c="combo"><div class="row"><h3>Haircut &amp; Beard Trim</h3><span class="dots"></span><span class="pr">$30</span></div><p>Tapered or faded haircut, beard sculpt and lineup, and a straight razor neck shave.</p><span class="t">45 min</span></div>
+        <div class="svc" data-c="combo"><div class="row"><h3>Haircut, Beard Trim + Hot Towel Shave</h3><span class="dots"></span><span class="pr">$35</span></div><span class="t">45 min</span></div>
+        <div class="svc" data-c="combo"><div class="row"><h3>Straight Razor Head Shave &amp; Beard Trim</h3><span class="dots"></span><span class="pr">$40</span></div><p>Straight razor head shave with pre-shave lotion, hot towels, and aftershave.</p><span class="t">1 hr</span></div>
+        <div class="svc" data-c="combo"><div class="row"><h3>Haircut &amp; Hot Towel Shave</h3><span class="dots"></span><span class="pr">$45</span></div><p>Tapered or faded haircut plus a straight razor face shave.</p><span class="t">1 hr 15 min</span></div>
+      </div>
+      <div class="menu-foot">
+        <small>Prices as listed on Singler's Square booking page.</small>
+        <a class="btn p" href="https://square.site/book/VPZ2RYRTW72X8/anthony-singler-sevierville-tn" target="_blank" rel="noopener">See open times</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shave">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">The Straight Razor Shave</div>
+        <h2 class="h2">Done the old way, start to finish.</h2>
+        <p class="lede">Each straight razor shave on the menu comes with the full routine, as listed on the booking page.</p>
+      </div>
+      <div class="ritual">
+        <div class="step rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v6a5 5 0 0 0 10 0V3M12 14v7M8 21h8"/></svg><h3>Pre-shave</h3><p>Pre-shave lotion to prep the skin.</p></div>
+        <div class="step rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3c-1 2 1 3 0 5M12 3c-1 2 1 3 0 5M16 3c-1 2 1 3 0 5M3 12h18v3a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6z"/></svg><h3>Hot towels</h3><p>Hot towels to soften things up.</p></div>
+        <div class="step rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 15l9-9 3 3-9 9H3zM14 5l2-2 5 5-2 2"/></svg><h3>Straight razor</h3><p>A close straight razor shave, face, head or both.</p></div>
+        <div class="step rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6v4H9zM7 7h10v14H7zM10 12h4"/></svg><h3>Aftershave</h3><p>Finished with aftershave.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <svg class="ghost" viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate(-35 50 50)" fill="currentColor"><rect x="5" y="44" width="45" height="12" rx="6"/><path d="M52 44h38q6 0 4 6l-3 8H52z"/></g></svg>
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">Why Singler's</div>
+        <h2 class="h2">One master barber. One chair you can count on.</h2>
+      </div>
+      <div class="facts">
+        <div class="fact rv"><div class="big">Master</div><h3>Barber Anthony Singler</h3><p>Anthony Singler is the barber listed on the booking page, under the title Master Barber.</p></div>
+        <div class="fact rv"><div class="big">13</div><h3>Services, clearly priced</h3><p>From a $10 buzz cut to the $50 head-and-face straight razor shave. No guessing at the counter.</p></div>
+        <div class="fact rv"><div class="big">$15</div><h3>Kids &amp; seniors</h3><p>Kids 12 and under and customers 65 and older get their own $15 cut.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">Visit</div>
+        <h2 class="h2">Find the pole on Brooklyn Street.</h2>
+      </div>
+      <div class="visit">
+        <div class="card rv">
+          <ul class="hours" id="hours">
+            <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+            <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+            <li data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></li>
+            <li data-d="3"><span>Wednesday</span><span>9:00 AM – 5:00 PM</span></li>
+            <li data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></li>
+            <li data-d="5"><span>Friday</span><span>9:00 AM – 5:00 PM</span></li>
+            <li data-d="6"><span>Saturday</span><span>7:00 AM – 12:00 PM</span></li>
+          </ul>
+          <div class="contact">
+            <a href="tel:+15134179908"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(513) 417-9908</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=704+Brooklyn+St+Unit+2+Cumberland+Gap+TN+37724" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get directions</a>
+            <a href="mailto:anthony_singler@yahoo.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>anthony_singler@yahoo.com</a>
+          </div>
+        </div>
+        <div class="rv">
+          <p class="addr">704 Brooklyn St, Unit 2<br>Cumberland Gap, TN 37724</p>
+          <div class="map"><iframe title="Map to Singler's Barbershop" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=704%20Brooklyn%20St%2C%20Unit%202%2C%20Cumberland%20Gap%2C%20TN%2037724&amp;output=embed"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="mark"><span class="s">S</span><span>Singler's Barbershop</span></a>
+    <p>704 Brooklyn St, Unit 2 · Cumberland Gap, TN 37724 · <a href="tel:+15134179908">(513) 417-9908</a></p>
+    <p style="margin-top:14px;font-size:12.5px">Concept by Code Craft Media. Not affiliated with or live for Singler's Barbershop.</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="c" href="tel:+15134179908"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/VPZ2RYRTW72X8/anthony-singler-sevierville-tn" target="_blank" rel="noopener">Book a chair</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var d0=new Date().getDay(), li=document.querySelector('#hours li[data-d="'+d0+'"]'); if(li) li.classList.add('today');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else d.classList.add('show-all');
+  setTimeout(function(){d.classList.add('show-all')},1500);
+  var tabs=document.querySelectorAll('.tab'), svcs=document.querySelectorAll('.svc');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    var f=t.getAttribute('data-f'); svcs.forEach(function(s){s.hidden=!(f==='all'||s.getAttribute('data-c')===f)});
+  })});
+})();
+</script>
+</body>
+</html>

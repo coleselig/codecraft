@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Fade to Glory — Clarksville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#4a0f17; --ox2:#2a070c; --ox3:#6b1622; --bone:#efe6d6; --bone2:#d9ccb4; --brass:#c19a4b; --brass2:#e2c27f; --ink:#1a0508;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ox2);color:var(--bone);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.bebas{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.92}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--ink);color:var(--bone2);font-size:10.5px;text-align:center;padding:7px 12px;letter-spacing:0;line-height:1.35;border-bottom:1px solid rgba(193,154,75,.25)}
+.concept b{color:var(--brass2);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(42,7,12,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(193,154,75,.2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:30px;height:30px}
+.logo span{font-family:"Bebas Neue";font-size:26px;letter-spacing:.06em;color:var(--bone)}
+.logo span em{font-style:normal;color:var(--brass)}
+.navlinks{display:flex;gap:28px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--bone2);transition:color .2s}
+.navlinks a:hover{color:var(--brass2)}
+.navbook{background:var(--brass);color:var(--ink)!important;padding:9px 16px;border-radius:2px;font-weight:700;text-decoration:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,transform .2s}
+.navbook:hover{background:var(--brass2);transform:translateY(-1px)}
+@media(max-width:820px){.navlinks{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 80% at 80% 0%, rgba(193,154,75,.16), transparent 60%),
+  radial-gradient(90% 70% at 0% 100%, rgba(107,22,34,.9), transparent 70%),
+  var(--ox);
+  padding:56px 0 64px;border-bottom:1px solid rgba(193,154,75,.3)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(239,230,214,.035) 0 1px,transparent 1px 7px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass2);font-weight:600}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--brass)}
+.hero h1{font-size:clamp(64px,19vw,148px);margin:16px 0 18px;color:var(--bone)}
+.hero h1 .gold{color:transparent;background:linear-gradient(180deg,var(--brass2),var(--brass) 55%,#8e6b2a);-webkit-background-clip:text;background-clip:text}
+.hero h1 .line{display:block}
+.hero p.sub{font-size:17px;color:var(--bone2);max-width:30em}
+.hero p.sub strong{color:var(--bone);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:transform .2s,background .2s,box-shadow .2s,color .2s}
+.btn-gold{background:var(--brass);color:var(--ink);box-shadow:0 10px 30px -10px rgba(193,154,75,.7)}
+.btn-gold:hover{background:var(--brass2);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--brass);color:var(--brass2)}
+.btn-line:hover{background:rgba(193,154,75,.12);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+.openchip{margin-top:22px;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--bone2)}
+.dot{width:8px;height:8px;border-radius:50%;background:#7fbf7f;box-shadow:0 0 0 0 rgba(127,191,127,.6);animation:pulse 2s infinite}
+.dot.closed{background:#b8706f;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(127,191,127,.55)}70%{box-shadow:0 0 0 9px rgba(127,191,127,0)}100%{box-shadow:0 0 0 0 rgba(127,191,127,0)}}
+
+/* pole art */
+.poleart{position:relative;justify-self:center;width:100%;max-width:400px}
+.poleart svg{width:100%;height:auto;display:block}
+.stripes{animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:translateY(-56px)}}
+@media (prefers-reduced-motion:reduce){.stripes,.dot{animation:none}}
+@media(min-width:900px){.hero{padding:88px 0 96px}.hero .wrap{grid-template-columns:1.25fr .75fr}}
+@media(max-width:899px){.hero{padding:22px 0 48px}.hero .wrap{gap:4px}.poleart{max-width:200px;order:-1;margin:0 auto -6px}.hero h1{margin:12px 0 14px}.hero .btn-line{display:none}}
+
+/* engraved rule */
+.rule{display:flex;align-items:center;gap:14px;color:var(--brass);margin:0 auto 18px;justify-content:center}
+.rule::before,.rule::after{content:"";height:1px;flex:0 1 70px;background:linear-gradient(90deg,transparent,var(--brass))}
+.rule::after{background:linear-gradient(270deg,transparent,var(--brass))}
+.rule svg{width:16px;height:16px}
+
+section{padding:76px 0}
+.sec-h{text-align:center;margin-bottom:40px}
+.sec-h h2{font-size:clamp(46px,11vw,76px);color:var(--bone)}
+.sec-h p{color:var(--bone2);margin-top:8px;font-size:15px}
+
+/* strip ticker */
+.ticker{background:var(--brass);color:var(--ink);overflow:hidden;white-space:nowrap;border-top:1px solid #8e6b2a;border-bottom:1px solid #8e6b2a}
+.ticker .track{display:inline-block;padding:11px 0;font-family:"Bebas Neue";font-size:22px;letter-spacing:.12em;animation:tick 28s linear infinite}
+.ticker span{margin:0 18px}
+.ticker i{font-style:normal;opacity:.55}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* menu */
+.menu{background:var(--bone);color:var(--ink);position:relative}
+.menu::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(0deg,rgba(74,15,23,.035) 0 1px,transparent 1px 4px);pointer-events:none}
+.menu .sec-h h2{color:var(--ox)}
+.menu .sec-h p{color:#5a3a35}
+.menu .rule{color:var(--ox3)}
+.menu .rule::before{background:linear-gradient(90deg,transparent,var(--ox3))}
+.menu .rule::after{background:linear-gradient(270deg,transparent,var(--ox3))}
+.packages{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:34px;position:relative}
+@media(min-width:720px){.packages{grid-template-columns:1fr 1fr}}
+.pkg{position:relative;padding:26px 24px 24px;border:1px solid var(--ox);background:linear-gradient(180deg,#f6efe2,#ece1cc);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.pkg:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(42,7,12,.6)}
+.pkg::after{content:"";position:absolute;inset:6px;border:1px solid rgba(74,15,23,.25);pointer-events:none}
+.pkg .tier{font-family:"Bebas Neue";font-size:15px;letter-spacing:.3em;color:var(--ox3)}
+.pkg h3{font-size:40px;color:var(--ox);margin:4px 0 6px}
+.pkg .price{position:absolute;top:22px;right:22px;font-family:"Bebas Neue";font-size:44px;color:var(--ox);line-height:1}
+.pkg.gold{background:linear-gradient(160deg,#3a0a11,#5a121c);color:var(--bone);border-color:var(--brass)}
+.pkg.gold::after{border-color:rgba(193,154,75,.45)}
+.pkg.gold .tier{color:var(--brass2)}
+.pkg.gold h3{color:var(--bone)}
+.pkg.gold .price{color:var(--brass2)}
+.pkg .meta{font-size:13px;opacity:.75}
+.list{display:grid;grid-template-columns:1fr;gap:0 48px;position:relative}
+@media(min-width:720px){.list{grid-template-columns:1fr 1fr}}
+.item{display:flex;align-items:baseline;gap:10px;padding:15px 2px;border-bottom:1px solid rgba(74,15,23,.18)}
+.item .name{font-weight:600;font-size:16px}
+.item .lead{flex:1;border-bottom:1px dotted rgba(74,15,23,.4);transform:translateY(-4px);min-width:16px}
+.item .p{font-family:"Bebas Neue";font-size:26px;color:var(--ox);line-height:1}
+.item small{display:block;font-size:12.5px;color:#6b4a44;font-weight:400}
+.note{text-align:center;font-size:13px;color:#6b4a44;margin-top:22px;position:relative}
+.menu .ctas{justify-content:center}
+.menu .btn-line{border-color:var(--ox);color:var(--ox)}
+.menu .btn-line:hover{background:rgba(74,15,23,.08)}
+
+/* why */
+.why{background:var(--ox2);position:relative}
+.why .grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:720px){.why .grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.why .grid{grid-template-columns:repeat(4,1fr)}}
+.card{border:1px solid rgba(193,154,75,.3);padding:26px 22px;background:linear-gradient(180deg,rgba(107,22,34,.35),rgba(42,7,12,.2));position:relative;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--brass);transform:translateY(-3px)}
+.card .num{font-family:"Bebas Neue";font-size:56px;color:var(--brass);line-height:1}
+.card h3{font-size:28px;margin:10px 0 8px;color:var(--bone)}
+.card p{font-size:14.5px;color:var(--bone2)}
+.card svg{width:34px;height:34px;color:var(--brass)}
+
+/* hours */
+.visit{background:var(--ox);border-top:1px solid rgba(193,154,75,.25)}
+.visit .grid{display:grid;grid-template-columns:1fr;gap:26px}
+@media(min-width:900px){.visit .grid{grid-template-columns:1fr 1.1fr;align-items:start}}
+.hours{border:1px solid rgba(193,154,75,.35);padding:8px 22px;background:rgba(26,5,8,.35)}
+.hours h3{font-size:32px;padding:14px 0 6px;color:var(--brass2)}
+.hrow{display:flex;justify-content:space-between;gap:10px;white-space:nowrap;padding:12px 10px;border-bottom:1px solid rgba(239,230,214,.08);font-size:14.5px;margin:0 -10px}
+.hrow:last-child{border-bottom:0}
+.hrow.today{background:var(--brass);color:var(--ink);font-weight:700;border-radius:2px}
+.hrow.today .d::after{content:"Today";margin-left:6px;padding:1px 5px;background:var(--ink);color:var(--brass2);border-radius:2px;font-size:10px;vertical-align:2px;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.where{display:flex;flex-direction:column;gap:14px}
+.map{border:1px solid rgba(193,154,75,.35);overflow:hidden;aspect-ratio:4/3;background:#1a0508}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.35) sepia(.25) contrast(1.05)}
+.addr{font-size:15px;color:var(--bone2)}
+.addr strong{display:block;font-family:"Bebas Neue";font-size:30px;color:var(--bone);font-weight:400;letter-spacing:.03em}
+.where .ctas{margin-top:2px}
+
+footer{background:var(--ink);padding:44px 0 36px;text-align:center;font-size:13px;color:var(--bone2);border-top:1px solid rgba(193,154,75,.25)}
+footer .logo{justify-content:center;margin-bottom:12px}
+footer a{color:var(--brass2)}
+footer .small{margin-top:14px;opacity:.6;font-size:12px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(26,5,8,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(193,154,75,.35)}
+.callbar a{flex:1;height:52px}
+@media(min-width:900px){.callbar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>Fade to Glory</b>. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Fade to Glory home">
+      <svg class="mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="none" stroke="#c19a4b" stroke-width="1.2"/><circle cx="15" cy="15" r="10.5" fill="none" stroke="#c19a4b" stroke-width=".6"/><path d="M9 19 L21 11 M9 15 L17 9.7 M13 21 L21 15.4" stroke="#efe6d6" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span>Fade to <em>Glory</em></span>
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#why">The Chair</a><a href="#visit">Hours &amp; Map</a></div>
+    <a class="navbook" href="https://square.site/book/5BG156T9EGP9C/fade-to-glory-clarksville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Barbershop · Clarksville, TN</div>
+      <h1><span class="line">From fade</span><span class="line">to <span class="gold">glory.</span></span></h1>
+      <p class="sub">Fresh cuts, beard work, hot towel shaves and custom designs on Wilma Rudolph. <strong>Open seven days a week.</strong></p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://square.site/book/5BG156T9EGP9C/fade-to-glory-clarksville-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book your chair</a>
+        <a class="btn btn-line" href="tel:+19318028269">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(931) 802-8269</a>
+      </div>
+      <div class="openchip"><span class="dot" id="dot"></span><span id="openTxt">Open 7 days a week</span></div>
+    </div>
+
+    <div class="poleart rv" aria-hidden="true">
+      <svg viewBox="0 10 300 400">
+        <defs>
+          <clipPath id="tube"><rect x="112" y="88" width="76" height="244" rx="6"/></clipPath>
+          <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".22" stop-color="#fff" stop-opacity=".35"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#000" stop-opacity=".35"/></linearGradient>
+          <linearGradient id="brassg" x1="0" x2="1"><stop offset="0" stop-color="#7d5c22"/><stop offset=".35" stop-color="#e2c27f"/><stop offset=".6" stop-color="#c19a4b"/><stop offset="1" stop-color="#5e4416"/></linearGradient>
+          <pattern id="engr" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#c19a4b" stroke-opacity=".22" stroke-width="1"/></pattern>
+        </defs>
+        <circle cx="150" cy="210" r="140" fill="url(#engr)"/>
+        <circle cx="150" cy="210" r="140" fill="none" stroke="#c19a4b" stroke-opacity=".5"/>
+        <circle cx="150" cy="210" r="128" fill="none" stroke="#c19a4b" stroke-opacity=".25" stroke-dasharray="2 5"/>
+        <g clip-path="url(#tube)">
+          <rect x="112" y="88" width="76" height="244" fill="#efe6d6"/>
+          <g class="stripes">
+            <g id="s">
+              <path d="M90 100 L210 40 L210 62 L90 122Z" fill="#6b1622"/>
+              <path d="M90 128 L210 68 L210 76 L90 136Z" fill="#c19a4b"/>
+            </g>
+            <use href="#s" y="56"/><use href="#s" y="112"/><use href="#s" y="168"/><use href="#s" y="224"/><use href="#s" y="280"/><use href="#s" y="336"/>
+          </g>
+          <rect x="112" y="88" width="76" height="244" fill="url(#glass)"/>
+        </g>
+        <rect x="112" y="88" width="76" height="244" rx="6" fill="none" stroke="#2a070c" stroke-width="2"/>
+        <rect x="100" y="66" width="100" height="24" rx="3" fill="url(#brassg)"/>
+        <path d="M112 66 Q150 22 188 66Z" fill="url(#brassg)"/>
+        <circle cx="150" cy="30" r="9" fill="url(#brassg)"/>
+        <rect x="100" y="330" width="100" height="24" rx="3" fill="url(#brassg)"/>
+        <path d="M112 354 Q150 392 188 354Z" fill="url(#brassg)"/>
+        <line x1="104" y1="78" x2="196" y2="78" stroke="#5e4416" stroke-width=".8"/>
+        <line x1="104" y1="342" x2="196" y2="342" stroke="#5e4416" stroke-width=".8"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Men's Cuts</span><i>✦</i><span>Beard Trims</span><i>✦</i><span>Hot Towel Shaves</span><i>✦</i><span>Designs</span><i>✦</i><span>Kids Cuts</span><i>✦</i><span>Eyebrow Arching</span><i>✦</i><span>Silver &amp; Gold Packages</span><i>✦</i>
+  <span>Men's Cuts</span><i>✦</i><span>Beard Trims</span><i>✦</i><span>Hot Towel Shaves</span><i>✦</i><span>Designs</span><i>✦</i><span>Kids Cuts</span><i>✦</i><span>Eyebrow Arching</span><i>✦</i><span>Silver &amp; Gold Packages</span><i>✦</i>
+</div></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="rule"><svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6Z" fill="currentColor"/></svg></div>
+      <h2>The Menu</h2>
+      <p>Straight from the booking book. Pick a service, pick a time.</p>
+    </div>
+
+    <div class="packages">
+      <div class="pkg rv">
+        <div class="tier">Package · Silver</div>
+        <h3>Haircut + Beard Trim</h3>
+        <div class="price">$45</div>
+        <div class="meta">1 hr 20 min in the chair</div>
+      </div>
+      <div class="pkg gold rv">
+        <div class="tier">Package · Gold</div>
+        <h3>Haircut + Beard Trim</h3>
+        <div class="price">$50</div>
+        <div class="meta">30 min in the chair</div>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="item rv"><div><div class="name">Men's Haircut</div><small>Price varies · 30 min</small></div><span class="lead"></span><span class="p">$25</span></div>
+      <div class="item rv"><div><div class="name">Women's Haircut</div><small>Price varies · 30 min</small></div><span class="lead"></span><span class="p">$22</span></div>
+      <div class="item rv"><div><div class="name">Kids Haircut</div><small>Prices vary · 30 min</small></div><span class="lead"></span><span class="p">$23</span></div>
+      <div class="item rv"><div><div class="name">Beard Trim</div><small>Price varies · 20 min</small></div><span class="lead"></span><span class="p">$10</span></div>
+      <div class="item rv"><div><div class="name">Hot Towel Shave</div><small>30 min</small></div><span class="lead"></span><span class="p">$15</span></div>
+      <div class="item rv"><div><div class="name">Design</div><small>Starts at $15, depends on size &amp; detail · 30 min</small></div><span class="lead"></span><span class="p">$15</span></div>
+      <div class="item rv"><div><div class="name">Eyebrow Arching</div><small>20 min</small></div><span class="lead"></span><span class="p">$10</span></div>
+      <div class="item rv"><div><div class="name">Color Enhancement</div><small>Prices vary · 15 min</small></div><span class="lead"></span><span class="p">$10</span></div>
+      <div class="item rv"><div><div class="name">Shampoo</div><small>Price varies · 20 min</small></div><span class="lead"></span><span class="p">$10</span></div>
+    </div>
+    <p class="note">Prices as listed on Fade to Glory's Square booking page. "Price varies" means final price depends on the cut.</p>
+    <div class="ctas"><a class="btn btn-line" href="https://square.site/book/5BG156T9EGP9C/fade-to-glory-clarksville-tn" target="_blank" rel="noopener">See open times</a></div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="rule"><svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6Z" fill="currentColor"/></svg></div>
+      <h2>Why This Chair</h2>
+      <p>No hype. Just what the shop actually offers.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv"><div class="num">7</div><h3>Days a week</h3><p>Open Sunday through Saturday, so a fresh cut fits around shifts, school and weekends.</p></div>
+      <div class="card rv"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 24c4-2 8-2 11 0s8 2 11 0M6 18c4-2 8-2 11 0s8 2 11 0M10 12c2-3 2-5 0-8M17 12c2-3 2-5 0-8M24 12c2-3 2-5 0-8"/></svg><h3>Hot towel shaves</h3><p>The old-school finish, on the menu for $15.</p></div>
+      <div class="card rv"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 28 L17 6 L29 28Z M11 22h12M14 16h6"/></svg><h3>Custom designs</h3><p>Line work and designs starting at $15, priced by size and detail.</p></div>
+      <div class="card rv"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="7" width="24" height="22" rx="1"/><path d="M5 13h24M11 4v6M23 4v6M11 20l4 4 8-8"/></svg><h3>Book in seconds</h3><p>Real-time booking online. Pick the service, pick the slot, done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="rule"><svg viewBox="0 0 16 16"><path d="M8 0 L10 6 L16 8 L10 10 L8 16 L6 10 L0 8 L6 6Z" fill="currentColor"/></svg></div>
+      <h2>Hours &amp; Directions</h2>
+    </div>
+    <div class="grid">
+      <div class="hours rv">
+        <h3>Shop Hours</h3>
+        <div class="hrow" data-d="0"><span class="d">Sunday</span><span>12:00 PM – 5:00 PM</span></div>
+        <div class="hrow" data-d="1"><span class="d">Monday</span><span>12:00 PM – 5:00 PM</span></div>
+        <div class="hrow" data-d="2"><span class="d">Tuesday</span><span>1:00 PM – 5:30 PM</span></div>
+        <div class="hrow" data-d="3"><span class="d">Wednesday</span><span>11:00 AM – 5:30 PM</span></div>
+        <div class="hrow" data-d="4"><span class="d">Thursday</span><span>11:00 AM – 5:30 PM</span></div>
+        <div class="hrow" data-d="5"><span class="d">Friday</span><span>10:30 AM – 6:00 PM</span></div>
+        <div class="hrow" data-d="6"><span class="d">Saturday</span><span>10:00 AM – 4:00 PM</span></div>
+      </div>
+      <div class="where rv">
+        <div class="map"><iframe title="Map to Fade to Glory" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2053%20Wilma%20Rudolph%20Blvd%2C%20Clarksville%2C%20TN%2037042&output=embed"></iframe></div>
+        <div class="addr"><strong>2053 Wilma Rudolph</strong>Clarksville, TN 37042</div>
+        <div class="ctas">
+          <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&destination=2053%20Wilma%20Rudolph%20Blvd%2C%20Clarksville%2C%20TN%2037042" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-line" href="tel:+19318028269">Call the shop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#top"><svg class="mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="none" stroke="#c19a4b" stroke-width="1.2"/><circle cx="15" cy="15" r="10.5" fill="none" stroke="#c19a4b" stroke-width=".6"/><path d="M9 19 L21 11 M9 15 L17 9.7 M13 21 L21 15.4" stroke="#efe6d6" stroke-width="1.6" stroke-linecap="round"/></svg><span>Fade to <em>Glory</em></span></a>
+  <div>2053 Wilma Rudolph, Clarksville, TN 37042</div><div style="margin-top:6px"><a href="tel:+19318028269">(931) 802-8269</a></div>
+  <div style="margin-top:6px">Instagram <a href="https://instagram.com/mharden1989" target="_blank" rel="noopener">@mharden1989</a></div>
+  <div class="small">Concept by Code Craft Media</div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-line" href="tel:+19318028269">Call</a>
+  <a class="btn btn-gold" href="https://square.site/book/5BG156T9EGP9C/fade-to-glory-clarksville-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var d=new Date(), day=d.getDay();
+  var row=document.querySelector('.hrow[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var H=[[12,17],[12,17],[13,17.5],[11,17.5],[11,17.5],[10.5,18],[10,16]];
+  var t=d.getHours()+d.getMinutes()/60, h=H[day], open=t>=h[0]&&t<h[1];
+  function fmt(x){var hr=Math.floor(x),m=Math.round((x-hr)*60),ap=hr>=12?'PM':'AM';hr=hr%12||12;return hr+(m?':'+(m<10?'0':'')+m:'')+' '+ap;}
+  var txt=document.getElementById('openTxt'), dot=document.getElementById('dot');
+  if(open){txt.textContent='Open now · until '+fmt(h[1]);}
+  else{dot.classList.add('closed');var n=t<h[0]?h:H[(day+1)%7];txt.textContent='Closed now · opens '+(t<h[0]?'today':'tomorrow')+' at '+fmt(n[0]);}
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('in');});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},1500);
+})();
+</script>
+</body>
+</html>

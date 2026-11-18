@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>BlowDry &amp; Co. — Cookeville</title>
+<meta name="description" content="Concept site for BlowDry & Co., a blowout bar at 905 W Broad St, Cookeville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#F7D6D9; --pink:#F49AB0; --peach:#FFC7A1; --ink:#121212; --white:#fff;
+  --grad:linear-gradient(100deg,#F49AB0 0%,#FFC7A1 100%);
+  --soft:#FDF1F2; --muted:#5b4b4e;
+  --r:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3,.syne{font-family:"Syne",sans-serif;letter-spacing:-.02em;line-height:1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:#f3d9dc;font-size:11.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:#fff;font-weight:600}
+@media(max-width:420px){.banner{font-size:10px;letter-spacing:-.01em;padding:7px 8px}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #f4e2e4}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:"Syne";font-weight:800;font-size:21px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo .dot{width:26px;height:26px;border-radius:50%;background:var(--grad);display:grid;place-items:center}
+.logo em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:420px){.logo{font-size:18px;gap:6px}.logo .dot{width:22px;height:22px}nav .btn-sm{padding:8px 14px;font-size:13px}}
+.navlinks{display:none;gap:28px;font-weight:600;font-size:14px}
+.navlinks a{text-decoration:none;opacity:.75;transition:opacity .2s}
+.navlinks a:hover{opacity:1}
+@media(min-width:900px){.navlinks{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:var(--r);padding:14px 24px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,box-shadow .2s,background .2s,color .2s;cursor:pointer;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:4px 4px 0 var(--pink)}
+.btn-dark:hover{box-shadow:6px 6px 0 var(--pink)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--blush)}
+.btn-sm{padding:9px 18px;font-size:13.5px}
+
+/* hero */
+.hero{position:relative;background:var(--blush);overflow:hidden;padding:44px 0 0}
+.hero .swoosh{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .swoosh path{fill:none;stroke-linecap:round}
+.flow{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s cubic-bezier(.6,.1,.2,1) forwards}
+.flow.d2{animation-delay:.25s}.flow.d3{animation-delay:.5s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-inner{position:relative;display:grid;gap:30px}
+@media(min-width:900px){.hero{padding:80px 0 0}.hero-inner{grid-template-columns:1.15fr .85fr;align-items:center}}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--ink);border-radius:var(--r);padding:6px 14px 6px 8px;font-size:12.5px;font-weight:600}
+.chip i{width:18px;height:18px;border-radius:50%;background:var(--grad);display:inline-block}
+.hero h1{font-size:clamp(48px,13.5vw,112px);font-weight:800;margin:18px 0 18px}
+.hero h1 .g{-webkit-text-stroke:2px #121212;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;padding-right:.04em}
+.hero h1 .u{position:relative;display:inline-block}
+.hero h1 .u svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.32em}
+.hero p.sub{font-size:17px;max-width:30em;color:#3a2e30}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;font-weight:600;margin-top:16px;color:#3a2e30}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta svg{flex:none}
+
+/* hero card */
+.card-art{position:relative;margin:0 auto;width:min(100%,400px);aspect-ratio:4/5}
+.card-art .blob{position:absolute;inset:0;border-radius:200px 200px 28px 28px;background:var(--grad);border:2px solid var(--ink);overflow:hidden;box-shadow:10px 10px 0 var(--ink)}
+.card-art .blob svg{position:absolute;inset:0;width:100%;height:100%}
+.ticket{position:absolute;background:#fff;border:2px solid var(--ink);border-radius:20px;padding:12px 16px;font-size:13px;font-weight:600;box-shadow:4px 4px 0 var(--ink)}
+.ticket b{font-family:"Syne";font-size:26px;display:block;line-height:1}
+.ticket.t1{left:-6px;bottom:44px;animation:bob 4s ease-in-out infinite}
+.ticket.t2{right:-6px;top:38px;animation:bob 4s ease-in-out infinite 1.4s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media(max-width:899px){.card-art{width:min(86%,340px);margin-bottom:6px}}
+
+/* marquee */
+.marquee{background:var(--ink);color:#fff;overflow:hidden;border-top:2px solid var(--ink);margin-top:48px;transform:rotate(-1.5deg);width:104%;margin-left:-2%}
+.marquee .track{display:flex;width:max-content;animation:mq 32s linear infinite}
+.marquee span{font-family:"Syne";font-weight:700;font-size:22px;padding:15px 0;display:flex;align-items:center;white-space:nowrap}
+.marquee span::after{content:"";width:16px;height:16px;border-radius:50%;background:var(--grad);margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track,.ticket,.flow{animation:none}.flow{stroke-dashoffset:0}}
+
+/* sections */
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--blush);border-radius:var(--r);padding:6px 14px;margin-bottom:16px}
+h2{font-size:clamp(38px,9vw,68px);font-weight:800;margin-bottom:14px}
+h2 .g{-webkit-text-stroke:1.5px #121212;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:16.5px;max-width:36em}
+
+/* menu */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0 22px}
+.tab{font:inherit;font-weight:700;font-size:14px;border:2px solid var(--ink);background:#fff;border-radius:var(--r);padding:9px 18px;cursor:pointer;transition:background .2s,color .2s}
+.tab:hover{background:var(--blush)}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.menu{display:grid;gap:12px}
+@media(min-width:760px){.menu{grid-template-columns:1fr 1fr}}
+.svc{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border:1.5px solid #ecd3d6;border-radius:22px;background:#fff;transition:border-color .2s,transform .2s,box-shadow .2s;text-decoration:none}
+.svc:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:4px 4px 0 var(--blush)}
+.svc h3{font-family:"Plus Jakarta Sans";font-size:16.5px;font-weight:700;letter-spacing:0;line-height:1.25}
+.svc small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.price{flex:none;font-family:"Syne";font-weight:700;font-size:18px;text-align:right;line-height:1.1}
+.price em{display:block;font-family:"Plus Jakarta Sans";font-style:normal;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.price.ask{font-family:"Plus Jakarta Sans";font-size:12.5px;font-weight:700;background:var(--soft);border-radius:var(--r);padding:7px 12px;color:#7a3c4a}
+.svc[hidden]{display:none}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+
+/* feature blowout */
+.feature{margin-top:34px;background:var(--ink);color:#fff;border-radius:32px;padding:32px 26px;position:relative;overflow:hidden;display:grid;gap:18px}
+.feature svg.bg{position:absolute;right:-90px;bottom:-110px;width:320px;opacity:.45;transform:rotate(-10deg)}
+.feature h3{font-size:clamp(30px,7vw,46px);font-weight:800;position:relative}
+.feature p{position:relative;color:#e9d6d9;max-width:30em}
+.feature .big{font-family:"Syne";font-weight:800;font-size:64px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative}
+.feature .big small{font-size:15px;font-family:"Plus Jakarta Sans";font-weight:600;color:#e9d6d9;-webkit-text-fill-color:#e9d6d9;display:block;margin-bottom:6px}
+@media(min-width:760px){.feature{grid-template-columns:1.4fr .6fr;align-items:end;padding:46px}}
+.feature .btn-light{border-color:#fff;position:relative;justify-self:start}
+
+/* why */
+.why{background:var(--soft);position:relative;overflow:hidden}
+.grid3{display:grid;gap:16px;margin-top:34px}
+@media(min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.tile{background:#fff;border:2px solid var(--ink);border-radius:28px;padding:26px;position:relative}
+.tile .ic{width:54px;height:54px;border-radius:50%;background:var(--grad);display:grid;place-items:center;margin-bottom:18px;border:2px solid var(--ink)}
+.tile h3{font-size:24px;font-weight:700;margin-bottom:8px}
+.tile p{color:var(--muted);font-size:15px}
+
+/* hours */
+.hours-grid{display:grid;gap:22px;margin-top:30px}
+@media(min-width:900px){.hours-grid{grid-template-columns:1fr 1fr;align-items:stretch}}
+.hours{border:2px solid var(--ink);border-radius:28px;overflow:hidden;background:#fff}
+.hours li{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:15px 22px;border-bottom:1px solid #f1dfe1;font-weight:500}
+.hours li:last-child{border-bottom:0}
+.hours li.today{background:var(--grad);font-weight:800}
+.hours li.today .d::after{content:"Today";font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:#fff;border-radius:var(--r);padding:3px 9px;margin-left:10px;vertical-align:2px}
+.hours li .closed{color:#9a7d82}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;margin-top:12px}
+.status i{width:10px;height:10px;border-radius:50%;background:#bbb}
+.status.open i{background:#2fbf71;box-shadow:0 0 0 4px rgba(47,191,113,.2)}
+.map{border:2px solid var(--ink);border-radius:28px;overflow:hidden;min-height:320px;background:var(--blush);display:flex;flex-direction:column}
+.map iframe{border:0;width:100%;flex:1;min-height:300px;display:block}
+.addr{padding:20px 22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fff;border-top:2px solid var(--ink)}
+.addr b{font-family:"Syne";font-size:19px;display:block}
+.addr span{font-size:14px;color:var(--muted)}
+
+/* cta band */
+.band{background:var(--grad);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);position:relative;overflow:hidden;text-align:center}
+.band h2{font-size:clamp(40px,11vw,92px)}
+.band .ctas{justify-content:center}
+.band p{max-width:30em;margin:0 auto;font-weight:500}
+
+footer{background:var(--ink);color:#d9c3c6;padding:46px 0 40px;font-size:14px}
+footer .wrap{display:grid;gap:22px}
+@media(min-width:760px){footer .wrap{grid-template-columns:1.2fr 1fr 1fr}}
+footer .logo{color:#fff}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .fine{grid-column:1/-1;border-top:1px solid #2c2c2c;padding-top:18px;font-size:12.5px;color:#9b8a8d}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1.5px solid #ecd3d6}
+.callbar .btn{flex:1;padding:13px 10px;box-shadow:none}
+.callbar .btn-grad{background:var(--grad);color:var(--ink)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(24px)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for BlowDry &amp; Co. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="BlowDry &amp; Co. home"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.6" stroke-linecap="round"><path d="M3 15c4-8 10-8 18-6M3 19c5-6 11-6 18-4"/></svg></span>BlowDry <em>&amp;</em> Co.</a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#why">Why us</a><a href="#visit">Hours &amp; map</a></div>
+    <a class="btn btn-dark btn-sm" href="https://square.site/book/9Y50JG9MGW53K/blowdry-co-llc-cookeville-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="swoosh" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#F49AB0"/><stop offset="1" stop-color="#FFC7A1"/></linearGradient></defs>
+    <path class="flow" d="M-60 640 C 260 460, 420 760, 760 560 S 1240 300, 1520 420" stroke="url(#sg)" stroke-width="34" opacity=".55"/>
+    <path class="flow d2" d="M-60 700 C 300 540, 460 820, 800 620 S 1260 380, 1520 500" stroke="#fff" stroke-width="10" opacity=".8"/>
+    <path class="flow d3" d="M-60 140 C 240 40, 520 260, 820 120 S 1260 -20, 1520 90" stroke="#fff" stroke-width="6" opacity=".7"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div class="reveal">
+      <span class="chip"><i></i>Blowout bar · W Broad St, Cookeville</span>
+      <h1>Wash. <span class="g">Blow.</span><br><span class="u">Go.<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 C 50 4, 120 4, 196 16" fill="none" stroke="#121212" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
+      <p class="sub">Cookeville's blowout bar on W Broad St: shampoo and a style of your choice, from $45, plus updos, makeup, keratin and spray tans.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="https://square.site/book/9Y50JG9MGW53K/blowdry-co-llc-cookeville-tn" target="_blank" rel="noopener">Book a blowout
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-light" href="tel:+19315594247">Call (931) 559-4247</a>
+      </div>
+      <div class="meta">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Open 6 days · till 7 Thu &amp; Fri</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>905 W Broad St, A-5</span>
+      </div>
+    </div>
+    <div class="card-art reveal" aria-hidden="true">
+      <div class="blob">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke-linecap="round">
+            <path d="M-20 120 C 80 60, 160 200, 260 140 S 420 60, 440 110" stroke="#fff" stroke-width="22" opacity=".85"/>
+            <path d="M-20 170 C 90 110, 170 250, 270 190 S 420 120, 440 160" stroke="#121212" stroke-width="5"/>
+            <path d="M-20 230 C 100 170, 180 320, 280 250 S 420 180, 440 220" stroke="#fff" stroke-width="14" opacity=".7"/>
+            <path d="M-20 290 C 110 230, 190 380, 290 310 S 420 240, 440 280" stroke="#F7D6D9" stroke-width="30"/>
+            <path d="M-20 350 C 120 290, 200 440, 300 370 S 420 300, 440 340" stroke="#121212" stroke-width="5"/>
+            <path d="M-20 410 C 130 350, 210 500, 310 430 S 420 360, 440 400" stroke="#fff" stroke-width="18" opacity=".8"/>
+          </g>
+          <!-- hair dryer -->
+          <g transform="translate(118 300) rotate(-14)">
+            <rect x="0" y="0" width="150" height="74" rx="37" fill="#121212"/>
+            <rect x="140" y="12" width="34" height="50" rx="10" fill="#121212"/>
+            <circle cx="40" cy="37" r="20" fill="#F49AB0"/><circle cx="40" cy="37" r="8" fill="#121212"/>
+            <rect x="70" y="60" width="34" height="96" rx="17" fill="#121212"/>
+            <rect x="80" y="86" width="14" height="6" rx="3" fill="#FFC7A1"/>
+            <path d="M184 22 h26 M186 37 h34 M184 52 h26" stroke="#121212" stroke-width="6" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ticket t1"><b>$45</b>blowouts start at</div>
+      <div class="ticket t2"><b>55 min</b>wash + style</div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track" id="mq">
+    <span>Blowouts</span><span>Updos</span><span>Express Keratin</span><span>Makeup</span><span>Spray Tan</span><span>Braids</span><span>Gloss</span><span>Extensions</span><span>Scalp Massage</span><span>Custom Color</span>
+    <span>Blowouts</span><span>Updos</span><span>Express Keratin</span><span>Makeup</span><span>Spray Tan</span><span>Braids</span><span>Gloss</span><span>Extensions</span><span>Scalp Massage</span><span>Custom Color</span>
+  </div></div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <span class="eyebrow">The menu</span>
+    <h2>Pick your <span class="g">finish.</span></h2>
+    <p class="lead">The full BlowDry &amp; Co. menu, with the prices and times from the salon's own booking page. Tap any service to book it.</p>
+
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="style">Blowouts &amp; styling</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="treat">Treatments</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Cut, color &amp; ext.</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="beauty">Beauty</button>
+    </div>
+
+    <div class="menu" id="menuList"></div>
+    <p class="note">"From" prices are starting prices as listed by the salon. Services marked "Price at consult" or "Call for pricing" don't show a set price online; call (931) 559-4247 for a quote.</p>
+
+    <div class="feature reveal">
+      <svg class="bg" viewBox="0 0 340 340" aria-hidden="true" fill="none" stroke-linecap="round"><path d="M10 80 C 90 20, 160 150, 330 60" stroke="#F49AB0" stroke-width="18"/><path d="M10 140 C 100 80, 170 210, 330 120" stroke="#FFC7A1" stroke-width="10"/><path d="M10 200 C 110 140, 180 270, 330 180" stroke="#F7D6D9" stroke-width="4"/></svg>
+      <div>
+        <h3>The signature blowout</h3>
+        <p>"Shampoo and style of your choice." 55 minutes, start to finish. Wearing extensions? The salon asks you to call to book your blowout.</p>
+      </div>
+      <div>
+        <div class="big"><small>from</small>$45</div>
+        <a class="btn btn-light" style="margin-top:16px" href="https://square.site/book/9Y50JG9MGW53K/blowdry-co-llc-cookeville-tn" target="_blank" rel="noopener">Grab a time</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <span class="eyebrow" style="background:#fff">Why BlowDry &amp; Co.</span>
+    <h2>One chair, the <span class="g">whole look.</span></h2>
+    <p class="lead">Hair, makeup, lashes and a spray tan, all at one address on W Broad St.</p>
+    <div class="grid3">
+      <div class="tile reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Early &amp; late</h3>
+        <p>Doors open at 8 AM on Mondays and Fridays, and stay open until 7 PM on Thursdays and Fridays. Saturdays too, 9 to 3.</p>
+      </div>
+      <div class="tile reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.2" stroke-linecap="round"><path d="M12 3l2.6 5.6L20 9.4l-4 4 1 5.6-5-2.8-5 2.8 1-5.6-4-4 5.4-.8z"/></svg></div>
+        <h3>Event-ready</h3>
+        <p>Updos from $55, half-up styles with a wash from $48, makeup from $45, and an in-salon hair + makeup photo session for $85.</p>
+      </div>
+      <div class="tile reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.2" stroke-linecap="round"><path d="M3 14c4-7 10-7 18-5M3 19c5-6 11-6 18-4"/></svg></div>
+        <h3>Frizz, handled</h3>
+        <p>The Express Keratin Treatment (from $125) promises "smoothness and defrizz lasting at least 4-6 weeks if not longer."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <span class="eyebrow">Visit</span>
+    <h2>Come get <span class="g">blown away.</span></h2>
+    <div class="status" id="status"><i></i><span>Hours</span></div>
+    <div class="hours-grid">
+      <ul class="hours reveal" id="hours">
+        <li data-d="1"><span class="d">Monday</span><span>8:00 AM – 4:30 PM</span></li>
+        <li data-d="2"><span class="d">Tuesday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="3"><span class="d">Wednesday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="4"><span class="d">Thursday</span><span>9:00 AM – 7:00 PM</span></li>
+        <li data-d="5"><span class="d">Friday</span><span>8:00 AM – 7:00 PM</span></li>
+        <li data-d="6"><span class="d">Saturday</span><span>9:00 AM – 3:00 PM</span></li>
+        <li data-d="0"><span class="d">Sunday</span><span class="closed">Closed</span></li>
+      </ul>
+      <div class="map reveal">
+        <iframe title="Map to BlowDry &amp; Co." loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=905%20W%20Broad%20St%20A-5%2C%20Cookeville%2C%20TN%2038501&output=embed"></iframe>
+        <div class="addr">
+          <div><b>905 W Broad St, A-5</b><span>Cookeville, TN 38501</span></div>
+          <a class="btn btn-dark btn-sm" href="https://www.google.com/maps/dir/?api=1&destination=905%20W%20Broad%20St%20A-5%2C%20Cookeville%2C%20TN%2038501" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Good hair day,<br>on demand.</h2>
+    <p>Book online any time, or call the salon directly.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="https://square.site/book/9Y50JG9MGW53K/blowdry-co-llc-cookeville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-light" href="tel:+19315594247">(931) 559-4247</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#top" class="logo"><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.6" stroke-linecap="round"><path d="M3 15c4-8 10-8 18-6M3 19c5-6 11-6 18-4"/></svg></span>BlowDry <em>&amp;</em> Co.</a>
+      <p style="margin-top:12px">Blowout bar &amp; salon in Cookeville, Tennessee.</p>
+    </div>
+    <div>
+      <p>905 W Broad St, A-5<br>Cookeville, TN 38501</p>
+    </div>
+    <div>
+      <p><a href="tel:+19315594247">(931) 559-4247</a><br><a href="mailto:blowdryco@icloud.com">blowdryco@icloud.com</a></p>
+    </div>
+    <p class="fine">Concept by Code Craft Media · A design preview made for BlowDry &amp; Co. LLC, not an official website.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-light" href="tel:+19315594247"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Call</a>
+  <a class="btn btn-grad" href="https://square.site/book/9Y50JG9MGW53K/blowdry-co-llc-cookeville-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+var BOOK="https://square.site/book/9Y50JG9MGW53K/blowdry-co-llc-cookeville-tn";
+// Prices/durations verbatim from the salon's Square booking page. Spelling of "Split End" / "Extensions" corrected.
+var S=[
+ ["Blowout","55 min","From $45","style"],
+ ["Blowout and Lashes","1 hr","From $45","style"],
+ ["Dry Style","30 min","From $30","style"],
+ ["Half up – including wash","1 hr 15 min","From $48","style"],
+ ["Updo","1 hr","From $55","style"],
+ ["Braids with wash","55 min","$35","style"],
+ ["Express Keratin Treatment","1 hr 15 min","From $125","treat"],
+ ["Smoothing Treatment","30 min","","treat"],
+ ["Deep Conditioning Treatment","15 min","$15","treat"],
+ ["Gloss","20 min","$20","treat"],
+ ["Split End Treatment","30 min","","treat"],
+ ["Scalp Massage","10 min","$10","treat"],
+ ["Haircut","45 min","consult","color"],
+ ["Custom Color","1 hr 55 min","consult","color"],
+ ["Perm","2 hr 30 min","","color"],
+ ["Extensions","1 hr 30 min","","color"],
+ ["Extension Consultation","30 min","","color"],
+ ["Halo Couture Consultation","30 min","Free","color"],
+ ["Consultation","30 min","Free","color"],
+ ["Makeup","45 min","From $45","beauty"],
+ ["Hair/makeup photo in salon","45 min","$85","beauty"],
+ ["Eye/lip wax","30 min","$15","beauty"],
+ ["Spray Tan","30 min","$25","beauty"]
+];
+var list=document.getElementById('menuList');
+list.innerHTML=S.map(function(s){
+  var p;
+  if(s[2]==="consult") p='<span class="price ask">Price at consult</span>';
+  else if(s[2]==="") p='<span class="price ask">Call for pricing</span>';
+  else if(s[2].indexOf("From ")===0) p='<span class="price"><em>from</em>'+s[2].slice(5)+'</span>';
+  else p='<span class="price">'+s[2]+'</span>';
+  return '<a class="svc" data-c="'+s[3]+'" href="'+BOOK+'" target="_blank" rel="noopener"><div><h3>'+s[0]+'</h3><small>'+s[1]+'</small></div>'+p+'</a>';
+}).join('');
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});
+    t.setAttribute('aria-selected','true');
+    var f=t.dataset.f;
+    list.querySelectorAll('.svc').forEach(function(el){el.hidden=!(f==='all'||el.dataset.c===f)});
+  });
+});
+// hours: today highlight + open status (America/Chicago)
+(function(){
+  var H={0:null,1:[8,16.5],2:[9,17],3:[9,17],4:[9,19],5:[8,19],6:[9,15]};
+  var now=new Date();
+  try{var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var map={};parts.forEach(function(p){map[p.type]=p.value});
+    var d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(map.weekday);var h=(+map.hour%24)+(+map.minute)/60;}
+  catch(e){var d=now.getDay(),h=now.getHours()+now.getMinutes()/60;}
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'),r=H[d];
+  if(r&&h>=r[0]&&h<r[1]){st.classList.add('open');st.querySelector('span').textContent='Open now';}
+  else st.querySelector('span').textContent='Closed right now · book online any time';
+})();
+// reveal (content visible without JS; fallback after 1.5s)
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)) return;
+  els.forEach(function(e){ if(e.getBoundingClientRect().top>window.innerHeight) e.classList.add('pre'); });
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

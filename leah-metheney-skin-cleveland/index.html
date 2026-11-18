@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Leah Metheney Skin — Cleveland, TN</title>
+<meta name="description" content="Concept site for Leah Metheney Skin — Circadia facials, waxing, brows and lashes on North Ocoee St, Cleveland, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --porcelain:#FAFAF8; --mist:#DCE6EA; --mist-2:#EEF3F5; --ink:#22313A; --ink-soft:#4C5C66; --champ:#C9B48A; --champ-deep:#8E7748;
+  --line:rgba(34,49,58,.12); --serif:"Instrument Serif",Georgia,serif; --sans:"Inter Tight",system-ui,-apple-system,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--porcelain);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+.concept{background:var(--ink);color:#E9EEF0;font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--champ);font-weight:500}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(250,250,248,.82);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--serif);font-size:23px;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.logo i{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--champ) 70%);box-shadow:0 0 14px rgba(201,180,138,.7)}
+.logo span{font-style:italic;color:var(--champ-deep)}
+.links{display:none;gap:30px;font-size:14px}
+.links a{text-decoration:none;color:var(--ink-soft);transition:color .2s}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 15px/1 var(--sans);text-decoration:none;border-radius:999px;padding:16px 26px;transition:transform .25s ease,box-shadow .25s ease,background .25s;cursor:pointer;border:0}
+.btn-ink{background:var(--ink);color:var(--porcelain);box-shadow:0 10px 30px -12px rgba(34,49,58,.6)}
+.btn-ink:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(34,49,58,.6)}
+.btn-ghost{background:rgba(255,255,255,.6);color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{background:#fff;transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+nav .btn{padding:11px 18px;font-size:13.5px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:52px 0 64px;isolation:isolate}
+.orb{position:absolute;border-radius:50%;filter:blur(50px);z-index:-1;opacity:.9;animation:drift 16s ease-in-out infinite alternate}
+.o1{width:360px;height:360px;background:radial-gradient(circle,#fff 0%,var(--mist) 60%,transparent 72%);top:-80px;right:-120px}
+.o2{width:300px;height:300px;background:radial-gradient(circle,rgba(201,180,138,.55),transparent 70%);bottom:-60px;left:-110px;animation-duration:20s}
+.o3{width:220px;height:220px;background:radial-gradient(circle,rgba(220,230,234,.95),transparent 70%);top:42%;left:44%;animation-duration:24s}
+@keyframes drift{to{transform:translate(30px,40px) scale(1.12)}}
+.ripples{position:absolute;right:-150px;top:30px;width:520px;height:520px;z-index:-1;opacity:.7}
+.ripples circle{fill:none;stroke:var(--ink);stroke-opacity:.09;transform-origin:center;animation:ripple 9s ease-out infinite}
+.ripples circle:nth-child(2){animation-delay:1.8s}.ripples circle:nth-child(3){animation-delay:3.6s}.ripples circle:nth-child(4){animation-delay:5.4s}.ripples circle:nth-child(5){animation-delay:7.2s}
+@keyframes ripple{0%{transform:scale(.25);stroke-opacity:.18}100%{transform:scale(1);stroke-opacity:0}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--champ)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(50px,13.5vw,118px);line-height:.94;letter-spacing:-.025em;margin:22px 0 22px}
+h1 em{color:var(--champ-deep);font-style:italic}
+.sub{font-size:17px;color:var(--ink-soft);max-width:34ch;margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:38px}
+.chip{font-size:12.5px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid var(--line);color:var(--ink-soft)}
+.chip b{color:var(--ink);font-weight:600}
+.glowcard{display:none}
+
+/* sections */
+section{padding:86px 0;position:relative}
+.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--champ-deep);font-weight:600;margin-bottom:14px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,9.5vw,72px);line-height:1;letter-spacing:-.02em;margin-bottom:18px}
+h2 em{font-style:italic;color:var(--champ-deep)}
+.lead{color:var(--ink-soft);max-width:52ch;font-size:16.5px}
+
+/* menu */
+#menu{background:linear-gradient(180deg,var(--porcelain),var(--mist-2) 30%,var(--porcelain))}
+.tabs{display:flex;gap:8px;margin:34px 0 26px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:500 14px var(--sans);padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--porcelain);border-color:var(--ink)}
+.panel{display:grid;gap:12px}
+.panel[hidden]{display:none}
+.svc{background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:20px;padding:20px 20px 18px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 22px 40px -28px rgba(34,49,58,.45);border-color:rgba(201,180,138,.7)}
+.svc-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15}
+.price{font-family:var(--serif);font-size:24px;color:var(--champ-deep);white-space:nowrap}
+.dur{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:6px 0 8px}
+.svc p{font-size:14.5px;color:var(--ink-soft)}
+.svc.feat{background:var(--ink);color:var(--porcelain);border-color:var(--ink);position:relative;overflow:hidden}
+.svc.feat::after{content:"";position:absolute;width:220px;height:220px;right:-80px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(201,180,138,.55),transparent 70%);filter:blur(10px)}
+.svc.feat p,.svc.feat .dur{color:#C3CDD2}
+.svc.feat .price{color:var(--champ)}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--champ);margin-bottom:8px;font-weight:600}
+.rows{background:#fff;border:1px solid var(--line);border-radius:20px;padding:6px 20px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.row:last-child{border-bottom:0}
+.row small{display:block;color:var(--ink-soft);font-size:12px;letter-spacing:.04em}
+.row .price{font-size:20px}
+.note{font-size:13px;color:var(--ink-soft);margin-top:18px}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:40px}
+.why{padding:28px 24px;border-radius:24px;background:#fff;border:1px solid var(--line);position:relative;overflow:hidden}
+.why svg{width:46px;height:46px;margin-bottom:18px}
+.why h3{font-family:var(--serif);font-weight:400;font-size:27px;line-height:1.1;margin-bottom:8px}
+.why p{color:var(--ink-soft);font-size:15px}
+.why .num{position:absolute;right:20px;top:14px;font-family:var(--serif);font-style:italic;font-size:44px;color:var(--mist)}
+
+/* quote band */
+.band{background:var(--ink);color:var(--porcelain);overflow:hidden;padding:90px 0}
+.band .ripples{right:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:760px;height:760px;opacity:1}
+.band .ripples circle{stroke:var(--champ);stroke-opacity:.25}
+.band p.big{font-family:var(--serif);font-size:clamp(34px,8vw,64px);line-height:1.06;letter-spacing:-.015em;max-width:18ch;position:relative}
+.band p.big em{color:var(--champ)}
+.band .small{color:#AEBBC2;margin-top:22px;font-size:15px;max-width:46ch;position:relative}
+
+/* visit */
+.visit-grid{display:grid;gap:18px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 22px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:28px;margin-bottom:14px}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15px;color:var(--ink-soft)}
+.hours li.open span:last-child{color:var(--ink);font-weight:500}
+.hours li.today{background:var(--mist);color:var(--ink);font-weight:600}
+.hours li.today span:first-child::after{content:" · Today";font-weight:500;color:var(--champ-deep);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.addr{font-size:17px;line-height:1.5;margin-bottom:6px}
+.muted{color:var(--ink-soft);font-size:14px}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:var(--mist)}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;filter:grayscale(.35) contrast(1.02)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.actions .btn{padding:13px 20px;font-size:14px}
+.contact-line{display:flex;flex-direction:column;gap:6px;margin-top:16px;font-size:15px}
+.contact-line a{text-decoration:none;border-bottom:1px solid var(--line);align-self:flex-start;transition:border-color .2s}
+.contact-line a:hover{border-color:var(--champ)}
+
+footer{padding:56px 0 40px;border-top:1px solid var(--line);text-align:center}
+footer .logo{justify-content:center;font-size:30px;margin-bottom:10px}
+footer p{color:var(--ink-soft);font-size:13.5px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,250,248,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.bar a{flex:1;padding:15px 10px;font-size:15px}
+
+/* reveal */
+.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media (min-width:760px){
+  .links{display:flex}
+  .panel{grid-template-columns:1fr 1fr}
+  .rows{grid-column:1/-1;column-count:2;column-gap:44px;padding:10px 28px}
+  .row{break-inside:avoid}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .visit-grid .map{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .wrap{padding:0 40px}
+  .hero{padding:110px 0 130px}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+  .glowcard{display:block;position:relative;aspect-ratio:4/5;border-radius:220px 220px 28px 28px;background:linear-gradient(170deg,#fff,var(--mist) 70%);border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 90px -50px rgba(34,49,58,.45)}
+  .glowcard .gorb{position:absolute;inset:18% 14% auto;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 36%,#fff 0%,#F6EFE3 28%,rgba(201,180,138,.75) 55%,rgba(220,230,234,0) 72%);filter:blur(14px);animation:breathe 7s ease-in-out infinite}
+  .glowcard .gl{position:absolute;left:28px;right:28px;bottom:28px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border:1px solid var(--line)}
+  .gl .t{font-family:var(--serif);font-size:24px;line-height:1.1}
+  .gl .s{font-size:13px;color:var(--ink-soft);margin-top:4px}
+  .visit-grid{grid-template-columns:1fr 1fr 1.3fr}
+  .visit-grid .map{grid-column:auto}
+  .panel{grid-template-columns:repeat(3,1fr)}
+  .rows{column-count:3}
+}
+@keyframes breathe{50%{transform:scale(1.07);filter:blur(20px)}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Leah Metheney Skin. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><i></i>Leah Metheney <span>Skin</span></a>
+    <div class="links"><a href="#menu">Treatments</a><a href="#why">Approach</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-ink" href="https://square.site/book/GC4G97D4PC75T/leah-metheney-skin-cleveland-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <svg class="ripples" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow reveal">Esthetics · North Ocoee St · Cleveland, TN</div>
+      <h1 class="reveal">Calm skin.<br>Clear <em>glow.</em></h1>
+      <p class="sub reveal">Circadia facials, peels, waxing, brows and lashes with Leah in downtown Cleveland — booked online in a minute.</p>
+      <div class="cta reveal">
+        <a class="btn btn-ink" href="https://square.site/book/GC4G97D4PC75T/leah-metheney-skin-cleveland-tn" target="_blank" rel="noopener">Book a treatment
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+14234146528">Call (423) 414-6528</a>
+      </div>
+      <div class="chips reveal">
+        <span class="chip"><b>7</b> Circadia treatments</span>
+        <span class="chip">Consultation <b>$15</b></span>
+        <span class="chip">Gift cards available</span>
+      </div>
+    </div>
+    <div class="glowcard reveal" aria-hidden="true">
+      <div class="gorb"></div>
+      <div class="gl"><div class="t">Oxygen “Red Carpet” Facial</div><div class="s">1 hr 15 min · $150</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="kicker reveal">The treatment menu</div>
+    <h2 class="reveal">Every facial, <em>priced plainly.</em></h2>
+    <p class="lead reveal">The full menu, straight from Leah's booking page. Not sure where to start? A 15‑minute consultation maps out what your skin actually needs.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="facials">Facials &amp; Peels</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="wax">Waxing</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="brows">Brows</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="lashes">Lashes</button>
+    </div>
+
+    <div class="panel" id="p-facials">
+      <article class="svc feat"><span class="tag">Signature</span><div class="svc-top"><h3>Oxygen Facial — “Red Carpet”</h3><span class="price">$150</span></div><div class="dur">1 hr 15 min</div><p>Oxygen treatment for a brighter, glowing look, with extractions as needed.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Consultation</h3><span class="price">$15</span></div><div class="dur">15 min</div><p>One‑on‑one skin assessment with treatment recommendations.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Acne Facial</h3><span class="price">$130</span></div><div class="dur">1 hr 15 min</div><p>Enzymes, steam, extractions as needed and high frequency.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Anti‑Aging Pumpkin Facial</h3><span class="price">$115</span></div><div class="dur">1 hr</div><p>Bakuchiol pumpkin mask for antioxidant protection and collagen support.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Australian Berry Brightening</h3><span class="price">$115</span></div><div class="dur">1 hr 15 min</div><p>Berry antioxidants that target hyperpigmentation.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Moisturizing Marshmallow</h3><span class="price">$115</span></div><div class="dur">1 hr</div><p>Hydrating facial for dry or sensitive skin.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Snow Algae Cooling</h3><span class="price">$115</span></div><div class="dur">1 hr</div><p>Cooling and soothing — suited to rosacea, acne and post‑treatment skin.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Pumpkin Peel with Vitamin A</h3><span class="price">$130</span></div><div class="dur">1 hr</div><p>Anti‑aging, brightening and acne care with minimal downtime.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Circadia Firming Peptide Facial</h3><span class="price">$175</span></div><div class="dur">1 hr 30 min</div><p>Firming peptide treatment for fine lines — dermaplane included.</p></article>
+      <article class="svc"><div class="svc-top"><h3>SWiCH</h3><span class="price">$150</span></div><div class="dur">1 hr 15 min</div><p>Non‑chemical‑peel treatment for aging or hyperpigmented skin. Includes a home care regimen; pause retinol two weeks before.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Dermaplane</h3><span class="price">$75</span></div><div class="dur">45 min</div><p>Removes dead skin and fine facial hair. Not for active breakouts.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Add Dermaplane</h3><span class="price">$25</span></div><div class="dur">15 min</div><p>Add to any facial.</p></article>
+    </div>
+
+    <div class="panel" id="p-wax" hidden>
+      <div class="rows">
+        <div class="row"><span>Brow Wax<small>15 min</small></span><span class="price">$18</span></div>
+        <div class="row"><span>Brow &amp; Lip Wax<small>15 min</small></span><span class="price">$28</span></div>
+        <div class="row"><span>Lip Wax<small>15 min</small></span><span class="price">$10</span></div>
+        <div class="row"><span>Chin Wax<small>10 min</small></span><span class="price">$10</span></div>
+        <div class="row"><span>Face Wax (incl. brow shaping)<small>15 min</small></span><span class="price">$38</span></div>
+        <div class="row"><span>Ear Wax<small>15 min</small></span><span class="price">$12</span></div>
+        <div class="row"><span>Under Arm Wax<small>15 min</small></span><span class="price">$25</span></div>
+        <div class="row"><span>Half Arm Wax<small>30 min</small></span><span class="price">$25</span></div>
+        <div class="row"><span>Full Arm Wax<small>30 min</small></span><span class="price">$40</span></div>
+        <div class="row"><span>Stomach Wax<small>15 min</small></span><span class="price">$25</span></div>
+        <div class="row"><span>Back Wax<small>30 min</small></span><span class="price">$75</span></div>
+        <div class="row"><span>Bikini Wax<small>30 min</small></span><span class="price">$30</span></div>
+        <div class="row"><span>Extended Bikini Wax<small>30 min</small></span><span class="price">$40</span></div>
+        <div class="row"><span>First Time Client Brazilian<small>30 min</small></span><span class="price">$75</span></div>
+        <div class="row"><span>Brazilian Repeat (repeat clients)<small>30 min</small></span><span class="price">$50</span></div>
+        <div class="row"><span>Half Leg Wax<small>30 min</small></span><span class="price">$40</span></div>
+        <div class="row"><span>Full Leg Wax<small>30 min</small></span><span class="price">$70</span></div>
+        <div class="row"><span>Toe Wax<small>15 min</small></span><span class="price">$15</span></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-brows" hidden>
+      <article class="svc"><div class="svc-top"><h3>Brow Wax</h3><span class="price">$18</span></div><div class="dur">15 min</div><p>Precision shaping.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Brow Tint</h3><span class="price">$25</span></div><div class="dur">15 min</div><p>Custom color for depth and definition.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Brow Tint &amp; Wax</h3><span class="price">$40</span></div><div class="dur">15 min</div><p>Tint, then waxing.</p></article>
+      <article class="svc feat"><span class="tag">Holds 6–8 weeks</span><div class="svc-top"><h3>Brow Lamination</h3><span class="price">$85</span></div><div class="dur">45 min</div><p>Restructures brow hairs to hold their shape for about 6–8 weeks.</p></article>
+    </div>
+
+    <div class="panel" id="p-lashes" hidden>
+      <article class="svc feat"><span class="tag">Lasts 4–6 weeks</span><div class="svc-top"><h3>Lash Lift &amp; Tint</h3><span class="price">$95</span></div><div class="dur">1 hr</div><p>Lift and color for a fuller look.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Lash Tint</h3><span class="price">$25</span></div><div class="dur">15 min</div><p>Color lasting 4–6 weeks.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Deep Conditioning Lash Treatment</h3><span class="price">$25</span></div><div class="dur">15 min</div><p>Hydrating, strengthening add‑on for lash lifts.</p></article>
+      <article class="svc"><div class="svc-top"><h3>Lash Lift Reversal</h3><span class="price">$45</span></div><div class="dur">30 min</div><p>Removes a lash lift; includes a hydrating lash mask.</p></article>
+    </div>
+    <p class="note reveal">Prices and times as listed on Leah's Square booking page.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="kicker reveal">The approach</div>
+    <h2 class="reveal">Professional care, <em>made for your skin.</em></h2>
+    <div class="why-grid">
+      <div class="why reveal"><span class="num">01</span>
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#DCE6EA"/><circle cx="24" cy="24" r="10" stroke="#22313A" stroke-width="1.5"/><circle cx="24" cy="24" r="16" stroke="#C9B48A" stroke-width="1.2" stroke-dasharray="2 4"/></svg>
+        <h3>Start with a consult</h3><p>A $15, 15‑minute one‑on‑one skin assessment before you commit to anything.</p></div>
+      <div class="why reveal"><span class="num">02</span>
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#DCE6EA"/><path d="M24 12c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15z" stroke="#22313A" stroke-width="1.5"/><circle cx="21" cy="27" r="2" fill="#C9B48A"/></svg>
+        <h3>Circadia treatments</h3><p>Seven Circadia facials and peels — from Snow Algae Cooling to Firming Peptide — matched to acne, aging, dryness or pigment.</p></div>
+      <div class="why reveal"><span class="num">03</span>
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#DCE6EA"/><rect x="14" y="15" width="20" height="19" rx="3" stroke="#22313A" stroke-width="1.5"/><path d="M14 21h20M19 12v5M29 12v5" stroke="#22313A" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="27.5" r="2.2" fill="#C9B48A"/></svg>
+        <h3>Book any time</h3><p>Every service is bookable online, and gift cards are available — an easy gift for someone who deserves a glow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <svg class="ripples" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="98"/></svg>
+  <div class="wrap">
+    <p class="big reveal">Head to toe, brow to lash — <em>one calm room</em> on North Ocoee.</p>
+    <p class="small reveal">Facials, peels, dermaplaning, full‑body waxing, brow lamination and lash lifts, all with Leah at Suite 201.</p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker reveal">Visit</div>
+    <h2 class="reveal">Find the <em>studio.</em></h2>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>Hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1" class="open"><span>Monday</span><span>10:00 AM – 7:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>Closed</span></li>
+          <li data-d="3"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4"><span>Thursday</span><span>Closed</span></li>
+          <li data-d="5"><span>Friday</span><span>Closed</span></li>
+          <li data-d="6"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="muted" style="margin-top:12px">Hours as listed on the booking page — see live openings when you book.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Location</h3>
+        <p class="addr">170 North Ocoee St, Suite 201<br>Cleveland, TN 37311</p>
+        <p class="muted">Inside Divine Remedy, downtown Cleveland.</p>
+        <div class="contact-line">
+          <a href="tel:+14234146528">(423) 414-6528</a>
+          <a href="mailto:leahnerren528@gmail.com">leahnerren528@gmail.com</a>
+          <a href="https://www.instagram.com/leahmetheneyskin/" target="_blank" rel="noopener">@leahmetheneyskin</a>
+        </div>
+        <div class="actions">
+          <a class="btn btn-ink" href="tel:+14234146528">Call</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=170+North+Ocoee+St+%23201+Cleveland+TN+37311" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Leah Metheney Skin" loading="lazy" src="https://www.google.com/maps?q=170%20North%20Ocoee%20St%20%23201%2C%20Cleveland%2C%20TN%2037311&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><i></i>Leah Metheney <span>Skin</span></div>
+    <p>170 North Ocoee St #201 · Cleveland, TN · (423) 414-6528</p>
+    <p style="margin-top:14px">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ghost" href="tel:+14234146528">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Call</a>
+  <a class="btn btn-ink" href="https://square.site/book/GC4G97D4PC75T/leah-metheney-skin-cleveland-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else d.classList.add('show-all');
+  setTimeout(function(){d.classList.add('show-all')},1500);
+  var t=new Date().getDay(); var li=document.querySelector('#hours li[data-d="'+t+'"]'); if(li) li.classList.add('today');
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false'); document.getElementById('p-'+x.dataset.t).hidden=(x!==b);});
+  })});
+})();
+</script>
+</body>
+</html>

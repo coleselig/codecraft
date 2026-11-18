@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Method Hair Studio — Chattanooga</title>
+<meta name="description" content="Concept site for Method Hair Studio, luxury blonding and extension specialist on Lee Highway, Chattanooga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --river:#17456b; --river-deep:#0d2c47; --river-mid:#2f6f9f; --river-soft:#9cc3de;
+  --sun:#f07a2f; --sun-hot:#e2581f; --gold:#f6b552; --honey:#fbd89a;
+  --off:#faf5ec; --paper:#f3ecdf; --ink:#14212e; --muted:#536373; --line:rgba(20,33,46,.12);
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--off);color:var(--ink);font-family:"Karla",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+h1,h2,h3,.disp{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;letter-spacing:-.01em;line-height:1.02}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.banner{background:var(--river-deep);color:#d7e6f2;font-size:11px;text-align:center;padding:7px 14px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--honey);font-weight:700}
+
+/* nav */
+.nav{position:absolute;top:34px;left:0;right:0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--off)}
+.logo .mark{width:38px;height:38px;border-radius:12px;background:var(--off);display:grid;place-items:center}
+.logo span{font-family:"Archivo Black";font-size:17px;letter-spacing:.02em;line-height:1}
+.logo small{display:block;font-family:"Karla";font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.nav ul{display:none;list-style:none;gap:26px}
+.nav ul a{color:var(--off);text-decoration:none;font-weight:500;font-size:15px;opacity:.9}
+.nav ul a:hover{opacity:1;color:var(--honey)}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;font-size:15.5px}
+.pill:hover{transform:translateY(-2px)}
+.pill:active{transform:translateY(0) scale(.98)}
+.pill.sun{background:var(--sun);color:#fff;box-shadow:0 10px 24px -10px rgba(226,88,31,.8)}
+.pill.sun:hover{background:var(--sun-hot)}
+.pill.ghost{border:1.5px solid rgba(250,245,236,.6);color:var(--off);background:rgba(13,44,71,.42);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pill.ghost:hover{background:rgba(250,245,236,.12)}
+.nav .pill{display:none}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,#0f3352 0%,#1e5683 34%,#d5774a 70%,#f6b552 86%,#fbd89a 100%);color:var(--off);overflow:hidden;min-height:840px;padding:118px 0 0}
+.sunball{position:absolute;left:78%;top:auto;bottom:150px;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffe6b0 0%,#ffc067 38%,#f28a3c 70%,rgba(240,122,47,0) 72%);filter:blur(.3px);animation:rise 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(70px);opacity:.3}to{transform:none;opacity:1}}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+.hero-copy{position:relative;z-index:3}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--honey)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--sun)}
+.hero h1{font-size:clamp(46px,13vw,112px);margin:14px 0 18px;text-shadow:0 2px 30px rgba(13,44,71,.35)}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#ffe0a3,#f6b552 45%,#ff8c42);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.hero p.lead{font-size:18.5px;max-width:30ch;color:#e8f0f6}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ridges{position:absolute;left:0;right:0;bottom:-2px;z-index:2;width:100%;height:auto}
+.ridges path{transform-origin:bottom}
+.r1{animation:drift 14s ease-in-out infinite alternate}
+.r2{animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{from{transform:translateX(-10px)}to{transform:translateX(10px)}}
+.hero-tags{position:relative;z-index:3;display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.tag{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(13,44,71,.38);border:1px solid rgba(250,245,236,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+.kicker{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--sun-hot);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:22px;height:2px;background:currentColor}
+h2{font-size:clamp(34px,8.4vw,64px);margin:12px 0 14px;color:var(--river-deep)}
+.sub{color:var(--muted);max-width:52ch}
+
+/* intro strip */
+.strip{background:var(--off);padding:26px 0 0}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px}
+.fact .disp{font-size:24px;color:var(--river)}
+.fact small{display:block;color:var(--muted);font-size:13.5px;line-height:1.35;margin-top:4px}
+
+/* menu */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.tab{appearance:none;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:700 14.5px "Karla";color:var(--river-deep);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--river-mid)}
+.tab[aria-selected="true"]{background:var(--river);border-color:var(--river);color:#fff}
+.menu{display:grid;gap:14px}
+.group{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:8px 20px 6px;box-shadow:0 18px 40px -30px rgba(13,44,71,.35)}
+.group h3{font-size:21px;color:var(--river-deep);padding:16px 0 10px;display:flex;align-items:center;gap:10px}
+.group h3 i{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--sun))}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:13px 0;border-top:1px dashed var(--line)}
+.row .n{font-weight:700}
+.row .d{display:block;font-size:13.5px;color:var(--muted);font-weight:400}
+.row .p{font-family:"Archivo Black";color:var(--sun-hot);white-space:nowrap;font-size:17px;text-align:right}
+.row .p small{display:block;font-family:"Karla";font-size:12px;color:var(--muted);font-weight:500}
+.note{font-size:13.5px;color:var(--muted);margin-top:14px}
+.hide{display:none}
+
+/* why */
+.why{background:var(--river-deep);color:var(--off);overflow:hidden}
+.why h2{color:var(--off)}
+.why .sub{color:#b8cee0}
+.why .kicker{color:var(--gold)}
+.cards{display:grid;gap:14px;margin-top:30px}
+.card{position:relative;border-radius:var(--r);padding:24px 22px;background:linear-gradient(160deg,rgba(47,111,159,.35),rgba(47,111,159,.08));border:1px solid rgba(156,195,222,.22);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.card .ico{width:46px;height:46px;border-radius:14px;background:var(--sun);display:grid;place-items:center;margin-bottom:14px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{color:#c8d9e7;font-size:15.5px}
+.why .ridge-bg{position:absolute;left:0;right:0;bottom:0;opacity:.5;pointer-events:none}
+
+/* swatch */
+.swatch{display:flex;height:16px;border-radius:999px;overflow:hidden;margin:22px 0 4px;max-width:420px}
+.swatch span{flex:1}
+
+/* visit */
+.visit-grid{display:grid;gap:18px;margin-top:28px}
+.visit-grid>*{min-width:0}
+.hours{padding:6px 16px!important}
+@media (max-width:360px){.hrow{font-size:15px}}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px 20px}
+.hrow{display:flex;justify-content:space-between;white-space:nowrap;gap:8px;padding:12px 0;border-top:1px solid var(--line);font-weight:500}
+.hrow:first-child{border-top:0}
+.hrow.closed span:last-child{color:var(--muted)}
+.hrow.today{color:var(--river-deep);font-weight:700;position:relative}
+.hrow.today span:first-child::after{content:"Today";margin-left:8px;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--sun);color:#fff;border-radius:999px;padding:3px 8px;vertical-align:2px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;margin:4px 0 14px;color:var(--river)}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 4px rgba(47,163,107,.18)}
+.status.off::before{background:#c0563a;box-shadow:0 0 0 4px rgba(192,86,58,.18)}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--paper);min-height:300px}
+.map iframe{display:block;width:100%;height:320px;border:0}
+.addr{background:var(--paper);border-radius:var(--r);padding:22px}
+.addr .disp{font-size:22px;color:var(--river-deep);line-height:1.15}
+.addr p{color:var(--muted);margin:6px 0 16px}
+.addr .ctas{margin-top:0}
+.pill.river{background:var(--river);color:#fff}
+.pill.river:hover{background:var(--river-deep)}
+.pill.line{border:1.5px solid var(--river);color:var(--river)}
+.pill.line:hover{background:rgba(23,69,107,.07)}
+
+/* cta band */
+.band{background:linear-gradient(120deg,var(--sun-hot),var(--sun) 45%,var(--gold));color:#fff;overflow:hidden}
+.band .wrap{position:relative;z-index:2;padding:70px 20px}
+.band h2{color:#fff;max-width:14ch}
+.band p{max-width:44ch;color:#fff5e6}
+.band .pill.dark{background:var(--river-deep);color:#fff}
+.band .pill.dark:hover{background:#06192a}
+.band .pill.ghost{border-color:rgba(255,255,255,.7);color:#fff}
+
+footer{background:var(--river-deep);color:#9fb8cc;padding:40px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:16px}
+footer a{color:var(--honey)}
+footer .disp{color:var(--off);font-size:20px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(250,245,236,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.bar a{flex:1;justify-content:center;padding:14px 10px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+.js.show-all .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .nav .pill{display:inline-flex}
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .menu{grid-template-columns:1fr 1fr;align-items:start}
+  .visit-grid{grid-template-columns:1fr 1.25fr}
+  .visit-grid .map{grid-row:span 2}
+  .map iframe{height:100%;min-height:460px}
+  .hero{min-height:820px;padding-top:150px}
+  .hero p.lead{font-size:20px;max-width:36ch}
+  .sunball{width:520px;height:520px;margin-left:-260px;top:auto;bottom:120px;left:72%}
+  .banner{font-size:12.5px}
+  .hero{min-height:860px}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .bar{display:none}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media for <b>Method Hair Studio</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Method Hair Studio home">
+      <span class="mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M2 19 L8 9 L11 13 L15 6 L22 19 Z" fill="#17456b"/><path d="M15 6 L18 11.5 L16.6 11 L15 13 L13.4 10.6 Z" fill="#f07a2f"/></svg>
+      </span>
+      <span>METHOD<small>hair studio</small></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">The studio</a></li>
+      <li><a href="#visit">Hours &amp; visit</a></li>
+    </ul>
+    <a class="pill sun" href="https://square.site/book/HM9AE36B9QMNF/method-hair-studio-chattanooga-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="sunball" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap hero-copy">
+    <div class="eyebrow">Lee Highway · Chattanooga</div>
+    <h1>Golden&nbsp;hour <em>blonde,</em><br>by method.</h1>
+    <p class="lead">Luxury blonding and extension specialist. Color melts, face frames and extensions by the row, by appointment Tuesday through Friday.</p>
+    <div class="ctas">
+      <a class="pill sun" href="https://square.site/book/HM9AE36B9QMNF/method-hair-studio-chattanooga-tn" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+        Book an appointment</a>
+      <a class="pill ghost" href="tel:+14235082589">Call (423) 508-2589</a>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">Blonding</span><span class="tag">Extensions</span><span class="tag">Color melts</span><span class="tag">Olaplex</span>
+    </div>
+  </div>
+  <svg class="ridges" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true">
+    <path class="r1" d="M-40 210 L80 150 L170 190 L290 110 L380 160 L470 120 L590 190 L700 130 L820 175 L930 95 L1040 165 L1150 120 L1260 175 L1360 130 L1480 170 L1480 360 L-40 360 Z" fill="#c7643a" opacity=".55"/>
+    <path class="r2" d="M-40 250 L60 210 L160 240 L260 185 L370 235 L480 200 L600 250 L720 190 L830 230 L950 175 L1070 240 L1180 205 L1300 245 L1400 210 L1480 230 L1480 360 L-40 360 Z" fill="#2f6f9f" opacity=".85"/>
+    <path d="M-40 295 L90 260 L210 290 L330 250 L450 285 L560 262 L690 300 L810 258 L930 292 L1060 255 L1180 290 L1300 265 L1480 290 L1480 360 L-40 360 Z" fill="#17456b"/>
+    <path d="M-40 330 C200 305 380 345 620 322 C860 300 1080 340 1480 318 L1480 360 L-40 360 Z" fill="#faf5ec"/>
+  </svg>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact rv"><div class="disp">Tue–Fri</div><small>9:00 AM to 5:00 PM, by appointment</small></div>
+      <div class="fact rv"><div class="disp">1–3 rows</div><small>Extension installs, priced by row</small></div>
+      <div class="fact rv"><div class="disp">Suite 302</div><small>7053 Lee Highway, Chattanooga</small></div>
+      <div class="fact rv"><div class="disp">Online</div><small>Book any time, day or night</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="kicker rv">The menu</div>
+    <h2 class="rv">Color, rows &amp; finish.</h2>
+    <p class="sub rv">Every service and price below comes straight from Method's booking page. Tap a category, then book the one you want.</p>
+
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="ext">Extensions</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="finish">Cut &amp; finish</button>
+    </div>
+
+    <div class="menu">
+      <div class="group rv" data-g="color">
+        <h3><i></i>Blonding &amp; color</h3>
+        <div class="row"><span class="n">Full color</span><span class="p">$190<small>3 hrs</small></span></div>
+        <div class="row"><span class="n">Partial color</span><span class="p">$170<small>2 hrs 30 min</small></span></div>
+        <div class="row"><span class="n">All over color</span><span class="p">$120<small>2 hrs</small></span></div>
+        <div class="row"><span class="n">Color melt</span><span class="p">$120<small>2 hrs</small></span></div>
+        <div class="row"><span class="n">Face frame and tone</span><span class="p">$120<small>30 min</small></span></div>
+        <div class="row"><span class="n">Root touch-up</span><span class="p">$100<small>2 hrs</small></span></div>
+        <div class="row"><span class="n">Toner</span><span class="p">$90<small>1 hr</small></span></div>
+        <div class="row"><span class="n">Root tap</span><span class="p">$25<small>30 min</small></span></div>
+        <div class="row"><span class="n">Add-on low lights</span><span class="p">$25<small>30 min</small></span></div>
+        <div class="row"><span class="n">Olaplex</span><span class="p">$30<small>30 min</small></span></div>
+      </div>
+
+      <div class="group rv" data-g="ext">
+        <h3><i></i>Extensions</h3>
+        <div class="row"><span class="n">Extension consultation<span class="d">Start here if you're new to extensions</span></span><span class="p"><small>15 min</small></span></div>
+        <div class="row"><span class="n">1 row</span><span class="p">$100<small>30 min</small></span></div>
+        <div class="row"><span class="n">2 rows</span><span class="p">$200<small>1 hr 30 min</small></span></div>
+        <div class="row"><span class="n">3 rows</span><span class="p">$275<small>2 hrs</small></span></div>
+        <div class="row"><span class="n">Extensions</span><span class="p"><small>2 hrs 30 min</small></span></div>
+        <div class="row"><span class="n">Extension root and lowlight</span><span class="p">$40<small>30 min</small></span></div>
+        <div class="row"><span class="n">Extension removal (2 rows)</span><span class="p">$30<small>30 min</small></span></div>
+        <div class="row"><span class="n">Shampoo style + extensions</span><span class="p">$60<small>1 hr 30 min</small></span></div>
+      </div>
+
+      <div class="group rv" data-g="finish">
+        <h3><i></i>Cut &amp; finish</h3>
+        <div class="row"><span class="n">Haircut</span><span class="p">$50<small>price varies · 1 hr</small></span></div>
+        <div class="row"><span class="n">Shampoo style</span><span class="p">$40<small>price varies · 1 hr</small></span></div>
+        <div class="row"><span class="n">Add-on blowout</span><span class="p">$15<small>30 min</small></span></div>
+        <div class="row"><span class="n">Extra product</span><span class="p">$15<small>30 min</small></span></div>
+      </div>
+    </div>
+    <p class="note rv">Services without a listed price are quoted at booking or consultation.</p>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="kicker rv">The studio</div>
+    <h2 class="rv">A specialist, not a&nbsp;menu of everything.</h2>
+    <p class="sub rv">Method keeps its focus narrow on purpose: blonding and extensions, done in Suite 302 on Lee Highway.</p>
+    <div class="swatch rv" aria-hidden="true"><span style="background:#fbe7c0"></span><span style="background:#f6d08f"></span><span style="background:#e9b46a"></span><span style="background:#c98b4a"></span><span style="background:#8f5a33"></span></div>
+    <div class="cards">
+      <div class="card rv">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></div>
+        <h3>Blonde is the specialty</h3>
+        <p>Full and partial color, color melts, face frames, toners and root work make up most of the menu, with Olaplex as an add-on.</p>
+      </div>
+      <div class="card rv">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
+        <h3>Extensions by the row</h3>
+        <p>Clear, published pricing for one, two or three rows, plus root and lowlight upkeep, removal and a 15-minute consultation to start.</p>
+      </div>
+      <div class="card rv">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>Your own appointment</h3>
+        <p>A studio suite on Lee Highway, open by appointment Tuesday through Friday, and bookable online any time through Square.</p>
+      </div>
+    </div>
+  </div>
+  <svg class="ridge-bg" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 150 L120 100 L240 140 L360 80 L480 130 L600 90 L720 150 L840 95 L960 135 L1080 85 L1200 140 L1320 100 L1440 130 L1440 220 L0 220 Z" fill="#17456b"/>
+    <path d="M0 190 L140 160 L280 185 L420 150 L560 180 L700 155 L840 190 L980 160 L1120 185 L1260 158 L1440 180 L1440 220 L0 220 Z" fill="#0a2238"/>
+  </svg>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="kicker rv">Hours &amp; visit</div>
+    <h2 class="rv">Find the suite.</h2>
+    <div class="visit-grid">
+      <div class="rv">
+        <div class="status" id="status">Open Tuesday to Friday</div>
+        <div class="hours" id="hours">
+          <div class="hrow closed" data-d="1"><span>Monday</span><span>Closed</span></div>
+          <div class="hrow" data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="3"><span>Wednesday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="5"><span>Friday</span><span>9:00 AM – 5:00 PM</span></div>
+          <div class="hrow closed" data-d="6"><span>Saturday</span><span>Closed</span></div>
+          <div class="hrow closed" data-d="0"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map to Method Hair Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=7053%20Lee%20Highway%2C%20Suite%20302%2C%20Chattanooga%2C%20TN%2037421&output=embed"></iframe>
+      </div>
+      <div class="addr rv">
+        <div class="disp">7053 Lee Highway, Suite 302<br>Chattanooga, TN 37421</div>
+        <p>Call or book online. Instagram: <a href="https://www.instagram.com/hairbykatie.chatt" target="_blank" rel="noopener">@hairbykatie.chatt</a></p>
+        <div class="ctas">
+          <a class="pill river" href="tel:+14235082589">Call (423) 508-2589</a>
+          <a class="pill line" href="https://www.google.com/maps/dir/?api=1&destination=7053%20Lee%20Highway%2C%20Suite%20302%2C%20Chattanooga%2C%20TN%2037421" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="rv">Ready for your blonde?</h2>
+    <p class="rv">Pick your service, choose a time, done. New to extensions? Book the 15-minute consultation first.</p>
+    <div class="ctas rv">
+      <a class="pill dark" href="https://square.site/book/HM9AE36B9QMNF/method-hair-studio-chattanooga-tn" target="_blank" rel="noopener">Book an appointment</a>
+      <a class="pill ghost" href="tel:+14235082589">Call the studio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Method Hair Studio</div>
+    <div>Luxury blonding and extension specialist · 7053 Lee Highway, Suite 302, Chattanooga, TN · <a href="tel:+14235082589">(423) 508-2589</a></div>
+    <div>Concept by Code Craft Media · Not a live site.</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="pill river" href="tel:+14235082589">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    Call</a>
+  <a class="pill sun" href="https://square.site/book/HM9AE36B9QMNF/method-hair-studio-chattanooga-tn" target="_blank" rel="noopener">Book now</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { d.classList.add('show-all'); }
+  setTimeout(function(){d.classList.add('show-all')},1500);
+
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('.hrow[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var st=document.getElementById('status');
+  var open=(day>=2&&day<=5);
+  if(open&&h>=9&&h<17){st.textContent='Open now · until 5:00 PM';}
+  else{st.classList.add('off');
+    var next=open&&h<9?'today at 9:00 AM':(day>=1&&day<=4?'tomorrow at 9:00 AM':'Tuesday at 9:00 AM');
+    st.textContent='Closed now · opens '+next;}
+
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+    var f=t.dataset.f;
+    document.querySelectorAll('.group').forEach(function(g){g.classList.toggle('hide',f!=='all'&&g.dataset.g!==f)});
+  })});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Heather Carver — Clarksville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--honey:#E3A857;--esp:#2E211B;--cream:#FBF6EE;--rose:#C98C8C;--esp2:#4a382e;--line:rgba(46,33,27,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--cream);color:var(--esp);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--esp);color:#f3e6d3;font-size:10.5px;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
+@media(min-width:600px){.banner{font-size:12px}}
+.banner b{color:var(--honey);font-weight:500}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;max-width:1180px;margin:0 auto}
+.logo{font-family:Lora,serif;font-size:21px;font-weight:600;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--rose);font-style:italic}
+.navlinks{display:none;gap:28px;font-size:15px}
+.navlinks a{text-decoration:none;opacity:.8;transition:.2s}.navlinks a:hover{opacity:1;color:#a66f2a}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:500;text-decoration:none;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-honey{background:var(--honey);color:var(--esp);box-shadow:0 8px 22px -10px rgba(163,105,32,.7)}
+.btn-honey:hover{background:#eab868;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--esp);color:var(--esp)}
+.btn-ghost:hover{background:var(--esp);color:var(--cream)}
+.hero{position:relative;max-width:1180px;margin:0 auto;padding:22px 22px 60px;display:grid;gap:36px}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#9b6a5f;font-weight:500}
+h1{font-family:Lora,serif;font-weight:500;font-size:clamp(40px,10.5vw,74px);line-height:1.04;letter-spacing:-.015em;margin:14px 0 18px}
+h1 em{color:var(--rose);font-style:italic}
+.sub{font-size:18px;color:var(--esp2);max-width:30em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.archwrap{position:relative;justify-self:center;width:min(84%,420px)}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;background:linear-gradient(170deg,#f0c98d 0%,var(--honey) 45%,#c98a5a 100%);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(46,33,27,.5)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.wave path{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 3.2s ease forwards}
+.wave path:nth-child(2){animation-delay:.25s}.wave path:nth-child(3){animation-delay:.5s}.wave path:nth-child(4){animation-delay:.75s}.wave path:nth-child(5){animation-delay:1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.arch2{position:absolute;width:44%;aspect-ratio:3/4;border-radius:999px 999px 18px 18px;border:2px solid var(--rose);right:-6%;bottom:-6%;z-index:-1}
+.badge{position:absolute;left:-4%;bottom:12%;background:var(--cream);padding:12px 16px;border-radius:16px;box-shadow:0 14px 30px -16px rgba(46,33,27,.45);font-size:14px;line-height:1.3}
+.badge strong{font-family:Lora,serif;font-size:22px;display:block;color:#a66f2a}
+section{padding:72px 22px;max-width:1180px;margin:0 auto}
+h2{font-family:Lora,serif;font-weight:500;font-size:clamp(32px,7vw,48px);line-height:1.1;margin:10px 0 14px}
+h2 em{color:var(--rose)}
+.lead{color:var(--esp2);max-width:36em}
+.menu{margin-top:34px;display:grid;gap:0;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:20px 4px;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.item:hover{background:rgba(227,168,87,.1);padding-left:12px}
+.item h3{font-family:Lora,serif;font-weight:500;font-size:21px}
+.item .price{font-family:Lora,serif;font-size:21px;color:#a66f2a}
+.item p{grid-column:1/-1;font-size:15px;color:#6b574b}
+.item .dur{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#9b6a5f}
+.cat{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#9b6a5f;margin:36px 0 0;font-weight:500}
+.why{background:var(--esp);color:var(--cream);border-radius:36px;max-width:1180px;margin:0 auto;position:relative;overflow:hidden}
+.why-in{padding:72px 26px;position:relative;z-index:1}
+.why .eyebrow{color:var(--honey)}
+.why h2 em{color:var(--honey)}
+.cards{display:grid;gap:16px;margin-top:34px}
+.card{background:rgba(251,246,238,.06);border:1px solid rgba(251,246,238,.12);border-radius:24px 24px 24px 24px;padding:26px;transition:transform .25s,background .25s}
+.card:hover{transform:translateY(-4px);background:rgba(251,246,238,.1)}
+.card .ic{width:46px;height:46px;border-radius:999px 999px 10px 10px;background:var(--honey);display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-family:Lora,serif;font-weight:500;font-size:22px;margin-bottom:6px}
+.card p{color:#e5d6c3;font-size:15.5px}
+.whywave{position:absolute;right:-60px;top:-40px;width:420px;opacity:.25}
+.hours{display:grid;gap:36px}
+table{width:100%;border-collapse:collapse;margin-top:18px}
+td{padding:14px 12px;border-bottom:1px solid var(--line);font-size:16.5px}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+tr.today td{background:var(--honey);font-weight:600}
+tr.today td:first-child{border-radius:14px 0 0 14px}tr.today td:last-child{border-radius:0 14px 14px 0}
+tr.today td:first-child::after{content:" · today";font-weight:400;font-size:13px}
+tr.closed td{color:#9a8a7e}
+.map{background:repeating-linear-gradient(135deg,#f3e7d6 0 14px,#efe0cc 14px 28px);border-radius:28px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(46,33,27,.5);border:6px solid #fff;min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.contact{display:grid;gap:12px;margin-top:22px}
+.crow{display:flex;gap:14px;align-items:flex-start;font-size:16px}
+.crow svg{flex:none;margin-top:3px}
+.crow a{text-decoration:none;border-bottom:1px solid var(--rose)}
+.crow a:hover{color:#a66f2a}
+.final{text-align:center;padding:84px 22px 64px;position:relative}
+.final h2{max-width:14em;margin:10px auto 14px}
+.final .ctas{justify-content:center}
+footer{text-align:center;padding:30px 22px;font-size:13.5px;color:#7a665a;border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,246,238,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.bar a{display:flex;justify-content:center;align-items:center;gap:8px;padding:14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:16px}
+.bar .call{background:var(--esp);color:var(--cream)}
+.bar .book{background:var(--honey);color:var(--esp)}
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+@media (min-width:900px){
+ body{padding-bottom:0}
+ .bar{display:none}
+ .navlinks{display:flex}
+ .hero{grid-template-columns:1.15fr .85fr;align-items:center;padding:40px 22px 40px}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .hours{grid-template-columns:1fr 1.1fr;align-items:stretch}
+ .menucols{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+ .why-in{padding:90px 64px}
+ section{padding:96px 22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.wave path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Heather Carver. Not live.</div>
+
+<nav>
+ <a href="#top" class="logo">Heather <span>Carver</span></a>
+ <div class="navlinks"><a href="#menu">Services</a><a href="#why">The Chair</a><a href="#visit">Hours &amp; Visit</a></div>
+ <a class="btn btn-honey" style="padding:10px 18px;font-size:14.5px" href="https://square.site/book/2FTX2XK6949MC/heather-carver-clarksville-tn">Book</a>
+</nav>
+
+<header class="hero" id="top">
+ <div class="reveal">
+  <div class="eyebrow">Hair stylist · Clarksville, TN</div>
+  <h1>Fresh cuts, <em>clean beards</em>, and five quiet minutes for you.</h1>
+  <p class="sub">Haircuts and beard trims with Heather Carver in Suite 203 off Memorial Drive, open Tuesday through Saturday.</p>
+  <div class="ctas">
+   <a class="btn btn-honey" href="https://square.site/book/2FTX2XK6949MC/heather-carver-clarksville-tn">Book online
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+   <a class="btn btn-ghost" href="tel:+19319192544">Call (931) 919-2544</a>
+  </div>
+ </div>
+ <div class="archwrap reveal">
+  <div class="arch">
+   <svg viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+    <defs><radialGradient id="g" cx="30%" cy="20%" r="70%"><stop offset="0" stop-color="#fff6e6" stop-opacity=".55"/><stop offset="1" stop-color="#fff6e6" stop-opacity="0"/></radialGradient></defs>
+    <rect width="400" height="500" fill="url(#g)"/>
+    <g class="wave" fill="none" stroke-linecap="round">
+     <path d="M-20 120 C 80 60, 140 200, 220 140 S 360 60, 430 130" stroke="#FBF6EE" stroke-width="3" opacity=".9"/>
+     <path d="M-20 190 C 70 130, 150 270, 230 205 S 360 130, 430 200" stroke="#2E211B" stroke-width="2.2" opacity=".55"/>
+     <path d="M-20 260 C 90 200, 140 340, 220 275 S 370 200, 430 270" stroke="#FBF6EE" stroke-width="3" opacity=".8"/>
+     <path d="M-20 330 C 80 270, 160 410, 240 345 S 360 270, 430 340" stroke="#C98C8C" stroke-width="3.5" opacity=".9"/>
+     <path d="M-20 400 C 90 340, 150 480, 230 415 S 370 340, 430 410" stroke="#2E211B" stroke-width="2.2" opacity=".45"/>
+    </g>
+    <g transform="translate(250 120) rotate(18)" fill="none" stroke="#2E211B" stroke-width="3" opacity=".7">
+     <circle cx="0" cy="0" r="14"/><circle cx="34" cy="0" r="14"/><path d="M8 -10 L60 -90 M26 -10 L-26 -90"/>
+    </g>
+   </svg>
+  </div>
+  <div class="arch2"></div>
+  <div class="badge"><strong>$32</strong>Haircut · 30 min</div>
+ </div>
+</header>
+
+<section id="menu">
+ <div class="reveal">
+  <div class="eyebrow">The menu</div>
+  <h2>Simple, honest <em>pricing.</em></h2>
+  <p class="lead">Every service and price below is from Heather's booking page. Pick one, add a little extra, and book in under a minute.</p>
+ </div>
+ <div class="menucols">
+  <div class="reveal">
+   <div class="cat">Cuts</div>
+   <div class="menu">
+    <div class="item"><h3>Haircut</h3><span class="price">$32</span><span class="dur">30 min</span></div>
+    <div class="item"><h3>Second Kids Haircut</h3><span class="price">$32</span><span class="dur">30 min</span><p>Bringing two kids? Book a second kids haircut on the same appointment.</p></div>
+   </div>
+   <div class="cat">Beard</div>
+   <div class="menu">
+    <div class="item"><h3>Deluxe Beard Trim</h3><span class="price">$20</span><span class="dur">30 min</span><p>Includes a deep conditioning treatment for your beard and hot steam towel.</p></div>
+    <div class="item"><h3>Beard Trim</h3><span class="price">$17</span><span class="dur">15 min</span></div>
+   </div>
+  </div>
+  <div class="reveal">
+   <div class="cat">Add a little extra</div>
+   <div class="menu">
+    <div class="item"><h3>Massaging Shampoo</h3><span class="price">$3</span><span class="dur">5 min</span></div>
+    <div class="item"><h3>Steam Towel</h3><span class="price">$3</span><span class="dur">5 min</span><p>A relaxing steam towel infused with essential oils.</p></div>
+    <div class="item"><h3>Neck &amp; Shoulder Massage</h3><span class="price">$3</span><span class="dur">5 min</span><p>Relaxing neck and shoulder treatment.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div style="padding:0 12px">
+<div class="why" id="why">
+ <svg class="whywave" viewBox="0 0 400 300" fill="none" aria-hidden="true"><path d="M0 60 C100 0 150 140 250 80 S380 20 400 60" stroke="#E3A857" stroke-width="3"/><path d="M0 130 C100 70 150 210 250 150 S380 90 400 130" stroke="#C98C8C" stroke-width="3"/><path d="M0 200 C100 140 150 280 250 220 S380 160 400 200" stroke="#E3A857" stroke-width="3"/></svg>
+ <div class="why-in">
+  <div class="eyebrow reveal">Why Heather's chair</div>
+  <h2 class="reveal">Little extras, <em>no surprises.</em></h2>
+  <div class="cards">
+   <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E211B" stroke-width="2"><path d="M4 8c3-3 5 3 8 0s5 3 8 0M4 14c3-3 5 3 8 0s5 3 8 0"/></svg></div><h3>Hot towels &amp; essential oils</h3><p>Steam towel, massaging shampoo, and a neck &amp; shoulder massage, each just $3 to add on.</p></div>
+   <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E211B" stroke-width="2"><path d="M7 4v7a5 5 0 0 0 10 0V4"/><path d="M12 16v4"/></svg></div><h3>Beards done properly</h3><p>The Deluxe Beard Trim adds a deep conditioning treatment and a hot steam towel.</p></div>
+   <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E211B" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Family-friendly booking</h3><p>Book a second kids haircut on the same appointment, and early starts from 8:00 on Saturdays.</p></div>
+  </div>
+ </div>
+</div>
+</div>
+
+<section id="visit">
+ <div class="hours">
+  <div class="reveal">
+   <div class="eyebrow">Hours &amp; visit</div>
+   <h2>Find the <em>chair.</em></h2>
+   <table id="hrs">
+    <tr data-d="2"><td>Tuesday</td><td>8:30 AM – 4:00 PM</td></tr>
+    <tr data-d="3"><td>Wednesday</td><td>8:30 AM – 5:00 PM</td></tr>
+    <tr data-d="4"><td>Thursday</td><td>8:30 AM – 4:00 PM</td></tr>
+    <tr data-d="5"><td>Friday</td><td>8:30 AM – 5:00 PM</td></tr>
+    <tr data-d="6"><td>Saturday</td><td>8:00 AM – 2:00 PM</td></tr>
+    <tr data-d="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+    <tr data-d="1" class="closed"><td>Monday</td><td>Closed</td></tr>
+   </table>
+   <div class="contact">
+    <div class="crow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C98C8C" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://www.google.com/maps/dir/?api=1&destination=1762B+Memorial+Dr+Suite+203+Clarksville+TN+37043">1762B Memorial Dr, Suite 203<br>Clarksville, TN 37043</a></div>
+    <div class="crow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C98C8C" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+19319192544">(931) 919-2544</a></div>
+    <div class="crow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C98C8C" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:heather.carver.2007@gmail.com">heather.carver.2007@gmail.com</a></div>
+   </div>
+   <div class="ctas"><a class="btn btn-honey" href="https://www.google.com/maps/dir/?api=1&destination=1762B+Memorial+Dr+Suite+203+Clarksville+TN+37043">Get directions</a><a class="btn btn-ghost" href="tel:+19319192544">Tap to call</a></div>
+  </div>
+  <div class="map reveal"><iframe title="Map to Heather Carver" loading="lazy" src="https://www.google.com/maps?q=1762B%20Memorial%20Dr%20Suite%20203%2C%20Clarksville%2C%20TN%2037043&output=embed"></iframe></div>
+ </div>
+</section>
+
+<div class="final reveal">
+ <div class="eyebrow">Tuesday – Saturday</div>
+ <h2>Your next cut is <em>a tap away.</em></h2>
+ <div class="ctas"><a class="btn btn-honey" href="https://square.site/book/2FTX2XK6949MC/heather-carver-clarksville-tn">Book with Heather</a><a class="btn btn-ghost" href="tel:+19319192544">(931) 919-2544</a></div>
+</div>
+
+<footer>Heather Carver · 1762B Memorial Dr, Suite 203, Clarksville, TN<br>Concept by Code Craft Media</footer>
+
+<div class="bar">
+ <a class="call" href="tel:+19319192544"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+ <a class="book" href="https://square.site/book/2FTX2XK6949MC/heather-carver-clarksville-tn">Book now</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var d=new Date().getDay();var r=document.querySelector('#hrs tr[data-d="'+d+'"]');if(r)r.classList.add('today');
+ var els=document.querySelectorAll('.reveal');
+ function all(){els.forEach(function(e){e.classList.add('in')})}
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})}else all();
+ setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

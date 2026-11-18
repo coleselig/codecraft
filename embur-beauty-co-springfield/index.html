@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Embur Beauty &amp; Co. — Springfield</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ember:#E8622C; --ember-2:#F59A3E; --glow:#FFC15E; --char:#1F1B19; --char-2:#2C2623;
+  --sand:#F3E6D3; --sand-2:#EAD8BE; --ink:#2A2421; --muted:#6B5D53; --line:rgba(31,27,25,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+h1,h2,h3,.jos{font-family:"Josefin Sans",sans-serif}
+a{color:inherit}
+.banner{background:var(--char);color:#d9c9b6;font-size:11px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.banner b{color:var(--glow);font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(31,27,25,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--sand)}
+.logo .mark{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 40% 35%,var(--glow),var(--ember) 55%,#8a2d10);box-shadow:0 0 18px rgba(245,154,62,.6)}
+.logo span{font-family:"Josefin Sans";font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:15px}
+.logo em{font-style:normal;color:var(--ember-2)}
+nav ul{display:none;list-style:none;gap:28px}
+nav ul a{color:#e8dccd;text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-family:"Josefin Sans"}
+nav ul a:hover{color:var(--glow)}
+.navcta{background:var(--ember);color:#fff;text-decoration:none;padding:9px 16px;border-radius:999px;font-family:"Josefin Sans";font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:transform .2s,box-shadow .2s}
+.navcta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,98,44,.5)}
+/* HERO */
+.hero{position:relative;background:var(--char);color:var(--sand);overflow:hidden;padding:56px 0 72px}
+.embers{position:absolute;inset:0;pointer-events:none}
+.embers i{position:absolute;bottom:-20px;border-radius:50%;background:radial-gradient(circle,var(--glow),var(--ember) 60%,transparent 70%);opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{transform:translate(0,0) scale(1);opacity:0}10%{opacity:.9}100%{transform:translate(var(--dx),-110vh) scale(.3);opacity:0}}
+.dotfield{position:absolute;inset:0;background-image:radial-gradient(rgba(245,154,62,.35) 1.2px,transparent 1.6px);background-size:22px 22px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 70% 100%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 80% 70% at 70% 100%,#000 10%,transparent 70%)}
+.glowblob{position:absolute;width:520px;height:520px;right:-180px;bottom:-240px;border-radius:50%;background:radial-gradient(circle,rgba(255,193,94,.55),rgba(232,98,44,.35) 40%,transparent 70%);filter:blur(10px);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.08);opacity:.85}}
+.hero .wrap{position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"Josefin Sans";letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:var(--glow);border:1px solid rgba(255,193,94,.35);padding:7px 14px;border-radius:999px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ember-2);box-shadow:0 0 10px var(--glow)}
+.hero h1{font-weight:300;text-wrap:balance;font-size:clamp(40px,11vw,92px);line-height:1.02;margin:22px 0 18px;letter-spacing:-.01em}
+.hero h1 strong{font-weight:700;background:linear-gradient(100deg,var(--glow),var(--ember-2) 40%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:18px;color:#d8c8b4;max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:999px;font-family:"Josefin Sans";font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-ember{background:linear-gradient(135deg,var(--ember-2),var(--ember));color:#fff;box-shadow:0 10px 30px rgba(232,98,44,.4)}
+.btn-ember:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(232,98,44,.55)}
+.btn-ghost{border:1.5px solid rgba(243,230,211,.4);color:var(--sand)}
+.btn-ghost:hover{background:rgba(243,230,211,.08);border-color:var(--glow)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:14px;color:#cdbca7}
+.facts span{display:flex;align-items:center;gap:8px}
+.facts span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ember-2)}
+/* SECTIONS */
+section{padding:72px 0}
+.kicker{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.24em;font-size:12px;color:var(--ember);font-weight:600}
+h2{font-weight:300;font-size:clamp(32px,7vw,52px);line-height:1.08;margin:10px 0 14px;color:var(--char)}
+h2 strong{font-weight:700}
+.lead{color:var(--muted);max-width:560px}
+/* MENU */
+.menu{display:grid;gap:14px;margin-top:34px}
+.cat{font-family:"Josefin Sans";letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--muted);margin:22px 0 4px;display:flex;align-items:center;gap:12px}
+.cat::after{content:"";flex:1;height:1px;background:var(--line)}
+.svc{background:#FBF4EA;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.svc:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(31,27,25,.08);border-color:rgba(232,98,44,.4)}
+.svc h3{font-weight:600;font-size:19px;color:var(--char)}
+.svc .price{font-family:"Josefin Sans";font-weight:700;font-size:19px;color:var(--ember);text-align:right;white-space:nowrap}
+.svc .price small{font-weight:400;font-size:12px;color:var(--muted);display:block;letter-spacing:.06em;text-transform:uppercase}
+.svc .meta{grid-column:1/-1;font-size:14px;color:var(--muted)}
+.svc.feat{background:var(--char);color:var(--sand);border-color:transparent;position:relative;overflow:hidden}
+.svc.feat::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,193,94,.45),transparent 65%)}
+.svc.feat h3{color:var(--sand)} .svc.feat .meta{color:#cbbba6} .svc.feat .price{color:var(--glow)} .svc.feat .price small{color:#cbbba6}
+.tag{display:inline-block;font-family:"Josefin Sans";font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,193,94,.16);color:var(--glow);padding:3px 9px;border-radius:999px;margin-bottom:6px}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+/* ABOUT */
+.about{background:var(--sand-2);position:relative;overflow:hidden}
+.about .dotsx{position:absolute;left:-40px;top:-40px;width:260px;height:260px;background-image:radial-gradient(rgba(232,98,44,.45) 1.5px,transparent 2px);background-size:18px 18px;-webkit-mask-image:radial-gradient(circle,#000 20%,transparent 70%);mask-image:radial-gradient(circle,#000 20%,transparent 70%)}
+.why{display:grid;gap:16px;margin-top:30px;position:relative}
+.why div{background:rgba(255,255,255,.55);border-radius:18px;padding:22px;border:1px solid var(--line)}
+.why .n{font-family:"Josefin Sans";font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--ember)}
+.why h3{font-size:21px;font-weight:600;margin:6px 0 6px;color:var(--char)}
+.why p{color:var(--muted);font-size:15px}
+.sig{margin-top:26px;font-family:"Josefin Sans";font-size:22px;font-weight:300;color:var(--char);position:relative}
+.sig b{font-weight:700;color:var(--ember)}
+/* HOURS */
+.hv{display:grid;gap:28px}
+.hours{background:var(--char);color:var(--sand);border-radius:22px;padding:26px 22px;position:relative;overflow:hidden}
+.hours::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,154,62,.18) 1px,transparent 1.5px);background-size:16px 16px}
+.hours ul{list-style:none;position:relative}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:10px;font-size:16px;border-bottom:1px solid rgba(243,230,211,.08)}
+.hours li:last-child{border-bottom:0}
+.hours li .d{font-family:"Josefin Sans";letter-spacing:.1em;text-transform:uppercase;font-size:14px}
+.hours li.closed span:last-child{color:#8f8073}
+.hours li.today{background:linear-gradient(90deg,rgba(232,98,44,.35),rgba(245,154,62,.12));box-shadow:inset 3px 0 0 var(--glow)}
+.hours li.today .d::after{content:" · today";color:var(--glow);font-size:11px;letter-spacing:.14em}
+.hours h3{position:relative;font-weight:600;font-size:22px;margin-bottom:12px}
+.mapcard{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#FBF4EA}
+.mapcard iframe{display:block;width:100%;height:280px;border:0;background:var(--sand-2);filter:sepia(.25) saturate(.9)}
+.mapcard .info{padding:20px 22px}
+.mapcard .addr{font-family:"Josefin Sans";font-size:20px;font-weight:600;color:var(--char)}
+.mapcard .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;border:1.5px solid var(--char);text-decoration:none;font-family:"Josefin Sans";font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s}
+.pill:hover{background:var(--char);color:var(--sand)}
+.pill.e{background:var(--ember);border-color:var(--ember);color:#fff}
+.pill.e:hover{background:#c94f1d}
+/* POLICY */
+.policy{padding:56px 0}
+.policy .box{border:1.5px dashed rgba(232,98,44,.5);border-radius:20px;padding:24px 22px;background:#FBF4EA}
+.policy ul{margin:12px 0 0 18px;color:var(--muted);font-size:15px}
+.policy li{margin:5px 0}
+/* CTA */
+.final{background:var(--char);color:var(--sand);text-align:center;position:relative;overflow:hidden}
+.final .glowblob{left:50%;right:auto;transform:translateX(-50%);bottom:-320px}
+.final h2{color:var(--sand)}
+.final .ctas{justify-content:center}
+footer{background:#151210;color:#9d8e80;font-size:13px;padding:30px 0;text-align:center}
+footer a{color:var(--glow)}
+/* BAR */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(31,27,25,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(255,193,94,.2)}
+.bar a{flex:1;padding:14px 10px;font-size:13px}
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){.embers,.glowblob{animation:none!important}.rv{transition:none}.js .rv:not(.in){opacity:1;transform:none}}
+@media(min-width:760px){
+  nav ul{display:flex}
+  .hero{padding:96px 0 120px}
+  .menu{grid-template-columns:1fr 1fr}
+  .cat{grid-column:1/-1}
+  .why{grid-template-columns:repeat(3,1fr)}
+  .hv{grid-template-columns:1fr 1.2fr;align-items:stretch}
+  .mapcard iframe{height:340px}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept by <b>Code Craft Media</b> for Embur Beauty &amp; Co. Not live.</div>
+<nav><div class="wrap">
+  <a class="logo" href="#top"><i class="mark"></i><span>Embur <em>&amp;</em> Co.</span></a>
+  <ul><li><a href="#menu">Menu</a></li><li><a href="#about">About</a></li><li><a href="#visit">Visit</a></li></ul>
+  <a class="navcta" href="https://square.site/book/WQVSEAZDQ3GVS/embur-beauty-co-springfield-tn">Book</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="dotfield"></div><div class="glowblob"></div><div class="embers" id="embers"></div>
+  <div class="wrap">
+    <span class="eyebrow">Springfield, TN</span>
+    <h1>Color that <strong>glows</strong>, from one chair on Memorial&nbsp;Blvd.</h1>
+    <p class="sub">Highlights, all over color, color correction and blowouts by Emilee, one client at a time.</p>
+    <div class="ctas">
+      <a class="btn btn-ember" href="https://square.site/book/WQVSEAZDQ3GVS/embur-beauty-co-springfield-tn">Book with Emilee</a>
+      <a class="btn btn-ghost" href="tel:+16158870518">Call (615) 887-0518</a>
+    </div>
+    <div class="facts"><span>Tue–Sat</span><span>806 Memorial Blvd</span><span>Gift cards online</span></div>
+  </div>
+</header>
+
+<section id="menu"><div class="wrap">
+  <div class="rv"><div class="kicker">The menu</div>
+  <h2>Pick your <strong>glow</strong>.</h2>
+  <p class="lead">Prices as listed on Embur's booking page. "From" means your final price depends on your hair.</p></div>
+  <div class="menu">
+    <div class="cat">Packages</div>
+    <div class="svc feat rv"><div><span class="tag">Package</span><h3>Low Maintenance Baddie</h3></div><div class="price">$250<small>5 hr 30 min</small></div><div class="meta">Color or lightening, root tap/smudge, shampoo, blow out and style. Add a haircut for $25.</div></div>
+    <div class="svc feat rv"><div><span class="tag">Package</span><h3>Platinum Card</h3></div><div class="price">$300<small>6 hr 30 min</small></div><div class="meta">Lightens all of the hair. Haircut $25 if needed.</div></div>
+    <div class="cat">Color</div>
+    <div class="svc rv"><h3>Full Highlight</h3><div class="price">from $150<small>4 hr</small></div></div>
+    <div class="svc rv"><h3>Partial Highlight</h3><div class="price">from $120<small>2 hr 30 min</small></div><div class="meta">Also works as a highlight touch-up.</div></div>
+    <div class="svc rv"><h3>All Over Color</h3><div class="price">from $90<small>1 hr 30 min</small></div></div>
+    <div class="svc rv"><h3>Root Touchup</h3><div class="price">from $75<small>1 hr</small></div></div>
+    <div class="svc rv"><h3>Gloss / Toner Refresh</h3><div class="price">from $50<small>45 min</small></div></div>
+    <div class="svc rv"><h3>Color Corrective Service</h3><div class="price">$48/hr<small>about 7 hr</small></div><div class="meta">Send your current and inspiration photos first.</div></div>
+    <div class="cat">Cut &amp; style</div>
+    <div class="svc rv"><h3>Haircut</h3><div class="price">$35<small>45 min</small></div><div class="meta">Same price for a trim.</div></div>
+    <div class="svc rv"><h3>Shampoo, Blow Out &amp; Style</h3><div class="price">$45<small>45 min</small></div></div>
+    <div class="cat">Add-ons</div>
+    <div class="svc rv"><h3>Root Tap / Smudge</h3><div class="price">from $20<small>30 min</small></div></div>
+    <div class="svc rv"><h3>Conditioning Treatment</h3><div class="price">$40<small>20 min</small></div></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="dotsx"></div><div class="wrap">
+  <div class="rv"><div class="kicker">Why Embur</div>
+  <h2>Just you, <strong>and Emilee</strong>.</h2>
+  <p class="lead">Embur Beauty &amp; Co. is a one-stylist studio. Emilee runs every appointment herself, with one goal: you leave comfortable and confident.</p></div>
+  <div class="why">
+    <div class="rv"><div class="n">01</div><h3>One-on-one, start to finish</h3><p>No hand-offs. The person who books you is the person who does your color.</p></div>
+    <div class="rv"><div class="n">02</div><h3>Built for lightening</h3><p>From a quick gloss to the 6.5 hour Platinum Card, the menu is all about color done right.</p></div>
+    <div class="rv"><div class="n">03</div><h3>Questions welcome</h3><p>Not sure what to book? Text or call Emilee before you commit.</p></div>
+  </div>
+  <p class="sig rv">Text or call: <b><a href="tel:+16158870518" style="text-decoration:none">(615) 887-0518</a></b></p>
+</div></section>
+
+<section id="visit"><div class="wrap">
+  <div class="rv"><div class="kicker">Visit</div><h2>Find the <strong>glow</strong>.</h2></div>
+  <div class="hv" style="margin-top:28px">
+    <div class="hours rv"><h3>Hours</h3><ul id="hours">
+      <li data-d="0" class="closed"><span class="d">Sunday</span><span>Closed</span></li>
+      <li data-d="1" class="closed"><span class="d">Monday</span><span>Closed</span></li>
+      <li data-d="2"><span class="d">Tuesday</span><span>9:30 – 5:00</span></li>
+      <li data-d="3"><span class="d">Wednesday</span><span>9:30 – 5:00</span></li>
+      <li data-d="4"><span class="d">Thursday</span><span>9:30 – 5:00</span></li>
+      <li data-d="5"><span class="d">Friday</span><span>9:30 – 5:00</span></li>
+      <li data-d="6"><span class="d">Saturday</span><span>10:00 – 4:00</span></li>
+    </ul></div>
+    <div class="mapcard rv">
+      <iframe title="Map to Embur Beauty &amp; Co." loading="lazy" src="https://www.google.com/maps?q=806%20Memorial%20Blvd%2C%20Springfield%2C%20TN%2037172&output=embed"></iframe>
+      <div class="info"><div class="addr">806 Memorial Blvd<br>Springfield, TN 37172</div>
+      <div class="links"><a class="pill e" href="tel:+16158870518">Call</a><a class="pill" href="https://www.google.com/maps/dir/?api=1&destination=806%20Memorial%20Blvd%2C%20Springfield%2C%20TN%2037172">Directions</a><a class="pill" href="https://instagram.com/embur_beautyco">Instagram</a></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="policy"><div class="wrap"><div class="box rv">
+  <div class="kicker">Before you book</div>
+  <ul>
+    <li>Cancellations: $35 flat fee to the card on file.</li>
+    <li>No-call/no-show: charged 100% of the service.</li>
+    <li>10+ minutes late: reschedule, with a 50% charge.</li>
+    <li>All services are non-refundable.</li>
+  </ul>
+</div></div></section>
+
+<section class="final"><div class="glowblob"></div><div class="wrap" style="position:relative">
+  <div class="kicker" style="color:var(--glow)">Ready when you are</div>
+  <h2>Your next color, <strong>lit up</strong>.</h2>
+  <div class="ctas"><a class="btn btn-ember" href="https://square.site/book/WQVSEAZDQ3GVS/embur-beauty-co-springfield-tn">Book online</a><a class="btn btn-ghost" href="tel:+16158870518">Call Emilee</a></div>
+</div></section>
+
+<footer>Embur Beauty &amp; Co.<br>806 Memorial Blvd, Springfield, TN<br><a href="tel:+16158870518">(615) 887-0518</a> · <a href="https://instagram.com/embur_beautyco">@embur_beautyco</a><br>Concept by Code Craft Media</footer>
+
+<div class="bar"><a class="btn btn-ghost" href="tel:+16158870518">Call</a><a class="btn btn-ember" href="https://square.site/book/WQVSEAZDQ3GVS/embur-beauty-co-springfield-tn">Book now</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var e=document.getElementById('embers');
+  for(var i=0;i<22;i++){var s=document.createElement('i'),z=3+Math.random()*7;s.style.cssText='left:'+(Math.random()*100)+'%;width:'+z+'px;height:'+z+'px;--dx:'+(Math.random()*80-40)+'px;animation-duration:'+(7+Math.random()*9)+'s;animation-delay:'+(-Math.random()*14)+'s';e.appendChild(s);}
+  var els=document.querySelectorAll('.rv');
+  function all(){els.forEach(function(x){x.classList.add('in')})}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(x){io.observe(x)})}else all();
+  setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

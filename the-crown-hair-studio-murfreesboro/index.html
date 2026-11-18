@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Crown Hair Studio — Murfreesboro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f0e0d;--ink2:#171513;--ink3:#1f1c19;--copper:#c27a4a;--copper2:#e0a073;--stone:#d9d2c7;--stone2:#a39b8f;--line:rgba(217,210,199,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--stone);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3{font-family:Cinzel,serif;font-weight:700;letter-spacing:.04em;color:#f3ede4}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:#000;color:var(--stone2);font-size:11.5px;letter-spacing:.01em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid var(--line)}
+.banner b{color:var(--copper2);font-weight:500}
+nav{position:sticky;top:0;z-index:20;background:rgba(15,14,13,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Cinzel,serif;font-weight:700;letter-spacing:.12em;font-size:14px;color:#f3ede4}
+.logo svg{width:26px;height:26px}
+.navlinks{display:flex;gap:26px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.navlinks a{text-decoration:none;color:var(--stone2);transition:color .2s}
+.navlinks a:hover{color:var(--copper2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:2px;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn-copper{background:linear-gradient(135deg,var(--copper2),var(--copper));color:#140d08;box-shadow:0 8px 30px -10px rgba(194,122,74,.6)}
+.btn-copper:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(194,122,74,.8)}
+.btn-ghost{border:1px solid rgba(217,210,199,.35);color:var(--stone)}
+.btn-ghost:hover{border-color:var(--copper2);color:var(--copper2)}
+.nav-cta{padding:10px 16px;font-size:12px}
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 92px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(120% 80% at 80% 10%,#2a1d14 0%,transparent 55%),radial-gradient(90% 60% at 0% 100%,#1d1915 0%,transparent 60%),var(--ink)}
+.hero::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:64px;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--copper2);margin-bottom:22px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--copper)}
+.hero h1{font-size:clamp(40px,11vw,92px);line-height:1.02;max-width:12ch}
+.hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--copper2),var(--copper) 60%,#8f5130);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{margin-top:22px;font-size:17px;max-width:34ch;color:var(--stone2)}
+.hero .ctas{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{margin-top:44px;display:flex;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--stone2)}
+.hero-meta span b{display:block;font-family:Cinzel,serif;color:#f3ede4;font-size:15px;letter-spacing:.06em;font-weight:500}
+.steam{position:absolute;right:-40px;top:0;height:100%;width:62%;max-width:640px;z-index:1;opacity:.9;pointer-events:none}
+.steam path{fill:none;stroke:url(#cg);stroke-width:1.8;stroke-linecap:round;stroke-dasharray:6 900;animation:rise 7s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.4s}.steam path:nth-child(3){animation-delay:2.8s}.steam path:nth-child(4){animation-delay:4.2s}.steam path:nth-child(5){animation-delay:5.6s}
+.steam .static path{stroke:rgba(194,122,74,.3);stroke-dasharray:none;animation:sway 9s ease-in-out infinite alternate}
+@keyframes rise{0%{stroke-dasharray:0 900;stroke-dashoffset:0;opacity:0}20%{opacity:1}100%{stroke-dasharray:260 900;stroke-dashoffset:-520;opacity:0}}
+@keyframes sway{to{transform:translateX(14px)}}
+.crownmark{position:absolute;right:8%;bottom:12%;width:180px;opacity:.12;z-index:1}
+/* sections */
+section{padding:96px 0;position:relative}
+.sec-head{margin-bottom:46px}
+.sec-head h2{font-size:clamp(30px,6vw,48px);line-height:1.1}
+.sec-head p{color:var(--stone2);margin-top:12px;max-width:52ch}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--copper),transparent);opacity:.4}
+/* signature */
+.signature{background:var(--ink2)}
+.sig-card{position:relative;border:1px solid rgba(194,122,74,.45);padding:40px 28px;background:linear-gradient(160deg,#211a14,#141210 70%);overflow:hidden}
+.sig-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(194,122,74,.18);pointer-events:none}
+.sig-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.sig-card h3{font-size:clamp(28px,6vw,44px);color:var(--copper2)}
+.price{font-family:Cinzel,serif;font-size:30px;color:#f3ede4}
+.price small{display:block;font-family:Inter;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone2);text-align:right}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0 24px;counter-reset:s}
+.steps li{counter-increment:s;padding:16px;border-top:1px solid rgba(194,122,74,.35);font-size:14.5px;color:var(--stone)}
+.steps li::before{content:"0" counter(s);display:block;font-family:Cinzel,serif;color:var(--copper);font-size:13px;letter-spacing:.14em;margin-bottom:4px}
+.sig-note{font-size:13px;color:var(--stone2)}
+/* menu */
+.menu{display:grid;grid-template-columns:1fr;gap:0 56px}
+@media(min-width:860px){.menu{grid-template-columns:1fr 1fr}}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:22px 0;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.item:hover{background:rgba(194,122,74,.05);padding-left:10px;padding-right:10px}
+.item h3{font-size:17px;letter-spacing:.05em}
+.item .p{font-family:Cinzel,serif;color:var(--copper2);font-size:17px;white-space:nowrap;text-align:right}
+.item .p small{font-family:Inter;font-size:11px;color:var(--stone2);letter-spacing:.08em;text-transform:uppercase;display:block}
+.item .d{grid-column:1/-1;font-size:14px;color:var(--stone2)}
+.item .t{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone2);opacity:.8}
+/* why */
+.why{background:var(--ink2)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.why-card{padding:30px 24px;border:1px solid var(--line);background:var(--ink3);transition:border-color .25s,transform .25s}
+.why-card:hover{border-color:rgba(194,122,74,.55);transform:translateY(-3px)}
+.why-card svg{width:34px;height:34px;margin-bottom:16px}
+.why-card h3{font-size:18px;margin-bottom:8px}
+.why-card p{font-size:14.5px;color:var(--stone2)}
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:860px){.visit-grid{grid-template-columns:1fr 1.2fr}}
+.hours{list-style:none;border:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--line);font-size:15px}
+.hours li:last-child{border-bottom:0}
+.hours li.closed span:last-child{color:var(--stone2);opacity:.7}
+.hours li.today{background:linear-gradient(90deg,rgba(194,122,74,.22),rgba(194,122,74,.04));color:#f3ede4;font-weight:600;box-shadow:inset 3px 0 0 var(--copper)}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper2);border:1px solid rgba(194,122,74,.6);padding:2px 6px;vertical-align:middle}
+.addr{margin-top:22px;font-size:15px}
+.addr a{color:var(--copper2)}
+.visit-ctas{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.map{border:1px solid var(--line);min-height:340px;height:100%;overflow:hidden}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(1) invert(.92) contrast(.9) sepia(.25)}
+.socials{margin-top:18px;font-size:14px;color:var(--stone2)}
+.socials a{color:var(--stone);text-decoration:none;border-bottom:1px solid rgba(194,122,74,.5)}
+footer{padding:44px 0 30px;border-top:1px solid var(--line);font-size:13px;color:var(--stone2);text-align:center}
+footer .logo{justify-content:center;margin-bottom:12px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,9,8,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(194,122,74,.3)}
+.callbar a{flex:1;padding:14px 10px;font-size:13px}
+@media(min-width:860px){.callbar{display:none}body{padding-bottom:0}}
+@media(max-width:720px){.banner{font-size:9.6px;padding:6px 8px;letter-spacing:0}.steps{grid-template-columns:1fr 1fr;gap:8px 14px}.steps li{padding:12px 4px;font-size:14px}.sig-card{padding:32px 22px}.navlinks{display:none}section{padding:72px 0}.steam{width:100%;right:-34%;opacity:.8}.crownmark{width:110px;right:6%;bottom:6%}}
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for The Crown Hair Studio. Not live.</div>
+<nav><div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" fill="none" stroke="#e0a073" stroke-width="1.6" stroke-linejoin="round"><path d="M4 24 6 10l6 7 4-10 4 10 6-7 2 14Z"/><path d="M5 28h22"/></svg>THE CROWN</a>
+  <div class="navlinks"><a href="#signature">Signature</a><a href="#menu">Menu</a><a href="#why">The Chair</a><a href="#visit">Visit</a></div>
+  <a class="btn btn-copper nav-cta" href="https://square.site/book/2G0HQ0CWGMRJ6/the-crown-hair-studio-murfreesboro-tn">Book</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <svg class="steam" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><linearGradient id="cg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#c27a4a" stop-opacity="0"/><stop offset=".5" stop-color="#e0a073"/><stop offset="1" stop-color="#d9d2c7" stop-opacity="0"/></linearGradient></defs>
+    <g class="static">
+      <path d="M210 820 C170 700 260 640 220 540 S180 380 240 300 S230 140 200 40"/>
+      <path d="M290 820 C330 720 250 650 300 560 S350 420 290 330 S300 170 330 60"/>
+      <path d="M140 820 C110 730 180 660 150 590 S110 470 160 400"/>
+    </g>
+    <g>
+      <path d="M210 820 C170 700 260 640 220 540 S180 380 240 300 S230 140 200 40"/>
+      <path d="M290 820 C330 720 250 650 300 560 S350 420 290 330 S300 170 330 60"/>
+      <path d="M140 820 C110 730 180 660 150 590 S110 470 160 400 S170 260 130 180"/>
+      <path d="M350 820 C380 740 320 680 360 600 S390 470 350 400"/>
+      <path d="M250 820 C230 760 280 700 255 640 S220 520 270 450 S280 330 250 260"/>
+    </g>
+  </svg>
+  <svg class="crownmark" viewBox="0 0 32 32" fill="none" stroke="#e0a073" stroke-width=".8" stroke-linejoin="round" aria-hidden="true"><path d="M4 24 6 10l6 7 4-10 4 10 6-7 2 14Z"/><path d="M5 28h22"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">Barbering · Murfreesboro, TN</div>
+    <h1>Sit down. Leave <em>crowned.</em></h1>
+    <p class="sub">Clean cuts, sharp hairlines and hot-towel razor lining on Warrior Drive.</p>
+    <div class="ctas">
+      <a class="btn btn-copper" href="https://square.site/book/2G0HQ0CWGMRJ6/the-crown-hair-studio-murfreesboro-tn">Book your chair</a>
+      <a class="btn btn-ghost" href="tel:+16159620807">Call (615) 962-0807</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>Crown the King</b>Full grooming, 1 hour</span>
+      <span><b>Tue · Thu · Fri · Sat</b>Open days</span>
+    </div>
+  </div>
+</header>
+
+<section class="signature" id="signature"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">The signature</div><h2>The full ritual.</h2><p>When a cut isn't enough. Every step of the studio's top service, start to finish.</p></div>
+  <div class="sig-card reveal">
+    <div class="sig-top"><h3>Crown the King</h3><div class="price">$70<small>1 hour</small></div></div>
+    <ol class="steps">
+      <li>Pre-cut wash</li><li>Conditioning</li><li>Exfoliation</li><li>The cut</li><li>Beard trim</li><li>Hot-towel razor lining</li><li>Enhancements</li>
+    </ol>
+    <p class="sig-note">Tipping for wash technicians is encouraged.</p>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">Service menu</div><h2>Cuts &amp; grooming</h2><p>Straight from the studio's booking page. "Starting at" prices may vary.</p></div>
+  <div class="menu">
+    <div class="item reveal"><h3>High Definition Cut</h3><div class="p">$42</div><div class="t">Head &amp; face · 45 min</div><div class="d">Haircut, beard trim, hot-towel razor lining and enhancements.</div></div>
+    <div class="item reveal"><h3>Clean Natural Haircut</h3><div class="p">$37</div><div class="t">Head &amp; face · 45 min</div><div class="d">Full head and face service. A natural cut, no enhancements.</div></div>
+    <div class="item reveal"><h3>Father &amp; Son Cut</h3><div class="p">$61</div><div class="t">Youth 15 &amp; under · 1 hr 25 min</div><div class="d">Two cuts booked together at a discount. Each extra child books a Kid Cut.</div></div>
+    <div class="item reveal"><h3>Kid Cut</h3><div class="p">$30</div><div class="t">Ages 4–15 · 35 min</div><div class="d">A natural child haircut, no facial hair services.</div></div>
+    <div class="item reveal"><h3>Women's Haircut</h3><div class="p">$37</div><div class="t">45 min</div></div>
+    <div class="item reveal"><h3>Beard Trim</h3><div class="p"><small>Starting at</small>$30</div><div class="t">30 min</div></div>
+    <div class="item reveal"><h3>Hairline</h3><div class="p"><small>Starting at</small>$25</div><div class="t">45 min</div><div class="d">Lining only. No taper or haircut included.</div></div>
+    <div class="item reveal"><h3>Shampoo &amp; Condition</h3><div class="p"><small>Starting at</small>$35</div><div class="t">15 min</div><div class="d">Hair wash and conditioning.</div></div>
+  </div>
+</div></section>
+
+<div class="divider"></div>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">The chair</div><h2>Why the Crown</h2></div>
+  <div class="why-grid">
+    <div class="why-card reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#e0a073" stroke-width="1.4" stroke-linecap="round"><path d="M10 30c-3-5 3-7 0-12s3-7 0-12M17 30c-3-5 3-7 0-12s3-7 0-12M24 30c-3-5 3-7 0-12s3-7 0-12"/></svg><h3>Hot-towel finish</h3><p>Razor lining with a hot towel is built into the High Definition Cut and Crown the King.</p></div>
+    <div class="why-card reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#e0a073" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="10" r="4"/><circle cx="23" cy="13" r="3"/><path d="M4 30c0-6 4-10 8-10s8 4 8 10M18 30c0-5 2-8 5-8s6 3 6 8"/></svg><h3>Father &amp; son, together</h3><p>Book both chairs in one appointment, priced as a pair.</p></div>
+    <div class="why-card reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#e0a073" stroke-width="1.4" stroke-linecap="round"><rect x="5" y="7" width="24" height="22" rx="1"/><path d="M5 13h24M11 4v6M23 4v6M11 19h4M19 19h4M11 24h4"/></svg><h3>Book in seconds</h3><p>Pick a service and a time online, any hour of the day.</p></div>
+  </div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">Visit</div><h2>Hours &amp; location</h2></div>
+  <div class="visit-grid">
+    <div class="reveal">
+      <ul class="hours" id="hours">
+        <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+        <li data-d="2"><span>Tuesday</span><span>10:00 AM – 5:00 PM</span></li>
+        <li data-d="3" class="closed"><span>Wednesday</span><span>Closed</span></li>
+        <li data-d="4"><span>Thursday</span><span>10:00 AM – 5:00 PM</span></li>
+        <li data-d="5"><span>Friday</span><span>9:00 AM – 6:00 PM</span></li>
+        <li data-d="6"><span>Saturday</span><span>9:00 AM – 3:00 PM</span></li>
+      </ul>
+      <p class="addr">1433 Warrior Dr.<br>Murfreesboro, TN 37128<br><a href="tel:+16159620807">(615) 962-0807</a></p>
+      <div class="visit-ctas">
+        <a class="btn btn-copper" href="tel:+16159620807">Call now</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=1433+Warrior+Dr+Murfreesboro+TN+37128">Directions</a>
+      </div>
+      <p class="socials">Follow along on Instagram <a href="https://instagram.com/The_Crown_Hair_Studio">@The_Crown_Hair_Studio</a></p>
+    </div>
+    <div class="map reveal"><iframe title="Map to The Crown Hair Studio" loading="lazy" src="https://www.google.com/maps?q=1433%20Warrior%20Dr%2C%20Murfreesboro%2C%20TN%2037128&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" fill="none" stroke="#e0a073" stroke-width="1.6" stroke-linejoin="round"><path d="M4 24 6 10l6 7 4-10 4 10 6-7 2 14Z"/><path d="M5 28h22"/></svg>THE CROWN HAIR STUDIO</a>
+  <p>1433 Warrior Dr., Murfreesboro, TN · (615) 962-0807</p>
+  <p style="margin-top:10px">Concept by Code Craft Media</p>
+</div></footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:+16159620807">Call</a>
+  <a class="btn btn-copper" href="https://square.site/book/2G0HQ0CWGMRJ6/the-crown-hair-studio-murfreesboro-tn">Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)){return}
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

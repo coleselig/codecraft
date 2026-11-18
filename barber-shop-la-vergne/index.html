@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Barber Shop — La Vergne</title>
+<meta name="description" content="Barber Shop with Daniel Lopez, 5094 Murfreesboro Rd, La Vergne, TN. Cuts, beards, designs, highlights. Open 7 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#070d1f; --navy2:#0c1530; --navy3:#121e42; --line:rgba(255,255,255,.09);
+  --teal:#18e6d2; --teal2:#0fb8a8; --white:#f5f8ff; --mute:#9fb0cf; --ink:#070d1f;
+  --cut:polygon(0 0,100% 0,100% calc(100% - 48px),0 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--navy);color:var(--white);font-family:"DM Sans",system-ui,sans-serif;line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.syne{font-family:"Syne",sans-serif;letter-spacing:-.02em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.banner{background:#000;color:var(--mute);font-size:10px;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.banner b{color:var(--teal);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(7,13,31,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Syne;font-weight:800;font-size:18px;letter-spacing:.02em;text-transform:uppercase}
+.logo svg{width:30px;height:30px}
+.logo small{display:block;font:500 10px/1 "DM Sans";letter-spacing:.22em;color:var(--teal);margin-top:3px}
+.navlinks{display:flex;gap:28px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--mute);transition:color .2s}
+.navlinks a:hover{color:var(--white)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 "DM Sans";text-decoration:none;padding:15px 22px;border-radius:2px;transition:transform .2s,box-shadow .2s,background .2s;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.btn-teal{background:var(--teal);color:var(--ink)}
+.btn-teal:hover{background:#4ff3e3;transform:translateY(-2px);box-shadow:0 10px 30px rgba(24,230,210,.35)}
+.btn-ghost{background:rgba(255,255,255,.06);color:var(--white);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+nav .btn{padding:11px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 500px at 85% 10%,rgba(24,230,210,.16),transparent 60%),
+  linear-gradient(160deg,var(--navy2),var(--navy) 60%);clip-path:var(--cut);padding:56px 0 120px}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-58deg,transparent 0 46px,rgba(255,255,255,.025) 46px 47px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--teal);transform:skewX(-40deg)}
+.hero h1{font-size:clamp(46px,13vw,104px);line-height:.92;font-weight:800;margin:18px 0 20px;text-transform:uppercase}
+.hero h1 .out{color:transparent;-webkit-text-stroke:1.5px var(--white)}
+.hero h1 .tl{color:var(--teal);position:relative;display:inline-block}
+.hero p.sub{font-size:18px;color:var(--mute);max-width:520px}
+.hero p.sub strong{color:var(--white);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:12.5px;font-weight:500;color:var(--white);padding:7px 12px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:2px}
+.chip i{font-style:normal;color:var(--teal);margin-right:6px}
+.art{position:relative;aspect-ratio:1/1;max-width:min(330px,88vw);width:100%;justify-self:center;margin-top:-10px}
+.art svg{width:100%;height:100%;overflow:visible}
+.spin{transform-origin:220px 220px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blade{animation:buzz 3.2s ease-in-out infinite;transform-origin:220px 220px}
+@keyframes buzz{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.sweep{stroke-dasharray:520;stroke-dashoffset:520;animation:sweep 2.4s .4s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes sweep{to{stroke-dashoffset:0}}
+
+/* ticker */
+.ticker{contain:paint;max-width:100%;background:var(--teal);color:var(--ink);transform:skewY(-3deg);margin:-30px 0 0;position:relative;z-index:2;overflow:hidden;padding:13px 0}
+.ticker div{display:flex;gap:34px;white-space:nowrap;font:800 17px/1 Syne;text-transform:uppercase;letter-spacing:.04em;animation:tick 26s linear infinite;width:max-content}
+.ticker span::after{content:"\2215";margin-left:34px;opacity:.5}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:88px 0;position:relative}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(34px,8vw,60px);line-height:1;font-weight:800;text-transform:uppercase}
+.sec-head h2 em{font-style:normal;color:var(--teal)}
+.sec-head p{color:var(--mute);max-width:560px}
+.num{font:700 13px Syne;color:var(--teal);letter-spacing:.2em}
+
+/* menu */
+.menu-grid{display:grid;gap:14px}
+.group{background:linear-gradient(180deg,var(--navy2),var(--navy));border:1px solid var(--line);padding:26px 22px 14px;position:relative;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,0 100%)}
+.group::after{content:"";position:absolute;top:0;right:0;width:26px;height:26px;background:var(--teal);clip-path:polygon(0 0,100% 100%,0 100%);}
+.group h3{font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:15px 0;border-bottom:1px dashed rgba(255,255,255,.12);transition:padding .2s}
+.item:last-child{border-bottom:0}
+.item:hover{padding-left:6px}
+.item .n{font-weight:600;font-size:16.5px}
+.item .p{font:700 21px/1.1 "DM Sans";letter-spacing:-.01em;color:var(--white);text-align:right}
+.item .d{font-size:13px;color:var(--mute)}
+.item .p small{font:500 11px "DM Sans";color:var(--mute);display:block;letter-spacing:.04em}
+.feature{background:var(--teal);color:var(--ink);border:0}
+.feature h3{color:var(--ink)}
+.feature .item{border-color:rgba(7,13,31,.2)}
+.feature .item .p,.feature .item .n{color:var(--ink)}
+.feature .item .d,.feature .item .p small{color:rgba(7,13,31,.68)}
+.feature::after{background:var(--ink)}
+.menu-note{margin-top:22px;font-size:13.5px;color:var(--mute)}
+.menu-note a{color:var(--teal);font-weight:600}
+
+/* why */
+.why{background:var(--navy2);clip-path:polygon(0 48px,100% 0,100% calc(100% - 48px),0 100%);padding:130px 0}
+.why-grid{display:grid;gap:14px}
+.card{padding:26px 22px;background:rgba(255,255,255,.03);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(24,230,210,.45)}
+.card .big{font:800 46px/1 Syne;color:var(--teal);margin-bottom:12px;display:flex;align-items:baseline;gap:6px}
+.card .big small{font-size:16px;color:var(--white)}
+.card h3{font-size:19px;font-weight:700;margin-bottom:6px}
+.card p{font-size:15px;color:var(--mute)}
+.card::before{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;background:repeating-linear-gradient(-45deg,rgba(24,230,210,.12) 0 2px,transparent 2px 9px);transform:rotate(12deg)}
+
+/* hours */
+.hv{display:grid;gap:28px}
+.hours{border:1px solid var(--line);background:var(--navy2)}
+.hrow{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);font-size:16px;position:relative}
+.hrow:last-child{border-bottom:0}
+.hrow .t{font-weight:600;font-variant-numeric:tabular-nums}
+.hrow.today{background:var(--teal);color:var(--ink);font-weight:700}
+.hrow.today span:first-child::after{content:"TODAY";margin-left:10px;vertical-align:2px;font:800 10.5px Syne;letter-spacing:.2em;background:var(--ink);color:var(--teal);padding:4px 8px;clip-path:polygon(5px 0,100% 0,calc(100% - 5px) 100%,0 100%)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-bottom:16px;color:var(--mute)}
+.dot{width:9px;height:9px;border-radius:50%;background:#556;box-shadow:0 0 0 4px rgba(255,255,255,.05)}
+.dot.on{background:var(--teal);box-shadow:0 0 0 4px rgba(24,230,210,.2);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(24,230,210,0)}}
+.visit h3{font-size:28px;font-weight:800;line-height:1.1;margin-bottom:10px;text-transform:uppercase}
+.visit address{font-style:normal;color:var(--mute);font-size:17px;margin-bottom:20px}
+.map{margin-top:22px;border:1px solid var(--line);aspect-ratio:4/3;overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%);background:var(--navy3)}
+.map iframe{width:100%;height:100%;border:0}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+
+/* final cta */
+.final{text-align:center;padding:60px 0 90px;background:radial-gradient(600px 300px at 50% 100%,rgba(24,230,210,.18),transparent 70%)}
+.final h2{font-size:clamp(40px,11vw,92px);line-height:.92;font-weight:800;text-transform:uppercase;margin:16px 0 26px}
+.final h2 span{color:transparent;-webkit-text-stroke:1.5px var(--teal)}
+.final .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{color:var(--teal);text-decoration:none}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(7,13,31,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;font-weight:700;font-size:15.5px;text-decoration:none;border-radius:2px}
+.bar .c{background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.bar .b{background:var(--teal);color:var(--ink)}
+.bar svg{width:18px;height:18px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(26px)}
+
+@media(min-width:760px){
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .hv{grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+}
+@media(min-width:1000px){
+  .art{max-width:440px}
+  .hero{padding:80px 0 150px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+@media(max-width:759px){.navlinks{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sweep{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Barber Shop. Not live.</div>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top" aria-label="Barber Shop home">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 24 L15 4 L27 24 Z" fill="none" stroke="#18e6d2" stroke-width="2.4"/><path d="M8 24 L15 12 L22 24" fill="none" stroke="#f5f8ff" stroke-width="2"/><path d="M2 27 L28 27" stroke="#18e6d2" stroke-width="2.4"/></svg>
+    <span>Barber Shop<small>LA VERGNE, TN</small></span>
+  </a>
+  <div class="navlinks"><a href="#menu">Menu</a><a href="#why">The Chair</a><a href="#visit">Hours &amp; Visit</a></div>
+  <a class="btn btn-teal" href="https://square.site/book/L998J7KVQ2VP3/barber-shop-la-vergne-tn">Book</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Murfreesboro Rd · La Vergne</span>
+      <h1>Clean <span class="out">fades.</span><br>Sharp <span class="tl">lines.</span></h1>
+      <p class="sub">Cuts, beards, custom designs and highlights by <strong>Daniel Lopez</strong>, open <strong>7 days a week</strong> and until <strong>8 PM</strong> most nights.</p>
+      <div class="cta">
+        <a class="btn btn-teal" href="https://square.site/book/L998J7KVQ2VP3/barber-shop-la-vergne-tn">Book your cut
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+16292561514">Call (629) 256-1514</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><i>/</i>Haircut $35</span>
+        <span class="chip"><i>/</i>Cut + Beard $45</span>
+        <span class="chip"><i>/</i>Cut + Design $60</span>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 440 440">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18e6d2"/><stop offset="1" stop-color="#0b7f86"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2752"/><stop offset="1" stop-color="#0c1530"/></linearGradient>
+          <clipPath id="hex"><polygon points="220,18 395,119 395,321 220,422 45,321 45,119"/></clipPath>
+        </defs>
+        <g class="spin"><circle cx="220" cy="220" r="210" fill="none" stroke="rgba(255,255,255,.12)" stroke-dasharray="2 10"/>
+          <text font-family="Syne" font-weight="700" font-size="13" letter-spacing="7" fill="#9fb0cf"><textPath href="#ring">CUTS · BEARDS · DESIGNS · HIGHLIGHTS · LINE UPS · </textPath></text>
+          <path id="ring" d="M220,32 a188,188 0 1,1 -0.1,0" fill="none"/></g>
+        <polygon points="220,58 360,139 360,301 220,382 80,301 80,139" fill="url(#g2)" stroke="rgba(24,230,210,.35)" stroke-width="1.5"/>
+        <g clip-path="url(#hex)" opacity=".5">
+          <g stroke="rgba(255,255,255,.06)" stroke-width="1">
+            <path d="M0 120 L440 -40M0 160 L440 0M0 200 L440 40M0 240 L440 80M0 280 L440 120M0 320 L440 160M0 360 L440 200M0 400 L440 240M0 440 L440 280M0 480 L440 320M0 520 L440 360"/>
+          </g>
+        </g>
+        <!-- clipper blade -->
+        <g class="blade">
+          <rect x="128" y="150" width="184" height="58" rx="4" fill="url(#g1)"/>
+          <g fill="#070d1f">
+            <polygon points="140,208 148,236 156,208"/><polygon points="160,208 168,240 176,208"/><polygon points="180,208 188,242 196,208"/><polygon points="200,208 208,244 216,208"/><polygon points="220,208 228,244 236,208"/><polygon points="240,208 248,242 256,208"/><polygon points="260,208 268,240 276,208"/><polygon points="280,208 288,236 296,208"/>
+          </g>
+          <g fill="#f5f8ff">
+            <polygon points="140,208 148,236 156,208" transform="translate(0,-2)" opacity=".95"/><polygon points="160,208 168,240 176,208" transform="translate(0,-2)"/><polygon points="180,208 188,242 196,208" transform="translate(0,-2)"/><polygon points="200,208 208,244 216,208" transform="translate(0,-2)"/><polygon points="220,208 228,244 236,208" transform="translate(0,-2)"/><polygon points="240,208 248,242 256,208" transform="translate(0,-2)"/><polygon points="260,208 268,240 276,208" transform="translate(0,-2)"/><polygon points="280,208 288,236 296,208" transform="translate(0,-2)"/>
+          </g>
+          <rect x="128" y="150" width="184" height="14" fill="rgba(255,255,255,.25)"/>
+          <circle cx="160" cy="180" r="6" fill="#070d1f"/><circle cx="280" cy="180" r="6" fill="#070d1f"/>
+          <rect x="196" y="172" width="48" height="16" rx="2" fill="#070d1f" opacity=".85"/>
+        </g>
+        <!-- fade bars -->
+        <g transform="translate(120 280)">
+          <rect width="200" height="8" fill="#18e6d2"/><rect y="16" width="160" height="8" fill="#18e6d2" opacity=".7"/><rect y="32" width="116" height="8" fill="#18e6d2" opacity=".45"/><rect y="48" width="70" height="8" fill="#18e6d2" opacity=".22"/>
+        </g>
+        <path class="sweep" d="M40 420 L400 40" stroke="#18e6d2" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>Fades</span><span>Line ups</span><span>Beards</span><span>Designs</span><span>Highlights</span><span>Razor brows</span><span>Kids cuts</span>
+  <span>Fades</span><span>Line ups</span><span>Beards</span><span>Designs</span><span>Highlights</span><span>Razor brows</span><span>Kids cuts</span>
+</div></div>
+
+<section id="menu"><div class="wrap">
+  <div class="sec-head rv"><span class="num">01 / THE MENU</span><h2>Pick your <em>cut.</em></h2><p>Every service below can be booked online. Prices and times as listed on the shop's booking page.</p></div>
+  <div class="menu-grid">
+    <div class="group feature rv">
+      <h3>Signature</h3>
+      <div class="item"><span class="n">Hair cut</span><span class="p">$35<small>35 MIN</small></span></div>
+      <div class="item"><span class="n">Hair cut and beard</span><span class="p">$45<small>40 MIN</small></span></div>
+      <div class="item"><span class="n">Hair cut and design</span><span class="p">$60<small>45 MIN</small></span></div>
+      <div class="item"><span class="n">Hair cut for boys</span><span class="p">$30<small>30 MIN</small></span><span class="d">Under 10 years</span></div>
+    </div>
+    <div class="group rv">
+      <h3>Lines &amp; Beard</h3>
+      <div class="item"><span class="n">Line up</span><span class="p">$20<small>20 MIN</small></span></div>
+      <div class="item"><span class="n">Beard</span><span class="p">$20<small>20 MIN</small></span></div>
+      <div class="item"><span class="n">Line up + Beard</span><span class="p">$30<small>30 MIN</small></span></div>
+      <div class="item"><span class="n">Eyebrows</span><span class="p">$8<small>10 MIN</small></span><span class="d">Razor</span></div>
+    </div>
+    <div class="group rv">
+      <h3>Design &amp; Color</h3>
+      <div class="item"><span class="n">Designs for women</span><span class="p">$30<small>30 MIN</small></span></div>
+      <div class="item"><span class="n">Highlights for men</span><span class="p">$160<small>1 HR</small></span></div>
+      <div class="item"><span class="n">Shampoo</span><span class="p">$5<small>PRICE VARIES</small></span></div>
+    </div>
+  </div>
+  <p class="menu-note rv">Ready? <a href="https://square.site/book/L998J7KVQ2VP3/barber-shop-la-vergne-tn">See open times and book →</a></p>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="sec-head rv"><span class="num">02 / THE CHAIR</span><h2>Built around <em>your</em> schedule.</h2></div>
+  <div class="why-grid">
+    <div class="card rv"><div class="big">7<small>days</small></div><h3>Open every day</h3><p>Monday through Sunday, including Sunday mornings from 9 AM.</p></div>
+    <div class="card rv"><div class="big">8<small>PM</small></div><h3>After-work cuts</h3><p>Open until 8 PM Tuesday through Saturday, so you can come straight from work.</p></div>
+    <div class="card rv"><div class="big">11<small>services</small></div><h3>More than a cut</h3><p>Custom hair designs, designs for women, razor eyebrows and men's highlights.</p></div>
+    <div class="card rv"><div class="big">24/7<small></small></div><h3>Book online</h3><p>Pick your service and an open time on the shop's Square booking page, any time of day.</p></div>
+  </div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+  <div class="sec-head rv"><span class="num">03 / HOURS &amp; VISIT</span><h2>Pull up in <em>La&nbsp;Vergne.</em></h2></div>
+  <div class="hv">
+    <div class="rv">
+      <div class="status"><span class="dot" id="dot"></span><span id="stat">Hours</span></div>
+      <div class="hours" id="hours">
+        <div class="hrow" data-d="1"><span>Monday</span><span class="t">10:00 AM – 6:00 PM</span></div>
+        <div class="hrow" data-d="2"><span>Tuesday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+        <div class="hrow" data-d="3"><span>Wednesday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+        <div class="hrow" data-d="4"><span>Thursday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+        <div class="hrow" data-d="5"><span>Friday</span><span class="t">10:00 AM – 8:00 PM</span></div>
+        <div class="hrow" data-d="6"><span>Saturday</span><span class="t">9:00 AM – 8:00 PM</span></div>
+        <div class="hrow" data-d="0"><span>Sunday</span><span class="t">9:00 AM – 3:00 PM</span></div>
+      </div>
+    </div>
+    <div class="visit rv">
+      <h3>Barber Shop</h3>
+      <address>5094 Murfreesboro Rd<br>La Vergne, TN 37086</address>
+      <div class="links">
+        <a class="btn btn-teal" href="tel:+16292561514">Call (629) 256-1514</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=5094+Murfreesboro+Rd+La+Vergne+TN+37086">Directions</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/danybarber97/">@danybarber97</a>
+      </div>
+      <div class="map"><iframe title="Map to Barber Shop, 5094 Murfreesboro Rd, La Vergne" loading="lazy" src="https://www.google.com/maps?q=5094%20Murfreesboro%20Rd%2C%20La%20Vergne%2C%20TN%2037086&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap rv">
+  <span class="eyebrow">Your next cut</span>
+  <h2>Fresh by <span>Friday.</span></h2>
+  <div class="cta"><a class="btn btn-teal" href="https://square.site/book/L998J7KVQ2VP3/barber-shop-la-vergne-tn">Book with Daniel</a><a class="btn btn-ghost" href="tel:+16292561514">Call the shop</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Barber Shop · 5094 Murfreesboro Rd, La Vergne, TN 37086 · <a href="tel:+16292561514">(629) 256-1514</a></span>
+  <span>Concept by <a href="#top">Code Craft Media</a></span>
+</div></footer>
+
+<div class="bar">
+  <a class="c" href="tel:+16292561514"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/L998J7KVQ2VP3/barber-shop-la-vergne-tn">Book a cut</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var H={0:[9,15],1:[10,18],2:[10,20],3:[10,20],4:[10,20],5:[10,20],6:[9,20]};
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  var r=document.querySelector('.hrow[data-d="'+d+'"]'); if(r) r.classList.add('today');
+  var open=h>=H[d][0]&&h<H[d][1];
+  document.getElementById('dot').classList.toggle('on',open);
+  function f(x){var p=x>=12?'PM':'AM';var y=x%12||12;return y+' '+p}
+  document.getElementById('stat').textContent=open?('Open now · until '+f(H[d][1])):('Closed now · opens '+f(H[(h<H[d][0])?d:(d+1)%7][0])+(h<H[d][0]?' today':' tomorrow'));
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

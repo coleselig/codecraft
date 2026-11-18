@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kirah's Kinky Styles — Columbia, TN</title>
+<meta name="description" content="Locs, retwists, twists and braids for adults and kids by Shakirah in Columbia, TN. Concept site by Code Craft Media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cocoa:#4a2c21; --cocoa-d:#2f1b14; --honey:#e0a43a; --honey-d:#b97e1c;
+  --cream:#faf3e6; --cream-2:#f3e7d1; --sage:#9bb08f; --sage-d:#5f7656;
+  --ink:#2f1b14; --muted:#6b5045;
+  --disp:"Bricolage Grotesque",system-ui,sans-serif; --body:"Lora",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--cocoa-d);color:#f3e7d1;font:500 10.5px/1.3 var(--disp);text-align:center;padding:7px 6px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--honey);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(250,243,230,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,44,33,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 19px/1 var(--disp);color:var(--cocoa);letter-spacing:-.02em}
+.logo svg{width:30px;height:30px}
+.logo em{font:italic 500 15px var(--body);color:var(--honey-d);letter-spacing:0}
+.navlinks{display:none;gap:28px;font:600 14px var(--disp)}
+.navlinks a{text-decoration:none;color:var(--cocoa);position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--honey);transition:right .3s}
+.navlinks a:hover::after{right:0}
+@media(min-width:900px){.navlinks{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--disp);text-decoration:none;border-radius:999px;padding:15px 24px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-honey{background:var(--honey);color:var(--cocoa-d);box-shadow:0 6px 18px -6px rgba(185,126,28,.6)}
+.btn-honey:hover{background:#eab34d;transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(185,126,28,.7)}
+.btn-line{border:2px solid var(--cocoa);color:var(--cocoa);background:transparent}
+.btn-line:hover{background:var(--cocoa);color:var(--cream)}
+.btn-sm{padding:10px 16px;font-size:13px}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 56px}
+.hero-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hero{padding:90px 0 100px}.hero-grid{grid-template-columns:1.1fr .9fr;gap:56px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 12px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d);background:rgba(155,176,143,.2);padding:8px 14px;border-radius:999px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--sage-d)}
+h1{font:800 clamp(42px,11.5vw,84px)/.96 var(--disp);letter-spacing:-.035em;color:var(--cocoa);margin:18px 0 18px}
+h1 em{font:italic 500 .9em var(--body);color:var(--honey-d);letter-spacing:-.02em}
+.sub{font-size:18px;color:var(--muted);max-width:30em}
+.sub em{color:var(--cocoa)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font:500 13px var(--disp);color:var(--muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+.hero-meta svg{width:15px;height:15px;color:var(--sage-d)}
+.art{position:relative;aspect-ratio:1/1;max-width:440px;width:100%;margin:0 auto}
+.art .disc{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f0c46e 0,var(--honey) 45%,var(--honey-d) 100%)}
+.art svg.locs{position:absolute;inset:0;width:100%;height:100%}
+.locs path{fill:none;stroke-linecap:round}
+.draw{stroke-dasharray:var(--len,900);stroke-dashoffset:0}
+.js .draw{animation:draw 2.4s cubic-bezier(.6,.1,.3,1) both}
+@keyframes draw{from{stroke-dashoffset:var(--len,900)}to{stroke-dashoffset:0}}
+.spin{transform-origin:center;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.bg-coil{position:absolute;pointer-events:none;opacity:.35}
+.chip{position:absolute;background:var(--cream);border-radius:16px;padding:10px 14px;font:700 13px/1.15 var(--disp);color:var(--cocoa);box-shadow:0 12px 30px -12px rgba(47,27,20,.35)}
+.chip small{display:block;font:italic 400 12px var(--body);color:var(--muted)}
+.chip.a{left:-2%;bottom:14%}
+.chip.b{right:-2%;top:10%}
+@media(min-width:900px){.chip.a{left:-8%}.chip.b{right:-6%}}
+
+/* sections */
+section{position:relative}
+.sec{padding:72px 0}
+@media(min-width:900px){.sec{padding:110px 0}}
+.kicker{font:600 12px var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--honey-d);display:flex;align-items:center;gap:10px}
+.kicker svg{width:26px;height:12px}
+h2{font:800 clamp(32px,7.5vw,54px)/1.02 var(--disp);letter-spacing:-.03em;color:var(--cocoa);margin:12px 0 14px}
+h2 em{font:italic 500 .92em var(--body);color:var(--honey-d)}
+.lead{color:var(--muted);font-size:17px;max-width:36em}
+
+/* menu */
+.menu{background:var(--cocoa);color:var(--cream);overflow:hidden}
+.menu h2{color:var(--cream)}
+.menu h2 em{color:var(--honey)}
+.menu .lead{color:#dcc9b4}
+.menu .kicker{color:var(--honey)}
+.tabs{display:flex;gap:8px;margin:30px 0 22px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;font:700 14px var(--disp);padding:11px 18px;border-radius:999px;border:1.5px solid rgba(250,243,230,.3);background:transparent;color:var(--cream);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--honey)}
+.tab[aria-selected="true"]{background:var(--honey);color:var(--cocoa-d);border-color:var(--honey)}
+.panel{display:grid;gap:12px}
+@media(min-width:760px){.panel{grid-template-columns:1fr 1fr;gap:14px}}
+.panel[hidden]{display:none}
+.svc{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:18px 18px;border-radius:18px;background:rgba(250,243,230,.06);border:1px solid rgba(250,243,230,.1);transition:background .25s,transform .25s}
+.svc:hover{background:rgba(250,243,230,.11);transform:translateY(-2px)}
+.svc h3{font:700 17px/1.25 var(--disp);letter-spacing:-.01em}
+.svc p{font:italic 400 14px/1.4 var(--body);color:#cdb9a3;margin-top:4px}
+.price{flex:none;font:800 22px/1 var(--disp);color:var(--honey);text-align:right}
+.price.opt{font:italic 500 13px/1.3 var(--body);color:#e8d6bf;max-width:7.5em}
+.menu-note{margin-top:22px;font:italic 400 14px var(--body);color:#cdb9a3}
+.menu-note a{color:var(--honey)}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:34px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fffaf1;border:1px solid rgba(74,44,33,.08);border-radius:22px;padding:24px 22px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(47,27,20,.35)}
+.card .ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(155,176,143,.25);margin-bottom:16px}
+.card .ico svg{width:30px;height:30px}
+.card h3{font:700 19px/1.2 var(--disp);color:var(--cocoa);margin-bottom:6px}
+.card p{font-size:15px;color:var(--muted)}
+
+/* policies */
+.policy{background:var(--cream-2)}
+.pol-grid{display:grid;gap:12px;margin-top:30px}
+@media(min-width:760px){.pol-grid{grid-template-columns:1fr 1fr;gap:14px}}
+.pol{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border-radius:18px;padding:18px;border-left:4px solid var(--sage)}
+.pol.key{border-left-color:var(--honey)}
+.pol .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--cocoa);color:var(--honey);display:grid;place-items:center;font:800 14px var(--disp)}
+.pol h3{font:700 16px/1.25 var(--disp);color:var(--cocoa)}
+.pol p{font-size:14.5px;color:var(--muted);margin-top:3px}
+.quote{margin-top:22px;font:italic 400 15px var(--body);color:var(--muted)}
+
+/* hours + map */
+.visit-grid{display:grid;gap:22px;margin-top:30px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:28px}}
+.hours{background:#fffaf1;border-radius:24px;padding:10px 8px;border:1px solid rgba(74,44,33,.08)}
+.hours li{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-radius:14px;font:500 16px var(--disp);color:var(--cocoa)}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.hours li.closed span:last-child{color:#9a8378;font-style:italic;font-family:var(--body)}
+.hours li.today{background:var(--cocoa);color:var(--cream)}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font:700 10px var(--disp);letter-spacing:.12em;text-transform:uppercase;background:var(--honey);color:var(--cocoa-d);padding:4px 8px;border-radius:999px;vertical-align:2px}
+.hours li.today.closed span:last-child{color:#d9c6b3}
+.mapbox{border-radius:24px;overflow:hidden;border:1px solid rgba(74,44,33,.12);min-height:300px;background:var(--cream-2);position:relative}
+.mapbox iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:sepia(.25) saturate(.9)}
+.contact{display:grid;gap:10px;margin-top:16px}
+@media(min-width:560px){.contact{grid-template-columns:1fr 1fr}}
+.contact a{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:18px;background:#fffaf1;border:1px solid rgba(74,44,33,.1);text-decoration:none;transition:.2s;min-width:0}
+.contact a:hover{border-color:var(--honey);transform:translateY(-2px)}
+.contact svg{width:22px;height:22px;flex:none;color:var(--honey-d)}
+.contact b{display:block;font:700 15px var(--disp);color:var(--cocoa)}
+.contact small{display:block;font:italic 13px var(--body);color:var(--muted);overflow-wrap:anywhere}
+.loc-note{margin-top:12px;font:italic 14px var(--body);color:var(--muted)}
+
+/* cta band */
+.band{background:var(--sage);overflow:hidden}
+.band .wrap{position:relative;padding:64px 20px;text-align:center}
+.band h2{color:var(--cocoa-d)}
+.band p{color:var(--cocoa);font-size:17px;max-width:32em;margin:0 auto}
+.band .ctas{justify-content:center}
+
+footer{background:var(--cocoa-d);color:#cdb9a3;padding:44px 0 36px;font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:14px}
+@media(min-width:760px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}}
+footer .logo{color:var(--cream)}
+footer a{color:var(--honey)}
+.social{display:flex;gap:16px}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(47,27,20,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar .btn{padding:14px 10px;font-size:15px}
+.callbar .btn-line{border-color:rgba(250,243,230,.5);color:var(--cream)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal:not(.in){opacity:1;transform:none}}
+@media(min-width:600px){.banner{font-size:12px}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('show-all')},1500);</script>
+
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Kirah's Kinky Styles. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Kirah's Kinky Styles home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#4a2c21"/><path d="M20 20c0-2 2-3 3.5-1.5S24 23 21 24s-6-1-6-5 4-7 8-6.5 7 4.5 6 9-6 8-11 7.5" fill="none" stroke="#e0a43a" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Kirah's <em>Kinky Styles</em></span>
+    </a>
+    <div class="navlinks">
+      <a href="#menu">Services</a><a href="#before">Before you book</a><a href="#visit">Hours</a>
+    </div>
+    <a class="btn btn-honey btn-sm" href="https://square.site/book/L22R6HRTN94H4/kirah-s-kinky-styles-columbia-tn" target="_blank" rel="noopener">Book now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="bg-coil" style="left:-110px;top:-40px;width:200px" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 100c0-8 10-12 15-5s0 20-14 22-28-10-26-28 22-32 42-28 34 24 30 46-26 40-50 38-46-22-46-50" fill="none" stroke="#9bb08f" stroke-width="3" stroke-linecap="round"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i>Locs · Twists · Braids · Columbia, TN</span>
+      <h1>Locs started, kept &amp; <em>loved</em> in Columbia.</h1>
+      <p class="sub">Starter locs, retwists, passion twists and braids for grown folks and kids, by <em>Shakirah</em> in her private home studio.</p>
+      <div class="ctas">
+        <a class="btn btn-honey" href="https://square.site/book/L22R6HRTN94H4/kirah-s-kinky-styles-columbia-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book an appointment</a>
+        <a class="btn btn-line" href="tel:+16628740215">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(662) 874-0215</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Weeknights 5–8 PM · Sat mornings</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Columbia, TN</span>
+      </div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <div class="disc"></div>
+      <svg class="locs" viewBox="0 0 400 400">
+        <g class="spin"><circle cx="200" cy="200" r="190" fill="none" stroke="#4a2c21" stroke-width="1.5" stroke-dasharray="2 10" opacity=".5"/></g>
+        <!-- abstract hanging locs: wavy strands with coil beads -->
+        <g stroke="#4a2c21" stroke-width="13">
+          <path class="draw" style="--len:420" d="M120 70c-14 40 14 70 0 110s14 70 0 110 10 50 4 70"/>
+          <path class="draw" style="--len:420;animation-delay:.15s" d="M165 55c-14 44 14 74 0 116s14 74 0 116 8 50 2 68"/>
+          <path class="draw" style="--len:420;animation-delay:.3s" d="M210 52c-14 44 14 76 0 118s14 76 0 118 6 48 0 64"/>
+          <path class="draw" style="--len:420;animation-delay:.45s" d="M255 58c-14 42 14 72 0 114s14 72 0 114 6 46 0 62"/>
+          <path class="draw" style="--len:420;animation-delay:.6s" d="M298 72c-14 38 14 68 0 106s14 68 0 106 4 42-2 58"/>
+        </g>
+        <g stroke="#faf3e6" stroke-width="2" opacity=".55">
+          <path d="M114 100l12 6M118 150l12 6M114 210l12 6M118 260l12 6M114 320l12 6"/>
+          <path d="M159 90l12 6M163 145l12 6M159 205l12 6M163 262l12 6M159 322l12 6"/>
+          <path d="M204 92l12 6M208 148l12 6M204 208l12 6M208 268l12 6M204 326l12 6"/>
+          <path d="M249 96l12 6M253 150l12 6M249 210l12 6M253 266l12 6M249 322l12 6"/>
+          <path d="M292 104l12 6M296 156l12 6M292 212l12 6M296 264l12 6"/>
+        </g>
+        <g class="float">
+          <circle cx="210" cy="290" r="11" fill="#9bb08f" stroke="#4a2c21" stroke-width="3"/>
+          <circle cx="120" cy="240" r="8" fill="#faf3e6" stroke="#4a2c21" stroke-width="3"/>
+          <circle cx="298" cy="230" r="8" fill="#faf3e6" stroke="#4a2c21" stroke-width="3"/>
+        </g>
+        <path d="M60 330c0-10 12-14 18-6s0 24-16 26-32-12-30-32 24-36 46-30" fill="none" stroke="#faf3e6" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+        <path d="M340 90c0-8 10-11 14-5s0 19-13 21-26-10-24-26 19-29 38-24" fill="none" stroke="#9bb08f" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div class="chip a">Starter locs<small>adults &amp; kids</small></div>
+      <div class="chip b">Basic retwist<small>$70 · 1 hr 45 min</small></div>
+    </div>
+  </div>
+</header>
+
+<section class="menu sec" id="menu">
+  <svg class="bg-coil" style="right:-80px;top:30px;width:300px;opacity:.12" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 100c0-8 10-12 15-5s0 20-14 22-28-10-26-28 22-32 42-28 34 24 30 46-26 40-50 38-46-22-46-50 24-60 64-60" fill="none" stroke="#e0a43a" stroke-width="3" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="kicker reveal"><svg viewBox="0 0 26 12"><path d="M1 6c3-6 6 6 9 0s6 6 9 0 4 4 6 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>The menu</div>
+    <h2 class="reveal">Every service, <em>every price</em> she's posted.</h2>
+    <p class="lead reveal">Straight from Kirah's booking page. Where a service has several options, length and loc count set the price, so you'll pick yours when you book.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="locs">Locs &amp; retwists</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="twists">Twists &amp; braids</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="kids">Kids</button>
+    </div>
+
+    <div class="panel" id="p-locs" role="tabpanel">
+      <div class="svc"><div><h3>Starter locs (Adult)</h3><p>2 hr 15 min</p></div><div class="price">$85</div></div>
+      <div class="svc"><div><h3>Basic Retwist (No style)</h3><p>1 hr 45 min</p></div><div class="price">$70</div></div>
+      <div class="svc"><div><h3>Retwist and style (Plaits)</h3><p>2 hr 55 min</p></div><div class="price">$75</div></div>
+      <div class="svc"><div><h3>Style (No Retwist)</h3><p>1 hr 10 min</p></div><div class="price">$50</div></div>
+      <div class="svc"><div><h3>Retwist + Basic style</h3><p>2 options</p></div><div class="price opt">Options on booking page</div></div>
+      <div class="svc"><div><h3>Retwist + Braids</h3><p>2 options</p></div><div class="price opt">Options on booking page</div></div>
+      <div class="svc"><div><h3>Two strand (Rope twists)</h3><p>Price varies by length &amp; amount of locs</p></div><div class="price opt">Options on booking page</div></div>
+      <div class="svc"><div><h3>Consultation</h3><p>30 min</p></div><div class="price">$30</div></div>
+    </div>
+
+    <div class="panel" id="p-twists" role="tabpanel" hidden>
+      <div class="svc"><div><h3>Medium Passion Twists</h3><p>5 hr 30 min</p></div><div class="price">$90</div></div>
+      <div class="svc"><div><h3>Long Passion Twists</h3><p>6 hr 30 min</p></div><div class="price">$125</div></div>
+      <div class="svc"><div><h3>Mens Braids</h3><p>1 hr</p></div><div class="price">$60</div></div>
+      <div class="svc"><div><h3>Two strand twist (Not Loc related)</h3><p>2 options</p></div><div class="price opt">Options on booking page</div></div>
+      <div class="svc"><div><h3>Extended Two Strand Twists</h3><p>You must provide your own hair · 3 options</p></div><div class="price opt">Options on booking page</div></div>
+      <div class="svc"><div><h3>Plaits (Not Loc Related Style)</h3><p>3 options</p></div><div class="price opt">Options on booking page</div></div>
+    </div>
+
+    <div class="panel" id="p-kids" role="tabpanel" hidden>
+      <div class="svc"><div><h3>Kids starter locs</h3><p>2 hr 30 min</p></div><div class="price">$60</div></div>
+      <div class="svc"><div><h3>Kids Retwist + Style</h3><p>2 hr 20 min</p></div><div class="price">$55</div></div>
+      <div class="svc"><div><h3>Kids Braids (No weave)</h3><p>2 hr 30 min</p></div><div class="price">$40</div></div>
+      <div class="svc"><div><h3>Kids Twists</h3><p>2 options</p></div><div class="price opt">Options on booking page</div></div>
+    </div>
+
+    <p class="menu-note">Prices and times as listed on <a href="https://square.site/book/L22R6HRTN94H4/kirah-s-kinky-styles-columbia-tn" target="_blank" rel="noopener">Kirah's Square booking page</a>. Deposits required at booking.</p>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="kicker reveal"><svg viewBox="0 0 26 12"><path d="M1 6c3-6 6 6 9 0s6 6 9 0 4 4 6 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Why Kirah's</div>
+    <h2 class="reveal">Built around <em>your</em> schedule &amp; your hair.</h2>
+    <div class="why-grid">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2c21" stroke-width="2.2" stroke-linecap="round"><path d="M22 6a10 10 0 1 0 4 14 8 8 0 0 1-4-14z"/></svg></div>
+        <h3>After-work hours</h3><p>Monday, Tuesday and Thursday evenings, 5 to 8 PM, plus Saturday mornings from 8:30.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2c21" stroke-width="2.2" stroke-linecap="round"><path d="M16 16c0-2 2.5-3 3.5-1s-.5 5-3.5 5-6-2.5-5.5-6 4.5-6.5 8.5-5.5 6.5 4.5 5.5 9-6 8-11 7"/></svg></div>
+        <h3>Locs, start to style</h3><p>Starter locs, retwists, two-strand rope twists, plaits and styles, plus a $30 consultation if you're not sure where to begin.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2c21" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="11" r="4"/><circle cx="22" cy="14" r="3"/><path d="M5 26c0-4 3-7 7-7s7 3 7 7M18 26c0-3 2-5 4-5s4 2 4 5"/></svg></div>
+        <h3>Kids welcome</h3><p>Kids starter locs, retwists, braids and twists, each with its own listing and price.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#4a2c21" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l11-9 11 9v11H5z"/><path d="M13 26v-7h6v7"/></svg></div>
+        <h3>Private home studio</h3><p>One-on-one appointments in Shakirah's home in Columbia. Book online any time, at least a day ahead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="policy sec" id="before">
+  <div class="wrap">
+    <div class="kicker reveal"><svg viewBox="0 0 26 12"><path d="M1 6c3-6 6 6 9 0s6 6 9 0 4 4 6 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Please read before scheduling</div>
+    <h2 class="reveal">Before you <em>book</em>.</h2>
+    <p class="lead reveal">Kirah's policies, from her booking page. They keep the calendar fair for everyone and respect her home.</p>
+    <div class="pol-grid">
+      <div class="pol key reveal"><div class="n">1</div><div><h3>Deposits are required</h3><p>Because of more late cancellations and no-shows, every booking needs a deposit.</p></div></div>
+      <div class="pol key reveal"><div class="n">2</div><div><h3>24-hour notice to change or cancel</h3><p>Please notify of any change or cancellation 24 hours before your appointment. No-call no-shows are charged a $10 cancellation fee.</p></div></div>
+      <div class="pol reveal"><div class="n">3</div><div><h3>15-minute grace period</h3><p>After 15 minutes late, the appointment is cancelled automatically.</p></div></div>
+      <div class="pol reveal"><div class="n">4</div><div><h3>No same-day appointments</h3><p>Book at least 24 hours in advance.</p></div></div>
+      <div class="pol reveal"><div class="n">5</div><div><h3>Confirm when notified</h3><p>Unconfirmed appointments don't hold your time slot.</p></div></div>
+      <div class="pol reveal"><div class="n">6</div><div><h3>Come with clean hair</h3><p>Washes aren't available right now. New clients, please come ready to pay.</p></div></div>
+      <div class="pol reveal"><div class="n">7</div><div><h3>Arrive on time, not early</h3><p>It's a home location, so please arrive no more than 5 minutes early and no more than 15 minutes late.</p></div></div>
+      <div class="pol reveal"><div class="n">8</div><div><h3>Bringing someone? Ask first</h3><p>Let Kirah know ahead of time if anyone is coming with you, children included.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap">
+    <div class="kicker reveal"><svg viewBox="0 0 26 12"><path d="M1 6c3-6 6 6 9 0s6 6 9 0 4 4 6 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Hours &amp; location</div>
+    <h2 class="reveal">Evenings &amp; <em>Saturday</em> mornings.</h2>
+    <div class="visit-grid">
+      <div class="reveal">
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="3" class="closed"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4"><span>Thursday</span><span>5:00 – 8:00 PM</span></li>
+          <li data-d="5" class="closed"><span>Friday</span><span>Closed</span></li>
+          <li data-d="6"><span>Saturday</span><span>8:30 AM – 3:00 PM</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <div class="contact">
+          <a href="tel:+16628740215"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><b>Call</b><small>(662) 874-0215</small></span></a>
+          <a href="mailto:kirah9@yahoo.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><b>Email</b><small>kirah9@yahoo.com</small></span></a>
+        </div>
+        <p class="loc-note">Private home studio in Columbia, TN. Book through Square to reserve your time.</p>
+      </div>
+      <div class="reveal">
+        <div class="mapbox"><iframe title="Map of Columbia, TN" src="https://www.google.com/maps?q=Columbia%2C%20TN&output=embed"></iframe></div>
+        <div class="contact" style="grid-template-columns:1fr">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Columbia%2C%20TN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg><span><b>Directions to Columbia</b><small>Opens Google Maps</small></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <svg class="bg-coil" style="left:-40px;bottom:-30px;width:200px;opacity:.5" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 100c0-8 10-12 15-5s0 20-14 22-28-10-26-28 22-32 42-28 34 24 30 46-26 40-50 38-46-22-46-50" fill="none" stroke="#faf3e6" stroke-width="3" stroke-linecap="round"/></svg>
+  <svg class="bg-coil" style="right:-30px;top:-20px;width:170px;opacity:.5" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 100c0-8 10-12 15-5s0 20-14 22-28-10-26-28 22-32 42-28 34 24 30 46-26 40-50 38-46-22-46-50" fill="none" stroke="#4a2c21" stroke-width="3" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <h2 class="reveal">Ready for a fresh <em>retwist</em>?</h2>
+    <p class="reveal">Pick your service, pay your deposit and grab an evening or Saturday slot.</p>
+    <div class="ctas reveal">
+      <a class="btn btn-honey" style="background:var(--cocoa);color:var(--cream)" href="https://square.site/book/L22R6HRTN94H4/kirah-s-kinky-styles-columbia-tn" target="_blank" rel="noopener">Book on Square</a>
+      <a class="btn btn-line" href="tel:+16628740215">Call (662) 874-0215</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#e0a43a"/><path d="M20 20c0-2 2-3 3.5-1.5S24 23 21 24s-6-1-6-5 4-7 8-6.5 7 4.5 6 9-6 8-11 7.5" fill="none" stroke="#2f1b14" stroke-width="2.4" stroke-linecap="round"/></svg><span>Kirah's <em>Kinky Styles</em></span></a>
+    <div class="social"><a href="https://www.instagram.com/kirahskinkystyles" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/ShakirahMoore" target="_blank" rel="noopener">Facebook</a></div>
+    <div>Columbia, TN · <a href="tel:+16628740215">(662) 874-0215</a><br>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-line" href="tel:+16628740215">Call</a>
+  <a class="btn btn-honey" href="https://square.site/book/L22R6HRTN94H4/kirah-s-kinky-styles-columbia-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false');document.getElementById('p-'+x.dataset.t).hidden=x!==t;});
+  });});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>

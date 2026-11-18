@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>VinceTheBarber — Cleveland, TN</title>
+<meta name="description" content="VinceTheBarber in Cleveland, TN. Haircuts, beard work and head shaves. Open until 10 PM Mondays and 9 PM Sundays. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0b1026; --night2:#121a3a; --night3:#1a2350;
+  --cyan:#2de2e6; --pink:#ff3864; --chrome:#c9ccd5; --white:#f4f6fb;
+  --muted:#9aa1b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--night);color:var(--chrome);font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:"Anton",Impact,sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;line-height:.95;color:var(--white)}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan)}
+.glow-c{color:var(--cyan);text-shadow:0 0 6px rgba(45,226,230,.9),0 0 22px rgba(45,226,230,.55),0 0 48px rgba(45,226,230,.3)}
+.glow-p{color:var(--pink);text-shadow:0 0 6px rgba(255,56,100,.9),0 0 22px rgba(255,56,100,.55),0 0 48px rgba(255,56,100,.3)}
+
+/* banner */
+.concept{background:#05081a;color:var(--muted);font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 6px;border-bottom:1px solid rgba(201,204,213,.12);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--chrome);font-weight:600}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(11,16,38,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(45,226,230,.12)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Anton",sans-serif;font-size:22px;text-decoration:none;color:var(--white);letter-spacing:.02em}
+.logo span{color:var(--pink);text-shadow:0 0 12px rgba(255,56,100,.7)}
+.navlinks{display:none;gap:30px;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.navlinks a{text-decoration:none;color:var(--chrome);transition:color .2s}
+.navlinks a:hover{color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:"Barlow",sans-serif;font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:15px 26px;transition:transform .18s, box-shadow .25s, background .25s, color .25s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-pink{background:var(--pink);color:#fff;box-shadow:0 0 0 1px rgba(255,56,100,.6),0 0 24px rgba(255,56,100,.45)}
+.btn-pink:hover{box-shadow:0 0 0 1px #ff6b8b,0 0 40px rgba(255,56,100,.75);transform:translateY(-2px)}
+.btn-ghost{color:var(--cyan);box-shadow:inset 0 0 0 2px var(--cyan),0 0 18px rgba(45,226,230,.25)}
+.btn-ghost:hover{background:var(--cyan);color:var(--night);box-shadow:inset 0 0 0 2px var(--cyan),0 0 34px rgba(45,226,230,.6)}
+.btn-sm{padding:10px 18px;font-size:13px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 0;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(60% 45% at 80% 20%,rgba(255,56,100,.22),transparent 70%),
+  radial-gradient(55% 40% at 10% 35%,rgba(45,226,230,.16),transparent 70%),
+  linear-gradient(180deg,#0b1026 0%,#0e1430 60%,#140d2e 100%)}
+.stars{position:absolute;inset:0;z-index:-1;background-image:radial-gradient(1px 1px at 20% 30%,#fff8,transparent),radial-gradient(1px 1px at 70% 12%,#fff6,transparent),radial-gradient(1.5px 1.5px at 45% 22%,#2de2e688,transparent),radial-gradient(1px 1px at 88% 40%,#fff5,transparent),radial-gradient(1px 1px at 8% 8%,#fff6,transparent),radial-gradient(1.5px 1.5px at 60% 44%,#ff386488,transparent);}
+.hero-grid{display:grid;gap:18px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:rgba(18,26,58,.8);border:1px solid rgba(45,226,230,.3);border-radius:999px;padding:7px 14px 7px 12px;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none}
+.dot.on{background:#3dff9a;box-shadow:0 0 10px #3dff9a;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.45}}
+.hero h1{font-size:clamp(58px,17vw,128px);margin-bottom:18px}
+.hero h1 .l2{display:block}
+.flicker{animation:flick 6s infinite}
+@keyframes flick{0%,18%,22%,60%,63%,100%{opacity:1}20%,61.5%{opacity:.35}}
+.hero .sub{font-size:19px;max-width:30ch;color:var(--chrome);margin-bottom:28px}
+.hero .sub b{color:var(--white)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:absolute;right:-70px;top:150px;width:300px;height:380px;opacity:.6;z-index:-1;pointer-events:none}
+.hero .wrap{position:relative}
+.hero-art .sign{display:none}
+@media (min-width:600px){.concept{font-size:12px}}
+.hero-art svg{width:100%;height:100%}
+.floor{position:relative;height:150px;margin-top:10px;perspective:300px;overflow:hidden;z-index:-1}
+.floor::before{content:"";position:absolute;left:-50%;right:-50%;top:0;height:300%;transform:rotateX(68deg);transform-origin:top;background-image:linear-gradient(rgba(255,56,100,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(255,56,100,.55) 1px,transparent 1px);background-size:44px 44px;animation:floor 3s linear infinite;mask-image:linear-gradient(#000 10%,transparent 60%);-webkit-mask-image:linear-gradient(#000 10%,transparent 60%)}
+.floor::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#140d2e 0%,transparent 35%,var(--night) 100%)}
+@keyframes floor{to{background-position:0 44px}}
+.pole-stripes{animation:poleSpin 1.6s linear infinite}
+@keyframes poleSpin{to{transform:translateY(-40px)}}
+.clip-float{animation:bob 4s ease-in-out infinite;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-2deg)}}
+
+/* marquee */
+.ticker{border-block:1px solid rgba(45,226,230,.22);background:#080c20;overflow:hidden;white-space:nowrap}
+.ticker .row{display:inline-flex;gap:38px;padding:14px 0;animation:tick 28s linear infinite;font-family:"Anton",sans-serif;font-size:20px;letter-spacing:.06em;text-transform:uppercase;color:var(--chrome)}
+.ticker .row span:nth-child(odd){color:var(--cyan)}
+.ticker .row i{font-style:normal;color:var(--pink)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:84px 0;position:relative}
+.sec-head{margin-bottom:36px}
+.sec-head h2{font-size:clamp(44px,11vw,80px);margin-top:10px}
+
+/* late */
+.late .grid{display:grid;gap:14px}
+.latecard{background:linear-gradient(160deg,var(--night2),#0d1330);border:1px solid rgba(201,204,213,.12);border-radius:20px;padding:24px;position:relative;overflow:hidden}
+.latecard .day{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--muted)}
+.latecard .time{font-family:"Anton",sans-serif;font-size:58px;line-height:1;margin:8px 0 6px;color:var(--white)}
+.latecard p{font-size:15px;color:var(--muted)}
+.latecard.mon{border-color:rgba(255,56,100,.45);box-shadow:0 0 34px rgba(255,56,100,.12) inset}
+.latecard.mon .time{color:var(--pink);text-shadow:0 0 18px rgba(255,56,100,.6)}
+.latecard.sun{border-color:rgba(45,226,230,.4);box-shadow:0 0 34px rgba(45,226,230,.1) inset}
+.latecard.sun .time{color:var(--cyan);text-shadow:0 0 18px rgba(45,226,230,.55)}
+.latecard .moon{position:absolute;right:18px;top:18px;opacity:.85}
+
+/* menu */
+.menu{background:linear-gradient(180deg,var(--night),#0d1230)}
+.menu-list{display:grid;gap:12px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline;padding:20px 22px;border-radius:16px;background:rgba(18,26,58,.6);border:1px solid rgba(201,204,213,.1);transition:border-color .25s, transform .25s, box-shadow .25s}
+.item:hover{border-color:rgba(45,226,230,.55);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 24px rgba(45,226,230,.12)}
+.item h3{font-size:25px;letter-spacing:.03em}
+.item .price{font-family:"Anton",sans-serif;font-size:30px;color:var(--cyan);text-shadow:0 0 14px rgba(45,226,230,.45)}
+.item .meta{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.item .meta .dur{display:inline-block;color:var(--chrome);font-weight:600;border:1px solid rgba(201,204,213,.25);border-radius:999px;padding:1px 10px;margin-right:8px;font-size:13px;letter-spacing:.06em}
+.item.feature{background:linear-gradient(135deg,rgba(255,56,100,.16),rgba(18,26,58,.7) 60%);border-color:rgba(255,56,100,.45)}
+.item.feature .price{color:var(--pink);text-shadow:0 0 14px rgba(255,56,100,.5)}
+.tag{display:inline-block;font-family:"Barlow";font-weight:700;font-size:11px;letter-spacing:.18em;color:var(--night);background:var(--pink);padding:2px 8px;border-radius:4px;vertical-align:middle;margin-left:8px;position:relative;top:-3px}
+.menu-note{margin-top:22px;font-size:14px;color:var(--muted)}
+.menu-cta{margin-top:26px}
+
+/* why */
+.why-grid{display:grid;gap:14px}
+.why{padding:26px 24px;border-radius:18px;background:var(--night2);border:1px solid rgba(201,204,213,.1)}
+.why svg{margin-bottom:14px}
+.why h3{font-size:28px;margin-bottom:8px}
+.why p{color:var(--muted);font-size:16px}
+
+/* hours */
+.hours{background:#080c20}
+.hrs-wrap{display:grid;gap:30px}
+.hrs{list-style:none;border-radius:20px;overflow:hidden;border:1px solid rgba(201,204,213,.12)}
+.hrs li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(201,204,213,.08);font-size:17px}
+.hrs li:last-child{border-bottom:0}
+.hrs .d{font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--white);font-size:15px}
+.hrs .t{font-variant-numeric:tabular-nums;text-align:right}
+.hrs .closed{color:var(--muted)}
+.hrs .late-t{color:var(--cyan)}
+.hrs .see a{color:var(--pink);font-weight:600}
+.hrs li.today{background:linear-gradient(90deg,rgba(45,226,230,.16),rgba(45,226,230,.02));box-shadow:inset 3px 0 0 var(--cyan)}
+.hrs li.today .d::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.18em;color:var(--night);background:var(--cyan);padding:2px 7px;border-radius:4px;vertical-align:middle;position:relative;top:-2px}
+.hrs-side h3{font-size:34px;margin-bottom:10px}
+.hrs-side p{color:var(--muted);margin-bottom:18px}
+
+/* visit */
+.map{border-radius:20px;overflow:hidden;border:1px solid rgba(45,226,230,.3);box-shadow:0 0 40px rgba(45,226,230,.12);aspect-ratio:4/3;background:var(--night2)}
+.map iframe{width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.7) brightness(.95)}
+.visit-grid{display:grid;gap:28px}
+.addr{font-family:"Anton",sans-serif;font-size:34px;line-height:1.05;color:var(--white);text-transform:uppercase;margin:10px 0 18px}
+.contact-list{list-style:none;display:grid;gap:12px;margin-bottom:24px}
+.contact-list a{color:var(--cyan);text-decoration:none;font-weight:600;word-break:break-all}
+.contact-list a:hover{text-decoration:underline}
+.contact-list .k{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+footer{padding:50px 0 40px;border-top:1px solid rgba(201,204,213,.1);text-align:center;color:var(--muted);font-size:14px}
+footer .logo{font-size:30px;display:inline-block;margin-bottom:10px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(8,12,32,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(45,226,230,.25)}
+.bar a{flex:1;padding:14px 10px;font-size:14px}
+.bar .btn-ghost{flex:0 0 auto;padding:14px 18px}
+
+/* reveal */
+.rv{transition:opacity .7s ease, transform .7s ease}
+.js .rv.pre{opacity:0;transform:translateY(22px)}
+
+@media (min-width:760px){
+  .late .grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .menu-list{grid-template-columns:1fr 1fr}
+  .hrs-wrap{grid-template-columns:1.1fr .9fr;align-items:center}
+  .visit-grid{grid-template-columns:1.3fr 1fr;align-items:center}
+}
+@media (min-width:980px){
+  .navlinks{display:flex}
+  .hero{padding-top:70px}
+  .hero-grid{grid-template-columns:1.1fr .9fr}
+  .hero-art{position:relative;right:auto;top:auto;width:auto;height:520px;opacity:1;z-index:auto}
+  .hero-art .sign{display:inline}
+  .floor{margin-top:-20px;height:200px}
+  body{padding-bottom:0}
+  .bar{display:none}
+  section{padding:110px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for VinceTheBarber. Not live.</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">VINCE<span>THE</span>BARBER</a>
+    <div class="navlinks"><a href="#late">Open Late</a><a href="#menu">Menu</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-pink btn-sm" href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stars"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="status"><span class="dot" id="sdot"></span><span id="stext">Cleveland, TN · Book online</span></div>
+      <h1><span class="glow-c">Fresh cuts</span><span class="l2">after <span class="glow-p flicker">dark.</span></span></h1>
+      <p class="sub">Haircuts, beard work and head shaves on Chambliss Ave NW, with chairs open until <b>10 PM Mondays</b> and <b>9 PM Sundays</b>.</p>
+      <div class="ctas">
+        <a class="btn btn-pink" href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">Book a chair
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 420" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <filter id="glowC" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="glowSoft" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="14"/></filter>
+          <clipPath id="poleClip"><rect x="146" y="70" width="56" height="250" rx="28"/></clipPath>
+          <linearGradient id="chrome" x1="0" x2="1"><stop offset="0" stop-color="#7d8296"/><stop offset=".45" stop-color="#eef0f5"/><stop offset="1" stop-color="#6b7084"/></linearGradient>
+        </defs>
+        <!-- halo -->
+        <ellipse cx="174" cy="200" rx="110" ry="170" fill="#2de2e6" opacity=".10" filter="url(#glowSoft)"/>
+        <ellipse cx="290" cy="270" rx="90" ry="70" fill="#ff3864" opacity=".14" filter="url(#glowSoft)"/>
+        <!-- pole caps -->
+        <rect x="136" y="40" width="76" height="26" rx="10" fill="url(#chrome)"/>
+        <circle cx="174" cy="30" r="14" fill="url(#chrome)"/>
+        <rect x="136" y="324" width="76" height="26" rx="10" fill="url(#chrome)"/>
+        <rect x="150" y="350" width="48" height="16" rx="5" fill="#8a8fa3"/>
+        <!-- pole glass -->
+        <rect x="146" y="70" width="56" height="250" rx="28" fill="#0e1432" stroke="#2de2e6" stroke-width="3" filter="url(#glowC)"/>
+        <g clip-path="url(#poleClip)">
+          <g class="pole-stripes">
+            <g id="stripes" stroke-width="12" stroke-linecap="round" filter="url(#glowC)">
+              <path d="M130 90 L220 50" stroke="#ff3864"/><path d="M130 130 L220 90" stroke="#2de2e6"/>
+              <path d="M130 170 L220 130" stroke="#ff3864"/><path d="M130 210 L220 170" stroke="#2de2e6"/>
+              <path d="M130 250 L220 210" stroke="#ff3864"/><path d="M130 290 L220 250" stroke="#2de2e6"/>
+              <path d="M130 330 L220 290" stroke="#ff3864"/><path d="M130 370 L220 330" stroke="#2de2e6"/>
+              <path d="M130 410 L220 370" stroke="#ff3864"/>
+            </g>
+          </g>
+          <rect x="152" y="74" width="10" height="242" rx="5" fill="#fff" opacity=".16"/>
+        </g>
+        <!-- clippers -->
+        <g class="clip-float">
+          <g transform="translate(250 150) rotate(18)">
+            <rect x="0" y="40" width="74" height="168" rx="30" fill="#121a3a" stroke="#ff3864" stroke-width="3" filter="url(#glowC)"/>
+            <rect x="10" y="10" width="54" height="40" rx="6" fill="url(#chrome)"/>
+            <g stroke="#0b1026" stroke-width="3"><path d="M16 10v14M24 10v14M32 10v14M40 10v14M48 10v14M56 10v14"/></g>
+            <rect x="6" y="0" width="62" height="12" rx="3" fill="#c9ccd5"/>
+            <rect x="26" y="96" width="22" height="40" rx="11" fill="none" stroke="#2de2e6" stroke-width="3" filter="url(#glowC)"/>
+            <circle cx="37" cy="108" r="5" fill="#2de2e6"/>
+            <path d="M37 208 q0 30 -30 46" fill="none" stroke="#c9ccd5" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+          </g>
+        </g>
+        <!-- neon text sign -->
+        <g class="sign" filter="url(#glowC)" font-family="Anton, Impact, sans-serif" font-size="30" letter-spacing="3">
+          <text x="22" y="140" fill="none" stroke="#ff3864" stroke-width="1.8">OPEN</text>
+          <text x="22" y="176" fill="none" stroke="#2de2e6" stroke-width="1.8">LATE</text>
+        </g>
+        <!-- scissors sparkle -->
+        <g stroke="#c9ccd5" stroke-width="2" opacity=".8"><path d="M340 70v18M331 79h18"/><path d="M60 300v12M54 306h12"/></g>
+      </svg>
+    </div>
+  </div>
+  <div class="floor"></div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="row">
+  <span>Haircuts</span><i>✦</i><span>Deluxe Beard</span><i>✦</i><span>Head Shave</span><i>✦</i><span>Buzz Cut</span><i>✦</i><span>Beard Trim</span><i>✦</i><span>Open till 10 Mon</span><i>✦</i><span>Cleveland TN</span><i>✦</i>
+  <span>Haircuts</span><i>✦</i><span>Deluxe Beard</span><i>✦</i><span>Head Shave</span><i>✦</i><span>Buzz Cut</span><i>✦</i><span>Beard Trim</span><i>✦</i><span>Open till 10 Mon</span><i>✦</i><span>Cleveland TN</span><i>✦</i>
+</div></div>
+
+<section class="late" id="late">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow">After-hours chair</div><h2>Off work at six?<br><span class="glow-p">Still time.</span></h2></div>
+    <div class="grid">
+      <div class="latecard mon rv">
+        <svg class="moon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff3864" stroke-width="2"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <div class="day">Monday</div><div class="time">10 PM</div><p>Doors 10 AM to 10 PM. Twelve hours of booking on Monday.</p>
+      </div>
+      <div class="latecard sun rv">
+        <svg class="moon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2de2e6" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+        <div class="day">Sunday</div><div class="time">8 AM–9 PM</div><p>Early start and a late finish. Sunday is open all day.</p>
+      </div>
+      <div class="latecard rv">
+        <div class="day">Tue · Thu · Fri</div><div class="time">10–6</div><p>Weekday daytime hours. Wednesday is the day off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow">The menu</div><h2>Straight-up<br><span class="glow-c">prices.</span></h2></div>
+    <div class="menu-list">
+      <div class="item feature rv"><h3>Haircut <span class="tag">CORE</span></h3><div class="price">$26</div><div class="meta"><span class="dur">30 min</span></div></div>
+      <div class="item rv"><h3>Deluxe Beard Service</h3><div class="price">$26</div><div class="meta"><span class="dur">30 min</span></div></div>
+      <div class="item rv"><h3>Head Shave</h3><div class="price">$30</div><div class="meta"><span class="dur">45 min</span></div></div>
+      <div class="item rv"><h3>Buzz Cut</h3><div class="price">$13</div><div class="meta"><span class="dur">15 min</span>One guard only, no shears or fading at all.</div></div>
+      <div class="item rv"><h3>Basic Beard Trim</h3><div class="price">$18</div><div class="meta"><span class="dur">15 min</span>Clippers-only beard trim.</div></div>
+      <div class="item rv"><h3>Wax Ears</h3><div class="price">$7</div><div class="meta"><span class="dur">5 min</span></div></div>
+      <div class="item rv"><h3>Wax Nose</h3><div class="price">$7</div><div class="meta"><span class="dur">30 min</span></div></div>
+    </div>
+    <p class="menu-note">Prices and times as listed on VinceTheBarber's Square booking page.</p>
+    <div class="menu-cta"><a class="btn btn-pink" href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">Pick a service &amp; time</a></div>
+  </div>
+</section>
+
+<section class="whysec" id="why">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow">Why Vince</div><h2>Built around<br><span class="glow-p">your schedule.</span></h2></div>
+    <div class="why-grid">
+      <div class="why rv">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2de2e6" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Open late</h3><p>Monday until 10 PM, Sunday until 9 PM. Book after work, not on your lunch break.</p>
+      </div>
+      <div class="why rv">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff3864" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"/></svg>
+        <h3>Book in seconds</h3><p>Every service, price and open slot is on his online booking page. No phone tag.</p>
+      </div>
+      <div class="why rv">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c9ccd5" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M7 7h7a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h8"/></svg>
+        <h3>Clear prices</h3><p>A $13 buzz cut up to a $30 head shave, all listed up front before you book.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="wrap hrs-wrap">
+    <ul class="hrs rv" id="hrs">
+      <li data-d="0"><span class="d">Sunday</span><span class="t late-t">8:00 AM – 9:00 PM</span></li>
+      <li data-d="1"><span class="d">Monday</span><span class="t late-t">10:00 AM – 10:00 PM</span></li>
+      <li data-d="2"><span class="d">Tuesday</span><span class="t">10:00 AM – 6:00 PM</span></li>
+      <li data-d="3"><span class="d">Wednesday</span><span class="t closed">Closed</span></li>
+      <li data-d="4"><span class="d">Thursday</span><span class="t">10:00 AM – 6:00 PM</span></li>
+      <li data-d="5"><span class="d">Friday</span><span class="t">10:00 AM – 6:00 PM</span></li>
+      <li data-d="6"><span class="d">Saturday</span><span class="t see"><a href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">See booking page</a></span></li>
+    </ul>
+    <div class="hrs-side rv">
+      <div class="eyebrow">Hours</div>
+      <h3>When the <span class="glow-c">lights</span> are on</h3>
+      <p>Hours as posted on the booking page. For Saturday, check open slots on the booking page before you head over.</p>
+      <a class="btn btn-ghost" href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">Check open slots</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="map rv"><iframe title="Map to VinceTheBarber" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2080%20Chambliss%20Ave%20NW%2C%20Cleveland%2C%20TN%2037311&output=embed"></iframe></div>
+    <div class="rv">
+      <div class="eyebrow">Pull up</div>
+      <div class="addr">2080 Chambliss Ave NW<br><span class="glow-c">Cleveland, TN 37311</span></div>
+      <ul class="contact-list">
+        <li><span class="k">Book</span><a href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">Online via Square</a></li>
+        <li><span class="k">Email</span><a href="mailto:goose727279@gmail.com">goose727279@gmail.com</a></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-pink" href="https://www.google.com/maps/dir/?api=1&destination=2080%20Chambliss%20Ave%20NW%2C%20Cleveland%2C%20TN%2037311" target="_blank" rel="noopener">Directions</a>
+        <a class="btn btn-ghost" href="mailto:goose727279@gmail.com">Email Vince</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#top">VINCE<span>THE</span>BARBER</a>
+  <div>2080 Chambliss Ave NW · Cleveland, TN 37311</div>
+  <div style="margin-top:14px;font-size:12px;opacity:.75">Concept by Code Craft Media</div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-pink" href="https://square.site/book/HJGG3CGVB4X7E/vincethebarber-cleveland-tn" target="_blank" rel="noopener">Book a chair</a>
+  <a class="btn btn-ghost" href="mailto:goose727279@gmail.com" aria-label="Email VinceTheBarber">Email</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // today + open status (America/New_York, Cleveland TN is Eastern)
+  var now; try{ now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'})); }catch(e){ now=new Date(); }
+  var d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hrs li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var H={0:[8,21],1:[10,22],2:[10,18],4:[10,18],5:[10,18]};
+  var dot=document.getElementById('sdot'), st=document.getElementById('stext');
+  if(H[d]){ if(h>=H[d][0]&&h<H[d][1]){dot.classList.add('on');st.textContent='Open now · until '+(H[d][1]>12?H[d][1]-12:H[d][1])+' PM';}
+    else if(h<H[d][0]){st.textContent='Opens today at '+H[d][0]+' AM';} else {st.textContent='Closed now · book ahead';} }
+  else if(d===3){st.textContent='Closed Wednesdays · book ahead';}
+  else {st.textContent='Saturday · check booking page';}
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){ var r=e.getBoundingClientRect(); if(r.top>innerHeight) e.classList.add('pre'); });
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

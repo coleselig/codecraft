@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Dolled By Diamand — Old Hickory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#5ec2e8;--ink:#111111;--pink:#ff4fa3;--white:#ffffff;--soft:#f4fbfe;--muted:#4a4a4a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:-.01em}
+.banner{background:var(--ink);color:#cfefff;font-size:10.5px;letter-spacing:-.01em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:8px;font-family:"Archivo Black";font-size:18px;text-decoration:none}
+.logo b{color:var(--pink);font-weight:400}
+.links{display:none;gap:26px;font-weight:800;font-size:14px}
+.links a{text-decoration:none;position:relative}
+.links a:after{content:"";position:absolute;left:0;bottom:-4px;height:3px;width:0;background:var(--pink);transition:width .25s}
+.links a:hover:after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:14px 24px;font-size:16px;transition:transform .15s,box-shadow .15s,background .2s}
+.btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:none;box-shadow:none}
+.pink{background:var(--pink);color:var(--white)}
+.blue{background:var(--blue);color:var(--ink)}
+.ghost{background:var(--white);color:var(--ink)}
+.nav-btn{padding:9px 18px;font-size:14px}
+@media(min-width:900px){.links{display:flex}}
+/* hero */
+.hero{position:relative;background:var(--ink);color:var(--white);overflow:hidden;padding:52px 0 70px}
+.hero .stitch-bg{position:absolute;inset:0;opacity:.22}
+.hero .grid{position:relative;display:grid;gap:30px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--ink);font-weight:800;font-size:13px;padding:6px 14px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
+.hero h1{font-size:clamp(44px,12.5vw,104px);margin:18px 0 18px}
+.hero h1 .p{color:var(--pink)}
+.hero h1 .b{color:var(--blue)}
+.hero p.sub{font-size:18px;color:#e6e6e6;max-width:520px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .ghost{background:transparent;color:var(--white);border-color:var(--white)}
+.hero .ghost:hover{box-shadow:4px 4px 0 var(--blue)}
+.hero .pink:hover{box-shadow:4px 4px 0 var(--blue)}
+.gem-stage{position:relative;max-width:300px;margin:0 auto;width:100%}
+.gem-stage svg.gem{width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(94,194,232,.35));animation:float 6s ease-in-out infinite}
+.spark{position:absolute;width:26px;height:26px;animation:twinkle 2.4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(-2deg)}}
+@keyframes twinkle{0%,100%{transform:scale(.4) rotate(0);opacity:.3}50%{transform:scale(1) rotate(45deg);opacity:1}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px;max-width:520px}
+.stat{border:2px solid rgba(255,255,255,.25);border-radius:16px;padding:12px}
+.stat strong{display:block;font-family:"Archivo Black";font-size:20px;white-space:nowrap;color:var(--blue)}
+.stat span{font-size:12px;color:#d0d0d0}
+@media(min-width:900px){.gem-stage{max-width:420px}.hero{padding:80px 0 100px}.hero .grid{grid-template-columns:1.25fr 1fr}}
+/* marquee */
+.marquee{background:var(--pink);color:var(--white);border-block:2px solid var(--ink);overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-block;padding:12px 0;font-family:"Archivo Black";font-size:20px;animation:mq 26s linear infinite}
+.marquee span{margin:0 18px}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:72px 0}
+.eyebrow{font-weight:800;color:var(--pink);text-transform:uppercase;letter-spacing:.12em;font-size:13px}
+h2{font-size:clamp(34px,8vw,60px);margin:10px 0 14px}
+.lead{color:var(--muted);max-width:620px;font-size:17px}
+/* menu */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:26px 0 8px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:800 14px Manrope;border:2px solid var(--ink);background:var(--white);border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s}
+.tab[aria-selected=true]{background:var(--ink);color:var(--white)}
+.tab:hover{background:var(--soft)}
+.tab[aria-selected=true]:hover{background:var(--ink)}
+.cards{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:1fr 1fr 1fr}}
+.card{position:relative;border:2px solid var(--ink);border-radius:20px;padding:18px 18px 16px;background:var(--white);transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--blue)}
+.card .row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card h3{font-size:19px;line-height:1.15}
+.price{font-family:"Archivo Black";font-size:22px;color:var(--pink);white-space:nowrap}
+.price.ask{font-family:Manrope;font-weight:800;font-size:13px;color:var(--ink);background:var(--blue);padding:4px 10px;border-radius:999px}
+.meta{margin-top:8px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 12px}
+.meta i{font-style:normal;display:inline-flex;align-items:center;gap:5px}
+.panel[hidden]{display:none}
+.fine{margin-top:18px;font-size:13px;color:var(--muted)}
+/* why */
+.why{background:var(--soft);position:relative;overflow:hidden}
+.why-grid{display:grid;gap:16px;margin-top:30px}
+@media(min-width:800px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-card{background:var(--white);border:2px solid var(--ink);border-radius:22px;padding:22px}
+.why-card svg{width:46px;height:46px;margin-bottom:12px}
+.why-card h3{font-size:20px;margin-bottom:6px}
+.why-card p{font-size:15px;color:var(--muted)}
+/* hours */
+.hv{display:grid;gap:26px}
+@media(min-width:900px){.hv{grid-template-columns:1fr 1fr;align-items:start}}
+.hours{border:2px solid var(--ink);border-radius:22px;overflow:hidden}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px dashed #cfcfcf;font-weight:600}
+.hours li:last-child{border-bottom:0}
+.hours li.today{background:var(--ink);color:var(--white)}
+.hours li.today .d:after{content:"Today";margin-left:10px;background:var(--pink);color:var(--white);font-size:11px;padding:3px 9px;border-radius:999px;vertical-align:middle}
+.hours li.closed span:last-child{color:#888}
+.hours li.today.closed span:last-child{color:#bbb}
+.map{border:2px solid var(--ink);border-radius:22px;overflow:hidden;background:var(--soft)}
+.map iframe{display:block;width:100%;height:300px;border:0}
+.map .cap{padding:16px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.map .cap strong{font-family:"Archivo Black";font-size:18px}
+.map .cap small{display:block;color:var(--muted)}
+/* cta */
+.cta{background:var(--ink);color:var(--white);position:relative;overflow:hidden;text-align:center}
+.cta h2{max-width:780px;margin:10px auto 14px}
+.cta p{color:#d8d8d8;max-width:540px;margin:0 auto}
+.cta .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+.cta .ghost{background:transparent;color:var(--white);border-color:var(--white)}
+.cta .contact{margin-top:22px;font-size:15px;color:#cfcfcf}
+.cta .contact a{color:var(--blue);font-weight:800}
+footer{background:var(--ink);color:#9a9a9a;border-top:1px solid #2a2a2a;padding:26px 0;font-size:13px;text-align:center}
+footer b{color:var(--white)}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:2px solid var(--ink)}
+.bar .btn{flex:1;padding:13px 10px;font-size:15px}
+@media(min-width:900px){.bar{display:none}}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Dolled By Diamand. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="spk" viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5 10.8 12 12-7 1.2-11.2 5.8-12 12-.8-6.2-5-10.8-12-12C7 10.8 11.2 6.2 12 0z"/></symbol>
+<pattern id="stitch" width="56" height="40" patternUnits="userSpaceOnUse">
+<path d="M0 20 q14 -16 28 0 t28 0" fill="none" stroke="#5ec2e8" stroke-width="3" stroke-dasharray="6 6"/>
+<path d="M0 20 q14 16 28 0 t28 0" fill="none" stroke="#ff4fa3" stroke-width="3" stroke-dasharray="6 6"/>
+</pattern>
+</defs>
+</svg>
+
+<nav aria-label="Main">
+<div class="wrap">
+<a class="logo" href="#top" aria-label="Dolled By Diamand home">
+<svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 4h24l8 10-20 24L0 14z" fill="#5ec2e8" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/><path d="M0 14h40M14 4l-4 10 10 24 10-24-4-10" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/></svg>
+Dolled <b>By</b> Diamand</a>
+<div class="links"><a href="#menu">Menu</a><a href="#why">Why Diamand</a><a href="#visit">Hours &amp; Visit</a></div>
+<a class="btn pink nav-btn" href="https://square.site/book/L0AYHMWTG7JW4/dolled-by-diamand-smyrna-tn" target="_blank" rel="noopener">Book</a>
+</div>
+</nav>
+
+<header class="hero" id="top">
+<svg class="stitch-bg" width="100%" height="100%" aria-hidden="true"><rect width="100%" height="100%" fill="url(#stitch)"/></svg>
+<div class="wrap grid">
+<div>
+<span class="kicker"><svg width="12" height="12" fill="#111"><use href="#spk"/></svg> Braids &amp; locs · Old Hickory, TN</span>
+<h1>Get <span class="p">dolled</span> up.<br>Leave <span class="b">flawless.</span></h1>
+<p class="sub">Knotless, box braids, Fulani, stitch braids and faux locs by Diamand, with real prices posted up front and online booking.</p>
+<div class="ctas">
+<a class="btn pink" href="https://square.site/book/L0AYHMWTG7JW4/dolled-by-diamand-smyrna-tn" target="_blank" rel="noopener">Book your appointment</a>
+<a class="btn ghost" href="tel:+16159249047">Call (615) 924-9047</a>
+</div>
+<div class="stats">
+<div class="stat"><strong>40+</strong><span>services on her menu</span></div>
+<div class="stat"><strong>6 days</strong><span>open each week</span></div>
+<div class="stat"><strong>Kids</strong><span>&amp; men's styles too</span></div>
+</div>
+</div>
+<div class="gem-stage" aria-hidden="true">
+<svg class="gem" viewBox="0 0 400 360">
+<defs>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfeaff"/><stop offset="1" stop-color="#5ec2e8"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ec2e8"/><stop offset="1" stop-color="#1f8fbf"/></linearGradient>
+<linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff4fa3"/><stop offset="1" stop-color="#ff8cc4"/></linearGradient>
+</defs>
+<polygon points="80,40 320,40 390,120 200,340 10,120" fill="url(#g2)"/>
+<polygon points="80,40 140,120 10,120" fill="#9fdcf5"/>
+<polygon points="80,40 200,40 140,120" fill="#dff5ff"/>
+<polygon points="200,40 320,40 260,120" fill="#bfeaff"/>
+<polygon points="320,40 390,120 260,120" fill="#7fd0ef"/>
+<polygon points="200,40 260,120 140,120" fill="url(#g3)"/>
+<polygon points="10,120 140,120 200,340" fill="#3fb0dc"/>
+<polygon points="140,120 260,120 200,340" fill="url(#g1)"/>
+<polygon points="260,120 390,120 200,340" fill="#2b9ccb"/>
+<g fill="none" stroke="#111" stroke-width="4" stroke-linejoin="round">
+<polygon points="80,40 320,40 390,120 200,340 10,120"/>
+<path d="M10 120h380M80 40l60 80 60-80 60 80 60-80M140 120l60 220 60-220"/>
+</g>
+</svg>
+<svg class="spark" style="top:4%;left:6%;fill:#fff"><use href="#spk"/></svg>
+<svg class="spark" style="top:18%;right:2%;fill:#ff4fa3;animation-delay:.8s"><use href="#spk"/></svg>
+<svg class="spark" style="bottom:20%;left:2%;fill:#5ec2e8;animation-delay:1.4s"><use href="#spk"/></svg>
+<svg class="spark" style="bottom:6%;right:18%;fill:#fff;width:18px;height:18px;animation-delay:.4s"><use href="#spk"/></svg>
+</div>
+</div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+<span>KNOTLESS</span><span>✦</span><span>BOX BRAIDS</span><span>✦</span><span>FULANI</span><span>✦</span><span>STITCH BRAIDS</span><span>✦</span><span>FAUX LOCS</span><span>✦</span><span>LEMONADE</span><span>✦</span><span>LOC RE-TWIST</span><span>✦</span><span>SILK PRESS</span><span>✦</span>
+<span>KNOTLESS</span><span>✦</span><span>BOX BRAIDS</span><span>✦</span><span>FULANI</span><span>✦</span><span>STITCH BRAIDS</span><span>✦</span><span>FAUX LOCS</span><span>✦</span><span>LEMONADE</span><span>✦</span><span>LOC RE-TWIST</span><span>✦</span><span>SILK PRESS</span><span>✦</span>
+</div></div>
+
+<main>
+<section id="menu">
+<div class="wrap">
+<div class="rv">
+<p class="eyebrow">The menu</p>
+<h2>Pick your look.</h2>
+<p class="lead">Prices and times straight from Diamand's booking page. Tap a category, then book the exact service online.</p>
+</div>
+<div class="tabs" role="tablist" aria-label="Service categories">
+<button class="tab" role="tab" aria-selected="true" data-p="braids">Braids</button>
+<button class="tab" role="tab" aria-selected="false" data-p="locs">Locs</button>
+<button class="tab" role="tab" aria-selected="false" data-p="styles">Styles &amp; ponies</button>
+<button class="tab" role="tab" aria-selected="false" data-p="kids">Kids &amp; men</button>
+<button class="tab" role="tab" aria-selected="false" data-p="extras">Extras</button>
+</div>
+
+<div class="panel" id="braids" role="tabpanel">
+<div class="cards">
+<div class="card"><div class="row"><h3>Knotless · Small</h3><span class="price">$250</span></div><div class="meta"><i>⏱ 8 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Knotless · Medium</h3><span class="price">$200</span></div><div class="meta"><i>⏱ 5.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Knotless · Large</h3><span class="price">$200</span></div><div class="meta"><i>⏱ 4 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Bohemian Knotless</h3><span class="price">$250</span></div><div class="meta"><i>⏱ 3.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Box Braids · Small</h3><span class="price">$250</span></div><div class="meta"><i>⏱ 8 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Box Braids · Medium</h3><span class="price">$200</span></div><div class="meta"><i>⏱ 6 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Box Braids · Large</h3><span class="price">$200</span></div><div class="meta"><i>⏱ 5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Fulani / Tribal · 2 Layers</h3><span class="price">$165</span></div><div class="meta"><i>⏱ 4 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Fulani / Tribal · 3 Layers</h3><span class="price">$185</span></div><div class="meta"><i>⏱ 5.75 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Stitch Braids</h3><span class="price">$150</span></div><div class="meta"><i>Book online</i></div></div>
+<div class="card"><div class="row"><h3>Lemonade Braids</h3><span class="price">$180</span></div><div class="meta"><i>⏱ 2.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Layer Braids</h3><span class="price">$85</span></div><div class="meta"><i>⏱ 2.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Feed-ins · 2 Braids</h3><span class="price">$60</span></div><div class="meta"><i>⏱ 1.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Feed-ins · 4–8 Braids</h3><span class="price">$95</span></div><div class="meta"><i>⏱ 2.25 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Feed-ins · 12+</h3><span class="price ask">See booking</span></div><div class="meta"><i>⏱ 3 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Basic Braid Style</h3><span class="price">$85</span></div><div class="meta"><i>⏱ 2 hrs</i><i>Hair not included (+$10)</i></div></div>
+<div class="card"><div class="row"><h3>Touch-up Braids</h3><span class="price">$50</span></div><div class="meta"><i>⏱ 2.5 hrs</i><i>2 rows rebraided</i></div></div>
+<div class="card"><div class="row"><h3>Rope Twist</h3><span class="price">$100</span></div><div class="meta"><i>⏱ 1.5 hrs</i></div></div>
+</div>
+</div>
+
+<div class="panel" id="locs" role="tabpanel" hidden>
+<div class="cards">
+<div class="card"><div class="row"><h3>Faux Locs · Small</h3><span class="price">$220</span></div><div class="meta"><i>⏱ 5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Faux Locs · Medium</h3><span class="price">$195</span></div><div class="meta"><i>⏱ 4 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Faux Locs · Large</h3><span class="price">$180+</span></div><div class="meta"><i>⏱ 3.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Starter Locs</h3><span class="price">$150</span></div><div class="meta"><i>⏱ 3 hrs</i><i>Varies by length &amp; density</i></div></div>
+<div class="card"><div class="row"><h3>Loc Re-twist</h3><span class="price">$100</span></div><div class="meta"><i>⏱ 2 hrs</i><i>Varies by length &amp; density</i></div></div>
+<div class="card"><div class="row"><h3>Interlocking</h3><span class="price">$90</span></div><div class="meta"><i>⏱ 4.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Style Locs</h3><span class="price">$20</span></div><div class="meta"><i>⏱ 30 min</i></div></div>
+<div class="card"><div class="row"><h3>Coloring Locs</h3><span class="price">$30</span></div><div class="meta"><i>⏱ 1 hr</i></div></div>
+<div class="card"><div class="row"><h3>Loc Reattach</h3><span class="price">$25</span></div><div class="meta"><i>⏱ 30 min</i></div></div>
+<div class="card"><div class="row"><h3>Loc Detox</h3><span class="price ask">See booking</span></div><div class="meta"><i>⏱ 25 min</i></div></div>
+<div class="card"><div class="row"><h3>Loc Take Down</h3><span class="price">$550</span></div><div class="meta"><i>⏱ 8.5 hrs</i></div></div>
+</div>
+</div>
+
+<div class="panel" id="styles" role="tabpanel" hidden>
+<div class="cards">
+<div class="card"><div class="row"><h3>Stitch Braided Pony</h3><span class="price">$120</span></div><div class="meta"><i>⏱ 2 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Ponytail</h3><span class="price">$70</span></div><div class="meta"><i>⏱ 1.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Braid Ponytail</h3><span class="price ask">See booking</span></div><div class="meta"><i>⏱ 2.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Full Sew-in · Traditional</h3><span class="price">$100</span></div><div class="meta"><i>⏱ ~2 hrs 10 min</i><i>Leave-out</i></div></div>
+<div class="card"><div class="row"><h3>Crochet</h3><span class="price ask">See booking</span></div><div class="meta"><i>⏱ 2 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Silk Press</h3><span class="price">$75</span></div><div class="meta"><i>⏱ 1.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Trim</h3><span class="price">$25</span></div><div class="meta"><i>⏱ 30 min</i></div></div>
+<div class="card"><div class="row"><h3>Shampoo</h3><span class="price">$25</span></div><div class="meta"><i>⏱ 30 min</i></div></div>
+</div>
+</div>
+
+<div class="panel" id="kids" role="tabpanel" hidden>
+<div class="cards">
+<div class="card"><div class="row"><h3>Kids Knotless</h3><span class="price">$150</span></div><div class="meta"><i>⏱ 4.5 hrs</i><i>Hair included</i></div></div>
+<div class="card"><div class="row"><h3>Kids Two-Layer Braids</h3><span class="price">$80</span></div><div class="meta"><i>⏱ 2.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Kids Lemonade</h3><span class="price">$65</span></div><div class="meta"><i>⏱ 1.5 hrs</i></div></div>
+<div class="card"><div class="row"><h3>Kids Loc Re-twist</h3><span class="price">$75</span></div><div class="meta"><i>⏱ 2.5 hrs</i><i>Shampoo required</i></div></div>
+<div class="card"><div class="row"><h3>Men's Freestyle Braids</h3><span class="price">$85</span></div><div class="meta"><i>⏱ 1.5 hrs</i></div></div>
+</div>
+</div>
+
+<div class="panel" id="extras" role="tabpanel" hidden>
+<div class="cards">
+<div class="card"><div class="row"><h3>Consultation</h3><span class="price">$20</span></div><div class="meta"><i>⏱ 30 min</i><i>Recommended for new clients</i></div></div>
+<div class="card"><div class="row"><h3>Deposit</h3><span class="price">$20</span></div><div class="meta"><i>Secures your slot</i></div></div>
+<div class="card"><div class="row"><h3>Same-Day Booking</h3><span class="price">$50</span></div><div class="meta"><i>Need it today?</i></div></div>
+<div class="card"><div class="row"><h3>Travel Fee</h3><span class="price">$50</span></div><div class="meta"><i>Listed on her menu</i></div></div>
+</div>
+</div>
+<p class="fine">Prices as listed on Diamand's Square booking page; final price confirmed at booking.</p>
+</div>
+</section>
+
+<section class="why" id="why">
+<div class="wrap">
+<div class="rv">
+<p class="eyebrow">Why Diamand</p>
+<h2>No guessing. Just glam.</h2>
+</div>
+<div class="why-grid">
+<div class="why-card rv"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="40" height="34" rx="6" fill="#5ec2e8" stroke="#111" stroke-width="3"/><path d="M4 18h40M14 4v8M34 4v8" stroke="#111" stroke-width="3" stroke-linecap="round"/><path d="m16 29 6 6 11-11" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/></svg><h3>Book in seconds</h3><p>Every service is bookable online through Square, any time of day.</p></div>
+<div class="why-card rv"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 6h22l12 12v24H8z" fill="#ff4fa3" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M15 22h18M15 29h18M15 36h10" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><h3>Prices up front</h3><p>Her full menu posts prices and appointment times, so you know before you sit down.</p></div>
+<div class="why-card rv"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 4h24l10 12-22 28L2 16z" fill="#5ec2e8" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M2 16h44M18 4l-4 12 10 28 10-28-4-12" fill="none" stroke="#111" stroke-width="2.5"/></svg><h3>Braids to locs</h3><p>Knotless, Fulani, stitch, faux locs, starter locs, re-twists, sew-ins and silk presses.</p></div>
+<div class="why-card rv"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="16" r="8" fill="#ff4fa3" stroke="#111" stroke-width="3"/><circle cx="34" cy="20" r="6" fill="#5ec2e8" stroke="#111" stroke-width="3"/><path d="M3 42c1-9 7-14 14-14s13 5 14 14M27 42c1-6 4-10 8-10s9 4 10 10" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/></svg><h3>The whole family</h3><p>Kids' knotless, lemonade and re-twists, plus men's freestyle braids.</p></div>
+</div>
+</div>
+</section>
+
+<section id="visit">
+<div class="wrap">
+<div class="rv">
+<p class="eyebrow">Hours &amp; visit</p>
+<h2>Open 6 days.</h2>
+<p class="lead">Evening slots until 9 PM on Tuesdays and Fridays, early starts on Thursdays and Saturdays.</p>
+</div>
+<div class="hv" style="margin-top:28px">
+<ul class="hours rv" id="hours">
+<li data-d="0"><span class="d">Sunday</span><span>2 – 5 PM</span></li>
+<li data-d="1" class="closed"><span class="d">Monday</span><span>Closed</span></li>
+<li data-d="2"><span class="d">Tuesday</span><span>1 – 9 PM</span></li>
+<li data-d="3"><span class="d">Wednesday</span><span>2 – 7 PM</span></li>
+<li data-d="4"><span class="d">Thursday</span><span>9 AM – 5 PM</span></li>
+<li data-d="5"><span class="d">Friday</span><span>2 – 9 PM</span></li>
+<li data-d="6"><span class="d">Saturday</span><span>9 AM – 5 PM</span></li>
+</ul>
+<div class="map rv">
+<iframe title="Map of Old Hickory, TN" loading="lazy" src="https://www.google.com/maps?q=Old%20Hickory%2C%20TN%2037138&output=embed"></iframe>
+<div class="cap">
+<div><strong>Old Hickory, TN 37138</strong><small>Exact address shared when you book.</small></div>
+<a class="btn blue nav-btn" href="https://www.google.com/maps/dir/?api=1&destination=Old%20Hickory%2C%20TN%2037138" target="_blank" rel="noopener">Directions</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<svg class="stitch-bg" style="position:absolute;inset:0;opacity:.18" width="100%" height="100%" aria-hidden="true"><rect width="100%" height="100%" fill="url(#stitch)"/></svg>
+<div class="wrap rv" style="position:relative">
+<p class="eyebrow" style="color:var(--blue)">Your chair is waiting</p>
+<h2>Ready to get dolled?</h2>
+<p>Lock in your braids online, or call Diamand with questions. New here? Start with a $20 consultation.</p>
+<div class="ctas">
+<a class="btn pink" href="https://square.site/book/L0AYHMWTG7JW4/dolled-by-diamand-smyrna-tn" target="_blank" rel="noopener">Book now</a>
+<a class="btn ghost" href="tel:+16159249047">Call (615) 924-9047</a>
+</div>
+<p class="contact">Email <a href="mailto:diamandwilliams@yahoo.com">diamandwilliams@yahoo.com</a></p>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap"><b>Dolled By Diamand</b> · Old Hickory, TN · (615) 924-9047<br>Concept by Code Craft Media</div></footer>
+
+<div class="bar">
+<a class="btn ghost" href="tel:+16159249047">Call</a>
+<a class="btn pink" href="https://square.site/book/L0AYHMWTG7JW4/dolled-by-diamand-smyrna-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.dataset.p).hidden=true});t.setAttribute('aria-selected','true');document.getElementById(t.dataset.p).hidden=false})});
+document.documentElement.classList.add('js');
+var els=document.querySelectorAll('.rv');
+function showAll(){els.forEach(function(e){e.classList.add('in')})}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}else showAll();
+setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Diva Nail Studio — Murfreesboro</title>
+<meta name="description" content="Concept site for Diva Nail Studio, 1430 Battleground Dr, Murfreesboro, TN. Nails, lashes and waxing, Thursday and Friday mornings by appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#d6246e; --magenta-d:#a8144f; --champ:#f7e7ce; --champ-l:#fdf6ea;
+  --navy:#14213d; --navy-2:#1d2d52; --lilac:#cdb4db; --ink:#14213d; --muted:#4a5577;
+  --radius:22px; --bar:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Outfit",system-ui,sans-serif;color:var(--ink);background:var(--champ-l);line-height:1.55;overflow-x:hidden;}
+a{color:inherit}
+img,svg{display:block}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.05;letter-spacing:-.01em}
+.eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--magenta)}
+
+/* banner */
+.concept{background:var(--navy);color:var(--champ);font-size:10.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
+@media(min-width:600px){.concept{font-size:.74rem;letter-spacing:.02em}}
+.concept b{color:var(--lilac);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(253,246,234,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(20,33,61,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Playfair Display",serif;font-weight:800;font-size:1.35rem;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{font-style:italic;color:var(--magenta)}
+.nav ul{display:none;list-style:none;gap:28px;font-size:.92rem;font-weight:500}
+.nav ul a{text-decoration:none;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--magenta);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:hover::after{transform:scaleX(1)}
+@media(min-width:900px){.nav ul{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-pop{background:linear-gradient(180deg,#e2397f,var(--magenta) 55%,var(--magenta-d));color:#fff;box-shadow:0 10px 24px -8px rgba(214,36,110,.65),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-pop:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(214,36,110,.75),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-ghost{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-ghost:hover{background:var(--navy);color:var(--champ)}
+.btn-sm{padding:9px 18px;font-size:.88rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,rgba(205,180,219,.75),transparent 60%),
+  radial-gradient(90% 60% at 0% 100%,rgba(214,36,110,.16),transparent 60%),
+  var(--champ)}
+.drips{position:absolute;top:0;left:0;width:100%;height:auto;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:56px;display:grid;gap:36px}
+@media(min-width:900px){.art{max-width:360px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:170px;padding-bottom:110px}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--champ);padding:7px 14px 7px 10px;border-radius:999px;font-size:.78rem;font-weight:500;margin-bottom:20px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--magenta);box-shadow:0 0 0 4px rgba(214,36,110,.3);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(214,36,110,0)}}
+.hero h1{font-size:clamp(2.7rem,11vw,5.4rem);font-weight:800;color:var(--navy)}
+.hero h1 em{font-style:italic;color:var(--magenta);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.32em}
+.hero p.sub{font-size:1.12rem;color:var(--muted);max-width:30ch;margin:22px 0 28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .ctas .btn{flex:1 1 auto}
+@media(min-width:900px){.hero .ctas .btn{flex:0 0 auto}}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.88rem;color:var(--muted)}
+.hero .meta span{display:flex;align-items:center;gap:6px}
+.hero .meta svg{width:16px;height:16px;color:var(--magenta)}
+
+/* bottle art */
+.art{position:relative;max-width:250px;margin:0 auto;width:100%}
+.art .bottle{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(20,33,61,.25));animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.spark{position:absolute;color:var(--magenta);animation:twinkle 2.6s ease-in-out infinite}
+.spark.s2{animation-delay:.8s;color:var(--navy)}
+.spark.s3{animation-delay:1.5s;color:#fff}
+@keyframes twinkle{0%,100%{transform:scale(.6) rotate(0);opacity:.5}50%{transform:scale(1) rotate(45deg);opacity:1}}
+
+/* ticker */
+.ticker{background:var(--navy);color:var(--champ);overflow:hidden;padding:14px 0;border-block:3px solid var(--magenta)}
+.ticker .track{display:flex;gap:34px;width:max-content;animation:tick 32s linear infinite;font-family:"Playfair Display",serif;font-style:italic;font-size:1.15rem}
+.ticker .track span{display:flex;align-items:center;gap:34px;white-space:nowrap}
+.ticker .track span::after{content:"✦";color:var(--lilac);font-style:normal;font-size:.9rem}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:76px 0}
+.sec-head{margin-bottom:36px;max-width:640px}
+.sec-head h2{font-size:clamp(2.1rem,7.5vw,3.4rem);font-weight:800;margin-top:10px}
+.sec-head h2 em{color:var(--magenta)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:1.05rem}
+
+/* exclusive / hours window */
+.window{background:var(--navy);color:var(--champ);position:relative;overflow:hidden}
+.window::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 50% at 100% 0%,rgba(214,36,110,.35),transparent 70%),
+  radial-gradient(50% 50% at 0% 100%,rgba(205,180,219,.22),transparent 70%)}
+.window .wrap{position:relative;display:grid;gap:40px}
+@media(min-width:900px){.window .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+.window .sec-head p{color:rgba(247,231,206,.78)}
+.window .eyebrow{color:var(--lilac)}
+.big-num{display:flex;align-items:flex-end;gap:14px;margin:6px 0 4px}
+.big-num strong{font-family:"Playfair Display",serif;font-size:clamp(5rem,22vw,8rem);line-height:1.05;padding:0 .04em;background:linear-gradient(180deg,#fff,var(--champ) 40%,var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.big-num span{font-size:1rem;padding-bottom:12px;color:var(--champ);max-width:16ch;line-height:1.3}
+.hours{background:rgba(247,231,206,.06);border:1px solid rgba(247,231,206,.16);border-radius:var(--radius);padding:10px;}
+.hours li{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-radius:14px;font-size:1rem}
+.hours li + li{border-top:1px solid rgba(247,231,206,.08)}
+.hours li.closed{color:rgba(247,231,206,.45)}
+.hours li.open b{color:#fff}
+.hours li.open span{background:var(--magenta);color:#fff;font-weight:600;font-size:.88rem;padding:4px 12px;border-radius:999px}
+.hours li.today{background:rgba(205,180,219,.18);border-top-color:transparent;outline:2px solid var(--lilac)}
+.hours li.today + li{border-top-color:transparent}
+.hours li .tag{display:none;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--lilac);padding:2px 8px;border-radius:999px;margin-left:8px;font-weight:700;vertical-align:middle}
+.hours li.today .tag{display:inline-block}
+.status{margin-top:14px;font-size:.92rem;color:var(--lilac);padding-left:6px}
+
+/* menu */
+.menu-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.menu-tabs::-webkit-scrollbar{display:none}
+.menu-tabs button{flex:0 0 auto;font:inherit;font-weight:600;font-size:.9rem;padding:10px 18px;border-radius:999px;border:2px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer;transition:all .2s}
+.menu-tabs button:hover{background:rgba(20,33,61,.06)}
+.menu-tabs button[aria-selected="true"]{background:var(--navy);color:var(--champ)}
+.cards{display:grid;gap:18px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.cards{gap:24px}}
+.card{background:#fff;border-radius:var(--radius);padding:24px 22px 18px;position:relative;overflow:hidden;box-shadow:0 1px 0 rgba(20,33,61,.06),0 18px 40px -26px rgba(20,33,61,.4);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(20,33,61,.06),0 26px 50px -24px rgba(214,36,110,.45)}
+.card .top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.card .ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--champ);color:var(--magenta);flex:0 0 auto}
+.card .ico svg{width:26px;height:26px}
+.card h3{font-size:1.45rem;font-weight:800}
+.card.hide{display:none}
+.row{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-top:1px dashed rgba(20,33,61,.14)}
+.row .n{font-weight:500}
+.row .d{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.row .fill{flex:1}
+.row .p{font-family:"Playfair Display",serif;font-weight:800;font-size:1.15rem;color:var(--magenta);white-space:nowrap}
+.row small{display:block;font-size:.8rem;color:var(--muted);font-weight:400}
+.note{font-size:.84rem;color:var(--muted);margin-top:22px}
+
+/* lash feature */
+.lash{background:linear-gradient(160deg,var(--lilac),#e9dcf0 55%,var(--champ));position:relative;overflow:hidden}
+.lash .wrap{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.lash .wrap{grid-template-columns:.9fr 1.1fr}}
+.lash-art{width:100%;max-width:440px;margin:0 auto;height:auto}
+.lash-art path.l{stroke-dasharray:240;stroke-dashoffset:0}
+.reveal.in .lash-art path.l{animation:draw 1.6s ease forwards}
+@keyframes draw{from{stroke-dashoffset:240}to{stroke-dashoffset:0}}
+.lash .price-tag{display:inline-flex;gap:18px;flex-wrap:wrap;margin:6px 0 26px}
+.lash .price-tag div{background:var(--navy);color:var(--champ);border-radius:18px;padding:14px 18px}
+.lash .price-tag b{display:block;font-family:"Playfair Display",serif;font-size:2rem;color:#fff;line-height:1}
+.lash .price-tag span{font-size:.82rem;opacity:.85}
+
+/* why */
+.why-grid{display:grid;gap:16px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{padding:26px 22px;border-radius:var(--radius);background:var(--champ);border:1px solid rgba(20,33,61,.08);position:relative;transition:background .25s}
+.why:hover{background:#fbe9d2}
+.why .k{font-family:"Playfair Display",serif;font-weight:800;font-size:2.4rem;color:var(--magenta);line-height:1}
+.why h3{font-size:1.25rem;margin:10px 0 6px}
+.why p{font-size:.95rem;color:var(--muted)}
+
+/* visit */
+.visit .wrap{display:grid;gap:24px}
+@media(min-width:900px){.visit .wrap{grid-template-columns:.8fr 1.2fr;align-items:stretch}}
+.visit-card{background:var(--navy);color:var(--champ);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:18px}
+.visit-card h2{font-size:2.4rem;color:#fff}
+.visit-card a.line{display:flex;gap:12px;align-items:flex-start;text-decoration:none;padding:12px 0;border-top:1px solid rgba(247,231,206,.14)}
+.visit-card a.line:hover span{color:#fff;text-decoration:underline}
+.visit-card a.line svg{width:22px;height:22px;flex:0 0 auto;color:var(--magenta);margin-top:2px}
+.visit-card .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.visit-card .btn-ghost{border-color:var(--champ);color:var(--champ)}
+.visit-card .btn-ghost:hover{background:var(--champ);color:var(--navy)}
+.map{background:var(--lilac) radial-gradient(circle at 50% 45%,var(--magenta) 0 10px,transparent 11px);border-radius:var(--radius);overflow:hidden;min-height:340px;border:4px solid #fff;box-shadow:0 20px 40px -24px rgba(20,33,61,.5)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+/* footer */
+footer{background:var(--navy);color:rgba(247,231,206,.8);padding:44px 0 calc(36px + var(--bar) + env(safe-area-inset-bottom));font-size:.9rem;position:relative;overflow:hidden}
+footer .wrap{display:flex;flex-direction:column;gap:14px}
+footer .logo{color:var(--champ)}
+footer p a{white-space:nowrap}
+@media(min-width:900px){footer{padding-bottom:36px}}
+footer .socials{display:flex;gap:12px}
+footer .socials a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(247,231,206,.08);transition:background .2s}
+footer .socials a:hover{background:var(--magenta)}
+footer .socials svg{width:20px;height:20px}
+footer small{opacity:.65}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(20,33,61,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:2px solid var(--magenta)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem}
+.callbar .c{background:var(--champ);color:var(--navy)}
+.callbar .b{background:linear-gradient(180deg,#e2397f,var(--magenta));color:#fff}
+.callbar svg{width:18px;height:18px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Diva Nail Studio. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Diva Nail Studio home">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#d6246e"/></svg>
+      Diva <i>Nail Studio</i>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#lashes">Lashes</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-pop btn-sm" href="https://square.site/book/A49TWDA8JB7NE/diva-nail-studio-murfreesboro-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <!-- glossy polish drips -->
+  <svg class="drips" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#a8144f"/><stop offset=".55" stop-color="#d6246e"/><stop offset="1" stop-color="#e94a8c"/>
+      </linearGradient>
+      <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#gloss)" d="M0 0h1440v52c-30 0-38 18-40 46-2 30-14 40-28 40s-24-12-24-40c0-22-10-40-34-40-30 0-40 12-44 30-3 16-10 24-22 24s-18-10-20-24c-4-24-18-30-44-30-34 0-46 20-48 64-2 50-14 74-34 74s-30-22-32-72c-2-40-16-66-46-66-26 0-38 14-42 34-4 18-12 26-24 26s-20-10-22-26c-4-24-22-34-50-34-30 0-42 16-46 50-4 34-16 48-32 48s-28-16-30-48c-2-30-18-50-48-50-24 0-36 10-40 26-3 14-10 20-20 20s-16-8-18-20c-4-18-22-26-48-26-32 0-46 26-48 86-2 64-16 96-36 96s-32-30-34-92c-2-56-18-90-50-90-26 0-38 14-42 36-4 22-14 32-28 32s-24-10-28-32c-4-22-18-36-46-36-30 0-44 18-48 52-4 34-16 50-34 50s-30-16-34-50c-4-34-18-52-46-52-22 0-34 10-38 26-4 14-12 20-22 20s-18-6-22-20c-4-16-16-26-40-26-30 0-42 18-46 46-4 30-16 44-32 44S56 128 52 98C48 68 34 52 0 52z"/>
+    <path fill="url(#shine)" opacity=".7" d="M0 8h1440v10H0z"/>
+    <g fill="#fff" opacity=".55">
+      <ellipse cx="432" cy="158" rx="4" ry="9"/><ellipse cx="910" cy="175" rx="4" ry="10"/><ellipse cx="1098" cy="116" rx="3" ry="7"/><ellipse cx="146" cy="128" rx="3" ry="7"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="reveal">
+      <div class="pill"><span class="dot"></span>Open Thursday &amp; Friday mornings only</div>
+      <h1>Five hours<br>a week. Make<br>yours <em>count.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14c40-10 120-14 196-6" stroke="#cdb4db" stroke-width="6" fill="none" stroke-linecap="round"/></svg></em></h1>
+      <p class="sub">Acrylics, gel, pink &amp; white, lash extensions and waxing on Battleground Drive in Murfreesboro.</p>
+      <div class="ctas">
+        <a class="btn btn-pop" href="https://square.site/book/A49TWDA8JB7NE/diva-nail-studio-murfreesboro-tn" target="_blank" rel="noopener">Book online
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+16156170604">Call (615) 617-0604</a>
+      </div>
+      <div class="meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Thu–Fri · 9:30 AM–12 PM</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>1430 Battleground Dr</span>
+      </div>
+    </div>
+
+    <div class="art reveal" aria-hidden="true">
+      <svg class="bottle" viewBox="0 0 300 380">
+        <defs>
+          <linearGradient id="glass" x1="0" x2="1">
+            <stop offset="0" stop-color="#a8144f"/><stop offset=".35" stop-color="#d6246e"/><stop offset=".7" stop-color="#e94a8c"/><stop offset="1" stop-color="#a8144f"/>
+          </linearGradient>
+          <linearGradient id="cap" x1="0" x2="1">
+            <stop offset="0" stop-color="#0b1428"/><stop offset=".4" stop-color="#2a3b66"/><stop offset=".6" stop-color="#14213d"/><stop offset="1" stop-color="#0b1428"/>
+          </linearGradient>
+          <linearGradient id="champg" x1="0" x2="1"><stop offset="0" stop-color="#e8cfa6"/><stop offset=".5" stop-color="#fff4e2"/><stop offset="1" stop-color="#d9bb8c"/></linearGradient>
+        </defs>
+        <ellipse cx="150" cy="362" rx="110" ry="12" fill="#14213d" opacity=".12"/>
+        <rect x="112" y="18" width="76" height="120" rx="14" fill="url(#cap)"/>
+        <rect x="124" y="26" width="10" height="100" rx="5" fill="#fff" opacity=".18"/>
+        <rect x="104" y="130" width="92" height="22" rx="6" fill="url(#champg)"/>
+        <path d="M70 168c0-10 8-18 18-18h124c10 0 18 8 18 18v158c0 20-16 34-36 34H106c-20 0-36-14-36-34z" fill="url(#glass)"/>
+        <path d="M86 176c0-6 4-10 10-10h12v178H98c-7 0-12-5-12-12z" fill="#fff" opacity=".35"/>
+        <path d="M200 180h8v140h-8z" fill="#fff" opacity=".18"/>
+        <rect x="110" y="236" width="80" height="54" rx="10" fill="#f7e7ce"/>
+        <text x="150" y="262" text-anchor="middle" font-family="Playfair Display,serif" font-style="italic" font-weight="800" font-size="22" fill="#14213d">Diva</text>
+        <text x="150" y="280" text-anchor="middle" font-family="Outfit,sans-serif" font-size="8" letter-spacing="3" fill="#d6246e">NAIL STUDIO</text>
+      </svg>
+      <svg class="spark" style="top:4%;left:4%;width:34px" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+      <svg class="spark s2" style="top:42%;right:0;width:22px" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+      <svg class="spark s3" style="top:20%;right:16%;width:18px" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+      <svg class="spark s2" style="bottom:14%;left:0;width:16px" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span>Acrylic Full Sets</span><span>Pink &amp; White</span><span>Gel Manicures</span><span>Chrome &amp; Cat Eye</span><span>Lash Extensions</span><span>Gel Pedicures</span><span>Brow &amp; Lip Wax</span>
+    <span>Acrylic Full Sets</span><span>Pink &amp; White</span><span>Gel Manicures</span><span>Chrome &amp; Cat Eye</span><span>Lash Extensions</span><span>Gel Pedicures</span><span>Brow &amp; Lip Wax</span>
+  </div>
+</div>
+
+<section class="window" id="hours">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:14px">
+        <span class="eyebrow">The booking window</span>
+        <h2 style="color:#fff">A small studio with a <em style="color:var(--lilac);font-style:italic">short list.</em></h2>
+        <p>Diva Nail Studio takes appointments just two mornings a week. That's the whole window, so it pays to book your spot online ahead of time.</p>
+      </div>
+      <div class="big-num"><strong>5</strong><span>bookable hours each week, Thursday &amp; Friday</span></div>
+    </div>
+    <div class="reveal">
+      <ul class="hours" id="hoursList">
+        <li class="closed" data-d="1"><b>Monday<span class="tag">Today</span></b>Closed</li>
+        <li class="closed" data-d="2"><b>Tuesday<span class="tag">Today</span></b>Closed</li>
+        <li class="closed" data-d="3"><b>Wednesday<span class="tag">Today</span></b>Closed</li>
+        <li class="open" data-d="4"><b>Thursday<span class="tag">Today</span></b><span>9:30 AM – 12 PM</span></li>
+        <li class="open" data-d="5"><b>Friday<span class="tag">Today</span></b><span>9:30 AM – 12 PM</span></li>
+        <li class="closed" data-d="6"><b>Saturday<span class="tag">Today</span></b>Closed</li>
+        <li class="closed" data-d="0"><b>Sunday<span class="tag">Today</span></b>Closed</li>
+      </ul>
+      <p class="status" id="status">Hours as listed on the studio's booking page.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Everything on the <em>polish list.</em></h2>
+      <p>Prices and times exactly as listed on Diva Nail Studio's booking page.</p>
+    </div>
+
+    <div class="menu-tabs" role="tablist" aria-label="Service categories">
+      <button role="tab" aria-selected="true" data-f="all">All</button>
+      <button role="tab" aria-selected="false" data-f="acrylic">Acrylic</button>
+      <button role="tab" aria-selected="false" data-f="gel">Gel &amp; Polish</button>
+      <button role="tab" aria-selected="false" data-f="extras">Art &amp; Extras</button>
+      <button role="tab" aria-selected="false" data-f="lash">Lashes &amp; Wax</button>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal" data-c="acrylic">
+        <div class="top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21V9a4 4 0 018 0v12z"/><path d="M10 9a2 2 0 014 0"/></svg></div><h3>Acrylic</h3></div>
+        <div class="row"><span class="n">Acrylic Full Set<small>Colored set $60 · Ombré set $75 · $5 up-charge for long nails · nail art not included</small></span><span class="fill"></span><span class="d">1 hr 55 min</span><span class="p">$65</span></div>
+        <div class="row"><span class="n">Acrylic Fill In</span><span class="fill"></span><span class="d">40 min</span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Pink and White</span><span class="fill"></span><span class="d">1 hr 30 min</span><span class="p">$60</span></div>
+        <div class="row"><span class="n">Pink and White Fill</span><span class="fill"></span><span class="d">1 hr 30 min</span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Pink Fill</span><span class="fill"></span><span class="d">35 min</span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Acrylic Toenail Full Set</span><span class="fill"></span><span class="d">1 hr 30 min</span><span class="p">$65</span></div>
+        <div class="row"><span class="n">Nail Removal</span><span class="fill"></span><span class="d">45 min</span><span class="p">$20</span></div>
+      </article>
+
+      <article class="card reveal" data-c="gel">
+        <div class="top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="2" width="8" height="7" rx="1.5"/><path d="M6 11a2 2 0 012-2h8a2 2 0 012 2v8a3 3 0 01-3 3H9a3 3 0 01-3-3z"/></svg></div><h3>Gel &amp; Polish</h3></div>
+        <div class="row"><span class="n">Gel Manicure</span><span class="fill"></span><span class="d">30 min</span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Gel Fill In</span><span class="fill"></span><span class="d">45 min</span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Gel Polish Change</span><span class="fill"></span><span class="d">30 min</span><span class="p">$35</span></div>
+        <div class="row"><span class="n">Gel Pedicure</span><span class="fill"></span><span class="d">45 min</span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Manicure<small>Price varies</small></span><span class="fill"></span><span class="d">35 min</span><span class="p">$30</span></div>
+        <div class="row"><span class="n">Pedicure<small>Price varies</small></span><span class="fill"></span><span class="d">1 hr</span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Polish Change</span><span class="fill"></span><span class="d">30 min</span><span class="p">$15</span></div>
+      </article>
+
+      <article class="card reveal" data-c="extras">
+        <div class="top"><div class="ico"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></div><h3>Art &amp; Extras</h3></div>
+        <div class="row"><span class="n">Nail Art</span><span class="fill"></span><span class="d">30 min</span><span class="p">$6</span></div>
+        <div class="row"><span class="n">Deep French</span><span class="fill"></span><span class="d">add-on</span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Regular French</span><span class="fill"></span><span class="d">add-on</span><span class="p">$10</span></div>
+        <div class="row"><span class="n">Chrome</span><span class="fill"></span><span class="d">add-on</span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Cat Eye</span><span class="fill"></span><span class="d">add-on</span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Nail Fix</span><span class="fill"></span><span class="d">30 min</span><span class="p">$5</span></div>
+      </article>
+
+      <article class="card reveal" data-c="lash">
+        <div class="top"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 12c4 4 14 4 18 0"/><path d="M6 14.5L4.5 17M10 15.6l-.5 3M14 15.6l.5 3M18 14.5l1.5 2.5"/></svg></div><h3>Lashes &amp; Wax</h3></div>
+        <div class="row"><span class="n">Full Set Eyelash Extensions</span><span class="fill"></span><span class="d">2 hr 30 min</span><span class="p">$95</span></div>
+        <div class="row"><span class="n">Eyelash Fill In</span><span class="fill"></span><span class="d">1 hr 30 min</span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Eyebrow Wax</span><span class="fill"></span><span class="d">30 min</span><span class="p">$15</span></div>
+        <div class="row"><span class="n">Lip Wax</span><span class="fill"></span><span class="d">30 min</span><span class="p">$10</span></div>
+        <div class="row"><span class="n">Underarm Wax</span><span class="fill"></span><span class="d">20 min</span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Half Leg Wax</span><span class="fill"></span><span class="d">30 min</span><span class="p">$30</span></div>
+      </article>
+    </div>
+    <p class="note">Concept preview — confirm current pricing when booking.</p>
+  </div>
+</section>
+
+<section class="lash" id="lashes">
+  <div class="wrap">
+    <svg class="lash-art reveal" viewBox="0 0 440 260" aria-hidden="true" fill="none" stroke-linecap="round">
+      <path d="M40 130c90 70 270 70 360 0" stroke="#14213d" stroke-width="5"/>
+      <path d="M40 130c90-60 270-60 360 0" stroke="#14213d" stroke-width="2" opacity=".35"/>
+      <g stroke="#14213d" stroke-width="3.2">
+        <path class="l" d="M70 150c-10 20-26 32-44 38"/><path class="l" d="M100 166c-6 22-18 38-34 48"/><path class="l" d="M135 177c-3 24-10 42-22 56"/>
+        <path class="l" d="M172 183c0 25-4 44-12 60"/><path class="l" d="M210 185c2 25 2 46-2 64"/><path class="l" d="M248 183c4 25 8 44 16 60"/>
+        <path class="l" d="M285 177c5 24 12 42 24 56"/><path class="l" d="M320 166c7 22 18 38 34 48"/><path class="l" d="M350 150c10 20 26 32 44 38"/>
+      </g>
+      <g fill="#d6246e" stroke="none">
+        <path d="M380 30l4.3 15.7L400 50l-15.7 4.3L380 70l-4.3-15.7L360 50l15.7-4.3z"/>
+        <path d="M60 40l2.6 9.4L72 52l-9.4 2.6L60 64l-2.6-9.4L48 52l9.4-2.6z" fill="#fff"/>
+      </g>
+    </svg>
+    <div class="reveal">
+      <span class="eyebrow">Lashes, too</span>
+      <h2 style="font-size:clamp(2.1rem,7.5vw,3.4rem);font-weight:800;margin:10px 0 16px">Nails done. <em style="color:var(--magenta)">Lashes next.</em></h2>
+      <p style="color:var(--muted);font-size:1.05rem;max-width:44ch;margin-bottom:22px">Full set eyelash extensions and fills, booked right alongside your nails in the same Thursday or Friday window.</p>
+      <div class="price-tag">
+        <div><b>$95</b><span>Full set · 2 hr 30 min</span></div>
+        <div><b>$50</b><span>Fill in · 1 hr 30 min</span></div>
+      </div>
+      <a class="btn btn-pop" href="https://square.site/book/A49TWDA8JB7NE/diva-nail-studio-murfreesboro-tn" target="_blank" rel="noopener">Book a lash appointment</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Diva</span>
+      <h2>One studio. <em>One stop.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="k">22</div><h3>Services, one chair</h3><p>Acrylic, gel, pedicures, lashes and waxing, all listed on one booking page.</p></div>
+      <div class="why reveal"><div class="k">24/7</div><h3>Book anytime</h3><p>Pick your service and time online, even when the studio's closed.</p></div>
+      <div class="why reveal"><div class="k">$5</div><h3>Quick fixes</h3><p>Broke one? A nail fix is listed at $5, so one chip won't ruin your week.</p></div>
+      <div class="why reveal"><div class="k">✦</div><h3>Chrome &amp; cat eye</h3><p>Finish any set with chrome, cat eye or a deep French add-on.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="visit-card reveal">
+      <span class="eyebrow" style="color:var(--lilac)">Visit the studio</span>
+      <h2>Find us on Battleground.</h2>
+      <a class="line" href="https://www.google.com/maps/dir/?api=1&destination=1430+Battleground+Dr%2C+Murfreesboro%2C+TN+37129" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span>1430 Battleground Dr<br>Murfreesboro, TN 37129</span></a>
+      <a class="line" href="tel:+16156170604">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg>
+        <span>(615) 617-0604</span></a>
+      <a class="line" href="mailto:danastrode@yahoo.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <span>danastrode@yahoo.com</span></a>
+      <div class="btns">
+        <a class="btn btn-pop" href="tel:+16156170604">Tap to call</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=1430+Battleground+Dr%2C+Murfreesboro%2C+TN+37129" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Map to Diva Nail Studio" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1430%20Battleground%20Dr%2C%20Murfreesboro%2C%20TN%2037129&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#d6246e"/></svg>
+      Diva <i>Nail Studio</i></a>
+    <p>1430 Battleground Dr, Murfreesboro, TN 37129 · <a href="tel:+16156170604">(615) 617-0604</a></p>
+    <div class="socials">
+      <a href="https://www.instagram.com/divanailstudio_" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="https://www.facebook.com/divanailstudio615" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 00-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+    </div>
+    <small>Concept by Code Craft Media · Not affiliated with or published by Diva Nail Studio.</small>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c" href="tel:+16156170604"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/A49TWDA8JB7NE/diva-nail-studio-murfreesboro-tn" target="_blank" rel="noopener">Book online</a>
+</nav>
+
+<script>
+(function(){
+  // today's hours
+  var now=new Date(), d=now.getDay();
+  var li=document.querySelector('#hoursList li[data-d="'+d+'"]');
+  if(li) li.classList.add('today');
+  var st=document.getElementById('status'), mins=now.getHours()*60+now.getMinutes();
+  if(d===4||d===5){
+    st.textContent = (mins>=570&&mins<720) ? '✦ Open now until 12 PM' : (mins<570 ? '✦ Opens today at 9:30 AM' : '✦ Closed for today — book ahead for next time');
+  } else {
+    st.textContent = '✦ Next opening: '+(d===4?'Friday':'Thursday')+' at 9:30 AM — book ahead online';
+  }
+  // menu filter
+  var tabs=document.querySelectorAll('.menu-tabs button'), cards=document.querySelectorAll('.card');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')}); t.setAttribute('aria-selected','true');
+    var f=t.dataset.f; cards.forEach(function(c){c.classList.toggle('hide', f!=='all' && c.dataset.c!==f); if(f!=='all') c.classList.add('in');});
+  })});
+  // reveals
+  var els=document.querySelectorAll('.reveal');
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

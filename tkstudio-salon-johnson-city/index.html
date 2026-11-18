@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>TKSTUDIO Salon — Johnson City</title>
+<meta name="description" content="Concept site for TKSTUDIO Salon, Johnson City, TN. Healthy hair care, cuts, color and extensions with Travis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F6F1EA; --ivory2:#EFE7DC; --esp:#2B1E17; --esp2:#3A2A21; --rose:#B98A6E; --rose-d:#8E6449;
+  --ink:#2B1E17; --muted:#6B5A4E; --line:rgba(43,30,23,.18);
+  --disp:"Bodoni Moda", "Didot", Georgia, serif; --body:"Manrope", system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ivory);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 48px}}
+
+/* concept banner */
+.concept{background:var(--esp);color:#E9DCCD;font-size:11px;letter-spacing:.04em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--rose);font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(246,241,234,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--disp);font-size:22px;letter-spacing:.14em;text-decoration:none;font-weight:500}
+.logo i{color:var(--rose);font-style:italic;letter-spacing:.02em}
+.nav ul{display:none;list-style:none;gap:34px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav ul a{text-decoration:none;position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--rose);transition:right .35s ease}
+.nav ul a:hover::after{right:0}
+@media (min-width:900px){.nav ul{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border:1px solid var(--esp);transition:background .3s,color .3s,transform .3s,border-color .3s;min-height:48px}
+.btn-dark{background:var(--esp);color:var(--ivory)}
+.btn-dark:hover{background:var(--rose-d);border-color:var(--rose-d);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--esp)}
+.btn-line:hover{background:var(--esp);color:var(--ivory);transform:translateY(-2px)}
+.nav .btn{padding:10px 18px;min-height:40px;font-size:11px}
+
+/* hero */
+.hero{position:relative;padding:44px 0 56px;overflow:hidden}
+.hero .wrap{position:relative;display:grid;gap:36px}
+@media (min-width:900px){.hero{padding:90px 0 110px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}}
+.kicker{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-d);font-weight:600}
+.kicker::before{content:"";width:34px;height:1px;background:var(--rose)}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(46px,12.5vw,104px);line-height:.96;letter-spacing:-.02em;margin:22px 0 22px}
+h1 em{font-style:italic;color:var(--rose-d)}
+h1 .thin{display:block;font-size:.42em;letter-spacing:.02em;font-style:italic;color:var(--muted);margin-top:14px;line-height:1.2}
+.sub{font-size:17px;color:var(--muted);max-width:30em}
+.sub strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.cta .btn{flex:1 1 140px;padding:15px 16px;letter-spacing:.12em}
+@media (min-width:900px){.cta .btn{flex:0 0 auto}}
+
+/* hero art: framed editorial plate */
+.plate{position:relative;aspect-ratio:4/5;max-width:440px;width:100%;justify-self:center}
+.plate .f1,.plate .f2{position:absolute;border:1px solid var(--esp)}
+.plate .f1{inset:0}
+.plate .f2{inset:14px;border-color:var(--rose)}
+.plate .fill{position:absolute;inset:28px;background:linear-gradient(160deg,#3A2A21 0%,#2B1E17 70%);overflow:hidden}
+.plate svg{position:absolute;inset:0;width:100%;height:100%}
+.plate .num{position:absolute;right:-14px;top:-40px;font-family:var(--disp);font-style:italic;font-size:150px;line-height:1;color:var(--rose);opacity:.9}
+.plate .cap{position:absolute;left:46px;bottom:46px;z-index:2;color:#E9DCCD;font-size:10px;letter-spacing:.3em;text-transform:uppercase}
+.plate .cap b{display:block;font-family:var(--disp);font-size:26px;letter-spacing:0;text-transform:none;font-weight:400;font-style:italic;color:var(--ivory);margin-top:6px}
+.strand{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 3.2s ease forwards}
+.strand:nth-child(2){animation-delay:.25s}.strand:nth-child(3){animation-delay:.5s}.strand:nth-child(4){animation-delay:.75s}.strand:nth-child(5){animation-delay:1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.strand{animation:none;stroke-dashoffset:0}}
+
+/* marquee */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--ivory2)}
+.ticker div{display:inline-block;animation:tick 34s linear infinite;font-family:var(--disp);font-style:italic;font-size:22px;color:var(--esp)}
+.ticker span{color:var(--rose);margin:0 22px;font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:72px 0}
+@media (min-width:900px){section{padding:110px 0}}
+.head{display:grid;gap:10px;margin-bottom:40px}
+.head .n{font-family:var(--disp);font-style:italic;font-size:64px;line-height:1;color:var(--rose)}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(34px,8vw,60px);line-height:1.05;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--rose-d)}
+.head p{color:var(--muted);max-width:36em}
+@media (min-width:900px){.head{grid-template-columns:110px 1fr;align-items:end;column-gap:28px}.head .n{font-size:96px;grid-row:span 2}}
+
+/* menu */
+.menu-grid{display:grid;gap:22px}
+@media (min-width:900px){.menu-grid{grid-template-columns:1fr 1fr;gap:28px}}
+.card{position:relative;border:1px solid var(--line);padding:28px 22px 22px;background:rgba(255,255,255,.35)}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(185,138,110,.35);pointer-events:none}
+.card h3{font-family:var(--disp);font-weight:400;font-size:28px;margin-bottom:4px}
+.card h3 em{color:var(--rose-d)}
+.card .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.row{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-top:1px solid var(--line);transition:padding .25s}
+.row:hover{padding-left:6px}
+.row .nm{font-weight:500}
+.row .nm small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;letter-spacing:.02em}
+.row .dots{flex:1;border-bottom:1px dotted rgba(43,30,23,.35);transform:translateY(-4px);min-width:12px}
+.row .pr{font-family:var(--disp);font-size:20px;white-space:nowrap}
+.row .pr.q{font-family:var(--body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose-d);font-weight:600}
+.card.dark{background:var(--esp);color:var(--ivory);border-color:var(--esp)}
+.card.dark::before{border-color:rgba(185,138,110,.5)}
+.card.dark .tag{color:#C9B8A8}
+.card.dark .row{border-color:rgba(246,241,234,.16)}
+.card.dark .row .nm small{color:#C9B8A8}
+.card.dark .dots{border-color:rgba(246,241,234,.3)}
+.card.dark h3 em{color:var(--rose)}
+.lens{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+.lens div{border:1px solid rgba(246,241,234,.2);padding:12px 8px;text-align:center;transition:border-color .25s,background .25s}
+.lens div:hover{border-color:var(--rose);background:rgba(185,138,110,.12)}
+.lens b{display:block;font-family:var(--disp);font-style:italic;font-weight:400;font-size:26px;line-height:1}
+.lens span{font-size:12px;color:#C9B8A8}
+.compact .row{padding:10px 0;font-size:14.5px}.compact .row .pr{font-size:17px}
+.note{font-size:13px;color:var(--muted);margin-top:22px}
+.menu-cta{margin-top:32px;display:flex;justify-content:center}
+
+/* about / why */
+.why{background:var(--esp);color:var(--ivory);position:relative;overflow:hidden}
+.why .head p{color:#C9B8A8}
+.why h2 em{color:var(--rose)}
+.stats{display:grid;gap:0;border-top:1px solid rgba(246,241,234,.18)}
+@media (min-width:900px){.stats{grid-template-columns:repeat(3,1fr);border-top:0}}
+.stat{padding:30px 0;border-bottom:1px solid rgba(246,241,234,.18);display:grid;grid-template-columns:92px 1fr;gap:20px;align-items:center}
+@media (min-width:900px){.stat{display:block;padding:10px 34px;border-bottom:0;border-left:1px solid rgba(246,241,234,.18)}.stat:first-child{border-left:0;padding-left:0}}
+.stat .big{font-family:var(--disp);font-style:italic;font-size:84px;line-height:.9;color:var(--rose)}
+.stat .big sup{font-size:.4em;vertical-align:top;margin-left:2px}
+.stat p{color:#E2D5C7;font-size:15px}
+.stat p b{display:block;color:var(--ivory);font-family:var(--disp);font-weight:400;font-size:22px;margin-bottom:4px}
+.quote{margin-top:56px;padding:34px 0 0;border-top:1px solid rgba(246,241,234,.18);font-family:var(--disp);font-style:italic;font-size:clamp(24px,5.6vw,40px);line-height:1.25;max-width:22em}
+.quote small{display:block;font-family:var(--body);font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);margin-top:18px}
+
+/* hours */
+.hgrid{display:grid;gap:40px}
+@media (min-width:900px){.hgrid{grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
+.hours{list-style:none;border:1px solid var(--esp);padding:8px 22px;position:relative}
+.hours::before{content:"";position:absolute;inset:6px;border:1px solid rgba(185,138,110,.45);pointer-events:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;position:relative}
+.hours li:last-child{border-bottom:0}
+.hours .d{font-family:var(--disp);font-size:20px}
+.hours .closed{color:var(--muted);font-style:italic}
+.hours li.today{color:var(--esp)}
+.hours li.today .d::after{content:"Today";font-family:var(--body);font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:var(--rose);color:#fff;padding:3px 8px;margin-left:10px;vertical-align:middle}
+.hours li.today{font-weight:700}
+.open-now{margin-top:16px;font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.open-now b{color:var(--rose-d)}
+.visit p{color:var(--muted);margin-bottom:18px}
+.contact-list{list-style:none;margin:6px 0 26px}
+.contact-list li{padding:14px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.contact-list li span{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.contact-list a{text-decoration:none;font-weight:600;word-break:break-all}
+.contact-list a:hover{color:var(--rose-d)}
+.map{position:relative;border:1px solid var(--esp);padding:8px;margin-top:8px}
+.map{background:repeating-linear-gradient(135deg,var(--ivory2) 0 10px,var(--ivory) 10px 20px)}
+.map::after{content:"Johnson City, TN";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--disp);font-style:italic;font-size:24px;color:var(--rose-d);z-index:0}
+.map iframe{position:relative;z-index:1;display:block;width:100%;height:300px;border:0;filter:sepia(.25) saturate(.8)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.btns .btn{flex:1 1 140px}
+
+/* footer */
+footer{background:var(--esp);color:#C9B8A8;padding:56px 0 40px;font-size:13px}
+footer .logo{color:var(--ivory);font-size:30px;display:inline-block;margin-bottom:12px}
+footer .fine{border-top:1px solid rgba(246,241,234,.15);margin-top:30px;padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer a{color:var(--ivory)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.25fr;background:var(--esp);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -10px 30px rgba(43,30,23,.25)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.bar .call{color:var(--ivory);border:1px solid rgba(246,241,234,.35)}
+.bar .book{background:var(--rose);color:#fff}
+.bar a:active{transform:scale(.98)}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .9s ease,transform .9s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in{opacity:1;transform:none}
+.js.showall .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for TKSTUDIO Salon. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo">TK<i>studio</i></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#travis">Travis</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn btn-dark" href="https://square.site/book/BMRRDAJTY4RBX/tkstudio-johnson-city-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-top:44px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Johnson City, Tennessee</div>
+      <h1>Healthy hair,<br><em>handled</em><br>by a teacher.
+        <span class="thin">18+ years behind the chair. Four of them teaching it.</span></h1>
+      <p class="sub">Travis specializes in <strong>healthy hair care, cuts, color and extensions</strong> — book your chair online in under a minute.</p>
+      <div class="cta">
+        <a class="btn btn-dark" href="https://square.site/book/BMRRDAJTY4RBX/tkstudio-johnson-city-tn" target="_blank" rel="noopener">Book online</a>
+        <a class="btn btn-line" href="tel:+14703518030">Call now</a>
+      </div>
+    </div>
+
+    <div class="plate rv" aria-hidden="true">
+      <div class="f1"></div><div class="f2"></div>
+      <div class="fill">
+        <svg viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9B39A"/><stop offset="1" stop-color="#8E6449"/></linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#g)" stroke-width="1.3" stroke-linecap="round">
+            <path class="strand" d="M40 -10 C 120 60, -10 140, 90 210 S 60 330, 150 400"/>
+            <path class="strand" d="M80 -10 C 160 70, 30 150, 130 220 S 100 330, 190 400"/>
+            <path class="strand" d="M120 -10 C 200 80, 70 160, 170 230 S 140 330, 230 400"/>
+            <path class="strand" d="M160 -10 C 240 90, 110 170, 210 240 S 180 330, 270 400"/>
+            <path class="strand" d="M200 -10 C 280 100, 150 180, 250 250 S 220 330, 310 400"/>
+          </g>
+          <g stroke="#B98A6E" stroke-width=".6" opacity=".5">
+            <line x1="230" y1="40" x2="290" y2="40"/><line x1="230" y1="46" x2="270" y2="46"/>
+          </g>
+          <circle cx="248" cy="96" r="26" fill="none" stroke="#B98A6E" stroke-width=".8" opacity=".7"/>
+          <path d="M236 96 a12 12 0 0 1 24 0" fill="none" stroke="#F6F1EA" stroke-width=".8" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="cap">Issue 01 · TKSTUDIO<b>Care, cut, colour.</b></div>
+      <div class="num">18</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div>
+  Loc Maintenance<span>✦</span>Relaxer<span>✦</span>Texturizer<span>✦</span>Straightening Treatment<span>✦</span>Cuts<span>✦</span>Colour<span>✦</span>Extensions<span>✦</span>Body Wave Bundles<span>✦</span>
+  Loc Maintenance<span>✦</span>Relaxer<span>✦</span>Texturizer<span>✦</span>Straightening Treatment<span>✦</span>Cuts<span>✦</span>Colour<span>✦</span>Extensions<span>✦</span>Body Wave Bundles<span>✦</span>
+</div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="n">i.</div>
+      <h2>The <em>menu</em></h2>
+      <p>Straight from the salon's booking page. Services without a listed price have options to choose from when you book.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="card rv">
+        <h3>Chair <em>services</em></h3>
+        <div class="tag">Booked with Travis</div>
+        <div class="row"><span class="nm">Texturizer<small>45 minutes</small></span><span class="dots"></span><span class="pr">from $90</span></div>
+        <div class="row"><span class="nm">Straightening Treatment System<small>45 minutes</small></span><span class="dots"></span><span class="pr">$160</span></div>
+        <div class="row"><span class="nm">Loc Maintenance<small>2 options</small></span><span class="dots"></span><span class="pr q">See options</span></div>
+        <div class="row"><span class="nm">Relaxer<small>2 options</small></span><span class="dots"></span><span class="pr q">See options</span></div>
+        <div class="row"><span class="nm">Hair Processing Charge<small>3 options</small></span><span class="dots"></span><span class="pr q">See options</span></div>
+      </div>
+
+      <div class="card dark rv">
+        <h3>Body wave <em>bundles</em></h3>
+        <div class="tag">Hair for extensions · by length</div>
+        <div class="lens">
+          <div><b>12″</b><span>$110</span></div>
+          <div><b>14″</b><span>$120</span></div>
+          <div><b>16″</b><span>$130</span></div>
+          <div><b>18″</b><span>$140</span></div>
+          <div><b>20″</b><span>$150</span></div>
+          <div><b>22″</b><span>$160</span></div>
+          <div><b>24″</b><span>$170</span></div>
+        </div>
+        <div style="height:14px"></div>
+        <div class="row"><span class="nm">12″ Lace Body Wave Closure</span><span class="dots"></span><span class="pr">$120</span></div>
+        <div class="row"><span class="nm">14″ Lace Body Wave Closure</span><span class="dots"></span><span class="pr">$130</span></div>
+        <div class="row"><span class="nm">16″ Lace Body Wave Closure</span><span class="dots"></span><span class="pr">$130</span></div>
+        <div class="row"><span class="nm">14″ Frontal Body Wave</span><span class="dots"></span><span class="pr">$140</span></div>
+      </div>
+
+      <div class="card compact rv" style="grid-column:1/-1">
+        <h3>Take-home <em>care</em></h3>
+        <div class="tag">Retail on the shelf</div>
+        <div class="menu-grid" style="gap:0 28px">
+          <div>
+            <div class="row"><span class="nm">Honey Cream Moisturizing Retention Shampoo</span><span class="dots"></span><span class="pr">$9.99</span></div>
+            <div class="row"><span class="nm">Oat Protein Honey Cleanse</span><span class="dots"></span><span class="pr">$9.99</span></div>
+            <div class="row"><span class="nm">Natural Almond &amp; Avocado Detangling Shampoo</span><span class="dots"></span><span class="pr">$11.99</span></div>
+            <div class="row"><span class="nm">Natural Almond &amp; Avocado Leave-in Conditioner</span><span class="dots"></span><span class="pr">$11.99</span></div>
+            <div class="row"><span class="nm">Peppermint &amp; Aloe Anti-itch Shampoo</span><span class="dots"></span><span class="pr">$11.99</span></div>
+            <div class="row"><span class="nm">Peppermint &amp; Aloe Soothing Scalp Tonic</span><span class="dots"></span><span class="pr">$7.99</span></div>
+            <div class="row"><span class="nm">Stimulation Super Moisturizing Conditioner</span><span class="dots"></span><span class="pr">$9.95</span></div>
+            <div class="row"><span class="nm">Almond Butter Instant Conditioner</span><span class="dots"></span><span class="pr">$9.99</span></div>
+            <div class="row"><span class="nm">HCO Leave-in Conditioner</span><span class="dots"></span><span class="pr">$9.95</span></div>
+          </div>
+          <div>
+            <div class="row"><span class="nm">Curl Enhancing Mousse</span><span class="dots"></span><span class="pr">$12.99</span></div>
+            <div class="row"><span class="nm">Reflection Liquid Shine</span><span class="dots"></span><span class="pr">$11.99</span></div>
+            <div class="row"><span class="nm">Natural Edge Tamer</span><span class="dots"></span><span class="pr">$10.99</span></div>
+            <div class="row"><span class="nm">Sleek Edge Control</span><span class="dots"></span><span class="pr">$9.99</span></div>
+            <div class="row"><span class="nm">Formation Spritz</span><span class="dots"></span><span class="pr">$9.95</span></div>
+            <div class="row"><span class="nm">Therapeutics Rx Treatment Grease</span><span class="dots"></span><span class="pr">$9.95</span></div>
+            <div class="row"><span class="nm">Botanical Oil</span><span class="dots"></span><span class="pr">$8.95</span></div>
+            <div class="row"><span class="nm">Satin Bonnet Caps</span><span class="dots"></span><span class="pr">$6</span></div>
+            <div class="row"><span class="nm">Mesh Wraps</span><span class="dots"></span><span class="pr">$5</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-cta rv"><a class="btn btn-dark" href="https://square.site/book/BMRRDAJTY4RBX/tkstudio-johnson-city-tn" target="_blank" rel="noopener">Choose a service &amp; time</a></div>
+  </div>
+</section>
+
+<section class="why" id="travis">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="n">ii.</div>
+      <h2>Meet <em>Travis</em></h2>
+      <p>The cosmetologist behind TKSTUDIO, working with high-profile and everyday clients alike.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><div class="big">18<sup>+</sup></div><p><b>Years in cosmetology</b>Nearly two decades of hands-on work behind the chair.</p></div>
+      <div class="stat rv"><div class="big">4</div><p><b>Years as an instructor</b>He has taught cosmetology, so he can explain exactly what your hair needs.</p></div>
+      <div class="stat rv"><div class="big">1</div><p><b>Stylist, start to finish</b>Book with Travis and Travis does your hair. No hand-offs.</p></div>
+    </div>
+    <p class="quote rv">“Travis specializes in healthy hair care, cuts, color and hair extensions.”<small>From the TKSTUDIO booking page</small></p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="n">iii.</div>
+      <h2>Hours &amp; <em>visit</em></h2>
+      <p>Early Saturdays and Thursday evenings, so you can fit your appointment around work.</p>
+    </div>
+    <div class="hgrid">
+      <div class="rv">
+        <ul class="hours" id="hours">
+          <li data-d="0"><span class="d">Sunday</span><span class="closed">Closed</span></li>
+          <li data-d="1"><span class="d">Monday</span><span class="closed">Closed</span></li>
+          <li data-d="2"><span class="d">Tuesday</span><span>10:00 AM – 5:30 PM</span></li>
+          <li data-d="3"><span class="d">Wednesday</span><span>10:00 AM – 5:30 PM</span></li>
+          <li data-d="4"><span class="d">Thursday</span><span>3:00 PM – 9:00 PM</span></li>
+          <li data-d="5"><span class="d">Friday</span><span>8:00 AM – 8:00 PM</span></li>
+          <li data-d="6"><span class="d">Saturday</span><span>6:00 AM – 4:00 PM</span></li>
+        </ul>
+        <p class="open-now" id="opennow">Hours as listed on the salon's booking page.</p>
+      </div>
+      <div class="visit rv">
+        <p>TKSTUDIO is in Johnson City, Tennessee. Call or book online for directions to the studio.</p>
+        <ul class="contact-list">
+          <li><span>Phone</span><a href="tel:+14703518030">(470) 351-8030</a></li>
+          <li><span>Email</span><a href="mailto:Tkstudiosalonllc@gmail.com">Tkstudiosalonllc@gmail.com</a></li>
+          <li><span>Booking</span><a href="https://square.site/book/BMRRDAJTY4RBX/tkstudio-johnson-city-tn" target="_blank" rel="noopener">Book online</a></li>
+        </ul>
+        <div class="map"><iframe title="Map of Johnson City, TN" loading="lazy" src="https://www.google.com/maps?q=Johnson%20City%2C%20TN&output=embed"></iframe></div>
+        <div class="btns">
+          <a class="btn btn-dark" href="tel:+14703518030">Tap to call</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Johnson%20City%2C%20TN" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo" style="text-decoration:none">TK<i style="color:var(--rose)">studio</i></a>
+    <p>Healthy hair care, cuts, colour &amp; extensions · Johnson City, TN</p>
+    <p style="margin-top:8px"><a href="tel:+14703518030">(470) 351-8030</a> · <a href="mailto:Tkstudiosalonllc@gmail.com">Tkstudiosalonllc@gmail.com</a></p>
+    <div class="fine"><span>Concept by Code Craft Media</span><span>Unofficial preview. Not affiliated or live.</span></div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+14703518030">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/BMRRDAJTY4RBX/tkstudio-johnson-city-tn" target="_blank" rel="noopener">Book with Travis</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var t=setTimeout(function(){d.classList.add('showall')},1500);
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  } else { d.classList.add('showall'); }
+  // today highlight + open now (salon time: America/New_York)
+  var hrs={0:null,1:null,2:[10,17.5],3:[10,17.5],4:[15,21],5:[8,20],6:[6,16]};
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var wd=p.find(function(x){return x.type==='weekday'}).value; day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(wd);
+    h=(+p.find(function(x){return x.type==='hour'}).value%24)+(+p.find(function(x){return x.type==='minute'}).value)/60;}catch(e){}
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var r=hrs[day], o=document.getElementById('opennow');
+  if(o){ if(r && h>=r[0] && h<r[1]) o.innerHTML='<b>Open now</b> · hours as listed on the booking page.';
+    else o.innerHTML='<b>Closed right now</b> · you can still book online any time.'; }
+})();
+</script>
+</body>
+</html>

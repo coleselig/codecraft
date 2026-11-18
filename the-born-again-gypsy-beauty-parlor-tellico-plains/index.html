@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Born Again Gypsy Beauty Parlor — Tellico Plains</title>
+<meta name="description" content="Concept site for The Born Again Gypsy Beauty Parlor, 111 Scott Street, Tellico Plains, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lake:#2b6f8f; --lake-d:#215873; --sun:#f08a4b; --sun-d:#c9632a; --sand:#f6ecd9; --sand-2:#efe0c3; --navy:#1b2a3a; --ink:#1b2a3a; --muted:#4c5b69; --white:#fffaf1;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Karla",system-ui,sans-serif;background:var(--sand);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:"Righteous",system-ui,sans-serif;font-weight:400;letter-spacing:.01em;line-height:1.05}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}
+/* banner */
+.concept{background:var(--navy);color:#e9dcc4;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--sun);font-weight:700}
+.concept .lg{display:none}@media(min-width:700px){.concept .lg{display:inline}.concept .sm{display:none}}
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(246,236,217,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--navy)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none}
+.brand span{font-family:"Righteous";font-size:17px;line-height:1.05;color:var(--navy)}
+.brand small{display:block;font-family:"Karla";font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lake);font-weight:800}
+.brand small em{font-style:normal;display:none}@media(min-width:520px){.brand small em{display:inline}}
+.nav ul{display:none;list-style:none;gap:26px;font-weight:700;font-size:15px}
+.nav ul a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.nav ul a:hover{border-color:var(--sun)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:"Karla";font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;border:2px solid var(--navy);transition:transform .15s ease,box-shadow .15s ease,background .2s;cursor:pointer}
+.btn-sun{background:var(--sun);color:var(--navy);box-shadow:4px 4px 0 var(--navy)}
+.btn-sun:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--navy)}
+.btn-sun:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--navy)}
+.btn-ghost{background:var(--white);color:var(--navy)}
+.btn-ghost:hover{background:#fff}
+.nav .btn{padding:9px 16px;font-size:14px;box-shadow:3px 3px 0 var(--navy)}
+@media(min-width:900px){.nav ul{display:flex}}
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,#fbe3c2 0%,#f8d2a6 45%,#f3b183 100%);overflow:hidden;color:var(--navy);border-bottom:2px solid var(--navy)}
+.hero-art{position:absolute;inset:0;pointer-events:none}
+.hero-art svg{position:absolute;right:-120px;bottom:0;width:900px;height:400px;overflow:visible}
+@media(min-width:780px){.hero-art svg{right:0;left:0;width:100%;height:470px}}
+.hero .wrap{position:relative;z-index:2;padding-top:40px;padding-bottom:280px}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--sand);border-radius:999px;padding:6px 14px;font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--sun);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{font-size:clamp(46px,13vw,104px);margin:18px 0 14px;color:var(--navy);text-shadow:3px 3px 0 rgba(255,250,241,.55)}
+.hero h1 em{font-style:normal;color:var(--white);-webkit-text-stroke:2px var(--navy);text-shadow:4px 4px 0 var(--sun-d)}
+.hero p.sub{font-size:clamp(17px,4.6vw,21px);max-width:560px;font-weight:500;color:#2a3644}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 18px;font-weight:700;font-size:14px;color:var(--navy)}
+.hero .meta span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,250,241,.88);border:1.5px solid var(--navy);border-radius:999px;padding:4px 12px}
+@media(min-width:780px){.hero .wrap{padding-top:72px;padding-bottom:350px}}
+.wave{animation:drift 9s ease-in-out infinite alternate}
+.wave.w2{animation-duration:12s;animation-direction:alternate-reverse}
+.wave.w3{animation-duration:15s}
+@keyframes drift{from{transform:translateX(-30px)}to{transform:translateX(30px)}}
+.sunrise{animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{transform:translateY(40px);opacity:.0}to{transform:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){.wave,.sunrise,.kicker i{animation:none}html{scroll-behavior:auto}}
+/* marquee strip */
+.strip{background:var(--navy);color:var(--sand);overflow:hidden;border-bottom:2px solid var(--navy)}
+.strip .track{display:flex;gap:34px;white-space:nowrap;padding:13px 0;font-family:"Righteous";font-size:18px;animation:scroll 32s linear infinite;width:max-content}
+.strip .track span::after{content:"✺";color:var(--sun);margin-left:34px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:72px 0}
+.eyebrow{font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:12.5px;color:var(--lake)}
+.sec-title{font-size:clamp(34px,8.5vw,56px);margin:8px 0 12px;color:var(--navy)}
+.lede{color:var(--muted);max-width:620px;font-size:17px}
+/* menu */
+.menu-grid{display:grid;gap:18px;margin-top:34px}
+@media(min-width:760px){.menu-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1060px){.menu-grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--white);border:2px solid var(--navy);border-radius:var(--r);padding:22px 20px 14px;box-shadow:6px 6px 0 var(--navy);position:relative;overflow:hidden}
+.card h3{font-size:24px;display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.card h3 .dot{width:34px;height:34px;border-radius:50%;flex:none;display:grid;place-items:center;border:2px solid var(--navy)}
+.card .stripe{position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;opacity:.16;background:repeating-linear-gradient(180deg,var(--sun) 0 9px,transparent 9px 15px)}
+.svc{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1.5px dashed rgba(27,42,58,.22)}
+.svc:first-of-type{border-top:0}
+.svc .n{font-weight:800;font-size:16px;line-height:1.3}
+.svc .d{display:block;font-weight:400;font-size:13.5px;color:var(--muted);margin-top:2px}
+.svc .p{text-align:right;flex:none;font-weight:800;font-size:16px;white-space:nowrap}
+.svc .p small{display:block;font-weight:500;font-size:12.5px;color:var(--muted)}
+.note{margin-top:22px;font-size:14px;color:var(--muted)}
+.c-lake .dot{background:var(--lake)} .c-sun .dot{background:var(--sun)} .c-navy .dot{background:var(--navy)} .c-sand .dot{background:var(--sand-2)}
+/* why */
+.why{background:var(--lake);color:var(--white);border-top:2px solid var(--navy);border-bottom:2px solid var(--navy);position:relative;overflow:hidden}
+.why .eyebrow{color:#ffd2b0}
+.why .sec-title{color:var(--white)}
+.why .lede{color:#d8e8ef}
+.why-grid{display:grid;gap:16px;margin-top:32px;position:relative;z-index:2}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1060px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-item{background:rgba(27,42,58,.28);border:2px solid rgba(255,250,241,.35);border-radius:var(--r);padding:22px;transition:transform .2s,background .2s}
+.why-item:hover{transform:translateY(-4px);background:rgba(27,42,58,.42)}
+.why-item .big{font-family:"Righteous";font-size:44px;color:var(--sun);line-height:1}
+.why-item h3{font-size:21px;margin:10px 0 6px}
+.why-item p{color:#dbe9ef;font-size:15.5px}
+.why .waves-bg{position:absolute;left:0;right:0;bottom:-6px;opacity:.25;pointer-events:none}
+/* hours/visit */
+.visit-grid{display:grid;gap:22px;margin-top:32px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.2fr}}
+.hours{background:var(--white);border:2px solid var(--navy);border-radius:var(--r);box-shadow:6px 6px 0 var(--navy);padding:10px 20px}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:13px 6px;border-top:1.5px dashed rgba(27,42,58,.2);font-weight:700}
+.hours li:first-child{border-top:0}
+.hours li.closed span:last-child{color:var(--muted);font-weight:500}
+.hours li.today{background:var(--sun);border-radius:12px;border-top-color:transparent;margin:4px -8px;padding:13px 14px}
+.hours li.today + li{border-top-color:transparent}
+.hours li.today span:first-child::after{content:" · Today";font-weight:800}
+.hours li.today.closed span:last-child{color:var(--navy)}
+.status{margin:14px 0 4px;font-weight:800;font-size:15px;display:flex;align-items:center;gap:8px}
+.status i{width:10px;height:10px;border-radius:50%;background:#9aa6b0;display:inline-block}
+.status.open i{background:#2f9e6a}
+.mapbox{border:2px solid var(--navy);border-radius:var(--r);overflow:hidden;box-shadow:6px 6px 0 var(--navy);background:var(--sand-2);display:flex;flex-direction:column}
+.mapbox iframe{width:100%;height:300px;border:0;display:block;filter:saturate(.85)}
+.addr{padding:18px 20px;background:var(--white);border-top:2px solid var(--navy)}
+.addr strong{font-family:"Righteous";font-weight:400;font-size:22px;display:block}
+.addr .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.addr .btn{padding:11px 18px;font-size:15px}
+/* book band */
+.book{background:var(--navy);color:var(--sand);text-align:center;position:relative;overflow:hidden}
+.book .sec-title{color:var(--sand)}
+.book .lede{color:#c7d1da;margin:0 auto}
+.book .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+.book .btn-ghost{background:transparent;color:var(--sand);border-color:var(--sand)}
+.book .btn-ghost:hover{background:rgba(246,236,217,.1)}
+.book .sun-sm{display:block;margin:0 auto 16px}
+footer{background:var(--navy);color:#9fb0bf;border-top:1px solid rgba(246,236,217,.15);padding:26px 0 30px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer a{color:var(--sun);text-decoration:none}
+/* mobile bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--sand);border-top:2px solid var(--navy)}
+.callbar .btn{padding:13px 10px;font-size:16px;box-shadow:3px 3px 0 var(--navy)}
+@media(min-width:900px){.callbar{display:none}}
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to services</a>
+<div class="concept"><span class="lg">Concept site by <b>Code Craft Media</b>, made for The Born Again Gypsy Beauty Parlor. Not live.</span><span class="sm">Concept by <b>Code Craft Media</b> for Born Again Gypsy. Not live.</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Born Again Gypsy Beauty Parlor, home">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><defs><clipPath id="bc"><circle cx="20" cy="20" r="18"/></clipPath></defs><circle cx="20" cy="20" r="18" fill="#f08a4b" stroke="#1b2a3a" stroke-width="2"/><g clip-path="url(#bc)" fill="#f6ecd9"><rect x="0" y="22" width="40" height="2.6"/><rect x="0" y="27" width="40" height="3.2"/><rect x="0" y="32.5" width="40" height="4"/></g><circle cx="20" cy="20" r="18" fill="none" stroke="#1b2a3a" stroke-width="2"/></svg>
+      <span>Born Again Gypsy<small>Beauty Parlor<em class="tp"> · Tellico Plains</em></small></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#why">Why Here</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn btn-sun" href="https://square.site/book/LE6TAAM631WX2/the-born-again-gypsy-beauty-parlor-tellico-plains-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1" style="padding:0">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 260 1440 640" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <clipPath id="sunclip"><circle cx="1060" cy="400" r="190"/></clipPath>
+        <linearGradient id="lk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b6f8f"/><stop offset="1" stop-color="#1f5470"/></linearGradient>
+        <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc178"/><stop offset="1" stop-color="#f08a4b"/></linearGradient>
+      </defs>
+      <g class="sunrise">
+        <circle cx="1060" cy="400" r="190" fill="url(#sg)"/>
+        <g clip-path="url(#sunclip)" fill="#f3b183">
+          <rect x="840" y="352" width="440" height="7"/><rect x="840" y="374" width="440" height="10"/><rect x="840" y="400" width="440" height="14"/><rect x="840" y="430" width="440" height="19"/><rect x="840" y="466" width="440" height="26"/>
+        </g>
+      </g>
+      <!-- ridgelines -->
+      <path d="M0 470 C120 420 220 440 330 400 C430 365 520 420 620 395 C730 368 820 330 930 372 C1040 412 1130 360 1240 380 C1330 396 1390 385 1440 400 L1440 506 L0 506Z" fill="#c98a6a" opacity=".55"/>
+      <path d="M0 492 C140 455 260 478 380 446 C520 410 610 470 760 450 C900 430 990 410 1120 440 C1250 470 1350 440 1440 452 L1440 506 L0 506Z" fill="#8f6a62" opacity=".6"/>
+      <rect x="-200" y="505" width="1840" height="420" fill="url(#lk)"/>
+      <!-- water -->
+      <g fill="none" stroke-linecap="round">
+        <g class="wave"><path d="M-60 560 q60 -16 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke="#f6ecd9" stroke-width="5" opacity=".75"/></g>
+        <g class="wave w2"><path d="M-60 610 q70 -18 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0" stroke="#f08a4b" stroke-width="6" opacity=".85"/></g>
+        <g class="wave w3"><path d="M-60 670 q80 -20 160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0" stroke="#f6ecd9" stroke-width="5" opacity=".5"/></g>
+        <g class="wave"><path d="M-60 740 q90 -22 180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0" stroke="#1b2a3a" stroke-width="6" opacity=".35"/></g>
+        <g class="wave w2"><path d="M-60 820 q100 -24 200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0" stroke="#f6ecd9" stroke-width="4" opacity=".35"/></g>
+      </g>
+      <!-- sun reflection -->
+      <g fill="#ffc178" opacity=".7"><rect x="980" y="540" width="160" height="6" rx="3"/><rect x="1000" y="575" width="120" height="6" rx="3"/><rect x="1020" y="635" width="80" height="6" rx="3"/><rect x="1035" y="700" width="50" height="5" rx="2.5"/></g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <span class="kicker"><i></i>111 Scott Street · Tellico Plains</span>
+    <h1 id="h1">Walk in. <br>Walk out <em>born&nbsp;again.</em></h1>
+    <p class="sub">Cuts, color, balayage, keratin, spray tans, ear piercing and permanent jewelry with Carrie, all booked online.</p>
+    <div class="cta">
+      <a class="btn btn-sun" href="https://square.site/book/LE6TAAM631WX2/the-born-again-gypsy-beauty-parlor-tellico-plains-tn" target="_blank" rel="noopener">Book an appointment →</a>
+      <a class="btn btn-ghost" href="tel:+14235197132">Call (423) 519-7132</a>
+    </div>
+    <div class="meta"><span>✺ Tue–Fri from 10 AM</span><span>✺ 21 services</span></div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track">
+  <span>Balayage</span><span>Keratin</span><span>Color Weaves</span><span>Spray Tans</span><span>Up Dos</span><span>Makeup</span><span>Ear Piercing</span><span>Permanent Jewelry</span><span>Olaplex</span><span>Kids Cuts</span>
+  <span>Balayage</span><span>Keratin</span><span>Color Weaves</span><span>Spray Tans</span><span>Up Dos</span><span>Makeup</span><span>Ear Piercing</span><span>Permanent Jewelry</span><span>Olaplex</span><span>Kids Cuts</span>
+</div></div>
+
+<section id="menu" aria-labelledby="menu-t">
+  <div class="wrap">
+    <p class="eyebrow reveal">The menu</p>
+    <h2 class="sec-title reveal" id="menu-t">Everything, under one roof.</h2>
+    <p class="lede reveal">From a quick dry trim to a full four-hour vivid transformation, here's every service on the books, with the prices and times listed on the parlor's booking page.</p>
+
+    <div class="menu-grid">
+      <article class="card c-sun reveal"><div class="stripe"></div>
+        <h3><span class="dot"></span>Color</h3>
+        <div class="svc"><span class="n">Highlight / Balayage with Root Shadow or Smudge<span class="d">Includes cut · 3 hr</span></span><span class="p">$150</span></div>
+        <div class="svc"><span class="n">Balayage<span class="d">Includes cut · 3 hr</span></span><span class="p"><small>See booking</small></span></div>
+        <div class="svc"><span class="n">Full Color Weave<span class="d">Foils on the entire head · includes cut · 3 hr</span></span><span class="p"><small>See booking</small></span></div>
+        <div class="svc"><span class="n">Partial Color Weave<span class="d">Foiling on the top of the head only · 2 hr</span></span><span class="p">$80</span></div>
+        <div class="svc"><span class="n">All Over Base Color<span class="d">One color, entire head, no foiling · includes cut · 2 hr</span></span><span class="p">$75</span></div>
+        <div class="svc"><span class="n">Grey Root Touch Up<span class="d">One color root cover-up, no foiling · 1 hr 30 min</span></span><span class="p">$65</span></div>
+        <div class="svc"><span class="n">Color Vivid Double Process<span class="d">Includes cut · 4 hr</span></span><span class="p"><small>Message for price</small></span></div>
+      </article>
+
+      <article class="card c-lake reveal"><div class="stripe"></div>
+        <h3><span class="dot"></span>Cuts &amp; Styling</h3>
+        <div class="svc"><span class="n">Women's Haircut<span class="d">Shampoo or extensive cut · 1 hr</span></span><span class="p">$40<small>price varies</small></span></div>
+        <div class="svc"><span class="n">Men's Haircut<span class="d">30 min</span></span><span class="p">$20<small>price varies</small></span></div>
+        <div class="svc"><span class="n">Kids Cut<span class="d">10 and under · 30 min</span></span><span class="p">$15</span></div>
+        <div class="svc"><span class="n">Quick Trim<span class="d">Dry cut, non-extensive · 30 min</span></span><span class="p">$20</span></div>
+        <div class="svc"><span class="n">Shampoo Style<span class="d">30 min</span></span><span class="p">$30<small>price varies</small></span></div>
+        <div class="svc"><span class="n">Up Do<span class="d">45 min</span></span><span class="p">$50</span></div>
+      </article>
+
+      <article class="card c-navy reveal"><div class="stripe"></div>
+        <h3><span class="dot"></span>Treatments</h3>
+        <div class="svc"><span class="n">Keratin Treatment<span class="d">Includes cut · 2 hr 30 min</span></span><span class="p">$125</span></div>
+        <div class="svc"><span class="n">Deep Conditioning with Olaplex<span class="d">1 hr</span></span><span class="p">$50</span></div>
+        <div class="svc"><span class="n">Consult<span class="d">2 options on the booking page</span></span><span class="p"><small>See booking</small></span></div>
+      </article>
+
+      <article class="card c-sun reveal"><div class="stripe"></div>
+        <h3><span class="dot"></span>Glow &amp; Glam</h3>
+        <div class="svc"><span class="n">Spray Tan<span class="d">20 min</span></span><span class="p">$40</span></div>
+        <div class="svc"><span class="n">Makeup<span class="d">45 min</span></span><span class="p">$50</span></div>
+        <div class="svc"><span class="n">Wax<span class="d">15 min</span></span><span class="p">$12</span></div>
+      </article>
+
+      <article class="card c-lake reveal"><div class="stripe"></div>
+        <h3><span class="dot"></span>Piercing &amp; Jewelry</h3>
+        <div class="svc"><span class="n">Ear Piercing<span class="d">Price depends on jewelry · 45 min</span></span><span class="p">$40–$90</span></div>
+        <div class="svc"><span class="n">Permanent Jewelry<span class="d">30 min</span></span><span class="p"><small>Will consult</small></span></div>
+      </article>
+    </div>
+    <p class="note reveal">Prices and times as listed on the parlor's Square booking page. Final pricing is confirmed by the parlor.</p>
+  </div>
+</section>
+
+<section id="why" class="why" aria-labelledby="why-t">
+  <div class="wrap">
+    <p class="eyebrow reveal">Why here</p>
+    <h2 class="sec-title reveal" id="why-t">One stop. The whole glow-up.</h2>
+    <p class="lede reveal">No running across town for a tan after your color. It's all on one menu at Scott Street.</p>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="big">21</div><h3>Services, one stop</h3><p>Cuts, color, keratin, makeup, spray tans, waxing, piercing and permanent jewelry.</p></div>
+      <div class="why-item reveal"><div class="big">$</div><h3>Prices up front</h3><p>Most services list a price and a time before you book, from a $12 wax to $150 balayage.</p></div>
+      <div class="why-item reveal"><div class="big">24/7</div><h3>Book anytime</h3><p>Pick your service and time online, even when the parlor's closed for the day.</p></div>
+      <div class="why-item reveal"><div class="big">$15</div><h3>Kids welcome</h3><p>Kids cuts for 10 and under are $15, so the whole family can come along.</p></div>
+    </div>
+  </div>
+  <svg class="waves-bg" viewBox="0 0 1440 120" preserveAspectRatio="none" width="100%" height="110" aria-hidden="true"><g fill="none" stroke="#f6ecd9" stroke-width="4"><path d="M0 40 q60 -18 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/><path d="M0 75 q60 -18 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/><path d="M0 108 q60 -18 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/></g></svg>
+</section>
+
+<section id="visit" aria-labelledby="visit-t">
+  <div class="wrap">
+    <p class="eyebrow reveal">Hours &amp; visit</p>
+    <h2 class="sec-title reveal" id="visit-t">Find us on Scott Street.</h2>
+    <div class="visit-grid">
+      <div class="reveal">
+        <ul class="hours" id="hours">
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>10:00 AM – 5:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10:00 AM – 4:30 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>10:00 AM – 5:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10:00 AM – 5:00 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+        </ul>
+        <p class="status" id="status"><i></i><span>Tuesday to Friday, by appointment</span></p>
+      </div>
+      <div class="mapbox reveal">
+        <iframe title="Map to 111 Scott Street, Tellico Plains, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=111%20Scott%20Street%2C%20Tellico%20Plains%2C%20TN%2037385&output=embed"></iframe>
+        <div class="addr">
+          <strong>111 Scott Street</strong>Tellico Plains, TN 37385
+          <div class="row">
+            <a class="btn btn-sun" href="tel:+14235197132">Call (423) 519-7132</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=111%20Scott%20Street%2C%20Tellico%20Plains%2C%20TN%2037385" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" aria-labelledby="book-t">
+  <div class="wrap">
+    <svg class="sun-sm" width="96" height="60" viewBox="0 0 96 60" aria-hidden="true"><defs><clipPath id="ss"><rect width="96" height="48"/></clipPath></defs><g clip-path="url(#ss)"><circle cx="48" cy="48" r="40" fill="#f08a4b"/><g fill="#1b2a3a"><rect y="28" width="96" height="3"/><rect y="35" width="96" height="4"/><rect y="42" width="96" height="5"/></g></g><path d="M4 54 q11 -6 22 0 t22 0 t22 0 t22 0" fill="none" stroke="#2b6f8f" stroke-width="3" stroke-linecap="round"/></svg>
+    <h2 class="sec-title" id="book-t">Your new look is a tap away.</h2>
+    <p class="lede">Book online in a minute, or call the parlor to ask about color, vivids or permanent jewelry.</p>
+    <div class="cta">
+      <a class="btn btn-sun" href="https://square.site/book/LE6TAAM631WX2/the-born-again-gypsy-beauty-parlor-tellico-plains-tn" target="_blank" rel="noopener">Book online →</a>
+      <a class="btn btn-ghost" href="mailto:carrie.ashley.lane@gmail.com">Email the parlor</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>The Born Again Gypsy Beauty Parlor · 111 Scott Street, Tellico Plains, TN</span>
+    <span>Concept by <a href="#top">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="btn btn-ghost" href="tel:+14235197132">Call</a>
+  <a class="btn btn-sun" href="https://square.site/book/LE6TAAM631WX2/the-born-again-gypsy-beauty-parlor-tellico-plains-tn" target="_blank" rel="noopener">Book now</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // Today's hours (Tellico Plains is Eastern time)
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var d=now.getDay(), m=now.getHours()*60+now.getMinutes();
+    var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+    var close={2:1020,3:990,4:1020,5:1020}[d], st=document.getElementById('status');
+    if(close && m>=600 && m<close){st.classList.add('open');st.querySelector('span').textContent='Open now · until '+(d===3?'4:30':'5:00')+' PM';}
+    else if(close && m<600){st.querySelector('span').textContent='Opens today at 10:00 AM';}
+    else {st.querySelector('span').textContent='Closed now · open Tuesday to Friday';}
+  }catch(e){}
+  // Reveal: content is visible without JS; this only animates in
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.remove('pre')});}
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect(); if(r.top>window.innerHeight) e.classList.add('pre');});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>
