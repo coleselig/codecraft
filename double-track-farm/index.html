@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Double Track Farm — Greeneville</title>
+<meta name="description" content="Concept site for Double Track Farm, Greeneville, TN: Duroc/Yorkshire/Hereford cross pork, duck eggs, free-range eggs, freeze-dried items, craft and wood products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b2a22; --ink2:#24382d; --cream:#f3ead7; --paper:#faf4e6; --rust:#b0502a; --rust2:#8f3d1d;
+  --brass:#c9a24a; --sage:#7f9a7a; --line:rgba(27,42,34,.16); --muted:#5a6a60;
+  --disp:"Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --serif:"Libre Caslon Text", Georgia, serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --bar:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.grid>*{min-width:0}
+
+/* concept banner */
+.concept{background:var(--ink);color:#d9cfb8;font:500 11px/1 var(--mono);letter-spacing:.02em;text-align:center;padding:8px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--brass);font-weight:600}
+.concept .long{display:none}
+.tag .gc{display:none}
+@media (min-width:600px){.tag .gc{display:inline}}
+@media (min-width:600px){.concept .long{display:inline}.concept .short{display:none}}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:30;background:rgba(250,244,230,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand span{font:900 21px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.links{display:none;gap:26px;font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.links a:hover{border-color:var(--rust)}
+.navcta{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;background:var(--rust);color:#fff;padding:11px 14px;border-radius:2px;transition:background .2s;white-space:nowrap}
+.navcta:hover{background:var(--rust2)}
+@media (min-width:900px){.links{display:flex}}
+
+/* hero */
+.hero{position:relative;background:var(--ink);color:var(--cream);overflow:hidden}
+.hero .grain{position:absolute;inset:0;opacity:.18;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .85 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-in{position:relative;display:grid;gap:8px;padding-top:34px}
+.tag{display:inline-flex;align-items:center;gap:10px;font:500 11px/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.tag::before{content:"";width:26px;height:0;border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);padding-top:3px}
+h1{font:900 clamp(50px,15vw,128px)/.86 var(--disp);text-transform:uppercase;letter-spacing:.005em;margin:16px 0 18px}
+h1 em{font-style:normal;color:var(--rust);display:block}
+h1 .amp{color:var(--brass)}
+.sub{font-size:17px;max-width:34ch;color:#e6dcc4}
+.sub i{color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:9px;font:600 13px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:16px 18px;border-radius:2px;transition:transform .15s, background .2s, color .2s;border:2px solid transparent}
+.btn svg{width:17px;height:17px;flex:none}
+@media (max-width:600px){.hero .ctas .btn{flex:1 1 100%;justify-content:center}}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--rust);color:#fff}
+.btn.primary:hover{background:#c45e33}
+.btn.ghost{border-color:rgba(243,234,215,.45);color:var(--cream)}
+.btn.ghost:hover{background:var(--cream);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;list-style:none}
+.chips li{font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(201,162,74,.5);color:#e8d9ae;padding:8px 10px;border-radius:99px}
+.scene{margin-top:22px;width:calc(100% + 40px);margin-left:-20px;max-width:none;height:auto}
+@media (min-width:900px){
+  .hero-in{grid-template-columns:1.05fr .95fr;align-items:center;padding-top:70px}
+  .scene{margin:0;width:100%;align-self:end;border-radius:2px}
+  .hero-copy{padding-bottom:70px}
+  .hero-in{align-items:end}
+  .hero .scene{margin-bottom:56px}
+  h1{font-size:clamp(80px,8.6vw,124px)}
+}
+/* animated bits */
+.smoke{animation:drift 7s ease-in-out infinite;transform-origin:center}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(6px,-4px)}}
+.sun{animation:glow 6s ease-in-out infinite}
+@keyframes glow{50%{opacity:.75}}
+.tail{animation:wag 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:0% 50%}
+@keyframes wag{50%{transform:rotate(18deg)}}
+.peck{animation:peck 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes peck{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(22deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* rails divider */
+.rails{height:22px;background:
+  linear-gradient(var(--ink),var(--ink)) 0 5px/100% 3px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) 0 14px/100% 3px no-repeat,
+  repeating-linear-gradient(90deg,var(--rust) 0 10px,transparent 10px 34px) 0 0/100% 22px no-repeat;opacity:.9}
+
+section{padding:76px 0}
+.eyebrow{font:500 11px/1.3 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--rust);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::after{content:"";flex:1;max-width:80px;border-top:1px solid currentColor;opacity:.5}
+h2{font:800 clamp(40px,10vw,76px)/.92 var(--disp);text-transform:uppercase;letter-spacing:.01em;margin-bottom:18px}
+.lede{font-size:19px;max-width:44ch;color:var(--muted)}
+
+/* quote strip */
+.quote{background:var(--cream);border-bottom:1px solid var(--line)}
+.quote .wrap{padding-top:54px;padding-bottom:54px;display:grid;gap:18px}
+.quote blockquote{font:italic 400 clamp(25px,6.4vw,44px)/1.22 var(--serif);max-width:24ch}
+.quote blockquote span{color:var(--rust)}
+.quote cite{font:500 11px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-style:normal}
+@media (min-width:900px){.quote .wrap{grid-template-columns:1.4fr 1fr;align-items:end}}
+
+/* goods */
+.goods{display:grid;gap:14px;margin-top:36px}
+@media (min-width:640px){.goods{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.goods{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:3px;padding:24px 22px 22px;display:grid;grid-template-columns:62px 1fr;gap:16px;align-items:start;transition:transform .2s, box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(27,42,34,.45)}
+.card .ic{width:62px;height:62px;border-radius:50%;background:var(--cream);display:grid;place-items:center}
+.card .ic svg{width:40px;height:40px}
+.card h3{font:800 25px/1 var(--disp);text-transform:uppercase;letter-spacing:.03em;margin:4px 0 8px}
+.card p{font-size:15.5px;color:var(--muted);line-height:1.5}
+.card .no{position:absolute;top:12px;right:14px;font:500 10px/1 var(--mono);color:#b9ad93;letter-spacing:.1em}
+.card.feature{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.card.feature p{color:#cfc5ad}
+.card.feature .ic{background:var(--rust)}
+.card.feature .no{color:var(--brass)}
+.garden{margin-top:16px;font:500 12px/1.6 var(--mono);letter-spacing:.06em;color:var(--muted)}
+.garden b{color:var(--ink)}
+
+/* how we raise */
+.raise{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.raise h2{color:var(--cream)}
+.raise .lede{color:#cdc3aa}
+.raise .eyebrow{color:var(--brass)}
+.ledger{margin-top:34px;display:grid;gap:0;border-top:1px solid rgba(243,234,215,.2)}
+.ledger>div{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid rgba(243,234,215,.2)}
+.ledger .n{font:800 28px/1 var(--disp);color:var(--rust)}
+.ledger h3{font:800 24px/1.05 var(--disp);text-transform:uppercase;letter-spacing:.03em}
+.ledger p{font-size:15.5px;color:#cdc3aa;margin-top:6px}
+@media (min-width:900px){.raise-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}.ledger{margin-top:0}}
+.stamp{margin-top:34px;display:inline-grid;place-items:center;width:150px;height:150px;border-radius:50%;border:2px dashed var(--brass);color:var(--brass);text-align:center;font:600 11px/1.45 var(--mono);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-8deg);padding:20px}
+.stamp b{display:block;font:900 30px/1 var(--disp);letter-spacing:.04em;color:var(--cream);margin:4px 0}
+
+/* market */
+.mkt-g{display:grid;gap:34px}
+@media (min-width:900px){.mkt-g{grid-template-columns:1fr 1fr;gap:56px}}
+.ticket{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;position:relative}
+.ticket header{background:var(--rust);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ticket header strong{font:800 24px/1 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.ticket header span{font:500 10.5px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;text-align:right}
+.tt{width:100%;border-collapse:collapse;font:500 14px/1.3 var(--mono)}
+.tt td{padding:12px 20px;border-bottom:1px dashed var(--line)}
+.tt td:last-child{text-align:right;color:var(--muted);white-space:nowrap}
+.tt tr.today td{background:#f6e7d6;color:var(--ink);font-weight:600}
+.tt tr.today td:first-child::after{content:"TODAY";margin-left:8px;font-size:9.5px;letter-spacing:.14em;background:var(--rust);color:#fff;padding:3px 6px;border-radius:2px;vertical-align:2px}
+.tnote{padding:16px 20px;font-size:14px;color:var(--muted);line-height:1.55;background:var(--paper)}
+.tnote b{color:var(--ink)}
+.winter{margin-top:16px;display:grid;gap:6px}
+.winter h3{font:800 22px/1 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.dates{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin-top:6px}
+.dates li{font:500 12px/1 var(--mono);border:1px solid var(--line);background:#fff;padding:8px 9px;border-radius:2px}
+.dates li.next{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.small{font-size:13.5px;color:var(--muted);margin-top:10px}
+.map{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--cream);aspect-ratio:4/3.2;min-height:260px}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:sepia(.25) saturate(.85)}
+.addr{display:grid;gap:14px;margin-top:18px}
+@media (min-width:520px){.addr{grid-template-columns:1fr 1fr}}
+.addr div{border-left:3px solid var(--rust);padding-left:14px}
+.addr h4{font:500 10.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:4px}
+.addr p{font-size:15.5px;line-height:1.45}
+.addr a{font:600 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--rust2);display:inline-block;margin-top:8px}
+
+/* contact */
+.contact{background:var(--cream);text-align:center;border-top:1px solid var(--line)}
+.contact h2{max-width:14ch;margin-left:auto;margin-right:auto}
+.contact .lede{margin:0 auto}
+.contact .ctas{justify-content:center}
+.contact .btn.ghost{border-color:var(--ink);color:var(--ink)}
+.contact .btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.mail{font:500 15px/1 var(--mono);margin-top:12px;color:var(--muted);word-break:break-all}
+.mail a{color:var(--rust2)}
+
+footer{background:var(--ink);color:#bfb59c;padding:38px 0 34px;font:500 12px/1.7 var(--mono);letter-spacing:.04em}
+footer .wrap{display:grid;gap:14px}
+footer .fb{font:900 26px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;color:var(--cream)}
+footer a{color:var(--brass)}
+@media (min-width:900px){footer .wrap{grid-template-columns:1fr auto;align-items:end}}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(27,42,34,.97);border-top:1px solid rgba(201,162,74,.35)}
+.bar>*{min-width:0}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:3px;font:600 12.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#fff;white-space:nowrap}
+.bar a svg{width:17px;height:17px;flex:none}
+.bar .e{background:var(--rust)}
+.bar .f{border:1.5px solid rgba(243,234,215,.5)}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease, transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+.js.show-all .rv{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="concept"><span class="short">Concept by <b>Code Craft Media</b> · Not live</span><span class="long">Concept site by <b>Code Craft Media</b>, made for Double Track Farm. Not live.</span></div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Double Track Farm home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1b2a22"/><path d="M13 33 L18 9 M27 33 L22 9" stroke="#c9a24a" stroke-width="2.2" stroke-linecap="round"/><path d="M14.5 27h11M15.6 21.5h8.8M16.7 16h6.6" stroke="#b0502a" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Double Track</span>
+    </a>
+    <div class="links"><a href="#goods">The Goods</a><a href="#raise">How We Raise</a><a href="#market">Find Us</a><a href="#contact">Contact</a></div>
+    <a class="navcta" href="mailto:doubletrackfarm@gmail.com?subject=Hello%20from%20the%20website">Email us</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="grain"></div>
+  <div class="wrap hero-in grid">
+    <div class="hero-copy">
+      <div class="tag">Greeneville, Tennessee<span class="gc">&nbsp;· Greene County</span></div>
+      <h1>Born &amp; raised <em>right here.</em></h1>
+      <p class="sub">Duroc/Yorkshire/Hereford cross pigs, duck eggs and free-range farm eggs, all fed <i>non-GMO, soy-free feed</i>.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:doubletrackfarm@gmail.com?subject=Ordering%20from%20Double%20Track%20Farm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>Email the farm</a>
+        <a class="btn ghost" href="https://www.facebook.com/profile.php?id=100086606131105" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8v3h2.6V21h2.9Z"/></svg>Message on Facebook</a>
+      </div>
+      <ul class="chips"><li>Veteran farm</li><li>Pasture raised</li><li>Regenerative</li></ul>
+    </div>
+
+    <svg class="scene" viewBox="0 0 600 470" role="img" aria-label="Illustration: Appalachian ridges at sunrise, a barn, a pig, a hen and a duck beside a double-track farm lane">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24382d"/><stop offset=".65" stop-color="#5b4a33"/><stop offset="1" stop-color="#c47a45"/></linearGradient>
+        <linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4d6a4c"/><stop offset="1" stop-color="#2b4033"/></linearGradient>
+        <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0v6" stroke="#1b2a22" stroke-width="1.2" opacity=".35"/></pattern>
+        <clipPath id="frame"><rect x="0" y="0" width="600" height="470" rx="0"/></clipPath>
+      </defs>
+      <g clip-path="url(#frame)">
+        <rect width="600" height="470" fill="url(#sky)"/>
+        <circle class="sun" cx="430" cy="210" r="62" fill="#e9b45f" opacity=".95"/>
+        <circle cx="430" cy="210" r="88" fill="#e9b45f" opacity=".12"/>
+        <path d="M0 250 C70 205 120 215 180 228 C250 190 320 175 380 215 C440 190 520 196 600 225 V470 H0Z" fill="#3a4f3e" opacity=".65"/>
+        <path d="M0 285 C90 240 160 262 230 248 C300 232 360 262 430 246 C500 232 560 250 600 262 V470 H0Z" fill="#2f4535"/>
+        <path d="M0 318 C120 292 220 308 320 300 C420 292 520 304 600 296 V470 H0Z" fill="url(#field)"/>
+        <!-- fence -->
+        <g stroke="#c9b48a" stroke-width="2.4" opacity=".75">
+          <path d="M14 334 L14 300M70 330 L70 297M126 327 L126 294M182 324 L182 292"/>
+          <path d="M8 305 L190 297M8 318 L190 310" stroke-width="1.6"/>
+        </g>
+        <!-- barn -->
+        <g transform="translate(395 222)">
+          <path d="M0 52 L44 14 L88 52 V110 H0Z" fill="#9c4325"/>
+          <path d="M0 52 L44 14 L88 52" fill="none" stroke="#f3ead7" stroke-width="4" stroke-linejoin="round"/>
+          <rect x="30" y="62" width="28" height="48" fill="#6e2d17"/>
+          <path d="M30 62 L58 110 M58 62 L30 110" stroke="#f3ead7" stroke-width="2.5"/>
+          <rect x="30" y="62" width="28" height="48" fill="none" stroke="#f3ead7" stroke-width="2.5"/>
+          <rect x="38" y="30" width="12" height="12" fill="#f3ead7" opacity=".9"/>
+          <path d="M88 60 H130 V110 H88Z" fill="#7d3519"/>
+          <path d="M86 58 H132" stroke="#f3ead7" stroke-width="3"/>
+          <rect x="100" y="0" width="20" height="60" rx="10" fill="#b9b2a0"/>
+          <path d="M100 12 H120 M100 26 H120 M100 40 H120" stroke="#8e8775" stroke-width="1.5"/>
+          <path d="M98 2 Q110 -10 122 2" fill="#9c9583"/>
+          <g class="smoke" opacity=".35" fill="#f3ead7"><circle cx="60" cy="-6" r="6"/><circle cx="70" cy="-16" r="8"/><circle cx="84" cy="-24" r="6"/></g>
+        </g>
+        <!-- double track lane -->
+        <path d="M262 470 C268 400 300 350 360 322 L374 322 C330 352 312 404 316 470Z" fill="#b89a68" opacity=".55"/>
+        <path d="M348 470 C344 410 360 360 392 330 L404 330 C380 362 372 412 384 470Z" fill="#b89a68" opacity=".55"/>
+        <path d="M316 470 C312 404 330 352 374 322 L392 330 C360 360 344 410 348 470Z" fill="#5f8257"/>
+        <rect x="0" y="318" width="600" height="152" fill="url(#hatch)" opacity=".35"/>
+        <!-- pig -->
+        <g transform="translate(78 360)">
+          <ellipse cx="62" cy="64" rx="66" ry="7" fill="#1b2a22" opacity=".35"/>
+          <path class="tail" d="M118 26 c10 -4 14 4 8 8 c-6 4 -2 10 6 6" fill="none" stroke="#e7a98a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M18 30 C18 6 52 0 82 2 C110 4 122 16 120 36 C118 54 100 60 70 60 C40 60 20 52 18 30Z" fill="#e7a98a"/>
+          <path d="M18 30 C18 6 52 0 82 2 C110 4 122 16 120 36 C118 54 100 60 70 60 C40 60 20 52 18 30Z" fill="url(#hatch)" opacity=".35"/>
+          <path d="M60 4 C76 2 96 4 106 10 C96 22 70 22 56 14Z" fill="#7a3a22" opacity=".85"/>
+          <rect x="30" y="52" width="10" height="14" rx="3" fill="#cf8d70"/><rect x="48" y="54" width="10" height="12" rx="3" fill="#cf8d70"/>
+          <rect x="88" y="52" width="10" height="14" rx="3" fill="#cf8d70"/><rect x="104" y="50" width="10" height="14" rx="3" fill="#cf8d70"/>
+          <path d="M22 14 L14 0 L34 8Z" fill="#cf8d70"/>
+          <ellipse cx="6" cy="32" rx="9" ry="10" fill="#d99377"/>
+          <circle cx="4" cy="29" r="1.6" fill="#7a3a22"/><circle cx="4" cy="35" r="1.6" fill="#7a3a22"/>
+          <circle cx="24" cy="22" r="2.4" fill="#1b2a22"/>
+        </g>
+        <!-- hen -->
+        <g transform="translate(225 372)">
+          <ellipse cx="22" cy="48" rx="24" ry="4" fill="#1b2a22" opacity=".35"/>
+          <path d="M40 10 C52 6 56 22 48 30" fill="#2b2b26"/>
+          <path d="M6 26 C6 12 24 8 38 14 C48 20 46 40 28 42 C14 44 6 38 6 26Z" fill="#a8542c"/>
+          <path d="M16 28 C22 22 34 24 38 30 C30 36 20 36 16 28Z" fill="#7d3519"/>
+          <g class="peck"><circle cx="8" cy="14" r="8" fill="#b65d31"/><path d="M4 6 l3 -5 l2 4 l3 -4 l1 6Z" fill="#c43b2a"/><path d="M0 14 l-7 2 l7 2Z" fill="#e2b14e"/><circle cx="7" cy="12" r="1.4" fill="#111"/><path d="M5 20 q2 5 4 0" fill="#c43b2a"/></g>
+          <path d="M20 42 v6 M28 42 v6" stroke="#e2b14e" stroke-width="2.4"/>
+        </g>
+        <!-- duck -->
+        <g transform="translate(468 388)">
+          <ellipse cx="26" cy="40" rx="28" ry="4" fill="#1b2a22" opacity=".35"/>
+          <path d="M4 22 C4 10 22 8 40 14 C52 18 54 34 36 36 C18 38 4 34 4 22Z" fill="#f3ead7"/>
+          <path d="M14 20 C24 14 38 18 42 24 C34 30 20 30 14 20Z" fill="#dcd1b8"/>
+          <path d="M46 16 C52 18 56 22 54 26 L44 22Z" fill="#f3ead7"/>
+          <circle cx="10" cy="8" r="8" fill="#f3ead7"/>
+          <path d="M2 10 l-10 1 q-2 3 2 4 l9 -1Z" fill="#e2a54a"/>
+          <circle cx="9" cy="6" r="1.4" fill="#111"/>
+          <path d="M20 36 v5 l-4 1 M30 36 v5 l-4 1" stroke="#e2a54a" stroke-width="2.2" fill="none"/>
+        </g>
+        <!-- foreground grass -->
+        <path d="M0 470 V452 q8 -14 10 0 q6 -18 10 0 q8 -12 12 0 q6 -16 10 0 q10 -10 12 0 V470Z" fill="#1f3226"/>
+        <path d="M600 470 V448 q-8 -14 -10 0 q-6 -18 -10 0 q-8 -12 -12 0 q-6 -16 -10 0 q-10 -10 -12 0 V470Z" fill="#1f3226"/>
+        <!-- frame border -->
+        <rect x="8" y="8" width="584" height="454" fill="none" stroke="#c9a24a" stroke-width="1.2" opacity=".55"/>
+        <text x="22" y="34" fill="#e8d9ae" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2.2">DOUBLE TRACK FARM · GREENEVILLE, TN</text>
+      </g>
+    </svg>
+  </div>
+</header>
+<div class="rails" aria-hidden="true"></div>
+
+<div class="quote">
+  <div class="wrap grid">
+    <blockquote class="rv">“All animals are fed <span>non-GMO/Soy-free</span> feed. Chickens are free ranged.”</blockquote>
+    <cite class="rv">From the farm’s own words on its Appalachian Grown listing<br>Veteran farm · New &amp; beginning farmer</cite>
+  </div>
+</div>
+
+<section id="goods">
+  <div class="wrap">
+    <div class="eyebrow">01 · The goods</div>
+    <h2 class="rv">What’s on<br>the table</h2>
+    <p class="lede rv">Everything here comes from the farm’s own listing. Email or message to ask what’s available right now.</p>
+    <div class="goods grid">
+      <article class="card feature rv"><span class="no">No. 01</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 26c0-8 8-13 18-13 9 0 13 5 13 11s-5 10-14 10H17c-4 0-7-3-7-8Z"/><path d="M10 25H6M14 17l-3-5 7 3M18 34v5M34 34v5"/><circle cx="16" cy="22" r="1" fill="#fff"/></svg></div>
+        <div><h3>Pasture pork</h3><p>Duroc/Yorkshire/Hereford cross pigs, born and raised right here on the farm.</p></div></article>
+      <article class="card rv"><span class="no">No. 02</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#1b2a22" stroke-width="2.4"><path d="M24 7c8 0 14 12 14 21a14 14 0 0 1-28 0C10 19 16 7 24 7Z" fill="#f3ead7"/><path d="M17 26c2 4 5 6 9 6" stroke="#b0502a"/></svg></div>
+        <div><h3>Duck eggs</h3><p>Duck eggs, for bakers and anyone who wants a richer egg.</p></div></article>
+      <article class="card rv"><span class="no">No. 03</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#1b2a22" stroke-width="2.4"><path d="M8 30h32v6a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4Z"/><ellipse cx="16" cy="24" rx="5" ry="7" fill="#e9c49a"/><ellipse cx="25" cy="22" rx="5" ry="7" fill="#f3ead7"/><ellipse cx="33" cy="24" rx="5" ry="7" fill="#c98d5c"/></svg></div>
+        <div><h3>Farm fresh eggs</h3><p>From free-ranged chickens, fed non-GMO, soy-free feed.</p></div></article>
+      <article class="card rv"><span class="no">No. 04</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#1b2a22" stroke-width="2.4" stroke-linecap="round"><rect x="14" y="12" width="20" height="28" rx="3"/><path d="M14 18h20M18 8h12v4H18Z"/><path d="M24 24v8M20 28h8M21 25l6 6M27 25l-6 6" stroke="#b0502a" stroke-width="1.8"/></svg></div>
+        <div><h3>Freeze-dried items</h3><p>Freeze-dried items, available alongside the farm’s eggs and pork.</p></div></article>
+      <article class="card rv"><span class="no">No. 05</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#1b2a22" stroke-width="2.4" stroke-linecap="round"><path d="M8 30h32l-3 9H11Z" fill="#e9c49a"/><path d="M12 30c0-6 5-10 12-10s12 4 12 10"/><path d="M16 35h16" stroke="#8f3d1d"/><circle cx="24" cy="25" r="2.5"/></svg></div>
+        <div><h3>Wood products</h3><p>Wood products, sold alongside the farm’s other goods.</p></div></article>
+      <article class="card rv"><span class="no">No. 06</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#1b2a22" stroke-width="2.4" stroke-linecap="round"><path d="M14 14l20 20M34 14 14 34"/><circle cx="12" cy="12" r="4" fill="#f3ead7"/><circle cx="36" cy="12" r="4" fill="#f3ead7"/><path d="M24 30v10" stroke="#b0502a"/></svg></div>
+        <div><h3>Crafts</h3><p>Craft goods, sold alongside the eggs and pork.</p></div></article>
+    </div>
+    <p class="garden rv"><b>From the garden, too:</b> hot peppers · okra · tomatoes</p>
+  </div>
+</section>
+
+<section class="raise" id="raise">
+  <div class="wrap raise-g grid">
+    <div>
+      <div class="eyebrow">02 · How we raise</div>
+      <h2 class="rv">No shortcuts<br>in the feed.</h2>
+      <p class="lede rv">A veteran-run Greene County farm raising its animals on pasture, the regenerative way.</p>
+      <div class="stamp rv" aria-hidden="true">Fed<b>NON-GMO</b>Soy-free</div>
+    </div>
+    <div class="ledger grid">
+      <div class="rv"><span class="n">01</span><div><h3>Born here, raised here</h3><p>The pigs are a Duroc, Yorkshire and Hereford cross, born and raised right here.</p></div></div>
+      <div class="rv"><span class="n">02</span><div><h3>Non-GMO, soy-free feed</h3><p>All animals on the farm are fed non-GMO, soy-free feed.</p></div></div>
+      <div class="rv"><span class="n">03</span><div><h3>Free-range hens</h3><p>Chickens are free ranged.</p></div></div>
+      <div class="rv"><span class="n">04</span><div><h3>Pasture-raised, regenerative</h3><p>Listed practices: GMO-free, pasture raised, humanely raised, free range and regenerative.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="market">
+  <div class="wrap mkt-g grid">
+    <div>
+      <div class="eyebrow">03 · Find us</div>
+      <h2 class="rv">Saturdays on<br>Depot Street</h2>
+      <p class="lede rv">Double Track Farm sells at the Depot Street Farmers Market in downtown Greeneville.</p>
+      <div class="ticket rv" style="margin-top:26px">
+        <header><strong>Market days</strong><span>Depot Street<br>Farmers Market</span></header>
+        <table class="tt" id="tt">
+          <tbody>
+            <tr data-d="1"><td>Monday</td><td>—</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>—</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>—</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>—</td></tr>
+            <tr data-d="5"><td>Friday</td><td>—</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>8:00 AM – 12:00 PM</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <div class="tnote"><b>Main season:</b> May 2 – Oct 31, 2026, in the Greene County Partnership lot near Academy &amp; Church St. Any other day, <b>email or message</b> the farm.</div>
+      </div>
+      <div class="winter rv">
+        <h3>Winter market dates</h3>
+        <ul class="dates" id="dates">
+          <li data-dt="2026-12-13">Dec 13</li><li data-dt="2027-01-10">Jan 10</li><li data-dt="2027-01-24">Jan 24</li><li data-dt="2027-02-14">Feb 14</li><li data-dt="2027-02-28">Feb 28</li><li data-dt="2027-03-14">Mar 14</li><li data-dt="2027-03-28">Mar 28</li>
+        </ul>
+        <p class="small">10 AM – 2 PM inside Brick House Wealth Strategies, 235 West Depot St. Dates and hours as posted by the market; message the farm to check they’ll be there.</p>
+      </div>
+    </div>
+    <div>
+      <div class="map rv"><iframe title="Map of Depot Street Farmers Market, Greeneville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=115%20Academy%20St%2C%20Greeneville%2C%20TN&amp;output=embed"></iframe></div>
+      <div class="addr grid">
+        <div><h4>The market</h4><p>115 Academy St<br>Greeneville, TN</p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=115%20Academy%20St%2C%20Greeneville%2C%20TN" target="_blank" rel="noopener">Directions →</a></div>
+        <div><h4>The farm</h4><p>21 Rader Union Lane<br>Greeneville, TN 37743</p><a href="mailto:doubletrackfarm@gmail.com?subject=Farm%20visit%20or%20pickup">Ask before visiting →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center">04 · Get in touch</div>
+    <h2 class="rv">Want pork, eggs or something freeze-dried?</h2>
+    <p class="lede rv">Send a note and ask what’s ready. Reach the farm by email or on Facebook.</p>
+    <div class="ctas">
+      <a class="btn primary" href="mailto:doubletrackfarm@gmail.com?subject=Ordering%20from%20Double%20Track%20Farm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>Email the farm</a>
+      <a class="btn ghost" href="https://www.facebook.com/profile.php?id=100086606131105" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8v3h2.6V21h2.9Z"/></svg>Facebook</a>
+      <a class="btn ghost" href="https://www.instagram.com/DoubleTrackFarm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>Instagram</a>
+    </div>
+    <p class="mail"><a href="mailto:doubletrackfarm@gmail.com">doubletrackfarm@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap grid">
+    <div><div class="fb">Double Track Farm</div>Greeneville, TN · Pork · Duck eggs · Eggs · Freeze-dried · Crafts &amp; wood</div>
+    <div>Concept by <a href="#top">Code Craft Media</a> · Not a live site</div>
+  </div>
+</footer>
+
+<div class="bar" role="navigation" aria-label="Quick contact">
+  <a class="e" href="mailto:doubletrackfarm@gmail.com?subject=Ordering%20from%20Double%20Track%20Farm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>Email</a>
+  <a class="f" href="https://www.facebook.com/profile.php?id=100086606131105" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.3H8v3h2.6V21h2.9Z"/></svg>Message</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var now=new Date(), day=now.getDay();
+  var row=document.querySelector('#tt tr[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var iso=now.toISOString().slice(0,10), marked=false;
+  document.querySelectorAll('#dates li').forEach(function(li){ if(!marked && li.getAttribute('data-dt')>=iso){li.classList.add('next');marked=true;} });
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { d.classList.add('show-all'); }
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

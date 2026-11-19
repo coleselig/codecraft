@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Majida's Spa and Waxing — Nashville</title>
+<meta name="description" content="Facials, peels, waxing and brow &amp; lash tint in Studio #11 inside Salons by JC, 210 25th Avenue North, Nashville.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#F6E7E1; --blush-2:#EFD8CF; --cream:#FBF4F0; --clay:#8C4A3C; --clay-d:#6E3529; --clay-l:#B9725F;
+  --char:#3B3A36; --char-2:#5A5852; --line:rgba(140,74,60,.22);
+  --serif:'Playfair Display',Georgia,serif; --sans:'Karla',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--blush);color:var(--char);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.concept{background:var(--char);color:#EDE3DE;font-size:9.6px;letter-spacing:-.01em;text-align:center;padding:7px 8px;line-height:1.35}
+@media (min-width:420px){.concept{font-size:11px}}
+@media (min-width:600px){.concept{font-size:12.5px;letter-spacing:.02em}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(246,231,225,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-size:20px;text-decoration:none;color:var(--clay-d);letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.brand svg{width:26px;height:26px}
+.nav ul{display:none;list-style:none;gap:30px;font-size:15px;font-weight:500}
+.nav ul a{text-decoration:none;position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav ul a:hover::after{transform:scaleX(1)}
+.nav .pill{font-size:14px;font-weight:600;text-decoration:none;background:var(--clay);color:#fff;padding:9px 16px;border-radius:999px;transition:background .25s,transform .25s}
+.nav .pill:hover{background:var(--clay-d);transform:translateY(-1px)}
+@media (min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:46px 0 56px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 50% at 85% 10%,rgba(185,114,95,.22),transparent 70%),
+  radial-gradient(50% 40% at 0% 100%,rgba(140,74,60,.14),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:34px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--clay)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,11vw,84px);line-height:1.02;letter-spacing:-.015em;margin:16px 0 18px;color:var(--char)}
+.hero h1 em{font-style:italic;color:var(--clay)}
+.hero .sub{font-size:18px;color:var(--char-2);max-width:31em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:15px 24px;transition:transform .25s,box-shadow .25s,background .25s,color .25s;min-height:52px}
+.btn svg{width:18px;height:18px}
+.btn-solid{background:var(--clay);color:#fff;box-shadow:0 10px 24px -12px rgba(110,53,41,.7)}
+.btn-solid:hover{background:var(--clay-d);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--clay);color:var(--clay-d)}
+.btn-ghost:hover{background:var(--clay);color:#fff}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14px;color:var(--char-2)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{width:15px;height:15px;color:var(--clay)}
+
+.art{position:relative;max-width:300px;width:100%;margin:0 auto}
+@media (min-width:900px){.art{max-width:440px}}
+.art .frame{aspect-ratio:4/5;border-radius:220px 220px 26px 26px;background:linear-gradient(170deg,#E9C9BC,#D9A895 55%,#B9725F);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(110,53,41,.55)}
+.art .frame svg{position:absolute;inset:0;width:100%;height:100%}
+.art .tag{position:absolute;left:-14px;bottom:28px;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:0 14px 30px -18px rgba(59,58,54,.5);font-size:13px;line-height:1.35}
+.art .tag b{display:block;font-family:var(--serif);font-size:17px;font-weight:500;color:var(--clay-d)}
+.art .seal{position:absolute;right:-14px;top:18px;width:84px;height:84px;animation:spin 28s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.draw path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s ease forwards .3s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.art .seal,.draw path{animation:none;stroke-dashoffset:0}}
+@media (min-width:900px){.hero{padding:80px 0 96px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}}
+
+/* divider */
+.henna{display:flex;justify-content:center;color:var(--clay);padding:6px 0}
+.henna svg{width:min(340px,86%);height:auto}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:700}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,8vw,52px);line-height:1.08;margin:10px 0 14px;letter-spacing:-.01em}
+h2 em{color:var(--clay);font-style:italic}
+.lead{color:var(--char-2);max-width:36em}
+
+/* services quick */
+.svc-grid{display:grid;gap:14px;margin-top:30px}
+.svc{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-3px);box-shadow:0 18px 34px -24px rgba(110,53,41,.6)}
+.svc .ic{flex:none;width:48px;height:48px;border-radius:50%;background:var(--blush);display:grid;place-items:center;color:var(--clay)}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:21px;line-height:1.2;margin-bottom:4px}
+.svc p{font-size:15px;color:var(--char-2)}
+@media (min-width:700px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* menu card */
+.menu-sec{background:var(--char);color:#F1E6E1;position:relative;overflow:hidden}
+.menu-sec .kicker{color:#E3A893}
+.menu-sec h2 em{color:#E3A893}
+.menu-sec .lead{color:#CFC4BE}
+.menu-sec::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23E3A893' stroke-opacity='.09' stroke-width='1'%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M40 18c6 8 6 36 0 44M18 40c8-6 36-6 44 0'/%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3Ccircle cx='80' cy='0' r='8'/%3E%3Ccircle cx='0' cy='80' r='8'/%3E%3Ccircle cx='80' cy='80' r='8'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.menu-sec .wrap{position:relative}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:28px -22px 0;padding:0 22px 6px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;font:600 14px var(--sans);color:#F1E6E1;background:transparent;border:1px solid rgba(227,168,147,.45);border-radius:999px;padding:10px 16px;cursor:pointer;transition:background .25s,color .25s}
+.tab:hover{background:rgba(227,168,147,.15)}
+.tab[aria-selected="true"]{background:#E3A893;color:var(--char);border-color:#E3A893}
+.card{margin-top:18px;background:var(--cream);color:var(--char);border-radius:28px;padding:30px 22px 26px;position:relative;box-shadow:0 40px 70px -40px rgba(0,0,0,.6)}
+.card::before{content:"";position:absolute;inset:9px;border:1px solid var(--line);border-radius:21px;pointer-events:none}
+.card-head{text-align:center;margin-bottom:10px}
+.card-head .orn{color:var(--clay);display:flex;justify-content:center}
+.card-head .orn svg{width:120px;height:auto}
+.card-head h3{font-family:var(--serif);font-weight:500;font-size:28px;margin-top:4px}
+.card-head p{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.panel{display:block}
+.panel[hidden]{display:none}
+.item{display:grid;grid-template-columns:1fr auto;column-gap:14px;padding:14px 4px;border-bottom:1px dashed var(--line);position:relative}
+.item:last-child{border-bottom:0}
+.item .n{font-family:var(--serif);font-size:18px;line-height:1.3}
+.item .d{font-size:13.5px;color:var(--char-2);grid-column:1;letter-spacing:.02em}
+.item .p{font-family:var(--serif);font-size:20px;color:var(--clay-d);grid-row:1/span 2;grid-column:2;align-self:center}
+.card-foot{margin-top:18px;text-align:center}
+.card-foot .btn{width:100%;max-width:340px}
+.card-foot small{display:block;margin-top:12px;font-size:12.5px;color:var(--char-2)}
+@media (min-width:900px){.card{padding:46px 56px 40px}.panel .cols{columns:2;column-gap:56px}.item{break-inside:avoid}.tabs{justify-content:center;margin:34px 0 0;padding:0}}
+
+/* why */
+.why-grid{display:grid;gap:16px;margin-top:30px}
+.why{padding:24px 0 0;border-top:1px solid var(--line)}
+.why .num{font-family:var(--serif);font-style:italic;color:var(--clay);font-size:20px}
+.why h3{font-family:var(--serif);font-weight:500;font-size:23px;margin:4px 0 6px;line-height:1.2}
+.why p{color:var(--char-2);font-size:16px}
+@media (min-width:800px){.why-grid{grid-template-columns:repeat(2,1fr);gap:28px 48px}}
+@media (min-width:1100px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* visit */
+.visit{background:var(--blush-2)}
+.visit-grid{display:grid;gap:22px;margin-top:30px}
+.hours{background:var(--cream);border-radius:24px;padding:26px 22px;border:1px solid var(--line)}
+.hours h3,.find h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:10px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:16px;transition:background .3s}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.hours li.closed{color:#8b8781}
+.hours li.today{background:var(--clay);color:#fff;font-weight:600}
+.hours li span{white-space:nowrap}
+.hours li.today span:first-child::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#F6E7E1;margin-right:8px;vertical-align:2px;box-shadow:0 0 0 3px rgba(255,255,255,.25)}
+.find{background:var(--cream);border-radius:24px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.map{position:relative;background:#EAD3C9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cg fill='none' stroke='%23FBF4F0' stroke-width='6'%3E%3Cpath d='M0 40h160M0 120h160M50 0v160M120 0l-40 160'/%3E%3C/g%3E%3C/svg%3E")}
+.map::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-26px 0 0 -13px;background:var(--clay);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 6px rgba(140,74,60,.2);z-index:0}
+.find iframe{position:relative;z-index:1;width:100%;height:280px;border:0;display:block;filter:saturate(.75) sepia(.12)}
+.find .info{padding:22px}
+.find address{font-style:normal;color:var(--char-2);margin-bottom:6px}
+.find .note{font-size:15px;background:var(--blush);border-left:3px solid var(--clay);padding:10px 14px;border-radius:0 10px 10px 0;margin:12px 0 16px}
+.find .row{display:flex;flex-wrap:wrap;gap:10px}
+.find .row .btn{flex:1 1 150px;padding:13px 18px;font-size:15px;min-height:48px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.8fr 1.2fr}.find iframe{height:340px}}
+
+/* final cta */
+.final{text-align:center;padding:76px 0}
+.final h2{max-width:17em;margin-left:auto;margin-right:auto}
+.final .cta{justify-content:center}
+
+footer{background:var(--char);color:#CFC4BE;padding:40px 0 calc(110px + env(safe-area-inset-bottom));font-size:14px}
+@media (min-width:900px){footer{padding-bottom:34px}}
+footer .wrap{display:grid;gap:16px}
+footer .brand{color:#F1E6E1}
+footer a{text-decoration:none;border-bottom:1px solid rgba(227,168,147,.4)}
+footer a:hover{color:#fff}
+footer .credit{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font-size:12.5px;color:#a49a94}
+@media (min-width:800px){footer .wrap{grid-template-columns:1fr 1fr 1fr;align-items:start}footer .credit{grid-column:1/-1}}
+
+/* sticky call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(251,244,240,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.bar a{flex:1;min-height:50px;padding:12px;font-size:15.5px}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){.js .reveal.pre{opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by Code Craft Media, made for Majida's Spa and Waxing. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Majida's Spa and Waxing, home">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="16" cy="16" r="5"/><path d="M16 3c3 4 3 22 0 26M3 16c4-3 22-3 26 0"/><path d="M7 7c4 2 14 14 18 18M25 7C21 9 11 21 7 25" opacity=".5"/></svg>
+      Majida's
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">The studio</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="pill" href="https://square.site/book/8SZ5VA85QADAW/majida-s-spa-and-waxing-nashville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Studio #11 · Nashville</span>
+      <h1>Smooth skin, <em>soft&nbsp;glow,</em> Studio&nbsp;#11.</h1>
+      <p class="sub">Facials, peels, face &amp; body waxing, brow &amp; lash tint and henna brows with Majida, inside Salons by JC on 25th Avenue North.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="https://square.site/book/8SZ5VA85QADAW/majida-s-spa-and-waxing-nashville-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          Book online</a>
+        <a class="btn btn-ghost" href="tel:+16157387124">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          615-738-7124</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>210 25th Ave N, Suite 11</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="openNow">Tue to Sat, by appointment</span></span>
+      </div>
+    </div>
+
+    <div class="art reveal" aria-hidden="true">
+      <div class="frame">
+        <svg viewBox="0 0 400 500" fill="none" class="draw">
+          <g stroke="#FBF4F0" stroke-width="1.4" stroke-linecap="round" opacity=".9">
+            <path d="M200 70c40 50 40 130 0 180c-40-50-40-130 0-180z"/>
+            <path d="M200 250c60-30 120-10 140 40c-50 20-110 10-140-40z"/>
+            <path d="M200 250c-60-30-120-10-140 40c50 20 110 10 140-40z"/>
+            <path d="M200 250c30 50 30 110 0 160c-30-50-30-110 0-160z"/>
+            <circle cx="200" cy="250" r="22"/><circle cx="200" cy="250" r="9"/>
+            <path d="M200 100v120M200 280v100"/>
+            <path d="M120 150c20 10 40 30 50 60M280 150c-20 10-40 30-50 60"/>
+            <path d="M100 360c30 0 60 20 70 50M300 360c-30 0-60 20-70 50"/>
+          </g>
+          <g fill="#FBF4F0" opacity=".85">
+            <circle cx="200" cy="56" r="4"/><circle cx="200" cy="40" r="2.5"/><circle cx="200" cy="28" r="1.5"/>
+            <circle cx="350" cy="295" r="3"/><circle cx="50" cy="295" r="3"/><circle cx="200" cy="424" r="3.5"/>
+            <circle cx="112" cy="146" r="2.5"/><circle cx="288" cy="146" r="2.5"/>
+          </g>
+          <g stroke="#FBF4F0" stroke-width="1" opacity=".45">
+            <path d="M40 470c60-40 260-40 320 0"/><path d="M60 486c60-30 220-30 280 0"/>
+          </g>
+        </svg>
+      </div>
+      <svg class="seal" viewBox="0 0 100 100">
+        <defs><path id="c" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs>
+        <circle cx="50" cy="50" r="49" fill="#FBF4F0"/>
+        <text font-family="Karla" font-size="9.6" font-weight="700" letter-spacing="2.6" fill="#8C4A3C"><textPath href="#c">FACIALS · PEELS · WAXING · TINT ·</textPath></text>
+        <circle cx="50" cy="50" r="9" fill="none" stroke="#8C4A3C" stroke-width="1.2"/><circle cx="50" cy="50" r="3" fill="#8C4A3C"/>
+      </svg>
+      <div class="tag"><b>Inside Salons by JC</b>Look for the sign · Studio #11</div>
+    </div>
+  </div>
+</section>
+
+<div class="henna" aria-hidden="true"><svg viewBox="0 0 340 30" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M10 15h110M220 15h110"/><path d="M170 3c8 6 8 18 0 24c-8-6-8-18 0-24z"/><path d="M170 15c10-8 26-8 34 0c-8 8-24 8-34 0zM170 15c-10-8-26-8-34 0c8 8 24 8 34 0z"/><circle cx="214" cy="15" r="2" fill="currentColor"/><circle cx="126" cy="15" r="2" fill="currentColor"/><path d="M60 15c4-6 10-6 14 0c-4 6-10 6-14 0zM266 15c4-6 10-6 14 0c-4 6-10 6-14 0z"/></svg></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">What Majida does</span>
+      <h2>Skin care and waxing, <em>start to finish.</em></h2>
+      <p class="lead">Everything listed for the studio, from a 30-minute mini facial to full-leg waxing.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M9 10h.01M15 10h.01M9 15c1.7 1.4 4.3 1.4 6 0"/></svg></div>
+        <div><h3>Facials</h3><p>Standard, mini, dermaplaning, gentleman's and teen acne facials.</p></div>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+        <div><h3>Peels &amp; microdermabrasion</h3><p>Multivitamin Power Peel, Enzyme Peel and microdermabrasion, with or without a special peel.</p></div>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 9c3-3 13-3 16 0"/><path d="M6 13c2.5-1.5 9.5-1.5 12 0"/><path d="M8 17c2-1 6-1 8 0"/></svg></div>
+        <div><h3>Face waxing</h3><p>Brow, lip, chin, nose, ear, sides and full-face combos.</p></div>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 3c-1 4-1 8 0 11l-1 7M15 3c1 4 1 8 0 11l1 7"/><path d="M9 14h6"/></svg></div>
+        <div><h3>Body waxing</h3><p>Bikini, Brazilian, legs, arms, underarms, back, chest, shoulders and neck.</p></div>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 12c4-5 14-5 18 0c-4 5-14 5-18 0z"/><circle cx="12" cy="12" r="2.5"/><path d="M6 7l-1-2M12 5.5V3M18 7l1-2"/></svg></div>
+        <div><h3>Brow &amp; lash tint</h3><p>Brow tint and lash tint, booked on their own or added to a wax.</p></div>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 4c2 3 2 6 0 8c-2-2-2-5 0-8z"/><path d="M12 12c3-1 6 0 7 2c-3 1-6 0-7-2zM12 12c-3-1-6 0-7 2c3 1 6 0 7-2z"/><path d="M12 12v8"/></svg></div>
+        <div><h3>Henna brows</h3><p>Listed on the studio's Salons by JC profile. Call to ask about it.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="kicker">The menu</span>
+      <h2>Prices, <em>right up front.</em></h2>
+      <p class="lead" style="margin:0 auto">As published on Majida's Square booking page.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-face" id="t-face">Facials &amp; Peels</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-fwax" id="t-fwax">Face Waxing</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-bwax" id="t-bwax">Body Waxing</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-tint" id="t-tint">Tint &amp; Extras</button>
+    </div>
+    <div class="card reveal">
+      <div class="card-head">
+        <div class="orn" aria-hidden="true"><svg viewBox="0 0 120 22" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M4 11h36M80 11h36"/><path d="M60 2c6 4 6 14 0 18c-6-4-6-14 0-18z"/><path d="M60 11c7-6 16-6 20 0M60 11c-7-6-16-6-20 0M60 11c7 6 16 6 20 0M60 11c-7 6-16 6-20 0" opacity=".6"/></svg></div>
+        <p id="cardKicker">Majida's Spa and Waxing</p>
+        <h3 id="cardTitle">Facials &amp; Peels</h3>
+      </div>
+
+      <div class="panel" id="p-face" role="tabpanel" aria-labelledby="t-face"><div class="cols">
+        <div class="item"><span class="n">Standard Facial</span><span class="d">1 hour</span><span class="p">$105</span></div>
+        <div class="item"><span class="n">Mini Facial</span><span class="d">30 minutes</span><span class="p">$75</span></div>
+        <div class="item"><span class="n">Gentleman's Facial</span><span class="d">1 hour</span><span class="p">$105</span></div>
+        <div class="item"><span class="n">Dermaplaning Facial</span><span class="d">1 hour</span><span class="p">$85</span></div>
+        <div class="item"><span class="n">Teen Acne Facial</span><span class="d">45 minutes</span><span class="p">$75</span></div>
+        <div class="item"><span class="n">Multivitamin Power Peel</span><span class="d">1 hour</span><span class="p">$125</span></div>
+        <div class="item"><span class="n">Enzyme Peel</span><span class="d">1 hour</span><span class="p">$110</span></div>
+        <div class="item"><span class="n">Microdermabrasion</span><span class="d">1 hour 15 minutes</span><span class="p">$125</span></div>
+        <div class="item"><span class="n">Microdermabrasion w/ special peel</span><span class="d">1 hour 30 minutes</span><span class="p">$150</span></div>
+      </div></div>
+
+      <div class="panel" id="p-fwax" role="tabpanel" aria-labelledby="t-fwax" hidden><div class="cols">
+        <div class="item"><span class="n">Brow Wax</span><span class="d">15 minutes</span><span class="p">$26</span></div>
+        <div class="item"><span class="n">Lip Wax</span><span class="d">15 minutes</span><span class="p">$19</span></div>
+        <div class="item"><span class="n">Chin Wax</span><span class="d">15 minutes</span><span class="p">$23</span></div>
+        <div class="item"><span class="n">Brow and Lip Wax</span><span class="d">15 minutes</span><span class="p">$45</span></div>
+        <div class="item"><span class="n">Nose Wax</span><span class="d">15 minutes</span><span class="p">$14</span></div>
+        <div class="item"><span class="n">Ear Wax</span><span class="d">15 minutes</span><span class="p">$22</span></div>
+        <div class="item"><span class="n">Sides</span><span class="d">15 minutes</span><span class="p">$21</span></div>
+        <div class="item"><span class="n">Full Face Wax B+L+CH</span><span class="d">30 minutes</span><span class="p">$54</span></div>
+        <div class="item"><span class="n">Full Face Combo B+L+CH+S</span><span class="d">30 minutes</span><span class="p">$62</span></div>
+      </div></div>
+
+      <div class="panel" id="p-bwax" role="tabpanel" aria-labelledby="t-bwax" hidden><div class="cols">
+        <div class="item"><span class="n">Bikini Wax</span><span class="d">30 minutes</span><span class="p">$58</span></div>
+        <div class="item"><span class="n">Brazilian Wax</span><span class="d">30 minutes</span><span class="p">$70</span></div>
+        <div class="item"><span class="n">Under Arm Wax</span><span class="d">15 minutes</span><span class="p">$30</span></div>
+        <div class="item"><span class="n">Half Arm Wax</span><span class="d">30 minutes</span><span class="p">$43</span></div>
+        <div class="item"><span class="n">Full Arm</span><span class="d">45 minutes</span><span class="p">$72</span></div>
+        <div class="item"><span class="n">Half Leg Wax</span><span class="d">30 minutes</span><span class="p">$55</span></div>
+        <div class="item"><span class="n">Full Leg Wax</span><span class="d">45 minutes</span><span class="p">$97</span></div>
+        <div class="item"><span class="n">Neck Wax</span><span class="d">20 minutes</span><span class="p">$27</span></div>
+        <div class="item"><span class="n">Shoulder Wax</span><span class="d">30 minutes</span><span class="p">$42</span></div>
+        <div class="item"><span class="n">Back Wax</span><span class="d">45 minutes</span><span class="p">$77</span></div>
+        <div class="item"><span class="n">Chest Wax</span><span class="d">30 minutes</span><span class="p">$65</span></div>
+      </div></div>
+
+      <div class="panel" id="p-tint" role="tabpanel" aria-labelledby="t-tint" hidden><div class="cols">
+        <div class="item"><span class="n">Brow Tint</span><span class="d">20 minutes</span><span class="p">$26</span></div>
+        <div class="item"><span class="n">Lash Tint</span><span class="d">30 minutes</span><span class="p">$32</span></div>
+        <div class="item"><span class="n">Anti- Aging Hand Treatment</span><span class="d">15 minutes</span><span class="p">$25</span></div>
+      </div></div>
+
+      <div class="card-foot">
+        <a class="btn btn-solid" href="https://square.site/book/8SZ5VA85QADAW/majida-s-spa-and-waxing-nashville-tn" target="_blank" rel="noopener">Book a time</a>
+        <small>Prices and times as listed on Square. Confirm when you book.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">The studio</span>
+      <h2>A studio of her own, <em>inside Salons by JC.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><span class="num">i.</span><h3>Your own studio</h3><p>Majida's Spa and Waxing is its own studio, #11, inside Salons by JC on 25th Avenue North.</p></div>
+      <div class="why reveal"><span class="num">ii.</span><h3>Face and body, one visit</h3><p>Facials, peels, waxing and tinting are all on one menu. Pair a brow wax with a tint, or add a peel to your facial.</p></div>
+      <div class="why reveal"><span class="num">iii.</span><h3>Something for everyone</h3><p>The menu includes a Gentleman's Facial and a Teen Acne Facial alongside the classics.</p></div>
+      <div class="why reveal"><span class="num">iv.</span><h3>Book in a minute</h3><p>Every service, price and open slot is on Majida's Square booking page, any time of day.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="henna" aria-hidden="true"><svg viewBox="0 0 340 30" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M10 15h110M220 15h110"/><path d="M170 3c8 6 8 18 0 24c-8-6-8-18 0-24z"/><path d="M170 15c10-8 26-8 34 0c-8 8-24 8-34 0zM170 15c-10-8-26-8-34 0c8 8 24 8 34 0z"/><circle cx="214" cy="15" r="2" fill="currentColor"/><circle cx="126" cy="15" r="2" fill="currentColor"/><path d="M60 15c4-6 10-6 14 0c-4 6-10 6-14 0zM266 15c4-6 10-6 14 0c-4 6-10 6-14 0z"/></svg></div>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Visit</span>
+      <h2>Find <em>Studio #11.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <ul id="hours">
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10:00 AM – 6:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>10:00 AM – 6:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9:00 AM – 4:00 PM</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="find reveal">
+        <div class="map"><iframe title="Map to Majida's Spa and Waxing" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=210%2025th%20Avenue%20North%2C%20Nashville%2C%20TN%2037203&output=embed"></iframe></div>
+        <div class="info">
+          <h3>Salons by JC</h3>
+          <address>210 25th Avenue North, Suite #11<br>Nashville, TN 37203</address>
+          <p class="note">Majida's is a studio inside Salons by JC. Look for the "Salons by JC" sign.</p>
+          <div class="row">
+            <a class="btn btn-solid" href="tel:+16157387124">Call 615-738-7124</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=210%2025th%20Avenue%20North%2C%20Nashville%2C%20TN%2037203" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap reveal">
+    <span class="kicker">Ready when you are</span>
+    <h2>Your next facial is <em>a few taps away.</em></h2>
+    <div class="cta">
+      <a class="btn btn-solid" href="https://square.site/book/8SZ5VA85QADAW/majida-s-spa-and-waxing-nashville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="https://instagram.com/majidasspaandwaxing" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top" style="border:0">Majida's Spa and Waxing</a><p style="margin-top:6px">Facials · Peels · Waxing · Tint</p></div>
+    <div>210 25th Avenue North, Suite #11<br>Nashville, TN 37203<br><a href="tel:+16157387124">615-738-7124</a></div>
+    <div>Tue &amp; Fri 9–5 · Wed &amp; Thu 10–6<br>Sat 9–4 · Sun &amp; Mon closed<br><a href="https://instagram.com/majidasspaandwaxing" target="_blank" rel="noopener">@majidasspaandwaxing</a></div>
+    <div class="credit">Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-ghost" href="tel:+16157387124">Call</a>
+  <a class="btn btn-solid" href="https://square.site/book/8SZ5VA85QADAW/majida-s-spa-and-waxing-nashville-tn" target="_blank" rel="noopener">Book now</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // hours: today highlight + open-now line (Nashville time)
+  var H={0:null,1:null,2:[9,17],3:[10,18],4:[10,18],5:[9,17],6:[9,16]};
+  var now;
+  try{now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}))}catch(e){now=new Date()}
+  var d=now.getDay(), hr=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var o=document.getElementById('openNow');
+  function fmt(h){var p=h>=12?'PM':'AM';var x=h%12||12;return x+':00 '+p}
+  if(o){
+    var t=H[d];
+    if(t&&hr>=t[0]&&hr<t[1]) o.textContent='Open today until '+fmt(t[1]);
+    else if(t&&hr<t[0]) o.textContent='Opens today at '+fmt(t[0]);
+    else o.textContent='Open Tue to Sat';
+  }
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var title=document.getElementById('cardTitle');
+  tabs.forEach(function(tb){tb.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    tb.setAttribute('aria-selected','true');document.getElementById(tb.getAttribute('aria-controls')).hidden=false;
+    title.textContent=tb.textContent;
+  })});
+  // reveal (content visible without JS; fallback shows all after 1.5s)
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.remove('pre')})}
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>window.innerHeight*0.95)e.classList.add('pre')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.remove('pre');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

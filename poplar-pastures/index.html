@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Poplar Pastures — Sparta, TN</title>
+<meta name="description" content="Concept site for Poplar Pastures, a grass-fed, regenerative Katahdin sheep farm in Sparta, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16201A; --ink2:#1F2C23; --moss:#3E5A3A; --sage:#9DB38A; --sage2:#C9D6B6;
+  --gold:#E2AE3A; --gold2:#F2CF7A; --clay:#B4552E; --bone:#F4EFE3; --bone2:#EAE2CF; --text:#24302A; --muted:#5B665E;
+  --serif:"Gloock",Georgia,serif; --sans:"Figtree",system-ui,-apple-system,Segoe UI,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,64px); --max:1180px; --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--text);background:var(--bone);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+a[href^="tel:"]{white-space:nowrap}
+.g>*{min-width:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* concept banner */
+.concept{background:#0E1510;color:#C9D1C4;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.concept b{color:var(--gold2);font-weight:600}
+.concept .short{display:none}
+@media(max-width:520px){.concept .long{display:none}.concept .short{display:inline}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(22,32,26,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(226,174,58,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bone)}
+.brand span{font-family:var(--serif);font-size:1.25rem;letter-spacing:.01em;white-space:nowrap}
+.nav ul{display:none;list-style:none;gap:28px}
+.nav ul a{color:#D6DccF;text-decoration:none;font-size:.92rem;font-weight:500;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;background:var(--gold);transition:right .3s}
+.nav ul a:hover::after{right:0}
+.nav .call{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--ink);font-weight:700;font-size:.88rem;padding:9px 16px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:transform .2s,background .2s}
+.nav .call:hover{background:var(--gold2);transform:translateY(-1px)}
+@media(min-width:900px){.nav ul{display:flex}}
+@media(max-width:380px){.nav .call .t{display:none}.nav .call{padding:9px 12px}}
+
+/* hero */
+.hero{background:var(--ink);color:var(--bone);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 85% 0%,rgba(226,174,58,.16),transparent 60%),radial-gradient(90% 60% at 0% 100%,rgba(157,179,138,.12),transparent 60%);pointer-events:none}
+.hero-in{display:grid;gap:8px;padding-top:44px;position:relative}
+.eyebrow{color:var(--gold2);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,11vw,5.6rem);line-height:.98;letter-spacing:-.01em;margin:18px 0 18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero h1 .u{background:linear-gradient(transparent 78%,rgba(226,174,58,.35) 78%);}
+.lede{color:#CFD7C8;font-size:1.06rem;max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn svg{width:18px;height:18px}
+.btn-gold{background:var(--gold);color:var(--ink)}
+@media(max-width:400px){.ctas{gap:10px}.ctas .btn{padding:0 16px;font-size:.95rem}}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(244,239,227,.35);color:var(--bone)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2);transform:translateY(-2px)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;color:#AEB9A8}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage)}
+.hero-art{position:relative;margin:24px calc(var(--pad) * -1) 0;min-height:0}
+.hero-art svg{width:100%;height:auto}
+@media(max-width:899px){.hero-in{padding-top:34px}.hero h1{margin:14px 0 14px}.hero .facts{display:none}.hero-art{height:262px;overflow:hidden;display:flex;align-items:flex-end;margin-top:14px}.hero-art svg{height:330px;flex:none}}
+@media(min-width:900px){
+  .hero-in{grid-template-columns:1.05fr 1fr;align-items:end;padding-top:72px;gap:24px}
+  .hero-copy{padding-bottom:84px}
+  .hero-art{margin:0 calc(var(--pad) * -1) 0 -40px;-webkit-mask:linear-gradient(90deg,transparent,#000 22%,#000 86%,transparent);mask:linear-gradient(90deg,transparent,#000 22%,#000 86%,transparent)}
+}
+.sway{transform-origin:50% 100%;transform-box:fill-box;animation:sway 7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.2deg)}}
+.graze{animation:graze 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:20% 60%}
+.graze.d2{animation-delay:-1.6s}.graze.d3{animation-delay:-3s}
+@keyframes graze{0%,60%,100%{transform:rotate(0)}70%,90%{transform:rotate(9deg)}}
+.firefly{animation:blink 3.6s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:.15}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* sections */
+section{scroll-margin-top:64px}
+.sec{padding:clamp(64px,9vw,112px) 0}
+.kicker{color:var(--clay);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.kicker::before{content:"";width:22px;height:1px;background:currentColor}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,6.5vw,3.4rem);line-height:1.04;letter-spacing:-.005em;color:var(--ink);max-width:18ch}
+h2 em{font-style:normal;color:var(--moss)}
+.sub{color:var(--muted);max-width:56ch;margin-top:14px;font-size:1.04rem}
+
+/* quote band */
+.quote{background:var(--bone2);border-top:1px solid #DCD2BC;border-bottom:1px solid #DCD2BC}
+.quote .wrap{display:grid;gap:18px;padding-top:48px;padding-bottom:48px;align-items:center}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.55rem,5vw,2.5rem);line-height:1.18;color:var(--ink);max-width:24ch}
+.quote blockquote::before{content:"\201C";color:var(--gold);margin-right:2px}
+.quote blockquote::after{content:"\201D";color:var(--gold)}
+.quote cite{font-style:normal;color:var(--muted);font-size:.9rem}
+@media(min-width:900px){.quote .wrap{grid-template-columns:auto 1fr;gap:48px}}
+.leaf{width:64px;height:64px;color:var(--moss)}
+
+/* offerings */
+.offer-grid{display:grid;gap:16px;margin-top:40px}
+@media(min-width:640px){.offer-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.offer-grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:#FBF8F0;border:1px solid #E1D8C3;border-radius:22px;padding:24px 22px 24px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(22,32,26,.45);border-color:var(--sage)}
+.card .ic{width:76px;height:76px;border-radius:18px;background:var(--ink);display:grid;place-items:center;margin-bottom:20px}
+.card .ic svg{width:48px;height:48px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:1.55rem;color:var(--ink);line-height:1.1}
+.card p{color:var(--muted);margin-top:8px;font-size:.98rem}
+.card .tag{margin-top:16px;display:inline-block;color:var(--moss);background:#E6ECDA;padding:5px 10px;border-radius:999px}
+.note{margin-top:22px;color:var(--muted);font-size:.92rem}
+.note a{color:var(--moss);font-weight:600}
+
+/* rotation */
+.rot{background:var(--ink);color:var(--bone);position:relative;overflow:hidden}
+.rot h2{color:var(--bone)}.rot h2 em{color:var(--gold)}
+.rot .sub{color:#B9C3B2}
+.rot .kicker{color:var(--gold2)}
+.rot-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.rot-grid{grid-template-columns:1fr 1.1fr;gap:64px}}
+.paddocks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:#0F1712;padding:8px;border-radius:20px;border:1px solid rgba(226,174,58,.22)}
+.pd{position:relative;aspect-ratio:1/0.82;border-radius:12px;background:#24372A;overflow:hidden;transition:background .8s}
+.pd .grass{position:absolute;left:0;right:0;bottom:0;height:var(--h,60%);background:repeating-linear-gradient(90deg,#5E8050 0 3px,#4B6B41 3px 7px);-webkit-mask:linear-gradient(transparent,#000 22%);mask:linear-gradient(transparent,#000 22%);transition:height 1.6s cubic-bezier(.3,.7,.2,1)}
+.pd .lbl{position:absolute;left:10px;top:9px;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:#C6D0BE;text-transform:uppercase}
+.pd.on{background:#3A5131}
+.pd.on .lbl{color:var(--gold2)}
+.pd .flock{position:absolute;inset:auto 0 10% 0;display:flex;justify-content:center;gap:2px;opacity:0;transform:translateY(8px);transition:opacity .6s,transform .6s}
+.pd.on .flock{opacity:1;transform:none}
+.pd .flock svg{width:30%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:14px;color:#AEB9A8}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+.steps{list-style:none;margin-top:28px;display:grid;gap:14px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:16px 0;border-top:1px solid rgba(244,239,227,.12)}
+.steps li>*{min-width:0}
+.steps .n{font-family:var(--serif);font-size:1.5rem;color:var(--gold);line-height:1.2}
+.steps b{display:block;color:var(--bone);font-weight:600}
+.steps span{color:#B9C3B2;font-size:.97rem}
+.small{font-size:.8rem;color:#8E9A88;margin-top:12px}
+
+/* almanac */
+.alm-grid{display:grid;gap:40px;align-items:center;margin-top:8px}
+@media(min-width:900px){.alm-grid{grid-template-columns:1fr 1fr;gap:72px}}
+.wheel{width:min(100%,440px);margin:0 auto}
+.wheel .arc{fill:none;stroke-linecap:round;stroke-dasharray:0 1000;transition:stroke-dasharray 1.6s cubic-bezier(.3,.7,.2,1)}
+.alm-list{list-style:none;display:grid;gap:4px;margin-top:28px}
+.alm-list li{display:grid;grid-template-columns:18px 108px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #DCD2BC;align-items:baseline}
+.alm-list li>*{min-width:0}
+.alm-list i{width:12px;height:12px;border-radius:50%;display:block;transform:translateY(1px)}
+.alm-list .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.alm-list .what{color:var(--muted);font-size:.97rem}
+@media(max-width:400px){.alm-list li{grid-template-columns:14px 84px 1fr;gap:10px}}
+
+/* hours */
+.hours{background:var(--bone2)}
+.hrs-grid{display:grid;gap:36px;margin-top:36px}
+@media(min-width:900px){.hrs-grid{grid-template-columns:1.1fr .9fr;gap:56px}}
+.week{background:#FBF8F0;border:1px solid #E1D8C3;border-radius:22px;padding:8px 6px;list-style:none}
+.week li{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:center;padding:14px 16px;border-radius:14px;transition:background .3s}
+.week li>*{min-width:0}
+.week .d{font-weight:700;color:var(--ink)}
+.week .h{color:var(--muted);font-size:.95rem}
+.week .h b{color:var(--ink);font-weight:600}
+.week .t{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--gold2);padding:4px 8px;border-radius:999px;visibility:hidden}
+.week li.today{background:var(--ink)}
+.week li.today .d{color:var(--gold2)}
+.week li.today .h,.week li.today .h b{color:var(--bone)}
+.week li.today .t{visibility:visible;background:var(--gold);color:var(--ink)}
+@media(max-width:520px){.week li{grid-template-columns:44px 1fr auto;padding:13px 12px}.week .d{font-size:0}.week .d::before{content:attr(data-ab);font-size:1rem}}
+.week .off{display:block;font-size:.8rem;color:var(--clay);margin-top:2px}
+.week li.today .off{color:var(--gold2)}
+.callout{background:var(--ink);color:var(--bone);border-radius:22px;padding:28px 26px;position:relative;overflow:hidden}
+.callout h3{font-family:var(--serif);font-weight:400;font-size:1.8rem;line-height:1.1}
+.callout p{color:#C3CCBC;margin-top:10px}
+.callout .btn{margin-top:20px}
+.callout{display:flex;flex-direction:column;align-items:flex-start}
+.mini{list-style:none;width:100%;margin-top:26px;border-top:1px solid rgba(244,239,227,.14);position:relative}
+.mini li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(244,239,227,.1);font-size:.66rem;letter-spacing:.1em}
+.mini span{color:#9FAB99}.mini b{color:var(--gold2);font-weight:500;text-align:right}
+.callout .bg{position:absolute;right:-30px;bottom:-30px;width:180px;opacity:.14;color:var(--gold)}
+
+/* visit */
+.visit-grid{display:grid;gap:28px;margin-top:36px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:40px;align-items:stretch}}
+.addr{background:#FBF8F0;border:1px solid #E1D8C3;border-radius:22px;padding:28px 24px;display:flex;flex-direction:column;gap:18px}
+.addr .row{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.addr .row>*{min-width:0}
+.addr .row svg{width:40px;height:40px;padding:9px;border-radius:12px;background:#E6ECDA;color:var(--moss)}
+.addr .row b{display:block;color:var(--ink);font-weight:600}
+.addr .row a,.addr .row span{color:var(--muted);text-decoration:none;overflow-wrap:anywhere}
+.addr .row a:hover{color:var(--moss);text-decoration:underline}
+.addr .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn-ink{background:var(--ink);color:var(--bone)}.btn-ink:hover{background:var(--moss);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}.btn-line:hover{background:var(--ink);color:var(--bone);transform:translateY(-2px)}
+.map{border-radius:22px;overflow:hidden;border:1px solid #E1D8C3;min-height:320px;background:#E6ECDA}
+.map{position:relative;background:#E6ECDA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 60Q30 40 60 60T120 60M0 20Q30 0 60 20T120 20M0 100Q30 80 60 100T120 100' fill='none' stroke='%239DB38A' stroke-opacity='.5'/%3E%3C/svg%3E")}
+.map .pin{white-space:nowrap;position:absolute;left:50%;top:50%;transform:translate(-50%,-60%);text-align:center;color:var(--ink);font-weight:600;font-size:.9rem}
+.map .pin svg{width:44px;height:44px;margin:0 auto 6px;color:var(--clay)}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:320px;border:0;display:block;filter:saturate(.85)}
+
+/* footer */
+footer{background:#0E1510;color:#9AA595;padding:56px 0 40px}
+.foot{display:grid;gap:28px}
+@media(min-width:900px){.foot{grid-template-columns:1.2fr 1fr 1fr}}
+footer .brand span{font-size:1.5rem}
+footer h4{font-family:var(--mono);font-weight:500;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:10px}
+footer a{color:#D6DCCF;text-decoration:none}footer a:hover{color:var(--gold2)}
+footer p{font-size:.93rem}
+.fine{border-top:1px solid rgba(255,255,255,.08);margin-top:36px;padding-top:20px;font-size:.82rem;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(14,21,16,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(226,174,58,.25);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.mbar>*{min-width:0}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;font-weight:700;text-decoration:none;font-size:.98rem;white-space:nowrap}
+.mbar svg{width:18px;height:18px;flex:none}
+.mbar .c{background:var(--gold);color:var(--ink)}
+.mbar .e{border:1.5px solid rgba(244,239,227,.3);color:var(--bone)}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal: visible by default; JS only adds the hidden-then-in effect */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="concept" role="note"><span class="long">Concept site by <b>Code Craft Media</b>, made for Poplar Pastures. Not live.</span><span class="short">Concept by <b>Code Craft Media</b> · Not live</span></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Katahdin hair sheep: sleek coat, no wool puff -->
+    <symbol id="sheep" viewBox="0 0 64 40">
+      <path d="M12 13c4-5 22-6 31-3 6 2 9 6 9 11 0 6-5 9-12 9H19c-7 0-11-3-11-8 0-4 1-7 4-9z" fill="currentColor"/>
+      <rect x="16" y="27" width="3.2" height="12" rx="1.4" fill="#2A2420"/><rect x="22" y="28" width="3.2" height="11" rx="1.4" fill="#2A2420"/>
+      <rect x="38" y="27" width="3.2" height="12" rx="1.4" fill="#2A2420"/><rect x="44" y="28" width="3.2" height="11" rx="1.4" fill="#2A2420"/>
+      <path d="M50 13c3-3 9-3 11 1 2 3 1 8-2 9l-5 1c-3 0-5-3-5-6z" fill="currentColor"/>
+      <path d="M53 12l-4-4 1 5z" fill="currentColor"/>
+      <circle cx="57.4" cy="16" r="1.1" fill="#2A2420"/>
+      <path d="M8 16c-3 0-5 3-4 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="tulipleaf" viewBox="0 0 64 64">
+      <path d="M32 58V30M32 30c-4-6-14-7-20-5 0 9 4 18 10 20l-4 6c6 1 10-2 14-6 4 4 8 7 14 6l-4-6c6-2 10-11 10-20-6-2-16-1-20 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M22 18c4-1 7 1 10 6 3-5 6-7 10-6l-2-8c-3 0-6 2-8 4-2-2-5-4-8-4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3l2 5-2 1.5a12 12 0 0 0 6.5 6.5L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Poplar Pastures home">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true" style="color:var(--gold)"><use href="#tulipleaf"/></svg>
+      <span>Poplar Pastures</span>
+    </a>
+    <ul>
+      <li><a href="#farm">The farm</a></li>
+      <li><a href="#offer">Lamb &amp; eggs</a></li>
+      <li><a href="#year">Farm year</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="call" href="tel:+16303101622"><svg width="16" height="16"><use href="#i-phone"/></svg><span class="t">630-310-1622</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-in g">
+    <div class="hero-copy">
+      <p class="mono eyebrow">Sparta, TN · Katahdin hair sheep</p>
+      <h1 id="h1">Lamb raised <span class="u">one&nbsp;paddock</span> at a&nbsp;time.</h1>
+      <p class="lede">A grass-fed, regenerative sheep farm in Sparta, TN. Whole lambs, cuts and eggs, plus farm tours in summer.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="tel:+16303101622"><svg><use href="#i-phone"/></svg>Call the farm</a>
+        <a class="btn btn-ghost" href="#hours">Plan a visit <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="facts mono"><span>Grass-fed</span><span>Rotational grazing</span><span>Spring lambing</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 640 520" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4C6B42"/><stop offset="1" stop-color="#2D4229"/></linearGradient>
+          <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#36503A"/><stop offset="1" stop-color="#1D2C21"/></linearGradient>
+          <linearGradient id="hill3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6B8A55"/><stop offset="1" stop-color="#3F5A37"/></linearGradient>
+          <linearGradient id="pop" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2E4A2E"/><stop offset=".55" stop-color="#557A43"/><stop offset="1" stop-color="#2A4229"/></linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F2CF7A"/><stop offset=".6" stop-color="#E2AE3A" stop-opacity=".55"/><stop offset="1" stop-color="#E2AE3A" stop-opacity="0"/></radialGradient>
+          <clipPath id="frontclip"><path d="M0 372C120 338 250 330 380 344 480 355 570 352 640 340V520H0z"/></clipPath>
+        </defs>
+        <!-- sun -->
+        <circle cx="430" cy="150" r="120" fill="url(#sun)" opacity=".55"/>
+        <circle cx="430" cy="150" r="46" fill="#F2CF7A" opacity=".9"/>
+        <!-- contour rings: "improving our land" -->
+        <g fill="none" stroke="#E2AE3A" stroke-opacity=".14" stroke-width="1">
+          <path d="M-20 250C90 200 210 196 330 214S540 236 680 196"/>
+          <path d="M-20 222C90 172 210 168 330 186S540 208 680 168"/>
+          <path d="M-20 194C90 144 210 140 330 158S540 180 680 140"/>
+        </g>
+        <!-- far ridge -->
+        <path d="M0 300C70 268 140 262 210 274S330 250 410 246 560 262 640 250V520H0z" fill="url(#hill2)"/>
+        <!-- mid hill with paddock fences -->
+        <path d="M0 336C110 300 230 296 340 310S540 300 640 290V520H0z" fill="url(#hill1)"/>
+        <g stroke="#E2AE3A" stroke-opacity=".5" stroke-width="1.4" fill="none" stroke-dasharray="2 5">
+          <path d="M120 312L96 400"/><path d="M262 300L250 404"/><path d="M400 308L414 404"/><path d="M540 298L566 400"/>
+        </g>
+        <!-- front pasture: paddock cells in different regrowth states -->
+        <g clip-path="url(#frontclip)">
+          <rect x="0" y="330" width="640" height="200" fill="url(#hill3)"/>
+          <path d="M0 330H170L150 520H0z" fill="#56763F" opacity=".7"/>
+          <path d="M170 330H330L330 520H150z" fill="#82A163" opacity=".55"/>
+          <path d="M330 330H480L512 520H330z" fill="#3E5A33" opacity=".55"/>
+          <path d="M480 330H640V520H512z" fill="#5E7E48" opacity=".5"/>
+          <g stroke="#F4EFE3" stroke-opacity=".55" stroke-width="1.6"><path d="M170 330L150 520"/><path d="M330 330V520"/><path d="M480 330L512 520"/></g>
+          <!-- grass ticks -->
+          <g stroke="#C9D6B6" stroke-opacity=".35" stroke-width="1.4" stroke-linecap="round">
+            <path d="M30 470l3-10M44 488l2-9M80 452l3-11M110 494l2-8M200 468l2-6M236 490l2-6M276 458l2-6M300 498l2-6M360 470l3-12M392 492l2-11M430 456l3-12M456 500l3-12M540 470l3-10M580 494l2-9M612 456l3-10"/>
+          </g>
+        </g>
+        <!-- fence posts -->
+        <g fill="#C9B48A"><rect x="166" y="352" width="4" height="22" rx="1"/><rect x="160" y="420" width="4" height="26" rx="1"/><rect x="328" y="356" width="4" height="22" rx="1"/><rect x="328" y="430" width="4" height="26" rx="1"/><rect x="483" y="350" width="4" height="22" rx="1"/><rect x="494" y="424" width="4" height="26" rx="1"/></g>
+        <!-- the tall poplar -->
+        <g class="sway">
+          <rect x="551" y="210" width="9" height="150" rx="3" fill="#3B2C22"/>
+          <path d="M556 40C520 92 512 168 518 240 522 290 536 330 556 344 576 330 590 290 594 240 600 168 592 92 556 40z" fill="url(#pop)"/>
+          <g fill="none" stroke="#9DB38A" stroke-opacity=".45" stroke-width="1.6" stroke-linecap="round">
+            <path d="M540 120c8 6 16 6 24 0M534 170c12 8 32 8 44 0M530 222c14 9 38 9 52 0M534 276c12 8 32 8 44 0"/>
+          </g>
+          <path d="M556 60V330" stroke="#1E3020" stroke-opacity=".5" stroke-width="1.4"/>
+        </g>
+        <!-- grazing flock in the fresh paddock -->
+        <g color="#EFE7D6">
+          <g class="graze"><use href="#sheep" x="186" y="372" width="78" height="49"/></g>
+          <g class="graze d2" color="#C99A6B"><use href="#sheep" x="250" y="398" width="66" height="41"/></g>
+          <g class="graze d3"><use href="#sheep" x="200" y="438" width="88" height="55"/></g>
+          <g color="#E3D5BA"><use href="#sheep" x="268" y="460" width="50" height="31" transform="translate(586 0) scale(-1 1)"/></g>
+        </g>
+        <!-- labels -->
+        <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#F4EFE3">
+          <text x="196" y="352" fill="#F2CF7A">GRAZING NOW</text>
+          <text x="352" y="376" opacity=".75">RESTING</text>
+          <text x="40" y="376" opacity=".75">REGROWING</text>
+        </g>
+        <!-- fireflies -->
+        <g fill="#F2CF7A"><circle class="firefly" cx="96" cy="250" r="2"/><circle class="firefly" cx="380" cy="270" r="1.6" style="animation-delay:-1.2s"/><circle class="firefly" cx="470" cy="236" r="1.8" style="animation-delay:-2.4s"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="farm" aria-label="In the farm's own words">
+  <div class="wrap g">
+    <svg class="leaf" viewBox="0 0 64 64" aria-hidden="true"><use href="#tulipleaf"/></svg>
+    <div class="rv">
+      <blockquote>Our goal is to raise healthy, happy animals while improving our land.</blockquote>
+      <cite>Poplar Pastures, in its own words</cite>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="offer" aria-labelledby="offer-h">
+  <div class="wrap">
+    <p class="mono kicker">From the farm</p>
+    <h2 id="offer-h">Grass-fed lamb, <em>straight from the pasture</em>.</h2>
+    <p class="sub">Poplar Pastures sells whole lambs and cuts, eggs, and tours of the farm. Call or email to ask what’s available this season.</p>
+    <div class="offer-grid g">
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg></div>
+        <h3>Whole lambs</h3>
+        <p>Grass-fed Katahdin lamb, sold whole to fill the freezer.</p>
+        <span class="mono tag">Custom lamb</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#F2CF7A" stroke-width="2.2" stroke-linejoin="round"><path d="M10 20c0-6 6-10 14-10s14 4 14 10c0 4-2 6-2 10 0 5-5 8-12 8s-12-3-12-8c0-4-2-6-2-10z"/><circle cx="24" cy="25" r="4"/></svg></div>
+        <h3>Lamb cuts</h3>
+        <p>Prefer smaller amounts? The farm also sells lamb by the cut.</p>
+        <span class="mono tag">Custom lamb</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#F4EFE3" stroke-width="2.2"><path d="M24 8c-8 0-13 12-13 19a13 13 0 0 0 26 0c0-7-5-19-13-19z"/><path d="M18 28a6 6 0 0 0 6 6" stroke="#F2CF7A" stroke-linecap="round"/></svg></div>
+        <h3>Farm eggs</h3>
+        <p>Eggs from the farm. Ask what’s available when you call.</p>
+        <span class="mono tag">Eggs</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#9DB38A" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 38h36M10 38V22l14-10 14 10v16"/><path d="M19 38v-9h10v9" stroke="#F2CF7A"/><path d="M24 12v-4"/></svg></div>
+        <h3>Facility tours</h3>
+        <p>See the flock and the pastures in person, May through August.</p>
+        <span class="mono tag">Agritourism</span>
+      </article>
+    </div>
+    <p class="note">Visitors are welcome, but please call ahead: <a href="tel:+16303101622">630-310-1622</a>.</p>
+  </div>
+</section>
+
+<section class="sec rot" aria-labelledby="rot-h">
+  <div class="wrap rot-grid g">
+    <div class="rv">
+      <p class="mono kicker">How the flock is raised</p>
+      <h2 id="rot-h">Moved to fresh grass, <em>so the land can rest</em>.</h2>
+      <p class="sub">“We rotationally graze our flock of Katahdin hair sheep on grass.” Katahdins are hair sheep: they shed their coat instead of growing wool.</p>
+      <ul class="steps">
+        <li><span class="n">01</span><div><b>Graze</b><span>The flock works one paddock of fresh grass.</span></div></li>
+        <li><span class="n">02</span><div><b>Move</b><span>They rotate on to the next paddock.</span></div></li>
+        <li><span class="n">03</span><div><b>Rest</b><span>The grazed ground gets time to grow back.</span></div></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <div class="paddocks" id="paddocks" aria-label="Animated illustration of rotational grazing">
+        <div class="pd"><span class="lbl">P1</span><div class="grass"></div><div class="flock"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg><svg viewBox="0 0 64 40" style="color:#C99A6B"><use href="#sheep"/></svg></div></div>
+        <div class="pd"><span class="lbl">P2</span><div class="grass"></div><div class="flock"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg><svg viewBox="0 0 64 40" style="color:#C99A6B"><use href="#sheep"/></svg></div></div>
+        <div class="pd"><span class="lbl">P3</span><div class="grass"></div><div class="flock"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg><svg viewBox="0 0 64 40" style="color:#C99A6B"><use href="#sheep"/></svg></div></div>
+        <div class="pd"><span class="lbl">P4</span><div class="grass"></div><div class="flock"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg><svg viewBox="0 0 64 40" style="color:#C99A6B"><use href="#sheep"/></svg></div></div>
+        <div class="pd"><span class="lbl">P5</span><div class="grass"></div><div class="flock"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg><svg viewBox="0 0 64 40" style="color:#C99A6B"><use href="#sheep"/></svg></div></div>
+        <div class="pd"><span class="lbl">P6</span><div class="grass"></div><div class="flock"><svg viewBox="0 0 64 40" style="color:#EFE7D6"><use href="#sheep"/></svg><svg viewBox="0 0 64 40" style="color:#C99A6B"><use href="#sheep"/></svg></div></div>
+      </div>
+      <div class="legend mono"><span><i style="background:#3A5131;outline:1px solid #F2CF7A"></i>Grazing</span><span><i style="background:#5E8050"></i>Grass height</span></div>
+      <p class="small">Illustration of the idea, not a map of the farm.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="year" aria-labelledby="year-h">
+  <div class="wrap alm-grid g">
+    <div class="rv">
+      <svg class="wheel" viewBox="0 0 400 400" role="img" aria-label="The farm year: fall breeding, winter hay, grain before lambing, spring lambing in April and May, tours May to August">
+        <circle cx="200" cy="200" r="182" fill="#16201A"/>
+        <circle cx="200" cy="200" r="182" fill="none" stroke="#E2AE3A" stroke-opacity=".3"/>
+        <g id="ticks" stroke="#F4EFE3" stroke-opacity=".25" stroke-width="1"></g>
+        <g id="months" font-family="IBM Plex Mono, monospace" font-size="12" fill="#C9D1C4" text-anchor="middle" dominant-baseline="middle" letter-spacing="1"></g>
+        <circle cx="200" cy="200" r="132" fill="none" stroke="#F4EFE3" stroke-opacity=".08" stroke-width="16"/>
+        <circle cx="200" cy="200" r="106" fill="none" stroke="#F4EFE3" stroke-opacity=".08" stroke-width="12"/>
+        <!-- outer ring: flock year; inner ring: visitors -->
+        <circle class="arc" data-start="8.2" data-len="2.6" cx="200" cy="200" r="132" stroke="#B4552E" stroke-width="16"/>
+        <circle class="arc" data-start="11.15" data-len="2.7" cx="200" cy="200" r="132" stroke="#C9D6B6" stroke-width="16"/>
+        <circle class="arc" data-start="2.15" data-len="0.7" cx="200" cy="200" r="132" stroke="#E2AE3A" stroke-width="16"/>
+        <circle class="arc" data-start="3.15" data-len="1.7" cx="200" cy="200" r="132" stroke="#F4EFE3" stroke-width="16"/>
+        <circle class="arc" data-start="4.15" data-len="3.7" cx="200" cy="200" r="106" stroke="#7FA067" stroke-width="12"/>
+        <g text-anchor="middle">
+          <text x="200" y="186" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#F2CF7A">THE FARM YEAR</text>
+          <text x="200" y="220" font-family="Gloock, Georgia, serif" font-size="30" fill="#F4EFE3">Poplar</text>
+          <text x="200" y="250" font-family="Gloock, Georgia, serif" font-size="30" fill="#F4EFE3">Pastures</text>
+        </g>
+      </svg>
+    </div>
+    <div class="rv">
+      <p class="mono kicker">The farm year</p>
+      <h2 id="year-h">Bred in fall, <em>born in spring</em>.</h2>
+      <p class="sub">The flock’s calendar, as the farm describes it.</p>
+      <ul class="alm-list">
+        <li><i style="background:#B4552E"></i><span class="when">Fall</span><span class="what">Ewes are bred for spring lambs.</span></li>
+        <li><i style="background:#C9D6B6;outline:1px solid #9DB38A"></i><span class="when">Winter</span><span class="what">Top-quality hay while the grass rests.</span></li>
+        <li><i style="background:#E2AE3A"></i><span class="when">Pre-lambing</span><span class="what">Grain for the 4 weeks before lambing, for good nutrition late in pregnancy.</span></li>
+        <li><i style="background:#F4EFE3;outline:1px solid #B9AE95"></i><span class="when">Apr – May</span><span class="what">Spring lambing.</span></li>
+        <li><i style="background:#7FA067"></i><span class="when">May – Aug</span><span class="what">Facility tours, Monday to Friday.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec hours" id="hours" aria-labelledby="hours-h">
+  <div class="wrap">
+    <p class="mono kicker">Hours &amp; visits</p>
+    <h2 id="hours-h">Saturdays on the farm. <em>Tours all summer.</em></h2>
+    <div class="hrs-grid g">
+      <ul class="week" id="week">
+        <li data-d="1"><span class="d" data-ab="Mon">Monday</span><span class="h"><b>Facility tours</b> · May–Aug</span><span class="t">Today</span></li>
+        <li data-d="2"><span class="d" data-ab="Tue">Tuesday</span><span class="h"><b>Facility tours</b> · May–Aug</span><span class="t">Today</span></li>
+        <li data-d="3"><span class="d" data-ab="Wed">Wednesday</span><span class="h"><b>Facility tours</b> · May–Aug</span><span class="t">Today</span></li>
+        <li data-d="4"><span class="d" data-ab="Thu">Thursday</span><span class="h"><b>Facility tours</b> · May–Aug</span><span class="t">Today</span></li>
+        <li data-d="5"><span class="d" data-ab="Fri">Friday</span><span class="h"><b>Facility tours</b> · May–Aug</span><span class="t">Today</span></li>
+        <li data-d="6"><span class="d" data-ab="Sat">Saturday</span><span class="h"><b>On-farm sale</b></span><span class="t">Today</span></li>
+        <li data-d="0"><span class="d" data-ab="Sun">Sunday</span><span class="h">Not listed</span><span class="t">Today</span></li>
+      </ul>
+      <div class="callout rv">
+        <svg class="bg" viewBox="0 0 64 64" aria-hidden="true"><use href="#tulipleaf"/></svg>
+        <h3>Please call ahead</h3>
+        <p>Farm visits are welcome. The farm asks that you call before you come out.</p>
+        <ul class="mini mono"><li><span>On-farm sale</span><b>Saturdays</b></li><li><span>Facility tours</span><b>May–Aug · Mon–Fri</b></li><li><span>Spring lambing</span><b>Apr – May</b></li></ul>
+        <a class="btn btn-gold" href="tel:+16303101622"><svg><use href="#i-phone"/></svg>630-310-1622</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <p class="mono kicker">Find the farm</p>
+    <h2 id="visit-h">Come see the <em>flock in Sparta</em>.</h2>
+    <div class="visit-grid g">
+      <div class="addr rv">
+        <div class="row"><svg><use href="#i-pin"/></svg><div><b>Poplar Pastures</b><span>1326 Mt Carmel Church Rd<br>Sparta, TN 38583</span></div></div>
+        <div class="row"><svg><use href="#i-phone"/></svg><div><b>Call</b><a href="tel:+16303101622">630-310-1622</a></div></div>
+        <div class="row"><svg><use href="#i-mail"/></svg><div><b>Email</b><a href="mailto:jessicastorch@gmail.com?subject=Poplar%20Pastures%20lamb">jessicastorch@gmail.com</a></div></div>
+        <div class="btns">
+          <a class="btn btn-ink" href="https://www.google.com/maps/dir/?api=1&amp;destination=1326%20Mt%20Carmel%20Church%20Rd%2C%20Sparta%2C%20TN%2038583" target="_blank" rel="noopener">Get directions <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line" href="tel:+16303101622">Call first</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <div class="pin" aria-hidden="true"><svg><use href="#i-pin"/></svg>1326 Mt Carmel Church Rd<br>Sparta, TN</div>
+        <iframe title="Map to Poplar Pastures, Sparta TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1326%20Mt%20Carmel%20Church%20Rd%2C%20Sparta%2C%20TN%2038583&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot g">
+      <div>
+        <a class="brand" href="#top"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" style="color:var(--gold)"><use href="#tulipleaf"/></svg><span>Poplar Pastures</span></a>
+        <p style="margin-top:12px;max-width:34ch">A grass-fed, regenerative sheep farm in Sparta, TN.</p>
+      </div>
+      <div><h4>Visit</h4><p>1326 Mt Carmel Church Rd<br>Sparta, TN 38583<br>On-farm sale Saturdays · please call ahead</p></div>
+      <div><h4>Contact</h4><p><a href="tel:+16303101622">630-310-1622</a><br><a href="mailto:jessicastorch@gmail.com">jessicastorch@gmail.com</a></p></div>
+    </div>
+    <div class="fine"><span>Concept by Code Craft Media</span><span>Details from the farm’s Pick Tennessee Products listing</span></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="c" href="tel:+16303101622"><svg><use href="#i-phone"/></svg>Call the farm</a>
+  <a class="e" href="mailto:jessicastorch@gmail.com?subject=Poplar%20Pastures%20lamb"><svg><use href="#i-mail"/></svg>Email</a>
+</nav>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement;
+  // today's day
+  var today=new Date().getDay();
+  var row=d.querySelector('#week li[data-d="'+today+'"]'); if(row){ row.classList.add('today');
+    var mo=new Date().getMonth(); if(today>=1&&today<=5&&(mo<4||mo>7)){var o=d.createElement('span');o.className='off';o.textContent='Tours resume in May';row.querySelector('.h').appendChild(o);} }
+
+  // wheel ticks + month letters
+  var NS='http://www.w3.org/2000/svg', M='JFMAMJJASOND';
+  var ticks=d.getElementById('ticks'), months=d.getElementById('months');
+  for(var i=0;i<12;i++){
+    var a=(i*30-90)*Math.PI/180, a2=((i+.5)*30-90)*Math.PI/180;
+    var l=d.createElementNS(NS,'line');
+    l.setAttribute('x1',200+150*Math.cos(a)); l.setAttribute('y1',200+150*Math.sin(a));
+    l.setAttribute('x2',200+182*Math.cos(a)); l.setAttribute('y2',200+182*Math.sin(a)); ticks.appendChild(l);
+    var t=d.createElementNS(NS,'text'); t.setAttribute('x',200+166*Math.cos(a2)); t.setAttribute('y',200+166*Math.sin(a2)); t.textContent=M[i]; months.appendChild(t);
+  }
+  var arcs=[].slice.call(d.querySelectorAll('.wheel .arc'));
+  function drawArcs(){
+    arcs.forEach(function(c){
+      var r=+c.getAttribute('r'), C=2*Math.PI*r, s=+c.dataset.start, n=+c.dataset.len;
+      c.setAttribute('transform','rotate('+(s*30-90)+' 200 200)');
+      c.style.strokeDasharray=(n/12*C)+' '+C;
+    });
+  }
+  // set rotation immediately so arcs are positioned even before animation
+  arcs.forEach(function(c){c.setAttribute('transform','rotate('+(+c.dataset.start*30-90)+' 200 200)');});
+
+  // paddock rotation demo
+  var pds=[].slice.call(d.querySelectorAll('#paddocks .pd')), order=[0,1,2,5,4,3], step=0;
+  function tick(){
+    pds.forEach(function(p,i){
+      var k=(step%6-order.indexOf(i)+6)%6; // steps since grazed: 0 = grazing now
+      p.classList.toggle('on',k===0);
+      p.querySelector('.grass').style.setProperty('--h', [14,28,42,56,70,84][k]+'%');
+    });
+    step++;
+  }
+  tick();
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(tick,2600);
+
+  // reveals: content is visible without JS; this only adds an entrance
+  root.classList.add('js');
+  var els=[].slice.call(d.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')}); drawArcs();}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in'); if(e.target.querySelector('.wheel')) drawArcs(); io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

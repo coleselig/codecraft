@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hallelujah Hair Co. — Mt. Juliet</title>
+<meta name="description" content="Hallelujah Hair Co., specializing in extensions + lived-in color. Suite #37, 661 S Mt Juliet Rd, Mt. Juliet, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#F3E9DC; --linen2:#EADBC8; --cream:#FBF6EF;
+  --caramel:#B9855A; --caramel-d:#8E5F38; --honey:#D9AE7E;
+  --char:#3B3A36; --char-soft:#5C5A54;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Work Sans', system-ui, -apple-system, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--linen);color:var(--char);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* banner */
+.concept{background:var(--char);color:var(--linen);font-size:clamp(8.6px,2.45vw,11px);letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(243,233,220,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(59,58,54,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.mark{font-family:var(--serif);font-size:22px;font-weight:600;text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:8px}
+.mark svg{width:26px;height:26px}
+.nav ul{display:none;list-style:none;gap:28px;font-size:14px}
+.nav ul a{text-decoration:none;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-3px;height:1px;width:0;background:var(--caramel);transition:width .3s}
+.nav ul a:hover::after{width:100%}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;text-decoration:none;font-weight:500;transition:transform .25s, background .25s, box-shadow .25s}
+.nav .pill{background:var(--char);color:var(--linen);font-size:13px;padding:9px 16px}
+.nav .pill:hover{background:var(--caramel-d)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:34px 0 56px;text-align:center}
+.halo{position:absolute;left:50%;top:-40px;width:760px;height:760px;transform:translateX(-50%);pointer-events:none;z-index:0}
+.halo .rays{stroke-opacity:.32;transform-origin:380px 380px;animation:spin 120s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel-d);font-weight:500;margin-bottom:18px}
+.logotype{font-family:var(--serif);font-weight:500;line-height:.86;letter-spacing:-.01em;font-size:clamp(64px,19vw,168px);color:var(--char)}
+.logotype em{display:block;font-style:italic;font-weight:400;color:var(--caramel);font-size:.52em;letter-spacing:.02em;margin-top:6px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(25px,6.4vw,40px);line-height:1.18;max-width:640px;margin:26px auto 0}
+.hero h1 i{color:var(--caramel-d)}
+.sub{font-size:15px;color:var(--char-soft);max-width:440px;margin:14px auto 0;font-weight:300}
+.ctas{display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:28px}
+.btn{white-space:nowrap;padding:15px 26px;font-size:15px;width:100%;max-width:300px;justify-content:center}
+.btn-dark{background:var(--char);color:var(--linen);box-shadow:0 10px 30px -12px rgba(59,58,54,.55)}
+.btn-dark:hover{background:var(--caramel-d);transform:translateY(-2px)}
+.btn-line{border:1px solid rgba(59,58,54,.35);color:var(--char)}
+.btn-line:hover{background:var(--cream);transform:translateY(-2px)}
+.btn svg{width:17px;height:17px}
+.loc-chip{margin-top:26px;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--char-soft);background:rgba(251,246,239,.75);border:1px solid rgba(185,133,90,.25);padding:8px 14px;border-radius:999px}
+.loc-chip b{font-weight:600;color:var(--char)}
+
+/* strands divider */
+.strands{height:70px;width:100%;color:var(--caramel)}
+
+/* sections */
+section{position:relative}
+.sec{padding:72px 0}
+.kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--caramel-d);font-weight:500}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,9vw,60px);line-height:1.02;margin-top:10px;letter-spacing:-.01em}
+h2 i{color:var(--caramel);font-weight:400}
+.lede{color:var(--char-soft);font-weight:300;margin-top:14px;max-width:540px}
+
+/* specialties */
+.spec{background:var(--cream)}
+.duo{display:grid;gap:18px;margin-top:36px}
+.card{position:relative;border-radius:26px;overflow:hidden;padding:30px 26px 28px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;transition:transform .4s}
+.card:hover{transform:translateY(-4px)}
+.card .art{position:absolute;inset:0;z-index:-1}
+.card .num{position:absolute;top:22px;left:26px;font-family:var(--serif);font-style:italic;font-size:20px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:40px;line-height:1}
+.card p{font-size:14.5px;margin-top:10px;max-width:340px}
+.card.a{background:linear-gradient(160deg,#C99A6E,#8E5F38);color:var(--cream)}
+.card.a p{color:rgba(251,246,239,.9)}
+.card.b{background:linear-gradient(165deg,#EADBC8 0%,#D9AE7E 55%,#B9855A 100%);color:var(--char)}
+.card.b p{color:#4a3b2e}
+
+.menu{margin-top:44px;border-top:1px solid rgba(59,58,54,.15)}
+.menu li{list-style:none;display:flex;align-items:baseline;gap:14px;padding:18px 2px;border-bottom:1px solid rgba(59,58,54,.15);transition:padding .3s, background .3s}
+.menu li:hover{padding-left:10px;background:rgba(217,174,126,.12)}
+.menu .n{font-family:var(--serif);font-style:italic;color:var(--caramel);font-size:18px;width:26px;flex:none}
+.menu .t{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.1}
+.menu .d{margin-left:auto;font-size:12px;color:var(--char-soft);text-align:right;flex:none}
+.note{font-size:13px;color:var(--char-soft);margin-top:16px;font-style:italic}
+
+/* why */
+.why{background:var(--char);color:var(--linen);overflow:hidden}
+.why .kicker{color:var(--honey)}
+.why h2 i{color:var(--honey)}
+.why .halo2{position:absolute;right:-180px;top:-160px;width:520px;height:520px;opacity:.5;pointer-events:none}
+.pts{display:grid;gap:14px;margin-top:38px;position:relative}
+.pt{border:1px solid rgba(243,233,220,.16);border-radius:20px;padding:24px 22px;background:rgba(243,233,220,.03);transition:background .3s,border-color .3s}
+.pt:hover{background:rgba(217,174,126,.08);border-color:rgba(217,174,126,.45)}
+.pt svg{width:34px;height:34px;color:var(--honey)}
+.pt h3{font-family:var(--serif);font-size:27px;font-weight:500;margin-top:14px;line-height:1.1}
+.pt p{font-size:14.5px;color:rgba(243,233,220,.75);margin-top:8px;font-weight:300}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(26px,7vw,44px);line-height:1.15;text-align:center;margin:56px auto 0;max-width:720px;color:var(--linen)}
+.quote span{color:var(--honey)}
+.quote small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(243,233,220,.55);margin-top:14px}
+
+/* hours */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:30px}
+.day{border-radius:14px;text-align:center;padding:14px 0 12px;background:var(--cream);border:1px solid rgba(59,58,54,.08);font-size:12px;font-weight:500;letter-spacing:.06em;transition:transform .3s}
+.day small{display:block;font-size:9.5px;font-weight:400;color:var(--char-soft);margin-top:4px;letter-spacing:.04em}
+.day.today{background:var(--caramel);color:var(--cream);border-color:var(--caramel);transform:translateY(-4px);box-shadow:0 12px 26px -12px rgba(142,95,56,.7)}
+.day.today small{color:var(--cream)}
+.hours-box{margin-top:22px;background:var(--cream);border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;gap:14px;border:1px solid rgba(185,133,90,.22)}
+.hours-box p{font-size:15px}
+.hours-box strong{font-family:var(--serif);font-size:26px;font-weight:500;display:block;line-height:1.1}
+
+/* visit */
+.visit{background:var(--linen2)}
+.visit-grid{display:grid;gap:22px;margin-top:34px}
+.map{position:relative;border-radius:24px;overflow:hidden;height:320px;border:1px solid rgba(59,58,54,.12);background:#F6EEE3}
+.map .mapart{position:absolute;inset:0;width:100%;height:100%}
+.map iframe{position:relative;z-index:1}
+.map iframe{width:100%;height:100%;border:0;filter:sepia(.25) saturate(.85)}
+.addr{background:var(--cream);border-radius:24px;padding:28px 24px}
+.addr h3{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.1}
+.addr address{font-style:normal;margin-top:12px;color:var(--char-soft)}
+.addr .row{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.addr .row .btn{max-width:none}
+.ig{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(59,58,54,.12);text-decoration:none;font-size:14.5px}
+.ig svg{width:22px;height:22px;color:var(--caramel-d)}
+.ig:hover span{text-decoration:underline}
+
+/* footer */
+footer{background:var(--char);color:rgba(243,233,220,.7);text-align:center;padding:46px 20px 40px;font-size:13px}
+footer .mark{justify-content:center;color:var(--linen);font-size:26px}
+footer p{margin-top:10px}
+footer .credit{margin-top:22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,233,220,.45)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(59,58,54,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+.bar a{flex:1;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:500;font-size:15px}
+.bar .call{background:var(--caramel);color:#fff}
+.bar .txt{background:rgba(243,233,220,.1);color:var(--linen);border:1px solid rgba(243,233,220,.2)}
+.bar svg{width:18px;height:18px}
+
+/* reveal */
+.reveal{transition:opacity .9s ease, transform .9s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(24px)}
+
+@media (min-width:760px){
+  :root{--bar:0px}
+  .bar{display:none}
+  body{padding-bottom:0}
+  .wrap{padding:0 40px}
+  .nav ul{display:flex}
+  .hero{padding:70px 0 100px}
+  .halo{width:1100px;height:1100px;top:-160px}
+  .ctas{flex-direction:row;justify-content:center}
+  .btn{width:auto}
+  .sec{padding:110px 0}
+  .duo{grid-template-columns:1fr 1fr;gap:24px}
+  .card{min-height:400px;padding:40px 36px}
+  .card h3{font-size:54px}
+  .pts{grid-template-columns:repeat(3,1fr);gap:18px}
+  .visit-grid{grid-template-columns:1.4fr 1fr;align-items:stretch}
+  .map{height:auto;min-height:420px}
+  .week{gap:12px}
+  .day{padding:22px 0 18px;font-size:14px}
+  .hours-box{flex-direction:row;align-items:center;justify-content:space-between;padding:30px 34px}
+  .hours-box .pill{flex:none}
+  .addr .row{flex-direction:row;flex-wrap:wrap}
+  .addr .row .btn{flex:1;min-width:150px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Hallelujah Hair Co. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="mark" aria-label="Hallelujah Hair Co. home">
+      <svg viewBox="0 0 32 32" fill="none" stroke="#B9855A" stroke-width="1.6" aria-hidden="true"><path d="M4 24a12 12 0 0 1 24 0"/><path d="M9 24a7 7 0 0 1 14 0"/><g stroke-linecap="round"><path d="M16 4v4"/><path d="M6.5 8.5l2.6 2.6"/><path d="M25.5 8.5l-2.6 2.6"/></g></svg>
+      Hallelujah
+    </a>
+    <ul>
+      <li><a href="#specialties">Specialties</a></li>
+      <li><a href="#why">The suite</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="pill" href="tel:+16293953399">Call to book</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <svg class="halo" viewBox="0 0 760 760" aria-hidden="true">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#FBF6EF" stop-opacity="1"/>
+          <stop offset=".45" stop-color="#F1DCC2" stop-opacity=".9"/>
+          <stop offset="1" stop-color="#F3E9DC" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="380" cy="380" r="380" fill="url(#glow)"/>
+      <g class="rays" stroke="#B9855A" stroke-opacity=".22" stroke-width="1.2" id="rays"></g>
+      <circle cx="380" cy="380" r="250" fill="none" stroke="#B9855A" stroke-opacity=".35" stroke-width="1"/>
+      <circle cx="380" cy="380" r="214" fill="none" stroke="#B9855A" stroke-opacity=".18" stroke-width="1" stroke-dasharray="2 7"/>
+      <circle cx="380" cy="380" r="300" fill="none" stroke="#D9AE7E" stroke-opacity=".28" stroke-width="18"/>
+    </svg>
+    <div class="wrap">
+      <span class="eyebrow reveal">Suite 37 &middot; Mt. Juliet, TN</span>
+      <div class="logotype reveal" aria-label="Hallelujah Hair Co.">Hallelujah<em>Hair Co.</em></div>
+      <h1 class="reveal">Extensions and <i>lived-in color</i>, done with a little joy.</h1>
+      <p class="sub reveal">Hallelujah Hair Co. is a private suite at Salons by JC, specializing in extensions + lived-in color.</p>
+      <div class="ctas reveal">
+        <a class="pill btn btn-dark" href="tel:+16293953399">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call 629-395-3399</a>
+        <a class="pill btn btn-line" href="sms:+16293953399">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+          Text to book</a>
+      </div>
+      <div class="loc-chip reveal"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8E5F38" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span><b>Salons by JC</b> &middot; 661 S Mt Juliet Rd</span></div>
+    </div>
+  </section>
+
+  <section class="sec spec" id="specialties">
+    <div class="wrap">
+      <span class="kicker reveal">What she specializes in</span>
+      <h2 class="reveal">Two things, <i>front and center.</i></h2>
+      <p class="lede reveal">Her Salons by JC profile says it plainly: extensions + lived-in color.</p>
+
+      <div class="duo">
+        <article class="card a reveal">
+          <svg class="art" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g fill="none" stroke="#FBF6EF" stroke-opacity=".22" stroke-width="2" stroke-linecap="round">
+              <path d="M60 -10 C 90 90, 30 170, 80 260 S 70 380, 100 420"/>
+              <path d="M110 -10 C 140 90, 80 170, 130 260 S 120 380, 150 420"/>
+              <path d="M160 -10 C 190 90, 130 170, 180 260 S 170 380, 200 420"/>
+              <path d="M210 -10 C 240 90, 180 170, 230 260 S 220 380, 250 420"/>
+              <path d="M260 -10 C 290 90, 230 170, 280 260 S 270 380, 300 420"/>
+              <path d="M310 -10 C 340 90, 280 170, 330 260 S 320 380, 350 420"/>
+              <path d="M360 -10 C 390 90, 330 170, 380 260 S 370 380, 400 420"/>
+            </g>
+            <g fill="none" stroke="#3B3A36" stroke-opacity=".18" stroke-width="1.2">
+              <path d="M85 -10 C 115 90, 55 170, 105 260 S 95 380, 125 420"/>
+              <path d="M235 -10 C 265 90, 205 170, 255 260 S 245 380, 275 420"/>
+              <path d="M335 -10 C 365 90, 305 170, 355 260 S 345 380, 375 420"/>
+            </g>
+          </svg>
+          <span class="num">i.</span>
+          <h3>Extensions</h3>
+          <p>Length and fullness, blended in so it reads as your own hair. Call or text to talk through what you're after.</p>
+        </article>
+        <article class="card b reveal">
+          <svg class="art" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="melt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5C4634" stop-opacity=".55"/><stop offset=".45" stop-color="#8E5F38" stop-opacity=".15"/><stop offset="1" stop-color="#FBF6EF" stop-opacity="0"/></linearGradient></defs>
+            <rect width="400" height="170" fill="url(#melt)"/>
+            <g fill="none" stroke="#FBF6EF" stroke-opacity=".5" stroke-width="1.4" stroke-linecap="round">
+              <path d="M-10 120 C 80 100, 140 160, 220 130 S 360 110, 420 140"/>
+              <path d="M-10 150 C 80 130, 150 190, 230 160 S 360 140, 420 170"/>
+            </g>
+          </svg>
+          <span class="num">ii.</span>
+          <h3>Lived-in color</h3>
+          <p>Color with soft, grown-in roots that's made to look good between visits, not just the day you leave the chair.</p>
+        </article>
+      </div>
+
+      <ul class="menu">
+        <li class="reveal"><span class="n">01</span><span class="t">Hair Extensions</span><span class="d">Specialty</span></li>
+        <li class="reveal"><span class="n">02</span><span class="t">Hair Color</span><span class="d">Lived-in &amp; more</span></li>
+        <li class="reveal"><span class="n">03</span><span class="t">Hair Cut</span><span class="d">Cuts &amp; shaping</span></li>
+        <li class="reveal"><span class="n">04</span><span class="t">Cosmetology</span><span class="d">Hair Stylist</span></li>
+      </ul>
+      <p class="note reveal">Pricing isn't posted. Call or text for a quote on your hair.</p>
+    </div>
+  </section>
+
+  <section class="sec why" id="why">
+    <svg class="halo2" viewBox="0 0 520 520" aria-hidden="true"><g fill="none" stroke="#D9AE7E" stroke-opacity=".35"><circle cx="260" cy="260" r="250"/><circle cx="260" cy="260" r="200" stroke-dasharray="2 8"/><circle cx="260" cy="260" r="150"/></g></svg>
+    <div class="wrap">
+      <span class="kicker reveal">Why Hallelujah</span>
+      <h2 class="reveal">A suite of her own, <i>for you.</i></h2>
+      <div class="pts">
+        <div class="pt reveal">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 28V9l10-5 10 5v19"/><path d="M12 28v-8h8v8"/><path d="M4 28h24"/></svg>
+          <h3>Private Suite #37</h3>
+          <p>Your appointment happens in her own suite inside Salons by JC on S Mt Juliet Rd.</p>
+        </div>
+        <div class="pt reveal">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M10 4c3 6-3 10 0 16s-1 8 0 8"/><path d="M16 4c3 6-3 10 0 16s-1 8 0 8"/><path d="M22 4c3 6-3 10 0 16s-1 8 0 8"/></svg>
+          <h3>A clear specialty</h3>
+          <p>Extensions + lived-in color are what Hallelujah Hair Co. specializes in.</p>
+        </div>
+        <div class="pt reveal">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M27 21.5v3.5a2.3 2.3 0 0 1-2.5 2.3A22.8 22.8 0 0 1 4.7 7.5 2.3 2.3 0 0 1 7 5h3.5a2.3 2.3 0 0 1 2.3 2c.1 1 .4 2 .8 3a2.3 2.3 0 0 1-.5 2.4l-1.5 1.5a18.4 18.4 0 0 0 6.9 6.9l1.5-1.5a2.3 2.3 0 0 1 2.4-.5c1 .4 2 .7 3 .8a2.3 2.3 0 0 1 2 2.4z"/></svg>
+          <h3>Book direct</h3>
+          <p>No apps, no middleman. Call or text Hallelujah at 629-395-3399.</p>
+        </div>
+      </div>
+      <p class="quote reveal">Extensions <span>+</span> lived-in color.<small>&mdash; Her specialty, as listed at Salons by JC</small></p>
+    </div>
+  </section>
+
+  <section class="sec" id="hours">
+    <div class="wrap">
+      <span class="kicker reveal">Hours</span>
+      <h2 class="reveal">By <i>appointment.</i></h2>
+      <div class="week reveal" id="week" aria-label="Days of the week, today highlighted">
+        <div class="day" data-d="0">SUN<small>&nbsp;</small></div>
+        <div class="day" data-d="1">MON<small>&nbsp;</small></div>
+        <div class="day" data-d="2">TUE<small>&nbsp;</small></div>
+        <div class="day" data-d="3">WED<small>&nbsp;</small></div>
+        <div class="day" data-d="4">THU<small>&nbsp;</small></div>
+        <div class="day" data-d="5">FRI<small>&nbsp;</small></div>
+        <div class="day" data-d="6">SAT<small>&nbsp;</small></div>
+      </div>
+      <div class="hours-box reveal">
+        <p><strong id="todayLine">Looking for a time this week?</strong>Hours aren't posted online. Call or text Hallelujah to ask about a time.</p>
+        <a class="pill btn btn-dark" href="sms:+16293953399">Text for availability</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec visit" id="visit">
+    <div class="wrap">
+      <span class="kicker reveal">Visit</span>
+      <h2 class="reveal">Find <i>Suite 37.</i></h2>
+      <div class="visit-grid">
+        <div class="map reveal">
+          <svg class="mapart" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g stroke="#E3D3BE" stroke-width="10" fill="none" stroke-linecap="round"><path d="M-20 120 L620 90"/><path d="M-20 300 L620 330"/><path d="M140 -20 L170 440"/><path d="M460 -20 L430 440"/></g>
+            <path d="M310 -20 C 300 120, 320 260, 300 440" stroke="#D9AE7E" stroke-width="16" fill="none"/>
+            <text x="330" y="60" font-family="Work Sans, sans-serif" font-size="13" fill="#8E5F38" letter-spacing="2">S MT JULIET RD</text>
+            <circle cx="306" cy="210" r="44" fill="#B9855A" fill-opacity=".14"/><circle cx="306" cy="210" r="22" fill="#B9855A" fill-opacity=".25"/>
+            <path d="M306 232s-22-19-22-36a22 22 0 0 1 44 0c0 17-22 36-22 36z" fill="#3B3A36" transform="translate(0,-26)"/><circle cx="306" cy="170" r="7" fill="#F3E9DC"/>
+          </svg>
+          <iframe title="Map to Hallelujah Hair Co. at 661 S Mt Juliet Rd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=661%20S%20Mt%20Juliet%20Rd%2C%20Mt.%20Juliet%2C%20TN&output=embed"></iframe>
+        </div>
+        <div class="addr reveal">
+          <h3>Hallelujah Hair Co.</h3>
+          <address>Suite #37, Salons by JC<br>661 S Mt Juliet Rd<br>Mt. Juliet, TN</address>
+          <div class="row">
+            <a class="pill btn btn-dark" href="tel:+16293953399">Call 629-395-3399</a>
+            <a class="pill btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=661%20S%20Mt%20Juliet%20Rd%2C%20Mt.%20Juliet%2C%20TN" target="_blank" rel="noopener">Get directions</a>
+          </div>
+          <a class="ig" href="https://www.instagram.com/hallelujah.hairco/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            <span>See her work on Instagram &mdash; @hallelujah.hairco</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="#top" class="mark"><svg viewBox="0 0 32 32" fill="none" stroke="#D9AE7E" stroke-width="1.6" aria-hidden="true"><path d="M4 24a12 12 0 0 1 24 0"/><path d="M9 24a7 7 0 0 1 14 0"/><g stroke-linecap="round"><path d="M16 4v4"/><path d="M6.5 8.5l2.6 2.6"/><path d="M25.5 8.5l-2.6 2.6"/></g></svg>Hallelujah Hair Co.</a>
+  <p>Suite #37 &middot; 661 S Mt Juliet Rd &middot; Mt. Juliet, TN &middot; <a href="tel:+16293953399">629-395-3399</a></p>
+  <p class="credit">Concept by Code Craft Media</p>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="call" href="tel:+16293953399"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="txt" href="sms:+16293953399"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text to book</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // sunburst rays
+  var g=document.getElementById('rays');
+  if(g){var s='';for(var i=0;i<72;i++){var a=i*5*Math.PI/180,r1=262,r2=(i%2?340:372);
+    s+='<line x1="'+(380+r1*Math.cos(a)).toFixed(1)+'" y1="'+(380+r1*Math.sin(a)).toFixed(1)+'" x2="'+(380+r2*Math.cos(a)).toFixed(1)+'" y2="'+(380+r2*Math.sin(a)).toFixed(1)+'"/>';}
+    g.innerHTML=s;}
+  // today
+  var d=new Date().getDay(),names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var el=document.querySelector('.day[data-d="'+d+'"]');
+  if(el){el.classList.add('today');el.querySelector('small').textContent='Today';}
+  var tl=document.getElementById('todayLine'); if(tl) tl.textContent='Hoping for '+names[d]+'?';
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

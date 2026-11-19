@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Oracle Artist — Hendersonville</title>
+<meta name="description" content="The Oracle Artist: private gel nail tech in Hendersonville, TN, specializing in hard gel and polygel systems plus alternative and unique styles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#1B1033; --night2:#251645; --night3:#2F1C57;
+  --gold:#C9A227; --gold2:#E3C766; --mist:#EDE6F7; --mist2:#C9BEDD;
+  --ink:#1B1033;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--night);color:var(--mist);font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block}
+.disp{font-family:"Cinzel Decorative",Georgia,serif;font-weight:400;letter-spacing:.02em;line-height:1.12}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero .dot{display:none}
+@media(min-width:760px){.hero .dot{display:inline}.mbr{display:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* starfield texture */
+.stars{position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:
+   radial-gradient(1px 1px at 12% 18%,#fff8 50%,transparent 51%),
+   radial-gradient(1px 1px at 72% 9%,#fff9 50%,transparent 51%),
+   radial-gradient(1.5px 1.5px at 38% 62%,#E3C76699 50%,transparent 51%),
+   radial-gradient(1px 1px at 88% 44%,#fff7 50%,transparent 51%),
+   radial-gradient(1px 1px at 22% 82%,#fff6 50%,transparent 51%),
+   radial-gradient(1.5px 1.5px at 60% 30%,#fff8 50%,transparent 51%),
+   radial-gradient(1px 1px at 94% 78%,#E3C76688 50%,transparent 51%),
+   radial-gradient(1px 1px at 5% 50%,#fff6 50%,transparent 51%);
+  background-size:320px 320px}
+
+/* banner */
+.banner{background:#0F0820;color:var(--mist2);font-size:11px;letter-spacing:-.005em;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid #C9A22733}
+.banner b{color:var(--gold2);font-weight:500}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(27,16,51,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #C9A22722}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo span{font-family:"Cinzel Decorative",serif;font-size:15px;color:var(--mist);letter-spacing:.04em}
+.navlinks{display:none;gap:28px;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.navlinks a{text-decoration:none;color:var(--mist2);transition:color .2s}
+.navlinks a:hover{color:var(--gold2)}
+.navcta{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--night);background:var(--gold);padding:9px 14px;border-radius:999px;transition:background .2s,transform .2s}
+.navcta:hover{background:var(--gold2);transform:translateY(-1px)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 64px;background:radial-gradient(120% 70% at 50% 0%,#3A2370 0%,var(--night) 62%)}
+.hero .wrap{position:relative;display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(34px,9.6vw,72px);color:var(--mist)}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p.sub{margin-top:16px;font-size:18px;color:var(--mist2);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;padding:15px 22px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--night);box-shadow:0 8px 28px #C9A22740}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 36px #C9A22766}
+.btn-ghost{border:1.5px solid #C9A22788;color:var(--mist)}
+.btn-ghost:hover{background:#C9A2271a;color:var(--gold2)}
+.btn svg{width:18px;height:18px}
+
+/* hero card */
+.herocard{justify-self:center;width:min(66vw,330px);margin-top:8px;aspect-ratio:2/3.3;position:relative;animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+.herocard .ghost{position:absolute;inset:0;border-radius:18px;background:var(--night3);border:1px solid #C9A22744}
+.herocard .ghost.a{transform:rotate(-9deg) translate(-18px,8px)}
+.herocard .ghost.b{transform:rotate(7deg) translate(18px,6px)}
+.tarot{position:relative;width:100%;height:100%;border-radius:18px;background:linear-gradient(170deg,#2D1A55,#1B1033 70%);border:1.5px solid var(--gold);box-shadow:0 30px 80px #0009,inset 0 0 0 6px var(--night),inset 0 0 0 7px #C9A22766;overflow:hidden}
+.tarot svg{width:100%;height:100%}
+
+/* moon divider */
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);padding:8px 0}
+.divider:before,.divider:after{content:"";height:1px;width:min(28vw,180px);background:linear-gradient(90deg,transparent,#C9A22799,transparent)}
+.divider svg{width:64px;height:16px}
+
+section{position:relative;padding:72px 0}
+.sechead{text-align:center;max-width:640px;margin:0 auto 40px}
+.sechead h2{font-size:clamp(28px,7vw,46px);margin-top:10px}
+.sechead p{color:var(--mist2);margin-top:12px}
+
+/* specialties: tarot cards */
+.cards{display:grid;gap:22px;grid-template-columns:1fr}
+.card{position:relative;border-radius:16px;padding:28px 24px 26px;background:linear-gradient(170deg,var(--night3),var(--night2));border:1px solid #C9A22766;box-shadow:inset 0 0 0 5px var(--night2),inset 0 0 0 6px #C9A22744;transition:transform .35s,box-shadow .35s;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:inset 0 0 0 5px var(--night2),inset 0 0 0 6px #C9A227aa,0 24px 50px #0008}
+.card .num{font-family:"Cinzel Decorative",serif;color:var(--gold);font-size:14px;letter-spacing:.2em;text-align:center}
+.card .ico{width:92px;height:92px;margin:14px auto 10px}
+.card h3{font-family:"Cinzel Decorative",serif;font-weight:700;font-size:22px;text-align:center;color:var(--mist)}
+.card p{text-align:center;color:var(--mist2);margin-top:10px;font-size:16px}
+.card .corner{position:absolute;width:18px;height:18px;color:var(--gold)}
+.card .tl{top:12px;left:12px}.card .tr{top:12px;right:12px;transform:scaleX(-1)}
+.card .bl{bottom:12px;left:12px;transform:scaleY(-1)}.card .br{bottom:12px;right:12px;transform:scale(-1)}
+
+/* about / reading */
+.reading{background:var(--mist);color:var(--ink);overflow:hidden}
+.reading .wrap{display:grid;gap:36px;align-items:center}
+.reading .eyebrow{color:#8A6B0F}
+.reading h2{font-size:clamp(28px,7vw,46px);margin-top:10px}
+.quote{position:relative;margin-top:22px;padding:24px 22px 22px 26px;border-left:3px solid var(--gold);background:#fff8;border-radius:0 14px 14px 0;font-size:19px;font-style:italic}
+.quote small{display:block;margin-top:10px;font-style:normal;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#6B5A8A}
+.truths{list-style:none;display:grid;gap:14px;margin-top:26px}
+.truths li{display:flex;gap:14px;align-items:flex-start}
+.truths svg{flex:none;width:26px;height:26px;margin-top:1px}
+.truths b{display:block}
+.truths span{color:#4A3D66;font-size:16px}
+.moonphase{display:flex;justify-content:space-between;max-width:420px;margin:0 auto;width:100%}
+.moonphase svg{width:13%;height:auto}
+.wheel{width:min(80vw,380px);margin:0 auto;animation:spin 80s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* gallery */
+.spread{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.slot{position:relative;aspect-ratio:3/4.6;border-radius:14px;border:1px solid #C9A22766;background:linear-gradient(170deg,var(--night3),var(--night2));box-shadow:inset 0 0 0 5px var(--night2),inset 0 0 0 6px #C9A22740;overflow:hidden;transition:transform .35s}
+.slot:hover{transform:rotate(-1.5deg) translateY(-4px)}
+.slot svg{width:100%;height:100%}
+.slot .lab{position:absolute;left:0;right:0;bottom:14px;text-align:center;font-family:"Cinzel Decorative",serif;font-size:12px;letter-spacing:.12em;color:var(--gold2)}
+.galnote{text-align:center;color:var(--mist2);font-size:14px;margin-top:20px;font-style:italic}
+
+/* visit */
+.visit .grid{display:grid;gap:22px}
+.panel{border-radius:18px;padding:26px 22px;background:var(--night2);border:1px solid #C9A22744}
+.panel h3{font-family:"Cinzel Decorative",serif;font-size:20px;color:var(--gold2)}
+.panel p{color:var(--mist2);margin-top:8px}
+.panel .big{font-size:20px;color:var(--mist);font-weight:500}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px}
+.week div{text-align:center;padding:10px 0;border-radius:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mist2);border:1px solid #C9A22722}
+.week div.today{background:var(--gold);color:var(--night);font-weight:700;border-color:var(--gold)}
+.todaynote{margin-top:12px;font-size:15px;color:var(--mist)}
+.todaynote b{color:var(--gold2)}
+.map{position:relative;border-radius:18px;overflow:hidden;border:1px solid #C9A22766;min-height:300px;background:radial-gradient(circle at 50% 45%,#3A2370,var(--night2) 70%)}
+.mapfb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;color:var(--mist2);font-size:15px;padding:20px}
+.mapfb svg{width:56px;height:56px}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:300px;border:0;filter:grayscale(.3) contrast(1.05)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.actions .btn{padding:13px 18px;font-size:13px}
+
+/* final cta */
+.final{text-align:center;overflow:hidden;background:radial-gradient(90% 80% at 50% 100%,#3A2370,var(--night) 70%)}
+.final h2{font-size:clamp(30px,8vw,56px);max-width:16ch;margin:12px auto 0}
+.final p{color:var(--mist2);margin:14px auto 0;max-width:40ch}
+.final .ctas{justify-content:center}
+
+footer{border-top:1px solid #C9A22733;padding:32px 0 28px;text-align:center;color:var(--mist2);font-size:14px}
+footer .disp{color:var(--mist);font-size:18px}
+footer p+p{margin-top:6px}
+footer .credit{margin-top:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9A8DB5}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(15,8,32,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #C9A22744}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.callbar .c1{border:1.5px solid #C9A22799;color:var(--mist)}
+.callbar .c2{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--night)}
+.callbar svg{width:18px;height:18px}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+
+@media (min-width:760px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .spread{grid-template-columns:repeat(4,1fr);gap:20px}
+  .visit .grid{grid-template-columns:1fr 1.2fr}
+  .map,.map iframe{min-height:100%}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .navlinks{display:flex}
+  .hero{padding:80px 0 100px}
+  .hero .wrap{grid-template-columns:1.25fr 1fr}
+  .reading .wrap{grid-template-columns:1.1fr 1fr}
+  section{padding:104px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for The Oracle Artist. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Oracle Artist home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M21 4a12 12 0 1 0 7 21A10 10 0 0 1 21 4z" fill="#C9A227"/><path d="M24 9l.9 2.1L27 12l-2.1.9L24 15l-.9-2.1L21 12l2.1-.9z" fill="#E3C766"/></svg>
+      <span>The Oracle Artist</span>
+    </a>
+    <div class="navlinks"><a href="#specialties">Specialties</a><a href="#about">The Artist</a><a href="#spread">The Spread</a><a href="#visit">Visit</a></div>
+    <a class="navcta" href="sms:+16156748271">Text to book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stars"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Private gel nail tech<span class="dot"> · </span><br class="mbr">Hendersonville, TN</div>
+      <h1 class="disp" style="margin-top:14px">The cards say: <em>hard gel</em>, <em>polygel</em> &amp; something unusual.</h1>
+      <p class="sub">Layah works privately out of her suite at Phenix Salon Suites. She does hard gel and polygel, plus alternative, unique styles.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="sms:+16156748271"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text to book</a>
+        <a class="btn btn-ghost" href="tel:+16156748271"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>615-674-8271</a>
+      </div>
+    </div>
+    <div class="herocard reveal" aria-hidden="true">
+      <div class="ghost a"></div><div class="ghost b"></div>
+      <div class="tarot">
+        <svg viewBox="0 0 200 330">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3C766"/><stop offset="1" stop-color="#A9861B"/></linearGradient>
+            <linearGradient id="nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDE6F7"/><stop offset=".55" stop-color="#B9A3E0"/><stop offset="1" stop-color="#6E4FB0"/></linearGradient>
+            <radialGradient id="glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#C9A227" stop-opacity=".35"/><stop offset="1" stop-color="#C9A227" stop-opacity="0"/></radialGradient>
+          </defs>
+          <text x="100" y="34" text-anchor="middle" font-family="Cinzel Decorative,serif" font-size="13" fill="#C9A227" letter-spacing="3">XVII</text>
+          <circle cx="100" cy="140" r="92" fill="url(#glow)"/>
+          <g fill="none" stroke="#C9A227" stroke-opacity=".5" stroke-width=".8">
+            <circle cx="100" cy="140" r="70"/><circle cx="100" cy="140" r="56" stroke-dasharray="2 4"/>
+          </g>
+          <!-- moon -->
+          <path d="M112 62a24 24 0 1 0 14 43a20 20 0 0 1-14-43z" fill="url(#g1)" transform="translate(-12 -20)"/>
+          <!-- hand of nails: five almond nails fanned -->
+          <g transform="translate(100 205)">
+            <g transform="rotate(-38)"><path d="M-9 0 C-9 -40 -6 -62 0 -72 C6 -62 9 -40 9 0 Z" fill="url(#nail)" stroke="#C9A227" stroke-width="1.2"/></g>
+            <g transform="rotate(-18)"><path d="M-10 0 C-10 -48 -6 -76 0 -88 C6 -76 10 -48 10 0 Z" fill="url(#nail)" stroke="#C9A227" stroke-width="1.2"/><path d="M0 -60 l2 5 5 1 -5 2 -2 5 -2 -5 -5 -2 5 -1z" fill="#E3C766"/></g>
+            <g><path d="M-10 0 C-10 -52 -6 -84 0 -98 C6 -84 10 -52 10 0 Z" fill="url(#nail)" stroke="#C9A227" stroke-width="1.2"/><path d="M4 -70a8 8 0 1 0 4 12a6 6 0 0 1-4-12z" fill="#E3C766"/></g>
+            <g transform="rotate(18)"><path d="M-10 0 C-10 -48 -6 -76 0 -88 C6 -76 10 -48 10 0 Z" fill="url(#nail)" stroke="#C9A227" stroke-width="1.2"/><circle cx="0" cy="-58" r="2.4" fill="#E3C766"/><circle cx="0" cy="-48" r="1.6" fill="#E3C766"/></g>
+            <g transform="rotate(38)"><path d="M-9 0 C-9 -40 -6 -62 0 -72 C6 -62 9 -40 9 0 Z" fill="url(#nail)" stroke="#C9A227" stroke-width="1.2"/></g>
+          </g>
+          <g fill="#E3C766"><circle cx="40" cy="80" r="1.4"/><circle cx="162" cy="96" r="1.8"/><circle cx="150" cy="58" r="1.2"/><circle cx="48" cy="180" r="1.2"/><circle cx="158" cy="190" r="1.4"/></g>
+          <line x1="30" y1="262" x2="170" y2="262" stroke="#C9A227" stroke-opacity=".6"/>
+          <text x="100" y="290" text-anchor="middle" font-family="Cinzel Decorative,serif" font-size="14" fill="#EDE6F7" letter-spacing="1.5">The Oracle</text>
+          <text x="100" y="308" text-anchor="middle" font-family="Karla,sans-serif" font-size="8" fill="#C9A227" letter-spacing="4">GEL · ARTIST</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 64 16"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor"/><path d="M24 3a5 5 0 1 0 0 10a4 4 0 0 1 0-10z" fill="currentColor"/><circle cx="32" cy="8" r="5" fill="currentColor"/><path d="M40 3a5 5 0 1 1 0 10a4 4 0 0 0 0-10z" fill="currentColor"/><circle cx="56" cy="8" r="5" fill="none" stroke="currentColor"/></svg></div>
+
+<section id="specialties">
+  <div class="stars" style="opacity:.3"></div>
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">Draw a card</div>
+      <h2 class="disp">Three specialties</h2>
+      <p>Straight from Layah's own description of her work.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <svg class="corner tl" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner tr" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner bl" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner br" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg>
+        <div class="num">I</div>
+        <svg class="ico" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="40" fill="none" stroke="#C9A227" stroke-opacity=".5"/><path d="M36 74 C36 44 39 26 46 16 C53 26 56 44 56 74 Z" fill="#EDE6F7" stroke="#C9A227" stroke-width="1.5"/><path d="M40 40 C42 30 44 24 46 20" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".8"/><path d="M46 8v4M46 80v4M8 46h4M80 46h4" stroke="#C9A227"/></svg>
+        <h3>Hard Gel</h3>
+        <p>Hard gel systems: one of the two systems Layah specializes in.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="corner tl" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner tr" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner bl" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner br" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg>
+        <div class="num">II</div>
+        <svg class="ico" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="40" fill="none" stroke="#C9A227" stroke-opacity=".5"/><path d="M34 74 V34 Q34 20 46 20 Q58 20 58 34 V74 Z" fill="#B9A3E0" stroke="#C9A227" stroke-width="1.5"/><path d="M34 46h24M34 58h24" stroke="#1B1033" stroke-opacity=".25"/><path d="M58 14a8 8 0 1 0 6 12a6 6 0 0 1-6-12z" fill="#E3C766"/></svg>
+        <h3>Polygel</h3>
+        <p>Polygel systems, Layah's other core specialty.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="corner tl" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner tr" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner bl" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg><svg class="corner br" viewBox="0 0 18 18" aria-hidden="true"><path d="M1 17V1h16" fill="none" stroke="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor"/></svg>
+        <div class="num">III</div>
+        <svg class="ico" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="40" fill="none" stroke="#C9A227" stroke-opacity=".5"/><path d="M36 74 C36 50 38 30 46 12 C54 30 56 50 56 74 Z" fill="#2F1C57" stroke="#C9A227" stroke-width="1.5"/><path d="M46 30 l3 7 7 1 -5 5 1.5 7 -6.5 -3.5 -6.5 3.5 1.5 -7 -5 -5 7 -1z" fill="#E3C766"/><circle cx="42" cy="60" r="2" fill="#EDE6F7"/><circle cx="50" cy="66" r="1.4" fill="#EDE6F7"/></svg>
+        <h3>Alternative &amp; Unique</h3>
+        <p>Alternative and unique styles for sets that don't look like everyone else's.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="reading" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The artist</div>
+      <h2 class="disp">Meet Layah, the Oracle Artist</h2>
+      <blockquote class="quote">“I'm a private gel nailtech that specializes in hardgel and polygel systems as well as alternative and unique styles.”<small>Layah Hicks, The Oracle Artist</small></blockquote>
+      <ul class="truths">
+        <li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M16 3a10 10 0 1 0 7 17A8 8 0 0 1 16 3z" fill="#C9A227"/></svg><div><b>A private suite</b><span>One-on-one appointments at Phenix Salon Suites, not a busy salon floor.</span></div></li>
+        <li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2l2.6 7.4L23 12l-7.4 2.6L13 22l-2.6-7.4L3 12l7.4-2.6z" fill="#C9A227"/></svg><div><b>Gel specialist</b><span>Her focus is hard gel and polygel systems.</span></div></li>
+        <li><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="9" fill="none" stroke="#C9A227" stroke-width="2"/><circle cx="13" cy="13" r="3" fill="#C9A227"/></svg><div><b>Alternative styles welcome</b><span>Alternative and unique looks are part of what she does.</span></div></li>
+      </ul>
+    </div>
+    <div class="reveal" aria-hidden="true">
+      <svg class="wheel" viewBox="0 0 300 300">
+        <g fill="none" stroke="#1B1033">
+          <circle cx="150" cy="150" r="140" stroke-opacity=".8"/>
+          <circle cx="150" cy="150" r="118" stroke-opacity=".35"/>
+          <circle cx="150" cy="150" r="70" stroke-opacity=".5" stroke-dasharray="3 5"/>
+        </g>
+        <g stroke="#C9A227" stroke-width="1.2">
+          <line x1="150" y1="10" x2="150" y2="32"/><line x1="150" y1="268" x2="150" y2="290"/><line x1="10" y1="150" x2="32" y2="150"/><line x1="268" y1="150" x2="290" y2="150"/>
+          <line x1="51" y1="51" x2="66" y2="66"/><line x1="234" y1="234" x2="249" y2="249"/><line x1="249" y1="51" x2="234" y2="66"/><line x1="51" y1="249" x2="66" y2="234"/>
+        </g>
+        <g fill="#1B1033">
+          <circle cx="150" cy="21" r="5"/><circle cx="279" cy="150" r="5" fill="none" stroke="#1B1033"/><circle cx="150" cy="279" r="5"/><circle cx="21" cy="150" r="5" fill="none" stroke="#1B1033"/>
+        </g>
+        <path d="M170 104a50 50 0 1 0 28 84a40 40 0 0 1-28-84z" fill="#C9A227"/>
+        <path d="M120 120l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#1B1033"/>
+        <path d="M190 190l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#1B1033"/>
+      </svg>
+      <div class="moonphase" style="margin-top:20px">
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#1B1033"/></svg>
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#1B1033"/><path d="M10 2a8 8 0 0 1 0 16a5 8 0 0 0 0-16z" fill="#C9A227"/></svg>
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#1B1033"/><path d="M10 2a8 8 0 0 1 0 16z" fill="#C9A227"/></svg>
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#C9A227"/></svg>
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#1B1033"/><path d="M10 2a8 8 0 0 0 0 16z" fill="#C9A227"/></svg>
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#1B1033"/><path d="M10 2a8 8 0 0 0 0 16a5 8 0 0 1 0-16z" fill="#C9A227"/></svg>
+        <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#1B1033"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="spread">
+  <div class="stars" style="opacity:.35"></div>
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">The spread</div>
+      <h2 class="disp">A gallery of sets</h2>
+      <p>A gallery for Layah's sets, laid out like a tarot spread.</p>
+    </div>
+    <div class="spread">
+      <div class="slot reveal" aria-hidden="true"><svg viewBox="0 0 120 184"><path d="M60 30a20 20 0 1 0 12 36a16 16 0 0 1-12-36z" fill="#C9A227" transform="translate(-6 0)"/><path d="M48 150 C48 112 52 92 60 80 C68 92 72 112 72 150 Z" fill="#EDE6F7" stroke="#C9A227"/></svg><div class="lab">The Moon</div></div>
+      <div class="slot reveal" aria-hidden="true"><svg viewBox="0 0 120 184"><circle cx="60" cy="52" r="16" fill="#E3C766"/><g stroke="#C9A227"><line x1="60" y1="24" x2="60" y2="30"/><line x1="60" y1="74" x2="60" y2="80"/><line x1="32" y1="52" x2="38" y2="52"/><line x1="82" y1="52" x2="88" y2="52"/></g><path d="M48 150 V100 Q48 86 60 86 Q72 86 72 100 V150 Z" fill="#B9A3E0" stroke="#C9A227"/></svg><div class="lab">The Sun</div></div>
+      <div class="slot reveal" aria-hidden="true"><svg viewBox="0 0 120 184"><path d="M60 28l5 14 15 1-12 9 4 15-12-8-12 8 4-15-12-9 15-1z" fill="#E3C766"/><path d="M48 150 C48 110 52 92 60 78 C68 92 72 110 72 150 Z" fill="#2F1C57" stroke="#C9A227"/><circle cx="60" cy="110" r="3" fill="#E3C766"/></svg><div class="lab">The Star</div></div>
+      <div class="slot reveal" aria-hidden="true"><svg viewBox="0 0 120 184"><circle cx="60" cy="52" r="22" fill="none" stroke="#C9A227"/><circle cx="60" cy="52" r="12" fill="none" stroke="#C9A227" stroke-dasharray="2 3"/><circle cx="60" cy="52" r="4" fill="#E3C766"/><path d="M50 150 C50 116 52 96 60 84 C68 96 70 116 70 150 Z" fill="#EDE6F7" stroke="#C9A227"/><path d="M50 128h20" stroke="#6E4FB0" stroke-width="3"/></svg><div class="lab">The Wheel</div></div>
+    </div>
+    <p class="galnote">Illustrated cards for this concept. Layah's own photos of her sets would go here.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">Find the suite</div>
+      <h2 class="disp">Visit &amp; book</h2>
+    </div>
+    <div class="grid">
+      <div style="display:grid;gap:22px">
+        <div class="panel reveal">
+          <h3>Where</h3>
+          <p class="big">Phenix Salon Suites</p>
+          <p>217 Indian Lake Blvd, Suite 300<br>Hendersonville, TN 37075</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=217+Indian+Lake+Blvd+Suite+300+Hendersonville+TN+37075" target="_blank" rel="noopener">Directions</a>
+            <a class="btn btn-ghost" href="tel:+16156748271">Call</a>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h3>When</h3>
+          <p>Private appointments only. Text Layah to find a time.</p>
+          <div class="week" id="week"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+          <p class="todaynote" id="todaynote">Text <b>615-674-8271</b> to ask about openings.</p>
+          <div class="actions"><a class="btn btn-gold" href="sms:+16156748271">Text to book</a></div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <div class="mapfb" aria-hidden="true"><svg viewBox="0 0 56 56"><path d="M28 4c-9 0-16 7-16 16 0 12 16 30 16 30s16-18 16-30c0-9-7-16-16-16z" fill="#C9A227"/><path d="M31 13a7 7 0 1 0 4 12a5.5 5.5 0 0 1-4-12z" fill="#1B1033"/></svg><span>217 Indian Lake Blvd, Suite 300<br>Hendersonville, TN</span></div>
+        <iframe title="Map to Phenix Salon Suites, 217 Indian Lake Blvd, Hendersonville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=217%20Indian%20Lake%20Blvd%20Suite%20300%2C%20Hendersonville%2C%20TN%2037075&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="stars"></div>
+  <div class="wrap reveal">
+    <div class="eyebrow">Your next reading</div>
+    <h2 class="disp">Ready for a set that's all your own?</h2>
+    <p>Hard gel, polygel or something unusual. Send Layah a text to start.</p>
+    <div class="ctas"><a class="btn btn-gold" href="sms:+16156748271">Text to book</a><a class="btn btn-ghost" href="tel:+16156748271">Call 615-674-8271</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="disp">The Oracle Artist</p>
+    <p>Private gel nail tech · Phenix Salon Suites, Hendersonville, TN</p>
+    <p><a href="tel:+16156748271">615-674-8271</a></p>
+    <p class="credit">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+16156748271"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="c2" href="sms:+16156748271"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text to book</a>
+</div>
+
+<script>
+(function(){
+  var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var d=new Date().getDay();
+  var cells=document.querySelectorAll('#week div');
+  if(cells[d]) cells[d].className='today';
+  var n=document.getElementById('todaynote');
+  if(n) n.innerHTML='Today is <b>'+days[d]+'</b>. Text <b>615-674-8271</b> to ask about openings.';
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

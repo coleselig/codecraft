@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kith Hair Clinic — Franklin</title>
+<meta name="description" content="Kith Hair Clinic: Japanese Head Spa with Giselle at Phenix Salon Suites, 2000 Mallory Ln Ste 340, Franklin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rice:#F2EFE9; --rice2:#E9E4DA; --matcha:#3E5C50; --matcha-d:#2C4339; --matcha-dd:#1F3029;
+  --hinoki:#C8A27C; --hinoki-d:#8A6A48; --ink:#22302A; --ink2:#4F5E57;
+  --serif:"Shippori Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  --sans:"Jost", system-ui, -apple-system, Segoe UI, sans-serif;
+  --barh:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--rice);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--barh) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .42 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.banner{position:relative;z-index:1}
+
+/* concept banner */
+.banner{background:var(--matcha-dd);color:#E9E4DA;font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--hinoki);font-weight:500}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:34px;height:34px}
+.logo span{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.04em;color:var(--matcha-d)}
+.logo small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--hinoki-d);font-weight:500;margin-top:-2px}
+.nav ul{display:none;list-style:none;gap:30px}
+.nav ul a{text-decoration:none;font-size:14px;letter-spacing:.08em;color:var(--ink2);position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--hinoki);transform:scaleX(0);transition:transform .35s ease}
+.nav ul a:hover::after{transform:scaleX(1)}
+.nav .navcall{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .navcall{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.06em;white-space:nowrap;text-decoration:none;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;-webkit-tap-highlight-color:transparent}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--matcha);color:#F7F4EE;box-shadow:0 10px 24px -12px rgba(31,48,41,.7)}
+.btn-primary:hover{background:var(--matcha-d);transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(31,48,41,.8)}
+.btn-ghost{border:1px solid rgba(62,92,80,.4);color:var(--matcha-d);background:rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:var(--matcha);background:rgba(255,255,255,.7);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn-sm{min-height:42px;padding:0 20px;font-size:14px}
+
+/* hero */
+.hero{position:relative;padding:18px 0 54px;overflow:hidden}
+.hero-grid{display:grid;gap:30px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;white-space:nowrap;text-transform:uppercase;color:var(--hinoki-d);font-weight:500}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--hinoki)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,11.4vw,82px);line-height:1.08;letter-spacing:-.01em;color:var(--matcha-dd);margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--matcha);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:.08em;height:.14em;background:linear-gradient(90deg,rgba(200,162,124,.0),rgba(200,162,124,.55),rgba(200,162,124,0));z-index:-1}
+.hero p.lede{font-size:17px;color:var(--ink2);max-width:30em;font-weight:300}
+.hero p.lede strong{font-weight:500;color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.cta-row .btn{flex:1 1 150px}
+@media(min-width:600px){.cta-row .btn{flex:0 0 auto}}
+.where{margin-top:22px;display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink2)}
+.where svg{width:16px;height:16px;color:var(--hinoki-d);flex:none}
+
+/* hero art: water bowl with ripples */
+.pond{position:relative;width:100%;max-width:520px;margin:0 auto;aspect-ratio:1/1}
+.pond svg{width:100%;height:100%}
+.ring{transform-origin:260px 260px;transform-box:view-box;animation:ripple 7s cubic-bezier(.2,.6,.3,1) infinite;opacity:0}
+.ring.r2{animation-delay:1.75s}.ring.r3{animation-delay:3.5s}.ring.r4{animation-delay:5.25s}
+@keyframes ripple{0%{transform:scale(.18);opacity:0}12%{opacity:.85}100%{transform:scale(1);opacity:0}}
+.drop{animation:drop 7s ease-in infinite;transform-box:view-box}
+@keyframes drop{0%{transform:translateY(-120px);opacity:0}6%{opacity:1}10%{transform:translateY(0);opacity:1}12%{opacity:0}100%{opacity:0}}
+.steam path{stroke-dasharray:6 10;animation:steam 6s linear infinite}
+@keyframes steam{to{stroke-dashoffset:-160}}
+@media (prefers-reduced-motion:reduce){.ring,.drop,.steam path{animation:none}.ring{opacity:.5}.ring.r2{transform:scale(.6)}.ring.r3{transform:scale(.8)}}
+@media(min-width:900px){.hero{padding:40px 0 90px}.hero-grid{grid-template-columns:1.1fr .9fr;gap:40px}}
+
+/* ripple divider */
+.divider{display:flex;justify-content:center;padding:6px 0}
+.divider svg{width:220px;height:46px}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--hinoki-d);font-weight:500}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,8vw,50px);line-height:1.15;color:var(--matcha-dd);margin:12px 0 16px;letter-spacing:-.005em}
+.sec-lede{color:var(--ink2);font-size:16.5px;font-weight:300;max-width:36em}
+
+/* service card */
+.service{margin-top:34px;position:relative;border-radius:28px;overflow:hidden;background:var(--matcha);color:#F2EFE9;padding:34px 26px 30px;isolation:isolate}
+.service::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(circle at 85% 15%,rgba(200,162,124,.28),transparent 45%),
+             repeating-radial-gradient(circle at 85% 15%,rgba(242,239,233,.07) 0 1px,transparent 1px 26px)}
+.service .tag{display:inline-block;font-size:11px;letter-spacing:.26em;text-transform:uppercase;border:1px solid rgba(200,162,124,.6);color:var(--hinoki);padding:6px 12px;border-radius:999px}
+.service h3{font-family:var(--serif);font-weight:500;font-size:clamp(32px,9vw,52px);line-height:1.1;margin:18px 0 6px}
+.service .jp{font-family:var(--sans);color:var(--hinoki);font-size:12px;font-weight:500;letter-spacing:.3em}
+.service p{color:rgba(242,239,233,.85);font-weight:300;margin-top:16px;max-width:34em}
+.service .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.service .btn-primary{background:#F2EFE9;color:var(--matcha-dd)}
+.service .btn-primary:hover{background:#fff}
+.service .note{font-size:13px;color:rgba(242,239,233,.7);margin-top:16px}
+@media(min-width:900px){.service{padding:56px 60px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}}
+.svc-art{display:none}
+@media(min-width:900px){.svc-art{display:block}}
+
+/* about the ritual - general */
+.notes{display:grid;gap:14px;margin-top:30px}
+.note-card{background:rgba(255,255,255,.55);border:1px solid rgba(138,106,72,.18);border-radius:22px;padding:24px 22px;transition:transform .3s ease, box-shadow .3s ease, background .3s}
+.note-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.85);box-shadow:0 18px 40px -26px rgba(31,48,41,.45)}
+.note-card .ic{width:46px;height:46px;border-radius:50%;background:var(--rice2);display:grid;place-items:center;color:var(--matcha);margin-bottom:14px}
+.note-card .ic svg{width:24px;height:24px}
+.note-card h3{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--matcha-dd);margin-bottom:6px}
+.note-card p{color:var(--ink2);font-size:15px;font-weight:300}
+@media(min-width:720px){.notes{grid-template-columns:repeat(3,1fr);gap:20px}}
+
+/* why */
+.why{background:var(--rice2)}
+.why-list{list-style:none;margin-top:28px;display:grid;gap:0}
+.why-list li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:20px 0;border-top:1px solid rgba(62,92,80,.16)}
+.why-list li:last-child{border-bottom:1px solid rgba(62,92,80,.16)}
+.why-list .n{font-family:var(--serif);color:var(--hinoki-d);font-size:20px;line-height:1.3}
+.why-list h3{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--matcha-dd)}
+.why-list p{color:var(--ink2);font-size:15px;font-weight:300;margin-top:2px}
+@media(min-width:900px){.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}.why-list{margin-top:0}}
+
+/* visit */
+.visit-grid{display:grid;gap:22px;margin-top:30px}
+.card{background:#FBFAF7;border:1px solid rgba(138,106,72,.18);border-radius:24px;padding:26px 22px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--matcha-dd);margin-bottom:10px}
+.addr{font-size:16px;line-height:1.55}
+.addr small{display:block;color:var(--ink2);font-size:13.5px;margin-top:6px}
+.phone-big{display:inline-block;font-family:var(--serif);font-size:30px;color:var(--matcha);text-decoration:none;margin:4px 0 2px;letter-spacing:.01em}
+.phone-big:hover{color:var(--matcha-dd)}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:16px 0 12px}
+.week div{text-align:center;font-size:12px;letter-spacing:.08em;padding:10px 0;border-radius:12px;background:var(--rice);color:var(--ink2);transition:background .3s,color .3s}
+.week div.today{background:var(--matcha);color:#F2EFE9;font-weight:500}
+.hours-note{font-size:14.5px;color:var(--ink2)}
+.hours-note b{color:var(--ink);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btns .btn{flex:1 1 140px}
+.map{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(138,106,72,.2);min-height:300px;background:var(--rice2) repeating-radial-gradient(circle at 50% 50%,rgba(62,92,80,.08) 0 1px,transparent 1px 28px)}
+.map::before{content:"2000 Mallory Ln · Suite 340";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif);color:var(--matcha);font-size:15px;white-space:nowrap}
+.map iframe{position:relative;z-index:1}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;filter:saturate(.75) sepia(.12)}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}.visit-grid .card{grid-column:1}.map{grid-column:2;grid-row:1 / span 2;min-height:100%}}
+
+/* closing */
+.closing{text-align:center;padding:80px 0 70px;position:relative;overflow:hidden}
+.closing h2{max-width:14em;margin:12px auto 18px}
+.closing .cta-row{justify-content:center}
+.closing .bg{position:absolute;left:50%;top:50%;width:760px;height:760px;transform:translate(-50%,-50%);z-index:-1;opacity:.55;pointer-events:none}
+
+footer{background:var(--matcha-dd);color:rgba(242,239,233,.75);padding:44px 0 36px;font-size:14px}
+footer .f{display:grid;gap:18px}
+footer .logo span{color:#F2EFE9}
+footer a{text-decoration:none}
+footer a:hover{color:var(--hinoki)}
+footer .credit{margin-top:26px;padding-top:18px;border-top:1px solid rgba(242,239,233,.12);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+@media(min-width:900px){footer .f{grid-template-columns:1.2fr 1fr 1fr}}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(242,239,233,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(62,92,80,.15)}
+.bar .btn{flex:1;min-height:50px;font-size:14.5px}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+.js.show-all .rv{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:reduce){.rv{transition:none}.js .rv:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--hinoki-d);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Kith Hair Clinic. Not live.</div>
+
+<header class="wrap nav">
+  <a class="logo" href="#top" aria-label="Kith Hair Clinic home">
+    <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <circle cx="20" cy="20" r="18" stroke="#3E5C50" stroke-width="1.2"/>
+      <circle cx="20" cy="20" r="12" stroke="#C8A27C" stroke-width="1.2"/>
+      <circle cx="20" cy="20" r="6" stroke="#3E5C50" stroke-width="1.2"/>
+      <circle cx="20" cy="20" r="1.8" fill="#3E5C50"/>
+    </svg>
+    <div><span>Kith</span><small>Hair Clinic</small></div>
+  </a>
+  <ul>
+    <li><a href="#head-spa">Head Spa</a></li>
+    <li><a href="#why">Why Kith</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <a class="btn btn-primary btn-sm navcall" href="tel:+16153900188">Call 615-390-0188</a>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-top:12px">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow rv">Japanese Head Spa · Franklin, TN</span>
+        <h1 class="rv">Let the day <em>ripple</em> away.</h1>
+        <p class="lede rv">Kith Hair Clinic brings the <strong>Japanese Head Spa</strong> to Franklin, in a private suite at Phenix Salon Suites on Mallory Lane.</p>
+        <div class="cta-row rv">
+          <a class="btn btn-primary" href="tel:+16153900188">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call to book
+          </a>
+          <a class="btn btn-ghost" href="#head-spa">The head spa</a>
+        </div>
+        <div class="where rv">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Suite 340 · 2000 Mallory Ln, Franklin
+        </div>
+      </div>
+
+      <div class="pond rv" aria-hidden="true">
+        <svg viewBox="0 0 520 520" fill="none">
+          <defs>
+            <radialGradient id="water" cx="50%" cy="45%" r="55%">
+              <stop offset="0" stop-color="#5E7D70"/>
+              <stop offset=".6" stop-color="#3E5C50"/>
+              <stop offset="1" stop-color="#2C4339"/>
+            </radialGradient>
+            <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#DDBC97"/>
+              <stop offset=".5" stop-color="#C8A27C"/>
+              <stop offset="1" stop-color="#A8835E"/>
+            </linearGradient>
+            <clipPath id="bowl"><circle cx="260" cy="260" r="196"/></clipPath>
+            <pattern id="grain" width="520" height="14" patternUnits="userSpaceOnUse">
+              <path d="M0 7 C 130 2, 260 12, 520 6" stroke="#9C7653" stroke-opacity=".35" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <!-- soft shadow -->
+          <ellipse cx="260" cy="482" rx="190" ry="18" fill="#3E5C50" opacity=".12"/>
+          <!-- hinoki rim -->
+          <circle cx="260" cy="260" r="232" fill="url(#wood)"/>
+          <circle cx="260" cy="260" r="232" fill="url(#grain)"/>
+          <circle cx="260" cy="260" r="232" stroke="#8A6A48" stroke-opacity=".35" stroke-width="1.5"/>
+          <circle cx="260" cy="260" r="206" fill="#8A6A48" opacity=".35"/>
+          <!-- water -->
+          <circle cx="260" cy="260" r="196" fill="url(#water)"/>
+          <g clip-path="url(#bowl)" stroke="#F2EFE9" stroke-width="1.6">
+            <circle class="ring r1" cx="260" cy="260" r="200"/>
+            <circle class="ring r2" cx="260" cy="260" r="200"/>
+            <circle class="ring r3" cx="260" cy="260" r="200"/>
+            <circle class="ring r4" cx="260" cy="260" r="200"/>
+            <!-- static faint rings so it never looks empty -->
+            <circle cx="260" cy="260" r="40" stroke-opacity=".18"/>
+            <circle cx="260" cy="260" r="90" stroke-opacity=".12"/>
+            <circle cx="260" cy="260" r="150" stroke-opacity=".08"/>
+            <ellipse cx="200" cy="170" rx="80" ry="26" fill="#F2EFE9" fill-opacity=".08" stroke="none" transform="rotate(-24 200 170)"/>
+          </g>
+          <circle class="drop" cx="260" cy="250" r="6" fill="#F2EFE9"/>
+          <!-- floating leaf -->
+          <g transform="translate(330 330) rotate(-30)">
+            <path d="M0 0 C 18 -22, 52 -22, 66 0 C 52 22, 18 22, 0 0 Z" fill="#C8A27C" opacity=".9"/>
+            <path d="M4 0 L 62 0" stroke="#8A6A48" stroke-width="1.2"/>
+          </g>
+          <!-- steam -->
+          <g class="steam" stroke="#3E5C50" stroke-opacity=".35" stroke-width="2" stroke-linecap="round">
+            <path d="M200 30 C 190 10, 214 -6, 204 -30"/>
+            <path d="M262 22 C 252 2, 276 -14, 266 -38"/>
+            <path d="M322 30 C 312 10, 336 -6, 326 -30"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 220 46" fill="none" stroke="#C8A27C" stroke-width="1.2">
+      <line x1="0" y1="23" x2="70" y2="23" stroke-opacity=".6"/>
+      <circle cx="110" cy="23" r="20" stroke-opacity=".35"/>
+      <circle cx="110" cy="23" r="12" stroke-opacity=".6"/>
+      <circle cx="110" cy="23" r="4" fill="#C8A27C" stroke="none"/>
+      <line x1="150" y1="23" x2="220" y2="23" stroke-opacity=".6"/>
+    </svg>
+  </div>
+
+  <section id="head-spa">
+    <div class="wrap">
+      <span class="kicker rv">The service</span>
+      <h2 class="rv">One ritual, given her full attention.</h2>
+      <p class="sec-lede rv">Kith Hair Clinic lists a single service, and it is the whole point of the visit.</p>
+
+      <div class="service rv">
+        <div>
+          <span class="tag">Kith signature</span>
+          <h3>Japanese Head Spa</h3>
+          <div class="jp">SCALP-FIRST CARE</div>
+          <p>A head spa is a scalp-first treatment, inspired by Japanese salon care, that centers on the scalp itself rather than on styling. Call Giselle to ask what your session includes and to find a time that works.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="tel:+16153900188">Call 615-390-0188</a>
+          </div>
+          <div class="note">Pricing and availability by phone.</div>
+        </div>
+        <div class="svc-art" aria-hidden="true">
+          <svg viewBox="0 0 300 300" fill="none" stroke="#C8A27C">
+            <circle cx="150" cy="150" r="130" stroke-opacity=".25"/>
+            <circle cx="150" cy="150" r="100" stroke-opacity=".4"/>
+            <circle cx="150" cy="150" r="70" stroke-opacity=".6"/>
+            <circle cx="150" cy="150" r="40" stroke-opacity=".8"/>
+            <circle cx="150" cy="150" r="10" fill="#C8A27C" stroke="none"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="notes">
+        <div class="note-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></div>
+          <h3>Scalp first</h3>
+          <p>The attention goes to the scalp itself, not to cutting or styling.</p>
+        </div>
+        <div class="note-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+          <h3>A private suite</h3>
+          <p>Suite 340 inside Phenix Salon Suites is a quiet room of her own, not a busy salon floor.</p>
+        </div>
+        <div class="note-card rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <h3>Book with a call</h3>
+          <p>No app or account to set up. Call 615-390-0188 and talk to Giselle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="kicker rv">Why Kith</span>
+        <h2 class="rv">Small on purpose.</h2>
+        <p class="sec-lede rv">Kith is Giselle's own studio: one practitioner, one service, one suite in Cool Springs.</p>
+      </div>
+      <ul class="why-list">
+        <li class="rv"><span class="n">01</span><div><h3>A head spa specialist</h3><p>The Japanese Head Spa is the only service on the menu, so it gets all of her focus.</p></div></li>
+        <li class="rv"><span class="n">02</span><div><h3>Booked one-on-one</h3><p>You book with Giselle directly, and she runs her own suite.</p></div></li>
+        <li class="rv"><span class="n">03</span><div><h3>Easy to reach in Cool Springs</h3><p>Phenix Salon Suites Franklin Cool Springs, 2000 Mallory Lane, Suite 340.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true" style="padding-top:40px">
+    <svg viewBox="0 0 220 46" fill="none" stroke="#3E5C50" stroke-width="1.2">
+      <line x1="0" y1="23" x2="70" y2="23" stroke-opacity=".35"/>
+      <circle cx="110" cy="23" r="20" stroke-opacity=".25"/>
+      <circle cx="110" cy="23" r="12" stroke-opacity=".45"/>
+      <circle cx="110" cy="23" r="4" fill="#3E5C50" stroke="none"/>
+      <line x1="150" y1="23" x2="220" y2="23" stroke-opacity=".35"/>
+    </svg>
+  </div>
+
+  <section id="visit" style="padding-top:24px">
+    <div class="wrap">
+      <span class="kicker rv">Visit</span>
+      <h2 class="rv">Find Suite 340.</h2>
+      <div class="visit-grid">
+        <div class="card rv">
+          <h3>Where</h3>
+          <p class="addr">2000 Mallory Ln, Ste 340<br>Franklin, TN 37067
+            <small>Inside Phenix Salon Suites, Franklin Cool Springs</small></p>
+          <div class="btns">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=2000+Mallory+Ln+Ste+340,+Franklin,+TN+37067" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+        <div class="card rv">
+          <h3>When</h3>
+          <div class="week" id="week">
+            <div data-d="1">Mon</div><div data-d="2">Tue</div><div data-d="3">Wed</div><div data-d="4">Thu</div><div data-d="5">Fri</div><div data-d="6">Sat</div><div data-d="0">Sun</div>
+          </div>
+          <p class="hours-note"><b id="todayName">Today</b>: hours aren't posted online. Call to check openings.</p>
+          <a class="phone-big" href="tel:+16153900188">615-390-0188</a>
+          <div class="btns">
+            <a class="btn btn-primary" href="tel:+16153900188">Tap to call</a>
+          </div>
+        </div>
+        <div class="map rv">
+          <iframe title="Map to Kith Hair Clinic, 2000 Mallory Ln Ste 340, Franklin TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=2000%20Mallory%20Ln%20Ste%20340%2C%20Franklin%2C%20TN%2037067&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <svg class="bg" viewBox="0 0 760 760" fill="none" stroke="#C8A27C" aria-hidden="true">
+      <circle cx="380" cy="380" r="370" stroke-opacity=".25"/>
+      <circle cx="380" cy="380" r="300" stroke-opacity=".35"/>
+      <circle cx="380" cy="380" r="230" stroke-opacity=".45"/>
+      <circle cx="380" cy="380" r="160" stroke-opacity=".55"/>
+    </svg>
+    <div class="wrap">
+      <span class="kicker rv">Kith Hair Clinic</span>
+      <h2 class="rv">Give your scalp some attention of its own.</h2>
+      <div class="cta-row rv">
+        <a class="btn btn-primary" href="tel:+16153900188">Call to book</a>
+        <a class="btn btn-ghost" href="#visit">Get directions</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f">
+      <div>
+        <a class="logo" href="#top">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="#C8A27C" stroke-width="1.2"/><circle cx="20" cy="20" r="12" stroke="#F2EFE9" stroke-opacity=".6" stroke-width="1.2"/><circle cx="20" cy="20" r="6" stroke="#C8A27C" stroke-width="1.2"/><circle cx="20" cy="20" r="1.8" fill="#C8A27C"/></svg>
+          <div><span>Kith</span><small>Hair Clinic</small></div>
+        </a>
+        <p style="margin-top:12px">Japanese Head Spa with Giselle.</p>
+      </div>
+      <div>2000 Mallory Ln, Ste 340<br>Franklin, TN 37067</div>
+      <div><a href="tel:+16153900188">615-390-0188</a></div>
+    </div>
+    <div class="credit"><span>Concept by Code Craft Media</span><span>Concept preview, not a live website.</span></div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-primary" href="tel:+16153900188">Call to book</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=2000+Mallory+Ln+Ste+340,+Franklin,+TN+37067" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=new Date().getDay();
+  var el=document.querySelector('#week [data-d="'+t+'"]'); if(el){el.classList.add('today');el.setAttribute('aria-current','date');}
+  var n=document.getElementById('todayName'); if(n) n.textContent=days[t];
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(i){io.observe(i)});
+  } else { d.classList.add('show-all'); }
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

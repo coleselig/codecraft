@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Williams Farm — Maryville</title>
+<meta name="description" content="Concept site for Williams Farm in Wildwood, Maryville, Tennessee: a family-run farm raising USDA-inspected beef & pork, eggs and vegetables.">
+<meta name="theme-color" content="#1d2b30">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#1d2b30; --slate:#2c4146; --ridge1:#3d5a5c; --ridge2:#56786f; --ridge3:#7c9a86; --haze:#b9c6b0;
+  --cream:#f4ecdc; --paper:#fbf6ec; --ink:#1f2523; --muted:#5d6560;
+  --ember:#b8442c; --ember-d:#9a3622; --corn:#e2aa3e; --line:rgba(31,37,35,.14);
+  --serif:"Young Serif", Georgia, "Times New Roman", serif;
+  --sans:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bar:72px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media (max-width:420px){.wrap{padding:0 16px}}
+
+/* concept banner */
+.concept{background:#11191c;color:#cfd8cf;font-size:12.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:600}
+.concept .s{display:none}
+@media (max-width:520px){.concept .l{display:none}.concept .s{display:inline}}
+
+/* nav */
+.nav{position:absolute;left:0;right:0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream)}
+.brand svg{width:38px;height:38px}
+.brand span{font-family:var(--serif);font-size:20px;line-height:1}
+.brand small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.75;margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--cream);text-decoration:none;font-size:14.5px;font-weight:500;opacity:.85;border-bottom:1px solid transparent;padding-bottom:2px;transition:opacity .2s,border-color .2s}
+.nav ul a:hover{opacity:1;border-color:var(--corn)}
+@media (max-width:860px){.nav ul{display:none}}
+.nav .pill{display:none;color:var(--cream);text-decoration:none;font-size:14px;font-weight:600;border:1px solid rgba(244,236,220,.4);border-radius:99px;padding:7px 14px}
+@media (max-width:860px){.nav .pill{display:inline-block}}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,#1a2a31 0%,#2b4448 38%,#6c7f6d 70%,#c9b98f 100%);color:var(--cream);overflow:hidden;isolation:isolate}
+.hero-art{position:absolute;inset:0;z-index:-1}
+.hero-art svg{width:100%;height:100%}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:0;min-height:min(860px,100svh)}
+.hero-copy{max-width:660px;padding-bottom:300px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--corn)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,9.6vw,92px);line-height:.98;letter-spacing:-.015em;margin:18px 0 20px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--corn)}
+.lede{font-size:clamp(17px,2.2vw,20px);max-width:560px;color:#e6e0cf;margin:0 0 28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;border-radius:99px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s,color .2s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--ember);color:#fff;box-shadow:0 10px 30px -10px rgba(184,68,44,.8)}
+.btn-primary:hover{background:var(--ember-d);transform:translateY(-2px)}
+.btn-ghost{color:var(--cream);border:1.5px solid rgba(244,236,220,.55)}
+.btn-ghost:hover{background:rgba(244,236,220,.12);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.sun{transform-origin:center;animation:rise 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.drift{animation:drift 26s linear infinite alternate}
+.drift2{animation:drift 34s linear infinite alternate-reverse}
+@keyframes drift{from{transform:translateX(-30px)}to{transform:translateX(30px)}}
+.hero-art .m{display:none}@media (max-width:700px){.hero-art .d{display:none}.hero-art .m{display:inline}}
+.hero-fade{position:absolute;left:0;right:0;bottom:-1px;height:40px;background:linear-gradient(180deg,rgba(251,246,236,0),var(--paper))}
+
+/* quote band */
+.quote{background:var(--paper);padding:72px 0 40px}
+.quote figure{margin:0 auto;max-width:880px;text-align:center}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(28px,4.6vw,50px);line-height:1.15;letter-spacing:-.01em;color:var(--night);text-wrap:balance}
+.quote blockquote::before{content:"\201C";display:block;font-size:1.8em;line-height:.6;color:var(--ember);margin-bottom:12px}
+.quote figcaption{margin-top:18px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* facts strip */
+.facts{padding:36px 0 80px}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts li{min-width:0;padding:22px 18px;border-left:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+.facts li:first-child{border-left:0}
+.facts svg{flex:none;width:30px;height:30px;color:var(--ember)}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.2}
+.facts span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}.facts li:nth-child(3){border-left:0}.facts li:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:440px){.facts ul{grid-template-columns:minmax(0,1fr)}.facts li{border-left:0!important;border-top:1px solid var(--line)}.facts li:first-child{border-top:0}}
+
+/* section heads */
+.sec{padding:96px 0}
+.kicker{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--ember)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5.4vw,58px);line-height:1.03;letter-spacing:-.012em;margin:12px 0 16px;text-wrap:balance}
+.sec-intro{max-width:620px;color:var(--muted);margin:0 0 44px}
+
+/* products */
+.grow{background:var(--cream);position:relative}
+.grow::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(31,37,35,.06) 1px,transparent 1.2px);background-size:14px 14px;pointer-events:none}
+.grow .wrap{position:relative}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cards>*{min-width:0}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px 26px 26px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(29,43,48,.45)}
+.card .ico{width:84px;height:84px;margin-bottom:18px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.tag{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);background:#e6ecdf;border-radius:99px;padding:6px 12px}
+.veg{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:30px;align-items:center;background:var(--night);color:var(--cream);border-color:transparent}
+.veg>*{min-width:0}
+.veg p{color:#c9d1c6}
+.veg h3{font-size:34px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(244,236,220,.22);border-radius:99px;padding:9px 15px 9px 11px;font-size:15px;font-weight:500;transition:background .2s,border-color .2s}
+.chips li:hover{background:rgba(226,170,62,.14);border-color:var(--corn)}
+.chips i{width:10px;height:10px;border-radius:50%;flex:none}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.veg{grid-template-columns:minmax(0,1fr);gap:20px}}
+@media (max-width:600px){.cards{grid-template-columns:minmax(0,1fr)}}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.why-grid>*{min-width:0}
+.why-list{list-style:none;margin:0;padding:0;counter-reset:w}
+.why-list li{counter-increment:w;display:grid;grid-template-columns:54px minmax(0,1fr);gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.why-list li>*{min-width:0}
+.why-list li:last-child{border-bottom:1px solid var(--line)}
+.why-list li::before{content:"0" counter(w);font-family:var(--serif);font-size:26px;color:var(--ember);line-height:1.1}
+.why-list h3{margin:0 0 4px;font-size:19px;font-weight:600}
+.why-list p{margin:0;color:var(--muted);font-size:15.5px}
+.why-art{border-radius:28px;overflow:hidden;background:#dfe5d6;aspect-ratio:4/5}
+.why-art svg{width:100%;height:100%}
+@media (max-width:860px){.why-grid{grid-template-columns:minmax(0,1fr);gap:36px}.why-art{aspect-ratio:1/1;order:-1}}
+
+/* market + hours */
+.find{background:var(--night);color:var(--cream);position:relative;overflow:hidden}
+.find .kicker{color:var(--corn)}
+.find .sec-intro{color:#b8c3bb}
+.find-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px}
+.find-grid>*{min-width:0}
+.panel{display:flex;flex-direction:column;background:rgba(255,255,255,.04);border:1px solid rgba(244,236,220,.14);border-radius:22px;padding:28px}
+.panel h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:0 0 6px;line-height:1.15}
+.panel .sub{color:#b8c3bb;font-size:15px;margin:0 0 18px}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:14px;padding:12px 14px;border-radius:12px;font-size:15.5px;border-bottom:1px solid rgba(244,236,220,.08)}
+.hours li span:last-child{text-align:right;color:#c9d1c6}
+.hours li.today{background:var(--corn);color:var(--night);font-weight:600;border-color:transparent}
+.hours li.today span:last-child{color:var(--night)}
+.hours li.today span:first-child::after{content:" · Today";font-weight:700}
+.note{font-size:13.5px;color:#a9b5ad;margin:14px 0 0}
+.mkt{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px}
+.mkt svg{flex:none;width:56px;height:56px}
+.addr{font-style:normal;font-size:15.5px;color:#d9ddd2;line-height:1.5}
+.tailgate{margin-top:auto;padding-top:26px}.tailgate svg{width:100%;height:auto;max-height:220px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn-sm{min-height:44px;padding:0 18px;font-size:15px}
+.btn-light{background:var(--cream);color:var(--night)}
+.btn-light:hover{background:#fff;transform:translateY(-2px)}
+@media (max-width:860px){.find-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* map */
+.visit-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:stretch}
+.visit-grid>*{min-width:0}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:#dfe5d6}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+.contact-list{list-style:none;padding:0;margin:26px 0 0}
+.contact-list li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
+.contact-list svg{flex:none;width:22px;height:22px;color:var(--ember);margin-top:3px}
+.contact-list a{text-decoration:none;font-weight:600;border-bottom:1.5px solid rgba(184,68,44,.35);transition:border-color .2s}
+.contact-list a:hover{border-color:var(--ember)}
+.contact-list small{display:block;color:var(--muted);font-size:13.5px}
+@media (max-width:860px){.visit-grid{grid-template-columns:minmax(0,1fr)}.map,.map iframe{min-height:300px}}
+
+/* footer */
+footer{background:#141e21;color:#9fb0a6;padding:56px 0 40px;font-size:14px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-end}
+.foot .brand span{color:var(--cream)}
+.foot p{margin:6px 0 0}
+.foot a{color:var(--cream);white-space:nowrap}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(20,30,33,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px;border-top:1px solid rgba(244,236,220,.1)}
+.bar>*{min-width:0}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;font-weight:600;font-size:15.5px;text-decoration:none;white-space:nowrap;overflow:hidden}
+.bar svg{width:18px;height:18px;flex:none}
+.bar .c{background:var(--ember);color:#fff}
+.bar .f{background:rgba(244,236,220,.1);color:var(--cream);border:1px solid rgba(244,236,220,.2)}
+@media (min-width:861px){.bar{left:auto;right:24px;bottom:24px;width:420px;border-radius:20px;border:1px solid rgba(244,236,220,.12);padding:10px;box-shadow:0 20px 50px -20px rgba(0,0,0,.5)}body{padding-bottom:0}footer{padding-bottom:120px}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+:focus-visible{outline:3px solid var(--corn);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Williams Farm. Not live.</span><span class="s">Concept by <b>Code Craft Media</b> · Not live</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Williams Farm home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#e2aa3e" stroke-width="1.5"/><path d="M6 27 L14 18 L19 23 L26 14 L34 27 Z" fill="#f4ecdc"/><path d="M22 27v-6l4-3 4 3v6z" fill="#b8442c"/><circle cx="27" cy="11" r="2.6" fill="#e2aa3e"/></svg>
+      <span>Williams Farm<small>Wildwood · Maryville, TN</small></span>
+    </a>
+    <ul>
+      <li><a href="#grow">What we raise</a></li>
+      <li><a href="#why">Our farm</a></li>
+      <li><a href="#find">Find us</a></li>
+      <li><a href="#visit">Contact</a></li>
+    </ul>
+    <a class="pill" href="tel:+18656045730">Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><line x1="0" y1="0" x2="0" y2="6" stroke="#000" stroke-opacity=".08" stroke-width="2"/></pattern>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6d48a" stop-opacity=".75"/><stop offset="1" stop-color="#f6d48a" stop-opacity="0"/></radialGradient>
+        <linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f5a41"/><stop offset="1" stop-color="#2a3d2d"/></linearGradient>
+      </defs>
+      <!-- stars -->
+      <g fill="#f4ecdc" opacity=".55"><circle cx="120" cy="90" r="1.3"/><circle cx="310" cy="160" r="1"/><circle cx="560" cy="70" r="1.2"/><circle cx="820" cy="130" r="1"/><circle cx="1010" cy="60" r="1.4"/><circle cx="1240" cy="110" r="1"/><circle cx="1380" cy="190" r="1.2"/><circle cx="700" cy="200" r=".9"/><circle cx="430" cy="240" r="1"/></g>
+      <!-- sun -->
+      <g class="d"><g class="sun"><circle cx="1080" cy="470" r="230" fill="url(#glow)"/><circle cx="1080" cy="470" r="74" fill="#efc46a"/></g></g>
+      <g class="m"><g class="sun"><circle cx="860" cy="470" r="140" fill="url(#glow)"/><circle cx="860" cy="470" r="42" fill="#efc46a"/></g></g>
+      <!-- far ridges -->
+      <g class="drift2"><path d="M-60 520 C 80 470 180 430 300 455 C 420 480 500 410 620 420 C 760 432 820 470 940 455 C 1060 440 1140 400 1260 420 C 1360 437 1440 460 1520 450 L1520 900 L-60 900Z" fill="#8a9a88" opacity=".55"/></g>
+      <path d="M-40 570 C 90 520 200 500 330 525 C 470 552 560 480 700 492 C 840 505 930 560 1070 540 C 1200 520 1290 480 1480 515 L1480 900 L-40 900Z" fill="#6d8476" opacity=".8"/>
+      <g class="drift"><path d="M-60 560 Q 300 548 600 566 T 1500 556" stroke="#e8dfc8" stroke-opacity=".22" stroke-width="18" fill="none" stroke-linecap="round"/></g>
+      <path d="M-40 625 C 120 585 250 600 380 615 C 520 632 640 575 790 590 C 930 604 1030 650 1180 630 C 1300 614 1380 600 1480 610 L1480 900 L-40 900Z" fill="#4d6a63"/>
+      <path d="M-40 625 C 120 585 250 600 380 615 C 520 632 640 575 790 590 C 930 604 1030 650 1180 630 C 1300 614 1380 600 1480 610 L1480 900 L-40 900Z" fill="url(#hatch)"/>
+      <!-- tree line -->
+      <g fill="#2e4542">
+        <path d="M-20 700 C 100 660 220 690 320 672 C 420 655 520 690 640 676 C 760 662 860 690 980 678 C 1100 666 1220 692 1340 680 L1460 676 L1460 900 L-20 900Z"/>
+        <g><path d="M140 676 l14 -46 l14 46z"/><path d="M168 680 l11 -36 l11 36z"/><path d="M1200 684 l15 -50 l15 50z"/><path d="M1232 686 l11 -36 l11 36z"/><path d="M1290 684 l13 -42 l13 42z"/><path d="M560 680 l10 -32 l10 32z"/></g>
+      </g>
+      <!-- pasture -->
+      <path d="M-20 742 C 260 712 520 728 760 722 C 1000 716 1220 704 1460 724 L1460 900 L-20 900Z" fill="url(#field)"/>
+      <!-- barn -->
+      <g class="d" transform="translate(860 642)">
+        <path d="M0 60 L0 24 L34 0 L68 24 L68 60Z" fill="#b8442c"/>
+        <path d="M0 24 L34 0 L68 24" fill="none" stroke="#7a2a1a" stroke-width="3"/>
+        <path d="M-4 26 L34 -3 L72 26" fill="none" stroke="#f4ecdc" stroke-width="2.2"/>
+        <rect x="22" y="30" width="24" height="30" fill="#7a2a1a"/><path d="M22 30 L46 60 M46 30 L22 60" stroke="#f4ecdc" stroke-width="1.8"/>
+        <rect x="29" y="12" width="10" height="9" fill="#f6d48a"/>
+        <path d="M68 60 L68 34 L104 34 L104 60Z" fill="#9a3622"/><path d="M66 34 L106 34" stroke="#f4ecdc" stroke-width="1.6"/>
+        <rect x="-26" y="10" width="18" height="50" rx="9" fill="#c9c2b0"/><path d="M-26 19 a9 9 0 0 1 18 0" fill="#9aa39a"/>
+      </g>
+      <g class="m" transform="translate(700 650) scale(1.25)">
+        <path d="M0 60 L0 24 L34 0 L68 24 L68 60Z" fill="#b8442c"/>
+        <path d="M0 24 L34 0 L68 24" fill="none" stroke="#7a2a1a" stroke-width="3"/>
+        <path d="M-4 26 L34 -3 L72 26" fill="none" stroke="#f4ecdc" stroke-width="2.2"/>
+        <rect x="22" y="30" width="24" height="30" fill="#7a2a1a"/><path d="M22 30 L46 60 M46 30 L22 60" stroke="#f4ecdc" stroke-width="1.8"/>
+        <rect x="29" y="12" width="10" height="9" fill="#f6d48a"/>
+        <path d="M68 60 L68 34 L104 34 L104 60Z" fill="#9a3622"/><path d="M66 34 L106 34" stroke="#f4ecdc" stroke-width="1.6"/>
+        <rect x="-26" y="10" width="18" height="50" rx="9" fill="#c9c2b0"/><path d="M-26 19 a9 9 0 0 1 18 0" fill="#9aa39a"/>
+      </g>
+      <!-- corn rows -->
+      <g stroke="#e2aa3e" stroke-width="2" fill="none" opacity=".9">
+        <g id="stalk"><path d="M0 0 L1 -70" stroke-width="3"/><path d="M0 -14 C 10 -24 22 -26 30 -20" /><path d="M0 -26 C -10 -38 -22 -40 -30 -34"/><path d="M1 -40 C 10 -50 20 -52 26 -48"/><path d="M1 -52 C -8 -60 -16 -62 -22 -58"/><path d="M1 -70 l-5 -10 M1 -70 l0 -12 M1 -70 l5 -10" stroke-width="1.8"/><path d="M2 -32 c5 -2 7 -10 4 -16 c-4 3 -6 10 -4 16z" fill="#e2aa3e"/></g>
+      </g>
+      <g stroke="#d49a35" stroke-width="2.2" fill="none" stroke-linecap="round">
+        <g transform="translate(70 800)"><use href="#stalk"/></g><g transform="translate(118 806)"><use href="#stalk"/></g><g transform="translate(166 812)"><use href="#stalk"/></g><g transform="translate(214 818)"><use href="#stalk"/></g><g transform="translate(262 824)"><use href="#stalk"/></g><g transform="translate(310 830)"><use href="#stalk"/></g>
+      </g>
+      <!-- fence -->
+      <g stroke="#e9dfc8" stroke-width="3" stroke-linecap="round" opacity=".85">
+        <path d="M560 806 L1460 770"/><path d="M560 826 L1460 792"/>
+        <path d="M580 790 v52"/><path d="M700 786 v50"/><path d="M820 781 v50"/><path d="M940 776 v50"/><path d="M1060 771 v50"/><path d="M1180 766 v50"/><path d="M1300 761 v50"/><path d="M1420 756 v50"/>
+      </g>
+      <!-- cattle silhouettes -->
+      <g fill="#1d2b30">
+        <g transform="translate(1110 728)"><path d="M0 14 C 0 4 8 0 20 0 L44 0 C 52 0 56 4 58 8 L66 6 C 70 6 72 10 70 14 L62 18 L60 24 L56 24 L54 18 L16 18 L14 26 L10 26 L8 18 C 3 18 0 17 0 14Z"/></g>
+        <g transform="translate(1250 738) scale(-.8 .8)"><path d="M0 14 C 0 4 8 0 20 0 L44 0 C 52 0 56 4 58 8 L66 6 C 70 6 72 10 70 14 L62 18 L60 24 L56 24 L54 18 L16 18 L14 26 L10 26 L8 18 C 3 18 0 17 0 14Z"/></g>
+      </g>
+      <path d="M-20 860 C 400 840 900 850 1460 836 L1460 900 L-20 900Z" fill="#26372a"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Wildwood · Maryville, TN</span>
+      <h1>Eleven years on this farm. <em>A lifetime</em> of farming.</h1>
+      <p class="lede">A family-run farm on Cave Mill Road raising USDA-inspected beef and pork, farm eggs, and a full summer of vegetables.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="tel:+18656045730"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call (865) 604-5730</a>
+        <a class="btn btn-ghost" href="#grow">What we raise</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-fade"></div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <figure class="rv">
+      <blockquote>Our farm is 11 years old, but I’ve been farming all my life.</blockquote>
+      <figcaption>Williams Farm · Wildwood, Blount County</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul class="rv">
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 27V14l11-8 11 8v13z"/><path d="M12 27v-8h8v8"/></svg><div><b>Family run</b><span>A Wildwood family farm</span></div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 4l10 4v8c0 6-4.5 10-10 12C10.5 26 6 22 6 16V8z"/><path d="M11 16l4 4 6-7"/></svg><div><b>USDA inspected</b><span>Beef &amp; pork, inspected and processed</span></div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 26c4-6 8-6 12 0 4-6 8-6 12 0"/><path d="M16 20V6M16 12c-4 0-6-2-7-5 4 0 6 2 7 5zM16 10c3 0 5-2 6-4-3 0-5 1-6 4z"/></svg><div><b>Pasture raised</b><span>Out on Wildwood pasture</span></div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M8 19h6"/></svg><div><b>Cards welcome</b><span>Credit &amp; debit accepted</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec grow" id="grow">
+  <div class="wrap">
+    <span class="kicker">What we raise</span>
+    <h2>From the pasture, the coop and the garden rows.</h2>
+    <p class="sec-intro">Beef and pork that are USDA inspected and processed, fresh eggs, and the vegetables that fill an East Tennessee summer.</p>
+    <div class="cards">
+      <article class="card rv">
+        <svg class="ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42" fill="#efe3c9"/><g fill="#1d2b30"><path d="M16 34c0-3 3-5 7-5h26c4 0 6 2 7 4l2 4v13c0 2-1 3-3 3H20c-2 0-4-2-4-4z"/><rect x="21" y="49" width="4.5" height="13" rx="1.5"/><rect x="29" y="49" width="4.5" height="13" rx="1.5"/><rect x="44" y="49" width="4.5" height="13" rx="1.5"/><rect x="51" y="49" width="4.5" height="13" rx="1.5"/><path d="M54 33l6-4h6c2 0 4 2 4 4v9c0 3-2 5-5 5h-5c-3 0-5-2-6-5z"/><path d="M60 29c-2-3-1-6 1-7M68 29c2-3 1-6-1-7" stroke="#1d2b30" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M57 31l-5-3 1 5z"/><path d="M16 36c-3 2-4 8-3 14" stroke="#1d2b30" stroke-width="2" fill="none" stroke-linecap="round"/></g><circle cx="64" cy="35" r="1.4" fill="#efe3c9"/><path d="M30 34c4 4 10 4 13 0" fill="#efe3c9" opacity=".18"/></svg>
+        <h3>Beef</h3>
+        <p>Raised right here on the farm in Wildwood.</p>
+        <span class="tag">USDA inspected &amp; processed</span>
+      </article>
+      <article class="card rv">
+        <svg class="ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42" fill="#f3d9cf"/><path d="M20 46c0-9 8-14 20-14h10c8 0 12 4 14 8h4c2 0 3 2 3 4v4c0 2-1 3-3 3h-4c-2 4-5 6-9 7l-1 6h-4l-1-5H35l-1 5h-4l-1-6c-6-2-9-6-9-12z" fill="#b8442c"/><circle cx="61" cy="43" r="1.6" fill="#fbf6ec"/><path d="M20 44c-4 0-5-3-3-5" stroke="#b8442c" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+        <h3>Pork</h3>
+        <p>Family-raised hogs from the same pasture-raised farm.</p>
+        <span class="tag">USDA inspected &amp; processed</span>
+      </article>
+      <article class="card rv">
+        <svg class="ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42" fill="#f6e7c2"/><ellipse cx="34" cy="47" rx="12" ry="15" fill="#fbf6ec" stroke="#1d2b30" stroke-width="2"/><ellipse cx="52" cy="49" rx="11" ry="14" fill="#d9b48a" stroke="#1d2b30" stroke-width="2"/><path d="M28 39c2-4 5-6 7-6" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        <h3>Eggs</h3>
+        <p>Farm eggs, gathered here in Wildwood.</p>
+        <span class="tag">Dairy &amp; eggs</span>
+      </article>
+      <article class="card veg rv">
+        <div>
+          <svg class="ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42" fill="#2c4146"/><circle cx="42" cy="48" r="18" fill="#b8442c"/><path d="M42 30c-3-4-8-5-12-3 4 1 6 3 7 6M42 30c2-5 7-6 11-4-4 1-6 3-7 6M42 30v-6" stroke="#7c9a86" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M34 42c2-3 5-4 8-4" stroke="#e8836b" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+          <h3>Vegetables</h3>
+          <p>Grown with organic practices (not certified). In the farm’s words: tomatoes, cucumbers, beets, bell peppers, squash, zucchini, and other produce.</p>
+        </div>
+        <ul class="chips">
+          <li><i style="background:#c9472f"></i>Tomatoes</li>
+          <li><i style="background:#e2aa3e"></i>Sweet corn</li>
+          <li><i style="background:#7fae6a"></i>Cucumber</li>
+          <li><i style="background:#9c2f4f"></i>Beets</li>
+          <li><i style="background:#d6643a"></i>Sweet peppers</li>
+          <li><i style="background:#c0392b"></i>Hot peppers</li>
+          <li><i style="background:#e8c35a"></i>Summer squash</li>
+          <li><i style="background:#4d8a4a"></i>Green beans</li>
+          <li><i style="background:#3f7a52"></i>Broccoli</li>
+          <li><i style="background:#9bbf7a"></i>Cabbage</li>
+          <li><i style="background:#d8c3a0"></i>Onions</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap why-grid">
+    <div class="rv">
+      <span class="kicker">Our farm</span>
+      <h2>Small, family run, and done the careful way.</h2>
+      <ul class="why-list">
+        <li><div><h3>A lifetime of know-how</h3><p>The farm has been going eleven years, and the farming goes back a lifetime before that.</p></div></li>
+        <li><div><h3>Inspected, start to finish</h3><p>Our beef and pork are USDA inspected and processed.</p></div></li>
+        <li><div><h3>Pasture raised</h3><p>Our animals are raised out on pasture here in Wildwood, Blount County.</p></div></li>
+        <li><div><h3>Organic practices</h3><p>We grow with organic practices. We’re not certified, and we tell you so up front.</p></div></li>
+      </ul>
+    </div>
+    <div class="why-art rv" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice">
+        <defs><pattern id="h2" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="5" stroke="#1d2b30" stroke-opacity=".09" stroke-width="1.6"/></pattern></defs>
+        <rect width="400" height="500" fill="#e9e1cc"/>
+        <circle cx="300" cy="190" r="50" fill="#e2aa3e"/>
+        <path d="M0 230 C 80 190 160 200 230 215 C 300 230 350 200 400 205 V500 H0Z" fill="#9fb39a"/>
+        <path d="M0 270 C 90 240 170 262 250 255 C 320 249 360 236 400 242 V500 H0Z" fill="#6f8e76"/>
+        <path d="M0 270 C 90 240 170 262 250 255 C 320 249 360 236 400 242 V500 H0Z" fill="url(#h2)"/>
+        <!-- garden rows -->
+        <g>
+          <path d="M-40 500 L170 300 L190 300 L40 500Z" fill="#7a5a3a"/><path d="M60 500 L195 300 L215 300 L140 500Z" fill="#8a6844"/><path d="M160 500 L220 300 L240 300 L240 500Z" fill="#7a5a3a"/><path d="M260 500 L245 300 L265 300 L340 500Z" fill="#8a6844"/><path d="M360 500 L270 300 L290 300 L440 500Z" fill="#7a5a3a"/>
+          <path d="M20 500 L182 300 M100 500 L205 300 M200 500 L230 300 M300 500 L255 300 M400 500 L280 300" stroke="#4d7a4a" stroke-width="10" stroke-dasharray="4 10" stroke-linecap="round"/>
+        </g>
+        <!-- tomato stake -->
+        <g transform="translate(300 330)">
+          <path d="M0 0 V150" stroke="#5b4630" stroke-width="5"/>
+          <path d="M0 20 C -30 30 -34 60 -10 80 C 10 96 30 120 6 150" stroke="#3f6b45" stroke-width="5" fill="none"/>
+          <path d="M0 40 c 18 4 28 14 30 26M0 90 c -22 2 -30 10 -32 22" stroke="#3f6b45" stroke-width="4" fill="none"/>
+          <circle cx="-16" cy="58" r="13" fill="#b8442c"/><circle cx="24" cy="76" r="11" fill="#c9472f"/><circle cx="-26" cy="116" r="12" fill="#b8442c"/><circle cx="10" cy="124" r="9" fill="#e2aa3e"/>
+        </g>
+        <!-- hen -->
+        <g transform="translate(70 380)">
+          <path d="M0 40 C 0 14 18 0 40 6 C 50 -10 66 -8 66 6 C 76 6 80 12 74 16 L66 18 C 70 40 56 56 34 56 C 14 56 0 52 0 40Z" fill="#fbf6ec" stroke="#1d2b30" stroke-width="2.5"/>
+          <path d="M56 -2 c2 -8 10 -8 10 0" fill="#b8442c"/><circle cx="62" cy="8" r="2.2" fill="#1d2b30"/>
+          <path d="M8 28 C 18 22 30 26 34 36" stroke="#1d2b30" stroke-width="2" fill="none"/>
+          <path d="M30 56 v14 M42 56 v14" stroke="#e2aa3e" stroke-width="3"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec find" id="find">
+  <div class="wrap">
+    <span class="kicker">Find us</span>
+    <h2>Saturday mornings at the Seymour Farmers Market.</h2>
+    <p class="sec-intro">Williams Farm is one of the farms supplying the Seymour Farmers Market tailgate. Off-season, or looking for beef and pork? Just give us a call.</p>
+    <div class="find-grid">
+      <div class="panel rv">
+        <div class="mkt">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="14" fill="#e2aa3e"/><path d="M10 24h36l-4-10H14z" fill="#b8442c"/><path d="M10 24c0 3 3 5 6 5s6-2 6-5c0 3 3 5 6 5s6-2 6-5c0 3 3 5 6 5s6-2 6-5" fill="#f4ecdc"/><path d="M14 29v15h28V29" stroke="#1d2b30" stroke-width="2.6" fill="none"/><path d="M24 44v-8h8v8" stroke="#1d2b30" stroke-width="2.6" fill="none"/></svg>
+          <div>
+            <h3>Seymour Farmers Market</h3>
+            <address class="addr">Lower parking lot, Seymour First Baptist Church<br>11621 Chapman Hwy, Seymour, TN 37865</address>
+          </div>
+        </div>
+        <p class="sub">2026 season: June 6 – October 10. Saturdays, 8 am – 12 noon.</p>
+        <div class="row">
+          <a class="btn btn-light btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=11621%20Chapman%20Hwy%2C%20Seymour%2C%20TN%2037865" target="_blank" rel="noopener">Market directions</a>
+          <a class="btn btn-ghost btn-sm" href="tel:+18656045730">Call the farm</a>
+        </div>
+        <div class="tailgate" aria-hidden="true">
+          <svg viewBox="0 0 480 200">
+            <path d="M0 196 H480" stroke="rgba(244,236,220,.25)" stroke-width="2"/>
+            <path d="M20 70 L240 40 L460 70 Z" fill="#b8442c"/>
+            <path d="M20 70 q27 18 55 0 q27 18 55 0 q27 18 55 0 q27 18 55 0 q27 18 55 0 q27 18 55 0 q27 18 55 0 q27 18 55 0" fill="#f4ecdc"/>
+            <path d="M40 72 V196 M440 72 V196" stroke="#f4ecdc" stroke-opacity=".6" stroke-width="5"/>
+            <rect x="70" y="150" width="340" height="12" rx="3" fill="#7a5a3a"/>
+            <g>
+              <rect x="80" y="112" width="96" height="38" rx="4" fill="#9a7a50"/><path d="M80 124h96M80 137h96" stroke="#6b5234" stroke-width="2"/>
+              <circle cx="96" cy="108" r="11" fill="#c9472f"/><circle cx="118" cy="106" r="12" fill="#b8442c"/><circle cx="140" cy="108" r="11" fill="#d6643a"/><circle cx="161" cy="107" r="10" fill="#c9472f"/>
+              <rect x="190" y="112" width="96" height="38" rx="4" fill="#9a7a50"/><path d="M190 124h96M190 137h96" stroke="#6b5234" stroke-width="2"/>
+              <g fill="#e2aa3e" stroke="#7c9a86" stroke-width="3"><ellipse cx="212" cy="104" rx="20" ry="7" transform="rotate(-12 212 104)"/><ellipse cx="248" cy="102" rx="20" ry="7" transform="rotate(8 248 102)"/><ellipse cx="270" cy="106" rx="16" ry="6" transform="rotate(-20 270 106)"/></g>
+              <rect x="300" y="112" width="100" height="38" rx="4" fill="#efe3c9"/><path d="M300 124h100" stroke="#cdbf9f" stroke-width="2"/>
+              <g fill="#fbf6ec" stroke="#1d2b30" stroke-width="1.5"><ellipse cx="318" cy="106" rx="8" ry="10"/><ellipse cx="336" cy="105" rx="8" ry="10" fill="#d9b48a"/><ellipse cx="354" cy="106" rx="8" ry="10"/><ellipse cx="372" cy="105" rx="8" ry="10" fill="#d9b48a"/><ellipse cx="389" cy="106" rx="7" ry="9"/></g>
+            </g>
+            <path d="M90 162 v34 M390 162 v34" stroke="#6b5234" stroke-width="6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="panel rv">
+        <h3>Market hours</h3>
+        <p class="sub">During the market season. Today is highlighted.</p>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>By phone</span></li>
+          <li data-d="2"><span>Tuesday</span><span>By phone</span></li>
+          <li data-d="3"><span>Wednesday</span><span>By phone</span></li>
+          <li data-d="4"><span>Thursday</span><span>By phone</span></li>
+          <li data-d="5"><span>Friday</span><span>By phone</span></li>
+          <li data-d="6"><span>Saturday</span><span>Market · 8 am – 12 pm</span></li>
+          <li data-d="0"><span>Sunday</span><span>By phone</span></li>
+        </ul>
+        <p class="note">Market schedule from the ASAP Local Food Guide. (865) 604-5730 for anything else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit">
+  <div class="wrap visit-grid">
+    <div class="rv">
+      <span class="kicker">Contact</span>
+      <h2>Out on Cave Mill Road.</h2>
+      <p class="sec-intro" style="margin-bottom:0">The farm sits in Wildwood, in Blount County. Calling is the quickest way to ask what’s ready.</p>
+      <ul class="contact-list">
+        <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><div><a href="tel:+18656045730">(865) 604-5730</a><small>Call the farm</small></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><a href="https://www.google.com/maps/dir/?api=1&amp;destination=4255%20Cave%20Mill%20Rd%2C%20Maryville%2C%20TN%2037804" target="_blank" rel="noopener">4255 Cave Mill Rd</a><small>Maryville, TN 37804 · Directions</small></div></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6.5c0-.8.2-1.5 1.5-1.5H17V2h-2.6C11.6 2 11 3.8 11 6v2H9v3h2v11h3V11h2.4l.6-3z"/></svg><div><a href="https://www.facebook.com/pages/category/Farm/Williams-Farm-in-Wildwood-257137371095224/" target="_blank" rel="noopener">Williams Farm in Wildwood</a><small>Follow along on Facebook</small></div></li>
+      </ul>
+    </div>
+    <div class="map rv">
+      <iframe title="Map to Williams Farm, 4255 Cave Mill Rd, Maryville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=4255%20Cave%20Mill%20Rd%2C%20Maryville%2C%20TN%2037804&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true" style="width:34px;height:34px"><circle cx="20" cy="20" r="19" fill="none" stroke="#e2aa3e" stroke-width="1.5"/><path d="M6 27 L14 18 L19 23 L26 14 L34 27 Z" fill="#f4ecdc"/><path d="M22 27v-6l4-3 4 3v6z" fill="#b8442c"/></svg><span>Williams Farm</span></a>
+      <p>4255 Cave Mill Rd, Maryville, TN 37804 · <a href="tel:+18656045730">(865) 604-5730</a></p>
+    </div>
+    <p>Concept by Code Craft Media · Not an official site</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="c" href="tel:+18656045730"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call (865) 604-5730</a>
+  <a class="f" href="https://www.facebook.com/pages/category/Farm/Williams-Farm-in-Wildwood-257137371095224/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6.5c0-.8.2-1.5 1.5-1.5H17V2h-2.6C11.6 2 11 3.8 11 6v2H9v3h2v11h3V11h2.4l.6-3z"/></svg>Facebook</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)) return;
+  root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

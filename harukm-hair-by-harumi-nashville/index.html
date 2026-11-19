@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>HaruKM — Hair by Harumi — Nashville</title>
+<meta name="description" content="Concept site for HaruKM, Hair by Harumi: hand-painted balayage, haircutting, hair coloring, barbering and keratin smoothing in Suite #5, Salons by JC West End, Nashville.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EDE4; --paper2:#EBE1D4; --ink:#2E2A27; --ink2:#5b534d; --seal:#C8553D; --seal-d:#a8432e;
+  --serif:"Shippori Mincho",ui-serif,Georgia,serif; --sans:Inter,system-ui,-apple-system,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .2 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.banner{position:relative;z-index:1}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 48px}}
+
+.banner{background:var(--ink);color:#e9e0d4;font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.seal{width:40px;height:40px;background:var(--seal);color:var(--paper);display:grid;place-items:center;border-radius:4px;
+  font-family:var(--serif);font-weight:800;font-size:13px;letter-spacing:.02em;line-height:1;box-shadow:inset 0 0 0 2px rgba(244,237,228,.25);transform:rotate(-3deg)}
+.brand b{font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:.01em;display:block;line-height:1.1}
+.brand small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.nav ul{display:none;list-style:none;gap:30px;font-size:14px}
+.nav ul a{text-decoration:none;position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--seal);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:hover::after{transform:scaleX(1)}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;padding:34px 0 64px;overflow:hidden}
+.eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--seal-d);font-weight:600;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--seal)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(46px,13.5vw,118px);line-height:.98;letter-spacing:-.02em;margin:18px 0 0;position:relative;z-index:2}
+h1 em{font-style:normal;color:var(--seal)}
+.ribbon{position:relative;height:150px;margin:-26px -20px -10px;z-index:1;pointer-events:none}
+.ribbon svg{width:100%;height:100%;display:block}
+.ribbon path.stroke{stroke-dasharray:1600;stroke-dashoffset:1600;animation:paint 2.2s cubic-bezier(.6,.1,.2,1) .25s forwards}
+@keyframes paint{to{stroke-dashoffset:0}}
+.sub{max-width:34ch;font-size:17px;color:var(--ink2);position:relative;z-index:2}
+.sub strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--seal);color:#fff;box-shadow:0 10px 24px -12px rgba(200,85,61,.8)}
+.btn.primary:hover{background:var(--seal-d);transform:translateY(-2px)}
+.btn.ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.hero-meta{margin-top:34px;display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--ink2);position:relative;z-index:2}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--seal)}
+.bigseal{display:none;position:absolute;opacity:.1;z-index:0;transform:rotate(-4deg)}
+@media(min-width:900px){
+  .hero{padding:70px 0 110px}
+  .ribbon{height:230px;margin:-60px -48px -20px}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
+  .bigseal{display:block;right:60px;top:70px;width:260px;height:260px}
+  .sub{font-size:19px}
+}
+
+/* sections */
+section{padding:76px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+.sec-num{font-family:var(--serif);color:var(--seal);font-size:15px;font-weight:600}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(34px,8.5vw,62px);line-height:1.05;letter-spacing:-.015em}
+.lead{color:var(--ink2);max-width:52ch;margin:-18px 0 34px}
+
+/* services */
+.services{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.services .sec-num{color:#e9876f}
+.services .lead{color:#c9bfb3}
+.svc{list-style:none;border-top:1px solid rgba(244,237,228,.18)}
+.svc li{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:24px 4px;border-bottom:1px solid rgba(244,237,228,.18);transition:background .3s,padding .3s;cursor:default}
+.svc li:hover{background:rgba(244,237,228,.04);padding-left:12px}
+.svc .n{font-family:var(--serif);color:#e9876f;font-size:14px}
+.svc h3{font-family:var(--serif);font-weight:600;font-size:clamp(23px,6vw,36px);line-height:1.15}
+.svc p{font-size:14px;color:#c9bfb3;margin-top:4px}
+.svc svg{width:38px;height:38px;opacity:.85}
+.svc-note{margin-top:28px;font-size:14px;color:#c9bfb3;display:flex;gap:10px;align-items:flex-start}
+.services .wash{position:absolute;right:-160px;bottom:-120px;width:420px;opacity:.09;pointer-events:none}
+
+/* why */
+.why-grid{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fbf7f1;border:1px solid rgba(46,42,39,.1);border-radius:18px;padding:26px 22px;position:relative;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(46,42,39,.45)}
+.card .ic{width:46px;height:46px;border-radius:12px;background:var(--paper2);display:grid;place-items:center;margin-bottom:18px}
+.card h3{font-family:var(--serif);font-size:22px;font-weight:700;line-height:1.2;margin-bottom:8px}
+.card p{font-size:15px;color:var(--ink2)}
+.card a{color:var(--seal-d);font-weight:600}
+
+/* hours */
+.hours{background:var(--paper2)}
+.hours-grid{display:grid;gap:30px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.hours-grid{grid-template-columns:1fr 1fr;gap:60px;align-items:center}}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{aspect-ratio:3/4;border-radius:12px;border:1px solid rgba(46,42,39,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);background:#fbf7f1;font-weight:500}
+.day b{width:6px;height:6px;border-radius:50%;background:rgba(46,42,39,.25);margin-top:10px;font-size:0}
+.day i{font-style:normal;font-size:9.5px;letter-spacing:.1em;margin-top:6px;display:none}
+.day.today i{display:block}
+.day.today{background:var(--seal);color:#fff;border-color:var(--seal);box-shadow:0 10px 22px -12px rgba(200,85,61,.9)}
+.day.today b{background:#fff}
+.today-line{margin-top:16px;font-size:15px;color:var(--ink2)}
+.today-line strong{color:var(--ink)}
+.appt h3{font-family:var(--serif);font-size:28px;line-height:1.2;margin-bottom:12px}
+.appt p{color:var(--ink2);margin-bottom:22px}
+
+/* visit */
+.visit-grid{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:48px;align-items:stretch}}
+.addr{font-family:var(--serif);font-size:clamp(26px,6.5vw,40px);line-height:1.2;font-weight:600}
+.addr span{color:var(--seal)}
+.visit-info p{color:var(--ink2);margin:14px 0 24px}
+.links{display:grid;gap:10px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-radius:14px;background:#fbf7f1;border:1px solid rgba(46,42,39,.1);text-decoration:none;transition:border-color .2s,transform .2s}
+.row:hover{border-color:var(--seal);transform:translateX(4px)}
+.row small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.row b{font-weight:600;font-size:17px}
+.row .arr{color:var(--seal);font-size:20px}
+.map{border-radius:20px;overflow:hidden;border:1px solid rgba(46,42,39,.12);min-height:320px;background:var(--paper2)}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:grayscale(.35) sepia(.15)}
+
+/* closing */
+.closing{text-align:center;padding:90px 0}
+.closing h2{max-width:16ch;margin:0 auto 26px}
+.closing .cta{justify-content:center}
+
+footer{background:var(--ink);color:#c9bfb3;padding:40px 0;font-size:13px}
+.foot{display:flex;flex-direction:column;gap:14px}
+@media(min-width:900px){.foot{flex-direction:row;justify-content:space-between;align-items:center}}
+footer .brand b{color:var(--paper)}
+footer .brand small{color:#a89d91}
+footer a{color:#e9876f}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(46,42,39,.96);backdrop-filter:blur(8px)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
+.bar .call{border:1.5px solid rgba(244,237,228,.4);color:var(--paper)}
+.bar .book{background:var(--seal);color:#fff}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){.reveal,.ribbon path.stroke{transition:none;animation:none;stroke-dashoffset:0}}
+:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for HaruKM. Not live.</div>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="HaruKM home">
+      <span class="seal" aria-hidden="true">HKM</span>
+      <span><b>HaruKM</b><small>Hair by Harumi</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#suite">The suite</a></li>
+      <li><a href="#book">Booking</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <svg class="bigseal" viewBox="0 0 100 100" aria-hidden="true"><rect x="6" y="6" width="88" height="88" rx="6" fill="none" stroke="#C8553D" stroke-width="6"/><text x="50" y="62" text-anchor="middle" font-family="Shippori Mincho,serif" font-weight="800" font-size="30" fill="#C8553D">HKM</text></svg>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">West End · Nashville</p>
+          <h1>Color,<br>painted<br>by <em>hand.</em></h1>
+        </div>
+      </div>
+      <div class="ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1200 230" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="bal" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#2E2A27"/>
+              <stop offset=".45" stop-color="#6b4a3a"/>
+              <stop offset=".75" stop-color="#b98a62"/>
+              <stop offset="1" stop-color="#e6c9a2"/>
+            </linearGradient>
+            <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".012 .09" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="9"/></filter>
+          </defs>
+          <path class="stroke" d="M-20 150 C 180 60, 360 200, 560 120 S 900 40, 1220 100" fill="none" stroke="url(#bal)" stroke-width="58" stroke-linecap="round" filter="url(#rough)"/>
+          <path class="stroke" d="M-20 168 C 200 90, 380 210, 580 140 S 920 70, 1220 122" fill="none" stroke="#F4EDE4" stroke-opacity=".35" stroke-width="3" filter="url(#rough)"/>
+          
+        </svg>
+      </div>
+      <p class="sub">Hand-painted balayage, haircuts, color, barbering and keratin smoothing by <strong>Harumi</strong>, in Suite #5 at Salons by JC.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://mysite.vagaro.com/hairbyharumi" target="_blank" rel="noopener">Book on Vagaro <span aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="tel:+17703801413">Call (770) 380-1413</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="dot"></i>210 25th Ave N, Suite #5</span>
+        <span><i class="dot"></i>@harumistylist</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <svg class="wash" viewBox="0 0 400 400" aria-hidden="true"><path d="M40 300 C 120 120, 260 360, 360 80" fill="none" stroke="#C8553D" stroke-width="70" stroke-linecap="round"/></svg>
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num">01</span><h2>The menu</h2></div>
+      <p class="lead reveal">Five things Harumi lists, start to finish. Pick one or pair them up when you book.</p>
+      <ul class="svc">
+        <li class="reveal"><span class="n">i.</span><div><h3>Hand-painted balayage</h3><p>Color brushed on freehand, section by section.</p></div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#e9876f" stroke-width="1.6" aria-hidden="true"><path d="M8 32 L26 14"/><path d="M26 14 l4-6 2 2-6 4z" fill="#e9876f"/><path d="M6 34c2-1 4-3 4-3" stroke-linecap="round"/></svg></li>
+        <li class="reveal"><span class="n">ii.</span><div><h3>Haircutting</h3><p>Cuts and shaping.</p></div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#e9876f" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="29" r="4"/><circle cx="28" cy="29" r="4"/><path d="M14.5 26 L28 8M25.5 26 L12 8"/></svg></li>
+        <li class="reveal"><span class="n">iii.</span><div><h3>Hair coloring</h3><p>Color services beyond balayage.</p></div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#e9876f" stroke-width="1.6" aria-hidden="true"><path d="M10 14h20l-2 18H12z"/><path d="M14 20h12" /><circle cx="20" cy="8" r="3" fill="#e9876f"/></svg></li>
+        <li class="reveal"><span class="n">iv.</span><div><h3>Barbering</h3><p>Clipper and barber work.</p></div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#e9876f" stroke-width="1.6" aria-hidden="true"><rect x="14" y="6" width="12" height="28" rx="6"/><path d="M14 14l12 6M14 22l12 6"/></svg></li>
+        <li class="reveal"><span class="n">v.</span><div><h3>Keratin / smoothing</h3><p>Smoothing treatments.</p></div>
+          <svg viewBox="0 0 40 40" fill="none" stroke="#e9876f" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 12c8 0 16 0 24 0M8 20c8 0 16 0 24 0M8 28c8 0 16 0 24 0"/></svg></li>
+      </ul>
+      <p class="svc-note reveal"><span aria-hidden="true">✦</span> See live times and current services on Harumi's Vagaro page.</p>
+    </div>
+  </section>
+
+  <section id="suite">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num">02</span><h2>Why book Harumi</h2></div>
+      <div class="why-grid">
+        <div class="card reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8553D" stroke-width="1.8"><path d="M4 20V8l8-4 8 4v12"/><path d="M10 20v-6h4v6"/></svg></div>
+          <h3>A private suite</h3><p>Suite #5 at Salons by JC, West End: Harumi's own salon suite.</p></div>
+        <div class="card reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8553D" stroke-width="1.8" stroke-linecap="round"><path d="M4 18c4-8 10-10 16-12"/><path d="M5 20c3-1 5-3 5-3"/></svg></div>
+          <h3>Painted by hand</h3><p>Hand-painted balayage is listed first on her services. It's the work this page is built around.</p></div>
+        <div class="card reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8553D" stroke-width="1.8"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M9 15 17 4M15 15 7 4"/></svg></div>
+          <h3>Cut, color, clippers</h3><p>Haircutting, coloring and barbering in one chair, plus keratin smoothing.</p></div>
+        <div class="card reveal">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8553D" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.6" cy="7.4" r=".9" fill="#C8553D"/></svg></div>
+          <h3>See her work</h3><p>Recent hair lives on Instagram at <a href="https://www.instagram.com/harumistylist/" target="_blank" rel="noopener">@harumistylist</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hours" id="book">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num">03</span><h2>By appointment</h2></div>
+      <div class="hours-grid">
+        <div class="reveal">
+          <div class="week" id="week" aria-label="This week">
+            <div class="day" data-d="1">Mon<b>·</b></div><div class="day" data-d="2">Tue<b>·</b></div><div class="day" data-d="3">Wed<b>·</b></div><div class="day" data-d="4">Thu<b>·</b></div><div class="day" data-d="5">Fri<b>·</b></div><div class="day" data-d="6">Sat<b>·</b></div><div class="day" data-d="0">Sun<b>·</b></div>
+          </div>
+          <p class="today-line" id="todayLine">Check Vagaro for today's openings.</p>
+        </div>
+        <div class="appt reveal">
+          <h3>Pick your time on Vagaro.</h3>
+          <p>Harumi takes bookings through her Vagaro page, "Hair by Harumi." Choose a service and a time there, or call the suite with questions.</p>
+          <div class="cta" style="margin-top:0">
+            <a class="btn primary" href="https://mysite.vagaro.com/hairbyharumi" target="_blank" rel="noopener">See open times <span aria-hidden="true">→</span></a>
+            <a class="btn ghost" href="tel:+17703801413">Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="sec-num">04</span><h2>Find the suite</h2></div>
+      <div class="visit-grid">
+        <div class="visit-info reveal">
+          <p class="addr">210 25th Ave N<br><span>Suite #5</span><br>Nashville, TN 37203</p>
+          <p>Inside Salons by JC, West End.</p>
+          <div class="links">
+            <a class="row" href="tel:+17703801413"><span><small>Call</small><b>(770) 380-1413</b></span><span class="arr">→</span></a>
+            <a class="row" href="https://www.google.com/maps/dir/?api=1&destination=210+25th+Ave+N,+Nashville,+TN+37203" target="_blank" rel="noopener"><span><small>Directions</small><b>Open in Maps</b></span><span class="arr">→</span></a>
+            <a class="row" href="https://www.instagram.com/harumistylist/" target="_blank" rel="noopener"><span><small>Instagram</small><b>@harumistylist</b></span><span class="arr">→</span></a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Map to 210 25th Ave N, Nashville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=210%2025th%20Ave%20N%2C%20Nashville%2C%20TN%2037203&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap reveal">
+      <p class="eyebrow" style="justify-content:center">HaruKM</p>
+      <h2 style="margin-top:16px">Ready for your next <em style="font-style:normal;color:var(--seal)">balayage?</em></h2>
+      <div class="cta">
+        <a class="btn primary" href="https://mysite.vagaro.com/hairbyharumi" target="_blank" rel="noopener">Book with Harumi <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><span class="seal" aria-hidden="true">HKM</span><span><b>HaruKM</b><small>Hair by Harumi · Nashville</small></span></a>
+    <span>Suite #5, 210 25th Ave N, Nashville · <a href="tel:+17703801413">(770) 380-1413</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+17703801413">Call</a>
+  <a class="book" href="https://mysite.vagaro.com/hairbyharumi" target="_blank" rel="noopener">Book on Vagaro</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay(), names=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var el=document.querySelector('.day[data-d="'+d+'"]'); if(el){el.classList.add('today');el.insertAdjacentHTML('beforeend','<i>Today</i>');}
+  var t=document.getElementById('todayLine'); if(t) t.innerHTML='It’s <strong>'+names[d]+'</strong>. Check Vagaro for today’s openings.';
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)) return;
+  els.forEach(function(e){var r=e.getBoundingClientRect(); if(r.top>innerHeight) e.classList.add('pre');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

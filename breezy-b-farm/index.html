@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Breezy B Farm — Lenoir City</title>
+<meta name="description" content="Concept site for Breezy B Farm: U-pick lavender, blueberries and cut flowers on Kingston Highway, Lenoir City, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lav:#8C7BB8; --lav-d:#5E4F8C; --lav-dd:#3F3466; --lav-l:#E7E1F3; --lav-ll:#F3EFF9;
+  --sage:#A3B18A; --sage-d:#5F6F48; --sage-l:#E4E9DA;
+  --linen:#FAF6EF; --linen-d:#F1EADD; --ink:#2E2A38; --muted:#5D586A; --white:#fff;
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Nunito", system-ui, -apple-system, sans-serif;
+  --r:20px; --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.fact b,.timeline .yr{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em;color:var(--lav-dd)}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media (max-width:400px){.wrap{padding:0 16px}}
+
+/* concept banner */
+.concept{background:var(--lav-dd);color:#EEE9F8;font-size:12px;text-align:center;padding:7px 12px;line-height:1.35}
+@media (max-width:420px){.concept{font-size:10.5px;letter-spacing:-.01em;padding:6px 8px}}
+.concept b{font-weight:700;color:#fff}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(94,79,140,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:34px;height:34px;flex:none}
+.brand span{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--lav-dd);white-space:nowrap}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{text-decoration:none;font-weight:700;font-size:15px;color:var(--muted);transition:color .2s}
+.navlinks a:hover{color:var(--lav-d)}
+.navlinks .lk{display:none}
+@media (min-width:860px){.navlinks .lk{display:inline}}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;border-radius:999px;transition:transform .2s, box-shadow .2s, background .2s;cursor:pointer;white-space:nowrap}
+.pill svg{width:18px;height:18px;flex:none}
+.pill-sm{padding:9px 16px;font-size:14px;background:var(--lav-d);color:#fff !important}
+.pill-sm:hover{background:var(--lav-dd)}
+.btn{padding:15px 26px;font-size:16px}
+.btn-p{background:var(--lav-d);color:#fff;box-shadow:0 10px 24px -10px rgba(63,52,102,.6)}
+.btn-p:hover{transform:translateY(-2px);background:var(--lav-dd);box-shadow:0 16px 30px -12px rgba(63,52,102,.65)}
+.btn-g{background:rgba(255,255,255,.75);color:var(--lav-dd);border:1.5px solid rgba(94,79,140,.3)}
+.btn-g:hover{transform:translateY(-2px);background:#fff;border-color:var(--lav-d)}
+.btn:active,.pill-sm:active{transform:scale(.97)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#F3EFF9 0%,#FAF6EF 62%);}
+.hero .wrap{position:relative;z-index:2;padding-top:30px;padding-bottom:36px;display:grid;gap:22px}
+.hero .wrap>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--sage-d)}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--sage);border-radius:2px}
+.hero h1{font-size:clamp(42px,11.5vw,84px);margin:14px 0 16px}
+.hero h1 em{font-style:italic;color:var(--lav)}
+.hero .sub{font-size:18px;color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:520px}
+.cta .sm{display:none}
+@media (max-width:520px){.cta{flex-wrap:nowrap;gap:10px}.cta .btn{padding:14px 18px;font-size:15px}.cta .lg{display:none}.cta .sm{display:inline}}
+.facts>*{min-width:0}
+.fact{background:rgba(255,255,255,.7);border:1px solid rgba(94,79,140,.14);border-radius:16px;padding:12px 10px;text-align:center}
+.fact b{display:block;font-family:var(--serif);font-size:30px;line-height:1;color:var(--lav-d);font-weight:700}
+.fact small{display:block;font-size:12px;line-height:1.3;color:var(--muted);margin-top:6px;font-weight:600}
+.field{position:relative;width:100%;margin-top:6px}
+.field svg{width:100%;height:auto}
+@media (max-width:959px){.field{aspect-ratio:600/330}.field svg{height:100%}}
+.field{border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(63,52,102,.55)}
+.sway{transform-origin:50% 100%;transform-box:fill-box;animation:sway 5s ease-in-out infinite}
+.sway.b{animation-duration:6.2s;animation-delay:-1.4s}
+.sway.c{animation-duration:4.6s;animation-delay:-2.8s}
+@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+.bee{animation:bee 9s ease-in-out infinite}
+@keyframes bee{0%{transform:translate(0,0)}25%{transform:translate(40px,-18px)}50%{transform:translate(90px,6px)}75%{transform:translate(40px,22px)}100%{transform:translate(0,0)}}
+.sun{animation:glow 6s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.85}50%{opacity:1}}
+@media (min-width:960px){
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;padding-top:64px;padding-bottom:64px;column-gap:56px;row-gap:30px}
+  .hero .copy{grid-column:1;grid-row:1}.field{grid-column:2;grid-row:1/3}.facts{grid-column:1;grid-row:2;align-self:start}
+  .field{margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){.sway,.bee,.sun{animation:none}html{scroll-behavior:auto}}
+
+/* sprig divider */
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;padding:6px 0;color:var(--lav)}
+.divider:before,.divider:after{content:"";height:1px;flex:1;max-width:220px;background:linear-gradient(90deg,transparent,rgba(140,123,184,.55))}
+.divider:after{background:linear-gradient(270deg,transparent,rgba(140,123,184,.55))}
+.divider svg{width:92px;height:34px}
+
+/* sections */
+section{padding:72px 0}
+.sec-h{max-width:640px;margin-bottom:34px}
+.sec-h h2{font-size:clamp(36px,8.5vw,56px);margin:10px 0 12px}
+.sec-h p{color:var(--muted);font-size:17.5px}
+
+/* story */
+.story{background:var(--linen)}
+.story-grid{display:grid;gap:34px}
+.story-grid>*{min-width:0}
+.quote{position:relative;background:var(--lav-dd);color:#F1ECFA;border-radius:var(--r);padding:34px 28px 30px;overflow:hidden}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(28px,6.6vw,38px);line-height:1.18;position:relative;z-index:1}
+.quote cite{display:block;margin-top:18px;font-style:normal;font-size:14px;letter-spacing:.06em;color:#CFC4EA;font-weight:700;position:relative;z-index:1}
+.quote .qm{position:absolute;right:-8px;top:-30px;font-family:var(--serif);font-size:220px;line-height:1;color:rgba(255,255,255,.07)}
+.quote .qs{position:absolute;right:14px;bottom:10px;width:90px;opacity:.35}
+.story-text p{color:var(--muted);margin-bottom:14px}
+.story-text p strong{color:var(--ink)}
+.timeline{list-style:none;margin-top:26px;position:relative;padding-left:30px}
+.timeline:before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--lav),var(--sage))}
+.timeline li{position:relative;margin-bottom:20px}
+.timeline li:before{content:"";position:absolute;left:-27px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--linen);border:3px solid var(--lav)}
+.timeline li.plan:before{border-color:var(--sage);border-style:dashed}
+.timeline .yr{font-family:var(--serif);font-weight:700;font-size:24px;color:var(--lav-d);line-height:1.1}
+.timeline li.plan .yr{color:var(--sage-d)}
+.timeline .yr small{font-family:var(--sans);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--sage-d);margin-left:8px;vertical-align:middle}
+.timeline p{color:var(--muted);font-size:16px;margin-top:2px}
+@media (min-width:960px){.story-grid{grid-template-columns:.9fr 1.1fr;align-items:start;gap:60px}.quote{position:sticky;top:96px}}
+
+/* u-pick */
+.upick{background:linear-gradient(180deg,var(--lav-ll),var(--linen));position:relative;overflow:hidden}
+.pick-grid{display:grid;gap:16px}
+.pick-grid>*{min-width:0}
+.pick{background:#fff;border-radius:var(--r);padding:26px 24px;border:1px solid rgba(94,79,140,.12);box-shadow:0 18px 40px -30px rgba(63,52,102,.45);transition:transform .3s, box-shadow .3s;display:flex;gap:18px;align-items:flex-start}
+.pick:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(63,52,102,.55)}
+.pick .ic{flex:none;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--lav-l)}
+.pick .ic svg{width:44px;height:44px}
+.pick:nth-child(2) .ic{background:#E2E6F2}
+.pick:nth-child(3) .ic{background:var(--sage-l)}
+.pick h3{font-size:28px;margin-bottom:4px}
+.pick p{color:var(--muted);font-size:15.5px}
+.tag{display:inline-block;margin-top:10px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-d);background:var(--sage-l);padding:4px 10px;border-radius:999px}
+@media (min-width:860px){.pick-grid{grid-template-columns:repeat(3,1fr)}.pick{flex-direction:column}}
+
+/* products */
+.prod-grid{display:grid;gap:16px}
+.prod-grid>*{min-width:0}
+.prod{background:#fff;border-radius:var(--r);padding:26px 24px 24px;border:1px solid rgba(94,79,140,.12);position:relative;overflow:hidden;transition:transform .3s, border-color .3s}
+.prod:hover{transform:translateY(-3px);border-color:rgba(94,79,140,.35)}
+.prod:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--lav)}
+.prod:nth-child(2):before{background:var(--sage)}
+.prod:nth-child(3):before{background:#C9A86A}
+.prod:nth-child(4):before{background:var(--lav-d)}
+.prod h3{font-size:27px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;font-weight:700;color:var(--ink);background:var(--linen);border:1px solid var(--linen-d);padding:6px 12px;border-radius:999px}
+.prod .note{font-size:14px;color:var(--muted);margin-top:14px}
+.classes{margin-top:18px;border-radius:var(--r);background:var(--sage-l);padding:24px;display:grid;gap:14px;align-items:center}
+.classes>*{min-width:0}
+.classes h3{font-size:28px;color:var(--sage-d)}
+.classes p{color:#44503A;font-size:16px}
+@media (min-width:700px){.prod-grid{grid-template-columns:repeat(2,1fr)}.classes{grid-template-columns:auto 1fr;gap:28px;padding:28px 32px}}
+
+/* hours */
+.hours{background:var(--lav-dd);color:#EDE8F7;position:relative;overflow:hidden}
+.hours h2{color:#fff}
+.hours .sec-h p{color:#CEC5E6}
+.hours .eyebrow{color:#C9D3B6}
+.hours .eyebrow:before{background:#C9D3B6}
+.hrs-grid{display:grid;gap:22px}
+.hrs-grid>*{min-width:0}
+.hrs{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:10px 8px}
+.hrs li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:13px 16px;border-radius:14px;font-weight:600;font-size:16px}
+.hrs li span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hrs li.muted{color:#A79DC4}
+.hrs li.today{background:#fff;color:var(--lav-dd);font-weight:800;box-shadow:0 10px 24px -14px rgba(0,0,0,.6)}
+.hrs li.today span:first-child:after{content:"Today";margin-left:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--sage);color:#22301A;padding:3px 8px;border-radius:999px;vertical-align:2px}
+.season{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px 24px}
+.season h3{color:#fff;font-size:30px;margin-bottom:8px}
+.season p{color:#D3CBE9;font-size:16px}
+.season .months{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin:20px 0 10px}
+.season .months>*{min-width:0}
+.season .months i{display:block;height:34px;border-radius:6px;background:rgba(255,255,255,.1);position:relative}
+.season .months i.on{background:linear-gradient(180deg,#A898D4,var(--lav))}
+.season .ml{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;font-size:10.5px;text-align:center;color:#B3A9CF;font-weight:700}
+.season .ml>*{min-width:0}
+.season{display:flex;flex-direction:column}
+.season .call{margin-top:20px;align-self:flex-start;background:#fff;border-color:#fff}
+.season .sp{margin-top:auto;padding-top:22px;display:flex;gap:6px;opacity:.5}
+.season .sp svg{width:16px;height:48px}
+@media (min-width:860px){.hrs-grid{grid-template-columns:1fr 1fr;gap:30px}}
+
+/* visit */
+.visit-grid{display:grid;gap:20px}
+.visit-grid>*{min-width:0}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(94,79,140,.18);background:var(--lav-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h40M20 0v40' stroke='%23d6cdea' stroke-width='1'/%3E%3C/svg%3E");min-height:300px;position:relative}
+.map iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+.card{background:#fff;border-radius:var(--r);padding:28px 24px;border:1px solid rgba(94,79,140,.12)}
+.card h3{font-size:30px;margin-bottom:6px}
+.addr{font-size:18px;font-weight:700;color:var(--ink);font-style:normal;margin-bottom:18px}
+.addr small{display:block;font-weight:600;color:var(--muted);font-size:14.5px;margin-top:2px}
+.rows{display:grid;gap:10px}
+.rows>*{min-width:0}
+.row{display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px 16px;border-radius:16px;background:var(--linen);border:1px solid var(--linen-d);transition:background .2s, transform .2s}
+.row:hover{background:var(--lav-ll);transform:translateX(3px)}
+.row .ri{flex:none;width:42px;height:42px;border-radius:12px;background:var(--lav-l);display:grid;place-items:center;color:var(--lav-d)}
+.row .ri svg{width:20px;height:20px}
+.row b{display:block;font-size:16px;line-height:1.25;overflow-wrap:anywhere}
+.row small{display:block;color:var(--muted);font-size:13.5px;line-height:1.3}
+.row>div{min-width:0}
+.follow{margin-top:18px;font-size:14.5px;color:var(--muted)}
+.follow a{color:var(--lav-d);font-weight:700}
+@media (min-width:900px){.visit-grid{grid-template-columns:1.25fr 1fr;align-items:stretch}.map iframe{min-height:100%}}
+
+/* footer */
+footer{background:var(--linen-d);padding:46px 0 34px;text-align:center;color:var(--muted);font-size:14.5px}
+footer .brand{justify-content:center;margin-bottom:10px}
+footer p{margin-top:4px}
+footer .cc{margin-top:18px;font-size:13px;opacity:.85}
+
+/* sticky call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(250,246,239,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(94,79,140,.16);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.bar>*{min-width:0}
+.bar a{padding:13px 10px;font-size:15px}
+@media (min-width:860px){.bar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.rv{transition:opacity .8s ease, transform .8s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in,.js.all .rv{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--sage-d);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('all')},1500);</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Breezy B Farm. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sprig" viewBox="0 0 40 120">
+      <path d="M20 120 C20 90 21 60 20 18" stroke="#6F7F55" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M20 96 C14 90 10 88 6 88 M20 84 C26 78 30 77 34 77" stroke="#7E8F63" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <g fill="#8C7BB8">
+        <ellipse cx="20" cy="10" rx="3.2" ry="5"/>
+        <ellipse cx="16.5" cy="18" rx="3.4" ry="5" transform="rotate(-22 16.5 18)"/><ellipse cx="23.5" cy="18" rx="3.4" ry="5" transform="rotate(22 23.5 18)"/>
+        <ellipse cx="16" cy="27" rx="3.6" ry="5.2" transform="rotate(-24 16 27)"/><ellipse cx="24" cy="27" rx="3.6" ry="5.2" transform="rotate(24 24 27)"/>
+        <ellipse cx="15.8" cy="36.5" rx="3.6" ry="5.2" transform="rotate(-26 15.8 36.5)"/><ellipse cx="24.2" cy="36.5" rx="3.6" ry="5.2" transform="rotate(26 24.2 36.5)"/>
+        <ellipse cx="16.4" cy="46" rx="3.4" ry="5" transform="rotate(-26 16.4 46)"/><ellipse cx="23.6" cy="46" rx="3.4" ry="5" transform="rotate(26 23.6 46)"/>
+      </g>
+      <g fill="#A898D4"><ellipse cx="20" cy="22" rx="2" ry="3.4"/><ellipse cx="20" cy="31.5" rx="2" ry="3.4"/><ellipse cx="20" cy="41" rx="2" ry="3.4"/></g>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Breezy B Farm home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E7E1F3"/><use href="#sprig" x="11" y="5" width="18" height="32"/></svg>
+      <span>Breezy B Farm</span>
+    </a>
+    <nav class="navlinks" aria-label="Sections">
+      <a class="lk" href="#story">Our story</a>
+      <a class="lk" href="#upick">U-pick</a>
+      <a class="lk" href="#farm">From the farm</a>
+      <a class="lk" href="#hours">Hours</a>
+      <a class="pill pill-sm" href="tel:+18653864815"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="copy">
+      <span class="eyebrow">U-pick lavender · Lenoir City, TN</span>
+      <h1>Four lavender plants grew into a <em>U-pick field.</em></h1>
+      <p class="sub">Patti planted four in 2023. Now there are around 100 to pick, plus blueberries and cut flowers, on Kingston Highway from April through November.</p>
+      <div class="cta">
+        <a class="pill btn btn-p" href="tel:+18653864815"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="lg">Call 865-386-4815</span><span class="sm">Call the farm</span></a>
+        <a class="pill btn btn-g" href="#visit"><svg aria-hidden="true"><use href="#i-pin"/></svg>Plan a visit</a>
+      </div>
+    </div>
+    <div class="field" aria-hidden="true">
+      <svg viewBox="0 0 600 430" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3EFF9" stop-opacity="0"/><stop offset="1" stop-color="#FBE9D6" stop-opacity=".7"/></linearGradient>
+          <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C4CEAF"/><stop offset="1" stop-color="#A3B18A"/></linearGradient>
+          <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DA9D0"/><stop offset="1" stop-color="#8C7BB8"/></linearGradient>
+          <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8C7BB8"/><stop offset="1" stop-color="#6A5B9C"/></linearGradient>
+          <pattern id="rows" width="22" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="3.2" fill="#A898D4"/><circle cx="16" cy="5" r="2.6" fill="#7766A8"/></pattern>
+        </defs>
+        <rect width="600" height="430" fill="url(#sky)"/>
+        <circle class="sun" cx="455" cy="120" r="54" fill="#F6D9B0"/>
+        <circle cx="455" cy="120" r="80" fill="#F6D9B0" opacity=".25"/>
+        <path d="M0 230 C90 190 170 200 250 215 C340 232 430 180 600 205 L600 430 L0 430Z" fill="url(#h1)" opacity=".75"/>
+        <!-- barn -->
+        <g transform="translate(70 168)">
+          <path d="M0 40 L36 12 L72 40 L72 78 L0 78Z" fill="#B65C4F"/>
+          <path d="M-4 42 L36 9 L76 42" stroke="#F1EADD" stroke-width="4" fill="none" stroke-linejoin="round"/>
+          <rect x="26" y="48" width="20" height="30" fill="#F1EADD"/><path d="M26 48 L46 78 M46 48 L26 78" stroke="#B65C4F" stroke-width="2"/>
+          <rect x="30" y="24" width="12" height="10" fill="#F1EADD"/>
+        </g>
+        <g fill="#6F7F55"><circle cx="190" cy="205" r="16"/><circle cx="206" cy="198" r="13"/><rect x="195" y="206" width="4" height="14"/><circle cx="530" cy="196" r="14"/><rect x="528" y="204" width="4" height="12"/></g>
+        <path d="M0 272 C120 240 240 250 330 262 C430 276 520 240 600 250 L600 430 L0 430Z" fill="url(#h2)"/>
+        <path d="M0 272 C120 240 240 250 330 262 C430 276 520 240 600 250 L600 430 L0 430Z" fill="url(#rows)" opacity=".55"/>
+        <path d="M0 330 C140 300 260 318 380 326 C480 333 540 310 600 312 L600 430 L0 430Z" fill="url(#h3)"/>
+        <g stroke="#55467F" stroke-width="2" opacity=".35" fill="none"><path d="M40 430 C120 380 200 345 300 330"/><path d="M180 430 C240 385 300 352 330 332"/><path d="M360 430 C350 390 345 360 340 330"/><path d="M540 430 C470 385 410 350 370 328"/></g>
+        <!-- foreground sprigs -->
+        <g>
+          <use class="sway" href="#sprig" x="18" y="250" width="58" height="180"/>
+          <use class="sway b" href="#sprig" x="62" y="282" width="48" height="150"/>
+          <use class="sway c" href="#sprig" x="110" y="262" width="54" height="170"/>
+          <use class="sway b" href="#sprig" x="430" y="270" width="52" height="162"/>
+          <use class="sway" href="#sprig" x="476" y="240" width="62" height="192"/>
+          <use class="sway c" href="#sprig" x="532" y="276" width="50" height="156"/>
+        </g>
+        <!-- bee -->
+        <g class="bee"><g transform="translate(250 210)">
+          <path d="M-60 10 C-40 -12 -18 18 0 2" stroke="#5E4F8C" stroke-width="1.4" stroke-dasharray="3 5" fill="none" opacity=".6"/>
+          <ellipse cx="8" cy="0" rx="10" ry="7" fill="#E8B84A"/><path d="M5 -6.5 v13 M10 -6.5 v13" stroke="#3F3466" stroke-width="2.4"/>
+          <ellipse cx="6" cy="-9" rx="6" ry="4" fill="#fff" opacity=".85"/><ellipse cx="12" cy="-8" rx="5" ry="3.5" fill="#fff" opacity=".7"/>
+        </g></g>
+      </svg>
+    </div>
+    <div class="facts">
+        <div class="fact"><b>4</b><small>plants in 2023</small></div>
+        <div class="fact"><b>~100</b><small>plants in 2025</small></div>
+        <div class="fact"><b>50+</b><small>years of farming</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 92 34"><use href="#sprig" x="8" y="0" width="12" height="34" transform="rotate(-70 14 17)"/><use href="#sprig" x="40" y="0" width="12" height="34"/><use href="#sprig" x="72" y="0" width="12" height="34" transform="rotate(70 78 17)"/></svg></div>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <figure class="quote rv">
+      <span class="qm" aria-hidden="true">“</span>
+      <p>“I wanted something that I could enjoy doing in my senior years.”</p>
+      <cite>— PATTI BRASHEARS</cite>
+      <svg class="qs" viewBox="0 0 90 60" aria-hidden="true"><use href="#sprig" x="10" y="0" width="22" height="60"/><use href="#sprig" x="34" y="4" width="20" height="56"/><use href="#sprig" x="56" y="0" width="22" height="60"/></svg>
+    </figure>
+    <div class="story-text rv">
+      <span class="eyebrow">Our story</span>
+      <div class="sec-h" style="margin-bottom:18px"><h2>Fifty years of farming. A few years of lavender.</h2></div>
+      <p>Patti and her husband have been farming for <strong>over 50 years on two farms in Roane County</strong>. They raised show livestock and kept vegetable gardens. Once the kids were grown and moved away, Patti wanted something she could enjoy, and she started with lavender.</p>
+      <ol class="timeline">
+        <li><div class="yr">2023</div><p>Started with just 4 lavender plants.</p></li>
+        <li><div class="yr">2024</div><p>Added 50 more plants. Held the first Fall Festival, with more than 100 people there: a chili cook-off, pollinator stations for the kids and a working display hive.</p></li>
+        <li><div class="yr">2025</div><p>Reached around 100 plants and opened the U-pick lavender field in June/July.</p></li>
+        <li class="plan"><div class="yr">2026 <small>Planned</small></div><p>A polycarbonate greenhouse that doubles as a retail shop, a lavender processing shop in the barn's tack room, a distilling station for essential oil, and a small lavender festival with classes.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="upick" id="upick">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Pick your own</span>
+      <h2>Come pick your own.</h2>
+      <p>Pick your own lavender, blueberries and cut flowers in season.</p>
+    </div>
+    <div class="pick-grid">
+      <article class="pick rv">
+        <div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><use href="#sprig" x="8" y="2" width="14" height="40"/><use href="#sprig" x="22" y="4" width="13" height="38"/></svg></div>
+        <div><h3>Lavender</h3><p>The field started with four plants in 2023 and opened for U-pick in summer 2025.</p><span class="tag">New in 2025</span></div>
+      </article>
+      <article class="pick rv">
+        <div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6c2 3 4 4 8 4" stroke="#5F6F48" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="15" cy="24" r="8" fill="#4A5A95"/><circle cx="28" cy="20" r="8" fill="#5D6FAE"/><circle cx="24" cy="32" r="8" fill="#3E4B80"/><path d="M13 20.5l2 1.5 2-1.5M26 16.5l2 1.5 2-1.5M22 28.5l2 1.5 2-1.5" stroke="#C9D0EA" stroke-width="1.4" fill="none"/></svg></div>
+        <div><h3>Blueberries</h3><p>Pick them straight off the bush.</p><span class="tag">U-pick</span></div>
+      </article>
+      <article class="pick rv">
+        <div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 40V20M22 30c-4-2-7-2-9-1M22 26c4-2 7-2 9-1" stroke="#5F6F48" stroke-width="2" fill="none" stroke-linecap="round"/><g fill="#D98BA4"><circle cx="22" cy="10" r="5"/><circle cx="16" cy="14" r="5"/><circle cx="28" cy="14" r="5"/><circle cx="18" cy="20" r="5"/><circle cx="26" cy="20" r="5"/></g><circle cx="22" cy="15.5" r="3.6" fill="#F2C55C"/></svg></div>
+        <div><h3>Cut flowers</h3><p>Pick your own cut flowers in season.</p><span class="tag">U-pick</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="farm">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">From the farm</span>
+      <h2>Handmade, homegrown, home-canned.</h2>
+      <p>Here's what the farm offers through the seasons. Call ahead to check what's ready.</p>
+    </div>
+    <div class="prod-grid">
+      <article class="prod rv">
+        <h3>Lavender, handmade</h3>
+        <div class="chips"><span>Candles</span><span>Soaps</span><span>Lotions</span><span>Lavender heat pads</span><span>Soap &amp; oils</span></div>
+        <p class="note">Homemade lavender products, made by Patti.</p>
+      </article>
+      <article class="prod rv">
+        <h3>Plants for your garden</h3>
+        <div class="chips"><span>Mums</span><span>Native plants</span><span>Vegetable plants</span><span>Flower bedding plants</span><span>Annuals &amp; perennials</span><span>Herbs</span></div>
+        <p class="note">Patti grows vegetable and flower bedding plants in spring and fall.</p>
+      </article>
+      <article class="prod rv">
+        <h3>The garden &amp; pantry</h3>
+        <div class="chips"><span>Blueberries</span><span>Grapes</span><span>Tomatoes</span><span>Sweet potatoes</span><span>Peppers</span><span>Okra</span><span>Cucumbers</span><span>Squash</span><span>Broccoli</span><span>Cauliflower</span><span>Radishes</span><span>Eggs</span></div>
+        <p class="note">Plus homemade jams, jellies, breads and canned produce from the garden.</p>
+      </article>
+      <article class="prod rv">
+        <h3>Fall &amp; décor</h3>
+        <div class="chips"><span>Corn stalks</span><span>Dried herb arrangements</span><span>Dried flower arrangements</span></div>
+        <p class="note">Seasonal décor from the farm.</p>
+      </article>
+    </div>
+    <div class="classes rv">
+      <h3>Classes &amp; festivals</h3>
+      <p>Patti has taught small classes on proper canning. For 2026 she's planning a small lavender festival with classes on making lavender goods. The first Fall Festival in 2024 drew more than 100 people.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Hours &amp; season</span>
+      <h2>Open spring and fall, April to November.</h2>
+      <p>Hours can change, so give Patti a quick call before you drive out.</p>
+    </div>
+    <div class="hrs-grid">
+      <ul class="hrs rv" id="hrs">
+        <li data-d="1"><span>Monday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="3"><span>Wednesday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="5"><span>Friday</span><span>9:00 AM – 5:00 PM</span></li>
+        <li data-d="6"><span>Saturday</span><span>9:00 AM – 2:00 PM</span></li>
+        <li data-d="0" class="muted"><span>Sunday</span><span>Call ahead</span></li>
+      </ul>
+      <div class="season rv">
+        <h3>Spring &amp; Fall season</h3>
+        <p>The farm is open April through November.</p>
+        <div class="months" aria-label="Open April through November">
+          <i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+        </div>
+        <div class="ml" aria-hidden="true"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
+        <a class="pill btn btn-g call" href="tel:+18653864815"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call to check today</a>
+        <div class="sp" aria-hidden="true"><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg><svg viewBox="0 0 40 120"><use href="#sprig"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Visit the farm</span>
+      <h2>Find us on Kingston Highway.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="map rv">
+        <iframe title="Map to Breezy B Farm, 4505 Kingston Highway, Lenoir City, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=4505%20Kingston%20Highway%2C%20Lenoir%20City%2C%20TN%2037771&amp;output=embed"></iframe>
+      </div>
+      <div class="card rv">
+        <h3>Breezy B Farm</h3>
+        <address class="addr">4505 Kingston Highway<br>Lenoir City, TN 37771<small>Roane County, East Tennessee</small></address>
+        <div class="rows">
+          <a class="row" href="tel:+18653864815"><span class="ri"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><div><b>865-386-4815</b><small>Tap to call Patti</small></div></a>
+          <a class="row" href="https://www.google.com/maps/dir/?api=1&amp;destination=4505%20Kingston%20Highway%2C%20Lenoir%20City%2C%20TN%2037771" target="_blank" rel="noopener"><span class="ri"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><b>Get directions</b><small>Opens in Google Maps</small></div></a>
+          <a class="row" href="mailto:pbfarmhouse17@gmail.com"><span class="ri"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><div><b>Email the farm</b><small>pbfarmhouse17@gmail.com</small></div></a>
+        </div>
+        <p class="follow">See what's blooming: <a href="https://www.facebook.com/patti.brashears.2025" target="_blank" rel="noopener">Facebook</a> · <a href="https://instagram.com/pattibrashears" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="divider" aria-hidden="true" style="background:var(--linen)"><svg viewBox="0 0 92 34"><use href="#sprig" x="8" y="0" width="12" height="34" transform="rotate(-70 14 17)"/><use href="#sprig" x="40" y="0" width="12" height="34"/><use href="#sprig" x="72" y="0" width="12" height="34" transform="rotate(70 78 17)"/></svg></div>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E7E1F3"/><use href="#sprig" x="11" y="5" width="18" height="32"/></svg><span>Breezy B Farm</span></a>
+    <p>U-pick lavender, blueberries &amp; cut flowers</p><p>4505 Kingston Highway, Lenoir City, TN</p>
+    <p><a href="tel:+18653864815">865-386-4815</a></p>
+    <p class="cc">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="pill btn-p" href="tel:+18653864815"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the farm</a>
+  <a class="pill btn-g" href="https://www.google.com/maps/dir/?api=1&amp;destination=4505%20Kingston%20Highway%2C%20Lenoir%20City%2C%20TN%2037771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay(), li=document.querySelector('#hrs li[data-d="'+d+'"]');
+  if(li) li.classList.add('today');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { document.documentElement.classList.add('all'); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Kimberly Ann Farms — Ten Mile, TN</title>
+<meta name="description" content="Concept site for Kimberly Ann Farms: pasture-raised meat, free-range eggs, vegetables, mushrooms and flowers from Ten Mile, TN, at Market Square in Knoxville.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#3E5C3A; --green-d:#2C4329; --green-dd:#1F301D;
+  --egg:#E8DCC4; --egg-l:#F4ECDC; --paper:#FBF7EE;
+  --red:#B5562F; --red-d:#94431F;
+  --ink:#24301F; --muted:#5A6452;
+  --line:rgba(62,92,58,.22);
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:"Bitter",Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.paper{background-color:var(--paper);background-image:radial-gradient(rgba(62,92,58,.06) 1px,transparent 1.2px);background-size:14px 14px}
+
+/* banner */
+.concept{background:var(--green-dd);color:var(--egg);font-size:10px;text-align:center;padding:7px 6px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (min-width:420px){.concept{font-size:12px;letter-spacing:.02em}}
+.concept b{color:#fff;font-weight:600}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:30;background:rgba(251,247,238,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:34px}
+.brand span{font-family:"Bitter",serif;font-weight:700;font-size:18px;color:var(--green-d);line-height:1}
+.brand small{display:block;font-family:"Work Sans";font-weight:500;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-top:3px}
+.links{display:none;gap:28px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--red)}
+.navcta{white-space:nowrap;font-size:14px;font-weight:600;text-decoration:none;background:var(--green);color:var(--egg-l);padding:9px 14px;border-radius:999px;transition:background .2s,transform .2s}
+.navcta:hover{background:var(--red);transform:translateY(-1px)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--green);color:var(--egg-l)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 85% 0%,rgba(232,220,196,.16),transparent 60%),repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 9px);pointer-events:none}
+.hero .wrap{position:relative;padding-top:44px;padding-bottom:0}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--egg)}
+.kicker i{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(181,86,47,.3);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(181,86,47,0)}}
+.hero h1{font-size:clamp(40px,11.5vw,84px);font-weight:800;margin:16px 0 16px;color:#fff;max-width:13ch}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--egg)}
+.hero h1 .u{position:relative;white-space:nowrap}
+.hero h1 .u svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.32em}
+.hero p.sub{font-size:18px;max-width:34ch;color:rgba(244,236,220,.88)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;text-decoration:none;padding:14px 20px;border-radius:999px;transition:transform .2s,background .2s,box-shadow .2s;min-height:48px}
+.btn svg{width:18px;height:18px}
+.btn.red{background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.btn.red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn.ghost{border:1.5px solid rgba(232,220,196,.55);color:var(--egg-l)}
+.btn.ghost:hover{background:rgba(232,220,196,.12);transform:translateY(-2px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:12.5px;font-weight:500;padding:6px 11px;border-radius:999px;background:rgba(232,220,196,.12);border:1px solid rgba(232,220,196,.25);color:var(--egg)}
+.bigbasket{display:none}
+.scene{position:relative;margin-top:26px;height:210px}
+.scene svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:max(100%,760px);height:auto}
+.scene .basket{position:absolute;right:6%;bottom:52px;width:150px;height:auto;left:auto;transform:none;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+
+/* section heads */
+section{scroll-margin-top:64px}
+.sec{padding:76px 0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:10px}
+.eyebrow svg{width:36px;height:12px}
+.sec h2{font-size:clamp(32px,8vw,52px);font-weight:800;color:var(--green-d);margin:12px 0 14px;max-width:18ch}
+.sec h2 em{font-style:italic;font-weight:600;color:var(--red)}
+.lede{color:var(--muted);max-width:56ch}
+
+/* products */
+.grid{display:grid;gap:16px;margin-top:34px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 22px 22px;position:relative;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,48,29,.10);border-color:rgba(181,86,47,.4)}
+.card .ic{width:58px;height:58px;border-radius:16px;background:var(--egg-l);display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:38px;height:38px}
+.card h3{font-size:22px;color:var(--green-d);margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.card ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.card li{font-size:13px;background:var(--egg-l);color:var(--green-d);padding:4px 10px;border-radius:999px}
+.veg{margin-top:18px;background:var(--green-d);color:var(--egg);border-radius:20px;padding:24px 22px;position:relative;overflow:hidden}
+.veg h3{color:#fff;font-size:22px;margin-bottom:4px}
+.veg p.s{font-size:14.5px;color:rgba(232,220,196,.8);margin-bottom:14px}
+.veg .list{font-family:"Bitter",serif;font-size:16px;line-height:1.5;color:var(--egg-l);display:flex;flex-wrap:wrap;gap:4px 0}
+.veg .list span{white-space:nowrap}
+.veg .list span:not(:last-child)::after{content:"·";color:#E8A483;font-weight:700;margin:0 8px}
+
+/* CSA */
+.csa{background:var(--egg);position:relative;overflow:hidden}
+.csa .box{background:var(--paper);border-radius:26px;padding:34px 24px;border:1.5px dashed rgba(62,92,58,.4);position:relative}
+.csa blockquote{font-family:"Bitter",serif;font-style:italic;font-size:clamp(22px,5.6vw,30px);line-height:1.3;color:var(--green-d);margin:16px 0 10px;padding-left:16px;border-left:4px solid var(--red)}
+.csa cite{font-style:normal;font-size:13px;color:var(--muted);display:block;margin-bottom:22px}
+.steps{display:grid;gap:12px;margin:8px 0 24px;counter-reset:s}
+.steps li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:15.5px}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--egg-l);font-family:"Bitter";font-weight:700;display:grid;place-items:center;font-size:14px}
+.csa .btn.ghost{color:var(--green-d);border-color:rgba(62,92,58,.45)}
+.csa .btn.ghost:hover{background:rgba(62,92,58,.08)}
+
+/* why */
+.why{display:grid;gap:14px;margin-top:30px}
+.why div{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--line)}
+.why svg{flex:none;width:34px;height:34px}
+.why h3{font-size:19px;color:var(--green-d);margin-bottom:3px}
+.why p{color:var(--muted);font-size:15.5px}
+
+/* market */
+.market{background:var(--green-dd);color:var(--egg)}
+.market h2{color:#fff}.market h2 em{color:var(--egg)}
+.market .lede{color:rgba(232,220,196,.8)}
+.mgrid{display:grid;gap:18px;margin-top:30px}
+.hours{background:rgba(232,220,196,.06);border:1px solid rgba(232,220,196,.18);border-radius:20px;padding:10px 6px}
+.hours li{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-radius:12px;font-size:16px;transition:background .2s}
+.hours li span:last-child{color:rgba(232,220,196,.72)}
+.hours li.open span:last-child{color:var(--egg-l);font-weight:500}
+.hours li.today{background:var(--red);color:#fff}
+.hours li.today span:last-child{color:#fff}
+.hours li.today span:first-child::after{content:"Today";font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-left:10px;background:rgba(255,255,255,.22);padding:3px 7px;border-radius:999px;vertical-align:2px}
+.note{font-size:13.5px;color:rgba(232,220,196,.7);margin-top:12px;padding:0 6px}
+.map{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(232,220,196,.2);min-height:300px;background:var(--green-d) radial-gradient(rgba(232,220,196,.12) 1px,transparent 1.2px) 0 0/16px 16px}
+.map::before{content:"Market Square · Knoxville";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:"Bitter";font-style:italic;color:rgba(232,220,196,.55);font-size:18px;white-space:nowrap}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;filter:saturate(.85)}
+.where{display:grid;gap:10px;margin-top:6px}
+.where a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:14px 16px;border-radius:14px;background:rgba(232,220,196,.08);border:1px solid rgba(232,220,196,.16);transition:background .2s,transform .2s}
+.where a:hover{background:rgba(232,220,196,.16);transform:translateX(3px)}
+.where svg{width:22px;height:22px;flex:none;color:var(--egg)}
+.where b{display:block;color:#fff;font-weight:600}
+.where small{color:rgba(232,220,196,.7);font-size:13.5px}
+
+/* footer */
+footer{background:var(--paper);padding:44px 0 30px;text-align:center;color:var(--muted);font-size:14px}
+footer .fence{width:100%;max-width:520px;height:34px;margin:0 auto 18px}
+footer b{font-family:"Bitter";color:var(--green-d);font-size:20px;display:block;margin-bottom:4px}
+footer .fine{font-size:12px;margin-top:14px;opacity:.8}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(31,48,29,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;border-radius:999px;height:50px;transition:transform .15s,background .2s}
+.callbar a:active{transform:scale(.97)}
+.callbar svg{width:18px;height:18px}
+.callbar .c{background:var(--red);color:#fff}
+.callbar .t{background:rgba(232,220,196,.12);color:var(--egg-l);border:1px solid rgba(232,220,196,.25)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+@media (min-width:720px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr);column-gap:40px}
+  .csa .box{padding:48px}
+  .scene{height:250px}
+  .scene .basket{width:190px;right:10%}
+}
+@media (min-width:980px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .links{display:flex}
+  .hero .wrap{padding-top:80px}
+  .hero p.sub{font-size:20px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .mgrid{grid-template-columns:1fr 1.25fr;align-items:stretch}
+  .csa .box{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .sec{padding:104px 0}
+  .scene{height:280px;margin-top:-30px}
+  .scene .basket{display:none}
+  .bigbasket{display:block!important;position:absolute;right:22px;top:120px;width:min(36vw,440px);height:auto;animation:bob 5s ease-in-out infinite;filter:drop-shadow(0 20px 30px rgba(0,0,0,.18))}
+  .bigbasket+.chips{}
+  .hero h1{max-width:12ch}
+}
+</style>
+</head>
+<body class="paper">
+<script>document.documentElement.className+=' js';document.body.classList.add('js')</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.2A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 10h20" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="sprig" viewBox="0 0 36 12"><path d="M1 6h34" stroke="currentColor" stroke-width="1.5"/><path d="M10 6c2-4 6-5 8-4-1 3-5 4-8 4zm8 0c2 4 6 5 8 4-1-3-5-4-8-4z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Kimberly Ann Farms. Not live.</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kimberly Ann Farms home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#3E5C3A"/><ellipse cx="20" cy="21" rx="7.5" ry="9.5" fill="#E8DCC4"/><path d="M8 29h24M11 25v8M29 25v8M20 31v4" stroke="#B5562F" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Kimberly Ann Farms<small>Ten Mile · Roane Co.</small></span>
+    </a>
+    <div class="links"><a href="#grow">What we grow</a><a href="#csa">CSA</a><a href="#how">How we farm</a><a href="#market">Find us</a></div>
+    <a class="navcta" href="tel:+16318879035">Call</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker"><i></i>Pasture to Market Square</div>
+    <h1>Eggs, greens &amp; <em>pasture-raised</em> meat from <span class="u">Ten Mile<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14c40-9 110-12 194-4" fill="none" stroke="#B5562F" stroke-width="5" stroke-linecap="round"/></svg></span>.</h1>
+    <p class="sub">A woman-owned Roane County farm growing vegetables, mushrooms, herbs and flowers, and raising free-range hens, cows and hogs.</p>
+    <div class="ctas">
+      <a class="btn red" href="tel:+16318879035"><svg><use href="#i-phone"/></svg>Call (631) 887-9035</a>
+      <a class="btn ghost" href="#csa">CSA interest list →</a>
+    </div>
+    <svg class="bigbasket" aria-hidden="true" viewBox="0 0 220 170">
+      <path d="M38 78c0-58 144-58 144 0" fill="none" stroke="#E8DCC4" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="78" cy="78" rx="17" ry="22" fill="#F4ECDC" stroke="#E8DCC4" stroke-width="3"/>
+      <ellipse cx="110" cy="72" rx="17" ry="22" fill="#E8DCC4" stroke="#F4ECDC" stroke-width="3"/>
+      <ellipse cx="142" cy="78" rx="17" ry="22" fill="#D9B48F" stroke="#E8DCC4" stroke-width="3"/>
+      <path d="M22 86h176l-20 70H42z" fill="#2C4329" stroke="#E8DCC4" stroke-width="4" stroke-linejoin="round"/>
+      <g stroke="#E8DCC4" stroke-width="2.5" opacity=".75" fill="none">
+        <path d="M28 104h164M33 122h154M38 140h144"/>
+        <path d="M60 86l6 70M90 86l3 70M120 86v70M150 86l-3 70M178 86l-8 70"/>
+      </g>
+    </svg>
+    <div class="chips"><span class="chip">Pasture raised</span><span class="chip">Free range</span><span class="chip">Permaculture</span><span class="chip">Organic methods (not certified)</span></div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <!-- fence line + hills -->
+    <svg viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax meet">
+      <path d="M0 150c140-50 280-70 420-40s250 40 380 10 260-50 400-30v170H0z" fill="#355032"/>
+      <path d="M0 190c160-30 330-40 500-15s320 20 460 0 180-15 240-10v95H0z" fill="#2C4329"/>
+      <path d="M0 225c200-12 420-14 640-4s420 8 560 0v40H0z" fill="#FBF7EE"/>
+      <g stroke="#E8DCC4" stroke-width="3" stroke-linecap="round" fill="none" opacity=".9">
+        <path d="M0 172 C200 160 400 156 600 162 S1000 168 1200 158"/>
+        <path d="M0 196 C200 186 400 182 600 188 S1000 194 1200 184"/>
+        <g stroke-width="5">
+          <path d="M40 150v64"/><path d="M160 145v66"/><path d="M280 142v68"/><path d="M400 142v68"/><path d="M520 144v68"/><path d="M640 146v68"/><path d="M760 147v68"/><path d="M880 146v68"/><path d="M1000 144v68"/><path d="M1120 140v68"/>
+        </g>
+      </g>
+      <g stroke="#E8DCC4" stroke-width="2" fill="none" opacity=".55" stroke-linecap="round">
+        <path d="M210 210c4-12 10-20 18-24M222 212c2-10 0-18-4-24M560 214c4-10 12-16 18-18M960 208c2-12 8-20 14-22"/>
+      </g>
+    </svg>
+    <!-- egg basket line art -->
+    <svg class="basket" viewBox="0 0 220 170">
+      <path d="M38 78c0-58 144-58 144 0" fill="none" stroke="#E8DCC4" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="78" cy="78" rx="17" ry="22" fill="#F4ECDC" stroke="#E8DCC4" stroke-width="3"/>
+      <ellipse cx="110" cy="72" rx="17" ry="22" fill="#E8DCC4" stroke="#F4ECDC" stroke-width="3"/>
+      <ellipse cx="142" cy="78" rx="17" ry="22" fill="#D9B48F" stroke="#E8DCC4" stroke-width="3"/>
+      <path d="M22 86h176l-20 70H42z" fill="#2C4329" stroke="#E8DCC4" stroke-width="4" stroke-linejoin="round"/>
+      <g stroke="#E8DCC4" stroke-width="2.5" opacity=".75" fill="none">
+        <path d="M28 104h164M33 122h154M38 140h144"/>
+        <path d="M60 86l6 70M90 86l3 70M120 86v70M150 86l-3 70M178 86l-8 70"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+<section class="sec" id="grow">
+  <div class="wrap">
+    <div class="eyebrow reveal"><svg><use href="#sprig"/></svg>What we grow</div>
+    <h2 class="reveal">From the hen house to the <em>garden rows.</em></h2>
+    <p class="lede reveal">Seasonal vegetables, mushrooms, herbs, free-range chicken eggs, cow and hog shares, and pasture-raised chicken. Everything is grown with sustainable, organic methods.</p>
+
+    <div class="grid">
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#3E5C3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h24l-3 13H11z"/><path d="M11 20c0-12 18-12 18 0"/><ellipse cx="16" cy="18" rx="3.5" ry="4.5" fill="#E8DCC4"/><ellipse cx="23" cy="17" rx="3.5" ry="4.5" fill="#E8DCC4"/><path d="M10 26h20" stroke="#B5562F"/></svg></div>
+        <h3>Free-range eggs</h3>
+        <p>Eggs from free-range chickens raised in Ten Mile.</p>
+        <ul><li>Chicken eggs</li><li>Free range</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#3E5C3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 30h32M8 24v12M20 24v12M32 24v12M4 26h32" stroke="#B5562F"/><path d="M12 20c0-5 4-8 9-8h5c3 0 5 2 5 5v3"/><path d="M14 20v4M28 20v4"/><path d="M26 12l2-4 2 4"/></svg></div>
+        <h3>Meat shares</h3>
+        <p>Cow and hog shares, plus pasture-raised chicken. Humanely raised.</p>
+        <ul><li>Beef</li><li>Pork</li><li>Chicken</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#3E5C3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20c0-8 6-12 13-12s13 4 13 12z" fill="#E8DCC4"/><path d="M16 20v10c0 2 8 2 8 0V20"/><path d="M13 15h2M19 13h2M25 15h2" stroke="#B5562F"/></svg></div>
+        <h3>Mushrooms &amp; herbs</h3>
+        <p>Mushrooms alongside fresh and dried herbs, plus sprouts.</p>
+        <ul><li>Mushrooms</li><li>Fresh herbs</li><li>Dried herbs</li><li>Sprouts</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#3E5C3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12c7 0 12 5 12 12s-5 10-12 10S8 31 8 24s5-12 12-12z" fill="#E8DCC4"/><path d="M20 12c0-3 1-5 3-6M20 12c-3-3-7-3-9-1 3 2 6 2 9 1z" stroke="#B5562F"/></svg></div>
+        <h3>Fruit &amp; berries</h3>
+        <p>Asian pears, melons, strawberries and elderberries in their season.</p>
+        <ul><li>Asian pears</li><li>Cantaloupes</li><li>Watermelons</li><li>Strawberries</li><li>Elderberries</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#3E5C3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="15" r="4" fill="#B5562F" stroke="#B5562F"/><path d="M20 11c0-4 6-4 6 0M24 15c4 0 4 6 0 6M16 15c-4 0-4 6 0 6M20 19c0 4-6 4-6 0M20 11c0-4-6-4-6 0"/><path d="M20 21v13M20 28c3-3 6-3 8-2"/></svg></div>
+        <h3>Flowers &amp; plants</h3>
+        <p>Fresh flowers, edible flowers and plants for your own garden.</p>
+        <ul><li>Fresh flowers</li><li>Edible flowers</li><li>Plants</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#3E5C3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 34c-6 0-10-5-10-12 0-4 4-7 10-7s10 3 10 7c0 7-4 12-10 12z" fill="#E8DCC4"/><path d="M20 15c0-4-2-7-5-9M20 15c1-4 4-7 8-8M20 15V8" stroke="#B5562F"/></svg></div>
+        <h3>Garden vegetables</h3>
+        <p>A long, rotating list from asparagus in spring to winter squash in the fall.</p>
+        <ul><li>Greens</li><li>Roots</li><li>Peppers</li><li>Squash</li></ul>
+      </article>
+    </div>
+
+    <div class="veg reveal">
+      <h3>The full vegetable list</h3>
+      <p class="s">Every vegetable the farm lists. What's ready depends on the season.</p>
+      <div class="list"><span>arugula</span><span>Asian greens</span><span>asparagus</span><span>beets</span><span>broccoli</span><span>cabbage</span><span>carrots</span><span>cauliflower</span><span>celery</span><span>chiles</span><span>collards</span><span>cucumber</span><span>eggplant</span><span>garlic</span><span>green beans</span><span>green onions</span><span>hot peppers</span><span>kohlrabi</span><span>lettuce</span><span>mushrooms</span><span>okra</span><span>onions</span><span>peas</span><span>pole beans</span><span>radish</span><span>salad greens</span><span>salad mix</span><span>spinach</span><span>summer squash</span><span>sweet corn</span><span>sweet peppers</span><span>sweet potato</span><span>Swiss chard</span><span>tomatoes</span><span>turnips</span><span>winter squash</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec csa" id="csa">
+  <div class="wrap">
+    <div class="box reveal">
+      <div>
+        <div class="eyebrow"><svg><use href="#sprig"/></svg>Coming to Roane County</div>
+        <h2>A farm share, <em>close to home.</em></h2>
+        <blockquote>“This year, we hope to start a CSA in the Roane County area: email or call if interested!”</blockquote>
+        <cite>From the farm's Appalachian Grown listing</cite>
+      </div>
+      <div>
+        <ol class="steps">
+          <li>Call or text the farm and say you'd like to hear about the CSA.</li>
+          <li>Let Ali know which part of Roane County is closest for you.</li>
+          <li>You'll hear first when share details are ready.</li>
+        </ol>
+        <div class="ctas">
+          <a class="btn red" href="sms:+16318879035?&amp;body=Hi%20Ali%2C%20I%27m%20interested%20in%20the%20Kimberly%20Ann%20Farms%20CSA!"><svg><use href="#i-chat"/></svg>Text “CSA” to the farm</a>
+          <a class="btn ghost" href="tel:+16318879035"><svg><use href="#i-phone"/></svg>Call instead</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="eyebrow reveal"><svg><use href="#sprig"/></svg>How we farm</div>
+    <h2 class="reveal">Raised on pasture. <em>Grown with care.</em></h2>
+    <p class="lede reveal">These are the practices the farm lists for itself.</p>
+    <div class="why">
+      <div class="reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#B5562F" stroke-width="2" stroke-linecap="round"><path d="M3 24h28M6 18v12M17 18v12M28 18v12M3 20h28"/><path d="M8 13c3-5 6-6 9-6s6 1 9 6" stroke="#3E5C3A"/></svg><div style="border:0;padding:0;display:block"><h3>Pasture raised &amp; free range</h3><p>Chickens range freely and the cattle and hogs are raised on pasture, humanely.</p></div></div>
+      <div class="reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#B5562F" stroke-width="2" stroke-linecap="round"><circle cx="17" cy="17" r="12" stroke="#3E5C3A"/><path d="M17 8c-5 4-5 14 0 18M17 8c5 4 5 14 0 18M7 17h20"/></svg><div style="border:0;padding:0;display:block"><h3>Permaculture</h3><p>The farm is planned around permaculture, working with the land rather than against it.</p></div></div>
+      <div class="reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#B5562F" stroke-width="2" stroke-linecap="round"><path d="M17 30V14" stroke="#3E5C3A"/><path d="M17 18c-6 0-9-4-9-9 6 0 9 4 9 9zM17 14c0-5 3-9 9-9 0 5-3 9-9 9z"/></svg><div style="border:0;padding:0;display:block"><h3>Organic methods</h3><p>Grown with organic, sustainable methods. Not certified organic.</p></div></div>
+      <div class="reveal"><svg viewBox="0 0 34 34" fill="none" stroke="#B5562F" stroke-width="2" stroke-linecap="round"><path d="M17 29s-11-7-11-15a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 8-11 15-11 15z" stroke="#3E5C3A"/></svg><div style="border:0;padding:0;display:block"><h3>Woman-owned &amp; LGBTQ+</h3><p>A woman-owned, LGBTQ+ farm run by a new and beginning farmer.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec market" id="market">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="color:#E8A483"><svg><use href="#sprig"/></svg>Where to find us</div>
+    <h2 class="reveal">See you at <em>Market Square.</em></h2>
+    <p class="lede reveal">Kimberly Ann Farms sells at the Market Square Farmers Market in downtown Knoxville. The 2026 season ran May 2 to October 31. Call the farm to ask what's available now.</p>
+    <div class="mgrid">
+      <div class="reveal">
+        <ul class="hours" id="hours">
+          <li data-d="0"><span>Sunday</span><span>—</span></li>
+          <li data-d="1"><span>Monday</span><span>—</span></li>
+          <li data-d="2"><span>Tuesday</span><span>—</span></li>
+          <li data-d="3" class="open"><span>Wednesday</span><span>10 AM – 1 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>—</span></li>
+          <li data-d="5"><span>Friday</span><span>—</span></li>
+          <li data-d="6" class="open"><span>Saturday</span><span>9 AM – 1 PM</span></li>
+        </ul>
+        <p class="note">Market Square Farmers Market hours during the 2026 season (May 2 – Oct 31).</p>
+        <div class="where" style="margin-top:16px">
+          <a href="tel:+16318879035"><svg><use href="#i-phone"/></svg><span><b>(631) 887-9035</b><small>Call or text the farm</small></span></a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Market+Square,+Knoxville,+TN" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span><b>Directions to Market Square</b><small>Downtown Knoxville, TN</small></span></a>
+          <a href="https://instagram.com/kimberly_ann_farms" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span><b>@kimberly_ann_farms</b><small>Follow along on Instagram</small></span></a>
+          <a href="#market" style="pointer-events:none"><svg><use href="#i-card"/></svg><span><b>Cards welcome</b><small>Credit and debit accepted</small></span></a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map of Market Square, Knoxville" loading="lazy" src="https://www.google.com/maps?q=Market%20Square%2C%20Knoxville%2C%20TN&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="fence" viewBox="0 0 520 34" fill="none" stroke="#3E5C3A" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M0 12h520M0 24h520" opacity=".5"/><path d="M20 4v30M120 4v30M220 4v30M300 4v30M400 4v30M500 4v30"/><ellipse cx="260" cy="18" rx="9" ry="12" fill="#E8DCC4"/></svg>
+  <b>Kimberly Ann Farms</b>
+  Ten Mile, Tennessee · Roane County<br>
+  <a href="tel:+16318879035">(631) 887-9035</a>
+  <p class="fine">Concept by Code Craft Media · Not affiliated, not live.</p>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+16318879035"><svg><use href="#i-phone"/></svg>Call the farm</a>
+  <a class="t" href="#csa"><svg><use href="#i-chat"/></svg>Join CSA list</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

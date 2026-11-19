@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Myers Brothers Farm — Wears Valley</title>
+<meta name="description" content="Concept site for Myers Brothers Farm, a family farm in Wears Valley, Tennessee: U-pick strawberries, honey and fresh produce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --berry:#C8323C;--berry-d:#9E2430;--berry-dd:#5E1520;
+  --smoky:#4A6A86;--smoky-d:#2E4558;--smoky-dd:#1C2B38;--smoky-l:#A9BDCF;
+  --honey:#E8B04A;--honey-l:#F6DDA4;--honey-d:#B9832A;
+  --cream:#FBF5EA;--paper:#F4EBDA;--ink:#22252B;--muted:#5C6168;--leaf:#4C7A43;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.05;margin:0;letter-spacing:-.01em;font-variation-settings:"opsz" 120}
+p{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:700px){.wrap{padding:0 32px}}
+[class*="grid"]>*{min-width:0}
+
+/* concept banner */
+.concept{background:var(--smoky-dd);color:#D8E2EC;font-size:12.5px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.concept b{color:var(--honey);font-weight:600}
+.concept .s{display:none}
+@media(max-width:520px){.concept .l{display:none}.concept .s{display:inline}.concept{font-size:12px;padding:7px 6px}}
+@media(max-width:372px){.concept{font-size:11.2px;letter-spacing:0}}
+
+/* nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;padding:16px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-width:0}
+.brand svg{width:40px;height:40px;flex:none}
+.brand span{font-family:Fraunces,serif;font-weight:700;font-size:19px;line-height:1.05;white-space:nowrap}
+.brand small{display:block;font-family:Karla;font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--honey-l);margin-top:3px}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}
+.nav ul a{color:#E9EFF5;text-decoration:none;font-weight:500;font-size:15px;padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+.nav ul a:hover{color:#fff;border-color:var(--honey)}
+.nav .callpill{display:none;background:var(--honey);color:var(--smoky-dd);text-decoration:none;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;transition:transform .2s,background .2s}
+.nav .callpill:hover{transform:translateY(-2px);background:#F0C062}
+@media(min-width:900px){.nav ul{display:flex}.nav .callpill{display:inline-block}}
+
+/* hero */
+.hero{position:relative;color:#fff;background:linear-gradient(180deg,#2B4459 0%,#4A6A86 46%,#7E97AC 70%,#E9C98A 100%);overflow:hidden;padding:92px 0 0}
+.hero .sun{position:absolute;width:360px;height:360px;border-radius:50%;right:-90px;top:70px;background:radial-gradient(circle,rgba(246,221,164,.85) 0%,rgba(232,176,74,.35) 42%,rgba(232,176,74,0) 70%);animation:glow 7s ease-in-out infinite alternate}
+@keyframes glow{to{transform:scale(1.08) translateY(8px);opacity:.85}}
+.hero .comb{position:absolute;inset:0;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 1 L55 16.5 L55 47.5 L28 63 L1 47.5 L1 16.5 Z M28 63 L28 97' fill='none' stroke='%23F6DDA4' stroke-width='1.6'/%3E%3C/svg%3E");background-size:56px 97px;mask-image:linear-gradient(180deg,#000 0%,transparent 55%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 55%)}
+.hero-inner{position:relative;z-index:2;display:grid;gap:28px;padding-bottom:20px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--honey-l)}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--honey)}
+.hero h1{font-size:clamp(38px,10.6vw,84px);margin:12px 0 16px;font-weight:700;text-wrap:balance}
+.hero h1 .l2{display:block}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--honey-l)}
+.hero h1 .berry{color:#FF9AA0;font-style:italic;font-weight:500}
+.hero .sub{font-size:18px;max-width:540px;color:#EEF3F7}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-berry{background:var(--berry);color:#fff;box-shadow:0 10px 24px -10px rgba(94,21,32,.8)}
+.btn-berry:hover{background:#D73E48;transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(94,21,32,.9)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.hero-art{position:relative;justify-self:center;width:min(100%,420px)}
+.hero-art .badge{position:absolute;right:2%;top:4%;width:104px;height:104px;border-radius:50%;background:var(--honey);color:var(--smoky-dd);display:grid;place-items:center;text-align:center;font-family:Fraunces,serif;font-weight:700;font-size:14px;line-height:1.1;transform:rotate(10deg);box-shadow:0 12px 26px -12px rgba(0,0,0,.5);animation:bob 5s ease-in-out infinite}
+.hero-art .badge span{display:block;font-size:30px;line-height:1}
+@keyframes bob{50%{transform:rotate(6deg) translateY(-6px)}}
+.ridge{position:relative;z-index:1;display:block;width:100%;height:auto;margin-top:-10px}
+@media(min-width:900px){
+  .hero{padding-top:120px}
+  .hero-inner{grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding-bottom:0}
+  .hero h1{font-size:clamp(56px,5.4vw,78px);text-wrap:pretty}
+  .hero-inner{grid-template-columns:1.3fr .7fr}
+}
+@media(max-width:899px){.hero-art{width:min(64%,250px);margin-top:-6px}.hero-inner{gap:14px}.hero .sub{font-size:17px}.ctas{margin-top:22px}.hero-art .badge{width:84px;height:84px;font-size:12px;right:-10%}.hero-art .badge span{font-size:23px}}
+
+/* section shared */
+section{scroll-margin-top:20px}
+.sec{padding:76px 0}
+@media(min-width:900px){.sec{padding:110px 0}}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--berry)}
+.sec h2{font-size:clamp(34px,8.4vw,58px);margin:10px 0 14px;text-wrap:balance}
+.sec h2 em{font-style:italic;font-weight:500;color:var(--berry)}
+.lede{color:var(--muted);font-size:18px;max-width:620px}
+
+/* strawberry feature */
+.feature{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.feature{grid-template-columns:1fr 1fr;gap:64px}}
+.patch{position:relative;border-radius:28px;background:linear-gradient(180deg,#F9E3DF,#F3D3CC);overflow:hidden;aspect-ratio:5/4}
+.patch svg{width:100%;height:100%}
+.ticks{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.ticks li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start}
+.ticks li>*{min-width:0}
+.ticks i{width:30px;height:30px;border-radius:50%;background:#F7DCDD;display:grid;place-items:center;color:var(--berry);font-style:normal;font-weight:700;font-size:15px}
+.ticks b{display:block}
+.ticks span{color:var(--muted);font-size:16px}
+
+/* products */
+.products{background:var(--paper);position:relative}
+.products:before{content:"";position:absolute;inset:0;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 1 L55 16.5 L55 47.5 L28 63 L1 47.5 L1 16.5 Z M28 63 L28 97' fill='none' stroke='%23E2CFA6' stroke-width='1.2'/%3E%3C/svg%3E");background-size:56px 97px;pointer-events:none}
+.products .wrap{position:relative}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+@media(min-width:900px){.pgrid{grid-template-columns:repeat(4,1fr);gap:20px}}
+.card{background:#fff;border-radius:var(--r);padding:20px 18px 18px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 14px 30px -22px rgba(34,37,43,.45);transition:transform .25s,box-shadow .25s;min-width:0}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 36px -22px rgba(34,37,43,.55)}
+.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:34px;height:34px}
+.card h3{font-size:21px;margin-bottom:5px}
+.card p{font-size:15px;color:var(--muted);line-height:1.45}
+.card.wide{grid-column:1/-1;background:var(--smoky-d);color:#fff}
+.card.wide p{color:#D2DDE7}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{font-size:14px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#EEF3F7}
+@media(min-width:900px){.card.wide{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;padding:28px}.card.wide .ic{margin:0}}
+
+/* honey */
+.honey{background:var(--smoky-dd);color:#fff;position:relative;overflow:hidden}
+.honey .sec h2,.honey h2{color:#fff}
+.honey .kicker{color:var(--honey)}
+.honey h2 em{color:var(--honey)}
+.honey .lede{color:#C9D5E0}
+.hgrid{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.combart{max-width:420px}.hgrid{grid-template-columns:.9fr 1.1fr;gap:70px}}
+.combart{position:relative;max-width:300px;width:100%;margin:0 auto}
+.combart .bee{position:absolute;width:44px;animation:fly 9s ease-in-out infinite}
+.combart .bee.b2{animation-duration:11s;animation-delay:-4s}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(-6deg)}25%{transform:translate(18px,-14px) rotate(8deg)}50%{transform:translate(34px,4px) rotate(-4deg)}75%{transform:translate(12px,14px) rotate(6deg)}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.stat{border:1px solid rgba(232,176,74,.35);border-radius:var(--r);padding:18px;background:rgba(232,176,74,.06)}
+.stat b{display:block;font-family:Fraunces,serif;font-size:38px;line-height:1;color:var(--honey);font-weight:700}
+.stat span{display:block;font-size:14.5px;color:#C9D5E0;margin-top:8px;line-height:1.35}
+
+/* why */
+.why .wgrid{display:grid;gap:16px;margin-top:34px}
+@media(min-width:760px){.why .wgrid{grid-template-columns:repeat(3,1fr);gap:22px}}
+.why .item{border-top:3px solid var(--berry);padding:20px 4px 0}
+.why .item:nth-child(2){border-color:var(--honey)}
+.why .item:nth-child(3){border-color:var(--smoky)}
+.why .num{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:var(--muted)}
+.why h3{font-size:24px;margin:6px 0 8px}
+.why p{color:var(--muted);font-size:16px}
+
+/* season */
+.season{background:var(--paper)}
+.sgrid{display:grid;gap:30px}
+@media(min-width:900px){.sgrid{grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}}
+.cal{background:#fff;border-radius:22px;padding:22px 18px;box-shadow:0 14px 30px -22px rgba(34,37,43,.45)}
+.cal h3{font-size:20px;margin-bottom:4px}
+.cal .note{font-size:14px;color:var(--muted)}
+.months{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;margin-top:18px;font-size:11px;text-align:center;color:var(--muted);font-weight:600}
+.months>*{min-width:0}
+.months span{padding:4px 0;border-radius:6px}
+.months span.now{background:var(--ink);color:#fff}
+.lane{margin-top:14px}
+.lane .lbl{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;font-weight:600;margin-bottom:6px}
+.lane .lbl em{font-style:normal;font-weight:500;color:var(--muted);font-size:13.5px;text-align:right}
+.bar{position:relative;height:16px;border-radius:999px;background:#EFE7D8}
+.bar i{position:absolute;top:0;bottom:0;border-radius:999px}
+.bar .stand{left:calc(100%/12*3);width:calc(100%/12*7);background:linear-gradient(90deg,var(--leaf),#7FA35A)}
+.bar .berry{left:calc(100%/12*3.6);width:calc(100%/12*2.2);background:linear-gradient(90deg,var(--berry),#E25A62)}
+.bar .nowline{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink);border-radius:2px}
+.status{margin-top:20px;display:grid;grid-template-columns:12px 1fr;gap:12px;align-items:start;padding:14px 16px;border-radius:14px;background:#F7F1E6;font-size:15.5px}
+.status>*{min-width:0}
+.status .dot{width:12px;height:12px;border-radius:50%;background:var(--honey-d);margin-top:6px;box-shadow:0 0 0 4px rgba(232,176,74,.25)}
+.status.open .dot{background:var(--leaf);box-shadow:0 0 0 4px rgba(76,122,67,.2)}
+.visit{display:grid;gap:14px}
+.vrow{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:#fff;border-radius:16px;padding:16px}
+.vrow>*{min-width:0}
+.vrow .vi{width:44px;height:44px;border-radius:12px;background:#F7DCDD;color:var(--berry);display:grid;place-items:center}
+.vrow:nth-child(2) .vi{background:#FBEBC8;color:var(--honey-d)}
+.vrow:nth-child(3) .vi{background:#DDE6EE;color:var(--smoky-d)}
+.vrow .vi svg{width:22px;height:22px}
+.vrow b{display:block;font-size:16.5px}
+.vrow span{display:block;color:var(--muted);font-size:15px;line-height:1.45}
+.vrow a{color:var(--berry-d);font-weight:700;text-decoration-thickness:1.5px;text-underline-offset:3px}
+
+/* find */
+.fgrid{display:grid;gap:22px;margin-top:30px}
+@media(min-width:900px){.fgrid{grid-template-columns:1.3fr .7fr;gap:30px}}
+.map{border-radius:22px;overflow:hidden;background:#DDE6EE;min-height:300px;box-shadow:0 14px 30px -22px rgba(34,37,43,.5)}
+.map iframe{display:block;width:100%;height:100%;min-height:300px;border:0}
+.findcard{background:var(--smoky-d);color:#fff;border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;gap:16px}
+.findcard h3{font-size:26px}
+.findcard p{color:#D2DDE7;font-size:16px}
+.findcard .phone{font-family:Fraunces,serif;font-size:30px;font-weight:700;color:var(--honey);text-decoration:none}
+.findcard .btn{width:100%}
+.btn-honey{background:var(--honey);color:var(--smoky-dd)}
+.btn-honey:hover{background:#F0C062;transform:translateY(-2px)}
+
+/* footer */
+footer{background:var(--smoky-dd);color:#B7C6D4;padding:0 0 calc(110px + env(safe-area-inset-bottom));font-size:14.5px}
+footer .ridge2{display:block;width:100%;height:auto;background:var(--cream)}
+footer .wrap{display:grid;gap:18px;padding-top:28px}
+footer .fb{display:flex;align-items:center;gap:12px;color:#fff}
+footer .fb svg{width:44px;height:44px;flex:none}
+footer .fb b{font-family:Fraunces,serif;font-size:21px;display:block;line-height:1.1}
+footer a{color:var(--honey-l)}
+footer .small{font-size:13px;color:#8EA2B5;border-top:1px solid rgba(255,255,255,.1);padding-top:18px}
+@media(min-width:900px){footer{padding-bottom:34px}footer .wrap{grid-template-columns:1fr auto;align-items:center}footer .small{grid-column:1/-1}}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.2fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(28,43,56,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(232,176,74,.3)}
+.callbar>*{min-width:0}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;text-decoration:none;font-weight:700;font-size:15.5px;white-space:nowrap;overflow:hidden}
+.callbar a svg{width:18px;height:18px;flex:none}
+.callbar .c1{background:var(--berry);color:#fff}
+.callbar .c2{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.callbar a:active{transform:scale(.98)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){.js .reveal.pre{opacity:1;transform:none}*{animation:none!important}}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Myers Brothers Farm. Not live.</span><span class="s">Concept by <b>Code Craft Media</b> for Myers Brothers Farm · Not live</span></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="31" fill="#FBF5EA"/>
+      <g transform="rotate(-12 22 36)">
+        <path d="M22 22c-8 0-12 6-12 13 0 9 7 17 12 19 5-2 12-10 12-19 0-7-4-13-12-13z" fill="#C8323C"/>
+        <path d="M14 22c3-4 6-3 8-1 2-2 5-3 8 1-3 2-6 3-8 2-2 1-5 0-8-2z" fill="#4C7A43"/>
+        <g fill="#F6DDA4"><circle cx="18" cy="32" r="1.1"/><circle cx="25" cy="31" r="1.1"/><circle cx="21" cy="38" r="1.1"/><circle cx="28" cy="38" r="1.1"/><circle cx="16" cy="40" r="1.1"/><circle cx="23" cy="45" r="1.1"/></g>
+      </g>
+      <g transform="rotate(12 42 36)">
+        <path d="M42 22c-8 0-12 6-12 13 0 9 7 17 12 19 5-2 12-10 12-19 0-7-4-13-12-13z" fill="#9E2430"/>
+        <path d="M34 22c3-4 6-3 8-1 2-2 5-3 8 1-3 2-6 3-8 2-2 1-5 0-8-2z" fill="#4C7A43"/>
+        <g fill="#F6DDA4"><circle cx="38" cy="32" r="1.1"/><circle cx="45" cy="31" r="1.1"/><circle cx="41" cy="38" r="1.1"/><circle cx="48" cy="38" r="1.1"/><circle cx="36" cy="40" r="1.1"/><circle cx="43" cy="45" r="1.1"/></g>
+      </g>
+      <path d="M32 6l5 3v6l-5 3-5-3V9z" fill="#E8B04A"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8V6.3c0-.8.2-1.3 1.4-1.3H17V2h-2.6C11.5 2 10.5 3.4 10.5 5.9V8H8v3h2.5v11H14V11h2.6l.4-3z"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 3v2h16V8zm0 5v4h16v-4zm2 1h5v2H6z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm-2 7v10h14V9z"/></symbol>
+    <symbol id="i-basket" viewBox="0 0 24 24"><path fill="currentColor" d="M5.4 9l4-6 1.7 1-3.4 5h8.6l-3.4-5 1.7-1 4 6H22v2h-1.2l-1.6 9.2a1 1 0 0 1-1 .8H5.8a1 1 0 0 1-1-.8L3.2 11H2V9z"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero" id="top">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="comb" aria-hidden="true"></div>
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="#top"><svg aria-hidden="true"><use href="#mark"/></svg><span>Myers Brothers Farm<small>Wears Valley, TN</small></span></a>
+      <ul>
+        <li><a href="#strawberries">U-Pick</a></li>
+        <li><a href="#grow">What we grow</a></li>
+        <li><a href="#honey">Honey</a></li>
+        <li><a href="#season">Season</a></li>
+        <li><a href="#find">Find us</a></li>
+      </ul>
+      <a class="callpill" href="tel:+18656409002">(865) 640-9002</a>
+    </div>
+  </nav>
+
+  <div class="wrap hero-inner">
+    <div class="reveal">
+      <span class="eyebrow">A family farm in Wears Valley</span>
+      <h1>Pick your own <span class="berry">strawberries.</span> <span class="l2">Take home <em>honey</em> from our hives.</span></h1>
+      <p class="sub">Twin brothers growing fresh produce in Wears Valley, Tennessee, for our local community and Smoky Mountain visitors.</p>
+      <div class="ctas">
+        <a class="btn btn-berry" href="tel:+18656409002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call before you visit</a>
+        <a class="btn btn-ghost" href="#season">When we’re open</a>
+      </div>
+    </div>
+    <div class="hero-art reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 360">
+        <defs>
+          <radialGradient id="bg1" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#E8505A"/><stop offset=".6" stop-color="#C8323C"/><stop offset="1" stop-color="#8E1E2A"/></radialGradient>
+          <radialGradient id="bg2" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#D9404B"/><stop offset=".6" stop-color="#AE2733"/><stop offset="1" stop-color="#701520"/></radialGradient>
+          <pattern id="seeds" width="22" height="24" patternUnits="userSpaceOnUse"><ellipse cx="6" cy="7" rx="1.8" ry="2.8" fill="#F6DDA4"/><ellipse cx="17" cy="19" rx="1.8" ry="2.8" fill="#F6DDA4"/></pattern>
+        </defs>
+        <ellipse cx="200" cy="330" rx="150" ry="18" fill="rgba(28,43,56,.22)"/>
+        <g transform="rotate(-14 140 200)">
+          <path d="M140 90c-52 0-80 38-80 84 0 62 48 118 80 132 32-14 80-70 80-132 0-46-28-84-80-84z" fill="url(#bg1)"/>
+          <path d="M140 90c-52 0-80 38-80 84 0 62 48 118 80 132 32-14 80-70 80-132 0-46-28-84-80-84z" fill="url(#seeds)" opacity=".9"/>
+          <path d="M92 132c-6 18-4 40 4 56" stroke="rgba(255,255,255,.35)" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M84 92c16-22 38-18 56-6 18-12 40-16 56 6-18 12-38 16-56 10-18 6-38 2-56-10z" fill="#4C7A43"/>
+          <path d="M140 96c-2-22 4-36 14-46" stroke="#3B6134" stroke-width="7" fill="none" stroke-linecap="round"/>
+        </g>
+        <g transform="rotate(12 262 214)">
+          <path d="M262 110c-50 0-76 36-76 80 0 58 46 112 76 126 30-14 76-68 76-126 0-44-26-80-76-80z" fill="url(#bg2)"/>
+          <path d="M262 110c-50 0-76 36-76 80 0 58 46 112 76 126 30-14 76-68 76-126 0-44-26-80-76-80z" fill="url(#seeds)" opacity=".85"/>
+          <path d="M216 150c-6 16-4 36 3 52" stroke="rgba(255,255,255,.28)" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M208 112c15-21 36-17 54-6 17-11 38-15 54 6-17 12-37 15-54 9-17 6-37 3-54-9z" fill="#5A8A4F"/>
+          <path d="M262 116c0-20 -6-34-16-44" stroke="#3B6134" stroke-width="7" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="badge"><div><span>U-Pick</span>in spring</div></div>
+    </div>
+  </div>
+
+  <svg class="ridge" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 80 L90 50 L170 72 L260 30 L360 66 L450 40 L560 78 L660 34 L770 70 L880 26 L990 64 L1090 44 L1200 76 L1310 38 L1440 62 V170 H0Z" fill="#7E97AC" opacity=".55"/>
+    <path d="M0 110 L120 78 L230 104 L340 70 L460 108 L590 76 L700 106 L820 72 L950 104 L1080 80 L1200 108 L1320 84 L1440 100 V170 H0Z" fill="#4A6A86" opacity=".75"/>
+    <path d="M0 140 C200 118 380 150 560 132 C760 112 940 150 1140 130 C1260 120 1360 132 1440 128 V170 H0Z" fill="#FBF5EA"/>
+  </svg>
+</header>
+
+<main>
+<section class="sec" id="strawberries">
+  <div class="wrap feature">
+    <div class="patch reveal" aria-hidden="true">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <defs><pattern id="seeds2" width="12" height="13" patternUnits="userSpaceOnUse"><ellipse cx="3" cy="4" rx="1" ry="1.6" fill="#F6DDA4"/><ellipse cx="9" cy="10" rx="1" ry="1.6" fill="#F6DDA4"/></pattern>
+          <g id="sb"><path d="M0 -14c-12 0-18 8-18 18 0 13 10 24 18 28 8-4 18-15 18-28 0-10-6-18-18-18z" fill="#C8323C"/><path d="M0 -14c-12 0-18 8-18 18 0 13 10 24 18 28 8-4 18-15 18-28 0-10-6-18-18-18z" fill="url(#seeds2)"/><path d="M-12 -14c4-6 9-5 12-2 3-3 8-4 12 2-4 3-8 4-12 3-4 1-8 0-12-3z" fill="#4C7A43"/></g>
+          <g id="leaf"><path d="M0 0c-22-6-34-26-30-44 18 2 32 18 30 44z" fill="#4C7A43"/><path d="M0 0c22-6 34-26 30-44-18 2-32 18-30 44z" fill="#5E9152"/><path d="M0 0c-6-20 0-40 0-52 6 12 8 32 0 52z" fill="#6FA35F"/></g>
+        </defs>
+        <rect width="500" height="400" fill="#F6E0DA"/>
+        <path d="M0 150 L80 120 L160 140 L250 100 L340 132 L420 110 L500 126 V400 H0Z" fill="#A9BDCF" opacity=".55"/>
+        <path d="M0 190 L110 160 L220 186 L330 154 L440 182 L500 170 V400 H0Z" fill="#7E97AC" opacity=".5"/>
+        <g fill="#9C6B43"><path d="M-20 400 L150 210 L190 210 L80 400Z"/><path d="M130 400 L215 210 L255 210 L250 400Z" opacity=".95"/><path d="M300 400 L285 210 L325 210 L420 400Z"/><path d="M470 400 L345 210 L385 210 L560 400Z"/></g>
+        <g fill="#7C5032" opacity=".55"><path d="M50 400 L170 210 L178 210 L70 400Z"/><path d="M200 400 L235 210 L243 210 L218 400Z"/><path d="M372 400 L305 210 L313 210 L392 400Z"/></g>
+        <g>
+          <use href="#leaf" transform="translate(70 352) scale(1.1)"/><use href="#sb" transform="translate(96 366) scale(.9)"/>
+          <use href="#leaf" transform="translate(132 286) scale(.8)"/><use href="#sb" transform="translate(150 296) scale(.65)"/>
+          <use href="#leaf" transform="translate(220 360) scale(1.1)"/><use href="#sb" transform="translate(196 372) scale(.9)"/>
+          <use href="#leaf" transform="translate(236 280) scale(.75)"/><use href="#sb" transform="translate(252 290) scale(.6)"/>
+          <use href="#leaf" transform="translate(356 356) scale(1.1)"/><use href="#sb" transform="translate(382 370) scale(.9)"/>
+          <use href="#leaf" transform="translate(318 282) scale(.78)"/><use href="#sb" transform="translate(302 292) scale(.6)"/>
+          <use href="#leaf" transform="translate(470 360) scale(1.05)"/>
+          <use href="#leaf" transform="translate(405 284) scale(.75)"/><use href="#sb" transform="translate(420 292) scale(.58)"/>
+        </g>
+        <g transform="translate(400 70)"><circle r="34" fill="#F6DDA4" opacity=".8"/><circle r="22" fill="#E8B04A"/></g>
+      </svg>
+    </div>
+    <div class="reveal">
+      <span class="kicker">U-Pick strawberries</span>
+      <h2>Spring tastes better <em>picked by hand.</em></h2>
+      <p class="lede">Each spring we open our strawberry patch in Wears Valley so you can fill your own basket, straight from the row.</p>
+      <ul class="ticks">
+        <li><i>1</i><div><b>Late April into early June</b><span>Strawberry U-pick runs through spring. The exact start depends on the berries, so call before you head out.</span></div></li>
+        <li><i>2</i><div><b>A small farm stand, too</b><span>Grab whatever else is fresh while you’re here.</span></div></li>
+        <li><i>3</i><div><b>Cards welcome</b><span>We take credit and debit cards.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec products" id="grow">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">What we grow</span>
+      <h2>From our fields to <em>your table.</em></h2>
+      <p class="lede">The farmstand opens as crops come in. Here’s what you’ll find through the season.</p>
+    </div>
+    <div class="pgrid">
+      <article class="card reveal"><div class="ic" style="background:#F7DCDD"><svg viewBox="0 0 40 40"><path d="M20 10c-8 0-11 5-11 11 0 8 6 14 11 16 5-2 11-8 11-16 0-6-3-11-11-11z" fill="#C8323C"/><path d="M13 10c3-4 5-3 7-1 2-2 4-3 7 1-3 2-5 3-7 2-2 1-4 0-7-2z" fill="#4C7A43"/><g fill="#F6DDA4"><circle cx="16" cy="19" r="1"/><circle cx="23" cy="18" r="1"/><circle cx="19" cy="25" r="1"/><circle cx="25" cy="25" r="1"/><circle cx="17" cy="30" r="1"/></g></svg></div><h3>Strawberries</h3><p>U-pick in spring, right from the patch.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#FBEBC8"><svg viewBox="0 0 40 40"><path d="M14 12h12l2 4v16a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3V16z" fill="#E8B04A"/><rect x="13" y="8" width="14" height="5" rx="1.5" fill="#B9832A"/><path d="M15 22h10" stroke="#FBF5EA" stroke-width="2"/><path d="M20 18l3 2v3l-3 2-3-2v-3z" fill="#FBF5EA" opacity=".7"/></svg></div><h3>Honey</h3><p>From our own honey bee hives.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#E3EFDB"><svg viewBox="0 0 40 40"><ellipse cx="20" cy="22" rx="13" ry="10" fill="#4C7A43"/><path d="M10 18c3 4 3 9 0 12M16 13c2 5 2 13 0 18M24 13c-2 5-2 13 0 18M30 18c-3 4-3 9 0 12" stroke="#2F5229" stroke-width="2" fill="none"/></svg></div><h3>Melons</h3><p>Watermelons, cantaloupes and more.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#FBEBC8"><svg viewBox="0 0 40 40"><path d="M20 6c5 0 7 7 7 15s-3 13-7 13-7-5-7-13 2-15 7-15z" fill="#E8B04A"/><g fill="#F6DDA4"><circle cx="18" cy="12" r="1.4"/><circle cx="22" cy="12" r="1.4"/><circle cx="18" cy="17" r="1.4"/><circle cx="22" cy="17" r="1.4"/><circle cx="18" cy="22" r="1.4"/><circle cx="22" cy="22" r="1.4"/><circle cx="18" cy="27" r="1.4"/><circle cx="22" cy="27" r="1.4"/></g><path d="M13 20c-4 6-3 13 5 16M27 20c4 6 3 13-5 16" stroke="#4C7A43" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><h3>Sweet corn</h3><p>Grown on our Wears Valley farm.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#F7DCDD"><svg viewBox="0 0 40 40"><circle cx="20" cy="23" r="12" fill="#C8323C"/><path d="M14 23a6 6 0 0 1 4-6" stroke="rgba(255,255,255,.4)" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M13 12c3 1 5 0 7-3 2 3 4 4 7 3-1 2-4 3-7 3s-6-1-7-3z" fill="#4C7A43"/></svg></div><h3>Tomatoes</h3><p>Plus peppers, squash and cucumbers.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#FCE3CC"><svg viewBox="0 0 40 40"><ellipse cx="20" cy="24" rx="14" ry="11" fill="#E07B2E"/><path d="M14 14c-2 4-2 16 0 20M26 14c2 4 2 16 0 20M20 13v22" stroke="#B85E1C" stroke-width="2" fill="none"/><path d="M20 13c0-4 2-6 4-7" stroke="#4C7A43" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><h3>Pumpkins</h3><p>Plus winter squash.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#E3EFDB"><svg viewBox="0 0 40 40"><path d="M20 34V18" stroke="#4C7A43" stroke-width="3" stroke-linecap="round"/><path d="M20 22c-8 0-12-6-12-12 7 0 12 4 12 12zM20 18c6 0 10-5 10-10-6 0-10 4-10 10z" fill="#5E9152"/><rect x="12" y="30" width="16" height="6" rx="2" fill="#9C6B43"/></svg></div><h3>Landscape plants</h3><p>For your own garden at home.</p></article>
+      <article class="card reveal"><div class="ic" style="background:#DDE6EE"><svg viewBox="0 0 40 40" style="color:#2E4558"><use href="#i-basket"/></svg></div><h3>Market Square</h3><p>Also listed at Market Square Farmers Market.</p></article>
+      <article class="card wide reveal">
+        <div class="ic" style="background:rgba(232,176,74,.16)"><svg viewBox="0 0 40 40"><path d="M10 30c0-9 4-16 10-20 6 4 10 11 10 20z" fill="#5E9152"/><path d="M20 10v22" stroke="#2F5229" stroke-width="2"/><path d="M15 22l5 4 5-4" stroke="#2F5229" stroke-width="2" fill="none"/></svg></div>
+        <div>
+          <h3>And a whole garden of vegetables</h3>
+          <p>As they come into season at the farmstand:</p>
+          <div class="chips"><span>Broccoli</span><span>Cabbage</span><span>Cauliflower</span><span>Collards</span><span>Cucumber</span><span>Garlic</span><span>Green beans</span><span>Green onions</span><span>Hot peppers</span><span>Kale</span><span>Lettuce</span><span>Onions</span><span>Summer squash</span><span>Sweet peppers</span><span>Winter squash</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="honey" id="honey">
+  <div class="sec">
+    <div class="wrap hgrid">
+      <div class="combart reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 380">
+          <defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6DDA4"/><stop offset="1" stop-color="#E8B04A"/></linearGradient>
+          <path id="hx" d="M0 -40 L34.6 -20 L34.6 20 L0 40 L-34.6 20 L-34.6 -20Z"/></defs>
+          <g stroke="#1C2B38" stroke-width="5">
+            <use href="#hx" x="130" y="110" fill="url(#hg)"/>
+            <use href="#hx" x="200" y="110" fill="#E8B04A"/>
+            <use href="#hx" x="270" y="110" fill="url(#hg)" opacity=".55"/>
+            <use href="#hx" x="95" y="170" fill="#B9832A"/>
+            <use href="#hx" x="165" y="170" fill="url(#hg)"/>
+            <use href="#hx" x="235" y="170" fill="#E8B04A"/>
+            <use href="#hx" x="305" y="170" fill="url(#hg)" opacity=".4"/>
+            <use href="#hx" x="130" y="230" fill="#E8B04A"/>
+            <use href="#hx" x="200" y="230" fill="#B9832A"/>
+            <use href="#hx" x="270" y="230" fill="url(#hg)"/>
+            <use href="#hx" x="165" y="290" fill="url(#hg)" opacity=".6"/>
+            <use href="#hx" x="235" y="290" fill="#E8B04A" opacity=".8"/>
+          </g>
+          <path d="M200 270 q-4 30 0 50 q4 -20 0 -50" fill="#E8B04A"/>
+          <circle cx="200" cy="326" r="7" fill="#E8B04A"/>
+        </svg>
+        <svg class="bee" style="left:6%;top:6%" viewBox="0 0 50 40"><ellipse cx="18" cy="12" rx="9" ry="7" fill="rgba(255,255,255,.75)"/><ellipse cx="30" cy="11" rx="9" ry="7" fill="rgba(255,255,255,.6)"/><ellipse cx="25" cy="25" rx="14" ry="10" fill="#E8B04A"/><path d="M20 16v18M28 16v18" stroke="#1C2B38" stroke-width="4"/><circle cx="38" cy="23" r="5" fill="#1C2B38"/></svg>
+        <svg class="bee b2" style="right:4%;bottom:14%;width:36px" viewBox="0 0 50 40"><ellipse cx="18" cy="12" rx="9" ry="7" fill="rgba(255,255,255,.75)"/><ellipse cx="30" cy="11" rx="9" ry="7" fill="rgba(255,255,255,.6)"/><ellipse cx="25" cy="25" rx="14" ry="10" fill="#E8B04A"/><path d="M20 16v18M28 16v18" stroke="#1C2B38" stroke-width="4"/><circle cx="38" cy="23" r="5" fill="#1C2B38"/></svg>
+      </div>
+      <div class="reveal">
+        <span class="kicker">Honey</span>
+        <h2>Wears Valley honey, <em>from our own hives.</em></h2>
+        <p class="lede">The brothers keep about thirty honey bee hives. Look for our honey at the farm and at local farmers markets.</p>
+        <div class="stats">
+          <div class="stat"><b>~30</b><span>honey bee hives kept by the brothers</span></div>
+          <div class="stat"><b>2</b><span>twin brothers running the farm</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Why visit</span>
+      <h2>Family farm, <em>valley grown.</em></h2>
+    </div>
+    <div class="wgrid">
+      <div class="item reveal"><span class="num">01</span><h3>Family-run</h3><p>A family farm operated by twin brothers, growing for the people who live here.</p></div>
+      <div class="item reveal"><span class="num">02</span><h3>In the Smokies</h3><p>Right in Wears Valley, Tennessee. An easy stop for Smoky Mountain visitors.</p></div>
+      <div class="item reveal"><span class="num">03</span><h3>Picked fresh</h3><p>Strawberries you pick yourself and produce sold as it comes out of the field.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec season" id="season">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Season &amp; hours</span>
+      <h2>Open with the <em>growing season.</em></h2>
+      <p class="lede">The farmstand is open seasonally, generally April through October, as products become available. Hours change with the crops, so please call before you visit.</p>
+    </div>
+    <div class="sgrid" style="margin-top:30px">
+      <div class="cal reveal">
+        <h3>Our year at a glance</h3>
+        <p class="note">Approximate. Weather and crops set the dates.</p>
+        <div class="months" id="months"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div>
+        <div class="lane"><div class="lbl">Farmstand <em>Generally Apr – Oct</em></div><div class="bar"><i class="stand"></i><span class="nowline" hidden></span></div></div>
+        <div class="lane"><div class="lbl">Strawberry U-pick <em>Late Apr – early Jun</em></div><div class="bar"><i class="berry"></i><span class="nowline" hidden></span></div></div>
+        <div class="status" id="status"><span class="dot"></span><span id="statusText">The farmstand is generally open April through October. Call (865) 640-9002 before you visit.</span></div>
+      </div>
+      <div class="visit">
+        <div class="vrow reveal"><div class="vi"><svg><use href="#i-phone"/></svg></div><div><b>Call before you come</b><span>Picking depends on the berries. <a href="tel:+18656409002">(865) 640-9002</a></span></div></div>
+        <div class="vrow reveal"><div class="vi"><svg><use href="#i-fb"/></svg></div><div><b>Check our Facebook</b><span>For current hours and what’s ready. <a href="https://www.facebook.com/Myersbrosfarm/" target="_blank" rel="noopener">facebook.com/Myersbrosfarm</a></span></div></div>
+        <div class="vrow reveal"><div class="vi"><svg><use href="#i-card"/></svg></div><div><b>Cards welcome</b><span>We accept credit and debit.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="find">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Find us</span>
+      <h2>Valley View Rd, <em>Wears Valley.</em></h2>
+    </div>
+    <div class="fgrid">
+      <div class="map reveal"><iframe title="Map of Valley View Rd, Wears Valley, Tennessee" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Valley%20View%20Rd%2C%20Wears%20Valley%2C%20TN&amp;output=embed"></iframe></div>
+      <div class="findcard reveal">
+        <h3>Come pick with us</h3>
+        <p>On Valley View Rd in Wears Valley, Tennessee, in the shadow of the Smokies.</p>
+        <a class="phone" href="tel:+18656409002">(865) 640-9002</a>
+        <a class="btn btn-honey" href="tel:+18656409002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the farm</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Valley%20View%20Rd%2C%20Wears%20Valley%2C%20TN" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="ridge2" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 L120 30 L230 52 L340 18 L460 50 L590 22 L700 48 L820 14 L950 46 L1080 24 L1200 52 L1320 28 L1440 44 V90 H0Z" fill="#4A6A86"/><path d="M0 76 L140 56 L280 72 L420 50 L560 74 L700 54 L840 72 L980 52 L1120 74 L1260 56 L1440 70 V90 H0Z" fill="#1C2B38"/></svg>
+  <div class="wrap">
+    <div class="fb"><svg aria-hidden="true"><use href="#mark"/></svg><div><b>Myers Brothers Farm</b>U-pick strawberries · honey · fresh produce</div></div>
+    <div><a href="tel:+18656409002">(865) 640-9002</a> · <a href="https://www.facebook.com/Myersbrosfarm/" target="_blank" rel="noopener">Facebook</a></div>
+    <div class="small">Concept by Code Craft Media. A design preview made for Myers Brothers Farm, not the farm’s official website.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c1" href="tel:+18656409002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the farm</a>
+  <a class="c2" href="https://www.facebook.com/Myersbrosfarm/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>Today’s news</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date(),m=d.getMonth(),day=d.getDate();
+  var ms=document.querySelectorAll('#months span'); if(ms[m]) ms[m].className='now';
+  var pos=((m+(day-1)/31)/12*100).toFixed(2)+'%';
+  [].forEach.call(document.querySelectorAll('.nowline'),function(n){n.style.left=pos;n.hidden=false;});
+  var names=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var st=document.getElementById('status'),tx=document.getElementById('statusText');
+  if(m>=3&&m<=9){st.className='status open';tx.textContent='It’s '+names[m]+', inside our usual farmstand season'+((m>=3&&m<=5)?', and strawberry time':'')+'. Call (865) 640-9002 to check today’s hours.';}
+  else{tx.textContent='It’s '+names[m]+', outside our usual April to October season. Call (865) 640-9002 before you visit.';}
+
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function show(e){e.classList.remove('pre');}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>innerHeight){e.classList.add('pre');io.observe(e);}});
+  }
+  setTimeout(function(){els.forEach(show);},1500);
+})();
+</script>
+</body>
+</html>

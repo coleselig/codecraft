@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>CutzbyTess — Mt. Juliet, TN</title>
+<meta name="description" content="CutzbyTess: haircuts, barber service, facial wax and hair color (after consultation) in Suite #8, 661 S Mt Juliet Rd, Mt. Juliet, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111827; --ink2:#1F2937; --ink3:#374151;
+  --steel:#E5E7EB; --steel2:#F3F4F6; --mute:#9CA3AF; --mute2:#6B7280;
+  --orange:#C2410C; --orange2:#EA580C; --orangeSoft:#FED7AA;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--steel);font-family:Inter,system-ui,sans-serif;line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+
+/* concept banner */
+.concept{background:#0B0F19;color:var(--mute);font-size:10.5px;letter-spacing:-.005em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid #1f2937}
+.concept b{color:var(--steel);font-weight:600}
+
+/* barber stripe */
+.stripe{height:8px;background:repeating-linear-gradient(-45deg,var(--orange) 0 12px,var(--steel) 12px 24px,var(--ink) 24px 36px,var(--steel) 36px 48px);background-size:68px 8px;animation:pole 2.4s linear infinite}
+@keyframes pole{to{background-position:68px 0}}
+@media(prefers-reduced-motion:reduce){.stripe,.spin{animation:none!important}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(17,24,39,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(229,231,235,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Oswald,sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase}
+.logo span span{color:var(--orange2)}
+.logo svg{width:26px;height:26px}
+.links{display:none;gap:28px;font-size:14px;font-weight:500}
+.links a{text-decoration:none;color:var(--mute);transition:color .2s}
+.links a:hover{color:var(--steel)}
+.navbtn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px;transition:background .2s,transform .2s}
+.navbtn:hover{background:var(--orange2);transform:translateY(-1px)}
+@media(min-width:900px){.links{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 56px;background:
+  radial-gradient(120% 80% at 100% 0%,rgba(194,65,12,.28),transparent 55%),
+  radial-gradient(90% 60% at 0% 100%,rgba(229,231,235,.06),transparent 60%),var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(229,231,235,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(229,231,235,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(180deg,#000 30%,transparent 95%);-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 95%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--orangeSoft)}
+.eyebrow i{width:28px;height:2px;background:var(--orange2);display:block}
+.hero h1{font-size:clamp(50px,15vw,112px);font-weight:700;margin:16px 0 18px}
+.hero h1 .o{color:var(--orange2)}
+.hero h1 .out{color:transparent;-webkit-text-stroke:1.5px var(--steel)}
+.sub{font-size:17px;color:#D1D5DB;max-width:520px}
+.sub b{color:#fff;font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}
+.btn svg{width:18px;height:18px}
+.btn.p{background:var(--orange);color:#fff;box-shadow:0 10px 30px -10px rgba(234,88,12,.7)}
+.btn.p:hover{background:var(--orange2);transform:translateY(-2px)}
+.btn.g{border:1.5px solid rgba(229,231,235,.3);color:var(--steel)}
+.btn.g:hover{border-color:var(--steel);transform:translateY(-2px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:12.5px;font-weight:500;color:#D1D5DB;border:1px solid rgba(229,231,235,.16);background:rgba(229,231,235,.04);padding:6px 12px;border-radius:999px}
+
+/* hero art */
+.art{position:relative;max-width:420px;width:100%;margin:0 auto;aspect-ratio:1/1}
+.art .ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(229,231,235,.2)}
+.art .disc{position:absolute;inset:9%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#273244,#111827 70%);box-shadow:inset 0 0 0 1px rgba(229,231,235,.08),0 40px 80px -30px rgba(0,0,0,.8)}
+.art svg.main{position:absolute;inset:0;width:100%;height:100%}
+.spin{animation:spin 40s linear infinite;transform-origin:50% 50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge{position:absolute;right:2%;bottom:8%;background:var(--steel);color:var(--ink);border-radius:14px;padding:10px 14px;font-family:Oswald,sans-serif;text-transform:uppercase;font-size:13px;font-weight:600;line-height:1.15;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);transform:rotate(-4deg)}
+.badge b{display:block;font-size:24px;color:var(--orange)}
+
+@media(min-width:900px){
+  .hero{padding:80px 0 96px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+}
+
+/* marquee */
+.marq{background:var(--orange);color:#fff;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(0,0,0,.2);border-bottom:1px solid rgba(0,0,0,.2)}
+.marq div{display:inline-flex;gap:28px;padding:13px 0;animation:mq 26s linear infinite;font-family:Oswald,sans-serif;text-transform:uppercase;font-size:18px;font-weight:500;letter-spacing:.06em}
+.marq span{display:inline-flex;align-items:center;gap:28px}
+.marq span::after{content:"✂";font-size:15px;opacity:.75}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:72px 0}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange2);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:22px;height:2px;background:currentColor}
+h2{font-size:clamp(38px,10vw,64px);font-weight:700;margin:12px 0 14px}
+.lede{color:var(--mute);max-width:560px;font-size:16px}
+.light{background:var(--steel2);color:var(--ink)}
+.light .lede{color:var(--mute2)}
+.light .kicker{color:var(--orange)}
+
+/* services */
+.svc{display:grid;gap:14px;margin-top:34px}
+.card{position:relative;background:#fff;border:1px solid #E5E7EB;border-radius:var(--r);padding:24px 22px 22px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(17,24,39,.45);border-color:#D1D5DB}
+.card::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:repeating-linear-gradient(-45deg,var(--orange) 0 6px,#fff 6px 12px,var(--ink) 12px 18px,#fff 18px 24px);opacity:0;transition:opacity .25s}
+.card:hover::after{opacity:1}
+.ic{width:52px;height:52px;border-radius:14px;background:var(--ink);color:var(--orange2);display:grid;place-items:center;margin-bottom:18px}
+.ic svg{width:28px;height:28px}
+.card h3{font-size:26px;font-weight:600;margin-bottom:6px}
+.card p{color:var(--mute2);font-size:15px}
+.num{position:absolute;right:18px;top:14px;font-family:Oswald,sans-serif;font-size:44px;font-weight:700;color:#F3F4F6;line-height:1}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tagrow span{font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);background:var(--steel2);padding:4px 9px;border-radius:6px}
+.note{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;background:var(--ink);color:var(--steel);border-radius:var(--r);padding:20px 22px}
+.note p{font-size:15px;color:#D1D5DB}
+.note p b{color:#fff}
+.note a{color:#fff;background:var(--orange);text-decoration:none;font-weight:600;padding:11px 18px;border-radius:999px;font-size:14px;white-space:nowrap;transition:background .2s}
+.note a:hover{background:var(--orange2)}
+@media(min-width:700px){.svc{grid-template-columns:1fr 1fr}}
+@media(min-width:1050px){.svc{grid-template-columns:repeat(4,1fr)}}
+
+/* why */
+.why{display:grid;gap:14px;margin-top:34px}
+.w{border:1px solid rgba(229,231,235,.1);background:linear-gradient(180deg,rgba(229,231,235,.05),rgba(229,231,235,.01));border-radius:var(--r);padding:24px 22px;transition:border-color .25s,transform .25s}
+.w:hover{border-color:rgba(234,88,12,.55);transform:translateY(-3px)}
+.w .big{font-family:Oswald,sans-serif;font-size:46px;font-weight:700;color:var(--orange2);line-height:1;margin-bottom:10px}
+.w h3{font-size:22px;font-weight:600;margin-bottom:6px;color:#fff}
+.w p{color:var(--mute);font-size:15px}
+@media(min-width:800px){.why{grid-template-columns:repeat(3,1fr)}}
+
+/* hours + visit */
+.visit{display:grid;gap:18px;margin-top:34px}
+.panel{background:#fff;border:1px solid #E5E7EB;border-radius:var(--r);padding:24px 22px}
+.panel h3{font-size:24px;font-weight:600;margin-bottom:4px}
+.panel .s{color:var(--mute2);font-size:14px;margin-bottom:16px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.d{text-align:center;border-radius:12px;background:var(--steel2);padding:10px 0 9px;font-family:Oswald,sans-serif;text-transform:uppercase;font-size:14px;font-weight:500;color:var(--ink3);transition:background .2s}
+.d small{display:block;font-family:Inter,sans-serif;text-transform:none;font-size:9.5px;font-weight:600;letter-spacing:.04em;color:var(--mute2);margin-top:2px}
+.d.today{background:var(--ink);color:#fff;box-shadow:0 0 0 2px var(--orange)}
+.d.today small{color:var(--orangeSoft)}
+.hrsnote{margin-top:16px;font-size:14.5px;color:var(--ink3);display:flex;gap:10px;align-items:flex-start}
+.hrsnote svg{flex:none;width:20px;height:20px;color:var(--orange);margin-top:1px}
+.hrsnote a{color:var(--orange);font-weight:600}
+.addr{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:24px;font-weight:600;line-height:1.15;margin:4px 0 4px}
+.addr small{display:block;font-family:Inter,sans-serif;text-transform:none;font-size:15px;font-weight:500;color:var(--mute2);margin-top:6px}
+.acts{display:grid;gap:10px;margin-top:18px}
+.acts a{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:15px;padding:14px 16px;border-radius:14px;border:1px solid #E5E7EB;color:var(--ink);transition:border-color .2s,background .2s,transform .2s}
+.acts a:hover{border-color:var(--orange);background:#FFF7ED;transform:translateX(3px)}
+.acts a svg{width:20px;height:20px;color:var(--orange);flex:none}
+.acts a em{margin-left:auto;font-style:normal;color:var(--mute2);font-weight:500;font-size:13px}
+.map{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid #E5E7EB;min-height:300px;background:#E5E7EB url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 40h120M0 92h120M30 0v120M84 0v120' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 10 120 70' stroke='%23D1D5DB' stroke-width='10'/%3E%3C/svg%3E")}
+.map .pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none}
+.map .pin svg{width:44px;height:44px;color:var(--orange);filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.map .pin span{background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:8px;white-space:nowrap}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:300px;border:0;display:block;filter:grayscale(.35) contrast(1.05)}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1fr}.visit .map{grid-row:span 2}}
+
+/* final cta */
+.final{position:relative;overflow:hidden;text-align:center;padding:84px 0;background:radial-gradient(80% 100% at 50% 0%,rgba(194,65,12,.35),transparent 70%),var(--ink)}
+.final h2{font-size:clamp(44px,13vw,96px)}
+.final h2 .o{color:var(--orange2)}
+.final .lede{margin:0 auto}
+.final .ctas{justify-content:center}
+.scis{width:64px;height:64px;margin:0 auto 18px;color:var(--orange2)}
+
+footer{border-top:1px solid rgba(229,231,235,.08);padding:30px 0 34px;font-size:13.5px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:center}
+footer a{color:var(--steel);text-decoration:none}
+footer a:hover{color:var(--orange2)}
+.credit{color:var(--mute2)}
+
+/* sticky call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(11,15,25,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(229,231,235,.1)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;text-decoration:none;font-weight:600;font-size:15.5px}
+.bar a svg{width:18px;height:18px}
+.bar .c{border:1.5px solid rgba(229,231,235,.28);color:#fff}
+.bar .b{background:var(--orange);color:#fff}
+.bar a:active{transform:scale(.98)}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal (content visible without JS) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in,.js.done .rv{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--orange2);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for <b>CutzbyTess</b>. Not live.</div>
+<div class="stripe" aria-hidden="true"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="CutzbyTess home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="9" cy="23" r="5" stroke="#E5E7EB" stroke-width="2.4"/><circle cx="23" cy="23" r="5" stroke="#E5E7EB" stroke-width="2.4"/><path d="M12.5 19.5 26 3M19.5 19.5 6 3" stroke="#EA580C" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Cutz<span>by</span>Tess</span>
+    </a>
+    <div class="links">
+      <a href="#services">Services</a><a href="#why">The Chair</a><a href="#visit">Visit</a>
+    </div>
+    <a class="navbtn" href="https://www.vagaro.com/cutzbytess" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow"><i></i>Mt. Juliet, TN · Suite #8</div>
+      <h1>Barber <span class="o">cuts.</span><br>Real <span class="out">color.</span><br>One chair.</h1>
+      <p class="sub">Tess does <b>haircuts, barber service, facial wax</b> and <b>hair color</b> (after a consultation) from her own suite at 661 S Mt Juliet Rd.</p>
+      <div class="ctas">
+        <a class="btn p" href="https://www.vagaro.com/cutzbytess" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
+          Book on Vagaro</a>
+        <a class="btn g" href="tel:+16156010582">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+          615-601-0582</a>
+      </div>
+      <div class="chips"><span class="chip">Mens Hair</span><span class="chip">Barber Service</span><span class="chip">Hair Cut</span><span class="chip">Hair Color</span></div>
+    </div>
+
+    <div class="art rv" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="disc"></div>
+      <svg class="main" viewBox="0 0 400 400" fill="none">
+        <defs>
+          <path id="circ" d="M200,200 m-168,0 a168,168 0 1,1 336,0 a168,168 0 1,1 -336,0"/>
+          <linearGradient id="bl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F9FAFB"/><stop offset="1" stop-color="#9CA3AF"/></linearGradient>
+          <pattern id="pole" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><rect width="24" height="24" fill="#F3F4F6"/><rect width="8" height="24" fill="#C2410C"/><rect x="12" width="5" height="24" fill="#111827"/></pattern>
+        </defs>
+        <g class="spin">
+          <text font-family="Oswald, sans-serif" font-size="15" font-weight="500" letter-spacing="5.2" fill="#9CA3AF"><textPath href="#circ">CUTZBYTESS · HAIRCUTS · BARBER · FACIAL WAX · HAIR COLOR · MT. JULIET ·</textPath></text>
+        </g>
+        <!-- barber pole -->
+        <g transform="translate(272 92)">
+          <rect x="-6" y="-14" width="44" height="14" rx="7" fill="#E5E7EB"/>
+          <rect x="0" y="0" width="32" height="150" rx="4" fill="url(#pole)"/>
+                    <rect x="3" y="0" width="7" height="150" fill="#fff" opacity=".22"/>
+          <rect x="-6" y="150" width="44" height="14" rx="7" fill="#E5E7EB"/>
+        </g>
+        <!-- scissors -->
+        <g transform="translate(150 210) rotate(-28)">
+          <path d="M0 0 L-8 -128 Q-4 -140 4 -128 L10 -4 Z" fill="url(#bl)"/>
+          <path d="M8 2 L60 -114 Q68 -122 70 -110 L20 8 Z" fill="url(#bl)"/>
+          <circle cx="4" cy="2" r="7" fill="#111827" stroke="#EA580C" stroke-width="3"/>
+          <circle cx="-22" cy="52" r="26" stroke="#EA580C" stroke-width="11"/>
+          <circle cx="36" cy="54" r="26" stroke="#EA580C" stroke-width="11"/>
+          <path d="M-6 26 L0 8 M20 28 L12 9" stroke="#EA580C" stroke-width="11" stroke-linecap="round"/>
+        </g>
+        <!-- comb -->
+        <g transform="translate(92 300) rotate(-8)" opacity=".9">
+          <rect x="0" y="0" width="150" height="18" rx="5" fill="#374151"/>
+          <g fill="#374151">
+            <rect x="6" y="16" width="4" height="22" rx="2"/><rect x="16" y="16" width="4" height="22" rx="2"/><rect x="26" y="16" width="4" height="22" rx="2"/><rect x="36" y="16" width="4" height="22" rx="2"/><rect x="46" y="16" width="4" height="22" rx="2"/><rect x="56" y="16" width="4" height="22" rx="2"/><rect x="66" y="16" width="4" height="22" rx="2"/><rect x="76" y="16" width="4" height="16" rx="2"/><rect x="86" y="16" width="4" height="16" rx="2"/><rect x="96" y="16" width="4" height="16" rx="2"/><rect x="106" y="16" width="4" height="16" rx="2"/><rect x="116" y="16" width="4" height="16" rx="2"/><rect x="126" y="16" width="4" height="16" rx="2"/><rect x="136" y="16" width="4" height="16" rx="2"/>
+          </g>
+        </g>
+        <!-- sparkle -->
+        <path d="M96 118l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#EA580C"/>
+        <path d="M318 286l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#E5E7EB"/>
+      </svg>
+      <div class="badge">Suite<b>#8</b>Mt. Juliet</div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>Haircuts</span><span>Barber service</span><span>Facial wax</span><span>Hair color</span><span>Mens hair</span><span>Mt. Juliet, TN</span>
+  <span>Haircuts</span><span>Barber service</span><span>Facial wax</span><span>Hair color</span><span>Mens hair</span><span>Mt. Juliet, TN</span>
+</div></div>
+
+<section class="light" id="services">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The menu</div>
+      <h2>What Tess does</h2>
+      <p class="lede">Straight from her booking page: four services, all in one private suite. See current options and openings on Vagaro.</p>
+    </div>
+    <div class="svc">
+      <article class="card rv">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.2 16 20 3M15.8 16 4 3"/></svg></div>
+        <h3>Haircuts</h3>
+        <p>Haircuts, one-on-one with Tess in her private Suite #8.</p>
+        <div class="tagrow"><span>Hair Cut</span><span>Hair Stylist</span></div>
+      </article>
+      <article class="card rv">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="7" rx="1.5"/><path d="M8 9.5h8l-1 11a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 20.5z"/><path d="M9 2.5v-1M12 2.5v-1M15 2.5v-1"/></svg></div>
+        <h3>Barber</h3>
+        <p>Barber service for men's hair.</p>
+        <div class="tagrow"><span>Barber Service</span><span>Mens Hair</span></div>
+      </article>
+      <article class="card rv">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11z"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.5"/></svg></div>
+        <h3>Hair Color</h3>
+        <p>Color is booked after a consultation, so the plan fits your hair first.</p>
+        <div class="tagrow"><span>Hair Color</span><span>Consult first</span></div>
+      </article>
+      <article class="card rv">
+        <span class="num">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="7"/><path d="M9 9h.01M15 9h.01M9.5 13c1.5 1.2 3.5 1.2 5 0"/><path d="M8 20.5h8"/></svg></div>
+        <h3>Facial Wax</h3>
+        <p>Facial waxing, on the same Vagaro menu as your cut.</p>
+        <div class="tagrow"><span>Facial Wax</span></div>
+      </article>
+    </div>
+    <div class="note rv">
+      <p><b>Prices &amp; open times</b> live on Tess's Vagaro page.</p>
+      <a href="https://www.vagaro.com/cutzbytess" target="_blank" rel="noopener">See the menu →</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The chair</div>
+      <h2>Barber <span style="color:var(--orange2)">&amp;</span> color.<br>Same chair.</h2>
+      <p class="lede">At CutzbyTess, a clean barber cut and a color consultation book in the same place, with the same person.</p>
+    </div>
+    <div class="why">
+      <div class="w rv"><div class="big">2-in-1</div><h3>Barber + stylist</h3><p>Listed for both Barber Service and Hair Color, plus haircuts, all from one chair.</p></div>
+      <div class="w rv"><div class="big">#8</div><h3>Your own suite</h3><p>A private suite at 661 S Mt Juliet Rd. One-on-one with Tess, not a crowded floor.</p></div>
+      <div class="w rv"><div class="big">Tap</div><h3>Book in seconds</h3><p>Pick your service and time on Vagaro, or call 615-601-0582.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Visit</div>
+      <h2>Find Suite #8</h2>
+      <p class="lede">661 S Mt Juliet Rd, Mt. Juliet. Grab a time online and head over.</p>
+    </div>
+    <div class="visit">
+      <div class="panel rv">
+        <h3>Hours</h3>
+        <p class="s">Book your time on Vagaro. Today is highlighted.</p>
+        <div class="days" id="days">
+          <div class="d" data-d="1">Mon<small>Appt</small></div>
+          <div class="d" data-d="2">Tue<small>Appt</small></div>
+          <div class="d" data-d="3">Wed<small>Appt</small></div>
+          <div class="d" data-d="4">Thu<small>Appt</small></div>
+          <div class="d" data-d="5">Fri<small>Appt</small></div>
+          <div class="d" data-d="6">Sat<small>Appt</small></div>
+          <div class="d" data-d="0">Sun<small>Appt</small></div>
+        </div>
+        <p class="hrsnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Open slots update live on <a href="https://www.vagaro.com/cutzbytess" target="_blank" rel="noopener">Vagaro</a>. Check there for <span id="todayName">today</span>'s openings.</span></p>
+      </div>
+      <div class="map rv">
+        <div class="pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s-7.5-6.6-7.5-12.2A7.5 7.5 0 0 1 19.5 9.8C19.5 15.4 12 22 12 22z"/><circle cx="12" cy="9.8" r="2.8" fill="#fff"/></svg><span>Suite #8 · 661 S Mt Juliet Rd</span></div>
+        <iframe title="Map to CutzbyTess, 661 S Mt Juliet Rd, Mt. Juliet, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=661%20S%20Mt%20Juliet%20Rd%2C%20Mt.%20Juliet%2C%20TN%2037122&output=embed"></iframe>
+      </div>
+      <div class="panel rv">
+        <h3>Address</h3>
+        <p class="addr">661 S Mt Juliet Rd<small>Suite #8 · Mt. Juliet, TN 37122</small></p>
+        <div class="acts">
+          <a href="tel:+16156010582"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Call Tess<em>615-601-0582</em></a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=661%20S%20Mt%20Juliet%20Rd%2C%20Mt.%20Juliet%2C%20TN%2037122" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Get directions<em>Maps</em></a>
+          <a href="https://www.instagram.com/cutzbytess_mj" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram<em>@cutzbytess_mj</em></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap rv">
+    <svg class="scis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.2 16 20 3M15.8 16 4 3"/></svg>
+    <h2>Time for a <span class="o">fresh cut?</span></h2>
+    <p class="lede">Haircuts, barber service, facial wax and color consults with Tess in Mt. Juliet.</p>
+    <div class="ctas">
+      <a class="btn p" href="https://www.vagaro.com/cutzbytess" target="_blank" rel="noopener">Book on Vagaro</a>
+      <a class="btn g" href="tel:+16156010582">Call 615-601-0582</a>
+    </div>
+  </div>
+</section>
+
+<div class="stripe" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff;font-family:Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase">CutzbyTess</strong> · Suite #8, 661 S Mt Juliet Rd, Mt. Juliet, TN · <a href="tel:+16156010582">615-601-0582</a></div>
+    <div class="credit">Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="c" href="tel:+16156010582"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Call</a>
+  <a class="b" href="https://www.vagaro.com/cutzbytess" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>Book on Vagaro</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay(),names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var el=document.querySelector('.d[data-d="'+d+'"]'); if(el){el.classList.add('today');el.querySelector('small').textContent='Today';}
+  var t=document.getElementById('todayName'); if(t) t.textContent=names[d];
+  var root=document.documentElement; root.classList.add('js');
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(i){io.observe(i);});
+  } else root.classList.add('done');
+  setTimeout(function(){root.classList.add('done');},1500);
+})();
+</script>
+</body>
+</html>

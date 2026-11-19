@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Texture Edit — Mt. Juliet</title>
+<meta name="description" content="The Texture Edit: curly hair specialist Areona Woodall. Cuts, color, treatments and natural hair care in Suite #3, 661 S Mt Juliet Rd, Mt. Juliet, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cinnamon:#7A4E3A; --cinnamon-d:#5E3A2B; --honey:#E9C46A; --honey-l:#F4DFA6;
+  --cream:#FDFBF7; --sand:#F5EDE2; --char:#2A2523; --muted:#5E5550;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--char);background:var(--cream);line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:Syne,sans-serif;line-height:1.02;letter-spacing:-.02em}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+
+/* banner */
+.banner{background:var(--char);color:#EDE4DA;font-size:10.5px;line-height:1.35;text-align:center;padding:7px 10px;letter-spacing:0}
+@media(min-width:420px){.banner{font-size:12px}}
+.banner b{color:var(--honey);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(253,251,247,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(122,78,58,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:9px;white-space:nowrap;text-decoration:none;font-family:Syne;font-weight:800;font-size:14.5px;letter-spacing:-.01em;color:var(--cinnamon-d)}
+.logo svg{width:26px;height:26px}
+@media(min-width:420px){.logo{font-size:17px}.logo svg{width:30px;height:30px}}
+.nav ul{display:none;list-style:none;gap:28px;font-weight:600;font-size:14px}
+.nav ul a{text-decoration:none;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--honey);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav ul a:hover::after{transform:scaleX(1)}
+@media(min-width:900px){.nav ul{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;min-height:48px}
+.btn:active{transform:scale(.97)}
+.btn-honey{background:var(--honey);color:var(--char);box-shadow:0 8px 24px -10px rgba(233,196,106,.9)}
+.btn-honey:hover{background:#F0CF7C;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid currentColor;color:var(--cream)}
+.btn-ghost:hover{background:rgba(253,251,247,.12)}
+.btn-dark{background:var(--cinnamon);color:var(--cream)}
+.btn-dark:hover{background:var(--cinnamon-d);transform:translateY(-2px)}
+.nav .btn{padding:8px 15px;min-height:40px;font-size:13.5px;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;background:var(--cinnamon);color:var(--cream);overflow:hidden;isolation:isolate}
+.hero .curls{position:absolute;inset:0;z-index:-1;opacity:.9}
+.hero .wrap{padding-top:48px;padding-bottom:64px;display:grid;gap:36px}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:96px;padding-bottom:110px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--honey)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--honey);border-radius:2px}
+.hero h1{font-size:clamp(46px,13.5vw,104px);font-weight:800;margin:16px 0 26px}
+.hero h1 em{font-style:normal;color:var(--honey);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;right:0;bottom:-.12em;width:100%;height:.28em;overflow:visible}
+.hero h1 em path{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s .4s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero p.sub{font-size:17px;max-width:30em;color:#F3E8DD}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:#EBDCCD}
+.hero .meta span{display:inline-flex;align-items:center;gap:7px}
+.hero .meta svg{width:15px;height:15px;color:var(--honey)}
+
+/* strand card */
+.strand-card{position:relative;background:rgba(253,251,247,.07);border:1px solid rgba(253,251,247,.18);border-radius:28px;padding:26px;backdrop-filter:blur(4px)}
+.strand-card h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-family:Manrope;font-weight:700;color:var(--honey);margin-bottom:14px}
+.types{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.type{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11.5px;font-weight:600;color:#F3E8DD}
+.type svg{width:100%;height:90px}
+.type svg path{stroke:var(--honey);stroke-width:3;fill:none;stroke-linecap:round}
+.strand-card p{margin-top:16px;font-size:14px;color:#EBDCCD}
+.strand-card p b{color:var(--cream)}
+@media(min-width:900px){.strand-card{padding:38px}.type svg{height:170px}.type{font-size:13px}.strand-card p{font-size:16px}.strand-card h3{font-size:14px}}
+
+/* wave band */
+.band{background:var(--honey);color:var(--char);overflow:hidden;position:relative}
+.band .track{display:flex;width:max-content;animation:marq 28s linear infinite}
+.band .seg{display:flex;align-items:center;gap:22px;padding:16px 11px;font-family:Syne;font-weight:700;font-size:20px;white-space:nowrap}
+.band .seg svg{width:58px;height:18px}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.band .track{animation:none}.hero h1 em path{animation:none;stroke-dashoffset:0}}
+.wave-div{display:block;width:100%;height:46px}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:76px 0}
+@media(min-width:900px){.sec{padding:110px 0}}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head .eyebrow{color:var(--cinnamon)}
+.sec-head .eyebrow::before{background:var(--cinnamon)}
+.sec-head h2{font-size:clamp(36px,9vw,64px);font-weight:800;margin:12px 0 14px;color:var(--char)}
+.sec-head p{color:var(--muted);font-size:16.5px}
+
+/* services */
+.svc-grid{display:grid;gap:14px}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{position:relative;background:#fff;border:1px solid rgba(122,78,58,.14);border-radius:var(--r);padding:24px 22px 24px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(94,58,43,.45);border-color:rgba(122,78,58,.35)}
+.svc .ico{width:52px;height:52px;border-radius:16px;background:var(--sand);display:grid;place-items:center;margin-bottom:16px;color:var(--cinnamon)}
+.svc .ico svg{width:28px;height:28px}
+.svc h3{font-size:22px;font-weight:700;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:14.5px}
+.svc .num{position:absolute;top:18px;right:20px;font-family:Syne;font-weight:700;font-size:13px;color:rgba(122,78,58,.4)}
+.svc.feature{background:var(--char);color:var(--cream);border-color:var(--char)}
+.svc.feature .ico{background:rgba(233,196,106,.16);color:var(--honey)}
+.svc.feature p{color:#D9CFC6}
+.svc.feature .num{color:var(--honey)}
+.svc-note{margin-top:22px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.svc-note a{font-weight:700;color:var(--cinnamon)}
+
+/* why */
+.why{background:var(--sand);position:relative}
+.why-grid{display:grid;gap:30px}
+@media(min-width:900px){.why-grid{grid-template-columns:.9fr 1.1fr;align-items:center;gap:60px}}
+.quote{position:relative;background:var(--cinnamon);color:var(--cream);border-radius:30px;padding:34px 28px 30px;overflow:hidden}
+.quote .mark{font-family:Syne;font-weight:800;font-size:110px;line-height:.7;color:var(--honey);display:block;height:48px}
+.quote blockquote{font-family:Syne;font-weight:700;font-size:clamp(30px,8vw,46px);line-height:1.05;letter-spacing:-.02em}
+.quote cite{display:block;margin-top:18px;font-style:normal;font-size:13.5px;color:#EBDCCD}
+.quote svg.bg{position:absolute;right:-30px;bottom:-30px;width:220px;opacity:.18}
+.points{display:grid;gap:14px}
+.pt{display:flex;gap:16px;align-items:flex-start;background:var(--cream);border-radius:18px;padding:18px 18px}
+.pt .dot{flex:none;width:40px;height:40px;border-radius:12px;background:var(--honey);display:grid;place-items:center;color:var(--char)}
+.pt .dot svg{width:22px;height:22px}
+.pt h3{font-size:18px;font-weight:700;margin-bottom:2px}
+.pt p{font-size:14.5px;color:var(--muted)}
+
+/* hours */
+.hours-grid{display:grid;gap:22px}
+@media(min-width:900px){.hours-grid{grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{border:1px solid rgba(122,78,58,.18);border-radius:14px;text-align:center;padding:12px 0 10px;font-weight:700;font-size:13px;background:#fff;transition:all .3s}
+.day small{display:block;font-weight:500;font-size:10.5px;color:var(--muted);margin-top:2px}
+.day.today{background:var(--cinnamon);color:var(--cream);border-color:var(--cinnamon);transform:translateY(-4px);box-shadow:0 14px 26px -14px rgba(94,58,43,.7)}
+.day.today small{color:var(--honey)}
+.hours-card{background:#fff;border:1px solid rgba(122,78,58,.14);border-radius:var(--r);padding:24px}
+.hours-card h3{font-size:24px;font-weight:700;margin-bottom:8px}
+.hours-card p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.today-line{margin-top:18px;font-size:14px;color:var(--muted)}
+.today-line b{color:var(--cinnamon)}
+
+/* visit */
+.visit{background:var(--char);color:var(--cream)}
+.visit .sec-head h2{color:var(--cream)}
+.visit .sec-head .eyebrow{color:var(--honey)}
+.visit .sec-head .eyebrow::before{background:var(--honey)}
+.visit .sec-head p{color:#CFC4BA}
+.visit-grid{display:grid;gap:18px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.8fr 1.2fr;gap:28px}}
+.info{display:grid;gap:12px;align-content:start}
+.info a,.info div.row{display:flex;gap:14px;align-items:center;text-decoration:none;background:rgba(253,251,247,.06);border:1px solid rgba(253,251,247,.12);border-radius:18px;padding:16px 18px;transition:background .25s,border-color .25s}
+.info a:hover{background:rgba(233,196,106,.12);border-color:rgba(233,196,106,.5)}
+.info .i{flex:none;width:42px;height:42px;border-radius:12px;background:var(--honey);color:var(--char);display:grid;place-items:center}
+.info .i svg{width:20px;height:20px}
+.info small{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--honey);font-weight:700}
+.info span.v{font-weight:600;font-size:15.5px;line-height:1.35}
+.map{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(253,251,247,.15);min-height:320px;background:#3a3330}
+.map .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#CFC4BA;font-size:14px}
+.map .ph svg{width:100%;height:100%;position:absolute;inset:0}
+.map .ph span{position:relative;background:rgba(42,37,35,.85);padding:10px 16px;border-radius:999px}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:grayscale(.25) contrast(1.05)}
+
+/* cta */
+.final{position:relative;background:var(--honey);overflow:hidden;text-align:center}
+.final .wrap{position:relative;padding-top:80px;padding-bottom:84px}
+.final h2{font-size:clamp(40px,11vw,88px);font-weight:800;max-width:12ch;margin:0 auto 18px}
+.final p{max-width:30em;margin:0 auto 28px;color:#4A3A2E;font-size:16.5px}
+.final .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.final svg.curlbg{position:absolute;inset:0;width:100%;height:100%;opacity:.35}
+
+footer{background:var(--cream);padding:34px 0 30px;font-size:13.5px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center}
+footer a{font-weight:600;color:var(--cinnamon)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:rgba(42,37,35,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(233,196,106,.25)}
+.bar a{min-height:50px;font-size:15px}
+.bar .call{background:transparent;border:1.5px solid rgba(253,251,247,.5);color:var(--cream)}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(26px)}
+.js.all-in .rv{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for The Texture Edit. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Texture Edit home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#7A4E3A"/><path d="M10 25c0-4 6-4 6-8s-6-4-6-8 6-4 6-4M16 25c0-4 6-4 6-8s-6-4-6-8 6-4 6-4" stroke="#E9C46A" stroke-width="2.2" stroke-linecap="round"/></svg>
+      The Texture Edit
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Approach</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-dark" href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="curls" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="cp" width="80" height="80" patternUnits="userSpaceOnUse">
+        <path d="M0 40c10-14 30-14 40 0s30 14 40 0" stroke="#8C5D47" stroke-width="2" fill="none"/>
+      </pattern>
+      <radialGradient id="glow" cx="80%" cy="15%" r="60%"><stop offset="0" stop-color="#E9C46A" stop-opacity=".35"/><stop offset="1" stop-color="#E9C46A" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="400" height="800" fill="url(#cp)" opacity=".55"/>
+    <rect width="400" height="800" fill="url(#glow)"/>
+  </svg>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Curly hair specialist · Mt. Juliet, TN</span>
+      <h1>Every strand <em>matters.<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 18c24-16 48-16 72 0s48 16 72 0 48-16 72 0 48 16 72 0" stroke="#E9C46A" stroke-width="6" fill="none" stroke-linecap="round"/></svg></em></h1>
+      <p class="sub">Areona Woodall's suite for cuts, color, treatments and natural hair care, in Suite #3 at 661 S Mt Juliet Rd.</p>
+      <div class="ctas">
+        <a class="btn btn-honey" href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener">Book on Vagaro
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+16156242699">Call 615-624-2699</a>
+      </div>
+      <div class="meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Suite #3 · Mt. Juliet</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@ar.eona.hair</span>
+      </div>
+    </div>
+    <div class="strand-card rv" aria-hidden="false">
+      <h3>Every texture, edited with care</h3>
+      <div class="types" role="img" aria-label="Illustration of four strand patterns: wavy, curly, coily and straight">
+        <div class="type"><svg viewBox="0 0 40 90"><path d="M20 4c0 10 12 14 12 24S8 38 8 48s24 14 24 24-12 14-12 14"/></svg>Wavy</div>
+        <div class="type"><svg viewBox="0 0 40 90"><path d="M20 4c10 0 12 10 4 12S8 22 14 28s16-2 14 8-16 4-14 12 16 2 14 10-14 6-12 14 10 4 6 4"/></svg>Curly</div>
+        <div class="type"><svg viewBox="0 0 40 90"><path d="M20 4c8 0 8 7 0 7s-8 7 0 7 8 7 0 7-8 7 0 7 8 7 0 7-8 7 0 7 8 7 0 7-8 7 0 7 8 7 0 7"/></svg>Coily</div>
+        <div class="type"><svg viewBox="0 0 40 90"><path d="M20 4c1 20-1 40 0 60s0 18 0 22"/></svg>Straight</div>
+      </div>
+      <p><b>Curly hair specialist</b>, plus cuts, color and treatments for every pattern.</p>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true">
+  <div class="track">
+    <div class="seg">every strand matters<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>natural hair care<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>cut · color · treat<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>curly hair specialist<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div>
+    <div class="seg">every strand matters<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>natural hair care<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>cut · color · treat<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>curly hair specialist<svg viewBox="0 0 58 18"><path d="M2 9c7-8 14-8 18 0s11 8 18 0 11-8 18 0" stroke="#7A4E3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div>
+  </div>
+</div>
+
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">The menu</span>
+      <h2>Cut. Color. Care.</h2>
+      <p>The services Areona lists for The Texture Edit. See the full menu and open times when you book on Vagaro.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc feature rv"><span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c4 0 4 4 0 4s-4 4 0 4 4 4 0 4-4 4 0 4"/></svg></div>
+        <h3>Curly hair specialist</h3><p>Her stated specialty: curls handled by someone who works with texture first.</p></article>
+      <article class="svc rv"><span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5 20 18M8.5 16.5 20 6"/></svg></div>
+        <h3>Hair cut</h3><p>Hair cutting shaped around your natural pattern.</p></article>
+      <article class="svc rv"><span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
+        <h3>Hair color</h3><p>Hair coloring for curls, coils and waves.</p></article>
+      <article class="svc rv"><span class="num">04</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3h6M10 3v4l-4 9a3 3 0 0 0 2.7 4.3h6.6A3 3 0 0 0 18 16l-4-9V3"/><path d="M7.5 14h9"/></svg></div>
+        <h3>Hair treatment</h3><p>Treatments to keep every strand healthy.</p></article>
+      <article class="svc rv"><span class="num">05</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21c-5-3-8-7-8-11a8 8 0 0 1 16 0c0 4-3 8-8 11z"/><path d="M12 21V9"/></svg></div>
+        <h3>Natural hair care</h3><p>Care for natural hair, just as it grows.</p></article>
+      <article class="svc rv"><span class="num">06</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div>
+        <h3>Hair styling</h3><p>Hair stylist and cosmetology services, all in one suite.</p></article>
+    </div>
+    <div class="svc-note rv">Prices and times are on the booking page. <a href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener">View the menu on Vagaro →</a></div>
+  </div>
+</section>
+
+<svg class="wave-div" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)"><path d="M0 46V24c120-28 240-28 360 0s240 28 360 0 240-28 360 0 240 28 360 0v22z" fill="#F5EDE2"/></svg>
+
+<section id="why" class="sec why" style="padding-top:50px">
+  <div class="wrap why-grid">
+    <div class="quote rv">
+      <span class="mark">“</span>
+      <blockquote>At The Texture Edit, every strand matters.</blockquote>
+      <cite>Areona Woodall, The Texture Edit</cite>
+      <svg class="bg" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 5c20 0 20 18 0 18S30 41 50 41s20 18 0 18-20 18 0 18 20 18 0 18" stroke="#E9C46A" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+    </div>
+    <div>
+      <div class="sec-head rv" style="margin-bottom:24px">
+        <span class="eyebrow">Why The Texture Edit</span>
+        <h2>Built for texture.</h2>
+      </div>
+      <div class="points">
+        <div class="pt rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3c4 0 4 4 0 4s-4 4 0 4 4 4 0 4-4 4 0 4"/></svg></div><div><h3>A curly hair specialist</h3><p>Texture is the focus here, not an add-on.</p></div></div>
+        <div class="pt rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg></div><div><h3>A private suite</h3><p>Suite #3 at Salons by JC, 661 S Mt Juliet Rd.</p></div></div>
+        <div class="pt rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><div><h3>Book with Areona</h3><p>Cuts, color, treatments and natural hair care, all on one booking page.</p></div></div>
+        <div class="pt rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div><h3>Online booking</h3><p>Services and open times are on Vagaro, a few taps away.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="sec">
+  <div class="wrap hours-grid">
+    <div>
+      <div class="sec-head rv" style="margin-bottom:26px">
+        <span class="eyebrow">Hours</span>
+        <h2>Pick your time.</h2>
+        <p>Open appointment times are listed live on The Texture Edit's Vagaro page.</p>
+      </div>
+      <div class="week rv" id="week">
+        <div class="day" data-d="1">Mon<small>Book</small></div>
+        <div class="day" data-d="2">Tue<small>Book</small></div>
+        <div class="day" data-d="3">Wed<small>Book</small></div>
+        <div class="day" data-d="4">Thu<small>Book</small></div>
+        <div class="day" data-d="5">Fri<small>Book</small></div>
+        <div class="day" data-d="6">Sat<small>Book</small></div>
+        <div class="day" data-d="0">Sun<small>Book</small></div>
+      </div>
+      <p class="today-line rv" id="todayLine">Check today's open times on Vagaro.</p>
+    </div>
+    <div class="hours-card rv">
+      <h3>Find your time</h3>
+      <p>Choose a service and pick an open slot on The Texture Edit's Vagaro page. Questions first? Give the suite a call.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a class="btn btn-dark" href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener">See open times</a>
+        <a class="btn" style="border:1.5px solid var(--cinnamon);color:var(--cinnamon)" href="tel:+16156242699">615-624-2699</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="sec visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Visit</span>
+      <h2>Suite #3, Mt.&nbsp;Juliet.</h2>
+      <p>Inside Salons by JC on S Mt Juliet Rd.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="info rv">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=661+S+Mt+Juliet+Rd+Suite+3+Mt.+Juliet+TN+37122" target="_blank" rel="noopener"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Directions</small><span class="v">661 S Mt Juliet Rd, Suite #3<br>Mt. Juliet, TN 37122</span></span></a>
+        <a href="tel:+16156242699"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Call</small><span class="v">615-624-2699</span></span></a>
+        <a href="https://www.instagram.com/ar.eona.hair/" target="_blank" rel="noopener"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span><small>Instagram</small><span class="v">@ar.eona.hair</span></span></a>
+        <a href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><small>Book</small><span class="v">vagaro.com/thetextureedit</span></span></a>
+      </div>
+      <div class="map rv">
+        <div class="ph" aria-hidden="true"><svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice"><defs><pattern id="mg" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" stroke="#4a413d" fill="none"/></pattern></defs><rect width="400" height="320" fill="url(#mg)"/><path d="M-10 230C80 200 140 250 220 190s160-40 200-70" stroke="#5a4d47" stroke-width="14" fill="none"/><path d="M190 -10v340" stroke="#5a4d47" stroke-width="10"/><g transform="translate(190 140)"><path d="M0 34s-22-20-22-37a22 22 0 0 1 44 0C22 14 0 34 0 34z" fill="#E9C46A"/><circle cy="-3" r="8" fill="#2A2523"/></g></svg><span>661 S Mt Juliet Rd · Suite #3</span></div>
+        <iframe title="Map to The Texture Edit, 661 S Mt Juliet Rd, Mt. Juliet, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=661%20S%20Mt%20Juliet%20Rd%2C%20Mt.%20Juliet%2C%20TN%2037122&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="curlbg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><pattern id="cp2" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M0 30c7.5-10 22.5-10 30 0s22.5 10 30 0" stroke="#D4AD4F" stroke-width="2" fill="none"/></pattern></defs>
+    <rect width="400" height="300" fill="url(#cp2)"/>
+  </svg>
+  <div class="wrap rv">
+    <span class="eyebrow" style="color:var(--cinnamon-d)">Your next appointment</span>
+    <h2 style="margin-top:14px">Give your texture the edit.</h2>
+    <p>Curly hair specialist Areona Woodall · Suite #3, 661 S Mt Juliet Rd, Mt. Juliet.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener">Book on Vagaro</a>
+      <a class="btn" style="border:1.5px solid var(--char)" href="tel:+16156242699">Call 615-624-2699</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© The Texture Edit · Mt. Juliet, TN</span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn call" href="tel:+16156242699">Call</a>
+  <a class="btn btn-honey" href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener">Book on Vagaro</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay(), names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var el=document.querySelector('.day[data-d="'+d+'"]');
+  if(el){el.classList.add('today');el.querySelector('small').textContent='Today';}
+  var tl=document.getElementById('todayLine');
+  if(tl) tl.innerHTML='Today is <b>'+names[d]+'</b>. See today\'s open times on <a href="https://www.vagaro.com/thetextureedit" target="_blank" rel="noopener" style="color:var(--cinnamon);font-weight:700">Vagaro</a>.';
+  var root=document.documentElement, items=document.querySelectorAll('.rv');
+  function showAll(){root.classList.add('all-in')}
+  setTimeout(showAll,1500);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(i){io.observe(i)});
+  } else showAll();
+})();
+</script>
+</body>
+</html>

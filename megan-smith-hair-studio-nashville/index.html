@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Megan Smith Hair Studio — Nashville</title>
+<meta name="description" content="Concept site for Megan Smith Hair Studio, Suite #77, 210 25th Ave N, Nashville. Balayage, color, haircuts, blowouts and extensions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF6EF; --cream2:#F4EADC; --honey:#C9A27E; --honey-d:#9C744F; --espresso:#4A3B32; --esp-d:#2E241E;
+  --ink:#3A2E27; --muted:#6E5D51; --line:rgba(74,59,50,.14);
+  --serif:'Fraunces',Georgia,serif; --sans:'Work Sans',system-ui,-apple-system,sans-serif;
+  --r:22px; --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--esp-d);color:#EBDCC9;font-size:10.5px;letter-spacing:0;line-height:1.35;text-align:center;padding:6px 12px}
+@media (min-width:480px){.concept{font-size:11.5px;letter-spacing:.02em}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:30;background:rgba(251,246,239,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-family:var(--serif);font-size:19px;font-weight:400;text-decoration:none;letter-spacing:-.01em;line-height:1.05}
+.brand em{font-style:italic;color:var(--honey-d)}
+.brand small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav nav{display:none;gap:28px;font-size:14px}
+.nav nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav nav a:hover{color:var(--espresso)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s,color .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-dark{background:var(--espresso);color:var(--cream)}
+.btn-dark:hover{background:var(--esp-d);box-shadow:0 10px 24px -10px rgba(46,36,30,.6);transform:translateY(-2px)}
+.btn-light{background:var(--cream);color:var(--espresso)}
+.btn-light:hover{background:#fff;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(251,246,239,.55)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--cream);transform:translateY(-2px)}
+.nav .btn{padding:10px 18px;font-size:13.5px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:var(--cream);background:var(--espresso)}
+.hero .sweep{position:absolute;inset:0;background:
+  radial-gradient(120% 70% at 85% 105%, rgba(233,203,165,.95) 0%, rgba(201,162,126,.7) 30%, transparent 62%),
+  linear-gradient(162deg, #2E241E 0%, #4A3B32 34%, #7A5C45 62%, #C9A27E 92%, #E3C7A3 100%)}
+.hero .strands{position:absolute;inset:0;width:100%;height:100%;opacity:.55;mix-blend-mode:soft-light}
+.hero .grain{position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .88 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;gap:36px;padding-top:44px;padding-bottom:56px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
+.hero .eyebrow{color:#EBD6BC}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,12.4vw,96px);line-height:.98;letter-spacing:-.025em;margin:18px 0 18px}
+.hero h1 em{font-style:italic;font-weight:300;background:linear-gradient(95deg,#F6E3C8 0%,#D9B48D 55%,#F3DDBF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:17px;max-width:30em;color:#F1E4D3;line-height:1.55}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:12.5px;padding:7px 13px;border-radius:999px;background:rgba(251,246,239,.1);box-shadow:inset 0 0 0 1px rgba(251,246,239,.25);color:#F4E8D8}
+
+/* arches */
+.arches{position:relative;height:340px;max-width:440px;width:100%;margin:0 auto}
+.arch{position:absolute;bottom:0;border-radius:999px 999px 26px 26px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(20,14,10,.75)}
+.arch svg{width:100%;height:100%}
+.arch.a1{left:0;width:46%;height:92%;outline:1.5px solid rgba(251,246,239,.45);outline-offset:7px}
+.arch.a2{right:0;width:46%;height:72%;bottom:7%}
+.arch-tag{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:rgba(251,246,239,.92);color:var(--espresso);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.seal{position:absolute;right:30%;top:2%;width:92px;height:92px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.strand-anim{animation:sway 7s ease-in-out infinite alternate;transform-origin:50% 0}
+@keyframes sway{to{transform:skewX(-3deg) translateX(4px)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:76px 0}
+.sec-head{max-width:640px;margin-bottom:36px}
+.sec-head .eyebrow{color:var(--honey-d)}
+h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,9vw,58px);line-height:1.04;letter-spacing:-.02em;margin-top:14px;color:var(--espresso)}
+h2 em{font-style:italic;color:var(--honey-d)}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:16.5px}
+
+/* services */
+.menu{display:grid;gap:14px}
+.group{background:#fff;border-radius:var(--r);padding:26px 22px;box-shadow:0 1px 0 var(--line),0 18px 40px -30px rgba(74,59,50,.45);position:relative;overflow:hidden}
+.group.feature{background:linear-gradient(150deg,var(--espresso) 0%,#6B5040 55%,var(--honey) 120%);color:var(--cream)}
+.group h3{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
+.group h3 .ico{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--cream2)}
+.group.feature h3 .ico{background:rgba(251,246,239,.16)}
+.group .lede{font-size:14.5px;color:var(--muted);margin-top:8px}
+.group.feature .lede{color:#EBDCC9}
+.group ul{list-style:none;margin-top:16px}
+.group li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:16px;font-weight:500}
+.group.feature li{border-top-color:rgba(251,246,239,.18)}
+.group li span.t{font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--honey-d);text-transform:uppercase;white-space:nowrap}
+.group.feature li span.t{color:#F0D8B8}
+.swatch{display:flex;height:10px;border-radius:99px;overflow:hidden;margin-top:18px;box-shadow:0 0 0 1px rgba(251,246,239,.3)}
+.swatch i{flex:1}
+.menu-note{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;background:var(--cream2);border-radius:var(--r);padding:20px 22px}
+.menu-note p{font-size:15px;color:var(--muted);max-width:34em}
+
+/* balayage band */
+.band{background:var(--espresso);color:var(--cream);overflow:hidden}
+.band .wrap{padding-top:70px;padding-bottom:70px;display:grid;gap:34px}
+.band h2{color:var(--cream)}
+.band h2 em{color:var(--honey)}
+.band p.lead{color:#E6D6C2;margin-top:14px;font-size:16.5px;max-width:30em}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tri{text-align:center}
+.tri .frame{aspect-ratio:3/4.4;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(251,246,239,.2)}
+.tri .frame svg{width:100%;height:100%}
+.tri b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;margin-top:12px;line-height:1.2}
+.tri small{display:block;font-size:11.5px;color:#CDB8A0;margin-top:4px;letter-spacing:.04em}
+
+/* why */
+.why{display:grid;gap:14px}
+.why .card{border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);transition:transform .25s,box-shadow .25s}
+.why .card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -28px rgba(74,59,50,.5)}
+.why .num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--honey-d)}
+.why h3{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15;margin:8px 0 8px;color:var(--espresso)}
+.why p{font-size:15px;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--cream2)}
+.visit-grid{display:grid;gap:16px}
+.panel{background:#fff;border-radius:var(--r);padding:26px 22px;box-shadow:0 18px 40px -32px rgba(74,59,50,.5)}
+.panel h3{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--espresso)}
+.days{list-style:none;margin-top:14px}
+.days li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:12px;font-size:15px;color:var(--muted)}
+.days li + li{margin-top:2px}
+.days li.today{background:var(--espresso);color:var(--cream);font-weight:600}
+.days li.today .d::after{content:" · today";font-weight:400;font-size:12px;letter-spacing:.06em;color:var(--honey)}
+.days li .v{font-size:13.5px}
+.small{font-size:13.5px;color:var(--muted);margin-top:14px}
+.addr{font-family:var(--serif);font-size:22px;line-height:1.3;margin-top:10px;color:var(--espresso)}
+.addr span{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--honey-d);margin-bottom:6px}
+.contact-list{list-style:none;margin-top:18px;display:grid;gap:10px}
+.contact-list a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px 16px;border-radius:14px;background:var(--cream);transition:background .2s,transform .2s;font-weight:500}
+.contact-list a:hover{background:var(--cream2);transform:translateX(3px)}
+.contact-list .ci{width:36px;height:36px;flex:none;border-radius:50%;background:var(--espresso);display:grid;place-items:center}
+.contact-list small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.map{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;box-shadow:0 18px 40px -32px rgba(74,59,50,.5);background:#e9e0d3 repeating-linear-gradient(35deg,transparent 0 38px,rgba(74,59,50,.06) 38px 40px)}
+.map .pin{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:8px;color:var(--espresso);font-family:var(--serif);font-size:18px;text-align:center}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+
+/* final */
+.final{position:relative;overflow:hidden;color:var(--cream);text-align:center;background:linear-gradient(200deg,#C9A27E 0%,#8A6A52 45%,#4A3B32 100%)}
+.final .wrap{position:relative;padding-top:84px;padding-bottom:84px}
+.final h2{color:var(--cream)}
+.final h2 em{color:#F6E3C8}
+.final p{margin:16px auto 0;max-width:28em;color:#F4E8D8}
+.final .ctas{justify-content:center}
+
+footer{background:var(--esp-d);color:#CDB8A0;font-size:13.5px}
+footer .wrap{padding-top:40px;padding-bottom:40px;display:grid;gap:16px}
+footer .brand{color:var(--cream)}
+footer .brand small{color:#A99380}
+footer a{text-decoration:none}
+footer a:hover{color:var(--cream)}
+footer .fl{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer .credit{border-top:1px solid rgba(251,246,239,.12);padding-top:16px;font-size:12.5px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(46,36,30,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 -10px 30px -10px rgba(0,0,0,.35)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
+.callbar .c{color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(251,246,239,.4)}
+.callbar .b{background:var(--honey);color:var(--esp-d)}
+.callbar a:active{transform:scale(.97)}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+
+@media (min-width:720px){
+  .menu{grid-template-columns:repeat(2,1fr)}
+  .group.feature{grid-row:span 2}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .map{grid-column:1/-1}
+}
+@media (min-width:1000px){
+  :root{--bar:0px}
+  .callbar{display:none}
+  .nav nav{display:flex}
+  .nav .wrap{height:72px}
+  .brand{font-size:22px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:80px;padding-bottom:96px;gap:48px}
+  .arches{height:500px;max-width:none}
+  .seal{width:112px;height:112px}
+  .sec{padding:110px 0}
+  .menu{grid-template-columns:1.1fr 1fr 1fr}
+  .menu .group.ext{grid-column:span 2}
+  .band .wrap{grid-template-columns:1fr 1.1fr;align-items:center;gap:70px;padding-top:100px;padding-bottom:100px}
+  .why{grid-template-columns:repeat(4,1fr)}
+  .visit-grid{grid-template-columns:1fr 1fr 1.4fr}
+  .map{grid-column:auto}
+  footer .wrap{grid-template-columns:1fr auto;align-items:center}
+  footer .credit{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="concept" role="note">Concept site by Code Craft Media, made for Megan Smith Hair Studio. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Megan Smith Hair Studio, home">Megan Smith <em>Hair</em><small>Studio · Nashville</small></a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#balayage">Balayage</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-dark" href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="sweep" aria-hidden="true"></div>
+  <svg class="strands" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity=".2"/></linearGradient></defs>
+    <g fill="none" stroke="url(#hs)" stroke-width="1.2">
+      <path d="M260 -10 C 230 140, 330 260, 280 420 S 330 560, 300 620"/>
+      <path d="M290 -10 C 260 150, 360 270, 310 430 S 360 570, 330 620"/>
+      <path d="M320 -10 C 290 160, 390 280, 340 440 S 390 580, 360 620"/>
+      <path d="M350 -10 C 320 170, 420 290, 370 450 S 420 590, 390 620"/>
+      <path d="M230 -10 C 200 130, 300 250, 250 410 S 300 550, 270 620"/>
+      <path d="M200 -10 C 170 120, 270 240, 220 400 S 270 540, 240 620" stroke-width=".8"/>
+    </g>
+  </svg>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Suite #77 · West End, Nashville</span>
+      <h1>Balayage, <em>painted</em> just&nbsp;for&nbsp;you.</h1>
+      <p class="sub">Megan Smith Hair Studio — full, partial and face-framing balayage, color, cuts, blowouts and extensions, in Megan's own suite at Salons by JC.</p>
+      <div class="ctas">
+        <a class="btn btn-light" href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">Book online
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+16156514160">Call (615) 651-4160</a>
+      </div>
+      <div class="chips" aria-label="Highlights">
+        <span class="chip">Balayage · 3 ways</span><span class="chip">Color &amp; root touch ups</span><span class="chip">Extensions</span>
+      </div>
+    </div>
+
+    <div class="arches reveal" aria-hidden="true">
+      <div class="arch a1">
+        <svg viewBox="0 0 200 320" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="bal1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2C23"/><stop offset=".38" stop-color="#6E513E"/><stop offset=".72" stop-color="#C9A27E"/><stop offset="1" stop-color="#EED6B5"/></linearGradient>
+            <linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect width="200" height="320" fill="url(#bal1)"/>
+          <g class="strand-anim" fill="none" stroke-linecap="round">
+            <path d="M20 0 C 10 90, 50 170, 30 320" stroke="#F3DFC3" stroke-opacity=".55" stroke-width="7"/>
+            <path d="M55 0 C 45 100, 85 180, 62 320" stroke="#2E211A" stroke-opacity=".35" stroke-width="10"/>
+            <path d="M88 0 C 80 110, 120 190, 98 320" stroke="#F6E6CD" stroke-opacity=".6" stroke-width="6"/>
+            <path d="M120 0 C 110 100, 150 185, 128 320" stroke="#2E211A" stroke-opacity=".3" stroke-width="9"/>
+            <path d="M150 0 C 142 110, 180 195, 160 320" stroke="#F3DFC3" stroke-opacity=".5" stroke-width="7"/>
+            <path d="M182 0 C 172 100, 206 180, 190 320" stroke="#2E211A" stroke-opacity=".25" stroke-width="8"/>
+          </g>
+          <rect x="-60" y="0" width="80" height="320" fill="url(#sh)" transform="skewX(-12)">
+            <animate attributeName="x" values="-120;260" dur="5.5s" repeatCount="indefinite"/>
+          </rect>
+        </svg>
+        <span class="arch-tag">Full balayage</span>
+      </div>
+      <div class="arch a2">
+        <svg viewBox="0 0 200 260" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="bal2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9CFAE"/><stop offset=".5" stop-color="#C9A27E"/><stop offset="1" stop-color="#7A5A44"/></linearGradient></defs>
+          <rect width="200" height="260" fill="url(#bal2)"/>
+          <!-- comb + sectioning clip illustration -->
+          <g transform="translate(40 70) rotate(-18 60 40)">
+            <rect x="0" y="0" width="128" height="22" rx="6" fill="#4A3B32"/>
+            <g fill="#4A3B32">
+              <rect x="6" y="20" width="4" height="34" rx="2"/><rect x="16" y="20" width="4" height="34" rx="2"/><rect x="26" y="20" width="4" height="34" rx="2"/><rect x="36" y="20" width="4" height="34" rx="2"/><rect x="46" y="20" width="4" height="34" rx="2"/><rect x="56" y="20" width="4" height="34" rx="2"/><rect x="66" y="20" width="4" height="26" rx="2"/><rect x="76" y="20" width="4" height="26" rx="2"/><rect x="86" y="20" width="4" height="26" rx="2"/><rect x="96" y="20" width="4" height="26" rx="2"/><rect x="106" y="20" width="4" height="26" rx="2"/><rect x="116" y="20" width="4" height="26" rx="2"/>
+            </g>
+          </g>
+          <g transform="translate(70 150)">
+            <circle cx="30" cy="30" r="30" fill="#FBF6EF" opacity=".9"/>
+            <path d="M14 34 q16 -26 32 0" fill="none" stroke="#4A3B32" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="30" cy="22" r="4" fill="#C9A27E"/>
+          </g>
+        </svg>
+        <span class="arch-tag">Suite #77</span>
+      </div>
+      <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="circ" d="M50 50 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0"/></defs>
+        <circle cx="50" cy="50" r="49" fill="#FBF6EF"/>
+        <text font-family="Work Sans, sans-serif" font-size="9.4" letter-spacing="2.6" fill="#4A3B32" font-weight="600"><textPath href="#circ">BALAYAGE · COLOR · CUTS · NASHVILLE ·</textPath></text>
+        <text x="50" y="58" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="24" fill="#9C744F">MS</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Everything Megan <em>offers</em>, in one place.</h2>
+      <p>Straight from Megan's studio listing — nine services, from a quick bang trim to a full balayage.</p>
+    </div>
+    <div class="menu">
+      <div class="group feature reveal">
+        <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F6E3C8" stroke-width="1.8" stroke-linecap="round"><path d="M7 3c-1 6 3 9 1 18M12 3c-1 6 3 9 1 18M17 3c-1 6 3 9 1 18"/></svg></span>Balayage</h3>
+        <p class="lede">Three ways to get that lived-in, sun-kissed blend.</p>
+        <ul>
+          <li>Full balayage highlight <span class="t">All over</span></li>
+          <li>Partial balayage highlight <span class="t">Lighter touch</span></li>
+          <li>Face framing balayage highlight <span class="t">Around the face</span></li>
+        </ul>
+        <div class="swatch" aria-hidden="true"><i style="background:#3B2C23"></i><i style="background:#6E513E"></i><i style="background:#9C744F"></i><i style="background:#C9A27E"></i><i style="background:#E3C7A3"></i><i style="background:#F6E6CD"></i></div>
+      </div>
+      <div class="group reveal">
+        <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9C744F" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="#C9A27E" stroke="none"/></svg></span>Color</h3>
+        <p class="lede">All-over color and upkeep between visits.</p>
+        <ul>
+          <li>Full color</li>
+          <li>Root touch up</li>
+        </ul>
+      </div>
+      <div class="group reveal">
+        <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9C744F" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 19 4M16 16 5 4"/></svg></span>Cut &amp; style</h3>
+        <p class="lede">Fresh shapes and a polished finish.</p>
+        <ul>
+          <li>Haircuts</li>
+          <li>Bang trims</li>
+          <li>Blowout</li>
+        </ul>
+      </div>
+      <div class="group ext reveal">
+        <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9C744F" stroke-width="1.8" stroke-linecap="round"><path d="M6 3v4M10 3v4M14 3v4M18 3v4M4 7h16M7 7c0 6-2 9-1 14M12 7c0 6-1 9 0 14M17 7c0 6 2 9 1 14"/></svg></span>Extensions</h3>
+        <p class="lede">Add length, fullness, or both.</p>
+        <ul>
+          <li>Extensions</li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-note reveal">
+      <p>Prices, timing and open spots are on Megan's live booking page.</p>
+      <a class="btn btn-dark" href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">See times &amp; book</a>
+    </div>
+  </div>
+</section>
+
+<!-- BALAYAGE BAND -->
+<section class="band" id="balayage">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--honey)">Pick your balayage</span>
+      <h2>Full, partial, or <em>just around the face.</em></h2>
+      <p class="lead">Megan's menu has three kinds of balayage highlight, so you can go all in or keep it soft. Not sure which one? Call or book and ask.</p>
+      <div class="ctas"><a class="btn btn-light" href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">Book a balayage</a></div>
+    </div>
+    <div class="trio reveal" aria-hidden="true">
+      <div class="tri">
+        <div class="frame"><svg viewBox="0 0 100 150" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="t1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2C23"/><stop offset=".3" stop-color="#7A5A44"/><stop offset=".65" stop-color="#C9A27E"/><stop offset="1" stop-color="#F3DFC3"/></linearGradient></defs><rect width="100" height="150" fill="url(#t1)"/><g fill="none" stroke="#F6E6CD" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"><path d="M15 0c-6 50 12 90 2 150"/><path d="M38 0c-6 50 12 90 2 150"/><path d="M62 0c-6 50 12 90 2 150"/><path d="M85 0c-6 50 12 90 2 150"/></g></svg></div>
+        <b>Full</b><small>Root-to-end, all over</small>
+      </div>
+      <div class="tri">
+        <div class="frame"><svg viewBox="0 0 100 150" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="t2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2C23"/><stop offset=".45" stop-color="#5E4535"/><stop offset=".8" stop-color="#B08865"/><stop offset="1" stop-color="#DDBF9A"/></linearGradient></defs><rect width="100" height="150" fill="url(#t2)"/><g fill="none" stroke="#F6E6CD" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"><path d="M22 20c-6 50 12 80 2 130"/><path d="M50 20c-6 50 12 80 2 130"/><path d="M78 20c-6 50 12 80 2 130"/></g></svg></div>
+        <b>Partial</b><small>A softer, lighter touch</small>
+      </div>
+      <div class="tri">
+        <div class="frame"><svg viewBox="0 0 100 150" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="t3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9CFAE"/><stop offset=".22" stop-color="#7A5A44"/><stop offset=".78" stop-color="#4A3B32"/><stop offset="1" stop-color="#E9CFAE"/></linearGradient></defs><rect width="100" height="150" fill="url(#t3)"/><ellipse cx="50" cy="62" rx="22" ry="28" fill="#2E241E" opacity=".35"/></svg></div>
+        <b>Face framing</b><small>Brightness where it shows</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why book with Megan</span>
+      <h2>A studio that's <em>all yours</em> for the hour.</h2>
+    </div>
+    <div class="why">
+      <div class="card reveal"><span class="num">01</span><h3>Her own suite</h3><p>Megan works from Suite #77 at Salons by JC on 25th Ave N, a private studio instead of a busy salon floor.</p></div>
+      <div class="card reveal"><span class="num">02</span><h3>Balayage, three ways</h3><p>Full, partial and face-framing balayage highlights are all on the menu, so the look can fit you.</p></div>
+      <div class="card reveal"><span class="num">03</span><h3>Color to extensions</h3><p>Full color, root touch ups, cuts, blowouts and extensions, all from the same chair.</p></div>
+      <div class="card reveal"><span class="num">04</span><h3>Book in a few taps</h3><p>Pick a service and a time on Megan's online booking page, or just call the studio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visit the studio</span>
+      <h2>Find Suite <em>#77.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="panel reveal">
+        <h3>Hours</h3>
+        <ul class="days" id="days">
+          <li data-d="1"><span class="d">Monday</span><span class="v">See booking</span></li>
+          <li data-d="2"><span class="d">Tuesday</span><span class="v">See booking</span></li>
+          <li data-d="3"><span class="d">Wednesday</span><span class="v">See booking</span></li>
+          <li data-d="4"><span class="d">Thursday</span><span class="v">See booking</span></li>
+          <li data-d="5"><span class="d">Friday</span><span class="v">See booking</span></li>
+          <li data-d="6"><span class="d">Saturday</span><span class="v">See booking</span></li>
+          <li data-d="0"><span class="d">Sunday</span><span class="v">See booking</span></li>
+        </ul>
+        <p class="small">Megan works by appointment. Open times show live on her booking page.</p>
+      </div>
+      <div class="panel reveal">
+        <h3>Studio</h3>
+        <p class="addr"><span>Salons by JC</span>Suite #77<br>210 25th Ave N<br>Nashville, TN 37203</p>
+        <ul class="contact-list">
+          <li><a href="tel:+16156514160"><span class="ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FBF6EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span>(615) 651-4160<small>Tap to call</small></span></a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=210+25th+Ave+N%2C+Nashville%2C+TN+37203" target="_blank" rel="noopener"><span class="ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FBF6EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span>Get directions<small>Opens Google Maps</small></span></a></li>
+          <li><a href="https://www.instagram.com/megansmithhair/" target="_blank" rel="noopener"><span class="ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FBF6EF" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#FBF6EF"/></svg></span><span>@megansmithhair<small>See her work on Instagram</small></span></a></li>
+        </ul>
+      </div>
+      <div class="map reveal">
+        <div class="pin" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="#4A3B32"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.6" fill="#C9A27E"/></svg>210 25th Ave N</div>
+        <iframe title="Map to Megan Smith Hair Studio, 210 25th Ave N, Nashville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=210%2025th%20Ave%20N%2C%20Nashville%2C%20TN%2037203&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="color:#FBF0E1">Ready when you are</span>
+    <h2>Your next color, <em>booked in a minute.</em></h2>
+    <p>Choose a service and a time that works for you on Megan's booking page.</p>
+    <div class="ctas">
+      <a class="btn btn-light" href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">Book with Megan</a>
+      <a class="btn btn-ghost" href="tel:+16156514160">Call the studio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top">Megan Smith <em>Hair</em><small>Studio · Nashville</small></a>
+    <div class="fl">
+      <a href="tel:+16156514160">(615) 651-4160</a>
+      <a href="https://www.instagram.com/megansmithhair/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">Book online</a>
+    </div>
+    <p class="credit">Suite #77, 210 25th Ave N, Nashville, TN 37203 · Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick actions">
+  <a class="c" href="tel:+16156514160"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="b" href="https://megansmithhairstudio.glossgenius.com/" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var t=new Date().getDay(); var li=document.querySelector('#days li[data-d="'+t+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else { d.classList.add('show-all'); }
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

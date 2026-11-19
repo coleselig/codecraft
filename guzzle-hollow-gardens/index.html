@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Guzzle Hollow Gardens — Niota</title>
+<meta name="description" content="Local honey, pure maple syrup, blackberries and nectar plants for honeybees from Guzzle Hollow Gardens in Niota, Tennessee. Find us at Market Square in Knoxville.">
+<meta name="theme-color" content="#2E4636">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maple:#8C4A1E; --maple-d:#6B3713; --honey:#E9B949; --honey-l:#F6DC94; --pine:#2E4636; --pine-d:#1F3126; --pine-dd:#16241B;
+  --cream:#FBF5E8; --paper:#F4EAD3; --ink:#2A2118; --muted:#6A5A48; --line:#E2D3B3;
+  --serif:'Bitter',Georgia,serif; --sans:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --r:18px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.6 var(--sans);overflow-x:hidden;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);line-height:1.1;margin:0;color:var(--pine-d)}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 40px}}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:6px}
+
+/* concept banner */
+.concept{background:var(--pine-dd);color:#D7CDB4;font-size:12px;line-height:1.3;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:600}
+.concept .s{display:none}
+@media (max-width:340px){.concept{font-size:10px!important;padding:7px 6px}}
+@media (max-width:560px){.concept{font-size:11px}.concept .l{display:none}.concept .s{display:inline}}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(251,245,232,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.top.scrolled{border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:40px;height:40px;flex:none}
+.brand span{font:800 17px/1.05 var(--serif);color:var(--pine-d);letter-spacing:-.01em}
+.brand small{display:block;font:500 10.5px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--maple);margin-top:3px}
+.links{display:none;gap:28px;align-items:center}
+.links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--pine-d);position:relative}
+.links a.btn{color:#fff}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--honey);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.links a:not(.btn):hover::after{transform:scaleX(1)}
+@media (min-width:900px){.links{display:flex}}
+.nav .callmini{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:600;font-size:14px;color:#fff;background:var(--maple);padding:9px 14px;border-radius:999px;white-space:nowrap}
+@media (min-width:900px){.nav .callmini{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:999px;border:2px solid transparent;transition:transform .2s, background .2s, box-shadow .2s, color .2s;cursor:pointer}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-maple{background:var(--maple);color:#fff;box-shadow:0 8px 20px -10px rgba(140,74,30,.8)}
+.btn-maple:hover{background:var(--maple-d);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--pine);color:var(--pine-d)}
+.btn-ghost:hover{background:var(--pine);color:#fff;transform:translateY(-2px)}
+.btn-honey{background:var(--honey);color:var(--pine-dd)}
+.btn-honey:hover{background:#F1C962;transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 80% at 85% 10%, rgba(233,185,73,.28), transparent 60%),
+  radial-gradient(90% 70% at 0% 100%, rgba(140,74,30,.10), transparent 60%), var(--cream)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64l28 16v32M28 64L0 80v32' fill='none' stroke='%23E9B949' stroke-opacity='.35' stroke-width='1.2'/%3E%3C/svg%3E");
+  -webkit-mask-image:linear-gradient(200deg,#000 0%,transparent 55%);mask-image:linear-gradient(200deg,#000 0%,transparent 55%)}
+.hero-grid{position:relative;display:grid;gap:8px;padding-top:30px;padding-bottom:40px}
+.hero-grid>*{min-width:0}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding-top:72px;padding-bottom:88px}}
+.season{text-decoration:none;display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-size:13px;font-weight:600;color:var(--pine-d);box-shadow:0 4px 14px -8px rgba(46,70,54,.4);max-width:100%}
+.season i{width:10px;height:10px;border-radius:50%;background:#3E9A5B;box-shadow:0 0 0 4px rgba(62,154,91,.18);flex:none;animation:pulse 2.2s infinite}
+.season span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(62,154,91,0)}}
+.hero h1{font-size:clamp(40px,10.6vw,76px);font-weight:800;letter-spacing:-.025em;margin:18px 0 16px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--maple)}
+.hero h1 .hl{background:linear-gradient(transparent 62%, rgba(233,185,73,.55) 62%);padding:0 .06em}
+.hero .sub{font-size:18px;color:var(--muted);max-width:34em}
+.hero .sub b{color:var(--ink);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ctas .btn{flex:1 1 200px}
+@media (min-width:900px){.ctas .btn{flex:0 0 auto}}
+.tags{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--muted)}
+.tags span{display:inline-flex;align-items:center;gap:7px}
+.tags svg{width:16px;height:16px;color:var(--maple)}
+.art{position:relative;max-width:440px;width:100%;margin:6px auto 0}
+.art svg{width:100%;height:auto;border-radius:28px;box-shadow:0 30px 60px -36px rgba(31,49,38,.55)}
+.drip{animation:drip 3.2s cubic-bezier(.5,0,.8,.4) infinite}
+@keyframes drip{0%{transform:translateY(0) scale(.4);opacity:0}15%{opacity:1;transform:translateY(0) scale(1)}55%{transform:translateY(0)}85%{transform:translateY(46px);opacity:1}100%{transform:translateY(52px);opacity:0}}
+.bee{animation:fly 9s ease-in-out infinite}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(-6deg)}25%{transform:translate(-26px,-14px) rotate(4deg)}50%{transform:translate(-8px,-30px) rotate(-2deg)}75%{transform:translate(18px,-10px) rotate(6deg)}}
+.wing{animation:flap .12s linear infinite alternate;transform-box:fill-box;transform-origin:bottom center}
+@keyframes flap{to{transform:scaleY(.55)}}
+.leaf{animation:fall 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.leaf.l2{animation-delay:-3.5s;animation-duration:8.5s}
+@keyframes fall{0%{transform:translate(0,-10px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-40px,150px) rotate(220deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ribbon */
+.ribbon{background:var(--pine);color:#EFE6CF;overflow:hidden;border-block:3px solid var(--honey)}
+.ribbon .track{display:flex;gap:38px;width:max-content;padding:13px 0;animation:marquee 32s linear infinite;font:600 15px/1 var(--serif);letter-spacing:.02em}
+.ribbon .track span{display:inline-flex;align-items:center;gap:38px;white-space:nowrap}
+.ribbon .track span::after{content:"";width:10px;height:10px;background:var(--honey);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:72px 0}
+@media (min-width:900px){.sec{padding:104px 0}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--maple);margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor}
+.sec h2{font-size:clamp(32px,7.6vw,52px);font-weight:800;letter-spacing:-.02em}
+.lede{font-size:17.5px;color:var(--muted);margin-top:14px;max-width:38em}
+
+/* products */
+.prod-grid{display:grid;gap:16px;margin-top:38px;grid-template-columns:1fr}
+.prod-grid>*{min-width:0}
+@media (min-width:620px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1040px){.prod-grid{grid-template-columns:repeat(4,1fr)}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 22px 26px;overflow:hidden;transition:transform .3s, box-shadow .3s, border-color .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(46,70,54,.45);border-color:#D4BF92}
+.card .ic{width:76px;height:76px;border-radius:20px;display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:52px;height:52px}
+.card h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+.card .k{position:absolute;top:18px;right:20px;font:600 12px/1 var(--serif);color:#C9B48A;letter-spacing:.05em}
+.c-honey .ic{background:#FBEFCB}.c-maple .ic{background:#F5E1D2}.c-berry .ic{background:#ECE3EE}.c-plant .ic{background:#E1EADF}
+.note{margin-top:22px;font-size:14.5px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.note svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--maple)}
+.note a{color:var(--maple);font-weight:600}
+
+/* cycle */
+.cycle{background:var(--pine);color:#EDE4CC;position:relative;overflow:hidden}
+.cycle::before{content:"";position:absolute;inset:0;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 18l6 16 14-8-4 16 16 2-12 12 10 10-16 2 2 16-14-8-2 16-6-14-6 14-2-16-14 8 2-16-16-2 10-10-12-12 16-2-4-16 14 8z' fill='%23F6DC94'/%3E%3C/svg%3E");background-size:120px}
+.cycle h2{color:#fff}
+.cycle .eyebrow{color:var(--honey)}
+.cycle .lede{color:#C9C6AE}
+.quote{position:relative;margin:36px 0 0;padding:28px 24px 26px;background:rgba(255,255,255,.06);border:1px solid rgba(246,220,148,.25);border-radius:var(--r);font:500 italic clamp(21px,5vw,30px)/1.35 var(--serif);color:#FFF6DD}
+.quote::before{content:"\201C";position:absolute;top:-30px;left:16px;font:800 90px/1 var(--serif);color:var(--honey)}
+.quote cite{display:block;margin-top:14px;font:500 13.5px/1.4 var(--sans);font-style:normal;color:#BDB89E;letter-spacing:.02em}
+.loop{display:grid;gap:14px;margin-top:34px;grid-template-columns:1fr}
+.loop>*{min-width:0}
+@media (min-width:820px){.loop{grid-template-columns:repeat(3,1fr);gap:18px}}
+.step{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:16px;background:rgba(0,0,0,.14)}
+.step b{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--honey);color:var(--pine-dd);font:800 18px/1 var(--serif)}
+.step h3{color:#fff;font-size:19px;margin-bottom:4px}
+.step p{font-size:15px;color:#C9C6AE}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:36px;grid-template-columns:1fr}
+.why-grid>*{min-width:0}
+@media (min-width:760px){.why-grid{grid-template-columns:1fr 1fr;gap:18px}}
+.why{display:flex;gap:16px;padding:22px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line)}
+.why svg{width:40px;height:40px;flex:none;color:var(--maple)}
+.why h3{font-size:19px;margin-bottom:4px}
+.why p{color:var(--muted);font-size:15.5px}
+
+/* market */
+.market{background:var(--paper);position:relative}
+.mk-grid{display:grid;gap:22px;margin-top:36px;grid-template-columns:1fr}
+.mk-grid>*{min-width:0}
+@media (min-width:900px){.mk-grid{grid-template-columns:1fr 1fr;gap:28px;align-items:start}}
+.seasons{display:grid;gap:14px;grid-template-columns:1fr}
+.seasons>*{min-width:0}
+.sz{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 20px 18px}
+.sz.now{border-color:var(--maple);box-shadow:0 0 0 3px rgba(140,74,30,.12)}
+.sz .badge{display:none;position:absolute;top:16px;right:16px;background:var(--maple);color:#fff;font:600 11.5px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:999px}
+.sz.now .badge{display:inline-block}
+.sz h3{font-size:20px;padding-right:96px}
+.sz .dates{font-size:14px;color:var(--muted);margin:2px 0 12px}
+.sz ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sz li{display:flex;justify-content:space-between;gap:12px;font-size:15.5px;padding:8px 12px;border-radius:10px;background:var(--cream)}
+.sz li b{font-weight:600}
+.week{background:var(--pine-d);color:#E9E1CB;border-radius:var(--r);padding:22px 20px}
+.week h3{color:#fff;font-size:20px;margin-bottom:4px}
+.week .wsub{font-size:14px;color:#B9B7A0;margin-bottom:14px}
+.days{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.days li{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:10px;font-size:15.5px;transition:background .3s}
+.days li span:last-child{color:#B9B7A0}
+.days li.open span:last-child{color:var(--honey-l);font-weight:600}
+.days li.today{background:var(--honey);color:var(--pine-dd)}
+.days li.today span:last-child{color:var(--pine-dd);font-weight:600}
+.days li.today span:first-child::after{content:"Today";margin-left:8px;font:600 10.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;background:var(--pine-dd);color:var(--honey);padding:3px 7px;border-radius:999px;vertical-align:2px}
+.week .fine{font-size:13px;color:#A9A890;margin-top:14px}
+
+/* find */
+.find-grid{display:grid;gap:22px;margin-top:36px;grid-template-columns:1fr}
+.find-grid>*{min-width:0}
+@media (min-width:900px){.find-grid{grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}}
+.map{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:300px;background:linear-gradient(90deg,rgba(46,70,54,.06) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(rgba(46,70,54,.06) 1px,transparent 1px) 0 0/28px 28px,var(--paper)}
+.map::before{content:"Market Square · Knoxville";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:600 15px/1 var(--serif);color:var(--pine);background:#fff;padding:12px 16px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.map iframe{position:relative}
+.map iframe{display:block;width:100%;height:100%;min-height:300px;border:0}
+.info{display:grid;gap:12px}
+.info>*{min-width:0}
+.row{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:16px;background:#fff;border:1px solid var(--line);text-decoration:none;transition:border-color .2s, transform .2s}
+a.row:hover{border-color:var(--maple);transform:translateX(3px)}
+.row .ri{width:44px;height:44px;border-radius:12px;background:var(--paper);display:grid;place-items:center;flex:none;color:var(--maple)}
+.row .ri svg{width:22px;height:22px}
+.row small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.row strong{display:block;font:700 18px/1.3 var(--serif);color:var(--pine-d);overflow-wrap:anywhere}
+.row em{display:block;font-style:normal;font-size:14px;color:var(--muted)}
+
+/* cta band */
+.band{position:relative;background:var(--maple);color:#FCEBD8;overflow:hidden;text-align:center}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 50% 120%, rgba(233,185,73,.45), transparent 70%)}
+.band .wrap{position:relative;padding-top:64px;padding-bottom:68px}
+.band h2{color:#fff;font-size:clamp(30px,7vw,50px)}
+.band p{margin:12px auto 26px;max-width:32em;color:#F5D9BE;font-size:17px}
+.band .ctas{justify-content:center}
+.band .btn-ghost{border-color:#F5D9BE;color:#fff}
+.band .btn-ghost:hover{background:#fff;color:var(--maple)}
+
+footer{background:var(--pine-dd);color:#A9A890;font-size:14px}
+footer .wrap{padding-top:40px;padding-bottom:40px;display:grid;gap:18px}
+footer .wrap>*{min-width:0}
+@media (min-width:900px){footer .wrap{grid-template-columns:1fr auto;align-items:center}}
+footer .brand span{color:#fff}
+footer a{color:#E9E1CB}
+footer .cc{color:#D7CDB4}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.25fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(22,36,27,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 -10px 30px -12px rgba(0,0,0,.4)}
+.callbar>*{min-width:0}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:14px;text-decoration:none;font:600 15.5px/1 var(--sans);white-space:nowrap}
+.callbar svg{width:18px;height:18px;flex:none}
+.callbar .c1{background:var(--honey);color:var(--pine-dd)}
+.callbar .c2{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18)}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.ic>*,.ri>*,.days>*,.sz ul>*,.step>*,.callbar>*{min-width:0}
+.rv{transition:opacity .7s ease, transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+</style>
+</head>
+<body>
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Guzzle Hollow Gardens. Not live.</span><span class="s"><b>Code Craft Media</b> concept for Guzzle Hollow Gardens. Not live.</span></div>
+
+<header class="top" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Guzzle Hollow Gardens, home">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#2E4636"/>
+        <path d="M24 8l2.6 6.4 5.6-3.2-1.6 6.6 6.6-.8-4.4 5 4.2 3.4-6.4 1.2 1 6.2-5.2-3.4L24 35l-2.4-5.6-5.2 3.4 1-6.2-6.4-1.2 4.2-3.4-4.4-5 6.6.8-1.6-6.6 5.6 3.2z" fill="#8C4A1E"/>
+        <path d="M24 35v6" stroke="#8C4A1E" stroke-width="2" stroke-linecap="round"/>
+        <g transform="translate(24 22)">
+          <ellipse cx="-3" cy="-5" rx="4" ry="2.6" fill="#FBF5E8" opacity=".9" transform="rotate(-25 -3 -5)"/>
+          <ellipse cx="3" cy="-5" rx="4" ry="2.6" fill="#FBF5E8" opacity=".9" transform="rotate(25 3 -5)"/>
+          <ellipse cx="0" cy="0" rx="4.4" ry="6" fill="#E9B949"/>
+          <path d="M-4.2-1.4h8.4M-4 2h8" stroke="#1F3126" stroke-width="1.6"/>
+        </g>
+      </svg>
+      <span>Guzzle Hollow<small>Gardens · Niota, TN</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#story">The hollow</a>
+      <a href="#market">Market times</a>
+      <a href="#find">Find us</a>
+      <a class="btn btn-maple" href="tel:+18654100216" style="padding:12px 18px;font-size:15px">Call (865) 410-0216</a>
+    </nav>
+    <a class="callmini" href="tel:+18654100216" aria-label="Call Guzzle Hollow Gardens"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <a class="season" href="#market"><i></i><span id="seasonPill">Market Square Winter · Saturdays 10–2</span></a>
+      <h1>Honey from the hive. <em>Syrup</em> from the maple. <span class="hl">Both from Niota.</span></h1>
+      <p class="sub"><b>Guzzle Hollow Gardens</b> produces local honey, pure maple syrup, and plants that are good nectar sources for honeybees, and brings them to Market Square in Knoxville.</p>
+      <div class="ctas">
+        <a class="btn btn-maple" href="tel:+18654100216"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (865) 410-0216</a>
+        <a class="btn btn-ghost" href="#market"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>See market times</a>
+      </div>
+      <div class="tags">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z"/></svg>Local honey</span>
+        <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 4.5 3.9-2.2-1.1 4.6 4.6-.6-3.1 3.5 2.9 2.4-4.5.8.7 4.3-3.6-2.4L12 21l-1.6-4.1-3.6 2.4.7-4.3-4.5-.8 2.9-2.4-3.1-3.5 4.6.6-1.1-4.6 3.9 2.2z"/></svg>Pure maple syrup</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0 1 8-3 5 5 0 0 1 8 3c0 4.5-4 8-8 11z"/></svg>Bee-friendly plants</span>
+      </div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 420 430">
+        <defs>
+          <linearGradient id="bark" x1="0" x2="1"><stop offset="0" stop-color="#5B4636"/><stop offset=".5" stop-color="#7A604B"/><stop offset="1" stop-color="#4A382B"/></linearGradient>
+          <linearGradient id="pail" x1="0" x2="1"><stop offset="0" stop-color="#9AA3A0"/><stop offset=".35" stop-color="#E6EAE8"/><stop offset=".7" stop-color="#B9C1BE"/><stop offset="1" stop-color="#7E8885"/></linearGradient>
+          <linearGradient id="syrup" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C77A2E"/><stop offset="1" stop-color="#8C4A1E"/></linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F6DC94"/><stop offset="1" stop-color="#F6DC94" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="250" cy="170" r="170" fill="url(#sun)"/>
+        <!-- hill -->
+        <path d="M-10 380 Q 120 320 230 350 T 440 330 V 440 H -10z" fill="#2E4636"/>
+        <path d="M-10 400 Q 140 360 260 385 T 440 375 V 440 H -10z" fill="#1F3126"/>
+        <!-- distant pines -->
+        <g fill="#3D5A46">
+          <path d="M330 345l14-46 14 46z"/><path d="M352 340l11-36 11 36z"/><path d="M302 350l10-32 10 32z"/>
+        </g>
+        <!-- trunk -->
+        <path d="M120 0 H 205 Q 200 200 214 392 H 108 Q 124 200 120 0z" fill="url(#bark)"/>
+        <g stroke="#3E2F24" stroke-width="2.4" fill="none" opacity=".55" stroke-linecap="round">
+          <path d="M140 20 q-6 60 2 120"/><path d="M182 40 q6 50-2 110"/><path d="M160 180 q-4 50 4 110"/><path d="M190 230 q4 60-2 140"/><path d="M134 260 q-4 50 0 110"/>
+        </g>
+        <!-- canopy leaves -->
+        <g fill="#8C4A1E">
+          <path transform="translate(230 30) scale(1.4)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z"/>
+          <path transform="translate(40 60) scale(1.1) rotate(-20 24 18)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z" fill="#B5652B"/>
+          <path transform="translate(300 110) scale(.9) rotate(25 24 18)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z" fill="#E9B949"/>
+        </g>
+        <!-- falling leaves -->
+        <path class="leaf" transform="translate(260 120) scale(.6)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z" fill="#B5652B"/>
+        <path class="leaf l2" transform="translate(70 150) scale(.5)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z" fill="#E9B949"/>
+        <!-- spile + bucket -->
+        <rect x="196" y="176" width="34" height="7" rx="2" fill="#6E7774"/>
+        <path d="M226 176 h10 v7 h-10z" fill="#AEB6B3"/>
+        <path d="M218 168 q14 -6 18 8" stroke="#6E7774" stroke-width="3" fill="none"/>
+        <circle class="drip" cx="234" cy="189" r="4.2" fill="url(#syrup)"/>
+        <!-- lid -->
+        <path d="M188 190 L 300 190 L 286 178 L 204 178 z" fill="#6E7774"/>
+        <path d="M195 196 H 293 L 282 300 H 206 z" fill="url(#pail)"/>
+        <path d="M195 196 H 293" stroke="#5E6764" stroke-width="3"/>
+        <path d="M200 228 H 289 M203 262 H 286" stroke="#7E8885" stroke-width="2" opacity=".6"/>
+        <ellipse cx="244" cy="300" rx="38" ry="4" fill="#5E6764"/>
+        <!-- jar on ground -->
+        <g transform="translate(40 300)">
+          <rect x="6" y="0" width="52" height="12" rx="3" fill="#8C4A1E"/>
+          <path d="M2 14 h60 v62 a10 10 0 0 1-10 10 h-40 a10 10 0 0 1-10-10z" fill="#E9B949"/>
+          <path d="M2 14 h60 v62 a10 10 0 0 1-10 10 h-40 a10 10 0 0 1-10-10z" fill="none" stroke="#C99A2E" stroke-width="2"/>
+          <path d="M10 22 v48" stroke="#FFF2C6" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+          <rect x="14" y="38" width="36" height="24" rx="4" fill="#FBF5E8"/>
+          <path d="M32 44 l3 4-3 4-3-4z" fill="#8C4A1E"/>
+          <path d="M20 57 h24" stroke="#2E4636" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <!-- syrup bottle -->
+        <g transform="translate(320 286)">
+          <rect x="14" y="0" width="16" height="10" rx="2" fill="#2E4636"/>
+          <path d="M16 10 h12 v14 q16 8 16 26 v40 a8 8 0 0 1-8 8 h-28 a8 8 0 0 1-8-8 v-40 q0-18 16-26z" fill="#9B5420"/>
+          <path d="M8 56 h28 v24 h-28z" fill="#FBF5E8"/>
+          <path transform="translate(14 59) scale(.34)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z" fill="#8C4A1E"/>
+          <path d="M10 38 v14" stroke="#E9A25F" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+        </g>
+        <!-- bee -->
+        <g transform="translate(330 220)">
+          <g class="bee">
+            <path d="M-60 30 q20-30 40-10 t40-20" fill="none" stroke="#8C4A1E" stroke-width="1.6" stroke-dasharray="3 6" opacity=".55"/>
+            <ellipse class="wing" cx="-4" cy="-12" rx="8" ry="11" fill="#fff" opacity=".85" transform="rotate(-20)"/>
+            <ellipse class="wing" cx="8" cy="-12" rx="7" ry="10" fill="#fff" opacity=".7" transform="rotate(20)"/>
+            <ellipse cx="0" cy="0" rx="16" ry="11" fill="#E9B949"/>
+            <path d="M-6-10 v20 M3-10.5 v21" stroke="#1F3126" stroke-width="4.5"/>
+            <circle cx="15" cy="-1" r="6.5" fill="#1F3126"/>
+            <path d="M-16 0 l-6 2" stroke="#1F3126" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div class="track">
+  <span>Local honey</span><span>Pure maple syrup</span><span>Blackberries</span><span>Nectar plants for honeybees</span><span>Market Square, Knoxville</span><span>Niota, Tennessee</span>
+  <span>Local honey</span><span>Pure maple syrup</span><span>Blackberries</span><span>Nectar plants for honeybees</span><span>Market Square, Knoxville</span><span>Niota, Tennessee</span>
+</div></div>
+
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">From the hollow</div>
+      <h2>What we bring to the table</h2>
+      <p class="lede">Four things, all from Guzzle Hollow: honey, pure maple syrup, blackberries, and the plants that keep honeybees fed.</p>
+    </div>
+    <div class="prod-grid">
+      <article class="card c-honey rv">
+        <span class="k">01</span>
+        <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l20 11.5v23L32 52 12 40.5v-23z" fill="#E9B949"/><path d="M32 14l13 7.5v15L32 44l-13-7.5v-15z" fill="#F6DC94"/><path d="M32 52v6" stroke="#C99A2E" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="60" r="3" fill="#E9B949"/></svg></div>
+        <h3>Local honey</h3>
+        <p>Honey we produce ourselves, sold by the people who keep the bees.</p>
+      </article>
+      <article class="card c-maple rv">
+        <span class="k">02</span>
+        <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="26" y="4" width="12" height="7" rx="2" fill="#2E4636"/><path d="M27 11h10v9q12 6 12 20v14a6 6 0 0 1-6 6H21a6 6 0 0 1-6-6V40q0-14 12-20z" fill="#9B5420"/><path transform="translate(22 34) scale(.42)" d="M24 0l3.3 8 7-4-2 8.2 8.3-1-5.5 6.3 5.3 4.2-8 1.5 1.2 7.8-6.5-4.2L24 35l-3-7-6.5 4.2 1.2-7.8-8-1.5 5.3-4.2L7.5 11.2l8.3 1-2-8.2 7 4z" fill="#F6DC94"/></svg></div>
+        <h3>Pure maple syrup</h3>
+        <p>Pure maple syrup, made by us, from the same farm as our honey.</p>
+      </article>
+      <article class="card c-berry rv">
+        <span class="k">03</span>
+        <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 14c4-6 10-8 16-6-3 5-8 8-14 8" fill="#3E7A4E"/><path d="M32 16c-3-5-8-7-13-5 2 4 7 6 12 6" fill="#2E4636"/><g fill="#4B2A4E"><circle cx="26" cy="26" r="6"/><circle cx="38" cy="26" r="6"/><circle cx="32" cy="34" r="6"/><circle cx="22" cy="37" r="6"/><circle cx="42" cy="37" r="6"/><circle cx="27" cy="46" r="6"/><circle cx="37" cy="46" r="6"/><circle cx="32" cy="55" r="5.5"/></g><g fill="#fff" opacity=".35"><circle cx="24" cy="24" r="1.6"/><circle cx="36" cy="24" r="1.6"/><circle cx="30" cy="32" r="1.6"/><circle cx="40" cy="35" r="1.6"/><circle cx="25" cy="44" r="1.6"/></g></svg></div>
+        <h3>Blackberries</h3>
+        <p>Sweet, dark blackberries, on our table when they’re in season.</p>
+      </article>
+      <article class="card c-plant rv">
+        <span class="k">04</span>
+        <div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 44h28l-4 16H22z" fill="#8C4A1E"/><path d="M16 40h32v6H16z" fill="#6B3713"/><path d="M32 40V20" stroke="#2E4636" stroke-width="3"/><path d="M32 30c-8 0-12-5-12-10 6 0 12 4 12 10zM32 34c7 0 11-4 11-9-6 0-11 3-11 9z" fill="#3E7A4E"/><g transform="translate(32 14)"><circle r="4" fill="#E9B949"/><g fill="#F3E3F0"><circle cx="0" cy="-8" r="4.5"/><circle cx="7.6" cy="-2.5" r="4.5"/><circle cx="4.7" cy="6.5" r="4.5"/><circle cx="-4.7" cy="6.5" r="4.5"/><circle cx="-7.6" cy="-2.5" r="4.5"/></g><circle r="3.6" fill="#E9B949"/></g></svg></div>
+        <h3>Nectar plants for bees</h3>
+        <p>Plants that are good nectar sources for honeybees, for your own garden.</p>
+      </article>
+    </div>
+    <p class="note rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>What’s on the table changes with the seasons. <a href="tel:+18654100216">Call (865) 410-0216</a> to ask before you come.</span></p>
+  </div>
+</section>
+
+<section class="sec cycle" id="story">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">The hollow’s little loop</div>
+      <h2>We plant for the bees, too.</h2>
+      <p class="lede">Plenty of farms sell honey. Guzzle Hollow also produces the plants that feed honeybees, plus pure maple syrup.</p>
+    </div>
+    <blockquote class="quote rv">We produce local honey, pure maple syrup, and plants that are good nectar sources for honeybees.<cite>Guzzle Hollow Gardens, in its own words</cite></blockquote>
+    <div class="loop">
+      <div class="step rv"><b>1</b><div><h3>Plant for nectar</h3><p>We produce plants that are good nectar sources for honeybees.</p></div></div>
+      <div class="step rv"><b>2</b><div><h3>The bees make honey</h3><p>Local honey, produced right here at Guzzle Hollow.</p></div></div>
+      <div class="step rv"><b>3</b><div><h3>The maples give syrup</h3><p>Pure maple syrup, made by the same hands.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Why shop Guzzle Hollow</div>
+      <h2>Straight from the people who make it</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 7.5v15L20 34 7 26.5v-15z"/><path d="M14 20l4 4 8-8"/></svg><div><h3>We make it ourselves</h3><p>The honey, syrup and plants all come from our farm. There’s no reseller in between.</p></div></div>
+      <div class="why rv"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16l14-9 14 9"/><path d="M9 15v18h22V15"/><path d="M16 33v-9h8v9"/></svg><div><h3>At Market Square all year</h3><p>You’ll find us at the summer market and the Saturday winter market in downtown Knoxville.</p></div></div>
+      <div class="why rv"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 34c-6-4-12-9-12-16a7 7 0 0 1 12-5 7 7 0 0 1 12 5c0 7-6 12-12 16z"/></svg><div><h3>We grow for pollinators</h3><p>We sell nectar plants for honeybees, so you can feed the bees in your own garden.</p></div></div>
+      <div class="why rv"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 34l12-26 12 26"/><path d="M13 24h14"/><circle cx="20" cy="8" r="2"/></svg><div><h3>Grown in the Appalachian region</h3><p>We’re in the Appalachian Grown farm directory run by ASAP.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec market" id="market">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Market times</div>
+      <h2>Come see us at Market Square</h2>
+      <p class="lede">We sell at the Market Square Farmers Market in downtown Knoxville, both the summer market and the winter market.</p>
+    </div>
+    <div class="mk-grid">
+      <div class="seasons">
+        <div class="sz rv" id="szWinter">
+          <span class="badge">On now</span>
+          <h3>Winter market</h3>
+          <p class="dates">Nov 7, 2026 – Mar 27, 2027</p>
+          <ul><li><span>Saturday</span><b>10 AM – 2 PM</b></li></ul>
+        </div>
+        <div class="sz rv" id="szSummer">
+          <span class="badge">On now</span>
+          <h3>Summer market</h3>
+          <p class="dates">May – October (2026: May 2 – Oct 31)</p>
+          <ul><li><span>Wednesday</span><b>10 AM – 1 PM</b></li><li><span>Saturday</span><b>9 AM – 1 PM</b></li></ul>
+        </div>
+      </div>
+      <div class="week rv">
+        <h3 id="weekTitle">This week at Market Square</h3>
+        <p class="wsub" id="weekSub">Winter hours</p>
+        <ul class="days" id="days"></ul>
+        <p class="fine">Hours are the market’s published schedule. Please call before a special trip to make sure we’ll be there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="find">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Find us</div>
+      <h2>From Niota to Market Square</h2>
+      <p class="lede">The farm is in Niota, Tennessee. You can find us in person at Market Square in downtown Knoxville.</p>
+    </div>
+    <div class="find-grid">
+      <div class="info">
+        <a class="row rv" href="tel:+18654100216"><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><strong>(865) 410-0216</strong><em>Tap to call the farm</em></span></a>
+        <a class="row rv" href="https://www.google.com/maps/dir/?api=1&amp;destination=Market+Square%2C+Knoxville%2C+TN" target="_blank" rel="noopener"><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8z"/></svg></span><span><small>Market</small><strong>Market Square, Knoxville</strong><em>Get directions to the market</em></span></a>
+        <div class="row rv"><span class="ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>The farm</small><strong>Niota, Tennessee</strong><em>McMinn County</em></span></div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map of Market Square, Knoxville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Market%20Square%2C%20Knoxville%2C%20TN%2037902&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap rv">
+    <h2>Stock the pantry with Niota sweetness.</h2>
+    <p>Honey and maple syrup at Market Square. Call ahead to ask what we’re bringing.</p>
+    <div class="ctas">
+      <a class="btn btn-honey" href="tel:+18654100216">Call (865) 410-0216</a>
+      <a class="btn btn-ghost" href="#market">Market times</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span>Guzzle Hollow Gardens<small style="color:var(--honey)">Niota, Tennessee</small></span></a>
+      <p style="margin-top:12px">Local honey · Pure maple syrup · Blackberries · Nectar plants for honeybees<br><a href="tel:+18654100216">(865) 410-0216</a></p>
+    </div>
+    <p class="cc">Concept by Code Craft Media. Not the official site.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c1" href="tel:+18654100216"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the farm</a>
+  <a class="c2" href="#market"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Market times</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date(), m=d.getMonth(), dow=d.getDay();
+  // Summer: May–Oct (Wed 10–1, Sat 9–1). Winter: Nov–Mar (Sat 10–2). April: between seasons.
+  var season = (m>=4 && m<=9) ? 'summer' : (m===3 ? 'off' : 'winter');
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var hours = season==='summer' ? {3:'10 AM – 1 PM',6:'9 AM – 1 PM'} : season==='winter' ? {6:'10 AM – 2 PM'} : {};
+  var order=[1,2,3,4,5,6,0], ul=document.getElementById('days'), html='';
+  order.forEach(function(i){
+    var h=hours[i]; html+='<li class="'+(h?'open':'')+(i===dow?' today':'')+'"><span>'+names[i]+'</span><span>'+(h||'Not at market')+'</span></li>';
+  });
+  ul.innerHTML=html;
+  var pill=document.getElementById('seasonPill'), sub=document.getElementById('weekSub');
+  if(season==='summer'){document.getElementById('szSummer').classList.add('now');pill.textContent='Market Square · Wed 10–1 & Sat 9–1';sub.textContent='Summer hours (May – October)';}
+  else if(season==='winter'){document.getElementById('szWinter').classList.add('now');pill.textContent='Market Square Winter · Saturdays 10–2';sub.textContent='Winter hours (November – March)';}
+  else {pill.textContent='Market Square summer season starts in May';sub.textContent='Between seasons: the summer market returns in May';}
+
+  var hdr=document.getElementById('top');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>8)},{passive:true});
+
+  // reveal: content visible without JS; class added only to animate; fallback shows all after 1.5s
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+    setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+  }
+})();
+</script>
+</body>
+</html>

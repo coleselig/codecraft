@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Jaros Family Farm — Athens, TN</title>
+<meta name="description" content="Woodland-raised Berkshire Heritage pork shares and duck and chicken eggs from Jaros Family Farm in Athens, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#2B2B2E; --char2:#1F1F22; --olive:#6B7A3C; --olive-d:#55622F; --olive-l:#A7B57A;
+  --egg:#CFE3E0; --egg-l:#E7F1EF; --cream:#F6F3EA; --ink:#2B2B2E; --muted:#5A5C57;
+  --serif:"DM Serif Display", Georgia, serif; --sans:"DM Sans", system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--olive)}
+.concept{background:var(--char2);color:#CFCFCB;font-size:.72rem;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--egg);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(43,43,46,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand span{font-family:var(--serif);font-size:1.22rem;letter-spacing:.01em}
+.nav ul{display:none;list-style:none;gap:28px;font-size:.9rem}
+.nav ul a{text-decoration:none;opacity:.85;transition:opacity .2s}
+.nav ul a:hover{opacity:1;color:var(--egg)}
+.nav .call{font-size:.85rem;font-weight:600;text-decoration:none;background:var(--olive);padding:8px 14px;border-radius:99px;transition:background .2s}
+.nav .call:hover{background:var(--olive-d)}
+
+/* hero */
+.hero{position:relative;background:var(--char);color:#fff;overflow:hidden;isolation:isolate}
+.hero .grain{position:absolute;inset:0;z-index:-1;opacity:.5;
+  background:radial-gradient(120% 70% at 85% 0%,rgba(107,122,60,.55),transparent 60%),radial-gradient(90% 60% at 0% 100%,rgba(207,227,224,.12),transparent 60%)}
+.hero .wrap{padding-top:34px;padding-bottom:0;display:grid;gap:26px}
+.hero .eyebrow{color:var(--olive-l)}
+.hero h1{font-size:clamp(2.7rem,12vw,5.4rem);margin-top:10px}
+.hero h1 em{color:var(--egg);font-style:italic}
+.hero p.sub{font-size:1.06rem;color:#D9DAD5;max-width:34ch;margin-top:16px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;text-decoration:none;padding:13px 20px;border-radius:99px;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn-egg{background:var(--egg);color:var(--char)}
+.btn-egg:hover{background:#fff;box-shadow:0 8px 24px rgba(207,227,224,.25)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:var(--egg);color:var(--egg)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tags span{font-size:.76rem;font-weight:600;letter-spacing:.04em;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.08);color:#E6E7E2;border:1px solid rgba(255,255,255,.12)}
+.scene{position:relative;margin:-14px -22px 0}
+.scene svg{width:100%;height:auto}
+.leaf{transform-box:fill-box;transform-origin:50% 100%;animation:sway 6s ease-in-out infinite}
+.leaf.b{animation-delay:-2s}.leaf.c{animation-delay:-4s}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.hog{animation:root 4.5s ease-in-out infinite}
+@keyframes root{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+
+/* speckle band */
+.band{height:46px;background-color:var(--egg);
+  background-image:radial-gradient(circle at 20% 30%,#9DB8B3 1.4px,transparent 1.6px),radial-gradient(circle at 70% 60%,#7E9A94 1.1px,transparent 1.3px),radial-gradient(circle at 45% 80%,#A9C3BE 1.8px,transparent 2px),radial-gradient(circle at 85% 15%,#8FAAA4 .9px,transparent 1.1px);
+  background-size:38px 30px,27px 34px,51px 41px,23px 19px;position:relative}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.0),rgba(255,255,255,.25),rgba(255,255,255,0))}
+
+section{padding:76px 0}
+.head{max-width:620px;margin-bottom:36px}
+.head h2{font-size:clamp(2rem,7.5vw,3.2rem);margin-top:10px}
+.head p{color:var(--muted);margin-top:14px;font-size:1.03rem}
+
+/* products */
+.cards{display:grid;gap:18px}
+.card{background:#fff;border-radius:22px;padding:28px 24px;border:1px solid #E5E1D4;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(43,43,46,.1)}
+.card .ico{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px}
+.card h3{font-size:1.65rem}
+.card p{color:var(--muted);margin-top:8px}
+.card ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+.card li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem}
+.card li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--olive)}
+.card.pork .ico{background:var(--char);color:var(--egg)}
+.card.eggs .ico{background:var(--egg);color:var(--char)}
+.card .corner{position:absolute;right:-18px;top:-18px;opacity:.09;width:130px}
+.note{margin-top:18px;font-size:.88rem;color:var(--muted)}
+
+/* woods / quote */
+.woods{background:var(--olive);color:#fff;position:relative;overflow:hidden}
+.woods .pat{position:absolute;inset:0;opacity:.12;pointer-events:none}
+.woods blockquote{font-family:var(--serif);font-size:clamp(2.2rem,9vw,4.4rem);line-height:1.05;max-width:16ch;position:relative}
+.woods blockquote::before{content:"\201C";display:block;font-size:4rem;line-height:.6;color:var(--egg);margin-bottom:8px}
+.woods cite{display:block;margin-top:18px;font-style:normal;font-size:.85rem;letter-spacing:.06em;color:#E3E8D2}
+.woods p.lede{margin-top:28px;max-width:52ch;color:#EEF1E3;font-size:1.04rem;position:relative}
+
+/* why */
+.why{display:grid;gap:14px}
+.why > div{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid #DCD7C8}
+.why > div:last-child{border-bottom:0}
+.why .n{flex:none;line-height:1.1;font-family:var(--serif);font-size:1.6rem;color:var(--olive);width:34px}
+.why h3{font-family:var(--sans);font-weight:700;font-size:1.04rem}
+.why p{color:var(--muted);font-size:.96rem;margin-top:3px}
+
+/* visit */
+.visit{background:var(--char);color:#fff}
+.visit .head p{color:#C9CAC4}
+.visit .eyebrow{color:var(--olive-l)}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px;transition:border-color .2s,background .2s}
+.step:hover{border-color:var(--egg);background:rgba(207,227,224,.06)}
+.step b{display:block;font-family:var(--serif);font-weight:400;font-size:1.35rem;color:var(--egg)}
+.step p{color:#D2D3CE;font-size:.95rem;margin-top:6px}
+.season{margin-top:26px;display:grid;gap:10px}
+.season div{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.04);font-size:.95rem}
+.season div span:last-child{color:var(--egg);font-weight:600;text-align:right}
+.season div.today{background:var(--olive);}
+.season div.today span:last-child{color:#fff}
+
+/* find */
+.find .grid{display:grid;gap:22px}
+.map{border-radius:22px;overflow:hidden;border:1px solid #E0DBCC;background:var(--egg-l);min-height:300px}
+.map iframe{width:100%;height:320px;border:0;display:block}
+.contact{background:#fff;border-radius:22px;padding:26px 24px;border:1px solid #E5E1D4}
+.contact h3{font-size:1.7rem}
+.contact dl{margin-top:16px;display:grid;gap:14px}
+.contact dt{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--olive)}
+.contact dd{font-size:1.02rem;margin-top:2px;word-break:break-word}
+.contact dd a{text-decoration:none;border-bottom:1.5px solid var(--egg);transition:border-color .2s}
+.contact dd a:hover{border-color:var(--olive)}
+.contact .ctas .btn-egg{background:var(--char);color:#fff}
+.contact .ctas .btn-egg:hover{background:var(--olive)}
+.contact .ctas .btn-ghost{border-color:#CFCBBE;color:var(--char)}
+.contact .ctas .btn-ghost:hover{border-color:var(--olive);color:var(--olive)}
+
+footer{background:var(--char2);color:#B9BAB4;padding:44px 0 30px;font-size:.88rem}
+footer .wrap{display:grid;gap:16px}
+footer .brand span{color:#fff}
+footer .soc{display:flex;gap:18px}
+footer .soc a{text-decoration:none;color:var(--egg)}
+footer .soc a:hover{text-decoration:underline}
+footer small{display:block;color:#8D8E88;font-size:.76rem}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(31,31,34,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:14px;font-weight:600;text-decoration:none;font-size:.98rem;transition:transform .15s,filter .2s}
+.bar a:active{transform:scale(.97)}
+.bar .c{background:var(--egg);color:var(--char)}
+.bar .e{background:var(--olive);color:#fff}
+.bar a:hover{filter:brightness(1.08)}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){.rv,.leaf,.hog{transition:none;animation:none}html{scroll-behavior:auto}}
+
+@media (min-width:860px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .nav ul{display:flex}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:end;padding-top:80px}
+  .hero .copy{padding-bottom:90px}
+  .scene{margin:0}
+  section{padding:110px 0}
+  .cards{grid-template-columns:1fr 1fr}
+  .woods .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:end}
+  .woods p.lede{margin-top:0}
+  .two{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .find .grid{grid-template-columns:1.4fr 1fr}
+  .map iframe{height:100%;min-height:440px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Jaros Family Farm. Not live.</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Jaros Family Farm home">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#CFE3E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(20 21) scale(.6)" d="M0 -26C4 -24 6 -21 5 -18C9 -19 11 -16 9 -12C13 -12 15 -8 11 -5C15 -3 15 1 10 2C12 6 9 9 5 7C5 11 2 13 0 14C-2 13 -5 11 -5 7C-9 9 -12 6 -10 2C-15 1 -15 -3 -11 -5C-15 -8 -13 -12 -9 -12C-11 -16 -9 -19 -5 -18C-6 -21 -4 -24 0 -26ZM0 22V-20" stroke="#A7B57A" stroke-width="3.2"/></g></svg>
+      <span>Jaros Family Farm</span>
+    </a>
+    <ul>
+      <li><a href="#shares">Shares &amp; eggs</a></li>
+      <li><a href="#woods">The woods</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#find">Contact</a></li>
+    </ul>
+    <a class="call" href="tel:+13523021934">Call</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div class="copy">
+      <div class="eyebrow">Athens, Tennessee &middot; McMinn County</div>
+      <h1>Berkshire pork, raised in the <em>woods.</em></h1>
+      <p class="sub">Heritage hogs that forage and uproot in the woods around our family farm, plus fresh duck and chicken eggs.</p>
+      <div class="ctas">
+        <a class="btn btn-egg" href="tel:+13523021934">Reserve a share</a>
+        <a class="btn btn-ghost" href="#shares">What we raise</a>
+      </div>
+      <div class="tags"><span>Non-GMO feed</span><span>Pasture raised</span><span>Veteran-owned</span><span>On-farm pickup</span></div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 140 600 280" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2B2E" stop-opacity="0"/><stop offset="1" stop-color="#3A4026"/></linearGradient>
+          <g id="oak"><path d="M0 -26C4 -24 6 -21 5 -18C9 -19 11 -16 9 -12C13 -12 15 -8 11 -5C15 -3 15 1 10 2C12 6 9 9 5 7C5 11 2 13 0 14C-2 13 -5 11 -5 7C-9 9 -12 6 -10 2C-15 1 -15 -3 -11 -5C-15 -8 -13 -12 -9 -12C-11 -16 -9 -19 -5 -18C-6 -21 -4 -24 0 -26Z"/><path d="M0 22V-20" fill="none" stroke-width="1.4"/></g>
+        </defs>
+        
+        <!-- trees -->
+        <g fill="none" stroke="#6B7A3C" stroke-width="3" stroke-linecap="round">
+          <path d="M70 420V170M70 240l-40-40M70 210l38-46M70 280l-30-22"/>
+          <path d="M520 420V120M520 200l50-46M520 250l-44-36M520 170l-30-38"/>
+          <path d="M300 420V230M300 290l-28-30M300 270l26-26" opacity=".6"/>
+        </g>
+        <g fill="#6B7A3C" stroke="#55622F">
+          <g transform="translate(30 200) scale(1.6) rotate(-30) scale(.55)"><use href="#oak" class="leaf"/></g>
+          <g transform="translate(108 164) scale(1.8) rotate(20) scale(.55)"><use href="#oak" class="leaf b"/></g>
+          <g transform="translate(70 170) scale(2.2) scale(.55)"><use href="#oak" class="leaf c"/></g>
+          <g transform="translate(40 258) scale(1.3) rotate(-50) scale(.55)"><use href="#oak" class="leaf"/></g>
+          <g transform="translate(570 154) scale(2) rotate(30) scale(.55)"><use href="#oak" class="leaf b"/></g>
+          <g transform="translate(476 214) scale(1.7) rotate(-35) scale(.55)"><use href="#oak" class="leaf c"/></g>
+          <g transform="translate(520 120) scale(2.4) scale(.55)"><use href="#oak" class="leaf"/></g>
+          <g transform="translate(490 132) scale(1.4) rotate(-20) scale(.55)"><use href="#oak" class="leaf b"/></g>
+          <g transform="translate(300 230) scale(1.4) scale(.55)" opacity=".7"><use href="#oak" class="leaf c"/></g>
+        </g>
+        <!-- falling acorns -->
+        <g fill="#CFE3E0" opacity=".85">
+          <g transform="translate(180 120)"><ellipse cx="0" cy="6" rx="6" ry="8"/><path d="M-8 0h16a8 5 0 0 1-16 0z" fill="#A7B57A"/></g>
+          <g transform="translate(410 90) rotate(25)"><ellipse cx="0" cy="6" rx="5" ry="7"/><path d="M-7 0h14a7 4 0 0 1-14 0z" fill="#A7B57A"/></g>
+          <g transform="translate(250 340) rotate(-20)"><ellipse cx="0" cy="6" rx="5" ry="7"/><path d="M-7 0h14a7 4 0 0 1-14 0z" fill="#A7B57A"/></g>
+        </g>
+        <!-- ground -->
+        <path d="M0 360c80-20 160-14 240-4s180 12 260-6 100-6 100-6v76H0z" fill="#55622F"/>
+        <path d="M0 384c120-14 240-6 340 0s180 2 260-10v46H0z" fill="#44502A"/>
+        <!-- electric fence -->
+        <g stroke="#CFE3E0" stroke-width="2" opacity=".55">
+          <path d="M14 330v66M150 336v60M286 340v58M422 336v60M558 330v66"/>
+          <path d="M14 344c45 6 90 6 136 0s90 4 136 2 90-6 136-4 90 2 136-4M14 362c45 6 90 6 136 0s90 4 136 2 90-6 136-4 90 2 136-4" fill="none" stroke-dasharray="2 6"/>
+        </g>
+        <!-- Berkshire hog -->
+        <g transform="translate(250 300) scale(.82)"><g class="hog">
+          <path d="M20 54c-14 0-22-12-20-26 2-16 20-28 52-30 34-2 70 2 96 8 14 3 26 6 34 14l18 4c6 2 8 8 4 12l-8 6c-4 3-10 3-14 2-6 8-14 12-24 14l2 18h-14l-6-14c-22 4-46 4-66 2l-4 14h-14l-2-16C40 64 28 60 20 54z" fill="#1A1A1C"/>
+          <!-- Berkshire white points: snout, feet, tail tip -->
+          <path d="M214 56l8-6c2-2 2-5 0-6l-12-3" fill="none" stroke="#F6F3EA" stroke-width="5" stroke-linecap="round"/>
+          <path d="M160 82h14M58 82h14" stroke="#F6F3EA" stroke-width="6" stroke-linecap="round"/>
+          <path d="M2 28c-8-4-10 4-4 6" fill="none" stroke="#F6F3EA" stroke-width="3" stroke-linecap="round"/>
+          <path d="M176 10l10-14 6 18z" fill="#1A1A1C"/>
+          <circle cx="196" cy="30" r="2.6" fill="#CFE3E0"/>
+        </g></g>
+      </svg>
+    </div>
+  </div>
+</header>
+<div class="band" aria-hidden="true"></div>
+
+<main>
+<section id="shares">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">What we raise</div>
+      <h2>Pork shares and farm-fresh eggs.</h2>
+      <p>Everything is picked up right here on the farm, at a time we set up together.</p>
+    </div>
+    <div class="cards">
+      <article class="card pork rv">
+        <div class="ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18c0-6 6-9 12-9 5 0 8 1 10 4l3 1-1 3-2 1c-1 3-4 5-8 5v3h-3l-1-3h-4l-1 3H7v-4c-1-1-2-2-2-4z"/><circle cx="24" cy="14" r=".8" fill="currentColor"/></svg></div>
+        <h3>Berkshire Heritage pork</h3>
+        <p>Custom pork shares from hogs raised in the woods around the farm.</p>
+        <ul>
+          <li>Half and whole shares</li>
+          <li>Available twice a year</li>
+          <li>Call to schedule your farm pickup</li>
+        </ul>
+      </article>
+      <article class="card eggs rv">
+        <div class="ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="18" rx="6" ry="8"/><ellipse cx="21" cy="17" rx="6" ry="8" fill="#fff"/><circle cx="20" cy="14" r=".9" fill="currentColor"/><circle cx="23" cy="19" r=".7" fill="currentColor"/></svg></div>
+        <h3>Duck &amp; chicken eggs</h3>
+        <p>From our Khaki Campbell ducks and several breeds of chickens.</p>
+        <ul>
+          <li>Duck eggs and chicken eggs</li>
+          <li>Pre-arranged on-farm pickup</li>
+          <li>Pay by credit or debit card</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note rv">Ask us about the next round of shares when you call.</p>
+  </div>
+</section>
+
+<section class="woods" id="woods">
+  <svg class="pat" width="100%" height="100%" aria-hidden="true"><defs><pattern id="p" width="90" height="90" patternUnits="userSpaceOnUse"><g fill="none" stroke="#fff" stroke-width="1.4"><path transform="translate(24 36) rotate(-20) scale(.8)" d="M0 -26C4 -24 6 -21 5 -18C9 -19 11 -16 9 -12C13 -12 15 -8 11 -5C15 -3 15 1 10 2C12 6 9 9 5 7C5 11 2 13 0 14C-2 13 -5 11 -5 7C-9 9 -12 6 -10 2C-15 1 -15 -3 -11 -5C-15 -8 -13 -12 -9 -12C-11 -16 -9 -19 -5 -18C-6 -21 -4 -24 0 -26ZM0 22V-18"/><g transform="translate(66 68) rotate(15)"><path d="M-5 2a5 7 0 0 0 10 0z"/><path d="M-7 2h14a7 5 0 0 0-14 0zM0 -3v-3"/></g></g></pattern></defs><rect width="100%" height="100%" fill="url(#p)"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" style="color:#E3E8D2">How they're raised</div>
+      <blockquote style="margin-top:18px">They never see the same ground twice.</blockquote>
+      <cite>Jaros Family Farm, on Appalachian Grown</cite>
+    </div>
+    <p class="lede rv">Our Berkshire hogs spend their lives in the woods around us, free to forage and uproot across a very large area. Every animal is rotated in electric fencing to keep it safe and give it plenty of fresh forage.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap two">
+    <div class="head rv">
+      <div class="eyebrow">Why families buy from us</div>
+      <h2>Raised the way we feed our own.</h2>
+      <p>We started as a small homestead after our family changed the way we eat, and grew into supplying other families.</p>
+    </div>
+    <div class="why">
+      <div class="rv"><span class="n">01</span><div><h3>Non-GMO feed</h3><p>Our hogs and poultry are fed non-GMO feed.</p></div></div>
+      <div class="rv"><span class="n">02</span><div><h3>No routine medication</h3><p>We don't use medication of any kind unless an animal's life is at stake.</p></div></div>
+      <div class="rv"><span class="n">03</span><div><h3>Rotated, regenerative ground</h3><p>Hogs move through the woods, and the chickens and ducks rotate in electric netting.</p></div></div>
+      <div class="rv"><span class="n">04</span><div><h3>Come see for yourself</h3><p>Anyone considering our hog shares or eggs is welcome to visit, as long as we arrange a time.</p></div></div>
+      <div class="rv"><span class="n">05</span><div><h3>Veteran-owned family farm</h3><p>A first-generation farm run by our family in Athens.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Visits &amp; pickup</div>
+      <h2>By appointment, all year.</h2>
+      <p>We don't keep store hours. Call or email and we'll set a time to meet you at the farm.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><b>1. Get in touch</b><p>Call (352) 302-1934 or email us about a pork share or eggs.</p></div>
+      <div class="step rv"><b>2. Pick a time</b><p>We'll arrange a day for your visit or pickup, and you're welcome to look around.</p></div>
+      <div class="step rv"><b>3. Pick up on the farm</b><p>Collect your share or eggs. We take credit and debit cards.</p></div>
+    </div>
+    <div class="season rv" id="season">
+      <div data-day="any"><span>Open season</span><span>Jan 1 to Dec 31, 2026</span></div>
+      <div id="todayRow" class="today"><span id="todayName">Today</span><span>Call to arrange a time</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Find us</div>
+      <h2>Athens, Tennessee.</h2>
+      <p>We share directions when we set up your visit.</p>
+    </div>
+    <div class="grid">
+      <div class="map rv"><iframe title="Map of Athens, Tennessee" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Athens%2C%20TN&amp;output=embed"></iframe></div>
+      <div class="contact rv">
+        <h3>Get in touch</h3>
+        <dl>
+          <div><dt>Phone</dt><dd><a href="tel:+13523021934">(352) 302-1934</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:JarosFamilyFarmTN@gmail.com">JarosFamilyFarmTN@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Athens, TN &middot; McMinn County</dd></div>
+        </dl>
+        <div class="ctas">
+          <a class="btn btn-egg" href="tel:+13523021934">Call the farm</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Athens%2C%20TN" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span>Jaros Family Farm</span></a>
+      <p style="margin-top:8px">Berkshire Heritage pork &amp; farm eggs &middot; Athens, TN</p>
+    </div>
+    <div class="soc">
+      <a href="https://www.instagram.com/jarosfamilyfarmtn" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/Jaros-Family-Farm-TN-106036934561983" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <small>Concept by Code Craft Media &middot; a design preview, not the farm's official website.</small>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="c" href="tel:+13523021934"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="e" href="mailto:JarosFamilyFarmTN@gmail.com?subject=Pork%20share%20or%20eggs"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email</a>
+</div>
+
+<script>
+(function(){
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=document.getElementById('todayName'); if(t) t.textContent='Today, '+days[new Date().getDay()];
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

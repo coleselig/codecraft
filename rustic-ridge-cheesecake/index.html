@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Rustic Ridge Cheesecake — Union County, TN</title>
+<meta name="description" content="Concept site for Rustic Ridge Cheesecake: homemade cheesecake by the slice, and whole cakes by special order. Union County, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7EFE3; --cream2:#EFE2CF; --paper:#FBF6EE;
+  --graham:#33241A; --graham2:#5A4130; --crumb:#C99A62;
+  --caramel:#B0682F; --lime:#9DB24A; --lime-d:#5F7124; --berry:#4C5A92; --sage:#7E8C74;
+  --ink:#2A1E16; --muted:#6B5646;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.015em;font-variation-settings:"opsz" 120}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--caramel)}
+
+/* banner */
+.concept{background:var(--graham);color:#EADBC6;font-size:12.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.concept b{color:#fff;font-weight:600}
+.concept .short{display:none}
+@media(max-width:520px){.concept .long{display:none}.concept .short{display:inline}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(247,239,227,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(51,36,26,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none}
+.brand span{font-family:Fraunces,serif;font-weight:700;font-size:19px;letter-spacing:-.01em;white-space:nowrap}
+.brand em{font-style:italic;font-weight:500;color:var(--caramel)}
+.nav nav{display:none;gap:28px;font-weight:600;font-size:15px}
+.nav nav a{text-decoration:none;opacity:.8;transition:opacity .2s}
+.nav nav a:hover{opacity:1}
+.nav .cta-sm{display:none}
+@media(min-width:900px){.nav nav{display:flex}.nav .cta-sm{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 16px Figtree,sans-serif;padding:15px 24px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-dark{background:var(--graham);color:var(--cream);box-shadow:0 10px 24px -10px rgba(51,36,26,.6)}
+.btn-dark:hover{background:#21170F}
+.btn-ghost{background:transparent;color:var(--graham);box-shadow:inset 0 0 0 2px var(--graham)}
+.btn-ghost:hover{background:var(--graham);color:var(--cream)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,#FBE9CF 0%,rgba(251,233,207,0) 60%),var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:8px;padding-top:34px;padding-bottom:0;position:relative;z-index:2}
+.hero .wrap>*{min-width:0}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1fr 1.1fr;align-items:center;gap:30px;padding-top:56px;padding-bottom:10px}}
+.hero h1{font-size:clamp(44px,12.4vw,74px);margin:14px 0 18px}
+.hero h1 i{font-style:italic;font-weight:500;color:var(--caramel)}
+.hero h1 .u{background:linear-gradient(transparent 68%,rgba(157,178,74,.45) 68%,rgba(157,178,74,.45) 92%,transparent 92%)}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:30em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .ctas .btn{flex:1 1 auto}
+@media(min-width:520px){.hero .ctas .btn{flex:0 0 auto}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--paper);border:1px solid rgba(51,36,26,.1)}
+.tag::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px;background:var(--c)}
+.hero-art{position:relative;margin:10px -20px 0}
+@media(min-width:900px){.hero-art{margin:0 -30px 0 0;transform:scale(1.12);transform-origin:center right}}
+.hero-art svg{width:100%;height:auto;-webkit-mask-image:radial-gradient(closest-side at 50% 50%,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side at 50% 50%,#000 72%,transparent 100%)}
+@media(max-width:899px){.hero-art{order:-1;margin:-6px -20px -26px;max-width:none}.hero-art svg{max-height:230px;margin:0 auto}.hero .wrap{padding-top:6px}.hero h1{margin-top:8px}}
+@media(max-width:420px){.hero .eyebrow{font-size:11px;letter-spacing:.12em;white-space:nowrap}}
+.steam path{stroke-dasharray:6 10;animation:steam 3.6s linear infinite}
+@keyframes steam{to{stroke-dashoffset:-64}}
+.floaty{animation:floaty 6s ease-in-out infinite;transform-origin:center}
+@keyframes floaty{50%{transform:translateY(-8px)}}
+.ridges{display:block;width:100%;height:auto;margin-top:-2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* crumb border */
+.crumb{height:18px;background:
+  radial-gradient(circle at 10% 50%,var(--crumb) 0 2.4px,transparent 3px) 0 0/23px 18px,
+  radial-gradient(circle at 60% 30%,#A87A47 0 1.8px,transparent 2.4px) 0 0/17px 18px,
+  radial-gradient(circle at 35% 75%,#D9B07A 0 2px,transparent 2.6px) 0 0/29px 18px,
+  var(--graham2)}
+
+section{padding:76px 0}
+@media(min-width:900px){section{padding:110px 0}}
+.head{max-width:640px;margin-bottom:38px}
+.head h2{font-size:clamp(34px,8.4vw,56px);margin-top:10px}
+.head h2 i{font-style:italic;font-weight:500;color:var(--caramel)}
+.head p{color:var(--muted);margin-top:14px}
+
+/* flavors */
+.flavors{background:var(--graham);color:var(--cream)}
+.flavors .eyebrow{color:var(--crumb)}
+.flavors .head p{color:#CDBBA6}
+.flavors .head h2 i{color:var(--crumb)}
+.fgrid{display:grid;grid-template-columns:1fr;gap:18px}
+.fgrid>*{min-width:0}
+@media(min-width:760px){.fgrid{grid-template-columns:repeat(3,1fr);gap:22px}}
+.fcard{background:#3F2D21;border-radius:var(--r);padding:22px 22px 26px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s}
+.fcard:hover{transform:translateY(-6px);background:#47332A}
+.fcard .art{background:var(--bg);border-radius:16px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;margin-bottom:20px;overflow:hidden}
+.fcard .art svg{width:78%;height:auto;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.fcard:hover .art svg{transform:rotate(-4deg) scale(1.05)}
+.fcard h3{font-size:30px}
+.fcard p{color:#CDBBA6;font-size:15.5px;margin-top:8px}
+.fcard .dot{position:absolute;top:34px;right:34px;font:600 12px Figtree;letter-spacing:.14em;text-transform:uppercase;color:var(--graham);background:var(--cream);padding:5px 10px;border-radius:999px}
+.fnote{margin-top:26px;font-size:14.5px;color:#BFAA93;display:flex;gap:10px;align-items:flex-start}
+.fnote svg{flex:none;margin-top:3px}
+
+/* order */
+.ogrid{display:grid;grid-template-columns:1fr;gap:18px}
+.ogrid>*{min-width:0}
+@media(min-width:860px){.ogrid{grid-template-columns:1fr 1fr;gap:24px}}
+.ocard{background:var(--paper);border-radius:var(--r);padding:30px 26px;border:1px solid rgba(51,36,26,.08);position:relative;overflow:hidden}
+.ocard.whole{background:var(--lime);background:linear-gradient(160deg,#B9CB6E,#93A845);color:#1F2610;border:0}
+.ocard .num{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:var(--caramel);font-weight:600}
+.ocard.whole .num{color:#3B4716}
+.ocard h3{font-size:clamp(30px,7vw,40px);margin:6px 0 10px}
+.ocard p{color:var(--muted)}
+.ocard.whole p{color:#2E3814}
+.ocard ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.ocard li a{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;background:rgba(255,255,255,.45);padding:13px 16px;border-radius:14px;transition:background .2s,transform .2s;word-break:break-word;min-width:0}
+.ocard li a:hover{background:rgba(255,255,255,.75);transform:translateX(3px)}
+.ocard li span.ic{flex:none;width:34px;height:34px;border-radius:50%;background:#2E3814;color:#E8F0C4;display:grid;place-items:center}
+.ocard li span.ic svg{width:16px;height:16px}
+.ocard li .fb{display:flex;align-items:center;gap:12px;font-weight:600;background:rgba(255,255,255,.3);padding:13px 16px;border-radius:14px}
+.ocard .slice-ill{position:absolute;right:-30px;bottom:-30px;width:170px;opacity:.9}
+.ocard.slice .lead{padding-right:0}
+.market-line{margin-top:20px;display:flex;gap:12px;align-items:center;font-weight:600;font-size:15px}
+.market-line svg{flex:none}
+
+/* why */
+.why{background:var(--cream2);position:relative}
+.wgrid{display:grid;grid-template-columns:1fr;gap:16px}
+.wgrid>*{min-width:0}
+@media(min-width:760px){.wgrid{grid-template-columns:repeat(3,1fr);gap:22px}}
+.wcard{padding:28px 24px;border-radius:var(--r);background:var(--paper);border:1px solid rgba(51,36,26,.07)}
+.wcard .big{font-family:Fraunces,serif;font-size:58px;font-weight:600;line-height:1;color:var(--caramel);letter-spacing:-.03em}
+.wcard .big small{font-size:24px;font-style:italic;font-weight:500}
+.wcard h3{font-size:24px;margin:14px 0 8px}
+.wcard p{color:var(--muted);font-size:15.5px}
+.wcard .icon{width:58px;height:58px}
+.quote-src{margin-top:22px;font-size:13.5px;color:var(--muted)}
+.quote-src a{color:var(--caramel);font-weight:600}
+
+/* find */
+.fgrid2{display:grid;grid-template-columns:1fr;gap:22px}
+.fgrid2>*{min-width:0}
+@media(min-width:900px){.fgrid2{grid-template-columns:.9fr 1.1fr;gap:30px;align-items:stretch}}
+.hours{background:var(--paper);border-radius:var(--r);padding:26px 22px;border:1px solid rgba(51,36,26,.08)}
+.hours h3{font-size:26px}
+.hours .lbl{font-size:14px;color:var(--muted);margin-top:4px}
+.hours table{width:100%;border-collapse:collapse;margin-top:18px;font-size:16px}
+.hours td{padding:11px 10px;border-bottom:1px dashed rgba(51,36,26,.14)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.closed td:last-child{color:#9C8A7A;font-weight:500}
+.hours tr.today td{background:var(--graham);color:var(--cream);border-bottom-color:transparent}
+.hours tr.today td:first-child{border-radius:12px 0 0 12px}
+.hours tr.today td:last-child{border-radius:0 12px 12px 0;color:var(--cream)}
+.hours tr.today td:first-child::after{content:"Today";margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--lime);color:#1F2610;padding:2px 7px;border-radius:999px;vertical-align:2px}
+.hours .fine{font-size:13.5px;color:var(--muted);margin-top:16px}
+.todaynote{margin-top:14px;font-size:14.5px;font-weight:600;background:#F1E4CF;border-radius:12px;padding:10px 14px}
+.mapcard{border-radius:var(--r);overflow:hidden;background:var(--paper);border:1px solid rgba(51,36,26,.08);display:flex;flex-direction:column}
+.mapcard iframe{border:0;width:100%;height:320px;display:block;filter:sepia(.25) saturate(.9)}
+@media(min-width:900px){.mapcard iframe{height:100%;min-height:360px;flex:1}}
+.mapcard .info{padding:20px 22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.mapcard .info b{font-family:Fraunces,serif;font-size:20px;font-weight:600;display:block}
+.mapcard .info span{color:var(--muted);font-size:15px}
+.mapcard .info .btns{display:flex;gap:10px;flex-wrap:wrap}
+.mapcard .btn{padding:12px 18px;font-size:15px}
+
+/* final cta */
+.final{background:var(--berry);color:#F2F0FA;text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(36px,9vw,64px);max-width:14ch;margin:12px auto 16px}
+.final h2 i{font-style:italic;font-weight:500;color:#D9DEF5}
+.final p{color:#D5D8EE;max-width:32em;margin:0 auto}
+.final .eyebrow{color:#C9D1F5}
+.final .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.final .btn-dark{background:var(--cream);color:var(--graham)}
+.final .btn-ghost{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
+.final .btn-ghost:hover{background:#fff;color:var(--berry)}
+.final .berries{position:absolute;inset:0;pointer-events:none;opacity:.18}
+.final .wrap{position:relative}
+
+footer{background:var(--graham);color:#CDBBA6;padding:44px 0 36px;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start}
+footer .brand span{color:var(--cream)}
+footer a{color:var(--crumb)}
+footer .small{font-size:13px;opacity:.85;margin-top:6px}
+
+/* mobile bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(51,36,26,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:14px;font-weight:700;font-size:15.5px;text-decoration:none;min-width:0;white-space:nowrap}
+.callbar .c1{background:var(--cream);color:var(--graham)}
+.callbar .c2{background:var(--lime);color:#1F2610}
+.callbar svg{width:18px;height:18px;flex:none}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in,.js.reveal-all .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('reveal-all')},1500);</script>
+
+<div class="concept" role="note"><span class="long">Concept site by <b>Code Craft Media</b>, made for Rustic Ridge Cheesecake. Not live.</span><span class="short">Concept by <b>Code Craft Media</b> · Not live</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Rustic Ridge Cheesecake home">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#33241A"/><path d="M5 27l7-8 5 5 6-9 12 12" fill="none" stroke="#9DB24A" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M11 30h18l-9-14z" fill="#F7EFE3"/><path d="M11 30h18v2H11z" fill="#C99A62"/></svg>
+      <span>Rustic Ridge <em>Cheesecake</em></span>
+    </a>
+    <nav aria-label="Main"><a href="#flavors">Flavors</a><a href="#order">Order</a><a href="#about">Allison</a><a href="#find">Find us</a></nav>
+    <a class="btn btn-dark cta-sm" href="tel:+18658247331" style="padding:11px 18px;font-size:15px">Call (865) 824-7331</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Homemade cheesecake · Union County, TN</div>
+      <h1>Cheesecake <span class="u">by the slice,</span> or <i>the whole cake.</i></h1>
+      <p class="sub">Fresh, creamy, homemade cheesecake from Allison Brummitt, who's been making them for over 10 years. Turtle, Key Lime and Lemon Blueberry at the market; whole cakes by special order.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="tel:+18658247331"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call to order</a>
+        <a class="btn btn-ghost" href="#order">Order a whole cake</a>
+      </div>
+      <div class="tags" aria-label="Flavors">
+        <span class="tag" style="--c:#B0682F">Turtle</span><span class="tag" style="--c:#9DB24A">Key Lime</span><span class="tag" style="--c:#4C5A92">Lemon Blueberry</span>
+      </div>
+    </div>
+    <div class="hero-art rv" aria-hidden="true">
+      <svg viewBox="0 0 560 470" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6D9AE"/><stop offset="1" stop-color="#F7EFE3" stop-opacity="0"/></linearGradient>
+          <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF9EF"/><stop offset="1" stop-color="#F1E2C8"/></linearGradient>
+          <linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F3E5CC"/><stop offset="1" stop-color="#E4CFAE"/></linearGradient>
+          <linearGradient id="car" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C47C3C"/><stop offset="1" stop-color="#8E4F22"/></linearGradient>
+          <pattern id="crumbs" width="14" height="10" patternUnits="userSpaceOnUse"><rect width="14" height="10" fill="#B9874F"/><circle cx="3" cy="3" r="1.6" fill="#8F6233"/><circle cx="10" cy="6" r="1.3" fill="#D8AE76"/><circle cx="6" cy="8.5" r="1" fill="#7A522A"/></pattern>
+        </defs>
+        <circle cx="300" cy="190" r="170" fill="url(#sky)"/>
+        <!-- distant ridges -->
+        <path d="M0 330 C60 280 110 300 160 270 S260 230 320 262 S430 220 560 270 V470 H0Z" fill="#C9C7A6" opacity=".55"/>
+        <path d="M0 360 C70 320 130 345 200 312 S320 300 380 325 S480 300 560 320 V470 H0Z" fill="#9FAA88" opacity=".7"/>
+        <!-- steam -->
+        <g class="steam" fill="none" stroke="#C99A62" stroke-width="2.5" stroke-linecap="round" opacity=".6">
+          <path d="M250 120c-12-18 12-28 0-46"/><path d="M290 108c-12-18 12-28 0-46"/><path d="M330 120c-12-18 12-28 0-46"/>
+        </g>
+        <g class="floaty">
+          <!-- plate -->
+          <ellipse cx="290" cy="352" rx="210" ry="40" fill="#33241A" opacity=".18"/>
+          <ellipse cx="290" cy="340" rx="200" ry="38" fill="#FBF6EE" stroke="#E2D2BB" stroke-width="2"/>
+          <ellipse cx="290" cy="336" rx="160" ry="27" fill="none" stroke="#EADBC4" stroke-width="2"/>
+          <!-- slice: wedge -->
+          <!-- crust -->
+          <path d="M120 300 L410 300 L440 286 L440 318 L410 332 L120 332Z" fill="url(#crumbs)"/>
+          <path d="M120 300 L410 300 L440 286 L150 286Z" fill="#C99A62"/>
+          <!-- filling side face -->
+          <path d="M120 300 L410 300 L410 196 L120 268Z" fill="url(#fill)"/>
+          <!-- back face (outer edge) -->
+          <path d="M410 300 L440 286 L440 184 L410 196Z" fill="url(#side)"/>
+          <!-- top -->
+          <path d="M120 268 L410 196 L440 184 Z" fill="#FFF8EC"/>
+          <!-- caramel/turtle topping -->
+          <path d="M118 270 L410 194 L442 182 L440 196 C432 204 424 196 416 206 C404 220 396 204 384 214 C370 226 360 210 348 222 C334 236 322 220 310 232 C296 244 286 228 272 240 C258 252 248 238 234 250 C220 262 208 250 196 262 C184 272 172 262 160 272 C148 280 134 276 122 282Z" fill="url(#car)"/>
+          <g fill="#6A3A18"><ellipse cx="300" cy="214" rx="12" ry="6" transform="rotate(-14 300 214)"/><ellipse cx="360" cy="200" rx="10" ry="5" transform="rotate(-14 360 200)"/><ellipse cx="236" cy="232" rx="11" ry="5.5" transform="rotate(-14 236 232)"/><ellipse cx="178" cy="248" rx="9" ry="4.5" transform="rotate(-14 178 248)"/></g>
+          <g fill="#E9C995"><circle cx="270" cy="222" r="3"/><circle cx="330" cy="208" r="2.6"/><circle cx="206" cy="242" r="2.4"/><circle cx="392" cy="196" r="2.4"/></g>
+          <!-- cream shine -->
+          <path d="M150 292 L380 292" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          <!-- fork -->
+          <g transform="translate(400 345) rotate(-8)"><rect x="0" y="0" width="120" height="9" rx="4.5" fill="#B9B2A6"/><rect x="-36" y="-6" width="40" height="21" rx="5" fill="#CFC8BC"/><g fill="#CFC8BC"><rect x="-70" y="-5" width="38" height="3.5" rx="1.7"/><rect x="-70" y="1" width="38" height="3.5" rx="1.7"/><rect x="-70" y="7" width="38" height="3.5" rx="1.7"/><rect x="-70" y="13" width="38" height="3.5" rx="1.7"/></g></g>
+        </g>
+        <!-- lime & berries garnish -->
+        <g transform="translate(78 360)"><circle r="30" fill="#7F9435"/><circle r="25" fill="#D8E59A"/><g stroke="#9DB24A" stroke-width="2"><path d="M0-24V24M-24 0H24M-17-17L17 17M17-17L-17 17"/></g><circle r="4" fill="#EEF4CF"/></g>
+        <g fill="#4C5A92"><circle cx="500" cy="388" r="11"/><circle cx="520" cy="372" r="9"/><circle cx="484" cy="404" r="8"/></g>
+        <g fill="#7F8CC0"><circle cx="503" cy="384" r="3"/><circle cx="522" cy="369" r="2.4"/></g>
+      </svg>
+    </div>
+  </div>
+  <svg class="ridges" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 C120 30 220 60 330 40 S540 0 660 34 S880 80 1000 44 S1240 8 1440 50 V140 H0Z" fill="#7E8C74" opacity=".55"/><path d="M0 100 C160 70 260 96 400 76 S640 56 780 84 S1060 108 1200 82 S1360 70 1440 86 V140 H0Z" fill="#5A4130"/></svg>
+</section>
+<div class="crumb" aria-hidden="true"></div>
+
+<section class="flavors" id="flavors">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">In the case</div>
+      <h2>Three flavors, <i>one very good fork.</i></h2>
+      <p>These were the three homemade cheesecakes on the table at the Union County Farmers Market on June 13, 2026.</p>
+    </div>
+    <div class="fgrid">
+      <article class="fcard rv">
+        <div class="art" style="--bg:#E9C79B">
+          <svg viewBox="0 0 200 120" aria-hidden="true"><path d="M20 96h140l20-8v14l-20 8H20z" fill="#9A6A3A"/><path d="M20 96h140V44L20 80z" fill="#FFF6E8"/><path d="M160 96l20-8V36l-20 8z" fill="#EAD5B5"/><path d="M18 82L160 42l22-8-2 10c-6 5-10-1-16 6-7 8-12 0-18 7-7 8-12 0-18 7s-12 1-18 8-12 0-18 7-12 1-18 8-12 0-18 6-12 1-20 6z" fill="#A55D27"/><g fill="#5E3214"><ellipse cx="100" cy="58" rx="7" ry="3.5"/><ellipse cx="140" cy="48" rx="6" ry="3"/><ellipse cx="62" cy="70" rx="6" ry="3"/></g></svg>
+        </div>
+        <span class="dot">Turtle</span>
+        <h3>Turtle</h3>
+        <p>Rich, creamy and homemade. One of the three flavors at the June 13 market.</p>
+      </article>
+      <article class="fcard rv">
+        <div class="art" style="--bg:#CFDB8E">
+          <svg viewBox="0 0 200 120" aria-hidden="true"><path d="M20 96h140l20-8v14l-20 8H20z" fill="#B88A55"/><path d="M20 96h140V44L20 80z" fill="#F4F6D6"/><path d="M160 96l20-8V36l-20 8z" fill="#DDE3AE"/><path d="M20 80L160 44l20-8z" fill="#FBFCEB"/><g transform="translate(150 34)"><circle r="16" fill="#6F8429"/><circle r="13" fill="#D6E48F"/><path d="M0-12V12M-12 0H12M-8-8L8 8M8-8L-8 8" stroke="#9DB24A" stroke-width="1.5"/></g><g fill="#fff" opacity=".85"><circle cx="74" cy="64" r="7"/><circle cx="86" cy="60" r="6"/><circle cx="110" cy="54" r="7"/></g></svg>
+        </div>
+        <span class="dot">Key Lime</span>
+        <h3>Key Lime</h3>
+        <p>Fresh, creamy and homemade. Ask about whole-cake orders.</p>
+      </article>
+      <article class="fcard rv">
+        <div class="art" style="--bg:#BCC4E6">
+          <svg viewBox="0 0 200 120" aria-hidden="true"><path d="M20 96h140l20-8v14l-20 8H20z" fill="#B88A55"/><path d="M20 96h140V44L20 80z" fill="#FFF7DC"/><path d="M160 96l20-8V36l-20 8z" fill="#EEE1B8"/><path d="M18 82L160 42l22-8v6c-8 6-14 2-22 8-9 6-16 2-24 8s-16 2-24 8-16 2-24 8-16 2-24 8-14 2-24 6z" fill="#5A68A6"/><g fill="#3A4680"><circle cx="70" cy="70" r="5"/><circle cx="104" cy="60" r="5.5"/><circle cx="140" cy="50" r="5"/></g><path d="M40 90c30-6 70-14 110-26" stroke="#F2D16B" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round"/></svg>
+        </div>
+        <span class="dot">Lemon Blueberry</span>
+        <h3>Lemon Blueberry</h3>
+        <p>Lemon and blueberry in a fresh, homemade cheesecake, sold by the slice.</p>
+      </article>
+    </div>
+    <p class="fnote rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A62" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5" stroke-linecap="round"/></svg>The lineup changes. Call or email to ask what Allison is baking next, or which flavor she can do as a whole cake.</p>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">How to order</div>
+      <h2>A slice for now, <i>a whole cake for later.</i></h2>
+      <p>Slices are sold at the market. Whole cheesecakes are made by special order. Just reach out.</p>
+    </div>
+    <div class="ogrid">
+      <div class="ocard slice rv">
+        <div class="num">01 · By the slice</div>
+        <h3>Find the cheesecake table at the market</h3>
+        <p>Rustic Ridge sells cheesecake by the slice at the Union County Farmers Market in Maynardville.</p>
+        <div class="market-line"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B0682F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9M3 9h18M3 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3M5 12v8h14v-8"/></svg>Saturdays, 9 am – 1 pm during market season</div>
+        <a class="btn btn-ghost" href="#find" style="margin-top:22px">Market hours &amp; map</a>
+      </div>
+      <div class="ocard whole rv">
+        <div class="num">02 · Whole cakes</div>
+        <h3>Special-order a whole cheesecake</h3>
+        <p>For birthdays, holidays, or just because. Get in touch and Allison will sort out the details with you.</p>
+        <ul>
+          <li><a href="tel:+18658247331"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>(865) 824-7331</a></li>
+          <li><a href="mailto:rusticridgecheesecakes@gmail.com?subject=Whole%20cheesecake%20order"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></span>rusticridgecheesecakes@gmail.com</a></li>
+          <li><div class="fb"><span class="ic" style="flex:none;width:34px;height:34px;border-radius:50%;background:#2E3814;color:#E8F0C4;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.4.3-.5.6-.5z"/></svg></span>Or message Rustic Ridge on Facebook</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="about">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Made by Allison</div>
+      <h2>Homemade, <i>by Allison.</i></h2>
+      <p>Rustic Ridge is Allison Brummitt's cheesecake kitchen, with a little help from her daughter at the market table.</p>
+    </div>
+    <div class="wgrid">
+      <div class="wcard rv"><div class="big">10<small>+ yrs</small></div><h3>Of cheesecake</h3><p>Allison loves making cheesecake and has been creating them for over a decade.</p></div>
+      <div class="wcard rv"><svg class="icon" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="29" fill="#F1E4CF"/><path d="M14 40h32l-16-22z" fill="#FFF8EC" stroke="#B0682F" stroke-width="2" stroke-linejoin="round"/><path d="M14 40h32v4H14z" fill="#C99A62"/><path d="M22 18c-3-4 3-6 0-10M30 16c-3-4 3-6 0-10M38 18c-3-4 3-6 0-10" fill="none" stroke="#C99A62" stroke-width="2" stroke-linecap="round"/></svg><h3>Fresh &amp; homemade</h3><p>Fresh, creamy, homemade cheesecakes, sold by the slice or whole.</p></div>
+      <div class="wcard rv"><svg class="icon" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="29" fill="#F1E4CF"/><path d="M8 42l12-14 8 8 10-14 14 20z" fill="#7E8C74"/><path d="M8 42l12-14 8 8 10-14 14 20" fill="none" stroke="#33241A" stroke-width="2" stroke-linejoin="round"/><circle cx="42" cy="18" r="5" fill="#B0682F"/></svg><h3>Union County local</h3><p>Sold at the Union County Farmers Market, "where our community meets."</p></div>
+    </div>
+    <p class="quote-src rv">Facts from the <a href="https://www.historicunioncounty.com/article/6132026-farmers-market" rel="noopener" target="_blank">Historic Union County market write-up</a> (June 2026).</p>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Find us</div>
+      <h2>Market days <i>&amp; directions.</i></h2>
+    </div>
+    <div class="fgrid2">
+      <div class="hours rv">
+        <h3>Union County Farmers Market</h3>
+        <div class="lbl">Market hours · 2026 season (May – October)</div>
+        <table id="hrs" aria-label="Market hours">
+          <tr data-d="1" class="closed"><td>Monday</td><td>No market</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>5 – 8 pm <small style="font-weight:500">(Jul–Aug)</small></td></tr>
+          <tr data-d="3" class="closed"><td>Wednesday</td><td>No market</td></tr>
+          <tr data-d="4" class="closed"><td>Thursday</td><td>No market</td></tr>
+          <tr data-d="5" class="closed"><td>Friday</td><td>No market</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>9 am – 1 pm</td></tr>
+          <tr data-d="0" class="closed"><td>Sunday</td><td>No market</td></tr>
+        </table>
+        <div class="todaynote" id="todaynote">Whole cheesecakes are by special order. Call (865) 824-7331 or email to ask.</div>
+        <p class="fine">These are the market's hours. Check Rustic Ridge's Facebook page for the days Allison will be there.</p>
+      </div>
+      <div class="mapcard rv">
+        <iframe title="Map: Union County Farmers Market, Maynardville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=115%20Durham%20Drive%2C%20Maynardville%2C%20TN&output=embed"></iframe>
+        <div class="info">
+          <div><b>Union County Farmers Market</b><span>115 Durham Drive, Maynardville, TN</span></div>
+          <div class="btns">
+            <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=115%20Durham%20Drive%2C%20Maynardville%2C%20TN" target="_blank" rel="noopener">Directions</a>
+            <a class="btn btn-ghost" href="tel:+18658247331">Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="berries" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff"><circle cx="30" cy="40" r="10"/><circle cx="48" cy="28" r="7"/><circle cx="360" cy="150" r="12"/><circle cx="340" cy="170" r="8"/><circle cx="380" cy="30" r="6"/><circle cx="60" cy="170" r="9"/></g></svg>
+  <div class="wrap rv">
+    <div class="eyebrow">Whole cakes by special order</div>
+    <h2>Got a celebration coming? <i>Bring the cheesecake.</i></h2>
+    <p>Call, email, or message Allison on Facebook to order a whole Rustic Ridge cheesecake.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="tel:+18658247331">Call (865) 824-7331</a>
+      <a class="btn btn-ghost" href="mailto:rusticridgecheesecakes@gmail.com?subject=Whole%20cheesecake%20order">Email an order</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F7EFE3"/><path d="M5 27l7-8 5 5 6-9 12 12" fill="none" stroke="#5F7124" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M11 30h18l-9-14z" fill="#33241A"/></svg><span>Rustic Ridge Cheesecake</span></a>
+      <div class="small">Homemade cheesecake · Union County, Tennessee</div>
+    </div>
+    <div>
+      <a href="tel:+18658247331">(865) 824-7331</a><br>
+      <a href="mailto:rusticridgecheesecakes@gmail.com">rusticridgecheesecakes@gmail.com</a>
+    </div>
+    <div class="small" style="width:100%">Concept by Code Craft Media. A sample design made for Rustic Ridge Cheesecake; not an official site.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c1" href="tel:+18658247331"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="c2" href="mailto:rusticridgecheesecakes@gmail.com?subject=Whole%20cheesecake%20order"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>Order a cake</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay(),m=new Date().getMonth();
+  var row=document.querySelector('#hrs tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+  var note=document.getElementById('todaynote');
+  var inSeason=m>=4&&m<=9;
+  if(note){
+    if(!inSeason)note.textContent='The market is between seasons (May – October). Whole cheesecakes are by special order: call (865) 824-7331 or email.';
+    else if(d===6)note.textContent='It’s market day, 9 am – 1 pm. Whole cheesecakes are by special order.';
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  }else document.documentElement.classList.add('reveal-all');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hoodley Creek — Afton, TN</title>
+<meta name="description" content="Concept site for Hoodley Creek, a seventh generation Tennessee Century Farm in Afton raising Katahdin sheep and lamb.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --barn:#7A3B2E; --barn-d:#5a2a20; --barn-dd:#3b1b14;
+  --sage:#9AA77F; --sage-d:#5f6c49; --sage-l:#dfe4d2;
+  --wool:#F4EFE6; --wool-d:#e9e1d2; --ink:#2b211c; --muted:#6b5d54;
+  --serif:"Playfair Display", Georgia, serif; --sans:"Source Sans 3", system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--wool);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.grain{position:relative}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .2 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--barn-dd);color:#e9dccb;font-size:clamp(10px,2.85vw,12.5px);letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(244,239,230,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(122,59,46,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:36px;height:36px;flex:none}
+.brand span{font:700 19px/1 var(--serif);color:var(--barn);white-space:nowrap}
+.nav nav{display:none;gap:26px}
+.nav nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink);position:relative}
+.nav nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--barn);transition:right .25s}
+.nav nav a:hover::after{right:0}
+.nav .call{font-weight:700;font-size:14px;text-decoration:none;color:#fff;background:var(--barn);padding:9px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,transform .2s}
+.nav .call:hover{background:var(--barn-d);transform:translateY(-1px)}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#efe7d9 0%,var(--wool) 70%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:8px;padding-top:24px;padding-bottom:0}
+.hero .wrap>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--sage)}
+h1{font:800 clamp(36px,10vw,76px)/1.02 var(--serif);color:var(--barn-dd);letter-spacing:-.015em;margin:14px 0 16px}
+h1 em{font-style:italic;font-weight:500;color:var(--barn)}
+.lede{font-size:18px;color:var(--muted);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 16px/1 var(--sans);text-decoration:none;padding:15px 22px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;min-height:50px}
+.btn svg{width:18px;height:18px}
+.btn-p{background:var(--barn);color:#fff;box-shadow:0 8px 20px -10px rgba(90,42,32,.7)}
+.btn-p:hover{background:var(--barn-d);transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(90,42,32,.8)}
+.btn-s{background:transparent;color:var(--barn-dd);border:1.5px solid rgba(122,59,46,.35)}
+.btn-s:hover{border-color:var(--barn);background:rgba(122,59,46,.06)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--muted);font-weight:600}
+.facts span{display:inline-flex;align-items:center;gap:6px}
+.facts span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage)}
+.scene{position:relative;margin:18px -20px 0}
+.scene>svg:first-child{width:100%;height:auto}
+.seal{position:absolute;right:14px;top:4px;width:118px;height:118px;filter:drop-shadow(0 8px 14px rgba(59,27,20,.25))}
+.seal .ring{transform-origin:60px 60px;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sheep-bob{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.sheep-bob.b2{animation-delay:-1.6s}
+@keyframes bob{50%{transform:translateY(-2px)}}
+.cloud{animation:drift 30s linear infinite}
+@keyframes drift{from{transform:translateX(-40px)}to{transform:translateX(60px)}}
+
+/* sections */
+section{padding:72px 0}
+.kicker{font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d)}
+h2{font:700 clamp(32px,7.6vw,52px)/1.08 var(--serif);color:var(--barn-dd);margin:10px 0 14px;letter-spacing:-.01em}
+h2 em{font-style:italic;font-weight:500;color:var(--barn)}
+.sub{color:var(--muted);max-width:56ch}
+
+/* story */
+.story{background:var(--barn-dd);color:#eee3d4}
+.story h2{color:#fff}.story h2 em{color:#e3b9a6}.story .kicker{color:var(--sage)}
+.story .grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.story .grid>*{min-width:0}
+.quote{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:30px 24px 24px}
+.quote svg.qm{position:absolute;top:-18px;left:20px;width:40px;height:40px}
+.quote p{font:500 italic clamp(21px,5.2vw,27px)/1.4 var(--serif);color:#fff}
+.quote cite{display:block;margin-top:14px;font-style:normal;font-size:14px;color:var(--sage);font-weight:600;letter-spacing:.04em}
+.timeline{list-style:none;margin-top:26px;border-left:2px solid rgba(154,167,127,.45);padding-left:20px;display:grid;gap:20px}
+.timeline li{position:relative;min-width:0}
+.timeline li::before{content:"";position:absolute;left:-27px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--barn-dd);border:2px solid var(--sage)}
+.timeline b{display:block;font:700 22px/1.1 var(--serif);color:#fff}
+.timeline span{font-size:15.5px;color:#d8cbb9}
+
+/* products */
+.cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+.cards>*{min-width:0}
+.card{background:#fffaf2;border:1px solid var(--wool-d);border-radius:20px;padding:24px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 34px -20px rgba(59,27,20,.45);border-color:rgba(122,59,46,.3)}
+.card .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:var(--sage-l);margin-bottom:16px}
+.card .ic svg{width:34px;height:34px}
+.card h3{font:700 25px/1.15 var(--serif);color:var(--barn-dd);margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+.card.feature{background:var(--barn);border-color:var(--barn);color:#f3e7d9}
+.card.feature h3{color:#fff}.card.feature p{color:#efdccc}.card.feature .ic{background:rgba(255,255,255,.14)}
+.tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff}
+.order{margin-top:20px;display:grid;grid-template-columns:1fr;gap:14px;background:var(--sage-l);border-radius:20px;padding:22px 22px}
+.order>*{min-width:0}
+.order h3{font:700 22px/1.2 var(--serif);color:var(--barn-dd)}
+.order p{color:#4a4a3a;font-size:16px}
+.order .ctas{margin-top:0}
+
+/* practices */
+.practices{background:linear-gradient(180deg,var(--wool),#ece4d5)}
+.plist{display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px}
+.plist>*{min-width:0}
+.pitem{display:flex;gap:14px;align-items:flex-start;background:#fffaf2;border-radius:16px;padding:18px;border:1px solid var(--wool-d)}
+.pitem .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--barn);color:#fff;display:grid;place-items:center}
+.pitem .n svg{width:20px;height:20px}
+.pitem div{min-width:0}
+.pitem b{display:block;font-size:17px;color:var(--barn-dd)}
+.pitem span{font-size:15.5px;color:var(--muted)}
+.src{margin-top:18px;font-size:13px;color:var(--muted)}
+
+/* markets */
+.markets .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+.markets .grid>*{min-width:0}
+.mkt{border-radius:20px;padding:24px;background:#fffaf2;border:1px solid var(--wool-d);display:flex;gap:16px;align-items:flex-start;transition:transform .25s}
+.mkt:hover{transform:translateY(-3px)}
+.mkt .pin{flex:none;width:44px;height:44px;border-radius:12px;background:var(--barn);display:grid;place-items:center}
+.mkt .pin svg{width:22px;height:22px}
+.mkt div{min-width:0}
+.mkt h3{font:700 21px/1.2 var(--serif);color:var(--barn-dd)}
+.mkt p{font-size:15px;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--sage-d);color:#f1efe6}
+.visit h2{color:#fff}.visit h2 em{color:#f0dcc4}.visit .kicker{color:#e6ecd8}
+.visit .grid{display:grid;grid-template-columns:1fr;gap:22px;margin-top:28px}
+.visit .grid>*{min-width:0}
+.panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:24px}
+.panel h3{font:700 22px/1.2 var(--serif);color:#fff;margin-bottom:12px}
+.days{list-style:none;display:grid;gap:4px}
+.days li{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border-radius:10px;font-size:15.5px}
+.days li span:last-child{color:#dfe5d0;text-align:right}
+.days li.today{background:#fff;color:var(--barn-dd);font-weight:700}
+.days li.today span:last-child{color:var(--barn)}
+.days li.today span:first-child::after{content:" · today";font-weight:600;color:var(--sage-d);font-size:13px}
+.hnote{margin-top:12px;font-size:14.5px;color:#e6ead9}
+.addr{font-size:17px;line-height:1.5}
+.addr a{text-decoration:none;font-weight:700;color:#fff}
+.map{margin-top:16px;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#4f5a3c url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 80 Q30 60 60 75 T120 70' fill='none' stroke='%23ffffff22' stroke-width='2'/%3E%3Cpath d='M0 30 Q40 15 70 30 T120 25' fill='none' stroke='%23ffffff18' stroke-width='2'/%3E%3C/svg%3E")}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.panel .ctas{margin-top:16px}
+.btn-w{background:#fff;color:var(--barn-dd)}
+.btn-w:hover{background:var(--wool);transform:translateY(-2px)}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{background:rgba(255,255,255,.1)}
+
+footer{background:var(--barn-dd);color:#cdbcaa;padding:44px 0 36px;font-size:14.5px}
+footer .wrap{display:grid;grid-template-columns:1fr;gap:18px}
+footer .wrap>*{min-width:0}
+footer .brand span{color:#fff}
+footer a{color:#fff}
+.socials{display:flex;gap:10px}
+.socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;transition:background .2s}
+.socials a:hover{background:rgba(255,255,255,.12)}
+.socials svg{width:19px;height:19px}
+.fine{font-size:12.5px;color:#a8968a;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(59,27,20,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 -8px 24px -12px rgba(0,0,0,.5)}
+.bar>*{min-width:0}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap}
+.bar a svg{width:18px;height:18px;flex:none}
+.bar .c{background:var(--sage);color:var(--barn-dd)}
+.bar .m{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .wrap{padding:0 32px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .plist{grid-template-columns:1fr 1fr}
+  .markets .grid{grid-template-columns:repeat(3,1fr)}
+  .order{grid-template-columns:1.4fr 1fr;align-items:center}
+  .order .ctas{justify-content:flex-end}
+  .visit .grid{grid-template-columns:1fr 1.25fr}
+  footer .wrap{grid-template-columns:1.4fr 1fr 1fr}
+  .scene{margin:0}
+}
+@media (min-width:980px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .nav nav{display:flex}
+  .concept{font-size:12.5px}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:center;padding-top:56px;padding-bottom:40px;gap:30px}
+  .scene{margin:0}
+  .scene>svg:first-child{border-radius:28px;box-shadow:0 30px 60px -36px rgba(59,27,20,.55)}
+  .seal{width:150px;height:150px;right:6px;top:-10px}
+  .story .grid{grid-template-columns:1fr 1fr;gap:64px}
+  section{padding:104px 0}
+}
+@media (max-width:520px){
+  .facts{display:none}
+  .ctas .btn{padding:14px 18px;font-size:15px}
+  .lede{font-size:17px}
+  h1{margin:10px 0 12px}
+}
+@media (max-width:370px){
+  .ctas{gap:8px}
+  .ctas .btn{padding:13px 14px;font-size:14.5px}
+  .ctas .btn svg{width:16px;height:16px}
+  .brand span{font-size:17px}
+  .nav .call{padding:8px 11px;font-size:13px}
+  .bar a{font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Hoodley Creek. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hoodley Creek home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#7A3B2E"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#F4EFE6" stroke-width=".8" stroke-dasharray="1.5 1.5"/><g fill="#F4EFE6"><ellipse cx="18" cy="20.5" rx="8.5" ry="5.2"/><path d="M24.5 17q4.5-3.5 7 .8q1.3 2.8-1.4 4.2q-2.8 1.2-5-.8z"/><ellipse cx="25.6" cy="16.6" rx="2.2" ry="1" transform="rotate(-30 25.6 16.6)"/></g><g stroke="#F4EFE6" stroke-width="1.6" stroke-linecap="round"><path d="M12.5 24.5v5M16 25v4.5M20.5 25v4.5M24 24.5v5"/></g></svg>
+      <span>Hoodley Creek</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#story">Our story</a><a href="#lamb">Lamb &amp; herbs</a><a href="#markets">Markets</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="call" href="tel:+16154789335">(615) 478-9335</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero grain" style="padding:0">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Afton, Tennessee · Est. 1850</span>
+      <h1>Seven generations on this land. <em>Now raising Katahdin lamb.</em></h1>
+      <p class="lede">A Tennessee Century Farm in continuous livestock production since 1850, with lamb, fresh herbs and garlic straight from the family.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="tel:+16154789335"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to order lamb</a>
+        <a class="btn btn-s" href="#lamb">What we raise</a>
+      </div>
+      <div class="facts"><span>Tennessee Century Farm</span><span>About 200 acres</span><span>No hormones</span></div>
+    </div>
+    <div class="scene rv" aria-hidden="true">
+      <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe7d9" stop-opacity="0"/><stop offset="1" stop-color="#f1e6d2"/></linearGradient>
+          <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9c3a0"/><stop offset="1" stop-color="#9AA77F"/></linearGradient>
+          <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a9970"/><stop offset="1" stop-color="#6f7d55"/></linearGradient>
+          <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#66744c"/><stop offset="1" stop-color="#4f5b39"/></linearGradient>
+        </defs>
+        <rect width="600" height="400" fill="url(#sky)"/>
+        <circle cx="140" cy="120" r="46" fill="#e8c9a0" opacity=".55"/>
+        <g class="cloud" fill="#fff" opacity=".8"><ellipse cx="300" cy="70" rx="44" ry="12"/><ellipse cx="324" cy="62" rx="26" ry="12"/></g>
+        <path d="M0 210 C90 170 170 190 250 175 S420 140 600 185 V400 H0Z" fill="#c9cfb3" opacity=".7"/>
+        <path d="M0 250 C110 205 230 240 330 215 S500 195 600 225 V400 H0Z" fill="url(#h1)"/>
+        <!-- barn -->
+        <g transform="translate(360 150)">
+          <path d="M0 70 L50 28 L100 70 V130 H0Z" fill="#7A3B2E"/>
+          <path d="M-8 74 L50 22 L108 74" fill="none" stroke="#3b1b14" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M100 82 H160 V130 H100Z" fill="#6a3226"/>
+          <path d="M96 84 L128 60 H162 L166 84" fill="#4a231a"/>
+          <rect x="34" y="82" width="32" height="48" fill="#5a2a20"/>
+          <path d="M34 82 L66 130 M66 82 L34 130" stroke="#F4EFE6" stroke-width="2.4"/>
+          <rect x="34" y="82" width="32" height="48" fill="none" stroke="#F4EFE6" stroke-width="2.4"/>
+          <rect x="42" y="50" width="16" height="16" fill="#F4EFE6"/><path d="M50 50v16M42 58h16" stroke="#7A3B2E" stroke-width="2"/>
+          <rect x="116" y="96" width="14" height="12" fill="#F4EFE6" opacity=".9"/>
+        </g>
+        <!-- silo -->
+        <g transform="translate(320 150)"><rect x="0" y="40" width="30" height="90" fill="#d9cdb9"/><path d="M0 40 A15 15 0 0 1 30 40" fill="#9a8f7c"/><path d="M0 60h30M0 80h30M0 100h30" stroke="#bfb29b" stroke-width="1.5"/></g>
+        <!-- trees -->
+        <g fill="#56633d"><circle cx="560" cy="210" r="26"/><circle cx="585" cy="225" r="20"/><rect x="558" y="225" width="5" height="30" fill="#4a3a2c"/></g>
+        <g fill="#6a7a4b"><circle cx="40" cy="232" r="22"/><rect x="38" y="245" width="4" height="22" fill="#4a3a2c"/></g>
+        <path d="M0 300 C120 262 260 292 380 275 S540 262 600 280 V400 H0Z" fill="url(#h2)"/>
+        <!-- fence -->
+        <g stroke="#F4EFE6" stroke-width="3" stroke-linecap="round" opacity=".9">
+          <path d="M0 318 L600 296"/><path d="M0 334 L600 312"/>
+          <path d="M20 306v38M90 304v38M160 301v38M230 299v38M300 296v38M370 294v38M440 291v38M510 289v38M580 286v38" opacity=".95"/>
+        </g>
+        <path d="M0 350 C150 325 300 355 450 338 S560 330 600 340 V400 H0Z" fill="url(#h3)"/>
+        <!-- sheep (Katahdin: hair sheep, smooth coat) -->
+        <g transform="translate(110 318)"><g class="sheep-bob">
+          <ellipse cx="0" cy="0" rx="34" ry="19" fill="#f4efe6"/>
+          <path d="M28 -10 q14 -10 22 2 q4 8 -4 14 q-8 4 -16 -2z" fill="#e7dccb"/>
+          <ellipse cx="34" cy="-11" rx="6" ry="3" fill="#d8c9b3" transform="rotate(-25 34 -11)"/>
+          <circle cx="42" cy="-5" r="1.6" fill="#2b211c"/>
+          <g stroke="#3b2b22" stroke-width="4" stroke-linecap="round"><path d="M-20 14v16M-8 16v14M12 16v14M22 14v16"/></g>
+          <path d="M-33 -4 q-8 2 -6 10" stroke="#e7dccb" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </g></g>
+        <g transform="translate(250 330) scale(-.82 .82)"><g class="sheep-bob b2">
+          <ellipse cx="0" cy="0" rx="34" ry="19" fill="#c08f6b"/>
+          <path d="M28 -10 q14 -10 22 2 q4 8 -4 14 q-8 4 -16 -2z" fill="#a8775a"/>
+          <ellipse cx="34" cy="-11" rx="6" ry="3" fill="#8f6249" transform="rotate(-25 34 -11)"/>
+          <circle cx="42" cy="-5" r="1.6" fill="#2b211c"/>
+          <g stroke="#3b2b22" stroke-width="4" stroke-linecap="round"><path d="M-20 14v16M-8 16v14M12 16v14M22 14v16"/></g>
+        </g></g>
+        <g transform="translate(470 352) scale(.6)">
+          <ellipse cx="0" cy="0" rx="34" ry="19" fill="#f4efe6"/>
+          <path d="M28 -10 q14 -10 22 2 q4 8 -4 14 q-8 4 -16 -2z" fill="#e7dccb"/>
+          <circle cx="42" cy="-5" r="2" fill="#2b211c"/>
+          <g stroke="#3b2b22" stroke-width="5" stroke-linecap="round"><path d="M-20 14v14M22 14v14"/></g>
+        </g>
+        <!-- guinea hens -->
+        <g fill="#3d3a3a"><ellipse cx="400" cy="372" rx="9" ry="6"/><circle cx="408" cy="366" r="3"/><ellipse cx="425" cy="378" rx="8" ry="5.5"/><circle cx="432" cy="372" r="2.7"/></g>
+        <g fill="#fff" opacity=".7"><circle cx="397" cy="371" r=".9"/><circle cx="402" cy="373" r=".9"/><circle cx="423" cy="377" r=".9"/></g>
+      </svg>
+      <svg class="seal" viewBox="0 0 120 120">
+        <defs><path id="arc" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+        <circle cx="60" cy="60" r="58" fill="#7A3B2E"/>
+        <circle cx="60" cy="60" r="53" fill="none" stroke="#F4EFE6" stroke-width="1.2"/>
+        <g class="ring"><text font-family="Source Sans 3, sans-serif" font-size="9" font-weight="700" letter-spacing="1.6" fill="#F4EFE6"><textPath href="#arc" textLength="272" lengthAdjust="spacing">TENNESSEE CENTURY FARM · HOODLEY CREEK ·</textPath></text></g>
+        <circle cx="60" cy="60" r="34" fill="#F4EFE6"/>
+        <g fill="#7A3B2E" transform="translate(58 55) scale(.85)"><ellipse cx="-2" cy="0" rx="15" ry="9"/><path d="M11 -5 q7 -5 11 1 q2 4 -2 7 q-4 2 -8 -1z"/><g stroke="#7A3B2E" stroke-width="2.4" stroke-linecap="round"><path d="M-11 7v7M-5 8v6M4 8v6M9 7v7"/></g></g>
+        <text x="60" y="80" text-anchor="middle" font-family="Playfair Display, serif" font-weight="800" font-size="10" fill="#7A3B2E">EST. 1850</text>
+        <text x="60" y="43" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="6.5" letter-spacing="1.2" fill="#5f6c49">AFTON · TN</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="kicker">Our story</span>
+      <h2>A family farm since <em>1850.</em></h2>
+      <p class="sub" style="color:#d8cbb9">A seventh generation Tennessee Century Farm, in continuous livestock production since it was established in 1850. About 200 acres in Greene County, farmed today by the 6th and 7th generations.</p>
+      <ul class="timeline">
+        <li><b>1850</b><span>The farm is established and livestock production begins.</span></li>
+        <li><b>2013</b><span>The family transitions from cattle to Katahdin sheep.</span></li>
+        <li><b>Today</b><span>Breeding Katahdins and raising lamb, licensed by TDA for retail meat sales.</span></li>
+      </ul>
+    </div>
+    <figure class="quote rv">
+      <svg class="qm" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#9AA77F"/><path d="M12 25c0-5 2-8 6-10l1 2c-2 1-3 3-3 4h3v6h-7zm10 0c0-5 2-8 6-10l1 2c-2 1-3 3-3 4h3v6h-7z" fill="#3b1b14"/></svg>
+      <blockquote><p>I grew up during the summers on this farm, so I’ve always wanted to run the farm and have sheep on it.</p></blockquote>
+      <cite>KK Proffitt, owner</cite>
+    </figure>
+  </div>
+</section>
+
+<section id="lamb">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">From our pastures</span>
+      <h2>Lamb, herbs <em>&amp; garlic.</em></h2>
+      <p class="sub">Specializing in breeding Katahdin sheep and producing high-quality lamb, alongside fresh herbs and garlic.</p>
+    </div>
+    <div class="cards">
+      <article class="card feature rv">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="#F4EFE6"><ellipse cx="17" cy="21" rx="12" ry="7.5"/><path d="M27 16q6 -4 9 1q2 4 -2 6q-4 2 -7 -1z"/><g stroke="#F4EFE6" stroke-width="2.2" stroke-linecap="round"><path d="M9 27v6M14 28v5M21 28v5M25 27v6"/></g></svg></div>
+        <h3>Katahdin lamb</h3>
+        <p>USDA processed frozen lamb, raised primarily on pasture with no hormones and no antibiotics fed for growth or disease prevention.</p>
+        <span class="tag">Call or message to order</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#5f6c49" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 36V14"/><path d="M20 22c-6 0-10-4-10-10 6 0 10 4 10 10z" fill="#9AA77F"/><path d="M20 18c5 0 9-3 9-9-5 0-9 3-9 9z" fill="#b9c3a0"/><path d="M20 30c-4 0-7-3-7-7 4 0 7 3 7 7z" fill="#b9c3a0"/></svg></div>
+        <h3>Fresh herbs</h3>
+        <p>Grown on the farm to Certified Naturally Grown standards.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#7A3B2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6c0 6-10 10-10 19a10 10 0 0 0 20 0C30 16 20 12 20 6z" fill="#F4EFE6"/><path d="M20 15c-3 4-4 9-3 16M20 15c3 4 4 9 3 16"/><path d="M15 35l-2 2M20 35v3M25 35l2 2"/></svg></div>
+        <h3>Garlic</h3>
+        <p>Grown here on the farm, to the same naturally grown standards.</p>
+      </article>
+    </div>
+    <div class="order rv">
+      <div>
+        <h3>How to order</h3>
+        <p>Message the farm on Facebook or Instagram, or give us a call at <span style="white-space:nowrap">(615) 478-9335</span>.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-p" href="tel:+16154789335">Call the farm</a>
+        <a class="btn btn-s" href="https://www.facebook.com/hoodleycreek" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="practices" id="how">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">How we raise them</span>
+      <h2>Raised the <em>old way,</em> on purpose.</h2>
+    </div>
+    <div class="plist">
+      <div class="pitem rv"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><b>No hormones</b><span>No hormones, no antibiotics fed for growth or disease prevention.</span></div></div>
+      <div class="pitem rv"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M3 20c4-8 14-8 18 0M7 20c1-4 4-6 5-10M17 20c-1-4-3-6-4-9"/></svg></div><div><b>Primarily pasture-fed</b><span>Our sheep are primarily pasture-fed, with grain only as needed.</span></div></div>
+      <div class="pitem rv"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"/><circle cx="17" cy="16" r="4"/><path d="M8 10V6M17 12V9"/></svg></div><div><b>Our own hay</b><span>Naturally fertilized hay fields using our own composted hay and manure.</span></div></div>
+      <div class="pitem rv"><div class="n"><svg viewBox="0 0 24 24" fill="#fff"><ellipse cx="11" cy="14" rx="7" ry="5"/><circle cx="18" cy="9" r="3"/><path d="M20 9l3 1-3 1z"/></svg></div><div><b>Guinea hens on patrol</b><span>Free-range guinea hens help with insect control.</span></div></div>
+      <div class="pitem rv"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><div><b>Licensed for retail meat</b><span>Hoodley Creek is licensed by TDA for retail meat sales.</span></div></div>
+      <div class="pitem rv"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-10 16-10 0 9-4 16-9 17z"/><path d="M4 21c4-5 7-8 11-11"/></svg></div><div><b>Naturally grown</b><span>Grown to Certified Naturally Grown standards (not certified).</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="markets" id="markets">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Find us at market</span>
+      <h2>Come say hello <em>in person.</em></h2>
+      <p class="sub">Pick up lamb, herbs and garlic at these markets, or arrange a pickup at the farm.</p>
+    </div>
+    <div class="grid">
+      <div class="mkt rv"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M5 10V6l7-3 7 3v4M6 10v10M18 10v10M3 20h18"/></svg></div><div><h3>Market Square Farmers Market</h3><p>Our regular market.</p></div></div>
+      <div class="mkt rv"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v20M4 6l16 12M20 6L4 18"/></svg></div><div><h3>Market Square Winter Market</h3><p>We’re there through the cold months too.</p></div></div>
+      <div class="mkt rv"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12z"/><path d="M9 21v-6h6v6"/></svg></div><div><h3>Boone Street Market</h3><p>Jonesborough, TN. Look for us in April.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Visit the farm</span>
+      <h2>Call ahead, <em>then come on out.</em></h2>
+      <p class="sub" style="color:#e6ead9">We welcome customers wanting to buy USDA processed frozen lamb or breeding Katahdins. Please call for an appointment.</p>
+    </div>
+    <div class="grid">
+      <div class="panel rv">
+        <h3>Farm hours</h3>
+        <ul class="days" id="days">
+          <li data-d="1"><span>Monday</span><span>By appointment</span></li>
+          <li data-d="2"><span>Tuesday</span><span>By appointment</span></li>
+          <li data-d="3"><span>Wednesday</span><span>By appointment</span></li>
+          <li data-d="4"><span>Thursday</span><span>By appointment</span></li>
+          <li data-d="5"><span>Friday</span><span>By appointment</span></li>
+          <li data-d="6"><span>Saturday</span><span>By appointment</span></li>
+          <li data-d="0"><span>Sunday</span><span>By appointment</span></li>
+        </ul>
+        <p class="hnote">No set store hours. Call <span style="white-space:nowrap">(615) 478-9335</span> to set up a time.</p>
+      </div>
+      <div class="panel rv">
+        <h3>Find the farm</h3>
+        <p class="addr">9840 Baileyton Rd<br>Afton, TN 37616 · Greene County<br><a href="tel:+16154789335">(615) 478-9335</a></p>
+        <div class="map"><iframe title="Map to Hoodley Creek" loading="lazy" src="https://www.google.com/maps?q=9840%20Baileyton%20Rd%2C%20Afton%2C%20TN%2037616&amp;output=embed"></iframe></div>
+        <div class="ctas">
+          <a class="btn btn-w" href="tel:+16154789335">Call the farm</a>
+          <a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=9840%20Baileyton%20Rd%2C%20Afton%2C%20TN%2037616" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F4EFE6"/><g fill="#7A3B2E"><ellipse cx="18" cy="20.5" rx="8.5" ry="5.2"/><path d="M24.5 17q4.5-3.5 7 .8q1.3 2.8-1.4 4.2q-2.8 1.2-5-.8z"/><ellipse cx="25.6" cy="16.6" rx="2.2" ry="1" transform="rotate(-30 25.6 16.6)"/></g><g stroke="#7A3B2E" stroke-width="1.6" stroke-linecap="round"><path d="M12.5 24.5v5M16 25v4.5M20.5 25v4.5M24 24.5v5"/></g></svg><span>Hoodley Creek</span></a>
+      <p style="margin-top:10px">Seventh generation Tennessee Century Farm. Katahdin sheep and lamb since 2013, livestock since 1850.</p>
+    </div>
+    <div>
+      <p><b style="color:#fff">Hoodley Creek</b><br>9840 Baileyton Rd, Afton, TN 37616<br><a href="tel:+16154789335">(615) 478-9335</a></p>
+    </div>
+    <div>
+      <p style="margin-bottom:10px;color:#fff;font-weight:600">Follow the flock</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/hoodleycreek" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#fff"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+        <a href="https://www.instagram.com/hoodleycreek" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></a>
+      </div>
+    </div>
+    <p class="fine" style="grid-column:1/-1">Concept by Code Craft Media · A design preview made for Hoodley Creek, not the farm’s official site.</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="c" href="tel:+16154789335"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="m" href="https://www.facebook.com/hoodleycreek" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.2S17.5 2 12 2zm1 12.4l-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7z"/></svg>Message to order</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#days li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Davis Farm — McMinn County</title>
+<meta name="description" content="Davis Farm grows Davis sweet corn and a variety of vegetables in McMinn County, Tennessee. Find us at three farmers markets a week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --husk:#22351F; --husk2:#2F4A2A; --leaf:#5E7F3A; --sage:#A9B98A;
+  --kernel:#F2C14E; --butter:#F8DC8A; --silk:#B8642B; --copper:#8E4A1E;
+  --paper:#FBF5E6; --paper2:#F3E9CF; --ink:#1D1B14; --muted:#5B5644;
+  --r:22px;
+  --serif:"Young Serif", Georgia, serif;
+  --sans:"Figtree", system-ui, -apple-system, Segoe UI, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+@media (max-width:400px){.wrap{padding:0 16px}}
+.grid > *, [class*="grid"] > *{min-width:0}
+
+/* concept banner */
+.concept{background:var(--ink);color:#D9D0B4;font-size:12.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.concept b{color:var(--kernel);font-weight:600}
+.concept .s{display:none}
+@media (max-width:560px){.concept{font-size:11px;letter-spacing:0}.concept .l{display:none}.concept .s{display:inline}}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(251,245,230,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(34,53,31,.1)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:30px;height:30px;flex:none}
+.brand span{font-family:var(--serif);font-size:21px;color:var(--husk);white-space:nowrap}
+.brand small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:-4px}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--husk);position:relative}
+.links a:not(.pill)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--silk);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.links a:not(.pill):hover::after{transform:scaleX(1)}
+.pill{background:var(--husk);color:var(--paper)!important;padding:9px 18px;border-radius:99px;transition:background .2s,transform .2s}
+.pill:hover{background:var(--silk);transform:translateY(-1px)}
+@media (max-width:899px){.links a:not(.pill){display:none}.pill{padding:8px 15px;font-size:14px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 80% at 85% 10%, rgba(242,193,78,.35), transparent 55%),
+  linear-gradient(180deg,var(--paper) 0%, var(--paper2) 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .1 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:72px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);font-weight:700}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--silk)}
+h1{font-family:var(--serif);font-weight:400;color:var(--husk);font-size:clamp(44px,7.2vw,92px);line-height:.98;letter-spacing:-.015em;margin:18px 0 22px}
+h1 em{font-style:normal;color:var(--silk);position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:.04em;height:.14em;background:var(--kernel);opacity:.55;z-index:-1;border-radius:4px}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:33ch}
+.lede b{color:var(--ink);font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:16px;padding:15px 24px;border-radius:99px;transition:transform .2s, box-shadow .2s, background .2s}
+.btn svg{width:18px;height:18px}
+.btn.solid{background:var(--husk);color:var(--paper);box-shadow:0 10px 24px -10px rgba(34,53,31,.7)}
+.btn.solid:hover{transform:translateY(-2px);background:var(--husk2)}
+.btn.ghost{border:2px solid var(--husk);color:var(--husk)}
+.btn.ghost:hover{background:var(--husk);color:var(--paper)}
+.days{display:flex;gap:8px;margin-top:34px;flex-wrap:wrap}
+.days span{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;padding:7px 12px;border-radius:99px;background:#fff;border:1px solid rgba(34,53,31,.15);color:var(--husk)}
+.days span i{font-style:normal;color:var(--silk)}
+.art{position:relative;aspect-ratio:1/1.08;max-width:520px;width:100%;justify-self:center}
+.art svg{width:100%;height:100%;overflow:visible}
+.silk path{animation:sway 5s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
+.silk path:nth-child(2n){animation-duration:6.5s}
+.silk path:nth-child(3n){animation-duration:4.2s;animation-delay:-1s}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+.leafL{animation:leafL 7s ease-in-out infinite;transform-origin:50% 95%;transform-box:fill-box}
+.leafR{animation:leafR 8s ease-in-out infinite;transform-origin:50% 95%;transform-box:fill-box}
+@keyframes leafL{0%,100%{transform:rotate(0)}50%{transform:rotate(-2.5deg)}}
+@keyframes leafR{0%,100%{transform:rotate(0)}50%{transform:rotate(2.5deg)}}
+.sun{animation:spin 60s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stamp{position:absolute;right:2%;bottom:6%;width:118px;height:118px;border-radius:50%;background:var(--husk);color:var(--butter);display:grid;place-items:center;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.14em;line-height:1.5;text-transform:uppercase;box-shadow:0 14px 30px -12px rgba(0,0,0,.45);transform:rotate(-10deg);border:3px dashed rgba(248,220,138,.55);outline:6px solid var(--husk)}
+.stamp b{display:block;font-family:var(--serif);font-size:22px;letter-spacing:0;text-transform:none;color:var(--kernel);font-weight:400;line-height:1.05;margin:2px 0}
+@media (max-width:899px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:34px;padding-bottom:48px;gap:12px}
+  .art{max-width:250px;order:-1;margin:-8px auto -10px}
+  .stamp{width:96px;height:96px;font-size:8.5px;right:-2%}
+  .stamp b{font-size:18px}
+}
+@media (max-width:400px){h1{font-size:40px;margin:10px 0 14px}.art{max-width:196px}.hero .wrap{padding-top:16px}.lede{font-size:16px}.cta{margin-top:22px}.btn{padding:13px 20px;font-size:15px}.stamp{width:84px;height:84px;font-size:7.5px}.stamp b{font-size:16px}}
+
+/* ticker */
+.ticker{background:var(--husk);color:var(--butter);overflow:hidden;white-space:nowrap;border-block:1px solid #000}
+.ticker .row{display:inline-flex;gap:34px;padding:14px 0;animation:tick 38s linear infinite;font-family:var(--serif);font-size:20px}
+.ticker .row span{display:inline-flex;align-items:center;gap:34px}
+.ticker .row span::after{content:"";width:9px;height:12px;border-radius:50% 50% 45% 45%;background:var(--kernel);display:inline-block}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:92px 0}
+@media (max-width:700px){section{padding:64px 0}}
+.head{max-width:680px;margin-bottom:44px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,58px);line-height:1.04;color:var(--husk);letter-spacing:-.01em;margin-top:12px}
+.head p{color:var(--muted);margin-top:14px;font-size:18px}
+
+/* markets */
+#markets{background:var(--paper)}
+.week{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:899px){.week{grid-template-columns:1fr;gap:14px}}
+.mk{position:relative;background:#fff;border-radius:var(--r);padding:28px 26px 26px;border:1px solid rgba(34,53,31,.12);transition:transform .25s, box-shadow .25s;overflow:hidden}
+.mk:hover{transform:translateY(-4px);box-shadow:0 24px 40px -24px rgba(34,53,31,.45)}
+.mk .d{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
+.mk .t{font-family:var(--serif);font-size:44px;line-height:1;color:var(--husk);margin:14px 0 10px;white-space:nowrap}
+.mk .t small{font-size:20px;color:var(--muted)}
+.mk h3{font-size:19px;font-weight:700;line-height:1.3}
+.mk p{color:var(--muted);font-size:15px;margin-top:6px}
+.mk a.dir{display:inline-flex;margin-top:14px;font-weight:700;font-size:14px;color:var(--husk);text-decoration:none;border-bottom:2px solid var(--kernel)}
+.mk a.dir:hover{border-color:var(--silk)}
+.mk .tag{position:absolute;top:22px;right:20px;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--kernel);color:var(--ink);padding:5px 10px;border-radius:99px;display:none}
+.mk.today{background:var(--husk);border-color:var(--husk);color:var(--paper)}
+.mk.today .d{color:var(--kernel)}.mk.today .t{color:var(--butter)}.mk.today .t small,.mk.today p{color:var(--sage)}
+.mk.today a.dir{color:var(--paper)}
+.mk.today .tag{display:inline-block}
+.mk .rows{position:absolute;right:-30px;bottom:-30px;width:140px;opacity:.09;pointer-events:none}
+.mk.today .rows{opacity:.16}
+.next{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:18px 22px;border-radius:16px;background:var(--paper2);border:1px dashed rgba(142,74,30,.35)}
+.next .dot{width:10px;height:10px;border-radius:50%;background:var(--silk);box-shadow:0 0 0 0 rgba(184,100,43,.6);animation:pulse 2s infinite;flex:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(184,100,43,0)}100%{box-shadow:0 0 0 0 rgba(184,100,43,0)}}
+.next p{font-weight:600;flex:1;min-width:200px}
+.next p span{color:var(--copper)}
+.next small{color:var(--muted);font-size:14px;width:100%}
+
+/* grown */
+#grown{background:linear-gradient(180deg,var(--paper2),var(--paper))}
+.feat{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:20px}
+@media (max-width:899px){.feat{grid-template-columns:1fr}}
+.card{border-radius:var(--r);padding:150px 28px 30px;position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card svg.ill{position:absolute;top:18px;right:18px;width:110px;height:110px}
+.card .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.8}
+.card h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.05;margin:8px 0}
+.card p{font-size:15.5px;opacity:.88;max-width:32ch}
+.c1{background:var(--husk);color:var(--paper)}
+.c1 h3{color:var(--kernel)}
+.c1 svg.ill{width:150px;height:170px;top:10px;right:6px}
+.c2{background:#F2D6CF;color:#4A1D17}
+.c3{background:var(--butter);color:var(--ink)}
+@media (max-width:899px){.card{min-height:0;padding-top:120px}.card svg.ill{width:90px;height:90px}.c1 svg.ill{width:100px;height:116px}}
+
+.full{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:899px){.full{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.full{grid-template-columns:1fr}}
+.grp{background:#fff;border:1px solid rgba(34,53,31,.12);border-radius:18px;padding:22px 22px 20px}
+.grp.veg{grid-column:span 2}
+@media (max-width:520px){.grp.veg{grid-column:auto}}
+.grp h4{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font-size:14px;font-weight:600;padding:5px 11px;border-radius:99px;background:var(--paper);border:1px solid rgba(34,53,31,.12);color:var(--husk);transition:background .2s,color .2s}
+.chips span:hover{background:var(--husk);color:var(--paper)}
+.src{margin-top:18px;font-size:13.5px;color:var(--muted)}
+
+/* why */
+#why{background:var(--husk);color:var(--paper);position:relative;overflow:hidden}
+#why h2{color:var(--butter)}
+#why .head p{color:var(--sage)}
+#why .eyebrow{color:var(--kernel)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+@media (max-width:899px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.why{grid-template-columns:1fr}}
+.w{border-top:2px solid rgba(248,220,138,.35);padding-top:20px}
+.w .n{font-family:var(--serif);font-size:54px;line-height:1;color:var(--kernel)}
+.w h3{font-size:18px;font-weight:700;margin:10px 0 6px;color:var(--paper)}
+.w p{font-size:15px;color:var(--sage)}
+.fieldrows{position:absolute;left:0;right:0;bottom:0;height:120px;opacity:.12;pointer-events:none}
+.quote{margin-top:56px;font-family:var(--serif);font-size:clamp(24px,3vw,36px);line-height:1.25;color:var(--paper);max-width:28ch;position:relative}
+.quote::before{content:"\201C";position:absolute;left:-.6em;top:-.15em;font-size:2em;color:var(--silk)}
+.quote cite{display:block;font-family:var(--mono);font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-top:14px}
+@media (max-width:560px){.quote{margin-left:22px}}
+
+/* find */
+#find .grid2{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:stretch}
+@media (max-width:899px){#find .grid2{grid-template-columns:1fr}}
+.contact{background:#fff;border-radius:var(--r);padding:34px 30px;border:1px solid rgba(34,53,31,.12)}
+.contact h3{font-family:var(--serif);font-weight:400;font-size:30px;color:var(--husk);line-height:1.1}
+.contact p{color:var(--muted);margin:10px 0 20px}
+.mail{display:flex;align-items:center;gap:14px;text-decoration:none;padding:16px 18px;border-radius:16px;background:var(--paper);border:1px solid rgba(34,53,31,.14);transition:background .2s,transform .2s}
+.mail:hover{background:var(--butter);transform:translateY(-2px)}
+.mail .ic{width:44px;height:44px;border-radius:12px;background:var(--husk);display:grid;place-items:center;flex:none}
+.mail .ic svg{width:20px;height:20px}
+.mail b{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.mail span{font-weight:700;font-size:16px;color:var(--husk);word-break:break-all}
+.list{list-style:none;margin-top:22px;display:grid;gap:10px}
+.list li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(34,53,31,.18);font-size:15.5px}
+.list li span:first-child{font-weight:700}
+.list li span:last-child{font-family:var(--mono);font-size:13.5px;color:var(--muted);text-align:right;white-space:nowrap}
+.list li.on span{color:var(--copper)}
+.list li.on span:first-child::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--silk);margin-right:8px;vertical-align:middle}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(34,53,31,.12);min-height:380px;position:relative;background:radial-gradient(circle at 50% 50%,rgba(184,100,43,.18) 0 40px,transparent 41px),repeating-linear-gradient(35deg,transparent 0 26px,rgba(34,53,31,.07) 26px 28px),repeating-linear-gradient(-55deg,transparent 0 40px,rgba(34,53,31,.06) 40px 42px),var(--paper2)}
+.map iframe{position:relative;width:100%;height:100%;min-height:380px;border:0;display:block}
+.map .lbl{position:absolute;left:14px;top:14px;background:var(--husk);color:var(--paper);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:99px}
+
+/* footer */
+footer{background:var(--ink);color:#BDB59C;padding:56px 0 40px;font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-end}
+footer .b{font-family:var(--serif);font-size:30px;color:var(--butter)}
+footer a{color:var(--kernel)}
+footer small{display:block;margin-top:8px;color:#8C866F}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(29,27,20,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15.5px;border-radius:14px;padding:14px 10px;min-width:0;white-space:nowrap}
+.bar a svg{width:18px;height:18px;flex:none}
+.bar .a1{background:var(--kernel);color:var(--ink)}
+.bar .a2{background:transparent;color:var(--paper);border:1.5px solid rgba(251,245,230,.35)}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal: content visible without JS */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in,.js.reveal-all .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+a:focus-visible{outline:3px solid var(--silk);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Davis Farm. Not live.</span><span class="s">Concept by <b>Code Craft Media</b> for Davis Farm · Not live</span></div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Davis Farm home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#22351F"/><ellipse cx="20" cy="19" rx="6.5" ry="11" fill="#F2C14E"/><path d="M20 30c-6-2-10-8-10-15 3 3 6 8 10 15zM20 30c6-2 10-8 10-15-3 3-6 8-10 15z" fill="#5E7F3A"/></svg>
+      <div><span>Davis Farm</span><small>McMinn County · TN</small></div>
+    </a>
+    <div class="links">
+      <a href="#markets">Market days</a>
+      <a href="#grown">What we grow</a>
+      <a href="#find">Find us</a>
+      <a class="pill" href="mailto:ddavis21974@gmail.com?subject=Hello%20Davis%20Farm">Email us</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="copy">
+      <span class="eyebrow">McMinn County, Tennessee</span>
+      <h1>Davis sweet corn, <em>three markets</em> a week.</h1>
+      <p class="lede">The name on the corn at your Knoxville-area market: <b>Davis sweet corn</b>, strawberries, popcorn and a long list of vegetables, every Tuesday, Thursday and Saturday.</p>
+      <div class="cta">
+        <a class="btn solid" href="#markets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>See market days</a>
+        <a class="btn ghost" href="mailto:ddavis21974@gmail.com?subject=Hello%20Davis%20Farm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Email the farm</a>
+      </div>
+      <div class="days" aria-label="Market schedule summary">
+        <span>TUE <i>4–7pm</i></span><span>THU <i>3–6pm</i></span><span>SAT <i>9–12</i></span>
+      </div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 432">
+        <defs>
+          <pattern id="kern" width="22" height="20" patternUnits="userSpaceOnUse">
+            <rect x="1.5" y="1.5" width="19" height="17" rx="8" fill="#F2C14E"/>
+            <rect x="4" y="3.5" width="9" height="5" rx="2.5" fill="#FBE7A6" opacity=".9"/>
+            <rect x="1.5" y="12" width="19" height="6.5" rx="3" fill="#D99A2B" opacity=".55"/>
+          </pattern>
+          <pattern id="kern2" width="22" height="20" patternUnits="userSpaceOnUse" patternTransform="translate(11 0)">
+            <rect x="1.5" y="1.5" width="19" height="17" rx="8" fill="#F2C14E"/>
+            <rect x="4" y="3.5" width="9" height="5" rx="2.5" fill="#FBE7A6" opacity=".9"/>
+            <rect x="1.5" y="12" width="19" height="6.5" rx="3" fill="#D99A2B" opacity=".55"/>
+          </pattern>
+          <clipPath id="ear"><path d="M200 62c42 0 62 58 62 150s-22 168-62 168-62-76-62-168 20-150 62-150z"/></clipPath>
+          <linearGradient id="shade" x1="0" x2="1"><stop offset="0" stop-color="#7A4A10" stop-opacity=".45"/><stop offset=".35" stop-color="#7A4A10" stop-opacity="0"/><stop offset=".7" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#7A4A10" stop-opacity=".5"/></linearGradient>
+          <linearGradient id="huskG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FAE5A"/><stop offset="1" stop-color="#3E5E2C"/></linearGradient>
+          <linearGradient id="huskD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E8F43"/><stop offset="1" stop-color="#22351F"/></linearGradient>
+        </defs>
+        <!-- sun -->
+        <g class="sun"><circle cx="300" cy="96" r="70" fill="#F8DC8A" opacity=".55"/>
+          <g stroke="#F2C14E" stroke-width="3" stroke-linecap="round" opacity=".7">
+            <path d="M300 6v16M300 170v16M210 96h16M374 96h16M236 32l11 11M353 149l11 11M364 32l-11 11M247 149l-11 11"/>
+          </g></g>
+        <!-- field rows -->
+        <g opacity=".22" stroke="#22351F" stroke-width="2" fill="none">
+          <path d="M-20 400q220-60 440 0M-20 418q220-56 440 0M-20 384q220-64 440 0"/>
+        </g>
+        <!-- back husks -->
+        <path class="leafL" d="M196 392C120 360 70 270 92 150c28 70 62 130 112 200z" fill="url(#huskD)"/>
+        <path class="leafR" d="M204 392c76-32 126-122 104-242-28 70-62 130-112 200z" fill="url(#huskD)"/>
+        <!-- ear -->
+        <g clip-path="url(#ear)">
+          <rect x="130" y="50" width="140" height="340" fill="url(#kern)"/>
+          <rect x="130" y="50" width="140" height="340" fill="url(#shade)"/>
+        </g>
+        <path d="M200 62c42 0 62 58 62 150s-22 168-62 168-62-76-62-168 20-150 62-150z" fill="none" stroke="#B87A1C" stroke-width="2" opacity=".5"/>
+        <!-- silk -->
+        <g class="silk" fill="none" stroke-linecap="round" stroke-width="2.4">
+          <path d="M200 66c-6-20-18-34-34-46" stroke="#B8642B"/>
+          <path d="M200 66c2-24 0-40-6-58" stroke="#C97A3A"/>
+          <path d="M200 66c8-18 22-30 40-38" stroke="#8E4A1E"/>
+          <path d="M200 66c-12-12-30-16-50-14" stroke="#D08A47"/>
+          <path d="M200 66c14-8 30-8 48 0" stroke="#B8642B"/>
+          <path d="M200 66c-2-16 6-34 18-48" stroke="#9C5424"/>
+        </g>
+        <!-- front husks -->
+        <path class="leafL" d="M200 404c-58-14-104-70-108-150 30 48 60 86 98 112 6 14 9 26 10 38z" fill="url(#huskG)"/>
+        <path class="leafR" d="M200 404c58-14 104-70 108-150-30 48-60 86-98 112-6 14-9 26-10 38z" fill="url(#huskG)"/>
+        <path d="M196 404c-40-30-70-90-74-180" stroke="#2F4A2A" stroke-width="1.6" fill="none" opacity=".45"/>
+        <path d="M204 404c40-30 70-90 74-180" stroke="#2F4A2A" stroke-width="1.6" fill="none" opacity=".45"/>
+        <path d="M188 400h24l-4 30h-16z" fill="#4A6B30"/>
+      </svg>
+      <div class="stamp"><div>Grown in<b>McMinn</b>County</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="row">
+  <span>Davis sweet corn</span><span>Strawberries</span><span>Popcorn</span><span>Ornamental corn</span><span>Blueberries</span><span>Watermelons</span><span>Tomatoes</span><span>Pumpkins</span><span>Okra</span><span>Pole beans</span>
+  <span>Davis sweet corn</span><span>Strawberries</span><span>Popcorn</span><span>Ornamental corn</span><span>Blueberries</span><span>Watermelons</span><span>Tomatoes</span><span>Pumpkins</span><span>Okra</span><span>Pole beans</span>
+</div></div>
+
+<section id="markets">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Market days</span>
+      <h2>Three markets. One easy week to remember.</h2>
+      <p>Every place to find Davis Farm, on one page, with today's market lit up.</p>
+    </div>
+    <div class="week grid">
+      <article class="mk rv" data-day="2">
+        <span class="tag">Today</span>
+        <div class="d">Tuesday</div>
+        <div class="t">4–7<small> pm</small></div>
+        <h3>Pavilion Farmers Market</h3>
+        <p>A weekday evening stop on the way home.</p>
+        <svg class="rows" viewBox="0 0 100 100"><path d="M0 80q50-30 100 0M0 60q50-30 100 0M0 40q50-30 100 0" stroke="currentColor" stroke-width="6" fill="none"/></svg>
+      </article>
+      <article class="mk rv" data-day="4">
+        <span class="tag">Today</span>
+        <div class="d">Thursday</div>
+        <div class="t">3–6<small> pm</small></div>
+        <h3>New Harvest Farmers Market</h3>
+        <p>Midweek top-up, straight from the farm.</p>
+        <svg class="rows" viewBox="0 0 100 100"><path d="M0 80q50-30 100 0M0 60q50-30 100 0M0 40q50-30 100 0" stroke="currentColor" stroke-width="6" fill="none"/></svg>
+      </article>
+      <article class="mk rv" data-day="6">
+        <span class="tag">Today</span>
+        <div class="d">Saturday</div>
+        <div class="t">9–12<small> noon</small></div>
+        <h3>Dixie Lee Farmers Market</h3>
+        <p>Renaissance Farragut parking lot, 12740 Kingston Pike.</p>
+        <a class="dir" href="https://www.google.com/maps/search/?api=1&amp;query=12740%20Kingston%20Pike%2C%20Knoxville%2C%20TN%2037934" target="_blank" rel="noopener">Directions →</a>
+        <svg class="rows" viewBox="0 0 100 100"><path d="M0 80q50-30 100 0M0 60q50-30 100 0M0 40q50-30 100 0" stroke="currentColor" stroke-width="6" fill="none"/></svg>
+      </article>
+    </div>
+    <div class="next rv">
+      <span class="dot" aria-hidden="true"></span>
+      <p id="nextTxt">Next market: <span>Tuesday, 4–7pm at Pavilion Farmers Market</span></p>
+      <small>Tailgate market seasons run spring through late fall. Email ahead to check what's picked this week.</small>
+    </div>
+  </div>
+</section>
+
+<section id="grown">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">What we grow</span>
+      <h2>Known for the corn. Worth the trip for everything else.</h2>
+      <p>The farm says it grows "a variety of vegetables and Davis sweet corn." Here's what "a variety" means.</p>
+    </div>
+    <div class="feat grid">
+      <article class="card c1 rv">
+        <svg class="ill" viewBox="0 0 120 140" aria-hidden="true"><ellipse cx="60" cy="62" rx="22" ry="46" fill="url(#kern)"/><path d="M60 128C30 118 16 84 22 44c10 30 22 56 38 84zM60 128c30-10 44-44 38-84-10 30-22 56-38 84z" fill="#5E7F3A"/><path d="M60 18c-4-8-10-12-18-14M60 18c2-8 6-12 12-16" stroke="#B8642B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <span class="k">The signature</span>
+        <h3>Davis sweet corn</h3>
+        <p>The crop the farm puts its name on. Ask at the stand when the first ears come in.</p>
+      </article>
+      <article class="card c2 rv">
+        <svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 92C26 80 16 56 22 40c6-14 22-16 28-10 6-6 22-4 28 10 6 16-4 40-28 52z" fill="#C8323A"/><g fill="#F8DC8A"><circle cx="38" cy="48" r="1.8"/><circle cx="52" cy="44" r="1.8"/><circle cx="62" cy="54" r="1.8"/><circle cx="44" cy="62" r="1.8"/><circle cx="58" cy="68" r="1.8"/><circle cx="50" cy="78" r="1.8"/><circle cx="34" cy="58" r="1.8"/></g><path d="M50 30c-10-10-22-8-26-4 10 2 18 4 26 4zm0 0c10-10 22-8 26-4-10 2-18 4-26 4zm0 0c0-10 4-16 8-20" fill="#3E5E2C" stroke="#3E5E2C" stroke-width="2"/></svg>
+        <span class="k">Spring</span>
+        <h3>Strawberries</h3>
+        <p>Plus blueberries, melons and watermelons as the season turns.</p>
+      </article>
+      <article class="card c3 rv">
+        <svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><g fill="#FFF8E6" stroke="#B87A1C" stroke-width="2"><circle cx="40" cy="40" r="13"/><circle cx="60" cy="34" r="12"/><circle cx="56" cy="56" r="14"/><circle cx="34" cy="62" r="11"/><circle cx="72" cy="58" r="10"/></g><g fill="#F2C14E"><circle cx="44" cy="44" r="3"/><circle cx="58" cy="60" r="3"/><circle cx="64" cy="36" r="2.5"/></g></svg>
+        <span class="k">Fall</span>
+        <h3>Popcorn &amp; ornamental corn</h3>
+        <p>From the snack bowl to the front porch.</p>
+      </article>
+    </div>
+
+    <div class="full grid">
+      <div class="grp veg rv">
+        <h4>Vegetables</h4>
+        <div class="chips">
+          <span>Sweet corn</span><span>Tomatoes</span><span>Green beans</span><span>Pole beans</span><span>Peas</span><span>Okra</span><span>Cucumber</span><span>Summer squash</span><span>Winter squash</span><span>Pumpkins</span><span>Eggplant</span><span>Sweet peppers</span><span>Hot peppers</span><span>Onions</span><span>Carrots</span><span>Beets</span><span>Radish</span><span>Turnips</span><span>Cabbage</span><span>Broccoli</span><span>Cauliflower</span><span>Brussels sprouts</span><span>Kale</span><span>Collards</span><span>Swiss chard</span><span>Lettuce</span><span>Watercress</span>
+        </div>
+      </div>
+      <div class="grp rv">
+        <h4>Fruits &amp; berries</h4>
+        <div class="chips"><span>Strawberries</span><span>Blueberries</span><span>Melons</span><span>Watermelons</span></div>
+      </div>
+      <div class="grp rv">
+        <h4>Grains &amp; specialty</h4>
+        <div class="chips"><span>Popcorn</span><span>Ornamental corn</span></div>
+      </div>
+    </div>
+    <p class="src rv">What's on the table changes with the season. Email the farm to ask what's ready.</p>
+  </div>
+</section>
+
+<section id="why">
+  <svg class="fieldrows" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><g stroke="#F8DC8A" stroke-width="3" fill="none"><path d="M0 120Q600 20 1200 120M0 100Q600 0 1200 100M0 80Q600-20 1200 80"/></g></svg>
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Why Davis Farm</span>
+      <h2>Short trip from field to market table.</h2>
+      <p>Grown by the farm, sold by the farm, at the tailgate markets it supplies each week.</p>
+    </div>
+    <div class="why grid">
+      <div class="w rv"><div class="n">01</div><h3>Grown in McMinn County</h3><p>East Tennessee soil, picked and brought to market by the farm itself.</p></div>
+      <div class="w rv"><div class="n">03</div><h3>Market days a week</h3><p>Tuesday, Thursday and Saturday: there's always a market day coming up.</p></div>
+      <div class="w rv"><div class="n">30+</div><h3>Crops on the list</h3><p>From strawberries and sweet corn to collards, pumpkins and winter squash.</p></div>
+      <div class="w rv"><div class="n">1</div><h3>Email away</h3><p>Questions about what's picked? One email reaches the farm directly.</p></div>
+    </div>
+    <p class="quote rv">…grow a variety of vegetables and Davis sweet corn.<cite>Davis Farm, ASAP Local Food Guide</cite></p>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Find us</span>
+      <h2>Come say hi at the market.</h2>
+      <p>Questions about what's picked, or want to set something aside? Email is the best way to reach the farm.</p>
+    </div>
+    <div class="grid2">
+      <div class="contact rv">
+        <h3>Get in touch</h3>
+        <p>The farm is in McMinn County, Tennessee. You'll find us at the markets below.</p>
+        <a class="mail" href="mailto:ddavis21974@gmail.com?subject=Hello%20Davis%20Farm">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F2C14E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <div><b>Email</b><span>ddavis21974@gmail.com</span></div>
+        </a>
+        <ul class="list" id="hours">
+          <li data-day="2"><span>Tuesday</span><span>Pavilion · 4–7pm</span></li>
+          <li data-day="4"><span>Thursday</span><span>New Harvest · 3–6pm</span></li>
+          <li data-day="6"><span>Saturday</span><span>Dixie Lee · 9am–12pm</span></li>
+        </ul>
+      </div>
+      <div class="map rv">
+        <span class="lbl">McMinn County, TN</span>
+        <iframe title="Map of McMinn County, Tennessee" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=McMinn%20County%2C%20Tennessee&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="b">Davis Farm</div>
+      <small>Davis sweet corn &amp; vegetables · McMinn County, Tennessee</small>
+      <small><a href="mailto:ddavis21974@gmail.com">ddavis21974@gmail.com</a></small>
+    </div>
+    <div>Concept by <a href="#top">Code Craft Media</a><small>A preview made for Davis Farm. Not a live site.</small></div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="a1" href="mailto:ddavis21974@gmail.com?subject=Hello%20Davis%20Farm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Email the farm</a>
+  <a class="a2" href="#markets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Market days</a>
+</div>
+
+<script>
+(function(){
+  var M={2:{d:'Tuesday',t:'4–7pm',m:'Pavilion Farmers Market'},4:{d:'Thursday',t:'3–6pm',m:'New Harvest Farmers Market'},6:{d:'Saturday',t:'9am–12pm',m:'Dixie Lee Farmers Market'}};
+  var now=new Date(),day=now.getDay(),h=now.getHours()+now.getMinutes()/60,end={2:19,4:18,6:12};
+  document.querySelectorAll('[data-day]').forEach(function(el){if(+el.getAttribute('data-day')===day){el.classList.add(el.tagName==='LI'?'on':'today')}});
+  var pick=null;
+  for(var i=0;i<8;i++){var d=(day+i)%7;if(M[d]&&!(i===0&&h>=end[d])){pick={i:i,d:d};break}}
+  if(pick){var x=M[pick.d],lead=pick.i===0?'Today':(pick.i===1?'Tomorrow':x.d);
+    document.getElementById('nextTxt').innerHTML='Next market: <span>'+lead+(pick.i>1?'':' ('+x.d+')')+', '+x.t+' at '+x.m+'</span>';}
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{document.documentElement.classList.add('reveal-all')}
+  setTimeout(function(){document.documentElement.classList.add('reveal-all')},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Southern Sprout — Knoxville</title>
+<meta name="description" content="Concept site for Southern Sprout: family-owned microgreens and edible flowers, grown indoors year-round in Knoxville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --leaf:#14301f;      /* deep chlorophyll */
+  --leaf-2:#1d4229;
+  --moss:#2f6b3c;
+  --shoot:#9fd36b;     /* pea-shoot green */
+  --shoot-2:#c8ea8f;
+  --paper:#f6f1e6;
+  --paper-2:#ede5d3;
+  --ink:#16241a;
+  --muted:#4d5c51;
+  --radish:#c2306b;    /* radish stem magenta */
+  --viola:#6b3fa0;
+  --nastur:#ef7d2d;
+  --sun:#f6c445;
+  --r:22px;
+  --bar:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+[class*="grid"]>*{min-width:0}
+
+/* concept banner */
+.concept{background:#0b1a11;color:#cfe3c0;font-size:12.5px;letter-spacing:.01em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--shoot);font-weight:600}
+.concept .short{display:none}
+@media (max-width:520px){.concept .long{display:none}.concept .short{display:inline}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(20,48,31,.88);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(159,211,107,.14)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--paper);font-weight:700;font-size:19px;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px}
+.links{display:flex;gap:26px;font-size:15px}
+.links a{color:#d9e8cd;text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--shoot);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.links a:hover::after{transform:scaleX(1)}
+.nav-call{background:var(--shoot);color:var(--leaf);text-decoration:none;font-weight:700;font-size:14.5px;padding:9px 16px;border-radius:999px;transition:transform .2s,background .2s;white-space:nowrap}
+.nav-call:hover{background:var(--shoot-2);transform:translateY(-1px)}
+@media (max-width:860px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 80% at 80% 0%,#235234 0%,var(--leaf) 55%,#0e2316 100%);color:var(--paper);overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(200,234,143,.10) 1px,transparent 1.2px);background-size:22px 22px;z-index:-1;mask-image:linear-gradient(180deg,#000 30%,transparent 95%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding-top:72px;padding-bottom:84px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--shoot)}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px}
+.hero h1{font-size:clamp(46px,7.2vw,96px);line-height:.92;letter-spacing:-.035em;font-weight:800;margin:20px 0 22px}
+.hero h1 .serif{font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--shoot-2)}
+.hero h1 .bloom{color:#ffb4cf}
+.hero p.lede{font-size:clamp(17px,1.6vw,20px);color:#d6e5cb;max-width:33em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--shoot);color:var(--leaf);box-shadow:0 10px 30px -10px rgba(159,211,107,.6)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(159,211,107,.75)}
+.btn-ghost{border:1.5px solid rgba(246,241,230,.35);color:var(--paper)}
+.btn-ghost:hover{background:rgba(246,241,230,.08);border-color:var(--paper)}
+.hero-note{margin-top:26px;display:flex;align-items:center;gap:10px;font-size:14px;color:#b9cdb0}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--shoot);box-shadow:0 0 0 0 rgba(159,211,107,.7);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(159,211,107,0)}100%{box-shadow:0 0 0 0 rgba(159,211,107,0)}}
+
+/* rack illustration */
+.rack{position:relative;width:100%;max-width:520px;margin-left:auto}
+.rack svg{width:100%;height:auto;overflow:visible}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+.sway.d2{animation-delay:-1.3s}.sway.d3{animation-delay:-2.6s}.sway.d4{animation-delay:-3.7s}
+@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+.glow{animation:glow 4s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55}50%{opacity:.9}}
+.float{animation:float 7s ease-in-out infinite}
+.float.f2{animation-delay:-2s}.float.f3{animation-delay:-4.5s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(12deg)}}
+.float{transform-box:fill-box;transform-origin:center}
+
+@media (max-width:420px){.cta{flex-wrap:nowrap;gap:10px}.cta .btn{flex:1 1 auto;justify-content:center;padding:14px 14px;font-size:15px;white-space:nowrap}}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;padding-top:40px;padding-bottom:56px;gap:22px}
+  .rack{max-width:400px;margin:0 auto;order:2}
+}
+
+/* ticker */
+.ticker{background:var(--shoot);color:var(--leaf);overflow:hidden;border-top:1px solid rgba(0,0,0,.08);border-bottom:1px solid rgba(0,0,0,.08)}
+.ticker-track{display:flex;gap:0;width:max-content;animation:tick 34s linear infinite}
+.ticker span{font-family:"Instrument Serif",serif;font-style:italic;font-size:26px;padding:12px 22px;white-space:nowrap;display:flex;align-items:center;gap:22px}
+.ticker span::after{content:"✿";font-style:normal;font-size:16px;color:var(--radish)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:96px 0}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--moss)}
+h2{font-size:clamp(36px,5vw,62px);line-height:1;letter-spacing:-.03em;font-weight:800;margin:14px 0 18px}
+h2 .serif{font-style:italic;font-weight:400;color:var(--radish);letter-spacing:-.01em}
+.intro{max-width:36em;color:var(--muted);font-size:18px}
+@media (max-width:600px){section{padding:68px 0}}
+
+/* grow cards */
+.grow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.card{background:#fffdf7;border:1px solid #e3dac5;border-radius:var(--r);padding:26px 22px 24px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 48px -26px rgba(20,48,31,.45);border-color:#cfc3a6}
+.card .art{height:120px;margin:-6px -6px 14px;display:flex;align-items:flex-end;justify-content:center;border-radius:16px;background:linear-gradient(180deg,var(--tint,#eef6e0),transparent)}
+.card .art svg{height:112px;width:auto}
+.card h3{font-size:23px;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+.tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--moss);background:#eaf3dc;padding:5px 10px;border-radius:999px}
+@media (max-width:1000px){.grow-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grow-grid{grid-template-columns:1fr;gap:12px;margin-top:34px}.card{display:grid;grid-template-columns:92px 1fr;column-gap:16px;padding:16px 16px 16px 14px;align-items:start}.card .art{grid-row:1/4;height:92px;margin:0;align-items:center;border-radius:14px}.card .art svg{height:78px}.card h3{font-size:20px;margin:2px 0 4px}.card p{font-size:14.5px;line-height:1.45}.card .tag{margin-top:10px;justify-self:start;font-size:11px}}
+
+/* range strip */
+.range{margin-top:22px;background:var(--leaf);color:var(--paper);border-radius:var(--r);padding:30px 28px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.range .q{font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(24px,3vw,34px);line-height:1.15}
+.range .q em{color:var(--shoot-2)}
+.range small{display:block;margin-top:8px;color:#a9c19c;font-size:13px;font-family:"Bricolage Grotesque",sans-serif;font-style:normal}
+.scale{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.chip{border:1.5px solid rgba(200,234,143,.4);border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px;white-space:nowrap}
+.chip.rare{background:var(--radish);border-color:var(--radish);color:#fff}
+.arrow{color:var(--shoot);font-size:20px}
+@media (max-width:760px){.range{grid-template-columns:1fr;padding:26px 22px;gap:18px}}
+
+/* how */
+.how{background:var(--paper-2);position:relative;overflow:hidden}
+.how-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fact{background:var(--paper);border-radius:18px;padding:22px 20px;border:1px solid #ddd2b9;transition:transform .3s,background .3s}
+.fact:hover{transform:translateY(-3px);background:#fffdf7}
+.fact .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px;background:var(--leaf);color:var(--shoot)}
+.fact .ic svg{width:22px;height:22px}
+.fact h3{font-size:18px;letter-spacing:-.01em;line-height:1.2;margin-bottom:4px}
+.fact p{font-size:14.5px;color:var(--muted)}
+.tower{background:var(--leaf);border-radius:28px;padding:28px;position:relative;overflow:hidden}
+.tower svg{width:100%;height:auto}
+.tower-cap{position:absolute;left:22px;bottom:18px;right:22px;color:#cfe3c0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;display:flex;justify-content:space-between;gap:10px}
+@media (max-width:900px){.how-grid{grid-template-columns:1fr;gap:34px}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+
+/* market / hours */
+.market{background:var(--leaf);color:var(--paper);position:relative;overflow:hidden}
+.market .kicker{color:var(--shoot)}
+.market h2 .serif{color:#ffb4cf}
+.market .intro{color:#c3d6b7}
+.mk-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+.panel{background:rgba(246,241,230,.05);border:1px solid rgba(200,234,143,.18);border-radius:var(--r);padding:28px}
+.panel h3{font-size:22px;letter-spacing:-.01em;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.season{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--shoot);color:var(--leaf)}
+.season.off{background:transparent;border:1px solid rgba(200,234,143,.4);color:#c3d6b7}
+.dates{color:#a9c19c;font-size:14px;margin:6px 0 18px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:12px;font-size:16px;border-bottom:1px dashed rgba(200,234,143,.14)}
+.hours li:last-child{border-bottom:0}
+.hours li span:last-child{text-align:right;color:#d6e5cb}
+.hours li.closed span:last-child{color:#7f977a}
+.hours li.today{background:var(--shoot);color:var(--leaf);font-weight:700;border-bottom-color:transparent}
+.hours li.today span:last-child{color:var(--leaf)}
+.hours li.today span:first-child::after{content:" · Today";font-weight:600;font-size:13px}
+.mk-note{margin-top:16px;font-size:13.5px;color:#93ab88}
+.map{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(200,234,143,.18);min-height:320px;background:radial-gradient(circle at 50% 45%,rgba(159,211,107,.18),transparent 45%),repeating-linear-gradient(0deg,transparent 0 38px,rgba(200,234,143,.07) 38px 39px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(200,234,143,.07) 38px 39px),#0e2316}
+.map::before{content:"\25CF  Market Square \00B7 downtown Knoxville";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--shoot);font-weight:700;font-size:15px;white-space:nowrap}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:saturate(.85)}
+.visit{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.visit .btn-ghost{font-size:15px;padding:12px 18px}
+@media (max-width:900px){.mk-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.panel{padding:22px 16px}.hours li{padding:10px 8px;font-size:15px}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}
+.big-tel{display:inline-block;font-size:clamp(36px,6.4vw,78px);font-weight:800;letter-spacing:-.035em;line-height:1;text-decoration:none;color:var(--leaf);background:linear-gradient(transparent 70%,var(--shoot-2) 70%);transition:background-size .3s}
+.big-tel:hover{color:var(--radish)}
+.socials{display:grid;gap:12px}
+.social{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-radius:16px;background:#fffdf7;border:1px solid #e3dac5;text-decoration:none;font-weight:600;transition:transform .25s,border-color .25s}
+.social:hover{transform:translateX(4px);border-color:var(--moss)}
+.social small{display:block;font-weight:500;color:var(--muted);font-size:13.5px}
+.social svg{width:22px;height:22px;flex:none}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:#0b1a11;color:#9fb594;padding:46px 0 calc(40px + var(--bar) + env(safe-area-inset-bottom));font-size:14px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
+footer .brand{color:var(--paper)}
+footer a{color:var(--shoot)}
+
+/* sticky bar */
+.callbar{display:none}
+@media (max-width:760px){
+  :root{--bar:76px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(11,26,17,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(159,211,107,.2)}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font-weight:700;text-decoration:none;font-size:15.5px}
+  .callbar svg{width:18px;height:18px}
+  .callbar .c1{background:var(--shoot);color:var(--leaf)}
+  .callbar .c2{border:1.5px solid rgba(246,241,230,.3);color:var(--paper)}
+  .nav-call{display:none}
+}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.js.show-all .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+a:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+
+<div class="concept" role="note"><span class="long">Concept site by <b>Code Craft Media</b>, made for Southern Sprout. Not live.</span><span class="short">Concept by <b>Code Craft Media</b> · Not live</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Southern Sprout home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#9fd36b"/><path d="M16 26V15" stroke="#14301f" stroke-width="2.2" stroke-linecap="round"/><path d="M16 16c0-5-3.5-7.5-8-7.5 0 4.6 3.4 7.5 8 7.5Z" fill="#14301f"/><path d="M16 14.5c0-4.6 3-7 7.5-7 0 4.3-3 7-7.5 7Z" fill="#2f6b3c"/></svg>
+      Southern Sprout
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#grow">What we grow</a>
+      <a href="#how">How it's grown</a>
+      <a href="#market">Find us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-call" href="tel:+19046314152">Call (904) 631-4152</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Knoxville, TN · Family-owned</span>
+      <h1>Grown <span class="serif">straight up,</span> ready by <span class="serif bloom">Saturday.</span></h1>
+      <p class="lede">Microgreens and edible flowers from an indoor vertical grow space in Knoxville, raised year-round without pesticides or harmful chemicals. Find them at Market Square.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="tel:+19046314152"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call to order</a>
+        <a class="btn btn-ghost" href="#market">Market hours →</a>
+      </div>
+      <div class="hero-note"><span class="dot" aria-hidden="true"></span><span>Winter market: Saturdays 10 AM – 2 PM, Market Square</span></div>
+    </div>
+
+    <div class="rack reveal" aria-hidden="true">
+      <svg viewBox="0 0 520 520" role="img">
+        <defs>
+          <linearGradient id="lamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d8ff" stop-opacity=".55"/><stop offset="1" stop-color="#f3d8ff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="tray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2a1f"/><stop offset="1" stop-color="#22170f"/></linearGradient>
+          <g id="micro">
+            <path d="M0 0 C0 -14 1 -24 0 -34" stroke="#d9efb8" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M0 -33 C-9 -40 -16 -38 -18 -32 C-12 -28 -5 -29 0 -33Z" fill="#8cc95c"/>
+            <path d="M0 -33 C9 -41 16 -39 18 -33 C12 -28 5 -29 0 -33Z" fill="#a7dc72"/>
+          </g>
+          <g id="radish">
+            <path d="M0 0 C1 -12 0 -22 1 -30" stroke="#d6457f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M1 -29 C-8 -38 -16 -35 -17 -29 C-10 -25 -4 -26 1 -29Z" fill="#6fb24a"/>
+            <path d="M1 -29 C9 -37 16 -35 17 -29 C11 -25 5 -25 1 -29Z" fill="#84c45a"/>
+          </g>
+          <g id="pea">
+            <path d="M0 0 C-2 -16 3 -28 0 -44" stroke="#bfe39a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M0 -44 c4 -4 10 -4 9 2 c-2 4 -7 2 -6 -2" stroke="#bfe39a" stroke-width="1.6" fill="none"/>
+            <ellipse cx="-8" cy="-30" rx="8" ry="5" transform="rotate(-25 -8 -30)" fill="#7dbd52"/>
+            <ellipse cx="7" cy="-36" rx="7" ry="4.5" transform="rotate(20 7 -36)" fill="#93cf62"/>
+          </g>
+          <g id="viola">
+            <circle cx="-6" cy="-6" r="7" fill="#7a4fb3"/><circle cx="6" cy="-6" r="7" fill="#7a4fb3"/>
+            <circle cx="-7" cy="4" r="7" fill="#f6c445"/><circle cx="7" cy="4" r="7" fill="#f6c445"/><circle cx="0" cy="8" r="7.5" fill="#f2b632"/>
+            <path d="M0 3 l-4 6 M0 3 l0 7 M0 3 l4 6" stroke="#4a2b77" stroke-width="1.1"/>
+            <circle cx="0" cy="2" r="2.4" fill="#fff4c8"/>
+          </g>
+          <g id="borage">
+            <path d="M0 -12 L3 -3 L12 -4 L5 2 L8 11 L0 5 L-8 11 L-5 2 L-12 -4 L-3 -3Z" fill="#5d8fe0"/>
+            <circle r="3" fill="#1f2f63"/>
+          </g>
+          <g id="nast">
+            <circle r="13" fill="#ef7d2d"/>
+            <path d="M0 0 L0 -13 M0 0 L12 -4 M0 0 L8 10 M0 0 L-8 10 M0 0 L-12 -4" stroke="#c4471b" stroke-width="1.3"/>
+            <circle r="3.2" fill="#f6c445"/>
+          </g>
+        </defs>
+
+        <!-- frame -->
+        <rect x="58" y="18" width="10" height="490" rx="4" fill="#0c1d12"/>
+        <rect x="452" y="18" width="10" height="490" rx="4" fill="#0c1d12"/>
+
+        <!-- shelf 1 -->
+        <rect x="70" y="28" width="380" height="8" rx="4" fill="#e9d9ff" class="glow"/>
+        <path d="M78 36 H442 L470 150 H50Z" fill="url(#lamp)" class="glow"/>
+        <rect x="80" y="140" width="360" height="22" rx="6" fill="url(#tray)"/>
+        <rect x="80" y="140" width="360" height="6" rx="3" fill="#5b4330"/>
+        <g transform="translate(0 142)">
+          <use href="#micro" x="100" class="sway"/><use href="#micro" x="126" class="sway d2"/><use href="#micro" x="150" class="sway d3"/><use href="#micro" x="176" class="sway d4"/>
+          <use href="#micro" x="200" class="sway"/><use href="#micro" x="224" class="sway d3"/><use href="#micro" x="248" class="sway d2"/>
+          <use href="#radish" x="280" class="sway d4"/><use href="#radish" x="302" class="sway"/><use href="#radish" x="326" class="sway d2"/><use href="#radish" x="350" class="sway d3"/><use href="#radish" x="374" class="sway"/><use href="#radish" x="398" class="sway d4"/><use href="#radish" x="420" class="sway d2"/>
+        </g>
+        <rect x="66" y="162" width="388" height="6" rx="3" fill="#0c1d12"/>
+
+        <!-- shelf 2 -->
+        <rect x="70" y="178" width="380" height="8" rx="4" fill="#e9d9ff" class="glow" style="animation-delay:-1.5s"/>
+        <path d="M78 186 H442 L470 300 H50Z" fill="url(#lamp)" class="glow" style="animation-delay:-1.5s"/>
+        <rect x="80" y="290" width="360" height="22" rx="6" fill="url(#tray)"/>
+        <rect x="80" y="290" width="360" height="6" rx="3" fill="#5b4330"/>
+        <g transform="translate(0 292)">
+          <use href="#pea" x="102" class="sway d2"/><use href="#pea" x="132" class="sway"/><use href="#pea" x="162" class="sway d3"/><use href="#pea" x="192" class="sway d4"/><use href="#pea" x="222" class="sway d2"/>
+          <use href="#micro" x="256" class="sway"/><use href="#micro" x="280" class="sway d4"/><use href="#micro" x="304" class="sway d2"/>
+          <use href="#pea" x="338" class="sway d3"/><use href="#pea" x="368" class="sway"/><use href="#pea" x="398" class="sway d2"/><use href="#pea" x="424" class="sway d4"/>
+        </g>
+        <rect x="66" y="312" width="388" height="6" rx="3" fill="#0c1d12"/>
+
+        <!-- shelf 3 : flowers -->
+        <rect x="70" y="328" width="380" height="8" rx="4" fill="#e9d9ff" class="glow" style="animation-delay:-3s"/>
+        <path d="M78 336 H442 L470 450 H50Z" fill="url(#lamp)" class="glow" style="animation-delay:-3s"/>
+        <rect x="80" y="440" width="360" height="22" rx="6" fill="url(#tray)"/>
+        <rect x="80" y="440" width="360" height="6" rx="3" fill="#5b4330"/>
+        <g transform="translate(0 442)">
+          <g class="sway"><path d="M110 0 C110 -20 112 -34 110 -48" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><use href="#viola" x="110" y="-56"/></g>
+          <g class="sway d2"><path d="M150 0 C152 -16 148 -26 150 -36" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><use href="#borage" x="150" y="-44"/></g>
+          <g class="sway d3"><path d="M196 0 C194 -22 198 -40 196 -58" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><ellipse cx="184" cy="-24" rx="10" ry="8" fill="#5f9e44"/><use href="#nast" x="196" y="-66"/></g>
+          <g class="sway d4"><path d="M240 0 C240 -16 242 -28 240 -40" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><use href="#viola" x="240" y="-48"/></g>
+          <g class="sway"><path d="M282 0 C284 -20 280 -38 282 -52" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><use href="#borage" x="282" y="-60"/></g>
+          <g class="sway d2"><path d="M326 0 C324 -16 328 -30 326 -42" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><ellipse cx="338" cy="-18" rx="10" ry="8" fill="#5f9e44"/><use href="#nast" x="326" y="-50"/></g>
+          <g class="sway d3"><path d="M372 0 C372 -22 374 -40 372 -56" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><use href="#viola" x="372" y="-64"/></g>
+          <g class="sway d4"><path d="M414 0 C416 -16 412 -26 414 -36" stroke="#4f8a3a" stroke-width="2.4" fill="none"/><use href="#borage" x="414" y="-44"/></g>
+        </g>
+        <rect x="66" y="462" width="388" height="6" rx="3" fill="#0c1d12"/>
+
+        <!-- floating petals -->
+        <g class="float"><use href="#borage" transform="translate(30 110) scale(.8)"/></g>
+        <g class="float f2"><use href="#viola" transform="translate(492 240) scale(.75)"/></g>
+        <g class="float f3"><use href="#nast" transform="translate(24 380) scale(.7)"/></g>
+        <g class="float f2"><circle cx="496" cy="70" r="5" fill="#ffb4cf"/></g>
+        <g class="float"><circle cx="500" cy="420" r="4" fill="#c8ea8f"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>pea shoots</span><span>radish</span><span>cantaloupe</span><span>amaranth</span><span>edible flowers</span><span>fresh herbs</span><span>wheat grass</span>
+    <span>pea shoots</span><span>radish</span><span>cantaloupe</span><span>amaranth</span><span>edible flowers</span><span>fresh herbs</span><span>wheat grass</span>
+  </div>
+</div>
+
+<section id="grow">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">What we grow</span>
+      <h2>Small harvests, <span class="serif">big flavor.</span></h2>
+      <p class="intro">Four things fill the Southern Sprout table. The microgreens and edible flowers grow indoors in Knoxville, so they are here in January as easily as in June.</p>
+    </div>
+    <div class="grow-grid">
+      <article class="card reveal" style="--tint:#eaf5dc">
+        <div class="art"><svg viewBox="0 0 160 112" aria-hidden="true"><rect x="10" y="92" width="140" height="16" rx="5" fill="#3b2a1f"/><g transform="translate(0 94)"><use href="#micro" x="28"/><use href="#micro" x="50"/><use href="#radish" x="72"/><use href="#pea" x="96"/><use href="#micro" x="118"/><use href="#radish" x="138"/></g></svg></div>
+        <h3>Microgreens</h3>
+        <p>From everyday pea shoots and radish to rarer varieties like cantaloupe and amaranth.</p>
+        <span class="tag">Year-round</span>
+      </article>
+      <article class="card reveal" style="--tint:#f6e6f6">
+        <div class="art"><svg viewBox="0 0 160 112" aria-hidden="true"><use href="#viola" transform="translate(46 56) scale(1.6)"/><use href="#borage" transform="translate(104 40) scale(1.5)"/><use href="#nast" transform="translate(112 86) scale(1.1)"/><use href="#borage" transform="translate(30 96) scale(.8)"/></svg></div>
+        <h3>Edible flowers</h3>
+        <p>Color for plates, cocktails, cakes and boards, grown right alongside the greens.</p>
+        <span class="tag">Grown indoors</span>
+      </article>
+      <article class="card reveal" style="--tint:#e5f1e2">
+        <div class="art"><svg viewBox="0 0 160 112" aria-hidden="true"><g fill="#4f8a3a"><path d="M80 108 V30" stroke="#3f7a2f" stroke-width="3" fill="none"/><ellipse cx="64" cy="44" rx="16" ry="9" transform="rotate(-30 64 44)"/><ellipse cx="96" cy="58" rx="16" ry="9" transform="rotate(30 96 58)" fill="#6aa74c"/><ellipse cx="62" cy="76" rx="16" ry="9" transform="rotate(-25 62 76)" fill="#6aa74c"/><ellipse cx="98" cy="88" rx="15" ry="8" transform="rotate(25 98 88)"/><ellipse cx="80" cy="24" rx="9" ry="14" fill="#7fbd5c"/></g></svg></div>
+        <h3>Fresh herbs</h3>
+        <p>Fresh herbs for the kitchen, sold alongside the greens and flowers.</p>
+        <span class="tag">Fresh</span>
+      </article>
+      <article class="card reveal" style="--tint:#eef6d6">
+        <div class="art"><svg viewBox="0 0 160 112" aria-hidden="true"><rect x="30" y="92" width="100" height="16" rx="5" fill="#3b2a1f"/><g stroke-linecap="round" stroke-width="3.2" fill="none"><path d="M40 94 C40 70 38 50 42 22" stroke="#7cbd4f"/><path d="M50 94 C50 66 54 44 50 14" stroke="#95cf60"/><path d="M60 94 C62 70 58 48 62 26" stroke="#7cbd4f"/><path d="M70 94 C70 64 72 40 70 10" stroke="#a7dc72"/><path d="M80 94 C80 68 78 46 82 18" stroke="#7cbd4f"/><path d="M90 94 C92 66 88 44 92 12" stroke="#95cf60"/><path d="M100 94 C100 70 102 48 98 24" stroke="#a7dc72"/><path d="M110 94 C110 66 112 44 110 16" stroke="#7cbd4f"/><path d="M120 94 C120 72 118 54 122 30" stroke="#95cf60"/></g></svg></div>
+        <h3>Wheat grass</h3>
+        <p>Fresh wheat grass, bright green and ready for the juicer.</p>
+        <span class="tag">Sprouts</span>
+      </article>
+    </div>
+
+    <div class="range reveal">
+      <div class="q">From <em>pea shoots</em> to <em>amaranth.</em><small>The range, in Southern Sprout's own words: common to rare.</small></div>
+      <div class="scale" aria-label="Variety range">
+        <span class="chip">Pea shoots</span><span class="chip">Radish</span><span class="arrow" aria-hidden="true">→</span><span class="chip rare">Cantaloupe</span><span class="chip rare">Amaranth</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap how-grid">
+    <div class="tower reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 420">
+        <defs><linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d4ff" stop-opacity=".5"/><stop offset="1" stop-color="#f1d4ff" stop-opacity="0"/></linearGradient></defs>
+        <g fill="none" stroke="rgba(200,234,143,.10)"><path d="M0 70H400M0 140H400M0 210H400M0 280H400M0 350H400"/><path d="M80 0V420M160 0V420M240 0V420M320 0V420"/></g>
+        <g>
+          <rect x="60" y="30" width="280" height="6" rx="3" fill="#e9d9ff" class="glow"/><path d="M66 36H334L352 108H48Z" fill="url(#beam)" class="glow"/>
+          <rect x="70" y="100" width="260" height="16" rx="5" fill="#3b2a1f"/>
+          <g transform="translate(0 102)"><use href="#micro" x="92" class="sway"/><use href="#micro" x="118" class="sway d2"/><use href="#micro" x="144" class="sway d3"/><use href="#radish" x="174" class="sway"/><use href="#radish" x="200" class="sway d4"/><use href="#radish" x="226" class="sway d2"/><use href="#micro" x="256" class="sway d3"/><use href="#micro" x="282" class="sway"/><use href="#micro" x="308" class="sway d4"/></g>
+          <rect x="60" y="140" width="280" height="6" rx="3" fill="#e9d9ff" class="glow" style="animation-delay:-2s"/><path d="M66 146H334L352 218H48Z" fill="url(#beam)" class="glow" style="animation-delay:-2s"/>
+          <rect x="70" y="210" width="260" height="16" rx="5" fill="#3b2a1f"/>
+          <g transform="translate(0 212)"><use href="#pea" x="96" class="sway d2"/><use href="#pea" x="130" class="sway"/><use href="#pea" x="164" class="sway d3"/><use href="#pea" x="198" class="sway d4"/><use href="#pea" x="232" class="sway"/><use href="#pea" x="266" class="sway d2"/><use href="#pea" x="300" class="sway d3"/></g>
+          <rect x="60" y="250" width="280" height="6" rx="3" fill="#e9d9ff" class="glow" style="animation-delay:-3s"/><path d="M66 256H334L352 328H48Z" fill="url(#beam)" class="glow" style="animation-delay:-3s"/>
+          <rect x="70" y="320" width="260" height="16" rx="5" fill="#3b2a1f"/>
+          <g transform="translate(0 322)">
+            <g class="sway"><path d="M100 0V-36" stroke="#4f8a3a" stroke-width="2.4"/><use href="#viola" x="100" y="-44"/></g>
+            <g class="sway d2"><path d="M150 0V-26" stroke="#4f8a3a" stroke-width="2.4"/><use href="#borage" x="150" y="-34"/></g>
+            <g class="sway d3"><path d="M200 0V-40" stroke="#4f8a3a" stroke-width="2.4"/><use href="#nast" x="200" y="-50"/></g>
+            <g class="sway d4"><path d="M250 0V-30" stroke="#4f8a3a" stroke-width="2.4"/><use href="#viola" x="250" y="-38"/></g>
+            <g class="sway"><path d="M300 0V-36" stroke="#4f8a3a" stroke-width="2.4"/><use href="#borage" x="300" y="-44"/></g>
+          </g>
+        </g>
+      </svg>
+      <div class="tower-cap"><span>Indoor · Vertical</span><span>Year-round</span></div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">How it's grown</span>
+      <h2>Up the wall, <span class="serif">not out in the field.</span></h2>
+      <p class="intro" style="margin-bottom:28px">Southern Sprout grows in an indoor vertical space. That means greens and flowers in every season, grown without pesticides or other harmful chemicals.</p>
+      <div class="facts">
+        <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16M4 10h16M4 16h16M6 4v16M18 4v16"/></svg></div><h3>Indoor vertical farm</h3><p>Stacked growing, indoors, right here in Knoxville.</p></div>
+        <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Year-round</h3><p>Greens and flowers in every season, winter included.</p></div>
+        <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21c-5-3-8-7-8-11a8 8 0 0 1 16 0c0 4-3 8-8 11Z"/><path d="M9 11l2 2 4-4"/></svg></div><h3>No pesticides</h3><p>Organic practices (not certified) and GMO-free.</p></div>
+        <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></div><h3>Family-owned</h3><p>A small business, family-owned and operated.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market" id="market">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Find us</span>
+      <h2>Saturdays on <span class="serif">Market Square.</span></h2>
+      <p class="intro">Southern Sprout sells at the Market Square Farmers Market in downtown Knoxville, summer and winter. Cards (credit/debit) welcome.</p>
+    </div>
+    <div class="mk-grid">
+      <div class="reveal">
+        <div class="panel">
+          <h3>Winter market <span class="season" id="winterTag">In season</span></h3>
+          <p class="dates">Nov 7, 2026 – Mar 27, 2027 · Market Square, downtown Knoxville</p>
+          <ul class="hours" id="hours">
+            <li data-d="1" class="closed"><span>Monday</span><span>Growing</span></li>
+            <li data-d="2" class="closed"><span>Tuesday</span><span>Growing</span></li>
+            <li data-d="3" class="closed"><span>Wednesday</span><span>Growing</span></li>
+            <li data-d="4" class="closed"><span>Thursday</span><span>Growing</span></li>
+            <li data-d="5" class="closed"><span>Friday</span><span>Growing</span></li>
+            <li data-d="6"><span>Saturday</span><span>10 AM – 2 PM</span></li>
+            <li data-d="0" class="closed"><span>Sunday</span><span>Growing</span></li>
+          </ul>
+          <p class="mk-note">Summer market (May – Oct): Wednesdays 10 AM – 1 PM and Saturdays 9 AM – 1 PM. Other days, call or message.</p>
+        </div>
+        <div class="visit">
+          <a class="btn btn-primary" href="tel:+19046314152">Call (904) 631-4152</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Market+Square%2C+Knoxville%2C+TN" target="_blank" rel="noopener">Directions →</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map of Market Square, Knoxville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Market%20Square%2C%20Knoxville%2C%20TN&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker">Order &amp; questions</span>
+      <h2>Garnish, <span class="serif">sorted.</span></h2>
+      <p class="intro" style="margin-bottom:26px">Planning a menu, an event or just a better salad? Give Southern Sprout a call.</p>
+      <a class="big-tel" href="tel:+19046314152">(904) 631-4152</a>
+    </div>
+    <div class="socials reveal">
+      <a class="social" href="https://www.instagram.com/southernsproutshop/" target="_blank" rel="noopener"><span>Instagram<small>@southernsproutshop</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a class="social" href="https://www.facebook.com/southernsproutshop" target="_blank" rel="noopener"><span>Facebook<small>/southernsproutshop</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2Z"/></svg></a>
+      <a class="social" href="#market"><span>Market Square<small>Saturdays, downtown Knoxville</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#9fd36b"/><path d="M16 26V15" stroke="#14301f" stroke-width="2.2" stroke-linecap="round"/><path d="M16 16c0-5-3.5-7.5-8-7.5 0 4.6 3.4 7.5 8 7.5Z" fill="#14301f"/><path d="M16 14.5c0-4.6 3-7 7.5-7 0 4.3-3 7-7.5 7Z" fill="#2f6b3c"/></svg>Southern Sprout</a>
+    <span>Microgreens &amp; edible flowers · Knoxville, TN</span>
+    <span>Concept by <a href="#top">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c1" href="tel:+19046314152"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Call</a>
+  <a class="c2" href="https://www.instagram.com/southernsproutshop/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Message</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var now=new Date(), day=now.getDay();
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  // winter season tag
+  var m=now.getMonth(); var tag=document.getElementById('winterTag');
+  if(tag && m>=4 && m<=9){tag.textContent='Nov – Mar';tag.classList.add('off');}
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else { d.classList.add('show-all'); }
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

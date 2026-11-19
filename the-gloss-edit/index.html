@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Gloss Edit — Franklin, TN</title>
+<meta name="description" content="The Gloss Edit: a curated salon in Franklin, TN for seamless blonding, dimensional color and premium extensions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FAF7F2; --ivory2:#F2ECE2; --ink:#1C1C1C; --ink2:#4a4642; --champ:#D8B98A; --champ-d:#9C7B4C; --line:rgba(28,28,28,.14);
+  --serif:'Bodoni Moda', 'Didot', Georgia, serif; --sans:'Jost', system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--ink);color:#d9d2c6;font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 10px;line-height:1.4}
+.concept b{color:var(--champ);font-weight:500}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(250,247,242,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:var(--serif);font-size:22px;text-decoration:none;letter-spacing:.01em}
+.logo i{font-style:italic;color:var(--champ-d)}
+.navlinks{display:none;gap:28px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.navlinks a{text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ink);transition:right .3s}
+.navlinks a:hover::after{right:0}
+.navbook{font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);padding:9px 14px;transition:background .25s,color .25s}
+.navbook:hover{background:var(--ink);color:var(--ivory)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:34px 0 46px}
+.masthead{display:flex;justify-content:space-between;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);border-bottom:1px solid var(--ink);padding-bottom:9px;margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,13.4vw,128px);line-height:.92;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;display:block}
+.sheen{background:linear-gradient(100deg,#8f6e41 0%,#b8945f 28%,#dcc092 42%,#b8945f 56%,#8f6e41 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s ease-in-out infinite}
+@keyframes sheen{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.hero .dek{font-size:17px;line-height:1.55;color:var(--ink2);max-width:30ch;margin:22px 0 26px}
+.hero .dek strong{color:var(--ink);font-weight:500}
+.ctas{display:grid;grid-template-columns:1fr;gap:10px}
+.ctas .btn{justify-content:center}
+@media (min-width:480px){.ctas{display:flex;flex-wrap:wrap}}
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:15px 22px;border:1px solid var(--ink);transition:transform .2s,background .25s,color .25s;font-weight:500}
+.btn.solid{background:var(--ink);color:var(--ivory)}
+.btn.solid:hover{background:#000;transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--ink);color:var(--ivory);transform:translateY(-2px)}
+.btn svg{width:14px;height:14px}
+.cover{position:relative;margin-top:34px;aspect-ratio:4/5;max-height:520px;width:100%}
+.cover svg{width:100%;height:100%}
+.cover .tag{position:absolute;left:14px;bottom:14px;background:var(--ivory);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;padding:7px 10px;border:1px solid var(--ink)}
+.cover .issue{position:absolute;right:14px;top:14px;font-family:var(--serif);font-style:italic;color:var(--ivory);font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+
+/* quote strip */
+.quote{background:var(--ink);color:var(--ivory);padding:64px 0;position:relative;overflow:hidden}
+.quote::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(216,185,138,.18) 48%,transparent 62%);background-size:300% 100%;animation:sweep 7s linear infinite}
+@keyframes sweep{from{background-position:120% 0}to{background-position:-120% 0}}
+.quote .wrap{position:relative}
+.quote .big{display:none}
+.quote .sheen,.final .sheen{background-image:linear-gradient(100deg,#9C7B4C 0%,#D8B98A 28%,#fff6e4 42%,#D8B98A 56%,#a8865a 100%)}
+.quote blockquote{position:relative;font-family:var(--serif);font-size:clamp(30px,8.4vw,64px);line-height:1.08;font-weight:400;max-width:16ch}
+.quote blockquote em{color:var(--champ)}
+.quote .src{position:relative;margin-top:22px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#bdb4a6}
+.quote .mark{font-family:var(--serif);font-size:120px;line-height:.6;color:var(--champ);display:block;height:44px}
+
+/* section heads */
+section{scroll-margin-top:64px}
+.shead{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:8px}
+.shead h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,9vw,60px);line-height:1}
+.shead h2 i{color:var(--champ-d)}
+.shead span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2)}
+.lede{color:var(--ink2);max-width:52ch;margin:14px 0 6px;font-size:15.5px}
+
+/* edits */
+#edits{padding:72px 0 30px}
+.edit{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;padding:28px 0;border-bottom:1px solid var(--line);position:relative;text-decoration:none;transition:padding .3s}
+.edit .num{font-family:var(--serif);font-size:64px;line-height:.85;font-style:italic;grid-row:span 3}
+.edit .num.sheen{animation-duration:7s}
+.edit .kicker{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--champ-d);font-weight:500}
+.edit h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,7.4vw,44px);line-height:1.05}
+.edit h3 small{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-left:6px;vertical-align:middle}
+.edit p{font-size:14.5px;color:var(--ink2);max-width:46ch}
+.edit .go{position:absolute;right:0;top:32px;width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;transition:background .25s,color .25s,transform .25s}
+.edit .go svg{width:14px;height:14px}
+.edit:hover .go,.edit:focus-visible .go{background:var(--ink);color:var(--ivory);transform:rotate(-45deg)}
+.edit .swatch{grid-column:2;height:6px;margin-top:12px;max-width:220px;border-radius:3px}
+.note{font-size:12.5px;color:var(--ink2);margin-top:18px;font-style:italic}
+
+/* specialties */
+#craft{padding:60px 0 70px}
+.spec-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:10px}
+.spec{padding:22px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:flex-start}
+.spec svg{flex:0 0 46px;width:46px;height:46px}
+.spec h4{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.15}
+.spec p{font-size:14.5px;color:var(--ink2)}
+.pull{margin-top:34px;padding:26px 22px;background:var(--ivory2);border-left:3px solid var(--champ);font-family:var(--serif);font-size:21px;line-height:1.35;font-style:italic}
+.pull small{display:block;font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);margin-top:12px}
+
+/* visit */
+#visit{background:var(--ivory2);padding:70px 0 70px;border-top:1px solid var(--line)}
+.visit-grid{display:grid;grid-template-columns:1fr;gap:34px;margin-top:20px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:12px 10px;border-bottom:1px dashed var(--line);font-size:15.5px;transition:background .3s}
+.hours li span:first-child{letter-spacing:.06em}
+.hours li.closed span:last-child{color:#8a837a;font-style:italic}
+.hours li.today{background:var(--ink);color:var(--ivory);border-bottom-color:transparent;border-radius:2px}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:var(--champ);color:var(--ink);padding:2px 7px;border-radius:20px;vertical-align:2px}
+.hours li.today.closed span:last-child{color:#cfc6b8}
+.addr{font-family:var(--serif);font-size:24px;line-height:1.3;margin-bottom:6px}
+.addr-sub{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:18px}
+.map{border:1px solid var(--ink);aspect-ratio:4/3;width:100%;overflow:hidden;background:#e9e2d6}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.85) sepia(.15) contrast(.95)}
+.visit-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+
+/* policies */
+#policy{padding:64px 0}
+.pol{display:grid;grid-template-columns:1fr;gap:0;margin-top:10px}
+.pol div{padding:20px 0;border-bottom:1px solid var(--line)}
+.pol h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--champ-d);font-weight:600;margin-bottom:6px}
+.pol p{font-size:15px;color:var(--ink2)}
+
+/* final */
+.final{background:var(--ink);color:var(--ivory);padding:80px 0;text-align:center;position:relative;overflow:hidden}
+.final h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,11vw,96px);line-height:.98;position:relative}
+.final p{color:#cfc6b8;margin:18px auto 28px;max-width:34ch;position:relative}
+.final .btn{border-color:var(--champ);position:relative}
+.final .btn.solid{background:var(--champ);color:var(--ink)}
+.final .btn.ghost{color:var(--ivory)}
+.final .btn.ghost:hover{background:var(--ivory);color:var(--ink)}
+.final .ctas{justify-content:center}
+.final .rings{position:absolute;inset:0;opacity:.18;pointer-events:none}
+
+footer{background:var(--ink);color:#9d958a;border-top:1px solid #333;padding:28px 0 30px;font-size:12.5px}
+footer .wrap{display:flex;flex-direction:column;gap:8px}
+footer a{color:#d9d2c6}
+footer .credit{letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;color:var(--champ)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(250,247,242,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;border:1px solid var(--ink)}
+.bar a.book{background:var(--ink);color:var(--ivory)}
+.bar svg{width:15px;height:15px}
+
+/* reveal */
+.rv{transition:opacity .9s ease,transform .9s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){.sheen,.quote::before{animation:none}.rv{transition:none}.js .rv:not(.in){opacity:1;transform:none}}
+
+/* desktop */
+@media (min-width:860px){
+  .wrap{padding:0 40px}
+  .navlinks{display:flex}
+  .hero{padding:50px 0 80px}
+  .hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:56px;align-items:end}
+  .hero h1{font-size:clamp(72px,8vw,118px)}
+  .quote .wrap{display:grid;grid-template-columns:1.4fr 1fr;align-items:end;gap:40px}
+  .quote .big{display:block;font-family:var(--serif);font-style:italic;font-size:150px;line-height:.8;text-align:right}
+  .quote .big small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#bdb4a6;margin-top:16px}
+  .hero .dek{font-size:19px;max-width:34ch}
+  .cover{margin-top:0;max-height:600px}
+  .edits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px}
+  .edit{grid-template-columns:1fr;border-bottom:none;border-top:1px solid var(--line);padding:30px 0}
+  .edit .num{grid-row:auto;font-size:96px;margin-bottom:14px}
+  .edit .swatch{grid-column:1}
+  .edit .go{top:36px}
+  .spec-grid{grid-template-columns:repeat(2,1fr);gap:0 50px}
+  .craft-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:start}
+  .pull{margin-top:10px}
+  .visit-grid{grid-template-columns:1fr 1.2fr;gap:60px}
+  .pol{grid-template-columns:repeat(3,1fr);gap:0 40px}
+  .bar{display:none}
+  body{padding-bottom:0}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for The Gloss Edit. Not live.</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">The Gloss <i>Edit</i></a>
+    <div class="navlinks"><a href="#edits">The Edits</a><a href="#craft">The Craft</a><a href="#visit">Visit</a><a href="#policy">Policies</a></div>
+    <a class="navbook" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="masthead"><span>Franklin, TN</span><span>The Blonde Issue</span></div>
+    <div class="hero-grid">
+      <div>
+        <h1>Healthy, glossy hair <em class="sheen">is the ultimate accessory.</em></h1>
+        <p class="dek">A curated salon suite in Franklin for <strong>seamless blonding, dimensional color and premium extensions</strong>.</p>
+        <div class="ctas">
+          <a class="btn solid" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">Book your edit
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+          <a class="btn ghost" href="tel:+16157158575">Call 615-715-8575</a>
+        </div>
+      </div>
+      <div class="cover rv" aria-hidden="true">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2a2622"/><stop offset="1" stop-color="#121111"/>
+            </linearGradient>
+            <linearGradient id="hair" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#8a6a40"/><stop offset=".3" stop-color="#D8B98A"/><stop offset=".5" stop-color="#fbf0d9"/><stop offset=".7" stop-color="#D8B98A"/><stop offset="1" stop-color="#7c5d36"/>
+            </linearGradient>
+            <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <clipPath id="frame"><rect x="0" y="0" width="400" height="500"/></clipPath>
+          </defs>
+          <g clip-path="url(#frame)">
+            <rect width="400" height="500" fill="url(#bg)"/>
+            <!-- flowing strands -->
+            <g fill="none" stroke="url(#hair)" stroke-linecap="round">
+              <path d="M40 -20 C 120 120, 20 260, 120 520" stroke-width="34" opacity=".95"/>
+              <path d="M95 -20 C 175 130, 75 280, 180 520" stroke-width="30" opacity=".9"/>
+              <path d="M150 -20 C 230 140, 130 300, 240 520" stroke-width="36"/>
+              <path d="M205 -20 C 285 150, 185 310, 300 520" stroke-width="30" opacity=".92"/>
+              <path d="M260 -20 C 340 160, 240 320, 360 520" stroke-width="34" opacity=".95"/>
+              <path d="M315 -20 C 395 170, 295 330, 420 520" stroke-width="28" opacity=".85"/>
+            </g>
+            <g fill="none" stroke="#fff7e6" stroke-opacity=".35" stroke-width="1.2">
+              <path d="M60 -20 C 140 120, 40 260, 140 520"/><path d="M118 -20 C 198 130, 98 280, 203 520"/>
+              <path d="M172 -20 C 252 140, 152 300, 262 520"/><path d="M228 -20 C 308 150, 208 310, 323 520"/>
+              <path d="M284 -20 C 364 160, 264 320, 384 520"/>
+            </g>
+            <rect x="-200" y="0" width="160" height="500" fill="url(#gl)" transform="skewX(-18)">
+              <animate attributeName="x" from="-260" to="560" dur="5.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="18" y="18" width="364" height="464" fill="none" stroke="#FAF7F2" stroke-opacity=".55"/>
+          </g>
+        </svg>
+        <span class="issue">No. 13: Room 13</span>
+        <span class="tag">Blonding · Color · Extensions</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="quote">
+  <div class="wrap">
+  <div class="rv">
+    <span class="mark">“</span>
+    <blockquote>From luminous blondes to <em>effortless lived-in color.</em></blockquote>
+    <p class="src">The Gloss Edit · Signature approach</p>
+  </div>
+    <div class="big" aria-hidden="true"><span class="sheen">Nº 13</span><small>Suite 145 · Room 13 · Cool Springs</small></div>
+  </div>
+</section>
+
+<section id="edits">
+  <div class="wrap">
+    <div class="shead rv"><h2>The <i>Edits</i></h2><span>Service menu</span></div>
+    <p class="lede rv">Three signatures, each one a personalized appointment. Pick your edit, then book in a few taps.</p>
+    <div class="edits-grid">
+      <a class="edit rv" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">
+        <span class="num sheen">01</span>
+        <span class="kicker">Partial</span>
+        <h3>The Halo</h3>
+        <p>The partial edit. See timing and availability when you book.</p>
+        <span class="swatch" style="background:linear-gradient(90deg,#9C7B4C,#D8B98A 55%,#F4E6CC)"></span>
+        <span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="edit rv" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">
+        <span class="num sheen">02</span>
+        <span class="kicker">Full</span>
+        <h3>The Max</h3>
+        <p>The full edit. See timing and availability when you book.</p>
+        <span class="swatch" style="background:linear-gradient(90deg,#7c5d36,#D8B98A 40%,#fbf0d9 70%,#D8B98A)"></span>
+        <span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="edit rv" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">
+        <span class="num sheen">03</span>
+        <span class="kicker">Signature</span>
+        <h3>The Luxe Edit</h3>
+        <p>The namesake edit. See timing and availability when you book.</p>
+        <span class="swatch" style="background:linear-gradient(90deg,#1C1C1C,#9C7B4C 35%,#D8B98A 65%,#fff6e4)"></span>
+        <span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+    <p class="note rv">Pricing and availability live on the booking page. Buy Now, Pay Later is offered in person for $50–$4,000 bookings, with approval needed before your appointment.</p>
+  </div>
+</section>
+
+<section id="craft">
+  <div class="wrap craft-grid">
+    <div>
+      <div class="shead rv"><h2>The <i>Craft</i></h2><span>Specialties</span></div>
+      <div class="spec-grid">
+        <div class="spec rv">
+          <svg viewBox="0 0 46 46" fill="none" stroke="#1C1C1C" stroke-width="1.2"><circle cx="23" cy="23" r="21"/><path d="M14 10c6 8-4 18 3 26M22 9c6 9-4 19 3 28M30 10c6 8-4 18 3 26" stroke="#9C7B4C" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><h4>Seamless blonding</h4><p>Luminous blondes and effortless lived-in color.</p></div>
+        </div>
+        <div class="spec rv">
+          <svg viewBox="0 0 46 46" fill="none" stroke="#1C1C1C" stroke-width="1.2"><circle cx="23" cy="23" r="21"/><rect x="12" y="14" width="6" height="18" fill="#9C7B4C" stroke="none"/><rect x="20" y="14" width="6" height="18" fill="#D8B98A" stroke="none"/><rect x="28" y="14" width="6" height="18" fill="#F2E3C8" stroke="#1C1C1C" stroke-width=".6"/></svg>
+          <div><h4>Dimensional color</h4><p>Dimensional color and precise highlights, made for you.</p></div>
+        </div>
+        <div class="spec rv">
+          <svg viewBox="0 0 46 46" fill="none" stroke="#1C1C1C" stroke-width="1.2"><circle cx="23" cy="23" r="21"/><path d="M13 12h20M15 12v22M21 12v24M27 12v22M33 12v20" stroke="#9C7B4C" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><h4>Premium extensions</h4><p>Precise extension application by a blonde extension specialist.</p></div>
+        </div>
+        <div class="spec rv">
+          <svg viewBox="0 0 46 46" fill="none" stroke="#1C1C1C" stroke-width="1.2"><circle cx="23" cy="23" r="21"/><path d="M23 11l3 8.5 9 .3-7 5.6 2.5 8.6L23 29l-7.5 5 2.5-8.6-7-5.6 9-.3z" stroke="#9C7B4C" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          <div><h4>Healthy hair first</h4><p>Every appointment is built for hair health and longevity.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="pull rv">“From luminous blondes to effortless lived-in color, our signature approach ensures your hair always looks polished.”<small>From The Gloss Edit</small></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="shead rv"><h2>Visit <i>Room 13</i></h2><span>Hours &amp; location</span></div>
+    <div class="visit-grid">
+      <div class="rv">
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>9 AM – 5 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>11 AM – 7 PM</span></li>
+          <li data-d="3" class="closed"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4"><span>Thursday</span><span>11 AM – 7 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9 AM – 5 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9 AM – 4 PM</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="rv">
+        <p class="addr">615 Bakers Bridge Ave<br>Suite 145, Room 13</p>
+        <p class="addr-sub">Franklin, TN 37067 · Salons by JC Cool Springs</p>
+        <div class="map"><iframe title="Map to The Gloss Edit" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=615%20Bakers%20Bridge%20Ave%20Suite%20145%2C%20Franklin%2C%20TN%2037067&output=embed"></iframe></div>
+        <div class="visit-ctas">
+          <a class="btn solid" href="tel:+16157158575">Call</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=615%20Bakers%20Bridge%20Ave%2C%20Franklin%2C%20TN%2037067" target="_blank" rel="noopener">Directions</a>
+          <a class="btn ghost" href="https://www.instagram.com/beautyy.by.emi" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="policy">
+  <div class="wrap">
+    <div class="shead rv"><h2>The <i>Fine Print</i></h2><span>Policies</span></div>
+    <div class="pol">
+      <div class="rv"><h4>Changes</h4><p>Please give 24–48 hours' notice to cancel or reschedule.</p></div>
+      <div class="rv"><h4>Late changes</h4><p>Changes within 48 hours are charged 50% of the service. Changes within 24 hours, or a no-show, are charged 100%.</p></div>
+      <div class="rv"><h4>Running late</h4><p>Arriving more than 15 minutes late may mean a charge and a new time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="rings" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#D8B98A"><circle cx="200" cy="200" r="60"/><circle cx="200" cy="200" r="110"/><circle cx="200" cy="200" r="160"/><circle cx="200" cy="200" r="210"/><circle cx="200" cy="200" r="260"/></g></svg>
+  <div class="wrap rv">
+    <h2>Your next <i class="sheen">edit</i> starts here.</h2>
+    <p>Book The Halo, The Max or The Luxe Edit at The Gloss Edit in Cool Springs.</p>
+    <div class="ctas">
+      <a class="btn solid" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">Book now</a>
+      <a class="btn ghost" href="tel:+16157158575">615-715-8575</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>The Gloss Edit · 615 Bakers Bridge Ave, Suite 145, Room 13, Franklin, TN 37067 · <a href="tel:+16157158575">615-715-8575</a></span>
+    <span class="credit">Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a href="tel:+16157158575"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 5a2 2 0 012-2z"/></svg>Call</a>
+  <a class="book" href="https://theglossedit.glossgenius.com/" target="_blank" rel="noopener">Book your edit</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]');
+  if(li) li.classList.add('today');
+  var root=document.documentElement;
+  if(!('IntersectionObserver' in window)) return;
+  root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

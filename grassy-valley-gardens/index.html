@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Grassy Valley Gardens — Fountain City, Knoxville</title>
+<meta name="description" content="Heirloom tomatoes and rare chiles from a small garden plot in Fountain City, Knoxville. Concept site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C8102E; --red-d:#9E0C24; --orange:#F28C28; --vine:#1F3B2D; --vine-2:#2C5240; --leaf:#5E8C4A;
+  --paper:#F6EEDC; --paper-2:#EFE3C8; --ink:#1B1B17; --muted:#5A5848; --line:rgba(31,59,45,.18);
+  --serif:"Abril Fatface", Georgia, serif; --sans:"Karla", system-ui, -apple-system, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 40px}}
+/* paper grain */
+.grain{position:relative;isolation:isolate}
+.grain::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+  background-image:radial-gradient(rgba(31,59,45,.07) 1px,transparent 1.2px);background-size:7px 7px}
+
+/* concept banner */
+.concept{background:var(--ink);color:#EDE6D3;font-size:12px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--orange);font-weight:700}
+.concept .s{display:none}
+@media (max-width:560px){.concept .l{display:none}.concept .s{display:inline}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(246,238,220,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand span{font-family:var(--serif);font-size:20px;color:var(--vine);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav ul{display:none;list-style:none;gap:28px;font-weight:700;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--vine);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--red);transition:right .25s}
+.nav ul a:hover::after{right:0}
+.nav .call-s{font-weight:800;font-size:14px;text-decoration:none;color:#fff;background:var(--red);padding:9px 14px;border-radius:999px;white-space:nowrap}
+@media (min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{padding:44px 0 56px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.hero-grid>*{min-width:0}
+@media (min-width:900px){.hero{padding:80px 0 96px}.hero-grid{grid-template-columns:1.15fr .85fr;gap:56px}h1{font-size:clamp(56px,5.6vw,80px)}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+h1{font-family:var(--serif);font-weight:400;color:var(--vine);font-size:clamp(42px,11.5vw,80px);line-height:.98;letter-spacing:-.01em;margin:16px 0 18px}
+h1 em{font-style:normal;color:var(--red)}
+h1 .o{color:var(--orange)}
+.lede{font-size:clamp(17px,4.4vw,20px);color:var(--muted);max-width:34em}
+.lede strong{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:16px;text-decoration:none;padding:15px 22px;border-radius:999px;transition:transform .15s, box-shadow .2s, background .2s}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 6px 0 var(--red-d)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--red-d)}
+.btn-ghost{border:2px solid var(--vine);color:var(--vine)}
+.btn-ghost:hover{background:var(--vine);color:var(--paper)}
+.btn svg{width:18px;height:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:13px;font-weight:700;color:var(--vine);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+
+/* hero art: stacked packets */
+.art{position:relative;max-width:440px;width:100%;margin:0 auto;aspect-ratio:1/1.02}
+.pk{position:absolute;width:62%;aspect-ratio:3/4.1;border-radius:10px;box-shadow:0 18px 40px rgba(31,59,45,.22);overflow:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.pk svg{width:100%;height:100%}
+.pk.a{left:2%;top:8%;transform:rotate(-8deg);z-index:1}
+.pk.b{right:2%;top:2%;transform:rotate(7deg);z-index:2}
+.art:hover .pk.a{transform:rotate(-12deg) translateX(-8px)}
+.art:hover .pk.b{transform:rotate(11deg) translateX(8px)}
+.stamp{position:absolute;z-index:3;left:50%;bottom:0;transform:translateX(-50%) rotate(-4deg);background:var(--vine);color:var(--paper);font-family:var(--serif);font-size:20px;padding:12px 20px;border-radius:6px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.stamp small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);font-weight:800}
+
+/* vine divider */
+.vine{height:34px;background:var(--vine);position:relative;overflow:hidden}
+.vine svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* sections */
+section{padding:72px 0}
+@media (min-width:900px){section{padding:104px 0}}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8.4vw,60px);line-height:1.02;color:var(--vine);margin:12px 0 14px}
+.sub{color:var(--muted);font-size:17px;max-width:38em}
+
+/* packets */
+.packets{display:grid;grid-template-columns:1fr;gap:22px;margin-top:40px}
+.packets>*{min-width:0}
+@media (min-width:700px){.packets{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1050px){.packets{grid-template-columns:repeat(3,1fr)}}
+.packet{position:relative;background:#FFF9EC;border-radius:14px;border:1.5px solid var(--vine);overflow:hidden;transition:transform .25s, box-shadow .25s}
+.packet:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 18px 36px rgba(31,59,45,.18)}
+.packet .flap{height:22px;background:repeating-linear-gradient(90deg,transparent 0 10px,rgba(31,59,45,.18) 10px 11px),var(--paper-2);border-bottom:1.5px dashed var(--vine)}
+.packet .top{position:relative;padding:22px 22px 18px;color:#fff;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end}
+.packet .top svg.ill{position:absolute;right:-10px;top:-6px;width:58%;max-width:190px;opacity:.95}
+.packet.next .top svg.ill{width:44%;top:4px;right:6px}
+.packet.tom .top{background:linear-gradient(160deg,var(--orange),#E0601B)}
+.packet.chi .top{background:linear-gradient(160deg,var(--red),#7E0A1E)}
+.packet.next .top{background:repeating-linear-gradient(-45deg,var(--vine) 0 14px,var(--vine-2) 14px 28px)}
+.packet .kind{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;opacity:.9;position:relative}
+.packet h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1;position:relative;margin-top:6px;max-width:70%}
+.packet .body{padding:20px 22px 24px}
+.packet p{color:var(--muted);font-size:15.5px}
+.packet dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:16px;font-size:14px;border-top:1px dashed var(--line);padding-top:14px}
+.packet dl>*{min-width:0}
+.packet dt{font-weight:800;color:var(--vine);text-transform:uppercase;font-size:11.5px;letter-spacing:.12em;padding-top:2px}
+.packet dd{color:var(--ink)}
+.heat{margin-top:16px}
+.heat .lab{display:flex;justify-content:space-between;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--vine)}
+.heat .bar{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:6px}
+.heat .bar>*{min-width:0}
+.heat .bar i{height:18px;border-radius:4px;display:block}
+.heat .bar i:nth-child(1){background:#7FB069}.heat .bar i:nth-child(2){background:#E8C547}.heat .bar i:nth-child(3){background:var(--orange)}.heat .bar i:nth-child(4){background:#E0481E}.heat .bar i:nth-child(5){background:var(--red)}
+.heat .note{font-size:13px;color:var(--muted);margin-top:6px;font-style:italic}
+.tag-concept{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--orange);color:var(--ink);padding:3px 8px;border-radius:4px;margin-bottom:10px}
+
+/* about / why */
+.about{background:var(--vine);color:var(--paper)}
+.about .h2{color:var(--paper)}
+.about .sub{color:#C9D3C4}
+.about .eyebrow{color:var(--orange)}
+.facts{display:grid;grid-template-columns:1fr;gap:14px;margin-top:40px}
+.facts>*{min-width:0}
+@media (min-width:640px){.facts{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1050px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{border:1px solid rgba(246,238,220,.22);border-radius:14px;padding:22px;background:rgba(255,255,255,.03);transition:background .2s,border-color .2s}
+.fact:hover{background:rgba(255,255,255,.07);border-color:var(--orange)}
+.fact .big{font-family:var(--serif);font-size:44px;line-height:1;color:var(--orange)}
+.fact h3{font-size:17px;font-weight:800;margin:10px 0 4px}
+.fact p{font-size:15px;color:#C9D3C4}
+.quote{margin-top:44px;font-family:var(--serif);font-size:clamp(24px,5.6vw,38px);line-height:1.2;max-width:22em}
+.quote span{color:var(--orange)}
+.quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FB09A;margin-top:12px}
+
+/* markets */
+.mk-grid{display:grid;grid-template-columns:1fr;gap:28px;margin-top:40px}
+.mk-grid>*{min-width:0}
+@media (min-width:960px){.mk-grid{grid-template-columns:1fr 1fr;gap:40px}}
+.week{align-self:start;list-style:none;border:1.5px solid var(--vine);border-radius:16px;overflow:hidden;background:#FFF9EC}
+.week li{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center;padding:14px 18px;border-bottom:1px dashed var(--line);transition:background .2s}
+.week li>*{min-width:0}
+.week li:last-child{border-bottom:0}
+.week .d{font-weight:800;color:var(--vine);text-transform:uppercase;letter-spacing:.1em;font-size:13px}
+.week .w{font-size:15px;color:var(--muted)}
+.week li.on .w{color:var(--ink)}
+.week li.on .w b{display:block;font-weight:800;color:var(--ink)}
+.week li.on{background:#FFF1D9}
+.week li.today{background:var(--vine);border-bottom-color:transparent}
+.week li.today .d,.week li.today .w,.week li.today .w b{color:var(--paper)}
+.week li.today .d::after{content:"Today";display:block;font-size:10px;letter-spacing:.12em;color:var(--orange);margin-top:2px}
+.mk-cards{display:grid;gap:16px}
+.mk-cards>*{min-width:0}
+.mk{border-radius:16px;padding:22px;background:var(--paper-2);border-left:6px solid var(--red)}
+.mk.sat{border-left-color:var(--orange)}
+.mk .when{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.mk.sat .when{color:#B75A0C}
+.mk h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1;color:var(--vine);margin:6px 0 6px}
+.mk p{font-size:15px;color:var(--muted)}
+.mk a{display:inline-block;margin-top:10px;font-weight:800;font-size:14px;color:var(--vine);text-underline-offset:3px}
+.mk a:hover{color:var(--red)}
+.fine{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* find */
+.find{background:var(--paper-2)}
+.find-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:stretch;margin-top:36px}
+.find-grid>*{min-width:0}
+@media (min-width:960px){.find-grid{grid-template-columns:.9fr 1.1fr;gap:40px}}
+.map{border-radius:18px;overflow:hidden;border:1.5px solid var(--vine);min-height:320px;background:#dfe5d6}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.contact{background:#FFF9EC;border-radius:18px;padding:28px;border:1.5px solid var(--vine)}
+.contact .phone{font-family:var(--serif);font-size:clamp(32px,8.6vw,46px);color:var(--red);text-decoration:none;display:inline-block;margin:6px 0 10px;line-height:1.05}
+.contact .phone:hover{color:var(--red-d)}
+.contact p{color:var(--muted)}
+.contact .ctas{margin-top:20px}
+
+footer{background:var(--ink);color:#BDB7A4;padding:44px 0 36px;font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:14px}
+@media (min-width:800px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:flex-end}}
+footer .fb{font-family:var(--serif);color:var(--paper);font-size:26px}
+footer a{color:var(--orange)}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.25fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(27,27,23,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar>*{min-width:0}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;font-weight:800;font-size:15.5px;text-decoration:none;white-space:nowrap}
+.callbar .c{background:var(--red);color:#fff}
+.callbar .m{background:var(--paper);color:var(--vine)}
+.callbar svg{width:18px;height:18px;flex:none}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .rv.pre{opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{transition:none}.js .rv.pre{opacity:1;transform:none}}
+@keyframes sway{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(-6deg) translateY(-4px)}}
+@keyframes sway2{0%,100%{transform:rotate(7deg)}50%{transform:rotate(9deg) translateY(-6px)}}
+@media (prefers-reduced-motion:no-preference){.pk.a{animation:sway 6s ease-in-out infinite}.pk.b{animation:sway2 7s ease-in-out infinite}.art:hover .pk{animation-play-state:paused}}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Grassy Valley Gardens. Not live.</span><span class="s">Concept by <b>Code Craft Media</b> · Not live</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Grassy Valley Gardens home">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><circle cx="18" cy="23" r="13" fill="#F28C28"/><path d="M18 10c-3-4-8-4-10-2 4 0 6 2 7 4-3-1-7 0-8 3 4-2 7-1 9 0 0 3 0 0 2 0 2-1 5-2 9 0-1-3-5-4-8-3 1-2 3-4 7-4-2-2-7-2-8 2z" fill="#1F3B2D"/><path d="M27 6c5 2 8 8 6 16-1 5-4 9-6 12 1-5 1-9-1-13-1-4-1-10 1-15z" fill="#C8102E"/></svg>
+      <span>Grassy Valley Gardens</span>
+    </a>
+    <ul><li><a href="#grow">What we grow</a></li><li><a href="#about">About</a></li><li><a href="#markets">Markets</a></li><li><a href="#find">Contact</a></li></ul>
+    <a class="call-s" href="tel:+18657893416">Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero grain" style="padding-top:44px">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow">Fountain City · Knoxville</span>
+      <h1>Heirloom <em>tomatoes</em>. <span class="o">Rare</span> chiles. One small plot.</h1>
+      <p class="lede">Grassy Valley Gardens is a small garden plot in Fountain City, growing <strong>heirloom tomatoes and rare chiles</strong> since 2021. Find us on <strong>Tuesdays at Ebenezer Road</strong> and <strong>Saturdays in Oak Ridge</strong>.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="tel:+18657893416"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (865) 789-3416</a>
+        <a class="btn btn-ghost" href="#markets">Market days</a>
+      </div>
+      <div class="chips"><span class="chip">Est. 2021</span><span class="chip">Organic practices (not certified)</span><span class="chip">New &amp; beginning farmer</span></div>
+    </div>
+    <div class="art rv" aria-hidden="true">
+      <div class="pk a">
+        <svg viewBox="0 0 300 410"><rect width="300" height="410" fill="#FFF9EC"/><rect y="0" width="300" height="250" fill="#F28C28"/><g opacity=".18" stroke="#fff" stroke-width="2"><path d="M0 40h300M0 80h300M0 120h300M0 160h300M0 200h300M0 240h300"/></g>
+          <circle cx="150" cy="150" r="78" fill="#C8102E"/><circle cx="150" cy="150" r="78" fill="url(#tg)"/><path d="M110 120c10-18 26-24 40-24" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".45" fill="none"/>
+          <path d="M150 74c-6-14-20-20-34-16 12 3 20 9 24 17-12-5-28-3-34 6 14-3 26 0 34 4-4 6-10 10-18 12 14 2 22-2 28-8 6 6 14 10 28 8-8-2-14-6-18-12 8-4 20-7 34-4-6-9-22-11-34-6 4-8 12-14 24-17-14-4-28 2-34 16z" fill="#1F3B2D"/>
+          <defs><radialGradient id="tg" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#F28C28" stop-opacity=".55"/><stop offset="1" stop-color="#7E0A1E" stop-opacity=".35"/></radialGradient></defs>
+          <text x="22" y="292" font-family="Abril Fatface, Georgia, serif" font-size="34" fill="#1F3B2D">Heirloom</text><text x="22" y="330" font-family="Abril Fatface, Georgia, serif" font-size="34" fill="#C8102E">Tomatoes</text>
+          <text x="22" y="372" font-family="Karla, sans-serif" font-size="13" font-weight="800" letter-spacing="2.5" fill="#5A5848">GRASSY VALLEY GARDENS</text>
+          <rect x="10" y="10" width="280" height="390" rx="6" fill="none" stroke="#1F3B2D" stroke-width="2" stroke-dasharray="6 5" opacity=".5"/></svg>
+      </div>
+      <div class="pk b">
+        <svg viewBox="0 0 300 410"><rect width="300" height="410" fill="#FFF9EC"/><rect width="300" height="250" fill="#1F3B2D"/><g fill="#2C5240"><circle cx="40" cy="40" r="5"/><circle cx="110" cy="70" r="5"/><circle cx="250" cy="40" r="5"/><circle cx="210" cy="200" r="5"/><circle cx="60" cy="210" r="5"/><circle cx="270" cy="130" r="5"/></g>
+          <path d="M120 70c34 4 70 34 74 86 3 40-16 70-44 84 16-30 18-58 6-82-12-26-30-50-36-88z" fill="#C8102E"/><path d="M135 92c18 10 34 30 36 56" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".35" fill="none"/>
+          <path d="M120 70c-6-8-6-18 2-26 0 10 6 16 14 18 10 2 14 8 12 14-8-6-18-8-28-6z" fill="#5E8C4A"/>
+          <path d="M84 120c22 2 42 22 42 52 0 24-12 40-28 48 8-18 8-34 0-48-8-16-16-30-14-52z" fill="#F28C28"/><path d="M84 120c-4-6-2-14 4-18 0 8 4 12 10 14-4 2-10 3-14 4z" fill="#5E8C4A"/>
+          <text x="22" y="292" font-family="Abril Fatface, Georgia, serif" font-size="34" fill="#1F3B2D">Rare</text><text x="22" y="330" font-family="Abril Fatface, Georgia, serif" font-size="34" fill="#C8102E">Chiles</text>
+          <g transform="translate(22 350)"><rect width="44" height="10" rx="3" fill="#7FB069"/><rect x="50" width="44" height="10" rx="3" fill="#E8C547"/><rect x="100" width="44" height="10" rx="3" fill="#F28C28"/><rect x="150" width="44" height="10" rx="3" fill="#E0481E"/><rect x="200" width="44" height="10" rx="3" fill="#C8102E"/></g>
+          <text x="22" y="384" font-family="Karla, sans-serif" font-size="13" font-weight="800" letter-spacing="2.5" fill="#5A5848">FOUNTAIN CITY, TN</text>
+          <rect x="10" y="10" width="280" height="390" rx="6" fill="none" stroke="#1F3B2D" stroke-width="2" stroke-dasharray="6 5" opacity=".5"/></svg>
+      </div>
+      <div class="stamp"><small>Since</small>2021</div>
+    </div>
+  </div>
+</section>
+
+<div class="vine" aria-hidden="true"><svg viewBox="0 0 1200 34" preserveAspectRatio="none"><path d="M0 17 C100 0 200 34 300 17 S500 0 600 17 800 34 900 17 1100 0 1200 17" stroke="#5E8C4A" stroke-width="3" fill="none"/><g fill="#5E8C4A"><ellipse cx="150" cy="10" rx="10" ry="5" transform="rotate(-25 150 10)"/><ellipse cx="450" cy="24" rx="10" ry="5" transform="rotate(25 450 24)"/><ellipse cx="750" cy="10" rx="10" ry="5" transform="rotate(-25 750 10)"/><ellipse cx="1050" cy="24" rx="10" ry="5" transform="rotate(25 1050 24)"/></g><g fill="#C8102E"><circle cx="300" cy="17" r="6"/><circle cx="900" cy="17" r="6"/></g><g fill="#F28C28"><circle cx="600" cy="17" r="6"/></g></svg></div>
+
+<section id="grow" class="grain">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">What we grow</span>
+      <h2 class="h2">Every crop gets a seed packet.</h2>
+      <p class="sub">Grassy Valley Gardens grows a variety of heirloom tomatoes and rare chiles. Ask at the table which varieties are picking this week.</p>
+    </div>
+    <div class="packets">
+      <article class="packet tom rv">
+        <div class="flap"></div>
+        <div class="top">
+          <svg class="ill" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="112" r="64" fill="#C8102E"/><path d="M66 92c8-14 20-20 32-20" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".4" fill="none"/><path d="M100 50c-5-12-17-17-29-14 10 3 17 8 20 15-10-4-24-3-29 5 12-3 22 0 29 3-3 5-9 9-15 10 12 2 19-2 24-7 5 5 12 9 24 7-7-2-12-5-15-10 7-3 17-6 29-3-5-8-19-9-29-5 3-7 10-12 20-15-12-3-24 2-29 14z" fill="#1F3B2D"/></svg>
+          <span class="kind">Packet No. 01</span>
+          <h3>Heirloom Tomatoes</h3>
+        </div>
+        <div class="body">
+          <p>A variety of heirloom tomatoes, grown on a small plot in Fountain City.</p>
+          <dl><dt>Grown</dt><dd>Fountain City, Knoxville</dd><dt>Practices</dt><dd>Organic (not certified)</dd><dt>Find at</dt><dd>Ebenezer Rd (Tue) · Oak Ridge (Sat)</dd></dl>
+        </div>
+      </article>
+      <article class="packet chi rv">
+        <div class="flap"></div>
+        <div class="top">
+          <svg class="ill" viewBox="0 0 200 200" aria-hidden="true"><path d="M80 40c40 6 76 40 78 92 2 30-12 52-30 62 10-24 10-46-2-66-12-22-38-48-46-88z" fill="#F28C28"/><path d="M94 62c18 10 34 30 38 54" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".4" fill="none"/><path d="M80 40c-6-8-6-18 2-26 0 10 6 16 14 18 10 2 14 8 12 14-8-6-18-8-28-6z" fill="#5E8C4A"/></svg>
+          <span class="kind">Packet No. 02</span>
+          <h3>Rare Chiles</h3>
+        </div>
+        <div class="body">
+          <p>The garden's second specialty: a variety of rare chiles.</p>
+          <div class="heat" aria-label="Heat scale from mild to hot">
+            <div class="lab"><span>Mild</span><span>Heat</span><span>Hot</span></div>
+            <div class="bar"><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="note">Heat varies by variety. Ask at the table.</p>
+          </div>
+        </div>
+      </article>
+      <article class="packet next rv">
+        <div class="flap"></div>
+        <div class="top">
+          <svg class="ill" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#F6EEDC" stroke-width="5" stroke-linecap="round"><path d="M100 170V90"/><path d="M100 120c-30 0-46-18-48-44 28 0 46 16 48 44z" fill="#5E8C4A"/><path d="M100 104c26 0 42-16 44-40-26 0-42 14-44 40z" fill="#5E8C4A"/></g><g fill="#F28C28"><circle cx="70" cy="178" r="5"/><circle cx="100" cy="182" r="5"/><circle cx="130" cy="178" r="5"/></g></svg>
+          <span class="kind">Packet No. 03</span>
+          <h3>Next Season</h3>
+        </div>
+        <div class="body">
+          <span class="tag-concept">Concept idea</span>
+          <p>A spot to post next season's variety list, so regulars know which tomatoes and chiles are coming before the first market of the year.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">About the garden</span>
+      <h2 class="h2">Small plot. Two specialties.</h2>
+      <p class="sub">A Fountain City garden with two specialties, sold at two East Tennessee tailgate markets.</p>
+    </div>
+    <div class="facts">
+      <div class="fact rv"><div class="big">2021</div><h3>Established</h3><p>Growing in Fountain City since 2021.</p></div>
+      <div class="fact rv"><div class="big">2</div><h3>Specialties</h3><p>Heirloom tomatoes and rare chiles.</p></div>
+      <div class="fact rv"><div class="big"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M8 36C8 18 20 8 38 6c0 18-10 30-28 30z" fill="#F28C28"/><path d="M8 36C16 26 24 18 32 12" stroke="#1F3B2D" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><h3>Organic practices</h3><p>Grown with organic practices (not certified).</p></div>
+      <div class="fact rv"><div class="big">2</div><h3>Market days</h3><p>Ebenezer Road on Tuesdays, Historic Oak Ridge on Saturdays.</p></div>
+    </div>
+    <p class="quote rv">"Grassy Valley Gardens is a small garden plot in <span>Fountain City</span>."<cite>From the farm's Appalachian Grown listing</cite></p>
+  </div>
+</section>
+
+<section id="markets" class="grain">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Market days</span>
+      <h2 class="h2">Where to find us this week.</h2>
+      <p class="sub">The garden sells at two tailgate markets. Today's day is highlighted.</p>
+    </div>
+    <div class="mk-grid">
+      <ul class="week rv" id="week">
+        <li data-d="1"><span class="d">Mon</span><span class="w">No market</span></li>
+        <li data-d="2" class="on" data-end="2026-11-24"><span class="d">Tue</span><span class="w"><b>3:00–6:00 PM</b>Ebenezer Road Farmers' Market</span></li>
+        <li data-d="3"><span class="d">Wed</span><span class="w">No market</span></li>
+        <li data-d="4"><span class="d">Thu</span><span class="w">No market</span></li>
+        <li data-d="5"><span class="d">Fri</span><span class="w">No market</span></li>
+        <li data-d="6" class="on" data-end="2026-12-19"><span class="d">Sat</span><span class="w"><b>8:00 AM–12:00 PM</b>Historic Oak Ridge Farmers Market</span></li>
+        <li data-d="0"><span class="d">Sun</span><span class="w">No market</span></li>
+      </ul>
+      <div class="mk-cards">
+        <div class="mk rv">
+          <span class="when">Tuesdays · 3–6 PM</span>
+          <h3>Ebenezer Road Farmers' Market</h3>
+          <p>1001 Ebenezer Rd, Knoxville, in the Ebenezer United Methodist Church parking area. 2026 season: April 7 to November 24.</p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1001+Ebenezer+Rd+Knoxville+TN+37919" target="_blank" rel="noopener">Directions →</a>
+        </div>
+        <div class="mk sat rv">
+          <span class="when">Saturdays · 8 AM–12 PM</span>
+          <h3>Historic Oak Ridge Farmers Market</h3>
+          <p>213 Broadway Ave, Oak Ridge. 2026 season: January 10 to December 19.</p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=213+Broadway+Ave+Oak+Ridge+TN+37830" target="_blank" rel="noopener">Directions →</a>
+        </div>
+        <p class="fine">Market times are from each market's Appalachian Grown listing. Call ahead to check what's on the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find" class="find">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="h2">Grown in Fountain City.</h2>
+    </div>
+    <div class="find-grid">
+      <div class="contact rv">
+        <span class="eyebrow">Call the garden</span><br>
+        <a class="phone" href="tel:+18657893416">(865) 789-3416</a>
+        <p>Grassy Valley Gardens<br>Fountain City, Knoxville, TN</p>
+        <div class="ctas">
+          <a class="btn btn-red" href="tel:+18657893416">Call now</a>
+          <a class="btn btn-ghost" href="#markets">See market days</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map of Fountain City, Knoxville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Fountain%20City%2C%20Knoxville%2C%20TN&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="fb">Grassy Valley Gardens</div><div>Heirloom tomatoes &amp; rare chiles · Fountain City, Knoxville</div></div>
+    <div>Concept by <a href="https://coleselig.github.io/codecraft">Code Craft Media</a> · Not the farm's official site.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c" href="tel:+18657893416"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the garden</a>
+  <a class="m" href="#markets">Market days</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#week li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var now=new Date(); now.setHours(0,0,0,0);
+  [].forEach.call(document.querySelectorAll('#week li[data-end]'),function(el){var p=el.getAttribute('data-end').split('-');var end=new Date(+p[0],p[1]-1,+p[2]);if(now>end){el.classList.remove('on');var b=el.querySelector('.w b');if(b)b.textContent='2026 season ended';}});
+  var root=document.documentElement; root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)) return;
+  els.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.top>window.innerHeight*0.95) el.classList.add('pre'); });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

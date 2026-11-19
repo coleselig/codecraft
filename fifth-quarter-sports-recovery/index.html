@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>FifthQuarterFoundation SPR — Chattanooga</title>
+<meta name="description" content="Concept site: sports recovery, pre and post, with Dedrick Calloway in Chattanooga, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0F12; --ink2:#15171C; --ink3:#1D2027; --line:#2A2E37;
+  --teal:#00B3A4; --teal2:#2FE3D2; --chalk:#F5F7F7; --mute:#A3ABB3;
+  --amber:#FFB547;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--chalk);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.cond{font-family:"Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* banner */
+.concept{background:#06211F;color:#9FE9E1;font-size:10px;letter-spacing:-.02em;text-align:center;padding:6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid #0B3B37}
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(14,15,18,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .badge{width:34px;height:34px;border-radius:8px;background:var(--teal);color:var(--ink);display:grid;place-items:center;font-family:"Barlow Condensed";font-weight:800;font-size:19px;line-height:1}
+.logo .badge sup{font-size:10px;margin-left:1px}
+.logo b{font-family:"Barlow Condensed";font-weight:700;font-size:19px;letter-spacing:.04em;text-transform:uppercase}
+.logo b span{color:var(--teal)}
+.navlinks{display:none;gap:26px;font-size:14px;color:var(--mute)}
+.navlinks a{text-decoration:none;transition:color .2s}
+.navlinks a:hover{color:var(--teal2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:17px;text-decoration:none;border-radius:10px;padding:14px 22px;transition:transform .15s,background .2s,box-shadow .2s,color .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-teal{background:var(--teal);color:var(--ink);box-shadow:0 8px 28px -10px rgba(0,179,164,.7)}
+.btn-teal:hover{background:var(--teal2)}
+.btn-ghost{background:transparent;color:var(--chalk);border:1.5px solid #3A3F4A}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal2)}
+.btn-sm{padding:9px 14px;font-size:15px;border-radius:8px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:24px 0 48px;
+  background:
+   radial-gradient(120% 60% at 85% 0%,rgba(0,179,164,.20),transparent 60%),
+   linear-gradient(180deg,#0E0F12,#0B0C0F)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:28px 28px;
+  -webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 95%);mask-image:linear-gradient(180deg,#000 30%,transparent 95%)}
+.hero .wrap{position:relative;display:grid;gap:26px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:"Barlow Condensed";font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal2)}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,179,164,.2);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(0,179,164,0)}}
+h1{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;font-size:clamp(46px,13.2vw,100px);line-height:.88;letter-spacing:-.005em;margin:10px 0 14px}
+h1 em{font-style:normal;color:var(--teal);display:block}
+.sub{color:#C9CFD4;font-size:16px;max-width:520px}
+.sub b{color:var(--chalk);font-weight:700}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.cta .btn{flex:1 1 150px}
+/* scoreboard */
+.board{position:relative;background:linear-gradient(180deg,#17191F,#101216);border:1px solid #2B2F38;border-radius:18px;padding:16px 16px 14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.05)}
+.board:before,.board:after{content:"";position:absolute;top:-9px;width:10px;height:18px;border-radius:3px;background:#22252D;border:1px solid #33373F}
+.board:before{left:28%}.board:after{right:28%}
+.board-top{display:flex;justify-content:space-between;align-items:center;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;font-size:12px;color:var(--mute);text-transform:uppercase}
+.live{color:var(--amber);display:flex;align-items:center;gap:6px}
+.live i{width:6px;height:6px;border-radius:50%;background:var(--amber);animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+.clock{margin:10px 0 12px;background:#07080A;border-radius:12px;border:1px solid #23262D;padding:14px 10px 10px;text-align:center;position:relative;overflow:hidden}
+.clock:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 2px,transparent 2px 4px);pointer-events:none}
+.digits{font-family:"Barlow Condensed";font-weight:700;font-size:clamp(64px,21vw,96px);line-height:.9;color:var(--teal2);text-shadow:0 0 18px rgba(47,227,210,.55),0 0 2px rgba(47,227,210,.9);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.digits .colon{animation:blink 1s steps(2) infinite}
+.clock small{display:block;font-family:"Barlow Condensed";letter-spacing:.3em;font-size:12px;color:#5E666F;margin-top:6px}
+.qtrs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.q{text-align:center;border-radius:8px;padding:7px 0 6px;background:#1A1D23;border:1px solid #262A31;font-family:"Barlow Condensed";font-weight:700;font-size:15px;color:#5E666F;line-height:1}
+.q span{display:block;font-size:9.5px;letter-spacing:.12em;font-weight:600;margin-top:3px}
+.q.done{color:#7C858E}
+.q.on{background:var(--teal);color:var(--ink);border-color:var(--teal);box-shadow:0 0 22px -4px rgba(0,179,164,.8)}
+.board-foot{display:flex;justify-content:space-between;margin-top:12px;font-size:12.5px;color:var(--mute)}
+.board-foot b{color:var(--chalk);font-family:"Barlow Condensed";font-size:16px;letter-spacing:.04em}
+/* stat strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0B0C0F}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{padding:18px 6px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:"Barlow Condensed";font-weight:800;font-size:34px;line-height:1;color:var(--chalk)}
+.stat b sup{color:var(--teal);font-size:20px}
+.stat span{font-size:12px;color:var(--mute);line-height:1.3;display:block;margin-top:5px}
+/* sections */
+section{padding:64px 0}
+.eyebrow{font-family:"Barlow Condensed";font-weight:700;color:var(--teal);letter-spacing:.18em;font-size:14px;text-transform:uppercase}
+h2{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;font-size:clamp(38px,10vw,64px);line-height:.92;margin:8px 0 14px}
+.lead{color:#BFC6CC;max-width:600px}
+/* tabs */
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:26px -20px 0;padding:0 20px 4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;background:var(--ink2);border:1px solid var(--line);color:var(--mute);border-radius:12px;padding:10px 14px;text-align:left;cursor:pointer;transition:all .2s;font-family:inherit}
+.tab small{display:block;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;font-size:11px;color:#6A737C}
+.tab b{font-family:"Barlow Condensed";font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.03em;color:inherit}
+.tab:hover{border-color:#3C424D;color:var(--chalk)}
+.tab[aria-selected=true]{background:var(--teal);border-color:var(--teal);color:var(--ink)}
+.tab[aria-selected=true] small{color:#04423D}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 6px;background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.toggle p{font-size:13px;color:var(--mute);line-height:1.35}
+.seg{display:flex;background:#0A0B0E;border-radius:9px;padding:3px;border:1px solid var(--line);flex:0 0 auto}
+.seg button{border:0;background:transparent;color:var(--mute);font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px;padding:7px 11px;border-radius:7px;cursor:pointer}
+.seg button.on{background:var(--chalk);color:var(--ink)}
+.panel{display:none;margin-top:12px}
+.panel.on{display:grid;gap:10px;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.svc{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:start;background:linear-gradient(180deg,#14161B,#111317);border:1px solid var(--line);border-radius:14px;padding:16px;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:rgba(0,179,164,.6);transform:translateY(-2px)}
+.svc h3{font-family:"Barlow Condensed";font-weight:700;font-size:23px;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.svc p{grid-column:1/-1;color:#AEB6BD;font-size:14.5px}
+.price{text-align:right;font-family:"Barlow Condensed";font-weight:800;font-size:26px;line-height:1;color:var(--teal2);white-space:nowrap}
+.price small{display:block;font-weight:600;font-size:12px;letter-spacing:.1em;color:#7C858E;margin-top:4px}
+.price.na{font-size:15px;color:var(--mute);letter-spacing:.06em}
+.tagrow{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.tag{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal2);background:rgba(0,179,164,.1);border:1px solid rgba(0,179,164,.28);padding:3px 8px;border-radius:99px}
+.svc-book{grid-column:1/-1;justify-self:start;margin-top:6px;font-family:"Barlow Condensed";font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px;color:var(--chalk);text-decoration:none;border-bottom:2px solid var(--teal);padding-bottom:1px}
+.svc-book:hover{color:var(--teal2)}
+.fine{font-size:12.5px;color:#7C858E;margin-top:14px}
+/* coach */
+.coach{background:linear-gradient(180deg,#0B0C0F,#0E0F12)}
+.coach-grid{display:grid;gap:26px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:22px}
+.jersey{position:relative;border-radius:18px;overflow:hidden;background:radial-gradient(90% 80% at 50% 10%,rgba(0,179,164,.28),transparent 70%),#111317;border:1px solid var(--line);min-height:210px;display:grid;place-items:center;padding:18px 0}
+.jersey svg{width:56%!important}
+.jersey svg{width:78%;max-width:300px;height:auto}
+.why{display:grid;gap:12px;margin-top:6px}
+.why li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.why li:last-child{border-bottom:0}
+.why .n{font-family:"Barlow Condensed";font-weight:800;font-size:30px;color:var(--teal);line-height:1}
+.why h3{font-family:"Barlow Condensed";font-weight:700;font-size:22px;text-transform:uppercase;line-height:1.1}
+.why p{color:#AEB6BD;font-size:14.5px;margin-top:3px}
+/* hours */
+.hours-grid{display:grid;gap:22px}
+.hrs{background:var(--ink2);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.hrs-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);font-family:"Barlow Condensed";font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:14px;color:var(--mute)}
+#openNow{color:var(--teal2)}
+.hrs ul{list-style:none}
+.hrs li{display:flex;justify-content:space-between;padding:12px 18px;border-bottom:1px solid #20232A;font-size:15.5px;transition:background .2s}
+.hrs li:last-child{border-bottom:0}
+.hrs li span:last-child{font-variant-numeric:tabular-nums;color:#D5DADE}
+.hrs li.today{background:rgba(0,179,164,.12);box-shadow:inset 4px 0 0 var(--teal)}
+.hrs li.today span:first-child{font-weight:700;color:var(--teal2)}
+.hrs li.today span:first-child:after{content:" · Today";font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#111317 repeating-linear-gradient(45deg,#14171C 0 10px,#111317 10px 20px);min-height:280px}
+.map iframe{display:block;width:100%;height:300px;border:0;filter:grayscale(.6) invert(.92) hue-rotate(180deg) contrast(.9)}
+.addr{padding:16px 18px;display:grid;gap:12px}
+.addr b{font-family:"Barlow Condensed";font-size:22px;text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.addr .row{display:flex;gap:10px;flex-wrap:wrap}
+.addr .row .btn{flex:1 1 140px}
+/* final */
+.final{text-align:center;background:radial-gradient(80% 90% at 50% 100%,rgba(0,179,164,.25),transparent 70%),#0B0C0F;border-top:1px solid var(--line)}
+.final h2{font-size:clamp(44px,13vw,86px)}
+.final .cta{justify-content:center;max-width:460px;margin:22px auto 0}
+footer{border-top:1px solid var(--line);padding:26px 0 30px;color:#7C858E;font-size:13px}
+footer .wrap{display:grid;gap:8px}
+footer a{color:var(--teal2)}
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,11,14,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.callbar .btn{padding:13px 10px}
+/* reveal */
+.reveal{transition:opacity .6s ease,transform .6s ease}
+.js .reveal.pre{opacity:0;transform:translateY(16px)}
+:focus-visible{outline:2px solid var(--teal2);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (min-width:860px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .navlinks{display:flex}
+  .hero{padding:70px 0 90px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}
+  .board{padding:22px 22px 18px}
+  .digits{font-size:132px}
+  .jersey svg{width:72%!important}
+  .panel.on{grid-template-columns:1fr 1fr}
+  .coach-grid{grid-template-columns:.85fr 1.15fr;align-items:center;gap:56px}
+  .hours-grid{grid-template-columns:.9fr 1.1fr;align-items:start}
+  .map iframe{height:340px}
+  section{padding:96px 0}
+  .stat b{font-size:44px}
+  .stat span{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for FifthQuarterFoundation SPR. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="FifthQuarterFoundation SPR home"><span class="badge">5<sup>th</sup></span><b>Fifth Quarter <span>SPR</span></b></a>
+    <div class="navlinks"><a href="#services">Services</a><a href="#coach">Why Dedrick</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-teal btn-sm" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="kicker"><i></i>Sports Recovery · Chattanooga, TN</div>
+      <h1>The game ends.<em>Recovery is the 5th quarter.</em></h1>
+      <p class="sub">Pre- and post-game sports recovery with <b>Dedrick Calloway</b>: sports massage, stretch, M.A.T., A.R.T., cupping, TENS and Normatec, all bookable online.</p>
+      <div class="cta">
+        <a class="btn btn-teal" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book a session</a>
+        <a class="btn btn-ghost" href="tel:+14237798235">Call Dedrick</a>
+      </div>
+    </div>
+
+    <div class="board reveal" aria-label="Scoreboard graphic: 5th quarter, recovery">
+      <div class="board-top"><span>Fifth Quarter · SPR</span><span class="live"><i></i>Recovery</span></div>
+      <div class="clock">
+        <div class="digits" id="clock">50<span class="colon">:</span>00</div>
+        <small>MINUTES ON THE TABLE</small>
+      </div>
+      <div class="qtrs">
+        <div class="q done">1<span>QTR</span></div>
+        <div class="q done">2<span>QTR</span></div>
+        <div class="q done">3<span>QTR</span></div>
+        <div class="q done">4<span>QTR</span></div>
+        <div class="q on">5<span>RECOVER</span></div>
+      </div>
+      <div class="board-foot"><span>Sports Massage · Locals</span><b>$120 / 50 min</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b>4<sup>yrs</sup></b><span>Sports recovery, pre &amp; post</span></div>
+    <div class="stat"><b>7<sup>+</sup></b><span>Years as a CPT</span></div>
+    <div class="stat"><b>7<sup>days</sup></b><span>Open every day of the week</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow reveal">The playbook</div>
+    <h2 class="reveal">Pick your recovery.</h2>
+    <p class="lead reveal">Every service on Dedrick's booking page, grouped so you can find the right one fast. Switch between local pricing and non-local pricing, which includes travel.</p>
+
+    <div class="tabs" role="tablist" aria-label="Service groups">
+      <button class="tab" role="tab" aria-selected="true" data-p="p1"><small>Q1</small><b>Hands-On</b></button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p2"><small>Q2</small><b>Stretch</b></button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p3"><small>Q3</small><b>Pre / Post Tech</b></button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p4"><small>Q4</small><b>Restore</b></button>
+    </div>
+
+    <div class="toggle">
+      <p>Prices shown for<br><span id="modeLabel" style="color:#F5F7F7;font-weight:700">Locals</span></p>
+      <div class="seg" role="group" aria-label="Pricing">
+        <button class="on" data-mode="l">Locals</button>
+        <button data-mode="n">Non-Locals</button>
+      </div>
+    </div>
+
+    <div class="panel on" id="p1" role="tabpanel">
+      <div class="svc"><h3>Sports Massage</h3><div class="price" data-l="$120|50 min" data-n="$150|1 hr 20 min">$120<small>50 min</small></div><p>“Sports massage is designed to help athletes before, during and after training.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Deep Tissue</h3><div class="price" data-l="$85|1 hr" data-n="$150|1 hr">$85<small>1 hr</small></div><p>“Deep tissue massages are used to break up scar tissue and break down muscle adhesions.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Trigger Point Release</h3><div class="price" data-l="$120|1 hr" data-n="$105|1 hr 30 min">$120<small>1 hr</small></div><p>Focused work on trigger points.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>M.A.T.</h3><div class="price" data-l="$195|1 hr" data-n="$195|1 hr">$195<small>1 hr</small></div><p>Muscle Activation Technique. “A hands-on manual therapy.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>A.R.T.</h3><div class="price" data-l="$120|1 hr" data-n="$120|1 hr">$120<small>1 hr</small></div><p>Active Release Technique, which “focuses on treating the soft-tissue system.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>A.P.G.</h3><div class="price" data-l="$100|1 hr" data-n="$130|1 hr 50 min">$100<small>1 hr</small></div><p>Ask Dedrick about this session when you book.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+    </div>
+
+    <div class="panel" id="p2" role="tabpanel">
+      <div class="svc"><h3>Sports Stretch</h3><div class="price" data-l="$120|50 min" data-n="$150|1 hr 20 min">$120<small>50 min</small></div><p>“A movement based, full body routine that consists of both actively and passively stretching a client.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Thai Stretch</h3><div class="price" data-l="$175|1 hr" data-n="$175|1 hr">$175<small>1 hr</small></div><p>“Can include long, deep stretches as well as nourishing joint movements.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+    </div>
+
+    <div class="panel" id="p3" role="tabpanel">
+      <div class="svc"><h3>Normatec Pre/Post Recovery</h3><div class="price" data-l="$375|1 hr 20 min" data-n="$375|1 hr 20 min">$375<small>1 hr 20 min</small></div><p>“The NormaTec PULSE Recovery System consists of a compression device that surrounds your arms, legs, or hips.”</p><div class="tagrow"><span class="tag">Pre</span><span class="tag">Post</span></div><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>TENS Pre/Post Recovery</h3><div class="price" data-l="$130|1 hr" data-n="$130|1 hr">$130<small>1 hr</small></div><p>A TENS session built for before or after you compete.</p><div class="tagrow"><span class="tag">Pre</span><span class="tag">Post</span></div><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Cupping Therapy</h3><div class="price" data-l="$95|1 hr 30 min" data-n="$285|2 hr 10 min">$95<small>1 hr 30 min</small></div><p>“Believed to work by increasing blood flow to the strained area.”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Gua Sha Therapy</h3><div class="price" data-l="$75|50 min" data-n="$225|50 min">$75<small>50 min</small></div><p>Gua sha therapy, booked as its own session.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+    </div>
+
+    <div class="panel" id="p4" role="tabpanel">
+      <div class="svc"><h3>Swedish</h3><div class="price" data-l="$50|1 hr" data-n="$95|1 hr">$50<small>1 hr</small></div><p>A full-body Swedish massage.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Hot Stones &amp; Rock</h3><div class="price" data-l="$85|1 hr" data-n="$85|1 hr">$85<small>1 hr</small></div><p>A massage with heated stones.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Sinus &amp; Congestion Relief</h3><div class="price" data-l="$125|1 hr 10 min" data-n="See booking|1 hr 10 min">$125<small>1 hr 10 min</small></div><p>“This Massage is designed to help sinus pressure and congestion!”</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Lymphatic</h3><div class="price na" data-l="See booking|55 min" data-n="See booking|55 min">See booking<small>55 min</small></div><p>A lymphatic session, bookable online.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Chair Massage</h3><div class="price" data-l="$30|30 min" data-n="See booking|1 hr 10 min">$30<small>30 min</small></div><p>A quick seated session.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+      <div class="svc"><h3>Consultation</h3><div class="price na" data-l="Ask|20 min" data-n="Ask|20 min">Ask<small>20 min</small></div><p>Not sure where to start? Book a 20-minute consultation.</p><a class="svc-book" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book →</a></div>
+    </div>
+
+    <p class="fine">Prices and times are as listed on Dedrick's Square booking page. Non-local prices include travel fees. Confirm the details when you book.</p>
+  </div>
+</section>
+
+<section class="coach" id="coach">
+  <div class="wrap coach-grid">
+    <div class="jersey reveal" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00B3A4"/><stop offset="1" stop-color="#007A70"/></linearGradient></defs>
+        <path d="M96 40 L126 30 Q150 52 174 30 L204 40 L262 78 L238 132 L212 120 L212 270 L88 270 L88 120 L62 132 L38 78 Z" fill="url(#g)" stroke="#2FE3D2" stroke-width="2"/>
+        <path d="M126 30 Q150 52 174 30" stroke="#0E0F12" stroke-width="7" fill="none"/>
+        <path d="M88 120 L88 270 M212 120 L212 270" stroke="#0E0F12" stroke-opacity=".25" stroke-width="6"/>
+        <text x="150" y="128" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="22" letter-spacing="4" fill="#0E0F12">CALLOWAY</text>
+        <text x="150" y="232" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="104" fill="#0E0F12">5</text>
+        <text x="186" y="178" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="28" fill="#0E0F12">TH</text>
+      </svg>
+    </div>
+    <div>
+      <div class="eyebrow reveal">Why Dedrick</div>
+      <h2 class="reveal">Trainer first. Recovery specialist next.</h2>
+      <ul class="why">
+        <li class="reveal"><span class="n">01</span><div><h3>7+ years as a CPT</h3><p>A personal-training background behind every recovery session.</p></div></li>
+        <li class="reveal"><span class="n">02</span><div><h3>4 years in sports recovery</h3><p>Pre- and post-recovery work, from the warm-up to the cool-down.</p></div></li>
+        <li class="reveal"><span class="n">03</span><div><h3>One deep menu</h3><p>Hands-on work, assisted stretching, cupping, TENS and Normatec compression, all with one person.</p></div></li>
+        <li class="reveal"><span class="n">04</span><div><h3>President, Fifth Quarter Foundation</h3><p>The name says it: what you do after the game counts too.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="eyebrow reveal">Game times</div>
+    <h2 class="reveal">Open seven days.</h2>
+    <div class="hours-grid">
+      <div class="hrs reveal">
+        <div class="hrs-head"><span>Hours</span><span id="openNow"></span></div>
+        <ul id="hrsList">
+          <li data-d="0"><span>Sunday</span><span>11:00 AM – 5:00 PM</span></li>
+          <li data-d="1"><span>Monday</span><span>10:00 AM – 5:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>8:00 AM – 7:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>8:00 AM – 7:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>8:00 AM – 7:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 7:00 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9:00 AM – 5:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="map reveal" id="visit">
+        <iframe title="Map to 6900 Bonny Oaks Dr, Chattanooga, TN" loading="lazy" src="https://www.google.com/maps?q=6900%20Bonny%20Oaks%20Dr%2C%20Chattanooga%2C%20TN%2037421&amp;output=embed"></iframe>
+        <div class="addr">
+          <b>6900 Bonny Oaks Dr.<br>Chattanooga, TN 37421</b>
+          <div class="row">
+            <a class="btn btn-teal" href="tel:+14237798235">Call now</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=6900%20Bonny%20Oaks%20Dr%2C%20Chattanooga%2C%20TN%2037421" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow reveal">Final whistle</div>
+    <h2 class="reveal">Win the 5th quarter.</h2>
+    <p class="lead reveal" style="margin:0 auto">Book online in a minute, or call Dedrick directly.</p>
+    <div class="cta">
+      <a class="btn btn-teal" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book a session</a>
+      <a class="btn btn-ghost" href="tel:+14237798235">(423) 779-8235</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:#F5F7F7">FifthQuarterFoundation SPR</b> · 6900 Bonny Oaks Dr., Chattanooga, TN 37421 · <a href="tel:+14237798235">(423) 779-8235</a> · <a href="mailto:fqfsspr@gmail.com">fqfsspr@gmail.com</a> · <a href="https://www.instagram.com/D1_calloway" target="_blank" rel="noopener">Instagram</a></div>
+    <div>Concept by Code Craft Media. Not the official site.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-ghost" href="tel:+14237798235">Call</a>
+  <a class="btn btn-teal" href="https://square.site/book/LT3APXEHAQ977/fifthquarterfoundation-spr-chattanooga-tn" target="_blank" rel="noopener">Book a session</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.dataset.p).classList.remove('on')});
+    t.setAttribute('aria-selected','true');document.getElementById(t.dataset.p).classList.add('on');
+  })});
+  // pricing toggle
+  function setMode(m){
+    document.querySelectorAll('.price').forEach(function(p){
+      var v=(p.getAttribute('data-'+m)||'').split('|');
+      var isNum=/^\$/.test(v[0]);
+      p.classList.toggle('na',!isNum);
+      p.innerHTML=v[0]+'<small>'+(v[1]||'')+'</small>';
+    });
+    document.querySelectorAll('.seg button').forEach(function(b){b.classList.toggle('on',b.dataset.mode===m)});
+    document.getElementById('modeLabel').textContent=m==='l'?'Locals':'Non-Locals (travel included)';
+  }
+  document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode)})});
+  setMode('l');
+  // hours (Chattanooga = America/New_York)
+  var now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};var o={};p.forEach(function(x){o[x.type]=x.value});d=wd[o.weekday];h=(parseInt(o.hour,10)%24)+parseInt(o.minute,10)/60;}catch(e){}
+  var H=[[11,17],[10,17],[8,19],[8,19],[8,19],[9,19],[9,17]];
+  var li=document.querySelector('#hrsList li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var on=h>=H[d][0]&&h<H[d][1]; var fmt=function(x){return (x>12?x-12:x)+(x>=12?' PM':' AM')};
+  document.getElementById('openNow').textContent=on?'Open now · until '+fmt(H[d][1]):'Closed now';
+  // scoreboard clock: counts down a 50:00 session
+  var s=50*60, el=document.getElementById('clock');
+  setInterval(function(){s=s>0?s-1:50*60;var m=Math.floor(s/60),ss=s%60;el.innerHTML=(m<10?'0':'')+m+'<span class="colon">:</span>'+(ss<10?'0':'')+ss},1000);
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>window.innerHeight){e.classList.add('pre');io.observe(e)}});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hickory Corner Farms — Speedwell, TN</title>
+<meta name="description" content="Concept site for Hickory Corner Farms: farm-raised meats, a lunch kitchen and a farm store in an old tobacco barn on Hwy 63 in Speedwell, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --barn:#6B4A2F; --barn-d:#4A321F; --barn-dd:#2E1F13;
+  --mustard:#D9A441; --mustard-d:#B9852A;
+  --chalk:#F7F3EA; --chalk-2:#EFE8D8;
+  --ink:#2A1D12; --muted:#6E5C4A;
+  --board:#2F3A33; --board-2:#26302A;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--chalk);color:var(--ink);font-family:"Work Sans",system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Bitter",Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media(max-width:400px){.wrap{padding:0 16px}}
+.grid>*{min-width:0}
+
+/* concept banner */
+.concept{background:var(--barn-dd);color:#E9DCC4;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--mustard);font-weight:600}
+.concept .s{display:none}
+@media(max-width:520px){.concept{font-size:11px;padding:7px 8px}}
+@media(max-width:400px){.concept{font-size:10px;letter-spacing:-.005em}}
+@media(max-width:520px){.concept .l{display:none}.concept .s{display:inline}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(247,243,234,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(107,74,47,.14)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none}
+.brand span{font-family:"Bitter",serif;font-weight:800;font-size:18px;color:var(--barn-d);white-space:nowrap}
+.nav ul{display:none;list-style:none;gap:26px}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:var(--barn-d)}
+.nav ul a:hover{color:var(--mustard-d)}
+.nav .callbtn{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .callbtn{display:inline-flex}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Work Sans",sans-serif;font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .18s ease,background .18s ease,box-shadow .18s ease;cursor:pointer;border:2px solid transparent;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-mustard{background:var(--mustard);color:var(--barn-dd);box-shadow:0 6px 0 var(--mustard-d)}
+.btn-mustard:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--mustard-d)}
+.btn-line{border-color:rgba(247,243,234,.55);color:var(--chalk)}
+.btn-line:hover{background:rgba(247,243,234,.1);border-color:var(--chalk)}
+.btn-sm{padding:9px 18px;font-size:14px;box-shadow:0 4px 0 var(--mustard-d)}
+
+/* hero */
+.hero{position:relative;background:var(--barn);color:var(--chalk);overflow:hidden;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+   repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 62px,rgba(0,0,0,.22) 62px 64px),
+   repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 9px,rgba(0,0,0,.035) 9px 17px,rgba(255,255,255,0) 17px 31px),
+   linear-gradient(180deg,#7A5636,#5E4029 70%,#4E3521)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 70% at 20% 10%,rgba(217,164,65,.22),transparent 60%),linear-gradient(180deg,rgba(46,31,19,.25),rgba(46,31,19,.55))}
+.hero .wrap{display:grid;gap:34px;padding-top:44px;padding-bottom:56px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr;padding-top:84px;padding-bottom:96px;gap:56px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mustard)}
+.eyebrow:before{content:"";width:22px;height:2px;background:currentColor}
+.hero h1{font-size:clamp(38px,10.4vw,74px);font-weight:800;margin:16px 0 18px;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--mustard)}
+.hero p.lede{font-size:clamp(17px,4.4vw,20px);color:#EADFCB;max-width:34em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@media(max-width:520px){.hero .ctas .btn{flex:1 1 100%}}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;font-size:14px;color:#E0D2BA}
+.hero .meta span{display:inline-flex;align-items:center;gap:7px}
+.hero .meta svg{color:var(--mustard)}
+
+/* chalkboard card */
+.board{position:relative;background:var(--board);border-radius:10px;padding:26px 24px 24px;color:#ECEBE4;
+  border:12px solid #8A6440;box-shadow:inset 0 0 0 2px #5C4129,0 22px 40px rgba(0,0,0,.35);
+  background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.07),transparent 55%),radial-gradient(ellipse at 80% 90%,rgba(255,255,255,.05),transparent 50%);transform:rotate(-1.4deg);transition:transform .4s ease}
+.board:hover{transform:rotate(0)}
+.board:before{content:"";position:absolute;left:50%;top:-34px;width:2px;height:24px;background:#3A2A1B;box-shadow:-40px 6px 0 0 transparent}
+.board .pin{position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:var(--mustard);box-shadow:0 2px 0 var(--mustard-d)}
+.board h3{font-family:"Bitter",serif;font-style:italic;font-weight:500;font-size:15px;letter-spacing:.06em;color:var(--mustard);text-transform:uppercase}
+.board .big{font-family:"Bitter",serif;font-weight:700;font-size:30px;line-height:1.1;margin:8px 0 14px;color:#fff}
+.board ul{list-style:none;border-top:1px dashed rgba(236,235,228,.3)}
+.board li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(236,235,228,.3);font-size:15.5px}
+.board li i{font-style:normal;color:#B9C2B9;font-size:13px;white-space:nowrap}
+.board .note{margin-top:14px;font-size:13px;color:#B9C2B9;font-style:italic}
+.chalkline{height:4px;width:70px;border-radius:4px;background:rgba(236,235,228,.65);transform:rotate(-2deg)}
+
+/* plank band */
+.plank{height:46px;background:
+  repeating-linear-gradient(90deg,transparent 0 118px,rgba(0,0,0,.35) 118px 120px),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 3px,transparent 3px 7px),
+  linear-gradient(180deg,#8A6440,#6B4A2F);border-top:3px solid var(--barn-dd);border-bottom:3px solid var(--barn-dd);position:relative;overflow:hidden}
+.plank .ticker{position:absolute;inset:0;display:flex;align-items:center;white-space:nowrap;animation:tick 38s linear infinite;font-family:"Bitter",serif;font-weight:700;color:var(--chalk);font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.plank .ticker span{padding:0 22px;display:inline-flex;align-items:center;gap:22px}
+.plank .ticker span:after{content:"✦";color:var(--mustard)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.plank .ticker{animation:none}}
+
+section{padding:72px 0}
+@media(min-width:900px){section{padding:104px 0}}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head .eyebrow{color:var(--mustard-d)}
+.sec-head h2{font-size:clamp(30px,7.4vw,48px);font-weight:800;color:var(--barn-d);margin-top:12px;text-wrap:balance}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+
+/* offerings */
+.cards{display:grid;gap:16px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid rgba(107,74,47,.14);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(74,50,31,.12);border-color:rgba(217,164,65,.6)}
+.card .ic{width:54px;height:54px;border-radius:12px;background:var(--chalk-2);display:grid;place-items:center;color:var(--barn);margin-bottom:16px}
+.card h3{font-size:22px;font-weight:700;color:var(--barn-d);margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.card .tags span{font-size:12.5px;font-weight:600;background:var(--chalk);border:1px solid rgba(107,74,47,.16);color:var(--barn-d);padding:4px 10px;border-radius:999px}
+.card.feature{background:var(--barn-d);color:var(--chalk);border-color:var(--barn-d)}
+.card.feature h3{color:#fff}.card.feature p{color:#E3D5BD}
+.card.feature .ic{background:rgba(217,164,65,.18);color:var(--mustard)}
+.card.feature .tags span{background:rgba(247,243,234,.08);border-color:rgba(247,243,234,.2);color:#F1E6D2}
+
+/* seasons */
+.seasons{background:var(--chalk-2);position:relative}
+.season-grid{display:grid;gap:16px}
+@media(min-width:760px){.season-grid{grid-template-columns:1fr 1fr}}
+.season{border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.season svg.art{width:92px;height:92px;margin:-6px 0 10px -4px;position:relative}
+@media(min-width:760px){.season svg.art{position:absolute;right:4px;top:-12px;width:140px;height:140px;margin:0}.season{min-height:220px;padding:28px 28px}.season h3,.season p{max-width:calc(100% - 160px)}}
+.season .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.season h3{font-size:28px;font-weight:800;margin:6px 0 8px;position:relative}
+.season p{position:relative;max-width:30em}
+.season.fall{background:linear-gradient(160deg,#C9772E,#8E4A1C);color:#FFF3E2}
+.season.fall .tag{color:#FFD9A0}
+.season.spring{background:linear-gradient(160deg,#F3D9D2,#E9B9AE);color:#4A1F1A}
+.season.spring .tag{color:#9C2F2A}
+
+/* story */
+.story .wrap{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.story .wrap{grid-template-columns:.95fr 1.05fr;gap:72px}}
+.barn-art{background:linear-gradient(180deg,#E9D8B6,#F3E7CE);border-radius:20px;padding:20px;border:1px solid rgba(107,74,47,.15)}
+.facts{display:grid;gap:14px;margin-top:26px}
+.fact{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:16px;border-radius:12px;background:#fff;border:1px solid rgba(107,74,47,.12)}
+.fact>*{min-width:0}
+.fact .n{width:44px;height:44px;border-radius:50%;background:var(--mustard);color:var(--barn-dd);display:grid;place-items:center;font-family:"Bitter",serif;font-weight:800}
+.fact b{display:block;font-family:"Bitter",serif;color:var(--barn-d);font-size:17px}
+.fact span{color:var(--muted);font-size:15px}
+blockquote{font-family:"Bitter",serif;font-style:italic;font-weight:500;font-size:clamp(21px,5.2vw,28px);line-height:1.35;color:var(--barn-d);border-left:4px solid var(--mustard);padding-left:18px}
+blockquote small{display:block;margin-top:10px;font-family:"Work Sans",sans-serif;font-style:normal;font-size:13px;color:var(--muted);letter-spacing:.02em}
+
+/* visit */
+.visit{background:var(--barn-dd);color:var(--chalk);position:relative;overflow:hidden}
+.visit:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 62px,rgba(255,255,255,.025) 62px 64px);pointer-events:none}
+.visit .sec-head h2{color:#fff}.visit .sec-head p{color:#D9CBB2}.visit .sec-head .eyebrow{color:var(--mustard)}
+.visit-grid{display:grid;gap:22px;position:relative}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr}}
+.hours{background:rgba(247,243,234,.05);border:1px solid rgba(247,243,234,.14);border-radius:var(--radius);padding:10px 22px}
+.hours .row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(247,243,234,.1);font-size:16px}
+.hours .row:last-child{border-bottom:0}
+.hours .row .d{font-weight:500}
+.hours .row .t{color:#E4D6BE;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hours .row .d{white-space:nowrap}
+.hours .row.closed .t{color:#A8977E}
+.hours .row.today{background:var(--mustard);color:var(--barn-dd);margin:0 -14px;padding:13px 14px;border-radius:10px;border-bottom-color:transparent}
+.hours .row.today .t{color:var(--barn-dd);font-weight:700}
+.hours .row.today .d:after{content:"Today";margin-left:10px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--barn-dd);color:var(--mustard);padding:3px 8px;border-radius:999px;vertical-align:2px}
+.status{display:flex;align-items:center;gap:10px;margin:6px 0 18px;font-weight:600}
+.status i{width:10px;height:10px;border-radius:50%;background:#8FBF7A;box-shadow:0 0 0 4px rgba(143,191,122,.2)}
+.status.off i{background:#C9876B;box-shadow:0 0 0 4px rgba(201,135,107,.2)}
+.map{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(247,243,234,.14);min-height:300px;background:radial-gradient(circle at 50% 45%,rgba(217,164,65,.22),transparent 45%),repeating-linear-gradient(35deg,transparent 0 38px,rgba(247,243,234,.06) 38px 40px),repeating-linear-gradient(-55deg,transparent 0 52px,rgba(247,243,234,.05) 52px 54px),#3A2A1B}
+.map .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#E9DCC4;font-size:14px;padding:20px}
+.map .ph b{display:block;font-family:Bitter,serif;font-size:18px;color:#fff;margin-top:8px}
+.map iframe{position:relative;z-index:1}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;filter:sepia(.15) saturate(.9)}
+.addr{display:grid;gap:12px;margin-top:20px}
+.addr a.line{display:flex;align-items:center;gap:12px;text-decoration:none;padding:14px 16px;border-radius:12px;background:rgba(247,243,234,.06);border:1px solid rgba(247,243,234,.12);transition:background .2s,border-color .2s;min-width:0}
+.addr a.line:hover{background:rgba(217,164,65,.14);border-color:var(--mustard)}
+.addr a.line svg{color:var(--mustard);flex:none}
+.addr a.line div{min-width:0}
+.addr a.line small{display:block;color:#BFAF95;font-size:12.5px}
+.addr a.line b{font-weight:600;overflow-wrap:anywhere}
+
+/* footer */
+footer{background:#1F150D;color:#B8A88E;padding:44px 0 calc(36px + 76px + env(safe-area-inset-bottom));font-size:14px}
+@media(min-width:900px){footer{padding-bottom:36px}}
+footer .wrap{display:grid;gap:22px}
+@media(min-width:800px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr;align-items:start}}
+footer h4{font-family:"Bitter",serif;color:var(--chalk);font-size:19px;margin-bottom:8px}
+footer a{color:#E9DCC4;text-decoration:none;border-bottom:1px solid rgba(233,220,196,.25)}
+footer a:hover{color:var(--mustard);border-color:var(--mustard)}
+footer .fine{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;font-size:12.5px;grid-column:1/-1}
+.snap{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-weight:600;color:var(--chalk);background:rgba(217,164,65,.14);border:1px solid rgba(217,164,65,.4);padding:6px 12px;border-radius:999px;font-size:13px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.25fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(46,31,19,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(217,164,65,.3)}
+.callbar>*{min-width:0}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;text-decoration:none;font-weight:600;font-size:15.5px}
+.callbar .c1{background:var(--mustard);color:var(--barn-dd)}
+.callbar .c2{background:rgba(247,243,234,.08);color:var(--chalk);border:1px solid rgba(247,243,234,.2)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){.js .reveal.pre{opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept"><span class="l">Concept site by <b>Code Craft Media</b>, made for Hickory Corner Farms. Not live.</span><span class="s">Concept by <b>Code Craft Media</b> for Hickory Corner Farms. Not live.</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hickory Corner Farms home">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#6B4A2F"/><path d="M8 31V18l12-8 12 8v13z" fill="#D9A441"/><path d="M15 31v-8h10v8" fill="#6B4A2F"/><path d="M15 23l10 8M25 23l-10 8" stroke="#D9A441" stroke-width="1.6"/></svg>
+      <span>Hickory Corner Farms</span>
+    </a>
+    <ul>
+      <li><a href="#farm">The Farm Store</a></li>
+      <li><a href="#seasons">Seasons</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-mustard btn-sm callbtn" href="tel:+14233778386">Call 423-377-8386</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow">Speedwell, Tennessee · Hwy 63</span>
+      <h1>Raised here. Sold in the <em>old tobacco barn.</em></h1>
+      <p class="lede">Our own beef, pork, lamb, poultry and vegetables, plus a full kitchen turning out daily lunch specials, from a family farm that's been in Claiborne County for over 120 years.</p>
+      <div class="ctas">
+        <a class="btn btn-mustard" href="tel:+14233778386">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the store</a>
+        <a class="btn btn-line" href="#visit">Hours &amp; directions</a>
+      </div>
+      <div class="meta">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mon–Sat 9 AM – 6 PM</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>SNAP accepted</span>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="board" aria-label="From the kitchen">
+        <span class="pin"></span>
+        <h3>From the kitchen</h3>
+        <div class="big">Today's Lunch Special</div>
+        <div class="chalkline" style="margin-bottom:14px"></div>
+        <ul>
+          <li>Daily lunch special <i>ask at the counter</i></li>
+          <li>Burgers <i>off the grill</i></li>
+          <li>Baked goods <i>fresh</i></li>
+          <li>Ice cream &amp; milkshakes <i>scooped</i></li>
+        </ul>
+        <p class="note">Patio dining or take out. Call ahead for what's on the board.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="plank" aria-hidden="true">
+  <div class="ticker">
+    <span>Beef</span><span>Pork</span><span>Lamb</span><span>Poultry</span><span>Eggs</span><span>Vegetables</span><span>Lunch specials</span><span>Gift baskets</span><span>Pumpkins &amp; mums</span><span>U-pick strawberries</span>
+    <span>Beef</span><span>Pork</span><span>Lamb</span><span>Poultry</span><span>Eggs</span><span>Vegetables</span><span>Lunch specials</span><span>Gift baskets</span><span>Pumpkins &amp; mums</span><span>U-pick strawberries</span>
+  </div>
+</div>
+
+<section id="farm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The farm store</span>
+      <h2>Everything on the shelf starts on our land.</h2>
+      <p>We converted an old tobacco barn into a farmers market, so you can buy straight from the family that raised it.</p>
+    </div>
+    <div class="cards grid">
+      <article class="card feature reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M6 12c0-3 2-5 5-5h10c3 0 5 2 5 5v4c0 5-4 9-10 9S6 21 6 16z"/><path d="M6 11 3 8M26 11l3-3"/><circle cx="12.5" cy="14" r="1.2" fill="currentColor"/><circle cx="19.5" cy="14" r="1.2" fill="currentColor"/><path d="M13 20h6"/></svg></div>
+        <h3>Farm-raised meats</h3>
+        <p>Our own beef, pork, lamb and poultry, raised on the farm and sold in the barn store.</p>
+        <div class="tags"><span>Custom beef</span><span>Custom pork</span><span>Custom lamb</span><span>Custom poultry</span></div>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15h22a11 11 0 0 1-22 0z"/><path d="M11 10c0-2 2-2 2-4M16 10c0-2 2-2 2-4M21 10c0-2 2-2 2-4"/></svg></div>
+        <h3>The lunch kitchen</h3>
+        <p>A full kitchen serving daily lunch specials and burgers. Eat on the patio or take it with you.</p>
+        <div class="tags"><span>Patio dining</span><span>Take out</span></div>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13h12l-2 15h-8z"/><path d="M9 13a7 7 0 0 1 14 0"/><path d="M16 6V3"/></svg></div>
+        <h3>Sweets &amp; bakery</h3>
+        <p>Baked goods, ice cream and milkshakes. A good reason to stop by on the way home.</p>
+        <div class="tags"><span>Baked goods</span><span>Ice cream</span><span>Milkshakes</span></div>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 27c-6 0-9-4-9-9 0-3 2-6 5-6 2 0 3 1 4 1s2-1 4-1c3 0 5 3 5 6 0 5-3 9-9 9z"/><path d="M16 13c0-4 2-6 4-7"/></svg></div>
+        <h3>Vegetables &amp; eggs</h3>
+        <p>Home-grown vegetables in season, including cucumbers and peppers, plus farm eggs.</p>
+        <div class="tags"><span>Cucumbers</span><span>Peppers</span><span>Eggs</span></div>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="13" width="22" height="14" rx="2"/><path d="M3 9h26v4H3zM16 9v18"/><path d="M16 9c-2-4-7-5-7-2s5 2 7 2c2 0 7 1 7-2s-5-2-7 2z"/></svg></div>
+        <h3>Specialty store &amp; gifts</h3>
+        <p>A specialty and grocery store inside the barn, with gift baskets for whoever's hard to shop for.</p>
+        <div class="tags"><span>Grocery</span><span>Gift baskets</span></div>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M9 19h5"/></svg></div>
+        <h3>SNAP welcome</h3>
+        <p>Supplemental Nutrition Assistance Program (SNAP) benefits are accepted here.</p>
+        <div class="tags"><span>SNAP accepted</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="seasons" class="seasons">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On the farm all year</span>
+      <h2>Come for lunch. Come back every season.</h2>
+    </div>
+    <div class="season-grid grid">
+      <article class="season fall reveal">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 30c3-8 9-12 14-12" stroke="#5B3A12" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="60" cy="72" rx="44" ry="36" fill="#F09A3E"/><ellipse cx="60" cy="72" rx="22" ry="36" fill="#E6862C"/><ellipse cx="60" cy="72" rx="8" ry="36" fill="#F7A84F"/><path d="M74 20c10-4 18 2 16 10-8 0-14-4-16-10z" fill="#6E8B3D"/></svg>
+        <span class="tag">Fall</span>
+        <h3>Pumpkins &amp; mums</h3>
+        <p>Home-grown pumpkins you can pick yourself, and home-grown mums for the porch.</p>
+      </article>
+      <article class="season spring reveal">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 34c-26 0-38 16-34 34 5 22 22 38 34 38s29-16 34-38c4-18-8-34-34-34z" fill="#D8343B"/><g fill="#FCE7A8"><ellipse cx="44" cy="56" rx="2" ry="3"/><ellipse cx="60" cy="50" rx="2" ry="3"/><ellipse cx="76" cy="56" rx="2" ry="3"/><ellipse cx="50" cy="72" rx="2" ry="3"/><ellipse cx="70" cy="72" rx="2" ry="3"/><ellipse cx="60" cy="88" rx="2" ry="3"/></g><path d="M40 36c8-12 32-12 40 0-8 4-12 2-20-4-8 6-12 8-20 4z" fill="#4E8A3A"/><path d="M60 32V18" stroke="#4E8A3A" stroke-width="4" stroke-linecap="round"/></svg>
+        <span class="tag">Spring</span>
+        <h3>U-pick strawberries</h3>
+        <p>A pick-your-own strawberry patch and a strawberry festival with local vendors.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="wrap grid">
+    <div class="barn-art reveal">
+      <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a converted tobacco barn">
+        <defs>
+          <pattern id="boards" width="18" height="10" patternUnits="userSpaceOnUse"><rect width="18" height="10" fill="#6B4A2F"/><rect width="2" height="10" fill="#4A321F"/></pattern>
+        </defs>
+        <circle cx="320" cy="62" r="30" fill="#D9A441" opacity=".85"/>
+        <path d="M0 220 Q100 180 200 205 T400 195 V300 H0z" fill="#9BA86A"/>
+        <path d="M0 240 Q120 215 230 235 T400 228 V300 H0z" fill="#7F8E52"/>
+        <path d="M70 230 V128 L190 70 L310 128 V230z" fill="url(#boards)"/>
+        <path d="M60 132 L190 64 L320 132" fill="none" stroke="#2E1F13" stroke-width="10" stroke-linejoin="round"/>
+        <rect x="150" y="150" width="80" height="80" fill="#2E1F13"/>
+        <path d="M150 150 L230 230 M230 150 L150 230" stroke="#D9A441" stroke-width="5"/>
+        <rect x="150" y="150" width="80" height="80" fill="none" stroke="#D9A441" stroke-width="5"/>
+        <rect x="160" y="104" width="60" height="26" rx="3" fill="#F7F3EA"/>
+        <text x="190" y="122" text-anchor="middle" font-family="Bitter, serif" font-weight="800" font-size="13" fill="#4A321F">MARKET</text>
+        <rect x="92" y="160" width="34" height="34" fill="#F3E2B8" stroke="#2E1F13" stroke-width="4"/>
+        <rect x="254" y="160" width="34" height="34" fill="#F3E2B8" stroke="#2E1F13" stroke-width="4"/>
+        <g fill="#C9772E"><ellipse cx="60" cy="246" rx="14" ry="11"/><ellipse cx="88" cy="252" rx="11" ry="9"/><ellipse cx="330" cy="248" rx="13" ry="10"/></g>
+        <g fill="#B54E7A"><circle cx="350" cy="244" r="8"/><circle cx="362" cy="250" r="7"/></g>
+      </svg>
+    </div>
+    <div>
+      <div class="sec-head reveal" style="margin-bottom:22px">
+        <span class="eyebrow">Our story</span>
+        <h2>A family farm with over 120 years in Claiborne County.</h2>
+      </div>
+      <blockquote class="reveal">“We are a small, family-operated farm that has been in Claiborne County for over 120 years.”<small>Hickory Corner Farms</small></blockquote>
+      <div class="facts grid">
+        <div class="fact reveal"><div class="n">1</div><div><b>An old tobacco barn, reborn</b><span>We turned it into a farmers market and store, with a full kitchen inside.</span></div></div>
+        <div class="fact reveal"><div class="n">2</div><div><b>Raised by us, sold by us</b><span>Beef, pork, lamb, poultry and vegetables from our own farm.</span></div></div>
+        <div class="fact reveal"><div class="n">3</div><div><b>Rooted in the community</b><span>We supply local food pantries through Second Harvest Food Bank and sponsor local groups like Kiwanis.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visit the barn</span>
+      <h2>Out on Hwy 63 in Speedwell.</h2>
+      <p>Open six days a week. Closed Sundays.</p>
+    </div>
+    <div class="visit-grid grid">
+      <div class="reveal">
+        <div class="status" id="status"><i></i><span>Open Monday – Saturday, 9 AM – 6 PM</span></div>
+        <div class="hours" id="hours">
+          <div class="row" data-d="1"><span class="d">Monday</span><span class="t">9 AM – 6 PM</span></div>
+          <div class="row" data-d="2"><span class="d">Tuesday</span><span class="t">9 AM – 6 PM</span></div>
+          <div class="row" data-d="3"><span class="d">Wednesday</span><span class="t">9 AM – 6 PM</span></div>
+          <div class="row" data-d="4"><span class="d">Thursday</span><span class="t">9 AM – 6 PM</span></div>
+          <div class="row" data-d="5"><span class="d">Friday</span><span class="t">9 AM – 6 PM</span></div>
+          <div class="row" data-d="6"><span class="d">Saturday</span><span class="t">9 AM – 6 PM</span></div>
+          <div class="row closed" data-d="0"><span class="d">Sunday</span><span class="t">Closed</span></div>
+        </div>
+        <div class="addr">
+          <a class="line" href="tel:+14233778386"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Call the store</small><b>423-377-8386</b></div></a>
+          <a class="line" href="https://www.google.com/maps/dir/?api=1&amp;destination=3528+Hwy+63%2C+Speedwell%2C+TN+37870" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Get directions</small><b>3528 Hwy 63, Speedwell, TN 37870</b></div></a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <div class="ph" aria-hidden="true"><div><svg width="34" height="34" viewBox="0 0 24 24" fill="#D9A441" style="margin:0 auto"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="#3A2A1B"/></svg><b>3528 Hwy 63</b>Speedwell, TN 37870</div></div>
+        <iframe title="Map to Hickory Corner Farms" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=3528%20Hwy%2063%2C%20Speedwell%2C%20TN%2037870&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grid">
+    <div>
+      <h4>Hickory Corner Farms</h4>
+      <p>3528 Hwy 63, Speedwell, TN 37870<br><a href="tel:+14233778386">423-377-8386</a> · <a href="https://www.facebook.com/profile.php?id=61559930657837" target="_blank" rel="noopener">Facebook</a></p>
+      <span class="snap">SNAP accepted here</span>
+    </div>
+    <div><h4>Hours</h4><p>Mon–Sat 9 AM – 6 PM<br>Sunday closed</p></div>
+    <div><h4>Explore</h4><p><a href="#farm">Farm store</a> · <a href="#seasons">Seasons</a> · <a href="#story">Story</a> · <a href="#visit">Visit</a></p></div>
+    <p class="fine">Concept by Code Craft Media. A design preview made for Hickory Corner Farms; not an official site.</p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c1" href="tel:+14233778386"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the farm</a>
+  <a class="c2" href="https://www.google.com/maps/dir/?api=1&amp;destination=3528+Hwy+63%2C+Speedwell%2C+TN+37870" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 11 22 2l-9 19-2-8z"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // Hours: highlight today (Speedwell, TN is on Eastern time)
+  var now; try{ now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'})); }catch(e){ now=new Date(); }
+  var d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('#hours .row[data-d="'+d+'"]'); if(row) row.classList.add('today');
+  var st=document.getElementById('status');
+  if(st){ var open=d>=1&&d<=6&&h>=9&&h<18;
+    st.querySelector('span').textContent = open ? 'Open now · until 6 PM today' : (d===0 ? 'Closed today · open Monday at 9 AM' : (h<9 ? 'Opens today at 9 AM' : (d===6 ? 'Closed now · open Monday at 9 AM' : 'Closed now · open tomorrow at 9 AM')));
+    if(!open) st.classList.add('off'); }
+  // Reveal: content is visible without JS; this only adds/removes a class.
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){ els.forEach(function(e){e.classList.remove('pre')}); }
+  if('IntersectionObserver' in window){
+    var vh=window.innerHeight;
+    els.forEach(function(e){ if(e.getBoundingClientRect().top>vh*0.92) e.classList.add('pre'); });
+    var io=new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.remove('pre'); io.unobserve(x.target);} }); },{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  }
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

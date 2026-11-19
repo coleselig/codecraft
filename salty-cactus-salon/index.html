@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Salty Cactus Salon — Mt. Juliet</title>
+<meta name="description" content="Salty Cactus Salon: hair color, cuts, treatments and extensions in Suite #1 at Salons by JC, Mt. Juliet, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#E9C46A; --sand-soft:#F6E7BF; --cream:#FCF6EA; --teal:#2A9D8F; --teal-deep:#1C6E64; --ink:#1F3B38;
+  --terra:#E76F51; --terra-deep:#C4533A; --line:rgba(31,59,56,.14);
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.display{font-family:'Abril Fatface',Georgia,serif;font-weight:400;letter-spacing:.005em;line-height:1.02}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep)}
+
+/* banner */
+.concept{background:var(--ink);color:#F6E7BF;font-size:.62rem;text-align:center;padding:7px 8px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(min-width:600px){.concept{font-size:.78rem}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(252,246,234,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:50%;background:var(--teal);display:grid;place-items:center}
+.brand-name{font-family:'Abril Fatface',serif;font-size:1.2rem;line-height:1}
+.nav-links{display:none;gap:28px;font-weight:500;font-size:.95rem}
+.nav-links a{text-decoration:none;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav .nav-cta{display:none}
+@media(min-width:900px){.nav-links{display:flex}.nav .nav-cta{display:inline-flex}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent;min-height:52px}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:0 10px 24px -10px rgba(196,83,58,.7)}
+.btn-primary:hover{background:var(--terra-deep);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.btn-sm{padding:10px 18px;min-height:42px;font-size:.92rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%, rgba(233,196,106,.55), transparent 60%),
+  radial-gradient(90% 60% at 0% 100%, rgba(42,157,143,.18), transparent 60%), var(--cream)}
+.hero .wrap{position:relative;z-index:2;padding-top:8px;padding-bottom:40px}
+.hero-grid{display:grid;gap:8px}
+.hero h1{font-size:clamp(2.9rem,13.5vw,6.4rem);margin:10px 0 14px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero h1 .salt{color:var(--terra)}
+.hero p.lede{font-size:1.08rem;max-width:34ch;color:#35524E}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.hero-art{position:relative;order:-1;margin:0 -20px 6px;height:230px}
+.hero-art{overflow:hidden}.hero-art svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+@media(min-width:900px){
+  .hero .wrap{padding-top:80px;padding-bottom:0}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:end;gap:40px}
+  .hero-copy{padding-bottom:200px;position:relative;z-index:3}
+  .hero-art{order:0;margin:0 -60px 0 0;height:560px;overflow:visible}
+}
+.sun{animation:sunpulse 6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes sunpulse{50%{transform:scale(1.04)}}
+.sparkle{animation:twinkle 2.8s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.sparkle.d2{animation-delay:.9s}.sparkle.d3{animation-delay:1.7s}.sparkle.d4{animation-delay:.4s}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7) rotate(0)}50%{opacity:1;transform:scale(1.1) rotate(20deg)}}
+.wave-move{animation:drift 9s linear infinite}
+@keyframes drift{to{transform:translateX(-120px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* wave divider */
+.divider{display:block;width:100%;height:40px;color:var(--teal)}
+
+/* marquee */
+.ticker{background:var(--teal);color:var(--cream);overflow:hidden;padding:14px 0;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:34px;animation:tick 26s linear infinite;font-family:'Abril Fatface',serif;font-size:1.35rem}
+.ticker-track span{display:inline-flex;align-items:center;gap:34px}
+.ticker-track i{font-style:normal;color:var(--sand)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{scroll-margin-top:70px}
+.sec{padding:76px 0}
+.sec-head{max-width:620px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(2.2rem,9vw,3.6rem);margin:10px 0 12px}
+.sec-head p{color:#3E5B57}
+
+/* services */
+.svc-grid{display:grid;gap:14px}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 22px 22px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(31,59,56,.45);border-color:transparent}
+.svc .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px}
+.svc:nth-child(3n+1) .ic{background:rgba(42,157,143,.14);color:var(--teal-deep)}
+.svc:nth-child(3n+2) .ic{background:rgba(231,111,81,.14);color:var(--terra-deep)}
+.svc:nth-child(3n+3) .ic{background:rgba(233,196,106,.35);color:#7A5A12}
+.svc h3{font-family:'Abril Fatface',serif;font-weight:400;font-size:1.55rem;line-height:1.1;margin-bottom:6px}
+.svc p{font-size:.95rem;color:#47625E}
+.svc .num{position:absolute;right:18px;top:16px;font-family:'Abril Fatface',serif;font-size:1rem;color:rgba(31,59,56,.22)}
+.note{margin-top:18px;font-size:.86rem;color:#58716D}
+
+/* why */
+.why{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.why .eyebrow{color:var(--sand)}
+.why .sec-head p{color:#C9D8D4}
+.why-grid{display:grid;gap:16px}
+@media(min-width:800px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why-card{border:1px solid rgba(246,231,191,.18);border-radius:22px;padding:26px 22px;background:rgba(255,255,255,.03)}
+.why-card .big{font-family:'Abril Fatface',serif;font-size:2.6rem;line-height:1;color:var(--sand);margin-bottom:10px}
+.why-card h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.why-card p{color:#C9D8D4;font-size:.96rem}
+.why-cactus{position:absolute;right:-30px;bottom:-10px;width:220px;opacity:.08;pointer-events:none}
+
+/* hours */
+.hours-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px 22px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:6px 0 20px}
+.day{text-align:center;padding:12px 0;border-radius:14px;background:var(--cream);font-weight:600;font-size:.82rem;color:#47625E;border:1px solid transparent}
+.day.today{background:var(--teal);color:#fff;box-shadow:0 10px 20px -12px rgba(42,157,143,.9)}
+.day small{display:block;font-weight:500;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-top:2px}
+.hours-card h3{font-family:'Abril Fatface',serif;font-weight:400;font-size:1.6rem;line-height:1.15;margin-bottom:8px}
+.hours-card p{color:#47625E;margin-bottom:18px}
+.hours-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* visit */
+.visit-grid{display:grid;gap:18px}
+@media(min-width:900px){.visit-grid{grid-template-columns:.95fr 1.05fr;align-items:stretch}}
+.addr-card{background:var(--sand-soft);border-radius:26px;padding:28px 24px;position:relative;overflow:hidden}
+.addr-card .suite{display:inline-block;background:var(--terra);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.addr-card address{font-style:normal;font-family:'Abril Fatface',serif;font-size:1.75rem;line-height:1.15;margin-bottom:8px}
+.addr-card p{color:#4E5A3A;margin-bottom:20px}
+.map{border-radius:26px;overflow:hidden;min-height:320px;border:1px solid var(--line);background:
+  repeating-linear-gradient(45deg, rgba(42,157,143,.07) 0 12px, transparent 12px 24px), #EAF3EF;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map .pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-60%);text-align:center;font-weight:600;font-size:.9rem;color:var(--teal-deep)}
+
+/* insta */
+.insta{background:linear-gradient(135deg,var(--terra) 0%,#E98A5E 55%,var(--sand) 100%);color:#fff;border-radius:30px;padding:40px 26px;position:relative;overflow:hidden;text-align:left}
+.insta h2{font-size:clamp(2rem,8.5vw,3.4rem);margin:10px 0 12px}
+.insta p{max-width:44ch;margin-bottom:24px;color:#FFF4EA}
+.insta .eyebrow{color:#fff;opacity:.9}
+.btn-light{background:#fff;color:var(--terra-deep)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(0,0,0,.35)}
+.insta-art{position:absolute;right:-20px;bottom:-24px;width:170px;opacity:.25}
+@media(min-width:900px){.insta{padding:64px 60px}.insta-art{width:280px;opacity:.3}}
+
+footer{padding:46px 0 36px;border-top:1px solid var(--line);margin-top:76px}
+.foot{display:grid;gap:18px}
+@media(min-width:800px){.foot{grid-template-columns:1fr auto;align-items:end}}
+.foot small{color:#5C7672;display:block}
+.foot a{color:var(--teal-deep);font-weight:600}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(31,59,56,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;font-weight:600;text-decoration:none;font-size:.95rem}
+.mbar .m1{background:var(--terra);color:#fff}
+.mbar .m2{background:rgba(255,255,255,.1);color:var(--cream);border:1px solid rgba(246,231,191,.25)}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.js.show-all .reveal{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by Code Craft Media, made for Salty Cactus Salon. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Salty Cactus Salon home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="18" height="22" viewBox="0 0 18 22" fill="#FCF6EA"><path d="M7 22V3.5a2 2 0 0 1 4 0V22zM3 13V8.5a1.5 1.5 0 0 1 3 0V12h1v3H4.5A1.5 1.5 0 0 1 3 13.5zM15 10V6.5a1.5 1.5 0 0 0-3 0V10h-1v3h2.5A1.5 1.5 0 0 0 15 11.5z"/></svg>
+      </span>
+      <span class="brand-name">Salty Cactus</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a><a href="#why">Why Macy</a><a href="#visit">Visit</a><a href="#instagram">Instagram</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="https://www.instagram.com/saltycactussalon/" target="_blank" rel="noopener">Book via Instagram</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Suite #1 · Salons by JC · Mt. Juliet</span>
+      <h1 class="display">A&nbsp;little <span class="salt">salty.</span><br>A lot of <em>sharp.</em></h1>
+      <p class="lede">Color, cuts, treatments and extensions from Macy at Salty Cactus Salon, in Suite #1 on South Mt. Juliet Road.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://www.instagram.com/saltycactussalon/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          Book via Instagram</a>
+        <a class="btn btn-ghost" href="#services">See services</a>
+      </div>
+      <div class="chips" aria-label="Services">
+        <span class="chip">Color</span><span class="chip">Cuts</span><span class="chip">Treatments</span><span class="chip">Extensions</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 420" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="cac" x1="0" x2="1"><stop offset="0" stop-color="#2A9D8F"/><stop offset="1" stop-color="#1C6E64"/></linearGradient>
+          <linearGradient id="sunG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0A35E"/><stop offset="1" stop-color="#E76F51"/></linearGradient>
+          <clipPath id="sunClip"><circle cx="250" cy="170" r="118"/></clipPath>
+          <path id="star" d="M0-10C1-3 3-1 10 0C3 1 1 3 0 10C-1 3-3 1-10 0C-3-1-1-3 0-10Z"/>
+        </defs>
+        <g class="sun"><circle cx="250" cy="170" r="118" fill="url(#sunG)"/>
+          <g clip-path="url(#sunClip)" fill="#FCF6EA" opacity=".5">
+            <rect x="120" y="196" width="260" height="7"/><rect x="120" y="216" width="260" height="9"/><rect x="120" y="240" width="260" height="12"/><rect x="120" y="268" width="260" height="16"/>
+          </g>
+        </g>
+        <!-- dunes -->
+        <path d="M-1400 320 C-1100 300 -800 336 -420 318 C-300 300 -160 336 -20 330 C60 290 120 300 200 320 S340 300 440 315 C560 330 700 300 840 318 V420 H-1400Z" fill="#E9C46A"/>
+        <path d="M-1400 360 C-1100 344 -760 372 -420 362 C-260 344 -120 372 -20 360 C80 340 160 350 240 366 S360 352 440 362 C580 372 700 346 840 360 V420 H-1400Z" fill="#DDB04F"/>
+        <!-- saguaro -->
+        <g fill="url(#cac)">
+          <path d="M188 360 V128 a26 26 0 0 1 52 0 V360Z"/>
+          <path d="M188 262 h-38 a24 24 0 0 1-24-24 V176 a17 17 0 0 1 34 0 v52 h28z"/>
+          <path d="M240 228 h34 v-74 a17 17 0 0 1 34 0 v66 a32 32 0 0 1-32 32 h-36z"/>
+        </g>
+        <g stroke="#FCF6EA" stroke-opacity=".35" stroke-width="2" stroke-linecap="round">
+          <line x1="205" y1="120" x2="205" y2="350"/><line x1="223" y1="120" x2="223" y2="350"/>
+        </g>
+        <!-- salt wave -->
+        <g class="wave-move">
+          <path d="M-1400 392 q30-18 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 q30-18 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#2A9D8F" stroke-width="5" stroke-linecap="round"/>
+          <path d="M-1400 408 q30-14 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 q30-14 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#FCF6EA" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+        </g>
+        <!-- sea-salt sparkles -->
+        <g fill="#FCF6EA">
+          <use href="#star" class="sparkle" transform="translate(110 110)"/>
+          <use href="#star" class="sparkle d2" transform="translate(360 80) scale(.7)"/>
+          <use href="#star" class="sparkle d3" transform="translate(330 290) scale(.8)"/>
+        </g>
+        <g fill="#2A9D8F"><use href="#star" class="sparkle d4" transform="translate(80 240) scale(.9)"/></g>
+        <g fill="#E76F51"><use href="#star" class="sparkle d2" transform="translate(150 60) scale(.55)"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Hair Color <i>✦</i> Hair Cut <i>✦</i> Hair Treatment <i>✦</i> Hair Extensions <i>✦</i> Cosmetology <i>✦</i> Suite #1 <i>✦</i></span>
+    <span>Hair Color <i>✦</i> Hair Cut <i>✦</i> Hair Treatment <i>✦</i> Hair Extensions <i>✦</i> Cosmetology <i>✦</i> Suite #1 <i>✦</i></span>
+  </div>
+</div>
+
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2 class="display">Everything your hair's been asking for.</h2>
+      <p>The full service list from Salty Cactus Salon's suite profile, all under one roof in Suite #1.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal"><span class="num">01</span>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div>
+        <h3>Hair Color</h3><p>Fresh color, start to finish.</p></article>
+      <article class="svc reveal"><span class="num">02</span>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div>
+        <h3>Hair Cut</h3><p>Cuts and shaping in the chair.</p></article>
+      <article class="svc reveal"><span class="num">03</span>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3h6M10 3v4l-4 6v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6l-4-6V3"/><path d="M6 14h12"/></svg></div>
+        <h3>Hair Treatment</h3><p>Treatments to bring hair back to life.</p></article>
+      <article class="svc reveal"><span class="num">04</span>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3c0 6 2 10 2 18M12 3c0 6 0 10 0 18M17 3c0 6-2 10-2 18"/></svg></div>
+        <h3>Hair Extensions</h3><p>Extensions for length and volume.</p></article>
+      <article class="svc reveal"><span class="num">05</span>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l2.2 6.8H21l-5.5 4 2.1 6.7L12 15.4 6.4 19.5l2.1-6.7L3 8.8h6.8z"/></svg></div>
+        <h3>Cosmetology</h3><p>Cosmetology services in Suite #1.</p></article>
+      <article class="svc reveal"><span class="num">06</span>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Hair Stylist</h3><p>Styling for whatever you have planned.</p></article>
+    </div>
+    <p class="note">Prices aren't posted yet. Message Salty Cactus on Instagram for a quote.</p>
+  </div>
+</section>
+
+<section id="why" class="sec why">
+  <svg class="why-cactus" viewBox="0 0 120 200" fill="#E9C46A" aria-hidden="true"><path d="M48 200V30a12 12 0 0 1 24 0v170zM48 120H28a12 12 0 0 1-12-12V70a8 8 0 0 1 16 0v34h16zM72 100h18V60a8 8 0 0 1 16 0v36a16 16 0 0 1-16 16H72z"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Salty Cactus</span>
+      <h2 class="display">Your own suite, not a crowded floor.</h2>
+      <p>Salty Cactus Salon works out of its own private suite inside Salons by JC in Mt. Juliet.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="big">#1</div><h3>A private suite</h3><p>You'll find Salty Cactus in Suite #1, a space all its own inside Salons by JC.</p></div>
+      <div class="why-card reveal"><div class="big">5</div><h3>Five hair services</h3><p>Color, cut, treatment, extensions and cosmetology, all in one private suite.</p></div>
+      <div class="why-card reveal"><div class="big">DM</div><h3>Easy to reach</h3><p>Message <strong>@saltycactussalon</strong> on Instagram or send Macy an email to plan your visit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visit</span>
+      <h2 class="display">Find the cactus in Suite #1.</h2>
+      <p>Salons by JC, on South Mt. Juliet Road.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours-visit" style="display:grid;gap:18px">
+        <div class="addr-card reveal">
+          <span class="suite">Suite #1</span>
+          <address>661 S Mt Juliet Rd<br>Mt. Juliet, TN</address>
+          <p>Inside Salons by JC.</p>
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=661+S+Mt+Juliet+Rd%2C+Mt.+Juliet%2C+TN" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="hours-card reveal" id="hours">
+          <span class="eyebrow">Hours</span>
+          <div class="days" id="days"></div>
+          <h3 id="todayLine">Hours aren't posted yet.</h3>
+          <p>Message ahead to check openings and book your time.</p>
+          <div class="hours-actions">
+            <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/saltycactussalon/" target="_blank" rel="noopener">DM on Instagram</a>
+            <a class="btn btn-ghost btn-sm" href="mailto:macydenton@yahoo.com?subject=Appointment%20at%20Salty%20Cactus%20Salon">Email Macy</a>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <div class="pin">📍 661 S Mt Juliet Rd</div>
+        <iframe title="Map to Salty Cactus Salon, 661 S Mt Juliet Rd, Mt. Juliet, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=661%20S%20Mt%20Juliet%20Rd%2C%20Mt.%20Juliet%2C%20TN&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instagram" class="wrap">
+  <div class="insta reveal">
+    <svg class="insta-art" viewBox="0 0 120 200" fill="#fff" aria-hidden="true"><path d="M48 200V30a12 12 0 0 1 24 0v170zM48 120H28a12 12 0 0 1-12-12V70a8 8 0 0 1 16 0v34h16zM72 100h18V60a8 8 0 0 1 16 0v36a16 16 0 0 1-16 16H72z"/></svg>
+    <span class="eyebrow">@saltycactussalon</span>
+    <h2 class="display">Ready for something fresh?</h2>
+    <p>Send a DM on Instagram to ask about color, cuts, treatments or extensions, and save your spot in Suite #1.</p>
+    <a class="btn btn-light" href="https://www.instagram.com/saltycactussalon/" target="_blank" rel="noopener">Message on Instagram →</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand-name" style="font-size:1.6rem;margin-bottom:6px">Salty Cactus Salon</div>
+      <small>Suite #1, Salons by JC · 661 S Mt Juliet Rd, Mt. Juliet, TN</small>
+      <small><a href="https://www.instagram.com/saltycactussalon/" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:macydenton@yahoo.com">macydenton@yahoo.com</a></small>
+    </div>
+    <small>Concept by Code Craft Media</small>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="m1" href="https://www.instagram.com/saltycactussalon/" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Book via DM</a>
+  <a class="m2" href="https://www.google.com/maps/dir/?api=1&destination=661+S+Mt+Juliet+Rd%2C+Mt.+Juliet%2C+TN" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], full=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=new Date().getDay(), box=document.getElementById('days'), html='';
+  for(var i=1;i<=7;i++){var k=i%7;html+='<div class="day'+(k===t?' today':'')+'">'+names[k]+(k===t?'<small>Today</small>':'')+'</div>';}
+  box.innerHTML=html;
+  document.getElementById('todayLine').textContent="It's "+full[t]+". Hours aren't posted yet.";
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  } else d.classList.add('show-all');
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

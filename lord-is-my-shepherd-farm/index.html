@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Lord is My Shepherd Farm — Cleveland, TN</title>
+<meta name="description" content="Concept site for The Lord is My Shepherd Farm, a five-generation family farm on White Oak Valley Rd in Cleveland, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#3F5E3A; --green-d:#2B4228; --green-l:#5C7F55;
+  --red:#8E2F25; --red-d:#6E2219;
+  --cream:#F4EEDC; --cream-d:#E8DFC6; --paper:#FBF8EE;
+  --ink:#24261F; --muted:#5A5C50;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Source Sans 3',system-ui,-apple-system,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){body{padding-bottom:0}.wrap{padding:0 40px}}
+
+/* banner */
+.concept{background:var(--ink);color:#E9E4D2;font-size:12.5px;text-align:center;padding:7px 12px;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept .full{display:none}@media(min-width:640px){.concept .full{display:inline}.concept .short{display:none}}
+.concept b{color:#fff;font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(244,238,220,.92);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(63,94,58,.15)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:34px;height:34px;flex:none}
+.brand span{font-family:var(--serif);font-weight:700;font-size:17px;line-height:1.1;color:var(--green-d);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.links{display:none;gap:26px;font-weight:600;font-size:15px}
+.links a{text-decoration:none;color:var(--green-d);position:relative}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--red);transition:right .25s}
+.links a:hover::after{right:0}
+.nav .call{display:none}
+@media(min-width:900px){.links{display:flex}.nav .call{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:16px;text-decoration:none;padding:14px 22px;border-radius:999px;transition:transform .15s,background .2s,box-shadow .2s;border:2px solid transparent;min-height:50px}
+.btn svg{width:18px;height:18px;flex:none}
+.btn{white-space:nowrap}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 6px 18px -8px rgba(142,47,37,.7)}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--green);color:var(--green-d);background:transparent}
+.btn-ghost:hover{background:var(--green);color:var(--cream)}
+.btn:active{transform:scale(.97)}
+.btn.sm{padding:9px 16px;min-height:40px;font-size:14.5px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,rgba(255,255,255,.55),transparent 60%),var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding-top:22px;padding-bottom:0;position:relative;z-index:2}
+.hero .wrap>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+h1{font-family:var(--serif);font-weight:800;color:var(--green-d);font-size:clamp(34px,9.6vw,74px);line-height:1.02;letter-spacing:-.015em;margin:12px 0 12px}
+h1 em{font-style:italic;font-weight:700;color:var(--red)}
+.sub{font-size:18px;color:var(--muted);max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.cta .btn{flex:1 1 140px;padding:14px 16px}
+.art{position:relative;margin:4px -20px 0;min-width:0}
+.art svg{width:100%;height:auto}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:end;padding-top:64px;gap:32px}
+  .hero h1{font-size:clamp(44px,4.3vw,60px)}
+  .art svg{-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .hero .copy{padding-bottom:84px}
+  .cta .btn{flex:0 0 auto}
+  .art{margin:0 -40px 0 0}
+}
+.rooster{transform-origin:50% 90%;transform-box:fill-box;animation:peck 7s ease-in-out infinite}
+@keyframes peck{0%,86%,100%{transform:rotate(0)}90%{transform:rotate(-2.5deg)}94%{transform:rotate(1deg)}}
+.sun{animation:spin 60s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge-rot{animation:spin 40s linear infinite;transform-origin:center;transform-box:fill-box}
+
+/* facts strip */
+.strip{background:var(--green);color:var(--cream)}
+.strip .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.strip .wrap>*{min-width:0}
+.fact{padding:22px 10px;text-align:center;border-right:1px solid rgba(244,238,220,.16);border-bottom:1px solid rgba(244,238,220,.16)}
+.fact:nth-child(2n){border-right:0}
+.fact b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;color:#fff}
+.fact span{font-size:13.5px;letter-spacing:.04em;opacity:.85}
+@media(min-width:900px){.strip .wrap{grid-template-columns:repeat(4,minmax(0,1fr))}.fact{border-bottom:0}.fact:nth-child(2n){border-right:1px solid rgba(244,238,220,.16)}.fact:last-child{border-right:0}}
+
+/* sections */
+section{padding:72px 0}
+.kicker{font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+h2{font-family:var(--serif);font-weight:700;color:var(--green-d);font-size:clamp(30px,7.4vw,48px);line-height:1.08;letter-spacing:-.01em;margin-bottom:14px}
+h2 em{color:var(--red)}
+.lead{color:var(--muted);font-size:18px;max-width:58ch}
+@media(min-width:900px){section{padding:104px 0}}
+
+/* harvest */
+.harvest{background:var(--paper);position:relative}
+.harvest::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(63,94,58,.09) 1px,transparent 1.2px);background-size:18px 18px;pointer-events:none}
+.harvest .wrap{position:relative}
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:34px}
+.cards>*{min-width:0}
+.card{background:#fff;border:1px solid var(--cream-d);border-radius:18px;padding:24px 22px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(43,66,40,.45)}
+.card .ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--cream);margin-bottom:14px}
+.card .ico svg{width:34px;height:34px}
+.card h3{font-family:var(--serif);font-size:24px;color:var(--green-d);margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none}
+.tags li{font-size:14.5px;font-weight:600;background:var(--cream);color:var(--green-d);border-radius:999px;padding:5px 12px}
+.card.red .ico{background:#F5E1DD}
+.card.red .tags li{background:#F7E9E5;color:var(--red-d)}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* upick */
+.upick{background:var(--green-d);color:var(--cream);position:relative;overflow:hidden}
+.upick .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center;position:relative;z-index:1}
+.upick .wrap>*{min-width:0}
+.upick h2{color:#fff}
+.upick h2 em{color:#C9D9F2;font-style:italic}
+.upick .lead{color:rgba(244,238,220,.85)}
+.upick .note{margin-top:18px;font-size:15px;background:rgba(255,255,255,.08);border-left:3px solid #9DB6E0;padding:12px 14px;border-radius:0 10px 10px 0}
+.upick .btn-ghost{border-color:var(--cream);color:var(--cream)}
+.upick .btn-ghost:hover{background:var(--cream);color:var(--green-d)}
+.berries svg{width:100%;max-width:300px;margin:0 auto}
+@media(min-width:900px){.berries svg{max-width:440px}}
+@media(min-width:900px){.upick .wrap{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
+
+/* heritage */
+.heritage .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+.heritage .wrap>*{min-width:0}
+blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,5.6vw,30px);line-height:1.3;color:var(--green-d);border-left:4px solid var(--red);padding:4px 0 4px 18px;margin:22px 0 10px}
+.cite{font-size:14px;color:var(--muted)}
+.why{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;list-style:none}
+.why>*{min-width:0}
+.why li{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--cream-d);border-radius:16px;padding:18px}
+.why li svg{flex:none;width:40px;height:40px}
+.why h3{font-size:17.5px;color:var(--green-d);line-height:1.3;margin-bottom:3px}
+.why p{font-size:15.5px;color:var(--muted)}
+@media(min-width:900px){.heritage .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:64px}}
+
+/* where */
+.where{background:var(--paper)}
+.ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
+.ways>*{min-width:0}
+.way{background:#fff;border:1px solid var(--cream-d);border-radius:14px;padding:16px;text-align:left}
+.way b{display:block;font-family:var(--serif);color:var(--green-d);font-size:18px;line-height:1.2;margin-bottom:4px}
+.way span{font-size:14.5px;color:var(--muted)}
+.way.wide{grid-column:1/-1}
+@media(min-width:900px){.ways{grid-template-columns:repeat(4,minmax(0,1fr))}.way.wide{grid-column:auto}}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.visit .wrap>*{min-width:0}
+.hours{background:#fff;border-radius:18px;border:1px solid var(--cream-d);overflow:hidden}
+.hours h3{background:var(--green);color:var(--cream);font-family:var(--serif);font-size:21px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hours h3 small{font-family:var(--sans);font-size:13px;font-weight:600;background:rgba(255,255,255,.14);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:12px 20px;border-top:1px solid var(--cream-d);font-size:16px}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.hours tr.today td{background:#F7E9E5;color:var(--red-d);font-weight:700}
+.hours tr.today td:first-child::after{content:"Today";margin-left:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:#fff;border-radius:999px;padding:2px 8px;vertical-align:2px}
+.hours .fine{font-size:13.5px;color:var(--muted);padding:12px 20px 16px;border-top:1px solid var(--cream-d)}
+.contact{display:flex;flex-direction:column;gap:14px}
+.addr{font-size:18px;font-weight:600;color:var(--green-d);line-height:1.45}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--cream-d);aspect-ratio:4/3;background:var(--cream-d)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.contact .row{display:flex;flex-wrap:wrap;gap:10px}
+.contact .row .btn{flex:1 1 150px}
+.mail{font-size:15.5px;color:var(--muted);word-break:break-word}
+.mail a{color:var(--green-d);font-weight:600}
+@media(min-width:900px){.visit .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}}
+
+/* footer */
+footer{background:var(--ink);color:#CFCAB8;padding:44px 0 34px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+footer .wrap>*{min-width:0}
+footer .fb{font-family:var(--serif);font-size:22px;color:#fff}
+footer a{color:#fff}
+footer .small{font-size:13px;opacity:.75}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(251,248,238,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--cream-d);box-shadow:0 -8px 24px -16px rgba(0,0,0,.35)}
+.bar .btn{flex:1;min-height:50px;padding:12px 10px}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept"><span class="full">Concept site by <b>Code Craft Media</b>, made for The Lord is My Shepherd Farm. Not live.</span><span class="short">Concept site by <b>Code Craft Media</b>, made for this farm. Not live.</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Lord is My Shepherd Farm, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#3F5E3A"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#F4EEDC" stroke-width="1" stroke-dasharray="2 2"/><text x="20" y="25.5" text-anchor="middle" font-family="Playfair Display,serif" font-weight="800" font-style="italic" font-size="15" fill="#F4EEDC">LS</text></svg>
+      <span>The Lord is My Shepherd Farm</span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#harvest">Harvest</a><a href="#upick">U-Pick</a><a href="#heritage">Our Story</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-red sm call" href="tel:+14234640680">Call 423-464-0680</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="copy rv">
+      <div class="eyebrow">White Oak Valley · Cleveland, TN</div>
+      <h1>Five generations on White Oak Valley Road. <em>Since 1953.</em></h1>
+      <p class="sub">Fruit, vegetables, eggs and custom beef from a Cleveland family farm, shared for over 70 years.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="tel:+14234640680"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call the farm</a>
+        <a class="btn btn-ghost" href="#visit">Store hours</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 70 600 400" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4EEDC" stop-opacity="0"/><stop offset="1" stop-color="#EADFC0"/></linearGradient>
+          <path id="arc" d="M 0 -45 a 45 45 0 1 1 -0.1 0" />
+        </defs>
+        
+        <g class="sun"><circle cx="455" cy="130" r="58" fill="#E9C77A" opacity=".55"/><g stroke="#E2B65E" stroke-width="3" opacity=".5">
+          <line x1="455" y1="52" x2="455" y2="36"/><line x1="455" y1="208" x2="455" y2="224"/><line x1="377" y1="130" x2="361" y2="130"/><line x1="533" y1="130" x2="549" y2="130"/><line x1="400" y1="75" x2="389" y2="64"/><line x1="510" y1="185" x2="521" y2="196"/><line x1="510" y1="75" x2="521" y2="64"/><line x1="400" y1="185" x2="389" y2="196"/></g></g>
+        <!-- far hills -->
+        <path d="M0 300 C90 250 170 262 250 282 S420 236 600 270 V470 H0Z" fill="#8FA884"/>
+        <path d="M0 340 C120 300 230 318 330 330 S500 300 600 316 V470 H0Z" fill="#5C7F55"/>
+        <!-- barn -->
+        <g transform="translate(70 222)">
+          <path d="M0 70 L60 20 L120 70 V140 H0Z" fill="#8E2F25"/>
+          <path d="M60 20 L0 70 H120Z" fill="#6E2219"/>
+          <path d="M-6 72 L60 14 L126 72" fill="none" stroke="#F4EEDC" stroke-width="5" stroke-linejoin="round"/>
+          <rect x="40" y="86" width="40" height="54" fill="#6E2219"/>
+          <path d="M40 86 L80 140 M80 86 L40 140" stroke="#F4EEDC" stroke-width="3"/>
+          <rect x="40" y="86" width="40" height="54" fill="none" stroke="#F4EEDC" stroke-width="3"/>
+          <rect x="50" y="44" width="20" height="18" fill="#F4EEDC"/>
+          <rect x="132" y="38" width="26" height="102" rx="13" fill="#B7AE92"/>
+          <path d="M132 50 a13 13 0 0 1 26 0" fill="#8E2F25"/>
+        </g>
+        <!-- fence -->
+        <g stroke="#F4EEDC" stroke-width="5" stroke-linecap="round">
+          <line x1="0" y1="388" x2="600" y2="372"/><line x1="0" y1="410" x2="600" y2="394"/>
+          <line x1="30" y1="372" x2="30" y2="430"/><line x1="130" y1="369" x2="130" y2="428"/><line x1="230" y1="367" x2="230" y2="425"/><line x1="530" y1="358" x2="530" y2="418"/>
+        </g>
+        <path d="M0 420 C150 400 300 412 600 398 V470 H0Z" fill="#3F5E3A"/>
+        <!-- rooster -->
+        <g transform="translate(268 168)"><g class="rooster">
+          <path d="M74 236 L66 280 M66 280 l-14 6 M66 280 l10 8 M104 236 l6 44 M110 280 l-12 7 M110 280 l12 6" stroke="#C78A2C" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <!-- tail -->
+          <path d="M40 150 C-10 120 -30 40 10 0 C10 50 30 90 60 120Z" fill="#2B4228"/>
+          <path d="M48 160 C0 150 -36 90 -20 40 C0 90 30 120 66 136Z" fill="#3F5E3A"/>
+          <path d="M56 168 C20 176 -20 150 -30 110 C0 140 40 150 70 150Z" fill="#1F2D1C"/>
+          <path d="M10 0 C40 30 50 80 60 120" stroke="#5C7F55" stroke-width="3" fill="none"/>
+          <!-- body -->
+          <path d="M50 140 C50 100 90 90 120 100 C150 70 160 40 150 20 C170 14 190 24 192 46 L210 54 L194 62 C196 90 186 120 170 150 C160 200 130 240 90 240 C60 240 44 200 50 140Z" fill="#8E2F25"/>
+          <path d="M120 100 C150 70 160 40 150 20 C170 14 190 24 192 46 L194 62 C196 90 186 120 170 150 C156 130 130 116 120 100Z" fill="#B5462F"/>
+          <path d="M70 160 C90 150 130 156 150 180 C130 210 90 214 66 196Z" fill="#6E2219"/>
+          <path d="M78 172 C100 168 124 172 138 184" stroke="#C25A3E" stroke-width="3" fill="none"/>
+          <path d="M84 188 C104 186 122 190 132 198" stroke="#C25A3E" stroke-width="3" fill="none"/>
+          <!-- comb & wattle -->
+          <path d="M152 22 C150 4 162 2 164 14 C166 -2 180 0 178 14 C186 4 196 12 188 26 C180 22 166 18 152 22Z" fill="#C8352A"/>
+          <path d="M190 62 C196 74 190 88 182 84 C178 76 182 66 190 62Z" fill="#C8352A"/>
+          <path d="M192 46 L212 54 L192 60Z" fill="#E2B04E"/>
+          <circle cx="178" cy="38" r="4.5" fill="#F4EEDC"/><circle cx="179" cy="38" r="2.2" fill="#1F2D1C"/>
+        </g></g>
+        <!-- since badge -->
+        <g transform="translate(118 160) scale(.9)">
+          <circle r="66" fill="#F4EEDC" stroke="#8E2F25" stroke-width="3"/>
+          <circle r="55" fill="none" stroke="#8E2F25" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <g class="badge-rot"><text font-family="Source Sans 3, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2.6" fill="#3F5E3A"><textPath href="#arc">FIVE GENERATIONS · FAMILY FARM · SINCE 1953 · </textPath></text></g>
+          <text y="-8" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-weight="700" font-size="10" letter-spacing="2.5" fill="#8E2F25">SINCE</text>
+          <text y="18" text-anchor="middle" font-family="Playfair Display, serif" font-weight="800" font-size="26" fill="#2B4228">1953</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="fact"><b>1953</b><span>Year established</span></div>
+    <div class="fact"><b>5</b><span>Generations of family</span></div>
+    <div class="fact"><b>70+</b><span>Years of farm products</span></div>
+    <div class="fact"><b>U-Pick</b><span>Blueberries in season</span></div>
+  </div>
+</div>
+
+<section class="harvest" id="harvest">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">What we grow &amp; raise</div>
+      <h2>From the orchard, the garden and <em>the barnyard.</em></h2>
+      <p class="lead">Grown naturally, with no preservatives. What's ready depends on the season, so give the farm a call before you drive out.</p>
+    </div>
+    <div class="cards">
+      <article class="card red rv">
+        <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 12c-6-4-14-1-14 8 0 9 7 15 14 13 7 2 14-4 14-13 0-9-8-12-14-8z" fill="#8E2F25"/><path d="M20 12c0-4 2-7 5-8" stroke="#3F5E3A" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M22 9c3-3 7-2 8 0-3 2-6 2-8 0z" fill="#5C7F55"/></svg></div>
+        <h3>Fruit</h3>
+        <ul class="tags"><li>Apples</li><li>Blackberries</li><li>Blueberries</li><li>Pears</li></ul>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 36c-8 0-12-8-10-16 2-6 6-8 10-8s8 2 10 8c2 8-2 16-10 16z" fill="#C8352A"/><path d="M14 13c2-4 4-6 6-6s4 2 6 6c-3-1-4 1-6 1s-3-2-6-1z" fill="#3F5E3A"/></svg></div>
+        <h3>Vegetables</h3>
+        <ul class="tags"><li>Beans</li><li>Broccoli</li><li>Cabbage</li><li>Carrots</li><li>Cauliflower</li><li>Corn</li><li>Cucumbers</li><li>Herbs</li><li>Lettuce</li><li>Okra</li><li>Peas</li><li>Peppers</li><li>Spinach</li><li>Summer squash</li><li>Winter squash</li><li>Tomatoes</li></ul>
+      </article>
+      <article class="card red rv">
+        <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="15" cy="23" rx="8" ry="10" fill="#F4EEDC" stroke="#8E2F25" stroke-width="2"/><ellipse cx="26" cy="25" rx="8" ry="10" fill="#E9D7B8" stroke="#8E2F25" stroke-width="2"/></svg></div>
+        <h3>Farm &amp; pantry</h3>
+        <ul class="tags"><li>Farm-fresh eggs</li><li>Custom beef</li><li>Dried herb &amp; flower arrangements</li><li>Soap &amp; oils</li><li>Wood</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="upick" id="upick">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker" style="color:#E9C77A">Pick your own</div>
+      <h2>Bring a bucket. <em>Blueberry season</em> is on the farm.</h2>
+      <p class="lead">Pick-your-own blueberries, straight off the bushes in White Oak Valley.</p>
+      <p class="note">U-pick days depend on the crop. Call <span style="white-space:nowrap">423-464-0680</span> for availability before you come.</p>
+      <div class="cta"><a class="btn btn-ghost" href="tel:+14234640680">Check what's ripe</a></div>
+    </div>
+    <div class="berries rv" aria-hidden="true">
+      <svg viewBox="0 0 400 320">
+        <path d="M40 300 C80 200 160 150 230 120 C290 95 340 60 370 20" stroke="#5C7F55" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M150 170 C120 130 130 90 170 80 C180 120 175 150 150 170Z" fill="#5C7F55"/>
+        <path d="M250 115 C260 70 300 55 330 70 C310 105 285 120 250 115Z" fill="#3F5E3A"/>
+        <path d="M95 235 C60 215 50 180 70 160 C95 180 105 210 95 235Z" fill="#3F5E3A"/>
+        <g>
+          <circle cx="200" cy="190" r="34" fill="#4A5C8F"/><circle cx="188" cy="178" r="9" fill="#7D8FBF" opacity=".55"/><path d="M200 168l-6-8 6 3 6-3z M200 168l-9 1 6 3z M200 168l9 1-6 3z" fill="#2E3A63"/>
+          <circle cx="262" cy="214" r="28" fill="#3D4D7E"/><circle cx="252" cy="205" r="7" fill="#7D8FBF" opacity=".5"/>
+          <circle cx="232" cy="262" r="30" fill="#55679C"/><circle cx="222" cy="252" r="8" fill="#9AA9D2" opacity=".5"/>
+          <circle cx="160" cy="246" r="24" fill="#3D4D7E"/><circle cx="152" cy="238" r="6" fill="#7D8FBF" opacity=".5"/>
+          <circle cx="300" cy="160" r="22" fill="#55679C"/><circle cx="294" cy="153" r="6" fill="#9AA9D2" opacity=".5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="heritage" id="heritage">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Our story</div>
+      <h2>A family farm, <em>five generations</em> deep.</h2>
+      <blockquote>“We have been blessed to provide our family and friends with products from our farm for over 70 years.”</blockquote>
+      <p class="cite">From the farm's own story</p>
+    </div>
+    <ul class="why">
+      <li class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F7E9E5"/><text x="20" y="25" text-anchor="middle" font-family="Playfair Display,serif" font-weight="800" font-size="12" fill="#8E2F25">1953</text></svg><div><h3>Established in 1953</h3><p>Family-operated for five generations near Cleveland, Tennessee.</p></div></li>
+      <li class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E5ECDF"/><ellipse cx="20" cy="22" rx="7" ry="9" fill="#F4EEDC" stroke="#3F5E3A" stroke-width="2"/><path d="M16 15l2 3 2-4 2 4 2-3" stroke="#3F5E3A" stroke-width="1.6" fill="none"/></svg><div><h3>A hatchery for endangered chickens</h3><p>Endangered chicken breeds hatched right here on the farm.</p></div></li>
+      <li class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E5ECDF"/><path d="M20 10l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#3F5E3A"/></svg><div><h3>Members of The Livestock Conservancy</h3><p>Dedicated to safeguarding endangered livestock breeds.</p></div></li>
+      <li class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F7E9E5"/><path d="M12 26c0-9 7-15 17-15-1 10-6 16-15 16" fill="#8E2F25"/><path d="M12 29c3-6 7-10 12-13" stroke="#F4EEDC" stroke-width="2" fill="none"/></svg><div><h3>Grown naturally</h3><p>No preservatives. Just the farm, the season and family know-how.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="where">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Where to find us</div>
+      <h2>On the farm, at the market, <em>and beyond.</em></h2>
+      <p class="lead">Stop by the farm store on White Oak Valley Rd, or look for the farm at the Bradley County Farmers Market.</p>
+    </div>
+    <div class="ways">
+      <div class="way rv"><b>On-farm sales</b><span>Six days a week</span></div>
+      <div class="way rv"><b>Pick your own</b><span>Blueberries</span></div>
+      <div class="way rv"><b>Farmers market</b><span>Bradley County Farmers Market</span></div>
+      <div class="way rv"><b>Wholesale</b><span>Ask the farm</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Visit the farm</div>
+      <h2>Come see us in <em>White Oak Valley.</em></h2>
+      <div class="hours" style="margin-top:22px">
+        <h3>On-farm sales <small>Mon – Sat</small></h3>
+        <table aria-label="On-farm sales hours">
+          <tbody>
+            <tr data-d="1"><td>Monday</td><td>9 AM – 5 PM</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>9 AM – 5 PM</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>9 AM – 3 PM</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>9 AM – 5 PM</td></tr>
+            <tr data-d="5"><td>Friday</td><td>9 AM – 5 PM</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>9 AM – 5 PM</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>Call ahead</td></tr>
+          </tbody>
+        </table>
+        <p class="fine">Call ahead to check what's available.</p>
+      </div>
+    </div>
+    <div class="contact rv">
+      <p class="addr">396 White Oak Valley Rd NW<br>Cleveland, TN 37312</p>
+      <div class="map"><iframe title="Map to The Lord is My Shepherd Farm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=396%20White%20Oak%20Valley%20Rd%20NW%2C%20Cleveland%2C%20TN%2037312&output=embed"></iframe></div>
+      <div class="row">
+        <a class="btn btn-red" href="tel:+14234640680">Call 423-464-0680</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=396%20White%20Oak%20Valley%20Rd%20NW%2C%20Cleveland%2C%20TN%2037312">Get directions</a>
+      </div>
+      <p class="mail">Email: <a href="mailto:tlmshepherdfarm@gmail.com">tlmshepherdfarm@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">The Lord is My Shepherd Farm</div>
+    <p>396 White Oak Valley Rd NW, Cleveland, TN 37312 · <a href="tel:+14234640680">423-464-0680</a> · <a href="https://www.facebook.com/profile.php?id=100092203215964" target="_blank" rel="noopener">Facebook</a></p>
+    <p class="small">Concept by Code Craft Media. A demo made for The Lord is My Shepherd Farm; not the farm's official website.</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-red" href="tel:+14234640680"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=396%20White%20Oak%20Valley%20Rd%20NW%2C%20Cleveland%2C%20TN%2037312">Directions</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var now=new Date(), day=now.getDay();
+  var row=document.querySelector('.hours tr[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

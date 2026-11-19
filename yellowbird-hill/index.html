@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Yellowbird Hill — Strawberry Plains</title>
+<meta name="description" content="Concept site for Yellowbird Hill, a small woman-owned regenerative flower and vegetable farm in Strawberry Plains, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --yellow:#F2C230; --yellow-d:#D9A70F; --green:#2F4A3A; --green-d:#22372A; --green-l:#4C6B57;
+  --cream:#F7EFE6; --cream-d:#EFE2D2; --ink:#1F2B23; --muted:#56635A; --rose:#E58A7B; --lilac:#B9A0D6;
+  --serif:"DM Serif Display", Georgia, serif; --sans:"Nunito Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+  --r:22px; --bar:0px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.concept{position:relative;z-index:1}
+
+/* concept banner */
+.concept{background:var(--green-d);color:#E9E2D3;font-size:12.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--yellow);font-weight:700}
+.concept .s{display:none}
+@media (max-width:420px){.concept .l{display:none}.concept .s{display:inline}.concept{font-size:12px}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(247,239,230,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(47,74,58,.1)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--green);min-width:0}
+.brand span{font-family:var(--serif);font-size:23px;line-height:1;white-space:nowrap}
+.brand svg{width:34px;height:34px;flex:none}
+.links{display:flex;gap:26px;align-items:center;font-weight:700;font-size:15px}
+.links a{text-decoration:none;color:var(--green);position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--yellow);transition:right .25s}
+.links a:not(.btn):hover::after{right:0}
+@media (max-width:860px){.links a:not(.btn){display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .18s, box-shadow .18s, background .18s;white-space:nowrap;border:2px solid transparent;cursor:pointer}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-y{background:var(--yellow);color:var(--green-d);box-shadow:0 6px 0 var(--yellow-d)}
+.btn-y:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--yellow-d)}
+.btn-y:active{transform:translateY(4px);box-shadow:0 2px 0 var(--yellow-d)}
+.btn-o{border-color:var(--green);color:var(--green);background:transparent}
+.btn-o:hover{background:var(--green);color:var(--cream)}
+.btn-sm{padding:9px 16px;font-size:14px;box-shadow:0 4px 0 var(--yellow-d)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:40px 0 0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+.hero-grid>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green-l)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(242,194,48,.25)}
+h1{font-family:var(--serif);font-weight:400;color:var(--green);font-size:clamp(40px,10.6vw,84px);line-height:1.02;letter-spacing:-.01em;margin:14px 0 16px}
+h1 em{font-style:italic;color:var(--green-l);position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.06em;height:.26em;background:var(--yellow);z-index:-1;border-radius:4px;opacity:.85;transform:skewX(-8deg)}
+.lede{font-size:18px;color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+@media (max-width:520px){.hero .cta{display:grid;grid-template-columns:1.15fr 1fr;gap:10px;margin-top:20px}.hero .cta>*{min-width:0}.hero .cta .btn{padding:13px 10px;font-size:14.5px;gap:7px}.hero .cta .btn svg{width:16px;height:16px}.hero{padding-top:24px}.lede{font-size:16.5px}h1{margin:10px 0 12px}.hero-grid{gap:10px}.hero-art{margin:0 -6px}}
+.hero-art{position:relative}
+.btn .sm{display:none}@media (max-width:520px){.btn .lg{display:none}.btn .sm{display:inline}}
+.hero-art svg{width:100%;height:auto}
+@media (min-width:900px){
+  .hero{padding:64px 0 0}
+  .hero-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:end}
+  .hero-grid>div:first-child{padding-bottom:70px}
+  .lede{font-size:19px}
+}
+.ground{height:34px;background:var(--green);margin-top:-2px}
+
+/* bus anim */
+.bus{animation:idle 3.2s ease-in-out infinite;transform-origin:center bottom}
+@keyframes idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+.sway{animation:sway 4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.sway.d2{animation-delay:-1.3s}.sway.d3{animation-delay:-2.6s}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.bird{animation:fly 9s ease-in-out infinite}
+@keyframes fly{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,-8px)}}
+.sun{animation:glow 6s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.95}50%{opacity:.75}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* sections */
+section{padding:84px 0}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green-l);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:26px;height:2px;background:var(--yellow)}
+h2{font-family:var(--serif);font-weight:400;color:var(--green);font-size:clamp(34px,7.4vw,54px);line-height:1.06;margin-bottom:18px}
+.sub{color:var(--muted);max-width:40em;font-size:18px}
+
+/* story */
+.story{background:var(--green);color:var(--cream);position:relative;overflow:hidden}
+.story h2{color:var(--cream)}
+.story .kicker{color:var(--yellow)}
+.story-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.story-grid>*{min-width:0}
+.quote{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.15;color:var(--cream);position:relative;padding-top:34px}
+.quote::before{content:"\201C";position:absolute;top:-22px;left:-4px;font-size:110px;color:var(--yellow);line-height:1}
+.quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:14px;letter-spacing:.06em;color:#BFD0C3;margin-top:18px}
+.story p.body{color:#D9E3DB;font-size:18px;margin-top:16px}
+.story p.body strong{color:var(--yellow);font-weight:700}
+.story-art svg{width:100%;max-width:460px;margin:0 auto}
+.story .wave{position:absolute;left:0;right:0;height:40px;width:100%}
+.story .wave.top{top:-1px}
+@media (min-width:900px){.story-grid{grid-template-columns:1.15fr .85fr;gap:70px}}
+
+/* products */
+.prod-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:38px}
+.prod-grid>*{min-width:0}
+@media (min-width:640px){.prod-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.prod-grid{grid-template-columns:1.25fr 1fr 1fr}}
+.card{background:#FFFBF5;border:1px solid rgba(47,74,58,.12);border-radius:var(--r);padding:26px 24px 24px;position:relative;overflow:hidden;transition:transform .25s, box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(47,74,58,.45)}
+.card .ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin-bottom:16px}
+.card .ic>*{min-width:0}.card .ic svg{width:34px;height:34px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--green);line-height:1.1;margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{font-size:14px;font-weight:700;background:var(--cream);color:var(--green);border-radius:999px;padding:5px 12px;border:1px solid rgba(47,74,58,.1)}
+.card.flowers{background:var(--yellow);border-color:transparent}
+.card.flowers h3{color:var(--green-d)}
+.card.flowers p{color:#4A3F12}
+.card.flowers .tags span{background:rgba(255,251,245,.65);border-color:transparent}
+.card.flowers .petals{position:absolute;right:-30px;bottom:-30px;width:clamp(150px,22vw,250px);opacity:.28;pointer-events:none}
+@media (min-width:1000px){.card.flowers{grid-row:span 2}}
+.note{margin-top:22px;font-size:14.5px;color:var(--muted)}
+
+/* why */
+.why{background:var(--cream-d)}
+.why-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:36px}
+.why-grid>*{min-width:0}
+@media (min-width:640px){.why-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-item{background:var(--cream);border-radius:var(--r);padding:24px;border:1px solid rgba(47,74,58,.1)}
+.why-item .n{font-family:var(--serif);font-size:42px;color:var(--yellow-d);line-height:1}
+.why-item h3{font-size:19px;font-weight:800;color:var(--green);margin:10px 0 6px;line-height:1.25}
+.why-item p{color:var(--muted);font-size:15.5px}
+
+/* market */
+.market-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:36px}
+.market-grid>*{min-width:0}
+@media (min-width:960px){.market-grid{grid-template-columns:1fr 1.1fr;gap:34px}}
+.hours{background:#FFFBF5;border-radius:var(--r);border:1px solid rgba(47,74,58,.12);padding:26px 22px}
+.hours h3{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--green);line-height:1.15}
+.season{display:inline-flex;align-items:center;gap:8px;margin:10px 0 18px;font-size:14px;font-weight:800;color:var(--green);background:var(--cream);padding:6px 12px;border-radius:999px}
+.season i{width:8px;height:8px;border-radius:50%;background:var(--green-l)}
+.season.on i{background:#3BA55C;box-shadow:0 0 0 4px rgba(59,165,92,.2)}
+.season.off i{background:var(--rose)}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:12px;font-size:16.5px;border-bottom:1px dashed rgba(47,74,58,.14)}
+.hours li:last-child{border-bottom:0}
+.hours li span:first-child{font-weight:700;color:var(--green)}
+.hours li span:last-child{color:var(--muted);text-align:right}
+.hours li.open span:last-child{color:var(--green);font-weight:700}
+.hours li.today{background:var(--yellow);border-bottom-color:transparent}
+.hours li.today span{color:var(--green-d)!important}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--green);color:var(--yellow);padding:2px 7px;border-radius:999px;vertical-align:2px}
+.hours .fine{font-size:14px;color:var(--muted);margin-top:14px}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(47,74,58,.15);background:var(--cream-d);min-height:320px;display:flex;flex-direction:column}
+.map iframe{width:100%;flex:1;min-height:320px;border:0;display:block}
+.map-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:16px 18px;background:#FFFBF5}
+.map-foot strong{color:var(--green);font-size:16px;display:block}
+.map-foot small{color:var(--muted);font-size:14px}
+
+/* contact */
+.contact{background:var(--yellow);position:relative;overflow:hidden;text-align:center}
+.contact h2{color:var(--green-d)}
+.contact .sub{color:#4A3F12;margin:0 auto}
+.contact .cta{justify-content:center}
+.contact .btn-y{background:var(--green);color:var(--cream);box-shadow:0 6px 0 var(--green-d)}
+.contact .btn-y:hover{box-shadow:0 8px 0 var(--green-d)}
+.contact .btn-o{border-color:var(--green-d);color:var(--green-d)}
+.contact .btn-o:hover{background:var(--green-d);color:var(--yellow)}
+.phone-big{display:inline-block;font-family:var(--serif);font-size:clamp(36px,9vw,58px);color:var(--green-d);text-decoration:none;margin:8px 0 4px;line-height:1.1}
+.phone-big:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+
+footer{background:var(--green-d);color:#BFD0C3;padding:40px 0 calc(40px + var(--bar));font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 30px;justify-content:space-between;align-items:center}
+footer .brand span{color:var(--cream)}
+footer a{color:var(--yellow)}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(34,55,42,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 -8px 24px -12px rgba(0,0,0,.4)}
+.callbar>*{min-width:0}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:14px;padding:13px 10px;font-weight:800;font-size:15.5px;text-decoration:none;white-space:nowrap}
+.callbar svg{width:18px;height:18px;flex:none}
+.callbar .c1{background:var(--yellow);color:var(--green-d)}
+.callbar .c2{background:rgba(247,239,230,.12);color:var(--cream);border:1px solid rgba(247,239,230,.25)}
+@media (max-width:899px){:root{--bar:calc(74px + env(safe-area-inset-bottom))}}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal: visible by default; JS only enhances */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Yellowbird Hill. Not live.</span><span class="s">Concept by <b>Code Craft Media</b> for Yellowbird Hill · Not live</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Yellowbird Hill home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2F4A3A"/><path d="M9 25c3-7 8-10 14-10 3 0 5 1 6 3l4-1-3 3c0 6-5 10-12 10-4 0-7-2-9-5z" fill="#F2C230"/><path d="M15 21c3 0 6 1 8 4-4 1-7 0-8-4z" fill="#D9A70F"/><circle cx="26" cy="18.5" r="1.3" fill="#2F4A3A"/></svg>
+      <span>Yellowbird Hill</span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#grow">What we grow</a>
+      <a href="#market">Market days</a>
+      <a class="btn btn-y btn-sm" href="tel:+18593388295">Call the farm</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom:0">
+    <div class="wrap hero-grid">
+      <div class="rv">
+        <span class="eyebrow"><i></i>Strawberry Plains, Tennessee</span>
+        <h1>A school bus, a dream, and <em>fields of flowers.</em></h1>
+        <p class="lede">A small, woman-owned regenerative flower and vegetable farm bringing old pasture land back to life.</p>
+        <div class="cta">
+          <a class="btn btn-y" href="tel:+18593388295"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (859) 338-8295</a>
+          <a class="btn btn-o" href="#market"><span class="lg">Find us at Market Square</span><span class="sm">Market days</span></a>
+        </div>
+      </div>
+      <div class="hero-art rv" aria-hidden="true">
+        <svg viewBox="30 14 500 426">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE7B0"/><stop offset=".6" stop-color="#F9D58A"/><stop offset="1" stop-color="#F4C77E"/></linearGradient>
+            <clipPath id="arch"><path d="M40 440V200C40 90 150 20 280 20s240 70 240 180v240z"/></clipPath>
+          </defs>
+          <g clip-path="url(#arch)">
+            <rect width="560" height="440" fill="url(#sky)"/>
+            <circle class="sun" cx="300" cy="210" r="62" fill="#F2C230"/>
+            <circle cx="300" cy="210" r="88" fill="#F2C230" opacity=".22"/>
+            <!-- House Mountain ridge -->
+            <path d="M40 260 C110 236 150 214 205 196 C240 186 262 176 300 176 C340 176 362 188 392 200 C440 220 480 236 520 246 V440H40z" fill="#8FA38C"/>
+            <path d="M40 290 C120 262 200 250 280 258 C360 266 440 258 520 270V440H40z" fill="#5F7D66"/>
+            <path d="M40 330 C140 300 240 296 340 306 C420 314 480 306 520 300V440H40z" fill="#3E5C48"/>
+            <!-- flower rows -->
+            <g opacity=".9">
+              <path d="M40 380 Q280 340 520 372" stroke="#2F4A3A" stroke-width="10" fill="none"/>
+              <path d="M40 410 Q280 372 520 404" stroke="#2F4A3A" stroke-width="10" fill="none"/>
+            </g>
+            <g>
+              <circle cx="70" cy="372" r="6" fill="#F2C230"/><circle cx="104" cy="366" r="6" fill="#E58A7B"/><circle cx="138" cy="361" r="6" fill="#F7EFE6"/><circle cx="172" cy="357" r="6" fill="#B9A0D6"/><circle cx="206" cy="354" r="6" fill="#F2C230"/>
+              <circle cx="400" cy="356" r="6" fill="#E58A7B"/><circle cx="434" cy="359" r="6" fill="#F2C230"/><circle cx="468" cy="363" r="6" fill="#F7EFE6"/><circle cx="500" cy="367" r="6" fill="#B9A0D6"/>
+              <circle cx="60" cy="403" r="7" fill="#E58A7B"/><circle cx="96" cy="397" r="7" fill="#F2C230"/><circle cx="132" cy="392" r="7" fill="#B9A0D6"/><circle cx="168" cy="388" r="7" fill="#F7EFE6"/><circle cx="204" cy="385" r="7" fill="#E58A7B"/><circle cx="240" cy="383" r="7" fill="#F2C230"/>
+              <circle cx="330" cy="383" r="7" fill="#B9A0D6"/><circle cx="366" cy="385" r="7" fill="#F2C230"/><circle cx="402" cy="388" r="7" fill="#E58A7B"/><circle cx="438" cy="391" r="7" fill="#F7EFE6"/><circle cx="474" cy="395" r="7" fill="#F2C230"/><circle cx="508" cy="399" r="7" fill="#E58A7B"/>
+            </g>
+            <!-- BUS -->
+            <g class="bus">
+              <ellipse cx="290" cy="352" rx="150" ry="10" fill="#22372A" opacity=".35"/>
+              <!-- body -->
+              <path d="M150 262 h196 a14 14 0 0 1 14 14 v4 h40 q18 0 22 18 l6 30 v14 a6 6 0 0 1 -6 6 H150 a10 10 0 0 1 -10 -10 v-62 a14 14 0 0 1 14 -14z" fill="#F2C230"/>
+              <path d="M140 316 h292 v10 H140z" fill="#2F4A3A" opacity=".9"/>
+              <path d="M140 300 h220" stroke="#D9A70F" stroke-width="3"/>
+              <!-- roof garden -->
+              <rect x="158" y="252" width="196" height="12" rx="6" fill="#D9A70F"/>
+              <!-- windows -->
+              <g fill="#FCE7B0" stroke="#2F4A3A" stroke-width="3">
+                <rect x="160" y="272" width="36" height="24" rx="4"/><rect x="204" y="272" width="36" height="24" rx="4"/><rect x="248" y="272" width="36" height="24" rx="4"/><rect x="292" y="272" width="36" height="24" rx="4"/>
+                <path d="M366 284 h32 q12 0 15 12 l2 8 h-49z"/>
+              </g>
+              <!-- door -->
+              <rect x="336" y="272" width="22" height="44" rx="3" fill="#FCE7B0" stroke="#2F4A3A" stroke-width="3"/>
+              <!-- flowers spilling from windows -->
+              <g>
+                <path d="M170 296 q-6 14 -16 22" stroke="#4C6B57" stroke-width="3" fill="none"/>
+                <circle cx="168" cy="282" r="7" fill="#E58A7B"/><circle cx="182" cy="286" r="6" fill="#F7EFE6"/><circle cx="176" cy="276" r="4" fill="#F2C230"/>
+                <circle cx="216" cy="284" r="7" fill="#B9A0D6"/><circle cx="230" cy="280" r="6" fill="#E58A7B"/>
+                <path d="M228 296 q4 12 0 22" stroke="#4C6B57" stroke-width="3" fill="none"/><circle cx="228" cy="320" r="5" fill="#F7EFE6"/>
+                <circle cx="260" cy="282" r="6" fill="#F7EFE6"/><circle cx="272" cy="286" r="7" fill="#E58A7B"/><circle cx="266" cy="278" r="4" fill="#B9A0D6"/>
+                <circle cx="304" cy="284" r="7" fill="#F2C230" stroke="#D9A70F" stroke-width="2"/><circle cx="318" cy="280" r="6" fill="#B9A0D6"/>
+                <path d="M312 296 q8 10 6 20" stroke="#4C6B57" stroke-width="3" fill="none"/><circle cx="318" cy="318" r="5" fill="#E58A7B"/>
+                <!-- roof blooms -->
+                <g class="sway"><path d="M186 252 v-16" stroke="#4C6B57" stroke-width="3"/><circle cx="186" cy="232" r="8" fill="#E58A7B"/><circle cx="186" cy="232" r="3" fill="#F2C230"/></g>
+                <g class="sway d2"><path d="M222 252 v-24" stroke="#4C6B57" stroke-width="3"/><circle cx="222" cy="224" r="10" fill="#F7EFE6"/><circle cx="222" cy="224" r="4" fill="#F2C230"/></g>
+                <g class="sway d3"><path d="M262 252 v-18" stroke="#4C6B57" stroke-width="3"/><circle cx="262" cy="232" r="8" fill="#B9A0D6"/></g>
+                <g class="sway"><path d="M300 252 v-28" stroke="#4C6B57" stroke-width="3"/><g transform="translate(300 220)"><circle r="12" fill="#2F4A3A"/><g fill="#F2C230"><ellipse rx="5" ry="10" cy="-14"/><ellipse rx="5" ry="10" cy="14"/><ellipse rx="10" ry="5" cx="-14"/><ellipse rx="10" ry="5" cx="14"/><ellipse rx="5" ry="10" cy="-14" transform="rotate(45)"/><ellipse rx="5" ry="10" cy="14" transform="rotate(45)"/><ellipse rx="10" ry="5" cx="-14" transform="rotate(45)"/><ellipse rx="10" ry="5" cx="14" transform="rotate(45)"/></g><circle r="8" fill="#5A3B1F"/></g></g>
+                <g class="sway d2"><path d="M334 252 v-14" stroke="#4C6B57" stroke-width="3"/><circle cx="334" cy="234" r="7" fill="#E58A7B"/></g>
+              </g>
+              <!-- lights, bumper -->
+              <rect x="424" y="312" width="10" height="8" rx="2" fill="#FCE7B0" stroke="#2F4A3A" stroke-width="2"/>
+              <rect x="420" y="336" width="18" height="8" rx="3" fill="#2F4A3A"/>
+              <text x="166" y="313" font-family="DM Serif Display, Georgia, serif" font-size="12" fill="#2F4A3A" letter-spacing=".8">YELLOWBIRD HILL</text>
+              <!-- wheels -->
+              <g><circle cx="196" cy="344" r="19" fill="#22372A"/><circle cx="196" cy="344" r="8" fill="#C9C2B3"/><circle cx="378" cy="344" r="19" fill="#22372A"/><circle cx="378" cy="344" r="8" fill="#C9C2B3"/></g>
+            </g>
+          </g>
+          <!-- arch frame -->
+          <path d="M40 440V200C40 90 150 20 280 20s240 70 240 180v240" fill="none" stroke="#2F4A3A" stroke-width="3"/>
+          <!-- bird -->
+          <g transform="translate(410 96)"><g class="bird">
+            <path d="M0 14c4-9 11-14 20-14 4 0 7 2 8 4l6-1-4 4c0 8-7 14-17 14-6 0-10-3-13-7z" fill="#F2C230" stroke="#2F4A3A" stroke-width="2"/>
+            <path d="M8 10c5 0 9 2 11 6-6 2-10 0-11-6z" fill="#D9A70F"/>
+            <circle cx="24" cy="6.5" r="1.8" fill="#2F4A3A"/>
+          </g></g>
+          <!-- small sparkles -->
+          <g fill="#2F4A3A" opacity=".55"><circle cx="120" cy="110" r="2.5"/><circle cx="470" cy="160" r="2"/><circle cx="90" cy="180" r="2"/></g>
+        </svg>
+      </div>
+    </div>
+    <div class="ground" style="margin-top:0"></div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <div class="rv">
+        <div class="kicker">How it started</div>
+        <h2>It began with a bus.</h2>
+        <blockquote class="quote">Yellowbird Hill started with a converted school bus and a dream of growing fields of flowers.
+          <cite>— YELLOWBIRD HILL</cite>
+        </blockquote>
+        <p class="body">Out on the Strawberry Plains property, where the sun sets over House Mountain, the goal is simple and stubborn: <strong>use regenerative farming to bring old pasture land back to life</strong>, only using what nature provides.</p>
+        <p class="body">A little love and a lot of work.</p>
+      </div>
+      <div class="story-art rv" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="180" fill="#22372A"/>
+          <circle cx="200" cy="200" r="180" fill="none" stroke="#F2C230" stroke-width="2" stroke-dasharray="3 9"/>
+          <!-- soil layers -->
+          <clipPath id="disc"><circle cx="200" cy="200" r="168"/></clipPath>
+          <g clip-path="url(#disc)">
+            <rect x="0" y="0" width="400" height="230" fill="#2F4A3A"/>
+            <circle cx="120" cy="110" r="34" fill="#F2C230" opacity=".9"/>
+            <path d="M0 200 C80 170 150 180 210 168 C280 154 340 170 400 184V240H0z" fill="#4C6B57"/>
+            <rect x="0" y="230" width="400" height="60" fill="#6B4A2E"/>
+            <rect x="0" y="290" width="400" height="120" fill="#4E3521"/>
+            <!-- roots -->
+            <g stroke="#E9D9B8" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round">
+              <path d="M110 230 q-6 30 4 56 q8 20 -2 40"/><path d="M110 250 q14 10 20 30"/><path d="M110 262 q-18 8 -24 26"/>
+              <path d="M200 228 q4 34 -6 60 q-8 22 2 46"/><path d="M200 252 q-16 10 -20 28"/><path d="M198 276 q18 6 26 24"/>
+              <path d="M290 230 q-4 30 6 52 q6 18 0 36"/><path d="M292 254 q16 8 20 26"/>
+            </g>
+            <!-- worms/biodiversity dots -->
+            <g fill="#E58A7B" opacity=".8"><path d="M150 320 q10 -8 20 0 q10 8 20 0" stroke="#E58A7B" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+            <g fill="#C9A77A" opacity=".6"><circle cx="60" cy="300" r="3"/><circle cx="250" cy="330" r="4"/><circle cx="330" cy="300" r="3"/><circle cx="90" cy="350" r="3"/><circle cx="310" cy="350" r="4"/></g>
+            <!-- plants -->
+            <g class="sway"><path d="M110 230 v-50" stroke="#8FC28F" stroke-width="4"/><path d="M110 200 q-18 -6 -24 -20 q18 0 24 20z" fill="#8FC28F"/><circle cx="110" cy="174" r="12" fill="#E58A7B"/><circle cx="110" cy="174" r="4" fill="#F2C230"/></g>
+            <g class="sway d2"><path d="M200 228 v-70" stroke="#8FC28F" stroke-width="4"/><path d="M200 196 q18 -6 24 -22 q-18 2 -24 22z" fill="#8FC28F"/><g transform="translate(200 150)"><g fill="#F2C230"><ellipse rx="6" ry="13" cy="-16"/><ellipse rx="6" ry="13" cy="16"/><ellipse rx="13" ry="6" cx="-16"/><ellipse rx="13" ry="6" cx="16"/><ellipse rx="6" ry="13" cy="-16" transform="rotate(45)"/><ellipse rx="6" ry="13" cy="16" transform="rotate(45)"/><ellipse rx="13" ry="6" cx="-16" transform="rotate(45)"/><ellipse rx="13" ry="6" cx="16" transform="rotate(45)"/></g><circle r="10" fill="#5A3B1F"/></g></g>
+            <g class="sway d3"><path d="M290 230 v-44" stroke="#8FC28F" stroke-width="4"/><path d="M290 206 q-16 -4 -22 -18 q16 0 22 18z" fill="#8FC28F"/><circle cx="290" cy="180" r="11" fill="#B9A0D6"/></g>
+          </g>
+          <text x="200" y="336" text-anchor="middle" font-family="Nunito Sans, sans-serif" font-weight="800" font-size="11" letter-spacing="2" fill="#F2C230">MINIMAL TILLAGE · LIVING SOIL</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE GROW -->
+  <section id="grow">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">What we grow</div>
+        <h2>Flowers first. Good food, too.</h2>
+        <p class="sub">Cut and dried flowers, handmade wreaths, farm eggs and a field's worth of vegetables and herbs. What's on the table changes with the season.</p>
+      </div>
+      <div class="prod-grid">
+        <article class="card flowers rv">
+          <svg class="petals" viewBox="0 0 100 100" aria-hidden="true"><g fill="#2F4A3A"><ellipse cx="50" cy="22" rx="12" ry="22"/><ellipse cx="50" cy="78" rx="12" ry="22"/><ellipse cx="22" cy="50" rx="22" ry="12"/><ellipse cx="78" cy="50" rx="22" ry="12"/></g><circle cx="50" cy="50" r="13" fill="#2F4A3A"/></svg>
+          <div class="ic" style="background:rgba(255,251,245,.7)"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 38V22" stroke="#2F4A3A" stroke-width="3"/><path d="M20 30c-6 0-9-3-10-7 5 0 9 2 10 7z" fill="#4C6B57"/><g fill="#E58A7B"><circle cx="20" cy="9" r="6"/><circle cx="13" cy="15" r="6"/><circle cx="27" cy="15" r="6"/><circle cx="16" cy="22" r="5"/><circle cx="24" cy="22" r="5"/></g><circle cx="20" cy="16" r="4" fill="#F2C230" stroke="#2F4A3A" stroke-width="2"/></svg></div>
+          <h3>Flowers &amp; wreaths</h3>
+          <p>The reason for the bus and the dream. Fresh-cut stems in season, dried flowers that last, and handmade floral wreaths and decorative pieces.</p>
+          <div class="tags"><span>Fresh flowers</span><span>Dried flowers</span><span>Floral wreaths</span><span>Decorative items</span></div>
+        </article>
+        <article class="card rv">
+          <div class="ic" style="background:#E6EFE4"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 36c-9 0-14-6-14-14 0-6 5-12 14-16 9 4 14 10 14 16 0 8-5 14-14 14z" fill="#4C6B57"/><path d="M20 8v26M20 16l-6-4M20 22l7-5M20 28l-8-4" stroke="#E6EFE4" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Greens</h3>
+          <p>Leafy and fresh, grown in living soil.</p>
+          <div class="tags"><span>Kale</span><span>Lettuce</span><span>Salad greens</span><span>Salad mix</span><span>Arugula</span><span>Spinach</span></div>
+        </article>
+        <article class="card rv">
+          <div class="ic" style="background:#FBE3DE"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="23" r="13" fill="#E05A47"/><path d="M14 11c2 2 4 2 6 0 2 2 4 2 6 0-1 3-3 5-6 5s-5-2-6-5z" fill="#4C6B57"/><path d="M20 6v6" stroke="#4C6B57" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <h3>Vegetables</h3>
+          <p>A summer table, straight from the field.</p>
+          <div class="tags"><span>Tomatoes</span><span>Cucumbers</span><span>Carrots</span><span>Peas</span><span>Hot peppers</span><span>Broccoli</span><span>Onions</span><span>Potatoes</span></div>
+        </article>
+        <article class="card rv">
+          <div class="ic" style="background:#FFF1C9"><svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="15" cy="23" rx="9" ry="12" fill="#F7EFE6" stroke="#C9A77A" stroke-width="2"/><ellipse cx="26" cy="25" rx="9" ry="11" fill="#E9C9A0" stroke="#C9A77A" stroke-width="2"/></svg></div>
+          <h3>Farm eggs</h3>
+          <p>Fresh eggs, straight from the farm.</p>
+        </article>
+        <article class="card rv">
+          <div class="ic" style="background:#EEE6F5"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 36V14" stroke="#4C6B57" stroke-width="2.5"/><g fill="#7FA77F"><ellipse cx="14" cy="16" rx="6" ry="3.5" transform="rotate(-30 14 16)"/><ellipse cx="26" cy="20" rx="6" ry="3.5" transform="rotate(30 26 20)"/><ellipse cx="14" cy="26" rx="6" ry="3.5" transform="rotate(-30 14 26)"/><ellipse cx="26" cy="30" rx="6" ry="3.5" transform="rotate(30 26 30)"/></g><circle cx="20" cy="10" r="4" fill="#B9A0D6"/></svg></div>
+          <h3>Fresh herbs</h3>
+          <p>Fresh-cut herbs for the kitchen, in season.</p>
+        </article>
+      </div>
+      <p class="note">Availability changes through the season. Call or message <a href="https://www.instagram.com/yellowbirdhillfarm/" target="_blank" rel="noopener">@yellowbirdhillfarm</a> to ask what's ready.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">How we farm</div>
+        <h2>Grown the slow way, on purpose.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item rv"><div class="n">01</div><h3>Regenerative</h3><p>Bringing old pasture land back to life, only using what nature provides.</p></div>
+        <div class="why-item rv"><div class="n">02</div><h3>Minimal tillage</h3><p>Working the ground as little as possible to support soil biodiversity and plant health.</p></div>
+        <div class="why-item rv"><div class="n">03</div><h3>Organic practices</h3><p>Grown with organic practices. Not certified, just careful.</p></div>
+        <div class="why-item rv"><div class="n">04</div><h3>Woman-owned</h3><p>A small farm in Strawberry Plains, Jefferson County, Tennessee.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET -->
+  <section id="market">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">Where to find us</div>
+        <h2>Market days on Market Square.</h2>
+        <p class="sub">Find Yellowbird Hill at the Market Square Farmers Market in downtown Knoxville, Wednesdays and Saturdays in season.</p>
+      </div>
+      <div class="market-grid">
+        <div class="hours rv">
+          <h3>Market Square Farmers Market</h3>
+          <div class="season" id="season"><i></i><span>2026 season: May 2 – Oct 31</span></div>
+          <ul id="hours">
+            <li data-d="1"><span>Monday</span><span>—</span></li>
+            <li data-d="2"><span>Tuesday</span><span>—</span></li>
+            <li data-d="3" class="open"><span>Wednesday</span><span>10 am – 1 pm</span></li>
+            <li data-d="4"><span>Thursday</span><span>—</span></li>
+            <li data-d="5"><span>Friday</span><span>—</span></li>
+            <li data-d="6" class="open"><span>Saturday</span><span>9 am – 1 pm</span></li>
+            <li data-d="0"><span>Sunday</span><span>—</span></li>
+          </ul>
+          <p class="fine">Market hours as published for the 2026 season. Off-season, call the farm or message on Instagram.</p>
+        </div>
+        <div class="map rv">
+          <iframe title="Map: Market Square, Knoxville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Market%20Square%2C%20Knoxville%2C%20TN%2037902&output=embed"></iframe>
+          <div class="map-foot">
+            <div><strong>Market Square, Knoxville</strong><small>The farm itself is in Strawberry Plains, TN</small></div>
+            <a class="btn btn-o btn-sm" style="box-shadow:none" href="https://www.google.com/maps/dir/?api=1&destination=Market%20Square%2C%20Knoxville%2C%20TN" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap rv">
+      <div class="kicker" style="justify-content:center;color:var(--green-d)">Say hello</div>
+      <h2>Flowers for your table? Give us a call.</h2>
+      <a class="phone-big" href="tel:+18593388295">(859) 338-8295</a>
+      <p class="sub">Ask what's blooming, what's in the field, or when we'll be at market next.</p>
+      <div class="cta">
+        <a class="btn btn-y" href="tel:+18593388295"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the farm</a>
+        <a class="btn btn-o" href="https://www.instagram.com/yellowbirdhillfarm/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@yellowbirdhillfarm</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F2C230"/><path d="M9 25c3-7 8-10 14-10 3 0 5 1 6 3l4-1-3 3c0 6-5 10-12 10-4 0-7-2-9-5z" fill="#2F4A3A"/><circle cx="26" cy="18.5" r="1.3" fill="#F2C230"/></svg><span>Yellowbird Hill</span></a>
+    <div>Strawberry Plains, TN · <a href="tel:+18593388295">(859) 338-8295</a></div>
+    <div>Concept by <a href="https://coleselig.github.io/codecraft/" target="_blank" rel="noopener">Code Craft Media</a></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c1" href="tel:+18593388295"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="c2" href="https://www.instagram.com/yellowbirdhillfarm/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Message</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date(), day=d.getDay();
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  // season: May 2 – Oct 31 (2026 published dates)
+  var m=d.getMonth(), dt=d.getDate();
+  var inSeason=(m>4&&m<10)||(m===4&&dt>=2);
+  var s=document.getElementById('season');
+  if(s){ s.classList.add(inSeason?'on':'off');
+    if(!inSeason) s.querySelector('span').textContent='Off-season · 2026 ran May 2 – Oct 31'; }
+  // reveals (content is visible without JS)
+  var root=document.documentElement; root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    els.forEach(function(e){io.observe(e)});
+  } else root.classList.add('show-all');
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

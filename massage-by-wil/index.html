@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Massage by Wil — Franklin, TN</title>
+<meta name="description" content="Concept site for Massage by Wil: Swedish, deep tissue and cupping massage in Franklin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2F3E46; --slate-2:#3A4C55; --slate-3:#24313A;
+  --euc:#84A98C; --euc-d:#5E8467; --euc-l:#CAD8C8;
+  --linen:#F6F1E9; --linen-2:#EDE5D8; --stone:#D9D2C5;
+  --ink:#22303A; --muted:#55646C;
+  --serif:'Lora', Georgia, serif; --sans:'Source Sans 3', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--linen);line-height:1.6;font-size:17px;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--slate-3);color:#CBD5D2;font-size:11.5px;letter-spacing:.02em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(min-width:600px){.concept{font-size:13px}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(246,241,233,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(47,62,70,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--slate);letter-spacing:-.01em}
+.brand b i{font-style:italic;color:var(--euc-d);font-weight:500}
+.nav ul{display:none;list-style:none;gap:28px}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:var(--slate);opacity:.8;transition:opacity .2s}
+.nav ul a:hover{opacity:1}
+.nav .btn-sm{font-size:14px;font-weight:600;text-decoration:none;background:var(--slate);color:var(--linen);padding:9px 16px;border-radius:999px;transition:background .2s, transform .2s}
+.nav .btn-sm:hover{background:var(--euc-d);transform:translateY(-1px)}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:36px 0 56px}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:34px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--euc-d)}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--euc)}
+h1{font-family:var(--serif);font-weight:500;color:var(--slate);font-size:clamp(40px,11vw,76px);line-height:1.04;letter-spacing:-.02em;margin:16px 0 18px}
+h1 em{font-style:italic;color:var(--euc-d)}
+.lead{font-size:18px;color:var(--muted);max-width:36ch}
+@media(min-width:900px){.lead{font-size:20px;max-width:40ch}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s, box-shadow .2s, background .2s}
+.btn-p{background:var(--slate);color:var(--linen);box-shadow:0 10px 24px -12px rgba(47,62,70,.7)}
+.btn-p:hover{background:var(--euc-d);transform:translateY(-2px)}
+.btn-g{border:1.5px solid rgba(47,62,70,.25);color:var(--slate)}
+.btn-g:hover{border-color:var(--slate);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+.hero .cta .btn{flex:1 1 0;padding:15px 12px;font-size:15.5px;white-space:nowrap}
+@media(min-width:600px){.hero .cta .btn{flex:0 0 auto;padding:15px 24px;font-size:16px}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14.5px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--euc)}
+.cairn-art{position:relative;justify-self:center;width:min(300px,78vw)}
+.cairn-art svg{width:100%;height:auto;overflow:visible}
+.ripple{position:absolute;inset:auto -40% -30px -40%;height:180px;z-index:1;opacity:.55;pointer-events:none}
+@media(min-width:900px){
+  .hero{padding:80px 0 96px}
+  .hero .wrap{grid-template-columns:1.25fr .9fr;align-items:center}
+  .cairn-art{width:380px}
+}
+.float{animation:float 7s ease-in-out infinite;transform-origin:center}
+.float.d2{animation-delay:-2.3s}.float.d3{animation-delay:-4.6s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion:reduce){.float{animation:none}html{scroll-behavior:auto}}
+
+/* section shells */
+section{position:relative}
+.sec{padding:76px 0}
+.marker{display:flex;align-items:flex-end;gap:12px;margin-bottom:14px}
+.marker svg{width:34px;height:auto;flex:none}
+.marker span{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--euc-d);padding-bottom:3px}
+h2{font-family:var(--serif);font-weight:500;color:var(--slate);font-size:clamp(32px,8vw,50px);line-height:1.1;letter-spacing:-.015em}
+h2 em{font-style:italic;color:var(--euc-d)}
+.sec-intro{color:var(--muted);margin-top:14px;max-width:52ch}
+
+/* story / quote */
+.story{background:var(--slate);color:var(--linen);overflow:hidden}
+.story .marker span{color:var(--euc)}
+.story h2{color:var(--linen)}
+.story h2 em{color:var(--euc)}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(23px,5.8vw,34px);line-height:1.38;margin:26px 0 18px;color:#EEF2EC;max-width:28ch}
+.quote mark{background:none;color:var(--euc)}
+.quote-by{font-size:14px;color:#AFC0BA;letter-spacing:.02em}
+.story-grid{display:grid;gap:40px}
+.facts{display:grid;gap:14px}
+.fact{display:flex;gap:16px;align-items:flex-start;padding:18px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .25s, transform .25s}
+.fact:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.fact .ic{flex:none;width:44px;height:44px;border-radius:50% 46% 52% 48%/48% 52% 46% 50%;background:var(--euc);display:grid;place-items:center;color:var(--slate)}
+.fact .ic svg{width:22px;height:22px}
+.fact h3{font-family:var(--serif);font-weight:500;font-size:19px;color:#fff;line-height:1.25}
+.fact p{font-size:15px;color:#BCCAC4;margin-top:3px}
+.story-stones{position:absolute;right:-60px;bottom:-40px;width:260px;opacity:.07;pointer-events:none}
+@media(min-width:900px){.story-grid{grid-template-columns:1.1fr 1fr;align-items:center;gap:64px}}
+
+/* services */
+.svc-grid{display:grid;gap:16px;margin-top:36px}
+.svc{position:relative;padding:28px 24px 26px;background:#fff;border-radius:28px;border:1px solid rgba(47,62,70,.07);box-shadow:0 18px 40px -30px rgba(47,62,70,.45);overflow:hidden;transition:transform .3s, box-shadow .3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(47,62,70,.6)}
+.svc .num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--euc-d)}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.15;color:var(--slate);margin:6px 0 10px}
+.svc p{color:var(--muted);font-size:16px}
+.svc .pebble{position:absolute;right:-26px;top:-26px;width:110px;height:86px;border-radius:52% 48% 55% 45%/58% 50% 50% 42%;background:var(--euc-l);opacity:.6;transition:transform .5s}
+.svc:hover .pebble{transform:rotate(-8deg) scale(1.06)}
+.svc>*:not(.pebble){position:relative}
+.addons{margin-top:22px;padding:24px;border-radius:28px;background:var(--linen-2);border:1px dashed rgba(47,62,70,.22)}
+.addons h3{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--slate)}
+.addons p.s{font-size:15px;color:var(--muted);margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--linen);border:1px solid rgba(47,62,70,.12);font-weight:600;font-size:15px;color:var(--slate);transition:background .2s,color .2s}
+.chip:hover{background:var(--slate);color:var(--linen)}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--euc);flex:none}
+.svc-note{margin-top:18px;font-size:14.5px;color:var(--muted)}
+.svc-note a{color:var(--euc-d);font-weight:600}
+@media(min-width:760px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* hours + visit */
+.visit{background:var(--linen-2)}
+.visit-grid{display:grid;gap:22px;margin-top:34px}
+.card{background:#fff;border-radius:28px;padding:26px 22px;border:1px solid rgba(47,62,70,.07);box-shadow:0 18px 40px -32px rgba(47,62,70,.5)}
+.card h3{font-family:var(--serif);font-weight:500;font-size:23px;color:var(--slate);margin-bottom:12px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:14px;font-size:16px;transition:background .2s}
+.hours li+li{border-top:1px solid rgba(47,62,70,.06)}
+.hours li span:last-child{font-weight:600;color:var(--slate);font-variant-numeric:tabular-nums}
+.hours li.closed span:last-child{color:#8B9599;font-weight:500}
+.hours li.today{background:var(--slate);color:var(--linen);border-top-color:transparent}
+.hours li.today + li{border-top-color:transparent}
+.hours li.today span:last-child{color:var(--euc-l)}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--euc);color:var(--slate);padding:2px 8px;border-radius:999px;vertical-align:2px}
+.status{margin-top:14px;font-size:14.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.status i{width:9px;height:9px;border-radius:50%;background:#B9B2A6;flex:none}
+.status.open i{background:var(--euc-d);box-shadow:0 0 0 4px rgba(132,169,140,.3)}
+.addr{font-style:normal;font-size:17px;color:var(--ink);line-height:1.5}
+.addr small{display:block;color:var(--muted);font-size:14.5px;margin-top:4px}
+.map{position:relative;margin-top:16px;border-radius:20px;overflow:hidden;border:1px solid rgba(47,62,70,.1);aspect-ratio:4/3;background:var(--linen-2) radial-gradient(circle at 50% 46%,rgba(132,169,140,.35) 0 18px,transparent 19px),repeating-linear-gradient(35deg,transparent 0 38px,rgba(47,62,70,.06) 38px 40px),repeating-linear-gradient(-55deg,transparent 0 52px,rgba(47,62,70,.05) 52px 54px)}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.row-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.row-btns .btn{padding:13px 20px;font-size:15px;flex:1 1 140px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.35fr}.map{aspect-ratio:16/10}}
+
+/* book band */
+.book{background:var(--slate);color:var(--linen);text-align:center;overflow:hidden}
+.book h2{color:var(--linen);max-width:16ch;margin:0 auto}
+.book h2 em{color:var(--euc)}
+.book p{color:#BCCAC4;margin:16px auto 0;max-width:40ch}
+.book .cta{justify-content:center}
+.book .btn-p{background:var(--euc);color:var(--slate)}
+.book .btn-p:hover{background:var(--linen)}
+.book .btn-g{border-color:rgba(246,241,233,.35);color:var(--linen)}
+.book .btn-g:hover{border-color:var(--linen)}
+.book .stack{width:70px;margin:0 auto 20px}
+
+footer{background:var(--slate-3);color:#9FB0AA;font-size:14px;padding:34px 0 30px}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer b{font-family:var(--serif);color:var(--linen);font-weight:500;font-size:18px}
+footer a{color:#CAD8C8}
+@media(min-width:760px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(36,49,58,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -10px 30px -12px rgba(0,0,0,.35)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.callbar .c{color:var(--linen);border:1.5px solid rgba(246,241,233,.3)}
+.callbar .b{background:var(--euc);color:var(--slate)}
+.callbar svg{width:18px;height:18px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal (progressive) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--euc-d);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Massage by Wil. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Massage by Wil home">
+      <svg width="28" height="30" viewBox="0 0 28 30" aria-hidden="true"><ellipse cx="14" cy="25" rx="13" ry="5" fill="#2F3E46"/><ellipse cx="14" cy="16" rx="9.5" ry="4.6" fill="#84A98C"/><ellipse cx="14" cy="8.4" rx="6" ry="3.6" fill="#5E8467"/></svg>
+      <b>Massage <i>by</i> Wil</b>
+    </a>
+    <ul>
+      <li><a href="#story">About Wil</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn-sm" href="https://www.massagebook.com/biz/massage-by-wil" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="ripple" viewBox="0 0 800 180" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="none" stroke="#84A98C" stroke-width="1.4">
+      <ellipse cx="400" cy="150" rx="390" ry="60"/><ellipse cx="400" cy="150" rx="300" ry="44" opacity=".8"/><ellipse cx="400" cy="150" rx="210" ry="30" opacity=".6"/><ellipse cx="400" cy="150" rx="120" ry="17" opacity=".45"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Franklin · Cool Springs</span>
+      <h1>Over a decade in Cool Springs. <em>Now it's just you and Wil.</em></h1>
+      <p class="lead">Swedish, deep tissue and cupping massage from Wil Van Winkle, Licensed Massage Therapist, in his private suite on Mallory Lane.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="https://www.massagebook.com/biz/massage-by-wil" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          Book online</a>
+        <a class="btn btn-g" href="tel:+16154231442">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          (615) 423-1442</a>
+      </div>
+      <div class="hero-meta"><span>Mon–Thu, 9 AM–9 PM</span><span>Phenix Salon Suites</span></div>
+    </div>
+    <div class="cairn-art rv" aria-hidden="true">
+      <svg viewBox="0 0 320 340">
+        <defs>
+          <radialGradient id="g1" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#4A5D67"/><stop offset="1" stop-color="#2F3E46"/></radialGradient>
+          <radialGradient id="g2" cx="35%" cy="28%" r="80%"><stop offset="0" stop-color="#A8C3AC"/><stop offset="1" stop-color="#6F9878"/></radialGradient>
+          <radialGradient id="g3" cx="35%" cy="25%" r="85%"><stop offset="0" stop-color="#EDE5D8"/><stop offset="1" stop-color="#CFC6B6"/></radialGradient>
+          <radialGradient id="g4" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#7D9C84"/><stop offset="1" stop-color="#4E7257"/></radialGradient>
+        </defs>
+        <circle cx="160" cy="160" r="150" fill="#EDE5D8"/>
+        <circle cx="160" cy="160" r="150" fill="none" stroke="#84A98C" stroke-opacity=".35" stroke-dasharray="2 7"/>
+        <ellipse cx="160" cy="312" rx="120" ry="12" fill="#2F3E46" opacity=".12"/>
+        <path class="float d3" d="M48 280c4-26 50-40 112-40s110 12 114 38c4 22-44 34-112 34S44 302 48 280z" fill="url(#g1)"/>
+        <path class="float d2" d="M78 222c2-22 38-34 84-34s82 10 84 32c2 20-36 30-84 30s-86-8-84-28z" fill="url(#g2)"/>
+        <path class="float" d="M102 172c1-18 28-28 60-28s58 8 60 26c1 16-26 26-60 26s-61-8-60-24z" fill="url(#g3)"/>
+        <path class="float d3" d="M124 128c0-14 18-22 38-22s38 7 38 20c0 13-17 20-38 20s-38-6-38-18z" fill="url(#g4)"/>
+        <path class="float d2" d="M140 92c0-10 10-16 22-16s22 5 22 15-10 15-22 15-22-5-22-14z" fill="url(#g1)"/>
+        <g fill="none" stroke="#84A98C" stroke-width="1.6" stroke-linecap="round" opacity=".8">
+          <path d="M30 120c18-8 34-8 52 0"/><path d="M238 70c16-7 30-7 46 0"/><path d="M250 190c12-5 22-5 34 0" opacity=".6"/>
+        </g>
+        <g fill="#84A98C"><path d="M228 108c10-16 28-22 40-20-4 14-20 26-40 20z"/><path d="M228 108c-2-14 6-28 16-34 4 12-2 28-16 34z" fill="#5E8467"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="story sec" id="story">
+  <svg class="story-stones" viewBox="0 0 200 220" aria-hidden="true"><g fill="#F6F1E9"><ellipse cx="100" cy="190" rx="90" ry="26"/><ellipse cx="100" cy="135" rx="66" ry="22"/><ellipse cx="100" cy="88" rx="46" ry="18"/><ellipse cx="100" cy="50" rx="28" ry="13"/></g></svg>
+  <div class="wrap story-grid">
+    <div class="rv">
+      <div class="marker"><svg viewBox="0 0 34 30" aria-hidden="true"><ellipse cx="17" cy="25" rx="16" ry="5" fill="#84A98C"/><ellipse cx="17" cy="15" rx="10" ry="4.4" fill="#CAD8C8"/><ellipse cx="17" cy="7" rx="5.6" ry="3.2" fill="#F6F1E9"/></svg><span>Meet Wil</span></div>
+      <h2>Ten-plus years in. <em>A practice of his own.</em></h2>
+      <p class="quote">“After serving the Williamson County area for over 10 years at a chain in Cool Springs, <mark>I have decided I can provide better service by going out on my own.</mark>”</p>
+      <p class="quote-by">Wil Van Winkle, Licensed Massage Therapist</p>
+    </div>
+    <div class="facts">
+      <div class="fact rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h3>Over a decade in Cool Springs</h3><p>More than ten years serving Williamson County, now on his own.</p></div></div>
+      <div class="fact rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Licensed Massage Therapist</h3><p>Specializing in Swedish, medical/deep tissue and cupping.</p></div></div>
+      <div class="fact rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div><div><h3>Open until 9 PM</h3><p>Monday through Thursday, so evenings after work are on the table.</p></div></div>
+      <div class="fact rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></div><div><h3>A private suite</h3><p>Inside Phenix Salon Suites on Mallory Lane in Franklin.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="rv">
+      <div class="marker"><svg viewBox="0 0 34 30" aria-hidden="true"><ellipse cx="17" cy="25" rx="16" ry="5" fill="#2F3E46"/><ellipse cx="17" cy="15" rx="10" ry="4.4" fill="#84A98C"/><ellipse cx="17" cy="7" rx="5.6" ry="3.2" fill="#5E8467"/></svg><span>Services</span></div>
+      <h2>What Wil <em>specializes in</em></h2>
+      <p class="sec-intro">Three specialties, plus add-ons you can ask for.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv"><span class="pebble"></span><span class="num">01</span><h3>Swedish</h3><p>The classic full-body massage. Long, flowing strokes for when you just need to let go.</p></article>
+      <article class="svc rv"><span class="pebble"></span><span class="num">02</span><h3>Medical / Deep Tissue</h3><p>Focused, deeper work aimed at pain reduction, in Wil's words.</p></article>
+      <article class="svc rv"><span class="pebble"></span><span class="num">03</span><h3>Cupping</h3><p>One of Wil's three specialties, alongside Swedish and deep tissue.</p></article>
+    </div>
+    <div class="addons rv">
+      <h3>Add-ons</h3>
+      <p class="s">Wil can also provide:</p>
+      <div class="chips">
+        <span class="chip"><i></i>Aromatherapy</span>
+        <span class="chip"><i></i>Herbal infused oil</span>
+        <span class="chip"><i></i>Facial cupping to help reduce wrinkles</span>
+      </div>
+    </div>
+    <p class="svc-note rv">See current session options and open times on <a href="https://www.massagebook.com/biz/massage-by-wil" target="_blank" rel="noopener">Wil's MassageBook page</a>.</p>
+  </div>
+</section>
+
+<section class="visit sec" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="marker"><svg viewBox="0 0 34 30" aria-hidden="true"><ellipse cx="17" cy="25" rx="16" ry="5" fill="#5E8467"/><ellipse cx="17" cy="15" rx="10" ry="4.4" fill="#2F3E46"/><ellipse cx="17" cy="7" rx="5.6" ry="3.2" fill="#84A98C"/></svg><span>Hours &amp; Visit</span></div>
+      <h2>Find your way <em>to the table</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card rv">
+        <h3>Hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="5" class="closed"><span>Friday</span><span>Closed</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="status" id="status"><i></i><span>Book online any time on MassageBook.</span></p>
+      </div>
+      <div class="card rv">
+        <h3>Phenix Salon Suites</h3>
+        <address class="addr">2000 Mallory Ln, Ste 340<br>Franklin, TN 37067<small>Cool Springs area, Franklin</small></address>
+        <div class="map"><iframe title="Map to Massage by Wil" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2000%20Mallory%20Ln%20Ste%20340%2C%20Franklin%2C%20TN%2037067&output=embed"></iframe></div>
+        <div class="row-btns">
+          <a class="btn btn-p" href="tel:+16154231442">Call (615) 423-1442</a>
+          <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&destination=2000%20Mallory%20Ln%20Ste%20340%2C%20Franklin%2C%20TN%2037067" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book sec">
+  <div class="wrap rv">
+    <svg class="stack" viewBox="0 0 70 60" aria-hidden="true"><ellipse cx="35" cy="50" rx="32" ry="9" fill="#84A98C"/><ellipse cx="35" cy="32" rx="22" ry="8" fill="#CAD8C8"/><ellipse cx="35" cy="17" rx="13" ry="6" fill="#F6F1E9"/></svg>
+    <h2>Your hour, <em>booked in a minute.</em></h2>
+    <p>Pick a time that works on Wil's MassageBook page, or give him a call.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="https://www.massagebook.com/biz/massage-by-wil" target="_blank" rel="noopener">Book with Wil</a>
+      <a class="btn btn-g" href="tel:+16154231442">Call (615) 423-1442</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Massage by Wil</b><br>2000 Mallory Ln, Ste 340, Franklin, TN 37067 · <a href="tel:+16154231442">(615) 423-1442</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c" href="tel:+16154231442"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="b" href="https://www.massagebook.com/biz/massage-by-wil" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book now</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // today highlight (America/Chicago)
+  var now=new Date(), day=now.getDay(), hr=now.getHours();
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',hour12:false}).formatToParts(now);
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    p.forEach(function(x){if(x.type==='weekday')day=map[x.value];if(x.type==='hour')hr=parseInt(x.value,10)%24;});}catch(e){}
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status');
+  if(st){var open=day>=1&&day<=4&&hr>=9&&hr<21; if(open){st.classList.add('open');st.lastElementChild.textContent='Open now until 9 PM. Book online any time.';}
+    else{st.lastElementChild.textContent=(day>=1&&day<=4&&hr<9)?'Opens today at 9 AM. Book online any time.':'Closed right now. Book online any time.';}}
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

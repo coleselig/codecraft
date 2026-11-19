@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Kyle Rustic Farm — Philadelphia, TN</title>
+<meta name="description" content="Concept site for Kyle Rustic Farm: a pasture-based farm in Paint Rock Valley, Philadelphia, TN. Farm store open Fridays and Saturdays.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#2F4A3A; --forest-d:#22362A; --forest-dd:#18271E;
+  --rust:#A5512B; --rust-d:#8A4122; --rust-l:#C76C40;
+  --oat:#EFE6D2; --oat-d:#E3D6BA; --cream:#F8F3E7;
+  --ink:#1F2A22; --muted:#56604F;
+  --wood1:#6B4A33; --wood2:#5A3D2A; --wood3:#7A5639;
+  --radius:14px;
+  --barH:68px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--oat);color:var(--ink);font:400 17px/1.6 Lato,system-ui,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Roboto Slab",Georgia,serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 16px}
+@media (min-width:700px){.wrap{padding:0 32px}}
+.grid>*{min-width:0}
+
+/* concept banner */
+.concept{background:var(--forest-dd);color:#D9CFB8;font-size:12px;line-height:1.3;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:700}
+.concept .s{display:none}
+@media (max-width:520px){.concept{font-size:11.5px;padding:7px 10px}.concept .l{display:none}.concept .s{display:inline}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(239,230,210,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(47,74,58,.14)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--forest);font:800 18px/1 "Roboto Slab",serif;white-space:nowrap}
+.brand svg{width:34px;height:34px;flex:none}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}
+.nav ul a{text-decoration:none;font-weight:700;font-size:15px;color:var(--forest);position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav ul a:hover::after{transform:scaleX(1)}
+.navcall{display:inline-flex;align-items:center;gap:8px;background:var(--rust);color:#fff;text-decoration:none;font-weight:900;font-size:14px;padding:9px 14px;border-radius:999px;transition:background .2s,transform .2s;white-space:nowrap}
+.navcall:hover{background:var(--rust-d);transform:translateY(-1px)}
+@media (min-width:860px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;background:var(--forest);color:var(--oat);overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{display:grid;gap:22px;padding-top:34px;padding-bottom:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 12.5px/1 Lato,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#E9B48F}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--rust-l)}
+.hero h1{font-size:clamp(36px,10vw,76px);font-weight:800;margin:14px 0 16px;color:#FBF6EA}
+.hero h1 em{font-style:normal;color:#F0A979;display:inline-block}
+.hero p.sub{font-size:18px;max-width:34em;color:#DCD3BE;margin:0 0 24px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 22px;border-radius:999px;font:900 16px/1 Lato,sans-serif;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer}
+.btn svg{width:18px;height:18px}
+@media (max-width:420px){.btn{padding:0 18px;font-size:15.5px}.ctas{gap:10px}}
+.btn-rust{background:var(--rust);color:#fff;box-shadow:0 6px 0 var(--rust-d)}
+.btn-rust:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--rust-d)}
+.btn-rust:active{transform:translateY(3px);box-shadow:0 3px 0 var(--rust-d)}
+.btn-ghost{border:2px solid rgba(239,230,210,.5);color:var(--oat)}
+.btn-ghost:hover{background:rgba(239,230,210,.1);border-color:var(--oat)}
+.open-now{margin-top:22px;display:inline-flex;align-items:center;gap:10px;font-size:14.5px;color:#DCD3BE;background:rgba(0,0,0,.18);padding:9px 14px;border-radius:10px}
+.dot{width:9px;height:9px;border-radius:50%;background:#9BB89A;box-shadow:0 0 0 0 rgba(155,184,154,.7);animation:pulse 2s infinite}
+.dot.closed{background:#E3A27E;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(155,184,154,0)}100%{box-shadow:0 0 0 0 rgba(155,184,154,0)}}
+.scene{position:relative;margin:0 -16px;align-self:end}
+.scene svg{width:100%;height:auto}
+@media (min-width:700px){.scene{margin:0 -32px}}
+@media (min-width:960px){
+  .hero{min-height:620px}
+  .hero .wrap{padding-top:80px}
+  .hero .copy{padding-bottom:96px;max-width:560px;position:relative;z-index:2}
+  .scene{position:absolute;right:0;bottom:0;width:min(60vw,920px);margin:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%);mask-image:linear-gradient(90deg,transparent,#000 22%)}
+}
+.sun{animation:sunrise 2.4s ease-out both}
+@keyframes sunrise{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+.cloud{animation:drift 26s linear infinite}
+@keyframes drift{from{transform:translateX(-40px)}to{transform:translateX(60px)}}
+.sway{transform-origin:bottom center;animation:sway 4s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+
+/* barnwood band with banner */
+.barnwood{position:relative;padding:34px 0 30px;
+  background:
+    repeating-linear-gradient(180deg,transparent 0 62px,rgba(0,0,0,.35) 62px 64px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 3px,transparent 3px 11px,rgba(0,0,0,.05) 11px 13px,transparent 13px 29px),
+    linear-gradient(180deg,var(--wood3),var(--wood2) 30%,var(--wood1) 55%,var(--wood2));
+}
+.barnwood::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='64'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .45' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .12  0 0 0 0 .07  0 0 0 0 .03  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
+.ribbon{position:relative;z-index:1;max-width:620px;margin:0 auto;padding:0 8px}
+.ribbon svg{width:100%;height:auto;filter:drop-shadow(0 6px 8px rgba(0,0,0,.35))}
+.ribbon-cap{position:relative;z-index:1;text-align:center;color:#F1E6CF;font-size:14px;margin:10px 16px 0;opacity:.9}
+
+/* sections */
+section{padding:72px 0}
+@media (min-width:860px){section{padding:104px 0}}
+.kicker{font:900 12.5px/1 Lato,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--rust)}
+.h2{font-size:clamp(30px,7.4vw,48px);font-weight:800;color:var(--forest);margin:12px 0 14px}
+.lede{color:var(--muted);max-width:40em;margin:0}
+
+/* products */
+.cats{display:grid;gap:16px;margin-top:36px;grid-template-columns:1fr}
+@media (min-width:600px){.cats{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.cats{grid-template-columns:repeat(3,1fr)}}
+.cat{background:var(--cream);border:1px solid rgba(47,74,58,.14);border-radius:var(--radius);padding:22px 20px 20px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.cat:hover{transform:translateY(-4px);box-shadow:0 14px 30px -14px rgba(47,74,58,.45);border-color:rgba(165,81,43,.45)}
+.cat .ic{width:56px;height:56px;border-radius:14px;background:var(--forest);display:grid;place-items:center;margin-bottom:14px}
+.cat .ic svg{width:34px;height:34px}
+@media (max-width:599px){.cat{display:grid;grid-template-columns:48px 1fr;column-gap:14px;padding:18px 16px}.cat>*{min-width:0}.cat .ic{width:48px;height:48px;border-radius:12px;margin:0;grid-row:span 2}.cat .ic svg{width:28px;height:28px}.cat h3{font-size:19px;margin:2px 0 4px}}
+.cat h3{font-size:21px;color:var(--forest);margin-bottom:8px}
+.cat p{margin:0;color:var(--muted);font-size:15.5px}
+.cat.feature{background:var(--forest);color:var(--oat);border-color:var(--forest)}
+.cat.feature h3{color:#FBF6EA}.cat.feature p{color:#D5CCB6}
+.cat.feature .ic{background:var(--rust)}
+.tag{display:inline-block;margin-top:12px;font:900 11px/1 Lato;letter-spacing:.12em;text-transform:uppercase;background:var(--rust);color:#fff;padding:6px 9px;border-radius:6px}
+.note{margin-top:22px;font-size:14.5px;color:var(--muted)}
+
+/* how we farm */
+.farm{background:var(--forest);color:var(--oat);position:relative;overflow:hidden}
+.farm .h2{color:#FBF6EA}.farm .lede{color:#D5CCB6}.farm .kicker{color:#F0A979}
+.farm-grid{display:grid;gap:40px;align-items:center}
+@media (min-width:900px){.farm-grid{grid-template-columns:1fr 1fr;gap:64px}}
+.pledges{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px}
+.pledges li{display:flex;gap:14px;align-items:flex-start;background:rgba(0,0,0,.16);border:1px solid rgba(239,230,210,.12);border-radius:12px;padding:14px 16px}
+.pledges li>*{min-width:0}
+.pledges svg{width:26px;height:26px;flex:none;margin-top:1px}
+.pledges b{display:block;color:#FBF6EA;font-family:"Roboto Slab",serif;font-weight:700;font-size:17px}
+.pledges span{color:#CFC6AF;font-size:15px}
+.quote{font-family:"Roboto Slab",serif;font-weight:700;font-size:clamp(24px,5.6vw,34px);line-height:1.25;color:#FBF6EA;margin:0;padding-left:18px;border-left:4px solid var(--rust-l)}
+.quote small{display:block;font:400 14px/1.5 Lato,sans-serif;color:#CFC6AF;margin-top:10px}
+.pasture svg{width:100%;height:auto;border-radius:18px}
+
+/* badges */
+.badges{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+@media (min-width:800px){.badges{grid-template-columns:repeat(3,1fr)}}
+.badge{border:1.5px dashed rgba(47,74,58,.4);border-radius:12px;padding:16px 14px;text-align:center;font-weight:700;color:var(--forest);font-size:14.5px;line-height:1.35;background:rgba(255,255,255,.35)}
+.badge svg{width:30px;height:30px;margin:0 auto 8px}
+
+/* find us */
+.find{background:var(--cream)}
+.find-grid{display:grid;gap:28px;margin-top:34px}
+@media (min-width:900px){.find-grid{grid-template-columns:1fr 1.15fr;gap:40px}}
+.hours{background:#fff;border-radius:var(--radius);border:1px solid rgba(47,74,58,.14);overflow:hidden}
+.hours h3{background:var(--forest);color:#FBF6EA;font-size:19px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hours h3 small{font:700 12px/1 Lato;letter-spacing:.1em;text-transform:uppercase;color:#E9B48F}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:13px 20px;border-top:1px solid rgba(47,74,58,.1);font-size:16px}
+.hours td:last-child{text-align:right;font-weight:700;color:var(--forest)}
+.hours tr.appt td:last-child{font-weight:400;color:var(--muted);font-style:italic}
+.hours tr.today td{background:#F6E3D6}
+.hours tr.today td:first-child{font-weight:900;color:var(--rust-d)}
+.hours tr.today td:first-child::after{content:"Today";margin-left:8px;font:900 10.5px/1 Lato;letter-spacing:.1em;text-transform:uppercase;background:var(--rust);color:#fff;padding:4px 7px;border-radius:5px;vertical-align:2px}
+.hours .fine{padding:12px 20px 16px;font-size:13.5px;color:var(--muted);border-top:1px solid rgba(47,74,58,.1)}
+.contact{display:grid;gap:12px;margin-top:16px}
+.contact a{display:flex;align-items:center;gap:14px;text-decoration:none;background:#fff;border:1px solid rgba(47,74,58,.14);border-radius:12px;padding:14px 16px;transition:border-color .2s,transform .2s}
+.contact a>*{min-width:0}
+.contact a:hover{border-color:var(--rust);transform:translateX(3px)}
+.contact .ci{width:42px;height:42px;border-radius:50%;background:var(--oat);display:grid;place-items:center;flex:none}
+.contact .ci svg{width:20px;height:20px}
+.contact b{display:block;color:var(--forest);font-size:16px;overflow-wrap:anywhere}
+.contact span{font-size:13.5px;color:var(--muted)}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(47,74,58,.18);background:var(--oat-d);min-height:320px;position:relative}
+.map iframe{display:block;width:100%;height:100%;min-height:320px;border:0}
+@media (min-width:900px){.map,.map iframe{min-height:560px}}
+.map-cap{font-size:14px;color:var(--muted);margin-top:10px}
+
+/* footer */
+footer{background:var(--forest-dd);color:#BDB59F;padding:44px 0 calc(36px + var(--barH) + env(safe-area-inset-bottom));font-size:14.5px}
+@media (min-width:860px){footer{padding-bottom:36px}}
+footer .wrap{display:grid;gap:18px}
+@media (min-width:800px){footer .wrap{grid-template-columns:1fr auto;align-items:end}}
+footer .brand{color:#FBF6EA}
+footer a{color:#E9B48F}
+footer p{margin:6px 0 0}
+footer a[href^="tel"]{white-space:nowrap}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(24,39,30,.97);box-shadow:0 -6px 20px rgba(0,0,0,.25)}
+.bar>*{min-width:0}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:12px;font:900 15.5px/1 Lato;text-decoration:none;white-space:nowrap}
+.bar a svg{width:18px;height:18px;flex:none}
+.bar .call{background:var(--rust);color:#fff}
+.bar .dir{background:var(--oat);color:var(--forest)}
+@media (min-width:860px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.js.reveal-all .reveal{opacity:1!important;transform:none!important}
+:focus-visible{outline:3px solid var(--rust-l);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="concept" role="note"><span class="l">Concept site by <b>Code Craft Media</b>, made for Kyle Rustic Farm. Not live.</span><span class="s">Concept site by <b>Code Craft Media</b> for Kyle Rustic Farm. Not live.</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kyle Rustic Farm home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2F4A3A"/><path d="M9 26 L20 12 L31 26 Z" fill="#A5512B"/><rect x="13" y="22" width="14" height="9" fill="#A5512B"/><path d="M17 31v-5h6v5" fill="#EFE6D2"/><path d="M15 23l10 7M25 23l-10 7" stroke="#EFE6D2" stroke-width="1.2"/></svg>
+      Kyle Rustic Farm
+    </a>
+    <ul>
+      <li><a href="#store">Farm store</a></li>
+      <li><a href="#how">How we farm</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="navcall" href="tel:+18653767067"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap grid">
+    <div class="copy">
+      <span class="eyebrow">Paint Rock Valley, Tennessee</span>
+      <h1>Raised on pasture, down in the <em>hollow.</em></h1>
+      <p class="sub">Pasture-raised meats and eggs from a rotationally grazed farm in Philadelphia, TN. No chemical fertilizers, pesticides, antibiotics or growth hormones.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="tel:+18653767067"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call (865) 376-7067</a>
+        <a class="btn btn-ghost" href="#visit">Hours</a>
+      </div>
+      <div class="open-now" id="openNow"><span class="dot" id="openDot"></span><span id="openText">Farm store: Fri 2–5 pm · Sat 9 am–2 pm</span></div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 0 640 420" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F4A3A" stop-opacity="0"/><stop offset="1" stop-color="#4E6B53" stop-opacity=".55"/></linearGradient>
+          <linearGradient id="barnG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B85E33"/><stop offset="1" stop-color="#8A4122"/></linearGradient>
+          <pattern id="boards" width="12" height="40" patternUnits="userSpaceOnUse"><rect width="12" height="40" fill="url(#barnG)"/><rect x="11" width="1.2" height="40" fill="#6E3219" opacity=".7"/></pattern>
+        </defs>
+        
+        <circle class="sun" cx="470" cy="150" r="54" fill="#F0A979" opacity=".9"/>
+        <g class="cloud" fill="#EFE6D2" opacity=".18"><ellipse cx="160" cy="80" rx="60" ry="14"/><ellipse cx="200" cy="70" rx="40" ry="14"/></g>
+        <!-- ridgelines -->
+        <path d="M0 230 C90 170 160 190 230 160 S380 120 450 170 S580 180 640 150 V420 H0Z" fill="#3E5C48"/>
+        <path d="M0 270 C110 220 200 250 300 225 S480 205 640 240 V420 H0Z" fill="#46664F"/>
+        <!-- tree line -->
+        <g fill="#2A4233">
+          <path d="M40 268 l14-40 14 40z"/><path d="M62 262 l12-34 12 34z"/><path d="M560 250 l14-44 14 44z"/><path d="M586 254 l11-32 11 32z"/><path d="M606 256 l13-38 13 38z"/>
+        </g>
+        <!-- barn -->
+        <g transform="translate(330 196)">
+          <path d="M0 70 L50 22 L110 22 L160 70 V150 H0Z" fill="url(#boards)"/>
+          <path d="M-8 74 L50 16 L110 16 L168 74" fill="none" stroke="#EFE6D2" stroke-width="7" stroke-linejoin="round"/>
+          <rect x="56" y="88" width="48" height="62" fill="#5E2A15"/>
+          <path d="M56 88h48v62H56zM56 88l48 62M104 88l-48 62" fill="none" stroke="#EFE6D2" stroke-width="4"/>
+          <rect x="68" y="40" width="24" height="22" fill="#5E2A15" stroke="#EFE6D2" stroke-width="4"/>
+          <rect x="10" y="96" width="30" height="26" fill="#5E2A15" stroke="#EFE6D2" stroke-width="3"/>
+          <rect x="120" y="96" width="30" height="26" fill="#5E2A15" stroke="#EFE6D2" stroke-width="3"/>
+        </g>
+        <!-- silo -->
+        <g transform="translate(500 210)"><rect x="0" y="20" width="40" height="126" fill="#C9BDA2"/><path d="M0 20 Q20 -6 40 20Z" fill="#A5512B"/><path d="M0 50h40M0 80h40M0 110h40" stroke="#A89C80" stroke-width="2"/></g>
+        <!-- pasture -->
+        <path d="M0 330 C140 300 300 320 420 312 S580 300 640 318 V420 H0Z" fill="#5D7F5F"/>
+        <path d="M0 360 C160 340 360 356 640 344 V420 H0Z" fill="#6E8F68"/>
+        <!-- fence -->
+        <g stroke="#EFE6D2" stroke-width="5" stroke-linecap="round" opacity=".9">
+          <path d="M0 362 L640 350" /><path d="M0 384 L640 372"/>
+          <path d="M40 352v44M140 350v44M240 348v44M340 346v44M440 344v44M540 342v44M630 340v44"/>
+        </g>
+        <!-- cow -->
+        <g transform="translate(150 300)">
+          <ellipse cx="40" cy="22" rx="38" ry="20" fill="#2B1C14"/>
+          <rect x="10" y="30" width="8" height="24" rx="3" fill="#2B1C14"/><rect x="58" y="30" width="8" height="24" rx="3" fill="#2B1C14"/>
+          <path d="M70 8 q18 -4 22 10 q2 12 -12 14 q-10 0 -12 -10z" fill="#2B1C14"/>
+          <ellipse cx="88" cy="22" rx="6" ry="4" fill="#6B4A33"/>
+          <ellipse cx="34" cy="18" rx="12" ry="8" fill="#F1E6CF" opacity=".85"/>
+        </g>
+        <!-- hens -->
+        <g transform="translate(268 344)" fill="#F1E6CF"><ellipse cx="12" cy="10" rx="12" ry="9"/><circle cx="24" cy="2" r="5"/><path d="M28 2l5 1-5 2z" fill="#E9B48F"/><path d="M22-3l2-3 2 3z" fill="#C2492A"/></g>
+        <g transform="translate(302 352)" fill="#A5512B"><ellipse cx="12" cy="10" rx="12" ry="9"/><circle cx="24" cy="2" r="5"/><path d="M28 2l5 1-5 2z" fill="#E9B48F"/><path d="M22-3l2-3 2 3z" fill="#C2492A"/></g>
+        <!-- grass tufts -->
+        <g fill="#86A57D"><path class="sway" d="M80 420 q4-28 8 0z"/><path class="sway" d="M90 420 q6-36 10 0z"/><path class="sway" d="M520 420 q4-30 8 0z"/><path class="sway" d="M532 420 q6-38 10 0z"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="barnwood" aria-label="Soil is life and provides life.">
+  <div class="ribbon reveal">
+    <svg viewBox="0 0 600 120" role="img" aria-label="Soil is life">
+      <path d="M8 38 L70 38 L56 62 L70 86 L8 86 L24 62Z" fill="#7E3A1C"/>
+      <path d="M592 38 L530 38 L544 62 L530 86 L592 86 L576 62Z" fill="#7E3A1C"/>
+      <path d="M58 30 Q300 6 542 30 L542 90 Q300 66 58 90Z" fill="#A5512B"/>
+      <path d="M58 30 Q300 6 542 30" fill="none" stroke="#EFE6D2" stroke-width="1.5" stroke-dasharray="5 6" opacity=".6" transform="translate(0 7)"/>
+      <path d="M58 90 Q300 66 542 90" fill="none" stroke="#EFE6D2" stroke-width="1.5" stroke-dasharray="5 6" opacity=".6" transform="translate(0 -7)"/>
+      <text x="300" y="70" text-anchor="middle" font-family="Roboto Slab, Georgia, serif" font-weight="800" font-size="40" fill="#FBF6EA" letter-spacing="2" transform="rotate(-1.2 300 60)">Soil is life.</text>
+    </svg>
+  </div>
+  <p class="ribbon-cap">“Soil is life and provides life.” — Kyle Rustic Farm</p>
+</div>
+
+<section id="store">
+  <div class="wrap">
+    <span class="kicker">From the farm store</span>
+    <h2 class="h2 reveal">What’s raised and grown here</h2>
+    <p class="lede reveal">Meat, eggs, produce and pantry goods from the farm in Paint Rock Valley. What’s on hand changes with the season, so call ahead for this week’s list.</p>
+    <div class="cats grid">
+      <article class="cat feature reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#EFE6D2" stroke-width="2.4" stroke-linejoin="round"><path d="M8 18c0-6 6-9 12-9s12 3 12 9-3 12-12 12S8 24 8 18z"/><path d="M6 12l5 4M34 12l-5 4"/><circle cx="16" cy="19" r="1.6" fill="#EFE6D2"/><circle cx="24" cy="19" r="1.6" fill="#EFE6D2"/><path d="M17 25h6"/></svg></div>
+        <h3>Pasture-raised meats</h3>
+        <p>Beef, pork, lamb, chicken, duck and turkey, raised outdoors with rotational grazing. Custom beef, pork, lamb and poultry.</p>
+      </article>
+      <article class="cat reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#EFE6D2" stroke-width="2.4"><path d="M20 7c6 0 11 10 11 17a11 11 0 0 1-22 0C9 17 14 7 20 7z"/></svg></div>
+        <h3>Eggs</h3>
+        <p>Farm eggs from hens on pasture.</p>
+      </article>
+      <article class="cat reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#EFE6D2" stroke-width="2.4" stroke-linejoin="round"><path d="M13 12h14l-2 22H15z"/><path d="M12 12h16M16 8h8v4h-8z"/></svg></div>
+        <h3>Raw milk drop point</h3>
+        <p>The farm is a drop point for fresh raw milk. Call for pickup details.</p>
+      </article>
+      <article class="cat reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#EFE6D2" stroke-width="2.4" stroke-linejoin="round"><path d="M20 34V16"/><path d="M20 22c-6 0-10-4-10-10 6 0 10 4 10 10zM20 18c0-6 4-10 10-10 0 6-4 10-10 10z"/></svg></div>
+        <h3>Seasonal produce</h3>
+        <p>Tomatoes, pole beans, okra, peppers, cucumbers, potatoes, sweet potatoes, pumpkins, muscadines, elderberries, herbs and edible flowers.</p>
+      </article>
+      <article class="cat reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#EFE6D2" stroke-width="2.4" stroke-linejoin="round"><path d="M12 14h16v18a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3z"/><path d="M11 10h18v4H11z"/><path d="M16 22h8"/></svg></div>
+        <h3>Pantry</h3>
+        <p>Honey, bee pollen, jams, jellies and spreads, maple syrup, and lard, leaf lard and fat for rendering.</p>
+      </article>
+      <article class="cat reveal">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#EFE6D2" stroke-width="2.4" stroke-linejoin="round"><circle cx="16" cy="27" r="7"/><path d="M21 22l10-14M28 6l5 4"/><circle cx="16" cy="27" r="2"/></svg></div>
+        <h3>Barnwood &amp; more</h3>
+        <p>Barnwood guitars, firewood, candles and a seed exchange.</p>
+      </article>
+    </div>
+    <p class="note">Prices aren’t listed online. Call <a href="tel:+18653767067"><b>(865) 376-7067</b></a> for current prices and availability.</p>
+  </div>
+</section>
+
+<section class="farm" id="how">
+  <div class="wrap">
+    <div class="farm-grid grid">
+      <div>
+        <span class="kicker">How we farm</span>
+        <h2 class="h2 reveal">Nestled in the hollow of Paint Rock Valley</h2>
+        <p class="lede reveal">A pasture-based, family-friendly farm using rotational grazing, where the animals are raised outdoors on open pasture.</p>
+        <ul class="pledges">
+          <li class="reveal"><svg viewBox="0 0 26 26" fill="none" stroke="#F0A979" stroke-width="2.4" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M8 13.5l3.5 3.5L18 10"/></svg><div><b>Rotational grazing</b><span>Livestock move across open pasture.</span></div></li>
+          <li class="reveal"><svg viewBox="0 0 26 26" fill="none" stroke="#F0A979" stroke-width="2.4" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M8 13.5l3.5 3.5L18 10"/></svg><div><b>No chemicals, no hormones</b><span>No chemical fertilizers, pesticides, herbicides, antibiotics or growth hormones.</span></div></li>
+          <li class="reveal"><svg viewBox="0 0 26 26" fill="none" stroke="#F0A979" stroke-width="2.4" stroke-linecap="round"><circle cx="13" cy="13" r="11"/><path d="M8 13.5l3.5 3.5L18 10"/></svg><div><b>Room for pollinators</b><span>Trees, grasses, legumes and flowers planted for pollinator habitat.</span></div></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="pasture" aria-hidden="true">
+          <svg viewBox="0 0 520 360">
+            <rect width="520" height="360" fill="#22362A"/>
+            <path d="M0 210 C120 170 220 200 330 170 S470 150 520 170 V360 H0Z" fill="#3E5C48"/>
+            <!-- paddocks -->
+            <g stroke="#EFE6D2" stroke-width="2.5" stroke-dasharray="6 6" opacity=".55" fill="none">
+              <path d="M40 330 L120 220 L300 205 L470 225 L500 330Z"/>
+              <path d="M120 220 L150 330M300 205 L300 330M470 225 L400 330"/>
+            </g>
+            <g fill="#6E8F68" opacity=".9"><path d="M40 330 L120 220 L210 212 L150 330Z"/></g>
+            <g fill="#86A57D"><path d="M300 205 L470 225 L400 330 L300 330Z" opacity=".5"/></g>
+            <!-- arrows -->
+            <g stroke="#F0A979" stroke-width="3" fill="none" stroke-linecap="round"><path d="M150 270 q60-40 120-20"/><path d="M262 244 l10 6-10 6"/><path d="M330 280 q50-30 90-10"/><path d="M412 262 l10 6-10 6"/></g>
+            <text x="98" y="300" fill="#EFE6D2" font-family="Lato" font-weight="900" font-size="13" letter-spacing="1.5">GRAZE</text>
+            <text x="212" y="300" fill="#EFE6D2" font-family="Lato" font-weight="900" font-size="13" letter-spacing="1.5" opacity=".75">REST</text>
+            <text x="350" y="310" fill="#EFE6D2" font-family="Lato" font-weight="900" font-size="13" letter-spacing="1.5" opacity=".75">REGROW</text>
+            <!-- sun & flowers -->
+            <circle cx="430" cy="80" r="36" fill="#F0A979" opacity=".85"/>
+            <g fill="#F0A979"><circle cx="60" cy="200" r="5"/><circle cx="76" cy="192" r="4"/><circle cx="470" cy="190" r="5"/></g>
+            <g fill="#EFE6D2"><circle cx="90" cy="204" r="4"/><circle cx="455" cy="182" r="4"/></g>
+            <!-- bee -->
+            <g transform="translate(110 120)"><ellipse cx="0" cy="0" rx="10" ry="7" fill="#F0A979"/><path d="M-3-7v14M3-7v14" stroke="#22362A" stroke-width="2.5"/><ellipse cx="-3" cy="-10" rx="6" ry="4" fill="#EFE6D2" opacity=".7"/><path d="M14 2 q30 10 50 -10" stroke="#EFE6D2" stroke-dasharray="3 5" fill="none" opacity=".5"/></g>
+            <text x="28" y="48" fill="#FBF6EA" font-family="Roboto Slab" font-weight="800" font-size="24">Move. Rest. Regrow.</text>
+            <text x="28" y="72" fill="#CFC6AF" font-family="Lato" font-size="14">Rotational grazing, paddock by paddock</text>
+          </svg>
+        </div>
+        <blockquote class="quote" style="margin-top:28px">“Soil is life and provides life.”<small>From the farm’s listing on Appalachian Grown</small></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="members" style="padding-bottom:64px">
+  <div class="wrap">
+    <span class="kicker">Memberships &amp; certifications</span>
+    <h2 class="h2 reveal">In good company</h2>
+    <div class="badges grid">
+      <div class="badge reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#A5512B" stroke-width="2.2"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z"/></svg>Appalachian Grown</div>
+      <div class="badge reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#A5512B" stroke-width="2.2"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z"/></svg>Pick Tennessee Products</div>
+      <div class="badge reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#A5512B" stroke-width="2.2"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z"/></svg>American Pastured Poultry Producers Assn.</div>
+      <div class="badge reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#A5512B" stroke-width="2.2"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z"/></svg>Farmer Veteran Coalition</div>
+      <div class="badge reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#A5512B" stroke-width="2.2"><path d="M15 3l10 4v8c0 6-4 10-10 12C9 25 5 21 5 15V7z"/></svg>NPIP Certified</div>
+      <div class="badge reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#A5512B" stroke-width="2.2"><path d="M4 22h22M7 22V12l8-6 8 6v10"/><path d="M12 22v-6h6v6"/></svg>Find us at Kingston Lakeside Market</div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="visit">
+  <div class="wrap">
+    <span class="kicker">Visit the farm store</span>
+    <h2 class="h2 reveal">Come out to Main Hollow Road</h2>
+    <p class="lede reveal">The farm store is open Friday afternoons and Saturday mornings. Monday through Thursday, call to set up a visit.</p>
+    <div class="find-grid grid">
+      <div class="reveal">
+        <div class="hours">
+          <h3>Farm store hours <small id="hoursStatus">Fri &amp; Sat</small></h3>
+          <table>
+            <tbody id="hoursBody">
+              <tr data-d="1" class="appt"><td>Monday</td><td>By appointment</td></tr>
+              <tr data-d="2" class="appt"><td>Tuesday</td><td>By appointment</td></tr>
+              <tr data-d="3" class="appt"><td>Wednesday</td><td>By appointment</td></tr>
+              <tr data-d="4" class="appt"><td>Thursday</td><td>By appointment</td></tr>
+              <tr data-d="5"><td>Friday</td><td>2 pm – 5 pm</td></tr>
+              <tr data-d="6"><td>Saturday</td><td>9 am – 2 pm</td></tr>
+              <tr data-d="0" class="appt"><td>Sunday</td><td>Call ahead</td></tr>
+            </tbody>
+          </table>
+          <div class="fine">Hours can change with the season. Call before a long drive.</div>
+        </div>
+        <div class="contact">
+          <a href="tel:+18653767067"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#A5512B" stroke-width="2.4"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><b>(865) 376-7067</b><span>Tap to call the farm</span></div></a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=103%20Main%20Hollow%20Rd%2C%20Philadelphia%2C%20TN%2037846" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#A5512B" stroke-width="2.4"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>103 Main Hollow Rd</b><span>Philadelphia, TN 37846 · Get directions</span></div></a>
+          <a href="mailto:KyleRusticFarm@gmail.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#A5512B" stroke-width="2.4"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b>KyleRusticFarm@gmail.com</b><span>Email the farm</span></div></a>
+          <a href="https://www.facebook.com/kylerusticfarm" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#A5512B" stroke-width="2.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#A5512B"/></svg></span><div><b>Facebook &amp; Instagram</b><span>@kylerusticfarm · @kylerustic</span></div></a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="map"><iframe title="Map to Kyle Rustic Farm" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=103%20Main%20Hollow%20Rd%2C%20Philadelphia%2C%20TN%2037846&amp;output=embed"></iframe></div>
+        <p class="map-cap">103 Main Hollow Road, Philadelphia, TN 37846, in Paint Rock Valley (Roane County).</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2F4A3A"/><path d="M9 26 L20 12 L31 26 Z" fill="#A5512B"/><rect x="13" y="22" width="14" height="9" fill="#A5512B"/><path d="M17 31v-5h6v5" fill="#EFE6D2"/></svg>Kyle Rustic Farm</a>
+      <p>103 Main Hollow Rd, Philadelphia, TN 37846 · <a href="tel:+18653767067">(865) 376-7067</a></p>
+    </div>
+    <p>Concept by <a href="https://coleselig.github.io/codecraft/">Code Craft Media</a>. Not the farm’s official site.</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+18653767067"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call the farm</a>
+  <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=103%20Main%20Hollow%20Rd%2C%20Philadelphia%2C%20TN%2037846" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  setTimeout(function(){d.classList.add('reveal-all')},1500);
+  try{
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+      document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+    } else d.classList.add('reveal-all');
+  }catch(e){d.classList.add('reveal-all')}
+  // Today's hours in farm's time zone (America/New_York)
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+    var row=document.querySelector('#hoursBody tr[data-d="'+day+'"]'); if(row) row.classList.add('today');
+    var open=(day===5&&h>=14&&h<17)||(day===6&&h>=9&&h<14);
+    var txt=document.getElementById('openText'), dot=document.getElementById('openDot'), st=document.getElementById('hoursStatus');
+    var msg;
+    if(open){msg=day===5?'Farm store open now · until 5 pm':'Farm store open now · until 2 pm'; st.textContent='Open now';}
+    else{
+      dot.classList.add('closed');
+      if(day===5&&h<14) msg='Farm store opens today at 2 pm';
+      else if(day===6&&h<9) msg='Farm store opens today at 9 am';
+      else if(day===5) msg='Farm store opens Saturday at 9 am';
+      else msg='Farm store opens Friday at 2 pm · weekdays by appointment';
+      st.textContent='Closed now';
+    }
+    txt.textContent=msg;
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
