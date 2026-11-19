@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hair by Mckennzie — Springfield</title>
+<meta name="description" content="Concept site for Hair by Mckennzie, 502 B S. Main St., 3rd floor, Springfield, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5EEE4; --paper:#FBF7F1; --ink:#2A1D19; --ink2:#5A463E; --copper:#B0602F; --copper-d:#8E4A22;
+  --rose:#E9CFC0; --plum:#4A2634; --line:rgba(42,29,25,.14);
+  --serif:'Bodoni Moda',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+.concept{background:var(--ink);color:#EBDDD2;font-size:clamp(10px,2.75vw,12px);text-align:center;padding:7px 8px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#F0B48B;font-weight:600}
+
+header.nav{position:sticky;top:0;z-index:30;background:rgba(245,238,228,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--serif);font-size:22px;text-decoration:none;letter-spacing:-.01em}
+.logo i{color:var(--copper);font-style:italic}
+.nav ul{display:none;list-style:none;gap:28px;font-size:14px;font-weight:500}
+.nav ul a{text-decoration:none;opacity:.8}
+.nav ul a:hover{opacity:1;color:var(--copper)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--copper);color:#fff;box-shadow:0 8px 24px -10px rgba(176,96,47,.7)}
+.btn-primary:hover{background:var(--copper-d);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.nav .btn{min-height:40px;padding:0 18px;font-size:14px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:44px 0 56px}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-d)}
+.eyebrow:before{content:"";width:28px;height:1.5px;background:currentColor}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,12.5vw,92px);line-height:.98;letter-spacing:-.025em;margin:18px 0 20px}
+h1 em{font-style:italic;color:var(--copper)}
+.sub{font-size:17px;color:var(--ink2);max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cta .btn{flex:1 1 200px}
+@media(min-width:980px){.cta .btn{flex:0 0 auto}}
+.floor{margin-top:30px;display:flex;align-items:center;gap:14px;font-size:14px;color:var(--ink2)}
+.floor .num{font-family:var(--serif);font-size:40px;line-height:1;color:var(--plum);font-style:italic}
+.floor b{color:var(--ink);font-weight:600;display:block}
+
+.art{position:relative;aspect-ratio:1/1.05;max-width:460px;width:100%;margin:0 auto}
+.arch{position:absolute;inset:0;border-radius:240px 240px 24px 24px;background:linear-gradient(170deg,#4A2634 0%,#6E3443 45%,#B0602F 100%);overflow:hidden;box-shadow:0 30px 60px -30px rgba(74,38,52,.6)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.wave path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s ease forwards}
+.wave path:nth-child(2){animation-delay:.25s}.wave path:nth-child(3){animation-delay:.5s}.wave path:nth-child(4){animation-delay:.75s}.wave path:nth-child(5){animation-delay:1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.swatch{position:absolute;display:flex;align-items:center;gap:10px;background:var(--paper);border-radius:999px;padding:8px 16px 8px 8px;font-size:13px;font-weight:600;box-shadow:0 14px 30px -16px rgba(42,29,25,.5);animation:float 6s ease-in-out infinite}
+.swatch span{width:28px;height:28px;border-radius:50%}
+.s1{left:-6px;top:22%}.s1 span{background:linear-gradient(135deg,#E8C79B,#B0602F)}
+.s2{right:-6px;top:52%;animation-delay:-2s}.s2 span{background:linear-gradient(135deg,#C04D8A,#5B3BC0)}
+.s3{left:8%;bottom:-14px;animation-delay:-4s}.s3 span{background:linear-gradient(135deg,#F3E1C4,#8B5A3C)}
+@keyframes float{50%{transform:translateY(-8px)}}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .15 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* marquee */
+.ticker{background:var(--plum);color:#F3DCCB;overflow:hidden;border-block:1px solid rgba(255,255,255,.08)}
+.ticker .track{display:flex;gap:40px;white-space:nowrap;padding:14px 0;animation:tick 32s linear infinite;font-family:var(--serif);font-style:italic;font-size:20px}
+.ticker .track span:nth-child(even){color:#F0B48B;font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:72px 0}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,8.5vw,60px);line-height:1.02;letter-spacing:-.02em}
+.h2 em{font-style:italic;color:var(--copper)}
+.lede{color:var(--ink2);margin-top:14px;max-width:560px}
+
+/* MENU */
+.menu{background:var(--paper)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 8px}
+.tab{font:600 14px var(--sans);padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--copper)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.panels{display:grid;gap:40px;margin-top:20px}
+.group h3{font-family:var(--serif);font-weight:500;font-style:italic;font-size:26px;color:var(--plum);margin-bottom:6px}
+.group .note{font-size:13px;color:var(--ink2);margin-bottom:12px}
+.item{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-bottom:1px solid var(--line)}
+.item .n{font-weight:600;font-size:16px}
+.item .dots{flex:1;border-bottom:1.5px dotted rgba(42,29,25,.28);transform:translateY(-4px);min-width:16px}
+.item .p{font-family:var(--serif);font-size:20px;white-space:nowrap}
+.item .v{display:block;font-size:12px;font-weight:500;color:var(--copper-d);letter-spacing:.02em}
+.menu-foot{margin-top:28px;font-size:14px;color:var(--ink2);display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.js .group[hidden]{display:none}
+
+/* WHY */
+.why .grid{display:grid;gap:16px;margin-top:36px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(42,29,25,.45)}
+.card .ic{width:46px;height:46px;border-radius:14px;background:var(--rose);display:grid;place-items:center;margin-bottom:18px}
+.card h4{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15;margin-bottom:8px}
+.card p{color:var(--ink2);font-size:15px}
+.card.dark{background:var(--plum);color:#F6E6DA;border-color:transparent}
+.card.dark p{color:#E2C7B9}.card.dark .ic{background:rgba(255,255,255,.12)}
+
+/* VISIT */
+.visit{background:var(--ink);color:var(--cream)}
+.visit .h2 em{color:#F0B48B}
+.visit .lede{color:#CDBBAF}
+.vgrid{display:grid;gap:28px;margin-top:36px}
+.hours{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:10px 22px}
+.hrow{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}
+.hrow:last-child{border-bottom:0}
+.hrow .d{font-weight:600}
+.hrow .t{color:#D9C6BA}
+.hrow.closed .t{color:#8E7B72}
+.hrow.today{color:#fff}
+.hrow.today .d:after{content:"Today";margin-left:10px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--copper);color:#fff;padding:3px 8px;border-radius:999px;vertical-align:2px}
+.hrow.today .t{color:#F0B48B;font-weight:600}
+.addr{font-family:var(--serif);font-size:26px;line-height:1.25;margin:4px 0 6px}
+.addr small{display:block;font-family:var(--sans);font-size:14px;color:#CDBBAF;margin-top:6px}
+.map{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12);aspect-ratio:4/3;background:#3a2a25 repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px)}
+.map:before{content:"502 B S. Main St · Springfield";position:absolute;inset:0;display:grid;place-items:center;color:#8E7B72;font-size:14px}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+.vbtns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.visit .btn-ghost{border-color:#EBDDD2;color:#EBDDD2}
+.visit .btn-ghost:hover{background:#EBDDD2;color:var(--ink)}
+
+footer{background:#1E1411;color:#A8958B;font-size:13px;padding:34px 0 calc(110px + env(safe-area-inset-bottom))}
+footer a{white-space:nowrap}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer .logo{color:#EBDDD2;font-size:20px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(42,29,25,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.bar a{flex:1;min-height:50px;font-size:15px}
+.bar .call{background:transparent;border:1.5px solid #EBDDD2;color:#EBDDD2}
+
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal.pre{opacity:0;transform:translateY(24px)}
+
+a:focus-visible,button:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+@media (min-width:760px){
+  .why .grid{grid-template-columns:repeat(3,1fr)}
+  .panels{grid-template-columns:1fr 1fr;gap:20px 56px}
+  .group[data-g=color]{grid-row:span 2}
+  .js .panels.filtered{grid-template-columns:1fr}
+  .js .panels.filtered .group{grid-row:auto}
+}
+@media (min-width:980px){
+  footer{padding-bottom:34px}
+  .bar{display:none}
+  .nav ul{display:flex}
+  .hero{padding:72px 0 96px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
+  .vgrid{grid-template-columns:.9fr 1.1fr;align-items:start}
+  section{padding:110px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.wave path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>Hair by Mckennzie</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Hair by <i>Mckennzie</i></a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#why">Why book</a></li>
+      <li><a href="#visit">Hours &amp; visit</a></li>
+    </ul>
+    <a class="btn btn-primary" href="https://square.site/book/MDQBNSKKHN8QF/hair-by-mckennzie-springfield-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Springfield, Tennessee</span>
+      <h1>Color, cuts &amp; <em>balayage</em> on South Main.</h1>
+      <p class="sub">Highlights, vivids, color correction and everyday cuts with Mckennzie Woodard, up on the third floor at 502 S. Main St.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://square.site/book/MDQBNSKKHN8QF/hair-by-mckennzie-springfield-tn" target="_blank" rel="noopener">Book online
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+16159820129">Call (615) 982-0129</a>
+      </div>
+      <div class="floor"><span class="num">3rd</span><span><b>Third floor, 502 B S. Main St.</b>Open Tuesday through Saturday</span></div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="arch">
+        <svg viewBox="0 0 400 420" preserveAspectRatio="none" class="wave" fill="none">
+          <path d="M-20 70 C 80 20, 140 160, 230 110 S 380 40, 430 120" stroke="#F0B48B" stroke-width="2.4" opacity=".9"/>
+          <path d="M-20 140 C 70 90, 150 230, 240 175 S 380 110, 430 190" stroke="#F3DCCB" stroke-width="1.6" opacity=".7"/>
+          <path d="M-20 210 C 90 160, 140 300, 250 245 S 370 180, 430 260" stroke="#E8C79B" stroke-width="2.8" opacity=".85"/>
+          <path d="M-20 280 C 80 230, 160 370, 250 315 S 380 250, 430 330" stroke="#F3DCCB" stroke-width="1.4" opacity=".6"/>
+          <path d="M-20 350 C 70 300, 150 440, 250 385 S 380 320, 430 400" stroke="#F0B48B" stroke-width="2.2" opacity=".8"/>
+        </svg>
+        <svg viewBox="0 0 400 420" style="mix-blend-mode:overlay">
+          <circle cx="320" cy="80" r="120" fill="#fff" opacity=".12"/>
+          <circle cx="80" cy="360" r="140" fill="#000" opacity=".12"/>
+        </svg>
+      </div>
+      <div class="swatch s1"><span></span>Balayage</div>
+      <div class="swatch s2"><span></span>Vivids</div>
+      <div class="swatch s3"><span></span>Highlights</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Balayage</span><span>✦</span><span>Full highlights</span><span>✦</span><span>Vivids</span><span>✦</span><span>Color correction</span><span>✦</span><span>Men's cuts</span><span>✦</span><span>Brow wax</span><span>✦</span>
+  <span>Balayage</span><span>✦</span><span>Full highlights</span><span>✦</span><span>Vivids</span><span>✦</span><span>Color correction</span><span>✦</span><span>Men's cuts</span><span>✦</span><span>Brow wax</span><span>✦</span>
+</div></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <span class="eyebrow">The menu</span>
+    <h2 class="h2 reveal">Every service, <em>priced up front.</em></h2>
+    <p class="lede reveal">Prices as listed on the Square booking page. Many services note that price may vary, so your final price is confirmed in the chair.</p>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cuts">Cuts &amp; style</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="extras">Wax &amp; add-ons</button>
+    </div>
+    <div class="panels">
+      <div class="group reveal" data-g="color">
+        <h3>Color</h3>
+        <p class="note">Most color services: price may vary.</p>
+        <div class="item"><span class="n">Balayage</span><span class="dots"></span><span class="p">$130</span></div>
+        <div class="item"><span class="n">Full highlights</span><span class="dots"></span><span class="p">$135</span></div>
+        <div class="item"><span class="n">Highlights (partial)</span><span class="dots"></span><span class="p">$90</span></div>
+        <div class="item"><span class="n">Color</span><span class="dots"></span><span class="p">$90</span></div>
+        <div class="item"><span class="n">Color (long hair)</span><span class="dots"></span><span class="p">$125</span></div>
+        <div class="item"><span class="n">Color change / color correction</span><span class="dots"></span><span class="p">$170</span></div>
+        <div class="item"><span class="n">Vivids</span><span class="dots"></span><span class="p" style="font-size:15px;font-family:var(--sans);font-weight:600">Price will vary</span></div>
+      </div>
+      <div class="group reveal" data-g="cuts">
+        <h3>Cuts &amp; style</h3>
+        <p class="note">Women's, men's and beard services.</p>
+        <div class="item"><span class="n">Women's Haircut</span><span class="dots"></span><span class="p">$25</span></div>
+        <div class="item"><span class="n">Woman cut and shampoo</span><span class="dots"></span><span class="p">$35</span></div>
+        <div class="item"><span class="n">Style</span><span class="dots"></span><span class="p">$45</span></div>
+        <div class="item"><span class="n">Shampoo</span><span class="dots"></span><span class="p">$25</span></div>
+        <div class="item"><span class="n">Men's Haircut</span><span class="dots"></span><span class="p">$20</span></div>
+        <div class="item"><span class="n">Beard Trim</span><span class="dots"></span><span class="p">$10</span></div>
+      </div>
+      <div class="group reveal" data-g="extras">
+        <h3>Wax &amp; add-ons</h3>
+        <p class="note">Quick extras to pair with any visit.</p>
+        <div class="item"><span class="n">Brow wax</span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="item"><span class="n">Chin wax</span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="item"><span class="n">Add on toner service</span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="item"><span class="n">Add on cut</span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="item"><span class="n">Extra bowl</span><span class="dots"></span><span class="p">$10</span></div>
+      </div>
+    </div>
+    <div class="menu-foot">
+      <a class="btn btn-primary" href="https://square.site/book/MDQBNSKKHN8QF/hair-by-mckennzie-springfield-tn" target="_blank" rel="noopener">Pick a time online</a>
+      <span>Or call <a href="tel:+16159820129"><b>(615) 982-0129</b></a></span>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <span class="eyebrow">Why book here</span>
+    <h2 class="h2 reveal">One stylist. <em>Your whole look.</em></h2>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A2634" stroke-width="1.8" stroke-linecap="round"><path d="M3 8c3-3 6 3 9 0s6 3 9 0"/><path d="M3 13c3-3 6 3 9 0s6 3 9 0"/><path d="M3 18c3-3 6 3 9 0s6 3 9 0"/></svg></div>
+        <h4>From subtle to vivid</h4>
+        <p>Partial and full highlights, balayage, all-over color, vivids and full color correction, all on one menu.</p>
+      </div>
+      <div class="card dark reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0B48B" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="7" r="3"/><circle cx="6" cy="17" r="3"/><path d="M8.5 8.5 20 18M8.5 15.5 20 6"/></svg></div>
+        <h4>Cuts for everyone</h4>
+        <p>Women's cuts, men's haircuts and beard trims, plus styling and brow and chin waxing.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A2634" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <h4>Book any time</h4>
+        <p>See open times and reserve online, day or night, through the Square booking page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#F0B48B">Hours &amp; visit</span>
+    <h2 class="h2 reveal">Find us <em>downtown.</em></h2>
+    <div class="vgrid">
+      <div>
+        <p class="addr">502 B S. Main St.<small>3rd floor · Springfield, TN 37148</small></p>
+        <div class="hours" id="hours" style="margin-top:22px">
+          <div class="hrow closed" data-d="0"><span class="d">Sunday</span><span class="t">Closed</span></div>
+          <div class="hrow closed" data-d="1"><span class="d">Monday</span><span class="t">Closed</span></div>
+          <div class="hrow" data-d="2"><span class="d">Tuesday</span><span class="t">9:00 AM – 1:45 PM</span></div>
+          <div class="hrow" data-d="3"><span class="d">Wednesday</span><span class="t">9:00 AM – 1:45 PM</span></div>
+          <div class="hrow" data-d="4"><span class="d">Thursday</span><span class="t">9:00 AM – 1:45 PM</span></div>
+          <div class="hrow" data-d="5"><span class="d">Friday</span><span class="t">9:00 AM – 1:45 PM</span></div>
+          <div class="hrow" data-d="6"><span class="d">Saturday</span><span class="t">10:00 AM – 2:00 PM</span></div>
+        </div>
+        <div class="vbtns">
+          <a class="btn btn-primary" href="tel:+16159820129">Call (615) 982-0129</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=502%20S%20Main%20St%2C%20Springfield%2C%20TN%2037148" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="map"><iframe title="Map to Hair by Mckennzie" loading="lazy" src="https://www.google.com/maps?q=502%20S%20Main%20St%2C%20Springfield%2C%20TN%2037148&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Hair by <i style="color:#F0B48B">Mckennzie</i></span>
+    <span>502 B S. Main St., 3rd floor, Springfield, TN · <a href="tel:+16159820129">(615) 982-0129</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn call" href="tel:+16159820129">Call</a>
+  <a class="btn btn-primary" href="https://square.site/book/MDQBNSKKHN8QF/hair-by-mckennzie-springfield-tn" target="_blank" rel="noopener">Book online</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var d=new Date().getDay(),r=document.querySelector('.hrow[data-d="'+d+'"]'); if(r) r.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function show(){els.forEach(function(e){e.classList.remove('pre')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){if(e.getBoundingClientRect().top>innerHeight){e.classList.add('pre');io.observe(e)}});
+  }
+  setTimeout(show,1500);
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),groups=[].slice.call(document.querySelectorAll('.group')),panels=document.querySelector('.panels');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    var f=t.getAttribute('data-f');
+    groups.forEach(function(g){g.hidden=!(f==='all'||g.getAttribute('data-g')===f); g.classList.remove('pre')});
+    panels.classList.toggle('filtered',f!=='all');
+  })});
+})();
+</script>
+</body>
+</html>
