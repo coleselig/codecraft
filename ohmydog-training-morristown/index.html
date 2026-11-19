@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>OhMyDog Training — Morristown</title>
+<meta name="description" content="OhMyDog Training: pet training with owner Cara Hoadley in Morristown, TN and surrounding areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#e8f1f8; --sky2:#d6e6f3; --navy:#1d3557; --navy2:#2b4a73; --orange:#f4a259; --orange-d:#c86a1c; --white:#fff;
+  --ink:#1d3557; --muted:#4a5f7c;
+  --r:24px; --shadow:0 10px 30px rgba(29,53,87,.10);
+  --bar:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sky);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.05;margin:0;color:var(--navy)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.concept{background:var(--navy);color:#dce8f4;font-size:12.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--orange);font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(232,241,248,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(29,53,87,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Baloo 2";font-weight:800;font-size:23px;color:var(--navy)}
+.logo .dot{width:38px;height:38px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 4px 0 #d98a43}
+.logo span em{font-style:normal;color:var(--orange-d)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}
+.nav ul a{text-decoration:none;font-weight:500;color:var(--navy2)}
+.nav ul a:hover{color:var(--orange-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .18s ease, box-shadow .18s ease, background .18s;border:2px solid transparent;min-height:48px}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-o{background:var(--orange);color:var(--navy);box-shadow:0 5px 0 #d98a43}
+.btn-o:hover{transform:translateY(-2px);box-shadow:0 7px 0 #d98a43}
+.btn-n{background:var(--white);color:var(--navy);border-color:var(--navy)}
+.btn-n:hover{background:var(--navy);color:#fff}
+.nav .btn{padding:9px 16px;min-height:40px;font-size:15px;white-space:nowrap}
+@media (max-width:420px){.logo{font-size:20px;gap:8px}.logo .dot{width:32px;height:32px}}
+.logo span{white-space:nowrap}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:34px 0 0}
+.hero .wrap{display:grid;gap:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:6px 14px 6px 8px;font-size:14px;font-weight:500;color:var(--navy2);box-shadow:var(--shadow);width:max-content;max-width:100%}
+.pill i{width:22px;height:22px;border-radius:50%;background:var(--sky2);display:grid;place-items:center;font-style:normal}
+.hero h1{font-size:clamp(44px,12.5vw,84px);font-weight:800;letter-spacing:-.5px;margin-top:14px}
+.hero h1 .hl{color:var(--orange-d);position:relative;white-space:nowrap}
+.hero h1 .hl{background:linear-gradient(transparent 56%, rgba(244,162,89,.38) 56%, rgba(244,162,89,.38) 76%, transparent 76%);padding:0 4px;margin-left:-4px}
+.hero p.sub{font-size:18.5px;color:var(--muted);max-width:520px;margin:16px 0 22px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;margin:0 -20px;min-height:270px}
+.hero-art .sun{position:absolute;right:3%;top:-2%;width:96px;height:96px;border-radius:50%;background:var(--orange);opacity:.9;animation:bob 6s ease-in-out infinite}
+.hero-art svg.dog{position:relative;display:block;width:100%;height:auto;max-height:360px}
+.ground{height:22px;background:var(--navy);border-radius:24px 24px 0 0}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.tail{transform-origin:212px 150px;animation:wag 1.1s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(14deg)}}
+.ball{animation:bounce 1.6s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-34px)}}
+
+/* paw trail */
+.trail{display:block;width:100%;height:46px;color:var(--orange)}
+.trail.n{color:var(--navy);opacity:.18}
+
+section{padding:56px 0}
+.eyebrow{font-family:"Baloo 2";font-weight:700;color:var(--orange-d);text-transform:uppercase;letter-spacing:1.5px;font-size:14px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+h2{font-size:clamp(34px,8.5vw,52px);font-weight:800}
+.lead{color:var(--muted);max-width:620px;margin:12px 0 0}
+
+/* cards */
+.cards{display:grid;gap:16px;margin-top:28px}
+.card{background:#fff;border-radius:var(--r);padding:24px;box-shadow:var(--shadow);position:relative;transition:transform .2s ease, box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(29,53,87,.14)}
+.card .ic{width:56px;height:56px;border-radius:18px;background:var(--sky);display:grid;place-items:center;margin-bottom:14px}
+.card h3{font-size:25px;font-weight:700}
+.card p{margin:6px 0 0;color:var(--muted)}
+.card.feature{background:var(--navy);color:#e3edf7}
+.card.feature h3{color:#fff}
+.card.feature p{color:#c6d6e8}
+.card.feature .ic{background:var(--orange)}
+.card .tag{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;color:var(--navy);background:var(--orange);padding:4px 12px;border-radius:999px}
+
+/* steps */
+.white{background:#fff}
+.steps{display:grid;gap:14px;margin-top:28px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--sky);border-radius:var(--r);padding:20px}
+.step .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font-family:"Baloo 2";font-weight:800;font-size:22px;display:grid;place-items:center}
+.step h3{font-size:22px}
+.step p{margin:2px 0 0;color:var(--muted)}
+
+/* hours + map */
+.split{display:grid;gap:18px;margin-top:28px}
+.hours{background:#fff;border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.hours .big{font-family:"Baloo 2";font-weight:800;font-size:30px;line-height:1.1;color:var(--navy)}
+.hours p{color:var(--muted);margin:8px 0 18px}
+.contact-list{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:10px}
+.contact-list a,.contact-list span{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--sky);border-radius:16px;text-decoration:none;font-weight:500;word-break:break-word}
+.contact-list a:hover{background:var(--sky2)}
+.contact-list svg{flex:0 0 22px}
+.map{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:var(--sky2) radial-gradient(circle at 50% 45%, #fff 0 46px, transparent 47px);min-height:320px;position:relative}
+.map::before{content:"Morristown, TN";position:absolute;left:0;right:0;top:calc(45% + 58px);text-align:center;font-family:"Baloo 2";font-weight:700;font-size:20px;color:var(--navy)}
+.map::after{content:"";position:absolute;left:50%;top:45%;width:30px;height:30px;margin:-22px 0 0 -15px;background:var(--orange);border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+.map iframe{position:relative;z-index:1;background:transparent;display:block;width:100%;height:100%;min-height:320px;border:0}
+
+/* cta band */
+.band{background:var(--navy);color:#fff;border-radius:32px;padding:38px 26px;text-align:center;position:relative;overflow:hidden}
+.band h2{color:#fff}
+.band p{color:#c6d6e8;max-width:520px;margin:12px auto 22px}
+.band .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.band .btn-n{background:transparent;color:#fff;border-color:#fff}
+.band .btn-n:hover{background:#fff;color:var(--navy)}
+.band .paws{position:absolute;inset:0;opacity:.07;pointer-events:none}
+
+footer{padding:34px 0 28px;text-align:center;color:var(--muted);font-size:14px}
+footer .logo{justify-content:center;margin-bottom:8px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 -6px 24px rgba(29,53,87,.12)}
+.callbar a{flex:1;min-height:50px;padding:10px 12px;font-size:16px}
+.callbar .btn-n{border-color:var(--navy)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+.js .rv.in,.show-all .rv{opacity:1;transform:none}
+
+@media (max-width:959px){.hero h1{font-size:clamp(42px,11.6vw,64px)}.hero p.sub{font-size:17px;margin:12px 0 18px}.hero .ctas .btn{padding:12px 18px}.hero-art{min-height:0;margin-top:-6px}.hero-art svg.dog{max-height:230px}}
+@media (min-width:760px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .step{flex-direction:column}
+  .split{grid-template-columns:1fr 1.3fr}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .nav ul{display:flex}
+  .hero{padding-top:56px}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:end}
+  .hero .copy{padding-bottom:70px}
+  .hero-art{margin:0}
+  section{padding:84px 0}
+  .band{padding:60px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="paw" viewBox="0 0 40 40">
+      <ellipse cx="20" cy="27" rx="9.5" ry="8"/>
+      <ellipse cx="8" cy="16" rx="4" ry="5.2" transform="rotate(-18 8 16)"/>
+      <ellipse cx="15.5" cy="8.5" rx="4" ry="5.4" transform="rotate(-6 15.5 8.5)"/>
+      <ellipse cx="24.5" cy="8.5" rx="4" ry="5.4" transform="rotate(6 24.5 8.5)"/>
+      <ellipse cx="32" cy="16" rx="4" ry="5.2" transform="rotate(18 32 16)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for OhMyDog Training. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="OhMyDog Training home">
+      <span class="dot"><svg width="22" height="22" fill="#1d3557"><use href="#paw"/></svg></span>
+      <span>OhMyDog<em> Training</em></span>
+    </a>
+    <ul>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#how">How it starts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-o" href="tel:+14237480113">Call Cara</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="copy">
+      <span class="pill"><i><svg width="13" height="13" fill="#c86a1c"><use href="#paw"/></svg></i>Morristown, TN &amp; surrounding areas</span>
+      <h1>Oh my dog,<br>look at those <span class="hl">manners.</span></h1>
+      <p class="sub">Pet training with owner Cara Hoadley, for dogs and their people around Morristown.</p>
+      <div class="ctas">
+        <a class="btn btn-o" href="tel:+14237480113"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Call 423-748-0113</a>
+        <a class="btn btn-n" href="mailto:cara222001@yahoo.com?subject=Dog%20training%20question">Email</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="sun"></div>
+      <svg class="dog" viewBox="0 0 420 300">
+        <!-- paw trail -->
+        <g fill="#1d3557" opacity=".14">
+          <use href="#paw" x="18" y="250" width="22" height="22" transform="rotate(-12 29 261)"/>
+          <use href="#paw" x="52" y="232" width="22" height="22" transform="rotate(8 63 243)"/>
+          <use href="#paw" x="86" y="252" width="22" height="22" transform="rotate(-12 97 263)"/>
+        </g>
+        <!-- ball -->
+        <g class="ball"><circle cx="352" cy="244" r="17" fill="#f4a259"/><path d="M337 238 q15 10 30 0" stroke="#fff" stroke-width="3" fill="none"/></g>
+        <!-- dog silhouette (original, sitting, looking up) -->
+        <g fill="#1d3557">
+          <path class="tail" d="M206 196 C 230 186, 246 160, 240 134 C 238 126, 230 128, 231 136 C 234 158, 222 176, 200 184 Z"/>
+          <path d="M120 286 C 112 248, 116 210, 134 184 C 146 166, 150 140, 146 118 C 142 96, 150 74, 170 64 C 186 56, 206 58, 218 70 C 226 64, 236 62, 244 66 C 254 70, 258 82, 252 92 C 262 96, 266 108, 258 116 C 250 124, 236 124, 224 120 C 220 136, 222 152, 226 166 C 236 196, 236 236, 226 270 L 230 286 Z"/>
+          <!-- ear -->
+          <path d="M176 66 C 162 60, 150 70, 150 88 C 150 104, 158 116, 166 120 C 170 106, 174 86, 176 66 Z" fill="#2b4a73"/>
+          <!-- front leg highlight -->
+          <path d="M190 200 C 196 230, 196 262, 190 286 L 176 286 C 182 262, 182 230, 178 204 Z" fill="#2b4a73"/>
+        </g>
+        <circle cx="216" cy="86" r="4.2" fill="#fff"/>
+        <ellipse cx="256" cy="94" rx="5.5" ry="4" fill="#0f1f35"/>
+        <!-- collar + tag -->
+        <path d="M152 124 C 176 136, 206 136, 228 124" stroke="#f4a259" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <circle cx="192" cy="142" r="8" fill="#f4a259"/>
+        <!-- sparkle -->
+        <g stroke="#f4a259" stroke-width="4" stroke-linecap="round"><path d="M282 52 v16"/><path d="M274 60 h16"/></g>
+        <g stroke="#1d3557" stroke-width="3" stroke-linecap="round" opacity=".35"><path d="M300 92 v10"/><path d="M295 97 h10"/></g>
+      </svg>
+      <div class="ground"></div>
+    </div>
+  </div>
+</section>
+
+<section id="training" style="padding-top:44px">
+  <div class="wrap">
+    <svg class="trail" viewBox="0 0 360 46" preserveAspectRatio="xMinYMid meet" aria-hidden="true" fill="currentColor">
+      <use href="#paw" x="0" y="18" width="22" height="22" transform="rotate(70 11 29)"/>
+      <use href="#paw" x="34" y="4" width="22" height="22" transform="rotate(100 45 15)"/>
+      <use href="#paw" x="68" y="18" width="22" height="22" transform="rotate(70 79 29)" opacity=".7"/>
+      <use href="#paw" x="102" y="4" width="22" height="22" transform="rotate(100 113 15)" opacity=".45"/>
+      <use href="#paw" x="136" y="18" width="22" height="22" transform="rotate(70 147 29)" opacity=".22"/>
+    </svg>
+    <div class="eyebrow">What OhMyDog does</div>
+    <h2 class="rv">Training for the good dog<br>you already know is in there.</h2>
+    <p class="lead rv">OhMyDog Training is a pet training business run by Cara Hoadley, serving Morristown and the towns around it.</p>
+    <div class="cards">
+      <article class="card feature rv">
+        <div class="ic"><svg width="30" height="30" fill="#1d3557"><use href="#paw"/></svg></div>
+        <h3>Pet training</h3>
+        <p>Tell Cara about your dog and what you'd like to work on, and she'll talk through how she can help.</p>
+        <span class="tag">Call or email to ask</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1d3557" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+        <h3>Owner-led</h3>
+        <p>OhMyDog is Cara's own business, so the person you call is the person running it.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1d3557" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <h3>Morristown &amp; nearby</h3>
+        <p>Serving Morristown and the surrounding areas, so help is close to home.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="white">
+  <div class="wrap">
+    <div class="eyebrow">Getting started</div>
+    <h2 class="rv">Three easy steps to a first chat.</h2>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><div><h3>Reach out</h3><p>Call <a href="tel:+14237480113">423-748-0113</a>, or send Cara an email.</p></div></div>
+      <div class="step rv"><div class="n">2</div><div><h3>Tell her about your dog</h3><p>Name, age, and the habits you'd love to change (or keep!).</p></div></div>
+      <div class="step rv"><div class="n">3</div><div><h3>Make a plan together</h3><p>Talk through times and next steps that work for you and your pup.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Hours &amp; contact</div>
+    <h2 class="rv">Let's talk dogs.</h2>
+    <div class="split">
+      <div class="hours rv">
+        <div class="big">Call or message for hours</div>
+        <p>Give Cara a call or send an email to ask about training times.</p>
+        <ul class="contact-list">
+          <li><a href="tel:+14237480113"><svg width="22" height="22" viewBox="0 0 24 24" fill="#c86a1c"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>423-748-0113</a></li>
+          <li><a href="mailto:cara222001@yahoo.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c86a1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>cara222001@yahoo.com</a></li>
+          <li><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c86a1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Morristown, TN &amp; surrounding areas</span></li>
+        </ul>
+        <a class="btn btn-n" style="width:100%" href="https://www.google.com/maps/search/?api=1&query=Morristown%2C%20TN" target="_blank" rel="noopener">Open Morristown in Maps</a>
+      </div>
+      <div class="map rv">
+        <iframe title="Map of Morristown, TN" loading="lazy" src="https://www.google.com/maps?q=Morristown%2C%20TN&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band rv">
+      <svg class="paws" aria-hidden="true" width="100%" height="100%"><defs><pattern id="pp" width="70" height="70" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><use href="#paw" x="10" y="10" width="26" height="26" fill="#fff"/><use href="#paw" x="44" y="44" width="20" height="20" fill="#fff"/></pattern></defs><rect width="100%" height="100%" fill="url(#pp)"/></svg>
+      <h2>Ready for a calmer walk?</h2>
+      <p>One call to Cara is the first step. A member of the Morristown Chamber of Commerce.</p>
+      <div class="ctas">
+        <a class="btn btn-o" href="tel:+14237480113">Call 423-748-0113</a>
+        <a class="btn btn-n" href="mailto:cara222001@yahoo.com?subject=Dog%20training%20question">Email Cara</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="logo" href="#top"><span class="dot"><svg width="22" height="22" fill="#1d3557"><use href="#paw"/></svg></span><span>OhMyDog<em> Training</em></span></a>
+  <div>Pet training · Morristown, TN &amp; surrounding areas</div>
+  <div style="margin-top:6px">Concept by Code Craft Media</div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="btn btn-o" href="tel:+14237480113">Call Cara</a>
+  <a class="btn btn-n" href="mailto:cara222001@yahoo.com?subject=Dog%20training%20question">Email</a>
+</nav>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){document.body.classList.add('show-all')}
+  setTimeout(showAll,1500);
+  if(!('IntersectionObserver' in window)){showAll();return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

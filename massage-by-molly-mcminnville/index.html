@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Massage By Molly — McMinnville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#2E4036;--cream:#F5F0E8;--brick:#C8553D;--ink:#1f2a24;--muted:#5d6b62;--line:rgba(46,64,54,.16);--card:#fbf8f2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.banner{background:var(--forest);color:#e9e3d6;font-size:11px;letter-spacing:-.01em;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}@media(max-width:400px){.banner{font-size:10.5px;letter-spacing:-.02em}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:"Instrument Serif",serif;font-size:26px;color:var(--forest);text-decoration:none;line-height:1}
+.logo i{color:var(--brick)}
+.navlinks{display:flex;gap:26px;font-size:15px}
+.navlinks a{text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--brick)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-primary{background:var(--brick);color:#fff;box-shadow:0 8px 22px -10px rgba(200,85,61,.8)}
+.btn-primary:hover{transform:translateY(-2px);background:#b4482f}
+.btn-ghost{border:1.5px solid var(--forest);color:var(--forest)}
+.btn-ghost:hover{background:var(--forest);color:var(--cream)}
+/* hero */
+.hero{position:relative;padding:26px 0 40px;overflow:hidden}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brick);font-weight:600}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,12vw,96px);line-height:.98;color:var(--forest);margin:14px 0 18px;letter-spacing:-.01em}
+h1 em{color:var(--brick)}
+.swash{position:relative;display:inline-block;white-space:nowrap}
+.swash svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.32em;overflow:visible}
+.swash path{fill:none;stroke:var(--brick);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:0;animation:draw 1.4s .4s ease-out both}
+@keyframes draw{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
+.sub{font-size:18px;color:var(--muted);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-grid{display:grid;gap:30px}
+.art{position:relative;aspect-ratio:1/1;max-width:340px;width:100%;margin:0 auto}
+.art svg{width:100%;height:100%}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card);color:var(--forest)}
+@media(min-width:880px){.hero-grid{grid-template-columns:1.15fr .85fr;align-items:center}.hero{padding:60px 0 90px}}
+@media(max-width:640px){.navlinks{display:none}}
+/* sections */
+section{padding:64px 0}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(36px,8vw,58px);line-height:1.04;color:var(--forest);margin:10px 0 14px}
+h2 em{color:var(--brick)}
+.lead{color:var(--muted);max-width:34em}
+.menu{display:grid;gap:18px;margin-top:34px}
+@media(min-width:820px){.menu{grid-template-columns:1fr 1fr}}
+.group{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 22px}
+.group h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:28px;color:var(--forest);display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.group h3 small{font-family:"Instrument Sans";font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brick);font-weight:600}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:0}
+.row span:first-child{font-weight:500}
+.row .dots{flex:1;border-bottom:1px dotted rgba(46,64,54,.3);transform:translateY(-4px)}
+.price{font-family:"Instrument Serif",serif;font-size:22px;color:var(--brick);white-space:nowrap}
+.dur{color:var(--muted);font-size:14px;font-weight:400}
+.addons{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.addon{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:15px}
+.addon b{color:var(--brick);font-weight:600;margin-left:6px}
+.why{background:var(--forest);color:var(--cream);border-radius:32px;margin:0 12px;position:relative;overflow:hidden}
+.why h2{color:var(--cream)}
+.why h2 em{color:#e9937f}
+.why .lead{color:#c9d1c8}
+.pillars{display:grid;gap:16px;margin-top:30px}
+@media(min-width:820px){.pillars{grid-template-columns:repeat(3,1fr)}}
+.pillar{border:1px solid rgba(245,240,232,.18);border-radius:20px;padding:22px}
+.pillar .n{font-family:"Instrument Serif",serif;font-size:40px;color:#e9937f;line-height:1}
+.pillar h4{font-size:18px;margin:8px 0 6px;font-weight:600}
+.pillar p{color:#c9d1c8;font-size:15px}
+.policy{margin-top:22px;font-size:14px;color:#c9d1c8;border-top:1px solid rgba(245,240,232,.18);padding-top:18px}
+.policy a{color:#fff}
+.visit{display:grid;gap:22px;margin-top:30px}
+@media(min-width:860px){.visit{grid-template-columns:1fr 1.2fr}}
+.hours{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:10px 22px}
+.hrow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.hrow:last-child{border-bottom:0}
+.hrow.today{color:var(--brick);font-weight:600}
+.hrow.today span:first-child::after{content:" · today";font-weight:500;font-size:13px}
+.closed{color:var(--muted)}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:#e6e0d4}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+footer{padding:40px 0 30px;text-align:center;color:var(--muted);font-size:14px}
+footer .logo{font-size:30px;display:block;margin-bottom:8px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(245,240,232,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.bar a{flex:1;justify-content:center;padding:13px 10px;font-size:15px}
+@media(min-width:880px){.bar{display:none}body{padding-bottom:0}}
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Massage By Molly. Not live.</div>
+<div class="wrap">
+<nav><a class="logo" href="#top">Massage <i>by</i> Molly</a>
+<div class="navlinks"><a href="#menu">Massages</a><a href="#why">The details</a><a href="#visit">Hours &amp; visit</a></div></nav>
+</div>
+<header class="hero" id="top">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">Massage therapy · McMinnville, TN</div>
+<h1>Downtown McMinnville&rsquo;s place to <em class="swash">unwind.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 40 4, 90 3, 128 9 S 182 17, 197 6"/></svg></em></h1>
+<p class="sub">Relaxation, deep tissue, prenatal and hot stone massage with Molly at 201 W Main St, Suite 200. Thirty, sixty or ninety minutes.</p>
+<div class="cta"><a class="btn btn-primary" href="https://massagebymolly.glossgenius.com/services">Book a massage</a><a class="btn btn-ghost" href="#menu">See the menu</a></div>
+<div class="chips"><span class="chip">Mon–Thu 9–5</span><span class="chip">Fri 9–5:30</span><span class="chip">From $45</span></div>
+</div>
+<div class="art float" aria-hidden="true">
+<svg viewBox="0 0 400 400">
+<defs><radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#C8553D" stop-opacity=".22"/><stop offset="1" stop-color="#C8553D" stop-opacity="0"/></radialGradient></defs>
+<circle cx="200" cy="200" r="190" fill="url(#g)"/>
+<circle cx="200" cy="200" r="150" fill="none" stroke="#2E4036" stroke-opacity=".18" stroke-dasharray="2 7"/>
+<!-- stacked stones -->
+<ellipse cx="200" cy="300" rx="120" ry="34" fill="#2E4036"/>
+<ellipse cx="200" cy="292" rx="120" ry="30" fill="#3d5547"/>
+<ellipse cx="204" cy="244" rx="92" ry="28" fill="#2E4036"/>
+<ellipse cx="204" cy="237" rx="92" ry="25" fill="#4a6455"/>
+<ellipse cx="196" cy="196" rx="66" ry="22" fill="#2E4036"/>
+<ellipse cx="196" cy="190" rx="66" ry="19" fill="#5a7565"/>
+<ellipse cx="200" cy="156" rx="40" ry="16" fill="#C8553D"/>
+<ellipse cx="200" cy="151" rx="40" ry="13" fill="#d9705a"/>
+<!-- steam -->
+<path d="M180 120 c-14-18 14-26 0-46" fill="none" stroke="#C8553D" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+<path d="M205 114 c-14-18 14-26 0-46" fill="none" stroke="#2E4036" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+<path d="M230 120 c-14-18 14-26 0-46" fill="none" stroke="#C8553D" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+<!-- leaves -->
+<path d="M70 330 C 60 280, 100 250, 130 270 C 115 300, 95 325, 70 330 Z" fill="#2E4036" opacity=".85"/>
+<path d="M330 320 C 345 270, 305 240, 275 262 C 290 292, 305 318, 330 320 Z" fill="#2E4036" opacity=".6"/>
+<path d="M72 328 C 92 300, 108 284, 128 272" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+</svg>
+</div>
+</div>
+</header>
+
+<section id="menu">
+<div class="wrap">
+<div class="eyebrow reveal">The menu</div>
+<h2 class="reveal">Choose your <em>time</em>, choose your pressure.</h2>
+<p class="lead reveal">Prices as listed on Molly&rsquo;s booking page.</p>
+<div class="menu">
+<div class="group reveal"><h3>Basic Relaxation <small>Relax</small></h3>
+<div class="row"><span>30 minutes</span><span class="dots"></span><span class="price">$45</span></div>
+<div class="row"><span>60 minutes</span><span class="dots"></span><span class="price">$75</span></div>
+<div class="row"><span>90 minutes</span><span class="dots"></span><span class="price">$105</span></div></div>
+<div class="group reveal"><h3>Therapy Massage <small>Deep tissue</small></h3>
+<div class="row"><span>30 minutes</span><span class="dots"></span><span class="price">$55</span></div>
+<div class="row"><span>60 minutes</span><span class="dots"></span><span class="price">$85</span></div>
+<div class="row"><span>90 minutes</span><span class="dots"></span><span class="price">$120</span></div></div>
+<div class="group reveal"><h3>Hot Stone</h3>
+<div class="row"><span>60 minutes</span><span class="dots"></span><span class="price">$85</span></div>
+<div class="row"><span>90 minutes</span><span class="dots"></span><span class="price">$105</span></div></div>
+<div class="group reveal"><h3>Prenatal</h3>
+<div class="row"><span>60 minutes</span><span class="dots"></span><span class="price">$85</span></div>
+<p class="dur" style="margin-top:10px">A 60-minute session for moms-to-be.</p></div>
+</div>
+<div class="group reveal" style="margin-top:18px"><h3>Add a little extra <small>10 min each</small></h3>
+<div class="addons"><span class="addon">Red Light Therapy<b>$10</b></span><span class="addon">Hot Towels<b>$10</b></span><span class="addon">Cupping<b>$15</b></span><span class="addon">Aromatherapy<b>$5</b></span><span class="addon">Cold Stones<b>$10</b></span><span class="addon">Foot Scrubs<b>$10</b></span></div></div>
+</div>
+</section>
+
+<section id="why" class="why">
+<div class="wrap">
+<div class="eyebrow reveal" style="color:#e9937f">Good to know</div>
+<h2 class="reveal">Simple, <em>personal</em>, on Main Street.</h2>
+<div class="pillars">
+<div class="pillar reveal"><div class="n">01</div><h4>Book with Molly</h4><p>Pick your massage and time online and you&rsquo;re booked straight onto Molly&rsquo;s schedule.</p></div>
+<div class="pillar reveal"><div class="n">02</div><h4>Built your way</h4><p>Pick 30, 60 or 90 minutes, relaxation or deep tissue, then layer on cupping, hot towels or a foot scrub.</p></div>
+<div class="pillar reveal"><div class="n">03</div><h4>Right downtown</h4><p>Suite 200 at 201 W Main St, open weekdays with Friday hours until 5:30.</p></div>
+</div>
+<p class="policy reveal">Cancellations made at least 24 hours before your appointment get a full refund; within 24 hours or no-shows are charged the full massage cost. Questions: <a href="mailto:Mollybdodd.lmt@gmail.com">Mollybdodd.lmt@gmail.com</a></p>
+</div>
+</section>
+
+<section id="visit">
+<div class="wrap">
+<div class="eyebrow reveal">Hours &amp; visit</div>
+<h2 class="reveal">Come <em>see us</em> downtown.</h2>
+<div class="visit">
+<div>
+<div class="hours reveal" id="hours">
+<div class="hrow" data-d="1"><span>Monday</span><span>9 AM – 5 PM</span></div>
+<div class="hrow" data-d="2"><span>Tuesday</span><span>9 AM – 5 PM</span></div>
+<div class="hrow" data-d="3"><span>Wednesday</span><span>9 AM – 5 PM</span></div>
+<div class="hrow" data-d="4"><span>Thursday</span><span>9 AM – 5 PM</span></div>
+<div class="hrow" data-d="5"><span>Friday</span><span>9 AM – 5:30 PM</span></div>
+<div class="hrow" data-d="6"><span>Saturday</span><span class="closed">Closed</span></div>
+<div class="hrow" data-d="0"><span>Sunday</span><span class="closed">Closed</span></div>
+</div>
+<p class="addr reveal"><span>201 W Main St, Suite 200<br>McMinnville, TN 37110</span></p>
+<div class="cta reveal" style="margin-top:14px"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=201+W+Main+St+Suite+200+McMinnville+TN+37110">Get directions</a><a class="btn btn-ghost" href="mailto:Mollybdodd.lmt@gmail.com">Email Molly</a></div>
+</div>
+<div class="map reveal"><iframe title="Map to Massage By Molly" loading="lazy" src="https://www.google.com/maps?q=201%20W%20Main%20St%20Suite%20200%2C%20McMinnville%2C%20TN%2037110&output=embed"></iframe></div>
+</div>
+</div>
+</section>
+
+<footer><div class="wrap"><span class="logo">Massage <i style="color:var(--brick)">by</i> Molly</span>201 W Main St, Suite 200 · McMinnville, TN<br><a href="https://www.instagram.com/mollybdodd.lmt">Instagram</a> · <a href="https://www.facebook.com/share/19f3aBB8ud/?mibextid=wwXIfr">Facebook</a><br><br>Concept by Code Craft Media</div></footer>
+
+<div class="bar"><a class="btn btn-primary" href="https://massagebymolly.glossgenius.com/services">Book now</a><a class="btn btn-ghost" href="mailto:Mollybdodd.lmt@gmail.com">Email Molly</a></div>
+<script>
+document.documentElement.classList.add('js');
+(function(){var d=new Date().getDay();var r=document.querySelector('.hrow[data-d="'+d+'"]');if(r)r.classList.add('today');
+var els=[].slice.call(document.querySelectorAll('.reveal'));
+if('IntersectionObserver' in window){els.forEach(function(e){var b=e.getBoundingClientRect();if(b.top>window.innerHeight)e.classList.add('pre')});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)});}
+setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);})();
+</script>
+</body>
+</html>

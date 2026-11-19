@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Styled By KT — Pulaski</title>
+<meta name="description" content="Concept site for Styled By KT, hair color, cuts and extensions at 106 W Jefferson in downtown Pulaski, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#3b1f3a; --plum-2:#4f2a4d; --plum-3:#2a1529;
+  --champ:#e9d8b4; --champ-2:#d9c08c; --gold:#c9a96a;
+  --ivory:#fbf7ef; --ivory-2:#f3ecdd; --ink:#2b1a2a; --muted:#6c5a68;
+  --book:"https://square.site/book/PYA0S9GRB83VX/styled-by-kt-pulaski-tn";
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;letter-spacing:-.01em;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.concept{background:var(--plum-3);color:var(--champ);font-size:10px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(59,31,58,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(233,216,180,.18)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ivory)}
+.logo .mono{width:34px;height:40px}
+.logo b{font-family:"Fraunces",serif;font-weight:400;font-size:19px;letter-spacing:.01em}
+.logo b i{color:var(--champ);font-style:italic}
+nav.top ul{display:none;list-style:none;margin:0;padding:0;gap:28px}
+nav.top ul a{color:var(--ivory-2);text-decoration:none;font-size:14px;letter-spacing:.04em;opacity:.85;transition:opacity .2s,color .2s}
+nav.top ul a:hover{opacity:1;color:var(--champ)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:"DM Sans",sans-serif;font-weight:500;font-size:15px;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s ease,background .25s,color .25s,box-shadow .25s;cursor:pointer;border:1px solid transparent}
+.btn:active{transform:scale(.97)}
+.btn-champ{background:var(--champ);color:var(--plum)}
+.btn-champ:hover{background:#f3e6c8;box-shadow:0 10px 24px -10px rgba(233,216,180,.6)}
+.btn-line{border-color:rgba(233,216,180,.55);color:var(--champ)}
+.btn-line:hover{background:rgba(233,216,180,.1)}
+.btn-plum{background:var(--plum);color:var(--ivory)}
+.btn-plum:hover{background:var(--plum-2)}
+.nav-book{padding:9px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 80% at 80% 0%,#5a3157 0%,var(--plum) 45%,var(--plum-3) 100%);color:var(--ivory);overflow:hidden;padding:34px 0 64px}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(233,216,180,.08) 1px,transparent 1px);background-size:18px 18px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--champ)}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(40px,11.4vw,82px);line-height:1.02;font-weight:300;margin:14px 0 16px}
+.hero h1 em{font-style:italic;color:var(--champ)}
+.hero p.sub{font-size:17px;color:#e8dfe6;max-width:34ch;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.arch-wrap{position:relative;justify-self:center;width:min(300px,78vw);margin-top:6px}
+.arch-wrap svg{width:100%;height:auto;overflow:visible}
+.arch-tag{position:absolute;left:-6px;bottom:28px;background:var(--ivory);color:var(--plum);border-radius:14px;padding:10px 14px;font-size:12.5px;line-height:1.35;box-shadow:0 14px 30px -14px rgba(0,0,0,.6);max-width:170px}
+.arch-tag b{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:16px}
+.sparkle{animation:twinkle 3.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.sparkle.s2{animation-delay:1.2s}.sparkle.s3{animation-delay:2.3s}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+.strand{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 3.2s ease forwards .3s}
+.strand.d2{animation-delay:.6s}.strand.d3{animation-delay:.9s}.strand.d4{animation-delay:1.2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:13.5px;color:#d8cbd5}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta span::before{content:"";width:5px;height:5px;transform:rotate(45deg);background:var(--gold)}
+
+/* ornament */
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:0 auto 14px}
+.orn::before,.orn::after{content:"";height:1px;width:56px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{transform:scaleX(-1)}
+.orn svg{width:16px;height:16px}
+
+section{padding:76px 0}
+.head{text-align:center;max-width:620px;margin:0 auto 40px}
+.head h2{font-size:clamp(32px,8.4vw,52px);line-height:1.08;color:var(--plum)}
+.head h2 em{font-style:italic;color:#8a5e3c}
+.head p{color:var(--muted);margin:12px 0 0}
+
+/* menu */
+.menu{background:var(--ivory)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;margin:0 -22px 18px;padding-left:22px;padding-right:22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:500 14px "DM Sans",sans-serif;padding:10px 16px;border-radius:999px;border:1px solid #d9cbb0;background:transparent;color:var(--plum);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--plum)}
+.tab[aria-selected="true"]{background:var(--plum);color:var(--champ);border-color:var(--plum)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:#fff;border:1px solid #eadfca;border-radius:26px 26px 18px 18px;padding:8px 22px;box-shadow:0 20px 40px -32px rgba(59,31,58,.45)}
+.card h3{font-size:22px;color:var(--plum);padding:16px 0 4px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.card h3 small{font-family:"DM Sans";font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a07f4c}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:14px 0;border-top:1px dashed #e4d7bd}
+.card h3 + .row{border-top:0}
+.row .n{font-weight:500}
+.row .p{font-family:"Fraunces",serif;font-size:18px;color:var(--plum);text-align:right;white-space:nowrap}
+.row .d{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.row .note{grid-column:1/-1;font-size:13px;color:#7a6a77;font-style:italic}
+.menu-foot{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;text-align:center;font-size:14px;color:var(--muted)}
+
+/* why */
+.why{background:var(--plum);color:var(--ivory);position:relative;overflow:hidden}
+.why::after{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:420px;border:1px solid rgba(233,216,180,.18);border-radius:170px 170px 0 0}
+.why .head h2{color:var(--ivory)}
+.why .head h2 em{color:var(--champ)}
+.why .head p{color:#d6c8d3}
+.grid{display:grid;gap:16px}
+.why-card{position:relative;border:1px solid rgba(233,216,180,.28);border-radius:140px 140px 18px 18px;padding:62px 24px 28px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0));transition:transform .3s ease,border-color .3s}
+.why-card:hover{transform:translateY(-4px);border-color:rgba(233,216,180,.6)}
+.why-card .ic{width:46px;height:46px;margin:0 auto 14px;color:var(--champ)}
+.why-card h3{font-size:22px;color:var(--champ);margin-bottom:8px}
+.why-card p{margin:0;color:#e2d7df;font-size:15px}
+
+/* hours */
+.hours{background:var(--ivory-2)}
+.hours-box{display:grid;gap:20px}
+.hcard{background:#fff;border-radius:26px;padding:10px 22px 14px;border:1px solid #e8dcc3}
+.hrow{display:flex;justify-content:space-between;align-items:center;padding:13px 4px;border-top:1px solid #f0e7d6;font-size:15.5px}
+.hrow:first-child{border-top:0}
+.hrow .t{color:var(--muted)}
+.hrow.closed .t{color:#a99aa6}
+.hrow.today{background:var(--plum);color:var(--ivory);border-radius:14px;margin:4px -10px;padding:13px 14px;border-top-color:transparent}
+.hrow.today .t{color:var(--champ)}
+.hrow.today + .hrow{border-top-color:transparent}
+.hrow .tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;background:var(--champ);color:var(--plum);padding:3px 8px;border-radius:999px;margin-left:8px;vertical-align:2px}
+.status{font-size:14px;color:var(--muted);text-align:center;margin-top:6px}
+.status b{color:var(--plum)}
+.visit{background:var(--plum);color:var(--ivory);border-radius:140px 140px 26px 26px;padding:60px 26px 30px;text-align:center}
+.visit h3{font-size:28px;color:var(--champ);margin-bottom:6px}
+.visit address{font-style:normal;color:#e6dbe3;margin-bottom:20px}
+.visit .cta{justify-content:center}
+.map{position:relative;margin-top:22px;border-radius:24px;overflow:hidden;border:1px solid #e3d5ba;height:300px;background:repeating-linear-gradient(45deg,#efe6d4 0 14px,#f3ecdd 14px 28px)}
+.map::before{content:"106 W Jefferson · Pulaski, TN";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-size:20px;color:var(--plum)}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;border:0;display:block}
+
+/* footer */
+footer{background:var(--plum-3);color:#cdbfca;padding:44px 0 calc(110px + env(safe-area-inset-bottom));text-align:center;font-size:14px}
+footer .logo{justify-content:center;margin-bottom:12px}
+footer a{color:var(--champ);text-decoration:none}
+footer small{display:block;margin-top:16px;color:#9b8a98;font-size:12px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(42,21,41,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(233,216,180,.2)}
+.bar .btn{padding:13px 10px;font-size:15px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv.pre{opacity:0;transform:translateY(18px)}
+
+@media (max-width:759px){
+  .hero .wrap{position:static}
+  .hero .wrap > div:first-child{position:relative;z-index:2}
+  .arch-wrap{position:absolute;right:-70px;top:70px;width:230px;opacity:.38;margin:0;z-index:1;pointer-events:none}
+  .arch-tag{display:none}
+  .hero{padding-bottom:56px}
+}
+@media (min-width:760px){
+  nav.top ul{display:flex}
+  .hero{padding:60px 0 90px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+  .arch-wrap{width:340px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .hours-box{grid-template-columns:1fr 1fr;align-items:stretch}
+  .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .tabs{display:none}
+  .panel{display:block}
+  .menu-cols .panel + .panel{margin-top:0}
+  .bar{display:none}
+  footer{padding-bottom:34px}
+  .map{height:380px}
+}
+@media (max-width:759px){ .menu-cols .panel{margin-top:0} }
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.strand{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Styled By KT. Not live.</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Styled By KT home">
+      <svg class="mono" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M2 39V17C2 8.7 8.7 2 17 2s15 6.7 15 15v22" stroke="#c9a96a" stroke-width="1.2"/><text x="17" y="30" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="15" fill="#e9d8b4">kt</text></svg>
+      <b>Styled By <i>KT</i></b>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">Why KT</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn btn-champ nav-book" href="https://square.site/book/PYA0S9GRB83VX/styled-by-kt-pulaski-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Downtown Pulaski, TN</span>
+      <h1>Highlights, extensions &amp; cuts, <em>styled by Katie.</em></h1>
+      <p class="sub">Color, cuts, extensions and bridal hair, booked online, Wednesday through Friday at 106 W Jefferson.</p>
+      <div class="cta">
+        <a class="btn btn-champ" href="https://square.site/book/PYA0S9GRB83VX/styled-by-kt-pulaski-tn" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-line" href="tel:+19319815073">Call (931) 981-5073</a>
+      </div>
+      <div class="hero-meta">
+        <span>Free consultations</span><span>Free bridal trials</span><span>Online booking</span>
+      </div>
+    </div>
+
+    <div class="arch-wrap" aria-hidden="true">
+      <svg viewBox="0 0 300 380" fill="none">
+        <defs>
+          <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3c67"/><stop offset="1" stop-color="#3b1f3a"/></linearGradient>
+          <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3e6c8"/><stop offset=".55" stop-color="#d9c08c"/><stop offset="1" stop-color="#a77d4a"/></linearGradient>
+        </defs>
+        <!-- outer arch frame -->
+        <path d="M16 370V150C16 76 76 16 150 16s134 60 134 134v220" stroke="#c9a96a" stroke-width="1"/>
+        <path d="M30 370V152C30 86 84 30 150 30s120 56 120 122v218Z" fill="url(#glass)" stroke="#e9d8b4" stroke-opacity=".5"/>
+        <!-- mullions -->
+        <path d="M150 30v340M30 200h240" stroke="#e9d8b4" stroke-opacity=".14"/>
+        <path d="M60 104c24-40 56-58 90-58" stroke="#e9d8b4" stroke-opacity=".25" stroke-width="1"/>
+        <!-- flowing hair strands -->
+        <path class="strand" d="M118 70c-30 50-18 100 10 140s34 90 6 150" stroke="url(#hair)" stroke-width="16" stroke-linecap="round"/>
+        <path class="strand d2" d="M146 64c-20 56-4 104 22 142s28 96 0 156" stroke="url(#hair)" stroke-width="12" stroke-linecap="round" opacity=".9"/>
+        <path class="strand d3" d="M172 72c-12 54 6 98 30 132s20 96-8 150" stroke="url(#hair)" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+        <path class="strand d4" d="M98 92c-22 54-4 98 18 132s22 82 6 132" stroke="#e9d8b4" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+        <!-- comb -->
+        <g transform="translate(196 92) rotate(28)">
+          <rect x="0" y="0" width="74" height="14" rx="4" fill="#e9d8b4"/>
+          <g stroke="#e9d8b4" stroke-width="3" stroke-linecap="round">
+            <path d="M8 14v16M17 14v16M26 14v16M35 14v16M44 14v16M53 14v16M62 14v16"/>
+          </g>
+        </g>
+        <!-- sparkles -->
+        <path class="sparkle" d="M236 238l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#e9d8b4"/>
+        <path class="sparkle s2" d="M70 250l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#e9d8b4"/>
+        <path class="sparkle s3" d="M222 160l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="#e9d8b4"/>
+        <!-- sill -->
+        <path d="M8 370h284" stroke="#c9a96a"/>
+      </svg>
+      <div class="arch-tag"><b>Consultation</b>Free · 15 minutes, booked online</div>
+    </div>
+  </div>
+</header>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="orn"><svg viewBox="0 0 16 16"><path d="M8 0l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="currentColor"/></svg></div>
+      <h2>The <em>menu</em></h2>
+      <p>Every service and price as listed on Katie's booking page. Tap a category.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-p="p-cut">Cuts &amp; Styling</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p-color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p-bridal">Bridal &amp; Ext.</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="p-brow">Brows &amp; Extras</button>
+    </div>
+
+    <div class="menu-cols">
+      <div class="panel on" id="p-cut">
+        <div class="card rv">
+          <h3>Cuts &amp; Styling <small>Hair</small></h3>
+          <div class="row"><span class="n">Consultation</span><span class="p">Free</span><span class="d">15 minutes</span></div>
+          <div class="row"><span class="n">Shampoo + Cut + Style</span><span class="p">$50</span><span class="d">1 hour</span></div>
+          <div class="row"><span class="n">Shampoo + Cut (no style)</span><span class="p">$40</span><span class="d">30 minutes</span></div>
+          <div class="row"><span class="n">Dry Cut + Style</span><span class="p">$30</span><span class="d">40 minutes</span></div>
+          <div class="row"><span class="n">Olaplex + Cut</span><span class="p">$75</span><span class="d">1 hour 30 minutes</span></div>
+          <div class="row"><span class="n">Blowout</span><span class="p">$35</span><span class="d">45 minutes</span></div>
+          <div class="row"><span class="n">Shampoo + style</span><span class="p">$20</span><span class="d">30 minutes</span></div>
+          <div class="row"><span class="n">Men's Cut</span><span class="p">$25</span><span class="d">30 minutes · price varies</span></div>
+          <div class="row"><span class="n">Mens's Grey Blending + Cut</span><span class="p">$50</span><span class="d">45 minutes</span></div>
+          <div class="row"><span class="n">Childs Cut (5 &amp; Under)</span><span class="p">$10</span><span class="d">30 minutes</span></div>
+          <div class="row"><span class="n">Bang Trim</span><span class="p">$10</span><span class="d">15 minutes</span></div>
+          <div class="row"><span class="n">Perm</span><span class="p">$95</span><span class="d">3 hours</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="p-color">
+        <div class="card rv">
+          <h3>Color &amp; Highlights <small>Color</small></h3>
+          <div class="row"><span class="n">Mini Highlight</span><span class="p">$100</span><span class="d">2 hours 15 minutes</span></div>
+          <div class="row"><span class="n">2.5 Hour Highlight</span><span class="p">$145</span><span class="d">2 hours 45 minutes</span></div>
+          <div class="row"><span class="n">3 Hour Highlight</span><span class="p">$165</span><span class="d">3 hours</span></div>
+          <div class="row"><span class="n">3.5 Hour Highlight</span><span class="p">$195</span><span class="d">3 hours 30 minutes</span></div>
+          <div class="row"><span class="n">4 Hour Highlight</span><span class="p">$225</span><span class="d">4 hours</span></div>
+          <div class="row"><span class="n">All Over Color</span><span class="p">$100</span><span class="d">2 hours 30 minutes</span></div>
+          <div class="row"><span class="n">Color Touch Up</span><span class="p">$85</span><span class="d">2 hours 30 minutes</span></div>
+          <div class="row"><span class="n">Color Touch Up + Gloss</span><span class="p">$120</span><span class="d">2 hours 30 minutes</span></div>
+          <div class="row"><span class="n">Gloss + Shampoo/cut/style</span><span class="p">$75</span><span class="d">1 hour 30 minutes</span></div>
+          <div class="row"><span class="n">Color Correction</span><span class="p">Hourly</span><span class="d">4 hours</span><span class="note">"Using any and all hair coloring services required to correct previous colored hair to restore the hairs integrity."</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="p-bridal">
+        <div class="card rv">
+          <h3>Bridal &amp; Extensions <small>Occasion</small></h3>
+          <div class="row"><span class="n">Bridal Trial</span><span class="p">Free</span><span class="d">1 hour</span></div>
+          <div class="row"><span class="n">Bridal Up-Do (onsite)</span><span class="p">$55</span><span class="d">1 hour</span></div>
+          <div class="row"><span class="n">Down Style</span><span class="p">$35</span><span class="d">45 minutes</span></div>
+          <div class="row"><span class="n">Extension Move Up</span><span class="p">$100</span><span class="d">30 minutes</span></div>
+          <div class="row"><span class="n">Extension Fix</span><span class="p">Ask</span><span class="d">30 minutes</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="p-brow">
+        <div class="card rv">
+          <h3>Brows &amp; Extras <small>Finishing</small></h3>
+          <div class="row"><span class="n">Brows</span><span class="p">$10</span><span class="d">15 minutes</span></div>
+          <div class="row"><span class="n">Brow Tint</span><span class="p">$15</span><span class="d">15 minutes</span></div>
+          <div class="row"><span class="n">Brow + Lip</span><span class="p">$15</span><span class="d">20 minutes</span></div>
+          <div class="row"><span class="n">Lip</span><span class="p">$10</span><span class="d">10 minutes</span></div>
+          <div class="row"><span class="n">Beard Trim</span><span class="p">$5</span><span class="d">10 minutes</span></div>
+          <div class="row"><span class="n">Deep Condition</span><span class="p">$5</span><span class="d">5 minutes</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-foot rv">
+      <a class="btn btn-plum" href="https://square.site/book/PYA0S9GRB83VX/styled-by-kt-pulaski-tn" target="_blank" rel="noopener">See live availability</a>
+      <span>Not sure what to book? Start with the free consultation.</span>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="orn"><svg viewBox="0 0 16 16"><path d="M8 0l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="currentColor"/></svg></div>
+      <h2>Why book <em>with KT</em></h2>
+      <p>Straight from the booking page, nothing added.</p>
+    </div>
+    <div class="grid">
+      <div class="why-card rv">
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="24" cy="24" r="17"/><path d="M24 14v10l7 5"/></svg>
+        <h3>Start free</h3>
+        <p>A free 15-minute consultation before any big change, and a free one-hour bridal trial before the big day.</p>
+      </div>
+      <div class="why-card rv">
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 6c-4 10-2 18 4 26s6 12 4 10M24 6c-3 10-1 18 5 26s5 12 3 10M34 6c-2 10 0 18 5 26"/></svg>
+        <h3>Color, timed honestly</h3>
+        <p>Highlights are booked by the hour, from a Mini Highlight to a 4 Hour Highlight, so you know the time and price before you sit down.</p>
+      </div>
+      <div class="why-card rv">
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 40V20a14 14 0 0 1 28 0v20"/><path d="M6 40h36"/><path d="M24 14l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg>
+        <h3>Bridal, on site</h3>
+        <p>Bridal up-dos done on site, plus extension move-ups, fixes and Olaplex cuts for everyday hair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="visit">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="orn"><svg viewBox="0 0 16 16"><path d="M8 0l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="currentColor"/></svg></div>
+      <h2>Hours &amp; <em>visit</em></h2>
+      <p>Find Katie at 106 W Jefferson in downtown Pulaski.</p>
+    </div>
+    <div class="hours-box">
+      <div class="rv">
+        <div class="hcard" id="hours">
+          <div class="hrow closed" data-d="0"><span>Sunday</span><span class="t">Closed</span></div>
+          <div class="hrow closed" data-d="1"><span>Monday</span><span class="t">Closed</span></div>
+          <div class="hrow closed" data-d="2"><span>Tuesday</span><span class="t">Closed</span></div>
+          <div class="hrow" data-d="3"><span>Wednesday</span><span class="t">8:30 AM – 4:30 PM</span></div>
+          <div class="hrow" data-d="4"><span>Thursday</span><span class="t">8:30 AM – 4:30 PM</span></div>
+          <div class="hrow" data-d="5"><span>Friday</span><span class="t">8:30 AM – 4:00 PM</span></div>
+          <div class="hrow closed" data-d="6"><span>Saturday</span><span class="t">Closed</span></div>
+        </div>
+        <p class="status" id="status">Booking is online, any time.</p>
+      </div>
+      <div class="visit rv">
+        <h3>106 W Jefferson</h3>
+        <address>Pulaski, TN 38478</address>
+        <div class="cta">
+          <a class="btn btn-champ" href="tel:+19319815073">Call (931) 981-5073</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=106%20W%20Jefferson%2C%20Pulaski%2C%20TN%2038478" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+    <div class="map rv">
+      <iframe title="Map to 106 W Jefferson, Pulaski, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=106%20W%20Jefferson%2C%20Pulaski%2C%20TN%2038478&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="mono" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path d="M2 39V17C2 8.7 8.7 2 17 2s15 6.7 15 15v22" stroke="#c9a96a" stroke-width="1.2"/><text x="17" y="30" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="15" fill="#e9d8b4">kt</text></svg><b>Styled By <i>KT</i></b></a>
+    <div>106 W Jefferson, Pulaski, TN 38478 · <a href="tel:+19319815073">(931) 981-5073</a></div>
+    <div><a href="mailto:styledbykt@icloud.com">styledbykt@icloud.com</a> · <a href="https://www.facebook.com/hairbykatiemeek/" target="_blank" rel="noopener">Facebook</a></div>
+    <small>Concept by Code Craft Media</small>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-line" href="tel:+19319815073">Call</a>
+  <a class="btn btn-champ" href="https://square.site/book/PYA0S9GRB83VX/styled-by-kt-pulaski-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')});
+    t.setAttribute('aria-selected','true');
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id===t.dataset.p)});
+  })});
+  // hours highlight
+  var now=new Date(), day=now.getDay();
+  var r=document.querySelector('.hrow[data-d="'+day+'"]');
+  if(r){r.classList.add('today'); r.firstElementChild.insertAdjacentHTML('beforeend','<span class="tag">Today</span>');}
+  var open={3:[8.5,16.5],4:[8.5,16.5],5:[8.5,16]}, h=now.getHours()+now.getMinutes()/60, s=document.getElementById('status');
+  if(open[day]&&h>=open[day][0]&&h<open[day][1]) s.innerHTML='<b>In the chair today</b> until '+(day===5?'4:00':'4:30')+' PM. Book online any time.';
+  else s.innerHTML='Katie works <b>Wednesday to Friday</b>. Book online any time.';
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var b=e.getBoundingClientRect(); if(b.top>window.innerHeight) e.classList.add('pre')});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

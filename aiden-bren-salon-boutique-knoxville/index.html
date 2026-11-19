@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Aiden Bren Salon &amp; Boutique — Knoxville</title>
+<meta name="description" content="Concept site for Aiden Bren Salon & Boutique, 3105 Alcoa Highway, Suite L, Knoxville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mauve:#b48a96; --mauve-d:#8f6572; --mauve-l:#e9d9dc; --blush:#f6eeee;
+  --char:#2b2729; --char-2:#3a3437; --ink:#2b2729; --muted:#6d6266;
+  --gold:#c3a066; --gold-d:#9c7d46; --paper:#fbf7f5;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:400;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.disp{font-family:'Italiana',serif;font-weight:400;letter-spacing:.01em;line-height:1.05}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--mauve-d)}
+/* weave texture */
+.weave{background-image:
+  repeating-linear-gradient(0deg,rgba(43,39,41,.035) 0 1px,transparent 1px 4px),
+  repeating-linear-gradient(90deg,rgba(43,39,41,.035) 0 1px,transparent 1px 4px)}
+.weave-dark{background-image:
+  repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 4px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 4px)}
+
+/* banner */
+.concept{background:var(--char);color:#e8dcdf;font-size:.6rem;letter-spacing:0;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--gold);font-weight:500}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(251,247,245,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(143,101,114,.18)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .mark{width:34px;height:34px}
+.brand span{font-family:'Italiana',serif;font-size:1.3rem;letter-spacing:.06em;line-height:1}
+.brand small{display:block;font-family:'Jost';font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mauve-d);margin-top:3px}
+.links{display:none;gap:28px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.links a{text-decoration:none;position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .3s}
+.links a:hover::after{width:100%}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:14px 26px;font-family:'Jost';font-weight:500;font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:transform .25s,background .25s,box-shadow .25s,color .25s;cursor:pointer;border:1px solid transparent}
+.btn:active{transform:scale(.97)}
+.btn-dark{background:var(--char);color:#fff}
+.btn-dark:hover{background:var(--mauve-d);box-shadow:0 10px 26px -10px rgba(143,101,114,.8)}
+.btn-line{border-color:var(--char);color:var(--char);background:transparent}
+.btn-line:hover{background:var(--char);color:#fff}
+.btn-gold{background:var(--gold);color:var(--char)}
+.btn-gold:hover{background:#d4b47c}
+.nav-cta{padding:10px 18px;font-size:.74rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--blush),var(--paper) 85%)}
+.hero .wrap{position:relative;display:grid;gap:34px;padding-top:44px;padding-bottom:60px}
+.hero h1{font-size:clamp(3rem,13vw,6.4rem);color:var(--char)}
+.hero h1 em{font-style:normal;color:var(--mauve-d)}
+.hero h1 .amp{color:var(--gold-d)}
+.hero p.sub{font-size:1.05rem;color:var(--muted);max-width:30em;margin-top:18px;font-weight:300}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:.84rem;color:var(--muted)}
+.hero .meta span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:8px;height:8px;border-radius:50%;background:#9bb39a;box-shadow:0 0 0 4px rgba(155,179,154,.25)}
+.dot.closed{background:#c88;box-shadow:0 0 0 4px rgba(204,136,136,.2)}
+.arch-art{position:relative;justify-self:center;width:min(78%,300px)}
+@media(min-width:900px){.arch-art{width:min(100%,420px)}}
+.arch-art svg{width:100%;height:auto;overflow:visible}
+.sway{transform-origin:200px 64px;animation:sway 6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.shimmer{animation:shim 4s ease-in-out infinite}
+@keyframes shim{0%,100%{opacity:.35}50%{opacity:1}}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:80px;padding-bottom:100px}
+}
+@media(prefers-reduced-motion:reduce){.sway,.shimmer{animation:none}}
+
+/* marquee */
+.ribbon{background:var(--char);color:var(--mauve-l);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:'Italiana',serif;font-size:1.25rem;letter-spacing:.08em}
+.ribbon .track{display:inline-flex;gap:34px;animation:mq 34s linear infinite;padding-left:34px}
+.ribbon i{font-style:normal;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:76px 0}
+.head{max-width:640px;margin-bottom:38px}
+.head h2{font-size:clamp(2.3rem,9vw,3.8rem);margin-top:10px}
+.head p{color:var(--muted);margin-top:12px;font-weight:300}
+
+/* services: hang tags */
+.menu{display:grid;gap:22px}
+@media(min-width:760px){.menu{grid-template-columns:repeat(3,1fr)}}
+.tag{position:relative;background:#fff;border:1px solid rgba(143,101,114,.22);border-radius:14px 14px 18px 18px;padding:46px 22px 24px;box-shadow:0 18px 40px -28px rgba(43,39,41,.35);transition:transform .35s,box-shadow .35s}
+.tag::before{content:"";position:absolute;top:0;left:50%;transform:translate(-50%,-50%);width:88px;height:44px;background:#fff;border:1px solid rgba(143,101,114,.22);border-bottom:none;border-radius:44px 44px 0 0;clip-path:inset(0 0 50% 0)}
+.tag .hole{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;border:1.5px solid var(--gold);background:var(--paper)}
+.tag .string{position:absolute;top:-30px;left:50%;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);transform-origin:top;}
+.tag:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 26px 50px -28px rgba(143,101,114,.6)}
+.tag h3{font-size:1.85rem;text-align:center;margin-bottom:4px}
+.tag .cat{text-align:center;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-d);margin-bottom:18px}
+.tag ul{list-style:none}
+.tag li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-top:1px dashed rgba(143,101,114,.28);font-size:.95rem}
+.tag li span:first-child{flex:1}
+.tag li .t{font-size:.76rem;color:var(--muted);white-space:nowrap}
+.tag li .p{font-weight:600;color:var(--mauve-d);margin-left:6px}
+.menu-note{margin-top:26px;font-size:.88rem;color:var(--muted);text-align:center}
+.menu-note a{color:var(--mauve-d);font-weight:500}
+
+/* why */
+.why{background:var(--char);color:#efe6e8;position:relative;overflow:hidden}
+.why .head h2{color:#fff}
+.why .head p{color:#bfb2b6}
+.why .eyebrow{color:var(--gold)}
+.facts{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(max-width:759px){.fact{padding:30px 12px 18px!important}.fact p{font-size:.82rem}.fact h3{font-size:.68rem;letter-spacing:.16em}.fact .big{font-size:2.6rem}}
+@media(min-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{border:1px solid rgba(195,160,102,.35);border-radius:120px 120px 16px 16px;padding:40px 22px 26px;text-align:center;background:rgba(255,255,255,.02);transition:background .3s,border-color .3s}
+.fact:hover{background:rgba(180,138,150,.12);border-color:var(--gold)}
+.fact .big{font-family:'Italiana',serif;font-size:3.2rem;color:var(--gold);line-height:1}
+.fact h3{font-family:'Jost';font-weight:500;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;margin:12px 0 8px;color:#fff}
+.fact p{font-size:.92rem;color:#c7babe;font-weight:300}
+
+/* hours */
+.hours-grid{display:grid;gap:30px}
+@media(min-width:900px){.hours-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.hours{background:#fff;border-radius:200px 200px 20px 20px;border:1px solid rgba(143,101,114,.22);padding:64px 26px 30px;box-shadow:0 20px 50px -34px rgba(43,39,41,.4)}
+.hours h3{text-align:center;font-size:2.2rem;margin-bottom:6px}
+.hours .now{text-align:center;font-size:.84rem;color:var(--muted);margin-bottom:20px;display:flex;justify-content:center;align-items:center;gap:8px}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{white-space:nowrap;padding:11px 12px;border-top:1px solid rgba(143,101,114,.15);font-size:.97rem}
+.hours td:last-child{text-align:right}
+.hours tr.closed td{color:#a3979b}
+.hours tr.today td{background:var(--mauve-l);font-weight:600;color:var(--char)}
+.hours tr.today td:first-child{border-radius:10px 0 0 10px}
+.hours tr.today td:last-child{border-radius:0 10px 10px 0}
+.hours tr.today td:first-child::after{content:"Today";margin-left:8px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:var(--char);color:var(--gold);padding:3px 7px;border-radius:99px;vertical-align:2px;font-weight:500}
+.visit h3{font-size:2.2rem}
+.visit address{font-style:normal;font-size:1.08rem;margin:10px 0 18px;line-height:1.5}
+.map{border-radius:20px;overflow:hidden;border:1px solid rgba(143,101,114,.25);aspect-ratio:4/3;background:var(--mauve-l);margin-top:20px}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.visit .row{display:flex;flex-wrap:wrap;gap:10px}
+.contact-list{list-style:none;margin-top:22px;display:grid;gap:10px}
+.contact-list a{text-decoration:none;display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;background:#fff;border:1px solid rgba(143,101,114,.2);transition:border-color .25s,transform .25s;overflow-wrap:anywhere}
+.contact-list a:hover{border-color:var(--mauve);transform:translateX(3px)}
+.contact-list svg{flex:none;width:20px;height:20px;color:var(--mauve-d)}
+
+/* cta band */
+.band{background:linear-gradient(135deg,var(--mauve-d),var(--mauve));color:#fff;text-align:center;position:relative;overflow:hidden}
+.band h2{font-size:clamp(2.4rem,10vw,4.4rem)}
+.band p{opacity:.9;margin:14px auto 26px;max-width:32em;font-weight:300}
+.band .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.band .btn-line{border-color:#fff;color:#fff}
+.band .btn-line:hover{background:#fff;color:var(--mauve-d)}
+
+footer{background:var(--char);color:#b9adb1;padding:44px 0 34px;font-size:.86rem;text-align:center}
+footer .disp{font-size:1.7rem;color:#fff;margin-bottom:6px}
+footer a{color:var(--gold);text-decoration:none}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(43,39,41,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar a{flex:1;padding:14px 10px;font-size:.8rem}
+.callbar .btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+.js.all-in .rv{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Aiden Bren Salon &amp; Boutique. Not live.</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Aiden Bren Salon & Boutique home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 38V18a12 12 0 0 1 24 0v20" fill="none" stroke="#8f6572" stroke-width="1.4"/><path d="M13 38V19a7 7 0 0 1 14 0v19" fill="none" stroke="#c3a066" stroke-width="1"/><circle cx="20" cy="15" r="1.6" fill="#c3a066"/></svg>
+      <span>Aiden Bren<small>Salon &amp; Boutique</small></span>
+    </a>
+    <div class="links"><a href="#menu">Services</a><a href="#why">Why Us</a><a href="#visit">Hours &amp; Visit</a></div>
+    <a class="btn btn-dark nav-cta" href="https://square.site/book/FYBB4Y29H5R37/aiden-bren-salon-boutique-knoxville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero weave" id="top">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Alcoa Highway · Knoxville, TN</div>
+      <h1 style="margin-top:14px">Cut, color <span class="amp">&amp;</span> <em>the boutique</em> touch.</h1>
+      <p class="sub">Haircuts, color, highlights, keratin, updos and tape-ins, booked online in a minute at Suite L, 3105 Alcoa Highway.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="https://square.site/book/FYBB4Y29H5R37/aiden-bren-salon-boutique-knoxville-tn" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-line" href="tel:+18658519610">Call (865) 851-9610</a>
+      </div>
+      <div class="meta">
+        <span><i class="dot" id="nowDot"></i><span id="nowText">Tue–Fri by appointment</span></span>
+        <span>Womens Haircuts $50 · Men Haircut $25</span>
+      </div>
+    </div>
+    <div class="arch-art rv" aria-hidden="true">
+      <svg viewBox="0 0 400 470">
+        <defs>
+          <pattern id="wv" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 3h6M3 0v6" stroke="#8f6572" stroke-opacity=".12" stroke-width="1"/></pattern>
+          <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9d9dc"/><stop offset="1" stop-color="#b48a96"/></linearGradient>
+          <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3c98f"/><stop offset="1" stop-color="#9c7d46"/></linearGradient>
+        </defs>
+        <!-- arches -->
+        <path d="M40 470V200a160 160 0 0 1 320 0v270" fill="url(#ag)"/>
+        <path d="M40 470V200a160 160 0 0 1 320 0v270" fill="url(#wv)"/>
+        <path d="M22 470V200a178 178 0 0 1 356 0v270" fill="none" stroke="#c3a066" stroke-width="1"/>
+        <path d="M70 470V210a130 130 0 0 1 260 0v260" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1"/>
+        <!-- clothing rail -->
+        <line x1="90" y1="64" x2="310" y2="64" stroke="#2b2729" stroke-width="3" stroke-linecap="round"/>
+        <!-- hanger + hang tag -->
+        <g class="sway">
+          <path d="M200 64v-8a8 8 0 1 1 8 -8" fill="none" stroke="#2b2729" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M200 66l-70 38h140z" fill="none" stroke="#2b2729" stroke-width="2.2" stroke-linejoin="round"/>
+          <line x1="200" y1="104" x2="200" y2="128" stroke="#c3a066" stroke-width="1.4"/>
+          <path d="M166 128h68l18 24v126a10 10 0 0 1-10 10h-84a10 10 0 0 1-10-10V152z" fill="#2b2729"/>
+          <path d="M166 128h68l18 24v126a10 10 0 0 1-10 10h-84a10 10 0 0 1-10-10V152z" fill="url(#wv)"/>
+          <path d="M170 136h60l14 19v119a6 6 0 0 1-6 6h-76a6 6 0 0 1-6-6V155z" fill="none" stroke="#c3a066" stroke-width=".8"/>
+          <circle cx="200" cy="152" r="7" fill="#b48a96" stroke="#c3a066" stroke-width="1.4"/>
+          <text x="200" y="210" text-anchor="middle" font-family="Italiana,serif" font-size="38" fill="#fbf7f5">AB</text>
+          <line x1="172" y1="226" x2="228" y2="226" stroke="#c3a066"/>
+          <text x="200" y="246" text-anchor="middle" font-family="Jost,sans-serif" font-size="8.5" letter-spacing="2.4" fill="#e9d9dc">SALON &amp;</text>
+          <text x="200" y="260" text-anchor="middle" font-family="Jost,sans-serif" font-size="8.5" letter-spacing="2.4" fill="#e9d9dc">BOUTIQUE</text>
+        </g>
+        <!-- scissors -->
+        <g transform="translate(92 340) rotate(-28)" stroke="#2b2729" stroke-width="2.4" fill="none" stroke-linecap="round">
+          <circle cx="0" cy="0" r="13"/><circle cx="0" cy="38" r="13"/>
+          <path d="M11 7l78 30M11 31l78-30"/>
+        </g>
+        <!-- comb -->
+        <g transform="translate(232 372)">
+          <rect x="0" y="0" width="104" height="14" rx="4" fill="url(#gl)"/>
+          <g stroke="#9c7d46" stroke-width="2.2"><path d="M8 14v18M18 14v18M28 14v18M38 14v18M48 14v18M58 14v18M68 14v18M78 14v18M88 14v18M96 14v14"/></g>
+        </g>
+        <!-- sparkles -->
+        <g fill="#c3a066">
+          <path class="shimmer" d="M330 110l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+          <path class="shimmer" style="animation-delay:1.3s" d="M78 160l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+          <path class="shimmer" style="animation-delay:2.4s" d="M318 300l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" aria-hidden="true"><div class="track">
+  <span>Womens Haircuts</span><i>✦</i><span>Base Color</span><i>✦</i><span>Full Highlight</span><i>✦</i><span>Keratin Smoothing</span><i>✦</i><span>Formal Updo</span><i>✦</i><span>Tape Ins</span><i>✦</i><span>Perm</span><i>✦</i><span>Waxing</span><i>✦</i>
+  <span>Womens Haircuts</span><i>✦</i><span>Base Color</span><i>✦</i><span>Full Highlight</span><i>✦</i><span>Keratin Smoothing</span><i>✦</i><span>Formal Updo</span><i>✦</i><span>Tape Ins</span><i>✦</i><span>Perm</span><i>✦</i><span>Waxing</span><i>✦</i>
+</div></div>
+
+<section id="menu" class="weave">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">The service menu</div>
+      <h2>Seventeen services, one chair.</h2>
+      <p>Every service on the booking menu, with the appointment length for each. Prices are shown where the salon publishes them.</p>
+    </div>
+    <div class="menu">
+      <article class="tag rv">
+        <span class="string"></span><span class="hole"></span>
+        <h3>Cuts &amp; Style</h3><div class="cat">Tag no. 01</div>
+        <ul>
+          <li><span>Womens Haircuts</span><span class="t">1 hr<span class="p">$50</span></span></li>
+          <li><span>Men Haircut</span><span class="t">30 min<span class="p">$25</span></span></li>
+          <li><span>Shampoo Blow Out</span><span class="t">30 min</span></li>
+          <li><span>Formal Updo Hairstyle</span><span class="t">1 hr</span></li>
+          <li><span>Perm</span><span class="t">1 hr 15 min</span></li>
+        </ul>
+      </article>
+      <article class="tag rv">
+        <span class="string"></span><span class="hole"></span>
+        <h3>Color &amp; Light</h3><div class="cat">Tag no. 02</div>
+        <ul>
+          <li><span>Base Color</span><span class="t">1 hr 30 min</span></li>
+          <li><span>Partial Highlights</span><span class="t">1 hr 30 min</span></li>
+          <li><span>Full Highlight</span><span class="t">1 hr 30 min</span></li>
+          <li><span>Base Color with Haircut</span><span class="t">2 hr</span></li>
+          <li><span>Partial Highlight with Haircut</span><span class="t">2 hr</span></li>
+          <li><span>Full Highlight with Haircut</span><span class="t">2 hr</span></li>
+          <li><span>Brightener</span><span class="t">30 min</span></li>
+        </ul>
+      </article>
+      <article class="tag rv">
+        <span class="string"></span><span class="hole"></span>
+        <h3>Care &amp; Extras</h3><div class="cat">Tag no. 03</div>
+        <ul>
+          <li><span>Keratin Smoothing Treatment</span><span class="t">1 hr 30 min</span></li>
+          <li><span>Moisturizing Treatment</span><span class="t">5 min</span></li>
+          <li><span>Tape Ins</span><span class="t">1 hr</span></li>
+          <li><span>Waxing</span><span class="t">15 min</span></li>
+          <li><span>Add-on Blow-out <small style="color:var(--muted)">(with a color service only)</small></span><span class="t">15 min</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="menu-note rv">Pick a service and a time on the <a href="https://square.site/book/FYBB4Y29H5R37/aiden-bren-salon-boutique-knoxville-tn" target="_blank" rel="noopener">online booking page</a>, or call <a href="tel:+18658519610">(865) 851-9610</a> for color pricing.</p>
+  </div>
+</section>
+
+<section id="why" class="why weave-dark">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Why Aiden Bren</div>
+      <h2>A full salon menu, one easy stop.</h2>
+      <p>Book with Amanda Snyder, on your schedule.</p>
+    </div>
+    <div class="facts">
+      <div class="fact rv"><div class="big">17</div><h3>Services</h3><p>From a quick brightener to tape-ins and keratin smoothing, all on one menu.</p></div>
+      <div class="fact rv"><div class="big">24/7</div><h3>Online booking</h3><p>Choose your service and time online, any hour, even when the salon is closed.</p></div>
+      <div class="fact rv"><div class="big">7<small style="font-size:1.4rem">pm</small></div><h3>Late Thursdays</h3><p>Open until 7 PM on Thursdays for after-work appointments.</p></div>
+      <div class="fact rv"><div class="big">2<small style="font-size:1.4rem">hr</small></div><h3>Color + cut</h3><p>Combo appointments pair base color or highlights with a haircut in one visit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap hours-grid">
+    <div class="hours rv">
+      <div class="eyebrow" style="text-align:center">Salon hours</div>
+      <h3>Tuesday – Friday</h3>
+      <div class="now"><i class="dot" id="nowDot2"></i><span id="nowText2">Closed Sat, Sun &amp; Mon</span></div>
+      <table id="hoursTable">
+        <tr data-d="2"><td>Tuesday</td><td>9 AM – 5 PM</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>9 AM – 5 PM</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>10 AM – 7 PM</td></tr>
+        <tr data-d="5"><td>Friday</td><td>9 AM – 6 PM</td></tr>
+        <tr data-d="6" class="closed"><td>Saturday</td><td>Closed</td></tr>
+        <tr data-d="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+        <tr data-d="1" class="closed"><td>Monday</td><td>Closed</td></tr>
+      </table>
+    </div>
+    <div class="visit rv">
+      <div class="eyebrow">Find us</div>
+      <h3>Suite L on Alcoa Highway</h3>
+      <address>3105 Alcoa Highway, Suite L<br>Knoxville, TN 37920</address>
+      <div class="row">
+        <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=3105+Alcoa+Highway+Suite+L+Knoxville+TN+37920" target="_blank" rel="noopener">Directions</a>
+        <a class="btn btn-line" href="tel:+18658519610">Call</a>
+      </div>
+      <div class="map"><iframe title="Map to Aiden Bren Salon & Boutique" loading="lazy" src="https://www.google.com/maps?q=3105%20Alcoa%20Highway%2C%20Suite%20L%2C%20Knoxville%2C%20TN%2037920&amp;output=embed"></iframe></div>
+      <ul class="contact-list">
+        <li><a href="tel:+18658519610"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>(865) 851-9610</a></li>
+        <li><a href="mailto:amanda55520@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>amanda55520@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band weave-dark">
+  <div class="wrap rv">
+    <h2>Your chair is waiting.</h2>
+    <p>Pick a service, pick a time, and see you on Alcoa Highway.</p>
+    <div class="row">
+      <a class="btn btn-gold" href="https://square.site/book/FYBB4Y29H5R37/aiden-bren-salon-boutique-knoxville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-line" href="tel:+18658519610">(865) 851-9610</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Aiden Bren Salon &amp; Boutique</div>
+    <p>3105 Alcoa Highway, Suite L · Knoxville, TN 37920</p>
+    <p style="margin-top:14px;font-size:.78rem">Concept by <a href="#top">Code Craft Media</a> · Not the official site</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-line" href="tel:+18658519610">Call</a>
+  <a class="btn btn-gold" href="https://square.site/book/FYBB4Y29H5R37/aiden-bren-salon-boutique-knoxville-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var H={2:[9,17],3:[9,17],4:[10,19],5:[9,18]};
+  var NM=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(h){var s=h>=12?'PM':'AM';var x=h%12||12;return x+' '+s}
+  var now=new Date(),d=now.getDay(),hr=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('#hoursTable tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+  var t,open=false;
+  if(H[d]&&hr>=H[d][0]&&hr<H[d][1]){open=true;t='Open today until '+fmt(H[d][1])}
+  else if(H[d]&&hr<H[d][0]){t='Opens today at '+fmt(H[d][0])}
+  else{for(var i=1;i<8;i++){var n=(d+i)%7;if(H[n]){t='Closed now · opens '+(i===1?'tomorrow':NM[n])+' at '+fmt(H[n][0]);break}}}
+  ['nowText','nowText2'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent=t});
+  ['nowDot','nowDot2'].forEach(function(id){var e=document.getElementById(id);if(e&&!open)e.classList.add('closed')});
+  // reveal
+  var root=document.documentElement;root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  } else root.classList.add('all-in');
+  setTimeout(function(){root.classList.add('all-in')},1500);
+})();
+</script>
+</body>
+</html>

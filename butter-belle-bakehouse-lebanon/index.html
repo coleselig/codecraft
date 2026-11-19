@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Butter Belle Bakehouse — Lebanon, TN</title>
+<meta name="description" content="Concept site for Butter Belle Bakehouse, a home bakehouse in Lebanon, TN serving Middle TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --butter:#F6D776; --butter-d:#E9BF3C; --navy:#1D2A44; --navy-2:#2A3A5C; --cream:#FFFBF2; --cream-2:#FBF1D9;
+  --ink:#1D2A44; --muted:#4D5A73; --line:rgba(29,42,68,.28);
+  --serif:'DM Serif Display',Georgia,serif; --sans:'Outfit',system-ui,-apple-system,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.dots{border:0;border-top:2px dotted var(--line);margin:0}
+
+/* banner */
+.concept{background:var(--navy);color:var(--cream);font-size:10.5px;letter-spacing:-.005em;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--butter);font-weight:600}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(255,251,242,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px dotted var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .bm{width:38px;height:38px;flex:none}
+.brand span{font-family:var(--serif);font-size:20px;line-height:1}
+.navlinks{display:none;gap:26px;font-weight:500;font-size:15px}
+.navlinks a{text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;border-bottom:2px dotted var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.navlinks a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 22px;transition:transform .15s,box-shadow .2s,background .2s;cursor:pointer;border:2px solid var(--navy)}
+.btn:active{transform:scale(.97)}
+.btn-navy{background:var(--navy);color:var(--cream);box-shadow:0 4px 0 var(--butter-d)}
+.btn-navy:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--butter-d)}
+.btn-ghost{background:transparent;color:var(--navy)}
+.btn-ghost:hover{background:var(--butter)}
+.btn-sm{padding:9px 16px;font-size:14px;box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(circle at 1px 1px,rgba(29,42,68,.10) 1.2px,transparent 1.4px) 0 0/18px 18px, var(--cream)}
+.hero .wrap{display:grid;gap:22px;padding-top:26px;padding-bottom:40px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;align-self:start;justify-self:start;background:var(--butter);border:1.5px solid var(--navy);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--navy);display:block}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,10.4vw,72px);line-height:1.02;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--navy-2);background:linear-gradient(transparent 62%,var(--butter) 62%,var(--butter) 92%,transparent 92%);padding:0 .06em}
+.sub{font-size:18px;color:var(--muted);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.ctas .btn{flex:1 1 auto}
+.heroart{position:relative;justify-self:center;width:min(100%,420px)}
+.heroart svg{width:100%;height:auto}
+.spin{transform-origin:200px 200px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bob{animation:bob 4.5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.steam path{stroke-dasharray:6 8;animation:steam 2.4s linear infinite}
+@keyframes steam{to{stroke-dashoffset:-28}}
+@media (prefers-reduced-motion:reduce){.spin,.bob,.steam path,.tick{animation:none!important}}
+
+/* ticker */
+.ticker{background:var(--navy);color:var(--butter);overflow:hidden;border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
+.tick{display:flex;gap:28px;white-space:nowrap;padding:11px 0;font-family:var(--serif);font-size:20px;animation:tick 38s linear infinite;width:max-content}
+.tick span::after{content:"✦";margin-left:28px;color:var(--cream);font-size:13px;vertical-align:middle}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:62px 0}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;border-top:2px dotted var(--navy)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,8vw,52px);line-height:1.05;margin:10px 0 14px}
+.lede{color:var(--muted);max-width:56ch}
+
+/* menu */
+#menu{background:var(--cream-2)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:24px -20px 20px;padding:4px 20px 8px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;font:600 14px var(--sans);border:1.5px solid var(--navy);background:var(--cream);color:var(--navy);border-radius:999px;padding:9px 15px;cursor:pointer;transition:background .2s}
+.tab:hover{background:var(--butter)}
+.tab[aria-selected="true"]{background:var(--navy);color:var(--cream)}
+.panel{display:grid;gap:16px}
+.panel[hidden]{display:none}
+.no-js .panel[hidden]{display:grid}
+.card{position:relative;background:var(--cream);border:2px solid var(--navy);border-radius:18px;padding:22px 20px 18px;box-shadow:5px 5px 0 var(--navy);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--navy)}
+.card::before{content:"";position:absolute;inset:7px;border:1.5px dotted var(--line);border-radius:12px;pointer-events:none}
+.card h3{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.1;margin-bottom:4px;padding-right:96px}
+.tag{position:absolute;top:16px;right:14px;background:var(--butter);border:1.5px solid var(--navy);border-radius:8px;padding:4px 9px;font-weight:700;font-size:14px;transform:rotate(3deg);white-space:nowrap}
+.tag small{font-weight:500;font-size:10px;display:block;letter-spacing:.08em;text-transform:uppercase;line-height:1}
+.card .note{font-size:14px;color:var(--muted);margin-bottom:10px}
+.rows{list-style:none;font-size:15px}
+.rows li{display:flex;align-items:baseline;gap:8px;padding:5px 0}
+.rows li .n{flex:0 1 auto}
+.rows li .fill{flex:1 1 20px;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:14px}
+.rows li .p{flex:none;font-weight:600}
+.flav{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.flav span{font-size:13px;border:1px dashed var(--navy);border-radius:999px;padding:3px 10px;background:#fff}
+.menu-foot{margin-top:24px;font-size:14px;color:var(--muted)}
+
+/* why */
+.badges{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.badge{position:relative;text-align:center;padding:22px 12px 18px;border:2px solid var(--navy);border-radius:50% 50% 18px 18px/34% 34% 18px 18px;background:var(--cream)}
+.badge::after{content:"";position:absolute;inset:6px;border:1.5px dotted var(--navy);border-radius:inherit;opacity:.5}
+.badge .big{font-family:var(--serif);font-size:44px;line-height:1;color:var(--navy)}
+.badge .big sup{font-size:18px}
+.badge .lbl{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-top:8px}
+.badge .sm{font-size:13px;color:var(--muted);margin-top:4px}
+.badge.y{background:var(--butter)}
+.badge.n{background:var(--navy);color:var(--cream)}
+.badge.n .big{color:var(--butter)}
+.badge.n .sm{color:#C9D1E3}
+.badge.n::after{border-color:var(--butter)}
+.quoteblock{margin-top:30px;border-top:2px dotted var(--line);border-bottom:2px dotted var(--line);padding:22px 0;font-family:var(--serif);font-size:24px;line-height:1.25}
+.quoteblock small{display:block;font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px}
+
+/* order / week */
+#order{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+#order .kicker{color:#C9D1E3}
+#order .kicker::before{border-color:var(--butter)}
+#order .lede{color:#C9D1E3}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:26px 0 8px}
+.day{border:1.5px dotted rgba(255,251,242,.45);border-radius:12px;text-align:center;padding:10px 2px;font-size:13px;font-weight:600;letter-spacing:.04em}
+.day b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:0}
+.day.today{background:var(--butter);color:var(--navy);border:2px solid var(--butter)}
+.day.ready{border:2px solid var(--butter);color:var(--butter)}
+.weeknote{font-size:14px;color:#C9D1E3;min-height:22px}
+.weeknote strong{color:var(--butter)}
+.steps{list-style:none;display:grid;gap:14px;margin-top:28px;counter-reset:s}
+.steps li{display:flex;gap:14px;align-items:flex-start;border:1.5px dotted rgba(255,251,242,.4);border-radius:16px;padding:16px}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:38px;height:38px;border-radius:50%;background:var(--butter);color:var(--navy);display:grid;place-items:center;font-family:var(--serif);font-size:20px}
+.steps h3{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.15}
+.steps p{font-size:15px;color:#C9D1E3}
+.order-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.order-cta .btn-navy{background:var(--butter);color:var(--navy);border-color:var(--butter);box-shadow:0 4px 0 #0F1729}
+.order-cta .btn-ghost{color:var(--cream);border-color:var(--cream)}
+.order-cta .btn-ghost:hover{background:var(--cream);color:var(--navy)}
+
+/* find */
+.map{margin-top:24px;border:2px solid var(--navy);border-radius:18px;overflow:hidden;box-shadow:5px 5px 0 var(--navy);aspect-ratio:4/3;background:var(--cream-2)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.contact{display:grid;gap:12px;margin-top:22px}
+.crow{display:flex;align-items:center;gap:14px;text-decoration:none;border:2px dotted var(--line);border-radius:14px;padding:14px 16px;transition:background .2s,border-color .2s}
+.crow:hover{background:var(--cream-2);border-color:var(--navy)}
+.crow .ic{width:40px;height:40px;flex:none;border-radius:50%;background:var(--butter);border:1.5px solid var(--navy);display:grid;place-items:center}
+.crow .ic svg{width:20px;height:20px}
+.crow .t{font-size:13px;color:var(--muted);line-height:1.2}
+.crow .v{font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+
+footer{background:var(--navy);color:#C9D1E3;padding:40px 0 30px;font-size:14px;text-align:center}
+footer .fb{font-family:var(--serif);color:var(--cream);font-size:26px;margin-bottom:6px}
+footer .rule{border-top:2px dotted rgba(246,215,118,.5);margin:18px auto;max-width:240px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--navy);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;border-top:3px solid var(--butter)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px}
+.callbar .a1{background:var(--butter);color:var(--navy)}
+.callbar .a2{border:2px solid var(--cream);color:var(--cream)}
+.callbar svg{width:18px;height:18px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv.pre{opacity:0;transform:translateY(18px)}
+
+@media (min-width:760px){
+  .concept{font-size:12px;letter-spacing:.02em}
+  .map{aspect-ratio:16/10}
+  .navlinks{display:flex}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:56px;padding-bottom:70px}
+  .hero .copy{display:grid;gap:22px}
+  .ctas .btn{flex:0 0 auto}
+  .panel{grid-template-columns:repeat(2,1fr)}
+  .badges{grid-template-columns:repeat(4,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .findgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start}
+  section{padding:90px 0}
+}
+@media (min-width:1040px){
+  .panel{grid-template-columns:repeat(3,1fr)}
+  body{padding-bottom:0}
+  .callbar{display:none}
+}
+@media (max-width:759px){ .hero .copy{display:grid;gap:16px} .hero .wrap{padding-top:18px;gap:10px} .ctas .btn{padding:13px 16px} .ctas .btn-navy{flex:1.4 1 0} .ctas .btn-ghost{flex:1 1 0} .heroart{width:250px;margin-top:2px} h1{font-size:clamp(36px,10vw,72px)} .sub{font-size:17px} }
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');document.body.classList.add('js');</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Butter Belle Bakehouse. Not live.</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Butter Belle Bakehouse home">
+      <svg class="bm" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="#F6D776" stroke="#1D2A44" stroke-width="2"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="#1D2A44" stroke-width="1.3" stroke-dasharray="1.5 2.6"/><text x="20" y="26" text-anchor="middle" font-family="DM Serif Display,Georgia,serif" font-size="16" fill="#1D2A44">BB</text></svg>
+      <span>Butter Belle</span>
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#why">Why Belle</a><a href="#order">How to order</a><a href="#find">Find us</a></div>
+    <a class="btn btn-navy btn-sm" href="https://bakesy.shop/b/butter-belle-bakehouse" target="_blank" rel="noopener">Order</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="copy">
+      <span class="eyebrow"><i></i>Home bakehouse · Lebanon, TN</span>
+      <h1>Pecan pie, jumbo cinnamon rolls &amp; <em>cakes worth a party.</em></h1>
+      <p class="sub">Baked in Lebanon and serving Middle TN. Order on Bakesy with just one day's notice.</p>
+      <div class="ctas">
+        <a class="btn btn-navy" href="https://bakesy.shop/b/butter-belle-bakehouse" target="_blank" rel="noopener">Request an order →</a>
+        <a class="btn btn-ghost" href="#menu">The menu</a>
+      </div>
+    </div>
+    <div class="heroart" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <path id="ring" d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"/>
+          <pattern id="lat" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="16" height="16" fill="#E9BF3C"/><rect width="7" height="16" fill="#F6D776"/></pattern>
+        </defs>
+        <!-- scalloped label -->
+        <g class="spin">
+          <circle cx="200" cy="200" r="186" fill="#1D2A44"/>
+          <g fill="#1D2A44">
+            <circle cx="200" cy="12" r="14"/><circle cx="294" cy="37" r="14"/><circle cx="363" cy="106" r="14"/><circle cx="388" cy="200" r="14"/><circle cx="363" cy="294" r="14"/><circle cx="294" cy="363" r="14"/><circle cx="200" cy="388" r="14"/><circle cx="106" cy="363" r="14"/><circle cx="37" cy="294" r="14"/><circle cx="12" cy="200" r="14"/><circle cx="37" cy="106" r="14"/><circle cx="106" cy="37" r="14"/>
+          </g>
+          <circle cx="200" cy="200" r="172" fill="none" stroke="#F6D776" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+          <text font-family="Outfit,sans-serif" font-weight="600" font-size="17" letter-spacing="4.1" fill="#F6D776"><textPath href="#ring">BUTTER BELLE BAKEHOUSE ✦ LEBANON · TENNESSEE ✦ SERVING MIDDLE TN ✦</textPath></text>
+        </g>
+        <circle cx="200" cy="200" r="128" fill="#FFFBF2" stroke="#F6D776" stroke-width="4"/>
+        <circle cx="200" cy="200" r="118" fill="none" stroke="#1D2A44" stroke-width="1.5" stroke-dasharray="2 5"/>
+        <!-- pie -->
+        <g class="bob">
+          <g class="steam" fill="none" stroke="#1D2A44" stroke-width="3" stroke-linecap="round" opacity=".55">
+            <path d="M170 128 q-10 -14 0 -28 q10 -14 0 -28"/>
+            <path d="M200 120 q-10 -14 0 -28 q10 -14 0 -28"/>
+            <path d="M230 128 q-10 -14 0 -28 q10 -14 0 -28"/>
+          </g>
+          <ellipse cx="200" cy="232" rx="100" ry="34" fill="#1D2A44"/>
+          <ellipse cx="200" cy="222" rx="96" ry="32" fill="#FFFBF2" stroke="#1D2A44" stroke-width="3"/>
+          <ellipse cx="200" cy="214" rx="82" ry="26" fill="url(#lat)" stroke="#1D2A44" stroke-width="3"/>
+          <g fill="none" stroke="#1D2A44" stroke-width="2.5" stroke-linecap="round">
+            <path d="M126 210 q8 -8 16 0 q8 8 16 0 q8 -8 16 0 q8 8 16 0 q8 -8 16 0 q8 8 16 0 q8 -8 16 0 q8 8 16 0 q8 -8 16 0" opacity="0"/>
+          </g>
+          <!-- crimped crust edge -->
+          <ellipse cx="200" cy="214" rx="82" ry="26" fill="none" stroke="#FFFBF2" stroke-width="7" stroke-dasharray="3 9" stroke-linecap="round"/>
+          <!-- heart cutout -->
+          <path d="M200 222 c-14 -10 -18 -20 -10 -25 c5 -3 9 0 10 3 c1 -3 5 -6 10 -3 c8 5 4 15 -10 25z" fill="#1D2A44"/>
+        </g>
+        <!-- ribbon -->
+        <g>
+          <path d="M92 278 h216 l-14 16 l14 16 h-216 l14 -16z" fill="#F6D776" stroke="#1D2A44" stroke-width="3" stroke-linejoin="round"/>
+          <text x="200" y="300" text-anchor="middle" font-family="DM Serif Display,Georgia,serif" font-size="19" fill="#1D2A44">order 1 day ahead</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="tick">
+    <span>Chess pie</span><span>Jumbo cinnamon rolls</span><span>Cookie sammies</span><span>Smash cakes</span><span>Coconut meringue</span><span>Fried pies</span><span>Bundt cakes</span><span>Cake pops</span><span>Samoa pie</span><span>Mini cinnis</span>
+    <span>Chess pie</span><span>Jumbo cinnamon rolls</span><span>Cookie sammies</span><span>Smash cakes</span><span>Coconut meringue</span><span>Fried pies</span><span>Bundt cakes</span><span>Cake pops</span><span>Samoa pie</span><span>Mini cinnis</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kicker">The menu</p>
+      <h2>The Butter Belle menu.</h2>
+      <p class="lede">Prices as listed on Butter Belle's Bakesy shop. Custom cakes and extra flavors are priced by request.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab" role="tab" aria-selected="true" data-t="rolls">Cinnamon rolls</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="pies">Pies</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="cookies">Cookies</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="cakes">Cakes &amp; cupcakes</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="bars">Bars &amp; more</button>
+    </div>
+
+    <div class="panel" data-p="rolls" role="tabpanel">
+      <article class="card"><span class="tag"><small>from</small>$6</span><h3>Regular Size Cinnamon Rolls</h3>
+        <ul class="rows"><li><span class="n">2 pack</span><i class="fill"></i><span class="p">$6</span></li><li><span class="n">4 pack</span><i class="fill"></i><span class="p">$12</span></li><li><span class="n">6 pack</span><i class="fill"></i><span class="p">$18</span></li><li><span class="n">Dozen</span><i class="fill"></i><span class="p">$36</span></li></ul></article>
+      <article class="card"><span class="tag"><small>from</small>$10</span><h3>Jumbo Cinnamon Rolls</h3>
+        <ul class="rows"><li><span class="n">2 pack</span><i class="fill"></i><span class="p">$10</span></li><li><span class="n">4 pack</span><i class="fill"></i><span class="p">$20</span></li><li><span class="n">6 pack</span><i class="fill"></i><span class="p">$30</span></li><li><span class="n">Dozen</span><i class="fill"></i><span class="p">$60</span></li></ul></article>
+      <article class="card"><span class="tag"><small>from</small>$4</span><h3>Mini Cinnis</h3>
+        <ul class="rows"><li><span class="n">3 pack</span><i class="fill"></i><span class="p">$4</span></li><li><span class="n">6 pack</span><i class="fill"></i><span class="p">$8</span></li><li><span class="n">12 pack</span><i class="fill"></i><span class="p">$16</span></li></ul></article>
+      <article class="card"><span class="tag"><small>per</small>roll</span><h3>Flavored Cinnamon Rolls</h3>
+        <p class="note">Priced per roll.</p>
+        <ul class="rows"><li><span class="n">Mini</span><i class="fill"></i><span class="p">$2.50</span></li><li><span class="n">Regular</span><i class="fill"></i><span class="p">$4</span></li><li><span class="n">Jumbo</span><i class="fill"></i><span class="p">$6</span></li></ul></article>
+    </div>
+
+    <div class="panel" data-p="pies" role="tabpanel" hidden>
+      <article class="card"><span class="tag">$15</span><h3>Classic pies</h3>
+        <div class="flav"><span>Chess</span><span>Chocolate Chess</span><span>Buttermilk</span><span>Pumpkin</span></div></article>
+      <article class="card"><span class="tag">$16</span><h3>Cream &amp; specialty pies</h3>
+        <div class="flav"><span>Fudge</span><span>Chocolate Chip Cookie</span><span>Fruit</span><span>Creamy Caramel</span><span>Peanut Butter</span><span>Key Lime</span></div></article>
+      <article class="card"><span class="tag">$18</span><h3>Meringue &amp; Samoa</h3>
+        <div class="flav"><span>Chocolate Meringue</span><span>Coconut Meringue</span><span>Samoa</span></div></article>
+      <article class="card"><span class="tag">$20</span><h3>Pecan pies</h3>
+        <div class="flav"><span>Pecan</span><span>Chocolate Pecan</span></div>
+        <p class="note" style="margin-top:12px">Other flavors available by inquiry.</p></article>
+      <article class="card"><span class="tag"><small>from</small>$3</span><h3>Fried Pies</h3>
+        <ul class="rows"><li><span class="n">Each</span><i class="fill"></i><span class="p">$3</span></li><li><span class="n">Dozen</span><i class="fill"></i><span class="p">$35</span></li></ul></article>
+      <article class="card"><span class="tag">$25</span><h3>Cobbler</h3><p class="note">Listed at $25.</p></article>
+    </div>
+
+    <div class="panel" data-p="cookies" role="tabpanel" hidden>
+      <article class="card"><span class="tag"><small>from</small>$9</span><h3>Cookies</h3>
+        <ul class="rows"><li><span class="n">Mini · 6 pack</span><i class="fill"></i><span class="p">$9</span></li><li><span class="n">Mini · dozen</span><i class="fill"></i><span class="p">$18</span></li><li><span class="n">Regular · 6 pack</span><i class="fill"></i><span class="p">$15</span></li><li><span class="n">Regular · dozen</span><i class="fill"></i><span class="p">$30</span></li></ul></article>
+      <article class="card"><span class="tag"><small>from</small>$40</span><h3>Custom Decorated Cookies</h3><p class="note">Starting at $40 per dozen.</p></article>
+      <article class="card"><span class="tag">$28</span><h3>Holiday Cookies</h3><p class="note">Per dozen.</p>
+        <div class="flav"><span>Glazed Oatmeal Raisin</span><span>Apple Butter Snickerdoodle</span></div></article>
+      <article class="card"><span class="tag"><small>from</small>$3</span><h3>Cookie Sammies</h3>
+        <ul class="rows"><li><span class="n">Mini</span><i class="fill"></i><span class="p">$3</span></li><li><span class="n">Regular</span><i class="fill"></i><span class="p">$4</span></li><li><span class="n">Jumbo</span><i class="fill"></i><span class="p">$6</span></li></ul></article>
+      <article class="card"><span class="tag">$8</span><h3>Cookie Dippers</h3><p class="note">8–10 mini cookies with icing.</p></article>
+      <article class="card"><span class="tag"><small>from</small>$8</span><h3>BYO Cookie Set</h3>
+        <ul class="rows"><li><span class="n">Small</span><i class="fill"></i><span class="p">$8</span></li><li><span class="n">Regular</span><i class="fill"></i><span class="p">$15</span></li><li><span class="n">Large</span><i class="fill"></i><span class="p">$30</span></li></ul></article>
+    </div>
+
+    <div class="panel" data-p="cakes" role="tabpanel" hidden>
+      <article class="card"><span class="tag"><small>from</small>$2.50</span><h3>Cupcakes</h3>
+        <ul class="rows"><li><span class="n">Classic flavors</span><i class="fill"></i><span class="p">from $2.50</span></li><li><span class="n">Signature flavors</span><i class="fill"></i><span class="p">$3</span></li><li><span class="n">Dozen minis · classic</span><i class="fill"></i><span class="p">$20</span></li><li><span class="n">Dozen minis · specialty</span><i class="fill"></i><span class="p">$30</span></li></ul></article>
+      <article class="card"><span class="tag"><small>from</small>$15</span><h3>Smash Cake</h3><p class="note">6-inch, starting at $15.</p></article>
+      <article class="card"><span class="tag"><small>from</small>$20</span><h3>Bundt Cakes</h3>
+        <ul class="rows"><li><span class="n">Small</span><i class="fill"></i><span class="p">$20</span></li><li><span class="n">Large</span><i class="fill"></i><span class="p">$40</span></li></ul></article>
+      <article class="card"><span class="tag"><small>from</small>$2</span><h3>Cake Pops</h3><p class="note">Starting at $2.</p></article>
+      <article class="card"><span class="tag"><small>by</small>inquiry</span><h3>Custom, Wedding &amp; Groom's Cakes</h3><p class="note">Priced by request. Send your date and idea through Bakesy.</p></article>
+      <article class="card"><span class="tag">$15</span><h3>Gingerbread Cake Kit</h3><p class="note">1 cake, 1 buttercream bag, 6 candies.</p>
+        <ul class="rows"><li><span class="n">4 kits ($10 off)</span><i class="fill"></i><span class="p">$50</span></li><li><span class="n">Extra icing bag</span><i class="fill"></i><span class="p">$1</span></li><li><span class="n">Extra candy</span><i class="fill"></i><span class="p">$0.50</span></li></ul></article>
+    </div>
+
+    <div class="panel" data-p="bars" role="tabpanel" hidden>
+      <article class="card"><span class="tag"><small>from</small>$25</span><h3>Brownies or Blondies</h3><p class="note">9×13 pan. Larger sizes by inquiry.</p>
+        <ul class="rows"><li><span class="n">Regular</span><i class="fill"></i><span class="p">$25</span></li><li><span class="n">Iced / decorated</span><i class="fill"></i><span class="p">$30</span></li></ul></article>
+      <article class="card"><span class="tag">$45</span><h3>Cheesecake Bars</h3><p class="note">A Thanksgiving menu item.</p></article>
+    </div>
+
+    <p class="menu-foot">Full flavor lists and holiday cakes are on <a href="https://bakesy.shop/b/butter-belle-bakehouse" target="_blank" rel="noopener">Butter Belle's Bakesy shop</a>.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kicker">Why Butter Belle</p>
+      <h2>A home bakehouse with a <em style="font-style:italic">serious</em> menu.</h2>
+      <p class="lede">From $4 mini cinnis to custom wedding cakes, all baked in Lebanon for tables across Middle Tennessee.</p>
+    </div>
+    <div class="badges rv">
+      <div class="badge y"><div class="big">16</div><div class="lbl">Reviews</div><div class="sm">on Bakesy</div></div>
+      <div class="badge n"><div class="big">1<sup>day</sup></div><div class="lbl">Lead time</div><div class="sm">typical, per Bakesy</div></div>
+      <div class="badge"><div class="big">15</div><div class="lbl">Pie flavors</div><div class="sm">plus more by inquiry</div></div>
+      <div class="badge y"><div class="big">50<sup>%</sup></div><div class="lbl">Deposit</div><div class="sm">holds your order</div></div>
+    </div>
+    <p class="quoteblock rv">“Foodie. Tennessee. Serving Middle TN.”<small>From Butter Belle's own Bakesy bio</small></p>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kicker">How to order</p>
+      <h2>Order a day ahead. That's it.</h2>
+      <p class="lede">Butter Belle's typical lead time is one day. Send your request on Bakesy, ideally a day or more ahead.</p>
+    </div>
+    <div class="week" id="week" aria-label="This week">
+      <div class="day" data-d="0">SUN<b>·</b></div><div class="day" data-d="1">MON<b>·</b></div><div class="day" data-d="2">TUE<b>·</b></div><div class="day" data-d="3">WED<b>·</b></div><div class="day" data-d="4">THU<b>·</b></div><div class="day" data-d="5">FRI<b>·</b></div><div class="day" data-d="6">SAT<b>·</b></div>
+    </div>
+    <p class="weeknote" id="weeknote">Typical lead time: 1 day.</p>
+    <ol class="steps rv">
+      <li><div><h3>Pick your treats</h3><p>Browse the menu on Bakesy. For rolls, choose quantity 1, then pick your total count.</p></div></li>
+      <li><div><h3>Send the request</h3><p>Tap “Request Order” with your date and any details for custom work.</p></div></li>
+      <li><div><h3>50% deposit</h3><p>Butter Belle's typical deposit is 50% to lock in your order.</p></div></li>
+    </ol>
+    <div class="order-cta">
+      <a class="btn btn-navy" href="https://bakesy.shop/b/butter-belle-bakehouse" target="_blank" rel="noopener">Request an order →</a>
+      <a class="btn btn-ghost" href="mailto:ashlee_c6841@yahoo.com?subject=Order%20question">Email a question</a>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap findgrid">
+    <div>
+      <div class="rv">
+        <p class="kicker">Find us</p>
+        <h2>Baked in Lebanon, TN.</h2>
+        <p class="lede">A home bakehouse in Lebanon, serving Middle Tennessee. Order details are handled through Bakesy.</p>
+      </div>
+      <div class="map"><iframe title="Map of Lebanon, Tennessee" loading="lazy" src="https://www.google.com/maps?q=Lebanon%2C%20TN&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+    <div class="contact rv">
+      <a class="crow" href="https://bakesy.shop/b/butter-belle-bakehouse" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1D2A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.5 11h-13z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg></span><span><span class="t">Order online</span><br><span class="v">Bakesy shop</span></span></a>
+      <a class="crow" href="mailto:ashlee_c6841@yahoo.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1D2A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="t">Email</span><br><span class="v">ashlee_c6841@yahoo.com</span></span></a>
+      <a class="crow" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lebanon%2C%20TN" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1D2A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><span class="t">Directions</span><br><span class="v">Lebanon, Tennessee</span></span></a>
+      <a class="crow" href="https://www.facebook.com/BBBakehouseTN" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="#1D2A44"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></span><span><span class="t">Facebook</span><br><span class="v">BBBakehouseTN</span></span></a>
+      <a class="crow" href="https://www.tiktok.com/@buttebellebakehouse" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="#1D2A44"><path d="M16 3c.4 2.4 1.9 4 4 4.2v3.4a7.4 7.4 0 0 1-4-1.2V15a6 6 0 1 1-6-6h.5v3.5a2.6 2.6 0 1 0 2 2.5V3z"/></svg></span><span><span class="t">TikTok</span><br><span class="v">@buttebellebakehouse</span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">Butter Belle Bakehouse</div>
+    <div>Lebanon, Tennessee · Serving Middle TN</div>
+    <div class="rule"></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="a1" href="https://bakesy.shop/b/butter-belle-bakehouse" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.5 11h-13z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg>Order</a>
+  <a class="a2" href="mailto:ashlee_c6841@yahoo.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+</div>
+
+<script>
+(function(){
+  // tabs
+  var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    panels.forEach(function(p){p.hidden=p.dataset.p!==t.dataset.t});
+  })});
+  // week strip
+  var now=new Date(),d=now.getDay(),names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var days=document.querySelectorAll('.day');
+  var start=new Date(now);start.setDate(now.getDate()-d);
+  days.forEach(function(el,i){var dt=new Date(start);dt.setDate(start.getDate()+i);el.querySelector('b').textContent=dt.getDate();
+    if(i===d)el.classList.add('today');if(i===(d+1)%7)el.classList.add('ready');});
+  document.getElementById('weeknote').innerHTML='Order today ('+names[d]+') → <strong>'+names[(d+1)%7]+'</strong> is the earliest typical ready day.';
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>window.innerHeight)e.classList.add('pre')});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Chocolate Box — Chattanooga</title>
+<meta name="description" content="The Chocolate Box: sugar art, custom cakes and decorated cookies in Chattanooga, TN. Concept site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cocoa:#4A2C2A; --cocoa-deep:#2E1A19; --cocoa-soft:#6B4440;
+  --blush:#F3D6D2; --blush-pale:#FBEEEB; --cream:#FFF9F6;
+  --gold:#C9A45C; --gold-deep:#8C6A2C; --ink:#2E1A19; --muted:#6E5350;
+  --bar-h:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
+
+/* banner */
+.concept{background:var(--cocoa-deep);color:var(--blush);font-size:10.5px;letter-spacing:-.01em;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--gold);font-weight:700}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(255,249,246,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,44,42,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Playfair Display",serif;font-weight:700;font-size:19px;color:var(--cocoa)}
+.brand svg{width:30px;height:30px}
+.navlinks{display:none;gap:28px;font-weight:700;font-size:14px}
+.navlinks a{text-decoration:none;color:var(--cocoa-soft);transition:color .2s}
+.navlinks a:hover{color:var(--gold-deep)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:var(--cocoa-deep);box-shadow:0 8px 22px -10px rgba(140,106,44,.8)}
+.btn-gold:hover{background:#d8b36a;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(243,214,210,.5);color:var(--blush)}
+.btn-ghost:hover{background:rgba(243,214,210,.1)}
+.btn-sm{padding:9px 16px;font-size:13px}
+.nav-cta{background:var(--cocoa);color:var(--blush)}
+.nav-cta:hover{background:var(--cocoa-soft)}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 80% at 80% 0%,#5d3835 0%,var(--cocoa) 45%,var(--cocoa-deep) 100%);color:var(--blush-pale);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(201,164,92,.18) 1px,transparent 1.4px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000 0%,transparent 75%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
+.hero .wrap{position:relative;display:grid;gap:30px;padding-top:40px;padding-bottom:56px}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(40px,11vw,76px);font-weight:800;margin:14px 0 16px;color:#fff}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+.hero p.sub{font-size:18px;max-width:30em;color:var(--blush)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;font-size:13px;font-weight:700;color:rgba(243,214,210,.85)}
+.facts span{display:inline-flex;align-items:center;gap:7px}
+.facts span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* the box illustration */
+.boxart{position:relative;max-width:420px;width:100%;margin:0 auto}
+.box{position:relative;background:linear-gradient(160deg,#3a2120,#25151a);border-radius:18px;padding:16px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6),inset 0 0 0 2px rgba(201,164,92,.35)}
+.box::after{content:"";position:absolute;inset:7px;border:1px solid rgba(201,164,92,.35);border-radius:13px;pointer-events:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cell{aspect-ratio:1;border-radius:10px;background:radial-gradient(circle at 50% 60%,#1d0f0e 0%,#2b1918 70%);display:grid;place-items:center;box-shadow:inset 0 3px 8px rgba(0,0,0,.6)}
+.truffle{width:76%;aspect-ratio:1;border-radius:50%;position:relative;animation:bob 5s ease-in-out infinite}
+.truffle::after{content:"";position:absolute;top:14%;left:20%;width:30%;height:20%;border-radius:50%;background:rgba(255,255,255,.28);filter:blur(1px)}
+.t1{background:radial-gradient(circle at 35% 30%,#7a4b44,#3b211f)}
+.t2{background:radial-gradient(circle at 35% 30%,#fbe3df,#e1a9a1)}
+.t3{background:radial-gradient(circle at 35% 30%,#e6c98d,#a37b34)}
+.t4{background:radial-gradient(circle at 35% 30%,#f7e7d6,#d9b99a)}
+.t5{background:radial-gradient(circle at 35% 30%,#8a5a52,#4a2c2a)}
+.t6{background:radial-gradient(circle at 35% 30%,#f6d4cf,#c98f88)}
+.drizzle{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(201,164,92,.75) 6px 8px),radial-gradient(circle at 35% 30%,#7a4b44,#3b211f)}
+.sprinkle{background-image:radial-gradient(circle,#fff 1.2px,transparent 1.6px),radial-gradient(circle at 35% 30%,#fbe3df,#e1a9a1);background-size:9px 9px,100% 100%}
+.cell:nth-child(2) .truffle{animation-delay:-1s}.cell:nth-child(3) .truffle{animation-delay:-2s}
+.cell:nth-child(4) .truffle{animation-delay:-3s}.cell:nth-child(5) .truffle{animation-delay:-1.5s}
+.cell:nth-child(6) .truffle{animation-delay:-2.5s}.cell:nth-child(7) .truffle{animation-delay:-.5s}
+.cell:nth-child(8) .truffle{animation-delay:-3.5s}.cell:nth-child(9) .truffle{animation-delay:-4s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.ribbon{position:absolute;left:50%;top:-14px;transform:translateX(-50%);background:var(--gold);color:var(--cocoa-deep);font-family:"Playfair Display",serif;font-style:italic;font-weight:700;font-size:14px;padding:6px 18px;border-radius:4px;box-shadow:0 6px 14px -6px rgba(0,0,0,.5);white-space:nowrap}
+.seal{position:absolute;right:-10px;bottom:-26px;width:116px;height:116px;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* sections */
+section{padding:72px 0}
+.sec-head{max-width:640px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(32px,7.5vw,48px);margin-top:10px;color:var(--cocoa)}
+.sec-head p{margin-top:12px;color:var(--muted)}
+
+/* menu */
+.menu{background:var(--cream)}
+.menu-grid{display:grid;gap:18px}
+.item{position:relative;background:#fff;border-radius:20px;padding:26px 24px 24px;border:1px solid rgba(74,44,42,.08);box-shadow:0 18px 40px -28px rgba(74,44,42,.5);transition:transform .25s,box-shadow .25s;overflow:hidden}
+.item:hover{transform:translateY(-4px);box-shadow:0 26px 50px -28px rgba(74,44,42,.6)}
+.item .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--blush-pale);color:var(--cocoa-soft)}
+.item h3{font-size:25px;margin:14px 0 6px;color:var(--cocoa)}
+.item p{color:var(--muted);font-size:15.5px}
+.price{position:absolute;top:22px;right:22px;font-family:"Playfair Display",serif;font-weight:800;font-size:26px;color:var(--gold-deep)}
+.item .cookies{display:flex;gap:8px;margin-top:18px}
+.item .cookies svg{width:38px;height:38px}
+.item.custom{background:var(--cocoa);color:var(--blush);border:none}
+.item.custom h3{color:#fff}.item.custom p{color:var(--blush)}
+.item.custom .tag{background:rgba(201,164,92,.18);color:var(--gold)}
+.item.custom a{display:inline-flex;margin-top:16px;font-weight:800;color:var(--gold);text-decoration:none;border-bottom:1.5px solid rgba(201,164,92,.5)}
+.item.custom a:hover{border-color:var(--gold)}
+.menu-note{margin-top:18px;font-size:13.5px;color:var(--muted)}
+
+/* gallery box */
+.gallery{background:var(--blush);position:relative;overflow:hidden}
+.gallery .sec-head h2{color:var(--cocoa)}
+.giftbox{background:var(--cocoa);border-radius:24px;padding:14px;box-shadow:0 30px 60px -30px rgba(46,26,25,.8),inset 0 0 0 2px rgba(201,164,92,.4)}
+.ggrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gtile{position:relative;aspect-ratio:1;border-radius:16px;background:var(--blush-pale);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;transition:transform .25s}
+.gtile:hover{transform:scale(1.02)}
+.gtile svg{width:58%;height:auto}
+.gtile span{margin-top:8px;font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:var(--cocoa);line-height:1.2}
+.gtile.dark{background:#5a3633}.gtile.dark span{color:var(--blush)}
+.gtile.goldt{background:#ead8b0}
+.gnote{margin-top:16px;font-size:13.5px;color:var(--cocoa-soft);text-align:center}
+
+/* why */
+.why{background:var(--cream)}
+.why-grid{display:grid;gap:16px}
+.why-card{display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:18px;background:#fff;border:1px solid rgba(74,44,42,.08)}
+.why-card .ic{flex:none;width:46px;height:46px;border-radius:14px;background:var(--blush);display:grid;place-items:center}
+.why-card .ic svg{width:24px;height:24px}
+.why-card h3{font-size:20px;color:var(--cocoa);margin-bottom:4px}
+.why-card p{font-size:15.5px;color:var(--muted)}
+.big{font-family:"Playfair Display",serif;font-weight:800;color:var(--gold-deep)}
+
+/* how to order */
+.order{background:var(--cocoa-deep);color:var(--blush)}
+.order .sec-head h2{color:#fff}.order .sec-head p{color:var(--blush)}
+.order .eyebrow{color:var(--gold)}
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{position:relative;padding:22px 22px 22px 74px;border-radius:18px;background:rgba(243,214,210,.06);border:1px solid rgba(201,164,92,.25)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:20px;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--cocoa-deep);display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;font-size:19px}
+.step h3{font-size:20px;color:#fff;margin-bottom:4px}
+.step p{font-size:15.5px;color:var(--blush)}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.term{text-align:center;padding:18px 8px;border-radius:16px;background:rgba(201,164,92,.12);border:1px solid rgba(201,164,92,.3)}
+.term .v{font-family:"Playfair Display",serif;font-weight:800;font-size:28px;color:var(--gold);line-height:1}
+.term .k{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;color:var(--blush)}
+.today{margin-top:22px;padding:16px 18px;border-radius:14px;background:rgba(243,214,210,.08);font-size:15px}
+.today b{color:var(--gold)}
+
+/* visit */
+.visit{background:var(--blush-pale)}
+.visit-grid{display:grid;gap:22px}
+.map{border-radius:20px;overflow:hidden;border:4px solid #fff;box-shadow:0 20px 40px -26px rgba(74,44,42,.6);aspect-ratio:4/3;background:var(--blush) radial-gradient(rgba(74,44,42,.12) 1.2px,transparent 1.6px) 0 0/18px 18px}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.contact-card{background:#fff;border-radius:20px;padding:26px;border:1px solid rgba(74,44,42,.08)}
+.contact-card h3{font-size:24px;color:var(--cocoa);margin-bottom:8px}
+.contact-card p{color:var(--muted);margin-bottom:6px}
+.contact-card .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn-cocoa{background:var(--cocoa);color:var(--blush)}
+.btn-cocoa:hover{background:var(--cocoa-soft)}
+.btn-line{border:1.5px solid var(--cocoa);color:var(--cocoa)}
+.btn-line:hover{background:var(--cocoa);color:var(--blush)}
+
+footer{background:var(--cocoa-deep);color:rgba(243,214,210,.75);text-align:center;padding:36px 20px;font-size:13.5px}
+footer .brand{justify-content:center;color:var(--blush);margin-bottom:10px}
+footer a{color:var(--gold)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(46,26,25,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;border-top:1px solid rgba(201,164,92,.3)}
+.bar a{flex:1;padding:14px 10px;font-size:15px}
+.bar .btn-ghost{flex:.8}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+
+@media (min-width:760px){
+  .navlinks{display:flex}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:72px;padding-bottom:96px}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .ggrid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1.3fr 1fr;align-items:stretch}
+  .map{aspect-ratio:auto;min-height:340px}
+  section{padding:100px 0}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for The Chocolate Box. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Chocolate Box home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="9" width="26" height="20" rx="3" fill="#4A2C2A"/><rect x="2" y="6" width="28" height="6" rx="2" fill="#C9A45C"/><rect x="14" y="6" width="4" height="23" fill="#F3D6D2"/><circle cx="9" cy="20" r="3" fill="#F3D6D2"/><circle cx="23" cy="20" r="3" fill="#C9A45C"/></svg>
+      The Chocolate Box
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#box">Sugar art</a><a href="#order">How to order</a><a href="#visit">Chattanooga</a></div>
+    <a class="btn btn-sm nav-cta" href="https://bakesy.shop/order-request/new/5f8f2773-a7ba-4545-866f-06767d9f5b9b" target="_blank" rel="noopener">Order</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Sugar art · Chattanooga, TN</div>
+      <h1>Every cake, <em>a little work of art</em> in sugar.</h1>
+      <p class="sub">The Chocolate Box makes custom cakes and hand-decorated cookies to order, here in Chattanooga.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://bakesy.shop/order-request/new/5f8f2773-a7ba-4545-866f-06767d9f5b9b" target="_blank" rel="noopener">Request an order</a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="facts"><span>1-week typical lead time</span><span>$24 order minimum</span><span>23 ratings on Bakesy</span></div>
+    </div>
+
+    <div class="boxart reveal" aria-hidden="true">
+      <div class="box">
+        <div class="ribbon">made to order</div>
+        <div class="grid">
+          <div class="cell"><div class="truffle t1"></div></div>
+          <div class="cell"><div class="truffle sprinkle"></div></div>
+          <div class="cell"><div class="truffle t3"></div></div>
+          <div class="cell"><div class="truffle t4"></div></div>
+          <div class="cell"><div class="truffle drizzle"></div></div>
+          <div class="cell"><div class="truffle t6"></div></div>
+          <div class="cell"><div class="truffle t3"></div></div>
+          <div class="cell"><div class="truffle t2"></div></div>
+          <div class="cell"><div class="truffle t5"></div></div>
+        </div>
+      </div>
+      <svg class="seal" viewBox="0 0 140 140">
+        <defs><path id="ring" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs>
+        <circle cx="70" cy="70" r="68" fill="#C9A45C"/>
+        <circle cx="70" cy="70" r="62" fill="none" stroke="#4A2C2A" stroke-width="1" stroke-dasharray="2 3"/>
+        <text font-family="Nunito Sans, sans-serif" font-weight="800" font-size="11.5" fill="#2E1A19" letter-spacing="0">
+          <textPath href="#ring" textLength="318" lengthAdjust="spacingAndGlyphs">THE CHOCOLATE BOX • CHATTANOOGA • SUGAR ART •</textPath>
+        </text>
+        <circle cx="70" cy="70" r="30" fill="#4A2C2A"/>
+        <path d="M70 58c-6-8-18-2-12 7l12 11 12-11c6-9-6-15-12-7z" fill="#F3D6D2"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">On the menu now</div>
+      <h2>Cookies by the dozen, cakes made for you</h2>
+      <p>The current menu as listed on The Chocolate Box's Bakesy page. Prices shown exactly as published.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="item reveal">
+        <span class="tag">Holiday</span>
+        <div class="price">$42</div>
+        <h3>Dozen Christmas Cookies</h3>
+        <p>Sugar cookies decorated for the holidays.</p>
+        <div class="cookies" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M20 4 32 22h-6l7 10H7l7-10H8z" fill="#3F7A55"/><circle cx="17" cy="18" r="1.8" fill="#C9A45C"/><circle cx="24" cy="26" r="1.8" fill="#E06C6C"/><circle cx="15" cy="28" r="1.8" fill="#FFF"/><rect x="18" y="32" width="4" height="5" fill="#6B4440"/></svg>
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="9" r="6" fill="#C98A55"/><path d="M20 15c-9 0-14 3-14 6s4 3 8 2v13h12V23c4 1 8 1 8-2s-5-6-14-6z" fill="#C98A55"/><path d="M14 30h12M15 25h10" stroke="#FFF" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="8" r="1" fill="#2E1A19"/><circle cx="22" cy="8" r="1" fill="#2E1A19"/></svg>
+          <svg viewBox="0 0 40 40"><path d="M20 3v34M5 11l30 18M5 29 35 11" stroke="#F3D6D2" stroke-width="4" stroke-linecap="round"/><path d="M20 3v34M5 11l30 18M5 29 35 11" stroke="#FFF" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+      </article>
+      <article class="item reveal">
+        <span class="tag">Seasonal</span>
+        <div class="price">$45</div>
+        <h3>Halloween Dozen Decorated Cookies</h3>
+        <p>Dozen Halloween cookies, mixed.</p>
+        <div class="cookies" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M20 6c9 0 15 6 15 15s-6 13-15 13S5 30 5 21 11 6 20 6z" fill="#E8913A"/><path d="M20 6c-2-3 1-5 3-4" stroke="#4A2C2A" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M13 19l3 3-3 0zM27 19l-3 3 3 0zM13 27c4 3 10 3 14 0" stroke="#2E1A19" stroke-width="2" fill="#2E1A19"/></svg>
+          <svg viewBox="0 0 40 40"><path d="M20 4c8 0 13 7 13 15v17l-4-3-4 3-5-3-5 3-4-3-4 3V19C7 11 12 4 20 4z" fill="#FBEEEB"/><circle cx="15" cy="18" r="2.5" fill="#2E1A19"/><circle cx="25" cy="18" r="2.5" fill="#2E1A19"/><ellipse cx="20" cy="25" rx="2.5" ry="3" fill="#2E1A19"/></svg>
+          <svg viewBox="0 0 40 40"><path d="M20 34 6 10h28z" fill="#F6D9A0"/><path d="M8.5 14h23L28 20H12z" fill="#E8913A"/><path d="M14 24h12l-3 5h-6z" fill="#FFF9F6"/></svg>
+        </div>
+      </article>
+      <article class="item custom reveal">
+        <span class="tag">Custom</span>
+        <h3>Custom cakes &amp; sugar work</h3>
+        <p>Have a design in mind? Send your idea, date and inspiration through the order request form and The Chocolate Box will follow up with you.</p>
+        <a href="https://bakesy.shop/order-request/new/5f8f2773-a7ba-4545-866f-06767d9f5b9b" target="_blank" rel="noopener">Start a custom request &rarr;</a>
+      </article>
+    </div>
+    <p class="menu-note">Custom cakes are quoted per request; no cake prices are published.</p>
+  </div>
+</section>
+
+<section class="gallery" id="box">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Open the box</div>
+      <h2>A box of sweet moments</h2>
+      <p>Customers on Bakesy write about wedding and bridal cakes, baby-shower cakes and cookies, themed birthday cakes, eggless cakes and decorated Christmas cookies. Each square below is a spot for a photo of that work.</p>
+    </div>
+    <div class="giftbox reveal">
+      <div class="ggrid">
+        <div class="gtile"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="22" y="12" width="36" height="16" rx="3" fill="#F3D6D2" stroke="#C9A45C" stroke-width="2"/><rect x="16" y="28" width="48" height="18" rx="3" fill="#FBEEEB" stroke="#C9A45C" stroke-width="2"/><rect x="10" y="46" width="60" height="22" rx="3" fill="#F3D6D2" stroke="#C9A45C" stroke-width="2"/><path d="M10 56h60M16 37h48" stroke="#C9A45C" stroke-dasharray="2 3"/><circle cx="40" cy="9" r="4" fill="#E1A9A1"/></svg><span>Wedding &amp; bridal</span></div>
+        <div class="gtile dark"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="14" y="34" width="52" height="32" rx="4" fill="#F3D6D2"/><path d="M14 42c6 5 10-3 17 2s10-3 17 2 12-3 18 0" stroke="#FBEEEB" stroke-width="5" fill="none"/><rect x="38" y="16" width="4" height="18" fill="#C9A45C"/><path d="M40 6c4 4 4 8 0 10-4-2-4-6 0-10z" fill="#E8913A"/></svg><span>Birthday themes</span></div>
+        <div class="gtile goldt"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="26" fill="#FBEEEB" stroke="#8C6A2C" stroke-width="2"/><path d="M40 26l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z" fill="#C9A45C"/></svg><span>Decorated cookies</span></div>
+        <div class="gtile"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M22 40h36l-4 26H26z" fill="#C98F88"/><path d="M18 40c0-12 10-20 22-20s22 8 22 20z" fill="#FBEEEB" stroke="#E1A9A1" stroke-width="2"/><circle cx="40" cy="18" r="5" fill="#C94F4F"/></svg><span>Cupcakes</span></div>
+        <div class="gtile dark"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 18c-12 0-20 8-20 18 0 12 10 16 10 26h20c0-10 10-14 10-26 0-10-8-18-20-18z" fill="#F3D6D2"/><circle cx="40" cy="70" r="4" fill="#C9A45C"/><path d="M30 34c4-6 16-6 20 0" stroke="#C9A45C" stroke-width="2" fill="none"/></svg><span>Baby showers</span></div>
+        <div class="gtile goldt"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="14" y="30" width="52" height="34" rx="4" fill="#4A2C2A"/><rect x="10" y="22" width="60" height="10" rx="3" fill="#6B4440"/><rect x="36" y="22" width="8" height="42" fill="#C9A45C"/><path d="M40 22c-8-12-20-6-12 0M40 22c8-12 20-6 12 0" stroke="#C9A45C" stroke-width="3" fill="none"/></svg><span>Holiday gifting</span></div>
+      </div>
+    </div>
+    <p class="gnote reveal">Illustrations only. On the live site these tiles would hold The Chocolate Box's own photos.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Why The Chocolate Box</div>
+      <h2>Sugar art, made one order at a time</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div><div><h3>A sugar artist</h3><p>In their own words: "Sugar Artist creator of sweet treats and artist sugar work."</p></div></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg></div><div><h3>Made to order</h3><p>Every order starts with your request on Bakesy, so you can share your date, idea and inspiration.</p></div></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><div><h3><span class="big">23</span> ratings on Bakesy</h3><p>Customers have left 23 ratings on The Chocolate Box's Bakesy page.</p></div></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><h3>Right here in Chattanooga</h3><p>A local sugar artist baking for Chattanooga celebrations.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">How to order</div>
+      <h2>Three easy steps to your box</h2>
+      <p>Orders are by request. These are the terms listed on Bakesy.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Send a request</h3><p>Tell The Chocolate Box your date, what you'd like and any inspiration.</p></div>
+      <div class="step reveal"><h3>Confirm &amp; deposit</h3><p>A 50% deposit is typical to hold your order.</p></div>
+      <div class="step reveal"><h3>Celebrate</h3><p>Plan for about a week of lead time, then enjoy your treats.</p></div>
+    </div>
+    <div class="terms reveal">
+      <div class="term"><div class="v">1 wk</div><div class="k">Typical lead time</div></div>
+      <div class="term"><div class="v">50%</div><div class="k">Typical deposit</div></div>
+      <div class="term"><div class="v">$24</div><div class="k">Order minimum</div></div>
+    </div>
+    <p class="today reveal" id="leadline">Planning ahead? Request about a week before your event.</p>
+    <div class="ctas reveal"><a class="btn btn-gold" href="https://bakesy.shop/order-request/new/5f8f2773-a7ba-4545-866f-06767d9f5b9b" target="_blank" rel="noopener">Request an order on Bakesy</a></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Find us</div>
+      <h2>Baking in Chattanooga, Tennessee</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="map reveal"><iframe title="Map of Chattanooga, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Chattanooga%2C%20TN&amp;output=embed"></iframe></div>
+      <div class="contact-card reveal">
+        <h3>The Chocolate Box</h3>
+        <p>Chattanooga, TN</p>
+        <p>Order through Bakesy or by email; details are confirmed with each request.</p>
+        <div class="btns">
+          <a class="btn btn-cocoa" href="https://bakesy.shop/order-request/new/5f8f2773-a7ba-4545-866f-06767d9f5b9b" target="_blank" rel="noopener">Request an order</a>
+          <a class="btn btn-line" href="mailto:patelnichelle@gmail.com">Email</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chattanooga%2C%20TN" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="brand" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true" width="26" height="26"><rect x="3" y="9" width="26" height="20" rx="3" fill="#6B4440"/><rect x="2" y="6" width="28" height="6" rx="2" fill="#C9A45C"/><rect x="14" y="6" width="4" height="23" fill="#F3D6D2"/></svg>The Chocolate Box</a>
+  <p>Sugar art · Chattanooga, TN</p>
+  <p style="margin-top:10px">Concept by Code Craft Media. Not the official site of The Chocolate Box.</p>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-gold" href="https://bakesy.shop/order-request/new/5f8f2773-a7ba-4545-866f-06767d9f5b9b" target="_blank" rel="noopener">Order on Bakesy</a>
+  <a class="btn btn-ghost" href="mailto:patelnichelle@gmail.com">Email</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // lead-time helper: earliest date about one week from today
+  try{
+    var t=new Date(); t.setDate(t.getDate()+7);
+    var s=t.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+    var el=document.getElementById('leadline');
+    if(el) el.innerHTML='Ordering today? With the typical 1-week lead time, plan for <b>'+s+'</b> or later.';
+  }catch(e){}
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.remove('pre')})}
+  if(!('IntersectionObserver' in window)){return}
+  els.forEach(function(e){var r=e.getBoundingClientRect(); if(r.top>window.innerHeight) e.classList.add('pre')});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

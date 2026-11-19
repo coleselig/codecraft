@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Mooresburg Marine — Mooresburg, TN</title>
+<meta name="description" content="Concept site for Mooresburg Marine, marine repair on County Line Road in Mooresburg, Hawkins County, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2340; --navy-2:#0f2e52; --deep:#06172b; --orange:#ff6a13; --orange-2:#ff8a3d;
+  --white:#ffffff; --foam:#eef4fa; --mist:#c9d8e8; --ink:#0b1d33; --muted:#4a5f78; --line:#d7e2ee;
+  --rope:#c99a5b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--white);line-height:1.55;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.h{font-family:"Barlow Condensed",Inter,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.95;font-weight:800}
+.nw{white-space:nowrap}
+.eyebrow{font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:14px;color:var(--orange)}
+
+/* banner */
+.concept{background:var(--orange);color:#1a0c02;font-size:10px;letter-spacing:-.015em;font-weight:600;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(6,23,43,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-width:0}
+.brand-mark{width:36px;height:36px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:none}
+.brand-name{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.brand-name small{display:block;font-size:11px;letter-spacing:.2em;color:var(--mist);font-weight:600;margin-top:3px}
+.nav-links{display:none;gap:26px;font-size:14px;font-weight:600}
+.nav-links a{color:var(--mist);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px;transition:transform .2s,background .2s;white-space:nowrap}
+.nav-call:hover{background:var(--orange-2);transform:translateY(-1px)}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 80% at 80% 0%,#173f6c 0%,var(--navy) 45%,var(--deep) 100%);color:#fff;overflow:hidden;isolation:isolate}
+.hero .grid-lines{position:absolute;inset:0;z-index:-2;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,#000 0%,transparent 75%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
+.hero-inner{padding-top:40px;position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px}
+.hero .eyebrow:before{content:"";width:26px;height:2px;background:var(--orange)}
+.hero h1{font-size:clamp(46px,13.6vw,124px);margin:16px 0 18px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--orange);display:block}
+.hero p.lead{font-size:17px;color:var(--mist);max-width:520px}
+.hero p.lead strong{color:#fff;font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;padding:15px 18px;border-radius:12px;transition:transform .2s,box-shadow .2s,background .2s;min-height:52px}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 10px 28px -10px rgba(255,106,19,.8)}
+.btn-o:hover{transform:translateY(-2px);background:var(--orange-2)}
+.btn-g{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+.btn-g:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.hero .cta-row{gap:10px}.hero .btn{font-size:15px;padding:14px 15px}.hero .btn svg{width:16px;height:16px}
+.btn:active{transform:translateY(0) scale(.98)}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:13px;font-weight:600;color:#dbe7f3;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;display:inline-flex;align-items:center;gap:7px}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--orange);display:inline-block}
+.hero-art{position:relative;margin-top:26px;height:170px}
+.hero-art svg{position:absolute;inset:auto 0 0 0;width:100%;height:100%}
+.waves{position:relative;height:70px;margin-top:-1px;background:var(--deep)}
+.waves svg{position:absolute;bottom:0;left:0;max-width:none;width:200%;height:70px;animation:drift 18s linear infinite}
+.waves svg.w2{animation-duration:26s;opacity:.55}
+@keyframes drift{to{transform:translateX(-50%)}}
+.bob{animation:bob 4.5s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1.2deg)}}
+
+/* rope divider */
+.rope{height:14px;background:repeating-linear-gradient(115deg,var(--rope) 0 7px,#a87c43 7px 9px,#e0b77c 9px 14px);opacity:.9}
+
+/* sections */
+section{position:relative}
+.sec{padding:70px 0}
+.sec-head{max-width:640px;margin-bottom:30px}
+.sec-head h2{font-size:clamp(40px,10vw,68px);margin-top:10px;color:var(--navy)}
+.sec-head p{color:var(--muted);font-size:16px;margin-top:12px}
+
+/* service */
+.svc{background:var(--foam);overflow:hidden}
+.svc:before{content:"";position:absolute;right:-60px;top:30px;width:320px;height:320px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%230b2340' stroke-width='3' stroke-linecap='round'%3E%3Ccircle cx='50' cy='14' r='7'/%3E%3Cpath d='M50 21v66M32 34h36M16 62c4 16 18 26 34 26s30-10 34-26M16 62l-6 6M16 62l8 3M84 62l6 6M84 62l-8 3'/%3E%3C/svg%3E") no-repeat center/contain;opacity:.06;pointer-events:none}
+.svc-main{background:var(--navy);color:#fff;border-radius:22px;padding:30px 24px;position:relative;overflow:hidden}
+.svc-main .tag{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:6px}
+.svc-main h3{font-size:clamp(46px,12vw,78px);margin:16px 0 10px}
+.svc-main p{color:var(--mist);max-width:460px}
+.svc-main .gear{position:absolute;right:-30px;bottom:-30px;width:170px;opacity:.14;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.steps{display:grid;gap:14px;margin-top:16px}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;gap:16px;align-items:flex-start;transition:transform .25s,box-shadow .25s,border-color .25s}
+.step:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(11,35,64,.35);border-color:#b9cde2}
+.step .n{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:34px;color:var(--orange);line-height:1;min-width:34px}
+.step h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:23px;text-transform:uppercase;color:var(--navy);letter-spacing:.02em}
+.step p{color:var(--muted);font-size:15px;margin-top:3px}
+.step a{color:var(--navy);font-weight:600}
+
+/* why */
+.why{background:#fff}
+.why-grid{display:grid;gap:14px}
+.why-card{border-radius:18px;padding:24px;border:1px solid var(--line);position:relative;overflow:hidden;background:linear-gradient(180deg,#fff,#f7fafd)}
+.why-card .ic{width:48px;height:48px;border-radius:14px;background:var(--navy);display:grid;place-items:center;margin-bottom:14px}
+.why-card h4{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:25px;text-transform:uppercase;color:var(--navy);line-height:1.05}
+.why-card p{color:var(--muted);font-size:15px;margin-top:6px}
+.why-card:after{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:transform .35s}
+.why-card:hover:after{transform:scaleY(1)}
+
+/* hours */
+.hours{background:var(--navy);color:#fff;overflow:hidden}
+.hours .sec-head h2{color:#fff}
+.hours .sec-head p{color:var(--mist)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 0;text-align:center;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:var(--mist);text-transform:uppercase;position:relative}
+.day.today{background:var(--orange);color:#fff;border-color:var(--orange);box-shadow:0 10px 24px -10px rgba(255,106,19,.9)}
+.day.today:after{content:"Today";position:absolute;left:50%;top:-22px;transform:translateX(-50%);font-size:11px;letter-spacing:.14em;color:var(--orange)}
+.hours-note{margin-top:34px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.hours-note p{color:#dbe7f3;font-size:15.5px}
+.hours-note p strong{color:#fff}
+.hours-note .btn{align-self:flex-start}
+
+/* visit */
+.visit{background:var(--foam)}
+.visit-grid{display:grid;gap:16px}
+.map{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#dfe8f2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23c3d3e4' stroke-width='1'/%3E%3C/svg%3E");min-height:300px;box-shadow:0 20px 40px -26px rgba(11,35,64,.5)}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:300px;border:0;display:block}
+.map .pin{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:8px;font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--navy)}
+.contact{background:#fff;border-radius:20px;border:1px solid var(--line);padding:24px}
+.c-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)}
+.c-row:last-of-type{border-bottom:0}
+.c-row .ic{width:40px;height:40px;border-radius:12px;background:var(--foam);display:grid;place-items:center;flex:none}
+.c-row small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.c-row a,.c-row span{font-weight:600;color:var(--navy);text-decoration:none;font-size:14.5px;letter-spacing:-.01em;overflow-wrap:anywhere}
+.c-row a:hover{color:var(--orange)}
+.contact .cta-row{margin-top:18px}
+.contact .btn-g{color:var(--navy);border-color:var(--line);background:#fff}
+.contact .btn-g:hover{background:var(--foam)}
+
+/* footer */
+footer{background:var(--deep);color:var(--mist);padding:46px 0 34px;font-size:14px}
+footer .brand{margin-bottom:14px}
+footer .f-grid{display:grid;gap:22px}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:var(--orange)}
+footer .credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:13px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(6,23,43,.97);border-top:1px solid rgba(255,255,255,.1);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px}
+.callbar .c1{background:var(--orange);color:#fff}
+.callbar .c2{border:1.5px solid rgba(255,255,255,.3);color:#fff}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+
+@media (min-width:760px){
+  .nav-links{display:flex}
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:end;padding-top:80px}
+  .hero-art{height:380px;margin-top:0}
+  .hero h1{font-size:clamp(64px,7.6vw,112px)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .svc-wrap{display:grid;grid-template-columns:1fr;gap:6px}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1.3fr 1fr}
+  .map,.map iframe{min-height:440px}
+  .hours-note{flex-direction:row;align-items:center;justify-content:space-between}
+  .hours-note .btn{align-self:center;flex:none}
+  .day{padding:20px 0;font-size:22px}
+  footer .f-grid{grid-template-columns:2fr 1fr 1fr}
+  .sec{padding:100px 0}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Mooresburg Marine. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mooresburg Marine home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.2V21M7 11h10M4 15c1 3.6 4.3 6 8 6s7-2.4 8-6"/></svg>
+      </span>
+      <span class="brand-name">Mooresburg Marine<small>Marine repair · TN</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#service">Service</a><a href="#why">Why us</a><a href="#hours">Hours</a><a href="#visit">Find us</a>
+    </nav>
+    <a class="nav-call" href="tel:+14232930488" aria-label="Call Mooresburg Marine">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="grid-lines" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Mooresburg · Hawkins County, TN</span>
+      <h1 class="h">Get back<br>on the water.<em>Marine repair.</em></h1>
+      <p class="lead">Marine repair on <strong>County Line Road in Mooresburg</strong>, Hawkins County, in Cherokee Lake country. One call and you're talking to the shop.</p>
+      <div class="cta-row">
+        <a class="btn btn-o" href="tel:+14232930488">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call 423-293-0488</a>
+        <a class="btn btn-g" href="#visit">Directions</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><i></i>Marine repair</span>
+        <span class="chip"><i></i>Ask for Ken Dixon</span>
+        <span class="chip"><i></i>Hawkins County Chamber listed</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="hull" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c9d8e8"/></linearGradient>
+        </defs>
+        <!-- sun -->
+        <circle cx="300" cy="70" r="46" fill="#ff6a13" opacity=".9"/>
+        <circle cx="300" cy="70" r="64" fill="none" stroke="#ff6a13" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 7"/>
+        <!-- ridges -->
+        <path d="M0 200 L60 150 L110 178 L170 128 L230 170 L290 140 L350 172 L400 150 V230 H0Z" fill="#14365e"/>
+        <path d="M0 215 L80 182 L150 205 L220 178 L300 204 L400 186 V240 H0Z" fill="#0f2e52"/>
+        <!-- boat -->
+        <g class="bob">
+          <path d="M120 222 H290 L270 250 H140 Z" fill="url(#hull)"/>
+          <path d="M140 250 H270 L266 256 H144Z" fill="#ff6a13"/>
+          <path d="M170 222 V200 H235 L252 222Z" fill="#ffffff" opacity=".92"/>
+          <path d="M182 206 H230 L240 218 H182Z" fill="#0b2340"/>
+          <path d="M282 226 l10 2 -2 26 -8 -2z" fill="#0b2340"/>
+          <rect x="286" y="250" width="5" height="14" rx="2" fill="#0b2340"/>
+        </g>
+        <!-- water -->
+        <path d="M0 248 Q25 240 50 248 T100 248 T150 248 T200 248 T250 248 T300 248 T350 248 T400 248 V300 H0Z" fill="#06172b"/>
+        <path d="M10 262 Q30 256 50 262 T90 262" fill="none" stroke="#3d6c9c" stroke-width="2" stroke-linecap="round"/>
+        <path d="M200 272 Q225 265 250 272 T300 272" fill="none" stroke="#3d6c9c" stroke-width="2" stroke-linecap="round"/>
+        <path d="M320 258 Q340 252 360 258" fill="none" stroke="#ff6a13" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <div class="waves" aria-hidden="true">
+    <svg class="w2" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 30 Q90 10 180 30 T360 30 T540 30 T720 30 T900 30 T1080 30 T1260 30 T1440 30 V70 H0Z" fill="#c9d8e8"/></svg>
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 42 Q90 24 180 42 T360 42 T540 42 T720 42 T900 42 T1080 42 T1260 42 T1440 42 V70 H0Z" fill="#eef4fa"/></svg>
+  </div>
+</section>
+
+<section class="sec svc" id="service">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What we do</span>
+      <h2 class="h">One job, done right.</h2>
+      <p>Mooresburg Marine is listed with the Rogersville / Hawkins County Chamber of Commerce as a marine repair shop. Here's how to get your boat in.</p>
+    </div>
+    <div class="svc-wrap">
+      <div class="svc-main rv">
+        <span class="tag">Service</span>
+        <h3 class="h">Marine repair</h3>
+        <p>Something not running right before a weekend on the lake? Call the shop, describe the problem and ask what they can take on.</p>
+        <svg class="gear" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="5" aria-hidden="true"><circle cx="50" cy="50" r="16"/><path d="M50 8v14M50 78v14M8 50h14M78 50h14M20 20l10 10M70 70l10 10M80 20 70 30M30 70 20 80"/><circle cx="50" cy="50" r="30"/></svg>
+      </div>
+      <div class="steps">
+        <div class="step rv"><span class="n">01</span><div><h4>Call the shop</h4><p>Ring <a href="tel:+14232930488">423-293-0488</a> and tell them what's going on with your boat.</p></div></div>
+        <div class="step rv"><span class="n">02</span><div><h4>Haul it in</h4><p>Bring it to County Line Road in Mooresburg, Hawkins County.</p></div></div>
+        <div class="step rv"><span class="n">03</span><div><h4>Back on the lake</h4><p>Questions in between? Email <a href="mailto:Mooresburgmarine@yahoo.com">Mooresburgmarine@yahoo.com</a>.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rope" aria-hidden="true"></div>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Why Mooresburg Marine</span>
+      <h2 class="h">Close to the lake. Easy to reach.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <h4>Right here in Mooresburg</h4>
+        <p>On County Line Road in Hawkins County, a local shop instead of a long haul to the city.</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+        <h4>A real person to talk to</h4>
+        <p>Ken Dixon, Business Manager, is the shop's listed contact. Call and ask for Ken.</p>
+      </div>
+      <div class="why-card rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6a13" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div>
+        <h4>Chamber listed</h4>
+        <p>Listed in the Rogersville / Hawkins County Chamber of Commerce's East Tennessee Visitors Guide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec hours" id="hours">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Hours</span>
+      <h2 class="h">Call before you haul.</h2>
+      <p>Hours aren't posted online yet, so a quick call saves you a wasted trip with the trailer.</p>
+    </div>
+    <div class="days rv" id="days" aria-label="Days of the week">
+      <div class="day" data-d="1">Mon</div><div class="day" data-d="2">Tue</div><div class="day" data-d="3">Wed</div><div class="day" data-d="4">Thu</div><div class="day" data-d="5">Fri</div><div class="day" data-d="6">Sat</div><div class="day" data-d="0">Sun</div>
+    </div>
+    <div class="hours-note rv">
+      <p><strong id="todayline">Heading over today?</strong> Call <strong class="nw">423-293-0488</strong> to check the shop is open and has room for your boat.</p>
+      <a class="btn btn-o" href="tel:+14232930488">Call to check hours</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Find us</span>
+      <h2 class="h">County Line Road, Mooresburg.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="map rv">
+        <div class="pin" aria-hidden="true"><svg width="44" height="44" viewBox="0 0 24 24" fill="#ff6a13"><path d="M12 22s-7.5-6.6-7.5-12a7.5 7.5 0 0 1 15 0c0 5.4-7.5 12-7.5 12z"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></svg>Mooresburg, TN</div>
+        <iframe title="Map to Mooresburg Marine" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Mooresburg%20Marine%2C%20County%20Line%20Rd%2C%20Mooresburg%2C%20TN%2037811&output=embed"></iframe>
+      </div>
+      <div class="contact rv">
+        <div class="c-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b2340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><small>Phone</small><a href="tel:+14232930488">423-293-0488</a></div></div>
+        <div class="c-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b2340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>Email</small><a href="mailto:Mooresburgmarine@yahoo.com">Mooresburgmarine@yahoo.com</a></div></div>
+        <div class="c-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b2340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Location</small><span>County Line Road, Mooresburg, TN 37811</span></div></div>
+        <div class="c-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0b2340"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.9-4.5 4.6V11H7v4h2.5v7h4v-7H16l.6-4h-3.1V9c0-.6.4-1 1-1z"/></svg></span><div><small>Facebook</small><a href="https://www.facebook.com/p/Mooresburg-Marine-100068268592232/" target="_blank" rel="noopener">Mooresburg Marine</a></div></div>
+        <div class="cta-row">
+          <a class="btn btn-o" href="tel:+14232930488">Tap to call</a>
+          <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&destination=Mooresburg%20Marine%2C%20County%20Line%20Rd%2C%20Mooresburg%2C%20TN%2037811" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.2V21M7 11h10M4 15c1 3.6 4.3 6 8 6s7-2.4 8-6"/></svg></span><span class="brand-name">Mooresburg Marine<small>Marine repair · TN</small></span></a>
+        <p>Marine repair on County Line Road, Mooresburg, Hawkins County, Tennessee.</p>
+      </div>
+      <div><p><a href="tel:+14232930488">423-293-0488</a></p><p><a href="mailto:Mooresburgmarine@yahoo.com">Email the shop</a></p></div>
+      <div><p><a href="https://www.facebook.com/p/Mooresburg-Marine-100068268592232/" target="_blank" rel="noopener">Facebook</a></p><p><a href="#visit">Directions</a></p></div>
+    </div>
+    <div class="credit"><span>© Mooresburg Marine</span><span>Concept by Code Craft Media</span></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c1" href="tel:+14232930488"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the shop</a>
+  <a class="c2" href="https://www.google.com/maps/dir/?api=1&destination=Mooresburg%20Marine%2C%20County%20Line%20Rd%2C%20Mooresburg%2C%20TN%2037811" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var el=document.querySelector('.day[data-d="'+d+'"]'); if(el){el.classList.add('today');el.setAttribute('aria-current','date');}
+  var t=document.getElementById('todayline'); if(t) t.textContent='Heading over this '+names[d]+'?';
+  var root=document.documentElement; root.classList.add('js');
+  var items=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    items.forEach(function(i){io.observe(i)});
+  } else { root.classList.add('show-all'); }
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

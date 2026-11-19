@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hair by Jessica Patrice — Hendersonville</title>
+<meta name="description" content="Color, highlights, balayage, silk press, cuts and more at 217 Indian Lake Blvd, Hendersonville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lake:#0f4c5c; --lake-deep:#0a3440; --lake-ink:#072a33; --teal:#1f7a8c;
+  --sand:#f3e9d8; --sand-2:#e9dcc4; --sand-3:#d9c7a6; --coral:#ef6f5e; --coral-deep:#d4533f;
+  --ink:#16313a; --muted:#4d6670; --white:#fffdf8;
+  --display:'DM Serif Display', Georgia, serif; --body:'Rubik', system-ui, -apple-system, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--sand);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.concept{background:var(--lake-ink);color:#cfe3e6;font-size:11.5px;text-align:center;padding:7px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:500}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(15,76,92,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--display);color:var(--sand);font-size:21px;text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:9px}
+.brand svg{width:26px;height:26px}
+.nav ul{display:none;list-style:none;gap:28px}
+.nav ul a{color:#d8eaec;text-decoration:none;font-size:14.5px;letter-spacing:.03em;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-5px;height:2px;background:var(--coral);transition:right .3s}
+.nav ul a:hover::after{right:0}
+.nav .cta{background:var(--coral);color:#fff;text-decoration:none;font-weight:500;font-size:14px;padding:9px 16px;border-radius:999px;transition:background .2s,transform .2s}
+.nav .cta:hover{background:var(--coral-deep);transform:translateY(-1px)}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,var(--lake) 0%,var(--lake-deep) 62%,var(--lake-ink) 100%);color:var(--sand);overflow:hidden;padding:46px 0 0}
+.hero .sun{display:none;position:absolute;right:-60px;top:30px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#ffb199 0%,var(--coral) 45%,rgba(239,111,94,0) 72%);opacity:.55;filter:blur(2px);animation:glow 7s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translateY(14px) scale(1.05);opacity:.7}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#9fd0d7;font-weight:500}
+.eyebrow i{width:26px;height:1px;background:var(--coral);display:inline-block}
+.hero h1{z-index:2;font-family:var(--display);font-weight:400;font-size:clamp(42px,11.5vw,88px);line-height:1.02;margin:16px 0 18px;letter-spacing:-.01em;position:relative}
+.hero h1 em{color:var(--coral);font-style:italic}
+.hero p.sub{font-size:17px;color:#cfe3e6;max-width:520px;font-weight:300}
+.hero p.sub b{color:#fff;font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:500;font-size:15.5px;padding:14px 22px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-coral{background:var(--coral);color:#fff;box-shadow:0 10px 26px -10px rgba(239,111,94,.9)}
+.btn-coral:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(243,233,216,.45);color:var(--sand)}
+.btn-ghost:hover{background:rgba(243,233,216,.1);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:#bfdde1;margin-top:12px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8fb3b9}
+.dot.open{background:#5fe0a6;box-shadow:0 0 0 0 rgba(95,224,166,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(95,224,166,0)}100%{box-shadow:0 0 0 0 rgba(95,224,166,0)}}
+.hero-grid{display:grid;gap:26px;position:relative;z-index:2}
+.hero-art{position:relative;margin:0 -22px}
+@media (max-width:759px){.hero-art .sc{display:none}.hero-art{margin-top:-20px}}
+.ripples{width:100%;height:auto}
+.ripples path{fill:none;stroke-linecap:round}
+.r1{animation:drift 9s ease-in-out infinite alternate}
+.r2{animation:drift 11s ease-in-out infinite alternate-reverse}
+.r3{animation:drift 13s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translateX(-26px)}}
+.shore{display:block;width:100%;height:70px;margin-top:-1px}
+
+/* sections */
+section{padding:72px 0}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral-deep);font-weight:600}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,8.5vw,54px);line-height:1.06;color:var(--lake-deep);margin:10px 0 14px}
+h2 em{font-style:italic;color:var(--teal)}
+.lede{color:var(--muted);max-width:560px;font-size:16.5px}
+
+/* menu */
+.menu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 22px}
+.tab{border:1.5px solid var(--sand-3);background:transparent;color:var(--lake-deep);font:500 14px var(--body);padding:9px 15px;border-radius:999px;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--teal)}
+.tab[aria-selected="true"]{background:var(--lake);border-color:var(--lake);color:var(--sand)}
+.menu-grid{display:grid;gap:16px}
+.cat{background:var(--white);border-radius:22px;padding:24px 22px 10px;box-shadow:0 1px 0 var(--sand-3),0 24px 40px -30px rgba(10,52,64,.45);position:relative;overflow:hidden}
+.cat::before{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;border:1.5px solid rgba(31,122,140,.13);box-shadow:0 0 0 14px rgba(31,122,140,.04),0 0 0 30px rgba(31,122,140,.03)}
+.cat h3{font-family:var(--display);font-weight:400;font-size:27px;color:var(--lake-deep);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.cat h3 span{width:10px;height:10px;border-radius:50%;background:var(--coral)}
+.cat.hide{display:none}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-top:1px dashed var(--sand-3)}
+.svc:first-of-type{border-top:0}
+.svc .n{font-weight:500;color:var(--ink)}
+.svc .p{font-family:var(--display);font-size:21px;color:var(--coral-deep);text-align:right;line-height:1.2}
+.svc .d{grid-column:1/-1;font-size:13.5px;color:var(--muted)}
+.svc .t{font-size:12.5px;color:var(--teal);font-weight:500;letter-spacing:.02em}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+
+/* why */
+.why{background:var(--lake-deep);color:var(--sand);position:relative;overflow:hidden}
+.why h2{color:var(--sand)}
+.why h2 em{color:var(--coral)}
+.why .lede{color:#bcd8dc}
+.why-bg{position:absolute;inset:auto 0 0 0;opacity:.25;pointer-events:none}
+.facts{display:grid;gap:14px;margin-top:30px;position:relative}
+.fact{border:1px solid rgba(243,233,216,.16);border-radius:20px;padding:22px;background:rgba(255,255,255,.03);transition:transform .25s,border-color .25s}
+.fact:hover{transform:translateY(-3px);border-color:rgba(239,111,94,.6)}
+.fact .big{font-family:var(--display);font-size:40px;color:var(--coral);line-height:1}
+.fact h3{font-weight:500;font-size:17px;margin:8px 0 4px;color:#fff}
+.fact p{font-size:14.5px;color:#bcd8dc}
+
+/* hours + visit */
+.visit-grid{display:grid;gap:22px;margin-top:28px}
+.card{background:var(--white);border-radius:22px;padding:24px 22px;box-shadow:0 24px 40px -30px rgba(10,52,64,.45)}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:12px 12px;border-radius:12px;font-size:15.5px}
+.hours li + li{margin-top:2px}
+.hours li .d{font-weight:500}
+.hours li.closed{color:#8a9aa0}
+.hours li.today{background:var(--lake);color:var(--sand)}
+.hours li.today .d::after{content:"Today";margin-left:10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--coral);color:#fff;padding:3px 8px;border-radius:999px;vertical-align:2px}
+.addr{font-family:var(--display);font-size:25px;line-height:1.2;color:var(--lake-deep)}
+.addr small{display:block;font-family:var(--body);font-size:14px;color:var(--muted);margin-top:6px}
+.map{border-radius:18px;overflow:hidden;margin-top:18px;border:1px solid var(--sand-3);aspect-ratio:4/3;background:var(--sand-2)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.contact-row{display:grid;gap:10px;margin-top:18px}
+.contact-row a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:14px 16px;border-radius:14px;background:var(--sand);font-weight:500;color:var(--lake-deep);transition:background .2s,transform .2s;word-break:break-word}
+.contact-row a:hover{background:var(--sand-2);transform:translateX(3px)}
+.contact-row svg{width:20px;height:20px;flex:none;color:var(--coral-deep)}
+
+/* final cta */
+.final{background:linear-gradient(160deg,var(--coral) 0%,#f08a6c 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{color:#fff}
+.final h2 em{color:var(--lake-ink)}
+.final p{max-width:460px;margin:0 auto;color:var(--lake-ink);font-size:17px}
+.final .btns{justify-content:center}
+.final .btn-dark{background:var(--lake-ink);color:var(--sand)}
+.final .btn-dark:hover{background:var(--lake);transform:translateY(-2px)}
+.final .btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.final .btn-line:hover{background:rgba(255,255,255,.12)}
+.final svg.rip{position:absolute;left:50%;top:50%;width:900px;transform:translate(-50%,-50%);opacity:.18;pointer-events:none}
+
+footer{background:var(--lake-ink);color:#9fbcc1;padding:34px 0 30px;font-size:13.5px}
+footer .wrap{display:flex;flex-direction:column;gap:8px}
+footer b{color:var(--sand);font-family:var(--display);font-weight:400;font-size:20px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(7,42,51,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:500;font-size:15px;height:50px;border-radius:14px}
+.callbar .c{background:rgba(243,233,216,.12);color:var(--sand)}
+.callbar .b{background:var(--coral);color:#fff}
+.callbar svg{width:18px;height:18px}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.reveal-all .reveal{opacity:1!important;transform:none!important}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero{padding-top:70px}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center}
+  .hero-art{margin:0}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:.9fr 1.1fr;align-items:start}
+  .contact-row{grid-template-columns:1fr 1fr}
+  section{padding:100px 0}
+  .callbar{left:auto;right:22px;bottom:22px;width:360px;border-radius:20px;padding:10px;border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 40px -18px rgba(0,0,0,.5)}
+  body{padding-bottom:0}
+  footer{padding-bottom:100px}
+}
+@media (min-width:760px){.hero .sun{display:block}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Hair by Jessica Patrice. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hair by Jessica Patrice home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#ef6f5e" stroke-width="1.6"/><path d="M6 15c3-2.4 5.5-2.4 8.5 0s5.5 2.4 8.5 0 3.5-1.6 3.5-1.6M6 20c3-2.4 5.5-2.4 8.5 0s5.5 2.4 8.5 0" fill="none" stroke="#f3e9d8" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Jessica Patrice
+    </a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#why">Why Jessica</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="cta" href="https://square.site/book/V9XGWARK7YH3Z/hair-by-jessica-patrice-hendersonville-tn">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i>Hendersonville, Tennessee</span>
+      <h1>Sun-kissed color, <em>lakeside</em> calm.</h1>
+      <p class="sub">Balayage, highlights, silk presses and cuts with Jessica on <b>Indian Lake Blvd</b>, with every price posted up front.</p>
+      <div class="btns">
+        <a class="btn btn-coral" href="https://square.site/book/V9XGWARK7YH3Z/hair-by-jessica-patrice-hendersonville-tn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book online</a>
+        <a class="btn btn-ghost" href="tel:+16155619238">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(615) 561-9238</a>
+      </div>
+      <div class="status"><span class="dot" id="dot"></span><span id="status">Open Tue, Thu, Fri &amp; Sat</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg class="ripples" viewBox="0 0 440 300">
+        <defs>
+          <linearGradient id="hg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ef6f5e" stop-opacity=".9"/><stop offset="1" stop-color="#ef6f5e" stop-opacity="0"/></linearGradient>
+        </defs>
+        <!-- sun reflection -->
+        <ellipse cx="300" cy="120" rx="62" ry="62" fill="url(#hg)" opacity=".55"/>
+        <g class="r1" stroke="#f3e9d8" stroke-width="2" opacity=".55">
+          <path d="M20 150c30-10 60-10 90 0s60 10 90 0 60-10 90 0 60 10 90 0 60-10 90 0"/>
+        </g>
+        <g class="r2" stroke="#9fd0d7" stroke-width="1.6" opacity=".55">
+          <path d="M-10 182c30-9 60-9 90 0s60 9 90 0 60-9 90 0 60 9 90 0 60-9 90 0 60 9 90 0"/>
+          <path d="M40 210c26-8 52-8 78 0s52 8 78 0 52-8 78 0 52 8 78 0 52-8 78 0"/>
+        </g>
+        <g class="r3" stroke="#ef6f5e" stroke-width="2.2" opacity=".85">
+          <path d="M240 168c14-5 28-5 42 0s28 5 42 0 28-5 42 0"/>
+          <path d="M262 190c11-4 22-4 33 0s22 4 33 0"/>
+        </g>
+        <g class="r1" stroke="#f3e9d8" stroke-width="1.3" opacity=".3">
+          <path d="M-20 240c34-8 68-8 102 0s68 8 102 0 68-8 102 0 68 8 102 0 68-8 102 0"/>
+          <path d="M10 268c34-7 68-7 102 0s68 7 102 0 68-7 102 0 68 7 102 0"/>
+        </g>
+        <!-- comb + scissors silhouette on the shore -->
+        <g class="sc" transform="translate(70 66) rotate(-18)" fill="none" stroke="#f3e9d8" stroke-width="2" opacity=".85">
+          <circle cx="0" cy="0" r="11"/><circle cx="0" cy="34" r="11"/>
+          <path d="M9 6 L70 30 M9 28 L70 4" stroke-linecap="round"/>
+          <circle cx="40" cy="17" r="2.4" fill="#ef6f5e" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <svg class="shore" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c120-26 240-26 360 0s240 26 360 0 240-26 360 0 240 26 360 0v30H0z" fill="#f3e9d8"/><path d="M0 40c120-26 240-26 360 0s240 26 360 0 240-26 360 0 240 26 360 0" fill="none" stroke="#ef6f5e" stroke-width="2" opacity=".5"/></svg>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">The menu</span>
+      <h2>24 services, <em>every price posted.</em></h2>
+      <p class="lede">From a quick eyebrow wax to a full balayage, here's exactly what Jessica offers and what it costs, straight from her booking page.</p>
+    </div>
+    <div class="menu-tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts &amp; Style</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="smooth">Smoothing</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="extra">Extras</button>
+    </div>
+    <div class="menu-grid">
+      <div class="cat reveal" data-c="color">
+        <h3><span></span>Color &amp; Highlights</h3>
+        <div class="svc"><span class="n">Balayage</span><span class="p">$120</span><span class="d">Hand-painted highlights for a natural, sun-kissed look · <span class="t">2 hr 30 min</span></span></div>
+        <div class="svc"><span class="n">Full highlights</span><span class="p">$90</span><span class="d"><span class="t">2 hr</span></span></div>
+        <div class="svc"><span class="n">Partial highlights</span><span class="p">$70</span><span class="d">Highlights on top of the head · <span class="t">2 hr 30 min</span></span></div>
+        <div class="svc"><span class="n">All-over color</span><span class="p">$75</span><span class="d"><span class="t">2 hr 45 min</span></span></div>
+        <div class="svc"><span class="n">Base color</span><span class="p">$65</span><span class="d"><span class="t">2 hr</span></span></div>
+        <div class="svc"><span class="n">Shine glaze</span><span class="p">$25</span><span class="d"><span class="t">55 min</span></span></div>
+        <div class="svc"><span class="n">Color consultation</span><span class="p">$15</span><span class="d"><span class="t">30 min</span></span></div>
+      </div>
+      <div class="cat reveal" data-c="cut">
+        <h3><span></span>Cuts &amp; Styling</h3>
+        <div class="svc"><span class="n">Haircut</span><span class="p">$20</span><span class="d">Shampoo, cut and dry · <span class="t">30 min</span></span></div>
+        <div class="svc"><span class="n">Kids cut</span><span class="p">$18</span><span class="d"><span class="t">30 min</span></span></div>
+        <div class="svc"><span class="n">Cut &amp; Style</span><span class="p">$40</span><span class="d">Haircut with styling · <span class="t">1 hr 20 min</span></span></div>
+        <div class="svc"><span class="n">Blowout</span><span class="p">$40</span><span class="d">Shampoo and round-brush blow dry, no flat iron · <span class="t">1 hr 15 min</span></span></div>
+        <div class="svc"><span class="n">Shampoo Style</span><span class="p">$35</span><span class="d">Shampoo, conditioning and blow-dry styling · <span class="t">45 min</span></span></div>
+        <div class="svc"><span class="n">Up-do</span><span class="p">$50</span><span class="d"><span class="t">2 hr</span></span></div>
+        <div class="svc"><span class="n">Flat iron straightening</span><span class="p">$20</span><span class="d"><span class="t">30 min</span></span></div>
+      </div>
+      <div class="cat reveal" data-c="smooth">
+        <h3><span></span>Smoothing &amp; Texture</h3>
+        <div class="svc"><span class="n">Silk Press</span><span class="p">$50</span><span class="d">Clarifying and moisturizing wash, blow dry and flat-iron straightening · <span class="t">1 hr</span></span></div>
+        <div class="svc"><span class="n">Keratin treatment</span><span class="p">$120</span><span class="d">Smooths frizz only · <span class="t">2 hr 30 min</span></span></div>
+        <div class="svc"><span class="n">Virgin relaxer</span><span class="p">$100</span><span class="d"><span class="t">2 hr 30 min</span></span></div>
+        <div class="svc"><span class="n">Relaxer touch-up</span><span class="p">$60</span><span class="d"><span class="t">2 hr</span></span></div>
+        <div class="svc"><span class="n">Perm</span><span class="p">$80</span><span class="d"><span class="t">1 hr 50 min</span></span></div>
+      </div>
+      <div class="cat reveal" data-c="extra">
+        <h3><span></span>Extras &amp; Finishing</h3>
+        <div class="svc"><span class="n">Tape-in extensions</span><span class="p">$60</span><span class="d"><span class="t">1 hr</span></span></div>
+        <div class="svc"><span class="n">Makeup</span><span class="p">$40</span><span class="d"><span class="t">2 hr</span></span></div>
+        <div class="svc"><span class="n">Deep condition</span><span class="p">$15</span><span class="d">Conditioning with heat treatment · <span class="t">15 min</span></span></div>
+        <div class="svc"><span class="n">Eyebrow wax</span><span class="p">$12</span><span class="d"><span class="t">15 min</span></span></div>
+        <div class="svc"><span class="n">Shampoo</span><span class="p">$10</span><span class="d"><span class="t">15 min</span></span></div>
+      </div>
+    </div>
+    <p class="note">Prices and times as listed on Jessica's Square booking page.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="why-bg" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#9fd0d7" stroke-width="1.5"><path d="M0 80c120-24 240-24 360 0s240 24 360 0 240-24 360 0 240 24 360 0"/><path d="M0 140c120-24 240-24 360 0s240 24 360 0 240-24 360 0 240 24 360 0"/><path d="M0 200c120-24 240-24 360 0s240 24 360 0 240-24 360 0 240 24 360 0"/></g></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker" style="color:#ff9a8a">Why book with Jessica</span>
+      <h2>One chair, <em>the whole menu.</em></h2>
+      <p class="lede">Color, smoothing, cuts, up-dos, brows and makeup, all booked in a couple of taps.</p>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><div class="big">$10–$120</div><h3>Prices posted up front</h3><p>Every one of the 24 services shows its price and time before you book. No guessing.</p></div>
+      <div class="fact reveal"><div class="big">24/7</div><h3>Book online anytime</h3><p>Pick a service and a time on her Square booking page, day or night.</p></div>
+      <div class="fact reveal"><div class="big">Every texture</div><h3>Silk press to balayage</h3><p>Relaxers, keratin and silk presses sit right beside highlights, perms and kids' cuts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Hours &amp; visit</span>
+      <h2>Find Jessica by <em>Indian Lake.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <ul class="hours" id="hours">
+          <li data-d="0" class="closed"><span class="d">Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span class="d">Monday</span><span>Closed</span></li>
+          <li data-d="2"><span class="d">Tuesday</span><span>9:00 – 2:00</span></li>
+          <li data-d="3" class="closed"><span class="d">Wednesday</span><span>Closed</span></li>
+          <li data-d="4"><span class="d">Thursday</span><span>11:00 – 1:30</span></li>
+          <li data-d="5"><span class="d">Friday</span><span>11:00 – 7:00</span></li>
+          <li data-d="6"><span class="d">Saturday</span><span>9:00 – 3:00</span></li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <p class="addr">217 Indian Lake Blvd, Suite 300<small>Hendersonville, TN 37075</small></p>
+        <div class="map"><iframe title="Map to 217 Indian Lake Blvd, Hendersonville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=217%20Indian%20Lake%20Blvd%20Suite%20300%2C%20Hendersonville%2C%20TN%2037075&output=embed"></iframe></div>
+        <div class="contact-row">
+          <a href="tel:+16155619238"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(615) 561-9238</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=217%20Indian%20Lake%20Blvd%2C%20Hendersonville%2C%20TN%2037075"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get directions</a>
+          <a href="mailto:hairbyjessicapatrice@gmail.com" style="grid-column:1/-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>hairbyjessicapatrice@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="rip" viewBox="0 0 900 900" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2"><circle cx="450" cy="450" r="90"/><circle cx="450" cy="450" r="170"/><circle cx="450" cy="450" r="260"/><circle cx="450" cy="450" r="360"/></g></svg>
+  <div class="wrap reveal" style="position:relative">
+    <span class="kicker" style="color:var(--lake-ink)">Ready when you are</span>
+    <h2>Your next appointment is <em>a tap away.</em></h2>
+    <p>Choose your service and time online, or call Jessica directly.</p>
+    <div class="btns">
+      <a class="btn btn-dark" href="https://square.site/book/V9XGWARK7YH3Z/hair-by-jessica-patrice-hendersonville-tn">Book online</a>
+      <a class="btn btn-line" href="tel:+16155619238">Call (615) 561-9238</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Hair by Jessica Patrice</b>
+    <span>217 Indian Lake Blvd, Suite 300 · Hendersonville, TN 37075</span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c" href="tel:+16155619238"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/V9XGWARK7YH3Z/hair-by-jessica-patrice-hendersonville-tn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Book now</a>
+</nav>
+
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js');
+  // hours: [open,close] in minutes
+  var H={2:[540,840],4:[660,810],5:[660,1140],6:[540,900]};
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+(mm?':'+String(mm).padStart(2,'0'):'')+' '+ap}
+  try{
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday), now=(+o.hour%24)*60+(+o.minute);
+    var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+    var s=document.getElementById('status'), dot=document.getElementById('dot'), t=H[day];
+    if(t && now>=t[0] && now<t[1]){dot.classList.add('open');s.textContent='Open now · until '+fmt(t[1]);}
+    else{
+      for(var i=0;i<8;i++){var d=(day+i)%7,h=H[d]; if(h && (i>0 || now<h[0])){s.textContent='Closed now · opens '+(i===0?'today':i===1?'tomorrow':names[d])+' at '+fmt(h[0]);break;}}
+    }
+  }catch(e){}
+  // tabs
+  var tabs=document.querySelectorAll('.tab'), cats=document.querySelectorAll('.cat');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    var f=b.dataset.f; cats.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.dataset.c!==f); c.classList.add('in')});
+  })});
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else root.classList.add('reveal-all');
+  setTimeout(function(){root.classList.add('reveal-all')},1500);
+})();
+</script>
+</body>
+</html>

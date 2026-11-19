@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>InStyle Nail Salon — Cleveland, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#7d8f74; --sage-d:#5d6d55; --sage-dd:#3f4b3a; --clay:#d9a79b; --clay-d:#b9786a;
+  --bone:#f5efe4; --bone-2:#ece3d3; --ink:#2b2f28; --muted:#5f655a; --line:rgba(63,75,58,.18);
+  --card:#fbf8f2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bone);color:var(--ink);font-family:"Albert Sans",system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--sage-dd);color:#efe9dc;font-size:11.5px;text-align:center;padding:7px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(245,239,228,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Instrument Serif",serif;font-size:26px;text-decoration:none;color:var(--sage-dd);display:flex;align-items:center;gap:8px}
+.logo i{font-style:italic;color:var(--clay-d)}
+.navlinks{display:none;gap:28px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--sage-dd)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;border:1.5px solid transparent}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--sage-dd);color:#f7f2e8;box-shadow:0 8px 20px -10px rgba(63,75,58,.7)}
+.btn-p:hover{background:var(--sage-d);transform:translateY(-2px)}
+.btn-o{border-color:var(--sage-dd);color:var(--sage-dd)}
+.btn-o:hover{background:var(--sage-dd);color:#f7f2e8}
+.btn-sm{padding:9px 16px;font-size:13px}
+/* hero */
+.hero{position:relative;padding:26px 0 56px;overflow:hidden}
+.hero .wrap{display:grid;gap:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d)}
+.eyebrow:before{content:"";width:22px;height:1.5px;background:var(--clay-d)}
+.hero h1{font-size:clamp(50px,13.5vw,98px);margin:14px 0 16px;color:var(--sage-dd)}
+.hero h1 em{color:var(--clay-d)}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--sage-dd)}
+.archart{position:relative;justify-self:center;width:min(300px,78vw);aspect-ratio:3/4}
+.arch{position:absolute;inset:0;border-radius:999px 999px 26px 26px;background:linear-gradient(170deg,#e8c3b9 0%,var(--clay) 55%,#c98f81 100%);overflow:hidden;box-shadow:0 30px 60px -30px rgba(120,70,60,.55)}
+.arch:after{content:"";position:absolute;inset:12px;border-radius:999px 999px 18px 18px;border:1.5px solid rgba(255,250,240,.6)}
+.arch2{position:absolute;width:44%;aspect-ratio:3/4;right:-10%;bottom:-6%;border-radius:999px 999px 18px 18px;background:var(--sage);box-shadow:0 20px 40px -20px rgba(40,50,35,.6)}
+.arch2 svg{position:absolute;inset:0;margin:auto}
+.archart .hand{position:absolute;inset:0}
+.badge{position:absolute;left:-8%;bottom:12%;background:var(--card);border-radius:18px;padding:10px 14px;font-size:12px;line-height:1.35;box-shadow:0 14px 30px -16px rgba(0,0,0,.35);border:1px solid var(--line)}
+.badge b{display:block;font-family:"Instrument Serif",serif;font-size:24px;font-weight:400;color:var(--clay-d)}
+.sprig{position:absolute;pointer-events:none;opacity:.55}
+.sway{transform-origin:50% 100%;animation:sway 7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2.5deg)}}
+.float{animation:fl 6s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+/* section */
+section{padding:64px 0;position:relative;overflow:hidden}
+.sec-h{margin-bottom:28px}
+.sec-h h2{font-size:clamp(40px,10vw,64px);color:var(--sage-dd)}
+.sec-h h2 em{color:var(--clay-d)}
+.sec-h p{color:var(--muted);margin-top:8px;max-width:34em}
+/* menu */
+.menu{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 18px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1.5px solid var(--line);background:transparent;border-radius:999px;padding:9px 16px;font:600 14px "Albert Sans",sans-serif;color:var(--sage-dd);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--sage)}
+.tab[aria-selected=true]{background:var(--sage-dd);border-color:var(--sage-dd);color:#f7f2e8}
+.groups{display:grid;gap:16px}
+.group{border-radius:160px 160px 22px 22px;background:var(--bone);border:1px solid var(--line);padding:46px 22px 18px;position:relative}
+.group h3{font-size:34px;text-align:center;color:var(--sage-dd)}
+.group .gi{display:block;margin:0 auto 6px}
+.group ul{list-style:none;margin-top:12px}
+.group li{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.group li:last-child{border-bottom:0}
+.group li span.n{flex:1}
+.group li small{display:block;color:var(--muted);font-size:12.5px}
+.group li b{font-weight:600;color:var(--clay-d);white-space:nowrap}
+.menu-note{font-size:13px;color:var(--muted);margin-top:18px;text-align:center}
+.js .group.hide{display:none}
+/* why */
+.why-grid{display:grid;gap:14px}
+.why{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;gap:16px;align-items:flex-start;transition:transform .25s,box-shadow .25s}
+.why:hover{transform:translateY(-3px);box-shadow:0 16px 30px -22px rgba(40,50,35,.5)}
+.why .ic{flex:none;width:52px;height:60px;border-radius:999px 999px 12px 12px;background:var(--clay);display:grid;place-items:center}
+.why .ic.s{background:var(--sage)}
+.why h3{font-size:26px;color:var(--sage-dd)}
+.why p{font-size:15px;color:var(--muted)}
+.team{margin-top:22px;text-align:center;font-size:15px;color:var(--muted)}
+.team b{color:var(--sage-dd);font-weight:600}
+/* hours + visit */
+.visit{background:var(--sage-dd);color:#efe9dc;overflow:hidden}
+.visit .sec-h h2{color:#f5efe4}
+.visit .sec-h h2 em{color:var(--clay)}
+.visit .sec-h p{color:#cfd4c6}
+.vgrid{display:grid;gap:18px}
+.hours{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:10px 20px}
+.hours div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}
+.hours div:last-child{border-bottom:0}
+.hours div.today{color:var(--sage-dd);background:var(--clay);margin:4px -12px;padding:12px;border-radius:14px;font-weight:600;border-bottom:0}
+.hours div.today span:first-child:after{content:"  · today";font-weight:500;font-size:12px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;margin-bottom:12px;color:#e9e3d6}
+.dot{width:9px;height:9px;border-radius:50%;background:#9fb894;box-shadow:0 0 0 4px rgba(159,184,148,.25)}
+.dot.off{background:var(--clay);box-shadow:0 0 0 4px rgba(217,167,155,.25)}
+.map{border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.14);height:300px;background:#4a5845}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.75)}
+.addr{font-size:16px;margin:16px 0 14px}
+.addr b{font-family:"Instrument Serif",serif;font-weight:400;font-size:28px;display:block;color:#f5efe4}
+.visit .btn-o{border-color:#efe9dc;color:#efe9dc}
+.visit .btn-o:hover{background:#efe9dc;color:var(--sage-dd)}
+.visit .btn-p{background:var(--clay);color:var(--sage-dd)}
+.visit .btn-p:hover{background:#e7bcb1}
+.contact-note{font-size:14px;color:#cfd4c6;margin-top:14px}
+.contact-note a{color:#f3d6ce}
+footer{padding:36px 0 30px;text-align:center;font-size:13px;color:var(--muted)}
+footer .logo{justify-content:center;margin-bottom:6px}
+/* call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(245,239,228,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.bar .btn{flex:1;padding:14px 10px}
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.sway,.float{animation:none}.js .rv{opacity:1;transform:none}}
+@media (min-width:860px){
+  .navlinks{display:flex}
+  .hero{padding:70px 0 90px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+  .archart{width:360px}
+  .groups{grid-template-columns:repeat(3,1fr)}
+  .js .group.hide{display:block}
+  .tabs{display:none}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .vgrid{grid-template-columns:.9fr 1.1fr;align-items:start}
+  .map{height:420px}
+  .bar{display:none}
+  body{padding-bottom:0}
+  .banner{font-size:13px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for InStyle. Not live.</div>
+<nav><div class="wrap">
+  <a class="logo" href="#top">InStyle <i>nails</i></a>
+  <div class="navlinks"><a href="#menu">Menu</a><a href="#why">Why InStyle</a><a href="#visit">Hours &amp; visit</a></div>
+  <a class="btn btn-p btn-sm" href="https://instylenails.glossgenius.com/book">Book</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <svg class="sprig sway" style="left:-30px;top:30px" width="140" height="220" viewBox="0 0 140 220" fill="none" stroke="#7d8f74" stroke-width="1.6" stroke-linecap="round"><path d="M70 218C68 160 74 100 96 20"/><path d="M71 180c-20-6-34-20-40-38 18 2 34 14 40 38zM73 140c18-8 30-22 34-42-18 4-30 18-34 42zM78 104c-18-6-30-20-34-38 16 2 30 14 34 38zM86 66c16-8 26-22 28-40-16 4-26 18-28 40z"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Non-toxic salon · Cleveland, TN</span>
+      <h1>Nails, lashes &amp; head spa, <em>done with care.</em></h1>
+      <p class="sub">A non-toxic salon on Old Mouse Creek Rd where quality comes before speed, backed by a 7-day nail warranty.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="https://instylenails.glossgenius.com/book">Book an appointment</a>
+        <a class="btn btn-o" href="#menu">See the menu</a>
+      </div>
+      <div class="chips"><span class="chip">Nails</span><span class="chip">Pedicures</span><span class="chip">Lashes</span><span class="chip">Head spa</span><span class="chip">Walk-ins when possible</span></div>
+    </div>
+    <div class="archart rv" aria-hidden="true">
+      <div class="arch">
+        <svg class="hand" viewBox="0 0 300 400" fill="none" stroke="#fff8ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="float">
+          <path d="M96 400c4-60 10-108 22-150 8-28 10-58 6-92-2-14 14-18 18-4l14 64"/>
+          <path d="M156 218l-2-110c0-15 18-16 20-1l8 106"/>
+          <path d="M182 212l6-98c2-15 20-13 19 2l-4 100"/>
+          <path d="M203 222l10-78c2-14 19-11 18 3l-8 92c-4 50-10 90-6 161"/>
+          <path d="M138 222c-20-12-40-22-56-40-10-11 4-25 16-15l40 38"/>
+          <path d="M153 118c0-8 13-9 14-1M180 122c1-8 14-8 14 1M206 152c2-7 14-6 13 2" stroke="#b9786a" stroke-width="7"/>
+          <path d="M125 168c0-8 13-9 14-1" stroke="#b9786a" stroke-width="7"/>
+          </g>
+          <g stroke="#fff8ef" stroke-width="1.4" opacity=".8"><path d="M40 70l6 6M46 70l-6 6M250 300l5 5M255 300l-5 5M235 60h10M240 55v10"/></g>
+        </svg>
+      </div>
+      <div class="arch2"><svg width="70" height="110" viewBox="0 0 70 110" fill="none" stroke="#f5efe4" stroke-width="1.6" stroke-linecap="round" class="sway"><path d="M35 108C34 76 38 44 50 8"/><path d="M36 84c-12-4-20-12-22-24 10 1 19 9 22 24zM38 62c10-5 17-13 19-25-10 2-17 11-19 25zM42 40c-9-4-15-11-16-21 9 1 15 8 16 21z"/></svg></div>
+      <div class="badge"><b>7-day</b>nail warranty<br>3-day lash warranty</div>
+    </div>
+  </div>
+</header>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">The menu</span><h2>The full menu, <em>priced up front.</em></h2><p>Prices and times as published on InStyle's booking page. A "+" means starting at.</p></div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-g="nails">Nails</button>
+      <button class="tab" role="tab" aria-selected="false" data-g="lashes">Lashes</button>
+      <button class="tab" role="tab" aria-selected="false" data-g="spa">Head spa &amp; more</button>
+    </div>
+    <div class="groups">
+      <div class="group rv" data-g="nails">
+        <svg class="gi" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#b9786a" stroke-width="1.6"><rect x="11" y="4" width="12" height="26" rx="6"/><path d="M11 14h12"/></svg>
+        <h3>Nails &amp; pedicures</h3>
+        <ul>
+          <li><span class="n">Builder Gel / Tap Gel / Acrylic Nail<small>30+ min</small></span><b>$29+</b></li>
+          <li><span class="n">Manicure<small>20+ min</small></span><b>$15+</b></li>
+          <li><span class="n">Pedicure<small>30+ min</small></span><b>$29+</b></li>
+          <li><span class="n">Add On for Nails<small>10+ min</small></span><b>$5+</b></li>
+          <li><span class="n">Add On for Pedicure<small>10+ min</small></span><b>$5+</b></li>
+          <li><span class="n">Kids Manicure (under 12)<small>10+ min</small></span><b>$12+</b></li>
+          <li><span class="n">Kid Pedicure (12 &amp; younger)<small>15+ min</small></span><b>$12+</b></li>
+          <li><span class="n">Removal<small>15+ min</small></span><b>$15+</b></li>
+        </ul>
+      </div>
+      <div class="group rv" data-g="lashes">
+        <svg class="gi" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#b9786a" stroke-width="1.6" stroke-linecap="round"><path d="M4 18c6-7 20-7 26 0"/><path d="M8 15l-3-5M13 13l-1-6M17 12V6M21 13l1-6M26 15l3-5"/></svg>
+        <h3>Lashes</h3>
+        <ul>
+          <li><span class="n">Full Set<small>90+ min</small></span><b>$122+</b></li>
+          <li><span class="n">Regular Lash Fill (14 days)<small>45+ min</small></span><b>$59+</b></li>
+          <li><span class="n">Extended Lash Fill (19–24 days)<small>120 min</small></span><b>$72+</b></li>
+          <li><span class="n">1 Week Lash Fill<small>60 min</small></span><b>$37+</b></li>
+          <li><span class="n">Lash Miscellaneous<small>15+ min</small></span><b>$10+</b></li>
+        </ul>
+      </div>
+      <div class="group rv" data-g="spa">
+        <svg class="gi" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#b9786a" stroke-width="1.6" stroke-linecap="round"><path d="M17 30c0-8 0-14 6-24M17 22c-6-1-9-5-10-10 5 0 9 4 10 10zM18 16c5-2 8-6 8-11-5 1-8 5-8 11z"/></svg>
+        <h3>Head spa, wax &amp; PMU</h3>
+        <ul>
+          <li><span class="n">Head Spa<small>45+ min</small></span><b>$59+</b></li>
+          <li><span class="n">Add On for Head Spa<small>15+ min</small></span><b>$10+</b></li>
+          <li><span class="n">Waxing Face<small>10+ min</small></span><b>$10+</b></li>
+          <li><span class="n">Tiny Tattoo<small>60+ min</small></span><b>$50+</b></li>
+          <li><span class="n">Permanent Makeup Tattoo<small>90+ min</small></span><b>$200+</b></li>
+          <li><span class="n">PMU Miscellaneous<small>10+ min</small></span><b>$50+</b></li>
+        </ul>
+      </div>
+    </div>
+    <p class="menu-note">Booking requires a non-refundable 50% deposit, per InStyle's posted policy.</p>
+  </div>
+</section>
+
+<section id="why">
+  <svg class="sprig" style="right:0;top:20px" width="120" height="180" viewBox="0 0 140 220" fill="none" stroke="#d9a79b" stroke-width="1.6" stroke-linecap="round"><path d="M70 218C68 160 74 100 96 20"/><path d="M71 180c-20-6-34-20-40-38 18 2 34 14 40 38zM73 140c18-8 30-22 34-42-18 4-30 18-34 42zM78 104c-18-6-30-20-34-38 16 2 30 14 34 38z"/></svg>
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Why InStyle</span><h2>Clean, calm, <em>and guaranteed.</em></h2></div>
+    <div class="why-grid">
+      <div class="why rv"><div class="ic s"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5efe4" stroke-width="1.8" stroke-linecap="round"><path d="M12 21c0-6 0-10 5-17M12 15c-5-1-7-4-8-8 4 0 7 3 8 8z"/></svg></div><div><h3>A non-toxic salon</h3><p>Non-toxic is right in the name, and hygiene is taken seriously for every service.</p></div></div>
+      <div class="why rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3f4b3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Work that's warrantied</h3><p>A 7-day nail warranty and a 3-day lash warranty on their work.</p></div></div>
+      <div class="why rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3f4b3a" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><div><h3>Quality over speed</h3><p>Every appointment is about the result and a relaxing visit, not rushing you out the door.</p></div></div>
+      <div class="why rv"><div class="ic s"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5efe4" stroke-width="1.8" stroke-linecap="round"><path d="M4 20V8l8-5 8 5v12"/><path d="M10 20v-6h4v6"/></svg></div><div><h3>Walk-ins welcome</h3><p>Appointments are recommended, and walk-ins are taken whenever possible.</p></div></div>
+    </div>
+    <p class="team rv">Your team: <b>Joanne Nguyen</b>, <b>Tiana Than</b> and <b>Marla Castro</b>.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow" style="color:#cfd4c6">Hours &amp; visit</span><h2>Come see us <em>on Old Mouse Creek.</em></h2></div>
+    <div class="vgrid">
+      <div class="rv">
+        <div class="status" id="status"><span class="dot"></span><span>Mon–Sat, 9:30 AM–6:30 PM</span></div>
+        <div class="hours" id="hours">
+          <div data-d="1"><span>Monday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div data-d="2"><span>Tuesday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div data-d="3"><span>Wednesday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div data-d="4"><span>Thursday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div data-d="5"><span>Friday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div data-d="6"><span>Saturday</span><span>9:30 AM – 6:30 PM</span></div>
+          <div data-d="0"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <p class="addr"><b>162 Old Mouse Creek Rd</b>Cleveland, TN 37312</p>
+        <div class="cta" style="margin-top:0">
+          <a class="btn btn-p" href="https://instylenails.glossgenius.com/book">Book online</a>
+          <a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=162+Old+Mouse+Creek+Rd+Cleveland+TN+37312">Directions</a>
+        </div>
+        <p class="contact-note">Need to change a service? Email <a href="mailto:joanne.n.info@gmail.com">joanne.n.info@gmail.com</a> or text your tech.</p>
+      </div>
+      <div class="map rv"><iframe title="Map to InStyle Nail Salon" loading="lazy" src="https://www.google.com/maps?q=162%20Old%20Mouse%20Creek%20Rd%2C%20Cleveland%2C%20TN%2037312&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#top">InStyle <i>nails</i></a>
+  <p>162 Old Mouse Creek Rd, Cleveland, TN 37312</p>
+  <p style="margin-top:10px">Concept by Code Craft Media</p>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-o" href="mailto:joanne.n.info@gmail.com">Email us</a>
+  <a class="btn btn-p" href="https://instylenails.glossgenius.com/book">Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function show(e){e.classList.add('in')}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(show);
+  setTimeout(function(){els.forEach(show)},1500);
+  // today
+  var now=new Date(), day=now.getDay(), row=document.querySelector('#hours [data-d="'+day+'"]');
+  if(row) row.classList.add('today');
+  var m=now.getHours()*60+now.getMinutes(), st=document.getElementById('status');
+  var open = day!==0 && m>=570 && m<1110;
+  st.innerHTML = open ? '<span class="dot"></span><span>Open now · until 6:30 PM</span>' : '<span class="dot off"></span><span>Closed now · '+(day===6&&m>=1110||day===0?'opens Monday 9:30 AM':'opens 9:30 AM')+'</span>';
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), groups=[].slice.call(document.querySelectorAll('.group'));
+  function sel(g){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.g===g)});groups.forEach(function(x){x.classList.toggle('hide',x.dataset.g!==g); if(x.dataset.g===g) show(x)})}
+  tabs.forEach(function(t){t.addEventListener('click',function(){sel(t.dataset.g)})});
+  sel('nails');
+})();
+</script>
+</body>
+</html>

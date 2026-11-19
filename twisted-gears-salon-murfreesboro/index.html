@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Twisted Gears Salon — Murfreesboro</title>
+<meta name="description" content="Color, highlights, balayage and cuts with Jessica at Twisted Gears Salon, 120 River Rock Blvd, Murfreesboro, TN. Open Wednesday to Saturday, 9 to 5.">
+<meta name="theme-color" content="#0d3236">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal-900:#08272a; --teal-800:#0d3236; --teal-700:#134247; --teal-600:#1b5a60; --teal-300:#7fb3b0;
+  --brass:#c39a5b; --brass-hi:#e6c88f; --brass-lo:#8a6a3b;
+  --char:#1b1e21; --char-2:#2a2e32;
+  --cream:#f4eee3; --paper:#faf6ef; --ink:#1b1e21; --muted:#5d625f;
+  --line:rgba(195,154,91,.35);
+  --metal:linear-gradient(115deg,#8a6a3b 0%,#e6c88f 22%,#b88d4f 38%,#f1dcae 52%,#a57d45 70%,#d9b778 86%,#8a6a3b 100%);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter Tight",system-ui,-apple-system,Segoe UI,sans-serif;
+  --barH:0px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:var(--barH)}
+@media (max-width:760px){:root{--barH:calc(76px + env(safe-area-inset-bottom))}}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* concept banner */
+.concept{background:var(--char);color:#cfc6b6;font-size:clamp(9.5px,2.75vw,12px);letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--brass-hi);font-weight:500}
+
+/* nav */
+.nav{position:absolute;left:0;right:0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream)}
+.logo svg{width:40px;height:40px}
+.logo span{font-family:var(--serif);font-size:19px;letter-spacing:.01em}
+.logo em{font-style:italic;color:var(--brass-hi)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:30px}
+.nav ul a{color:#d9e4e1;text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav ul a:hover::after{transform:scaleX(1)}
+.nav .navcta{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .navcta{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.04em;text-decoration:none;transition:transform .2s,box-shadow .3s,background-position .6s;cursor:pointer;border:0}
+.btn-brass{background:var(--metal);background-size:220% 100%;background-position:0 0;color:#1d1609;box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 10px 30px -10px rgba(195,154,91,.6)}
+.btn-brass:hover{background-position:100% 0;transform:translateY(-2px)}
+.btn-ghost{color:var(--cream);border:1px solid rgba(230,200,143,.55);background:rgba(8,39,42,.35)}
+.btn-ghost:hover{background:rgba(230,200,143,.12);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn svg{width:18px;height:18px}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--brass-hi);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 80% at 80% 10%,#1b5a60 0%,var(--teal-800) 45%,var(--teal-900) 100%);color:var(--cream);overflow:hidden;padding:120px 0 86px}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-hi)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--metal)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,11.5vw,92px);line-height:1.02;letter-spacing:-.015em;margin:18px 0 20px;max-width:12ch}
+.hero h1 em{font-style:italic;font-weight:400;background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.hero p.sub{font-size:clamp(17px,2.4vw,20px);color:#cfdcd8;max-width:34ch;margin:0 0 30px;font-weight:300}
+.hero p.sub strong{color:var(--cream);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.status{margin-top:28px;display:inline-flex;align-items:center;gap:10px;font-size:14px;color:#cfdcd8;padding:8px 14px 8px 12px;border:1px solid rgba(127,179,176,.3);border-radius:999px;background:rgba(8,39,42,.45)}
+.status i{width:8px;height:8px;border-radius:50%;background:#e0a35b;box-shadow:0 0 0 4px rgba(224,163,91,.18)}
+.status.open i{background:#6fd3a5;box-shadow:0 0 0 4px rgba(111,211,165,.18)}
+.gears{position:absolute;z-index:1;pointer-events:none;color:var(--brass)}
+.gears.g-hero{right:-170px;top:60px;width:540px;height:540px;opacity:.7}
+@media(min-width:900px){.gears.g-hero{right:-40px;top:70px;width:640px;height:640px;opacity:.85}.hero{padding:150px 0 130px}}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin 40s linear infinite}
+.spin.rev{animation-direction:reverse}
+.spin.s2{animation-duration:26.7s}.spin.s3{animation-duration:22.2s}.spin.s4{animation-duration:53.3s}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}html{scroll-behavior:auto}}
+.hero-rule{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--metal);opacity:.9}
+
+/* section shell */
+section{position:relative}
+.sec{padding:84px 0}
+@media(min-width:900px){.sec{padding:120px 0}}
+.sec-head{display:grid;gap:14px;margin-bottom:44px}
+.sec-head .eyebrow{color:var(--brass-lo)}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,6.5vw,56px);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:18ch}
+.sec-head h2 em{font-style:italic;color:var(--teal-600)}
+.sec-head p{margin:0;color:var(--muted);max-width:56ch}
+
+/* menu */
+.menu{background:var(--paper)}
+.menu::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(19,66,71,.06) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -20px 28px;padding:2px 20px 6px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:500 14px var(--sans);letter-spacing:.03em;padding:11px 18px;border-radius:999px;border:1px solid rgba(19,66,71,.2);background:#fff;color:var(--teal-700);cursor:pointer;transition:all .25s}
+.tab:hover{border-color:var(--brass)}
+.tab[aria-selected="true"]{background:var(--teal-800);color:var(--cream);border-color:var(--teal-800)}
+.groups{display:grid;gap:22px}
+@media(min-width:900px){.groups{display:block;columns:2;column-gap:28px}.groups .group{break-inside:avoid;margin-bottom:28px;display:block}.tabs{display:none}}
+.group{background:#fff;border:1px solid rgba(19,66,71,.12);border-radius:22px;padding:26px 22px 14px;position:relative;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 24px 50px -36px rgba(8,39,42,.45)}
+.group::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--metal)}
+@media(min-width:900px){.group{padding:32px 32px 18px}}
+.group h3{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:500;font-size:26px;margin:0 0 4px}
+.group h3 svg{width:28px;height:28px;color:var(--brass)}
+.group .gnote{font-size:14px;color:var(--muted);margin:0 0 12px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-top:1px dashed rgba(19,66,71,.16)}
+.svc:first-of-type{border-top:0}
+.svc .n{font-weight:500;font-size:16px}
+.svc .p{font-family:var(--serif);font-size:20px;color:var(--teal-700);text-align:right;white-space:nowrap}
+.svc .d{font-size:13px;color:var(--muted);letter-spacing:.02em}
+.svc .note{grid-column:1/-1;font-size:13px;color:var(--brass-lo);font-style:italic}
+@media(max-width:899px){.js .group[hidden-tab]{display:none}}
+.menu-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;color:var(--muted);font-size:14px}
+.menu-foot .btn-brass{min-height:48px}
+
+/* why */
+.why{background:var(--teal-800);color:var(--cream);overflow:hidden}
+.why .sec-head .eyebrow{color:var(--brass-hi)}
+.why .sec-head h2 em{color:var(--brass-hi)}
+.why .sec-head p{color:#b9cbc7}
+.facts{display:grid;gap:16px}
+@media(min-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{position:relative;border:1px solid rgba(230,200,143,.22);border-radius:20px;padding:26px 22px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,0));transition:transform .3s,border-color .3s}
+.fact:hover{transform:translateY(-4px);border-color:rgba(230,200,143,.6)}
+.fact .num{font-family:var(--serif);font-size:48px;line-height:1;background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.fact h3{font-family:var(--serif);font-weight:500;font-size:22px;margin:14px 0 6px}
+.fact p{margin:0;color:#b9cbc7;font-size:15px}
+.gears.g-why{left:-120px;bottom:-140px;width:420px;height:420px;opacity:.25}
+
+/* visit */
+.visit{background:var(--cream)}
+.visit-grid{display:grid;gap:22px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.25fr;gap:28px}}
+.card{background:#fff;border-radius:22px;border:1px solid rgba(19,66,71,.12);padding:26px 22px;box-shadow:0 24px 50px -36px rgba(8,39,42,.45)}
+@media(min-width:900px){.card{padding:32px}}
+.card h3{font-family:var(--serif);font-weight:500;font-size:24px;margin:0 0 14px}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:12px;font-size:16px}
+.hours li span:last-child{color:var(--muted)}
+.hours li.closed span:last-child{color:#9a9e9b}
+.hours li.today{background:var(--teal-800);color:var(--cream)}
+.hours li.today span:last-child{color:var(--brass-hi)}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--metal);color:#1d1609;font-weight:600;vertical-align:2px}
+.addr{font-style:normal;font-size:17px;line-height:1.55;margin:4px 0 18px}
+.contact-list{display:grid;gap:10px;margin:0 0 20px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:12px 14px;border-radius:14px;border:1px solid rgba(19,66,71,.14);transition:border-color .25s,background .25s;word-break:break-word}
+.contact-list a:hover{border-color:var(--brass);background:#fffaf1}
+.contact-list svg{width:20px;height:20px;color:var(--teal-600);flex:0 0 auto}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px}
+.btn-teal{background:var(--teal-800);color:var(--cream)}
+.btn-teal:hover{background:var(--teal-700);transform:translateY(-2px)}
+.btn-line{border:1px solid rgba(19,66,71,.3);color:var(--teal-800);background:#fff}
+.btn-line:hover{border-color:var(--brass);transform:translateY(-2px)}
+.map{border-radius:22px;overflow:hidden;border:1px solid rgba(19,66,71,.12);min-height:340px;background:#dfe6e3;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75) contrast(1.02);z-index:1}
+.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:var(--teal-700);background:linear-gradient(#e7ece9,#dfe6e3);background-image:linear-gradient(rgba(19,66,71,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(19,66,71,.07) 1px,transparent 1px);background-size:32px 32px}
+.map-fallback svg{width:40px;height:40px;color:var(--brass-lo)}
+.map-fallback b{font-family:var(--serif);font-weight:500;font-size:22px}
+.left-col{display:grid;gap:22px}
+
+/* final cta */
+.final{background:var(--char);color:var(--cream);text-align:center;overflow:hidden}
+.final h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,7vw,64px);line-height:1.05;margin:16px auto 18px;max-width:16ch}
+.final h2 em{font-style:italic;background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+.final p{color:#bdb6a9;margin:0 auto 28px;max-width:42ch}
+.final .ctas{justify-content:center}
+.final .eyebrow{color:var(--brass-hi)}
+.gears.g-final{left:50%;top:50%;width:760px;height:760px;transform:translate(-50%,-50%);opacity:.09}
+
+footer{background:#121416;color:#8f8a80;font-size:14px;padding:30px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center}
+footer a{color:#cfc6b6}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(13,50,54,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(230,200,143,.35)}
+.callbar a{flex:1;min-height:52px;padding:0 12px}
+.callbar .btn-ghost{background:transparent}
+@media(min-width:761px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="g24" viewBox="-145 -145 290 290"><path d="M129.0,0.0 L139.8,6.6 L138.8,18.3 L127.0,22.8 L124.6,33.4 L133.4,42.6 L129.3,53.6 L116.7,54.9 L111.7,64.5 L117.8,75.6 L111.1,85.2 L98.5,83.3 L91.2,91.2 L94.2,103.5 L85.2,111.1 L73.6,105.9 L64.5,111.7 L64.2,124.4 L53.6,129.3 L43.7,121.4 L33.4,124.6 L29.8,136.8 L18.3,138.8 L10.8,128.5 L0.0,129.0 L-6.6,139.8 L-18.3,138.8 L-22.8,127.0 L-33.4,124.6 L-42.6,133.4 L-53.6,129.3 L-54.9,116.7 L-64.5,111.7 L-75.6,117.8 L-85.2,111.1 L-83.3,98.5 L-91.2,91.2 L-103.5,94.2 L-111.1,85.2 L-105.9,73.6 L-111.7,64.5 L-124.4,64.2 L-129.3,53.6 L-121.4,43.7 L-124.6,33.4 L-136.8,29.8 L-138.8,18.3 L-128.5,10.8 L-129.0,0.0 L-139.8,-6.6 L-138.8,-18.3 L-127.0,-22.8 L-124.6,-33.4 L-133.4,-42.6 L-129.3,-53.6 L-116.7,-54.9 L-111.7,-64.5 L-117.8,-75.6 L-111.1,-85.2 L-98.5,-83.3 L-91.2,-91.2 L-94.2,-103.5 L-85.2,-111.1 L-73.6,-105.9 L-64.5,-111.7 L-64.2,-124.4 L-53.6,-129.3 L-43.7,-121.4 L-33.4,-124.6 L-29.8,-136.8 L-18.3,-138.8 L-10.8,-128.5 L-0.0,-129.0 L6.6,-139.8 L18.3,-138.8 L22.8,-127.0 L33.4,-124.6 L42.6,-133.4 L53.6,-129.3 L54.9,-116.7 L64.5,-111.7 L75.6,-117.8 L85.2,-111.1 L83.3,-98.5 L91.2,-91.2 L103.5,-94.2 L111.1,-85.2 L105.9,-73.6 L111.7,-64.5 L124.4,-64.2 L129.3,-53.6 L121.4,-43.7 L124.6,-33.4 L136.8,-29.8 L138.8,-18.3 L128.5,-10.8Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle r="112" fill="none" stroke="currentColor" stroke-width=".8"/><circle r="30" fill="none" stroke="currentColor" stroke-width="1.2"/><circle r="10" fill="none" stroke="currentColor" stroke-width="1.2"/><g stroke="currentColor" stroke-width=".9"><line x1="0" y1="-30" x2="0" y2="-112"/><line x1="0" y1="30" x2="0" y2="112"/><line x1="-30" y1="0" x2="-112" y2="0"/><line x1="30" y1="0" x2="112" y2="0"/><line x1="21" y1="21" x2="79" y2="79"/><line x1="-21" y1="-21" x2="-79" y2="-79"/><line x1="21" y1="-21" x2="79" y2="-79"/><line x1="-21" y1="21" x2="-79" y2="79"/></g></symbol>
+    <symbol id="g18" viewBox="-105 -105 210 210"><path d="M90.0,0.0 L99.8,6.3 L98.5,17.4 L87.5,21.2 L84.6,30.8 L91.6,40.0 L86.6,50.0 L75.0,49.8 L68.9,57.9 L72.4,69.0 L64.3,76.6 L53.4,72.4 L45.0,77.9 L44.5,89.6 L34.2,94.0 L25.4,86.3 L15.6,88.6 L11.1,99.4 L0.0,100.0 L-5.7,89.8 L-15.6,88.6 L-23.5,97.2 L-34.2,94.0 L-36.0,82.5 L-45.0,77.9 L-55.3,83.3 L-64.3,76.6 L-62.1,65.2 L-68.9,57.9 L-80.5,59.3 L-86.6,50.0 L-80.6,40.0 L-84.6,30.8 L-95.9,28.2 L-98.5,17.4 L-89.4,10.0 L-90.0,0.0 L-99.8,-6.3 L-98.5,-17.4 L-87.5,-21.2 L-84.6,-30.8 L-91.6,-40.0 L-86.6,-50.0 L-75.0,-49.8 L-68.9,-57.9 L-72.4,-69.0 L-64.3,-76.6 L-53.4,-72.4 L-45.0,-77.9 L-44.5,-89.6 L-34.2,-94.0 L-25.4,-86.3 L-15.6,-88.6 L-11.1,-99.4 L-0.0,-100.0 L5.7,-89.8 L15.6,-88.6 L23.5,-97.2 L34.2,-94.0 L36.0,-82.5 L45.0,-77.9 L55.3,-83.3 L64.3,-76.6 L62.1,-65.2 L68.9,-57.9 L80.5,-59.3 L86.6,-50.0 L80.6,-40.0 L84.6,-30.8 L95.9,-28.2 L98.5,-17.4 L89.4,-10.0Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle r="74" fill="none" stroke="currentColor" stroke-width=".8"/><circle r="22" fill="none" stroke="currentColor" stroke-width="1.2"/><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="0" cy="-48" r="14"/><circle cx="0" cy="48" r="14"/><circle cx="-48" cy="0" r="14"/><circle cx="48" cy="0" r="14"/></g></symbol>
+    <symbol id="g12" viewBox="-70 -70 140 140"><path d="M57.0,0.0 L65.7,6.2 L63.8,17.1 L53.4,19.9 L49.4,28.5 L53.8,38.2 L46.7,46.7 L36.3,43.9 L28.5,49.4 L27.5,60.0 L17.1,63.8 L9.5,56.2 L0.0,57.0 L-6.2,65.7 L-17.1,63.8 L-19.9,53.4 L-28.5,49.4 L-38.2,53.8 L-46.7,46.7 L-43.9,36.3 L-49.4,28.5 L-60.0,27.5 L-63.8,17.1 L-56.2,9.5 L-57.0,0.0 L-65.7,-6.2 L-63.8,-17.1 L-53.4,-19.9 L-49.4,-28.5 L-53.8,-38.2 L-46.7,-46.7 L-36.3,-43.9 L-28.5,-49.4 L-27.5,-60.0 L-17.1,-63.8 L-9.5,-56.2 L-0.0,-57.0 L6.2,-65.7 L17.1,-63.8 L19.9,-53.4 L28.5,-49.4 L38.2,-53.8 L46.7,-46.7 L43.9,-36.3 L49.4,-28.5 L60.0,-27.5 L63.8,-17.1 L56.2,-9.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle r="44" fill="none" stroke="currentColor" stroke-width=".8"/><circle r="12" fill="none" stroke="currentColor" stroke-width="1.2"/><g stroke="currentColor" stroke-width=".9"><line x1="0" y1="-12" x2="0" y2="-44"/><line x1="10.4" y1="6" x2="38.1" y2="22"/><line x1="-10.4" y1="6" x2="-38.1" y2="22"/></g></symbol>
+    <symbol id="g10" viewBox="-52 -52 104 104"><path d="M40.0,0.0 L47.7,5.4 L45.7,14.8 L36.4,16.6 L32.4,23.5 L35.4,32.4 L28.2,38.8 L19.7,34.8 L12.4,38.0 L9.6,47.0 L0.0,48.0 L-4.5,39.7 L-12.4,38.0 L-19.9,43.7 L-28.2,38.8 L-27.0,29.5 L-32.4,23.5 L-41.8,23.7 L-45.7,14.8 L-39.2,8.0 L-40.0,0.0 L-47.7,-5.4 L-45.7,-14.8 L-36.4,-16.6 L-32.4,-23.5 L-35.4,-32.4 L-28.2,-38.8 L-19.7,-34.8 L-12.4,-38.0 L-9.6,-47.0 L-0.0,-48.0 L4.5,-39.7 L12.4,-38.0 L19.9,-43.7 L28.2,-38.8 L27.0,-29.5 L32.4,-23.5 L41.8,-23.7 L45.7,-14.8 L39.2,-8.0Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle r="28" fill="none" stroke="currentColor" stroke-width=".8"/><circle r="8" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Twisted Gears Salon. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Twisted Gears Salon, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><g transform="translate(15 15)"><g class="spin s2"><use href="#g12" x="-14" y="-14" width="28" height="28" style="color:#e6c88f"/></g></g><g transform="translate(30.2 27.6)"><g class="spin rev s3"><use href="#g10" x="-10.4" y="-10.4" width="20.8" height="20.8" style="color:#7fb3b0"/></g></g></svg>
+      <span>Twisted <em>Gears</em></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why">The Salon</a></li>
+      <li><a href="#visit">Hours &amp; Visit</a></li>
+    </ul>
+    <a class="btn btn-brass navcta" href="https://square.site/book/1HF73W3KWB03N/twisted-gears-salon-murfreesboro-tn" target="_blank" rel="noopener">Book online</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="gears g-hero" viewBox="0 0 640 640" aria-hidden="true">
+    <g transform="translate(330 300)"><g class="spin s4"><use href="#g24" x="-145" y="-145" width="290" height="290"/></g></g>
+    <g transform="translate(480 426) rotate(7)"><g class="spin rev s2"><use href="#g12" x="-70" y="-70" width="140" height="140"/></g></g>
+    <g transform="translate(131 415) rotate(4)"><g class="spin rev"><use href="#g18" x="-105" y="-105" width="210" height="210" style="color:#7fb3b0"/></g></g>
+    <g transform="translate(571 373) rotate(10)"><g class="spin s3"><use href="#g10" x="-52" y="-52" width="104" height="104" style="color:#7fb3b0"/></g></g>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Hair salon · Murfreesboro, TN</span>
+    <h1>Color, cuts &amp; <em>fine‑tuned</em> finishes.</h1>
+    <p class="sub">Balayage, foils, root touch‑ups and cuts for the whole family with <strong>Jessica</strong> at 120 River Rock Blvd. Open <strong>Wednesday–Saturday, 9–5</strong>.</p>
+    <div class="ctas">
+      <a class="btn btn-brass" href="https://square.site/book/1HF73W3KWB03N/twisted-gears-salon-murfreesboro-tn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book an appointment</a>
+      <a class="btn btn-ghost" href="tel:+16155427318">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(615) 542‑7318</a>
+    </div>
+    <div class="status" id="status"><i></i><span>Open Wed–Sat · 9 AM – 5 PM</span></div>
+  </div>
+  <div class="hero-rule"></div>
+</section>
+
+<section class="sec menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The full menu</span>
+      <h2>Every service, <em>every price,</em> up front.</h2>
+      <p>31 services, from a quick brow wax to a full balayage with haircut. Prices and times exactly as listed on the salon's booking page.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-tab="color">Color &amp; Highlights</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="cuts">Cuts</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="style">Style &amp; Treat</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="brows">Brows</button>
+    </div>
+    <div class="groups">
+      <div class="group reveal" data-group="color">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.4 6 10.5A6 6 0 0 1 6 13.5C6 10.4 8.5 7.2 12 3z"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.5"/></svg>Color &amp; Highlights</h3>
+        <p class="gnote">Solid color, foils, balayage and toners.</p>
+        <div class="svc"><span class="n">Balayage</span><span class="p">$200</span><span class="d">3 hours</span></div>
+        <div class="svc"><span class="n">Balayage With Haircut</span><span class="p">$235</span><span class="d">3 hours 30 minutes</span></div>
+        <div class="svc"><span class="n">Full Foil</span><span class="p">$200</span><span class="d">2 hours 15 minutes</span></div>
+        <div class="svc"><span class="n">Full Foil With Haircut</span><span class="p">$230</span><span class="d">3 hours</span><span class="note">Price varies on desired color and cut</span></div>
+        <div class="svc"><span class="n">Partial Foils</span><span class="p">$145</span><span class="d">2 hours</span></div>
+        <div class="svc"><span class="n">Partial Highlight With Haircut</span><span class="p">$180</span><span class="d">2 hours 30 minutes</span></div>
+        <div class="svc"><span class="n">Cap Highlight</span><span class="p">$90</span><span class="d">1 hour 30 minutes</span></div>
+        <div class="svc"><span class="n">Cap Highlight With Haircut</span><span class="p">$125</span><span class="d">1 hour 45 minutes</span><span class="note">Price depends on hair length</span></div>
+        <div class="svc"><span class="n">All Over Solid Color (Not Foils)</span><span class="p">$105</span><span class="d">2 hours</span></div>
+        <div class="svc"><span class="n">All Over Solid Color With Highlight</span><span class="p">$190</span><span class="d">3 hours</span></div>
+        <div class="svc"><span class="n">Solid Color Root Touch Up (Not Foils)</span><span class="p">$75</span><span class="d">1 hour 30 minutes</span></div>
+        <div class="svc"><span class="n">Solid Root Touch Up With Haircut (Not Foils)</span><span class="p">$105</span><span class="d">2 hours</span></div>
+        <div class="svc"><span class="n">Solid Color Root Touch Up With Foil</span><span class="p">$160</span><span class="d">2 hours 30 minutes</span></div>
+        <div class="svc"><span class="n">Men's Color</span><span class="p">$60</span><span class="d">1 hour</span></div>
+        <div class="svc"><span class="n">Toner Add On</span><span class="p">$20</span><span class="d">30 minutes</span></div>
+      </div>
+      <div class="group reveal" data-group="brows">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 13c3-4 8-5.5 13-4.5 2 .4 3.6 1.2 5 2.5"/><path d="M6 17c2.5 1.5 6 1.5 9 0"/></svg>Brows</h3>
+        <p class="gnote">Quick waxing while you're in the chair.</p>
+        <div class="svc"><span class="n">Eyebrow Wax</span><span class="p">$17</span><span class="d">20 minutes</span></div>
+        <div class="svc"><span class="n">Eyebrow And Lip</span><span class="p">$25</span><span class="d">15 minutes</span></div>
+      </div>
+      <div class="group reveal" data-group="cuts">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="6" cy="6.5" r="2.6"/><circle cx="6" cy="17.5" r="2.6"/><path d="M8.2 8 20 18M8.2 16 20 6"/></svg>Cuts</h3>
+        <p class="gnote">Women, men, seniors, kids and military.</p>
+        <div class="svc"><span class="n">Woman's Cut (No Shampoo)</span><span class="p">$35</span><span class="d">30 minutes</span></div>
+        <div class="svc"><span class="n">Woman's Haircut With Shampoo</span><span class="p">$40</span><span class="d">40 minutes</span></div>
+        <div class="svc"><span class="n">Men's Cuts</span><span class="p">$35</span><span class="d">25 minutes</span></div>
+        <div class="svc"><span class="n">Men's Cut With Shampoo</span><span class="p">$40</span><span class="d">30 minutes</span></div>
+        <div class="svc"><span class="n">Men's Cut With Beard Trim</span><span class="p">$39</span><span class="d">30 minutes</span></div>
+        <div class="svc"><span class="n">Military Cut</span><span class="p">$20</span><span class="d">25 minutes</span></div>
+        <div class="svc"><span class="n">Senior Haircut (No Shampoo)</span><span class="p">$31</span><span class="d">25 minutes</span></div>
+        <div class="svc"><span class="n">Senior Cut With Shampoo</span><span class="p">$36</span><span class="d">40 minutes</span></div>
+        <div class="svc"><span class="n">One Kid Cut (No Shampoo)</span><span class="p">$31</span><span class="d">30 minutes</span></div>
+        <div class="svc"><span class="n">Two Haircuts</span><span class="p">$70</span><span class="d">45 minutes</span></div>
+      </div>
+      <div class="group reveal" data-group="style">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18.5 16.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg>Style &amp; Treat</h3>
+        <p class="gnote">Blowouts, updos and conditioning.</p>
+        <div class="svc"><span class="n">Updo</span><span class="p">$65</span><span class="d">1 hour</span></div>
+        <div class="svc"><span class="n">Shampoo Style</span><span class="p">$30</span><span class="d">30 minutes</span></div>
+        <div class="svc"><span class="n">Deep Conditioning Treatment</span><span class="p">$20</span><span class="d">30 minutes</span></div>
+        <div class="svc"><span class="n">Shampoo Add On</span><span class="p">$5</span><span class="d">5 minutes</span></div>
+      </div>
+    </div>
+    <div class="menu-foot reveal">
+      <span>Book any service online, any time.</span>
+      <a class="btn btn-brass" href="https://square.site/book/1HF73W3KWB03N/twisted-gears-salon-murfreesboro-tn" target="_blank" rel="noopener">See times &amp; book</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <svg class="gears g-why" viewBox="0 0 420 420" aria-hidden="true"><g transform="translate(210 210)"><g class="spin s4"><use href="#g24" x="-145" y="-145" width="290" height="290"/></g></g></svg>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The salon</span>
+      <h2>One stylist, <em>start to finish.</em></h2>
+      <p>Twisted Gears lists one stylist, Jessica, so the person you book is the person who does your hair.</p>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><span class="num">01</span><h3>Booked with Jessica</h3><p>Jessica Foster is the stylist behind every service on the menu, cuts and color alike.</p></div>
+      <div class="fact reveal"><span class="num">31</span><h3>Services on the menu</h3><p>Balayage, foils, cap highlights, solid color, men's color, updos, brows and cuts.</p></div>
+      <div class="fact reveal"><span class="num">$</span><h3>Prices posted</h3><p>Every service shows its price and time before you book. Cuts start at $20.</p></div>
+      <div class="fact reveal"><span class="num">4</span><h3>Days a week</h3><p>Wednesday through Saturday, 9 AM to 5 PM, with online booking around the clock.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Hours &amp; visit</span>
+      <h2>Find us on <em>River Rock Blvd.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="left-col">
+        <div class="card reveal">
+          <h3>Hours</h3>
+          <ul class="hours" id="hours">
+            <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+            <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+            <li data-d="2" class="closed"><span>Tuesday</span><span>Closed</span></li>
+            <li data-d="3"><span>Wednesday</span><span>9 AM – 5 PM</span></li>
+            <li data-d="4"><span>Thursday</span><span>9 AM – 5 PM</span></li>
+            <li data-d="5"><span>Friday</span><span>9 AM – 5 PM</span></li>
+            <li data-d="6"><span>Saturday</span><span>9 AM – 5 PM</span></li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Visit &amp; contact</h3>
+          <address class="addr">Twisted Gears Salon<br>120 River Rock Blvd, Suite #5<br>Murfreesboro, TN 37128</address>
+          <div class="contact-list">
+            <a href="tel:+16155427318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(615) 542‑7318</a>
+            <a href="mailto:retsof3213@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>retsof3213@gmail.com</a>
+          </div>
+          <div class="btnrow">
+            <a class="btn btn-teal" href="tel:+16155427318">Call now</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=120+River+Rock+Blvd+Suite+5+Murfreesboro+TN+37128" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <div class="map-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><b>120 River Rock Blvd, Suite #5</b><span>Murfreesboro, TN 37128</span></div>
+        <iframe title="Map to Twisted Gears Salon, 120 River Rock Blvd, Murfreesboro" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=120%20River%20Rock%20Blvd%2C%20Suite%205%2C%20Murfreesboro%2C%20TN%2037128&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final">
+  <svg class="gears g-final" viewBox="0 0 760 760" aria-hidden="true"><g transform="translate(380 380)"><g class="spin s4"><use href="#g24" x="-290" y="-290" width="580" height="580"/></g></g></svg>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="eyebrow">Wednesday – Saturday</span>
+    <h2>Ready for your <em>next color?</em></h2>
+    <p>Pick a service and a time on the booking page, or call the salon directly.</p>
+    <div class="ctas">
+      <a class="btn btn-brass" href="https://square.site/book/1HF73W3KWB03N/twisted-gears-salon-murfreesboro-tn" target="_blank" rel="noopener">Book an appointment</a>
+      <a class="btn btn-ghost" href="tel:+16155427318">Call (615) 542‑7318</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Twisted Gears Salon · 120 River Rock Blvd, Suite #5, Murfreesboro, TN 37128</span>
+    <span>Concept by <a href="#top">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="btn btn-ghost" href="tel:+16155427318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="btn btn-brass" href="https://square.site/book/1HF73W3KWB03N/twisted-gears-salon-murfreesboro-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book online</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // today's hours
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var openDays=[3,4,5,6], st=document.getElementById('status');
+  if(st){
+    var t=st.querySelector('span');
+    if(openDays.indexOf(day)>-1 && h>=9 && h<17){st.classList.add('open');t.textContent='Open today until 5 PM';}
+    else{
+      var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],n=day,i=0;
+      if(openDays.indexOf(day)>-1 && h<9){t.textContent='Opens today at 9 AM';}
+      else{do{n=(n+1)%7;i++;}while(openDays.indexOf(n)<0&&i<8);t.textContent='Closed now · opens '+(i===1?'tomorrow':names[n])+' at 9 AM';}
+    }
+  }
+  // tabs (mobile)
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), groups=[].slice.call(document.querySelectorAll('.group'));
+  function show(k){tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.tab===k?'true':'false')});groups.forEach(function(g){if(g.dataset.group===k)g.removeAttribute('hidden-tab');else g.setAttribute('hidden-tab','')});}
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.tab)})});
+  show('color');
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect(); if(r.top>window.innerHeight) e.classList.add('pre');});
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

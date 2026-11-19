@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>T-Cuts Lawn Care — Hendersonville, TN</title>
+<meta name="description" content="Concept site for T-Cuts Lawn Care: mowing, mulching, aeration, power washing and more in Hendersonville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#3fae2a; --green-d:#2c8a1c; --green-dd:#1d5f12; --green-l:#8fd16f;
+  --char:#1c1f1d; --char-2:#262a27; --char-3:#323733;
+  --yellow:#ffd21f; --yellow-d:#e6b800;
+  --paper:#f4f6ef; --ink:#161816; --muted:#5b625a; --line:#dfe4d8;
+  --water:#6fd3ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;overflow-x:hidden;}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.display{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+
+/* banner */
+.concept{background:#0f110f;color:#b9c2b5;font-size:11px;letter-spacing:-.005em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--yellow);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(28,31,29,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:var(--green);display:grid;place-items:center;box-shadow:inset 0 -4px 0 var(--green-d)}
+.logo-txt{font-family:Anton,sans-serif;font-size:22px;letter-spacing:.03em;text-transform:uppercase;line-height:1}
+.logo-txt small{display:block;font-family:Barlow,sans-serif;font-size:10.5px;letter-spacing:.22em;color:var(--green-l);font-weight:600;margin-top:3px}
+.nav-links{display:none;gap:26px;align-items:center}
+.nav-links a{color:#d6ddd2;text-decoration:none;font-weight:600;font-size:15px}
+.nav-links a:hover{color:var(--yellow)}
+@media(min-width:900px){.nav-links{display:flex}.nav .mob-book{display:none}}
+.nav-links a.btn{color:#151515}.nav-links a.btn:hover{color:#151515}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:17px;text-decoration:none;border-radius:12px;padding:15px 22px;transition:transform .15s ease,box-shadow .2s ease,background .2s;min-height:52px;letter-spacing:.01em}
+.btn:active{transform:scale(.97)}
+.btn-y{background:var(--yellow);color:#151515;box-shadow:0 5px 0 var(--yellow-d),0 14px 30px -10px rgba(255,210,31,.55)}
+.btn-y:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--yellow-d),0 18px 34px -10px rgba(255,210,31,.6)}
+.btn-o{border:2px solid rgba(255,255,255,.28);color:#fff}
+.btn-o:hover{border-color:var(--green-l);background:rgba(63,174,42,.14)}
+.btn-sm{padding:10px 16px;min-height:42px;font-size:15px;box-shadow:0 4px 0 var(--yellow-d)}
+
+/* hero */
+.hero{position:relative;color:#fff;background:var(--char);overflow:hidden;isolation:isolate}
+.stripes{position:absolute;inset:0;z-index:-2;
+  background:repeating-linear-gradient(115deg,#2f8f20 0 64px,#3aa628 64px 128px);
+  opacity:1}
+.stripes::after{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(25deg,rgba(0,0,0,.05) 0 2px,transparent 2px 7px),
+  linear-gradient(180deg,rgba(18,22,18,.86) 0%,rgba(18,22,18,.55) 46%,rgba(18,22,18,.15) 100%)}
+.hero-inner{padding-top:40px;position:relative}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14);color:#e9f3e3;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(255,210,31,.22)}
+.hero h1{font-size:clamp(52px,14.6vw,118px);margin:20px 0 18px;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero h1 .y{color:var(--yellow)}
+.hero h1 .o{-webkit-text-stroke:2px #fff;color:transparent}
+.hero p.sub{font-size:19px;max-width:560px;color:#eef3ea;font-weight:500}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+.hero-ctas .btn{flex:1 1 200px}
+@media(min-width:700px){.hero-ctas .btn{flex:0 0 auto}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14.5px;color:#d7e3d1;font-weight:600}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta svg{flex:none}
+.hero-art{position:relative;margin-top:30px;height:150px}
+.mower{position:absolute;bottom:22px;left:-140px;width:130px;animation:mow 11s linear infinite}
+@keyframes mow{0%{transform:translateX(0)}100%{transform:translateX(calc(100vw + 300px))}}
+.grass-edge{position:absolute;left:calc(50% - 50vw);width:100vw;bottom:0;height:34px;
+  background:radial-gradient(10px 26px at 10px 34px,var(--paper) 98%,transparent) 0 0/20px 34px repeat-x}
+@media(min-width:900px){
+  .hero-inner{padding-top:80px}
+  .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:end}
+  .hero-art{height:170px}
+}
+.price-card{display:none}
+@media(min-width:900px){
+  .price-card{display:block;background:rgba(18,21,18,.78);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:24px;backdrop-filter:blur(6px)}
+  .price-card h3{font-family:Anton,sans-serif;font-weight:400;font-size:24px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:10px;color:var(--yellow)}
+  .price-card li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-weight:600}
+  .price-card li:last-child{border:0}
+  .price-card li b{font-family:Anton,sans-serif;font-weight:400;font-size:20px;color:#fff;letter-spacing:.02em}
+}
+
+/* section base */
+section{padding:72px 0}
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--green-d);margin-bottom:12px}
+.eyebrow::before{content:"";display:inline-block;width:22px;height:4px;background:var(--yellow);border-radius:2px;vertical-align:middle;margin-right:10px;transform:translateY(-2px)}
+h2.display{font-size:clamp(40px,10vw,74px);margin-bottom:14px}
+.lead{font-size:18px;color:var(--muted);max-width:620px}
+
+/* services */
+.svc-grid{display:grid;gap:14px;margin-top:34px}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;transition:transform .2s ease,box-shadow .25s ease,border-color .2s;overflow:hidden}
+.svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:repeating-linear-gradient(180deg,var(--green) 0 10px,var(--green-d) 10px 20px)}
+.svc:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(29,95,18,.45);border-color:#c5d8bb}
+.svc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.svc h3{font-family:Anton,sans-serif;font-weight:400;font-size:25px;text-transform:uppercase;letter-spacing:.015em;line-height:1.05}
+.price{flex:none;font-family:Anton,sans-serif;font-size:22px;background:var(--char);color:var(--yellow);padding:5px 11px;border-radius:9px;letter-spacing:.02em;white-space:nowrap}
+.price.q{font-family:Barlow,sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;background:#eef3e8;color:var(--green-dd);padding:7px 10px}
+.svc p{color:var(--muted);margin-top:8px;font-size:15.5px}
+.svc .dur{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--green-dd)}
+.svc.feat{background:var(--char);color:#fff;border-color:var(--char)}
+.svc.feat p{color:#c4ccc0}
+.svc.feat .dur{color:var(--green-l)}
+.svc.feat .price{background:var(--yellow);color:#151515}
+.svc-note{margin-top:18px;font-size:14px;color:var(--muted)}
+
+/* power wash band */
+.wash{background:var(--char);color:#fff;position:relative;overflow:hidden}
+.wash::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 85% 10%,rgba(111,211,255,.14),transparent 60%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 64px),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 64px)}
+.wash .wrap{position:relative}
+.wash .eyebrow{color:var(--water)}
+.wash .lead{color:#c7cfc3}
+.wash-grid{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.wash-grid{grid-template-columns:1fr 1fr}}
+.spray{width:100%;height:auto}
+.spray .drop{animation:drift 2.2s ease-in infinite;opacity:0}
+@keyframes drift{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}100%{opacity:0;transform:translate(46px,24px)}}
+.spray .arc{stroke-dasharray:6 10;animation:flow 1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+.wash-stat{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.wash-stat div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px;flex:1 1 140px}
+.wash-stat b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:34px;color:var(--yellow);line-height:1}
+.wash-stat span{font-size:14px;color:#c7cfc3;font-weight:600}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:34px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+.why .ic{width:48px;height:48px;border-radius:12px;background:#eaf5e3;display:grid;place-items:center;margin-bottom:14px}
+.why h3{font-weight:700;font-size:20px;margin-bottom:6px;line-height:1.2}
+.why p{color:var(--muted);font-size:15.5px}
+
+/* hours + map */
+.visit{background:#e9eee2}
+.visit-grid{display:grid;gap:22px;margin-top:30px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;background:#eef3e8;color:var(--green-dd);margin-bottom:12px}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--green)}
+.status.closed{background:#fff6d6;color:#7a5d00}
+.status.closed i{background:var(--yellow-d)}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:12px 12px;border-radius:10px;font-weight:600;font-size:16.5px}
+.hours li+li{border-top:1px solid #eef1ea}
+.hours li span:last-child{font-variant-numeric:tabular-nums;color:var(--muted)}
+.hours li.today{background:var(--char);color:#fff;border-color:transparent}
+.hours li.today span:last-child{color:var(--yellow)}
+.hours li.today + li{border-top-color:transparent}
+.hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--yellow);color:#151515;padding:3px 7px;border-radius:6px;vertical-align:2px}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#dfe6d8;min-height:320px;display:flex;flex-direction:column}
+.map iframe{border:0;width:100%;flex:1;min-height:300px;display:block}
+.map-foot{background:#fff;padding:16px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.map-foot b{font-size:17px}
+.map-foot small{display:block;color:var(--muted);font-size:14px}
+.map-foot a{font-weight:700;color:var(--green-dd);text-decoration:none;border-bottom:2px solid var(--yellow)}
+
+/* CTA band */
+.cta{background:var(--green-d);color:#fff;position:relative;overflow:hidden;text-align:center}
+.cta::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.07) 0 60px,transparent 60px 120px)}
+.cta .wrap{position:relative}
+.cta h2{font-size:clamp(44px,12vw,92px)}
+.cta p{font-size:18px;color:#e6f4df;margin:6px auto 26px;max-width:520px}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta .btn-o{border-color:rgba(255,255,255,.55)}
+
+footer{background:#121412;color:#9aa596;padding:40px 0 calc(110px + env(safe-area-inset-bottom));font-size:14.5px}
+@media(min-width:900px){footer{padding-bottom:34px}}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer a{color:#dfe8da;text-decoration:none}
+footer a:hover{color:var(--yellow)}
+
+/* mobile call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,23,20,.96);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:12px;font-weight:700;font-size:16.5px;text-decoration:none}
+.bar .call{background:var(--char-3);color:#fff;border:1px solid rgba(255,255,255,.14)}
+.bar .book{background:var(--yellow);color:#151515}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){.rv,.mower,.spray *{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for T-Cuts Lawn Care. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="T-Cuts Lawn Care home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21c2-6 3-10 3-15M9 21c.5-5 2-9 4-13M15 21c0-4 1.5-8 4.5-11M21 21H3" stroke="#151515" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </span>
+      <span class="logo-txt">T-Cuts<small>Lawn Care</small></span>
+    </a>
+    <a class="btn btn-y btn-sm mob-book" href="https://square.site/book/LCX4WA25RGVNR/t-cuts-lawn-care-hendersonville-tn" target="_blank" rel="noopener">Book</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#wash">Power Washing</a>
+      <a href="#hours">Hours</a>
+      <a class="btn btn-y btn-sm" href="https://square.site/book/LCX4WA25RGVNR/t-cuts-lawn-care-hendersonville-tn" target="_blank" rel="noopener">Book online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="stripes" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-grid">
+      <div>
+        <span class="tag"><i></i>Hendersonville, TN</span>
+        <h1 class="display">Fresh <span class="y">stripes.</span><br><span class="o">Clean</span> drives.</h1>
+        <p class="sub">Mowing, mulching, aeration and power washing in Hendersonville — with prices posted up front and online booking.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-y" href="https://square.site/book/LCX4WA25RGVNR/t-cuts-lawn-care-hendersonville-tn" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="2.2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            Book a service
+          </a>
+          <a class="btn btn-o" href="tel:+16159069957">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            (615) 906-9957
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#ffd21f" stroke-width="2.4"/><path d="M12 7v5l3 2" stroke="#ffd21f" stroke-width="2.4" stroke-linecap="round"/></svg>Open until 9 PM, 7 days</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4 10-10" stroke="#ffd21f" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Mowing from $35</span>
+        </div>
+      </div>
+      <aside class="price-card" aria-label="Posted prices">
+        <h3>Posted prices</h3>
+        <ul>
+          <li>Mowing <b>$35–$80</b></li>
+          <li>Trimming bushes <b>$80</b></li>
+          <li>Power washing <b>$75</b></li>
+          <li>Mulching <b>$125</b></li>
+          <li>Aeration / over seeding <b>$225</b></li>
+        </ul>
+      </aside>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg class="mower" viewBox="0 0 140 90" fill="none">
+        <path d="M8 6 L40 44" stroke="#e9efe5" stroke-width="5" stroke-linecap="round"/>
+        <path d="M2 4h14" stroke="#e9efe5" stroke-width="6" stroke-linecap="round"/>
+        <path d="M34 40h74a14 14 0 0 1 14 14v10H30V46a6 6 0 0 1 4-6Z" fill="#ffd21f"/>
+        <path d="M30 58h92v6H30z" fill="#e6b800"/>
+        <rect x="62" y="30" width="34" height="12" rx="4" fill="#1c1f1d"/>
+        <circle cx="44" cy="70" r="12" fill="#1c1f1d"/><circle cx="44" cy="70" r="4.5" fill="#8a948a"/>
+        <circle cx="108" cy="70" r="12" fill="#1c1f1d"/><circle cx="108" cy="70" r="4.5" fill="#8a948a"/>
+      </svg>
+      <div class="grass-edge"></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 class="display rv">Everything<br>the yard needs.</h2>
+    <p class="lead rv">Ten services, straight from the T-Cuts booking menu. Where a price is posted, it's shown here — the rest depend on the job.</p>
+
+    <div class="svc-grid">
+      <article class="svc feat rv">
+        <div class="svc-top"><h3>Mowing</h3><span class="price">$35–$80</span></div>
+        <p>Regular cuts that leave clean lines across the yard.</p>
+        <span class="dur">⏱ About 45 min</span>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Mulching</h3><span class="price">$125</span></div>
+        <p>Fresh mulch for beds and borders.</p>
+        <span class="dur">⏱ About 50 min</span>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Trimming bushes</h3><span class="price">$80</span></div>
+        <p>Overgrown shrubs cut back neat and even.</p>
+        <span class="dur">⏱ About 40 min</span>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Aeration / Over seeding</h3><span class="price">$225</span></div>
+        <p>“We aerate and over seed yards.”</p>
+        <span class="dur">⏱ About 30 min</span>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Power washing</h3><span class="price">$75</span></div>
+        <p>“We clean driveways and sidewalks.”</p>
+        <span class="dur">⏱ About 1 hr 30 min</span>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Pulling weeds</h3><span class="price q">2 options</span></div>
+        <p>Pick the option that fits your beds when you book.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Removing bushes</h3><span class="price q">Quote</span></div>
+        <p>Priced by how many bushes there are.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Root cutting</h3><span class="price q">Quote</span></div>
+        <p>Priced by how many roots there are.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-top"><h3>Lighting</h3><span class="price q">Quote</span></div>
+        <p>Depends on how many lights and the size transformer you need.</p>
+      </article>
+    </div>
+    <p class="svc-note">Also on the menu: <b>car washing &amp; detailing</b> — price varies with what you want done.</p>
+  </div>
+</section>
+
+<section class="wash" id="wash">
+  <div class="wrap wash-grid">
+    <div>
+      <span class="eyebrow">Power washing</span>
+      <h2 class="display rv">Driveway<br>gray to<br><span style="color:var(--water)">like-new.</span></h2>
+      <p class="lead rv">“We clean driveways and sidewalks.” Book it on its own or alongside a mow — one visit, lawn and concrete.</p>
+      <div class="wash-stat rv">
+        <div><b>$75</b><span>Power washing, posted price</span></div>
+        <div><b>1.5 HR</b><span>Typical appointment</span></div>
+      </div>
+    </div>
+    <svg class="spray rv" viewBox="0 0 520 330" aria-label="Illustration of a pressure washer spraying a driveway" role="img">
+      <defs>
+        <linearGradient id="dirty" x1="0" x2="1"><stop offset="0" stop-color="#5a5d55"/><stop offset="1" stop-color="#6c6f66"/></linearGradient>
+        <linearGradient id="clean" x1="0" x2="1"><stop offset="0" stop-color="#d9ddd3"/><stop offset="1" stop-color="#eef1ea"/></linearGradient>
+        <clipPath id="slab"><path d="M20 230 L500 230 L470 320 L50 320 Z"/></clipPath>
+      </defs>
+      <g clip-path="url(#slab)">
+        <rect x="0" y="230" width="520" height="100" fill="url(#dirty)"/>
+        <g opacity=".35" fill="#3d3f39"><circle cx="330" cy="260" r="9"/><circle cx="400" cy="290" r="14"/><circle cx="455" cy="250" r="7"/><circle cx="370" cy="305" r="6"/></g>
+        <rect x="0" y="230" width="300" height="100" fill="url(#clean)"/>
+        <path d="M140 230v100M300 230v100" stroke="#b9bfb2" stroke-width="2"/>
+        <path d="M300 230 L300 330" stroke="#ffd21f" stroke-width="3" stroke-dasharray="6 6"/>
+      </g>
+      <!-- wand -->
+      <path d="M86 40 L210 128" stroke="#ffd21f" stroke-width="10" stroke-linecap="round"/>
+      <path d="M60 22 L92 44" stroke="#2f3430" stroke-width="18" stroke-linecap="round"/>
+      <rect x="64" y="40" width="14" height="34" rx="4" transform="rotate(35 71 57)" fill="#2f3430"/>
+      <circle cx="212" cy="130" r="7" fill="#ffd21f"/>
+      <!-- spray arc -->
+      <path class="arc" d="M216 134 Q 270 170 300 230" stroke="#6fd3ff" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M216 134 L270 232 L330 232 Z" fill="#6fd3ff" opacity=".18"/>
+      <path class="arc" d="M216 134 Q 290 160 330 230" stroke="#bdeaff" stroke-width="3" fill="none" stroke-linecap="round" style="animation-delay:-.4s"/>
+      <path class="arc" d="M216 134 Q 255 180 275 230" stroke="#bdeaff" stroke-width="3" fill="none" stroke-linecap="round" style="animation-delay:-.7s"/>
+      <g fill="#6fd3ff">
+        <circle class="drop" cx="300" cy="220" r="4"/>
+        <circle class="drop" cx="320" cy="214" r="3" style="animation-delay:.5s"/>
+        <circle class="drop" cx="285" cy="222" r="3.5" style="animation-delay:1s"/>
+        <circle class="drop" cx="335" cy="222" r="2.5" style="animation-delay:1.5s"/>
+      </g>
+      <text x="40" y="216" fill="#8fd16f" font-family="Barlow,sans-serif" font-weight="700" font-size="15" letter-spacing="2">CLEAN</text>
+      <text x="400" y="216" fill="#8a9087" font-family="Barlow,sans-serif" font-weight="700" font-size="15" letter-spacing="2">BEFORE</text>
+    </svg>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <span class="eyebrow">Why T-Cuts</span>
+    <h2 class="display rv">No guesswork.</h2>
+    <div class="why-grid">
+      <div class="why rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#2c8a1c" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <h3>Prices posted up front</h3>
+        <p>Mowing runs $35–$80, power washing $75, mulching $125. You know the number before anyone shows up.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2c8a1c" stroke-width="2.2"/><path d="M12 7v5l3 2" stroke="#2c8a1c" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <h3>Evenings &amp; weekends</h3>
+        <p>Open until 9 PM every day, and 9 AM–9 PM on Saturdays and Sundays.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#2c8a1c" stroke-width="2.2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="#2c8a1c" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <h3>Book in a few taps</h3>
+        <p>Pick a service and a time online — no phone tag. Or just call Tanner.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20c2-5 3-9 3-14M10 20c.5-4 2-8 4-12M16 20c0-3 1.5-7 4-10M3 20h18" stroke="#2c8a1c" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <h3>Lawn to driveway</h3>
+        <p>Mowing, mulch, weeds, bushes, aeration, lighting and power washing — one call covers the whole yard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="hours">
+  <div class="wrap">
+    <span class="eyebrow">Hours &amp; area</span>
+    <h2 class="display rv">When we're out.</h2>
+    <div class="visit-grid">
+      <div class="card rv">
+        <div class="status" id="status"><i></i><span>Open 7 days a week</span></div>
+        <ul class="hours" id="hrs">
+          <li data-d="0"><span>Sunday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="1"><span>Monday</span><span>4 PM – 9 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>4 PM – 9 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>4 PM – 9 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>4 PM – 9 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>4 PM – 9 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9 AM – 9 PM</span></li>
+        </ul>
+      </div>
+      <div class="map rv">
+        <iframe title="Map of Hendersonville, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hendersonville%2C%20TN&output=embed"></iframe>
+        <div class="map-foot">
+          <div><b>Hendersonville, TN</b><small>We come to you — book your address online.</small></div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Hendersonville%2C%20TN" target="_blank" rel="noopener">Open in Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="display rv">Get on the schedule.</h2>
+    <p class="rv">Book online any time, or call (615) 906-9957.</p>
+    <div class="row">
+      <a class="btn btn-y" href="https://square.site/book/LCX4WA25RGVNR/t-cuts-lawn-care-hendersonville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-o" href="tel:+16159069957">Call (615) 906-9957</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:#fff">T-Cuts Lawn Care</b> · Hendersonville, TN · <a href="tel:+16159069957">(615) 906-9957</a> · <a href="mailto:salinasatanner255@gmail.com">Email</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+16159069957"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/LCX4WA25RGVNR/t-cuts-lawn-care-hendersonville-tn" target="_blank" rel="noopener">Book online</a>
+</nav>
+
+<script>
+(function(){
+  // hours: highlight today + live status (America/Chicago)
+  var H={0:[9,21],1:[16,21],2:[16,21],3:[16,21],4:[16,21],5:[16,21],6:[9,21]};
+  var now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};var o={};p.forEach(function(x){o[x.type]=x.value});
+    d=wd[o.weekday];h=(+o.hour%24)+(+o.minute)/60;}catch(e){}
+  var li=document.querySelector('#hrs li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var s=document.getElementById('status'), r=H[d], fmt=function(x){return x===12?'12 PM':x>12?(x-12)+' PM':x+' AM'};
+  if(h>=r[0]&&h<r[1]){s.querySelector('span').textContent='Open now · until 9 PM';}
+  else{s.classList.add('closed');s.querySelector('span').textContent=h<r[0]?'Opens today at '+fmt(r[0]):'Opens tomorrow at '+fmt(H[(d+1)%7][0]);}
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  var show=function(){els.forEach(function(e){e.classList.add('in')})};
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else show();
+  setTimeout(show,1500);
+})();
+</script>
+</body>
+</html>

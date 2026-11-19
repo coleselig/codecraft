@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Tessa Little - Harlow — Johnson City</title>
+<meta name="description" content="Concept site for Tessa Little - Harlow, a Johnson City hairstylist specializing in blonding and lived-in color.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213d; --navy-2:#1c2c4f; --navy-3:#0e1830;
+  --rose:#d4a59a; --rose-2:#e7c3b9; --rose-deep:#b98273;
+  --blush:#fbf3ef; --blush-2:#f4e6e0; --ink:#1a2238; --muted:#5d6478;
+  --line:rgba(212,165,154,.45);
+  --bar-h:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--navy-3);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--rose-deep)}
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.18;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* banner */
+.concept{background:var(--navy-3);color:#e9d6d0;font-size:10px;text-align:center;padding:7px 8px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:30;background:rgba(20,33,61,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,165,154,.22)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:"Cormorant Garamond",serif;color:var(--blush);font-size:22px;text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.brand svg{width:26px;height:26px}
+.navlinks{display:none;gap:28px;font-size:13.5px;font-weight:600;letter-spacing:.04em}
+.navlinks a{color:#e9d6d0;text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--rose);transition:right .3s}
+.navlinks a:hover::after{right:0}
+.nav-book{background:var(--rose);color:var(--navy);text-decoration:none;font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px;transition:background .2s,transform .2s}
+.nav-book:hover{background:var(--rose-2);transform:translateY(-1px)}
+@media (min-width:900px){.navlinks{display:flex}}
+
+/* hero */
+.hero{background:radial-gradient(120% 80% at 50% 0%,var(--navy-2) 0%,var(--navy) 55%,var(--navy-3) 100%);color:var(--blush);overflow:hidden;position:relative}
+.hero .fan{position:absolute;left:50%;bottom:-2px;transform:translateX(-50%);width:760px;max-width:none;opacity:.9;pointer-events:none}
+.hero .fan{-webkit-mask-image:linear-gradient(to top,#000 50%,transparent 92%);mask-image:linear-gradient(to top,#000 50%,transparent 92%)}
+.hero-meta{position:relative;z-index:3}
+.hero .fan path,.hero .fan line,.hero .fan circle{vector-effect:non-scaling-stroke}
+.hero-inner{position:relative;z-index:2;padding:50px 0 215px;text-align:center}
+@media(min-width:900px){.concept{font-size:12px}.hero-inner{padding:80px 0 280px}}
+.hero .eyebrow{color:var(--rose)}
+.hero h1{font-size:clamp(46px,13vw,96px);margin:18px auto 0;max-width:12ch;font-weight:500}
+.hero h1 em{font-style:italic;color:var(--rose-2);font-weight:400}
+.hero p.sub{max-width:34ch;margin:18px auto 0;color:#dcc9c4;font-size:16px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s,color .2s}
+.btn svg{width:17px;height:17px}
+.btn-rose{background:linear-gradient(135deg,var(--rose-2),var(--rose) 55%,var(--rose-deep));color:var(--navy);box-shadow:0 10px 30px -10px rgba(212,165,154,.7)}
+.btn-rose:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(212,165,154,.85)}
+.btn-ghost{border:1px solid rgba(231,195,185,.55);color:var(--blush)}
+.btn-ghost:hover{background:rgba(231,195,185,.12)}
+.hero-meta{margin-top:26px;font-size:13px;color:#cdb8b2;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.hero-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--rose)}
+.shimmer{animation:shimmer 6s ease-in-out infinite}
+@keyframes shimmer{0%,100%{opacity:.55}50%{opacity:1}}
+.rays line{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 2.4s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.rays line{animation:none;stroke-dashoffset:0}.shimmer{animation:none}}
+
+/* deco divider */
+.deco-rule{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--rose-deep);margin:0 auto}
+.deco-rule::before,.deco-rule::after{content:"";height:1px;width:56px;background:linear-gradient(90deg,transparent,var(--rose))}
+.deco-rule::after{transform:scaleX(-1)}
+.deco-rule svg{width:22px;height:22px}
+
+main,section,header{background-color:var(--blush)}
+section{padding:76px 0}
+.sec-head{text-align:center;margin-bottom:38px}
+.sec-head h2{font-size:clamp(38px,9vw,58px);margin-top:12px}
+.sec-head h2 em{font-style:italic;color:var(--rose-deep)}
+.sec-head p{color:var(--muted);max-width:44ch;margin:12px auto 0}
+
+/* specialty strip */
+.spec{background:var(--blush-2);padding:56px 0}
+.spec-grid{display:grid;gap:14px}
+@media(min-width:760px){.spec-grid{grid-template-columns:repeat(3,1fr)}}
+.spec-card{background:var(--blush);border:1px solid var(--line);border-radius:18px;padding:24px 22px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.spec-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(20,33,61,.45)}
+.spec-card svg.ic{width:44px;height:44px;margin-bottom:12px}
+.spec-card h3{font-size:28px}
+@media(max-width:759px){.spec-card{display:grid;grid-template-columns:52px 1fr;column-gap:14px;padding:20px 18px}.spec-card svg.ic{grid-row:1/3;margin:4px 0 0;width:48px;height:48px}.spec-card h3{font-size:26px}.spec-card p{margin-top:2px}}
+.spec-card p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.spec-card .corner{position:absolute;right:-26px;top:-26px;width:110px;height:110px;opacity:.5}
+
+/* menu */
+.menu-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -22px 22px;padding-left:22px;padding-right:22px;scrollbar-width:none}
+.menu-tabs::-webkit-scrollbar{display:none}
+@media(min-width:760px){.menu-tabs{justify-content:center}}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 13.5px Manrope,sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tab:hover{border-color:var(--rose-deep)}
+.tab[aria-selected="true"]{background:var(--navy);color:var(--blush);border-color:var(--navy)}
+.menu-group{display:block}
+.menu-group + .menu-group{margin-top:34px}
+.js .menu-group{display:none;margin-top:0}
+.js .menu-group.on{display:block;animation:fadeup .45s ease both}
+@keyframes fadeup{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.menu-group h3{font-size:30px;margin-bottom:6px;color:var(--navy)}
+.no-js-only{display:block}.js .no-js-only{display:none}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:16px 2px;border-bottom:1px dashed rgba(185,130,115,.45)}
+.svc:last-child{border-bottom:0}
+.svc .n{font-weight:700;font-size:15.5px}
+.svc .p{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600;color:var(--navy);line-height:1;text-align:right;white-space:nowrap}
+.svc .d{grid-column:1/-1;color:var(--muted);font-size:13.5px}
+.svc .t{font-size:12px;letter-spacing:.06em;color:var(--rose-deep);font-weight:700;text-transform:uppercase}
+.menu-card{background:#fff;border-radius:22px;padding:22px 22px 10px;border:1px solid var(--line);box-shadow:0 30px 60px -45px rgba(20,33,61,.5);max-width:760px;margin:0 auto}
+.menu-note{text-align:center;color:var(--muted);font-size:13px;margin-top:18px}
+
+/* why */
+.why{background:var(--navy);color:var(--blush);overflow:hidden}
+.why .sec-head h2{color:var(--blush)}
+.why .sec-head h2 em{color:var(--rose)}
+.why .sec-head p{color:#cdb8b2}
+.why-grid{display:grid;gap:1px;background:rgba(212,165,154,.25);border:1px solid rgba(212,165,154,.25);border-radius:20px;overflow:hidden}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+.why-item{background:var(--navy);padding:26px 24px;display:flex;gap:16px;transition:background .25s}
+.why-item:hover{background:var(--navy-2)}
+.why-item .num{font-family:"Cormorant Garamond",serif;font-size:40px;line-height:1;color:var(--rose);font-style:italic;min-width:38px}
+.why-item h3{font-size:25px;color:var(--blush)}
+.why-item p{color:#cdb8b2;font-size:14.5px;margin-top:4px}
+.quote-line{text-align:center;margin-top:40px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(24px,6vw,34px);color:var(--rose-2)}
+.quote-line small{display:block;font-family:Manrope,sans-serif;font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#a99590;margin-top:8px}
+
+/* visit */
+.visit-grid{display:grid;gap:22px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.15fr;align-items:stretch}}
+.hours{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.hours h3{font-size:30px;color:var(--navy)}
+.hours ul{list-style:none;margin-top:14px}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15px}
+.hours li span:last-child{color:var(--muted)}
+.hours li.closed span:last-child{color:#9a9fae}
+.hours li.today{background:var(--navy);color:var(--blush);font-weight:700}
+.hours li.today span:last-child{color:var(--rose-2)}
+.hours li.today span:first-child::after{content:" · Today";font-weight:500;color:var(--rose);font-size:12.5px}
+.addr{margin-top:18px;padding-top:18px;border-top:1px dashed var(--line);font-size:15px}
+.addr strong{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;color:var(--navy)}
+.visit-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn-navy{background:var(--navy);color:var(--blush)}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--navy);color:var(--navy)}
+.btn-line:hover{background:var(--navy);color:var(--blush)}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:320px;background:var(--blush-2);position:relative}
+.map::before{content:"4307 North Roan Street · Johnson City";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--rose-deep);text-align:center;padding:20px}
+.map iframe{position:relative;width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* book band */
+.band{background:linear-gradient(135deg,var(--rose-2),var(--rose) 60%,var(--rose-deep));color:var(--navy);text-align:center;padding:60px 0;position:relative;overflow:hidden}
+.band h2{font-size:clamp(36px,9vw,56px)}
+.band p{max-width:40ch;margin:10px auto 0;color:#3a3446}
+.band .ctas .btn-ghost{border-color:var(--navy);color:var(--navy)}
+.band .ctas .btn-ghost:hover{background:rgba(20,33,61,.08)}
+.band svg.bfan{position:absolute;left:50%;top:-40px;transform:translateX(-50%);width:640px;max-width:none;opacity:.16;pointer-events:none}
+
+footer{background:var(--navy-3);color:#bfaaa4;padding:44px 0 36px;font-size:13.5px;text-align:center}
+footer .brand{justify-content:center;margin-bottom:10px}
+footer a{color:var(--rose-2)}
+footer .fine{margin-top:14px;font-size:12px;color:#8e8090}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(14,24,48,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(212,165,154,.3)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:14px;font-weight:700;text-decoration:none;font-size:15px}
+.callbar svg{width:18px;height:18px}
+.callbar .c{border:1px solid rgba(231,195,185,.55);color:var(--blush)}
+.callbar .b{background:linear-gradient(135deg,var(--rose-2),var(--rose));color:var(--navy)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose-deep);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Tessa Little - Harlow. Not live.</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tessa Little - Harlow home">
+      <svg viewBox="0 0 26 26" fill="none" stroke="#d4a59a" stroke-width="1.1" aria-hidden="true"><path d="M2 22 A11 11 0 0 1 24 22"/><path d="M6 22 A7 7 0 0 1 20 22"/><path d="M13 22 V9 M13 22 L5.5 13.5 M13 22 L20.5 13.5 M13 22 L2.8 18 M13 22 L23.2 18"/></svg>
+      Tessa Harlow
+    </a>
+    <div class="navlinks"><a href="#menu">Services</a><a href="#why">Why Tessa</a><a href="#visit">Visit</a></div>
+    <a class="nav-book" href="https://tessalittle.glossgenius.com/book">Book</a>
+  </div>
+</nav>
+
+<header class="hero grain" id="top">
+  <svg class="fan" viewBox="0 0 760 320" fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7c3b9" stop-opacity=".9"/><stop offset="1" stop-color="#d4a59a" stop-opacity=".15"/></linearGradient>
+    </defs>
+    <g stroke="url(#rg)" stroke-width="1">
+      <path d="M40 320 A340 340 0 0 1 720 320"/>
+      <path d="M100 320 A280 280 0 0 1 660 320"/>
+      <path d="M160 320 A220 220 0 0 1 600 320" class="shimmer"/>
+      <path d="M220 320 A160 160 0 0 1 540 320"/>
+      <path d="M280 320 A100 100 0 0 1 480 320"/>
+    </g>
+    <g class="rays" stroke="#d4a59a" stroke-opacity=".55" stroke-width=".8">
+      <line x1="380" y1="320" x2="40" y2="320"/><line x1="380" y1="320" x2="58" y2="214"/><line x1="380" y1="320" x2="110" y2="118"/><line x1="380" y1="320" x2="190" y2="42"/><line x1="380" y1="320" x2="285" y2="-6"/><line x1="380" y1="320" x2="380" y2="-20"/><line x1="380" y1="320" x2="475" y2="-6"/><line x1="380" y1="320" x2="570" y2="42"/><line x1="380" y1="320" x2="650" y2="118"/><line x1="380" y1="320" x2="702" y2="214"/><line x1="380" y1="320" x2="720" y2="320"/>
+    </g>
+    <circle cx="380" cy="320" r="46" fill="#14213d" stroke="#e7c3b9" stroke-width="1.2"/>
+    <circle cx="380" cy="320" r="30" fill="none" stroke="#d4a59a" stroke-opacity=".6"/>
+    <text x="380" y="306" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#e7c3b9">T·H</text>
+  </svg>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Hairstylist · Johnson City, TN</div>
+    <h1>Blonding &amp; <em>lived-in</em> color</h1>
+    <p class="sub">Hi, I'm Tessa. Foils, balayage, glazes and cuts on North Roan Street, booked online in a minute.</p>
+    <div class="ctas">
+      <a class="btn btn-rose" href="https://tessalittle.glossgenius.com/book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book online</a>
+      <a class="btn btn-ghost" href="tel:+13049422337"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(304) 942-2337</a>
+    </div>
+    <div class="hero-meta"><span>Tue–Fri · 10 AM–6 PM</span><span class="dot"></span><span>Free color consults</span></div>
+  </div>
+</header>
+
+<section class="spec">
+  <div class="wrap">
+    <div class="spec-grid">
+      <div class="spec-card reveal">
+        <svg class="corner" viewBox="0 0 110 110" fill="none" stroke="#d4a59a" aria-hidden="true"><path d="M110 110 A100 100 0 0 1 10 10"/><path d="M110 110 A75 75 0 0 1 35 35"/><path d="M110 110 A50 50 0 0 1 60 60"/></svg>
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="#14213d" stroke-width="1.3" aria-hidden="true"><path d="M10 38c2-12 4-22 12-32 8 10 10 20 12 32"/><path d="M15 38c1-8 3-15 7-22 4 7 6 14 7 22" stroke="#b98273"/><path d="M22 6v32"/></svg>
+        <h3>Blonding</h3>
+        <p>Full and partial foils, highlights with root color, and the glaze to finish.</p>
+      </div>
+      <div class="spec-card reveal">
+        <svg class="corner" viewBox="0 0 110 110" fill="none" stroke="#d4a59a" aria-hidden="true"><path d="M110 110 A100 100 0 0 1 10 10"/><path d="M110 110 A75 75 0 0 1 35 35"/><path d="M110 110 A50 50 0 0 1 60 60"/></svg>
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="#14213d" stroke-width="1.3" aria-hidden="true"><path d="M8 34c6-4 8-16 14-26"/><path d="M14 36c6-4 8-16 14-26" stroke="#b98273"/><path d="M20 38c6-4 8-16 14-26"/><circle cx="34" cy="10" r="2.4" fill="#d4a59a" stroke="none"/></svg>
+        <h3>Lived-in color</h3>
+        <p>Balayage that's "blended lived in color", plus all-over color and root touch ups.</p>
+      </div>
+      <div class="spec-card reveal">
+        <svg class="corner" viewBox="0 0 110 110" fill="none" stroke="#d4a59a" aria-hidden="true"><path d="M110 110 A100 100 0 0 1 10 10"/><path d="M110 110 A75 75 0 0 1 35 35"/><path d="M110 110 A50 50 0 0 1 60 60"/></svg>
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="#14213d" stroke-width="1.3" aria-hidden="true"><path d="M22 6l3 9h9l-7 6 3 9-8-6-8 6 3-9-7-6h9z"/><path d="M22 34v6" stroke="#b98273"/></svg>
+        <h3>Bridal &amp; formal</h3>
+        <p>Bridal trials and formal styles for the big day, with blowouts in between.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="deco-rule"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" aria-hidden="true"><path d="M1 18 A10 10 0 0 1 21 18"/><path d="M11 18V6M11 18 4 10M11 18l7-8"/></svg></div>
+      <h2>The <em>menu</em></h2>
+      <p>Every service and price as listed on Tessa's booking page. A "+" means a starting price.</p>
+    </div>
+    <div class="menu-tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" data-g="color" aria-selected="true">Color &amp; blonding</button>
+      <button class="tab" role="tab" data-g="cuts" aria-selected="false">Cuts &amp; styling</button>
+      <button class="tab" role="tab" data-g="care" aria-selected="false">Treatments</button>
+      <button class="tab" role="tab" data-g="ext" aria-selected="false">Extensions &amp; wax</button>
+    </div>
+    <div class="menu-card reveal">
+      <div class="menu-group on" data-g="color">
+        <h3 class="no-js-only">Color &amp; blonding</h3>
+        <div class="svc"><span class="n">Full Foil + Haircut</span><span class="p">$190+</span><span class="d">Highlight / lowlight · <span class="t">180 min</span></span></div>
+        <div class="svc"><span class="n">Full Foil</span><span class="p">$150+</span><span class="d"><span class="t">180 min</span></span></div>
+        <div class="svc"><span class="n">Partial Foil + Haircut</span><span class="p">$145+</span><span class="d"><span class="t">150 min</span></span></div>
+        <div class="svc"><span class="n">Partial Foil</span><span class="p">$125+</span><span class="d">Foils on upper half of head and front of face · <span class="t">165 min</span></span></div>
+        <div class="svc"><span class="n">Balayage + Haircut</span><span class="p">$190+</span><span class="d"><span class="t">180 min</span></span></div>
+        <div class="svc"><span class="n">Balayage</span><span class="p">$150+</span><span class="d">Blended lived in color · <span class="t">180 min</span></span></div>
+        <div class="svc"><span class="n">Full Highlight With Root Color</span><span class="p">$145+</span><span class="d"><span class="t">180 min</span></span></div>
+        <div class="svc"><span class="n">All Over Color</span><span class="p">$120+</span><span class="d">One singular color all over · <span class="t">120 min</span></span></div>
+        <div class="svc"><span class="n">Root Touch Up + Haircut</span><span class="p">$130+</span><span class="d">Base color for greys or fresh roots · <span class="t">90 min</span></span></div>
+        <div class="svc"><span class="n">Root And Run</span><span class="p">$55+</span><span class="d">For a time crunch: root color applied, then run home · <span class="t">35 min</span></span></div>
+        <div class="svc"><span class="n">Glaze</span><span class="p">$50</span><span class="d"><span class="t">60 min</span></span></div>
+        <div class="svc"><span class="n">Add On Glaze With Root Touch Up</span><span class="p">$45</span><span class="d">Refresh for the ends of your hair · <span class="t">20 min</span></span></div>
+      </div>
+      <div class="menu-group" data-g="cuts">
+        <h3 class="no-js-only">Cuts &amp; styling</h3>
+        <div class="svc"><span class="n">Womens Cut</span><span class="p">$45</span><span class="d">Includes blowout / style · <span class="t">60 min</span></span></div>
+        <div class="svc"><span class="n">Womens Dry Cut</span><span class="p">$35</span><span class="d">Come with clean, dry, straight hair · <span class="t">30 min</span></span></div>
+        <div class="svc"><span class="n">Blow Out</span><span class="p">$30</span><span class="d"><span class="t">30 min</span></span></div>
+        <div class="svc"><span class="n">Bang Trim</span><span class="p">$5</span><span class="d"><span class="t">10 min</span></span></div>
+        <div class="svc"><span class="n">Formal Style</span><span class="p">$60</span><span class="d"><span class="t">75 min</span></span></div>
+        <div class="svc"><span class="n">Bridal Trial</span><span class="p">$60</span><span class="d"><span class="t">90 min</span></span></div>
+      </div>
+      <div class="menu-group" data-g="care">
+        <h3 class="no-js-only">Treatments</h3>
+        <div class="svc"><span class="n">Deep Conditioning Treatment</span><span class="p">$45</span><span class="d"><span class="t">60 min</span></span></div>
+        <div class="svc"><span class="n">Add On Deep Conditioning Treatment</span><span class="p">$45</span><span class="d">Add to any color service · <span class="t">10 min</span></span></div>
+        <div class="svc"><span class="n">Color / Extension Consultation</span><span class="p">$0</span><span class="d"><span class="t">10 min</span></span></div>
+      </div>
+      <div class="menu-group" data-g="ext">
+        <h3 class="no-js-only">Extensions &amp; wax</h3>
+        <div class="svc"><span class="n">Extension Maintenance</span><span class="p">$150+</span><span class="d"><span class="t">120 min</span></span></div>
+        <div class="svc"><span class="n">Brow Wax</span><span class="p">$12</span><span class="d"><span class="t">10 min</span></span></div>
+        <div class="svc"><span class="n">Lip Wax</span><span class="p">$8</span><span class="d"><span class="t">10 min</span></span></div>
+      </div>
+    </div>
+    <p class="menu-note">Not sure what to book? Start with the free 10-minute color / extension consultation.</p>
+  </div>
+</section>
+
+<section class="why grain" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" style="color:var(--rose)">Why Tessa</div>
+      <h2>A blonde specialist, <em>by choice</em></h2>
+      <p>The short version, straight from Tessa's own booking page.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="num">i</div><div><h3>Blonding is the specialty</h3><p>Tessa describes herself as a Johnson City hairstylist specializing in blonding and lived-in color.</p></div></div>
+      <div class="why-item reveal"><div class="num">ii</div><div><h3>Consults cost nothing</h3><p>The color / extension consultation is listed at $0, so you can plan before you commit.</p></div></div>
+      <div class="why-item reveal"><div class="num">iii</div><div><h3>Clear pricing up front</h3><p>Every service shows its price and time on the menu, so you know how long to block off.</p></div></div>
+      <div class="why-item reveal"><div class="num">iv</div><div><h3>Short on time? Root &amp; Run</h3><p>Root color applied, then you head home. 35 minutes on the menu.</p></div></div>
+    </div>
+    <p class="quote-line reveal">"Hi, I'm Tessa!"<small>Johnson City · North Roan Street</small></p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="deco-rule"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" aria-hidden="true"><path d="M1 18 A10 10 0 0 1 21 18"/><path d="M11 18V6M11 18 4 10M11 18l7-8"/></svg></div>
+      <h2>Come <em>see me</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <ul id="hours">
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>10 AM – 6 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10 AM – 6 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>10 AM – 6 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10 AM – 6 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <div class="addr">
+          <strong>4307 North Roan Street, #1</strong>
+          Johnson City, TN 37615
+          <div class="visit-ctas">
+            <a class="btn btn-navy" href="tel:+13049422337">Call (304) 942-2337</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=4307%20North%20Roan%20Street%20%231%2C%20Johnson%20City%2C%20TN%2037615">Directions</a>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to 4307 North Roan Street, Johnson City" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=4307%20North%20Roan%20Street%20%231%2C%20Johnson%20City%2C%20TN%2037615&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band grain">
+  <svg class="bfan" viewBox="0 0 640 320" fill="none" stroke="#14213d" stroke-width="1" aria-hidden="true"><path d="M20 320 A300 300 0 0 1 620 320"/><path d="M80 320 A240 240 0 0 1 560 320"/><path d="M140 320 A180 180 0 0 1 500 320"/><path d="M320 320 L20 320 M320 320 L60 170 M320 320 L170 60 M320 320 L320 20 M320 320 L470 60 M320 320 L580 170 M320 320 L620 320"/></svg>
+  <div class="wrap" style="position:relative">
+    <h2>Ready for your blonde?</h2>
+    <p>Book Tuesday through Friday online, or call Tessa directly.</p>
+    <div class="ctas">
+      <a class="btn btn-navy" href="https://tessalittle.glossgenius.com/book">Book online</a>
+      <a class="btn btn-ghost" href="tel:+13049422337">Call Tessa</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 26 26" fill="none" stroke="#d4a59a" stroke-width="1.1" aria-hidden="true"><path d="M2 22 A11 11 0 0 1 24 22"/><path d="M6 22 A7 7 0 0 1 20 22"/><path d="M13 22 V9 M13 22 L5.5 13.5 M13 22 L20.5 13.5"/></svg>Tessa Little - Harlow</a>
+    <div>4307 North Roan Street, #1 · Johnson City, TN 37615</div>
+    <div><a href="tel:+13049422337">(304) 942-2337</a> · <a href="https://tessalittle.glossgenius.com/book">Book online</a></div>
+    <div class="fine">Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+13049422337"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="b" href="https://tessalittle.glossgenius.com/book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), groups=[].slice.call(document.querySelectorAll('.menu-group'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+    groups.forEach(function(g){g.classList.toggle('on',g.dataset.g===t.dataset.g)});
+  })});
+  // today
+  var day=new Date().getDay(); var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(function(e){e.classList.add('in')});
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

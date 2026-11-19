@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Luxe Beauty Lounge — Ooltewah, TN</title>
+<meta name="description" content="Concept website for Luxe Beauty Lounge, an exclusive lash & brow salon on Lee Hwy in Ooltewah, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0f3b3a; --teal2:#164c4a; --teal3:#1f6360; --coral:#ef7a5f; --coral2:#d9604a; --coral-l:#f7b6a3;
+  --shell:#fbf3ec; --sand:#f3e4d7; --ink:#12302f; --mut:#55706d; --r:26px; --bar:74px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--shell);line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:-.015em}
+h1 em,h2 em{font-style:italic;color:var(--coral)}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;position:relative}
+.banner{background:var(--teal);color:#b9d3cf;font-size:10.5px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--coral-l);font-weight:600}
+.nav{position:sticky;top:0;z-index:40;background:rgba(251,243,236,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,59,58,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{text-decoration:none;font-family:Fraunces;font-size:21px;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.logo i{font-style:italic;color:var(--coral2)}
+.nav ul{display:none;list-style:none;gap:28px;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--mut)}
+.nav ul a:hover{color:var(--coral2)}
+.navbook{background:var(--teal);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:9px 17px;border-radius:999px;transition:background .2s}
+.navbook:hover{background:var(--coral2)}
+
+.hero{position:relative;overflow:hidden;padding:30px 0 56px;background:var(--shell)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;background-image:repeating-linear-gradient(0deg,rgba(15,59,58,.035) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(15,59,58,.03) 0 1px,transparent 1px 4px)}
+.blob{position:absolute;pointer-events:none}
+.hb1{width:340px;right:-180px;top:-70px;animation:float 15s ease-in-out infinite}
+.hb2{width:260px;left:-160px;top:300px;animation:float 19s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(8px,-12px) rotate(5deg)}}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal3)}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--coral)}
+.hero h1{font-size:clamp(46px,13vw,108px);margin:14px 0 14px;max-width:10ch;position:relative;z-index:1}
+.hero p.sub{font-size:17px;color:var(--mut);max-width:34ch;position:relative;z-index:1}
+.lashart{width:100%;max-width:300px;margin:16px 0 0;position:relative;z-index:1}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:16px;padding:15px 22px;border-radius:999px;transition:transform .2s,background .2s,box-shadow .2s}
+.btn-c{background:var(--coral);color:#fff;box-shadow:0 12px 26px -12px rgba(239,122,95,.9)}
+.btn-c:hover{background:var(--coral2);transform:translateY(-2px)}
+.btn-t{border:1.5px solid rgba(15,59,58,.22);color:var(--teal)}
+.btn-t:hover{border-color:var(--teal);transform:translateY(-2px)}
+.hero-art{display:none}
+
+.special{background:var(--teal);color:#e6f0ee;border-radius:var(--r);padding:18px;margin-top:24px;display:flex;gap:16px;align-items:center;position:relative;z-index:1;overflow:hidden}
+.special .pill{flex:0 0 auto;width:64px;height:64px;border-radius:22px 30px 20px 28px;background:var(--coral);display:grid;place-items:center;font-family:Fraunces;font-size:14px;line-height:1.05;text-align:center;color:#fff;font-style:italic}
+.special b{display:block;font-family:Fraunces;font-weight:400;font-size:20px;color:#fff;line-height:1.15}
+.special span{font-size:14px;color:#b9d3cf}
+.special s{opacity:.7}
+
+section{padding:76px 0}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral2)}
+h2{font-size:clamp(38px,10vw,64px);margin:10px 0 14px}
+.lead{color:var(--mut);font-size:17px;max-width:46ch}
+
+.menu{background:#fff}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:26px -20px 0;padding:0 20px 6px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 14px Figtree;padding:10px 16px;border-radius:999px;border:1.5px solid var(--sand);background:var(--shell);color:var(--ink);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--coral)}
+.tab[aria-selected="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.panel{margin-top:20px;background:var(--shell);border-radius:var(--r);padding:6px 20px}
+.panel[hidden]{display:none}
+.row{padding:15px 0;border-bottom:1px solid var(--sand);display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .n{font-weight:600;font-size:16px}
+.row .p{font-family:Fraunces;font-size:19px;color:var(--coral2);text-align:right;white-space:nowrap}
+.row .m{font-size:13px;color:var(--mut);grid-column:1/-1}
+.note{font-size:13.5px;color:var(--mut);margin-top:14px}
+
+.why{background:var(--sand);position:relative;overflow:hidden}
+.cards{display:grid;gap:16px;margin-top:30px}
+.card{background:var(--shell);border-radius:var(--r);padding:26px 24px;transition:transform .25s,box-shadow .25s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(15,59,58,.45)}
+.card .ic{width:52px;height:52px;border-radius:18px 24px 16px 22px;background:var(--teal);display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:25px;margin-bottom:6px}
+.card p{color:var(--mut);font-size:15.5px}
+
+.visit{background:var(--teal);color:#e6f0ee;overflow:hidden;position:relative}
+.visit .kicker{color:var(--coral-l)}
+.visit h2 em{color:var(--coral-l)}
+.vgrid{display:grid;gap:18px;margin-top:30px}
+.hours{background:var(--teal2);border-radius:var(--r);padding:10px 22px;border:1px solid rgba(255,255,255,.06)}
+.hrow{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:15.5px}
+.hrow:last-child{border-bottom:0}
+.hrow.today{color:#fff;font-weight:700}
+.hrow.today span:first-child::after{content:"Today";font:700 10.5px Figtree;letter-spacing:.1em;text-transform:uppercase;background:var(--coral);color:#fff;padding:3px 8px;border-radius:999px;margin-left:10px;vertical-align:2px}
+.hrow .cl{color:#86a5a1}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+.status i{width:9px;height:9px;border-radius:50%;background:#86a5a1}
+.status.open i{background:#8ee0a0;box-shadow:0 0 0 4px rgba(142,224,160,.2)}
+.map{border-radius:var(--r);overflow:hidden;min-height:300px;background:var(--teal2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='%23ef7a5f' stroke-width='1.6'%3E%3Cpath d='M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center/60px no-repeat}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{background:var(--shell);color:var(--ink);border-radius:var(--r);padding:24px}
+.addr h3{font-size:26px;margin-bottom:6px}
+.addr p{color:var(--mut)}
+.addr .ctas{margin-top:18px}
+
+.final{background:var(--coral);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{max-width:13ch;margin:10px auto 14px}
+.final h2 em{color:var(--teal)}
+.final p{max-width:40ch;margin:0 auto;color:#fff3ee}
+.final .btn{background:var(--teal);color:#fff;margin-top:26px}
+.final .btn:hover{background:#0a2928;transform:translateY(-2px)}
+footer{background:#0a2928;color:#86a5a1;font-size:14px;padding:34px 0 30px}
+footer .wrap{display:grid;gap:10px}
+footer b{color:#fff;font-family:Fraunces;font-weight:400;font-size:20px}
+footer a{color:var(--coral-l)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(15,59,58,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15.5px;height:52px;border-radius:16px;transition:transform .15s}
+.bar a:active{transform:scale(.97)}
+.bar .call{background:rgba(255,255,255,.1);color:#fff}
+.bar .book{background:var(--coral);color:#fff}
+
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+.draw path{stroke-dasharray:400;stroke-dashoffset:0;animation:draw 2.4s ease both}
+@keyframes draw{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+
+@media (min-width:860px){
+  :root{--bar:0px}
+  .bar{display:none}
+  body{padding-bottom:0}
+  .nav ul{display:flex}
+  .hero{padding:80px 0 100px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .hero-art{display:block;position:relative;z-index:1}
+  .lashart{display:none}
+  .hb1{width:520px;right:-140px;top:-120px}
+  .hero p.sub{font-size:20px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .vgrid{grid-template-columns:1fr 1.2fr}
+  .vgrid .map{grid-row:span 2}
+  .menu .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+  .menu .tabs{margin:26px 0 0;padding:0;flex-wrap:wrap}
+  .menu .side{position:sticky;top:90px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Luxe Beauty Lounge. Not live.</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top">Luxe <i>Beauty</i> Lounge</a>
+    <ul><li><a href="#menu">Services</a></li><li><a href="#why">The studio</a></li><li><a href="#visit">Visit</a></li></ul>
+    <a class="navbook" href="https://square.site/book/CHHKARR6RJEEW/luxe-beauty-lounge-ooltewah-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="blob hb1" viewBox="0 0 200 200" aria-hidden="true"><path fill="#f7b6a3" fill-opacity=".55" d="M44.7,-58.9C57.1,-48.7,65.6,-34,70.1,-17.7C74.6,-1.4,75.1,16.5,67.7,30.4C60.3,44.3,45,54.2,28.6,61.6C12.2,69,-5.3,73.9,-22.6,70.6C-39.9,67.3,-57,55.8,-66.2,40C-75.4,24.2,-76.7,4.1,-71.5,-13.1C-66.3,-30.3,-54.6,-44.6,-40.6,-54.6C-26.6,-64.6,-10.3,-70.3,4.1,-75.2C18.5,-80.1,32.3,-69.1,44.7,-58.9Z" transform="translate(100 100)"/></svg>
+  <svg class="blob hb2" viewBox="0 0 200 200" aria-hidden="true"><path fill="#1f6360" fill-opacity=".12" d="M39.9,-52.4C52.6,-44.8,64.3,-34,69.6,-20.2C74.9,-6.4,73.8,10.4,66.8,23.9C59.8,37.4,46.9,47.6,32.7,55.3C18.5,63,3,68.2,-13.2,67.2C-29.4,66.2,-46.3,59,-57.7,46.3C-69.1,33.6,-75,15.4,-73.4,-1.7C-71.8,-18.8,-62.7,-34.8,-50,-42.6C-37.3,-50.4,-21,-50,-6.3,-42.1C8.4,-34.2,27.2,-60,39.9,-52.4Z" transform="translate(100 100)"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="tag"><i></i><span id="heroStatus">Lee Hwy · Ooltewah, TN</span></span>
+      <h1>Lashes &amp; brows, <em>made luxe.</em></h1>
+      <p class="sub">An exclusive lash &amp; brow salon in Ooltewah: lash extensions, brow lamination, microblading and lip blush, all booked online.</p>
+      <svg class="lashart draw" viewBox="0 0 340 70" aria-hidden="true">
+        <path d="M20 22 C 110 70, 230 70, 320 22" stroke="#0f3b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <g stroke="#0f3b3a" stroke-width="2.2" stroke-linecap="round" fill="none">
+          <path d="M40 34 q -6 14 -16 22"/><path d="M62 43 q -4 14 -12 24"/><path d="M86 50 q -2 13 -7 23"/><path d="M112 54 q 0 13 -3 22"/><path d="M140 57 q 1 12 0 22"/><path d="M170 58 q 2 12 3 22"/><path d="M200 57 q 3 12 6 21"/><path d="M228 54 q 5 12 10 20"/><path d="M254 50 q 6 11 13 18"/><path d="M278 43 q 8 10 16 15"/><path d="M300 34 q 9 8 18 11"/>
+        </g>
+        <circle cx="326" cy="14" r="5" fill="#ef7a5f"/>
+      </svg>
+      <div class="ctas">
+        <a class="btn btn-c" href="https://square.site/book/CHHKARR6RJEEW/luxe-beauty-lounge-ooltewah-tn" target="_blank" rel="noopener">Book your appointment
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-t" href="tel:+14237409883">Call (423) 740-9883</a>
+      </div>
+      <div class="special">
+        <div class="pill">Nov<br>only</div>
+        <div><b>The Ultimate Luxe Duo, <s>$200</s> $175</b><span>Brow lamination + Korean lash lift, 1 hr 30 min. November special on the booking page.</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 440 480" width="100%">
+        <path d="M220 20c110 0 200 70 200 190s-80 250-210 250S20 360 30 230 110 20 220 20z" fill="#0f3b3a"/>
+        <path d="M352 40c40 6 64 40 56 74-8 32-44 46-72 34s-40-50-28-78c8-20 24-32 44-30z" fill="#ef7a5f"/>
+        <g>
+          <path d="M70 250 C 160 330, 290 330, 380 250" stroke="#fbf3ec" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <g stroke="#fbf3ec" stroke-width="3.2" stroke-linecap="round" fill="none">
+            <path d="M92 268 q -10 22 -26 34"/><path d="M118 284 q -7 22 -20 37"/><path d="M146 296 q -4 22 -12 38"/><path d="M176 303 q -1 22 -5 38"/><path d="M206 306 q 1 22 1 39"/><path d="M236 305 q 3 21 7 37"/><path d="M266 299 q 6 20 14 34"/><path d="M294 289 q 9 18 20 30"/><path d="M320 276 q 11 15 25 23"/><path d="M344 262 q 13 11 28 16"/>
+          </g>
+        </g>
+        <path d="M110 170 C 170 130, 270 130, 340 165" stroke="#f7b6a3" stroke-width="12" fill="none" stroke-linecap="round"/>
+        <g fill="#f7b6a3"><circle cx="80" cy="120" r="5"/><circle cx="390" cy="360" r="4"/><circle cx="120" cy="410" r="3" opacity=".7"/></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="side rv">
+      <span class="kicker">Services</span>
+      <h2>Your lash &amp; brow <em>menu.</em></h2>
+      <p class="lead">Straight from Luxe Beauty Lounge's booking page. Pick a category, then book the exact service online.</p>
+    </div>
+    <div class="rv">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-t="lash">Lashes</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="brow">Brows</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="pmu">Permanent makeup</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="skin">Skin &amp; consults</button>
+      </div>
+      <div class="panel" data-p="lash">
+        <div class="row"><span class="n">Classic Luxe Lash Full Set</span><span class="p">$150</span><span class="m">2 hr</span></div>
+        <div class="row"><span class="n">Signature Luxe Lash Full Set</span><span class="p">$175</span><span class="m">2 hr</span></div>
+        <div class="row"><span class="n">Luxe Artistry Lash Set</span><span class="p">$200</span><span class="m">2 hr 30 min</span></div>
+        <div class="row"><span class="n">Lash Extensions Fill In</span><span class="p">from $75</span><span class="m">1 hr · within 3 weeks</span></div>
+        <div class="row"><span class="n">Extended Lash Extension Fill In</span><span class="p">$100</span><span class="m">1 hr 30 min · 22–28 days</span></div>
+        <div class="row"><span class="n">Luxe Artistry Lash Extension Fill In</span><span class="p">$100</span><span class="m">1 hr 30 min</span></div>
+        <div class="row"><span class="n">Korean Lash Lift &amp; Tint</span><span class="p">$125</span><span class="m">1 hr 15 min</span></div>
+        <div class="row"><span class="n">Lash Tint</span><span class="p">$25</span><span class="m">30 min</span></div>
+        <div class="row"><span class="n">Bottom Lash Extensions (add-on)</span><span class="p">$30</span><span class="m">30 min</span></div>
+        <div class="row"><span class="n">Lash Extension Removal</span><span class="p">$30</span><span class="m">30 min</span></div>
+      </div>
+      <div class="panel" data-p="brow" hidden>
+        <div class="row"><span class="n">Brow Lamination</span><span class="p">$90</span><span class="m">45 min · includes wax &amp; tint</span></div>
+        <div class="row"><span class="n">Brow Sculpting</span><span class="p">$45</span><span class="m">30 min</span></div>
+        <div class="row"><span class="n">Brow Wax</span><span class="p">$20</span><span class="m">20 min</span></div>
+        <div class="row"><span class="n">The Ultimate Luxe Duo</span><span class="p">$200</span><span class="m">1 hr 30 min · brow lamination + Korean lash lift</span></div>
+      </div>
+      <div class="panel" data-p="pmu" hidden>
+        <div class="row"><span class="n">Microblading (Master Artist)</span><span class="p">$575</span><span class="m">2 hr</span></div>
+        <div class="row"><span class="n">Powder Brows (Master Artist)</span><span class="p">$575</span><span class="m">2 hr</span></div>
+        <div class="row"><span class="n">Combination Brows (Master Artist)</span><span class="p">$625</span><span class="m">2 hr</span></div>
+        <div class="row"><span class="n">Nano Brows (Master Artist)</span><span class="p">$625</span><span class="m">3 hr 30 min</span></div>
+        <div class="row"><span class="n">Lip Blush Tattoo</span><span class="p">$600</span><span class="m">2 hr</span></div>
+        <div class="row"><span class="n">Microblading (Apprentice Artist)</span><span class="p">$125</span><span class="m">3 hr</span></div>
+        <div class="row"><span class="n">Powder Brows (Apprentice Artist)</span><span class="p">$150</span><span class="m">3 hr</span></div>
+        <div class="row"><span class="n">Combination Brows (Apprentice Artist)</span><span class="p">$175</span><span class="m">3 hr</span></div>
+        <div class="row"><span class="n">6–8 Week Brow Touch Up</span><span class="p">Free</span><span class="m">1 hr</span></div>
+        <div class="row"><span class="n">6–8 Week Lip Touch Up</span><span class="p">Free</span><span class="m">1 hr 30 min</span></div>
+        <div class="row"><span class="n">1–3 Year PMU Touch Up</span><span class="p">$300</span><span class="m">1 hr 30 min · current clients</span></div>
+      </div>
+      <div class="panel" data-p="skin" hidden>
+        <div class="row"><span class="n">Dermaplaning</span><span class="p">$75</span><span class="m">30 min</span></div>
+        <div class="row"><span class="n">Lip Wax</span><span class="p">$10</span><span class="m">15 min</span></div>
+        <div class="row"><span class="n">Cosmetic Tattoo Consultation (Master Artist)</span><span class="p">$50</span><span class="m">15 min · applied to service if booked</span></div>
+        <div class="row"><span class="n">Consultation for Aesthetic Services</span><span class="p">$50</span><span class="m">15 min</span></div>
+      </div>
+      <p class="note">Prices and times as listed on Luxe Beauty Lounge's Square booking page. Some artists have their own client-only listings; see the booking page for those.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="blob" style="width:320px;right:-160px;bottom:-120px" viewBox="0 0 200 200" aria-hidden="true"><path fill="#ef7a5f" fill-opacity=".18" d="M44.7,-58.9C57.1,-48.7,65.6,-34,70.1,-17.7C74.6,-1.4,75.1,16.5,67.7,30.4C60.3,44.3,45,54.2,28.6,61.6C12.2,69,-5.3,73.9,-22.6,70.6C-39.9,67.3,-57,55.8,-66.2,40C-75.4,24.2,-76.7,4.1,-71.5,-13.1C-66.3,-30.3,-54.6,-44.6,-40.6,-54.6C-26.6,-64.6,-10.3,-70.3,4.1,-75.2C18.5,-80.1,32.3,-69.1,44.7,-58.9Z" transform="translate(100 100)"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">The studio</span>
+      <h2>Lash, brow &amp; <em>PMU</em> under one roof.</h2>
+    </div>
+    <div class="cards">
+      <div class="card rv">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f7b6a3" stroke-width="2" stroke-linecap="round"><path d="M3 10c4 5 14 5 18 0"/><path d="M6 12.5l-1.5 3M9.5 14l-.7 3.2M14.5 14l.7 3.2M18 12.5l1.5 3"/></svg></div>
+        <h3>Three lash looks</h3>
+        <p>Classic Luxe, Signature Luxe and Luxe Artistry full sets, plus fills, Korean lash lifts and bottom-lash add-ons.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f7b6a3" stroke-width="2" stroke-linecap="round"><path d="M3 11c5-5 13-5 18 0"/><path d="M5 14l2-1M9 13l2-.5M13 12.5l2 .5M17 13l2 1"/></svg></div>
+        <h3>Master &amp; apprentice artists</h3>
+        <p>Microblading, powder, combination and nano brows plus lip blush, with apprentice-artist options at a lower price.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f7b6a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M8 15l2.5 2.5L16 13"/></svg></div>
+        <h3>Open five days a week</h3>
+        <p>Tuesday through Saturday on Lee Hwy, Suite M. Book online any time, day or night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Visit</span>
+      <h2>Find us in <em>Ooltewah.</em></h2>
+      <p class="status" id="status"><i></i><span>Tue–Sat · by appointment</span></p>
+    </div>
+    <div class="vgrid">
+      <div class="hours rv">
+        <div class="hrow" data-d="2"><span>Tuesday</span><span>9:00 AM – 4:00 PM</span></div>
+        <div class="hrow" data-d="3"><span>Wednesday</span><span>9:00 AM – 5:30 PM</span></div>
+        <div class="hrow" data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></div>
+        <div class="hrow" data-d="5"><span>Friday</span><span>9:00 AM – 4:00 PM</span></div>
+        <div class="hrow" data-d="6"><span>Saturday</span><span>9:00 AM – 3:00 PM</span></div>
+        <div class="hrow" data-d="0"><span>Sunday</span><span class="cl">Closed</span></div>
+        <div class="hrow" data-d="1"><span>Monday</span><span class="cl">Closed</span></div>
+      </div>
+      <div class="map rv"><iframe title="Map to Luxe Beauty Lounge" loading="lazy" src="https://www.google.com/maps?q=9515%20Lee%20Hwy%20Ste%20M%2C%20Ooltewah%2C%20TN%2037363&output=embed"></iframe></div>
+      <div class="addr rv">
+        <h3>Luxe Beauty Lounge</h3>
+        <p>9515 Lee Hwy, Suite M<br>Ooltewah, TN 37363</p>
+        <div class="ctas">
+          <a class="btn btn-c" href="https://www.google.com/maps/dir/?api=1&destination=9515%20Lee%20Hwy%20Ste%20M%2C%20Ooltewah%2C%20TN%2037363" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn-t" href="tel:+14237409883">Call (423) 740-9883</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <svg class="blob" style="width:340px;left:-130px;top:-130px" viewBox="0 0 200 200" aria-hidden="true"><path fill="#0f3b3a" fill-opacity=".14" d="M39.9,-52.4C52.6,-44.8,64.3,-34,69.6,-20.2C74.9,-6.4,73.8,10.4,66.8,23.9C59.8,37.4,46.9,47.6,32.7,55.3C18.5,63,3,68.2,-13.2,67.2C-29.4,66.2,-46.3,59,-57.7,46.3C-69.1,33.6,-75,15.4,-73.4,-1.7C-71.8,-18.8,-62.7,-34.8,-50,-42.6C-37.3,-50.4,-21,-50,-6.3,-42.1C8.4,-34.2,27.2,-60,39.9,-52.4Z" transform="translate(100 100)"/></svg>
+  <div class="wrap rv">
+    <span class="kicker" style="color:#fff3ee">Ready for your set?</span>
+    <h2>Wake up <em>already</em> done.</h2>
+    <p>Choose your service and artist, pick a time, and you're booked.</p>
+    <a class="btn" href="https://square.site/book/CHHKARR6RJEEW/luxe-beauty-lounge-ooltewah-tn" target="_blank" rel="noopener">Book at Luxe Beauty Lounge</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Luxe Beauty Lounge</b>
+    <span>9515 Lee Hwy, Suite M, Ooltewah, TN 37363 · <a href="tel:+14237409883">(423) 740-9883</a> · <a href="mailto:luxebeautyloungetn@gmail.com">luxebeautyloungetn@gmail.com</a></span>
+    <span>Concept by Code Craft Media. Not the official site of Luxe Beauty Lounge.</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="call" href="tel:+14237409883"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/CHHKARR6RJEEW/luxe-beauty-lounge-ooltewah-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    panels.forEach(function(p){p.hidden=p.dataset.p!==t.dataset.t});
+  })});
+  var H={0:null,1:null,2:[9,16],3:[9,17.5],4:[9,17],5:[9,16],6:[9,15]};
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};var o={};p.forEach(function(x){o[x.type]=x.value});
+    d=wd[o.weekday];h=(+o.hour%24)+(+o.minute)/60;}catch(e){}
+  var row=document.querySelector('.hrow[data-d="'+d+'"]');if(row)row.classList.add('today');
+  function fmt(x){var hh=Math.floor(x)%12||12,m=x%1?':30':'';return hh+m+(x<12?' AM':' PM')}
+  var st=document.getElementById('status'),hs=document.getElementById('heroStatus'),r=H[d];
+  if(r&&h>=r[0]&&h<r[1]){st.classList.add('open');st.querySelector('span').textContent='Open now · until '+fmt(r[1]);hs.textContent='Open today until '+fmt(r[1]);}
+  else{st.querySelector('span').textContent='Closed now · book online any time';}
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

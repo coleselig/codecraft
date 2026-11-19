@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Koko's Beauty Bar — Smyrna</title>
+<meta name="description" content="Concept site for Koko's Beauty Bar, 6600 New Nashville Hwy, Suite 145, Smyrna, TN. Color, blonding, smoothing, extensions and cuts. Open Tuesday to Friday.">
+<meta name="theme-color" content="#2b1a14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#f6e4de; --blush-2:#efd2c8; --blush-3:#e7bfb2; --cream:#fbf5f1;
+  --espresso:#2b1a14; --espresso-2:#3d2820; --cocoa:#6b4c40;
+  --gold:#b8935a; --gold-2:#d8bc8a; --gold-ink:#8a6a36;
+  --ink:#2b1a14; --muted:#6e554b;
+  --r:22px; --bar:76px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.eyebrow{font:500 12px/1 "DM Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* concept banner */
+.concept{background:var(--espresso);color:#e9d9cc;font-size:10.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
+@media (min-width:600px){.concept{font-size:12px;letter-spacing:.02em}}
+.concept b{color:var(--gold-2);font-weight:500}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(251,245,241,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,147,90,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:34px;height:34px}
+.logo span{font:500 23px/1 "Cormorant Garamond",serif;letter-spacing:.01em}
+.logo em{font-style:italic;color:var(--gold-ink)}
+.links{display:none;gap:30px;font-size:14px}
+.links a{text-decoration:none;color:var(--muted);position:relative;transition:color .2s}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--gold);transition:right .3s}
+.links a:hover{color:var(--ink)} .links a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;font:500 15px/1 "DM Sans",sans-serif;text-decoration:none;transition:transform .2s, box-shadow .25s, background .25s;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+.btn svg{width:17px;height:17px}
+.btn-dark{background:var(--espresso);color:var(--cream);box-shadow:0 10px 24px -12px rgba(43,26,20,.7)}
+.btn-dark:hover{transform:translateY(-2px);background:#1f120d;box-shadow:0 16px 30px -12px rgba(43,26,20,.7)}
+.btn-line{border-color:rgba(43,26,20,.28);color:var(--ink);background:rgba(255,255,255,.4)}
+.btn-line:hover{transform:translateY(-2px);border-color:var(--gold);background:#fff}
+.btn:active{transform:scale(.97)}
+.nav .btn{padding:10px 18px;font-size:14px}
+@media (min-width:900px){.links{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(60% 50% at 85% 18%, rgba(231,191,178,.9), transparent 70%),
+  radial-gradient(50% 45% at 10% 85%, rgba(216,188,138,.35), transparent 70%),
+  linear-gradient(180deg,var(--blush) 0%, var(--cream) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:34px;padding-bottom:64px}
+.glow{position:absolute;border-radius:50%;filter:blur(40px);opacity:.7;animation:drift 14s ease-in-out infinite alternate;z-index:0}
+.glow.g1{width:300px;height:300px;background:#f2c9bb;top:-60px;right:-90px}
+.glow.g2{width:220px;height:220px;background:#ecd6ae;bottom:40px;left:-80px;animation-delay:-6s}
+@keyframes drift{to{transform:translate(-30px,30px) scale(1.12)}}
+.hero-grid{display:grid;gap:30px}
+.hero h1{font-size:clamp(46px,12.4vw,92px);font-weight:500}
+.hero h1 i{font-style:italic;color:var(--gold-ink);font-weight:400}
+.hero h1 .amp{font-style:italic;color:var(--gold)}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:30em;margin:18px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.today{margin-top:24px;display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--cocoa);background:rgba(255,255,255,.6);border:1px solid rgba(184,147,90,.3);padding:9px 14px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:#b9a59b;flex:none}
+.dot.on{background:#5f9b6c;box-shadow:0 0 0 0 rgba(95,155,108,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(95,155,108,0)}100%{box-shadow:0 0 0 0 rgba(95,155,108,0)}}
+.hero-art{position:relative;max-width:420px;margin:0 auto;width:100%}
+.arch{position:relative;aspect-ratio:4/5;border-radius:220px 220px 28px 28px;background:
+  radial-gradient(70% 55% at 50% 30%, #fff6f1 0%, #f3d4c9 55%, #e4b9a9 100%);
+  border:1px solid rgba(184,147,90,.45);overflow:hidden;box-shadow:0 40px 80px -40px rgba(107,76,64,.55)}
+.arch::after{content:"";position:absolute;inset:12px;border-radius:210px 210px 20px 20px;border:1px solid rgba(184,147,90,.5)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.draw path{stroke-dasharray:900;stroke-dashoffset:0;animation:draw 3.2s ease both}
+@keyframes draw{from{stroke-dashoffset:900}}
+.badge{position:absolute;left:-6px;bottom:30px;background:var(--espresso);color:var(--cream);border-radius:18px;padding:14px 16px;box-shadow:0 20px 40px -20px rgba(43,26,20,.8);max-width:190px}
+.badge small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)}
+.badge strong{font:500 22px/1.15 "Cormorant Garamond",serif;display:block;margin-top:4px}
+.chip{position:absolute;right:-4px;top:38px;background:#fff;border-radius:999px;padding:8px 14px;font-size:12.5px;color:var(--cocoa);border:1px solid rgba(184,147,90,.35);box-shadow:0 12px 26px -16px rgba(107,76,64,.6)}
+.chip b{color:var(--ink);font-weight:500}
+@media (min-width:900px){
+  .hero .wrap{padding-top:70px;padding-bottom:100px}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}
+  .hero p.sub{font-size:19px}
+}
+@media (max-width:899px){.hero-art{max-width:290px;margin-top:10px}.badge{left:-14px;bottom:22px;padding:11px 14px}.badge strong{font-size:19px}.chip{right:-12px}}
+
+/* marquee */
+.ribbon{background:var(--espresso);color:var(--gold-2);overflow:hidden;white-space:nowrap;padding:14px 0;border-block:1px solid rgba(216,188,138,.25)}
+.ribbon .track{display:inline-flex;gap:28px;animation:slide 38s linear infinite;font:italic 400 22px/1 "Cormorant Garamond",serif}
+.ribbon .track span{display:inline-flex;align-items:center;gap:28px}
+.ribbon .track span::after{content:"✦";font-style:normal;font-size:11px;color:var(--gold)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding:72px 0}
+@media (min-width:900px){.sec{padding:100px 0}.special .price{font-size:110px}}
+.sec-head{max-width:640px;margin-bottom:38px}
+.sec-head h2{font-size:clamp(38px,9vw,62px);margin-top:14px}
+.sec-head h2 i{color:var(--gold-ink);font-weight:400}
+.sec-head p{color:var(--muted);margin:14px 0 0}
+
+/* menu */
+.menu{background:var(--cream);position:relative}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 24px;padding-inline:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid rgba(43,26,20,.18);background:#fff;color:var(--cocoa);padding:10px 16px;border-radius:999px;font:500 14px/1 "DM Sans",sans-serif;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--gold)}
+.tab[aria-selected="true"]{background:var(--espresso);color:var(--cream);border-color:var(--espresso)}
+.panel{background:#fff;border:1px solid rgba(184,147,90,.25);border-radius:var(--r);padding:8px 22px;box-shadow:0 30px 60px -45px rgba(107,76,64,.5);position:relative;overflow:hidden}
+.panel h3{font-size:30px;padding:20px 0 6px;display:flex;align-items:center;gap:12px}
+.panel h3 svg{width:28px;height:28px;flex:none}
+.js .panel[hidden]{display:none}
+.row{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-top:1px dashed rgba(184,147,90,.35)}
+.row:first-of-type{border-top:0}
+.row .n{font-weight:500}
+.row .d{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+.row .fill{flex:1;min-width:12px}
+.row .p{font:500 21px/1 "Cormorant Garamond",serif;color:var(--gold-ink);white-space:nowrap;text-align:right}
+.row .p small{display:block;font:500 10px/1.3 "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.row .p.ask{font:500 12px/1.2 "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.menu-note{font-size:13.5px;color:var(--muted);margin-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+@media (min-width:900px){
+  .js .panel[hidden]{display:none}
+  .panel{padding:10px 36px}
+  .panel .rows{columns:2;column-gap:56px}
+  .row{break-inside:avoid}
+}
+
+/* special */
+.special{position:relative;background:linear-gradient(135deg,var(--espresso) 0%, #452c22 100%);color:var(--cream);border-radius:28px;padding:34px 26px;overflow:hidden;margin-top:40px}
+.special .eyebrow{color:var(--gold-2)}
+.special h3{font-size:clamp(34px,8vw,52px);margin:14px 0 10px}
+.special h3 i{color:var(--gold-2)}
+.special p{color:#e2d0c4;max-width:34em;margin:0}
+.special .price{font:500 64px/1 "Cormorant Garamond",serif;color:var(--gold-2)}
+.special .btn{margin-top:22px;background:var(--gold-2);color:var(--espresso)}
+.special .btn:hover{background:#e8cf9f}
+.special svg.leaf{position:absolute;right:-40px;bottom:-30px;width:240px;opacity:.35}
+@media (min-width:900px){.special{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:50px 56px}}
+
+/* why */
+.why{background:linear-gradient(180deg,var(--cream),var(--blush) 100%)}
+.cards{display:grid;gap:16px}
+.card{background:rgba(255,255,255,.7);border:1px solid rgba(184,147,90,.28);border-radius:var(--r);padding:26px;transition:transform .3s, box-shadow .3s, background .3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);background:#fff;box-shadow:0 26px 50px -30px rgba(107,76,64,.55)}
+.card .ic{width:50px;height:50px;border-radius:50%;background:var(--blush);display:grid;place-items:center;margin-bottom:16px;border:1px solid rgba(184,147,90,.35)}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:27px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .big{font:500 46px/1 "Cormorant Garamond",serif;color:var(--gold-ink);display:block;margin-bottom:6px}
+@media (min-width:700px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(4,1fr)}}
+
+/* visit */
+.visit{background:var(--blush)}
+.visit-grid{display:grid;gap:18px}
+.hours,.where{background:#fff;border-radius:var(--r);border:1px solid rgba(184,147,90,.28);padding:26px}
+.hours h3,.where h3{font-size:32px;margin-bottom:14px}
+.hours ul{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;font-size:15px;transition:background .2s}
+.hours li span:last-child{color:var(--muted);text-align:right}
+.hours li.closed span:last-child{font-style:italic}
+.hours li.is-today{background:var(--espresso);color:var(--cream);font-weight:500}
+.hours li.is-today span:last-child{color:var(--gold-2)}
+.hours li span:last-child{white-space:nowrap}
+.hours li.is-today span:first-child::after{content:"Today";display:inline-block;margin-left:8px;font-weight:500;color:var(--espresso);background:var(--gold-2);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:999px;vertical-align:2px}
+.hours li{padding:12px 12px}
+.status{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:14px;color:var(--cocoa)}
+.where address{font-style:normal;font-size:17px;line-height:1.55}
+.where .contact{display:grid;gap:10px;margin:18px 0 20px}
+.where .contact a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:12px 14px;border-radius:14px;background:var(--cream);border:1px solid transparent;transition:border-color .2s, background .2s;word-break:break-word}
+.where .contact a:hover{border-color:var(--gold);background:#fff}
+.where .contact svg{width:20px;height:20px;flex:none;color:var(--gold-ink)}
+.map{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(184,147,90,.35);min-height:320px;background:radial-gradient(circle at 50% 45%,#fff3ee 0,#efd2c8 60%,#e7bfb2 100%)}
+.map .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--cocoa);font-size:14px;padding:20px}
+.map .ph svg{width:44px;height:44px;margin:0 auto 10px;color:var(--gold-ink)}
+.map iframe{position:relative;z-index:1;background:transparent}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:saturate(.8) sepia(.08)}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1fr 1.2fr}}
+
+/* footer */
+footer{background:var(--espresso);color:#d9c7bb;padding:56px 0 calc(40px + var(--bar) + env(safe-area-inset-bottom));position:relative;overflow:hidden}
+footer .big{font:italic 400 clamp(40px,10vw,76px)/1 "Cormorant Garamond",serif;color:var(--cream)}
+footer .big b{font-style:normal;font-weight:500;color:var(--gold-2)}
+footer .fgrid{display:grid;gap:22px;margin-top:30px;font-size:14px}
+footer a{color:#f3e6dc;text-decoration:none;border-bottom:1px solid rgba(216,188,138,.4)}
+footer a:hover{color:var(--gold-2)}
+footer .fine{margin-top:40px;padding-top:20px;border-top:1px solid rgba(216,188,138,.2);font-size:12.5px;color:#b8a396;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media (min-width:900px){footer{padding-bottom:40px}footer .fgrid{grid-template-columns:repeat(3,1fr)}}
+
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(43,26,20,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(216,188,138,.25)}
+.mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:999px;text-decoration:none;font:500 15px/1 "DM Sans",sans-serif}
+.mbar svg{width:18px;height:18px}
+.mbar .call{color:var(--cream);border:1px solid rgba(216,188,138,.45)}
+.mbar .book{background:var(--gold-2);color:var(--espresso)}
+@media (min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease, transform .8s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .reveal.pre{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Koko's Beauty Bar. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Koko's Beauty Bar home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" stroke="#b8935a" stroke-width="1.2" aria-hidden="true"><circle cx="20" cy="20" r="18.5"/><path d="M20 31c0-8 0-13 0-20M20 18c-3-1-6-4-6-8 3 0 6 3 6 8zM20 23c3-1 6-4 6-8-3 0-6 3-6 8zM20 27c-2.5-.5-5-2.5-5.5-5.5 2.5 0 5 2 5.5 5.5z"/></svg>
+      <span>Koko's <em>Beauty Bar</em></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#menu">Menu</a><a href="#why">The studio</a><a href="#visit">Hours &amp; visit</a>
+    </nav>
+    <a class="btn btn-dark" href="https://square.site/book/BNE3X8PMR5DE3/koko-s-beauty-bar-smyrna-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Hair &amp; beauty · Smyrna, TN</span>
+        <h1 style="margin-top:16px">Blondes, coppers <span class="amp">&amp;</span> <i>glass-smooth</i> hair, on New Nashville Hwy.</h1>
+        <p class="sub">Color, balayage, smoothing treatments, extensions and cuts at Koko's Beauty Bar, Suite 145. Open Tuesday to Friday.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="https://square.site/book/BNE3X8PMR5DE3/koko-s-beauty-bar-smyrna-tn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book online</a>
+          <a class="btn btn-line" href="tel:+16158014542">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>(615) 801-4542</a>
+        </div>
+        <div class="today"><span class="dot" id="heroDot"></span><span id="heroStatus">Open Tue–Fri · see hours below</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="arch">
+          <svg viewBox="0 0 400 500" fill="none" aria-hidden="true">
+            <defs><radialGradient id="sun" cx="50%" cy="38%" r="40%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+            <circle cx="200" cy="190" r="150" fill="url(#sun)"/>
+            <g class="draw" stroke="#8a6a36" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M200 470C198 380 196 300 206 200 214 130 236 90 262 62"/>
+              <path d="M203 300c-30-10-60-34-70-74 34 4 62 30 70 74z"/>
+              <path d="M205 250c28-12 54-38 60-76-32 6-56 34-60 76z"/>
+              <path d="M207 200c-24-12-44-34-48-66 28 6 46 30 48 66z"/>
+              <path d="M214 156c20-12 36-32 38-58-24 6-38 28-38 58z"/>
+              <path d="M200 380c-36-4-70-24-86-58 38-2 72 20 86 58z"/>
+              <path d="M200 345c34-6 66-28 80-62-36 0-68 24-80 62z"/>
+              <path d="M150 470c4-60 14-110 40-150"/>
+              <path d="M262 62c8-6 18-6 22 2s-4 16-14 14-12-10-8-16z"/>
+              <path d="M120 470c10-40 30-70 56-92"/>
+              <path d="M290 470c-8-50-30-90-66-120"/>
+              <path d="M262 420c18-14 40-18 58-10-14 16-38 20-58 10z"/>
+              <path d="M140 430c-18-10-40-10-56 2 16 12 38 12 56-2z"/>
+            </g>
+            <g fill="#b8935a"><circle cx="268" cy="70" r="3"/><circle cx="110" cy="120" r="2"/><circle cx="310" cy="160" r="2.4"/><circle cx="90" cy="260" r="1.6"/><circle cx="330" cy="300" r="1.8"/></g>
+            <g stroke="#b8935a" stroke-width="1"><path d="M110 112v16M102 120h16"/><path d="M310 150v20M300 160h20"/></g>
+          </svg>
+        </div>
+        <div class="badge"><small>Tuesdays only</small><strong>Root n Go · $75</strong></div>
+        <div class="chip"><b>Free</b> extension consult</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div class="track">
+  <span>Balayage</span><span>Global Blonde</span><span>Custom Copper</span><span>Vivid Reds</span><span>Keratin Smoothing</span><span>Brazilian Hair Botox</span><span>K18 Treatment Mask</span><span>Extensions</span><span>Gloss &amp; Toner</span><span>Updos</span>
+  <span>Balayage</span><span>Global Blonde</span><span>Custom Copper</span><span>Vivid Reds</span><span>Keratin Smoothing</span><span>Brazilian Hair Botox</span><span>K18 Treatment Mask</span><span>Extensions</span><span>Gloss &amp; Toner</span><span>Updos</span>
+</div></div>
+
+<section class="sec menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Every service, <i>sorted</i> so you can find yours.</h2>
+      <p>Prices are as listed on Koko's online booking page. Where no price is listed, book or call and Anna will go over it with you.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-color" id="t-color">Color &amp; blonding</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-smooth" id="t-smooth">Smoothing &amp; treatments</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-cut" id="t-cut">Cuts &amp; styling</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-ext" id="t-ext">Extensions</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-skin" id="t-skin">Brows, lashes &amp; skin</button>
+    </div>
+
+    <div class="panel reveal" role="tabpanel" id="p-color" aria-labelledby="t-color">
+      <h3><svg viewBox="0 0 32 32" fill="none" stroke="#b8935a" stroke-width="1.2"><path d="M16 29V12M16 18c-4-1-7-5-7-10 4 1 7 5 7 10zM16 14c3-1 6-4 6-9-3 1-6 4-6 9z"/></svg>Color &amp; blonding</h3>
+      <div class="rows">
+        <div class="row"><span class="n">Balayage<span class="d">Includes 2 bowls of lightener</span></span><span class="fill"></span><span class="p"><small>Starts at</small>$280</span></div>
+        <div class="row"><span class="n">Color</span><span class="fill"></span><span class="p"><small>Starts at</small>$160</span></div>
+        <div class="row"><span class="n">Global Blonde</span><span class="fill"></span><span class="p">$350</span></div>
+        <div class="row"><span class="n">Custom Blonde</span><span class="fill"></span><span class="p">$300</span></div>
+        <div class="row"><span class="n">Custom Color<span class="d">Reds &amp; vivid reds</span></span><span class="fill"></span><span class="p">$275</span></div>
+        <div class="row"><span class="n">Custom Color<span class="d">Copper</span></span><span class="fill"></span><span class="p">$280</span></div>
+        <div class="row"><span class="n">Copper Color</span><span class="fill"></span><span class="p"><small>Starts at</small>$250</span></div>
+        <div class="row"><span class="n">Partial Highlights<span class="d">10–15 foils</span></span><span class="fill"></span><span class="p">$175</span></div>
+        <div class="row"><span class="n">Face Framing Lights</span><span class="fill"></span><span class="p">$75</span></div>
+        <div class="row"><span class="n">Root Retouch<span class="d">1 inch or less · color only</span></span><span class="fill"></span><span class="p">$95</span></div>
+        <div class="row"><span class="n">Root Retouch – Blonde</span><span class="fill"></span><span class="p">$200</span></div>
+        <div class="row"><span class="n">Pre-Color Lift</span><span class="fill"></span><span class="p">$125</span></div>
+        <div class="row"><span class="n">Toner</span><span class="fill"></span><span class="p">$95</span></div>
+        <div class="row"><span class="n">Gloss</span><span class="fill"></span><span class="p">$90</span></div>
+        <div class="row"><span class="n">Highlights</span><span class="fill"></span><span class="p ask">Price varies</span></div>
+        <div class="row"><span class="n">Blonde Session<span class="d">All-over blonde · 2 bowls of lightener</span></span><span class="fill"></span><span class="p ask">Book to price</span></div>
+        <div class="row"><span class="n">Fashion Color</span><span class="fill"></span><span class="p ask">Call us</span></div>
+        <div class="row"><span class="n">Color Consultation</span><span class="fill"></span><span class="p ask">Book</span></div>
+      </div>
+    </div>
+
+    <div class="panel reveal" role="tabpanel" id="p-smooth" aria-labelledby="t-smooth">
+      <h3><svg viewBox="0 0 32 32" fill="none" stroke="#b8935a" stroke-width="1.2"><path d="M6 10c6-4 14 4 20 0M6 16c6-4 14 4 20 0M6 22c6-4 14 4 20 0"/></svg>Smoothing &amp; treatments</h3>
+      <div class="rows">
+        <div class="row"><span class="n">Brazilian Smoothing Treatment<span class="d">Reduces frizz 70–90% · typically lasts 3–5 months</span></span><span class="fill"></span><span class="p">$155</span></div>
+        <div class="row"><span class="n">Keratin Smoothing Treatment</span><span class="fill"></span><span class="p"><small>Starts at</small>$150</span></div>
+        <div class="row"><span class="n">Brazilian Hair Botox</span><span class="fill"></span><span class="p">$150</span></div>
+        <div class="row"><span class="n">Hair Botox</span><span class="fill"></span><span class="p"><small>Starts at</small>$150</span></div>
+        <div class="row"><span class="n">Scalp Treatment</span><span class="fill"></span><span class="p">$50</span></div>
+        <div class="row"><span class="n">K18 Treatment Mask</span><span class="fill"></span><span class="p">$30</span></div>
+      </div>
+    </div>
+
+    <div class="panel reveal" role="tabpanel" id="p-cut" aria-labelledby="t-cut">
+      <h3><svg viewBox="0 0 32 32" fill="none" stroke="#b8935a" stroke-width="1.2"><circle cx="9" cy="23" r="4"/><circle cx="23" cy="23" r="4"/><path d="M12 20L25 5M20 20L7 5"/></svg>Cuts &amp; styling</h3>
+      <div class="rows">
+        <div class="row"><span class="n">Women's Haircut<span class="d">Deluxe cut · includes wash &amp; style</span></span><span class="fill"></span><span class="p ask">2 options</span></div>
+        <div class="row"><span class="n">Haircut Plus Treatment</span><span class="fill"></span><span class="p">$75</span></div>
+        <div class="row"><span class="n">Haircut (Add Thermal)</span><span class="fill"></span><span class="p">$65</span></div>
+        <div class="row"><span class="n">Shampoo Style<span class="d">Wash, blow-dry &amp; style</span></span><span class="fill"></span><span class="p">$55</span></div>
+        <div class="row"><span class="n">Child Haircut<span class="d">12 &amp; under · no blowout</span></span><span class="fill"></span><span class="p">$25</span></div>
+        <div class="row"><span class="n">Thermal Straight Add-On</span><span class="fill"></span><span class="p">$25</span></div>
+        <div class="row"><span class="n">Style Updo</span><span class="fill"></span><span class="p ask">Book</span></div>
+        <div class="row"><span class="n">Perm</span><span class="fill"></span><span class="p ask">Book</span></div>
+      </div>
+    </div>
+
+    <div class="panel reveal" role="tabpanel" id="p-ext" aria-labelledby="t-ext">
+      <h3><svg viewBox="0 0 32 32" fill="none" stroke="#b8935a" stroke-width="1.2"><path d="M10 4c-2 8 2 14 0 24M16 4c-2 8 2 14 0 24M22 4c-2 8 2 14 0 24"/></svg>Extensions</h3>
+      <div class="rows">
+        <div class="row"><span class="n">Hair Extension Consultation</span><span class="fill"></span><span class="p">Free</span></div>
+        <div class="row"><span class="n">Hair Extension Initial Install</span><span class="fill"></span><span class="p">$275</span></div>
+        <div class="row"><span class="n">Hair Extension Maintenance</span><span class="fill"></span><span class="p">$275</span></div>
+        <div class="row"><span class="n">Wash and Style with Extensions</span><span class="fill"></span><span class="p">$75</span></div>
+      </div>
+    </div>
+
+    <div class="panel reveal" role="tabpanel" id="p-skin" aria-labelledby="t-skin">
+      <h3><svg viewBox="0 0 32 32" fill="none" stroke="#b8935a" stroke-width="1.2"><path d="M4 16c6-8 18-8 24 0-6 8-18 8-24 0z"/><circle cx="16" cy="16" r="3.5"/></svg>Brows, lashes &amp; skin</h3>
+      <div class="rows">
+        <div class="row"><span class="n">Acne Facial</span><span class="fill"></span><span class="p">$70</span></div>
+        <div class="row"><span class="n">Eyebrow Wax</span><span class="fill"></span><span class="p">$15</span></div>
+        <div class="row"><span class="n">Lash Application</span><span class="fill"></span><span class="p">$12</span></div>
+        <div class="row"><span class="n">Lip Wax</span><span class="fill"></span><span class="p ask">Book</span></div>
+      </div>
+    </div>
+
+    <div class="menu-note reveal">
+      <span>See live availability and every option on Koko's booking page.</span>
+      <a class="btn btn-line" href="https://square.site/book/BNE3X8PMR5DE3/koko-s-beauty-bar-smyrna-tn" target="_blank" rel="noopener">Book a service →</a>
+    </div>
+
+    <div class="special reveal">
+      <div>
+        <span class="eyebrow">Tuesday special</span>
+        <h3>Root n Go <i>Tuesdays</i></h3>
+        <p>A quick root color for regrowth of 1 inch or less, in and out (drying and styling not included). Only on Tuesdays.</p>
+        <a class="btn" href="https://square.site/book/BNE3X8PMR5DE3/koko-s-beauty-bar-smyrna-tn" target="_blank" rel="noopener">Grab a Tuesday spot</a>
+      </div>
+      <div class="price">$75</div>
+      <svg class="leaf" viewBox="0 0 200 200" fill="none" stroke="#d8bc8a" stroke-width="1.2" aria-hidden="true"><path d="M20 190C60 140 100 90 180 20M60 140c-20-20-24-50-10-70 18 18 22 46 10 70zM100 100c-6-28 6-56 30-66 6 26-6 52-30 66zM90 120c26-6 54 2 66 24-26 6-52-2-66-24zM140 60c22-2 40 8 46 26-22 2-40-8-46-26z"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The studio</span>
+      <h2>A beauty bar built around <i>color</i>.</h2>
+      <p>Straight from Koko's own menu, here's what sets the chair apart.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <span class="big">42</span>
+        <h3>Services on one menu</h3>
+        <p>From a $12 lash application to a 4½-hour Global Blonde, hair, skin and brows all in one suite.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#8a6a36" stroke-width="1.3"><path d="M16 28V10M16 16c-4-1-7-5-7-10 4 1 7 5 7 10zM16 12c3-1 6-4 6-8-3 1-6 4-6 8z"/></svg></div>
+        <h3>Blonde &amp; copper specialists</h3>
+        <p>Balayage, Global Blonde, Custom Blonde, Copper and Vivid Reds each get their own dedicated service.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#8a6a36" stroke-width="1.3"><path d="M5 11c6-4 16 4 22 0M5 17c6-4 16 4 22 0M5 23c6-4 16 4 22 0"/></svg></div>
+        <h3>Frizz, handled</h3>
+        <p>Brazilian smoothing that reduces frizz 70–90% and typically lasts 3–5 months, plus keratin, hair botox and K18.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#8a6a36" stroke-width="1.3"><circle cx="16" cy="12" r="5"/><path d="M6 28c1-6 5-9 10-9s9 3 10 9"/></svg></div>
+        <h3>Book with Anna</h3>
+        <p>Pick your service and time online in a few taps, or call (615) 801-4542. Extension consultations are free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Hours &amp; visit</span>
+      <h2>Find us in <i>Suite 145</i>.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <p class="status"><span class="dot" id="hDot"></span><span id="hStatus">Open Tuesday to Friday</span></p>
+        <ul id="hoursList">
+          <li data-d="2"><span>Tuesday</span><span>10:30 AM – 5:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10:00 AM – 5:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>10:30 AM – 5:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10:30 AM – 3:30 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="where reveal">
+        <h3>Visit</h3>
+        <address>Koko's Beauty Bar<br>6600 New Nashville Hwy, Suite 145<br>Smyrna, TN 37167</address>
+        <div class="contact">
+          <a href="tel:+16158014542"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>(615) 801-4542</a>
+          <a href="mailto:a.maldonado615@icloud.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>a.maldonado615@icloud.com</a>
+          <a href="https://www.instagram.com/kokos_beauty_bar/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg>@kokos_beauty_bar</a>
+        </div>
+        <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=6600+New+Nashville+Hwy+Suite+145+Smyrna+TN+37167" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Get directions</a>
+      </div>
+      <div class="map reveal">
+        <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>6600 New Nashville Hwy, Suite 145<br>Smyrna, TN 37167</div></div>
+        <iframe title="Map to Koko's Beauty Bar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=6600%20New%20Nashville%20Hwy%2C%20Suite%20145%2C%20Smyrna%2C%20TN%2037167&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">Koko's <b>Beauty Bar</b></div>
+    <div class="fgrid">
+      <div>6600 New Nashville Hwy, Suite 145<br>Smyrna, TN 37167</div>
+      <div><a href="tel:+16158014542">(615) 801-4542</a><br><a href="mailto:a.maldonado615@icloud.com">a.maldonado615@icloud.com</a></div>
+      <div>Tue · Thu 10:30–5 · Wed 10–5<br>Fri 10:30–3:30 · Sat–Mon closed</div>
+    </div>
+    <div class="fine"><span>Concept by Code Craft Media · not affiliated, not live</span><span>Booking via Koko's Square page</span></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="call" href="tel:+16158014542"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/BNE3X8PMR5DE3/koko-s-beauty-bar-smyrna-tn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book online</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  // hours: [open, close] in minutes, by JS day (0=Sun)
+  var H={2:[630,1020],3:[600,1020],4:[630,1020],5:[630,930]};
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap}
+  var now;try{now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}))}catch(e){now=new Date()}
+  var d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hoursList li[data-d="'+d+'"]'); if(li) li.classList.add('is-today');
+  var txt,on=false,t=H[d];
+  if(t&&m>=t[0]&&m<t[1]){on=true;txt='Open now · until '+fmt(t[1])+' today'}
+  else if(t&&m<t[0]){txt='Opens today at '+fmt(t[0])}
+  else{for(var i=1;i<=7;i++){var nd=(d+i)%7;if(H[nd]){txt='Closed now · opens '+(i===1?'tomorrow':names[nd])+' at '+fmt(H[nd][0]);break}}}
+  ['heroDot','hDot'].forEach(function(id){var e=document.getElementById(id);if(e&&on)e.classList.add('on')});
+  ['heroStatus','hStatus'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent=txt});
+
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(x){if(x.getAttribute('aria-selected')!=='true')document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+  tabs.forEach(function(tb){tb.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+    tb.setAttribute('aria-selected','true');var p=document.getElementById(tb.getAttribute('aria-controls'));p.hidden=false;p.classList.remove('pre');
+  })});
+
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>window.innerHeight)e.classList.add('pre')});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

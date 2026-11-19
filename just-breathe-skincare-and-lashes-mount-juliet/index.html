@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Just Breathe Skincare and Lashes — Mount Juliet</title>
+<meta name="description" content="Lashes, facials, peels and waxing by appointment in Mount Juliet, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#f4f8f7; --white:#fbfdfc; --sea:#9fd3c7; --sea-2:#6fb8a8; --sea-deep:#2f7d6d;
+  --slate:#26343d; --slate-2:#3d4f5a; --ink-soft:#5a6c75; --line:rgba(38,52,61,.12);
+  --display:'Cormorant',Georgia,serif; --body:'Mulish',system-ui,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--mist);color:var(--slate);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+.banner{background:var(--slate);color:#cfe6e0;font-size:10.4px;letter-spacing:0;text-align:center;padding:6px 12px;line-height:1.35}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(244,248,247,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:30px;height:30px}
+.brand b{font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:.01em;line-height:1}
+.brand small{display:block;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+.nav-links{display:none;gap:28px;font-size:14px}
+.nav-links a{text-decoration:none;color:var(--slate-2);position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--sea-deep);transform:scaleX(0);transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:700;font-size:15px;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:14px 26px;transition:transform .2s,background .2s,box-shadow .2s,color .2s;min-height:48px}
+.btn-primary{background:var(--slate);color:var(--white);box-shadow:0 10px 24px -12px rgba(38,52,61,.6)}
+.btn-primary:hover{background:var(--sea-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--slate);border:1.5px solid var(--slate)}
+.btn-ghost:hover{background:var(--slate);color:var(--white)}
+.nav .btn{padding:9px 18px;min-height:40px;font-size:13.5px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 70% at 80% 0%,#dff1ec 0%,var(--mist) 60%)}
+.hero .wrap{position:relative;z-index:2;padding-top:22px;padding-bottom:64px;display:grid;gap:14px}
+.breath{position:relative;width:min(190px,52vw);aspect-ratio:1;margin:0 auto;display:grid;place-items:center}
+.breath .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(47,125,109,.25)}
+.breath .r1{background:radial-gradient(circle,rgba(159,211,199,.55) 0%,rgba(159,211,199,.18) 60%,rgba(159,211,199,0) 72%);animation:breathe 8s ease-in-out infinite}
+.breath .r2{inset:12%;border-color:rgba(47,125,109,.3);animation:breathe 8s ease-in-out infinite .4s}
+.breath .r3{inset:26%;background:radial-gradient(circle at 40% 35%,#ffffff 0%,#d6eee8 70%);border-color:rgba(47,125,109,.18);box-shadow:0 20px 50px -20px rgba(47,125,109,.45);animation:breathe 8s ease-in-out infinite .8s}
+.breath-cue{position:relative;z-index:2;text-align:center;font-family:var(--display);font-style:italic;font-size:17px;color:var(--sea-deep)}
+.breath-cue span{display:block;transition:opacity .8s}
+.breath-cue small{display:block;font-family:var(--body);font-style:normal;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
+@keyframes breathe{0%,100%{transform:scale(.86);opacity:.75}50%{transform:scale(1.04);opacity:1}}
+.eyebrow{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--sea-deep);font-weight:700}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(40px,11vw,84px);line-height:.98;letter-spacing:-.01em;margin:10px 0 14px}
+h1 em{font-style:italic;color:var(--sea-deep)}
+.sub{font-size:16px;color:var(--slate-2);max-width:34ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cta-row .btn{padding:14px 20px}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:13.5px;color:var(--slate-2);background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.dot{width:8px;height:8px;border-radius:50%;background:#b9c4c9}
+.dot.on{background:var(--sea-2);box-shadow:0 0 0 4px rgba(111,184,168,.25)}
+.waves{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:90px;z-index:1}
+.waves path{fill:none;stroke-width:1.2}
+.waves .w1{stroke:rgba(47,125,109,.35);animation:drift 14s ease-in-out infinite alternate}
+.waves .w2{stroke:rgba(47,125,109,.2);animation:drift 18s ease-in-out infinite alternate-reverse}
+.waves .w3{stroke:rgba(38,52,61,.12);animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-40px)}}
+
+/* sections */
+section{padding:72px 0}
+.sec-head{margin-bottom:34px}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(36px,9vw,56px);line-height:1.02;margin-top:10px}
+h2 em{font-style:italic;color:var(--sea-deep)}
+.lead{color:var(--slate-2);margin-top:12px;max-width:52ch}
+
+/* menu */
+.menu{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 22px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 13.5px var(--body);border:1px solid var(--line);background:var(--mist);color:var(--slate-2);padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--sea-2)}
+.tab[aria-selected="true"]{background:var(--slate);color:var(--white);border-color:var(--slate)}
+.cat{display:none}
+.cat.show{display:block}
+.no-js .cat{display:block;margin-bottom:28px}
+.cat h3{font-family:var(--display);font-size:28px;font-weight:500;margin-bottom:6px}
+.cat > p{font-size:14px;color:var(--ink-soft);margin-bottom:12px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:15px 0;border-bottom:1px dashed var(--line);transition:background .2s}
+.svc:hover{background:linear-gradient(90deg,rgba(159,211,199,.15),transparent)}
+.svc .n{font-weight:600;font-size:15.5px}
+.svc .p{font-family:var(--display);font-size:22px;font-weight:600;color:var(--slate);text-align:right;line-height:1.1}
+.svc .m{grid-column:1/-1;font-size:12.5px;color:var(--ink-soft);display:flex;gap:10px;flex-wrap:wrap}
+.svc .m i{font-style:normal;color:var(--sea-deep);background:rgba(159,211,199,.22);padding:1px 8px;border-radius:999px}
+.menu-note{font-size:13px;color:var(--ink-soft);margin-top:22px}
+.menu-cta{margin-top:26px}
+
+/* why */
+.why-grid{display:grid;gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:26px 24px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(38,52,61,.35)}
+.card svg{width:44px;height:44px;margin-bottom:14px}
+.card h3{font-family:var(--display);font-size:26px;font-weight:500;line-height:1.1;margin-bottom:6px}
+.card p{font-size:15px;color:var(--slate-2)}
+.card .big{font-family:var(--display);font-size:52px;line-height:1;color:var(--sea-deep);font-weight:500}
+
+/* hours + visit */
+.visit{background:var(--slate);color:#e7f1ee;position:relative;overflow:hidden}
+.visit h2{color:var(--white)}
+.visit h2 em{color:var(--sea)}
+.visit .eyebrow{color:var(--sea)}
+.visit-grid{display:grid;gap:22px}
+.hours{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:10px 22px}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px;color:#b7c8cf}
+.hours li:last-child{border-bottom:0}
+.hours li.open{color:#fff}
+.hours li.open b{color:var(--sea)}
+.hours li b{font-weight:600}
+.hours li.today{background:rgba(159,211,199,.14);margin:0 -14px;padding:12px 14px;border-radius:12px;border-bottom-color:transparent}
+.hours li.today span::after{content:"Today";margin-left:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--sea);color:var(--slate);padding:2px 8px;border-radius:999px;vertical-align:2px;font-weight:700}
+.map{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12);height:300px;background:#33444e}
+.map iframe{width:100%;height:100%;border:0;filter:saturate(.7)}
+.contact{display:grid;gap:10px}
+.contact a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:background .2s;min-height:56px}
+.contact a:hover{background:rgba(159,211,199,.16)}
+.contact svg{width:22px;height:22px;flex:0 0 auto;stroke:var(--sea)}
+.contact small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#93a8b0}
+.contact b{font-weight:600;color:#fff;word-break:break-word}
+.visit .note{font-size:13px;color:#93a8b0}
+
+footer{padding:40px 0 30px;text-align:center;font-size:13px;color:var(--ink-soft)}
+footer .brand{justify-content:center;margin-bottom:12px}
+
+/* bottom bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(251,253,252,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.bar .btn{padding:12px 10px;font-size:14.5px}
+
+/* reveal */
+.reveal{transition:opacity .9s ease,transform .9s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+
+@media (min-width:760px){
+  .nav-links{display:flex}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:80px;padding-bottom:120px}
+  .breath{order:2;width:min(420px,38vw)}
+  .breath-cue{font-size:24px}
+  .banner{font-size:12px}
+  h1{font-size:clamp(56px,6vw,84px)}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1fr 1.2fr}
+  .map{height:100%;min-height:380px}
+  .menu .wrap{display:grid;grid-template-columns:.8fr 1.6fr;gap:56px}
+  .tabs{margin:0 0 22px;padding:0 0 6px;flex-wrap:wrap}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body class="no-js">
+<div class="banner">Concept site by Code Craft Media, made for Just Breathe Skincare and Lashes. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Just Breathe home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#2f7d6d" stroke-width="1.2"/><circle cx="20" cy="20" r="11" fill="#9fd3c7" opacity=".55"/><path d="M8 24c4-3 8-3 12 0s8 3 12 0" fill="none" stroke="#26343d" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <span><b>Just Breathe</b><small>Skincare &amp; Lashes</small></span>
+    </a>
+    <nav class="nav-links"><a href="#menu">Menu</a><a href="#why">Why Just Breathe</a><a href="#visit">Hours &amp; visit</a></nav>
+    <a class="btn btn-primary" href="https://square.site/book/LZKAWQ5K38MM6/just-breathe-skincare-and-lashes-mount-juliet-tn">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="breath" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="breath-cue"><span id="cue">breathe in</span><small>Mount Juliet</small></div>
+    </div>
+    <div>
+      <div class="eyebrow">Lashes · Facials · Peels · Waxing</div>
+      <h1>Lie back.<br>Let your lashes <em>&amp; skin</em> catch their breath.</h1>
+      <p class="sub">Full sets, mega volume, facials and peels with Brandie in Mount Juliet, booked online in a minute.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://square.site/book/LZKAWQ5K38MM6/just-breathe-skincare-and-lashes-mount-juliet-tn">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+16156682758">Call (615) 668-2758</a>
+      </div>
+      <div class="status"><span class="dot" id="dot"></span><span id="status">Open Wednesdays &amp; Fridays, 2:30–8 PM</span></div>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path class="w1" d="M-40 50 C 200 20, 400 80, 640 50 S 1080 20, 1480 50"/>
+    <path class="w2" d="M-40 64 C 240 40, 480 90, 720 62 S 1160 36, 1480 64"/>
+    <path class="w3" d="M-40 78 C 260 60, 520 96, 780 76 S 1200 58, 1480 78"/>
+  </svg>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The menu</div>
+      <h2>Thirty-one ways to <em>exhale.</em></h2>
+      <p class="lead">Every service and price exactly as listed on Just Breathe's booking page. Tap a category.</p>
+    </div>
+    <div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-t="lashes" aria-selected="true">Lashes</button>
+        <button class="tab" role="tab" data-t="fills" aria-selected="false">Lash fills</button>
+        <button class="tab" role="tab" data-t="facials" aria-selected="false">Facials &amp; peels</button>
+        <button class="tab" role="tab" data-t="brows" aria-selected="false">Brows &amp; tint</button>
+        <button class="tab" role="tab" data-t="wax" aria-selected="false">Waxing</button>
+        <button class="tab" role="tab" data-t="body" aria-selected="false">Body</button>
+      </div>
+
+      <div class="cat show" data-c="lashes">
+        <h3>Lash sets</h3>
+        <div class="svc"><span class="n">Full set of lashes</span><span class="p">$142.68</span><span class="m"><i>2 hr</i>Price does not include tax</span></div>
+        <div class="svc"><span class="n">Full set of lashes (Hybrid)</span><span class="p">$131.70</span><span class="m"><i>1 hr 30 min</i>$115 plus tax</span></div>
+        <div class="svc"><span class="n">Full set of lashes (Mega Volume)</span><span class="p">$170.11</span><span class="m"><i>2 hr 15 min</i>Price does not include tax</span></div>
+        <div class="svc"><span class="n">Lash lift</span><span class="p">$115.24</span><span class="m"><i>1 hr</i>Price varies</span></div>
+        <div class="svc"><span class="n">Eyelash extension removal</span><span class="p">$32.93</span><span class="m"><i>30 min</i></span></div>
+      </div>
+
+      <div class="cat" data-c="fills">
+        <h3>Lash fills</h3>
+        <div class="svc"><span class="n">Quick lash fill</span><span class="p">$33</span><span class="m"><i>30 min</i></span></div>
+        <div class="svc"><span class="n">1 week lash fill</span><span class="p">$38.96</span><span class="m"><i>45 min</i>Price includes tax</span></div>
+        <div class="svc"><span class="n">1 week lash fill (Mega)</span><span class="p">$49.39</span><span class="m"><i>1 hr</i>Includes tax</span></div>
+        <div class="svc"><span class="n">2 week lash fill</span><span class="p">$76.83</span><span class="m"><i>1 hr 30 min</i>Price varies</span></div>
+        <div class="svc"><span class="n">2 week lash fill (Mega Volume)</span><span class="p">$93.29</span><span class="m"><i>2 hr</i></span></div>
+        <div class="svc"><span class="n">3 week lash fill</span><span class="p">$93.29</span><span class="m"><i>1 hr 45 min</i>$80 plus tax</span></div>
+        <div class="svc"><span class="n">3 week lash fill (Mega)</span><span class="p">$109.75</span><span class="m"><i>2 hr 30 min</i></span></div>
+        <div class="svc"><span class="n">Outside fill</span><span class="p">$87.80</span><span class="m"><i>1 hr 30 min</i></span></div>
+        <div class="svc"><span class="n">Outside fill (Mega)</span><span class="p">$102.50</span><span class="m"><i>1 hr 30 min</i></span></div>
+      </div>
+
+      <div class="cat" data-c="facials">
+        <h3>Facials &amp; peels</h3>
+        <div class="svc"><span class="n">30 minute facial</span><span class="p">$38.41</span><span class="m"><i>30 min</i></span></div>
+        <div class="svc"><span class="n">60 minute facial</span><span class="p">$71.34</span><span class="m"><i>1 hr</i></span></div>
+        <div class="svc"><span class="n">Lactic lightening facial</span><span class="p">$87.80</span><span class="m"><i>1 hr</i></span></div>
+        <div class="svc"><span class="n">Enzyme peel facial</span><span class="p">$109.75</span><span class="m"><i>1 hr 10 min</i></span></div>
+        <div class="svc"><span class="n">Microdermabrasion</span><span class="p">$115.24</span><span class="m"><i>45 min</i></span></div>
+        <div class="svc"><span class="n">Glycolic acid facial</span><span class="p">$131.70</span><span class="m"><i>1 hr 10 min</i></span></div>
+        <div class="svc"><span class="n">Dermaplaning facial</span><span class="p">$131.70</span><span class="m"><i>1 hr 15 min</i></span></div>
+        <div class="svc"><span class="n">TCA peel facial</span><span class="p">$153.65</span><span class="m"><i>1 hr 5 min</i></span></div>
+      </div>
+
+      <div class="cat" data-c="brows">
+        <h3>Brows &amp; tint</h3>
+        <div class="svc"><span class="n">Lash tint and/or brow tint</span><span class="p">$27.44</span><span class="m"><i>25 min</i>Price varies</span></div>
+        <div class="svc"><span class="n">Browxenna</span><span class="p">$71.34</span><span class="m"><i>1 hr</i>$60 plus tax</span></div>
+      </div>
+
+      <div class="cat" data-c="wax">
+        <h3>Waxing</h3>
+        <div class="svc"><span class="n">Lip wax</span><span class="p">$13.72</span><span class="m"><i>10 min</i></span></div>
+        <div class="svc"><span class="n">Nose wax</span><span class="p">$16.46</span><span class="m"><i>30 min</i></span></div>
+        <div class="svc"><span class="n">Face wax</span><span class="p">$32.95</span><span class="m"><i>30 min</i></span></div>
+        <div class="svc"><span class="n">Bikini wax</span><span class="p">$54.88</span><span class="m"><i>45 min</i></span></div>
+        <div class="svc"><span class="n">Brazilian wax</span><span class="p">$65.85</span><span class="m"><i>1 hr 15 min</i>Price varies</span></div>
+      </div>
+
+      <div class="cat" data-c="body">
+        <h3>Body</h3>
+        <div class="svc"><span class="n">Spray tan</span><span class="p">$27.44</span><span class="m"><i>30 min</i></span></div>
+        <div class="svc"><span class="n">Full body polish</span><span class="p">$87.80</span><span class="m"><i>1 hr 15 min</i></span></div>
+      </div>
+
+      <p class="menu-note">Prices as shown on the online booking page; some services are marked "price varies."</p>
+      <div class="menu-cta"><a class="btn btn-primary" href="https://square.site/book/LZKAWQ5K38MM6/just-breathe-skincare-and-lashes-mount-juliet-tn">See times &amp; book</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Why Just Breathe</div>
+      <h2>Lashes and skin, <em>under one calm roof.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="card reveal">
+        <div class="big">31</div>
+        <h3>Services on one menu</h3>
+        <p>Classic, hybrid and mega volume sets, fills from one to three weeks, facials, peels, waxing, spray tans and body polish.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#2f7d6d" stroke-width="1.4" aria-hidden="true"><circle cx="22" cy="22" r="18"/><path d="M8 22c5-6 23-6 28 0M8 22c5 6 23 6 28 0"/><circle cx="22" cy="22" r="4" fill="#9fd3c7"/></svg>
+        <h3>Every price up front</h3>
+        <p>Each service lists its price and how long it takes, so you know what your appointment looks like before you book.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#2f7d6d" stroke-width="1.4" aria-hidden="true"><rect x="7" y="9" width="30" height="28" rx="5"/><path d="M7 17h30M15 5v8M29 5v8"/><path d="M15 26l5 5 9-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Book online in a minute</h3>
+        <p>Pick your service and time on the booking page. Gift cards are available too, for a friend who needs a breather.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Hours &amp; visit</div>
+      <h2>Two evenings a week, <em>all yours.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div style="display:grid;gap:18px">
+        <ul class="hours" id="hours">
+          <li data-d="0"><span>Sunday</span><b>Closed</b></li>
+          <li data-d="1"><span>Monday</span><b>Closed</b></li>
+          <li data-d="2"><span>Tuesday</span><b>Closed</b></li>
+          <li data-d="3" class="open"><span>Wednesday</span><b>2:30 – 8:00 PM</b></li>
+          <li data-d="4"><span>Thursday</span><b>Closed</b></li>
+          <li data-d="5" class="open"><span>Friday</span><b>2:30 – 8:00 PM</b></li>
+          <li data-d="6"><span>Saturday</span><b>Closed</b></li>
+        </ul>
+        <div class="contact">
+          <a href="tel:+16156682758"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M5 3h4l2 5-3 2a11 11 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg><span><small>Call</small><b>(615) 668-2758</b></span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Mount+Juliet%2C+TN"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Location</small><b>Mount Juliet, TN</b></span></a>
+          <a href="mailto:reshabl41@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><small>Email</small><b>reshabl41@gmail.com</b></span></a>
+        </div>
+        <p class="note">Exact address is shared when you book.</p>
+      </div>
+      <div class="map"><iframe title="Map of Mount Juliet, TN" loading="lazy" src="https://www.google.com/maps?q=Mount%20Juliet%2C%20TN&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><span><b>Just Breathe</b><small>Skincare &amp; Lashes · Mount Juliet</small></span></a>
+    <p>Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ghost" href="tel:+16156682758">Call</a>
+  <a class="btn btn-primary" href="https://square.site/book/LZKAWQ5K38MM6/just-breathe-skincare-and-lashes-mount-juliet-tn">Book now</a>
+</div>
+
+<script>
+(function(){
+  var b=document.body;b.classList.remove('no-js');document.documentElement.classList.add('js');
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),cats=[].slice.call(document.querySelectorAll('.cat'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    cats.forEach(function(c){c.classList.toggle('show',c.dataset.c===t.dataset.t)});
+  })});
+  // hours / today (America/Chicago)
+  var now=new Date(),d,h,m;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var o={};p.forEach(function(x){o[x.type]=x.value});d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday);h=+o.hour%24;m=+o.minute;}
+  catch(e){d=now.getDay();h=now.getHours();m=now.getMinutes();}
+  var li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var t=h*60+m,openDay=(d===3||d===5),st=document.getElementById('status'),dot=document.getElementById('dot');
+  if(openDay&&t>=870&&t<1200){st.textContent='Open now · until 8 PM';dot.classList.add('on');}
+  else if(openDay&&t<870){st.textContent='Opens today at 2:30 PM';dot.classList.add('on');}
+  else{var nd=null;for(var i=1;i<=7;i++){var k=(d+i)%7;if(k===3||k===5){nd=k;break;}}
+    st.textContent='Closed now · next open '+(nd===3?'Wednesday':'Friday')+' 2:30 PM';}
+  // breathing cue
+  var cue=document.getElementById('cue'),inh=true;
+  setInterval(function(){inh=!inh;cue.style.opacity=0;setTimeout(function(){cue.textContent=inh?'breathe in':'breathe out';cue.style.opacity=1},500)},4000);
+  // reveal
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){e.classList.add('pre')});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

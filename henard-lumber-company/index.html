@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Henard Lumber Company — Rogersville</title>
+<meta name="description" content="Concept site for Henard Lumber Company, a family lumber, hardware and building supply store on Big Springs Road in Rogersville, TN, since 1899.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#e9dcc4; --kraft2:#dfcdae; --kraft3:#cdb48b; --paper:#f5ede0;
+  --pine:#c99a5b; --pine-d:#a8733a; --cedar:#9c4a2c; --cedar-d:#7a3720;
+  --forest:#24452f; --forest-d:#16301f; --forest-l:#3a6a4a;
+  --ink:#2a2118; --muted:#6a5a48; --line:#cbb593;
+  --display:"Archivo Black", Impact, "Arial Black", sans-serif;
+  --serif:"Source Serif 4", Georgia, serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--kraft);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+/* kraft paper fibre texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .33 0 0 0 0 .18 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.banner{position:relative;z-index:1}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.banner{background:var(--forest-d);color:#e9dcc4;font:600 11px/1.35 var(--serif);text-align:center;padding:7px 12px;letter-spacing:.01em}
+.banner b{color:#f0c88a;font-weight:700}
+.eyebrow{font:12px/1 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--cedar)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(34px,7vw,58px);color:var(--forest-d)}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:44px;height:44px;flex:none}
+.logo span{font:17px/1 var(--display);color:var(--forest-d);letter-spacing:.01em}
+.logo small{display:block;font:600 12px/1.2 var(--serif);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.nav ul{display:none;list-style:none;gap:26px}
+.nav ul a{text-decoration:none;font-weight:600;font-size:16px;color:var(--ink);border-bottom:2px solid transparent;padding-bottom:2px;transition:border-color .2s,color .2s}
+.nav ul a:hover{border-color:var(--cedar);color:var(--cedar)}
+.nav .navcall{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .navcall{display:inline-flex}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 18px;border-radius:6px;font:15px/1 var(--display);white-space:nowrap;letter-spacing:.03em;text-decoration:none;transition:transform .15s,box-shadow .15s,background .2s}
+.btn svg{width:19px;height:19px}
+.btn-green{background:var(--forest);color:#f5ede0;box-shadow:0 4px 0 var(--forest-d)}
+.btn-green:hover{background:var(--forest-l);transform:translateY(-2px);box-shadow:0 6px 0 var(--forest-d)}
+.btn-ghost{background:transparent;color:var(--forest-d);border:2px solid var(--forest-d)}
+.btn-ghost:hover{background:var(--forest-d);color:var(--kraft)}
+.btn:active{transform:translateY(2px)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:18px 0 0}
+.hero-grid{display:grid;gap:22px;align-items:center}
+.stamp{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--cedar);color:var(--cedar);padding:7px 12px 6px;border-radius:4px;font:12.5px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-2deg);background:rgba(245,237,224,.6)}
+.hero h1{font-size:clamp(46px,13.2vw,90px);color:var(--forest-d);margin:16px 0 14px}
+.hero h1 em{font-style:normal;color:var(--cedar);display:block}
+.hero p.sub{font-size:19px;color:var(--ink);max-width:40ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 4px}
+.hero .ctas .btn{flex:1 1 150px}
+.endgrain{position:relative;width:min(84vw,430px);margin:6px auto 0;aspect-ratio:1}
+.endgrain svg{width:100%;height:100%;filter:drop-shadow(0 18px 24px rgba(60,35,10,.28))}
+.endgrain .rings circle{animation:grow 1.8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+.endgrain .tag{position:absolute;right:2%;bottom:12%;background:var(--forest);color:var(--kraft);font:13px/1.15 var(--display);letter-spacing:.06em;padding:10px 12px;border-radius:4px;transform:rotate(4deg);box-shadow:0 6px 14px rgba(0,0,0,.2);text-align:center}
+.endgrain .tag b{display:block;font-size:26px;color:#f0c88a;letter-spacing:0}
+@media(min-width:900px){.hero{padding:40px 0 10px}.hero-grid{grid-template-columns:1.15fr .85fr}.hero .ctas .btn{flex:0 0 auto}.endgrain{margin:0 0 0 auto}}
+
+/* stacked board stripes */
+.boards{height:66px;margin-top:30px;background:
+ linear-gradient(180deg,
+  var(--pine) 0 12px,#8a5a2b 12px 14px,
+  #b98448 14px 26px,#7a4b22 26px 28px,
+  var(--cedar) 28px 40px,#5e2b17 40px 42px,
+  #d3a96c 42px 54px,#8a5a2b 54px 56px,
+  #a8733a 56px 66px);position:relative}
+.boards::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 170px,rgba(40,20,5,.55) 170px 172px,transparent 172px 260px,rgba(40,20,5,.4) 260px 262px);mix-blend-mode:multiply}
+.boards.thin{height:28px;margin:0;background:linear-gradient(180deg,var(--pine) 0 12px,#7a4b22 12px 14px,var(--cedar) 14px 26px,#5e2b17 26px 28px)}
+
+/* FACT STRIP */
+.facts{background:var(--forest);color:var(--kraft);padding:26px 0}
+.facts .wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px}
+.fact b{display:block;font:30px/1 var(--display);color:#f0c88a}
+.fact span{font-size:15px;line-height:1.35;display:block;margin-top:5px;opacity:.92}
+@media(min-width:900px){.facts .wrap{grid-template-columns:repeat(4,1fr)}}
+
+section{padding:64px 0}
+.lead{font-size:19px;max-width:56ch;margin-top:12px;color:var(--ink)}
+
+/* YARD / products */
+.yard{display:grid;gap:14px;margin-top:30px}
+.item{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:20px 20px 18px 74px;transition:transform .2s,box-shadow .2s;overflow:hidden}
+.item:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(70,45,15,.16)}
+.item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(180deg,var(--pine),var(--cedar))}
+.item .ic{position:absolute;left:24px;top:20px;width:36px;height:36px;color:var(--forest)}
+.item h3{font-size:20px;color:var(--forest-d);margin-bottom:5px;letter-spacing:.01em}
+.item p{font-size:16px;color:var(--muted);line-height:1.45}
+@media(min-width:700px){.yard{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.yard{grid-template-columns:repeat(3,1fr)}}
+.special{margin-top:22px;display:flex;gap:14px;align-items:flex-start;background:var(--forest-d);color:var(--kraft);border-radius:8px;padding:20px}
+.special svg{width:32px;height:32px;flex:none;color:#f0c88a}
+.special b{font-family:var(--display);font-weight:400;letter-spacing:.02em;color:#f0c88a}
+.special a{color:#f0c88a;font-weight:700}
+
+/* STORY / timeline */
+.story{background:var(--kraft2);position:relative}
+.story::before{content:"";position:absolute;inset:0;opacity:.35;background:repeating-linear-gradient(0deg,transparent 0 46px,rgba(120,80,30,.18) 46px 47px)}
+.story .wrap{position:relative}
+.timeline{list-style:none;margin-top:34px;position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:4px;background:linear-gradient(var(--pine),var(--cedar));border-radius:2px}
+.timeline li{position:relative;padding-bottom:28px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-31px;top:4px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#f0c88a 0 2px,var(--pine) 3px 5px,#a8733a 6px 7px,var(--pine) 8px);box-shadow:0 0 0 3px var(--kraft2)}
+.timeline .yr{font:30px/1 var(--display);color:var(--cedar)}
+.timeline p{margin-top:5px;font-size:17px;max-width:52ch}
+@media(min-width:900px){.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:46px 0 0}
+ .timeline::before{left:0;right:0;top:12px;bottom:auto;height:4px;width:auto}
+ .timeline li{padding:0}.timeline li::before{left:0;top:-43px}}
+.quote{margin-top:40px;border-left:6px solid var(--forest);padding:6px 0 6px 18px;font-style:italic;font-size:20px;color:var(--forest-d);max-width:60ch}
+.quote small{display:block;font-style:normal;font-size:14px;color:var(--muted);margin-top:6px}
+
+/* WHY */
+.why{display:grid;gap:16px;margin-top:30px}
+.why div{border-top:5px solid var(--forest);padding-top:14px}
+.why h3{font-size:21px;color:var(--forest-d);margin-bottom:6px}
+.why p{font-size:16.5px;color:var(--muted)}
+@media(min-width:800px){.why{grid-template-columns:repeat(3,1fr);gap:28px}}
+
+/* VISIT */
+.visit{background:var(--forest-d);color:var(--kraft)}
+.visit h2{color:var(--kraft)}
+.visit .eyebrow{color:#f0c88a}
+.vgrid{display:grid;gap:26px;margin-top:28px}
+@media(min-width:900px){.vgrid{grid-template-columns:1fr 1.2fr}}
+.hours{background:rgba(233,220,196,.06);border:1px solid rgba(233,220,196,.18);border-radius:8px;padding:8px 18px}
+.hours .row{display:flex;justify-content:space-between;gap:10px;padding:11px 8px;border-bottom:1px dashed rgba(233,220,196,.2);font-size:17px}
+.hours .row:last-child{border-bottom:0}
+.hours .row span:last-child{font-weight:600}
+.hours .row.today{background:#f0c88a;color:var(--forest-d);border-radius:5px;border-bottom-color:transparent;margin:3px -8px;padding:11px 16px}
+.hours .row.today span:first-child::after{content:" · today";font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.note{font-size:14.5px;opacity:.82;margin-top:12px;line-height:1.45}
+.contact{margin-top:22px;display:grid;gap:10px}
+.contact a{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:17px;padding:12px 14px;border-radius:6px;background:rgba(233,220,196,.07);transition:background .2s}
+.contact a:hover{background:rgba(233,220,196,.16)}
+.contact svg{width:22px;height:22px;flex:none;color:#f0c88a}
+.map{border-radius:8px;overflow:hidden;border:4px solid var(--pine);min-height:320px;background:#2b4a35 repeating-linear-gradient(45deg,transparent 0 22px,rgba(233,220,196,.05) 22px 24px)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.addr{font:22px/1.15 var(--display);color:#f0c88a;margin-top:2px}
+.dir{margin-top:14px;font-size:16px;opacity:.9}
+
+footer{background:#0f2216;color:rgba(233,220,196,.78);padding:30px 0 34px;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center}
+footer b{font-family:var(--display);font-weight:400;color:var(--kraft);letter-spacing:.02em}
+
+/* sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(22,48,31,.97);box-shadow:0 -6px 18px rgba(0,0,0,.25)}
+.callbar a{flex:1;min-height:50px;font-size:14px;padding:0 8px;border-radius:6px}
+.callbar .c1{background:#f0c88a;color:var(--forest-d)}
+.callbar .c2{border:2px solid rgba(233,220,196,.5);color:var(--kraft)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s,transform .7s}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Henard Lumber Company. Not live.</div>
+
+<header class="wrap nav">
+  <a class="logo" href="#top" aria-label="Henard Lumber Company home">
+    <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#c99a5b"/><circle cx="22" cy="22" r="21" fill="none" stroke="#7a3720" stroke-width="2"/><circle cx="21" cy="23" r="15" fill="none" stroke="#a8733a" stroke-width="1.5"/><circle cx="21.5" cy="22.5" r="10.5" fill="none" stroke="#a8733a" stroke-width="1.5"/><circle cx="22" cy="22" r="6" fill="none" stroke="#a8733a" stroke-width="1.5"/><circle cx="22" cy="22" r="2.2" fill="#7a3720"/></svg>
+    <div><span>HENARD LUMBER</span><small>Rogersville, TN · Since 1899</small></div>
+  </a>
+  <ul>
+    <li><a href="#yard">In the store</a></li>
+    <li><a href="#story">Our story</a></li>
+    <li><a href="#visit">Hours &amp; directions</a></li>
+  </ul>
+  <a class="btn btn-green navcall" href="tel:+14232728090">Call 423-272-8090</a>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="stamp">Six generations · Since 1899</span>
+      <h1>Building Rogersville <em>since 1899.</em></h1>
+      <p class="sub">Lumber, hardware, Glidden paint and building supplies from the Henard family, just south of town off Route 66.</p>
+      <div class="ctas">
+        <a class="btn btn-green" href="tel:+14232728090"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call the store</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=127+Big+Springs+Rd,+Rogersville,+TN+37857" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <div class="endgrain" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <radialGradient id="wd" cx="48%" cy="52%" r="55%"><stop offset="0" stop-color="#e2b77a"/><stop offset=".7" stop-color="#cf9c5c"/><stop offset="1" stop-color="#b98146"/></radialGradient>
+          <radialGradient id="bk" cx="50%" cy="50%" r="50%"><stop offset=".86" stop-color="#5e2b17"/><stop offset="1" stop-color="#3b1b0e"/></radialGradient>
+        </defs>
+        <path d="M200 8c58 0 104 18 140 52s52 82 50 136c-2 60-20 104-56 140s-82 56-136 56c-60 0-106-18-142-56S8 252 10 196c2-56 22-100 58-136S144 8 200 8z" fill="url(#bk)"/>
+        <path d="M200 26c52 0 92 16 124 47s46 74 45 122c-1 54-18 94-50 126s-74 49-122 49c-54 0-94-17-126-50S28 248 30 196c2-50 20-90 52-122S152 26 200 26z" fill="url(#wd)"/>
+        <g class="rings" fill="none" stroke="#9a6430" stroke-linecap="round" style="transform-origin:194px 206px">
+          <circle cx="194" cy="206" r="150" stroke-width="2.4" opacity=".55"/>
+          <circle cx="193" cy="206" r="134" stroke-width="1.6" opacity=".5"/>
+          <circle cx="194" cy="207" r="120" stroke-width="2.8" opacity=".6"/>
+          <circle cx="195" cy="206" r="104" stroke-width="1.4" opacity=".5"/>
+          <circle cx="194" cy="206" r="90" stroke-width="2.6" opacity=".6"/>
+          <circle cx="194" cy="205" r="76" stroke-width="1.6" opacity=".55"/>
+          <circle cx="195" cy="206" r="62" stroke-width="2.6" opacity=".65"/>
+          <circle cx="194" cy="206" r="48" stroke-width="1.5" opacity=".6"/>
+          <circle cx="194" cy="207" r="34" stroke-width="2.4" opacity=".7"/>
+          <circle cx="194" cy="206" r="21" stroke-width="1.6" opacity=".7"/>
+          <circle cx="194" cy="206" r="10" stroke-width="2.4" opacity=".8"/>
+        </g>
+        <circle cx="194" cy="206" r="4" fill="#7a3720"/>
+        <path d="M194 206 L330 120" stroke="#6a3a18" stroke-width="2.5" opacity=".55"/>
+        <path d="M194 206 L120 340" stroke="#6a3a18" stroke-width="1.5" opacity=".35"/>
+        <g font-family="Archivo Black, sans-serif" font-size="13" fill="#3b1b0e" opacity=".85">
+          <text x="206" y="196">1899</text>
+          <text x="236" y="150">1932</text>
+          <text x="268" y="132">1965</text>
+        </g>
+      </svg>
+      <div class="tag">ROGERSVILLE<b>127 YRS</b>AND COUNTING</div>
+    </div>
+  </div>
+  <div class="boards" aria-hidden="true"></div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b>1899</b><span>J.O. Henard starts a sawmill in Klondike</span></div>
+    <div class="fact"><b>6</b><span>generations of the Henard family</span></div>
+    <div class="fact"><b>Glidden</b><span>paint dealer for Rogersville</span></div>
+    <div class="fact"><b>Special</b><span>orders for what's not on the shelf</span></div>
+  </div>
+</div>
+
+<section id="yard">
+  <div class="wrap">
+    <p class="eyebrow rv">In the store</p>
+    <h2 class="rv">From the first board to the last coat of paint.</h2>
+    <p class="lead rv">Everything for the job in one stop on Big Springs Road, whether you're framing a barn or fixing a drip.</p>
+    <div class="yard">
+      <div class="item rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="3" y="8" width="30" height="6" rx="1"/><rect x="3" y="15" width="30" height="6" rx="1"/><rect x="3" y="22" width="30" height="6" rx="1"/></svg><h3>Lumber</h3><p>Regular and pressure-treated lumber, plus molding and trim.</p></div>
+      <div class="item rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="4" width="22" height="11" rx="2"/><path d="M27 9h3v8H17v4"/><rect x="14" y="21" width="6" height="11" rx="1.5"/></svg><h3>Glidden paint</h3><p>Your local Glidden paint dealer.</p></div>
+      <div class="item rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 30l14-14"/><path d="M18 6l12 12-4 4-12-12z"/></svg><h3>Hardware &amp; tools</h3><p>Hardware and tools, including battery-powered models.</p></div>
+      <div class="item rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 18l14-12 14 12"/><path d="M8 15v16h20V15"/><path d="M15 31v-9h6v9"/></svg><h3>Building materials</h3><p>The supplies that go into a build, for homeowners and contractors alike.</p></div>
+      <div class="item rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M8 4v10a6 6 0 0 0 6 6h8a6 6 0 0 1 6 6v6"/><circle cx="8" cy="4" r="0.1"/><path d="M20 12l-3 6h5l-3 6"/></svg><h3>Plumbing &amp; electrical</h3><p>Plumbing and electrical supplies, and water heaters.</p></div>
+      <div class="item rv"><svg class="ic" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 23c6-1 14-6 22-15l3 3c-6 9-14 14-22 16z"/><path d="M5 23l-1 6 4-2"/></svg><h3>Case pocket knives</h3><p>A long-time favorite at the counter.</p></div>
+    </div>
+    <div class="special rv">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="8" width="24" height="18" rx="2"/><path d="M4 13h24M11 4v6M21 4v6"/></svg>
+      <p><b>Don't see it? Ask.</b> Building and do-it-yourself products that aren't stocked can be special-ordered. Call <a href="tel:+14232728090">423-272-8090</a>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="boards thin" aria-hidden="true"></div>
+
+<section id="story" class="story">
+  <div class="wrap">
+    <p class="eyebrow rv">Our story</p>
+    <h2 class="rv">Six generations of Henards.</h2>
+    <ol class="timeline">
+      <li class="rv"><div class="yr">1899</div><p>James O. Henard starts the business with a sawmill in the Klondike community.</p></li>
+      <li class="rv"><div class="yr">1932</div><p>His son, A.E. Henard, buys the operation, and in the 1940s it moves to Henard Town.</p></li>
+      <li class="rv"><div class="yr">1965</div><p>Ross Henard buys the business, closes the sawmill and builds a modern store.</p></li>
+      <li class="rv"><div class="yr">Today</div><p>The family still runs the store, and the old building is used as warehouse space.</p></li>
+    </ol>
+    <p class="quote rv">Stop in and look around: the original Klondike sign and antique gas pumps are part of the store.<small>As reported by The Rogersville Review</small></p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <p class="eyebrow rv">Why Henard's</p>
+    <h2 class="rv">A hometown yard, not a big box.</h2>
+    <div class="why">
+      <div class="rv"><h3>Family-run</h3><p>Started by J.O. Henard in 1899 and passed down the family ever since.</p></div>
+      <div class="rv"><h3>One stop</h3><p>Lumber, paint, hardware, plumbing, electrical and tools under one roof.</p></div>
+      <div class="rv"><h3>Part of Rogersville</h3><p>A Chamber of Commerce member with a long history of supporting local schools.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <p class="eyebrow rv">Hours &amp; directions</p>
+    <h2 class="rv">Come see us in Henard Town.</h2>
+    <div class="vgrid">
+      <div class="rv">
+        <div class="hours" id="hours">
+          <div class="row" data-d="1"><span>Monday</span><span>8 AM – 5 PM</span></div>
+          <div class="row" data-d="2"><span>Tuesday</span><span>8 AM – 5 PM</span></div>
+          <div class="row" data-d="3"><span>Wednesday</span><span>8 AM – 5 PM</span></div>
+          <div class="row" data-d="4"><span>Thursday</span><span>8 AM – 5 PM</span></div>
+          <div class="row" data-d="5"><span>Friday</span><span>8 AM – 5 PM</span></div>
+          <div class="row" data-d="6"><span>Saturday</span><span>Call ahead</span></div>
+          <div class="row" data-d="0"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <p class="note">Weekday hours as listed in public directories. Saturday hours vary by listing, so please call before you drive out.</p>
+        <div class="contact">
+          <a href="tel:+14232728090"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>423-272-8090</a>
+          <a href="tel:+14232728180"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>423-272-8180</a>
+          <a href="mailto:henardlumber@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>henardlumber@gmail.com</a>
+          <a href="https://www.facebook.com/henardlumberco/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg>Henard Lumber on Facebook</a>
+        </div>
+      </div>
+      <div class="rv">
+        <p class="addr">127 Big Springs Rd<br>Rogersville, TN 37857</p>
+        <p class="dir">In the Henard Town community, off Route 66 South just south of Rogersville.</p>
+        <div class="map" style="margin-top:16px">
+          <iframe title="Map to Henard Lumber Company" loading="lazy" src="https://www.google.com/maps?q=127%20Big%20Springs%20Rd%2C%20Rogersville%2C%20TN%2037857&amp;output=embed"></iframe>
+        </div>
+        <a class="btn btn-green" style="margin-top:16px;width:100%;background:#f0c88a;color:var(--forest-d);box-shadow:0 4px 0 #a8733a" href="https://www.google.com/maps/dir/?api=1&amp;destination=127+Big+Springs+Rd,+Rogersville,+TN+37857" target="_blank" rel="noopener">Directions in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>HENARD LUMBER COMPANY</b> · 127 Big Springs Rd, Rogersville, TN</span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="btn c1" href="tel:+14232728090">Call the store</a>
+  <a class="btn c2" href="https://www.google.com/maps/dir/?api=1&amp;destination=127+Big+Springs+Rd,+Rogersville,+TN+37857" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var r=document.querySelector('#hours .row[data-d="'+d+'"]'); if(r) r.classList.add('today');
+  var root=document.documentElement; root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  setTimeout(function(){root.classList.add('show-all')},1500);
+  if(!('IntersectionObserver' in window)){root.classList.add('show-all');return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

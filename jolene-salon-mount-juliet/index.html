@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Jolene Salon — Mount Juliet</title>
+<meta name="description" content="Concept site for Jolene Salon, 661 South Mount Juliet Road, Mount Juliet, TN. Cuts, color, foils, balayage and Brazilian blowouts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --butter:#F6D77A; --butter-soft:#FBEFC4; --cream:#FFF8E8;
+  --rust:#B5532A; --rust-deep:#8E3C1C;
+  --denim:#2F4F7A; --denim-deep:#1E3557; --denim-soft:#DCE5F0;
+  --ink:#2A211C; --muted:#5E4F45;
+  --radius:22px;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+h1,h2,h3,.disp{font-family:"Yeseva One",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:.005em}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--denim-deep);color:#E9EEF6;font-size:10.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(255,248,232,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(181,83,42,.15)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:34px;height:34px}
+.logo span{font-family:"Yeseva One",serif;font-size:22px;color:var(--rust-deep)}
+.navlinks{display:none;gap:28px;font-weight:700;font-size:15px}
+.navlinks a{text-decoration:none;color:var(--denim-deep);position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--rust);transition:right .25s}
+.navlinks a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .18s, box-shadow .18s, background .18s;min-height:48px}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-rust{background:var(--rust);color:#fff;box-shadow:0 6px 0 var(--rust-deep)}
+.btn-rust:hover{box-shadow:0 8px 0 var(--rust-deep)}
+.btn-denim{background:var(--denim);color:#fff;box-shadow:0 6px 0 var(--denim-deep)}
+.btn-ghost{background:transparent;color:var(--denim-deep);border:2px solid var(--denim-deep)}
+.btn-sm{padding:9px 18px;min-height:40px;font-size:14px;box-shadow:0 4px 0 var(--rust-deep)}
+@media (min-width:900px){.navlinks{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--butter);padding:40px 0 56px}
+.rays{position:absolute;left:50%;bottom:-40%;width:1600px;height:1600px;transform:translateX(-50%);opacity:.55;animation:spin 120s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+.hero .wrap{position:relative;display:grid;gap:30px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--rust-deep);font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:2px solid var(--rust)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:#3E8E5A;box-shadow:0 0 0 0 rgba(62,142,90,.6);animation:pulse 2s infinite}
+.eyebrow.closed i{background:var(--rust);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(62,142,90,0)}100%{box-shadow:0 0 0 0 rgba(62,142,90,0)}}
+.hero h1{font-size:clamp(42px,11.5vw,82px);color:var(--denim-deep);margin:18px 0 14px}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.hero p.sub{font-size:18px;color:var(--ink);max-width:520px;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+@media (max-width:420px){.hero .cta .btn{flex:1 1 auto;padding:14px 16px;font-size:14px}}
+.arch-wrap{position:relative;justify-self:center;width:min(78%,300px)}
+.arch{position:relative;aspect-ratio:3/4;border-radius:999px 999px 26px 26px;background:var(--denim);overflow:hidden;border:6px solid var(--cream);box-shadow:0 0 0 3px var(--rust),0 24px 50px rgba(30,53,87,.25)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.sticker{position:absolute;right:-30px;bottom:22px;background:var(--rust);color:#fff;border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;font-weight:800;font-size:12px;line-height:1.15;letter-spacing:.04em;text-transform:uppercase;transform:rotate(-10deg);box-shadow:0 8px 0 var(--rust-deep);border:3px dashed rgba(255,255,255,.5)}
+.sticker b{display:block;font-family:"Yeseva One",serif;font-size:26px;font-weight:400;letter-spacing:0;text-transform:none}
+@media (min-width:900px){.hero{padding:80px 0 100px}.hero .wrap{grid-template-columns:1.2fr .8fr;gap:60px}.arch-wrap{width:400px}}
+
+/* wavy divider */
+.wave{display:block;width:100%;height:40px}
+
+/* stripe band */
+.band{background:var(--rust);color:var(--butter-soft);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:"Yeseva One",serif;font-size:22px}
+.band .track{display:inline-flex;gap:34px;animation:marq 40s linear infinite;padding-left:34px}
+.band .track span{display:inline-flex;align-items:center;gap:34px}
+.band .track span::after{content:"✺";color:var(--butter);font-size:18px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:72px 0}
+.kicker{font-weight:800;color:var(--rust);letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+h2{font-size:clamp(34px,8.5vw,56px);color:var(--denim-deep);margin:10px 0 14px}
+.lead{color:var(--muted);font-size:17px;max-width:620px}
+
+/* services */
+#services{background:var(--cream);position:relative}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 22px}
+.tab{font:inherit;font-weight:800;font-size:14px;border:2px solid var(--denim-deep);background:transparent;color:var(--denim-deep);padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .18s,color .18s;min-height:42px}
+.tab:hover{background:var(--denim-soft)}
+.tab[aria-selected="true"]{background:var(--denim-deep);color:#fff}
+.menu{display:grid;gap:18px}
+@media (min-width:760px){.menu{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border-radius:var(--radius);padding:24px 22px 14px;border:2px solid rgba(47,79,122,.14);position:relative;overflow:hidden}
+.card h3{font-size:26px;color:var(--rust-deep);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.card h3 svg{width:28px;height:28px;flex:none}
+.card .note{font-size:13.5px;color:var(--muted);margin-bottom:6px}
+.svc{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px dashed rgba(94,79,69,.25)}
+.svc:last-child{border-bottom:0}
+.svc .n{font-weight:700}
+.svc .d{font-size:12.5px;color:var(--muted);display:block;font-weight:600}
+.svc .dots{flex:1;min-width:10px}
+.svc .p{font-family:"Yeseva One",serif;font-size:20px;color:var(--denim-deep);white-space:nowrap}
+.svc .p small{font-family:"Nunito Sans",sans-serif;font-size:11px;font-weight:800;color:var(--rust);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.card.hide{display:none}
+.menu-foot{margin-top:24px;font-size:14px;color:var(--muted)}
+
+/* why */
+#why{background:var(--denim);color:#fff;position:relative;overflow:hidden}
+#why h2{color:var(--butter)}
+#why .lead{color:#DCE5F0}
+#why .kicker{color:var(--butter)}
+.why-rays{position:absolute;right:-300px;top:-300px;width:800px;height:800px;opacity:.12;pointer-events:none}
+.facts{display:grid;gap:16px;margin-top:30px;position:relative}
+@media (min-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{background:rgba(255,255,255,.08);border:2px solid rgba(246,215,122,.35);border-radius:120px 120px 20px 20px;padding:36px 22px 24px;text-align:center;transition:transform .25s,background .25s}
+.fact:hover{transform:translateY(-4px);background:rgba(255,255,255,.13)}
+.fact .big{font-family:"Yeseva One",serif;font-size:44px;color:var(--butter);line-height:1}
+.fact h3{font-family:"Nunito Sans",sans-serif;font-weight:800;font-size:17px;margin:10px 0 6px}
+.fact p{font-size:14.5px;color:#DCE5F0}
+
+/* hours */
+#visit{background:var(--butter-soft)}
+.visit-grid{display:grid;gap:24px;margin-top:26px}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1.2fr}}
+.hours{background:#fff;border-radius:var(--radius);padding:10px 22px;border:2px solid rgba(181,83,42,.25)}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:12px 10px;border-bottom:1px dashed rgba(94,79,69,.25);font-weight:600;border-radius:12px}
+.hours li:last-child{border-bottom:0}
+.hours li.today{background:var(--butter);font-weight:800;color:var(--denim-deep);border-bottom-color:transparent}
+.hours li.today .day::after{content:"Today";margin-left:6px;font-size:10px;background:var(--rust);color:#fff;padding:2px 8px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase;vertical-align:2px}
+.hours li .t{white-space:nowrap}
+.hours li .t.closed{color:var(--muted);font-weight:600}
+.map{border-radius:var(--radius);overflow:hidden;border:4px solid #fff;box-shadow:0 0 0 2px var(--rust);min-height:300px;background:var(--denim-soft)}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{margin-top:18px;background:#fff;border-radius:var(--radius);padding:20px 22px;border:2px solid rgba(181,83,42,.25)}
+.addr p{font-weight:700;font-size:17px}
+.addr .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+
+/* book band */
+.book{background:var(--rust);color:#fff;text-align:center;position:relative;overflow:hidden}
+.book h2{color:var(--butter)}
+.book p{color:#FBE7DA;max-width:560px;margin:0 auto}
+.book .cta{justify-content:center}
+.book .btn-light{background:var(--butter);color:var(--denim-deep);box-shadow:0 6px 0 #C9A646}
+.book .btn-line{border:2px solid #fff;color:#fff}
+
+footer{background:var(--denim-deep);color:#C9D5E6;padding:40px 0;font-size:14px}
+footer .wrap{display:grid;gap:14px}
+footer .logo span{color:var(--butter)}
+footer a{color:var(--butter)}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(30,53,87,.97);box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15px}
+.callbar .c{background:var(--butter);color:var(--denim-deep)}
+.callbar .b{background:var(--rust);color:#fff}
+.callbar svg{width:18px;height:18px}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){.rays,.band .track{animation:none}.js .reveal:not(.in){opacity:1;transform:none}}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Jolene Salon. Not live.</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Jolene Salon home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 38V20a16 16 0 0 1 32 0v18z" fill="#B5532A"/><path d="M10 38V21a10 10 0 0 1 20 0v17z" fill="#F6D77A"/><circle cx="20" cy="24" r="5" fill="#2F4F7A"/></svg>
+      <span>Jolene Salon</span>
+    </a>
+    <div class="navlinks"><a href="#services">Services</a><a href="#why">Why Jolene</a><a href="#visit">Hours &amp; Map</a></div>
+    <a class="btn btn-rust btn-sm" href="https://app.squareup.com/appointments/book/7sp41bodifvfd4/LNQHXSBGNFE1T/start" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="rays" viewBox="0 0 200 200" aria-hidden="true">
+    <g transform="translate(100 100)">
+      <g id="ray"><path d="M0 0 L-6 -100 L6 -100 Z" fill="#FBEFC4"/></g>
+      <use href="#ray" transform="rotate(15)"/><use href="#ray" transform="rotate(30)"/><use href="#ray" transform="rotate(45)"/><use href="#ray" transform="rotate(60)"/><use href="#ray" transform="rotate(75)"/><use href="#ray" transform="rotate(90)"/><use href="#ray" transform="rotate(105)"/><use href="#ray" transform="rotate(120)"/><use href="#ray" transform="rotate(135)"/><use href="#ray" transform="rotate(150)"/><use href="#ray" transform="rotate(165)"/><use href="#ray" transform="rotate(180)"/><use href="#ray" transform="rotate(195)"/><use href="#ray" transform="rotate(210)"/><use href="#ray" transform="rotate(225)"/><use href="#ray" transform="rotate(240)"/><use href="#ray" transform="rotate(255)"/><use href="#ray" transform="rotate(270)"/><use href="#ray" transform="rotate(285)"/><use href="#ray" transform="rotate(300)"/><use href="#ray" transform="rotate(315)"/><use href="#ray" transform="rotate(330)"/><use href="#ray" transform="rotate(345)"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" id="status"><i></i><b id="statusText">Mount Juliet, TN</b></span>
+      <h1>Golden-hour color, <em>right on</em> South Mt. Juliet Road.</h1>
+      <p class="sub">Balayage, foils, grey coverage, Brazilian blowouts and easy everyday cuts at Jolene Salon. Book online in a minute.</p>
+      <div class="cta">
+        <a class="btn btn-rust" href="https://app.squareup.com/appointments/book/7sp41bodifvfd4/LNQHXSBGNFE1T/start" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+16154794085">Call (615) 479-4085</a>
+      </div>
+    </div>
+    <div class="arch-wrap reveal">
+      <div class="arch">
+        <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6D77A"/><stop offset=".55" stop-color="#E9A35A"/><stop offset="1" stop-color="#B5532A"/></linearGradient>
+          </defs>
+          <rect width="300" height="400" fill="url(#sky)"/>
+          <g transform="translate(150 250)" fill="#FFF3CF" opacity=".45">
+            <path d="M0 0L-10 -260L10 -260Z"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(20)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(40)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(60)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(80)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(-20)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(-40)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(-60)"/><path d="M0 0L-10 -260L10 -260Z" transform="rotate(-80)"/>
+          </g>
+          <circle cx="150" cy="250" r="62" fill="#FBEFC4"/>
+          <circle cx="150" cy="250" r="46" fill="#F6D77A"/>
+          <!-- rolling hills -->
+          <path d="M0 290 C60 260 110 300 160 282 C210 264 250 286 300 270 V400 H0Z" fill="#2F4F7A"/>
+          <path d="M0 330 C70 300 130 340 190 318 C240 300 270 318 300 312 V400 H0Z" fill="#1E3557"/>
+          <!-- comb + shears -->
+          <g transform="translate(70 352) rotate(-8)">
+            <rect x="0" y="0" width="92" height="14" rx="5" fill="#FBEFC4"/>
+            <g fill="#FBEFC4"><rect x="6" y="12" width="4" height="16" rx="2"/><rect x="16" y="12" width="4" height="16" rx="2"/><rect x="26" y="12" width="4" height="16" rx="2"/><rect x="36" y="12" width="4" height="16" rx="2"/><rect x="46" y="12" width="4" height="16" rx="2"/><rect x="56" y="12" width="4" height="16" rx="2"/><rect x="66" y="12" width="4" height="16" rx="2"/><rect x="76" y="12" width="4" height="16" rx="2"/></g>
+          </g>
+          <g transform="translate(210 340) rotate(25)" fill="none" stroke="#F6D77A" stroke-width="5" stroke-linecap="round">
+            <circle cx="-12" cy="22" r="9"/><circle cx="12" cy="22" r="9"/>
+            <path d="M-6 14 L10 -30 M6 14 L-10 -30"/>
+          </g>
+        </svg>
+      </div>
+      <div class="sticker"><div><b>25</b>services<br>to book</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Balayage</span><span>Brazilian Blowout</span><span>Full Foil</span><span>Grey Coverage</span><span>Formal Updos</span><span>Glaze</span><span>Kids Cuts</span><span>Brow Tint</span>
+  <span>Balayage</span><span>Brazilian Blowout</span><span>Full Foil</span><span>Grey Coverage</span><span>Formal Updos</span><span>Glaze</span><span>Kids Cuts</span><span>Brow Tint</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">The menu</div>
+      <h2>Every service, every price, up front.</h2>
+      <p class="lead">Straight from Jolene Salon's booking page, so you know what you're booking before you sit in the chair.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts &amp; Style</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="combo">Foil Combos</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="extra">Treatments &amp; Brows</button>
+    </div>
+    <div class="menu">
+      <article class="card reveal" data-c="cut">
+        <h3><svg viewBox="0 0 32 32" fill="none" stroke="#B5532A" stroke-width="2.6" stroke-linecap="round"><circle cx="9" cy="24" r="5"/><circle cx="23" cy="24" r="5"/><path d="M12 20 L24 3 M20 20 L8 3"/></svg>Cuts &amp; Styling</h3>
+        <div class="svc"><span class="n">Womens haircut<span class="d">1 hr</span></span><span class="dots"></span><span class="p">$40</span></div>
+        <div class="svc"><span class="n">Mens Haircut<span class="d">30 min · price varies</span></span><span class="dots"></span><span class="p"><small>from</small>$20</span></div>
+        <div class="svc"><span class="n">Kids Haircut<span class="d">30 min · price varies</span></span><span class="dots"></span><span class="p"><small>from</small>$17</span></div>
+        <div class="svc"><span class="n">Shampoo Style<span class="d">1 hr · price varies</span></span><span class="dots"></span><span class="p"><small>from</small>$40</span></div>
+        <div class="svc"><span class="n">Formal updo<span class="d">1 hr 15 min</span></span><span class="dots"></span><span class="p">$65</span></div>
+        <div class="svc"><span class="n">Brazilian blowout<span class="d">2 hr 30 min · price varies</span></span><span class="dots"></span><span class="p"><small>from</small>$350</span></div>
+      </article>
+      <article class="card reveal" data-c="color">
+        <h3><svg viewBox="0 0 32 32" fill="none" stroke="#B5532A" stroke-width="2.6" stroke-linecap="round"><path d="M16 3c6 8 9 13 9 17a9 9 0 0 1-18 0c0-4 3-9 9-17z"/></svg>Color</h3>
+        <div class="svc"><span class="n">Balayage<span class="d">3 hr 30 min</span></span><span class="dots"></span><span class="p">$215</span></div>
+        <div class="svc"><span class="n">Full foil<span class="d">2 hr 30 min</span></span><span class="dots"></span><span class="p">$170</span></div>
+        <div class="svc"><span class="n">Partial foil<span class="d">1 hr 30 min</span></span><span class="dots"></span><span class="p">$125</span></div>
+        <div class="svc"><span class="n">Mini foil<span class="d">1 hr</span></span><span class="dots"></span><span class="p">$80</span></div>
+        <div class="svc"><span class="n">All over color<span class="d">1 hr 30 min</span></span><span class="dots"></span><span class="p">$100</span></div>
+        <div class="svc"><span class="n">Grey coverage root touch up<span class="d">1 hr</span></span><span class="dots"></span><span class="p">$60</span></div>
+        <div class="svc"><span class="n">Glaze<span class="d">30 min</span></span><span class="dots"></span><span class="p">$20</span></div>
+      </article>
+      <article class="card reveal" data-c="combo">
+        <h3><svg viewBox="0 0 32 32" fill="none" stroke="#B5532A" stroke-width="2.6" stroke-linejoin="round"><path d="M4 10l12-6 12 6-12 6z"/><path d="M4 16l12 6 12-6M4 22l12 6 12-6"/></svg>Foil Combos</h3>
+        <div class="svc"><span class="n">Partial foil + grey coverage<span class="d">1 hr 30 min</span></span><span class="dots"></span><span class="p">$135</span></div>
+        <div class="svc"><span class="n">Partial foil + lowlights<span class="d">1 hr 30 min</span></span><span class="dots"></span><span class="p">$140</span></div>
+        <div class="svc"><span class="n">Partial foil + lowlights + grey coverage<span class="d">2 hr 30 min</span></span><span class="dots"></span><span class="p">$160</span></div>
+        <div class="svc"><span class="n">Full foil + lowlights<span class="d">2 hr 30 min</span></span><span class="dots"></span><span class="p">$165</span></div>
+        <div class="svc"><span class="n">Full foil + grey coverage<span class="d">2 hr 30 min</span></span><span class="dots"></span><span class="p">$185</span></div>
+        <div class="svc"><span class="n">Full foil + lowlights + grey coverage<span class="d">2 hr 30 min</span></span><span class="dots"></span><span class="p">$190</span></div>
+      </article>
+      <article class="card reveal" data-c="extra">
+        <h3><svg viewBox="0 0 32 32" fill="none" stroke="#B5532A" stroke-width="2.6" stroke-linecap="round"><path d="M16 4v6M16 22v6M4 16h6M22 16h6M7.5 7.5l4 4M20.5 20.5l4 4M7.5 24.5l4-4M20.5 11.5l4-4"/></svg>Treatments, Brows &amp; Extras</h3>
+        <div class="svc"><span class="n">Hair extension consultation<span class="d">30 min</span></span><span class="dots"></span><span class="p">Free</span></div>
+        <div class="svc"><span class="n">Conditioning treatment<span class="d">1 hr</span></span><span class="dots"></span><span class="p">$30</span></div>
+        <div class="svc"><span class="n">10 min scalp massage<span class="d">30 min slot</span></span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="svc"><span class="n">Brow tint<span class="d">30 min</span></span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="svc"><span class="n">Brow wax<span class="d">15 min</span></span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="svc"><span class="n">Lip wax<span class="d">15 min</span></span><span class="dots"></span><span class="p">$10</span></div>
+      </article>
+    </div>
+    <p class="menu-foot">Prices and times as listed on Jolene Salon's Square booking page. Services marked “from” are listed there as “price varies.”</p>
+  </div>
+</section>
+
+<section id="why">
+  <svg class="why-rays" viewBox="0 0 200 200" aria-hidden="true"><g transform="translate(100 100)" fill="#F6D77A"><path d="M0 0L-7 -100L7 -100Z"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(30)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(60)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(90)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(120)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(150)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(180)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(210)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(240)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(270)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(300)"/><path d="M0 0L-7 -100L7 -100Z" transform="rotate(330)"/></g></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Why Jolene</div>
+      <h2>Simple to book. Easy to plan around.</h2>
+      <p class="lead">No guessing games. Here's what you can count on before you ever walk in.</p>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><div class="big">25</div><h3>Services on the menu</h3><p>From a $10 brow wax to a full Brazilian blowout, all bookable online.</p></div>
+      <div class="fact reveal"><div class="big">$</div><h3>Prices posted</h3><p>Every service shows its price and time before you book. No surprises.</p></div>
+      <div class="fact reveal"><div class="big">Free</div><h3>Extension consult</h3><p>Thinking about extensions? The hair extension consultation is free.</p></div>
+      <div class="fact reveal"><div class="big">7pm</div><h3>Late weeknights</h3><p>Open until 7 PM Tuesday through Thursday, so after-work color is doable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Come on by</div>
+      <h2>Hours &amp; directions</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <ul class="hours" id="hours">
+          <li data-d="0"><span class="day">Sunday</span><span class="t closed">Closed</span></li>
+          <li data-d="1"><span class="day">Monday</span><span class="t closed">Closed</span></li>
+          <li data-d="2"><span class="day">Tuesday</span><span class="t">9:00 AM – 7:00 PM</span></li>
+          <li data-d="3"><span class="day">Wednesday</span><span class="t">9:00 AM – 7:00 PM</span></li>
+          <li data-d="4"><span class="day">Thursday</span><span class="t">9:00 AM – 7:00 PM</span></li>
+          <li data-d="5"><span class="day">Friday</span><span class="t">10:00 AM – 2:00 PM</span></li>
+          <li data-d="6"><span class="day">Saturday</span><span class="t">9:00 AM – 2:00 PM</span></li>
+        </ul>
+        <div class="addr">
+          <p>661 South Mount Juliet Road<br>Mount Juliet, TN 37122</p>
+          <div class="row">
+            <a class="btn btn-denim" href="https://www.google.com/maps/search/?api=1&amp;query=661+South+Mount+Juliet+Road%2C+Mount+Juliet%2C+TN+37122" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost" href="tel:+16154794085">(615) 479-4085</a>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Jolene Salon" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=661%20South%20Mount%20Juliet%20Road%2C%20Mount%20Juliet%2C%20TN%2037122&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+  <div class="wrap reveal">
+    <div class="kicker" style="color:var(--butter)">Ready when you are</div>
+    <h2>Grab your spot in the chair.</h2>
+    <p>Pick a service, pick a time, done. Or give the salon a call.</p>
+    <div class="cta">
+      <a class="btn btn-light" href="https://app.squareup.com/appointments/book/7sp41bodifvfd4/LNQHXSBGNFE1T/start" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-line" href="tel:+16154794085">Call (615) 479-4085</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 38V20a16 16 0 0 1 32 0v18z" fill="#B5532A"/><path d="M10 38V21a10 10 0 0 1 20 0v17z" fill="#F6D77A"/><circle cx="20" cy="24" r="5" fill="#2F4F7A"/></svg><span>Jolene Salon</span></a>
+    <div>661 South Mount Juliet Road, Mount Juliet, TN 37122 · <a href="tel:+16154794085">(615) 479-4085</a> · <a href="mailto:hgray093@gmail.com">hgray093@gmail.com</a></div>
+    <div>Concept by Code Craft Media. Not affiliated with or endorsed by Jolene Salon.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+16154794085"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call</a>
+  <a class="b" href="https://app.squareup.com/appointments/book/7sp41bodifvfd4/LNQHXSBGNFE1T/start" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var hrs={2:[9,19],3:[9,19],4:[9,19],5:[10,14],6:[9,14]};
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), tx=document.getElementById('statusText');
+  function fmt(x){var hh=Math.floor(x)%12||12;return hh+(x>=12?' PM':' AM');}
+  if(hrs[d] && h>=hrs[d][0] && h<hrs[d][1]){tx.textContent='Open today until '+fmt(hrs[d][1]);}
+  else{
+    st.classList.add('closed');
+    var n=d,i=0; do{n=(n+1)%7;i++;}while(!hrs[n]&&i<8);
+    if(hrs[d] && h<hrs[d][0]) tx.textContent='Opens today at '+fmt(hrs[d][0]);
+    else tx.textContent='Opens '+(i===1?'tomorrow':names[n])+' at '+fmt(hrs[n][0]);
+  }
+  // tabs
+  var tabs=document.querySelectorAll('.tab'), cards=document.querySelectorAll('.card');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')});
+    t.setAttribute('aria-selected','true');
+    var f=t.getAttribute('data-f');
+    cards.forEach(function(c){c.classList.toggle('hide', f!=='all' && c.getAttribute('data-c')!==f); c.classList.add('in');});
+  });});
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

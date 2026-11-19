@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Bare Wax Studio — Knoxville</title>
+<meta name="description" content="Bare Wax Studio, inside Nourish Skin Studios at 110 Westfield Road, Knoxville, TN. Face and body waxing with Jessica Shifflett.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141112; --ink2:#3d3537; --muted:#6f6366;
+  --paper:#faf7f4; --paper2:#f3ece7;
+  --blush:#e9cfc4; --nude:#d9b2a2; --clay:#a8705c; --clay-dk:#8a5644;
+  --line:rgba(20,17,18,.12);
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.syne{font-family:Syne,Inter,sans-serif;letter-spacing:-.02em;line-height:1.02}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--clay-dk);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--nude)}
+
+/* banner */
+.concept{background:var(--ink);color:#f0e6e0;font-size:.6rem;text-align:center;padding:7px 8px;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(250,247,244,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Syne;font-weight:800;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase}
+.logo .drop{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f4e2da,var(--nude) 60%,var(--clay) 100%)}
+.navlinks{display:none;gap:30px;font-size:.88rem}
+.navlinks a{text-decoration:none;color:var(--ink2);position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ink);transition:right .3s}
+.navlinks a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;transition:transform .2s,background .2s,color .2s,box-shadow .2s;border:1.5px solid var(--ink)}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:var(--clay-dk);border-color:var(--clay-dk);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(138,86,68,.6)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.btn-sm{padding:9px 18px;font-size:.82rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:46px 0 56px}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.5rem,11.4vw,6.6rem);font-weight:800;margin:18px 0 22px;text-transform:uppercase}
+.hero h1 .soft{color:var(--clay);font-weight:500;text-transform:none;font-size:.62em;display:block;letter-spacing:-.03em;margin-top:.12em}
+.hero p.sub{font-size:1.05rem;color:var(--ink2);max-width:30ch}
+.hero p.sub strong{font-weight:600;color:var(--ink)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.status{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-size:.84rem;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 12px;background:rgba(255,255,255,.55)}
+.status i{width:8px;height:8px;border-radius:50%;background:#b9a9a3}
+.status.open i{background:#5f9c72;box-shadow:0 0 0 0 rgba(95,156,114,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(95,156,114,0)}100%{box-shadow:0 0 0 0 rgba(95,156,114,0)}}
+.orb{position:absolute;border-radius:50%;z-index:1;pointer-events:none}
+.orb.a{width:300px;height:300px;right:-150px;top:10px;background:radial-gradient(circle at 34% 30%,#f7e8e1 0%,var(--blush) 45%,var(--nude) 100%);animation:float 9s ease-in-out infinite}
+.orb.b{display:none;width:70px;height:70px;right:150px;top:300px;background:var(--ink);animation:float 7s ease-in-out infinite reverse}
+.orb.c{width:14px;height:14px;right:60px;top:380px;background:var(--clay)}
+.hero .lines{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.6}
+@keyframes float{50%{transform:translateY(-14px)}}
+
+/* strip */
+.strip{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;background:var(--paper2)}
+.strip .track{display:flex;gap:34px;padding:14px 0;white-space:nowrap;animation:marq 34s linear infinite;width:max-content;font-family:Syne;font-weight:600;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em}
+.strip .track span{display:inline-flex;align-items:center;gap:34px}
+.strip .track span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--nude)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:84px 0}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(2.2rem,8vw,4.2rem);font-weight:700}
+.sec-head p{color:var(--muted);max-width:52ch}
+
+/* menu */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{font:600 .82rem Inter,sans-serif;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:9px 16px;cursor:pointer;transition:all .2s}
+.tab:hover{background:var(--paper2)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.groups{display:grid;gap:22px}
+.group{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 22px 10px;position:relative;overflow:hidden}
+.group h3{font-size:1.5rem;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.group h3 small{font-family:Inter;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.group::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--blush);opacity:.35;right:-50px;top:-50px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-top:1px solid var(--line);position:relative;z-index:1}
+.svc:first-of-type{border-top:0}
+.svc .n{font-weight:500}
+.svc .p{font-family:Syne;font-weight:700;font-size:1.08rem}
+.svc .d{font-size:.78rem;color:var(--muted);grid-column:1}
+.svc:hover .n{color:var(--clay-dk)}
+.group.hide{display:none}
+.menu-note{margin-top:22px;font-size:.84rem;color:var(--muted)}
+
+/* why */
+.why{background:var(--ink);color:#f3ebe6}
+.why .eyebrow{color:var(--nude)}
+.why .sec-head p{color:#bdb0aa}
+.facts{display:grid;gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden}
+.fact{background:var(--ink);padding:30px 24px;position:relative;transition:background .3s}
+.fact:hover{background:#1f1a1b}
+.fact .big{font-family:Syne;font-weight:800;font-size:3.4rem;line-height:1;color:var(--blush);display:flex;align-items:baseline;gap:6px}
+.fact .big small{font-size:1rem;font-weight:600;color:#cdbdb6}
+.fact h3{font-size:1.2rem;margin:14px 0 6px;font-weight:600}
+.fact p{font-size:.92rem;color:#bdb0aa}
+
+/* hours + visit */
+.visit-grid{display:grid;gap:26px}
+.hours{list-style:none;border-top:1px solid var(--ink)}
+.hours li{display:flex;justify-content:space-between;padding:15px 6px;border-bottom:1px solid var(--line);font-size:.98rem;transition:background .2s}
+.hours li .day{font-family:Syne;font-weight:600}
+.hours li.closed span:last-child{color:var(--muted)}
+.hours li.today{background:var(--blush);border-radius:12px;border-bottom-color:transparent;padding-left:14px;padding-right:14px;font-weight:600}
+.hours li.today .day::after{content:" · Today";font-family:Inter;font-weight:500;font-size:.75rem;color:var(--clay-dk);letter-spacing:.06em;text-transform:uppercase}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.addr{font-family:Syne;font-weight:700;font-size:1.5rem;line-height:1.15;margin:10px 0 6px}
+.card p{color:var(--ink2);font-size:.95rem}
+.map{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--paper2)}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35) sepia(.12)}
+.card .ctas{margin-top:18px}
+.contact-list{margin-top:18px;display:grid;gap:8px;font-size:.93rem}
+.contact-list a{text-decoration:none;border-bottom:1px solid var(--nude);word-break:break-all}
+.contact-list a:hover{color:var(--clay-dk)}
+
+/* closing */
+.closing{text-align:center;padding:96px 0;position:relative;overflow:hidden}
+.closing h2{font-size:clamp(2.6rem,11vw,6rem);font-weight:800;text-transform:uppercase;position:relative;z-index:1}
+.closing p{color:var(--ink2);margin:16px auto 28px;max-width:34ch;position:relative;z-index:1}
+.closing .ctas{justify-content:center;position:relative;z-index:1}
+.closing .ring{position:absolute;left:50%;top:50%;width:520px;height:520px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid var(--nude)}
+.closing .ring.r2{width:360px;height:360px;background:radial-gradient(circle,rgba(233,207,196,.55),rgba(233,207,196,0) 70%)}
+
+footer{border-top:1px solid var(--line);padding:30px 0 34px;font-size:.82rem;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:8px}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(20,17,18,.96);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none}
+.callbar .c1{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.callbar .c2{background:var(--blush);color:var(--ink)}
+.callbar a:active{transform:scale(.97)}
+
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in{opacity:1;transform:none}
+
+@media(min-width:760px){
+  .wrap{padding:0 40px}
+  .navlinks{display:flex}
+  .hero{padding:80px 0 100px}
+  .hero p.sub{font-size:1.2rem;max-width:40ch}
+  .hero h1 .soft{font-size:.5em}
+  .hero{padding:64px 0 90px}
+  .orb.a{width:560px;height:560px;right:-60px;top:40px}
+  .orb.b{display:block;width:90px;height:90px;right:40px;top:560px}
+  .orb.c{right:150px;top:640px;width:18px;height:18px}
+  .groups{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .visit-grid{grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+  section{padding:120px 0}
+  .sec-head{flex-direction:row;justify-content:space-between;align-items:flex-end}
+  .sec-head > div{max-width:640px}
+}
+@media(min-width:1024px){
+  .facts{grid-template-columns:repeat(4,1fr)}
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .concept{font-size:.75rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Bare Wax Studio. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Bare Wax Studio home"><span class="drop"></span>Bare</a>
+    <div class="navlinks">
+      <a href="#menu">Menu</a><a href="#why">Studio</a><a href="#visit">Hours &amp; Visit</a>
+    </div>
+    <a class="btn btn-dark btn-sm" href="https://square.site/book/ABM6X70AAKZDF/bare-wax-studio-knoxville-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="lines" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 520 C 120 470, 220 560, 420 430" fill="none" stroke="#d9b2a2" stroke-width="1"/>
+    <path d="M-20 560 C 140 500, 240 600, 420 470" fill="none" stroke="#141112" stroke-opacity=".18" stroke-width="1"/>
+  </svg>
+  <div class="orb a" aria-hidden="true"></div>
+  <div class="orb b" aria-hidden="true"></div>
+  <div class="orb c" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow rv">Waxing studio · Knoxville, TN</div>
+    <h1 class="rv">Bare,<br>by brunch.<span class="soft">Most services take fifteen minutes.</span></h1>
+    <p class="sub rv">Brows to Brazilians with <strong>Jessica Shifflett</strong>, inside Nourish Skin Studios on Westfield Road.</p>
+    <div class="ctas rv">
+      <a class="btn btn-dark" href="https://square.site/book/ABM6X70AAKZDF/bare-wax-studio-knoxville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="tel:+18657129533">Call (865) 712-9533</a>
+    </div>
+    <div class="status rv" id="status"><i></i><span id="statusText">Mon · Thu · Fri · Sat</span></div>
+  </div>
+</header>
+
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span>Brow</span><span>Lip</span><span>Full Face</span><span>Underarm</span><span>Full Arm</span><span>Brazilian</span><span>Full Leg</span><span>Full Back</span><span>Shoulders</span>
+    <span>Brow</span><span>Lip</span><span>Full Face</span><span>Underarm</span><span>Full Arm</span><span>Brazilian</span><span>Full Leg</span><span>Full Back</span><span>Shoulders</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">The menu</div>
+        <h2 style="margin-top:14px">27 services.<br>Every price, upfront.</h2>
+      </div>
+      <p>Prices and times as listed on Bare Wax Studio’s booking page. Tap a category to filter.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="face">Face</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="body">Arms &amp; Body</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="legs">Legs &amp; Feet</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="bikini">Bikini &amp; Butt</button>
+    </div>
+    <div class="groups">
+      <div class="group rv" data-g="face">
+        <h3>Face <small>8 services</small></h3>
+        <div class="svc"><span class="n">Brow</span><span class="p">$18</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Lip</span><span class="p">$13</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Chin</span><span class="p">$15</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Cheek</span><span class="p">$10</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Nose</span><span class="p">$13</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Ear</span><span class="p">$12</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Sideburn</span><span class="p">$10</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Full Face</span><span class="p">$50</span><span class="d">30 min</span></div>
+      </div>
+      <div class="group rv" data-g="body">
+        <h3>Arms &amp; Body <small>9 services</small></h3>
+        <div class="svc"><span class="n">Neck</span><span class="p">$15</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Underarm</span><span class="p">$20</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Hand</span><span class="p">$8</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Half Arm</span><span class="p">$50</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Full Arm</span><span class="p">$65</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Shoulders</span><span class="p">$25</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Full Back</span><span class="p">$60</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Stomach Strip</span><span class="p">$12</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Stomach (Full)</span><span class="p">$25</span><span class="d">30 min</span></div>
+      </div>
+      <div class="group rv" data-g="legs">
+        <h3>Legs &amp; Feet <small>5 services</small></h3>
+        <div class="svc"><span class="n">Lower Leg</span><span class="p">$47</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Upper Leg</span><span class="p">$50</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Full Leg</span><span class="p">$82</span><span class="d">45 min</span></div>
+        <div class="svc"><span class="n">Inner Thigh</span><span class="p">$17</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Foot</span><span class="p">$5</span><span class="d">15 min</span></div>
+      </div>
+      <div class="group rv" data-g="bikini">
+        <h3>Bikini &amp; Butt <small>5 services</small></h3>
+        <div class="svc"><span class="n">Bikini Line (Women Only)</span><span class="p">$40</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Bikini Full (Women Only)</span><span class="p">$50</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Bikini Brazilian (Women Only)</span><span class="p">$55</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Butt Strip</span><span class="p">$18</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Full Butt (Women only)</span><span class="p">$30</span><span class="d">30 min</span></div>
+      </div>
+    </div>
+    <p class="menu-note rv">Book any service online in a few taps, or call the studio with questions.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">The studio</div>
+        <h2 style="margin-top:14px">Small studio.<br>Simple promise.</h2>
+      </div>
+      <p>No memberships to decode. Pick a service, see the price, book a time.</p>
+    </div>
+    <div class="facts">
+      <div class="fact rv"><div class="big">16<small>/ 27</small></div><h3>Fifteen-minute services</h3><p>Brows, lip, underarm, lower leg and more fit between errands.</p></div>
+      <div class="fact rv"><div class="big"><small>from</small>$5</div><h3>Prices on the menu</h3><p>Every service lists its price and time before you book.</p></div>
+      <div class="fact rv"><div class="big">1:1</div><h3>Book with Jessica</h3><p>Appointments are booked with Jessica Shifflett.</p></div>
+      <div class="fact rv"><div class="big">24/7</div><h3>Online booking</h3><p>Choose a service and a time on the booking page, day or night.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">Hours &amp; visit</div>
+        <h2 style="margin-top:14px">Find us inside<br>Nourish.</h2>
+      </div>
+    </div>
+    <div class="visit-grid">
+      <ul class="hours rv" id="hours">
+        <li data-d="1"><span class="day">Monday</span><span>11:00 AM – 6:30 PM</span></li>
+        <li data-d="2" class="closed"><span class="day">Tuesday</span><span>Closed</span></li>
+        <li data-d="3" class="closed"><span class="day">Wednesday</span><span>Closed</span></li>
+        <li data-d="4"><span class="day">Thursday</span><span>9:00 AM – 12:00 PM</span></li>
+        <li data-d="5"><span class="day">Friday</span><span>10:00 AM – 12:30 PM</span></li>
+        <li data-d="6"><span class="day">Saturday</span><span>10:00 AM – 3:00 PM</span></li>
+        <li data-d="0" class="closed"><span class="day">Sunday</span><span>Closed</span></li>
+      </ul>
+      <div class="card rv">
+        <div class="eyebrow">Address</div>
+        <div class="addr">110 Westfield Road<br>Knoxville, TN</div>
+        <p>Located inside Nourish Skin Studios.</p>
+        <div class="map"><iframe title="Map to Bare Wax Studio" loading="lazy" src="https://www.google.com/maps?q=110%20Westfield%20Road%2C%20Knoxville%2C%20TN&amp;output=embed"></iframe></div>
+        <div class="ctas">
+          <a class="btn btn-dark" href="tel:+18657129533">Call now</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=110%20Westfield%20Road%2C%20Knoxville%2C%20TN" target="_blank" rel="noopener">Directions</a>
+        </div>
+        <div class="contact-list">
+          <a href="tel:+18657129533">(865) 712-9533</a>
+          <a href="mailto:barewaxstudioknox@gmail.com">barewaxstudioknox@gmail.com</a>
+          <a href="https://www.instagram.com/barewaxstudioknox" target="_blank" rel="noopener">@barewaxstudioknox</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="ring r2" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="rv">Go bare.</h2>
+    <p class="rv">Pick your service and grab a time with Jessica.</p>
+    <div class="ctas rv">
+      <a class="btn btn-dark" href="https://square.site/book/ABM6X70AAKZDF/bare-wax-studio-knoxville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="tel:+18657129533">(865) 712-9533</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:var(--ink)">Bare Wax Studio</strong> · 110 Westfield Road, Knoxville, TN · inside Nourish Skin Studios</div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+18657129533">Call</a>
+  <a class="c2" href="https://square.site/book/ABM6X70AAKZDF/bare-wax-studio-knoxville-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var H={1:[660,1110],4:[540,720],5:[600,750],6:[600,900]};
+  var now=new Date(), d=now.getDay(), m=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), tx=document.getElementById('statusText');
+  function fmt(x){var h=Math.floor(x/60),mm=x%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap;}
+  if(H[d] && m>=H[d][0] && m<H[d][1]){st.classList.add('open');tx.textContent='Open today until '+fmt(H[d][1]);}
+  else{var names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];for(var i=0;i<8;i++){var k=(d+i)%7;if(H[k]&&(i>0||m<H[k][0])){tx.textContent='Closed now · opens '+(i===0?'today':i===1?'tomorrow':names[k])+' '+fmt(H[k][0]);break;}}}
+  document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');
+    var f=t.dataset.f;document.querySelectorAll('.group').forEach(function(g){g.classList.toggle('hide',f!=='all'&&g.dataset.g!==f)});
+  })});
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)});}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

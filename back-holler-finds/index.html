@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Back Holler Finds — Rogersville</title>
+<meta name="description" content="Back Holler Finds, Kathleen Simmons's shop at 7138 Highway 11W in Rogersville, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --denim:#3f5f7f; --denim-d:#2b4560; --denim-l:#8aa3bb; --denim-wash:#dfe7ee;
+  --rust:#b0532c; --rust-d:#8e3f1e; --cream:#f6efe1; --cream-d:#ece0c8; --paper:#fbf7ee;
+  --ink:#2a2622; --muted:#5f574d; --line:#d9c9a8;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+.display{font-family:"Abril Fatface",Georgia,serif;font-weight:400;letter-spacing:.2px;line-height:1.04}
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:radial-gradient(rgba(90,70,40,.08) 1px,transparent 1.2px),radial-gradient(rgba(90,70,40,.06) 1px,transparent 1.2px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 5px}
+main,header,footer,.concept{position:relative;z-index:1}
+
+.concept{background:var(--ink);color:#e9dfcb;font-size:clamp(9.5px,2.7vw,12.5px);letter-spacing:-.1px;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#f2b48f;font-weight:700}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1120px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:38px;height:38px}
+.brand span{font-family:"Abril Fatface",serif;font-size:20px;color:var(--denim-d)}
+.nav-links{display:none;gap:26px;font-weight:700;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--denim-d);border-bottom:2px solid transparent;padding-bottom:2px;transition:border-color .2s}
+.nav-links a:hover{border-color:var(--rust)}
+.nav .nav-call{display:none}
+@media(min-width:900px){.nav-links{display:flex}.nav .nav-call{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 22px;transition:transform .15s ease,box-shadow .2s ease,background .2s;min-height:50px}
+.btn:active{transform:scale(.97)}
+.btn-rust{background:var(--rust);color:#fff;box-shadow:0 4px 0 var(--rust-d)}
+.btn-rust:hover{background:#bd5d34;transform:translateY(-2px);box-shadow:0 6px 0 var(--rust-d)}
+.btn-ghost{background:transparent;color:var(--denim-d);border:2px solid var(--denim-d)}
+.btn-ghost:hover{background:var(--denim-d);color:var(--cream)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{padding:10px 0 46px;position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:22px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:40px}.hero{padding:40px 0 80px}}
+.tag{display:inline-flex;margin-left:4px;align-items:center;gap:10px;background:var(--paper);border:2px solid var(--denim-d);color:var(--denim-d);font-weight:800;font-size:13px;letter-spacing:1.6px;text-transform:uppercase;padding:6px 16px 6px 32px;position:relative;
+  clip-path:polygon(14px 0,100% 0,100% 100%,14px 100%,0 50%);transform:rotate(-2deg)}
+.tag::before{content:"";position:absolute;left:15px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--cream);border:2px solid var(--denim-d)}
+.hero h1{font-size:clamp(46px,13vw,92px);color:var(--denim-d);margin:16px 0 24px}
+.hero h1 em{font-style:normal;color:var(--rust);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:-2%;bottom:-.08em;width:104%;height:.16em}
+@media(min-width:900px){.hero h1{margin-bottom:34px}}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:520px}
+.hero p.sub strong{color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero .cta-row .btn{padding:13px 18px;font-size:15.5px}
+@media(max-width:899px){.hero-art{max-width:340px;margin-top:-4px}}
+.hero-art{position:relative;max-width:420px;margin:0 auto;width:100%}
+.hero-art .shelf{width:100%;height:auto}
+.sway{transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.glow{animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55}50%{opacity:.95}}
+@media(prefers-reduced-motion:reduce){.sway,.glow{animation:none}}
+
+/* denim stitch band */
+.stitch{background:var(--denim);color:var(--cream);position:relative;padding:16px 0;overflow:hidden}
+.stitch::before,.stitch::after{content:"";position:absolute;left:0;right:0;height:0;border-top:2px dashed rgba(246,239,225,.55)}
+.stitch::before{top:6px}.stitch::after{bottom:6px}
+.marquee{display:flex;gap:34px;white-space:nowrap;font-family:"Abril Fatface",serif;font-size:20px;animation:mq 26s linear infinite;width:max-content}
+.marquee span{display:inline-flex;align-items:center;gap:34px}
+.marquee i{width:8px;height:8px;background:#f2b48f;transform:rotate(45deg);display:inline-block}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee{animation:none}}
+
+section.block{padding:62px 0}
+.eyebrow{font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--rust)}
+h2.display{font-size:clamp(34px,8.6vw,56px);color:var(--denim-d);margin:8px 0 14px}
+.lead{color:var(--muted);max-width:620px}
+
+/* hang-tag cards */
+.cards{display:grid;gap:22px;margin-top:30px}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:var(--paper);border:2px solid var(--ink);border-radius:28px 28px 8px 8px;box-shadow:5px 5px 0 var(--cream-d);padding:30px 22px 24px 22px;text-decoration:none;display:block;
+  transition:transform .2s ease,background .2s}
+.card::after{content:"";position:absolute;top:12px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--cream);border:2px solid var(--ink)}
+.card:hover{transform:translateY(-4px) rotate(-.6deg);background:#fff}
+.card:nth-child(2):hover{transform:translateY(-4px) rotate(.6deg)}
+.card .ic{width:58px;height:58px;margin:10px 0 14px}
+.card h3{font-family:"Abril Fatface",serif;font-weight:400;font-size:25px;color:var(--denim-d);line-height:1.15;margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+.card .go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:800;color:var(--rust);font-size:15px;word-break:break-word}
+.card.c2{background:var(--denim-wash)}
+
+/* why */
+.why{background:var(--denim-d);color:var(--cream);position:relative;overflow:hidden}
+.why h2.display{color:var(--cream)}
+.why .eyebrow{color:#f2b48f}
+.why .lead{color:#cfd9e3}
+.why-grid{display:grid;gap:16px;margin-top:28px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+.fact{display:flex;gap:16px;align-items:flex-start;border:2px dashed rgba(246,239,225,.4);border-radius:14px;padding:18px}
+.fact .num{flex:0 0 auto;font-family:"Abril Fatface",serif;font-size:28px;color:#f2b48f;line-height:1;width:34px}
+.fact h3{font-size:18px;font-weight:800;margin-bottom:2px}
+.fact p{color:#cfd9e3;font-size:15.5px}
+.why-jar{display:none}
+
+/* hours */
+.hours-wrap{display:grid;gap:28px;align-items:start}
+@media(min-width:900px){.hours-wrap{grid-template-columns:1fr 1fr;gap:48px}}
+.ticket{background:var(--paper);border:2px solid var(--ink);border-radius:6px;position:relative;padding:22px 20px}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--cream);border:2px solid var(--ink)}
+.ticket::before{left:-12px;clip-path:inset(0 0 0 50%)}
+.ticket::after{right:-12px;clip-path:inset(0 50% 0 0)}
+.days{list-style:none}
+.days li{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px dashed var(--line);font-weight:600}
+.days li:last-child{border-bottom:0}
+.days li span:last-child{color:var(--muted);font-weight:600}
+.days li.today{background:var(--rust);color:#fff;border-radius:8px;border-bottom-color:transparent}
+.days li.today span:last-child{color:#fff}
+.days li.today span:first-child::after{content:" · today";font-weight:800}
+.note{margin-top:14px;font-size:15px;color:var(--muted)}
+
+/* visit */
+.visit-grid{display:grid;gap:22px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1.2fr .8fr;align-items:stretch}}
+.map{border:2px solid var(--ink);border-radius:14px;overflow:hidden;min-height:300px;position:relative;background:var(--denim-wash) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Cpath d='M-20 210 C 80 180 160 230 240 160 S 380 120 440 90' stroke='%238aa3bb' stroke-width='14' fill='none'/%3E%3Cpath d='M-20 210 C 80 180 160 230 240 160 S 380 120 440 90' stroke='%23f6efe1' stroke-width='2' stroke-dasharray='10 8' fill='none'/%3E%3Cpath d='M200 120c-14 0-24 10-24 24 0 18 24 42 24 42s24-24 24-42c0-14-10-24-24-24z' fill='%23b0532c'/%3E%3Ccircle cx='200' cy='144' r='8' fill='%23f6efe1'/%3E%3C/svg%3E") center/cover no-repeat}
+.map iframe{position:relative;width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:24px 22px}
+.addr h3{font-family:"Abril Fatface",serif;font-weight:400;font-size:26px;color:var(--denim-d);margin-bottom:8px}
+.addr .line{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line)}
+.addr .line:last-of-type{border-bottom:0}
+.addr .line svg{flex:0 0 22px;width:22px;height:22px;margin-top:2px;color:var(--rust)}
+.addr .line a{font-weight:700;color:var(--denim-d);text-decoration:none;word-break:break-word}
+.addr .line a:hover{color:var(--rust)}
+.addr .btns{display:grid;gap:10px;margin-top:16px}
+
+footer{background:var(--ink);color:#d8ccb6;padding:40px 0 34px;font-size:15px}
+footer .f{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .display{font-size:26px;color:var(--cream)}
+footer a{color:#f2b48f;text-decoration:none}
+footer small{display:block;margin-top:14px;color:#a89c86;font-size:13px}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--paper);border-top:2px solid var(--ink);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.callbar .btn{padding:12px 10px;font-size:15px;min-height:48px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Back Holler Finds. Not live.</div>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Back Holler Finds home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 4h24l6 8v24a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V12z" fill="#3f5f7f"/><circle cx="20" cy="11" r="3" fill="#f6efe1"/><text x="20" y="31" text-anchor="middle" font-family="Abril Fatface,Georgia,serif" font-size="14" fill="#f6efe1">BH</text></svg>
+      <span>Back Holler Finds</span>
+    </a>
+    <div class="nav-links"><a href="#finds">Finds</a><a href="#why">The shop</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-rust nav-call" href="tel:+14239236480">Call 423-923-6480</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">Rogersville, Tenn. · Hwy 11W</span>
+        <h1 class="display">Pull off 11W for a <em>good find.<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 50 2, 110 13, 197 5" stroke="#b0532c" stroke-width="4" fill="none" stroke-linecap="round"/></svg></em></h1>
+        <p class="sub"><strong>Back Holler Finds</strong> is Kathleen Simmons's shop at 7138 Highway 11W in Rogersville, Tennessee.</p>
+        <div class="cta-row">
+          <a class="btn btn-rust" href="tel:+14239236480"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call Kathleen</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=7138+Highway+11W+Rogersville+TN+37857" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg class="shelf" viewBox="0 0 420 330">
+          <!-- beam + hanging lantern -->
+          <rect x="8" y="10" width="404" height="16" rx="3" fill="#8e3f1e"/>
+          <rect x="8" y="22" width="404" height="4" fill="#6d3016" opacity=".6"/>
+          <g class="sway" style="transform-origin:330px 26px">
+            <line x1="330" y1="26" x2="330" y2="62" stroke="#2a2622" stroke-width="2.5"/>
+            <path d="M318 62 h24 l-3 -6 h-18z" fill="#2a2622"/>
+            <ellipse class="glow" cx="330" cy="104" rx="34" ry="40" fill="#f2b48f" opacity=".7"/>
+            <path d="M330 62 c-22 0 -24 10 -24 10 h48 s-2 -10 -24 -10z" fill="#3f5f7f"/>
+            <rect x="312" y="72" width="36" height="58" rx="10" fill="#fbf7ee" stroke="#2a2622" stroke-width="3"/>
+            <path d="M330 92 c-6 8 -6 16 0 22 c6 -6 6 -14 0 -22z" fill="#b0532c"/>
+            <line x1="312" y1="84" x2="348" y2="84" stroke="#2a2622" stroke-width="2"/>
+            <line x1="312" y1="118" x2="348" y2="118" stroke="#2a2622" stroke-width="2"/>
+            <line x1="322" y1="72" x2="322" y2="130" stroke="#2a2622" stroke-width="1.5" opacity=".5"/>
+            <line x1="338" y1="72" x2="338" y2="130" stroke="#2a2622" stroke-width="1.5" opacity=".5"/>
+            <rect x="306" y="130" width="48" height="10" rx="3" fill="#3f5f7f"/>
+          </g>
+          <!-- hang tag -->
+          <g class="sway" style="transform-origin:96px 26px;animation-duration:6.5s">
+            <line x1="96" y1="26" x2="96" y2="58" stroke="#b0532c" stroke-width="2" stroke-dasharray="3 3"/>
+            <path d="M66 74 l30 -18 l30 18 v74 h-60z" fill="#f6efe1" stroke="#2a2622" stroke-width="3"/>
+            <circle cx="96" cy="72" r="5" fill="#ece0c8" stroke="#2a2622" stroke-width="2"/>
+            <text x="96" y="108" text-anchor="middle" font-family="Abril Fatface,Georgia,serif" font-size="17" fill="#3f5f7f">Found</text>
+            <text x="96" y="128" text-anchor="middle" font-family="Abril Fatface,Georgia,serif" font-size="17" fill="#b0532c">in the</text>
+            <text x="96" y="145" text-anchor="middle" font-family="Abril Fatface,Georgia,serif" font-size="13" fill="#3f5f7f">HOLLER</text>
+          </g>
+          <!-- shelf -->
+          <rect x="20" y="276" width="380" height="14" rx="2" fill="#8e3f1e"/>
+          <rect x="20" y="288" width="380" height="5" fill="#6d3016" opacity=".6"/>
+          <rect x="44" y="290" width="10" height="34" fill="#6d3016"/><rect x="366" y="290" width="10" height="34" fill="#6d3016"/>
+          <!-- mason jar big -->
+          <g transform="translate(150 150)">
+            <rect x="8" y="0" width="76" height="16" rx="3" fill="#8aa3bb" stroke="#2a2622" stroke-width="3"/>
+            <path d="M4 16 h84 c0 6 6 8 6 18 v80 c0 8 -6 12 -14 12 h-68 c-8 0 -14 -4 -14 -12 v-80 c0 -10 6 -12 6 -18z" fill="#dfe7ee" stroke="#2a2622" stroke-width="3"/>
+            <path d="M14 40 v70" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+            <rect x="22" y="56" width="50" height="34" rx="4" fill="#f6efe1" stroke="#2a2622" stroke-width="2"/>
+            <text x="47" y="78" text-anchor="middle" font-family="Abril Fatface,Georgia,serif" font-size="13" fill="#b0532c">FINDS</text>
+            <circle cx="52" cy="104" r="5" fill="#b0532c" opacity=".7"/><circle cx="36" cy="110" r="4" fill="#3f5f7f" opacity=".6"/><circle cx="66" cy="110" r="4" fill="#3f5f7f" opacity=".5"/>
+          </g>
+          <!-- small jar -->
+          <g transform="translate(262 200)">
+            <rect x="6" y="0" width="48" height="11" rx="2" fill="#b0532c" stroke="#2a2622" stroke-width="3"/>
+            <path d="M2 11 h56 c0 4 4 6 4 12 v44 c0 6 -4 9 -10 9 h-44 c-6 0 -10 -3 -10 -9 v-44 c0 -6 4 -8 4 -12z" fill="#ece0c8" stroke="#2a2622" stroke-width="3"/>
+            <path d="M12 26 v38" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+          </g>
+          <!-- crock -->
+          <g transform="translate(46 196)">
+            <path d="M10 6 h60 c6 0 8 6 8 12 v52 c0 6 -4 10 -10 10 h-56 c-6 0 -10 -4 -10 -10 v-52 c0 -6 2 -12 8 -12z" fill="#fbf7ee" stroke="#2a2622" stroke-width="3"/>
+            <path d="M2 30 h76" stroke="#3f5f7f" stroke-width="5"/>
+            <text x="40" y="60" text-anchor="middle" font-family="Abril Fatface,Georgia,serif" font-size="18" fill="#3f5f7f">BH</text>
+            <path d="M74 22 c14 0 14 26 0 26" fill="none" stroke="#2a2622" stroke-width="3"/>
+          </g>
+          <!-- quilt scrap -->
+          <g transform="translate(330 236)">
+            <rect x="0" y="0" width="56" height="40" rx="3" fill="#3f5f7f" stroke="#2a2622" stroke-width="3"/>
+            <path d="M0 20 h56 M28 0 v40" stroke="#f6efe1" stroke-width="2" stroke-dasharray="3 3"/>
+            <path d="M0 0 l28 20 M56 0 l-28 20" stroke="#b0532c" stroke-width="3"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch" aria-hidden="true">
+    <div class="marquee">
+      <span>Back Holler Finds <i></i> Rogersville, TN <i></i> 7138 Highway 11W <i></i> Call 423-923-6480 <i></i></span>
+      <span>Back Holler Finds <i></i> Rogersville, TN <i></i> 7138 Highway 11W <i></i> Call 423-923-6480 <i></i></span>
+    </div>
+  </div>
+
+  <section class="block" id="finds">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">What's on the shelves</div>
+        <h2 class="display">Come see what's turned up.</h2>
+        <p class="lead">Three easy ways to see what's in the shop, or ask Kathleen about something you're hunting for.</p>
+      </div>
+      <div class="cards">
+        <a class="card reveal" href="https://www.instagram.com/p/DV1M58VEohN/" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><rect x="5" y="5" width="48" height="48" rx="14" fill="none" stroke="#3f5f7f" stroke-width="4"/><circle cx="29" cy="29" r="11" fill="none" stroke="#b0532c" stroke-width="4"/><circle cx="42" cy="16" r="3" fill="#3f5f7f"/></svg>
+          <h3>See it on Instagram</h3>
+          <p>Back Holler Finds is on Instagram. Have a look before you head out.</p>
+          <span class="go">Open Instagram →</span>
+        </a>
+        <a class="card c2 reveal" href="tel:+14239236480">
+          <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><path d="M17 8h10l4 12-6 4a26 26 0 0 0 10 10l4-6 12 4v10a4 4 0 0 1-4 4C25 46 12 33 12 12a4 4 0 0 1 5-4z" fill="none" stroke="#3f5f7f" stroke-width="4" stroke-linejoin="round"/><path d="M36 10a14 14 0 0 1 12 12" stroke="#b0532c" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+          <h3>Ask about a piece</h3>
+          <p>Looking for something in particular? Call Kathleen and ask what's in.</p>
+          <span class="go">423-923-6480 →</span>
+        </a>
+        <a class="card reveal" href="mailto:backhollerfinds@yahoo.com">
+          <svg class="ic" viewBox="0 0 58 58" aria-hidden="true"><rect x="6" y="12" width="46" height="34" rx="4" fill="none" stroke="#3f5f7f" stroke-width="4"/><path d="M8 15l21 17 21-17" fill="none" stroke="#b0532c" stroke-width="4" stroke-linejoin="round"/></svg>
+          <h3>Drop a line</h3>
+          <p>Rather write it down? Send a note and a photo of what you're after.</p>
+          <span class="go">backhollerfinds@yahoo.com →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block why" id="why">
+    <svg class="why-jar" viewBox="0 0 100 130" aria-hidden="true"><rect x="14" y="0" width="72" height="16" rx="3" fill="#f6efe1"/><path d="M8 16h84c0 6 6 8 6 18v80c0 8-6 12-14 12H16c-8 0-14-4-14-12V34c0-10 6-12 6-18z" fill="#f6efe1"/></svg>
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">The shop</div>
+        <h2 class="display">Small shop. Real person on the phone.</h2>
+        <p class="lead">The owner answers the phone. Just Kathleen's shop on 11W in Rogersville.</p>
+      </div>
+      <div class="why-grid">
+        <div class="fact reveal"><div class="num">01</div><div><h3>Run by Kathleen Simmons</h3><p>The owner is who you'll reach when you call or write.</p></div></div>
+        <div class="fact reveal"><div class="num">02</div><div><h3>Right on Highway 11W</h3><p>7138 Highway 11W, Rogersville, TN 37857. An easy stop on the road through Hawkins County.</p></div></div>
+        <div class="fact reveal"><div class="num">03</div><div><h3>In the East Tennessee Visitors Guide</h3><p>Listed under Retail &amp; Specialty Shopping.</p></div></div>
+        <div class="fact reveal"><div class="num">04</div><div><h3>Easy to reach</h3><p>Call 423-923-6480 or email backhollerfinds@yahoo.com.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="hours">
+    <div class="wrap hours-wrap">
+      <div class="reveal">
+        <div class="eyebrow">Hours</div>
+        <h2 class="display">Call before you drive out.</h2>
+        <p class="lead">Shop hours aren't posted yet. A quick call to Kathleen at <a href="tel:+14239236480" style="color:var(--rust);font-weight:800">423-923-6480</a> tells you when the door's open.</p>
+        <div class="cta-row"><a class="btn btn-rust" href="tel:+14239236480">Call for today's hours</a></div>
+      </div>
+      <div class="ticket reveal">
+        <ul class="days" id="days">
+          <li data-d="1"><span>Monday</span><span>Call ahead</span></li>
+          <li data-d="2"><span>Tuesday</span><span>Call ahead</span></li>
+          <li data-d="3"><span>Wednesday</span><span>Call ahead</span></li>
+          <li data-d="4"><span>Thursday</span><span>Call ahead</span></li>
+          <li data-d="5"><span>Friday</span><span>Call ahead</span></li>
+          <li data-d="6"><span>Saturday</span><span>Call ahead</span></li>
+          <li data-d="0"><span>Sunday</span><span>Call ahead</span></li>
+        </ul>
+        <p class="note">Once Kathleen sets her hours, they go right here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" style="padding-top:20px">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Visit</div>
+        <h2 class="display">Find the shop.</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="map reveal"><iframe title="Map to Back Holler Finds" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=7138%20Highway%2011W%2C%20Rogersville%2C%20TN%2037857&output=embed"></iframe></div>
+        <div class="addr reveal">
+          <h3>Back Holler Finds</h3>
+          <div class="line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div>7138 Highway 11W<br>Rogersville, TN 37857</div></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><a href="tel:+14239236480">423-923-6480</a></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 6-8-6zM5.6 7l6.4 4.8L18.4 7z"/></svg><a href="mailto:backhollerfinds@yahoo.com">backhollerfinds@yahoo.com</a></div>
+          <div class="btns">
+            <a class="btn btn-rust" href="tel:+14239236480">Tap to call</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=7138+Highway+11W+Rogersville+TN+37857" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f">
+      <div><div class="display">Back Holler Finds</div><div>7138 Highway 11W · Rogersville, TN 37857 · <a href="tel:+14239236480">423-923-6480</a></div></div>
+      <a href="https://www.instagram.com/p/DV1M58VEohN/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <small>Concept by Code Craft Media</small>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-rust" href="tel:+14239236480"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call Kathleen</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=7138+Highway+11W+Rogersville+TN+37857" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#days li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

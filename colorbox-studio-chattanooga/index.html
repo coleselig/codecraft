@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>ColorBox Studio — Chattanooga</title>
+<meta name="description" content="ColorBox Studio: sew-ins, wig installs, knotless braids, extensions, color and silk presses at 600 Georgia Ave, Suite 3B, Chattanooga.">
+<meta name="theme-color" content="#141414">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414; --ink2:#1d1d1d; --ink3:#262626;
+  --cream:#FFF4E8; --cream2:#f3e6d6; --muted:#c9bfb3;
+  --orange:#FF5A36; --blue:#3A86FF;
+  --line:rgba(255,244,232,.14);
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:"Unbounded",system-ui,sans-serif;letter-spacing:-.02em;line-height:1.05}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:var(--cream);color:var(--ink);padding:8px 12px;z-index:99}
+
+/* concept banner */
+.concept{background:var(--cream);color:var(--ink);font-size:12px;font-weight:600;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--orange)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(20,20,20,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Unbounded";font-weight:800;font-size:15px;letter-spacing:-.01em}
+.logo .mk{position:relative;width:26px;height:26px;flex:none}
+.logo .mk i{position:absolute;width:17px;height:17px;border-radius:3px}
+.logo .mk i:first-child{left:0;top:0;background:var(--orange)}
+.logo .mk i:last-child{right:0;bottom:0;background:var(--blue);outline:2px solid var(--ink)}
+.nav ul{display:none;list-style:none;gap:26px;font-size:14px;font-weight:600}
+.nav ul a{text-decoration:none;opacity:.8;transition:opacity .2s}
+.nav ul a:hover{opacity:1}
+.nav .cta{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .cta{display:inline-flex}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 22px;min-height:48px;transition:transform .18s ease,box-shadow .18s ease,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-o{background:var(--orange);color:var(--ink);box-shadow:4px 4px 0 var(--blue)}
+.btn-o:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--blue)}
+.btn-g{border:1.5px solid var(--cream);color:var(--cream)}
+.btn-g:hover{background:var(--cream);color:var(--ink)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:36px 0 56px}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);background:var(--ink3);border:1px solid var(--line);border-radius:999px;padding:7px 13px}
+.dot{width:8px;height:8px;border-radius:50%;background:#7a7a7a;flex:none}
+.dot.on{background:#34d27b;box-shadow:0 0 0 0 rgba(52,210,123,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(52,210,123,0)}100%{box-shadow:0 0 0 0 rgba(52,210,123,0)}}
+.hero h1{font-size:clamp(38px,11vw,78px);font-weight:800;margin:18px 0 18px}
+.hero h1 .o{color:var(--orange)}
+.hero h1 .b{color:var(--blue)}
+.hero h1 .box{display:inline-block;background:var(--cream);color:var(--ink);padding:0 .14em;border-radius:.08em;transform:rotate(-2deg)}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:34em}
+.hero p.sub strong{color:var(--cream)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:13px;color:var(--muted)}
+.hero .meta span{display:flex;align-items:center;gap:7px}
+.hero .meta i{width:9px;height:9px;border-radius:2px;display:inline-block}
+
+.art{position:relative;width:100%;max-width:440px;aspect-ratio:1/1;margin:0 auto}
+.sq{position:absolute;border-radius:14px;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.sq1{left:2%;top:8%;width:62%;height:62%;background:var(--orange)}
+.sq2{right:2%;bottom:6%;width:62%;height:62%;background:var(--blue)}
+.sq6{left:36%;top:36%;width:28%;height:28%;background:var(--ink);border-radius:6px}
+.sq3{left:30%;top:30%;width:40%;height:40%;border:2px solid var(--cream);border-radius:10px}
+.sq4{right:10%;top:2%;width:16%;height:16%;background:var(--cream);border-radius:6px}
+.sq5{left:6%;bottom:2%;width:12%;height:12%;border:2px dashed var(--muted);border-radius:4px}
+.art .comb{position:absolute;left:12%;top:17%;width:42%;color:var(--ink)}
+.art .label{position:absolute;right:5%;bottom:12%;font-family:"Unbounded";font-weight:800;font-size:clamp(20px,6vw,30px);color:var(--ink);line-height:1;text-align:right}
+.art .label small{display:block;font-family:"Plus Jakarta Sans";font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-top:6px}
+.art:hover .sq1{transform:translate(-8px,-8px) rotate(-3deg)}
+.art:hover .sq2{transform:translate(8px,8px) rotate(3deg)}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-6px)}}
+.sq4{animation:drift 6s ease-in-out infinite}
+.hero .grid-bg{position:absolute;inset:0;z-index:1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%);opacity:.5}
+@media(min-width:900px){
+  .hero{padding:70px 0 90px}
+  .hero .wrap{grid-template-columns:1.45fr 1fr;align-items:center;gap:50px}
+}
+
+/* ticker */
+.ticker{background:var(--orange);color:var(--ink);overflow:hidden;border-block:2px solid var(--ink)}
+.ticker .row{display:flex;gap:28px;width:max-content;padding:13px 0;font-family:"Unbounded";font-weight:600;font-size:15px;white-space:nowrap;animation:tick 32s linear infinite}
+.ticker .row span{display:flex;align-items:center;gap:28px}
+.ticker .row span::after{content:"";width:11px;height:11px;background:var(--ink);border-radius:2px;transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .row,.sq4,.dot.on{animation:none}}
+
+section{padding:72px 0}
+.sec-h{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:14px;height:14px;background:var(--orange);border-radius:3px;box-shadow:6px 6px 0 var(--blue)}
+.sec-h h2{font-size:clamp(30px,7.4vw,56px);font-weight:800}
+.sec-h p{color:var(--muted);max-width:40em}
+
+/* menu */
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 22px;padding-left:20px;padding-right:20px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font:inherit;font-size:14px;font-weight:700;color:var(--cream);background:var(--ink3);border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--cream)}
+.chip[aria-selected="true"]{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.cats{display:grid;gap:18px}
+.cat{background:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:22px 20px 10px;position:relative;overflow:hidden}
+.cat::after{content:"";position:absolute;right:-22px;top:-22px;width:74px;height:74px;border-radius:12px;background:var(--c,var(--orange));opacity:.9;transform:rotate(12deg)}
+.cat::before{content:"";position:absolute;right:14px;top:22px;width:40px;height:40px;border-radius:8px;border:2px solid var(--cream);opacity:.5;transform:rotate(12deg);z-index:1}
+.cat h3{font-size:20px;font-weight:600;margin-bottom:4px;padding-right:70px}
+.cat .note{font-size:13px;color:var(--muted);margin-bottom:10px;padding-right:60px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-top:1px solid var(--line)}
+.svc:first-of-type{border-top:0}
+.svc .n{font-weight:600}
+.svc .p{font-family:"Unbounded";font-weight:600;font-size:15px;text-align:right;white-space:nowrap}
+.svc .d{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.svc .t{font-size:12px;color:var(--muted);text-align:right}
+.js .cat[hidden]{display:none!important}
+.menu-foot{margin-top:22px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+@media(min-width:900px){.cats.all{grid-template-columns:1fr 1fr}.cats.one .cat{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;padding:30px 32px 14px}.cats.one .cat h3,.cats.one .cat .note{grid-column:1/-1}.cats.one .svc:nth-of-type(2){border-top:0}}
+
+/* why */
+.why{background:var(--cream);color:var(--ink)}
+.why .kicker{color:var(--ink)}
+.why .sec-h p{color:#4a4440}
+.tiles{display:grid;gap:14px}
+.tile{position:relative;border-radius:20px;padding:24px 22px;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:transform .25s}
+.tile:hover{transform:translateY(-4px)}
+.tile .big{font-family:"Unbounded";font-weight:800;font-size:44px;line-height:1;margin-bottom:10px}
+.tile h3{font-size:18px;font-weight:600;margin-bottom:6px}
+.tile p{font-size:14.5px}
+.t1{background:var(--ink);color:var(--cream)}
+.t1 p{color:var(--muted)}
+.t2{background:var(--orange);color:var(--ink)}
+.t3{background:var(--blue);color:var(--ink)}
+.t4{background:#fff;border:2px solid var(--ink)}
+.tile .deco{position:absolute;top:18px;right:18px;width:46px;height:46px}
+.tile .deco i{position:absolute;width:30px;height:30px;border-radius:6px}
+.tile .deco i:first-child{left:0;top:0;background:currentColor;opacity:.9}
+.tile .deco i:last-child{right:0;bottom:0;border:2px solid currentColor}
+@media(min-width:700px){.tiles{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.tiles{grid-template-columns:repeat(4,1fr)}}
+
+/* bridal */
+.bridal{position:relative;overflow:hidden}
+.bridal .card{position:relative;border-radius:26px;padding:34px 24px;background:var(--ink2);border:1px solid var(--line);overflow:hidden;display:grid;gap:24px}
+.bridal .card h2{font-size:clamp(28px,7vw,48px);font-weight:800}
+.bridal .card h2 em{font-style:normal;color:var(--orange)}
+.bridal .card p{color:var(--muted);max-width:34em}
+.pk{display:grid;gap:12px}
+.pk div{border-radius:16px;padding:18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pk div:first-child{background:var(--orange);color:var(--ink)}
+.pk div:last-child{background:var(--blue);color:var(--ink)}
+.pk b{font-family:"Unbounded";font-size:24px}
+.pk span{font-weight:700;font-size:15px}
+.pk small{display:block;font-weight:500;font-size:12.5px}
+@media(min-width:900px){.bridal .card{grid-template-columns:1.3fr 1fr;align-items:center;padding:50px}}
+
+/* hours + visit */
+.visit .grid{display:grid;gap:18px}
+.hours{background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:24px 20px}
+.hours h3{font-size:20px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.status{font-size:14px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:11px 12px;border-radius:10px;font-weight:500;font-size:15px}
+.hours li span:last-child{white-space:nowrap}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.hours li.closed span:last-child{color:var(--muted)}
+.hours li.today{background:var(--cream);color:var(--ink);font-weight:700}
+.hours li.today span:last-child{color:var(--ink)}
+.hours li.today span:first-child::after{content:"Today";margin-left:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--orange);color:var(--ink);padding:2px 7px;border-radius:5px;vertical-align:2px}
+.hours .rule{margin-top:14px;font-size:13px;color:var(--muted)}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--ink2);display:flex;flex-direction:column}
+.map .frame{position:relative;height:300px;background:var(--ink3);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:28px 28px}
+.map .frame::before{content:"";position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px;background:var(--orange);border-radius:6px;box-shadow:8px 8px 0 var(--blue);transform:rotate(45deg)}
+.map iframe{position:relative;width:100%;height:100%;border:0;display:block}
+.map .info{padding:20px}
+.map .addr{font-family:"Unbounded";font-weight:600;font-size:18px;line-height:1.3;margin-bottom:4px}
+.map .info p{color:var(--muted);font-size:14px;margin-bottom:16px}
+.map .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media(min-width:900px){.visit .grid{grid-template-columns:1fr 1.3fr}.map .frame{height:auto;min-height:340px;flex:1}}
+
+/* final cta */
+.final{padding:80px 0 90px;text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(34px,9vw,80px);font-weight:800;margin-bottom:18px}
+.final h2 .o{color:var(--orange)}
+.final p{color:var(--muted);margin:0 auto 28px;max-width:30em}
+.final .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.final .boxes{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.final .boxes i{position:absolute;border-radius:10px}
+
+footer{border-top:1px solid var(--line);padding:30px 0 36px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer a{text-decoration:underline;text-underline-offset:3px}
+@media(min-width:900px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}}
+
+/* sticky mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(20,20,20,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mbar .btn{padding:12px 10px;font-size:15px;box-shadow:none}
+.mbar .btn-o{box-shadow:3px 3px 0 var(--blue)}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.pre{opacity:0;transform:translateY(22px)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to services</a>
+<div class="concept">Concept site by Code Craft Media, made for <b>ColorBox Studio</b>. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ColorBox Studio home"><span class="mk"><i></i><i></i></span>ColorBox Studio</a>
+    <ul>
+      <li><a href="#menu">Services</a></li>
+      <li><a href="#why">The studio</a></li>
+      <li><a href="#bridal">Bridal</a></li>
+      <li><a href="#visit">Hours &amp; visit</a></li>
+    </ul>
+    <a class="btn btn-o cta" href="https://square.site/book/J83MX642ZW5M5" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-top:36px">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="dot" id="heroDot"></span><span id="heroStatus">Downtown Chattanooga</span></span>
+      <h1>Sew-ins, wigs &amp; braids, <span class="box">done</span> <span class="o">right</span> <span class="b">on Georgia Ave.</span></h1>
+      <p class="sub">Book <strong>Jasmine Greene</strong> at ColorBox Studio, Suite 3B on Georgia Ave: 50 services, from an $80 silk press to 360 frontals and knotless braids.</p>
+      <div class="ctas">
+        <a class="btn btn-o" href="https://square.site/book/J83MX642ZW5M5" target="_blank" rel="noopener">Book an appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="tel:+14237716314"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(423) 771-6314</a>
+      </div>
+      <div class="meta">
+        <span><i style="background:var(--orange)"></i>Tue–Fri 9:30–2:30</span>
+        <span><i style="background:var(--blue)"></i>Sat from 7:00 AM</span>
+        <span><i style="background:var(--cream)"></i>No walk-ins</span>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="sq sq1"></div>
+      <div class="sq sq2"></div>
+      <div class="sq sq6"></div>
+      <div class="sq sq3"></div>
+      <div class="sq sq4"></div>
+      <div class="sq sq5"></div>
+      <svg class="comb" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+        <!-- wave of hair strands -->
+        <path d="M14 30c18-14 36 14 54 0s36 14 40 4"/>
+        <path d="M14 48c18-14 36 14 54 0s36 14 40 4"/>
+        <path d="M14 66c18-14 36 14 54 0s36 14 40 4"/>
+        <path d="M14 84c18-14 36 14 54 0s36 14 40 4"/>
+      </svg>
+      <div class="label">COLOR<br>BOX<small>Studio · Suite 3B</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="row">
+    <span>Silk Press</span><span>Frontal Sew-ins</span><span>Knotless Braids</span><span>Wig Installs</span><span>Tape-Ins</span><span>Micro Links</span><span>Faux Locs</span><span>Full Color</span><span>Bridal</span>
+    <span>Silk Press</span><span>Frontal Sew-ins</span><span>Knotless Braids</span><span>Wig Installs</span><span>Tape-Ins</span><span>Micro Links</span><span>Faux Locs</span><span>Full Color</span><span>Bridal</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="kicker">The menu</span>
+      <h2>Pick your box.</h2>
+      <p>Every service and price below comes straight from ColorBox Studio's booking page. Tap a category, then book the exact service online.</p>
+    </div>
+    <div class="chips" role="tablist" aria-label="Service categories" id="chips"></div>
+    <div class="cats all" id="cats">
+
+      <article class="cat rv" data-cat="Sew-ins" style="--c:var(--orange)">
+        <h3>Sew-ins &amp; quick weaves</h3>
+        <p class="note">Closures, frontals, leave-outs and Vixens.</p>
+        <div class="svc"><span class="n">Closure Sewin</span><span class="p">$140</span><span class="d">3 hr 30 min</span></div>
+        <div class="svc"><span class="n">Leave Out Sewin</span><span class="p">$130</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Full Sewin</span><span class="p">$130</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Frontal Sewin</span><span class="p">$150</span><span class="d">3 hr</span></div>
+        <div class="svc"><span class="n">360 Frontal Sew-In</span><span class="p">$170</span><span class="d">4 hr</span></div>
+        <div class="svc"><span class="n">Vixen Sewin (2-way)</span><span class="p">$160</span><span class="d">3 hr 30 min</span></div>
+        <div class="svc"><span class="n">Vixen Sewin (4-way)</span><span class="p">$180</span><span class="d">3 hr</span></div>
+        <div class="svc"><span class="n">Half Up, Half Down Sewin</span><span class="p">$140</span><span class="d">3 hr 30 min</span></div>
+        <div class="svc"><span class="n">Quick Weave</span><span class="p">$130</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Half Up, Half Down Quick Weave</span><span class="p">$130</span><span class="d">3 hr</span></div>
+        <div class="svc"><span class="n">Closure Fix</span><span class="p">$80</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Frontal Fix and Wash</span><span class="p">$90</span><span class="d">3 hr</span></div>
+        <div class="svc"><span class="n">Sewin Wash and Style "Leave Out Only"</span><span class="p">$80</span><span class="d">2 hr</span></div>
+        <div class="svc"><span class="n">Take Down Sewin</span><span class="p">$60</span><span class="d">1 hr 30 min</span></div>
+      </article>
+
+      <article class="cat rv" data-cat="Wigs" style="--c:var(--blue)">
+        <h3>Wig installs &amp; units</h3>
+        <p class="note">Installs, customizing, or a unit made from your bundles.</p>
+        <div class="svc"><span class="n">Closure Wig Install</span><span class="p">$120</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Frontal Wig Install</span><span class="p">$140</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">360 Wig Install</span><span class="p">$165</span><span class="d">3 hr 30 min</span></div>
+        <div class="svc"><span class="n">Need a Wig Made?</span><span class="p">$200</span><span class="d">2 hr 30 min · Must provide hair for unit (closure/frontal, 2 or more bundles). Style and install included.</span></div>
+        <div class="svc"><span class="n">Customizing Glueless/Frontal Wigs</span><span class="p">$65</span><span class="d">1 hr 30 min</span></div>
+      </article>
+
+      <article class="cat rv" data-cat="Braids" style="--c:var(--orange)">
+        <h3>Braids, locs &amp; crochet</h3>
+        <p class="note">Knotless in three sizes, faux locs, crochet.</p>
+        <div class="svc"><span class="n">Small Knotless Braids</span><span class="p">$350</span><span class="d">8 hr</span></div>
+        <div class="svc"><span class="n">Medium Knotless</span><span class="p">$300</span><span class="d">7 hr</span></div>
+        <div class="svc"><span class="n">Large Knotless</span><span class="p">$200</span><span class="d">6 hr</span></div>
+        <div class="svc"><span class="n">Faux Locs "Small"</span><span class="p">$250</span><span class="d">6 hr</span></div>
+        <div class="svc"><span class="n">Faux Locs "Medium"</span><span class="p">$200</span><span class="d">5 hr 30 min</span></div>
+        <div class="svc"><span class="n">Faux Locs "Large"</span><span class="p">$150</span><span class="d">4 hr</span></div>
+        <div class="svc"><span class="n">Crochets</span><span class="p">$130</span><span class="d">3 hr 30 min</span></div>
+        <div class="svc"><span class="n">Crochet Individuals</span><span class="p">$180</span><span class="d">4 hr 30 min</span></div>
+        <div class="svc"><span class="n">Straight Back Braids "Natural Hair Only"</span><span class="p">$30</span><span class="d">1 hr 30 min</span></div>
+      </article>
+
+      <article class="cat rv" data-cat="Extensions" style="--c:var(--blue)">
+        <h3>Extensions</h3>
+        <p class="note">Micro links, K-tips and tape-ins, plus upkeep.</p>
+        <div class="svc"><span class="n">Micro Link "I-Tip" Install</span><span class="p">$400</span><span class="d">5 hr</span></div>
+        <div class="svc"><span class="n">Micro Link Touch Up</span><span class="p">$150</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Micro Link Take Down</span><span class="p">$120</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">K-Tips</span><span class="p">$400</span><span class="d">6 hr</span></div>
+        <div class="svc"><span class="n">Tape-Ins</span><span class="p">$275</span><span class="d">5 hr</span></div>
+        <div class="svc"><span class="n">Tape-In Restore</span><span class="p">$120</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Tape-In Wash</span><span class="p">$120</span><span class="d">3 hr</span></div>
+        <div class="svc"><span class="n">Tape-In Take Down</span><span class="p">$100</span><span class="d">3 hr</span></div>
+      </article>
+
+      <article class="cat rv" data-cat="Color" style="--c:var(--orange)">
+        <h3>Color</h3>
+        <p class="note">All-over color, highlights and ombré.</p>
+        <div class="svc"><span class="n">Full Color</span><span class="p">$130</span><span class="d">2 hr</span></div>
+        <div class="svc"><span class="n">Full Color &amp; Style</span><span class="p">$140</span><span class="d">3 hr 30 min</span></div>
+        <div class="svc"><span class="n">High Lights</span><span class="p">$70</span><span class="d">2 hr 30 min</span></div>
+        <div class="svc"><span class="n">Ombré</span><span class="p">$90</span><span class="d">2 hr</span></div>
+      </article>
+
+      <article class="cat rv" data-cat="Style" style="--c:var(--blue)">
+        <h3>Silk press, style &amp; care</h3>
+        <p class="note">Presses, curls, trims and the basics.</p>
+        <div class="svc"><span class="n">Silk Press</span><span class="p">$80</span><span class="d">2 hr 30 min · Wash, deep condition, steam session (hydro therapy), blow out, ends trim and style.</span></div>
+        <div class="svc"><span class="n">Style (Curls or Pressed)</span><span class="p">$30</span><span class="d">1 hr</span></div>
+        <div class="svc"><span class="n">Wand Curls</span><span class="p">$40</span><span class="d">1 hr</span></div>
+        <div class="svc"><span class="n">Ends Trimmed and Styled</span><span class="p">$50</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Wash</span><span class="p">$30</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Wash (Bundles Only)</span><span class="p">$30</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Simpley Me Package</span><span class="p">$30</span><span class="d">30 min · Brows filled in and lashes applied (lashes not included).</span></div>
+        <div class="svc"><span class="n">Consultations</span><span class="p">$35</span><span class="d">1 hr</span></div>
+      </article>
+
+      <article class="cat rv" data-cat="Bridal" style="--c:var(--orange)">
+        <h3>Bridal parties</h3>
+        <p class="note">Hair and face for the whole party.</p>
+        <div class="svc"><span class="n">Bridal Package for 5</span><span class="p">$550</span><span class="d">6 hr · Full face beat, hair styled to desired look, lashes, and a complimentary bottle of wine.</span></div>
+        <div class="svc"><span class="n">Bridal Package for 10</span><span class="p">$1,000</span><span class="d">10 hr</span></div>
+      </article>
+    </div>
+    <div class="menu-foot rv">
+      <span>Deposits are nonrefundable.</span>
+      <span>Card transaction fee: $12.</span>
+      <span>Appointments only, no walk-ins.</span>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="kicker">The studio</span>
+      <h2>One studio. Every look.</h2>
+      <p>No guesswork: here's what you can count on at ColorBox Studio, straight from the booking page.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile t1 rv"><span class="deco" style="color:var(--orange)"><i></i><i></i></span><div class="big">50</div><h3>Services, one studio</h3><p>Sew-ins, wigs, braids, extensions, color and presses, all bookable online.</p></div>
+      <div class="tile t2 rv"><span class="deco"><i></i><i></i></span><div class="big">7 AM</div><h3>Early Saturdays</h3><p>Saturday appointments start at 7:00 AM, so your hair is done before the day gets going.</p></div>
+      <div class="tile t3 rv"><span class="deco"><i></i><i></i></span><div class="big">3B</div><h3>Suite 3B, downtown</h3><p>Suite 3B at 600 Georgia Ave. Appointments only, no walk-ins.</p></div>
+      <div class="tile t4 rv"><span class="deco" style="color:var(--blue)"><i></i><i></i></span><div class="big">2+</div><h3>Bundles? Get a unit made.</h3><p>Bring 2 or more bundles plus a closure or frontal, and your wig is made, styled and installed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bridal" id="bridal">
+  <div class="wrap">
+    <div class="card rv">
+      <div>
+        <span class="kicker">Bridal</span>
+        <h2 style="margin:14px 0 14px">Getting married? <em>Bring the whole party.</em></h2>
+        <p>Full face beat, hair styled to your desired look and lashes for a party of 5, with a complimentary bottle of wine. Booking for a bigger crew? There's a package for 10.</p>
+      </div>
+      <div class="pk">
+        <div><span>Bridal Package for 5<small>6 hr</small></span><b>$550</b></div>
+        <div><span>Bridal Package for 10<small>10 hr</small></span><b>$1,000</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="kicker">Hours &amp; visit</span>
+      <h2>Find Suite 3B.</h2>
+    </div>
+    <div class="grid">
+      <div class="hours rv">
+        <h3>Studio hours</h3>
+        <div class="status"><span class="dot" id="stDot"></span><span id="stText">Tuesday to Saturday, by appointment</span></div>
+        <ul id="hours">
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:30 AM – 2:30 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9:30 AM – 2:30 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:30 AM – 2:30 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:30 AM – 2:30 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>7:00 AM – 2:30 PM</span></li>
+        </ul>
+        <p class="rule">Appointments only, no walk-ins. Book online any time.</p>
+      </div>
+      <div class="map rv">
+        <div class="frame"><iframe title="Map to ColorBox Studio, 600 Georgia Ave, Chattanooga" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=600%20Georgia%20Ave%2C%20Suite%203B%2C%20Chattanooga%2C%20TN%2037402&output=embed"></iframe></div>
+        <div class="info">
+          <div class="addr">600 Georgia Ave, Suite 3B<br>Chattanooga, TN 37402</div>
+          <p>Downtown Chattanooga.</p>
+          <div class="acts">
+            <a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&destination=600%20Georgia%20Ave%2C%20Suite%203B%2C%20Chattanooga%2C%20TN%2037402" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-g" href="tel:+14237716314">Call (423) 771-6314</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="boxes" aria-hidden="true">
+    <i style="left:-60px;top:-20px;width:110px;height:110px;background:var(--orange);transform:rotate(-10deg)"></i>
+    <i style="right:-40px;bottom:30px;width:140px;height:140px;background:var(--blue);transform:rotate(12deg)"></i>
+    <i style="right:12%;top:40px;width:40px;height:40px;border:2px solid var(--cream)"></i>
+  </div>
+  <div class="wrap" style="position:relative">
+    <h2>Your next look<br>is <span class="o">one tap</span> away.</h2>
+    <p>Pick a service, choose a time, done. Questions first? Give the studio a call.</p>
+    <div class="ctas">
+      <a class="btn btn-o" href="https://square.site/book/J83MX642ZW5M5" target="_blank" rel="noopener">Book at ColorBox</a>
+      <a class="btn btn-g" href="tel:+14237716314">(423) 771-6314</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© ColorBox Studio · 600 Georgia Ave, Suite 3B, Chattanooga, TN 37402 · <a href="tel:+14237716314">(423) 771-6314</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="btn btn-g" href="tel:+14237716314"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn btn-o" href="https://square.site/book/J83MX642ZW5M5" target="_blank" rel="noopener">Book now</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // hours: highlight today + open status (America/New_York)
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var day=now.getDay(), m=now.getHours()*60+now.getMinutes();
+    var H={2:[570,870],3:[570,870],4:[570,870],5:[570,870],6:[420,870]};
+    var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+    var h=H[day], open=h&&m>=h[0]&&m<h[1];
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var txt;
+    if(open) txt='Open now until 2:30 PM';
+    else if(h&&m<h[0]) txt='Opens today at '+(day===6?'7:00':'9:30')+' AM';
+    else { var n=day; do{n=(n+1)%7}while(!H[n]); txt='Closed now · Opens '+names[n]+' '+(n===6?'7:00':'9:30')+' AM'; }
+    document.getElementById('stText').textContent=txt;
+    if(open){document.getElementById('stDot').classList.add('on');document.getElementById('heroDot').classList.add('on');document.getElementById('heroStatus').textContent='Open now · Downtown';}
+  }catch(e){}
+  // menu chips
+  var cats=[].slice.call(document.querySelectorAll('#cats .cat')), box=document.getElementById('cats'), chips=document.getElementById('chips');
+  var labels={All:'All',Sewins:'Sew-ins'};
+  function sel(k){
+    [].forEach.call(chips.children,function(c){c.setAttribute('aria-selected',c.dataset.k===k?'true':'false')});
+    cats.forEach(function(c){c.hidden=!(k==='All'||c.dataset.cat===k)});
+    box.className='cats '+(k==='All'?'all':'one');
+  }
+  ['All'].concat(cats.map(function(c){return c.dataset.cat})).forEach(function(k){
+    var b=document.createElement('button'); b.className='chip'; b.type='button'; b.setAttribute('role','tab'); b.dataset.k=k;
+    var n=k==='All'?document.querySelectorAll('#cats .svc').length:document.querySelectorAll('#cats .cat[data-cat="'+k+'"] .svc').length;
+    b.textContent=k+' · '+n; b.onclick=function(){sel(k)}; chips.appendChild(b);
+  });
+  sel('Sew-ins');
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){ if(e.getBoundingClientRect().top>innerHeight) e.classList.add('pre'); });
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

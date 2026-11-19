@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Buchanan's Barber Lounge — Chattanooga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#6e1423; --ox2:#8f1d2f; --green:#13261d; --green2:#1d3a2c; --brass:#c09a4e; --brass2:#e0c27f;
+  --parch:#f3e8d2; --parch2:#e9dabd; --ink:#1c1712; --muted:#5b4e40;
+  --book:"https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn";
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Work Sans",system-ui,sans-serif;background:var(--parch);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.display{font-family:"Abril Fatface",Georgia,serif;font-weight:400;letter-spacing:.01em}
+.serif{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+
+/* paper grain */
+.grain{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.banner{background:var(--ink);color:#cbbd9f;font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* pole stripe */
+@media(max-width:420px){.banner{font-size:9.2px;padding:7px 2px;letter-spacing:-.01em}}
+.pole{height:12px;background:repeating-linear-gradient(-45deg,var(--ox) 0 14px,var(--parch) 14px 24px,var(--green2) 24px 38px,var(--parch) 38px 48px);background-size:68px 12px;animation:spin 3s linear infinite}
+@keyframes spin{to{background-position:68px 0}}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+
+nav{position:sticky;top:0;z-index:30;background:rgba(19,38,29,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(192,154,78,.35)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:"Abril Fatface",serif;color:var(--parch);text-decoration:none;font-size:20px;line-height:1}
+.logo small{display:block;font-family:"Work Sans";font-size:9.5px;letter-spacing:.32em;color:var(--brass2);margin-top:4px;text-transform:uppercase}
+.navlinks{display:none;gap:26px;font-size:14px;font-weight:500}
+.navlinks a{color:#e8dcc1;text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--brass);transition:width .25s}
+.navlinks a:hover::after{width:100%}
+.navbtn{background:var(--ox2);color:var(--parch);text-decoration:none;font-weight:600;font-size:13.5px;padding:9px 15px;border-radius:999px;border:1px solid var(--brass);transition:transform .2s,background .2s}
+.navbtn:hover{background:var(--ox);transform:translateY(-1px)}
+@media(min-width:900px){.navlinks{display:flex}}
+
+/* HERO */
+.hero{position:relative;background:var(--green);color:var(--parch);overflow:hidden;padding:44px 0 56px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 85% 0%,rgba(143,29,47,.55),transparent 60%),radial-gradient(90% 60% at 0% 100%,rgba(192,154,78,.18),transparent 60%)}
+.hero .wrap{position:relative;display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.sign{max-width:420px}.hero{padding:84px 0 96px}.hero .wrap{grid-template-columns:1.15fr .85fr}}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass2);font-weight:600}
+.kicker::before{content:"";width:26px;height:1px;background:var(--brass)}
+.hero h1{font-family:"Abril Fatface",serif;font-weight:400;font-size:clamp(46px,13vw,104px);line-height:.93;margin:16px 0 18px;letter-spacing:.005em}
+.hero h1 em{font-family:"DM Serif Display",serif;font-style:italic;color:var(--brass2);font-size:.62em;display:block;line-height:1.1;margin-top:8px}
+.hero h1 .red{color:#e2707c}
+.sub{font-size:17px;color:#d9ccb0;max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:15.5px;padding:15px 22px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-brass{background:linear-gradient(180deg,var(--brass2),var(--brass));color:#22180c;box-shadow:0 8px 22px -8px rgba(224,194,127,.6)}
+.btn-ghost{border:1.5px solid rgba(243,232,210,.5);color:var(--parch)}
+.btn-ghost:hover{background:rgba(243,232,210,.08)}
+.btn-ox{background:var(--ox);color:var(--parch)}
+.addr-line{margin-top:22px;font-size:13.5px;color:#b9ab8e;display:flex;gap:8px;align-items:center}
+
+/* signboard svg */
+.sign{max-width:320px;width:100%;margin:0 auto;filter:drop-shadow(0 24px 40px rgba(0,0,0,.45))}
+.sign .swing{transform-origin:200px 20px;animation:swing 6s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(-1.3deg)}50%{transform:rotate(1.3deg)}}
+@media (prefers-reduced-motion:reduce){.sign .swing{animation:none}}
+
+/* marquee */
+.ticker{background:var(--ox);color:var(--parch);border-top:2px solid var(--brass);border-bottom:2px solid var(--brass);overflow:hidden;white-space:nowrap}
+.ticker .track{display:inline-flex;gap:34px;padding:12px 0;animation:tick 32s linear infinite;font-family:"DM Serif Display",serif;font-size:19px}
+.ticker span{display:inline-flex;align-items:center;gap:34px}
+.ticker span::after{content:"✦";color:var(--brass2);font-size:13px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:68px 0}
+.eyebrow{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--ox2)}
+h2{font-family:"Abril Fatface",serif;font-weight:400;font-size:clamp(34px,8.5vw,58px);line-height:1;margin:10px 0 14px;color:var(--green)}
+.lead{color:var(--muted);max-width:56ch}
+
+/* MENU */
+.menu{display:grid;gap:22px;margin-top:34px}
+@media(min-width:900px){.menu{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fbf5e8;border:1px solid var(--parch2);border-radius:6px;padding:26px 22px 22px;position:relative;box-shadow:0 1px 0 #fff inset,0 14px 30px -22px rgba(60,30,10,.45);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 1px 0 #fff inset,0 22px 40px -24px rgba(60,30,10,.55)}
+.card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(192,154,78,.45);border-radius:3px;pointer-events:none}
+.card h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:27px;color:var(--ox);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.card h3 svg{flex:none}
+.item{padding:13px 0;border-bottom:1px dashed rgba(91,78,64,.3)}
+.item:last-child{border-bottom:0}
+.row{display:flex;align-items:baseline;gap:8px}
+.row b{font-weight:600;font-size:16px}
+.row i{flex:1;border-bottom:2px dotted rgba(91,78,64,.35);transform:translateY(-4px);min-width:14px}
+.price{font-family:"DM Serif Display",serif;font-size:20px;color:var(--green);white-space:nowrap}
+.price.opt{font-family:"Work Sans";font-size:13px;font-weight:600;color:var(--ox2);letter-spacing:.02em}
+.item p{font-size:13.5px;color:var(--muted);margin-top:3px}
+.dur{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8a7a62;font-weight:600}
+.menu-note{margin-top:22px;font-size:13.5px;color:var(--muted)}
+.menu-cta{margin-top:24px}
+
+/* BARBERS */
+.dark{background:var(--green);color:var(--parch);position:relative;overflow:hidden}
+.dark h2{color:var(--parch)}
+.dark .eyebrow{color:var(--brass2)}
+.dark .lead{color:#cdbf9f}
+.team{display:grid;gap:18px;margin-top:30px}
+@media(min-width:700px){.team{grid-template-columns:1fr 1fr}}
+.chair{display:flex;gap:18px;align-items:center;background:rgba(243,232,210,.05);border:1px solid rgba(192,154,78,.35);border-radius:6px;padding:20px}
+.mono{flex:none;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,var(--ox2),var(--ox));border:2px solid var(--brass);font-family:"Abril Fatface",serif;font-size:24px;color:var(--parch)}
+.chair h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:26px;line-height:1.1}
+.chair p{font-size:13.5px;color:#cdbf9f}
+.chair a{color:var(--brass2);font-weight:600;text-decoration:none;font-size:14px}
+.chair a:hover{text-decoration:underline}
+
+.why{display:grid;gap:14px;margin-top:40px}
+@media(min-width:900px){.why{grid-template-columns:repeat(4,1fr)}}
+.w{border-top:2px solid var(--brass);padding-top:14px}
+.w strong{font-family:"DM Serif Display",serif;font-weight:400;font-size:22px;display:block;color:var(--brass2)}
+.w span{font-size:14px;color:#d6c9ac}
+
+/* HOURS + VISIT */
+.visit{display:grid;gap:30px;margin-top:30px}
+@media(min-width:900px){.visit{grid-template-columns:.9fr 1.1fr}}
+.hours{background:#fbf5e8;border:1px solid var(--parch2);border-radius:6px;padding:10px 22px}
+.hrow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(91,78,64,.15);font-size:15.5px}
+.hrow:last-child{border-bottom:0}
+.hrow.today{background:var(--ox);color:var(--parch);margin:0 -22px;padding:12px 22px;border-radius:4px;font-weight:600}
+.hrow.today .d::after{content:" · today";font-weight:400;opacity:.8;font-size:13px}
+.hrow .closed{color:#9a8b74}
+.hrow.today .closed{color:#f1d9c0}
+.status{display:inline-flex;gap:8px;align-items:center;font-weight:600;font-size:14px;margin:4px 0 14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#8a7a62}
+.dot.on{background:#2f9a5a;box-shadow:0 0 0 4px rgba(47,154,90,.18)}
+.map{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--parch2);min-height:300px;background:repeating-linear-gradient(-45deg,rgba(110,20,35,.06) 0 12px,transparent 12px 24px),var(--parch2)}.map::before{content:"3800 St Elmo Ave · Chattanooga";position:absolute;inset:0;display:grid;place-items:center;font-family:"DM Serif Display",serif;font-size:18px;color:var(--muted)}.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.contact .btn{padding:12px 18px;font-size:14.5px}
+.btn-line{border:1.5px solid var(--green);color:var(--green)}
+.btn-line:hover{background:var(--green);color:var(--parch)}
+.addr{font-family:"DM Serif Display",serif;font-size:24px;color:var(--green);line-height:1.2}
+
+footer{background:var(--ink);color:#a89a80;padding:40px 0 34px;font-size:13.5px}
+footer .logo{font-size:26px}
+footer .fgrid{display:grid;gap:18px}
+@media(min-width:900px){footer .fgrid{grid-template-columns:1.2fr 1fr 1fr}}
+footer a{color:var(--brass2);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.credit{margin-top:26px;padding-top:16px;border-top:1px solid rgba(192,154,78,.2);font-size:12px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(19,38,29,.97);border-top:2px solid var(--brass)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;border-radius:999px;padding:13px 8px}
+.bar .call{border:1.5px solid var(--brass2);color:var(--parch)}
+.bar .book{background:linear-gradient(180deg,var(--brass2),var(--brass));color:#22180c}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Buchanan's Barber Lounge. Not live.</div>
+<div class="pole" aria-hidden="true"></div>
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Buchanan's<small>Barber Lounge · St. Elmo</small></a>
+    <div class="navlinks"><a href="#menu">The Menu</a><a href="#chairs">The Chairs</a><a href="#visit">Hours &amp; Visit</a></div>
+    <a class="navbtn" href="https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn" target="_blank" rel="noopener">Book a chair</a>
+  </div>
+</nav>
+
+<header class="hero grain" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">St. Elmo · Chattanooga, TN</div>
+      <h1>Sharp cuts.<br><span class="red">Hot towels.</span><em>Right here on St. Elmo Avenue.</em></h1>
+      <p class="sub">Haircuts, transformation cuts, hot towel shaves and deluxe beard trims — book your chair online in a minute.</p>
+      <div class="ctas">
+        <a class="btn btn-brass" href="https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn" target="_blank" rel="noopener">Book online →</a>
+        <a class="btn btn-ghost" href="tel:+14237627941">Call (423) 762-7941</a>
+      </div>
+      <div class="addr-line"><span class="dot" id="heroDot"></span><span id="heroStatus">Open Mon–Sat</span></div>
+    </div>
+
+    <svg class="sign reveal" viewBox="0 0 400 430" role="img" aria-label="Hanging painted sign reading Buchanan's Barber Lounge, St. Elmo">
+      <defs>
+        <linearGradient id="br" x1="0" x2="1"><stop offset="0" stop-color="#8a6a2c"/><stop offset=".5" stop-color="#e8cb87"/><stop offset="1" stop-color="#8a6a2c"/></linearGradient>
+        <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a1828"/><stop offset="1" stop-color="#4f0e19"/></linearGradient>
+        <clipPath id="poleclip"><rect x="178" y="300" width="44" height="112" rx="22"/></clipPath>
+        <pattern id="stripes" width="44" height="40" patternUnits="userSpaceOnUse" patternTransform="skewY(-30)">
+          <rect width="44" height="40" fill="#f3e8d2"/><rect y="0" width="44" height="10" fill="#8f1d2f"/><rect y="20" width="44" height="10" fill="#1d3a2c"/>
+          <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 40" dur="2.4s" repeatCount="indefinite" additive="sum"/>
+        </pattern>
+      </defs>
+      <rect x="30" y="8" width="340" height="10" rx="5" fill="url(#br)"/>
+      <g class="swing">
+        <line x1="90" y1="18" x2="90" y2="58" stroke="url(#br)" stroke-width="3"/>
+        <line x1="310" y1="18" x2="310" y2="58" stroke="url(#br)" stroke-width="3"/>
+        <rect x="24" y="56" width="352" height="226" rx="16" fill="url(#br)"/>
+        <rect x="31" y="63" width="338" height="212" rx="12" fill="url(#wood)"/>
+        <rect x="44" y="76" width="312" height="186" rx="8" fill="none" stroke="#e0c27f" stroke-width="1.5" stroke-dasharray="2 5"/>
+        <text x="200" y="112" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="12" letter-spacing="5" fill="#e0c27f" font-weight="600">ST. ELMO · CHATTANOOGA</text>
+        <text x="200" y="170" text-anchor="middle" font-family="Abril Fatface, serif" font-size="44" fill="#f3e8d2">Buchanan's</text>
+        <path d="M95 186 H305" stroke="#e0c27f" stroke-width="1.5"/>
+        <text x="200" y="218" text-anchor="middle" font-family="DM Serif Display, serif" font-style="italic" font-size="27" fill="#e0c27f">Barber Lounge</text>
+        <text x="200" y="248" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="11" letter-spacing="4" fill="#d9ccb0">CUTS · SHAVES · BEARDS</text>
+        <circle cx="58" cy="168" r="4" fill="#e0c27f"/><circle cx="342" cy="168" r="4" fill="#e0c27f"/>
+      </g>
+      <!-- barber pole -->
+      <rect x="170" y="290" width="60" height="14" rx="7" fill="url(#br)"/>
+      <circle cx="200" cy="288" r="12" fill="url(#br)"/>
+      <g clip-path="url(#poleclip)"><rect x="178" y="300" width="44" height="112" fill="url(#stripes)"/></g>
+      <rect x="178" y="300" width="44" height="112" rx="22" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+      <rect x="186" y="304" width="8" height="104" rx="4" fill="rgba(255,255,255,.28)"/>
+      <rect x="170" y="408" width="60" height="14" rx="7" fill="url(#br)"/>
+    </svg>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Haircuts</span><span>Transformation Cuts</span><span>Hot Towel Shaves</span><span>Deluxe Beard Trims</span><span>Head Shaves</span><span>Scalp Massage</span>
+  <span>Haircuts</span><span>Transformation Cuts</span><span>Hot Towel Shaves</span><span>Deluxe Beard Trims</span><span>Head Shaves</span><span>Scalp Massage</span>
+</div></div>
+
+<section id="menu" class="grain">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The Menu</div>
+      <h2>Pick your service.<br>We'll handle the rest.</h2>
+      <p class="lead">Every service below is straight from Buchanan's booking page. Prices as listed there.</p>
+    </div>
+    <div class="menu">
+      <div class="card reveal">
+        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6e1423" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></svg>Haircuts</h3>
+        <div class="item"><div class="row"><b>Haircut</b><i></i><span class="price opt">2 options</span></div><p>Choose your option when you book.</p></div>
+        <div class="item"><div class="row"><b>Transformation Cut</b><i></i><span class="price">$70</span></div><p>For detailed designs, long-to-short changes, and cleaning up shaggy hair.</p><span class="dur">1 hour</span></div>
+        <div class="item"><div class="row"><b>Long Haircut</b><i></i><span class="price">$70</span></div><p>For shoulder-length hair or longer. "$50 and up depending on the stylist."</p><span class="dur">1 hr 15 min</span></div>
+      </div>
+      <div class="card reveal">
+        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6e1423" stroke-width="1.8" aria-hidden="true"><path d="M3 15 15 3l2 2L5 17z"/><path d="M15 3c3 1 5 3 6 6"/><path d="M5 17l-2 4 4-2"/></svg>Beards &amp; Shaves</h3>
+        <div class="item"><div class="row"><b>Deluxe Beard Trim</b><i></i><span class="price">$65</span></div><p>Beard trim, hot towel, mini facial &amp; straight razor finish.</p><span class="dur">1 hour</span></div>
+        <div class="item"><div class="row"><b>Hot Towel Shave</b><i></i><span class="price">$65</span></div><span class="dur">1 hour</span></div>
+        <div class="item"><div class="row"><b>Head Shave</b><i></i><span class="price">$55</span></div><span class="dur">45 min</span></div>
+        <div class="item"><div class="row"><b>Beard Trim</b><i></i><span class="price">$25</span></div><span class="dur">20 min</span></div>
+      </div>
+      <div class="card reveal">
+        <h3><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6e1423" stroke-width="1.8" aria-hidden="true"><path d="M12 3c4 3 6 6 6 9a6 6 0 0 1-12 0c0-3 2-6 6-9z"/></svg>Combos &amp; Extras</h3>
+        <div class="item"><div class="row"><b>Haircut &amp; Beard Trim</b><i></i><span class="price opt">2 options</span></div><p>The full refresh in one visit — choose your option when you book.</p></div>
+        <div class="item"><div class="row"><b>Scalp Massage</b><i></i><span class="price">$5</span></div><p>Five minutes. Add it on. Thank us later.</p><span class="dur">5 min</span></div>
+      </div>
+    </div>
+    <div class="menu-cta reveal"><a class="btn btn-ox" href="https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn" target="_blank" rel="noopener">See times &amp; book →</a></div>
+  </div>
+</section>
+
+<section id="chairs" class="dark grain">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The Chairs</div>
+      <h2>Two barbers.<br>Your pick.</h2>
+      <p class="lead">Book with whoever you like — both take appointments online.</p>
+    </div>
+    <div class="team">
+      <div class="chair reveal"><div class="mono">HM</div><div><h3>Holly Mount</h3><p>Taking online bookings</p><a href="https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn" target="_blank" rel="noopener">Book with Holly →</a></div></div>
+      <div class="chair reveal"><div class="mono">JF</div><div><h3>Justin Farrow</h3><p>Taking online bookings</p><a href="https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn" target="_blank" rel="noopener">Book with Justin →</a></div></div>
+    </div>
+    <div class="why">
+      <div class="w reveal"><strong>Open six days</strong><span>Monday through Saturday, with evenings till 7 Tue–Thu.</span></div>
+      <div class="w reveal"><strong>Real hot towel shaves</strong><span>Straight razor finish on the Deluxe Beard Trim.</span></div>
+      <div class="w reveal"><strong>Long hair welcome</strong><span>A dedicated Long Haircut for shoulder-length and longer.</span></div>
+      <div class="w reveal"><strong>Book in a minute</strong><span>Pick your service, your barber and your time online.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="grain">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Hours &amp; Visit</div>
+      <h2>Come sit a spell.</h2>
+    </div>
+    <div class="visit">
+      <div class="reveal">
+        <div class="status"><span class="dot" id="dot"></span><span id="status">Mon–Sat</span></div>
+        <div class="hours" id="hours">
+          <div class="hrow" data-d="1"><span class="d">Monday</span><span>11:00 AM – 5:00 PM</span></div>
+          <div class="hrow" data-d="2"><span class="d">Tuesday</span><span>10:00 AM – 7:00 PM</span></div>
+          <div class="hrow" data-d="3"><span class="d">Wednesday</span><span>10:00 AM – 7:00 PM</span></div>
+          <div class="hrow" data-d="4"><span class="d">Thursday</span><span>10:00 AM – 7:00 PM</span></div>
+          <div class="hrow" data-d="5"><span class="d">Friday</span><span>10:00 AM – 6:00 PM</span></div>
+          <div class="hrow" data-d="6"><span class="d">Saturday</span><span>10:00 AM – 3:00 PM</span></div>
+          <div class="hrow" data-d="0"><span class="d">Sunday</span><span class="closed">Closed</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="addr">3800 St Elmo Ave<br>Chattanooga, TN 37409</p>
+        <div class="contact">
+          <a class="btn btn-ox" href="tel:+14237627941">Call (423) 762-7941</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=3800+St+Elmo+Ave+Chattanooga+TN+37409" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn-line" href="mailto:buchanansbarberlounge@gmail.com">Email</a>
+        </div>
+        <div class="map" style="margin-top:18px"><iframe title="Map to Buchanan's Barber Lounge" loading="lazy" src="https://www.google.com/maps?q=3800%20St%20Elmo%20Ave%2C%20Chattanooga%2C%20TN%2037409&output=embed"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><span class="logo">Buchanan's</span><p style="margin-top:6px">Barber Lounge · St. Elmo, Chattanooga</p></div>
+      <div>3800 St Elmo Ave<br>Chattanooga, TN 37409<br><a href="tel:+14237627941">(423) 762-7941</a></div>
+      <div><a href="mailto:buchanansbarberlounge@gmail.com">buchanansbarberlounge@gmail.com</a><br><a href="https://www.instagram.com/buchanansbarberlounge" target="_blank" rel="noopener">Instagram @buchanansbarberlounge</a></div>
+    </div>
+    <div class="credit">Concept by Code Craft Media · Not the official site of Buchanan's Barber Lounge.</div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="call" href="tel:+14237627941">☎ Call</a>
+  <a class="book" href="https://square.site/book/LBP6Q88ZSJA79/buchanan-s-barber-lounge-chattanooga-tn" target="_blank" rel="noopener">Book a chair →</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var H={0:null,1:[11,17],2:[10,19],3:[10,19],4:[10,19],5:[10,18],6:[10,15]};
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('.hrow[data-d="'+d+'"]'); if(row) row.classList.add('today');
+  var t=H[d],open=t&&h>=t[0]&&h<t[1];
+  function fmt(x){var p=x>=12?'PM':'AM',y=x%12||12;return y+' '+p}
+  var msg=open?('Open now · until '+fmt(t[1])):(t&&h<t[0]?('Opens today at '+fmt(t[0])):'Closed now · book online anytime');
+  ['status','heroStatus'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent=msg});
+  ['dot','heroDot'].forEach(function(id){var e=document.getElementById(id);if(e&&open)e.classList.add('on')});
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>innerHeight)e.classList.add('pre')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

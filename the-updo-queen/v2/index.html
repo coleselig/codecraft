@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Updo Queen — Cookeville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#6b1f35; --slate-2:#521627; --slate-3:#8a3550;
+  --sun:#f3c4c4; --sun-2:#f8d9d6; --chalk:#fbf6f2; --chalk-2:#f1e5df;
+  --ink:#2e1219; --muted:#7a5a62;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--chalk);color:var(--ink);font-family:'Outfit',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.02;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.concept{background:var(--slate-2);color:#f0d6dc;font-size:11px;line-height:1.35;text-align:center;padding:6px 10px}
+.concept b{color:var(--sun);font-weight:500}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:30;background:rgba(247,244,238,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(107,31,53,.1)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Syne';font-weight:800;font-size:15px;text-decoration:none;color:var(--slate);letter-spacing:-.01em;white-space:nowrap}
+.logo-mark{width:30px;height:30px;border-radius:50%;background:var(--sun);position:relative;flex:none}
+.logo-mark:after{content:"";position:absolute;inset:7px 7px auto auto;width:14px;height:14px;border-radius:50%;border:2.5px solid var(--slate);background:transparent;transform:translate(6px,-6px)}
+.navlinks{display:none;gap:28px;font-weight:500;font-size:15px}
+.navlinks a{text-decoration:none;color:var(--slate);position:relative}
+.navlinks a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--sun);transition:width .25s}
+.navlinks a:hover:after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Outfit';font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s, box-shadow .2s, background .2s;border:2px solid transparent;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-sun{background:var(--sun);color:var(--slate-2);box-shadow:5px 5px 0 var(--slate)}
+.btn-sun:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--slate)}
+.btn-line{border-color:var(--chalk);color:var(--chalk)}
+.btn-line:hover{background:var(--chalk);color:var(--slate)}
+.nav-cta{padding:8px 16px;flex:none;font-size:14px;box-shadow:3px 3px 0 var(--slate)}
+
+/* HERO */
+.hero{background:var(--slate);color:var(--chalk);position:relative;overflow:hidden;padding:46px 0 64px}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--sun-2)}
+.eyebrow:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--sun)}
+.hero h1{font-size:clamp(40px,11.4vw,104px);font-weight:800;margin:16px 0 18px;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--sun);position:relative;white-space:nowrap}
+.hero h1 .ring{display:inline-block;position:relative}
+.hero h1 .ring:after{content:"";position:absolute;left:-4%;top:-6%;width:106%;height:118%;border:2.5px solid var(--sun);border-radius:50%;transform:rotate(-6deg);opacity:.85}
+.hero p.sub{font-size:18px;max-width:30ch;color:#f3e1e5;font-weight:300}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.status{margin-top:26px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:9px 16px;border-radius:999px;font-size:14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#7fd49b;box-shadow:0 0 0 0 rgba(127,212,155,.6);animation:pulse 2s infinite}
+.dot.closed{background:#e98b7a;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(127,212,155,0)}100%{box-shadow:0 0 0 0 rgba(127,212,155,0)}}
+.hero-art{position:absolute;right:-90px;top:120px;width:330px;height:330px;z-index:1;pointer-events:none}
+.hero-art .c1{position:absolute;inset:0;border-radius:50%;background:var(--sun);opacity:.95}
+.hero-art .c2{position:absolute;inset:0;border-radius:50%;border:2.5px solid var(--chalk);transform:translate(-26px,-22px);opacity:.5}
+.hero-art .c3{position:absolute;width:120px;height:120px;border-radius:50%;background:var(--slate-3);left:-40px;bottom:-30px}
+.hero-art svg{position:absolute;inset:0;margin:auto;width:62%;height:62%}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.dots-pat{position:absolute;left:-20px;bottom:-20px;width:220px;height:140px;background-image:radial-gradient(rgba(243,196,196,.45) 2px,transparent 2.5px);background-size:18px 18px;z-index:1}
+
+/* TICKER */
+.ticker{background:var(--sun);color:var(--slate-2);overflow:hidden;border-block:2px solid var(--slate)}
+.ticker-track{display:flex;gap:34px;white-space:nowrap;padding:13px 0;font-family:'Syne';font-weight:700;font-size:18px;animation:tick 28s linear infinite;width:max-content}
+.ticker-track span:after{content:"●";margin-left:34px;font-size:10px;vertical-align:middle}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:72px 0}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--slate-3);display:flex;align-items:center;gap:10px}
+.kicker:before{content:"";width:22px;height:2px;background:var(--sun)}
+h2{font-size:clamp(36px,9vw,64px);font-weight:800;color:var(--slate);margin:12px 0 14px}
+.lead{color:var(--muted);max-width:52ch}
+
+/* MENU */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 22px}
+.tab{font:600 14px 'Outfit';padding:9px 16px;border-radius:999px;border:2px solid var(--slate);background:transparent;color:var(--slate);cursor:pointer;transition:.2s}
+.tab[aria-selected="true"],.tab:hover{background:var(--slate);color:var(--chalk)}
+.menu-grid{display:grid;gap:22px}
+.card{position:relative;background:#fff;border-radius:var(--r);padding:24px 22px 12px;z-index:1}
+.card:before{content:"";position:absolute;inset:0;border:2px solid var(--slate);border-radius:var(--r);transform:translate(8px,8px);z-index:-1;transition:transform .25s}
+.card:hover:before{transform:translate(4px,4px)}
+.card h3{font-size:24px;color:var(--slate);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.card h3 i{width:14px;height:14px;border-radius:50%;background:var(--sun);display:inline-block;flex:none}
+.card ul{list-style:none}
+.card li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed rgba(107,31,53,.18)}
+.card li:last-child{border-bottom:0}
+.card li span:first-child{font-weight:500}
+.card li small{display:block;color:var(--muted);font-size:13px;font-weight:400}
+.price{font-family:'Syne';font-weight:700;color:var(--slate);white-space:nowrap}
+.price.ask{font-family:'Outfit';font-weight:500;font-size:14px;color:var(--muted)}
+.note{font-size:14px;color:var(--muted);margin-top:22px}
+
+/* WHY */
+.why{background:var(--slate);color:var(--chalk);position:relative;overflow:hidden}
+.why h2{color:var(--chalk)}
+.why .kicker{color:var(--sun-2)}
+.why-grid{display:grid;gap:18px;margin-top:30px}
+.why-item{border:1.5px solid rgba(247,244,238,.25);border-radius:var(--r);padding:22px;display:flex;gap:16px;align-items:flex-start;transition:border-color .2s, background .2s}
+.why-item:hover{border-color:var(--sun);background:rgba(255,255,255,.04)}
+.why-num{flex:none;width:52px;height:52px;border-radius:50%;background:var(--sun);color:var(--slate-2);font-family:'Syne';font-weight:800;font-size:19px;display:grid;place-items:center}
+.why-item h3{font-size:21px;margin-bottom:4px}
+.why-item p{color:#ead3d9;font-size:15.5px}
+.why .big-ring{position:absolute;right:-140px;top:-120px;width:360px;height:360px;border-radius:50%;border:2px solid rgba(243,196,196,.35)}
+.why .big-ring:after{content:"";position:absolute;inset:40px;border-radius:50%;border:2px solid rgba(243,196,196,.2)}
+
+/* HOURS / VISIT */
+.visit-grid{display:grid;gap:28px;margin-top:28px}
+.hours{position:relative;background:#fff;border-radius:var(--r);padding:12px 22px;z-index:1}
+.hours:before{content:"";position:absolute;inset:0;border:2px solid var(--sun);border-radius:var(--r);transform:translate(-8px,8px);z-index:-1}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--chalk-2);font-size:16px}
+.hours li:last-child{border:0}
+.hours li.closed span:last-child{color:var(--muted)}
+.hours li.today span{color:inherit!important}
+.hours li.today{background:var(--slate);color:var(--chalk);border-radius:12px;padding:13px 14px;margin:4px -10px;border:0;font-weight:600}
+.hours li.today span:first-child:after{content:"Today";margin-left:10px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--sun);color:var(--slate-2);padding:3px 8px;border-radius:999px;vertical-align:2px}
+.map{border-radius:var(--r);overflow:hidden;border:2px solid var(--slate);min-height:300px;background:var(--chalk-2);position:relative}
+.map:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,var(--sun) 0 14px,transparent 15px),radial-gradient(circle at 50% 46%,transparent 0 30px,rgba(107,31,53,.25) 31px 33px,transparent 34px),repeating-linear-gradient(0deg,transparent 0 38px,rgba(107,31,53,.08) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(107,31,53,.08) 38px 40px)}
+.map iframe{position:relative;width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.addr p{font-size:18px;font-weight:500;color:var(--slate)}
+.addr .row{display:flex;gap:12px;flex-wrap:wrap}
+.btn-slate{background:var(--slate);color:var(--chalk)}
+.btn-slate:hover{background:var(--slate-3)}
+.btn-ghost{border-color:var(--slate);color:var(--slate)}
+.btn-ghost:hover{background:var(--slate);color:var(--chalk)}
+
+/* CTA band */
+.band{padding:0 0 72px}
+.band-box{position:relative;background:var(--sun);border-radius:28px;padding:40px 26px;overflow:hidden;z-index:1}
+.band-box:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--sun-2);right:-60px;bottom:-90px;z-index:-1}
+.band-box:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;border:2.5px solid var(--slate);right:-40px;top:-56px;z-index:-1}
+.band h2{color:var(--slate-2);max-width:14ch}
+.band p{color:var(--slate-2);margin-bottom:22px;max-width:38ch}
+.band .btn-slate{box-shadow:5px 5px 0 rgba(46,18,25,.25)}
+
+footer{background:var(--slate-2);color:#d9b6bf;padding:40px 0 30px;font-size:14px}
+footer .logo{color:var(--chalk);margin-bottom:12px}
+footer a{color:var(--sun-2)}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(82,22,39,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar a{flex:1;text-align:center;padding:14px 10px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px}
+.callbar .c{background:var(--chalk);color:var(--slate)}
+.callbar .b{background:var(--sun);color:var(--slate-2)}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+
+@media (min-width:760px){
+  .navlinks{display:flex}
+  .hero{padding:80px 0 110px}
+  .hero-art{right:-2%;top:70px;width:440px;height:440px}
+  .hero h1{font-size:88px;max-width:9ch}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .visit-grid{grid-template-columns:1fr 1.2fr;align-items:start}
+  .callbar{display:none}
+  body{padding-bottom:0}
+  .band-box{padding:56px 56px}
+}
+@media (min-width:1080px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:759px){.hero{padding-top:150px}.hero-art{width:220px;height:220px;right:-64px;top:-46px}.hero-art .c3{width:80px;height:80px;left:-20px;bottom:-10px}.hero h1{position:relative;z-index:3}.dots-pat{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style>
+.btn-sun{color:var(--slate-2)}
+.hero h1 em{color:var(--sun)}
+.logo-mark{background:var(--sun)}
+.crown-pat{position:absolute;inset:0;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M16 40l4-16 8 9 4-13 4 13 8-9 4 16z' fill='none' stroke='%23fbf6f2' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:64px 64px;z-index:0}
+.pill{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--sun);color:var(--slate-2);padding:3px 9px;border-radius:999px;margin-left:8px;vertical-align:3px}
+.quote{font-family:'Syne';font-weight:700;font-size:clamp(26px,6.4vw,40px);line-height:1.12;color:var(--slate);max-width:20ch;margin-top:8px}
+.quote-sec{padding:64px 0 8px}
+.quote-sec .src{color:var(--muted);font-size:14px;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>The Updo Queen</b>. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="logo-mark"></span>The Updo Queen</a>
+    <div class="navlinks"><a href="#menu">Services</a><a href="#why">Why us</a><a href="#visit">Hours &amp; map</a></div>
+    <a class="btn btn-sun nav-cta" href="https://square.site/book/F55DV5BSXVX5E/the-updo-queen-cookeville-tn">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="crown-pat"></div>
+  <div class="hero-art float" aria-hidden="true">
+    <div class="c2"></div><div class="c1"></div><div class="c3"></div>
+    <svg viewBox="0 0 200 200" fill="none">
+      <path d="M40 132l12-62 30 34 18-46 18 46 30-34 12 62z" fill="#6b1f35"/>
+      <rect x="40" y="132" width="120" height="20" rx="6" fill="#521627"/>
+      <circle cx="52" cy="66" r="8" fill="#fbf6f2"/><circle cx="100" cy="54" r="9" fill="#fbf6f2"/><circle cx="148" cy="66" r="8" fill="#fbf6f2"/>
+      <circle cx="100" cy="118" r="10" fill="#f3c4c4"/><circle cx="100" cy="118" r="4" fill="#6b1f35"/>
+      <circle cx="68" cy="142" r="4" fill="#f3c4c4"/><circle cx="132" cy="142" r="4" fill="#f3c4c4"/><circle cx="100" cy="142" r="4" fill="#f3c4c4"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">Hair &amp; makeup · Cookeville, TN</span>
+    <h1>Crowned for <em><span class="ring">every</span></em> event.</h1>
+    <p class="sub">Updos, airbrush makeup and bridal styling at 303 S. Willow Ave, inside Country Bumpkin Boutique.</p>
+    <div class="hero-cta">
+      <a class="btn btn-sun" href="https://square.site/book/F55DV5BSXVX5E/the-updo-queen-cookeville-tn">Book your chair</a>
+      <a class="btn btn-line" href="tel:+19312619467">Call (931) 261-9467</a>
+    </div>
+    <div class="status"><span class="dot" id="sdot"></span><span id="stext">Wed–Sat · see hours below</span></div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>Weddings</span><span>Prom</span><span>Pageants</span><span>Photo shoots</span><span>Airbrush makeup</span><span>Vintage styles</span><span>Blowouts</span><span>Smoothing treatments</span>
+  <span>Weddings</span><span>Prom</span><span>Pageants</span><span>Photo shoots</span><span>Airbrush makeup</span><span>Vintage styles</span><span>Blowouts</span><span>Smoothing treatments</span>
+</div></div>
+
+<section class="quote-sec">
+  <div class="wrap">
+    <div class="kicker reveal">The promise</div>
+    <p class="quote reveal">“Beauty for every person, for every event!”</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="kicker reveal">Services</div>
+    <h2 class="reveal">Choose your prep.</h2>
+    <p class="lead reveal">The Updo Queen's services, with prices as published on the online booking page.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="event">Event</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="bridal">Bridal</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="polish">Prep &amp; polish</button>
+    </div>
+    <div class="menu-grid">
+      <div class="card reveal" data-cat="event">
+        <h3><i></i>Event prep</h3>
+        <ul>
+          <li><span>The Queen's Prep<small>Hair and makeup · 2 hrs</small></span><span class="price">$155</span></li>
+          <li><span>The Crown Prep<small>Hair prep and event styling, no makeup · 1 hr 15 min</small></span><span class="price">$95</span></li>
+          <li><span>Event Hairstyling<small>1 hr</small></span><span class="price">from $55</span></li>
+          <li><span>Crown Worthy Airbrush Makeup<small>30 min</small></span><span class="price">$75</span></li>
+          <li><span>Vintage Hairstyle<small>30 min</small></span><span class="price">$65</span></li>
+        </ul>
+      </div>
+      <div class="card reveal" data-cat="event">
+        <h3><i></i>Little royals</h3>
+        <ul>
+          <li><span>The Junior Queen's Prep<small>Youth hair and makeup · 1 hr 30 min</small></span><span class="price">$125</span></li>
+          <li><span>Princess for a Day<small>Ages 2–12 · 30 min</small></span><span class="price">$30</span></li>
+        </ul>
+      </div>
+      <div class="card reveal" data-cat="bridal">
+        <h3><i></i>Bridal</h3>
+        <ul>
+          <li><span>Bridal Consultation<small>Scheduled phone call · 30 min</small></span><span class="price">Free</span></li>
+          <li><span>Crown Worthy Bridal Trial<small>2 hrs 15 min</small></span><span class="price">$175</span></li>
+          <li><span>The Crown Worthy Bride<small>Wedding day appointment · 2 hrs 15 min</small></span><span class="price">$200</span></li>
+        </ul>
+        <p class="note" style="margin:4px 0 14px">All bridal services are in-studio.</p>
+      </div>
+      <div class="card reveal" data-cat="polish">
+        <h3><i></i>Prep &amp; polish</h3>
+        <ul>
+          <li><span>Royal Reset<small>Scalp massage and blowout · 1 hr</small></span><span class="price">$65</span></li>
+          <li><span>Crown Polish<small>Smoothing treatment, lasts up to 6 weeks</small></span><span class="price ask">Ask</span></li>
+          <li><span>Curly Crown Polish<small>Curl-enhancing treatment, lasts up to 6 weeks</small></span><span class="price ask">Ask</span></li>
+          <li><span>Pre-approved Cut or Color<small>Existing cut and color clients only</small></span><span class="price ask">Ask</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note reveal">Prices as listed on The Updo Queen's Square booking page. "Ask" means no fixed price is published.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="big-ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker reveal">Why the Queen</div>
+    <h2 class="reveal">Made for your big moments.</h2>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="why-num">01</div><div><h3>Brides start with a free call</h3><p>Book a free 30-minute phone consultation, then a trial, then your wedding day.</p></div></div>
+      <div class="why-item reveal"><div class="why-num">02</div><div><h3>Airbrush in 30 minutes</h3><p>Crown Worthy Airbrush Makeup is a 30-minute appointment, $75.</p></div></div>
+      <div class="why-item reveal"><div class="why-num">03</div><div><h3>Something for the kids</h3><p>Princess for a Day for ages 2 to 12, and a Junior Queen's Prep for youth hair and makeup.</p></div></div>
+      <div class="why-item reveal"><div class="why-num">04</div><div><h3>Gift a crown</h3><p>Gift cards are available for a future visit or as a present.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker reveal">Visit</div>
+    <h2 class="reveal">Hours &amp; directions.</h2>
+    <div class="visit-grid">
+      <div class="reveal">
+        <ul class="hours" id="hours">
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2" class="closed"><span>Tuesday</span><span>Closed</span></li>
+          <li data-d="3"><span>Wednesday</span><span>10 AM – 5 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>10 AM – 5 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10 AM – 5 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9 AM – 4 PM</span></li>
+        </ul>
+        <div class="addr">
+          <p>303 S. Willow Ave<br>Cookeville, TN 38501<br><span style="font-weight:400;font-size:15px;color:var(--muted)">Inside Country Bumpkin Boutique</span></p>
+          <div class="row">
+            <a class="btn btn-slate" href="tel:+19312619467">Call (931) 261-9467</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=303+S+Willow+Ave+Cookeville+TN+38501">Directions</a>
+          </div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to The Updo Queen" loading="lazy" src="https://www.google.com/maps?q=303%20S%20Willow%20Ave%2C%20Cookeville%2C%20TN%2038501&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="band-box reveal">
+      <h2>Your crown is waiting.</h2>
+      <p>Pick your prep, choose a time, and you're booked with The Updo Queen.</p>
+      <a class="btn btn-slate" href="https://square.site/book/F55DV5BSXVX5E/the-updo-queen-cookeville-tn">Book your chair</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="logo-mark"></span>The Updo Queen</div>
+    <p>303 S. Willow Ave, Cookeville, TN 38501 · <a href="tel:+19312619467">(931) 261-9467</a> · <a href="mailto:the1updoqueen@gmail.com">the1updoqueen@gmail.com</a></p>
+    <p style="margin-top:10px"><a href="https://facebook.com/theupdoqueen">Facebook</a> · <a href="https://instagram.com/the1updoqueen">Instagram @the1updoqueen</a></p>
+    <p style="margin-top:14px;opacity:.7">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+19312619467">Call</a>
+  <a class="b" href="https://square.site/book/F55DV5BSXVX5E/the-updo-queen-cookeville-tn">Book online</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var H={0:null,1:null,2:null,3:[10,17],4:[10,17],5:[10,17],6:[9,16]};
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(h){return (h>12?h-12:h)+(h>=12?' PM':' AM')}
+  try{
+    var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));
+    var d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+    var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+    var t=H[d], st=document.getElementById('stext'), dot=document.getElementById('sdot');
+    if(t && h>=t[0] && h<t[1]){st.textContent='Open today until '+fmt(t[1]);}
+    else{
+      dot.classList.add('closed');
+      if(t && h<t[0]){st.textContent='Opens today at '+fmt(t[0]);}
+      else for(var i=1;i<=7;i++){var n=(d+i)%7; if(H[n]){st.textContent='Closed now · opens '+names[n]+' '+fmt(H[n][0]);break;}}
+    }
+  }catch(e){}
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false')}); b.setAttribute('aria-selected','true');
+    var f=b.dataset.f; document.querySelectorAll('.card[data-cat]').forEach(function(c){c.style.display=(f==='all'||c.dataset.cat===f)?'':'none'; c.classList.add('in')});
+  })});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

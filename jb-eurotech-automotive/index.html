@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>JB Eurotech Automotive — Rogersville</title>
+<meta name="description" content="Concept site for JB Eurotech Automotive, automotive repair at 5135 US 11W, Rogersville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:wght@500;600;700;800;900&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15171b; --bg2:#1c1f24; --panel:#20242a; --line:#2f343c; --grid:rgba(160,175,195,.07);
+  --silver:#c9ced6; --silver2:#9aa2ad; --white:#f3f5f8; --red:#d7262e; --red2:#ff3b43;
+  --ink:#e8ebef; --muted:#9aa2ad;
+  --barh:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--barh) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.bp{background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(rgba(160,175,195,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(160,175,195,.035) 1px,transparent 1px);background-size:80px 80px,80px 80px,16px 16px,16px 16px}
+
+/* concept banner */
+.concept{background:#0d0e11;color:var(--silver2);font-size:9.6px;text-align:center;padding:7px 8px;letter-spacing:-.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid var(--line)}
+.concept b{color:var(--silver);font-weight:600}
+@media(min-width:600px){.concept{font-size:11.5px;letter-spacing:.01em}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:30;background:rgba(21,23,27,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:34px;height:34px}
+.logo .wm{font-family:Saira,sans-serif;font-weight:800;font-size:17px;letter-spacing:.04em;line-height:1;text-transform:uppercase}
+.logo .wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.32em;color:var(--silver2);margin-top:3px}
+.navlinks{display:none;gap:28px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--silver2);transition:color .2s}
+.navlinks a:hover{color:var(--white)}
+.navcall{font-family:Saira,sans-serif;font-weight:700;font-size:14px;letter-spacing:.04em;text-decoration:none;border:1px solid var(--red);color:var(--white);padding:8px 14px;border-radius:3px;transition:background .2s}
+.navcall:hover{background:var(--red)}
+@media(min-width:900px){.navlinks{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{position:relative;padding-top:38px;padding-bottom:44px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:Saira,sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--silver2)}
+.tag:before{content:"";width:22px;height:2px;background:var(--red)}
+h1{font-family:Saira,sans-serif;font-weight:800;font-size:clamp(40px,11.5vw,96px);line-height:.94;letter-spacing:-.01em;text-transform:uppercase;margin:16px 0 18px;color:var(--white)}
+h1 .out{color:transparent;-webkit-text-stroke:1.4px var(--silver)}
+h1 .r{color:var(--red2)}
+.sub{font-size:17px;color:var(--silver);max-width:520px}
+.sub b{color:var(--white);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:Saira,sans-serif;font-weight:700;font-size:16px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:15px 22px;border-radius:3px;transition:transform .15s,background .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 24px -10px rgba(215,38,46,.7)}
+.btn-red:hover{background:var(--red2)}
+.btn-ghost{border:1px solid #4a515b;color:var(--white)}
+.btn-ghost:hover{border-color:var(--silver)}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:30px;max-width:560px}
+.spec div{background:rgba(28,31,36,.92);padding:12px 14px}
+.spec dt{font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--silver2)}
+.spec dd{font-family:Saira,sans-serif;font-weight:600;font-size:15px;color:var(--white);margin-top:2px}
+.hero-art{position:absolute;right:-90px;top:10px;width:380px;opacity:.5;pointer-events:none}
+@media(min-width:900px){
+  .hero .wrap{padding-top:90px;padding-bottom:100px}
+  .hero-art{right:0;top:40px;width:560px;opacity:.95}
+  .sub{font-size:19px}
+}
+.pin{height:3px;background:linear-gradient(90deg,var(--red) 0 40%,transparent 40% 42%,var(--silver2) 42% 44%,transparent 44%)}
+.gear{transform-origin:center;transform-box:fill-box;animation:spin 26s linear infinite}
+.gear.rev{animation-direction:reverse;animation-duration:18s}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.gear{animation:none}}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-family:Saira,sans-serif;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--red2);display:flex;align-items:center;gap:10px}
+.kicker span{color:var(--silver2)}
+h2{font-family:Saira,sans-serif;font-weight:800;font-size:clamp(30px,7.5vw,52px);line-height:1;text-transform:uppercase;color:var(--white);margin:12px 0 14px}
+h2:after{content:"";display:block;width:64px;height:2px;margin-top:14px;background:linear-gradient(90deg,var(--red) 0 70%,transparent 70% 78%,var(--silver2) 78%)}
+.lead{color:var(--silver);max-width:600px}
+
+/* steps */
+.steps{display:grid;gap:14px;margin-top:30px}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:24px 22px 22px;transition:border-color .25s,transform .25s}
+.step:hover{border-color:#59606a;transform:translateY(-3px)}
+.step .n{font-family:Saira Condensed,Saira,sans-serif;font-weight:800;font-size:46px;line-height:1;color:transparent;-webkit-text-stroke:1px #5b626c}
+.step h3{font-family:Saira,sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.02em;margin:10px 0 6px;color:var(--white)}
+.step p{color:var(--silver2);font-size:15px}
+.step p a{color:var(--white);font-weight:600}
+.step .ic{position:absolute;right:18px;top:20px;width:40px;height:40px;color:var(--silver2)}
+.step:after{content:"";position:absolute;left:22px;right:22px;bottom:0;height:2px;background:var(--red);transform:scaleX(.18);transform-origin:left;transition:transform .35s}
+.step:hover:after{transform:scaleX(1)}
+
+/* owner */
+.owner{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.owner-grid{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.owner-grid{grid-template-columns:1.1fr .9fr;gap:60px}}
+.facts{display:grid;gap:10px;margin-top:22px}
+.fact{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:rgba(21,23,27,.6)}
+.fact svg{flex:0 0 22px;width:22px;height:22px;color:var(--red2);margin-top:2px}
+.fact b{display:block;color:var(--white);font-weight:600}
+.fact span{color:var(--silver2);font-size:14.5px}
+.plate{position:relative;border:1px solid #3a4049;border-radius:6px;padding:26px;background:linear-gradient(160deg,#272b32,#1a1d22);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 30px 60px -30px rgba(0,0,0,.8)}
+.plate .screw{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#c9ced6,#5b626c);box-shadow:0 0 0 1px #111}
+.plate .screw:before{content:"";position:absolute;left:2px;right:2px;top:4px;height:2px;background:#2b2f35;transform:rotate(35deg)}
+.plate .s1{left:10px;top:10px}.plate .s2{right:10px;top:10px}.plate .s3{left:10px;bottom:10px}.plate .s4{right:10px;bottom:10px}
+.plate small{font-family:Saira,sans-serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--silver2)}
+.plate .name{font-family:Saira,sans-serif;font-weight:800;font-size:30px;line-height:1.05;color:var(--white);text-transform:uppercase;margin:6px 0 2px}
+.plate .role{color:var(--red2);font-family:Saira,sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.plate hr{border:0;border-top:1px dashed #444b55;margin:18px 0}
+.plate .row{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:5px 0;color:var(--silver2)}
+.plate .row b{color:var(--white);font-weight:600;text-align:right}
+.plate .row a{text-decoration:none;word-break:break-all}
+.plate .row a:hover{color:var(--red2)}
+
+/* hours */
+.hours-grid{display:grid;gap:22px;margin-top:28px}
+@media(min-width:900px){.hours-grid{grid-template-columns:1fr 1fr;gap:40px}}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{text-align:center;padding:12px 0 10px;border:1px solid var(--line);border-radius:4px;background:var(--panel);font-family:Saira,sans-serif}
+.day b{display:block;font-size:14px;font-weight:700;color:var(--silver)}
+.day i{display:block;font-style:normal;font-size:9.5px;letter-spacing:.12em;color:var(--silver2);margin-top:3px;text-transform:uppercase}
+.day.today{border-color:var(--red);background:rgba(215,38,46,.12)}
+.day.today b{color:var(--white)}
+.day.today i{color:var(--red2)}
+.hours-note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:4px;padding:20px 20px}
+.hours-note h3{font-family:Saira,sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;color:var(--white);margin-bottom:6px}
+.hours-note p{color:var(--silver2);font-size:15px}
+.hours-note .btn{margin-top:16px}
+#todayLabel{color:var(--white);font-weight:600}
+
+/* map */
+.map-grid{display:grid;gap:18px;margin-top:28px}
+@media(min-width:900px){.map-grid{grid-template-columns:1.5fr 1fr}}
+.map{position:relative;border:1px solid var(--line);border-radius:4px;overflow:hidden;min-height:300px;background-color:var(--panel);background-image:radial-gradient(circle at 50% 46%,rgba(215,38,46,.9) 0 7px,rgba(215,38,46,.25) 8px 18px,transparent 19px),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(115deg,transparent 48%,rgba(201,206,214,.18) 48% 52%,transparent 52%);background-size:auto,40px 40px,40px 40px,auto}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.85) contrast(1.05)}
+.addr{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:24px}
+.addr .big{font-family:Saira,sans-serif;font-weight:800;font-size:28px;line-height:1.05;color:var(--white);text-transform:uppercase}
+.addr p{color:var(--silver2);margin:8px 0 18px}
+.addr .btn{width:100%;justify-content:center;margin-top:10px}
+
+footer{border-top:1px solid var(--line);padding:34px 0 28px;color:var(--silver2);font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,14,17,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:3px;font-family:Saira,sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;font-size:15px}
+.callbar svg{width:18px;height:18px}
+.callbar .c{background:var(--red);color:#fff}
+.callbar .d{border:1px solid #4a515b;color:var(--white)}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(18px)}
+.show-all .rv{opacity:1!important;transform:none!important}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for JB Eurotech Automotive. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="JB Eurotech Automotive home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="4" stroke="#9aa2ad" stroke-width="1.5"/>
+        <path d="M8 31 L32 9" stroke="#d7262e" stroke-width="2.5"/>
+        <text x="20" y="25" text-anchor="middle" font-family="Saira, sans-serif" font-weight="800" font-size="15" fill="#f3f5f8">JB</text>
+      </svg>
+      <span class="wm">JB Eurotech<small>Automotive</small></span>
+    </a>
+    <div class="navlinks"><a href="#how">How it works</a><a href="#owner">The shop</a><a href="#hours">Hours</a><a href="#find">Find us</a></div>
+    <a class="navcall" href="tel:+14237543765">423-754-3765</a>
+  </div>
+</nav>
+
+<header class="hero bp" id="top">
+  <svg class="hero-art" viewBox="0 0 560 520" fill="none" aria-hidden="true">
+    <g stroke="#9aa2ad" stroke-width="1.2">
+      <g class="gear">
+        <path d="M300 120 l14 -34 h32 l14 34 l30 14 l34 -14 l22 22 l-14 34 l14 30 l34 14 v32 l-34 14 l-14 30 l14 34 l-22 22 l-34 -14 l-30 14 l-14 34 h-32 l-14 -34 l-30 -14 l-34 14 l-22 -22 l14 -34 l-14 -30 l-34 -14 v-32 l34 -14 l14 -30 l-14 -34 l22 -22 l34 14 z" />
+        <circle cx="330" cy="250" r="80"/>
+        <circle cx="330" cy="250" r="34" stroke="#d7262e" stroke-width="2"/>
+        <circle cx="330" cy="250" r="6" fill="#9aa2ad"/>
+      </g>
+      <g class="gear rev">
+        <path d="M120 360 l9 -22 h20 l9 22 l18 9 l22 -9 l14 14 l-9 22 l9 18 l22 9 v20 l-22 9 l-9 18 l9 22 l-14 14 l-22 -9 l-18 9 l-9 22 h-20 l-9 -22 l-18 -9 l-22 9 l-14 -14 l9 -22 l-9 -18 l-22 -9 v-20 l22 -9 l9 -18 l-9 -22 l14 -14 l22 9 z"/>
+        <circle cx="139" cy="439" r="40"/>
+        <circle cx="139" cy="439" r="14"/>
+      </g>
+      <path d="M40 60 H520 M40 60 v12 M520 60 v12" stroke-dasharray="2 4"/>
+      <text x="280" y="50" fill="#9aa2ad" stroke="none" font-family="Saira, sans-serif" font-size="11" letter-spacing="3" text-anchor="middle">US 11W · ROGERSVILLE TN</text>
+      <path d="M470 470 L520 420 M498 470 h22 v-22" stroke="#d7262e" stroke-width="1.6"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="tag">Rogersville · Hawkins County</span>
+    <h1>Precision <span class="out">repair</span> on <span class="r">US&nbsp;11W.</span></h1>
+    <p class="sub"><b>JB Eurotech Automotive</b> is Joshua Brady's automotive repair shop at 5135 US 11W in Rogersville. Call the shop or get directions below.</p>
+    <div class="ctas">
+      <a class="btn btn-red" href="tel:+14237543765"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 423-754-3765</a>
+      <a class="btn btn-ghost" href="#find">Directions</a>
+    </div>
+    <dl class="spec">
+      <div><dt>Service</dt><dd>Automotive repair</dd></div>
+      <div><dt>Owner</dt><dd>Joshua Brady</dd></div>
+      <div><dt>Location</dt><dd>5135 US 11W</dd></div>
+      <div><dt>Town</dt><dd>Rogersville, TN</dd></div>
+    </dl>
+  </div>
+</header>
+<div class="pin" aria-hidden="true"></div>
+
+<section id="how" class="bp">
+  <div class="wrap">
+    <div class="kicker">01 <span>/ How it works</span></div>
+    <h2 class="rv">Three steps to the shop</h2>
+    <p class="lead rv">No forms, no call center. One number, one email, one address.</p>
+    <div class="steps">
+      <div class="step rv">
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M30 26.5v4a2.6 2.6 0 0 1-2.9 2.6A25.8 25.8 0 0 1 7 13a2.6 2.6 0 0 1 2.6-2.9h4a2.6 2.6 0 0 1 2.6 2.2c.2 1.2.5 2.4.9 3.5a2.6 2.6 0 0 1-.6 2.8l-1.6 1.6a21 21 0 0 0 7.9 7.9l1.6-1.6a2.6 2.6 0 0 1 2.8-.6c1.1.4 2.3.7 3.5.9a2.6 2.6 0 0 1 2.2 2.6z"/></svg>
+        <div class="n">01</div>
+        <h3>Call the shop</h3>
+        <p>Ring <a href="tel:+14237543765">423-754-3765</a> and tell Joshua what the car is doing.</p>
+      </div>
+      <div class="step rv">
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="10" width="28" height="20" rx="2"/><path d="M6 12l14 10 14-10"/></svg>
+        <div class="n">02</div>
+        <h3>Or send an email</h3>
+        <p>Prefer writing it down? <a href="mailto:JBEurotech@protonmail.com">JBEurotech@protonmail.com</a></p>
+      </div>
+      <div class="step rv">
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M27 6a7 7 0 0 0-6.6 9.3L7.5 28.2a2.5 2.5 0 0 0 3.5 3.5l12.9-12.9A7 7 0 0 0 33.3 12l-4.2 4.2-3.9-1.3-1.3-3.9L28 6.8A7 7 0 0 0 27 6z"/></svg>
+        <div class="n">03</div>
+        <h3>Bring it in</h3>
+        <p>The shop is at 5135 US 11W, Rogersville, TN 37857.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="owner" class="owner">
+  <div class="wrap owner-grid">
+    <div>
+      <div class="kicker">02 <span>/ The shop</span></div>
+      <h2 class="rv">Owner-run, on the 11W corridor</h2>
+      <p class="lead rv">JB Eurotech Automotive is listed in the East Tennessee Visitors Guide's Rogersville shopping and services directory under automotive repair.</p>
+      <div class="facts">
+        <div class="fact rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><div><b>You deal with the owner</b><span>Joshua Brady runs the shop.</span></div></div>
+        <div class="fact rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg><div><b>Automotive repair</b><span>Call to talk through what your car needs.</span></div></div>
+        <div class="fact rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Easy to reach</b><span>Right on US 11W in Rogersville, Hawkins County.</span></div></div>
+      </div>
+    </div>
+    <div class="plate rv" aria-label="Shop details">
+      <i class="screw s1"></i><i class="screw s2"></i><i class="screw s3"></i><i class="screw s4"></i>
+      <small>Shop plate</small>
+      <div class="name">JB Eurotech Automotive</div>
+      <div class="role">Joshua Brady, Owner</div>
+      <hr>
+      <div class="row"><span>Phone</span><b><a href="tel:+14237543765">423-754-3765</a></b></div>
+      <div class="row"><span>Email</span><b><a href="mailto:JBEurotech@protonmail.com">JBEurotech@protonmail.com</a></b></div>
+      <div class="row"><span>Address</span><b>5135 US 11W<br>Rogersville, TN 37857</b></div>
+      <div class="row"><span>Service</span><b>Automotive repair</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="bp">
+  <div class="wrap">
+    <div class="kicker">03 <span>/ Hours</span></div>
+    <h2 class="rv">Call ahead before you drive over</h2>
+    <div class="hours-grid">
+      <div class="rv">
+        <div class="week" id="week">
+          <div class="day" data-d="1"><b>Mon</b><i>Call</i></div>
+          <div class="day" data-d="2"><b>Tue</b><i>Call</i></div>
+          <div class="day" data-d="3"><b>Wed</b><i>Call</i></div>
+          <div class="day" data-d="4"><b>Thu</b><i>Call</i></div>
+          <div class="day" data-d="5"><b>Fri</b><i>Call</i></div>
+          <div class="day" data-d="6"><b>Sat</b><i>Call</i></div>
+          <div class="day" data-d="0"><b>Sun</b><i>Call</i></div>
+        </div>
+        <p style="color:var(--silver2);font-size:14px;margin-top:12px">Today is <span id="todayLabel">highlighted</span>.</p>
+      </div>
+      <div class="hours-note rv">
+        <h3>Hours by phone</h3>
+        <p>Shop hours aren't published yet. A quick call to Joshua confirms when you can drop the car off.</p>
+        <a class="btn btn-red" href="tel:+14237543765">Call 423-754-3765</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker">04 <span>/ Find us</span></div>
+    <h2 class="rv">5135 US 11W, Rogersville</h2>
+    <div class="map-grid">
+      <div class="map rv"><iframe title="Map to JB Eurotech Automotive" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=5135%20US%2011W%2C%20Rogersville%2C%20TN%2037857&output=embed"></iframe></div>
+      <div class="addr rv">
+        <div class="big">JB Eurotech<br>Automotive</div>
+        <p>5135 US 11W<br>Rogersville, TN 37857</p>
+        <a class="btn btn-red" href="tel:+14237543765">Call 423-754-3765</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=5135%20US%2011W%2C%20Rogersville%2C%20TN%2037857" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© JB Eurotech Automotive · Rogersville, TN · <a href="tel:+14237543765">423-754-3765</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+14237543765"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the shop</a>
+  <a class="d" href="https://www.google.com/maps/dir/?api=1&destination=5135%20US%2011W%2C%20Rogersville%2C%20TN%2037857" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay(), names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var el=document.querySelector('.day[data-d="'+d+'"]'); if(el){el.classList.add('today');el.querySelector('i').textContent='Today';}
+  var tl=document.getElementById('todayLabel'); if(tl) tl.textContent=names[d];
+  document.documentElement.classList.add('js');
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(i){io.observe(i)});
+  } else { items.forEach(function(i){i.classList.add('in')}); }
+  setTimeout(function(){document.documentElement.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

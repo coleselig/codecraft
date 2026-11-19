@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Ashley Rose — Brentwood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --quartz:#f3d9d6; --quartz-2:#f8e9e6; --blush:#e7b8b2; --wine:#5a1a2b; --wine-2:#7a2a3f; --wine-ink:#3a0f1b;
+  --champ:#d9bf8c; --champ-2:#efe2c4; --paper:#fdf7f3; --ink:#2b1a1e; --muted:#6e5257;
+  --display:"Libre Caslon Display", Georgia, serif; --body:"Albert Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.concept{background:var(--wine-ink);color:var(--champ-2);font-size:10.5px;letter-spacing:0;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{font-weight:600;color:#fff}
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(253,247,243,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(90,26,43,.08)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:50%;border:1.2px solid var(--wine);display:grid;place-items:center;font-family:var(--display);color:var(--wine);font-size:19px;line-height:1}
+.brand-name{font-family:var(--display);font-size:21px;color:var(--wine);letter-spacing:.01em}
+.nav-links{display:none;gap:28px;font-size:14px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--wine)}
+.nav-cta{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--wine);padding:10px 16px;border-radius:999px;transition:background .2s,transform .2s}
+.nav-cta:hover{background:var(--wine-2);transform:translateY(-1px)}
+@media(min-width:900px){.nav-links{display:flex}}
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 80% at 85% 10%, var(--quartz) 0%, rgba(243,217,214,0) 60%),
+  radial-gradient(90% 60% at 0% 100%, var(--champ-2) 0%, rgba(239,226,196,0) 70%), var(--paper)}
+.hero .wrap{position:relative;padding-top:32px;padding-bottom:56px;display:grid;gap:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--wine-2)}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--champ)}
+h1{font-family:var(--display);font-weight:400;color:var(--wine-ink);font-size:clamp(48px,13.4vw,92px);line-height:.98;letter-spacing:-.01em;margin-top:16px}
+h1 em{font-style:italic;color:var(--wine-2)}
+.sub{font-size:16.5px;color:var(--muted);max-width:30em;margin-top:16px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:15px 22px;border-radius:999px;transition:transform .2s, box-shadow .2s, background .2s}
+.btn-primary{background:var(--wine);color:#fff;box-shadow:0 10px 24px -10px rgba(90,26,43,.6)}
+.btn-primary:hover{background:var(--wine-2);transform:translateY(-2px)}
+.btn-ghost{border:1.2px solid var(--wine);color:var(--wine);background:rgba(255,255,255,.4)}
+.btn-ghost:hover{background:#fff;transform:translateY(-2px)}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:12.5px;font-weight:500;color:var(--wine-ink);background:rgba(255,255,255,.65);border:1px solid rgba(217,191,140,.7);padding:6px 12px;border-radius:999px}
+.hero-art{position:relative;margin:0 auto;width:min(86%,420px);aspect-ratio:4/5}
+.door{position:absolute;inset:0;border-radius:200px 200px 18px 18px;background:linear-gradient(170deg,var(--wine) 0%,var(--wine-ink) 100%);box-shadow:0 30px 60px -30px rgba(58,15,27,.7), inset 0 0 0 10px rgba(217,191,140,.12)}
+.door::after{content:"";position:absolute;inset:16px;border-radius:186px 186px 10px 10px;border:1px solid rgba(217,191,140,.45)}
+.door-num{position:absolute;top:13%;left:50%;transform:translateX(-50%);font-family:var(--display);font-size:clamp(86px,26vw,132px);color:var(--champ);line-height:1;text-shadow:0 2px 0 rgba(0,0,0,.15)}
+.door-label{position:absolute;top:calc(13% + clamp(92px,28vw,140px));left:50%;transform:translateX(-50%);font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--champ-2);white-space:nowrap}
+.door-knob{position:absolute;right:15%;top:58%;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3d6,var(--champ) 55%,#9c8150)}
+.rose-line{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);width:62%;}
+.rose-line path{fill:none;stroke:var(--quartz);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;stroke-dashoffset:0}
+.js .rose-line path{animation:draw 3.2s ease-out both}
+@keyframes draw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+.petal{position:absolute;width:14px;height:10px;border-radius:70% 10% 70% 10%;background:var(--blush);opacity:.75;animation:float 9s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(25deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:72px;padding-bottom:96px}.hero-art{width:400px}}
+/* sections */
+section{padding:72px 0}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--wine-2)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,8.5vw,56px);line-height:1.04;color:var(--wine-ink);margin-top:10px}
+h2 em{color:var(--wine-2)}
+.lede{color:var(--muted);max-width:36em;margin-top:14px;font-size:16.5px}
+/* about */
+.about{background:var(--wine-ink);color:var(--quartz-2);position:relative;overflow:hidden}
+.about h2{color:#fff}.about h2 em{color:var(--champ)}.about .kicker{color:var(--champ)}.about .lede{color:#e6cfcf}
+.pillars{display:grid;gap:14px;margin-top:36px}
+.pillar{border:1px solid rgba(217,191,140,.35);border-radius:18px;padding:24px;background:rgba(255,255,255,.03);transition:transform .3s,border-color .3s}
+.pillar:hover{transform:translateY(-3px);border-color:var(--champ)}
+.pillar .big{font-family:var(--display);font-size:46px;line-height:1;color:var(--champ)}
+.pillar h3{font-size:17px;font-weight:600;color:#fff;margin-top:10px}
+.pillar p{font-size:14.5px;color:#dcc3c3;margin-top:6px}
+.about-rose{position:absolute;right:-60px;top:-30px;width:320px;opacity:.12}
+.about-rose path{fill:none;stroke:var(--champ);stroke-width:1.4}
+@media(min-width:760px){.pillars{grid-template-columns:repeat(3,1fr)}}
+/* menu */
+.menu-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-top:28px;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:600 13.5px var(--body);color:var(--wine);background:#fff;border:1px solid rgba(90,26,43,.18);padding:9px 15px;border-radius:999px;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--wine)}
+.tab[aria-selected=true]{background:var(--wine);color:#fff;border-color:var(--wine)}
+.menu-grid{display:grid;gap:18px;margin-top:22px}
+.cat{background:#fff;border:1px solid rgba(90,26,43,.08);border-radius:22px;padding:22px 20px;box-shadow:0 14px 30px -24px rgba(58,15,27,.4)}
+.cat h3{font-family:var(--display);font-weight:400;font-size:26px;color:var(--wine-ink);display:flex;align-items:center;gap:10px}
+.cat h3 small{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--champ);background:var(--wine-ink);padding:3px 8px;border-radius:999px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-bottom:1px dashed rgba(90,26,43,.15)}
+.svc:last-child{border-bottom:0}
+.svc .n{font-weight:500;font-size:15px}
+.svc .p{font-family:var(--display);font-size:19px;color:var(--wine);text-align:right;white-space:nowrap}
+.svc .p.free{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--wine-2);background:var(--quartz);padding:3px 9px;border-radius:999px;align-self:center}
+.svc .p.var{font-family:var(--body);font-size:13px;font-style:italic;color:var(--muted)}
+.svc .d{font-size:12.5px;color:var(--muted);grid-column:1/-1}
+.js .menu-grid.filtered .cat{display:none}
+.js .menu-grid.filtered .cat.on{display:block}
+@media(min-width:900px){.menu-grid{grid-template-columns:1fr 1fr}.js .menu-grid.filtered{grid-template-columns:1fr}}
+.note{font-size:13px;color:var(--muted);margin-top:18px}
+/* hours */
+.visit{background:linear-gradient(180deg,var(--quartz-2),var(--paper))}
+.visit-grid{display:grid;gap:22px;margin-top:34px}
+.card{background:#fff;border-radius:22px;padding:24px 22px;border:1px solid rgba(90,26,43,.08)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--wine);background:var(--quartz);padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.status i{width:8px;height:8px;border-radius:50%;background:#b04a5f;box-shadow:0 0 0 4px rgba(176,74,95,.18)}
+.status.open i{background:#3c8a5a;box-shadow:0 0 0 4px rgba(60,138,90,.18)}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15px}
+.hours li span:last-child{color:var(--muted)}
+.hours li.closed span:last-child{color:#b49aa0}
+.hours li.today{background:var(--wine);color:#fff;font-weight:600}
+.hours li.today span:last-child{color:var(--champ-2)}
+.addr{font-family:var(--display);font-size:24px;line-height:1.25;color:var(--wine-ink)}
+.addr-sub{color:var(--muted);font-size:14.5px;margin-top:8px}
+.contact-list{margin-top:18px;display:grid;gap:10px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:13px 14px;border-radius:14px;background:var(--quartz-2);font-weight:500;font-size:15px;transition:background .2s;word-break:break-word}
+.contact-list a:hover{background:var(--quartz)}
+.contact-list svg{flex:0 0 20px;width:20px;height:20px;stroke:var(--wine);fill:none;stroke-width:1.6}
+.map{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(90,26,43,.1);min-height:300px;background:repeating-linear-gradient(45deg,var(--quartz-2) 0 18px,#fbefec 18px 36px)}
+.map-fb{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:var(--display);font-size:22px;color:var(--wine);padding:20px}
+.map-fb span{display:block;font-family:var(--body);font-size:13px;color:var(--muted);margin-top:6px}
+.map iframe{position:relative;z-index:1}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1fr 1.2fr}}
+/* closing */
+.closing{text-align:center;background:var(--wine);color:#fff;position:relative;overflow:hidden}
+.closing h2{color:#fff}.closing h2 em{color:var(--champ)}
+.closing p{color:#efd6d8;max-width:30em;margin:14px auto 0}
+.closing .ctas{justify-content:center}
+.closing .btn-primary{background:var(--champ);color:var(--wine-ink)}
+.closing .btn-primary:hover{background:var(--champ-2)}
+.closing .btn-ghost{border-color:var(--champ-2);color:#fff;background:transparent}
+.closing .btn-ghost:hover{background:rgba(255,255,255,.1)}
+footer{background:var(--wine-ink);color:#cdb3b7;font-size:13px;padding:30px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{color:var(--champ-2)}
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(58,15,27,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:13px;border-radius:999px}
+.callbar .c{border:1px solid var(--champ);color:var(--champ-2)}
+.callbar .b{background:var(--champ);color:var(--wine-ink)}
+@media(min-width:900px){.callbar{display:none}}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>Ashley Rose</b>. Not live.</div>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Ashley Rose, home"><span class="brand-mark">5</span><span class="brand-name">Ashley Rose</span></a>
+  <div class="nav-links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#visit">Visit</a></div>
+  <a class="nav-cta" href="https://square.site/book/522FJPXZAQXJ3/ashley-rose-llc-brentwood-tn" target="_blank" rel="noopener">Book</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <span class="petal" style="left:8%;top:18%"></span>
+  <span class="petal" style="right:12%;top:62%;animation-delay:-3s;background:var(--champ)"></span>
+  <span class="petal" style="left:44%;bottom:6%;animation-delay:-6s"></span>
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Hair studio · Brentwood, TN</span>
+      <h1>Color that&rsquo;s <em>yours</em>, behind door no.&nbsp;5.</h1>
+      <p class="sub">Ashley Rose is a licensed cosmetologist since 2010, specializing in color and tape-in extensions, in Studio #5 on Mallory Lane.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://square.site/book/522FJPXZAQXJ3/ashley-rose-llc-brentwood-tn" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+16153649305">Call Ashley</a>
+      </div>
+      <div class="facts">
+        <span class="chip">Licensed since 2010</span>
+        <span class="chip">Free 15-min consultation</span>
+        <span class="chip">Tue · Thu · Sat</span>
+      </div>
+    </div>
+    <div class="hero-art rv" aria-hidden="true">
+      <div class="door">
+        <div class="door-num">5</div>
+        <div class="door-label">Studio · Ashley Rose</div>
+        <div class="door-knob"></div>
+        <svg class="rose-line" viewBox="0 0 220 230">
+          <path d="M110 226 C108 190 112 160 110 128 M110 186 C96 176 80 178 70 168 C84 162 100 168 110 180 M110 160 C124 150 140 152 152 142 C138 136 122 142 110 154 M110 128 C88 128 72 112 74 90 C76 70 92 58 110 60 C128 58 146 70 146 90 C148 112 132 128 110 128 Z M110 128 C96 120 90 106 96 94 C102 82 118 80 124 90 C130 100 124 112 112 112 C102 112 100 100 108 96 M74 90 C66 74 74 56 88 50 C96 46 104 50 110 60 M146 90 C154 74 146 56 132 50 C124 46 116 50 110 60 M88 50 C92 38 104 32 110 34 C118 32 128 38 132 50"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <svg class="about-rose" viewBox="0 0 220 230" aria-hidden="true"><path d="M110 226 C108 190 112 160 110 128 M110 128 C88 128 72 112 74 90 C76 70 92 58 110 60 C128 58 146 70 146 90 C148 112 132 128 110 128 Z M110 128 C96 120 90 106 96 94 C102 82 118 80 124 90 C130 100 124 112 112 112 C102 112 100 100 108 96 M74 90 C66 74 74 56 88 50 C96 46 104 50 110 60 M146 90 C154 74 146 56 132 50 C124 46 116 50 110 60"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">One chair, one stylist</span>
+      <h2>Every appointment, <em>start to finish</em>, with Ashley.</h2>
+      <p class="lede">Your color, your cut and your finish all come from the same hands. Ashley&rsquo;s focus is color and tape-in extensions, from root touch-ups and full highlights to balayage and EasiHair tape-ins.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar rv"><div class="big">2010</div><h3>Licensed cosmetologist</h3><p>Behind the chair since 2010.</p></div>
+      <div class="pillar rv"><div class="big">Color</div><h3>Highlights, balayage &amp; all-over</h3><p>Partial and full highlights, balayage, root touch-ups, color wash and shine glaze.</p></div>
+      <div class="pillar rv"><div class="big">Tape-ins</div><h3>EasiHair tape-in extensions</h3><p>Ashley&rsquo;s other specialty. Price varies; start with a free consultation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-head rv">
+      <div>
+        <span class="kicker">The menu</span>
+        <h2>Services &amp; <em>prices</em></h2>
+        <p class="lede">All 39 services, as listed on Ashley&rsquo;s booking page. Not sure what to book? The consultation is free.</p>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="hl">Highlights</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="root">Root touch-up</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts &amp; styling</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="tx">Treatments</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="wax">Waxing</button>
+    </div>
+    <div class="menu-grid" id="grid">
+      <div class="cat rv" data-c="color"><h3>All-over color</h3>
+        <div class="svc"><span class="n">All Over Color &amp; Style</span><span class="p">$140</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">All Over Color &amp; Cut</span><span class="p">$190</span><span class="d">1 hr 45 min</span></div>
+        <div class="svc"><span class="n">All Over Color w/ Partial Highlight &amp; Style</span><span class="p">$200</span><span class="d">1 hr 45 min</span></div>
+        <div class="svc"><span class="n">All Over Color w/ Full Highlight &amp; Style</span><span class="p">$240</span><span class="d">2 hr</span></div>
+        <div class="svc"><span class="n">All Over Color w/ Partial Highlight, Cut &amp; Style</span><span class="p">$255</span><span class="d">2 hr</span></div>
+        <div class="svc"><span class="n">All Over Color w/ Full Highlight, Cut &amp; Style</span><span class="p">$295</span><span class="d">2 hr 15 min</span></div>
+        <div class="svc"><span class="n">Color Wash (Base Lift) &amp; Style</span><span class="p">$80</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Color Wash (Base Lift) w/ Cut &amp; Style</span><span class="p">$135</span><span class="d">45 min</span></div>
+      </div>
+      <div class="cat rv" data-c="hl"><h3>Highlights &amp; balayage</h3>
+        <div class="svc"><span class="n">Partial Highlight &amp; Style</span><span class="p">$125</span><span class="d">1 hr 15 min</span></div>
+        <div class="svc"><span class="n">Partial Highlight w/ Cut &amp; Style</span><span class="p">$180</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Full Highlight &amp; Style</span><span class="p">$165</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Full Highlight w/ Cut &amp; Style</span><span class="p">$220</span><span class="d">1 hr 45 min</span></div>
+        <div class="svc"><span class="n">Balayage &amp; Style</span><span class="p">$165</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Balayage w/ Cut &amp; Style</span><span class="p">$220</span><span class="d">1 hr 45 min</span></div>
+      </div>
+      <div class="cat rv" data-c="root"><h3>Root touch-up</h3>
+        <div class="svc"><span class="n">Root Touch Up &amp; Style</span><span class="p">$110</span><span class="d">1 hr 20 min</span></div>
+        <div class="svc"><span class="n">Root Touch Up w/ Cut &amp; Style</span><span class="p">$165</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Root Touch Up w/ Partial Highlight &amp; Style</span><span class="p">$175</span><span class="d">1 hr 40 min</span></div>
+        <div class="svc"><span class="n">Root Touch Up w/ Full Highlight &amp; Style</span><span class="p">$215</span><span class="d">1 hr 45 min</span></div>
+        <div class="svc"><span class="n">Root Touch Up w/ Partial Highlight, Cut &amp; Style</span><span class="p">$230</span><span class="d">1 hr 45 min</span></div>
+        <div class="svc"><span class="n">Root Touch Up w/ Full Highlight, Cut &amp; Style</span><span class="p">$270</span><span class="d">2 hr</span></div>
+      </div>
+      <div class="cat rv" data-c="cut"><h3>Cuts &amp; styling</h3>
+        <div class="svc"><span class="n">Haircut &amp; Style</span><span class="p">$85</span><span class="d">35 min</span></div>
+        <div class="svc"><span class="n">Wet Cut</span><span class="p">$55</span><span class="d">20 min</span></div>
+        <div class="svc"><span class="n">Dry Cut</span><span class="p">$50</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Men&rsquo;s Cut</span><span class="p">$45</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Kid&rsquo;s Cut</span><span class="p">$40</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Bang Trim</span><span class="p free">Free</span><span class="d">5 min</span></div>
+        <div class="svc"><span class="n">Shampoo &amp; Blowout</span><span class="p">$60</span><span class="d">30 min</span></div>
+        <div class="svc"><span class="n">Shampoo w/ Flat Iron</span><span class="p">$75</span><span class="d">45 min</span></div>
+        <div class="svc"><span class="n">Special Style/Updo</span><span class="p">$95</span><span class="d">1 hr 10 min</span></div>
+      </div>
+      <div class="cat rv" data-c="tx"><h3>Extensions, texture &amp; treatments</h3>
+        <div class="svc"><span class="n">Easihair Tape-in Extensions</span><span class="p var">Price varies</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Keratin Express Treatment</span><span class="p var">Price varies</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Relaxer (Touch Up) &amp; Style</span><span class="p">$105</span><span class="d">1 hr 30 min</span></div>
+        <div class="svc"><span class="n">Relaxer (All Over) &amp; Style</span><span class="p">$145</span><span class="d">1 hr 45 min</span></div>
+        <div class="svc"><span class="n">Shine Glaze (Add on)</span><span class="p">$45</span><span class="d">1 hr</span></div>
+        <div class="svc"><span class="n">Deep Conditioning Treatment (Add on)</span><span class="p">$20</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Consultation</span><span class="p free">Free</span><span class="d">15 min</span></div>
+      </div>
+      <div class="cat rv" data-c="wax"><h3>Waxing</h3>
+        <div class="svc"><span class="n">Brow Wax</span><span class="p">$18</span><span class="d">15 min</span></div>
+        <div class="svc"><span class="n">Chin Wax</span><span class="p">$15</span><span class="d">10 min</span></div>
+        <div class="svc"><span class="n">Lip Wax</span><span class="p">$12</span><span class="d">10 min</span></div>
+      </div>
+    </div>
+    <p class="note">Prices and times as published on Ashley&rsquo;s Square booking page. Book online to see current availability.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Visit the studio</span>
+      <h2>Find <em>Studio #5</em> on Mallory Lane.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card rv">
+        <div class="status" id="status"><i></i><span>Tue &amp; Thu 9&ndash;3:30 · Sat 9&ndash;3</span></div>
+        <ul class="hours" id="hours">
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+          <li data-d="1" class="closed"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM &ndash; 3:30 PM</span></li>
+          <li data-d="3" class="closed"><span>Wednesday</span><span>Closed</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:00 AM &ndash; 3:30 PM</span></li>
+          <li data-d="5" class="closed"><span>Friday</span><span>Closed</span></li>
+          <li data-d="6"><span>Saturday</span><span>9:00 AM &ndash; 3:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <p class="addr">1731 Mallory Lane, Ste 100<br>Studio #5<br>Brentwood, TN 37027</p>
+        <p class="addr-sub">Look for door number five.</p>
+        <div class="contact-list">
+          <a href="tel:+16153649305"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(615) 364-9305</a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1731%20Mallory%20Lane%2C%20Ste%20100%2C%20Brentwood%2C%20TN%2037027" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Get directions</a>
+          <a href="mailto:ashphillips905@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ashphillips905@gmail.com</a>
+          <a href="https://www.instagram.com/ashrphil" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>@ashrphil</a>
+        </div>
+      </div>
+      <div class="map rv"><div class="map-fb" aria-hidden="true"><div>Studio #5 · Mallory Lane<span>Brentwood, TN 37027</span></div></div><iframe title="Map to 1731 Mallory Lane, Brentwood" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1731%20Mallory%20Lane%2C%20Ste%20100%2C%20Brentwood%2C%20TN%2037027&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap rv">
+    <span class="kicker" style="color:var(--champ)">Ready when you are</span>
+    <h2>Start with a <em>free</em> consultation.</h2>
+    <p>Fifteen minutes with Ashley to talk through color, extensions or your next cut, then book the service that fits.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://square.site/book/522FJPXZAQXJ3/ashley-rose-llc-brentwood-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="tel:+16153649305">Call Ashley</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>&copy; Ashley Rose, LLC · Brentwood, TN</span>
+  <span>Concept by <a href="#top">Code Craft Media</a></span>
+</div></footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+16153649305">Call</a>
+  <a class="b" href="https://square.site/book/522FJPXZAQXJ3/ashley-rose-llc-brentwood-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+  // hours
+  var now=new Date(), day=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+  var open={2:[540,930],4:[540,930],6:[540,900]};
+  var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), t=st.querySelector('span');
+  if(open[day] && mins>=open[day][0] && mins<open[day][1]){st.classList.add('open');t.textContent='Open today until '+(day===6?'3:00':'3:30')+' PM';}
+  else{var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];for(var i=0;i<8;i++){var dd=(day+i)%7;if(open[dd]&&(i>0||mins<open[dd][0])){t.textContent='Closed now · opens '+(i===0?'today':names[dd])+' at 9:00 AM';break;}}}
+  // tabs
+  var grid=document.getElementById('grid');
+  [].forEach.call(document.querySelectorAll('.tab'),function(b){b.addEventListener('click',function(){
+    [].forEach.call(document.querySelectorAll('.tab'),function(x){x.setAttribute('aria-selected','false')});
+    b.setAttribute('aria-selected','true'); var f=b.getAttribute('data-f');
+    if(f==='all'){grid.classList.remove('filtered')}else{grid.classList.add('filtered');[].forEach.call(grid.querySelectorAll('.cat'),function(c){c.classList.toggle('on',c.getAttribute('data-c')===f);c.classList.add('in')})}
+  })});
+})();
+</script>
+</body>
+</html>

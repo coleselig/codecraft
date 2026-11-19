@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Wax Shack — Franklin, TN</title>
+<meta name="description" content="Waxing, dermaplaning, facials and chemical peels at 2000 Mallory Lane, Suite #340, Franklin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --honey:#D98E1E; --honey-d:#A9650A; --honey-l:#F6C764; --cream:#FFF9EF; --wash:#FBF1DF;
+  --white:#fff; --ink:#2E2B29; --ink-2:#55504B; --line:#EADCC4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block}
+h1,h2,h3{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.005em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--honey-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:50px;padding:0 26px;border-radius:999px;font-weight:700;font-size:.98rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-honey{background:linear-gradient(180deg,#E9A53A,var(--honey));color:#2a1a04;box-shadow:0 8px 22px -8px rgba(169,101,10,.7),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-honey:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(169,101,10,.8),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink);background:rgba(255,255,255,.6)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn:active{transform:scale(.97)}
+
+/* banner */
+.concept{background:var(--ink);color:#EDE3D3;font-size:.64rem;letter-spacing:-.005em;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--honey-l);font-weight:600}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand span{font-family:Marcellus,serif;font-size:1.28rem}
+.navlinks{display:none;gap:28px;font-size:.92rem;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--ink-2);position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--honey);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.navlinks a:hover::after{transform:scaleX(1)}
+.navbook{min-height:40px;padding:0 18px;font-size:.88rem}
+@media(min-width:900px){.navlinks{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,#FCE7BC 0%,rgba(252,231,188,0) 60%),
+  linear-gradient(180deg,var(--cream),#fff 90%)}
+.drip{position:absolute;top:0;left:0;width:100%;height:auto;pointer-events:none}
+.comb{position:absolute;right:-90px;top:70px;width:260px;opacity:.5;pointer-events:none}
+@media(min-width:420px){.concept{font-size:.72rem}}
+.hero .wrap{position:relative;padding-top:92px;padding-bottom:64px;display:grid;gap:40px}
+.hero h1{font-size:clamp(2.6rem,11vw,5.2rem);margin:14px 0 18px}
+.hero h1 em{font-style:normal;background:linear-gradient(180deg,#E9A53A,var(--honey-d));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:1.06rem;color:var(--ink-2);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:.8rem;font-weight:600;padding:7px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-2)}
+.chip i{font-style:normal;color:var(--honey-d)}
+.jar{display:none}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:150px;padding-bottom:110px}
+  .jar{display:block;justify-self:center;width:100%;max-width:400px}
+  .comb{width:520px;right:-170px;top:auto;bottom:-120px;opacity:.35}
+}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.dripani{animation:dr 3.2s ease-in-out infinite;transform-origin:top}
+@keyframes dr{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.12)}}
+
+/* sections */
+section{padding:84px 0}
+.head{max-width:620px;margin-bottom:40px}
+.head h2{font-size:clamp(2.1rem,7vw,3.2rem);margin:10px 0 12px}
+.head p{color:var(--ink-2)}
+
+/* menu */
+#menu{background:#fff}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:26px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1.5px solid var(--line);background:#fff;font:600 .9rem "Plus Jakarta Sans",sans-serif;color:var(--ink-2);padding:10px 18px;border-radius:999px;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--honey)}
+.tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.menu-grid{display:grid;gap:18px}
+@media(min-width:760px){.menu-grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:24px 22px 10px;position:relative;overflow:hidden}
+.card h3{font-size:1.5rem;display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.card h3 svg{flex:none}
+.card .note{font-size:.84rem;color:var(--ink-2);margin-bottom:8px}
+.row{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-top:1px dashed #E2CFAE}
+.row:first-of-type{border-top:0}
+.row .n{font-weight:600;min-width:0}
+.row .p.sm{font-size:1rem}
+.row .d{font-size:.78rem;color:var(--ink-2);white-space:nowrap}
+.row .dots{flex:1;min-width:10px}
+.row .p{font-family:Marcellus,serif;font-size:1.18rem;color:var(--honey-d);white-space:nowrap}
+.card.hide{display:none}
+.menu-foot{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:var(--ink);color:#F4EADB;border-radius:22px;padding:22px 24px}
+.menu-foot p{max-width:46ch;font-size:.95rem}
+
+/* why */
+#why{background:linear-gradient(180deg,var(--wash),var(--cream));position:relative;overflow:hidden}
+.why-grid{display:grid;gap:16px}
+@media(min-width:760px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why{background:#fff;border-radius:22px;padding:26px 22px;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.why:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(120,74,8,.45)}
+.hex{width:52px;height:58px;display:grid;place-items:center;margin-bottom:16px;background:var(--honey-l);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.why h3{font-size:1.32rem;margin-bottom:8px}
+.why p{font-size:.94rem;color:var(--ink-2)}
+.big{font-family:Marcellus,serif;color:var(--honey-d);font-size:2.6rem;line-height:58px;height:58px;display:block;margin-bottom:16px}
+
+/* visit */
+.visit{display:grid;gap:22px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.1fr}}
+.hours{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.hours h3{font-size:1.5rem;margin-bottom:6px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:600;color:var(--ink-2);margin-bottom:14px}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:#BDB3A6}
+.status.open::before{background:#3E9B5A;box-shadow:0 0 0 4px rgba(62,155,90,.18)}
+.hrow{display:flex;justify-content:space-between;padding:11px 14px;border-radius:12px;font-size:.96rem}
+.hrow .t{font-weight:600}
+.hrow.closed{color:#9C9389}.hrow.closed .t{font-weight:500}
+.hrow.today{background:linear-gradient(90deg,#FCE7BC,#FFF4DC);color:var(--ink)}
+.hrow.today .dname::after{content:"Today";margin-left:8px;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--honey);color:#2a1a04;padding:2px 7px;border-radius:999px;vertical-align:2px}
+.hnote{font-size:.8rem;color:var(--ink-2);margin-top:12px}
+.mapcard{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
+.mapcard iframe{width:100%;height:300px;border:0;display:block;filter:saturate(.8) sepia(.12)}
+.addr{padding:20px 22px;display:grid;gap:14px}
+.addr strong{font-family:Marcellus,serif;font-weight:400;font-size:1.3rem;display:block}
+.addr .btns{display:flex;flex-wrap:wrap;gap:10px}
+.addr .btns .btn{min-height:46px;padding:0 20px;font-size:.92rem}
+
+/* closer */
+.closer{background:var(--ink);color:#F4EADB;position:relative;overflow:hidden;text-align:center}
+.closer h2{font-size:clamp(2.2rem,8vw,3.8rem);color:#fff;margin:12px auto 16px;max-width:16ch}
+.closer p{color:#CFC4B4;max-width:40ch;margin:0 auto 28px}
+.closer .eyebrow{color:var(--honey-l)}
+.closer .btn-line{border-color:#F4EADB;color:#F4EADB;background:transparent}
+.closer .btn-line:hover{background:#F4EADB;color:var(--ink)}
+.closer .ctas{justify-content:center}
+.closer svg.bgc{position:absolute;inset:0;width:100%;height:100%;opacity:.09}
+
+footer{background:#232120;color:#A89F94;font-size:.84rem;padding:30px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{color:#E8DDCC}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(0,0,0,.35)}
+.callbar .btn{min-height:50px;padding:0 10px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){.reveal{transition:none}.float,.dripani{animation:none}.js .reveal:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>The Wax Shack</b>. Not live.</div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Wax Shack home">
+      <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true"><path d="M15 1 29 9v16l-14 8L1 25V9z" fill="#F6C764" stroke="#A9650A" stroke-width="1.5"/><path d="M9 12h12v3c0 2-1 2-1 4s1 3 1 4h-1c0-2-2-2-2-4s-1-3-3-3-3 1-3 2v3H9z" fill="#A9650A"/></svg>
+      <span>The Wax Shack</span>
+    </a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#why">Why us</a><a href="#visit">Hours &amp; map</a></div>
+    <a class="btn btn-honey navbook" href="https://square.site/book/K9HSVT3BX556D/the-wax-shack-franklin-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9A53A"/><stop offset="1" stop-color="#C97D12"/></linearGradient></defs>
+    <path fill="url(#hg)" d="M0 0h1440v34c-40 0-48 10-60 10s-16-10-44-10c-30 0-30 52-52 52s-20-52-48-52c-40 0-60 14-110 14s-62-14-96-14c-26 0-24 70-50 70s-24-70-52-70c-44 0-70 18-120 18S740 34 700 34c-28 0-26 38-48 38s-24-38-50-38c-50 0-80 12-120 12s-58-12-92-12c-26 0-26 60-48 60s-24-60-52-60c-50 0-64 10-110 10S120 34 90 34C62 34 62 62 44 62S26 34 0 34z"/>
+    <g class="dripani"><path fill="#C97D12" d="M1284 80c-6 0-8 6-8 12 0 8 4 12 8 12s8-4 8-12c0-6-2-12-8-12z"/></g>
+    <path fill="#fff" opacity=".28" d="M0 6h1440v6H0z"/>
+  </svg>
+  <svg class="comb" viewBox="0 0 400 360" aria-hidden="true">
+    <g fill="none" stroke="#E2B35C" stroke-width="2">
+      <path d="M100 20l40 23v46l-40 23-40-23V43z"/><path d="M180 20l40 23v46l-40 23-40-23V43z"/><path d="M260 20l40 23v46l-40 23-40-23V43z"/>
+      <path d="M140 89l40 23v46l-40 23-40-23v-46z"/><path d="M220 89l40 23v46l-40 23-40-23v-46z"/><path d="M300 89l40 23v46l-40 23-40-23v-46z"/>
+      <path d="M180 158l40 23v46l-40 23-40-23v-46z"/><path d="M260 158l40 23v46l-40 23-40-23v-46z"/><path d="M340 158l40 23v46l-40 23-40-23v-46z"/>
+      <path d="M220 227l40 23v46l-40 23-40-23v-46z"/><path d="M300 227l40 23v46l-40 23-40-23v-46z"/>
+    </g>
+    <path d="M220 89l40 23v46l-40 23-40-23v-46z" fill="#F6C764" opacity=".55"/>
+    <path d="M260 158l40 23v46l-40 23-40-23v-46z" fill="#F6C764" opacity=".35"/>
+  </svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Waxing &amp; skin care · Franklin, TN</span>
+      <h1>Smooth skin, <em>warmly</em> done on Mallory&nbsp;Lane.</h1>
+      <p class="sub">Brows to Brazilians, dermaplaning to chemical peels, with every price posted before you book.</p>
+      <div class="ctas">
+        <a class="btn btn-honey" href="https://square.site/book/K9HSVT3BX556D/the-wax-shack-franklin-tn" target="_blank" rel="noopener">Book online</a>
+        <a class="btn btn-line" href="tel:+16154155052">Call (615) 415-5052</a>
+      </div>
+      <div class="chips"><span class="chip"><i>●</i> Open Sundays 11–4</span><span class="chip">Eyebrow wax $20</span><span class="chip">Suite #340</span></div>
+    </div>
+    <svg class="jar float" viewBox="0 0 360 400" aria-hidden="true">
+      <defs>
+        <linearGradient id="wx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6C764"/><stop offset="1" stop-color="#C97D12"/></linearGradient>
+        <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".8"/></linearGradient>
+      </defs>
+      <ellipse cx="180" cy="372" rx="120" ry="14" fill="#2E2B29" opacity=".09"/>
+      <rect x="70" y="150" width="220" height="214" rx="34" fill="url(#gl)" stroke="#E0C79B" stroke-width="2"/>
+      <path d="M78 214c34-12 70 12 102 0s68-14 102 0v118c0 14-12 26-26 26H104c-14 0-26-12-26-26z" fill="url(#wx)"/>
+      <path d="M96 236c10-4 18-2 22 4" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".6"/>
+      <rect x="60" y="126" width="240" height="34" rx="12" fill="#2E2B29"/>
+      <rect x="60" y="126" width="240" height="8" rx="4" fill="#4A4542"/>
+      <g transform="rotate(-24 210 80)">
+        <rect x="196" y="-6" width="26" height="190" rx="13" fill="#F4E7D1" stroke="#D8C29C" stroke-width="2"/>
+        <path d="M196 120h26v52c0 7-6 13-13 13s-13-6-13-13z" fill="url(#wx)"/>
+      </g>
+      <path d="M262 150c0 0 6 20 6 30 0 8-4 12-8 12s-8-4-8-12c0-10 10-30 10-30z" fill="#D98E1E" class="dripani"/>
+      <g fill="none" stroke="#E2B35C" stroke-width="2" opacity=".7"><path d="M40 40l20 11.5v23L40 86 20 74.5v-23z"/><path d="M320 270l16 9v18l-16 9-16-9v-18z"/></g>
+    </svg>
+  </div>
+</header>
+
+<main>
+<section id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>29 services, prices up front.</h2>
+      <p>Straight from The Wax Shack's booking page: no guessing, no surprise at checkout.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="face">Face</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="bikini">Bikini &amp; Brazilian</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="body">Body</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="skin">Skin care</button>
+    </div>
+    <div class="menu-grid">
+      <article class="card reveal" data-c="face">
+        <h3><svg width="34" height="38" viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1l16 9v18l-16 9L1 28V10z" fill="#F6C764"/><path d="M10 16c4-3 10-3 14 0" stroke="#2E2B29" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Face</h3>
+        <div class="row"><span class="n">Eyebrow wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Lip wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="row"><span class="n">Chin wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="row"><span class="n">Nose wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="row"><span class="n">Ear wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$10</span></div>
+        <div class="row"><span class="n">Neck wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="row"><span class="n">Full face wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$50</span></div>
+      </article>
+      <article class="card reveal" data-c="bikini">
+        <h3><svg width="34" height="38" viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1l16 9v18l-16 9L1 28V10z" fill="#F6C764"/><path d="M11 15h12l-6 9z" fill="#2E2B29"/></svg>Bikini &amp; Brazilian</h3>
+        <div class="row"><span class="n">Brazilian</span><span class="d">30 min</span><span class="dots"></span><span class="p">$60</span></div>
+        <div class="row"><span class="n">Bikini</span><span class="d">30 min</span><span class="dots"></span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Bikini Line</span><span class="d">30 min</span><span class="dots"></span><span class="p">$35</span></div>
+        <div class="row"><span class="n">Butt Strip</span><span class="d">30 min</span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="row"><span class="n">Full butt wax</span><span class="d">15 min</span><span class="dots"></span><span class="p">$30</span></div>
+      </article>
+      <article class="card reveal" data-c="body">
+        <h3><svg width="34" height="38" viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1l16 9v18l-16 9L1 28V10z" fill="#F6C764"/><path d="M17 10v18M11 15l6-4 6 4" stroke="#2E2B29" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Body</h3>
+        <div class="row"><span class="n">Underarms</span><span class="d">30 min</span><span class="dots"></span><span class="p">$25</span></div>
+        <div class="row"><span class="n">Half arm</span><span class="d">30 min</span><span class="dots"></span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Full arm</span><span class="d">30 min</span><span class="dots"></span><span class="p">$70</span></div>
+        <div class="row"><span class="n">Shoulder wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Full Chest wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$70</span></div>
+        <div class="row"><span class="n">Stomach Strip</span><span class="d">30 min</span><span class="dots"></span><span class="p">$15</span></div>
+        <div class="row"><span class="n">Upper back wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Lower back wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$35</span></div>
+        <div class="row"><span class="n">Full Back wax</span><span class="d">30 min</span><span class="dots"></span><span class="p">$70</span></div>
+        <div class="row"><span class="n">Half leg</span><span class="d">30 min</span><span class="dots"></span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Full legs</span><span class="d">45 min</span><span class="dots"></span><span class="p">$80</span></div>
+        <div class="row"><span class="n">Full Body Wax <span class="d" style="display:block;font-weight:400">2 hr 30 min</span></span><span class="dots"></span><span class="p sm">Starting at $300</span></div>
+      </article>
+      <article class="card reveal" data-c="skin">
+        <h3><svg width="34" height="38" viewBox="0 0 34 38" aria-hidden="true"><path d="M17 1l16 9v18l-16 9L1 28V10z" fill="#F6C764"/><path d="M17 10c-4 6-5 9-5 11a5 5 0 0010 0c0-2-1-5-5-11z" fill="#2E2B29"/></svg>Skin care</h3>
+        <div class="row"><span class="n">Mini facial</span><span class="d">30 min</span><span class="dots"></span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Hydro Jelly Mask</span><span class="d">30 min</span><span class="dots"></span><span class="p">$25</span></div>
+        <div class="row"><span class="n">Dermaplaning</span><span class="d">45 min</span><span class="dots"></span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Dermaplaning with Facial</span><span class="d">1 hr</span><span class="dots"></span><span class="p">$100</span></div>
+        <div class="row"><span class="n">Chemical Peel</span><span class="d">30 min</span><span class="dots"></span><span class="p">$90</span></div>
+      </article>
+    </div>
+    <div class="menu-foot reveal">
+      <p>See something you like? Pick your service and time online.</p>
+      <a class="btn btn-honey" href="https://square.site/book/K9HSVT3BX556D/the-wax-shack-franklin-tn" target="_blank" rel="noopener">Book a service</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Why The Wax Shack</span>
+      <h2>Small studio. Clear menu. Easy to book.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><span class="big">$10</span><h3>Quick touch-ups</h3><p>Lip, chin, nose and ear waxes are $10 each, so tidying up between bigger appointments stays simple.</p></div>
+      <div class="why reveal"><div class="hex"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#2E2B29" stroke-width="2"/><path d="M12 7v5l3 2" stroke="#2E2B29" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><h3>Open on Sundays</h3><p>Sunday hours from 11 to 4, plus Mondays, Thursdays and Saturdays.</p></div>
+      <div class="why reveal"><div class="hex"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4 6-6 9-6 12a6 6 0 0012 0c0-3-2-6-6-12z" fill="none" stroke="#2E2B29" stroke-width="2"/></svg></div><h3>Wax and skin in one place</h3><p>Dermaplaning, mini facials, a Hydro Jelly Mask and chemical peels sit right beside the wax menu.</p></div>
+      <div class="why reveal"><div class="hex"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="#2E2B29" stroke-width="2"/><path d="M4 10h16M9 3v4M15 3v4" stroke="#2E2B29" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Book in a minute</h3><p>Choose a service and time online with Nancy Hall.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Visit</span>
+      <h2>Find us on Mallory Lane.</h2>
+    </div>
+    <div class="visit">
+      <div class="hours reveal">
+        <h3>Hours</h3>
+        <div class="status" id="status">Mon, Thu, Sat &amp; Sun</div>
+        <div id="hrs">
+          <div class="hrow" data-d="0"><span class="dname">Sunday</span><span class="t">11 AM – 4 PM</span></div>
+          <div class="hrow" data-d="1"><span class="dname">Monday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="hrow closed" data-d="2"><span class="dname">Tuesday</span><span class="t">Closed</span></div>
+          <div class="hrow closed" data-d="3"><span class="dname">Wednesday</span><span class="t">Closed</span></div>
+          <div class="hrow" data-d="4"><span class="dname">Thursday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="hrow closed" data-d="5"><span class="dname">Friday</span><span class="t">Closed</span></div>
+          <div class="hrow" data-d="6"><span class="dname">Saturday</span><span class="t">10 AM – 3 PM</span></div>
+        </div>
+        <p class="hnote">Hours as listed on The Wax Shack's Square booking page.</p>
+      </div>
+      <div class="mapcard reveal">
+        <iframe title="Map to The Wax Shack" loading="lazy" src="https://www.google.com/maps?q=2000%20Mallory%20Lane%20Suite%20340%2C%20Franklin%2C%20TN%2037067&amp;output=embed"></iframe>
+        <div class="addr">
+          <div><strong>2000 Mallory Lane, Suite #340</strong>Franklin, TN 37067</div>
+          <div class="btns">
+            <a class="btn btn-honey" href="tel:+16154155052">Call (615) 415-5052</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=2000%20Mallory%20Lane%20Suite%20340%2C%20Franklin%2C%20TN%2037067" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closer">
+  <svg class="bgc" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="hp" width="28" height="48.5" patternUnits="userSpaceOnUse" patternTransform="scale(1.4)"><path d="M14 0l14 8v16l-14 8L0 24V8zM14 32v16.5" fill="none" stroke="#F6C764" stroke-width="1"/></pattern></defs><rect width="200" height="200" fill="url(#hp)"/></svg>
+  <div class="wrap" style="position:relative">
+    <span class="eyebrow">Ready when you are</span>
+    <h2>Your smoothest week starts at Suite #340.</h2>
+    <p>Book online in a few taps, or call and talk it through.</p>
+    <div class="ctas">
+      <a class="btn btn-honey" href="https://square.site/book/K9HSVT3BX556D/the-wax-shack-franklin-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-line" href="tel:+16154155052">Call (615) 415-5052</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>The Wax Shack · 2000 Mallory Lane, Suite #340, Franklin, TN 37067 · <a href="tel:+16154155052">(615) 415-5052</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-line" href="tel:+16154155052">Call</a>
+  <a class="btn btn-honey" href="https://square.site/book/K9HSVT3BX556D/the-wax-shack-franklin-tn" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // hours
+  var H={0:[11,16],1:[10,18],4:[10,18],6:[10,15]};
+  var now=new Date(), day=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('.hrow[data-d="'+day+'"]'); if(row) row.classList.add('today');
+  var st=document.getElementById('status'), t=H[day];
+  function fmt(x){var hr=x%12||12;return hr+(x<12?' AM':' PM')}
+  if(t && h>=t[0] && h<t[1]){st.textContent='Open now · until '+fmt(t[1]);st.classList.add('open')}
+  else{
+    var nd=null,k;
+    for(var i=0;i<8;i++){k=(day+i)%7; if(H[k] && (i>0 || h<H[k][0])){nd=i;break}}
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    st.textContent='Closed now · opens '+(nd===0?'today':nd===1?'tomorrow':names[k])+' at '+fmt(H[k][0]);
+  }
+  // tabs
+  var tabs=document.querySelectorAll('.tab'), cards=document.querySelectorAll('.card');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    var f=b.dataset.f; cards.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.dataset.c!==f)});
+  })});
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  function show(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  } else show();
+  setTimeout(show,1500);
+})();
+</script>
+</body>
+</html>

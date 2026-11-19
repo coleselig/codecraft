@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Peanit Gallery — Rogersville</title>
+<meta name="description" content="Concept site for Peanit Gallery, a handmade gift, decor and craft shop on South Church Street in Rogersville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf6ee; --paper:#f6eee2; --sage:#7f9878; --sage-d:#4e6449; --sage-dd:#33432f;
+  --blush:#e9c4bc; --blush-d:#c98576; --rose:#a8574a; --ink:#2f2a26; --muted:#6b625a; --line:#e6d9c8;
+  --serif:"Fraunces", Georgia, serif; --sans:"DM Sans", system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+/* soft paper texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .3 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.banner{position:relative;z-index:1}
+a{color:inherit}
+img,svg{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--sage-dd);color:#efe7da;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:420px){.banner{font-size:10.5px;padding:6px 8px}}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
+.logo small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
+.nav ul{display:none;list-style:none;gap:28px;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--rose)}
+@media(min-width:900px){.nav ul{display:flex}}
+
+/* hero */
+.hero{padding:10px 0 56px;position:relative}
+.hero-grid{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.25fr .75fr;gap:40px}.hero{padding:30px 0 90px}}
+
+.ribbon{display:inline-flex;align-items:center;gap:8px;background:#fff8f1;border:1px solid var(--blush);color:var(--rose);font-size:13px;font-weight:500;padding:6px 14px 6px 10px;border-radius:99px}
+.ribbon svg{flex:none}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,10.4vw,66px);line-height:1.02;letter-spacing:-.025em;margin:16px 0 16px;font-variation-settings:"opsz" 144}
+h1 em{font-style:italic;font-weight:400;color:var(--sage-d)}
+.lede{color:var(--muted);font-size:17.5px;max-width:34em}
+.lede strong{color:var(--ink);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:99px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .18s,box-shadow .18s,background .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--sage-d);color:#fff;box-shadow:0 8px 20px -10px rgba(51,67,47,.8)}
+.btn-primary:hover{background:var(--sage-dd)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-size:14px;color:var(--muted)}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta i{width:7px;height:7px;border-radius:50%;background:var(--blush-d);display:inline-block}
+.art{position:relative;margin:0 auto;width:100%;max-width:440px;aspect-ratio:1}
+.art .halo{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0,#fdf1ea 45%,rgba(233,196,188,.45) 70%,transparent 72%)}
+.art svg{position:relative;width:100%;height:100%;display:block}
+@media(max-width:899px){.hero .art{order:-1;max-width:180px;margin:-14px auto -18px}.hero .lede{font-size:16px;line-height:1.55}.hero h1{margin:12px 0 12px}.hero .ctas{margin-top:18px}.nav{padding:14px 0}}
+h1,h2{text-wrap:balance}
+.sway{transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+.sway2{transform-origin:50% 0;animation:sway 7.5s ease-in-out -2s infinite}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.twinkle{animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.sway,.sway2,.twinkle{animation:none}}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:700}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,7.6vw,48px);line-height:1.08;letter-spacing:-.02em;margin:10px 0 14px}
+h2 em{font-style:italic;font-weight:400;color:var(--sage-d)}
+.sub{color:var(--muted);max-width:36em}
+.scallop{height:22px;background:radial-gradient(circle at 11px 0,transparent 10px,var(--paper) 11px) 0 0/22px 22px repeat-x}
+.alt{background:var(--paper)}
+
+.grid{display:grid;gap:14px;margin-top:30px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fffdf9;border:1px solid var(--line);border-radius:22px;padding:22px 22px 24px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(78,100,73,.55);border-color:var(--blush)}
+.card .ic{width:58px;height:58px;border-radius:18px;background:#f3e9dc;display:grid;place-items:center;margin-bottom:14px}
+.card h3{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.2;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.card .tag{position:absolute;top:18px;right:18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-d);background:#eaf0e6;padding:4px 9px;border-radius:99px;font-weight:700}
+.card.feature{background:var(--sage-d);color:#f6efe4;border-color:var(--sage-d)}
+.card.feature p{color:#dfe7da}
+.card.feature .ic{background:rgba(255,255,255,.12)}
+.card.feature .tag{background:var(--blush);color:var(--sage-dd)}
+
+/* story */
+.story{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.story{grid-template-columns:.9fr 1.1fr;gap:60px}}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(25px,6.4vw,36px);line-height:1.25;color:var(--sage-dd);position:relative;padding-top:44px;margin-top:10px}
+.quote::before{content:"\201C";position:absolute;top:-6px;left:-4px;font-size:96px;color:var(--blush);line-height:1;font-style:normal}
+.quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:14px;color:var(--muted);margin-top:14px}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{display:flex;gap:14px;align-items:flex-start;background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.facts li svg{flex:none;margin-top:2px}
+.facts b{display:block;font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.25}
+.facts span{color:var(--muted);font-size:15px}
+
+/* anniversary */
+.anni{background:linear-gradient(135deg,#f4d9d2,#f9e9e3 55%,#eef2e9);border-radius:28px;padding:36px 24px;text-align:center;position:relative;overflow:hidden;border:1px solid var(--blush)}
+.anni h2{margin-top:6px}
+.anni p{color:#5f544c;max-width:30em;margin:0 auto}
+.anni .confetti{position:absolute;inset:0;pointer-events:none}
+
+/* visit */
+.visit{display:grid;gap:20px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.2fr;gap:28px}}
+.panel{background:#fffdf9;border:1px solid var(--line);border-radius:24px;padding:24px}
+.hours{list-style:none;margin-top:8px}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:16px;border-bottom:1px dashed var(--line)}
+.hours li:last-child{border-bottom:0}
+.hours li .t{color:var(--muted)}
+.hours li.closed .t{color:#9a8f86}
+.hours li.today{background:#eaf0e6;border-bottom-color:transparent;font-weight:700}
+.hours li.today .t{color:var(--sage-dd)}
+.hours li.today .d::after{content:"Today";font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--sage-d);color:#fff;border-radius:99px;padding:3px 8px;margin-left:8px;vertical-align:2px}
+.status{display:inline-flex;white-space:nowrap;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--sage-dd);background:#eaf0e6;border-radius:99px;padding:6px 12px;margin-top:4px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--sage)}
+.status.off{color:var(--rose);background:#f8e4df}
+.status.off i{background:var(--blush-d)}
+.addr{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.25;margin:4px 0 2px}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:320px;background:#ece3d6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h40M20 0v40' stroke='%23dccfbe' stroke-width='1'/%3E%3C/svg%3E")}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.row .btn{padding:12px 18px;font-size:15px}
+.contact{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);display:grid;gap:8px;font-size:15.5px}
+.contact a{text-decoration:none;color:var(--sage-dd);font-weight:500;word-break:break-word}
+.contact a:hover{color:var(--rose)}
+
+footer{background:var(--sage-dd);color:#d9e1d4;padding:44px 0 36px}
+footer .fl{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-end}
+footer b{font-family:var(--serif);font-size:26px;color:#fff;font-weight:600}
+footer small{display:block;font-size:13px;color:#b7c3b1;margin-top:6px}
+footer a{color:#fff}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(251,246,238,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;border-radius:99px;font-weight:700;font-size:15.5px;text-decoration:none}
+.bar .c{background:var(--sage-d);color:#fff}
+.bar .m{background:#fff;border:1.5px solid var(--ink);color:var(--ink)}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal: visible without JS */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+:focus-visible{outline:3px solid var(--blush-d);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Peanit Gallery. Not live.</div>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#top" aria-label="Peanit Gallery home">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="#7f9878" stroke-width="5" stroke-dasharray="3 2.2"/><circle cx="20" cy="20" r="14" fill="none" stroke="#4e6449" stroke-width="1.4"/><path d="M16 33l4-4 4 4M20 29v-3" stroke="#c98576" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="12" cy="11" r="2.3" fill="#c98576"/><circle cx="29" cy="15" r="2" fill="#e9c4bc"/></svg>
+      <span><b>Peanit Gallery</b><small>Rogersville, TN</small></span>
+    </a>
+    <ul>
+      <li><a href="#shop">In the shop</a></li>
+      <li><a href="#story">Robin's story</a></li>
+      <li><a href="#visit">Hours &amp; visit</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-top:6px">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="ribbon"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" fill="#c98576"/></svg>One year on South Church Street</span>
+        <h1>Handmade wreaths, gowns &amp; <em>gifts with a story.</em></h1>
+        <p class="lede">Robin makes most of what's on the shelves at Peanit Gallery: <strong>custom wreaths, floral arrangements, totes, purses and wall plaques</strong>, plus fabric, ribbon and craft supplies for your own projects.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="tel:+18325246259"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 832-524-6259</a>
+          <a class="btn btn-ghost" href="#visit">Hours &amp; directions</a>
+        </div>
+        <div class="meta"><span><i></i>Wed–Sat, 10 a.m.–5 p.m.</span><span><i></i>208 South Church Street</span></div>
+      </div>
+
+      <div class="art" aria-hidden="true">
+        <div class="halo"></div>
+        <svg viewBox="0 0 400 400">
+          <!-- hanging ornaments -->
+          <g class="sway2"><path d="M72 0v92" stroke="#c9b8a4" stroke-width="1.5"/><rect x="66" y="88" width="12" height="9" rx="2" fill="#b9a68f"/><circle cx="72" cy="118" r="22" fill="none" stroke="#7f9878" stroke-width="2.5"/><circle cx="72" cy="118" r="22" fill="#fff" fill-opacity=".35"/><path d="M58 112c6-6 22-6 28 0" stroke="#c98576" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M57 124c8 5 22 5 30 0" stroke="#7f9878" stroke-width="1.6" fill="none" stroke-dasharray="2 3" stroke-linecap="round"/><path d="M64 105a9 9 0 0 1 8-4" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+          <g class="sway"><path d="M330 0v62" stroke="#c9b8a4" stroke-width="1.5"/><rect x="324" y="58" width="12" height="9" rx="2" fill="#b9a68f"/><circle cx="330" cy="86" r="18" fill="#e9c4bc"/><path d="M313 82c10 4 24 4 34 0" stroke="#fff" stroke-width="2" fill="none"/><path d="M314 92c10 4 22 4 32 0" stroke="#c98576" stroke-width="1.5" fill="none"/><path d="M322 75a8 8 0 0 1 7-3" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+          <!-- wreath -->
+          <g transform="translate(200 218)">
+            <circle r="112" fill="none" stroke="#5f7a58" stroke-width="30" stroke-opacity=".12"/>
+          </g>
+          <g transform="translate(200 218)" id="wreath"></g>
+          <!-- bow -->
+          <g transform="translate(200 330)">
+            <path d="M0 0c-26-26-62-24-58-4 4 16 34 14 58 4z" fill="#e9c4bc" stroke="#a8574a" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M0 0c26-26 62-24 58-4-4 16-34 14-58 4z" fill="#e9c4bc" stroke="#a8574a" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M-6 6c-10 22-22 42-30 54l14-4 6 12c6-18 12-38 16-58" fill="#efcfc7" stroke="#a8574a" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M6 6c10 22 22 42 30 54l-14-4-6 12c-6-18-12-38-16-58" fill="#efcfc7" stroke="#a8574a" stroke-width="2.2" stroke-linejoin="round"/>
+            <ellipse rx="11" ry="10" fill="#c98576" stroke="#a8574a" stroke-width="2.2"/>
+            <path d="M-34-6c10 2 20 4 28 4M34-6c-10 2-20 4-28 4" stroke="#a8574a" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".6"/>
+          </g>
+          <!-- sparkles -->
+          <g fill="#c98576"><path class="twinkle" d="M352 196l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path class="twinkle" style="animation-delay:-1.5s" d="M42 248l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/><path class="twinkle" style="animation-delay:-.7s" fill="#7f9878" d="M118 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="scallop" aria-hidden="true"></div>
+  <section id="shop" class="alt">
+    <div class="wrap">
+      <p class="kicker rv">In the shop</p>
+      <h2 class="rv">Made by hand, <em>mostly by Robin.</em></h2>
+      <p class="sub rv">A little bit of everything: finished pieces for your door, your table and your big day, and the supplies to make your own.</p>
+      <div class="grid">
+        <article class="card feature rv">
+          <span class="tag">Custom</span>
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke-linecap="round"><circle cx="17" cy="16" r="10" stroke="#cfe0c6" stroke-width="4.5" stroke-dasharray="2.6 2"/><path d="M13 27l4-4 4 4" stroke="#e9c4bc" stroke-width="2.4"/><circle cx="10" cy="11" r="2" fill="#e9c4bc"/><circle cx="24" cy="20" r="2" fill="#e9c4bc"/></svg></div>
+          <h3>Custom wreaths</h3>
+          <p>Custom wreaths for your front door and your home.</p>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 30h12l2-9H9z" fill="#e9c4bc" stroke="#a8574a" stroke-width="1.8"/><path d="M17 21V11M17 15c-4-1-7-4-7-7 4 0 7 3 7 7zM17 13c3-1 6-4 6-7-4 0-6 3-6 7z" stroke="#4e6449" stroke-width="1.8"/><circle cx="17" cy="8" r="3" fill="#c98576"/></svg></div>
+          <h3>Floral arrangements</h3>
+          <p>Arrangements for the mantel, the table or a gift.</p>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13h20l-2 16H9z" fill="#dfe7da" stroke="#4e6449" stroke-width="1.8"/><path d="M12 13c0-5 2-8 5-8s5 3 5 8" stroke="#a8574a" stroke-width="1.8"/><path d="M10 19h14" stroke="#7f9878" stroke-width="1.4" stroke-dasharray="2 2"/></svg></div>
+          <h3>Totes, purses &amp; shopping bags</h3>
+          <p>Handmade bags for everyday carrying and gifting.</p>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l-7 6M17 4l7 6" stroke="#9a8a76" stroke-width="1.4"/><rect x="6" y="10" width="22" height="18" rx="3" fill="#fff8f1" stroke="#4e6449" stroke-width="1.8"/><path d="M11 17h12M11 21h8" stroke="#c98576" stroke-width="1.8"/></svg></div>
+          <h3>Wall plaques</h3>
+          <p>Decorative plaques for the home, the porch or someone you love.</p>
+        </article>
+        <article class="card rv">
+          <span class="tag">Hard to find</span>
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6l-1 6 7 20H8l7-20z" fill="#fbeee9" stroke="#a8574a" stroke-width="1.8"/><path d="M15 10h4M12 22c3 2 7 2 10 0" stroke="#c98576" stroke-width="1.4"/></svg></div>
+          <h3>Wedding &amp; formal gowns</h3>
+          <p>A selection of wedding and formal gowns, right here in Rogersville.</p>
+        </article>
+        <article class="card rv">
+          <div class="ic"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="13" cy="20" rx="8" ry="8" fill="#e9c4bc" stroke="#a8574a" stroke-width="1.8"/><path d="M8 16c3 2 7 2 10 0M7 21c4 2 8 2 12 0" stroke="#a8574a" stroke-width="1.2"/><path d="M21 13l7-7M24 6h4v4" stroke="#4e6449" stroke-width="1.8"/><path d="M19 26c4 0 8-2 9-6" stroke="#7f9878" stroke-width="1.6" stroke-dasharray="2 2"/></svg></div>
+          <h3>Fabric, ribbon &amp; craft supplies</h3>
+          <p>A wide range of supplies for your own projects, from fabric to ribbon.</p>
+        </article>
+      </div>
+      <p class="sub rv" style="margin-top:22px;font-size:15.5px">Also on the shelves: <strong style="color:var(--ink)">leather goods</strong> made by Robin's brother and <strong style="color:var(--ink)">quilts</strong> made by a neighbor.</p>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="wrap story">
+      <div class="rv">
+        <p class="kicker">Robin's story</p>
+        <p class="quote">I grew up in the north where it was too cold, then lived in Texas where it was too hot.<cite>Robin Stegman, owner, to The Rogersville Review</cite></p>
+      </div>
+      <ul class="facts">
+        <li class="rv"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l9-7 9 7v10H4z" fill="#eaf0e6" stroke="#4e6449" stroke-width="1.8"/><path d="M11 22v-6h4v6" stroke="#c98576" stroke-width="1.8"/></svg><div><b>Rogersville is home now</b><span>Robin bought property here years ago, moved here and opened the shop in November 2025.</span></div></li>
+        <li class="rv"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke-linecap="round"><path d="M5 21L18 8M16 6l4 4" stroke="#4e6449" stroke-width="1.8"/><circle cx="7" cy="7" r="3" fill="#e9c4bc" stroke="#a8574a" stroke-width="1.6"/><path d="M14 20h8" stroke="#c98576" stroke-width="1.8" stroke-dasharray="2 2.5"/></svg><div><b>An extensive background in crafts</b><span>Most of the items in the store are made by Robin herself.</span></div></li>
+        <li class="rv"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M13 21s-8-4.6-8-10.2A4.3 4.3 0 0 1 13 8a4.3 4.3 0 0 1 8 2.8C21 16.4 13 21 13 21z" fill="#f4d9d2" stroke="#a8574a" stroke-width="1.8"/></svg><div><b>Family &amp; neighbors on the shelves</b><span>Leather goods from her brother, quilts from a neighbor.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="anni rv">
+        <svg class="confetti" viewBox="0 0 400 220" preserveAspectRatio="none" aria-hidden="true"><g fill="#c98576" opacity=".55"><circle cx="30" cy="30" r="4"/><circle cx="370" cy="40" r="3"/><circle cx="350" cy="190" r="4"/><circle cx="56" cy="186" r="3"/></g><g fill="#7f9878" opacity=".55"><rect x="80" y="20" width="8" height="3" rx="1.5" transform="rotate(30 84 21)"/><rect x="310" y="22" width="8" height="3" rx="1.5" transform="rotate(-25 314 23)"/><rect x="20" y="110" width="8" height="3" rx="1.5" transform="rotate(60 24 111)"/><rect x="378" y="118" width="8" height="3" rx="1.5" transform="rotate(-40 382 119)"/></g></svg>
+        <p class="kicker">Since November 2025</p>
+        <h2>Year one <em>on Church Street.</em></h2>
+        <p>Peanit Gallery opened in November 2025. Follow along on Facebook for what's new on the shelves this season.</p>
+        <div class="ctas" style="justify-content:center"><a class="btn btn-primary" href="https://www.facebook.com/profile.php?id=61585144568552" target="_blank" rel="noopener">See the latest on Facebook</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="scallop" aria-hidden="true"></div>
+  <section id="visit" class="alt">
+    <div class="wrap">
+      <p class="kicker rv">Hours &amp; visit</p>
+      <h2 class="rv">Come browse <em>downtown.</em></h2>
+      <div class="visit">
+        <div class="panel rv">
+          <span class="status" id="status"><i></i><span id="statusTxt">Open Wednesday–Saturday</span></span>
+          <ul class="hours" id="hours">
+            <li data-d="0" class="closed"><span class="d">Sunday</span><span class="t">Closed</span></li>
+            <li data-d="1" class="closed"><span class="d">Monday</span><span class="t">Closed</span></li>
+            <li data-d="2" class="closed"><span class="d">Tuesday</span><span class="t">Closed</span></li>
+            <li data-d="3"><span class="d">Wednesday</span><span class="t">10 a.m. – 5 p.m.</span></li>
+            <li data-d="4"><span class="d">Thursday</span><span class="t">10 a.m. – 5 p.m.</span></li>
+            <li data-d="5"><span class="d">Friday</span><span class="t">10 a.m. – 5 p.m.</span></li>
+            <li data-d="6"><span class="d">Saturday</span><span class="t">10 a.m. – 5 p.m.</span></li>
+          </ul>
+          <div class="contact">
+            <p class="addr">208 South Church Street<br>Rogersville, TN 37857</p>
+            <a href="tel:+18325246259">832-524-6259</a>
+            <a href="mailto:peanit62@gmail.com">peanit62@gmail.com</a>
+          </div>
+          <div class="row">
+            <a class="btn btn-primary" href="tel:+18325246259">Call the shop</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=208%20South%20Church%20Street%2C%20Rogersville%2C%20TN%2037857" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+        <div class="map rv">
+          <iframe title="Map to Peanit Gallery" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=208%20South%20Church%20Street%2C%20Rogersville%2C%20TN%2037857&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fl">
+    <div><b>Peanit Gallery</b><small>Fabric, crafts, décor &amp; more · 208 South Church Street, Rogersville, TN</small></div>
+    <div><small>Concept by Code Craft Media</small><small><a href="#top">Back to top ↑</a></small></div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="c" href="tel:+18325246259"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="m" href="https://www.facebook.com/profile.php?id=61585144568552" target="_blank" rel="noopener">Facebook</a>
+</nav>
+
+<script>
+(function(){
+  // build hand-drawn wreath leaves
+  var g=document.getElementById('wreath'); if(g){
+    var ns='http://www.w3.org/2000/svg', s='';
+    var greens=['#4e6449','#7f9878','#5f7a58','#9db394'];
+    for(var i=0;i<44;i++){
+      var a=i/44*Math.PI*2, r=110+((i%3)-1)*9, x=Math.cos(a)*r, y=Math.sin(a)*r, rot=a*180/Math.PI+ (i%2?70:110);
+      var c=greens[i%4];
+      s+='<g transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+') rotate('+rot.toFixed(1)+')"><path d="M0 0c8-10 24-10 32 0-8 10-24 10-32 0z" fill="'+c+'" fill-opacity=".9" stroke="#33432f" stroke-width="1.2" stroke-linejoin="round"/><path d="M2 0h26" stroke="#33432f" stroke-width=".9" opacity=".5"/></g>';
+    }
+    var berries=[[20,'#c98576'],[64,'#e9c4bc'],[118,'#c98576'],[160,'#e9c4bc'],[205,'#c98576'],[248,'#e9c4bc'],[300,'#c98576'],[340,'#e9c4bc']];
+    berries.forEach(function(b,k){var a=b[0]*Math.PI/180,x=Math.cos(a)*112,y=Math.sin(a)*112;
+      s+='<g transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+')"><circle r="7" fill="'+b[1]+'" stroke="#a8574a" stroke-width="1.4"/><circle cx="9" cy="5" r="5" fill="'+b[1]+'" stroke="#a8574a" stroke-width="1.2"/><circle cx="-2" cy="-2.5" r="1.8" fill="#fff" opacity=".8"/></g>';});
+    [[95,1],[285,0],[180,1]].forEach(function(f){var a=f[0]*Math.PI/180,x=Math.cos(a)*112,y=Math.sin(a)*112,p='';
+      for(var j=0;j<5;j++){p+='<ellipse rx="7" ry="12" transform="rotate('+(j*72)+') translate(0 -10)" fill="#fbeee9" stroke="#a8574a" stroke-width="1.3"/>';}
+      s+='<g transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+')">'+p+'<circle r="5" fill="#e0b25a" stroke="#a8574a" stroke-width="1.2"/></g>';});
+    g.innerHTML=s;
+  }
+  // today highlight + status
+  try{
+    var now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+    var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+    var open=d>=3&&d<=6, st=document.getElementById('status'), tx=document.getElementById('statusTxt');
+    var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    if(open&&h>=10&&h<17){tx.textContent='Open now · until 5 p.m.';}
+    else{st.classList.add('off'); var n=d; var add=0;
+      if(open&&h<10){tx.textContent='Opens today at 10 a.m.';}
+      else if(!open){do{n=(n+1)%7;add++;}while(!(n>=3&&n<=6)); tx.textContent='Closed today · opens '+(add===1?'tomorrow':names[n]);}
+      else{do{n=(n+1)%7;add++;}while(!(n>=3&&n<=6)); tx.textContent='Closed now · opens '+(add===1?'tomorrow':names[n])+' at 10 a.m.';}}
+  }catch(e){}
+  // reveal
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)});}
+  else els.forEach(function(e){e.classList.add('in')});
+  setTimeout(function(){document.documentElement.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

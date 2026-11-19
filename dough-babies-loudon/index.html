@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>"DOUGH BABIES" Sourdough Bread &amp; Cottage Bakery — Loudon, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--crust:#8B5A2B;--crust-d:#5E3A19;--flour:#F6EFE3;--flour-2:#EFE4D2;--lake:#3E6A84;--lake-d:#2A4B5E;--ink:#2B2118;--muted:#6B5A4A;--card:#FFFBF4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--flour);color:var(--ink);font:400 16px/1.6 "Work Sans",system-ui,sans-serif;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;z-index:0;background-image:radial-gradient(rgba(139,90,43,.18) 1px,transparent 1.2px),radial-gradient(rgba(139,90,43,.10) 1px,transparent 1.4px);background-size:23px 23px,37px 37px;background-position:0 0,11px 17px}
+main,header,footer,.banner{position:relative;z-index:1}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.05;margin:0;font-weight:800;letter-spacing:-.01em}
+.banner{background:var(--ink);color:#EADFCC;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-family:Fraunces,serif;font-weight:800;font-size:20px;text-decoration:none;color:var(--crust-d);display:flex;gap:10px;align-items:center}
+.logo small{display:block;font:500 10px/1 "Work Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--lake);margin-top:3px}
+.navlinks{display:none;gap:26px;font-weight:500;font-size:15px}
+.navlinks a{text-decoration:none;position:relative}.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:2px;background:var(--crust);transition:right .25s}.navlinks a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--crust);color:#fff;box-shadow:0 6px 18px -6px rgba(94,58,25,.6)}.btn-primary:hover{background:var(--crust-d);transform:translateY(-2px)}
+.btn-ghost{border:2px solid var(--lake);color:var(--lake-d)}.btn-ghost:hover{background:var(--lake);color:#fff}
+.hero{padding:18px 20px 40px;display:grid;gap:22px}
+.eyebrow{font:600 12px/1 "Work Sans";letter-spacing:.2em;text-transform:uppercase;color:var(--lake);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--lake)}
+.hero h1{font-size:clamp(42px,11.5vw,88px);margin:14px 0 14px;color:var(--crust-d)}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--lake)}
+.ctas .btn{flex:1 1 auto;justify-content:center}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:34ch;margin:0 0 22px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.art{position:relative;max-width:300px;width:100%;justify-self:center}
+.art svg.loaf{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 26px rgba(94,58,25,.25))}
+.badge{position:absolute;right:0;top:-14px;width:118px;height:118px}
+.badge .spin{animation:spin 22s linear infinite;transform-origin:60px 60px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.steam path{stroke-dasharray:60;stroke-dashoffset:60;animation:steam 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.8s}.steam path:nth-child(3){animation-delay:1.6s}
+@keyframes steam{0%{stroke-dashoffset:60;opacity:0}40%{opacity:.8}100%{stroke-dashoffset:-60;opacity:0}}
+.score{display:block;width:100%;max-width:520px;height:34px;margin:0 auto}
+.score path{stroke-dasharray:640;stroke-dashoffset:640;transition:stroke-dashoffset 1.4s ease}
+.score.in path,.no-js .score path{stroke-dashoffset:0}
+section{padding:56px 0}
+.sec-head{text-align:center;margin-bottom:30px}
+.sec-head h2{font-size:clamp(32px,8vw,52px);color:var(--crust-d);margin-top:10px}
+.sec-head p{color:var(--muted);max-width:52ch;margin:10px auto 0}
+.sec-head .eyebrow{justify-content:center}.sec-head .eyebrow::after{content:"";width:28px;height:2px;background:var(--lake)}
+.menu-group{margin-bottom:34px}
+.menu-group h3{font-size:22px;color:var(--lake-d);margin-bottom:12px;display:flex;align-items:baseline;gap:10px}
+.menu-group h3 span{font:500 12px "Work Sans";letter-spacing:.12em;text-transform:uppercase;color:var(--crust)}
+.items{display:grid;gap:12px}
+.item{background:var(--card);border:1px solid rgba(139,90,43,.15);border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;gap:14px;align-items:flex-start;transition:transform .2s,box-shadow .2s,border-color .2s}
+.item:hover{transform:translateY(-3px);box-shadow:0 14px 28px -16px rgba(94,58,25,.45);border-color:rgba(139,90,43,.4)}
+.item b{font-family:Fraunces,serif;font-weight:600;font-size:18px;display:block;line-height:1.25}
+.item small{color:var(--muted);font-size:14px;display:block;margin-top:4px}
+.price{font-family:Fraunces,serif;font-weight:800;color:var(--crust);font-size:19px;white-space:nowrap}
+.price.soft{font:500 13px "Work Sans";color:var(--lake);text-align:right;white-space:normal;max-width:96px}
+section.wrap{padding:56px 20px}
+.why{background:var(--lake-d);color:#F1EADF;border-radius:28px;margin:0 12px;position:relative;overflow:hidden}
+.why::after{content:"";position:absolute;inset:auto -10% -40px -10%;height:120px;background:repeating-radial-gradient(ellipse at 50% 100%,rgba(255,255,255,.07) 0 2px,transparent 2px 14px)}
+.why .sec-head h2{color:#fff}.why .sec-head p{color:#C9D6DE}.why .eyebrow{color:#E7C9A2}.why .eyebrow::before,.why .eyebrow::after{background:#E7C9A2}
+.facts{display:grid;gap:14px;position:relative;z-index:1}
+.fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:20px}
+.fact svg{width:34px;height:34px;margin-bottom:8px}
+.fact h3{font-size:21px;color:#fff;margin-bottom:6px}.fact p{margin:0;color:#D5DFE5;font-size:15px}
+.how{display:grid;gap:14px;counter-reset:s}
+.step{background:var(--card);border-radius:18px;padding:20px 20px 20px 70px;position:relative;border:1px solid rgba(139,90,43,.15)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50%;background:var(--crust);color:#fff;font:800 18px/38px Fraunces,serif;text-align:center}
+.step h3{font-size:20px;margin-bottom:4px;color:var(--crust-d)}.step p{margin:0;color:var(--muted);font-size:15px}
+.hours{background:var(--card);border-radius:22px;border:1px solid rgba(139,90,43,.18);overflow:hidden;max-width:620px;margin:0 auto}
+.hours .row{display:flex;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px dashed rgba(139,90,43,.25);font-size:15px}
+.hours .row:last-child{border-bottom:0}
+.hours .row span:last-child{text-align:right;color:var(--muted)}
+.hours .row.today{background:var(--crust);color:#fff;font-weight:600}.hours .row.today span:last-child{color:#fff}
+.today-note{text-align:center;margin:16px auto 0;font-weight:500;color:var(--lake-d);max-width:44ch}
+.visit{display:grid;gap:20px}
+.map{border-radius:22px;overflow:hidden;border:1px solid rgba(139,90,43,.2);min-height:300px;background:var(--flour-2)}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.contact-card{background:var(--card);border-radius:22px;padding:24px;border:1px solid rgba(139,90,43,.18)}
+.contact-card h3{font-size:26px;color:var(--crust-d);margin-bottom:10px}
+.contact-card p{margin:0 0 14px;color:var(--muted)}
+.contact-card .ctas{flex-direction:column}.contact-card .btn{justify-content:center}
+.big-tel{font-family:Fraunces,serif;font-size:30px;font-weight:800;color:var(--lake-d);text-decoration:none;display:block;margin:4px 0 14px}
+footer{background:var(--ink);color:#CDBFA9;padding:36px 0 30px;text-align:center;font-size:14px;margin-top:40px}
+footer .logo{justify-content:center;color:#F6EFE3;margin-bottom:8px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(43,33,24,.94);backdrop-filter:blur(8px)}
+.callbar a{flex:1;justify-content:center;padding:13px 10px;font-size:15px}
+.callbar .btn-ghost{border-color:#E7C9A2;color:#F6EFE3}
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+@media(min-width:760px){
+ .navlinks{display:flex}
+ .art{max-width:440px}
+ .ctas .btn{flex:0 0 auto}
+ .hero{grid-template-columns:1.15fr .85fr;align-items:center;padding:40px 0 70px}
+ .items{grid-template-columns:1fr 1fr}
+ .facts{grid-template-columns:repeat(3,1fr)}
+ .how{grid-template-columns:repeat(3,1fr)}
+ .visit{grid-template-columns:1.3fr 1fr}
+ .why{margin:0 auto;max-width:1180px}
+ .callbar{display:none}body{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body class="no-js">
+<div class="banner">Concept site by Code Craft Media, made for "DOUGH BABIES". Not live.</div>
+<header class="wrap">
+ <nav>
+  <a class="logo" href="#top" aria-label="Dough Babies home">
+   <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="22" rx="17" ry="12" fill="#8B5A2B"/><path d="M8 20 C15 13 25 13 32 20" stroke="#F6EFE3" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+   <span>Dough Babies<small>Sourdough · Loudon, TN</small></span>
+  </a>
+  <div class="navlinks"><a href="#menu">Menu</a><a href="#how">How to order</a><a href="#hours">Pickup</a><a href="#visit">Contact</a></div>
+ </nav>
+</header>
+<main id="top">
+ <div class="wrap hero">
+  <div>
+   <div class="eyebrow">Kim's cottage microbakery</div>
+   <h1>Slow sourdough, <em>baked small</em> for Tellico Village.</h1>
+   <p class="sub">Naturally fermented, mostly soft-crust pan loaves from a Tennessee Cottage Food licensed kitchen in Loudon.</p>
+   <div class="ctas">
+    <a class="btn btn-primary" href="https://bakesy.shop/b/dough-babies-sourdough-bread-cottage-bakery">Order on Bakesy →</a>
+    <a class="btn btn-ghost" href="tel:+18652298986">Text or call Kim</a>
+   </div>
+  </div>
+  <div class="art">
+   <svg class="loaf" viewBox="0 0 440 340" role="img" aria-label="Illustration of a scored sourdough loaf">
+    <defs>
+     <radialGradient id="crust" cx="45%" cy="35%" r="70%"><stop offset="0" stop-color="#C98A4B"/><stop offset=".6" stop-color="#9C6332"/><stop offset="1" stop-color="#5E3A19"/></radialGradient>
+     <linearGradient id="ear" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F1D9B5"/><stop offset="1" stop-color="#D9A86C"/></linearGradient>
+     <pattern id="flourDots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r="1.1" fill="#fff" opacity=".55"/><circle cx="10" cy="10" r=".8" fill="#fff" opacity=".4"/></pattern>
+    </defs>
+    <ellipse cx="220" cy="300" rx="190" ry="22" fill="#3E6A84" opacity=".18"/>
+    <rect x="40" y="250" width="360" height="40" rx="14" fill="#B98552"/>
+    <rect x="40" y="250" width="360" height="10" rx="5" fill="#D4A06A"/>
+    <path d="M70 250 C60 150 130 92 220 92 C310 92 380 150 370 250 Z" fill="url(#crust)"/>
+    <path d="M70 250 C60 150 130 92 220 92 C310 92 380 150 370 250 Z" fill="url(#flourDots)"/>
+    <path d="M115 190 C160 140 270 128 330 168" stroke="url(#ear)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M118 182 C165 135 268 122 326 160" stroke="#5E3A19" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/>
+    <g class="steam" stroke="#8B5A2B" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7">
+     <path d="M180 78 C170 60 192 48 182 28"/><path d="M220 72 C210 54 232 42 222 22"/><path d="M260 78 C250 60 272 48 262 28"/>
+    </g>
+    <g fill="#F6EFE3" opacity=".9"><circle cx="96" cy="262" r="3"/><circle cx="350" cy="266" r="2.4"/><circle cx="300" cy="275" r="2"/></g>
+   </svg>
+   <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="60" cy="60" r="58" fill="#3E6A84"/>
+    <circle cx="60" cy="60" r="50" fill="none" stroke="#F6EFE3" stroke-width="1" opacity=".5"/>
+    <defs><path id="ring" d="M60,60 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
+    <g class="spin"><text font-family="Work Sans" font-size="10.5" font-weight="600" letter-spacing="1" fill="#F6EFE3"><textPath href="#ring" textLength="244" lengthAdjust="spacingAndGlyphs">FRESH BREAD FRIDAY • LOUDON, TN • </textPath></text></g>
+    <text x="60" y="58" text-anchor="middle" font-family="Fraunces" font-weight="800" font-size="20" fill="#fff">9–11</text>
+    <text x="60" y="74" text-anchor="middle" font-family="Work Sans" font-weight="600" font-size="9" fill="#E7C9A2" letter-spacing="1">AM PICKUP</text>
+   </svg>
+  </div>
+ </div>
+
+ <svg class="score reveal" viewBox="0 0 520 34" aria-hidden="true"><path d="M10 24 C120 2 400 2 510 24" stroke="#8B5A2B" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M40 27 C150 10 370 10 480 27" stroke="#3E6A84" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".6"/></svg>
+
+ <section id="menu" class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">On the menu</div><h2>Holiday gifts &amp; seasonal loaves</h2><p>Prices as listed on Kim's Bakesy shop (Tennessee sales tax included). Limited-time items come and go, so check the shop for what's baking next.</p></div>
+  <div class="menu-group reveal"><h3>Gift sets <span>2026 holiday</span></h3>
+   <div class="items">
+    <div class="item"><div><b>Classic Sourdough &amp; Herb Dip Gift</b></div><div class="price">$40</div></div>
+    <div class="item"><div><b>Harvest Home Gift Set</b><small>Classic sliced loaf</small></div><div class="price">$40</div></div>
+    <div class="item"><div><b>Harvest Home Gift Set</b><small>Fall flavor sliced loaf: Caramel Apple, Pumpkin Swirl or Cinnamon Apple Crisp</small></div><div class="price">$45</div></div>
+    <div class="item"><div><b>Mini Holiday Sourdough Gift Set</b><small>A mini loaf in a ceramic dish</small></div><div class="price">$25</div></div>
+   </div></div>
+  <div class="menu-group reveal"><h3>Specialty loaves <span>limited time</span></h3>
+   <div class="items">
+    <div class="item"><div><b>Holiday Cranberry Orange Croissant Swirl</b><small>Whole loaf</small></div><div class="price">$18</div></div>
+    <div class="item"><div><b>Pumpkin Spice Swirl Loaf</b><small>Whole loaf</small></div><div class="price soft">See shop for price</div></div>
+    <div class="item"><div><b>Caramel Apple Loaf</b><small>Whole loaf</small></div><div class="price soft">See shop for price</div></div>
+    <div class="item"><div><b>Apple Cinnamon Crisp Loaf</b><small>Whole loaf</small></div><div class="price soft">See shop for price</div></div>
+   </div></div>
+  <div class="menu-group reveal"><h3>Also from the kitchen</h3>
+   <div class="items">
+    <div class="item"><div><b>Wyatt's Spoiled Dog Treat Bag</b><small>Pumpkin and peanut butter treats for the pup</small></div><div class="price">$10</div></div>
+    <div class="item"><div><b>Gift Certificates</b><small>Delivered digitally</small></div><div class="price">$25 · $50 · $100</div></div>
+   </div></div>
+  <div style="text-align:center" class="reveal"><a class="btn btn-primary" href="https://bakesy.shop/b/dough-babies-sourdough-bread-cottage-bakery">See the full menu &amp; order →</a></div>
+ </section>
+
+ <section class="why reveal">
+  <div class="wrap">
+   <div class="sec-head"><div class="eyebrow">Why Dough Babies</div><h2>Real bread, from a real kitchen</h2><p>Small batches, honest ingredients, and pickup that fits around your week.</p></div>
+   <div class="facts">
+    <div class="fact"><svg viewBox="0 0 34 34" fill="none" stroke="#E7C9A2" stroke-width="2" stroke-linecap="round"><path d="M6 24c0-9 5-15 11-15s11 6 11 15z"/><path d="M11 17c3-3 9-3 12 0"/></svg><h3>Naturally fermented</h3><p>Small-batch sourdough, mostly soft-crust pan loaves made for sandwiches and toast.</p></div>
+    <div class="fact"><svg viewBox="0 0 34 34" fill="none" stroke="#E7C9A2" stroke-width="2" stroke-linecap="round"><path d="M17 4l11 4v8c0 7-5 12-11 14C11 28 6 23 6 16V8z"/><path d="M12 17l4 4 6-8"/></svg><h3>Licensed &amp; insured</h3><p>A Tennessee Cottage Food licensed and insured home bakery in Loudon.</p></div>
+    <div class="fact"><svg viewBox="0 0 34 34" fill="none" stroke="#E7C9A2" stroke-width="2" stroke-linecap="round"><rect x="6" y="11" width="22" height="16" rx="3"/><path d="M6 16h22M12 11V7h10v4"/></svg><h3>Porch cooler pickup</h3><p>Can't make the window? Late or after-hours pickup can be arranged from the porch cooler.</p></div>
+   </div>
+   <p style="text-align:center;margin:26px 0 0;color:#C9D6DE;font-size:14px;position:relative;z-index:1">61 reviews on Bakesy · Kitchen handles wheat, milk, eggs and nuts</p>
+  </div>
+ </section>
+
+ <section id="how" class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">How it works</div><h2>Order Monday, eat Friday</h2></div>
+  <div class="how">
+   <div class="step reveal"><h3>Order by Monday midnight</h3><p>Place your order on Bakesy before the Monday-at-midnight cutoff for the next scheduled pickup. $10 minimum, about 4 days' lead time.</p></div>
+   <div class="step reveal"><h3>Pay your way</h3><p>Venmo or cash at pickup, or text Kim for a Square link to pay by card (small fee).</p></div>
+   <div class="step reveal"><h3>Pick up fresh</h3><p>Fresh Bread Friday, 9:00–11:00 AM in Loudon. Local pickup only, no shipping.</p></div>
+  </div>
+ </section>
+
+ <svg class="score reveal" viewBox="0 0 520 34" aria-hidden="true"><path d="M10 24 C120 2 400 2 510 24" stroke="#8B5A2B" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M40 27 C150 10 370 10 480 27" stroke="#3E6A84" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".6"/></svg>
+
+ <section id="hours" class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">Pickup week</div><h2>When to order, when to pick up</h2><p>Fresh Bread Friday runs on select dates, typically every other week.</p></div>
+  <div class="hours reveal" id="hoursTable">
+   <div class="row" data-d="1"><span>Monday</span><span>Order cutoff at midnight</span></div>
+   <div class="row" data-d="2"><span>Tuesday</span><span>Order online anytime</span></div>
+   <div class="row" data-d="3"><span>Wednesday</span><span>Order online anytime</span></div>
+   <div class="row" data-d="4"><span>Thursday</span><span>Order online anytime</span></div>
+   <div class="row" data-d="5"><span>Friday</span><span>Pickup 9:00–11:00 AM (select Fridays)</span></div>
+   <div class="row" data-d="6"><span>Saturday</span><span>Order online anytime</span></div>
+   <div class="row" data-d="0"><span>Sunday</span><span>Order online anytime</span></div>
+  </div>
+  <p class="today-note" id="todayNote">Orders are placed online through Bakesy, any day of the week.</p>
+ </section>
+
+ <section id="visit" class="wrap">
+  <div class="sec-head reveal"><div class="eyebrow">Find us</div><h2>Loudon, serving Tellico Village</h2></div>
+  <div class="visit">
+   <div class="map reveal"><iframe title="Map of Loudon, TN" loading="lazy" src="https://www.google.com/maps?q=Loudon%2C%20TN&amp;output=embed"></iframe></div>
+   <div class="contact-card reveal">
+    <h3>Questions? Text Kim.</h3>
+    <a class="big-tel" href="tel:+18652298986">865-229-8986</a>
+    <p>Or email <a href="mailto:doughbabiestn@gmail.com">doughbabiestn@gmail.com</a>. Local pickup in Loudon only.</p>
+    <div class="ctas">
+     <a class="btn btn-primary" href="https://bakesy.shop/b/dough-babies-sourdough-bread-cottage-bakery">Order on Bakesy</a>
+     <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Loudon%2C%20TN">Directions to Loudon</a>
+    </div>
+   </div>
+  </div>
+ </section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="logo">"DOUGH BABIES" Sourdough</div>
+  <p style="margin:0 0 6px">Sourdough bread &amp; cottage bakery · Loudon, TN</p>
+  <p style="margin:0;opacity:.75">Concept by Code Craft Media</p>
+ </div>
+</footer>
+<div class="callbar"><a class="btn btn-ghost" href="tel:+18652298986">Text / Call</a><a class="btn btn-primary" href="https://bakesy.shop/b/dough-babies-sourdough-bread-cottage-bakery">Order on Bakesy</a></div>
+<script>
+document.body.classList.remove('no-js');document.body.classList.add('js');
+(function(){var d=new Date().getDay(),r=document.querySelector('.row[data-d="'+d+'"]');if(r)r.classList.add('today');
+var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],n=document.getElementById('todayNote');
+var msg={1:"It's Monday — get your order in before midnight for the next pickup.",5:"It's Friday — on Fresh Bread Fridays, pickup runs 9:00–11:00 AM."};
+n.textContent=msg[d]||("Today is "+names[d]+" — orders are open on Bakesy.");
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+setTimeout(function(){document.body.classList.add('show-all');els.forEach(function(e){e.classList.add('in')})},1500);})();
+</script>
+</body>
+</html>

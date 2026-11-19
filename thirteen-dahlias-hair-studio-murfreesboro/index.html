@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Thirteen Dahlias Hair Studio — Murfreesboro</title>
+<meta name="description" content="Concept site for Thirteen Dahlias Hair Studio, Studio 13 at 760 N. Thompson Ln., Murfreesboro, TN.">
+<meta name="theme-color" content="#1c0f1d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c0f1d; --plum:#2a1529; --plum2:#3a1d36; --aub:#4b2443;
+  --rose:#d29a9f; --rose2:#e7bcbc; --rosedeep:#a8636d;
+  --ivory:#f5ede3; --ivory2:#d9cdc3; --muted:#b9a5ad;
+  --line:rgba(245,237,227,.14);
+  --serif:'Bodoni Moda', 'Didot', Georgia, serif;
+  --sans:'Karla', system-ui, -apple-system, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 40px}}
+/* grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--rose);color:var(--ink);font-size:12px;letter-spacing:.02em;text-align:center;padding:6px 12px;line-height:1.35;font-weight:600}
+.concept span{opacity:.75;font-weight:500}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(28,15,29,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark{width:38px;height:38px;flex:none}
+.brand b{font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:.01em;line-height:1.05}
+.brand b small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:600;margin-top:3px}
+.links{display:none;gap:28px;font-size:14px;letter-spacing:.06em}
+.links a{text-decoration:none;color:var(--ivory2);position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--rose);transition:right .3s}
+.links a:hover{color:var(--ivory)} .links a:hover::after{right:0}
+@media (min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.04em;
+  text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .25s, background .25s, color .25s, box-shadow .25s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-rose{background:var(--rose);color:var(--ink);box-shadow:0 10px 30px -10px rgba(210,154,159,.6)}
+.btn-rose:hover{background:var(--rose2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(245,237,227,.35);color:var(--ivory)}
+.btn-ghost:hover{border-color:var(--rose);color:var(--rose2);transform:translateY(-2px)}
+.btn-sm{padding:10px 18px;font-size:13px}
+.nav .btn-sm{display:none}
+@media (min-width:600px){.nav .btn-sm{display:inline-flex}}
+.btn:focus-visible,.links a:focus-visible,summary:focus-visible{outline:2px solid var(--rose2);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:26px 0 60px;
+  background:radial-gradient(120% 70% at 85% 10%, #4a2042 0%, rgba(74,32,66,0) 60%), radial-gradient(90% 60% at 0% 100%, #3a1a33 0%, rgba(58,26,51,0) 70%), var(--ink)}
+.hero .wrap{position:relative;display:grid;gap:8px}
+.big13{position:absolute;right:-30px;top:-40px;font-family:var(--serif);font-style:italic;font-weight:400;font-size:340px;line-height:1;color:transparent;
+  -webkit-text-stroke:1px rgba(210,154,159,.16);pointer-events:none;user-select:none;letter-spacing:-.04em}
+.flower{position:relative;width:min(66vw,270px);margin:-6px auto 4px;aspect-ratio:1}
+.flower svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 30px 50px rgba(0,0,0,.45))}
+.flower .spin{transform-origin:center;animation:breathe 14s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(6deg) scale(1.025)}}
+.ring{transform-origin:0 0;animation:bloom 1.4s cubic-bezier(.2,.8,.2,1) both}
+.r1{animation-delay:.05s}.r2{animation-delay:.15s}.r3{animation-delay:.25s}.r4{animation-delay:.35s}.r5{animation-delay:.45s}.r6{animation-delay:.55s}
+@keyframes bloom{from{transform:scale(.4) rotate(-25deg);opacity:0}to{transform:none;opacity:1}}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);font-weight:600;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--rose)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,11.5vw,104px);line-height:.98;letter-spacing:-.02em;margin:14px 0 18px}
+h1 em{font-style:italic;color:var(--rose)}
+.lede{color:var(--ivory2);max-width:34em;font-size:17px}
+.lede strong{color:var(--ivory);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ctas .btn{flex:1 1 auto}
+@media (min-width:600px){.ctas .btn{flex:0 0 auto}}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--ivory2);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 12px;background:rgba(245,237,227,.03)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 0 rgba(210,154,159,.6);animation:pulse 2.2s infinite}
+.status.open .dot{background:#9fd3a8;box-shadow:0 0 0 0 rgba(159,211,168,.6)}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(210,154,159,0)}100%{box-shadow:0 0 0 0 rgba(210,154,159,0)}}
+@media (min-width:900px){
+  .hero{padding:80px 0 110px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+  .flower{order:2;width:118%;max-width:640px;margin:0 -9%}
+  .big13{font-size:700px;right:-40px;top:-170px;-webkit-text-stroke:1.5px rgba(210,154,159,.2)}
+}
+
+/* stamp strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--plum)}
+.strip .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.strip div{padding:18px 4px;text-align:center;border-right:1px solid var(--line)}
+.strip div:nth-child(2n){border-right:0}
+.strip div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.strip b{display:block;font-family:var(--serif);font-weight:500;font-size:24px;color:var(--ivory)}
+.strip span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:900px){.strip .wrap{grid-template-columns:repeat(4,1fr)}.strip div{border-bottom:0!important;border-right:1px solid var(--line)!important;padding:26px 4px}.strip div:last-child{border-right:0!important}}
+
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+@media (min-width:900px){.sec{padding:120px 0}}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);font-weight:600}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8.5vw,62px);line-height:1.04;letter-spacing:-.015em;margin:12px 0 16px}
+h2 em{font-style:italic;color:var(--rose)}
+.intro{color:var(--ivory2);max-width:36em}
+
+/* signature */
+.sig{display:grid;gap:18px;margin-top:40px}
+@media (min-width:900px){.sig{grid-template-columns:repeat(3,1fr);gap:24px}}
+.card{position:relative;border:1px solid var(--line);border-radius:22px;padding:28px 24px 26px;background:linear-gradient(160deg,rgba(75,36,67,.55),rgba(42,21,41,.35));overflow:hidden;transition:transform .35s, border-color .35s}
+.card:hover{transform:translateY(-4px);border-color:rgba(210,154,159,.45)}
+.card .no{font-family:var(--serif);font-style:italic;color:var(--rose);font-size:15px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:28px;line-height:1.1;margin:10px 0 10px}
+.card p{color:var(--ivory2);font-size:15.5px}
+.card .price{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;padding-top:16px;border-top:1px dashed rgba(245,237,227,.2);font-size:14px;color:var(--muted)}
+.card .price b{font-family:var(--serif);font-weight:500;font-size:30px;color:var(--ivory)}
+.card svg.petal{position:absolute;right:-46px;top:-46px;width:150px;opacity:.22;transition:transform 1.2s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.card:hover svg.petal{transform:rotate(30deg);opacity:.4}
+
+/* menu */
+.menu{background:var(--plum);border-top:1px solid var(--line)}
+.menu-grid{display:grid;gap:16px;margin-top:40px}
+.menu-grid>div{display:contents}
+@media (min-width:900px){.menu-grid{grid-template-columns:1fr 1fr;gap:20px;align-items:start}.menu-grid>div{display:grid!important;gap:20px}.menu-grid details{order:0!important}}
+details{border:1px solid var(--line);border-radius:18px;background:rgba(28,15,29,.45);overflow:hidden}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 22px;transition:background .25s}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:rgba(210,154,159,.06)}
+summary h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15}
+summary small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px;font-weight:500}
+.plus{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(210,154,159,.5);position:relative;transition:transform .3s, background .3s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--rose);transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] .plus{background:rgba(210,154,159,.12)}
+details[open] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+ul.items{list-style:none;padding:0 22px 14px}
+ul.items li{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-top:1px solid rgba(245,237,227,.08)}
+ul.items .n{font-weight:500;color:var(--ivory)}
+ul.items .p{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--rose2);text-align:right}
+ul.items .d{grid-column:1/-1;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.note{margin:0 22px 20px;font-size:13.5px;color:var(--ivory2);background:rgba(210,154,159,.08);border-left:2px solid var(--rose);padding:10px 14px;border-radius:0 10px 10px 0}
+.menu-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:30px;color:var(--muted);font-size:14px}
+
+/* why */
+.why-grid{display:grid;gap:14px;margin-top:40px}
+@media (min-width:700px){.why-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.why-grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+.why{padding:26px 24px;border-radius:20px;border:1px solid var(--line);position:relative;transition:border-color .3s, transform .3s}
+.why:hover{border-color:rgba(210,154,159,.45);transform:translateY(-3px)}
+.why .ic{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(210,154,159,.12);color:var(--rose);margin-bottom:16px}
+.why .ic svg{width:22px;height:22px}
+.why h3{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.15;margin-bottom:8px}
+.why p{color:var(--ivory2);font-size:15.5px}
+.why.feature{background:linear-gradient(150deg,var(--rose) 0%,#c48790 100%);color:var(--ink);border:0}
+.why.feature p{color:#3a1d36}
+.why.feature .ic{background:rgba(28,15,29,.12);color:var(--ink)}
+
+/* hours + visit */
+.visit{background:radial-gradient(80% 60% at 100% 0%, rgba(75,36,67,.7), rgba(75,36,67,0) 70%), var(--ink);border-top:1px solid var(--line)}
+.visit-grid{display:grid;gap:22px;margin-top:40px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:28px}}
+.panel{border:1px solid var(--line);border-radius:22px;padding:24px;background:rgba(42,21,41,.6)}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;color:var(--ivory2);font-size:16px}
+.hours li + li{margin-top:2px}
+.hours li .t{font-variant-numeric:tabular-nums}
+.hours li.closed .t{color:rgba(185,165,173,.7)}
+.hours li.today{background:var(--rose);color:var(--ink);font-weight:700}
+.hours li.today .t{color:var(--ink)}
+.hours li.today .day::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(28,15,29,.4);border-radius:999px;padding:2px 8px;vertical-align:2px}
+.addr{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+.addr .lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:600}
+.addr p{font-family:var(--serif);font-size:22px;line-height:1.3;margin-top:6px}
+.addr .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.addr .row .btn{flex:1 1 140px}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:340px;position:relative;background:
+  repeating-linear-gradient(45deg, rgba(210,154,159,.05) 0 2px, transparent 2px 22px), var(--plum)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+.map .pin{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:14px;pointer-events:none}
+.map .pin b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;color:var(--ivory)}
+.contact-line{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:15px;color:var(--ivory2)}
+.contact-line a{color:var(--rose2);text-decoration:none;border-bottom:1px solid rgba(231,188,188,.35)}
+.contact-line a:hover{border-color:var(--rose2)}
+
+/* closing */
+.close{text-align:center;padding:90px 0 96px;overflow:hidden;background:var(--plum)}
+.close .mini{width:120px;margin:0 auto 18px}
+.close h2{max-width:14em;margin-left:auto;margin-right:auto}
+.close .ctas{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:30px 0 34px;font-size:13px;color:var(--muted);background:var(--ink)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center}
+footer a{color:var(--ivory2)}
+
+/* sticky mobile bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(28,15,29,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.callbar .btn{padding:14px 10px;font-size:15px}
+@media (min-width:900px){.callbar{display:none}}
+
+/* reveal: content visible without JS */
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+.rv{transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept">Concept site by Code Craft Media, made for Thirteen Dahlias Hair Studio. <span>Not live.</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Thirteen Dahlias Hair Studio, home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#d29a9f" stroke-width="1"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#d29a9f" stroke-opacity=".35" stroke-width=".6"/><text x="20" y="26.5" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-style="italic" font-size="18" fill="#f5ede3">13</text></svg>
+      <b>Thirteen Dahlias<small>Hair Studio</small></b>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#menu">Menu</a><a href="#why">The Studio</a><a href="#visit">Hours &amp; Visit</a>
+    </nav>
+    <a class="btn btn-rose btn-sm" href="https://square.site/book/208MMQ8FA1XAX/thirteen-dahlias-hair-studio-murfreesboro-tn" target="_blank" rel="noopener">Book online</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="big13" aria-hidden="true">13</div>
+  <div class="wrap">
+    <div class="flower" aria-hidden="true">
+      <svg viewBox="-240 -240 480 480">
+        <defs>
+          <linearGradient id="pA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-200">
+            <stop offset="0" stop-color="#3b1a35"/><stop offset=".45" stop-color="#9a5a6c"/><stop offset=".8" stop-color="#d7a0a4"/><stop offset="1" stop-color="#f1d6d0"/>
+          </linearGradient>
+          <linearGradient id="pB" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-200">
+            <stop offset="0" stop-color="#2a1229"/><stop offset=".5" stop-color="#7d3f58"/><stop offset=".85" stop-color="#c48590"/><stop offset="1" stop-color="#e7bcbc"/>
+          </linearGradient>
+          <linearGradient id="pC" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-200">
+            <stop offset="0" stop-color="#6e3150"/><stop offset=".6" stop-color="#d29a9f"/><stop offset="1" stop-color="#f5ede3"/>
+          </linearGradient>
+          <radialGradient id="ctr"><stop offset="0" stop-color="#f5ede3"/><stop offset=".5" stop-color="#e7bcbc"/><stop offset="1" stop-color="#8a4660"/></radialGradient>
+          <radialGradient id="halo"><stop offset="0" stop-color="#d29a9f" stop-opacity=".35"/><stop offset="1" stop-color="#d29a9f" stop-opacity="0"/></radialGradient>
+          <g id="petal">
+            <path d="M0 -4 C -30 -42 -36 -128 -15 -186 Q 0 -206 15 -186 C 36 -128 30 -42 0 -4Z" stroke="#1c0f1d" stroke-opacity=".35" stroke-width="1.2"/>
+            <path d="M0 -20 L0 -176" stroke="#1c0f1d" stroke-opacity=".22" stroke-width="1.4" fill="none"/>
+            <path d="M-6 -60 Q -12 -120 -4 -170" stroke="#f5ede3" stroke-opacity=".18" stroke-width="2" fill="none"/>
+          </g>
+        </defs>
+        <circle r="236" fill="url(#halo)"/>
+        <g class="spin">
+<g class="ring r1">
+<use href="#petal" fill="url(#pA)" transform="rotate(0.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(20.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(40.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(60.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(80.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(100.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(120.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(140.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(160.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(180.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(200.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(220.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(240.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(260.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(280.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(300.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(320.0) scale(1.0)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(340.0) scale(1.0)"/>
+</g>
+<g class="ring r2">
+<use href="#petal" fill="url(#pB)" transform="rotate(10.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(30.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(50.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(70.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(90.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(110.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(130.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(150.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(170.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(190.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(210.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(230.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(250.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(270.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(290.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(310.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(330.0) scale(0.84)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(350.0) scale(0.84)"/>
+</g>
+<g class="ring r3">
+<use href="#petal" fill="url(#pA)" transform="rotate(0.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(22.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(45.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(67.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(90.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(112.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(135.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(157.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(180.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(202.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(225.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(247.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(270.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(292.5) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(315.0) scale(0.68)"/>
+<use href="#petal" fill="url(#pA)" transform="rotate(337.5) scale(0.68)"/>
+</g>
+<g class="ring r4">
+<use href="#petal" fill="url(#pB)" transform="rotate(12.0) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(37.7) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(63.4) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(89.1) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(114.9) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(140.6) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(166.3) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(192.0) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(217.7) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(243.4) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(269.1) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(294.9) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(320.6) scale(0.52)"/>
+<use href="#petal" fill="url(#pB)" transform="rotate(346.3) scale(0.52)"/>
+</g>
+<g class="ring r5">
+<use href="#petal" fill="url(#pC)" transform="rotate(0.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(30.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(60.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(90.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(120.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(150.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(180.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(210.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(240.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(270.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(300.0) scale(0.37)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(330.0) scale(0.37)"/>
+</g>
+<g class="ring r6">
+<use href="#petal" fill="url(#pC)" transform="rotate(18.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(54.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(90.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(126.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(162.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(198.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(234.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(270.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(306.0) scale(0.24)"/>
+<use href="#petal" fill="url(#pC)" transform="rotate(342.0) scale(0.24)"/>
+</g>
+          <circle r="22" fill="url(#ctr)"/>
+          <g fill="#3b1a35" opacity=".55"><circle cx="0" cy="-8" r="2.2"/><circle cx="7" cy="3" r="2.2"/><circle cx="-7" cy="4" r="2.2"/><circle cx="0" cy="10" r="1.8"/><circle cx="9" cy="-6" r="1.6"/><circle cx="-9" cy="-5" r="1.6"/></g>
+        </g>
+      </svg>
+    </div>
+    <div class="rv">
+      <div class="eyebrow">Studio 13 · Murfreesboro, TN</div>
+      <h1>Color that <em>blooms,</em> in Studio&nbsp;13.</h1>
+      <p class="lede">Balayage, color melts, foils and cuts by <strong>Brittany Hudson</strong> at 760 N. Thompson Ln. — with evening appointments Tuesday through Thursday until 8:30.</p>
+      <div class="ctas">
+        <a class="btn btn-rose" href="https://square.site/book/208MMQ8FA1XAX/thirteen-dahlias-hair-studio-murfreesboro-tn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+16153308470">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(615) 330-8470</a>
+      </div>
+      <div class="status" id="status"><span class="dot"></span><span id="statusText">Tue–Thu 4:30–8:30 PM · Sat 9 AM–3 PM</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>42</b><span>Services on the menu</span></div>
+    <div><b>8:30 PM</b><span>Latest weeknight close</span></div>
+    <div><b>Free</b><span>Cut with $175 color</span></div>
+    <div><b>Olaplex</b><span>Bond treatments</span></div>
+  </div>
+</div>
+
+<section class="sec" id="signature">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Signature color</div>
+      <h2>Dimension, <em>layer by layer.</em></h2>
+      <p class="intro">Like a dahlia, the best color is built in layers. Three favorites from the Thirteen Dahlias menu:</p>
+    </div>
+    <div class="sig">
+      <article class="card rv">
+        <svg class="petal" viewBox="-240 -240 480 480" aria-hidden="true"><use href="#petal" fill="url(#pA)" transform="rotate(0)"/><use href="#petal" fill="url(#pA)" transform="rotate(30)"/><use href="#petal" fill="url(#pA)" transform="rotate(60)"/><use href="#petal" fill="url(#pA)" transform="rotate(90)"/><use href="#petal" fill="url(#pA)" transform="rotate(120)"/><use href="#petal" fill="url(#pA)" transform="rotate(150)"/><use href="#petal" fill="url(#pA)" transform="rotate(180)"/><use href="#petal" fill="url(#pA)" transform="rotate(210)"/><use href="#petal" fill="url(#pA)" transform="rotate(240)"/><use href="#petal" fill="url(#pA)" transform="rotate(270)"/><use href="#petal" fill="url(#pA)" transform="rotate(300)"/><use href="#petal" fill="url(#pA)" transform="rotate(330)"/><circle r="26" fill="url(#ctr)"/></svg>
+        <div class="no">No. 01</div>
+        <h3>Full Balayage</h3>
+        <p>Full-head balayage, given room to breathe: a three-hour appointment, start to finish.</p>
+        <div class="price"><span>3 hours</span><b>$175</b></div>
+      </article>
+      <article class="card rv">
+        <svg class="petal" viewBox="-240 -240 480 480" aria-hidden="true"><use href="#petal" fill="url(#pB)" transform="rotate(0)"/><use href="#petal" fill="url(#pB)" transform="rotate(30)"/><use href="#petal" fill="url(#pB)" transform="rotate(60)"/><use href="#petal" fill="url(#pB)" transform="rotate(90)"/><use href="#petal" fill="url(#pB)" transform="rotate(120)"/><use href="#petal" fill="url(#pB)" transform="rotate(150)"/><use href="#petal" fill="url(#pB)" transform="rotate(180)"/><use href="#petal" fill="url(#pB)" transform="rotate(210)"/><use href="#petal" fill="url(#pB)" transform="rotate(240)"/><use href="#petal" fill="url(#pB)" transform="rotate(270)"/><use href="#petal" fill="url(#pB)" transform="rotate(300)"/><use href="#petal" fill="url(#pB)" transform="rotate(330)"/><circle r="26" fill="url(#ctr)"/></svg>
+        <div class="no">No. 02</div>
+        <h3>Color Melt</h3>
+        <p>“Blending two or more colors to create dimension within an all over color.” Does not include prelightening.</p>
+        <div class="price"><span>2 hours</span><b>$125</b></div>
+      </article>
+      <article class="card rv">
+        <svg class="petal" viewBox="-240 -240 480 480" aria-hidden="true"><use href="#petal" fill="url(#pC)" transform="rotate(0)"/><use href="#petal" fill="url(#pC)" transform="rotate(30)"/><use href="#petal" fill="url(#pC)" transform="rotate(60)"/><use href="#petal" fill="url(#pC)" transform="rotate(90)"/><use href="#petal" fill="url(#pC)" transform="rotate(120)"/><use href="#petal" fill="url(#pC)" transform="rotate(150)"/><use href="#petal" fill="url(#pC)" transform="rotate(180)"/><use href="#petal" fill="url(#pC)" transform="rotate(210)"/><use href="#petal" fill="url(#pC)" transform="rotate(240)"/><use href="#petal" fill="url(#pC)" transform="rotate(270)"/><use href="#petal" fill="url(#pC)" transform="rotate(300)"/><use href="#petal" fill="url(#pC)" transform="rotate(330)"/><circle r="26" fill="url(#ctr)"/></svg>
+        <div class="no">No. 03</div>
+        <h3>Color Correction</h3>
+        <p>For color that went sideways. Consultation required before scheduling — call the studio to start.</p>
+        <div class="price"><span>4 hours</span><b>$275</b></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec menu" id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The full menu</div>
+      <h2>Every service, <em>priced up front.</em></h2>
+      <p class="intro">The complete Thirteen Dahlias menu, with times — so you know exactly what you're booking.</p>
+    </div>
+    <div class="menu-grid">
+      <div style="display:grid;gap:16px">
+      <details style="order:1" open class="rv">
+        <summary><div><h3>Color</h3><small>7 services</small></div><span class="plus" aria-hidden="true"></span></summary>
+        <ul class="items">
+          <li><span class="n">Single Process Color — All Over</span><span class="p">$85</span><span class="d">2 hr</span></li>
+          <li><span class="n">Single Process Glaze at the Bowl</span><span class="p">$65</span><span class="d">1 hr</span></li>
+          <li><span class="n">Single Process Root Tap</span><span class="p">$70</span><span class="d">1 hr 30 min</span></li>
+          <li><span class="n">Double Process Root Tap</span><span class="p">$135</span><span class="d">2 hr 30 min</span></li>
+          <li><span class="n">Double Process Color</span><span class="p">$165</span><span class="d">3 hr</span></li>
+          <li><span class="n">Color Melt</span><span class="p">$125</span><span class="d">2 hr · does not include prelightening</span></li>
+          <li><span class="n">Color Correction</span><span class="p">$275</span><span class="d">4 hr · consultation required before scheduling</span></li>
+        </ul>
+        <p class="note">Color prices vary depending on the length and thickness of the hair.</p>
+      </details>
+      <details style="order:3" class="rv">
+        <summary><div><h3>Haircuts</h3><small>8 services</small></div><span class="plus" aria-hidden="true"></span></summary>
+        <ul class="items">
+          <li><span class="n">Haircut — Unisex</span><span class="p">$50</span><span class="d">45 min · including shampoo, dry &amp; light style</span></li>
+          <li><span class="n">Haircut — No Shampoo</span><span class="p">$40</span><span class="d">30 min</span></li>
+          <li><span class="n">Haircut — With Color Service</span><span class="p">$40</span><span class="d">30 min</span></li>
+          <li><span class="n">Haircut — Complimentary w/ $175 Color</span><span class="p">Free</span><span class="d">30 min</span></li>
+          <li><span class="n">Non-layered Dusting with Color</span><span class="p">$25</span><span class="d">10 min</span></li>
+          <li><span class="n">Children 12 &amp; Under</span><span class="p">$30</span><span class="d">30 min</span></li>
+          <li><span class="n">Children 12 &amp; Under w/ Shampoo &amp; Dry</span><span class="p">$40</span><span class="d">45 min</span></li>
+          <li><span class="n">Bang Trim</span><span class="p">$10</span><span class="d">15 min</span></li>
+        </ul>
+      </details>
+      <details style="order:5" class="rv">
+        <summary><div><h3>Styling</h3><small>4 services</small></div><span class="plus" aria-hidden="true"></span></summary>
+        <ul class="items">
+          <li><span class="n">Shampoo &amp; Blowdry</span><span class="p">$25</span><span class="d">30 min</span></li>
+          <li><span class="n">Iron Style, with shampoo</span><span class="p">$45</span><span class="d">30 min</span></li>
+          <li><span class="n">Iron Style, no shampoo</span><span class="p">$40</span><span class="d">30 min</span></li>
+          <li><span class="n">Formal Style</span><span class="p">$90</span><span class="d">1 hr</span></li>
+        </ul>
+      </details>
+      </div>
+      <div style="display:grid;gap:16px">
+      <details style="order:2" open class="rv">
+        <summary><div><h3>Highlights &amp; Balayage</h3><small>5 services</small></div><span class="plus" aria-hidden="true"></span></summary>
+        <ul class="items">
+          <li><span class="n">Accent Highlights (up to 15 foils)</span><span class="p">$75</span><span class="d">1 hr 30 min</span></li>
+          <li><span class="n">Partial Foil</span><span class="p">$110</span><span class="d">1 hr 45 min</span></li>
+          <li><span class="n">Full Foil</span><span class="p">$140</span><span class="d">2 hr 15 min</span></li>
+          <li><span class="n">Partial Balayage</span><span class="p">$150</span><span class="d">2 hr</span></li>
+          <li><span class="n">Full Balayage</span><span class="p">$175</span><span class="d">3 hr</span></li>
+        </ul>
+        <p class="note">Color prices vary depending on the length and thickness of the hair.</p>
+      </details>
+      <details style="order:4" class="rv">
+        <summary><div><h3>Add-ons &amp; Treatments</h3><small>14 add-ons</small></div><span class="plus" aria-hidden="true"></span></summary>
+        <ul class="items">
+          <li><span class="n">Accent Highlights (up to 15 foils)</span><span class="p">$45</span><span class="d">15 min</span></li>
+          <li><span class="n">Base Color Between Foils</span><span class="p">$55</span><span class="d">30 min</span></li>
+          <li><span class="n">Highlight Color</span><span class="p">$25</span><span class="d">15 min</span></li>
+          <li><span class="n">Root Drop / Blend with Balayage</span><span class="p">$50</span><span class="d">30 min</span></li>
+          <li><span class="n">Root Smudge or Tap</span><span class="p">$40</span><span class="d">15 min</span></li>
+          <li><span class="n">Vivid Color Overlay</span><span class="p">$60</span><span class="d">30 min</span></li>
+          <li><span class="n">Olaplex Full Treatment</span><span class="p">$25</span><span class="d">10 min</span></li>
+          <li><span class="n">Olaplex Mini Treatment</span><span class="p">$15</span><span class="d">10 min</span></li>
+          <li><span class="n">Deep Conditioning Treatment</span><span class="p">$15</span><span class="d">5 min</span></li>
+          <li><span class="n">Emergency Treatment</span><span class="p">$30</span><span class="d">30 min · removes buildup from minerals &amp; metal in hard water or pools</span></li>
+          <li><span class="n">Medium Length Hair</span><span class="p">$15</span><span class="d">10 min</span></li>
+          <li><span class="n">Long Length Hair</span><span class="p">$25</span><span class="d">20 min</span></li>
+          <li><span class="n">Extra-Long Hair</span><span class="p">$40</span><span class="d">30 min</span></li>
+          <li><span class="n">Hair Thickness</span><span class="p">$15</span><span class="d">5 min</span></li>
+        </ul>
+      </details>
+      <details style="order:6" class="rv">
+        <summary><div><h3>Brows &amp; Waxing</h3><small>4 services</small></div><span class="plus" aria-hidden="true"></span></summary>
+        <ul class="items">
+          <li><span class="n">Eyebrow Wax</span><span class="p">$15</span><span class="d">15 min</span></li>
+          <li><span class="n">Brow Tint</span><span class="p">$15</span><span class="d">15 min</span></li>
+          <li><span class="n">Lip Wax</span><span class="p">$10</span><span class="d">5 min</span></li>
+          <li><span class="n">Chin Wax</span><span class="p">$10</span><span class="d">5 min</span></li>
+        </ul>
+      </details>
+      </div>
+    </div>
+    <div class="menu-foot rv">
+      <span>Tap any category to open it. Pick a time on the live booking calendar.</span>
+      <a class="btn btn-rose" href="https://square.site/book/208MMQ8FA1XAX/thirteen-dahlias-hair-studio-murfreesboro-tn" target="_blank" rel="noopener">See open times</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The studio</div>
+      <h2>Why clients book <em>Studio 13.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why feature rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+        <h3>Your appointment is with Brittany.</h3>
+        <p>Brittany Hudson is the stylist behind Thirteen Dahlias — listed as a master stylist for women's cuts and color.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div>
+        <h3>After-work hours.</h3>
+        <p>Tuesday, Wednesday and Thursday evenings from 4:30 to 8:30 PM, plus Saturdays 9 AM to 3 PM.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Prices you can see.</h3>
+        <p>Every service on the menu is priced and timed. Color varies with length and thickness — and those add-ons are listed too.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
+        <h3>Care that goes deeper.</h3>
+        <p>Olaplex treatments, deep conditioning, and an emergency treatment for hard-water and pool buildup.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M6 18L18 6"/><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/></svg></div>
+        <h3>A cut on the house.</h3>
+        <p>Book a $175 color service and the haircut is complimentary.</p>
+      </div>
+      <div class="why rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c.8-3 3.2-5 6-5s5.2 2 6 5M15 20c.4-2 1.6-3.5 3.5-3.5S21.6 18 22 20"/></svg></div>
+        <h3>The whole family.</h3>
+        <p>Unisex cuts, kids 12 &amp; under from $30, formal styling, and brow &amp; wax services — all on one menu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Hours &amp; visit</div>
+      <h2>Find us in <em>Studio 13.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="panel rv">
+        <ul class="hours" id="hours">
+          <li data-d="0" class="closed"><span class="day">Sunday</span><span class="t">Closed</span></li>
+          <li data-d="1" class="closed"><span class="day">Monday</span><span class="t">Closed</span></li>
+          <li data-d="2"><span class="day">Tuesday</span><span class="t">4:30 – 8:30 PM</span></li>
+          <li data-d="3"><span class="day">Wednesday</span><span class="t">4:30 – 8:30 PM</span></li>
+          <li data-d="4"><span class="day">Thursday</span><span class="t">4:30 – 8:30 PM</span></li>
+          <li data-d="5" class="closed"><span class="day">Friday</span><span class="t">Closed</span></li>
+          <li data-d="6"><span class="day">Saturday</span><span class="t">9 AM – 3 PM</span></li>
+        </ul>
+        <div class="addr">
+          <div class="lbl">Address</div>
+          <p>760 N. Thompson Ln., Studio 13<br>Murfreesboro, TN 37129</p>
+          <div class="row">
+            <a class="btn btn-rose" href="tel:+16153308470">Call (615) 330-8470</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=760+N+Thompson+Ln+Studio+13+Murfreesboro+TN+37129" target="_blank" rel="noopener">Directions</a>
+          </div>
+          <div class="contact-line">
+            <a href="mailto:bhudson317@gmail.com">bhudson317@gmail.com</a>
+            <a href="https://www.facebook.com/ThirteenDahliasHairStudio" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/ThirteenDahliasHairStudio" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="map rv">
+        <div class="pin"><div><b>760 N. Thompson Ln.</b>Studio 13 · Murfreesboro</div></div>
+        <iframe title="Map to Thirteen Dahlias Hair Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=760%20N.%20Thompson%20Ln.%2C%20Studio%2013%2C%20Murfreesboro%2C%20TN%2037129&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap rv">
+    <svg class="mini" viewBox="-240 -240 480 480" aria-hidden="true">
+      <g><use href="#petal" fill="url(#pB)" transform="rotate(0)"/><use href="#petal" fill="url(#pB)" transform="rotate(45)"/><use href="#petal" fill="url(#pB)" transform="rotate(90)"/><use href="#petal" fill="url(#pB)" transform="rotate(135)"/><use href="#petal" fill="url(#pB)" transform="rotate(180)"/><use href="#petal" fill="url(#pB)" transform="rotate(225)"/><use href="#petal" fill="url(#pB)" transform="rotate(270)"/><use href="#petal" fill="url(#pB)" transform="rotate(315)"/>
+      <use href="#petal" fill="url(#pC)" transform="rotate(22.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(67.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(112.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(157.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(202.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(247.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(292.5) scale(.65)"/><use href="#petal" fill="url(#pC)" transform="rotate(337.5) scale(.65)"/>
+      <circle r="26" fill="url(#ctr)"/></g>
+    </svg>
+    <h2>Ready for your <em>next layer</em> of color?</h2>
+    <p class="intro" style="margin:0 auto">Choose a service and a time on Brittany's live calendar, or call the studio.</p>
+    <div class="ctas">
+      <a class="btn btn-rose" href="https://square.site/book/208MMQ8FA1XAX/thirteen-dahlias-hair-studio-murfreesboro-tn" target="_blank" rel="noopener">Book an appointment</a>
+      <a class="btn btn-ghost" href="tel:+16153308470">Call (615) 330-8470</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Thirteen Dahlias Hair Studio · Murfreesboro, TN</span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="btn btn-ghost" href="tel:+16153308470">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn btn-rose" href="https://square.site/book/208MMQ8FA1XAX/thirteen-dahlias-hair-studio-murfreesboro-tn" target="_blank" rel="noopener">Book online</a>
+</nav>
+
+<script>
+(function(){
+  // today's hours + open status (America/Chicago — Murfreesboro)
+  var now = new Date();
+  try{
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var map={}; parts.forEach(function(p){map[p.type]=p.value});
+    var wd=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(map.weekday);
+    var mins=(parseInt(map.hour,10)%24)*60+parseInt(map.minute,10);
+  }catch(e){ var wd=now.getDay(), mins=now.getHours()*60+now.getMinutes(); }
+  var H={2:[990,1230],3:[990,1230],4:[990,1230],6:[540,900]};
+  var li=document.querySelector('#hours li[data-d="'+wd+'"]'); if(li) li.classList.add('today');
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap}
+  var st=document.getElementById('status'), tx=document.getElementById('statusText'), msg;
+  var t=H[wd];
+  if(t && mins>=t[0] && mins<t[1]){ msg='Open now · until '+fmt(t[1]); st.classList.add('open'); }
+  else if(t && mins<t[0]){ msg='Opens today at '+fmt(t[0]); }
+  else { var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    for(var i=1;i<=7;i++){var d=(wd+i)%7; if(H[d]){ msg='Closed now · opens '+(i===1?'tomorrow':names[d])+' at '+fmt(H[d][0]); break; }} }
+  if(msg) tx.textContent=msg;
+
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function show(e){e.classList.add('in')}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(show);
+  setTimeout(function(){els.forEach(show)},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Mane Tamer Studio — Johnson City</title>
+<meta name="description" content="Concept site for Mane Tamer Studio: effortless blondes, soft lived-in color and seamless extensions in downtown Johnson City, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111; --ink-2:#1b1b1b; --ink-3:#262626;
+  --coral:#ff5a4e; --coral-2:#ff7b71; --coral-deep:#e2443a;
+  --paper:#f7f1e8; --paper-2:#efe6d8; --muted:#6b6259; --muted-d:#a99f93;
+  --rule:rgba(17,17,17,.16); --rule-d:rgba(247,241,232,.16);
+  --bar-h:66px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3,.num,.brand{font-family:"Space Grotesk",system-ui,sans-serif}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 40px}}
+.kicker{font-family:"Space Grotesk",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.22;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.concept{background:var(--coral);color:var(--ink);font-size:10.5px;font-weight:600;text-align:center;padding:6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+nav.top{position:sticky;top:0;z-index:30;background:rgba(17,17,17,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-d);color:var(--paper)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{text-decoration:none;font-weight:700;font-size:17px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(255,90,78,.18)}
+.navlinks{display:none;gap:30px;font-size:13px;font-weight:500;letter-spacing:.02em}
+.navlinks a{text-decoration:none;opacity:.8;transition:opacity .2s,color .2s}
+.navlinks a:hover{opacity:1;color:var(--coral)}
+.nav-book{background:var(--coral);color:var(--ink);text-decoration:none;font-weight:700;font-size:13px;padding:9px 16px;border-radius:2px;transition:background .2s,transform .2s}
+.nav-book:hover{background:var(--coral-2);transform:translateY(-1px)}
+@media (min-width:900px){.navlinks{display:flex}}
+
+/* HERO */
+.hero{background:var(--ink);color:var(--paper);overflow:hidden;position:relative}
+.hero .wrap{position:relative;padding-top:22px;padding-bottom:36px}
+.masthead{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--rule-d);border-bottom:1px solid var(--rule-d);padding:9px 0;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-d);font-family:"Space Grotesk",sans-serif}
+.masthead b{color:var(--coral);font-weight:600}
+.bignum{position:absolute;right:-14px;top:62px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:200px;line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.2px rgba(255,90,78,.5);pointer-events:none;user-select:none}
+.hero h1{position:relative;font-size:52px;line-height:.92;letter-spacing:-.045em;font-weight:700;margin-top:104px;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero .sub{position:relative;margin-top:18px;max-width:34ch;color:#d9d0c4;font-size:16.5px}
+.hero .ctas{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:14px 20px;border-radius:2px;transition:transform .2s,background .2s,color .2s,border-color .2s;min-height:48px}
+.btn svg{width:18px;height:18px}
+.btn-coral{background:var(--coral);color:var(--ink)}
+.btn-coral:hover{background:var(--coral-2);transform:translateY(-2px)}
+.btn-line{border:1px solid rgba(247,241,232,.4);color:var(--paper)}
+.btn-line:hover{border-color:var(--coral);color:var(--coral)}
+.hero-foot{position:relative;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule-d)}
+.hero-foot div{padding:12px 0 0;font-size:12.5px;color:var(--muted-d)}
+.hero-foot div+div{padding-left:14px;border-left:1px solid var(--rule-d)}
+.hero-foot b{display:block;color:var(--paper);font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:600;margin-bottom:2px}
+.strands{position:absolute;left:0;right:0;bottom:0;height:62%;pointer-events:none;opacity:.9}
+.strands path{fill:none;stroke-linecap:round}
+.strands .s{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s cubic-bezier(.3,.6,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.strands .s{animation:none;stroke-dashoffset:0}}
+@media (min-width:900px){
+  .hero .wrap{padding-top:30px;padding-bottom:60px}
+  .bignum{font-size:420px;right:20px;top:80px}
+  .hero h1{font-size:112px;margin-top:150px}
+  .hero .sub{font-size:19px}
+  .hero-foot{grid-template-columns:repeat(4,1fr);max-width:900px}
+  .hero-foot div:nth-child(3){padding-left:14px;border-left:1px solid var(--rule-d)}
+}
+
+/* TICKER */
+.ticker{background:var(--coral);color:var(--ink);overflow:hidden;white-space:nowrap;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.ticker .track{display:inline-flex;gap:28px;padding:11px 0;animation:tick 32s linear infinite;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;text-transform:uppercase}
+.ticker span::after{content:"✦";margin-left:28px;font-size:11px}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}}
+
+section{padding:64px 0;background:var(--paper)}
+.paper{background:var(--paper)}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:end;border-bottom:1px solid var(--rule);padding-bottom:14px;margin-bottom:26px}
+.sec-head .num{font-size:72px;font-weight:700;line-height:.8;letter-spacing:-.06em;color:var(--coral)}
+.sec-head h2{font-size:30px;line-height:1;letter-spacing:-.03em;font-weight:700}
+.sec-head .kicker{color:var(--muted);display:block;margin-bottom:8px}
+@media (min-width:900px){section{padding:100px 0}.sec-head .num{font-size:140px}.sec-head h2{font-size:54px}}
+
+/* MENU */
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-bottom:6px;padding-bottom:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;font:600 13px "Space Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 13px;border-radius:2px;cursor:pointer;transition:background .2s,color .2s}
+.tab:hover{background:var(--paper-2)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.menu-group{display:block}
+.js .menu-group{display:none}
+.js .menu-group.on{display:block}
+.menu-group h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:22px 0 4px;font-weight:600}
+.js .menu-group h3{display:none}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:15px 0;border-bottom:1px solid var(--rule);transition:padding .25s,background .25s}
+.item:hover{padding-left:8px;background:linear-gradient(90deg,rgba(255,90,78,.08),transparent 70%)}
+.item .n{font-weight:600;font-size:16.5px;letter-spacing:-.01em}
+.item .p{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:17px;white-space:nowrap}
+.item .p.soft{font-weight:500;font-size:14px;color:var(--coral-deep)}
+.item .d{grid-column:1/-1;font-size:13.5px;color:var(--muted)}
+.menu-note{margin-top:18px;font-size:13px;color:var(--muted)}
+@media (min-width:900px){.menu-cols{display:grid;grid-template-columns:320px 1fr;gap:60px}.tabs{flex-direction:column;overflow:visible}.tab{text-align:left;padding:14px 16px;font-size:14px}}
+
+/* WHY */
+.why{background:var(--ink);color:var(--paper)}
+.why .sec-head{border-color:var(--rule-d)}
+.why .sec-head .kicker{color:var(--muted-d)}
+.grid4{display:grid;grid-template-columns:1fr;border-top:1px solid var(--rule-d)}
+.cell{padding:24px 0;border-bottom:1px solid var(--rule-d);display:grid;grid-template-columns:64px 1fr;gap:6px 14px;position:relative}
+.cell .n{font-family:"Space Grotesk",sans-serif;font-size:44px;font-weight:700;line-height:.9;letter-spacing:-.05em;color:var(--coral);transition:transform .3s}
+.cell:hover .n{transform:translateX(4px)}
+.cell h3{font-size:20px;letter-spacing:-.02em;font-weight:600;line-height:1.15}
+.cell p{grid-column:2;color:#cfc6ba;font-size:14.5px}
+@media (min-width:900px){.grid4{grid-template-columns:repeat(4,1fr);border-top:none}.cell{grid-template-columns:1fr;border-bottom:none;border-left:1px solid var(--rule-d);padding:10px 24px 10px}.cell:first-child{border-left:none;padding-left:0}.cell p{grid-column:1}.cell .n{font-size:84px;margin-bottom:22px}}
+
+.pull{padding:56px 0;border-bottom:1px solid var(--rule)}
+.pull blockquote{font-family:"Space Grotesk",sans-serif;font-size:30px;line-height:1.05;letter-spacing:-.035em;font-weight:600;max-width:20ch}
+.pull blockquote span{color:var(--coral-deep)}
+.pull cite{display:block;margin-top:14px;font-style:normal;font-size:12.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+@media (min-width:900px){.pull{padding:100px 0}.pull blockquote{font-size:64px}}
+
+/* VISIT */
+.visit-grid{display:grid;gap:28px}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1.2fr;gap:56px}}
+#hours{list-style:none;border-top:1px solid var(--ink)}
+#hours li{display:flex;justify-content:space-between;padding:12px 10px;border-bottom:1px solid var(--rule);font-size:15.5px;transition:background .2s}
+#hours li span:first-child{font-family:"Space Grotesk",sans-serif;font-weight:600}
+#hours li.closed span:last-child{color:var(--muted)}
+#hours li.today{background:var(--ink);color:var(--paper)}
+#hours li.today span:first-child::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:var(--coral);color:var(--ink);padding:3px 6px;vertical-align:2px}
+#hours li.today.closed span:last-child{color:var(--muted-d)}
+.loc{margin-top:22px;display:grid;gap:12px}
+.loc div{border-left:3px solid var(--coral);padding:4px 0 4px 14px}
+.loc b{font-family:"Space Grotesk",sans-serif;display:block;font-size:15px}
+.loc span{font-size:14.5px;color:var(--muted)}
+.map{border:1px solid var(--ink);aspect-ratio:4/3.2;width:100%;background:var(--paper-2);filter:grayscale(.9) contrast(1.05)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.visit-ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--coral);color:var(--ink)}
+.btn-outline{border:1px solid var(--ink);color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--paper)}
+
+.band{background:var(--coral);color:var(--ink);padding:64px 0;overflow:hidden;position:relative}
+.band h2{font-size:44px;line-height:.92;letter-spacing:-.045em;font-weight:700;max-width:12ch;position:relative}
+.band p{margin-top:12px;max-width:36ch;position:relative;font-weight:500}
+.band .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;position:relative}
+.band .btn-ink:hover{background:var(--paper);color:var(--ink)}
+.band .btn-outline:hover{background:var(--ink);color:var(--coral)}
+.band .ring{position:absolute;right:-90px;top:-60px;width:300px;height:300px;opacity:.28}
+@media (min-width:900px){.band{padding:110px 0}.band h2{font-size:96px}.band .ring{width:560px;height:560px;right:-60px;top:-120px}}
+
+footer{background:var(--ink);color:var(--muted-d);padding:40px 0 30px;font-size:13.5px}
+footer .brand{color:var(--paper);margin-bottom:14px}
+footer .row{display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--coral)}
+footer .fine{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule-d);font-size:12px}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.4fr;background:var(--ink);border-top:1px solid var(--rule-d);padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{height:var(--bar-h);display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font:700 15px "Space Grotesk",sans-serif;letter-spacing:.01em}
+.callbar a svg{width:19px;height:19px}
+.callbar .c{color:var(--paper)}
+.callbar .b{background:var(--coral);color:var(--ink)}
+@media (min-width:900px){.callbar{display:none}}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+</style>
+</head>
+<body id="top">
+
+<div class="concept">Concept site by Code Craft Media, made for Mane Tamer Studio. Not live.</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>Mane Tamer Studio</a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#why">The Studio</a><a href="#visit">Hours &amp; Visit</a></div>
+    <a class="nav-book" href="https://square.site/book/LC9FHKY912TWP/mane-tamer-studio-johnson-city-tn">Book</a>
+  </div>
+</nav>
+
+<header class="hero grain">
+  <svg class="strands" viewBox="0 0 400 700" preserveAspectRatio="none" aria-hidden="true">
+    <path class="s" d="M-20 560 C 80 470, 160 640, 260 540 S 380 470, 440 520" stroke="#ff5a4e" stroke-width="1.4" opacity=".75"/>
+    <path class="s" d="M-20 590 C 90 500, 170 670, 270 570 S 390 500, 440 550" stroke="#f7f1e8" stroke-width=".8" opacity=".35" style="animation-delay:.2s"/>
+    <path class="s" d="M-20 620 C 100 530, 180 700, 280 600 S 400 530, 440 580" stroke="#ff5a4e" stroke-width=".8" opacity=".45" style="animation-delay:.4s"/>
+    <path class="s" d="M-20 650 C 110 560, 190 730, 290 630 S 410 560, 440 610" stroke="#f7f1e8" stroke-width=".6" opacity=".25" style="animation-delay:.6s"/>
+  </svg>
+  <div class="wrap">
+    <div class="masthead"><span>Johnson City, TN</span><span><b>●</b> Color · Cuts · Extensions</span></div>
+    <div class="bignum" aria-hidden="true">407</div>
+    <h1>Effortless <em>blondes,</em> downtown Johnson City.</h1>
+    <p class="sub">Soft, lived-in color and seamless extensions, every look customized to enhance your natural beauty.</p>
+    <div class="ctas">
+      <a class="btn btn-coral" href="https://square.site/book/LC9FHKY912TWP/mane-tamer-studio-johnson-city-tn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book an appointment</a>
+      <a class="btn btn-line" href="tel:+16314045597">Call (631) 404-5597</a>
+    </div>
+    <div class="hero-foot">
+      <div><b>Mon–Fri</b>9 AM – 5 PM</div>
+      <div><b>407 S. Roan St.</b>Downtown JC</div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Effortless blondes</span><span>Lived-in color</span><span>Hand-tied extensions</span><span>K-tip extensions</span><span>Smoothing treatments</span><span>Face frame highlights</span>
+  <span>Effortless blondes</span><span>Lived-in color</span><span>Hand-tied extensions</span><span>K-tip extensions</span><span>Smoothing treatments</span><span>Face frame highlights</span>
+</div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">01</div><div><span class="kicker">The menu</span><h2>Services &amp; prices</h2></div></div>
+    <div class="menu-cols">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-g="color">Color</button>
+        <button class="tab" role="tab" aria-selected="false" data-g="ext">Extensions</button>
+        <button class="tab" role="tab" aria-selected="false" data-g="cut">Cut &amp; Style</button>
+        <button class="tab" role="tab" aria-selected="false" data-g="treat">Treatments</button>
+      </div>
+      <div>
+        <div class="menu-group on" data-g="color">
+          <h3>Color</h3>
+          <div class="item"><span class="n">Traditional full highlight</span><span class="p">from $250</span><span class="d">3 hr · price rises with extra mixed color</span></div>
+          <div class="item"><span class="n">Traditional partial highlight</span><span class="p">from $150</span><span class="d">2 hr 30 min · price rises with extra color</span></div>
+          <div class="item"><span class="n">All over color</span><span class="p">$150</span><span class="d">1 hr 30 min</span></div>
+          <div class="item"><span class="n">Face frame highlights</span><span class="p">$100</span><span class="d">1 hr 30 min</span></div>
+          <div class="item"><span class="n">Gray cover (roots only)</span><span class="p">$100</span><span class="d">1 hr</span></div>
+          <div class="item"><span class="n">Toner</span><span class="p">$45</span><span class="d">30 min · gloss, toner or conditioning treatment</span></div>
+          <div class="item"><span class="n">Custom color</span><span class="p soft">Text to consult</span><span class="d">4 hr</span></div>
+        </div>
+        <div class="menu-group" data-g="ext">
+          <h3>Extensions</h3>
+          <div class="item"><span class="n">Extension consultation</span><span class="p">Free</span><span class="d">30 min</span></div>
+          <div class="item"><span class="n">Hand-tied extension install</span><span class="p">$350</span><span class="d">4 hr</span></div>
+          <div class="item"><span class="n">K-tip extension install</span><span class="p">$100 / pack</span><span class="d">3 hr 30 min · per pack of keratin bond extensions, plus installation</span></div>
+          <div class="item"><span class="n">Extension removal</span><span class="p">$150</span><span class="d">1 hr 30 min</span></div>
+        </div>
+        <div class="menu-group" data-g="cut">
+          <h3>Cut &amp; Style</h3>
+          <div class="item"><span class="n">Women's haircut, shampoo &amp; style</span><span class="p">$60</span><span class="d">1 hr</span></div>
+          <div class="item"><span class="n">Women's dry cut</span><span class="p">$30</span><span class="d">30 min</span></div>
+          <div class="item"><span class="n">Blow out</span><span class="p">$45</span><span class="d">1 hr</span></div>
+          <div class="item"><span class="n">Curls</span><span class="p">$35</span><span class="d">30 min · curling iron only, no shampoo or blow dry</span></div>
+          <div class="item"><span class="n">Bang trim</span><span class="p">$10</span><span class="d">10 min</span></div>
+        </div>
+        <div class="menu-group" data-g="treat">
+          <h3>Treatments</h3>
+          <div class="item"><span class="n">ProAddiction customized smoothing treatment</span><span class="p">$350</span><span class="d">4 hr</span></div>
+          <div class="item"><span class="n">Toner / gloss / conditioning</span><span class="p">$45</span><span class="d">30 min</span></div>
+        </div>
+        <p class="menu-note">Prices and times as listed on Mane Tamer Studio's booking page. Book online for live availability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why grain" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">02</div><div><span class="kicker">The studio</span><h2>Why clients book here</h2></div></div>
+    <div class="grid4">
+      <div class="cell reveal"><div class="n">01</div><h3>Blonde is the specialty</h3><p>Full and partial highlights, face framing and soft lived-in color.</p></div>
+      <div class="cell reveal"><div class="n">02</div><h3>Every look customized</h3><p>Custom color starts with a text to consult, so the plan fits your hair.</p></div>
+      <div class="cell reveal"><div class="n">03</div><h3>Two extension methods</h3><p>Hand-tied or K-tip keratin bonds, with a free 30-minute consultation first.</p></div>
+      <div class="cell reveal"><div class="n">04</div><h3>Two JC locations</h3><p>Downtown on South Roan Street, plus Sunset Plaza on Broyles Drive.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="paper"><div class="wrap">
+  <div class="pull reveal">
+    <blockquote>“Downtown Johnson City’s home for <span>effortless blondes</span>, soft lived-in color, and seamless extensions.”</blockquote>
+    <cite>Mane Tamer Studio</cite>
+  </div>
+</div></div>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">03</div><div><span class="kicker">Hours &amp; visit</span><h2>Come see us</h2></div></div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <ul id="hours">
+          <li data-d="1"><span>Monday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li data-d="6" class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li data-d="0" class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <div class="loc">
+          <div><b>Mane Tamer Studio</b><span>407 South Roan Street, Johnson City, TN 37601</span></div>
+          <div><b>Sunset Plaza</b><span>109 Broyles Drive, Johnson City, TN 37601</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="map"><iframe title="Map to Mane Tamer Studio" loading="lazy" src="https://www.google.com/maps?q=407%20South%20Roan%20Street%2C%20Johnson%20City%2C%20TN%2037601&amp;output=embed"></iframe></div>
+        <div class="visit-ctas">
+          <a class="btn btn-ink" href="tel:+16314045597">Call</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=407%20South%20Roan%20Street%2C%20Johnson%20City%2C%20TN%2037601">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band grain" style="background:var(--coral)">
+  <svg class="ring" viewBox="0 0 200 200" fill="none" stroke="#111" stroke-width=".6" aria-hidden="true"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="56"/><circle cx="100" cy="100" r="36"/></svg>
+  <div class="wrap">
+    <h2>Your next blonde starts here.</h2>
+    <p>Book Monday through Friday online, or call the studio. Extension consults are free.</p>
+    <div class="ctas">
+      <a class="btn btn-ink" href="https://square.site/book/LC9FHKY912TWP/mane-tamer-studio-johnson-city-tn">Book online</a>
+      <a class="btn btn-outline" href="tel:+16314045597">(631) 404-5597</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>Mane Tamer Studio</a>
+    <div class="row">
+      <div>407 South Roan Street · Johnson City, TN 37601</div>
+      <div><a href="tel:+16314045597">(631) 404-5597</a> · <a href="mailto:Manetamerstudio@gmail.com">Manetamerstudio@gmail.com</a></div>
+      <div><a href="https://www.instagram.com/manetamerstudio">Instagram @manetamerstudio</a></div>
+    </div>
+    <div class="fine">Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c" href="tel:+16314045597"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/LC9FHKY912TWP/mane-tamer-studio-johnson-city-tn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book now</a>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), groups=[].slice.call(document.querySelectorAll('.menu-group'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+    groups.forEach(function(g){g.classList.toggle('on',g.dataset.g===t.dataset.g)});
+  })});
+  var day=new Date().getDay(); var li=document.querySelector('#hours li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else els.forEach(function(e){e.classList.add('in')});
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

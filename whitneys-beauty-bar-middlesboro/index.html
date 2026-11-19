@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Whitney's Beauty Bar — Middlesboro</title>
+<meta name="description" content="Concept site for Whitney's Beauty Bar in Middlesboro, KY: color, blonding, cuts, brows and weft extensions with Whitney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --champagne:#F6EEE3; --champagne-2:#EFE2D1; --blush:#EBCFC6; --blush-2:#F5E2DC; --rose:#B9786A;
+  --espresso:#33221D; --espresso-2:#4A3530; --muted:#6E5A52; --gold:#B08A4F; --gold-hi:#E6CB8E; --gold-lo:#8C6A35;
+  --card:#FFFBF6; --line:rgba(51,34,29,.12);
+  --foil:linear-gradient(100deg,#8C6A35 0%,#D9B979 22%,#F4E3B5 38%,#B8914F 55%,#E6CB8E 72%,#8C6A35 100%);
+  --serif:'Bodoni Moda',Georgia,serif; --sans:'Outfit',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--champagne);color:var(--espresso);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+@media (min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+@media (min-width:900px){.wrap{padding:0 40px}}
+
+/* concept banner */
+.concept{background:var(--espresso);color:#EADBC6;font-size:10px;letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--gold-hi);font-weight:500}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(246,238,227,.88);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:30px;height:34px}
+.brand span{white-space:nowrap;font-family:var(--serif);font-size:19px;font-weight:500;letter-spacing:.01em}
+.brand em{font-style:italic;color:var(--rose)}
+.nav ul{display:none;list-style:none;gap:28px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.nav ul a{text-decoration:none;position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--gold);transition:right .3s}
+.nav ul a:hover::after{right:0}
+.nav .call-mini{font-size:13px;font-weight:500;text-decoration:none;border:1px solid var(--espresso);border-radius:999px;padding:7px 14px;transition:background .25s,color .25s}
+.call-mini .lg{display:none}@media (min-width:600px){.call-mini .lg{display:inline}.call-mini .sm{display:none}}
+.nav .call-mini{white-space:nowrap}
+.nav .call-mini:hover{background:var(--espresso);color:var(--champagne)}
+@media (min-width:900px){.nav ul{display:flex}}
+
+/* buttons */
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.02em;text-decoration:none;border-radius:999px;padding:15px 26px;transition:transform .2s,box-shadow .25s,background .25s,color .25s;min-height:50px}
+.btn:active{transform:scale(.98)}
+.btn-dark{background:var(--espresso);color:var(--champagne);box-shadow:0 10px 24px -12px rgba(51,34,29,.6)}
+.btn-dark:hover{background:#22160F;box-shadow:0 14px 30px -12px rgba(51,34,29,.7);transform:translateY(-1px)}
+.btn-ghost{border:1px solid rgba(51,34,29,.35);color:var(--espresso);background:rgba(255,251,246,.5)}
+.btn-ghost:hover{border-color:var(--espresso);background:var(--card)}
+.btn svg{width:17px;height:17px}
+
+/* gold foil line */
+.foil-line{height:1px;background:var(--foil);background-size:200% 100%;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+.foil-text{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s linear infinite}
+
+/* hero */
+.hero{position:relative;padding:26px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -30% auto auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(235,207,198,.75),rgba(235,207,198,0) 65%);pointer-events:none}
+.hero-grid{position:relative;display:grid;gap:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--foil)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid rgba(176,138,79,.45);border-radius:999px;padding:6px 13px 6px 10px;font-size:12.5px;font-weight:500;color:var(--espresso-2);margin-top:18px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#7FA37A;box-shadow:0 0 0 4px rgba(127,163,122,.2);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(127,163,122,.05)}}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,11.4vw,78px);line-height:1.02;letter-spacing:-.015em;margin-top:16px}
+h1 em{font-style:italic;font-weight:400;color:var(--rose)}
+.lede{font-size:16.5px;color:var(--espresso-2);max-width:470px;margin-top:18px;font-weight:300}
+.lede strong{font-weight:500;color:var(--espresso)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.cta-row .btn{flex:1 1 150px}
+@media (min-width:520px){.cta-row .btn{flex:0 0 auto}}
+
+.arch-stage{position:relative;justify-self:center;width:min(100%,400px);aspect-ratio:4/4.6}
+.arch-stage svg{width:100%;height:100%}
+.float-note{position:absolute;background:var(--card);border-radius:16px;box-shadow:0 18px 40px -22px rgba(51,34,29,.45);padding:11px 14px;font-size:12.5px;line-height:1.35;border:1px solid rgba(176,138,79,.3)}
+.float-note b{display:block;font-family:var(--serif);font-size:17px;font-weight:500}
+.float-note small{color:var(--muted);font-size:11.5px}
+.fn1{left:-4px;bottom:16%;animation:bob 6s ease-in-out infinite}
+.fn2{right:-4px;top:10%;animation:bob 7s ease-in-out infinite reverse}
+@keyframes bob{50%{transform:translateY(-7px)}}
+@media (min-width:900px){
+  .hero{padding:70px 0 96px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;gap:56px}
+  .lede{font-size:18px}
+}
+
+/* section shell */
+section{scroll-margin-top:70px}
+.sec{padding:72px 0}
+.sec-head{display:grid;gap:12px;margin-bottom:34px;max-width:640px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,8.4vw,52px);line-height:1.06;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--rose)}
+.sec-head p{color:var(--muted);font-weight:300;font-size:16px}
+
+/* marquee strip */
+.strip{background:var(--espresso);color:#EADBC6;overflow:hidden;padding:15px 0;border-top:1px solid rgba(230,203,142,.35);border-bottom:1px solid rgba(230,203,142,.35)}
+.strip-track{display:flex;gap:34px;width:max-content;animation:marq 34s linear infinite;font-family:var(--serif);font-style:italic;font-size:19px;white-space:nowrap}
+.strip-track span{display:flex;align-items:center;gap:34px}
+.strip-track span::after{content:"✦";font-style:normal;font-size:11px;color:var(--gold-hi)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* menu */
+.menu-sec{background:linear-gradient(180deg,var(--champagne) 0%,var(--blush-2) 100%)}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -20px 26px;padding:2px 20px 6px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-family:var(--sans);font-size:14px;font-weight:500;border:1px solid rgba(51,34,29,.2);background:rgba(255,251,246,.6);color:var(--espresso);border-radius:999px;padding:10px 17px;cursor:pointer;transition:all .25s}
+.tab:hover{border-color:var(--espresso)}
+.tab[aria-selected="true"]{background:var(--espresso);color:var(--champagne);border-color:var(--espresso)}
+.menu-grid{display:grid;gap:18px}
+@media (min-width:900px){.menu-grid{display:block;columns:2;column-gap:22px}.menu-grid .mcard{break-inside:avoid;margin-bottom:22px;display:block}.menu-grid .mcard[hidden]{display:none}.tabs{margin:0 0 30px;padding:2px 0 6px}}
+.mcard{background:var(--card);border-radius:180px 180px 22px 22px;padding:46px 22px 22px;border:1px solid rgba(176,138,79,.28);position:relative;box-shadow:0 22px 44px -36px rgba(51,34,29,.5)}
+.mcard::before{content:"";position:absolute;inset:7px;border-radius:174px 174px 17px 17px;border:1px solid rgba(176,138,79,.35);pointer-events:none}
+.mcard h3{font-family:var(--serif);font-weight:500;font-size:26px;text-align:center;line-height:1.15}
+.mcard .cat-sub{text-align:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin:6px 0 16px;font-weight:500}
+.mcard .ico{width:42px;height:42px;margin:0 auto 10px;color:var(--gold)}
+.svc{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 2px;border-top:1px solid var(--line)}
+.svc:first-of-type{border-top:0}
+.svc .n{font-weight:500;font-size:15.5px}
+.svc .p{font-family:var(--serif);font-size:18px;font-weight:500;white-space:nowrap;text-align:right}
+.svc .p.free{font-style:italic;color:var(--rose)}
+.svc .d{grid-column:1/-1;font-size:13.5px;color:var(--muted);font-weight:300;line-height:1.45}
+.svc .t{font-size:12px;color:var(--muted);letter-spacing:.03em}
+.svc q{quotes:"“" "”";font-style:italic}
+.mcard[hidden]{display:none}
+.menu-foot{margin-top:28px;text-align:center;font-size:13.5px;color:var(--muted)}
+.menu-foot a{color:var(--espresso);font-weight:500}
+
+/* notes from whitney */
+.notes{background:var(--espresso);color:#F1E6D6;position:relative;overflow:hidden}
+.notes::before{content:"";position:absolute;left:50%;top:-180px;width:640px;height:640px;margin-left:-320px;border-radius:50%;border:1px solid rgba(230,203,142,.18)}
+.notes h2 em{color:var(--blush)}
+.notes .sec-head p{color:#CDBBA9}
+.notes .eyebrow{color:#CDBBA9}
+.note-grid{display:grid;gap:16px;position:relative}
+@media (min-width:900px){.note-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+.note{border:1px solid rgba(230,203,142,.3);border-radius:22px;padding:24px 22px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,0));transition:transform .3s,border-color .3s}
+.note:hover{transform:translateY(-3px);border-color:rgba(230,203,142,.65)}
+.note .k{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);font-weight:500}
+.note blockquote{font-family:var(--serif);font-size:22px;line-height:1.3;margin:12px 0 10px;font-style:italic}
+.note p{font-size:14.5px;color:#CDBBA9;font-weight:300}
+
+/* new clients band */
+.newc{padding:64px 0}
+.newc-card{position:relative;background:var(--blush);border-radius:28px;padding:42px 24px;text-align:center;overflow:hidden}
+.newc-card svg.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.newc-card > *{position:relative}
+.newc-card .eyebrow::after{content:"";width:28px;height:1px;background:var(--foil)}
+.newc-card h2{font-size:clamp(34px,9vw,56px)}
+.newc-card p{max-width:460px;margin:12px auto 22px;color:var(--espresso-2)}
+
+/* visit */
+.visit-grid{display:grid;gap:22px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}}
+.hours{background:var(--card);border-radius:24px;border:1px solid rgba(176,138,79,.28);padding:26px 22px}
+.hours h3,.contact h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:12px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;margin-bottom:12px;padding:5px 12px;border-radius:999px;background:var(--champagne-2)}
+.status i{width:8px;height:8px;border-radius:50%;background:#B9786A}
+.status.open i{background:#7FA37A}
+.hrow{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-size:15px}
+.hrow span:last-child{color:var(--muted)}
+.hrow.closed span:last-child{font-style:italic}
+.hrow.today{background:var(--espresso);color:var(--champagne);font-weight:500}
+.hrow.today span:last-child{color:var(--gold-hi)}
+.contact{margin-top:18px;display:grid;gap:10px}
+.cline{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:var(--card);border-radius:16px;border:1px solid rgba(176,138,79,.28);text-decoration:none;transition:border-color .25s,transform .25s}
+a.cline:hover{border-color:var(--gold);transform:translateY(-1px)}
+.cline svg{flex:0 0 20px;width:20px;height:20px;color:var(--gold);margin-top:2px}
+.cline b{display:block;font-weight:500;font-size:15px}
+.cline small{color:var(--muted);font-size:13px}
+.map{border-radius:24px;overflow:hidden;border:1px solid rgba(176,138,79,.3);min-height:340px;background:var(--champagne-2)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:sepia(.18) saturate(.9)}
+
+/* footer */
+footer{background:var(--espresso);color:#CDBBA9;padding:44px 0 34px;text-align:center;font-size:13.5px}
+footer .brand{justify-content:center;color:var(--champagne);margin-bottom:12px}
+footer .brand span{font-size:22px}
+footer .foil-line{max-width:220px;margin:18px auto}
+footer a{color:var(--champagne)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:rgba(51,34,29,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(230,203,142,.4)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+.bar .c{border:1px solid rgba(241,230,214,.45);color:var(--champagne)}
+.bar .b{background:var(--foil);background-size:200% 100%;color:var(--espresso);animation:shimmer 8s linear infinite}
+.bar svg{width:17px;height:17px}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>Whitney's Beauty Bar</b>. Not live.</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Whitney's Beauty Bar home">
+      <svg viewBox="0 0 30 34" fill="none" aria-hidden="true"><path d="M2 33V15a13 13 0 0 1 26 0v18" stroke="url(#gf)" stroke-width="1.5"/><path d="M7 33V16a8 8 0 0 1 16 0v17" stroke="#B9786A" stroke-width="1"/><defs><linearGradient id="gf" x1="0" y1="0" x2="30" y2="34"><stop stop-color="#8C6A35"/><stop offset=".45" stop-color="#F4E3B5"/><stop offset="1" stop-color="#9E7A40"/></linearGradient></defs></svg>
+      <span>Whitney's <em>Beauty Bar</em></span>
+    </a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#notes">Good to know</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="call-mini" href="tel:+16063025267"><span class="sm">Call</span><span class="lg">(606) 302-5267</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Middlesboro, Kentucky</div>
+        <h1>Roots, blonde &amp; length, <em>done by Whitney.</em></h1>
+        <p class="lede">Color, foils, bleach-outs, cuts, brows and weft extensions on Dansbury Avenue, with a <strong>free extension consultation</strong> where you're color matched first.</p>
+        <div class="pill"><i></i>Accepting new clients!</div>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="https://square.site/book/D799ARXQXGNC3/whitney-at-whitney-s-beauty-bar-middlesboro-ky" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book online</a>
+          <a class="btn btn-ghost" href="tel:+16063025267">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call Whitney</a>
+        </div>
+      </div>
+
+      <div class="arch-stage reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 460" fill="none">
+          <defs>
+            <linearGradient id="foil" x1="0" y1="0" x2="400" y2="460" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#8C6A35"/><stop offset=".3" stop-color="#E6CB8E"/><stop offset=".45" stop-color="#F7EACB"/><stop offset=".65" stop-color="#B08A4F"/><stop offset="1" stop-color="#E6CB8E"/>
+            </linearGradient>
+            <linearGradient id="archfill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#EBCFC6"/><stop offset="1" stop-color="#F5E2DC"/></linearGradient>
+            <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5B3A2E"/><stop offset=".55" stop-color="#9C6B4E"/><stop offset="1" stop-color="#E3C08E"/></linearGradient>
+            <filter id="fs" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#33221D" flood-opacity=".28"/></filter>
+            <clipPath id="ac"><path d="M60 450V190a140 140 0 0 1 280 0v260z"/></clipPath>
+          </defs>
+          <path d="M30 455V185a170 170 0 0 1 340 0v270" stroke="url(#foil)" stroke-width="1.2"/>
+          <path d="M60 450V190a140 140 0 0 1 280 0v260z" fill="url(#archfill)"/>
+          <g clip-path="url(#ac)">
+            <!-- flowing hair ribbons: balayage from espresso root to champagne end -->
+            <path d="M120 40C150 140 90 220 140 300s-10 140 20 190" stroke="url(#hair)" stroke-width="34" stroke-linecap="round" opacity=".92"/>
+            <path d="M175 30c26 110-30 190 18 270s-6 150 28 200" stroke="url(#hair)" stroke-width="30" stroke-linecap="round" opacity=".85"/>
+            <path d="M232 36c18 104-38 196 8 270s4 140 34 190" stroke="url(#hair)" stroke-width="28" stroke-linecap="round" opacity=".8"/>
+            <path d="M288 50c10 90-30 180 4 250s10 130 36 180" stroke="url(#hair)" stroke-width="24" stroke-linecap="round" opacity=".7"/>
+            <!-- foils -->
+            <g opacity=".95">
+              <g filter="url(#fs)"><path d="M150 150l52-12 10 44-52 12z" fill="url(#foil)"/><path d="M155 170l52-12" stroke="#8C6A35" stroke-width=".8" opacity=".6"/><path d="M152 158l50-11" stroke="#FFF7E0" stroke-width="1.2" opacity=".8"/></g>
+              <g filter="url(#fs)"><path d="M214 196l50-16 13 42-50 16z" fill="url(#foil)"/><path d="M220 217l50-16" stroke="#8C6A35" stroke-width=".8" opacity=".6"/><path d="M216 204l49-15" stroke="#FFF7E0" stroke-width="1.2" opacity=".8"/></g>
+              <g filter="url(#fs)"><path d="M128 250l48-8 7 40-48 8z" fill="url(#foil)"/><path d="M131 270l48-8" stroke="#8C6A35" stroke-width=".8" opacity=".6"/></g>
+            </g>
+          </g>
+          <path d="M60 450V190a140 140 0 0 1 280 0v260" stroke="url(#foil)" stroke-width="2"/>
+          <!-- tint bowl + brush -->
+          <g transform="translate(250 360)">
+            <ellipse cx="50" cy="52" rx="58" ry="10" fill="#33221D" opacity=".12"/>
+            <path d="M0 18h100c-4 26-24 38-50 38S4 44 0 18z" fill="#33221D"/>
+            <ellipse cx="50" cy="18" rx="50" ry="10" fill="#4A3530"/>
+            <ellipse cx="50" cy="17" rx="40" ry="7" fill="#C99A6B"/>
+            <path d="M70 10L118 -48" stroke="#33221D" stroke-width="6" stroke-linecap="round"/>
+            <path d="M64 18l10-12" stroke="url(#foil)" stroke-width="9" stroke-linecap="round"/>
+          </g>
+          <!-- sparkles -->
+          <g fill="url(#foil)">
+            <path d="M44 120l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+            <path d="M356 300l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+            <path d="M330 70l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z"/>
+          </g>
+        </svg>
+        <div class="float-note fn1"><b>Free</b><small>Extension Consultation · 30 min</small></div>
+        <div class="float-note fn2"><b>Mon – Thu</b><small>10:00 AM – 3:30 PM</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <span>Root touch ups</span><span>Light &amp; heavy foil partials</span><span>Full highlights</span><span>Face framing blonding</span><span>Weft sew-ins</span><span>Brow tint &amp; shape</span><span>Color correction</span>
+      <span>Root touch ups</span><span>Light &amp; heavy foil partials</span><span>Full highlights</span><span>Face framing blonding</span><span>Weft sew-ins</span><span>Brow tint &amp; shape</span><span>Color correction</span>
+    </div>
+  </div>
+
+  <section class="sec menu-sec" id="menu">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">The menu</div>
+        <h2>Every service, <em>every price</em>, right here.</h2>
+        <p>Prices and times as listed on Whitney's booking page. Tap a category, then book the exact service online.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Service categories">
+        <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="blonde">Blonding</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="ext">Extensions</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts</button>
+        <button class="tab" role="tab" aria-selected="false" data-f="brow">Brows &amp; wax</button>
+      </div>
+
+      <div class="menu-grid">
+        <article class="mcard reveal" data-c="color">
+          <svg class="ico" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 20h30c-1 10-7 15-15 15S7 30 6 20z"/><ellipse cx="21" cy="20" rx="15" ry="4"/><path d="M27 17l9-12"/></svg>
+          <h3>Color</h3><div class="cat-sub">Single-process &amp; correction</div>
+          <div class="svc"><span class="n">Root Touch Up</span><span class="p">$85</span><span class="d">Single color root coverage, no blonding. <q>Roots must be 1.5 inch or less.</q> Add $15 for an end refresh at the bowl.</span><span class="t">1 hr 25 min</span></div>
+          <div class="svc"><span class="n">Full One Color</span><span class="p">$100</span><span class="d">One color from roots to ends, no blonding.</span><span class="t">1 hr 40 min</span></div>
+          <div class="svc"><span class="n">The Refresh at Bowl</span><span class="p">$50</span><span class="d">Refresh your blonde or color at the bowl with a glaze. Great for in-between maintenance.</span><span class="t">1 hr 30 min</span></div>
+          <div class="svc"><span class="n">Color Correction</span><span class="p">$200</span><span class="d"><q>Please consult with me before booking ❤️</q></span><span class="t">3 hr</span></div>
+        </article>
+
+        <article class="mcard reveal" data-c="blonde">
+          <svg class="ico" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 10l16-4 3 13-16 4z"/><path d="M14 22l16-4 3 13-16 4z"/><path d="M21 4v2M36 15h2M5 30H3"/></svg>
+          <h3>Blonding &amp; Foils</h3><div class="cat-sub">Brighten, partial or full</div>
+          <div class="svc"><span class="n">Face Framing Blonding</span><span class="p">$60</span><span class="d">Add $15+ for base color or toner.</span><span class="t">1 hr 40 min</span></div>
+          <div class="svc"><span class="n">Blonde Refresh</span><span class="p">$65</span><span class="d">Malibu treatment and tone included.</span><span class="t">1 hr 15 min</span></div>
+          <div class="svc"><span class="n">The Light Foil Partial</span><span class="p">$100</span><span class="d">A partial highlight with a light amount of foils. Add $15+ for base color or root tap.</span><span class="t">2 hr</span></div>
+          <div class="svc"><span class="n">Heavy Foil Partial</span><span class="p">$125</span><span class="d">A heavy foil partial. Add $15+ for base color or root tap.</span><span class="t">2 hr 40 min</span></div>
+          <div class="svc"><span class="n">Full Highlight</span><span class="p">$145</span><span class="d">Full highlights. Add $15+ for base color or root tap.</span><span class="t">3 hr</span></div>
+          <div class="svc"><span class="n">Full Bleach Out</span><span class="p">$200</span><span class="d">Full bleach out from roots to ends.</span><span class="t">3 hr 30 min</span></div>
+          <div class="svc"><span class="n">Full Bleach Out Root Touch Up</span><span class="p">$125</span><span class="d"><q>Roots must be 1 inch or less.</q></span><span class="t">1 hr 45 min</span></div>
+        </article>
+
+        <article class="mcard reveal" data-c="ext">
+          <svg class="ico" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 8h26"/><path d="M11 8c-2 10 3 18 0 28M17 8c-2 10 3 18 0 28M23 8c-2 10 3 18 0 28M29 8c-2 10 3 18 0 28"/></svg>
+          <h3>Extensions</h3><div class="cat-sub">Weft installs &amp; upkeep</div>
+          <div class="svc"><span class="n">Extension Consultation</span><span class="p free">Free</span><span class="d"><q>We choose the best option of extensions for you! During this app you will be color matched and order your extensions.</q></span><span class="t">30 min</span></div>
+          <div class="svc"><span class="n">Weft Sew-In Installation</span><span class="p">$75 / row</span><span class="d">Book an extension consultation first.</span><span class="t">1 hr 30 min</span></div>
+          <div class="svc"><span class="n">Weft Mini Move Up</span><span class="p">$60</span><span class="d">With wash and style.</span><span class="t">1 hr</span></div>
+          <div class="svc"><span class="n">Quick Weft Mini Move Up</span><span class="p">$25</span><span class="d">A quick bead maintenance with no wash or styling.</span><span class="t">30 min</span></div>
+          <div class="svc"><span class="n">Shampoo &amp; Style w/ Extensions</span><span class="p">$50</span><span class="t">1 hr 30 min</span></div>
+        </article>
+
+        <article class="mcard reveal" data-c="cut">
+          <svg class="ico" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="31" r="5"/><circle cx="31" cy="31" r="5"/><path d="M14 27L32 6M28 27L10 6"/></svg>
+          <h3>Cuts &amp; Style</h3><div class="cat-sub">Dry cut to full wash &amp; style</div>
+          <div class="svc"><span class="n">Women's Haircut, No Styling</span><span class="p">$17</span><span class="d">Dry cut with no styling or wash. Price varies.</span><span class="t">30 min</span></div>
+          <div class="svc"><span class="n">Haircut with Style Only</span><span class="p">$30</span><span class="d">No wash with this service.</span><span class="t">30 min</span></div>
+          <div class="svc"><span class="n">Haircut with Wash + Style</span><span class="p">$45</span><span class="d">Price varies.</span><span class="t">45 min</span></div>
+        </article>
+
+        <article class="mcard reveal" data-c="brow">
+          <svg class="ico" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 22c8-9 22-10 32-4"/><path d="M9 29c6 3 18 3 24 0"/></svg>
+          <h3>Brows &amp; Wax</h3><div class="cat-sub">Quick finishing touches</div>
+          <div class="svc"><span class="n">Brow Tint &amp; Shape</span><span class="p">$35</span><span class="d">This includes a wax.</span><span class="t">30 min</span></div>
+          <div class="svc"><span class="n">Wax (1 area)</span><span class="p">$12</span><span class="t">20 min</span></div>
+        </article>
+      </div>
+      <p class="menu-foot">Ready? <a href="https://square.site/book/D799ARXQXGNC3/whitney-at-whitney-s-beauty-bar-middlesboro-ky" target="_blank" rel="noopener">Pick your service and time on the booking page →</a></p>
+    </div>
+  </section>
+
+  <section class="sec notes" id="notes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Good to know</div>
+        <h2>Straight from Whitney, <em>before you book.</em></h2>
+        <p>The notes Whitney writes on her own services, so you book the right appointment the first time.</p>
+      </div>
+      <div class="note-grid">
+        <div class="note reveal"><div class="k">Root Touch Up</div><blockquote>“Roots must be 1.5 inch or less.”</blockquote><p>It's single color root coverage with no blonding. Grown out further, or after something brighter? Look at Full One Color or the foil services.</p></div>
+        <div class="note reveal"><div class="k">Extensions</div><blockquote>“You must book an extension consultation before booking this!”</blockquote><p>The consultation is free and takes 30 minutes. You're color matched and your extensions are ordered.</p></div>
+        <div class="note reveal"><div class="k">Color Correction</div><blockquote>“Please consult with me before booking ❤️”</blockquote><p>Color correction is listed at $200 and 3 hours. Call (606) 302-5267 first.</p></div>
+        <div class="note reveal"><div class="k">Bleach Out Touch Up</div><blockquote>“Roots must be 1 inch or less.”</blockquote><p>Keeps a full bleach out bright from the root. Listed at $125, 1 hr 45 min.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newc">
+    <div class="wrap">
+      <div class="newc-card reveal">
+        <svg class="bg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+          <g stroke="#B08A4F" stroke-width=".8" opacity=".55"><path d="M-20 320V170a120 120 0 0 1 240 0v150"/><path d="M180 320V150a120 120 0 0 1 240 0v170"/><path d="M80 320V200a100 100 0 0 1 200 0v120"/></g>
+        </svg>
+        <div class="eyebrow" style="justify-content:center">New here?</div>
+        <h2>Accepting <em>new clients!</em></h2>
+        <p>Book any service online in a minute, or start with the free 30-minute extension consultation.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn btn-dark" href="https://square.site/book/D799ARXQXGNC3/whitney-at-whitney-s-beauty-bar-middlesboro-ky" target="_blank" rel="noopener">Book with Whitney</a>
+          <a class="btn btn-ghost" href="tel:+16063025267">Call (606) 302-5267</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" style="padding-top:8px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Visit</div>
+        <h2>On Dansbury Avenue, <em>Middlesboro.</em></h2>
+        <p>402 Dansbury Avenue, Suite 2. A short drive from Harrogate and the Cumberland Gap.</p>
+      </div>
+      <div class="visit-grid">
+        <div>
+          <div class="hours reveal">
+            <h3>Hours</h3>
+            <div class="status" id="status"><i></i><span>Mon – Thu, 10:00 AM – 3:30 PM</span></div>
+            <div id="hrs">
+              <div class="hrow" data-d="1"><span>Monday</span><span>10:00 AM – 3:30 PM</span></div>
+              <div class="hrow" data-d="2"><span>Tuesday</span><span>10:00 AM – 3:30 PM</span></div>
+              <div class="hrow" data-d="3"><span>Wednesday</span><span>10:00 AM – 3:30 PM</span></div>
+              <div class="hrow" data-d="4"><span>Thursday</span><span>10:00 AM – 3:30 PM</span></div>
+              <div class="hrow closed" data-d="5"><span>Friday</span><span>Closed</span></div>
+              <div class="hrow closed" data-d="6"><span>Saturday</span><span>Closed</span></div>
+              <div class="hrow closed" data-d="0"><span>Sunday</span><span>Closed</span></div>
+            </div>
+          </div>
+          <div class="contact reveal">
+            <a class="cline" href="tel:+16063025267"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span><b>(606) 302-5267</b><small>Tap to call</small></span></a>
+            <a class="cline" href="https://www.google.com/maps/dir/?api=1&destination=402%20Dansbury%20Avenue%20Suite%202%2C%20Middlesboro%2C%20KY%2040965" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>402 Dansbury Avenue, Suite 2</b><small>Middlesboro, KY 40965 · Get directions</small></span></a>
+            <a class="cline" href="mailto:whitneybrock318@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><b>whitneybrock318@gmail.com</b><small>Email Whitney</small></span></a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Map to Whitney's Beauty Bar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=402%20Dansbury%20Avenue%20Suite%202%2C%20Middlesboro%2C%20KY%2040965&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><span>Whitney's <em style="color:var(--blush)">Beauty Bar</em></span></a>
+    <div>402 Dansbury Avenue, Suite 2 · Middlesboro, KY · <a href="tel:+16063025267">(606) 302-5267</a></div>
+    <div class="foil-line"></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="c" href="tel:+16063025267"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call</a>
+  <a class="b" href="https://square.site/book/D799ARXQXGNC3/whitney-at-whitney-s-beauty-bar-middlesboro-ky" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book online</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // today's hours + open status (America/New_York is the salon's zone)
+  try{
+    var now=new Date(); var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}, day=now.getDay(), h=now.getHours(), m=now.getMinutes();
+    parts.forEach(function(p){if(p.type==='weekday')day=wd[p.value];if(p.type==='hour')h=+p.value%24;if(p.type==='minute')m=+p.value;});
+    var row=document.querySelector('.hrow[data-d="'+day+'"]'); if(row){row.classList.add('today');row.firstElementChild.textContent+=' · today';}
+    var t=h*60+m, openDay=day>=1&&day<=4, st=document.getElementById('status'), s=st.querySelector('span');
+    if(openDay&&t>=600&&t<930){st.classList.add('open');s.textContent='Open now · until 3:30 PM';}
+    else if(openDay&&t<600){s.textContent='Opens today at 10:00 AM';}
+    else{s.textContent='Closed now · open Mon – Thu, 10–3:30';}
+  }catch(e){}
+  // nav border
+  var nav=document.getElementById('nav'); addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  // menu filter
+  var tabs=document.querySelectorAll('.tab'), cards=document.querySelectorAll('.mcard');
+  tabs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});cards.forEach(function(c){c.hidden=!(f==='all'||c.dataset.c===f);if(!c.hidden)c.classList.add('in')})})});
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

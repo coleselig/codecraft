@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Touched by Jenny — Smyrna, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--lilac:#C8B6E2;--mid:#1B1530;--pearl:#F7F4FB;--ink:#2a2240;--muted:#5e5577;--line:rgba(27,21,48,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--pearl);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--mid);color:#d9cfee;font-size:11.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Gloock",Georgia,serif;font-weight:400;letter-spacing:-.01em;color:var(--mid)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:"Gloock",serif;font-size:22px;color:var(--mid);text-decoration:none}
+.logo span{color:#8a6fc0}
+.navlinks{display:none;gap:28px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;opacity:.8}.navlinks a:hover{opacity:1}
+.hero{position:relative;overflow:hidden;background:var(--mid);color:var(--pearl);border-radius:0 0 36px 36px}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9;animation:float 14s ease-in-out infinite}
+.o1{width:260px;height:260px;right:-130px;top:120px;opacity:.55;background:radial-gradient(circle at 30% 30%,#fff 0%,#e6d9ff 18%,#C8B6E2 40%,#8fd3e0 65%,#f3b6d6 85%,transparent 100%)}
+.o2{width:180px;height:180px;left:-60px;bottom:40px;background:radial-gradient(circle at 35% 35%,#fff,#f6c9e4 30%,#C8B6E2 60%,#7bc5d8 90%);animation-delay:-5s;opacity:.65}
+.o3{width:90px;height:90px;right:30%;bottom:-20px;background:radial-gradient(circle at 35% 35%,#fff,#C8B6E2 55%,#9be1d1);animation-delay:-9s;opacity:.7}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,18px) scale(1.04)}}
+.hero nav .logo{color:var(--pearl)}.hero nav .logo span{color:var(--lilac)}
+.hero-in{position:relative;z-index:2;padding:40px 0 64px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac);border:1px solid rgba(200,182,226,.35);padding:6px 12px;border-radius:99px;backdrop-filter:blur(6px)}
+.hero h1{text-shadow:0 2px 24px rgba(27,21,48,.5);color:var(--pearl);font-size:clamp(44px,12vw,92px);line-height:.98;margin:22px 0 18px;max-width:11ch}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#C8B6E2,#f3c3e0 45%,#9fe0e6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:17px;max-width:34ch;color:#d7cfe6}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 22px;border-radius:99px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover,.btn:active{transform:translateY(-2px)}
+.btn-p{background:var(--lilac);color:var(--mid);box-shadow:0 10px 30px -10px rgba(200,182,226,.8)}
+.btn-g{border:1px solid rgba(247,244,251,.35);color:var(--pearl)}
+.btn-g:hover{background:rgba(247,244,251,.08)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
+.chip{font-size:12.5px;padding:7px 12px;border-radius:99px;background:rgba(247,244,251,.08);border:1px solid rgba(247,244,251,.14);color:#e8e1f3}
+section{padding:72px 0}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7a5fb0}
+h2{font-size:clamp(34px,8vw,56px);line-height:1.02;margin:10px 0 14px}
+.lead{color:var(--muted);max-width:52ch}
+.promo{margin-top:-34px;position:relative;z-index:3}
+.promo-card{background:linear-gradient(120deg,#fff,#efe7fb 60%,#e3f4f6);border:1px solid var(--line);border-radius:24px;padding:22px;display:grid;gap:14px;box-shadow:0 20px 50px -30px rgba(27,21,48,.5)}
+.promo-card h3{font-size:24px}
+.promo-row{display:grid;gap:10px}
+.deal{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14.5px}
+.deal b{font-weight:600}
+.tag{font-size:12px;font-weight:700;background:var(--mid);color:var(--lilac);padding:5px 10px;border-radius:99px;white-space:nowrap}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.tab{border:1px solid var(--line);background:#fff;padding:9px 15px;border-radius:99px;font:600 13.5px "Inter Tight",sans-serif;color:var(--ink);cursor:pointer;transition:.2s}
+.tab[aria-selected=true]{background:var(--mid);color:var(--pearl);border-color:var(--mid)}
+.menu{display:grid;gap:10px}
+.item{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:16px;transition:border-color .2s,transform .2s}
+.item:hover{border-color:var(--lilac);transform:translateX(3px)}
+.item .n{font-weight:600}.item .d{font-size:13px;color:var(--muted)}
+.item .p{font-family:"Gloock",serif;font-size:20px;color:var(--mid);white-space:nowrap}
+.menu[hidden]{display:none}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+.why{background:var(--mid);color:var(--pearl);border-radius:36px;position:relative;overflow:hidden}
+.why h2{color:var(--pearl)}.why .kicker{color:var(--lilac)}
+.why .o1{opacity:.35;top:auto;bottom:-140px;right:-120px}
+.grid{display:grid;gap:14px;margin-top:28px;position:relative;z-index:2}
+.card{border:1px solid rgba(247,244,251,.14);background:rgba(247,244,251,.05);border-radius:20px;padding:22px}
+.card .num{font-family:"Gloock",serif;font-size:42px;background:linear-gradient(100deg,#C8B6E2,#f3c3e0,#9fe0e6);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.card h3{color:var(--pearl);font-size:21px;margin:8px 0 6px}
+.card p{color:#cfc6df;font-size:14.5px}
+.hours{display:grid;gap:6px;margin-top:22px;max-width:520px}
+.hr{display:flex;justify-content:space-between;padding:12px 16px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:15px}
+.hr.today{background:var(--mid);color:var(--pearl);border-color:var(--mid)}
+.hr.today span:first-child::after{content:"  · today";color:var(--lilac);font-size:12px;font-weight:600}
+.hr .c{color:var(--muted)}.hr.today .c{color:#cfc6df}
+.visit{display:grid;gap:22px}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:#e9e3f4}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.addr{font-size:18px;font-weight:500;margin:6px 0 18px}
+.pay{margin-top:18px;font-size:14px;color:var(--muted)}
+footer{padding:40px 0 30px;text-align:center;font-size:13px;color:var(--muted)}
+footer .logo{display:block;margin-bottom:8px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(27,21,48,.92);backdrop-filter:blur(12px)}
+.bar a{flex:1;text-align:center;padding:14px 10px;border-radius:99px;font-weight:600;font-size:15px;text-decoration:none}
+.bar .b1{background:var(--lilac);color:var(--mid)}.bar .b2{border:1px solid rgba(247,244,251,.3);color:var(--pearl)}
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+@media (min-width:820px){
+ .navlinks{display:flex}
+ .hero-in{padding:70px 0 110px}
+ .promo-card{grid-template-columns:1fr 1.4fr;align-items:center;padding:30px}
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .menu{grid-template-columns:1fr 1fr}
+ .visit{grid-template-columns:1fr 1.2fr;align-items:stretch}
+ .bar{display:none}body{padding-bottom:0}
+ .o1{width:520px;height:520px;right:-80px;top:-120px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Touched by Jenny. Not live.</div>
+
+<header class="hero">
+ <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+ <div class="wrap">
+  <nav><a class="logo" href="#top">Touched by <span>Jenny</span></a>
+   <div class="navlinks"><a href="#menu">Services</a><a href="#why">About</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div></nav>
+  <div class="hero-in" id="top">
+   <span class="eyebrow">Locs · Natural hair · Smyrna, TN</span>
+   <h1>Your locs, <em>retwisted</em> with care.</h1>
+   <p class="sub">Starter locs, micro loc retwists, interlocks, silk presses and braids, from a stylist licensed since 2017.</p>
+   <div class="ctas">
+    <a class="btn btn-p" href="https://touchedbyjenny.glossgenius.com/book">Book your appointment →</a>
+    <a class="btn btn-g" href="#menu">See services</a>
+   </div>
+   <div class="chips"><span class="chip">Suite 216 · Hazelwood Dr.</span><span class="chip">Open Saturdays 7:30 AM</span><span class="chip">Online booking</span></div>
+  </div>
+ </div>
+</header>
+
+<div class="wrap promo">
+ <div class="promo-card reveal">
+  <div><span class="kicker">Limited dates</span><h3>Deal or No Deal</h3></div>
+  <div class="promo-row">
+   <div class="deal"><span><b>November 18th–22nd</b><br><span style="color:var(--muted);font-size:13px">$50 off your original price and style</span></span><span class="tag">$50 off</span></div>
+   <div class="deal"><span><b>December 18th–22nd</b><br><span style="color:var(--muted);font-size:13px">50% off your original price and style</span></span><span class="tag">50% off</span></div>
+  </div>
+ </div>
+</div>
+
+<section id="menu">
+ <div class="wrap">
+  <span class="kicker">Services</span>
+  <h2 class="reveal">The menu.</h2>
+  <p class="lead reveal">Starting prices as listed on Jenny's booking page. Final price depends on length and density.</p>
+  <div class="tabs" role="tablist">
+   <button class="tab" role="tab" aria-selected="true" data-t="locs">Loc retwists</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="micro">Micro locs</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="natural">Natural & braids</button>
+  </div>
+  <div class="menu" data-p="locs">
+   <div class="item"><div><div class="n">Short Locs Retwist</div><div class="d">Ear to chin · 90 min</div></div><div class="p">$150+</div></div>
+   <div class="item"><div><div class="n">Medium Length</div><div class="d">Neck to shoulders · 120 min</div></div><div class="p">$175+</div></div>
+   <div class="item"><div><div class="n">Long Midback Length</div><div class="d">180 min</div></div><div class="p">$200+</div></div>
+   <div class="item"><div><div class="n">Pass Midback Length</div><div class="d">210 min</div></div><div class="p">$225+</div></div>
+   <div class="item"><div><div class="n">Waist Length Locs Retwist</div><div class="d">240 min</div></div><div class="p">$265+</div></div>
+   <div class="item"><div><div class="n">Regular Starter Locs</div><div class="d">210 min</div></div><div class="p">$250+</div></div>
+  </div>
+  <div class="menu" data-p="micro" hidden>
+   <div class="item"><div><div class="n">Micro Starter Locs</div><div class="d">240 min</div></div><div class="p">$300+</div></div>
+   <div class="item"><div><div class="n">Short Length Micro Retwist</div><div class="d">210 min</div></div><div class="p">$180+</div></div>
+   <div class="item"><div><div class="n">Medium Length Micro Locs</div><div class="d">Retwist</div></div><div class="p">$200+</div></div>
+   <div class="item"><div><div class="n">Long Length Micro Loc Retwist</div><div class="d">240 min</div></div><div class="p">$225+</div></div>
+   <div class="item"><div><div class="n">Micro Loc Retie / Interlock · Short</div><div class="d">210 min</div></div><div class="p">$225+</div></div>
+   <div class="item"><div><div class="n">Micro Loc Retie / Interlock · Medium</div><div class="d">240 min</div></div><div class="p">$260+</div></div>
+   <div class="item"><div><div class="n">Micro Loc Retie / Interlock · Long</div><div class="d">270 min</div></div><div class="p">$300+</div></div>
+   <div class="item"><div><div class="n">Micro Loc Retie / Interlock · XLong</div><div class="d">330 min</div></div><div class="p">$350+</div></div>
+  </div>
+  <div class="menu" data-p="natural" hidden>
+   <div class="item"><div><div class="n">Silk Press</div><div class="d">150 min</div></div><div class="p">$125+</div></div>
+   <div class="item"><div><div class="n">Two Strands or Braids with Natural</div><div class="d">150 min</div></div><div class="p">$120+</div></div>
+   <div class="item"><div><div class="n">Shampoo + Steam + Blow-Out</div><div class="d">105 min</div></div><div class="p">$75+</div></div>
+   <div class="item"><div><div class="n">Braid Down + Crochets</div><div class="d">180+ min</div></div><div class="p">$125+</div></div>
+   <div class="item"><div><div class="n">Box Braids Take Down + Comb Out</div><div class="d">180 min</div></div><div class="p">$110+</div></div>
+   <div class="item"><div><div class="n">Men Cornrow Grooming</div><div class="d">150 min</div></div><div class="p">$95+</div></div>
+   <div class="item"><div><div class="n">Kids Braid Style w/ Shampoo</div><div class="d">180 min</div></div><div class="p">$120</div></div>
+   <div class="item"><div><div class="n">Teeth Gems</div><div class="d">10 min</div></div><div class="p">$50+</div></div>
+   <div class="item"><div><div class="n">Add-On Trim</div><div class="d">Natural hair or locs · 35 min</div></div><div class="p">$20+</div></div>
+  </div>
+  <p class="note">Need a sooner slot? A Squeeze-in Fee (priority appointment) is available from $50+.</p>
+ </div>
+</section>
+
+<section id="why" class="why">
+ <div class="orb o1"></div>
+ <div class="wrap">
+  <span class="kicker">Meet Jenny</span>
+  <h2 class="reveal">Owner. Stylist.<br>Loc specialist.</h2>
+  <div class="grid">
+   <div class="card reveal"><div class="num">2017</div><h3>Licensed since</h3><p>Jenny is the owner of Touched by Jenny and has been licensed since 2017.</p></div>
+   <div class="card reveal"><div class="num">27</div><h3>Services on the menu</h3><p>From starter locs to waist-length retwists, micro interlocks, silk presses, braids and kids' styles.</p></div>
+   <div class="card reveal"><div class="num">5</div><h3>Days a week</h3><p>Wednesday evenings, Thursday and Friday mornings, plus weekends, including Saturdays from 7:30 AM and Sundays from 1 PM.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="hours">
+ <div class="wrap">
+  <span class="kicker">Hours</span>
+  <h2 class="reveal">When to find her.</h2>
+  <div class="hours" id="hrs">
+   <div class="hr" data-d="1"><span>Monday</span><span class="c">Closed</span></div>
+   <div class="hr" data-d="2"><span>Tuesday</span><span class="c">Closed</span></div>
+   <div class="hr" data-d="3"><span>Wednesday</span><span>5 PM – 10 PM</span></div>
+   <div class="hr" data-d="4"><span>Thursday</span><span>8:30 AM – 2 PM</span></div>
+   <div class="hr" data-d="5"><span>Friday</span><span>8:30 AM – 2 PM</span></div>
+   <div class="hr" data-d="6"><span>Saturday</span><span>7:30 AM – 7:30 PM</span></div>
+   <div class="hr" data-d="0"><span>Sunday</span><span>1 PM – 6 PM</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+ <div class="wrap visit">
+  <div>
+   <span class="kicker">Visit</span>
+   <h2 class="reveal">Suite 216, Smyrna.</h2>
+   <p class="addr">1370 Hazelwood Dr., Suite 216<br>Smyrna, TN 37167</p>
+   <div class="ctas">
+    <a class="btn btn-p" href="https://touchedbyjenny.glossgenius.com/book">Book online</a>
+    <a class="btn" style="border:1px solid var(--line)" href="https://www.google.com/maps/dir/?api=1&destination=1370%20Hazelwood%20Dr%2C%20Suite%20216%2C%20Smyrna%2C%20TN%2037167">Get directions</a>
+   </div>
+   <p class="pay">Deposits accepted by Zelle or Cash App ($TouchedbyJenny).</p>
+  </div>
+  <div class="map"><iframe loading="lazy" title="Map to Touched by Jenny" src="https://www.google.com/maps?q=1370%20Hazelwood%20Dr%2C%20Suite%20216%2C%20Smyrna%2C%20TN%2037167&output=embed"></iframe></div>
+ </div>
+</section>
+
+<footer><div class="wrap"><span class="logo">Touched by Jenny</span>1370 Hazelwood Dr., Suite 216 · Smyrna, TN<br><br>Concept by Code Craft Media</div></footer>
+
+<div class="bar"><a class="b1" href="https://touchedbyjenny.glossgenius.com/book">Book now</a><a class="b2" href="https://www.google.com/maps/dir/?api=1&destination=1370%20Hazelwood%20Dr%2C%20Suite%20216%2C%20Smyrna%2C%20TN%2037167">Directions</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var d=new Date().getDay();var r=document.querySelector('.hr[data-d="'+d+'"]');if(r)r.classList.add('today');
+ document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
+  document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected',x===t)});
+  document.querySelectorAll('.menu').forEach(function(m){m.hidden=m.dataset.p!==t.dataset.t});});});
+ var els=[].slice.call(document.querySelectorAll('.reveal'));
+ if('IntersectionObserver' in window){els.forEach(function(e){e.classList.add('pre')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)});}
+ setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Honey Rock Herb Farm — Louisville, TN</title>
+<meta name="description" content="Herbs, flowers, figs, garlic and plants grown with organic methods in Louisville, Tennessee. Find us at the Maryville Farmers' Market.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosemary:#3f5a43; --rosemary-d:#2a3d2e; --sage:#8fa58a; --sage-l:#dfe6d6;
+  --honey:#c8922a; --honey-l:#e9be5c; --honey-d:#8a5f12;
+  --parch:#f5eedd; --parch-d:#ebe0c6; --ink:#2b2a22; --muted:#5e5b4c;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Work Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--parch);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.paper{background-image:radial-gradient(rgba(138,95,18,.06) 1px,transparent 1.2px),radial-gradient(rgba(63,90,67,.05) 1px,transparent 1.2px);background-size:22px 22px,31px 31px;background-position:0 0,11px 15px}
+
+/* banner */
+.concept{background:var(--rosemary-d);color:#e9e3cf;font-size:9.6px;text-align:center;padding:7px 4px;letter-spacing:-.015em;white-space:nowrap;overflow:hidden}
+@media(max-width:359px){.concept{white-space:normal}}
+@media(min-width:600px){.concept{font-size:12px;letter-spacing:.02em}}
+.concept b{color:var(--honey-l);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(245,238,221,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(63,90,67,.15)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:34px}
+.brand span{font-family:var(--serif);font-weight:700;font-size:21px;color:var(--rosemary-d);line-height:1}
+.brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--honey-d);margin-top:3px;font-weight:600}
+.navlinks{display:none;gap:28px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--rosemary-d);position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--honey);transition:right .25s}
+.navlinks a:hover::after{right:0}
+.navcall{font-size:13px;font-weight:600;text-decoration:none;background:var(--rosemary);color:#fff;padding:9px 14px;border-radius:999px;transition:background .2s}
+.navcall:hover{background:var(--rosemary-d)}
+@media(min-width:900px){.navlinks{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 56px}
+.hero .comb{position:absolute;right:-60px;top:-30px;width:260px;opacity:.5;pointer-events:none}
+.hero .sprig{position:absolute;left:-30px;bottom:-20px;width:180px;opacity:.35;transform:rotate(-12deg);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--honey-d);background:rgba(200,146,42,.12);border:1px solid rgba(200,146,42,.35);padding:6px 12px;border-radius:999px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--honey)}
+h1{font-family:var(--serif);font-weight:600;color:var(--rosemary-d);font-size:clamp(44px,11.5vw,92px);line-height:.95;letter-spacing:-.01em;margin:18px 0 18px}
+h1 em{font-style:italic;color:var(--honey-d);font-weight:500}
+.lede{font-size:17px;color:var(--muted);max-width:560px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:15px;padding:14px 22px;border-radius:999px;transition:transform .15s,box-shadow .2s,background .2s}
+.btn svg{width:18px;height:18px}
+.btn-p{background:var(--rosemary);color:#fff;box-shadow:0 8px 20px -10px rgba(42,61,46,.8)}
+.btn-p:hover{background:var(--rosemary-d);transform:translateY(-2px)}
+.btn-s{background:transparent;color:var(--rosemary-d);border:1.5px solid var(--rosemary)}
+.btn-s:hover{background:var(--sage-l);transform:translateY(-2px)}
+.hero-grid{display:grid;gap:36px;position:relative}
+.jar{position:relative;max-width:360px;margin:0 auto;width:100%}
+.label-card{position:relative;background:#fbf7ec;border:1px solid var(--parch-d);border-radius:22px;padding:22px;box-shadow:0 30px 60px -35px rgba(42,61,46,.55)}
+.label-card::before{content:"";position:absolute;inset:8px;border:1px dashed rgba(138,95,18,.35);border-radius:16px;pointer-events:none}
+.label-card h3{font-family:var(--serif);font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--honey-d);text-align:center;font-weight:700}
+.label-card .big{font-family:var(--serif);font-size:30px;color:var(--rosemary-d);text-align:center;line-height:1.05;margin:6px 0 4px;font-weight:600}
+.label-card .sub{text-align:center;font-size:13px;color:var(--muted)}
+.label-card ul{list-style:none;margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.label-card li{display:flex;align-items:center;gap:8px;font-size:14px;background:rgba(143,165,138,.16);padding:8px 10px;border-radius:10px}
+.label-card li svg{width:18px;height:18px;flex:none}
+.bee{position:absolute;width:30px;top:-12px;right:22px;animation:buzz 5s ease-in-out infinite}
+@keyframes buzz{0%,100%{transform:translate(0,0) rotate(6deg)}25%{transform:translate(-14px,-8px) rotate(-6deg)}50%{transform:translate(-4px,6px) rotate(4deg)}75%{transform:translate(10px,-4px) rotate(-3deg)}}
+@media(min-width:900px){.hero{padding:80px 0 96px}.hero-grid{grid-template-columns:1.25fr 1fr;align-items:center}.hero .comb{width:420px;right:-80px}.jar{max-width:440px}.label-card{padding:34px 30px;transform:rotate(1.5deg)}.label-card .big{font-size:40px}.label-card li{font-size:15.5px;padding:11px 12px}.label-card li svg{width:22px;height:22px}.bee{width:44px}}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--honey-d);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:26px;height:2px;background:var(--honey)}
+h2{font-family:var(--serif);font-weight:600;color:var(--rosemary-d);font-size:clamp(36px,8.4vw,58px);line-height:1;margin:12px 0 14px}
+h2 em{font-style:italic;color:var(--honey-d);font-weight:500}
+.intro{color:var(--muted);max-width:600px}
+
+/* products */
+.shelf{display:grid;gap:14px;margin-top:32px}
+@media(min-width:640px){.shelf{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.shelf{grid-template-columns:repeat(3,1fr)}}
+.tag{position:relative;background:#fbf7ec;border:1px solid var(--parch-d);border-radius:18px;padding:22px 20px 20px;transition:transform .2s,box-shadow .25s,border-color .2s;overflow:hidden}
+.tag:hover{transform:translateY(-4px);box-shadow:0 22px 40px -28px rgba(42,61,46,.6);border-color:var(--sage)}
+.tag .ico{width:52px;height:52px;border-radius:14px;background:var(--sage-l);display:grid;place-items:center;margin-bottom:14px}
+.tag .ico svg{width:32px;height:32px}
+.tag h3{font-family:var(--serif);font-size:27px;font-weight:600;color:var(--rosemary-d);line-height:1.05}
+.tag p{font-size:14.5px;color:var(--muted);margin-top:6px}
+.tag .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag .chips span{font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px;background:rgba(200,146,42,.14);color:var(--honey-d)}
+.tag.feature{background:var(--rosemary);border-color:var(--rosemary);color:#f3eedd}
+.tag.feature h3{color:#fff}.tag.feature p{color:#d6dccd}
+.tag.feature .ico{background:rgba(233,190,92,.18)}
+.tag.feature .chips span{background:rgba(233,190,92,.2);color:var(--honey-l)}
+.tag .corner{position:absolute;right:-18px;top:-18px;width:90px;opacity:.18}
+
+/* why */
+.why{background:var(--rosemary-d);color:#ece6d2;position:relative;overflow:hidden}
+.why h2{color:#fff}.why h2 em{color:var(--honey-l)}
+.why .kicker{color:var(--honey-l)}
+.why .intro{color:#c9d0bf}
+.why .comb-bg{position:absolute;inset:0;opacity:.07;pointer-events:none}
+.pillars{display:grid;gap:16px;margin-top:34px;position:relative}
+@media(min-width:800px){.pillars{grid-template-columns:repeat(4,1fr)}}
+.pillar{border-top:1px solid rgba(233,190,92,.4);padding-top:18px}
+.pillar .n{font-family:var(--serif);font-size:46px;line-height:1;color:var(--honey-l);font-weight:600}
+.pillar h3{font-size:16px;font-weight:600;color:#fff;margin:8px 0 4px}
+.pillar p{font-size:14px;color:#c9d0bf}
+.quote{margin-top:40px;position:relative;font-family:var(--serif);font-style:italic;font-size:clamp(24px,5.6vw,34px);line-height:1.2;color:#fff;max-width:760px}
+.quote small{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--honey-l);margin-top:12px}
+
+/* visit */
+.visit-grid{display:grid;gap:22px;margin-top:30px}.visit-grid>*{min-width:0}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.1fr}}
+.card{background:#fbf7ec;border:1px solid var(--parch-d);border-radius:20px;padding:22px}
+.card h3{font-family:var(--serif);font-size:28px;color:var(--rosemary-d);font-weight:600;line-height:1.1}
+.card .meta{font-size:14px;color:var(--muted);margin-top:4px}
+.season{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;background:rgba(200,146,42,.12);border:1px solid rgba(200,146,42,.3);font-size:14px}
+.season svg{width:22px;height:22px;flex:none}
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14.5px}
+@media(max-width:480px){table{font-size:13.5px}td{padding:10px 5px}tr.today td:first-child::after{margin-left:5px;font-size:9px;padding:2px 5px}.card{padding:20px 16px}}
+td{padding:10px 8px;border-bottom:1px dashed rgba(63,90,67,.22);white-space:nowrap}
+td:last-child{text-align:right;color:var(--muted)}
+tr.today td{background:rgba(143,165,138,.22);font-weight:600;color:var(--rosemary-d)}
+tr.today td:first-child{border-radius:10px 0 0 10px}
+tr.today td:last-child{border-radius:0 10px 10px 0;color:var(--rosemary-d)}
+tr.today td:first-child::after{content:"Today";margin-left:8px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--honey);color:#fff;padding:2px 7px;border-radius:999px;vertical-align:2px}
+.contact-list{list-style:none;margin-top:18px;display:grid;gap:10px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:13px 14px;border-radius:14px;background:var(--parch);border:1px solid var(--parch-d);transition:border-color .2s,background .2s;font-weight:500;overflow-wrap:anywhere}
+.contact-list a:hover{border-color:var(--sage);background:var(--sage-l)}
+.contact-list svg{width:20px;height:20px;flex:none;color:var(--rosemary)}
+.map{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--parch-d);min-height:320px;background:linear-gradient(115deg,transparent 46%,rgba(255,255,255,.7) 46.5%,rgba(255,255,255,.7) 49%,transparent 49.5%),linear-gradient(25deg,transparent 60%,rgba(255,255,255,.6) 60.5%,rgba(255,255,255,.6) 62.5%,transparent 63%),var(--sage-l);box-shadow:0 20px 40px -30px rgba(42,61,46,.6)}
+.map iframe{position:relative;z-index:1;width:100%;height:100%;min-height:320px;border:0;display:block}
+.map::before{content:"Founders Square · Maryville";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:22px;font-weight:600;color:var(--rosemary-d);background:#fbf7ec;padding:8px 16px;border-radius:999px;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);white-space:nowrap}
+@media(min-width:900px){.map,.map iframe{min-height:440px}}
+.dirs{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
+footer{background:var(--rosemary-d);color:#c9d0bf;padding:40px 0 34px;font-size:13.5px}
+footer .wrap{display:grid;gap:14px}
+footer .brand span{color:#fff}
+footer .fine{font-size:12px;opacity:.8;border-top:1px solid rgba(255,255,255,.12);padding-top:14px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(42,61,46,.97);box-shadow:0 -10px 30px -12px rgba(0,0,0,.4)}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:13px 10px;border-radius:999px}
+.callbar svg{width:18px;height:18px}
+.callbar .c1{background:var(--honey);color:#24200f}
+.callbar .c2{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+@media(min-width:900px){.callbar{display:none}}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){.reveal{transition:none}.bee{animation:none}}
+a:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+</style>
+</head>
+<body class="paper">
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Honey Rock Herb Farm. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sprig" viewBox="0 0 64 64"><path d="M32 60C32 40 33 22 36 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="27" cy="50" rx="7" ry="3" transform="rotate(-35 27 50)"/><ellipse cx="38" cy="45" rx="7" ry="3" transform="rotate(35 38 45)"/><ellipse cx="27.5" cy="38" rx="7" ry="3" transform="rotate(-38 27.5 38)"/><ellipse cx="39" cy="33" rx="6.5" ry="2.8" transform="rotate(38 39 33)"/><ellipse cx="29" cy="26" rx="6" ry="2.6" transform="rotate(-40 29 26)"/><ellipse cx="39.5" cy="21" rx="5.5" ry="2.4" transform="rotate(40 39.5 21)"/><ellipse cx="31" cy="14" rx="5" ry="2.2" transform="rotate(-42 31 14)"/><ellipse cx="38.5" cy="10" rx="4" ry="2" transform="rotate(42 38.5 10)"/></g></symbol>
+    <symbol id="hex" viewBox="0 0 40 46"><path d="M20 2l17 10v22L20 44 3 34V12z"/></symbol>
+    <symbol id="fig" viewBox="0 0 40 40"><path d="M20 6c1-3 4-4 6-3-2 1-3 2-4 4 7 3 12 10 12 18 0 8-6 13-14 13S6 33 6 25c0-8 6-15 14-19z" fill="currentColor"/><path d="M14 26c3 4 9 4 12 0" stroke="#fbf7ec" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/></symbol>
+    <symbol id="garlic" viewBox="0 0 40 40"><path d="M20 4c0 6-2 8-6 11-5 4-8 8-8 13 0 6 6 9 14 9s14-3 14-9c0-5-3-9-8-13-4-3-6-5-6-11z" fill="currentColor"/><path d="M20 15v21M13 19c-2 5-2 11 1 16M27 19c2 5 2 11-1 16" stroke="#fbf7ec" stroke-width="1.4" fill="none" opacity=".6"/></symbol>
+    <symbol id="flower" viewBox="0 0 40 40"><g fill="currentColor"><circle cx="20" cy="9" r="6"/><circle cx="30.5" cy="16.5" r="6"/><circle cx="26.5" cy="29" r="6"/><circle cx="13.5" cy="29" r="6"/><circle cx="9.5" cy="16.5" r="6"/></g><circle cx="20" cy="20" r="5" fill="#e9be5c"/></symbol>
+    <symbol id="pepper" viewBox="0 0 40 40"><path d="M25 8c2-3 5-4 7-3M24 9c-4 0-6 3-6 7 0 9-4 15-12 19 12 2 22-6 22-18 0-4-1-8-4-8z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="shroom" viewBox="0 0 40 40"><path d="M4 20C4 11 11 5 20 5s16 6 16 15z" fill="currentColor"/><path d="M15 20h10l-1 14c0 2-2 3-4 3s-4-1-4-3z" fill="currentColor" opacity=".55"/></symbol>
+    <symbol id="pot" viewBox="0 0 40 40"><path d="M9 22h22l-3 15H12z" fill="currentColor" opacity=".55"/><path d="M20 22V11M20 15c-4-1-7-4-7-8 4 0 7 3 7 8zM20 13c3-1 6-3 6-7-4 0-6 3-6 7z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="currentColor"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-7.2 7-12.5A7 7 0 005 9.5C5 14.8 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="beeS" viewBox="0 0 40 30"><ellipse cx="13" cy="8" rx="8" ry="6" fill="#fff" opacity=".85" stroke="#8a5f12" stroke-width="1"/><ellipse cx="23" cy="7" rx="7" ry="5" fill="#fff" opacity=".85" stroke="#8a5f12" stroke-width="1"/><ellipse cx="20" cy="19" rx="12" ry="8" fill="#e9be5c"/><path d="M15 12v14M21 11v16M27 13v12" stroke="#2b2a22" stroke-width="2.6"/><circle cx="32" cy="18" r="3.4" fill="#2b2a22"/></symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Honey Rock Herb Farm home">
+      <svg viewBox="0 0 40 46" aria-hidden="true"><path d="M20 2l17 10v22L20 44 3 34V12z" fill="#c8922a"/><use href="#sprig" x="6" y="7" width="28" height="32" style="color:#2a3d2e"/></svg>
+      <div><span>Honey Rock</span><small>Herb Farm</small></div>
+    </a>
+    <div class="navlinks"><a href="#grow">What we grow</a><a href="#why">The farm</a><a href="#visit">Find us</a></div>
+    <a class="navcall" href="tel:+18659840954">Call the farm</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="comb" viewBox="0 0 240 240" aria-hidden="true">
+    <g fill="none" stroke="#c8922a" stroke-width="2">
+      <use href="#hex" x="60" y="10" width="40" height="46"/><use href="#hex" x="100" y="10" width="40" height="46"/><use href="#hex" x="140" y="10" width="40" height="46"/>
+      <use href="#hex" x="80" y="44" width="40" height="46"/><use href="#hex" x="120" y="44" width="40" height="46"/><use href="#hex" x="160" y="44" width="40" height="46"/>
+      <use href="#hex" x="100" y="78" width="40" height="46"/><use href="#hex" x="140" y="78" width="40" height="46"/><use href="#hex" x="180" y="78" width="40" height="46"/>
+      <use href="#hex" x="160" y="112" width="40" height="46"/><use href="#hex" x="120" y="112" width="40" height="46"/>
+    </g>
+    <g fill="#e9be5c" opacity=".55"><use href="#hex" x="120" y="44" width="40" height="46"/><use href="#hex" x="140" y="78" width="40" height="46"/><use href="#hex" x="160" y="112" width="40" height="46"/></g>
+  </svg>
+  <svg class="sprig" viewBox="0 0 64 64" aria-hidden="true" style="color:#3f5a43"><use href="#sprig"/></svg>
+
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><i></i>Louisville, TN · Blount County</span>
+      <h1>Herbs, figs <em>&amp;</em> garlic, grown the slow way.</h1>
+      <p class="lede">Fresh and dried herbs, flowers, figs, garlic and plants, grown with organic methods. Find us at the Maryville Farmers' Market, April through November.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="tel:+18659840954"><svg><use href="#phone"/></svg>Call (865) 984-0954</a>
+        <a class="btn btn-s" href="#grow">See what we grow</a>
+      </div>
+    </div>
+
+    <div class="jar reveal">
+      <svg class="bee" aria-hidden="true" viewBox="0 0 40 30"><use href="#beeS"/></svg>
+      <div class="label-card">
+        <h3>Honey Rock</h3>
+        <div class="big">From the herb farm</div>
+        <div class="sub">Organic methods · not certified</div>
+        <ul>
+          <li><svg style="color:#3f5a43"><use href="#sprig"/></svg>Herbs</li>
+          <li><svg style="color:#b07a9c"><use href="#flower"/></svg>Flowers</li>
+          <li><svg style="color:#6d4a6b"><use href="#fig"/></svg>Figs</li>
+          <li><svg style="color:#cdbf9f"><use href="#garlic"/></svg>Garlic</li>
+          <li><svg style="color:#b5432e"><use href="#pepper"/></svg>Hot peppers</li>
+          <li><svg style="color:#8a6a4a"><use href="#shroom"/></svg>Mushrooms</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="grow">
+  <div class="wrap">
+    <div class="kicker reveal">What we grow</div>
+    <h2 class="reveal">The farm table, <em>by the bunch.</em></h2>
+    <p class="intro reveal">Grown with organic methods on our farm in Louisville, Tennessee. What's ready changes with the season, so call ahead if you're after something particular.</p>
+
+    <div class="shelf">
+      <article class="tag feature reveal">
+        <svg class="corner" viewBox="0 0 64 64" style="color:#e9be5c"><use href="#sprig"/></svg>
+        <div class="ico"><svg style="color:#e9be5c"><use href="#sprig"/></svg></div>
+        <h3>Herbs</h3>
+        <p>The heart of the farm. Bunches of fresh-cut herbs, plus dried herbs for the pantry.</p>
+        <div class="chips"><span>Fresh herbs</span><span>Dried herbs</span></div>
+      </article>
+      <article class="tag reveal">
+        <div class="ico"><svg style="color:#b07a9c"><use href="#flower"/></svg></div>
+        <h3>Flowers</h3>
+        <p>Fresh flowers for the table and dried flowers that keep long after the season ends.</p>
+        <div class="chips"><span>Fresh flowers</span><span>Dried flowers</span></div>
+      </article>
+      <article class="tag reveal">
+        <div class="ico"><svg style="color:#6d4a6b"><use href="#fig"/></svg></div>
+        <h3>Figs</h3>
+        <p>Not what most people expect from an herb farm, and a good reason to find our table.</p>
+        <div class="chips"><span>Fruit</span></div>
+      </article>
+      <article class="tag reveal">
+        <div class="ico"><svg style="color:#a8977a"><use href="#garlic"/></svg></div>
+        <h3>Garlic</h3>
+        <p>Grown alongside the herbs, ready for your kitchen.</p>
+        <div class="chips"><span>Vegetables</span></div>
+      </article>
+      <article class="tag reveal">
+        <div class="ico"><svg style="color:#b5432e"><use href="#pepper"/></svg></div>
+        <h3>Hot peppers &amp; mushrooms</h3>
+        <p>A little heat and a little earth from the same farm.</p>
+        <div class="chips"><span>Hot peppers</span><span>Mushrooms</span></div>
+      </article>
+      <article class="tag reveal">
+        <div class="ico"><svg style="color:#3f5a43"><use href="#pot"/></svg></div>
+        <h3>Plants</h3>
+        <p>Herb, flower and vegetable plants to start your own garden.</p>
+        <div class="chips"><span>Herb plants</span><span>Flower plants</span><span>Vegetable plants</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="comb-bg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><pattern id="hp" width="40" height="69" patternUnits="userSpaceOnUse"><path d="M20 0l20 11.5v23L20 46 0 34.5v-23z M20 46v23" fill="none" stroke="#e9be5c" stroke-width="1.5"/></pattern></defs>
+    <rect width="400" height="300" fill="url(#hp)"/>
+  </svg>
+  <div class="wrap" style="position:relative">
+    <div class="kicker reveal">The farm</div>
+    <h2 class="reveal">Forty years <em>among the herbs.</em></h2>
+    <p class="intro reveal">Honey Rock is a small Blount County herb farm that brings its harvest to downtown Maryville on market Saturdays.</p>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="n">40+</div><h3>Years growing herbs</h3><p>In our own words: we've been growing and enjoying herbs for over 40 years.</p></div>
+      <div class="pillar reveal"><div class="n">Organic</div><h3>Methods, not shortcuts</h3><p>Herbs, flowers and vegetable plants grown with organic methods (not certified).</p></div>
+      <div class="pillar reveal"><div class="n">Sat.</div><h3>Maryville Farmers' Market</h3><p>Founders Square, downtown Maryville, April through November.</p></div>
+      <div class="pillar reveal"><div class="n">Card</div><h3>Credit &amp; debit welcome</h3><p>No need to hunt for cash at the market table.</p></div>
+    </div>
+    <p class="quote reveal">"We have been growing and enjoying herbs for over 40 years."<small>Honey Rock Herb Farm</small></p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker reveal">Find us</div>
+    <h2 class="reveal">Market Saturdays, <em>or call the farm.</em></h2>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <h3>Maryville Farmers' Market</h3>
+        <p class="meta">Founders Square, downtown Maryville · Saturdays 8:30–11:30 a.m.</p>
+        <div class="season" id="season"><svg style="color:#8a5f12"><use href="#cal"/></svg><span>Market season runs April through November.</span></div>
+        <table aria-label="Weekly schedule">
+          <tbody id="hours">
+            <tr data-d="1"><td>Monday</td><td>By appointment</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>By appointment</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>By appointment</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>By appointment</td></tr>
+            <tr data-d="5"><td>Friday</td><td>By appointment</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>Market 8:30–11:30 a.m.</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>By appointment</td></tr>
+          </tbody>
+        </table>
+        <ul class="contact-list">
+          <li><a href="tel:+18659840954"><svg><use href="#phone"/></svg>(865) 984-0954 · call for an appointment</a></li>
+          <li><a href="mailto:honeyrockherbs@gmail.com"><svg><use href="#mail"/></svg>honeyrockherbs@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="map reveal"><iframe title="Map of Founders Square, Maryville TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Founders%20Square%2C%20Maryville%2C%20TN&output=embed"></iframe></div>
+        <div class="dirs">
+          <a class="btn btn-p" href="https://www.google.com/maps/dir/?api=1&destination=Founders%20Square%2C%20Maryville%2C%20TN" target="_blank" rel="noopener"><svg><use href="#pin"/></svg>Directions to the market</a>
+          <a class="btn btn-s" href="tel:+18659840954"><svg><use href="#phone"/></svg>Call the farm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand"><svg viewBox="0 0 40 46" aria-hidden="true"><path d="M20 2l17 10v22L20 44 3 34V12z" fill="#c8922a"/><use href="#sprig" x="6" y="7" width="28" height="32" style="color:#2a3d2e"/></svg><div><span>Honey Rock</span><small style="color:#e9be5c">Herb Farm</small></div></a>
+    <p>Louisville, Tennessee · Blount County · <a href="tel:+18659840954">(865) 984-0954</a></p>
+    <p class="fine">Concept by Code Craft Media · Not the official Honey Rock Herb Farm website.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:+18659840954"><svg><use href="#phone"/></svg>Call the farm</a>
+  <a class="c2" href="#visit"><svg><use href="#pin"/></svg>Find us</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var now=new Date(), d=now.getDay();
+  var r=document.querySelector('#hours tr[data-d="'+d+'"]'); if(r) r.classList.add('today');
+  var m=now.getMonth(); // 0=Jan
+  var s=document.querySelector('#season span');
+  if(s && (m<3 || (m===10 && now.getDate()>14) || m===11)) s.textContent='The market is between seasons. It runs April through November; call the farm in the meantime.';
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function show(e){e.classList.remove('pre')}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){var b=e.getBoundingClientRect(); if(b.top>innerHeight){e.classList.add('pre');io.observe(e)}});
+  }
+  setTimeout(function(){els.forEach(show)},1500);
+})();
+</script>
+</body>
+</html>

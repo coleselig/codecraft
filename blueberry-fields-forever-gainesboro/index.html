@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Blueberry Fields Forever — Gainesboro</title>
+<meta name="description" content="U-pick blueberries on Blackburn Fork Road in Jackson County, Tennessee. Concept site by Code Craft Media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --berry:#2e3a87; --berry-d:#1f2865; --berry-l:#5563b8;
+  --leaf:#4e8b4a; --leaf-d:#3a6d37; --leaf-l:#7fb26f;
+  --sky:#e9f1fb; --sun:#f2c14e; --cream:#fffaf0;
+  --ink:#1b2150; --muted:#4a5276;
+  --bar-h:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Nunito",system-ui,sans-serif;color:var(--ink);background:var(--sky);line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,.script{font-family:"Shrikhand",Georgia,serif;font-weight:400;letter-spacing:.01em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.concept{background:var(--berry-d);color:#dfe5ff;font-size:clamp(9.6px,2.62vw,12.5px);letter-spacing:-.01em;text-align:center;padding:7px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--sun);font-weight:800}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:30;background:rgba(233,241,251,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(46,58,135,.08)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:900;color:var(--berry);font-size:16px;line-height:1.05}
+.brand small{display:block;font-weight:700;font-size:11px;color:var(--leaf-d);letter-spacing:.08em;text-transform:uppercase}
+.navlinks{display:none;gap:26px;font-weight:700;font-size:15px}
+.navlinks a{text-decoration:none;color:var(--muted);transition:color .2s}
+.navlinks a:hover{color:var(--berry)}
+.top .navcall{display:none}
+@media(min-width:900px){.navlinks{display:flex}.top .navcall{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:15px 24px;transition:transform .18s ease,box-shadow .18s ease,background .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-sun{background:var(--sun);color:var(--berry-d);box-shadow:0 6px 0 #c99a2a,0 12px 24px rgba(242,193,78,.35)}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 8px 0 #c99a2a,0 16px 28px rgba(242,193,78,.4)}
+.btn-ghost{background:rgba(255,255,255,.7);color:var(--berry);box-shadow:inset 0 0 0 2px rgba(46,58,135,.25)}
+.btn-ghost:hover{background:#fff;box-shadow:inset 0 0 0 2px var(--berry)}
+.btn-berry{background:var(--berry);color:#fff;box-shadow:0 6px 0 var(--berry-d)}
+.btn-berry:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#d5e5fa 0%,var(--sky) 58%,#dcecd6 100%)}
+.sunburst{position:absolute;right:-70px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#fbe3a0 0%,var(--sun) 45%,rgba(242,193,78,0) 70%);opacity:.9;animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.06)}}
+.hero .wrap{position:relative;z-index:2;padding-top:30px;padding-bottom:0}
+.tag{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--leaf-d);font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:7px 13px;box-shadow:0 2px 0 rgba(46,58,135,.08)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--leaf);display:block}
+.hero h1{font-size:clamp(44px,12.2vw,80px);line-height:.98;color:var(--berry);margin:16px 0 14px;text-shadow:0 3px 0 rgba(255,255,255,.7)}
+.hero h1 span{color:var(--leaf-d);display:block}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:30ch;font-weight:600}
+.hero p.sub b{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 4px}
+.hero-art{position:relative;margin-top:16px}
+.hero-grid{display:grid;gap:10px}
+@media(min-width:900px){
+  .hero .wrap{padding-top:64px;padding-bottom:40px}
+  .hero-grid{grid-template-columns:1.35fr .65fr;align-items:end;gap:20px}
+  .hero h1{font-size:76px}
+  .hero-art .bucket{width:100%;max-width:440px;margin-bottom:-40px}
+  .hero p.sub{font-size:20px}
+  .hero-art{margin-top:0}
+}
+.bucket{width:min(78%,360px);margin:0 auto -6px;animation:bob 5s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes bob{50%{transform:rotate(-2deg) translateY(-4px)}}
+.rows{display:block;width:100%;height:auto;margin-top:-2px}
+.hero-rows{position:relative;z-index:1;height:120px;margin-top:-40px}
+@media(min-width:900px){.hero-rows{height:170px;margin-top:-70px}}
+
+/* facts strip */
+.strip{background:var(--leaf-d);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;padding:0}
+.strip div{padding:16px 18px;background:var(--leaf-d)}
+.strip b{display:block;font-size:20px;font-weight:900;color:var(--sun);line-height:1.15}
+.strip span{font-size:13px;opacity:.92;font-weight:600}
+@media(min-width:900px){.strip .wrap{grid-template-columns:repeat(4,1fr);padding:0 22px}.strip div{padding:22px}}
+
+/* sections */
+section{padding:70px 0}
+.eyebrow{font-weight:900;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-d);margin-bottom:8px}
+h2{font-size:clamp(34px,9vw,56px);line-height:1.02;color:var(--berry);margin-bottom:16px}
+.lead{font-size:17.5px;color:var(--muted);max-width:56ch}
+
+/* ways to buy */
+.ways{background:var(--cream);position:relative}
+.cards{display:grid;gap:16px;margin-top:30px}
+@media(min-width:800px){.cards{grid-template-columns:repeat(3,1fr);gap:22px}}
+.card{background:#fff;border-radius:24px;padding:26px 24px 24px;box-shadow:0 2px 0 rgba(46,58,135,.06),0 14px 34px rgba(46,58,135,.08);position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 2px 0 rgba(46,58,135,.06),0 20px 40px rgba(46,58,135,.14)}
+.card .ic{width:62px;height:62px;border-radius:18px;background:var(--sky);display:grid;place-items:center;margin-bottom:14px}
+.card h3{font-size:22px;font-weight:900;color:var(--berry);margin-bottom:6px;line-height:1.2}
+.card p{color:var(--muted);font-size:16px}
+.card .pill{display:inline-block;margin-top:14px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:#fdf1cf;color:#8a6510;padding:5px 10px;border-radius:999px}
+.note{margin-top:22px;display:flex;gap:12px;align-items:flex-start;background:var(--sky);border-radius:18px;padding:16px 18px;font-weight:700;color:var(--berry)}
+.note svg{flex:0 0 26px}
+
+/* berries section */
+.berries{background:var(--berry);color:#fff;position:relative;overflow:hidden}
+.berries h2{color:#fff}
+.berries .eyebrow{color:var(--sun)}
+.berries .lead{color:#cdd3f5}
+.variety{display:grid;gap:16px;margin-top:28px}
+@media(min-width:800px){.variety{grid-template-columns:1fr 1fr;gap:22px}}
+.vcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:24px;display:flex;gap:16px;align-items:center}
+.vcard svg{flex:0 0 74px}
+.vcard h3{font-size:21px;font-weight:900;margin-bottom:3px}
+.vcard p{color:#cdd3f5;font-size:15.5px}
+.dots{position:absolute;inset:0;opacity:.09;background-image:radial-gradient(circle at 10px 10px,#fff 2.4px,transparent 3px);background-size:34px 34px;pointer-events:none}
+.since{display:flex;align-items:center;gap:18px;margin-top:30px;background:var(--sun);color:var(--berry-d);border-radius:24px;padding:20px 22px}
+.since .script{font-size:46px;line-height:1}
+.since p{font-weight:700;font-size:16px}
+
+/* visit */
+.visit-grid{display:grid;gap:22px;margin-top:28px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.15fr;gap:28px}}
+.hours{background:#fff;border-radius:24px;padding:22px;box-shadow:0 14px 34px rgba(46,58,135,.08)}
+.hours h3{font-size:20px;font-weight:900;color:var(--berry);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.hours .small{font-size:14px;color:var(--muted);margin-bottom:12px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:11px 12px;border-radius:12px;font-weight:700;font-size:16px}
+.hours li:nth-child(odd){background:#f5f8fd}
+.hours li.today{background:var(--sun);color:var(--berry-d)}
+.hours li.today span:first-child::after{content:" · today";font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.addr{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(46,58,135,.08);display:flex;flex-direction:column}
+.addr iframe{width:100%;height:280px;border:0;display:block;background:#dfe8f4}
+.addr .info{padding:20px 22px 22px}
+.addr .info h3{font-size:20px;font-weight:900;color:var(--berry)}
+.addr .info p{color:var(--muted);margin:4px 0 0}
+.gps{margin-top:14px;display:flex;gap:10px;align-items:flex-start;background:#eef6ec;border:1.5px dashed var(--leaf);border-radius:14px;padding:12px 14px;font-size:15px;color:var(--leaf-d);font-weight:700}
+.gps svg{flex:0 0 22px}
+.addr .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.addr .btns .btn{padding:13px 18px;font-size:15px}
+
+/* checklist */
+.check{background:linear-gradient(180deg,var(--sky),#dcecd6)}
+.list{display:grid;gap:12px;margin-top:24px}
+@media(min-width:800px){.list{grid-template-columns:repeat(3,1fr)}}
+.li{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:20px;padding:18px}
+.li .n{flex:0 0 40px;height:40px;border-radius:50%;background:var(--berry);color:#fff;display:grid;place-items:center;font-family:"Shrikhand";font-size:19px}
+.li h3{font-size:17.5px;font-weight:900;color:var(--berry);line-height:1.25}
+.li p{font-size:15px;color:var(--muted)}
+
+/* cta */
+.cta{background:var(--leaf-d);color:#fff;text-align:center;position:relative;overflow:hidden;padding:70px 0 0}
+.cta h2{color:#fff}
+.cta p{color:#dcefd6;font-size:18px;max-width:34ch;margin:0 auto 24px}
+.cta .ctas{justify-content:center}
+.cta .rows{margin-top:40px}
+
+footer{background:var(--berry-d);color:#b9c1ee;font-size:14px;padding:26px 0 calc(30px + var(--bar-h) + env(safe-area-inset-bottom))}
+@media(min-width:900px){footer{padding-bottom:30px}}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer a{color:#fff}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -8px 24px rgba(31,40,101,.14);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:14px;font-weight:900;font-size:16px;text-decoration:none}
+.bar .call{background:var(--berry);color:#fff}
+.bar .dir{background:var(--sun);color:var(--berry-d)}
+.bar svg{width:18px;height:18px}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Blueberry Fields Forever. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg1" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#7b88d6"/><stop offset=".55" stop-color="#2e3a87"/><stop offset="1" stop-color="#1b2361"/></radialGradient>
+    <symbol id="berry" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="url(#bg1)"/><ellipse cx="13" cy="12" rx="5" ry="3.2" fill="#fff" opacity=".28" transform="rotate(-30 13 12)"/><path d="M15 6.5l5 3.5 5-3.5-1.6 5.5H16.6z" fill="#1b2361" opacity=".85"/><circle cx="20" cy="9" r="1.6" fill="#9aa6e8" opacity=".6"/></symbol>
+    <symbol id="leaf" viewBox="0 0 40 20"><path d="M2 10C10 0 28 -1 38 10 28 21 10 20 2 10z" fill="#4e8b4a"/><path d="M4 10h32" stroke="#3a6d37" stroke-width="1.4"/></symbol>
+    <symbol id="cluster" viewBox="0 0 120 110">
+      <path d="M60 4c-2 18-10 30-24 40M60 4c4 20 14 32 30 38M60 4v46" stroke="#3a6d37" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <use href="#leaf" x="56" y="0" width="46" height="23" transform="rotate(18 60 10)"/>
+      <use href="#leaf" x="14" y="2" width="44" height="22" transform="rotate(-24 50 12)"/>
+      <use href="#berry" x="16" y="38" width="38" height="38"/>
+      <use href="#berry" x="70" y="34" width="40" height="40"/>
+      <use href="#berry" x="40" y="48" width="44" height="44"/>
+      <use href="#berry" x="22" y="68" width="34" height="34"/>
+      <use href="#berry" x="62" y="70" width="36" height="36"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm9 7.2L4 7.3V17h16V7.3z"/></symbol>
+  </defs>
+</svg>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Blueberry Fields Forever home">
+      <svg width="34" height="31" aria-hidden="true"><use href="#cluster"/></svg>
+      <span>Blueberry Fields Forever<small>U-pick · Jackson County, TN</small></span>
+    </a>
+    <div class="navlinks"><a href="#pick">Ways to buy</a><a href="#berries">Our berries</a><a href="#visit">Hours &amp; directions</a></div>
+    <a class="btn btn-berry navcall" href="tel:+19312686937" style="padding:10px 18px;font-size:15px"><svg><use href="#i-phone"/></svg>931-268-6937</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="sunburst" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="tag rv"><i></i>Blackburn Fork Road · Jackson County</span>
+        <h1 class="rv">Grab a bucket. <span>The bushes are waiting.</span></h1>
+        <p class="sub rv">U-pick <b>Northern Highbush &amp; Rabbiteye</b> blueberries, grown on Blackburn Fork since 2012.</p>
+        <div class="ctas rv">
+          <a class="btn btn-sun" href="tel:+19312686937"><svg><use href="#i-phone"/></svg>Call before you pick</a>
+          <a class="btn btn-ghost" href="#visit"><svg><use href="#i-pin"/></svg>Hours &amp; directions</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg class="bucket" viewBox="0 0 320 250">
+          <defs>
+            <linearGradient id="pail" x1="0" x2="1"><stop offset="0" stop-color="#c9d3e6"/><stop offset=".45" stop-color="#f4f7fc"/><stop offset="1" stop-color="#aab6cf"/></linearGradient>
+          </defs>
+          <ellipse cx="160" cy="238" rx="120" ry="10" fill="#1f2865" opacity=".12"/>
+          <path d="M70 70 Q160 -30 250 70" fill="none" stroke="#8792ad" stroke-width="7" stroke-linecap="round"/>
+          <g>
+            <use href="#berry" x="78" y="44" width="40" height="40"/><use href="#berry" x="110" y="30" width="44" height="44"/><use href="#berry" x="148" y="26" width="42" height="42"/><use href="#berry" x="184" y="34" width="44" height="44"/><use href="#berry" x="214" y="50" width="34" height="34"/>
+            <use href="#berry" x="96" y="56" width="36" height="36"/><use href="#berry" x="166" y="52" width="38" height="38"/><use href="#berry" x="130" y="56" width="38" height="38"/><use href="#berry" x="200" y="60" width="34" height="34"/>
+            <use href="#leaf" x="150" y="14" width="46" height="23" transform="rotate(-20 170 25)"/>
+          </g>
+          <path d="M62 76h196l-22 152a10 10 0 01-10 8H94a10 10 0 01-10-8z" fill="url(#pail)"/>
+          <path d="M62 76h196" stroke="#8792ad" stroke-width="8" stroke-linecap="round"/>
+          <path d="M72 120h176M80 180h160" stroke="#a8b3cc" stroke-width="3" opacity=".7"/>
+          <rect x="108" y="130" width="104" height="40" rx="10" fill="#2e3a87"/>
+          <text x="160" y="157" text-anchor="middle" font-family="Shrikhand,Georgia,serif" font-size="20" fill="#f2c14e">U-pick</text>
+          <use href="#berry" x="236" y="200" width="26" height="26"/><use href="#berry" x="258" y="210" width="20" height="20"/><use href="#berry" x="48" y="206" width="22" height="22"/>
+        </svg>
+
+      </div>
+    </div>
+  </div>
+<svg class="rows hero-rows" viewBox="0 0 1200 210" preserveAspectRatio="none">
+          <path d="M0 80 C200 30 380 40 600 70 S1000 40 1200 60 V210 H0z" fill="#7fb26f"/>
+          <g fill="#4e8b4a">
+            <circle cx="60" cy="88" r="34"/><circle cx="150" cy="78" r="36"/><circle cx="245" cy="72" r="34"/><circle cx="340" cy="70" r="36"/><circle cx="440" cy="74" r="34"/><circle cx="540" cy="78" r="36"/><circle cx="640" cy="76" r="34"/><circle cx="740" cy="70" r="36"/><circle cx="840" cy="66" r="34"/><circle cx="940" cy="64" r="36"/><circle cx="1040" cy="66" r="34"/><circle cx="1140" cy="70" r="36"/>
+          </g>
+          <g fill="#2e3a87"><circle cx="48" cy="80" r="5"/><circle cx="70" cy="96" r="5"/><circle cx="140" cy="70" r="5"/><circle cx="162" cy="88" r="5"/><circle cx="236" cy="62" r="5"/><circle cx="256" cy="82" r="5"/><circle cx="330" cy="64" r="5"/><circle cx="352" cy="80" r="5"/><circle cx="430" cy="68" r="5"/><circle cx="452" cy="84" r="5"/><circle cx="530" cy="70" r="5"/><circle cx="552" cy="88" r="5"/><circle cx="630" cy="70" r="5"/><circle cx="652" cy="86" r="5"/><circle cx="730" cy="62" r="5"/><circle cx="752" cy="80" r="5"/><circle cx="830" cy="58" r="5"/><circle cx="852" cy="76" r="5"/><circle cx="930" cy="56" r="5"/><circle cx="952" cy="74" r="5"/><circle cx="1030" cy="58" r="5"/><circle cx="1052" cy="76" r="5"/><circle cx="1130" cy="62" r="5"/><circle cx="1152" cy="80" r="5"/></g>
+          <path d="M0 130 C260 100 420 112 640 128 S1000 110 1200 120 V210 H0z" fill="#4e8b4a"/>
+          <g fill="#3a6d37"><circle cx="20" cy="132" r="40"/><circle cx="130" cy="122" r="42"/><circle cx="245" cy="118" r="40"/><circle cx="360" cy="118" r="42"/><circle cx="475" cy="122" r="40"/><circle cx="590" cy="126" r="42"/><circle cx="705" cy="124" r="40"/><circle cx="820" cy="118" r="42"/><circle cx="935" cy="114" r="40"/><circle cx="1050" cy="116" r="42"/><circle cx="1165" cy="120" r="40"/></g>
+          <g fill="#2e3a87"><circle cx="118" cy="114" r="6"/><circle cx="142" cy="132" r="6"/><circle cx="350" cy="110" r="6"/><circle cx="374" cy="128" r="6"/><circle cx="580" cy="118" r="6"/><circle cx="604" cy="136" r="6"/><circle cx="810" cy="110" r="6"/><circle cx="834" cy="128" r="6"/><circle cx="1040" cy="108" r="6"/><circle cx="1064" cy="126" r="6"/></g>
+          <path d="M0 170 C300 150 600 168 900 160 S1150 164 1200 166 V210 H0z" fill="#3a6d37"/>
+        </svg>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>Since 2012</b><span>growing blueberry plants</span></div>
+    <div><b>2 species</b><span>Highbush &amp; Rabbiteye</span></div>
+    <div><b>Cash</b><span>for u-pick</span></div>
+    <div><b>Mon–Sat 8–5</b><span>Sun 12–5 in season</span></div>
+  </div>
+</div>
+
+<section class="ways" id="pick">
+  <div class="wrap">
+    <p class="eyebrow rv">Three ways to get berries</p>
+    <h2 class="rv">Pick your own, or let the farm do it.</h2>
+    <p class="lead rv">Blueberry Fields Forever offers u-pick for cash, u-pick on the half, or straight berry sales. Pick whichever suits your day.</p>
+    <div class="cards">
+      <article class="card rv">
+        <div class="ic"><svg width="44" height="40" viewBox="0 0 120 110" aria-hidden="true"><use href="#cluster"/></svg></div>
+        <h3>U-pick</h3>
+        <p>Walk the rows, fill your own bucket and pay for what you pick.</p>
+        <span class="pill">Cash</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="url(#bg1)"/><path d="M20 2v36" stroke="#f2c14e" stroke-width="3"/></svg></div>
+        <h3>U-pick on the half</h3>
+        <p>Another way to pick: give Rick a call and he can explain how it works.</p>
+        <span class="pill">Ask on the phone</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg width="44" height="36" viewBox="0 0 320 250" aria-hidden="true"><path d="M62 76h196l-22 152a10 10 0 01-10 8H94a10 10 0 01-10-8z" fill="#c9d3e6"/><use href="#berry" x="90" y="30" width="60" height="60"/><use href="#berry" x="150" y="26" width="64" height="64"/><use href="#berry" x="196" y="40" width="50" height="50"/></svg></div>
+        <h3>Straight berry sales</h3>
+        <p>No time to pick? Buy blueberries that are already picked.</p>
+        <span class="pill">Call for pricing</span>
+      </article>
+    </div>
+    <div class="note rv"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#f2c14e"/><path d="M12 6.5v7M12 16.5v.5" stroke="#1f2865" stroke-width="2.4" stroke-linecap="round"/></svg><span>Pricing isn't posted online. Call <a href="tel:+19312686937">931-268-6937</a> for the latest pricing before you head out.</span></div>
+  </div>
+</section>
+
+<section class="berries" id="berries">
+  <div class="dots" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow rv">On the bushes</p>
+    <h2 class="rv">Two kinds of blueberry, several varieties of each.</h2>
+    <p class="lead rv">The farm grows several varieties of both Northern Highbush and Rabbiteye blueberries along Blackburn Fork in Jackson County.</p>
+    <div class="variety">
+      <div class="vcard rv">
+        <svg width="74" height="68" viewBox="0 0 120 110" aria-hidden="true"><use href="#cluster"/></svg>
+        <div><h3>Northern Highbush</h3><p>Several varieties planted on the farm.</p></div>
+      </div>
+      <div class="vcard rv">
+        <svg width="74" height="68" viewBox="0 0 120 110" aria-hidden="true" style="transform:scaleX(-1)"><use href="#cluster"/></svg>
+        <div><h3>Rabbiteye</h3><p>Several varieties planted alongside the Highbush rows.</p></div>
+      </div>
+    </div>
+    <div class="since rv"><span class="script">2012</span><p>The year Blueberry Fields Forever started growing blueberry plants on Blackburn Fork.</p></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <p class="eyebrow rv">Plan your trip</p>
+    <h2 class="rv">Hours &amp; how to find the rows.</h2>
+    <p class="lead rv">Hours below are for the picking season. Berries depend on the weather, so a quick call first saves a wasted drive.</p>
+    <div class="visit-grid">
+      <div class="hours rv">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#2e3a87" stroke-width="2.4"/><path d="M12 7v5l3 2" stroke="#2e3a87" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>In-season hours</h3>
+        <p class="small">Check with the farm for availability.</p>
+        <ul id="hours">
+          <li data-d="1"><span>Monday</span><span>8 am – 5 pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>8 am – 5 pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>8 am – 5 pm</span></li>
+          <li data-d="4"><span>Thursday</span><span>8 am – 5 pm</span></li>
+          <li data-d="5"><span>Friday</span><span>8 am – 5 pm</span></li>
+          <li data-d="6"><span>Saturday</span><span>8 am – 5 pm</span></li>
+          <li data-d="0"><span>Sunday</span><span>12 pm – 5 pm</span></li>
+        </ul>
+        <div class="addr-btns" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+          <a class="btn btn-berry" href="tel:+19312686937" style="padding:13px 18px;font-size:15px"><svg><use href="#i-phone"/></svg>931-268-6937</a>
+          <a class="btn btn-ghost" href="mailto:r_fanning@hotmail.com" style="padding:13px 18px;font-size:15px"><svg><use href="#i-mail"/></svg>Email</a>
+        </div>
+      </div>
+      <div class="addr rv">
+        <iframe title="Map to Blueberry Fields Forever" loading="lazy" src="https://www.google.com/maps?q=1859%20Blackburn%20Fork%20Road%2C%20Gainesboro%2C%20TN%2038562&output=embed"></iframe>
+        <div class="info">
+          <h3>1859 Blackburn Fork Road</h3>
+          <p>Cookeville, TN 38501 · Jackson County</p>
+          <div class="gps"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>GPS tip: if your GPS sends you the wrong way, enter <b>Gainesboro, 38562</b> instead of Cookeville.</span></div>
+          <div class="btns">
+            <a class="btn btn-sun" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=1859%20Blackburn%20Fork%20Road%2C%20Gainesboro%2C%20TN%2038562"><svg><use href="#i-pin"/></svg>Get directions</a>
+            <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.facebook.com/Blueberry-Fields-Forever-541768136228142/">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="check">
+  <div class="wrap">
+    <p class="eyebrow rv">Before you go</p>
+    <h2 class="rv">Three quick things.</h2>
+    <div class="list">
+      <div class="li rv"><span class="n">1</span><div><h3>Call ahead</h3><p>Ask what's ripe and the latest pricing: 931-268-6937.</p></div></div>
+      <div class="li rv"><span class="n">2</span><div><h3>Bring cash</h3><p>U-pick is paid in cash.</p></div></div>
+      <div class="li rv"><span class="n">3</span><div><h3>Use Gainesboro 38562</h3><p>That's the GPS setting the farm recommends.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="rv">See you in the rows.</h2>
+    <p class="rv">One call tells you what's ripe this week.</p>
+    <div class="ctas rv">
+      <a class="btn btn-sun" href="tel:+19312686937"><svg><use href="#i-phone"/></svg>Call 931-268-6937</a>
+    </div>
+  </div>
+  <svg class="rows" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 50 C260 20 420 32 640 48 S1000 30 1200 40 V120 H0z" fill="#4e8b4a"/>
+    <g fill="#2e3a87"><circle cx="118" cy="44" r="6"/><circle cx="350" cy="38" r="6"/><circle cx="580" cy="46" r="6"/><circle cx="810" cy="38" r="6"/><circle cx="1040" cy="36" r="6"/></g>
+    <path d="M0 90 C300 70 600 88 900 80 S1150 84 1200 86 V120 H0z" fill="#2e3a87"/>
+  </svg>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Blueberry Fields Forever · 1859 Blackburn Fork Road · <a href="tel:+19312686937">931-268-6937</a></span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="call" href="tel:+19312686937"><svg><use href="#i-phone"/></svg>Call</a>
+  <a class="dir" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=1859%20Blackburn%20Fork%20Road%2C%20Gainesboro%2C%20TN%2038562"><svg><use href="#i-pin"/></svg>Directions</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function show(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else show();
+  setTimeout(show,1500);
+})();
+</script>
+</body>
+</html>

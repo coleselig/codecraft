@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Tapers &amp; Taps — Chattanooga</title>
+<meta name="description" content="Tapers & Taps — cuts, color, highlights and keratin by master hairstylist Caroline Wiley in Chattanooga, TN. Open every day 10–8.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0d0d; --ink2:#1a1a1a; --coral:#ff5a3c; --coral2:#ff8a6e; --bone:#f4efe6; --bone2:#e8e0d2; --mute:#8d877d;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bone);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;letter-spacing:-.01em;line-height:.95;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}
+/* banner */
+.concept{background:var(--coral);color:var(--ink);font-size:clamp(10px,2.9vw,12px);letter-spacing:-.01em;font-weight:500;text-align:center;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(13,13,13,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--bone);border-bottom:1px solid #262626}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:"Archivo Black";font-size:20px;text-decoration:none;display:flex;align-items:center;gap:10px;text-transform:uppercase}
+.logo i{display:inline-block;width:26px;height:26px;border-radius:6px;background:repeating-linear-gradient(90deg,var(--coral) 0 3px,transparent 3px 6px);box-shadow:inset 0 0 0 2px var(--coral)}
+.logo b{color:var(--coral);font-weight:400}
+.navl{display:none;gap:28px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.navl a{text-decoration:none;opacity:.8;transition:opacity .2s,color .2s}
+.navl a:hover{opacity:1;color:var(--coral)}
+.navbtn{background:var(--coral);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;transition:transform .2s,background .2s}
+.navbtn:hover{background:var(--bone);transform:translateY(-1px)}
+@media(min-width:900px){.navl{display:flex}}
+/* hero */
+.hero{background:var(--ink);color:var(--bone);position:relative;overflow:hidden;padding:26px 0 0}
+.hero .wrap{position:relative;z-index:2}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);border:1px solid #333;border-radius:999px;padding:6px 12px}
+.dot{width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 2s infinite}
+.dot.closed{background:var(--mute);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+.hero h1{font-size:clamp(50px,14.2vw,148px);margin:16px 0 14px}
+.hero h1 .c{color:var(--coral)}
+.hero h1 .o{-webkit-text-stroke:2px var(--bone);color:transparent}
+.hero p.sub{font-size:17px;max-width:560px;color:#d7d0c4}
+.hero p.sub strong{color:var(--bone)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;padding:15px 24px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s,color .2s,box-shadow .2s;min-height:52px}
+.btn-c{background:var(--coral);color:var(--ink);box-shadow:0 8px 24px -8px rgba(255,90,60,.7)}
+.btn-c:hover{transform:translateY(-2px);background:var(--coral2)}
+.btn-o{border:2px solid #3a3a3a;color:var(--bone)}
+.btn-o:hover{border-color:var(--bone);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+/* fade gradient bands */
+.fade{display:grid;grid-template-columns:repeat(8,1fr);height:120px;margin-top:6px}
+.fade span{display:block;transform-origin:bottom;animation:grow 1s cubic-bezier(.2,.8,.2,1) both}
+.fade span:nth-child(1){background:var(--coral);height:100%}
+.fade span:nth-child(2){background:#f35237;height:88%;align-self:end;animation-delay:.05s}
+.fade span:nth-child(3){background:#d94832;height:76%;align-self:end;animation-delay:.1s}
+.fade span:nth-child(4){background:#b23c2b;height:64%;align-self:end;animation-delay:.15s}
+.fade span:nth-child(5){background:#862f24;height:50%;align-self:end;animation-delay:.2s}
+.fade span:nth-child(6){background:#5b231c;height:36%;align-self:end;animation-delay:.25s}
+.fade span:nth-child(7){background:#361a16;height:22%;align-self:end;animation-delay:.3s}
+.fade span:nth-child(8){background:#1f1513;height:10%;align-self:end;animation-delay:.35s}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.guides{position:absolute;right:-60px;top:30px;width:320px;height:320px;z-index:1;opacity:.5}
+@media(min-width:900px){.guides{right:40px;top:60px;width:420px;height:420px;opacity:.9}.hero{padding-top:70px}.fade{height:160px}}
+/* ticker */
+.ticker{background:var(--coral);color:var(--ink);overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink)}
+.ticker div{display:inline-block;padding:12px 0;font-family:"Archivo Black";font-size:18px;text-transform:uppercase;animation:tick 26s linear infinite}
+.ticker em{font-style:normal;margin:0 18px;opacity:.55}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:72px 0}
+.lab{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.lab:before{content:"";width:28px;height:10px;background:repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 5px)}
+h2{font-size:clamp(40px,10vw,84px);margin-bottom:18px}
+.lead{max-width:620px;color:#4a463f;font-size:18px}
+/* menu */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 22px}
+.tab{font:700 14px "Space Grotesk";letter-spacing:.04em;text-transform:uppercase;padding:10px 16px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.tab[aria-selected=true],.tab:hover{background:var(--ink);color:var(--bone)}
+.grid{display:grid;gap:14px}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.cat{background:#fff;border-radius:20px;padding:22px 22px 10px;border:1px solid var(--bone2);position:relative;overflow:hidden}
+.cat h3{font-size:24px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
+.cat h3 small{font:500 12px "Space Grotesk";letter-spacing:.1em;color:var(--mute)}
+.cat:after{content:"";position:absolute;right:0;top:0;width:90px;height:8px;background:linear-gradient(90deg,transparent,var(--coral))}
+.row{display:grid;grid-template-columns:1fr auto;column-gap:16px;align-items:center;padding:12px 0;border-top:1px dashed #d9d1c3}
+.row>.n{grid-column:1;grid-row:1}
+.row>.t{grid-column:1;grid-row:2;margin-top:1px}
+.row>.fill{display:none}
+.row>.p{grid-column:2;grid-row:1/3}
+.row:first-of-type{border-top:0}
+.row .n{font-weight:700;flex:0 1 auto}
+.row .t{font-size:13px;color:var(--mute);white-space:nowrap}
+.row .fill{flex:1;min-width:10px}
+.row .p{font-weight:700;white-space:nowrap;text-align:right}
+.row .p.s{font-size:13px;font-weight:500;color:#5e594f;white-space:normal;max-width:150px}
+.cat[hidden]{display:none}
+.note{font-size:14px;color:var(--mute);margin-top:16px}
+/* why */
+.why{background:var(--ink);color:var(--bone);position:relative;overflow:hidden}
+.why .lead{color:#cfc7b9}
+.stat{display:grid;gap:14px;margin-top:34px}
+@media(min-width:760px){.stat{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid #2c2c2c;border-radius:20px;padding:26px;background:linear-gradient(180deg,#161616,#0f0f0f);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--coral)}
+.card .big{font-family:"Archivo Black";font-size:64px;line-height:1;color:var(--coral)}
+.card .big sup{font-size:28px;vertical-align:top}
+.card h3{font-size:22px;margin:12px 0 8px}
+.card p{color:#bdb5a7;font-size:16px}
+.meet{margin-top:44px;display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.meet{grid-template-columns:300px 1fr}}
+.mono{aspect-ratio:1;max-width:300px;border-radius:24px;background:var(--coral);position:relative;overflow:hidden;display:grid;place-items:center}
+.mono span{font-family:"Archivo Black";font-size:120px;color:var(--ink);position:relative;z-index:2}
+.mono:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(13,13,13,.0) 0 14px,rgba(13,13,13,.18) 14px 16px)}
+.mono:after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(0deg,rgba(13,13,13,.55),transparent)}
+.meet blockquote{font-size:22px;line-height:1.4;color:var(--bone)}
+.meet blockquote b{color:var(--coral)}
+.meet cite{display:block;font-style:normal;font-size:14px;color:var(--mute);margin-top:12px;letter-spacing:.06em;text-transform:uppercase}
+/* hours */
+.hrs{display:grid;gap:28px}
+@media(min-width:900px){.hrs{grid-template-columns:1fr 1fr}}
+.days{list-style:none;background:#fff;border-radius:20px;border:1px solid var(--bone2);overflow:hidden}
+.days li{display:flex;justify-content:space-between;padding:15px 22px;border-top:1px solid #eee6d9;font-weight:500}
+.days li:first-child{border-top:0}
+.days li.today{background:var(--ink);color:var(--bone)}
+.days li.today .d:after{content:"Today";margin-left:10px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--coral);color:var(--ink);padding:3px 8px;border-radius:999px;vertical-align:2px}
+.everyday{font-family:"Archivo Black";font-size:clamp(46px,12vw,96px);line-height:.9;text-transform:uppercase}
+.everyday span{color:var(--coral)}
+/* map */
+.mapbox{border-radius:20px;overflow:hidden;border:2px solid var(--ink);height:340px;background:var(--bone2)}
+.mapbox iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+.contact{display:grid;gap:12px;margin-top:20px}
+@media(min-width:600px){.contact{grid-template-columns:1fr 1fr}}
+.cbox{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--bone2);border-radius:16px;padding:16px 18px;text-decoration:none;transition:border-color .2s,transform .2s;min-width:0}
+.cbox:hover{border-color:var(--coral);transform:translateY(-2px)}
+.cbox .ic{width:44px;height:44px;flex:none;border-radius:12px;background:var(--ink);color:var(--coral);display:grid;place-items:center}
+.cbox .ic svg{width:20px;height:20px}
+.cbox small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.cbox b{display:block;overflow-wrap:anywhere}
+/* cta band */
+.band{background:var(--coral);color:var(--ink);text-align:center;position:relative;overflow:hidden}
+.band h2{font-size:clamp(44px,12vw,110px)}
+.band .btn-k{background:var(--ink);color:var(--bone)}
+.band .btn-k:hover{transform:translateY(-2px);background:#262626}
+.band .btn-ok{border:2px solid var(--ink);color:var(--ink)}
+.band .btn-ok:hover{background:var(--ink);color:var(--bone)}
+.band .ctas{justify-content:center;margin-bottom:0}
+.stripes{position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(13,13,13,.06) 22px 24px);pointer-events:none}
+footer{background:var(--ink);color:#a9a196;padding:40px 0 30px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between;align-items:center}
+footer .logo{color:var(--bone)}
+/* sticky bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,13,13,.96);border-top:1px solid #2a2a2a}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:14px;font-weight:700;text-decoration:none}
+.mbar .call{border:2px solid #3a3a3a;color:var(--bone)}
+.mbar .book{background:var(--coral);color:var(--ink)}
+.mbar svg{width:18px;height:18px}
+@media(min-width:900px){.mbar{display:none}}
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv:not(.in){opacity:0;transform:translateY(24px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<div class="concept">Concept site by Code Craft Media, made for Tapers &amp; Taps. Not live.</div>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a href="#top" class="logo"><i aria-hidden="true"></i>Tapers <b>&amp;</b> Taps</a>
+    <div class="navl"><a href="#menu">Menu</a><a href="#caroline">Caroline</a><a href="#hours">Hours</a><a href="#visit">Visit</a></div>
+    <a class="navbtn" href="https://square.site/book/ATSDB50D1AVZE/tapers-taps-chattanooga-tn" target="_blank" rel="noopener">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="guides" viewBox="0 0 200 200" aria-hidden="true">
+    <defs><pattern id="tooth" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="4" height="10" fill="#ff5a3c"/></pattern></defs>
+    <g transform="rotate(-18 100 100)">
+      <rect x="30" y="20" width="140" height="22" rx="4" fill="url(#tooth)" opacity=".9"/>
+      <rect x="30" y="54" width="140" height="22" rx="4" fill="url(#tooth)" opacity=".65"/>
+      <rect x="30" y="88" width="140" height="22" rx="4" fill="url(#tooth)" opacity=".42"/>
+      <rect x="30" y="122" width="140" height="22" rx="4" fill="url(#tooth)" opacity=".24"/>
+      <rect x="30" y="156" width="140" height="22" rx="4" fill="url(#tooth)" opacity=".12"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="kick"><i class="dot" id="dot"></i><span id="status">Open every day · 10–8</span></span>
+    <h1>Sharp <span class="o">tapers.</span><br>Bold <span class="c">color.</span><br>Every day.</h1>
+    <p class="sub">Barber-style cuts, highlights and keratin by master hairstylist <strong>Caroline Wiley</strong>, 13+ years behind the chair. Open 10–8, seven days a week in Chattanooga.</p>
+    <div class="ctas">
+      <a class="btn btn-c" href="https://square.site/book/ATSDB50D1AVZE/tapers-taps-chattanooga-tn" target="_blank" rel="noopener">Book your chair
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-o" href="tel:+14235584438"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(423) 558-4438</a>
+    </div>
+  </div>
+  <div class="fade" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>Barber Style Cut<em>/</em>Curly Cut<em>/</em>Full Highlight<em>/</em>Toner &amp; Gloss<em>/</em>Keratin Treatment<em>/</em>Beard Trim<em>/</em>Formal Style<em>/</em>Barber Style Cut<em>/</em>Curly Cut<em>/</em>Full Highlight<em>/</em>Toner &amp; Gloss<em>/</em>Keratin Treatment<em>/</em>Beard Trim<em>/</em>Formal Style<em>/</em></div></div>
+
+<main id="main">
+<section id="menu">
+  <div class="wrap">
+    <div class="lab">The menu</div>
+    <h2 class="rv">Pick your<br>length.</h2>
+    <p class="lead rv">From a 10-minute bang trim to a three-and-a-half-hour keratin treatment — every service and price straight from the Tapers &amp; Taps booking page.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="cut">Cuts</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="care">Treat &amp; style</button>
+    </div>
+    <div class="grid">
+      <div class="cat rv" data-c="cut">
+        <h3>Cuts <small>08</small></h3>
+        <div class="row"><span class="n">Barber Style Cut</span><span class="t">30 min</span><span class="fill"></span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Short Scissors Cut <span class="t">(Pixie–Chin)</span></span><span class="t">40 min</span><span class="fill"></span><span class="p">$50</span></div>
+        <div class="row"><span class="n">Medium Hair Cut <span class="t">(Below Chin–Shoulder)</span></span><span class="t">50 min</span><span class="fill"></span><span class="p">$65</span></div>
+        <div class="row"><span class="n">Long Hair Cut</span><span class="t">1 hr</span><span class="fill"></span><span class="p">from $75</span></div>
+        <div class="row"><span class="n">Long and extra thick</span><span class="t">1 hr 15</span><span class="fill"></span><span class="p">$85</span></div>
+        <div class="row"><span class="n">Curly Cut</span><span class="t">1 hr 15</span><span class="fill"></span><span class="p">$80</span></div>
+        <div class="row"><span class="n">Dry Shaping</span><span class="t">30 min</span><span class="fill"></span><span class="p">$45</span></div>
+        <div class="row"><span class="n">Bang Trim</span><span class="t">10 min</span><span class="fill"></span><span class="p s">Complimentary for returning guests</span></div>
+      </div>
+      <div class="cat rv" data-c="color">
+        <h3>Color <small>08</small></h3>
+        <div class="row"><span class="n">Base Color <span class="t">(Out growth)</span></span><span class="t">1 hr 30</span><span class="fill"></span><span class="p">$75</span></div>
+        <div class="row"><span class="n">All Over Color</span><span class="t">1 hr 30</span><span class="fill"></span><span class="p">$90</span></div>
+        <div class="row"><span class="n">Partial Highlight <span class="t">(Top/Face frame)</span></span><span class="t">1 hr 30</span><span class="fill"></span><span class="p">$130</span></div>
+        <div class="row"><span class="n">Full Highlight</span><span class="t">2 hr 30</span><span class="fill"></span><span class="p">$180</span></div>
+        <div class="row"><span class="n">Base with Highlights</span><span class="t">2 hr 30</span><span class="fill"></span><span class="p s">+$55 for any highlight</span></div>
+        <div class="row"><span class="n">Toner/Gloss</span><span class="t">30 min</span><span class="fill"></span><span class="p">$80</span></div>
+        <div class="row"><span class="n">Mystical Color</span><span class="t">3 hr</span><span class="fill"></span><span class="p s">Priced at consultation</span></div>
+        <div class="row"><span class="n">Special Technique</span><span class="t">2 hr 30</span><span class="fill"></span><span class="p s">Priced at consultation</span></div>
+      </div>
+      <div class="cat rv" data-c="care">
+        <h3>Treat &amp; style <small>06</small></h3>
+        <div class="row"><span class="n">Keratin Treatment</span><span class="t">3 hr 30</span><span class="fill"></span><span class="p">$350</span></div>
+        <div class="row"><span class="n">Deep Conditioning Treatment</span><span class="t">30 min</span><span class="fill"></span><span class="p">$40</span></div>
+        <div class="row"><span class="n">Shampoo Blowout</span><span class="t">30 min</span><span class="fill"></span><span class="p">$55</span></div>
+        <div class="row"><span class="n">Shampoo Upgrade</span><span class="t">20 min</span><span class="fill"></span><span class="p">$20</span></div>
+        <div class="row"><span class="n">Hot tool Style</span><span class="t">30 min</span><span class="fill"></span><span class="p">$35</span></div>
+        <div class="row"><span class="n">Formal Style</span><span class="t">1 hr</span><span class="fill"></span><span class="p">from $75</span></div>
+      </div>
+      <div class="cat rv" data-c="cut care">
+        <h3>Beard &amp; bridal <small>02</small></h3>
+        <div class="row"><span class="n">Beard Trim</span><span class="t">20 min</span><span class="fill"></span><span class="p">$15</span></div>
+        <div class="row"><span class="n">Bridal Consultation</span><span class="t">20 min</span><span class="fill"></span><span class="p">Free</span></div>
+      </div>
+    </div>
+    <p class="note">Prices and times as listed on the Tapers &amp; Taps Square booking page. Final price confirmed when you book.</p>
+  </div>
+</section>
+
+<section class="why" id="caroline">
+  <div class="wrap">
+    <div class="lab">Why Tapers &amp; Taps</div>
+    <h2 class="rv">One stylist.<br>Every style.</h2>
+    <p class="lead rv">Barbershop precision meets salon color — under one name, in one chair.</p>
+    <div class="stat">
+      <div class="card rv"><div class="big">13<sup>+</sup></div><h3>Years of experience</h3><p>Caroline has spent over 13 years as a hairstylist and holds the title of master hairstylist.</p></div>
+      <div class="card rv"><div class="big">7<sup>/7</sup></div><h3>Days a week</h3><p>Booking is open every day of the week, 10 AM to 8 PM — weekends included.</p></div>
+      <div class="card rv"><div class="big">20<sup>+</sup></div><h3>Services on the menu</h3><p>From barber-style cuts and beard trims to full highlights, keratin and formal styling.</p></div>
+    </div>
+    <div class="meet rv">
+      <div class="mono" aria-hidden="true"><span>CW</span></div>
+      <div>
+        <blockquote>Caroline Wiley is the <b>creator of Tapers and Taps</b> and a master hairstylist who specializes in <b>many color techniques</b> and <b>all cutting styles</b>.</blockquote>
+        <cite>— From the Tapers &amp; Taps booking page</cite>
+        <p style="color:#bdb5a7;margin-top:16px">Off the clock? Nature, beach trips, making art, collecting vintage and time with family and friends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap hrs">
+    <div>
+      <div class="lab">Hours</div>
+      <p class="everyday rv">Open<br><span>every</span><br>day.</p>
+      <p class="lead" style="margin-top:18px">10:00 AM – 8:00 PM, Sunday through Saturday. Grab a slot online any time.</p>
+    </div>
+    <ul class="days rv" id="days">
+      <li data-d="0"><span class="d">Sunday</span><span>10 AM – 8 PM</span></li>
+      <li data-d="1"><span class="d">Monday</span><span>10 AM – 8 PM</span></li>
+      <li data-d="2"><span class="d">Tuesday</span><span>10 AM – 8 PM</span></li>
+      <li data-d="3"><span class="d">Wednesday</span><span>10 AM – 8 PM</span></li>
+      <li data-d="4"><span class="d">Thursday</span><span>10 AM – 8 PM</span></li>
+      <li data-d="5"><span class="d">Friday</span><span>10 AM – 8 PM</span></li>
+      <li data-d="6"><span class="d">Saturday</span><span>10 AM – 8 PM</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="lab">Visit</div>
+    <h2 class="rv">Find us in<br><span style="color:var(--coral)">Chattanooga</span></h2>
+    <div class="mapbox rv"><iframe title="Map of Chattanooga, TN" loading="lazy" src="https://www.google.com/maps?q=Chattanooga%2C%20TN%2037419&amp;output=embed"></iframe></div>
+    <div class="contact">
+      <a class="cbox" href="tel:+14235584438"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Tap to call</small><b>(423) 558-4438</b></span></a>
+      <a class="cbox" href="mailto:carowiley89@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Email</small><b>carowiley89@gmail.com</b></span></a>
+      <a class="cbox" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chattanooga%2C%20TN%2037419" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Directions</small><b>Chattanooga, TN 37419</b></span></a>
+      <a class="cbox" href="https://square.site/book/ATSDB50D1AVZE/tapers-taps-chattanooga-tn" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><span><small>Book online</small><b>Pick a time on Square</b></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="stripes"></div>
+  <div class="wrap" style="position:relative">
+    <h2 class="rv">Fresh taper.<br>Today.</h2>
+    <p style="font-size:18px;max-width:520px;margin:0 auto">Open until 8 PM every night. Pick a service, pick a time, done.</p>
+    <div class="ctas">
+      <a class="btn btn-k" href="https://square.site/book/ATSDB50D1AVZE/tapers-taps-chattanooga-tn" target="_blank" rel="noopener">Book now</a>
+      <a class="btn btn-ok" href="tel:+14235584438">Call (423) 558-4438</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><i aria-hidden="true"></i>Tapers <b>&amp;</b> Taps</a>
+    <span>Chattanooga, TN · Open daily 10–8</span>
+    <span>Concept by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+14235584438"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="book" href="https://square.site/book/ATSDB50D1AVZE/tapers-taps-chattanooga-tn" target="_blank" rel="noopener">Book now</a>
+</div>
+
+<script>
+(function(){
+  var now=new Date(), d=now.getDay(), h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#days li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var open=h>=10&&h<20, s=document.getElementById('status'), dot=document.getElementById('dot');
+  if(open){s.textContent='Open now · until 8 PM'}else{dot.classList.add('closed');s.textContent=(h<10?'Opens today at 10 AM':'Opens tomorrow at 10 AM')}
+  // tabs
+  var tabs=document.querySelectorAll('.tab'), cats=document.querySelectorAll('.cat');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    var f=t.dataset.f; cats.forEach(function(c){c.hidden=!(f==='all'||c.dataset.c.split(' ').indexOf(f)>-1)});
+  })});
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else all();
+  setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

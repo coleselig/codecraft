@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Red Barn Produce — Rutledge</title>
+<meta name="description" content="Red Barn Produce: a family farm stand on Hwy 11W in Rutledge, Grainger County, TN. Homegrown Grainger County tomatoes, open year round.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#a4282c; --red-deep:#7e1c20; --cream:#fbf5e9; --cream-2:#f4ead6;
+  --leaf:#4f7a3a; --leaf-deep:#355a25; --kraft:#c9a878; --kraft-deep:#a98551;
+  --ink:#2b1d14; --ink-soft:#5a4636;
+  --slab:"Alfa Slab One", Georgia, serif; --sans:"Karla", system-ui, sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* paper grain */
+.grain{position:relative}
+.grain::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .18 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--ink);color:#f3e7d0;font-size:12.5px;text-align:center;padding:7px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--kraft)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:30;background:rgba(251,245,233,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:38px;height:34px}
+.brand span{font-family:var(--slab);font-size:20px;color:var(--red);letter-spacing:.01em}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px;font-weight:700;font-size:15px}
+.nav ul a{text-decoration:none;position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:3px;background:var(--red);transition:right .25s}
+.nav ul a:hover::after{right:0}
+.nav .call{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .call{display:inline-flex}}
+
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 22px;
+  border:2px solid var(--ink);transition:transform .15s, box-shadow .15s, background .2s;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-red{background:var(--red);color:#fff}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn svg{width:18px;height:18px}
+.btn-sm{padding:9px 16px;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
+
+/* hero */
+.hero{background:var(--cream);overflow:hidden;border-bottom:2px solid var(--ink)}
+.hero .wrap{display:grid;gap:8px;padding-top:30px;padding-bottom:0}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-deep);
+  background:#fff;border:2px solid var(--leaf);border-radius:999px;padding:5px 12px;width:max-content}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(79,122,58,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(79,122,58,0)}100%{box-shadow:0 0 0 0 rgba(79,122,58,0)}}
+h1{font-family:var(--slab);font-weight:400;color:var(--red);font-size:clamp(40px,11vw,92px);line-height:.98;margin:14px 0 12px;letter-spacing:-.005em;
+  text-shadow:2px 2px 0 rgba(43,29,20,.12)}
+h1 .stamp{display:inline-block;color:var(--ink);font-size:.52em;line-height:1.1;letter-spacing:.02em;display:block;margin-bottom:6px}
+.sub{font-size:17.5px;line-height:1.5;color:var(--ink-soft);max-width:34ch;margin:0 0 20px}
+.sub strong{color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px}
+@media(max-width:420px){.cta-row .btn{padding:13px 17px;font-size:15px}}
+.hero-art{position:relative;margin:0 -20px;overflow:hidden}
+.hero-art svg{width:100%;height:auto}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1fr 1.1fr;gap:40px;align-items:end;padding-top:56px}
+  .hero-copy{padding-bottom:70px}
+  .hero-art{margin:0;border:2px solid var(--ink);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:8px 0 0 var(--ink)}
+  .sub{font-size:20px}
+}
+.vine-sway{transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.tom-bob{animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(3px)}}
+
+/* marquee sign strip */
+.strip{background:var(--red);color:var(--cream);border-bottom:2px solid var(--ink);overflow:hidden}
+.strip .track{display:flex;gap:34px;white-space:nowrap;padding:12px 0;font-family:var(--slab);font-size:20px;letter-spacing:.03em;animation:marq 28s linear infinite;width:max-content}
+.strip .track span{display:inline-flex;align-items:center;gap:34px}
+.strip .track span::after{content:"✸";color:var(--kraft);font-size:16px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:72px 0}
+.sign{display:inline-block;font-family:var(--slab);font-weight:400;color:var(--cream);background:var(--red);padding:10px 20px 8px;border:2px solid var(--ink);
+  transform:rotate(-1.5deg);box-shadow:4px 4px 0 var(--ink);font-size:clamp(26px,6.4vw,40px);line-height:1.05;margin:0 0 18px;position:relative}
+.sign::before,.sign::after{content:"";position:absolute;top:50%;width:9px;height:9px;border-radius:50%;background:var(--kraft);border:2px solid var(--ink);transform:translateY(-50%)}
+.sign::before{left:-6px}.sign::after{right:-6px}
+.sign.green{background:var(--leaf)}
+.lede{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 34px}
+
+/* produce board */
+.board{background:var(--kraft);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.board .grain::before{opacity:.5}
+.chalk{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:700px){.chalk{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.chalk{grid-template-columns:repeat(4,1fr)}}
+.crate{background:var(--cream);border:2px solid var(--ink);border-radius:14px;padding:16px 14px 14px;box-shadow:4px 4px 0 var(--ink);transition:transform .2s, box-shadow .2s;position:relative}
+.crate:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:6px 8px 0 var(--ink)}
+.crate svg{width:56px;height:56px;margin-bottom:8px}
+.crate h3{font-family:var(--slab);font-weight:400;font-size:19px;margin:0 0 2px;color:var(--ink);line-height:1.15}
+.crate p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.4}
+.crate.star{grid-column:1/-1;background:var(--red);color:var(--cream);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;padding:20px}
+.crate.star svg{width:84px;height:84px;margin:0}
+.crate.star h3{color:var(--cream);font-size:24px}
+.crate.star p{color:#f6dcd2;font-size:15.5px}
+.crate.star .tag{display:inline-block;background:var(--kraft);color:var(--ink);font-weight:800;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:6px;border:1.5px solid var(--ink)}
+@media(min-width:1000px){.crate.star{grid-column:span 2;grid-row:span 2;grid-template-columns:1fr;align-content:center}.crate.star svg{width:110px;height:110px}.crate.star h3{font-size:30px}}
+.note{margin-top:26px;font-size:15px;color:var(--ink);background:rgba(251,245,233,.75);border:2px dashed var(--ink);border-radius:12px;padding:12px 16px;max-width:640px}
+
+/* why */
+.why-grid{display:grid;gap:18px}
+@media(min-width:800px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why{background:#fff;border:2px solid var(--ink);border-radius:16px;padding:22px 20px;position:relative;overflow:hidden}
+.why .num{font-family:var(--slab);font-size:44px;color:var(--kraft);line-height:1;position:absolute;right:16px;top:12px;opacity:.7}
+.why h3{font-family:var(--slab);font-weight:400;color:var(--red);font-size:22px;margin:0 0 8px;line-height:1.15;max-width:80%}
+.why p{margin:0;color:var(--ink-soft)}
+.why q{font-style:italic;color:var(--ink)}
+
+/* visit */
+.visit{background:var(--leaf);color:var(--cream);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);position:relative;overflow:hidden}
+.visit .rows{position:absolute;inset:0;opacity:.13;pointer-events:none;
+  background:repeating-linear-gradient(115deg, transparent 0 26px, #fff 26px 28px)}
+.visit .wrap{position:relative}
+.visit .lede{color:#e5efd9}
+.visit-grid{display:grid;gap:20px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.2fr;align-items:stretch}}
+.card{background:var(--cream);color:var(--ink);border:2px solid var(--ink);border-radius:16px;padding:24px;box-shadow:6px 6px 0 var(--ink)}
+.hours-sign{text-align:center;border:3px double var(--red);border-radius:10px;padding:18px 12px;margin-bottom:18px;background:#fff}
+.hours-sign .big{font-family:var(--slab);color:var(--red);font-size:30px;line-height:1.05}
+.hours-sign .small{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--leaf-deep);margin-top:6px}
+.info{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:14px}
+.info li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.info svg{width:24px;height:24px;color:var(--red)}
+.info b{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.info a{font-weight:800;text-decoration:none;border-bottom:2px solid var(--kraft)}
+.info a:hover{border-color:var(--red)}
+.card .btns{display:flex;flex-wrap:wrap;gap:10px}
+.map{position:relative;border:2px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);min-height:320px;background:var(--cream-2)}
+.map::before{content:"2999 Hwy 11W S · Rutledge";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--slab);color:var(--kraft-deep);font-size:20px;text-align:center;padding:20px;
+  background:repeating-linear-gradient(0deg,transparent 0 38px,rgba(169,133,81,.25) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(169,133,81,.25) 38px 40px)}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* footer */
+footer{background:var(--ink);color:#e9dcc4;padding:46px 0 calc(30px + var(--bar) + env(safe-area-inset-bottom));font-size:15px}
+@media(min-width:900px){footer{padding-bottom:30px}}
+footer .wrap{display:grid;gap:22px}
+footer .fbrand{font-family:var(--slab);font-size:28px;color:var(--cream)}
+footer a{color:var(--kraft);text-decoration:none;font-weight:700}
+footer a:hover{text-decoration:underline}
+footer .fine{font-size:13px;color:#a8977d;border-top:1px solid #4a382a;padding-top:18px}
+@media(min-width:800px){footer .wrap{grid-template-columns:1.2fr 1fr 1fr}footer .fine{grid-column:1/-1}}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--cream);border-top:2px solid var(--ink);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:15.5px;text-decoration:none;border:2px solid var(--ink);border-radius:999px;height:48px}
+.callbar .c{background:var(--red);color:#fff}
+.callbar .d{background:var(--leaf);color:#fff}
+.callbar svg{width:18px;height:18px}
+@media(min-width:900px){.callbar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(22px)}
+.show-all .reveal{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal:not(.in){opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Red Barn Produce. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Red Barn Produce home">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M3 15 20 3l17 12v19H3z" fill="#a4282c" stroke="#2b1d14" stroke-width="2" stroke-linejoin="round"/><path d="M14 34V22h12v12" fill="#fbf5e9" stroke="#2b1d14" stroke-width="2"/><path d="M14 22l12 12M26 22 14 34" stroke="#a4282c" stroke-width="2"/><rect x="16.5" y="10" width="7" height="6" fill="#fbf5e9" stroke="#2b1d14" stroke-width="1.6"/></svg>
+      <span>Red Barn Produce</span>
+    </a>
+    <ul>
+      <li><a href="#stand">At the stand</a></li>
+      <li><a href="#why">Why stop</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-red btn-sm call" href="tel:+18657672222">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      (865) 767-2222
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero grain" style="padding:0">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="kicker"><i></i>Hwy 11W · Rutledge, TN</span>
+      <h1><span class="stamp">Homegrown</span>Grainger County Tomatoes.</h1>
+      <p class="sub">A small <strong>family-owned farm stand</strong> in Rutledge, open <strong>year round</strong>, with vine-ripened tomatoes as our biggest seller.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="tel:+18657672222">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call the stand
+        </a>
+        <a class="btn btn-cream" href="#stand">See the stand</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 30 560 390" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf5e9"/><stop offset="1" stop-color="#f3e3c4"/></linearGradient>
+          <radialGradient id="tom" cx=".35" cy=".35" r=".75"><stop offset="0" stop-color="#e2524a"/><stop offset=".6" stop-color="#b82e2c"/><stop offset="1" stop-color="#7e1c20"/></radialGradient>
+          <pattern id="boards" width="16" height="10" patternUnits="userSpaceOnUse"><rect width="16" height="10" fill="#a4282c"/><path d="M0 .5h16" stroke="#7e1c20" stroke-width="1"/></pattern>
+          <pattern id="tin" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#8e9da1"/><path d="M5 0v10" stroke="#6f7f84" stroke-width="2"/></pattern>
+        </defs>
+        <rect width="560" height="420" fill="url(#sky)"/>
+        <circle cx="440" cy="92" r="46" fill="#f2c56b" opacity=".55"/>
+        <!-- ridges (Clinch Mountain feel) -->
+        <path d="M0 250 C70 200 130 214 200 196 S330 160 400 186 S500 200 560 172 V420H0Z" fill="#9db27c" opacity=".55"/>
+        <path d="M0 282 C90 250 170 268 250 246 S420 232 560 250 V420H0Z" fill="#6f9550"/>
+        <!-- field rows -->
+        <path d="M0 330 C160 300 380 300 560 320 V420H0Z" fill="#4f7a3a"/>
+        <g stroke="#355a25" stroke-width="3" fill="none" opacity=".7">
+          <path d="M-10 350 C150 326 390 326 570 344"/><path d="M-10 372 C150 350 390 350 570 368"/><path d="M-10 396 C150 376 390 376 570 392"/>
+        </g>
+        <!-- barn -->
+        <g transform="translate(250 128)">
+          <path d="M0 92 L40 40 L90 10 L140 40 L180 92 V200 H0Z" fill="url(#boards)" stroke="#2b1d14" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M-8 96 L40 36 L90 4 L140 36 L188 96" fill="none" stroke="#2b1d14" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M-6 94 L40 37 L90 6 L140 37 L186 94" fill="none" stroke="url(#tin)" stroke-width="3"/>
+          <rect x="68" y="40" width="44" height="34" fill="#fbf5e9" stroke="#2b1d14" stroke-width="3"/>
+          <path d="M68 40 112 74M112 40 68 74" stroke="#a4282c" stroke-width="3"/>
+          <rect x="52" y="112" width="76" height="88" fill="#fbf5e9" stroke="#2b1d14" stroke-width="3"/>
+          <path d="M52 112l76 88M128 112l-76 88M90 112v88" stroke="#a4282c" stroke-width="4"/>
+          <rect x="18" y="104" width="22" height="22" fill="#fbf5e9" stroke="#2b1d14" stroke-width="3"/>
+          <rect x="140" y="104" width="22" height="22" fill="#fbf5e9" stroke="#2b1d14" stroke-width="3"/>
+        </g>
+        <!-- farm stand sign -->
+        <g transform="translate(70 214)">
+          <rect x="18" y="58" width="8" height="70" fill="#7a5a34" stroke="#2b1d14" stroke-width="2"/>
+          <rect x="118" y="58" width="8" height="70" fill="#7a5a34" stroke="#2b1d14" stroke-width="2"/>
+          <g transform="rotate(-3 72 34)">
+            <rect x="0" y="6" width="144" height="60" rx="4" fill="#fbf5e9" stroke="#2b1d14" stroke-width="3"/>
+            <text x="72" y="32" text-anchor="middle" font-family="Alfa Slab One, Georgia, serif" font-size="17" fill="#a4282c">TOMATOES</text>
+            <text x="72" y="54" text-anchor="middle" font-family="Karla, sans-serif" font-weight="800" font-size="10.5" letter-spacing="1.6" fill="#4f7a3a">OPEN YEAR ROUND</text>
+          </g>
+        </g>
+        <!-- crates -->
+        <g transform="translate(420 300)">
+          <rect x="0" y="22" width="110" height="46" fill="#c9a878" stroke="#2b1d14" stroke-width="3"/>
+          <path d="M0 38h110M0 54h110" stroke="#a98551" stroke-width="3"/>
+          <g class="tom-bob">
+            <circle cx="22" cy="18" r="15" fill="url(#tom)" stroke="#2b1d14" stroke-width="2.4"/>
+            <circle cx="52" cy="14" r="17" fill="url(#tom)" stroke="#2b1d14" stroke-width="2.4"/>
+            <circle cx="84" cy="18" r="15" fill="url(#tom)" stroke="#2b1d14" stroke-width="2.4"/>
+            <path d="M46 0l6 5 6-5-2 7 6 2-7 2" fill="#4f7a3a" stroke="#2b1d14" stroke-width="1.6" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <!-- hanging vine -->
+        <g class="vine-sway">
+          <path d="M28 0 C40 50 18 90 34 130 S60 190 46 230" fill="none" stroke="#355a25" stroke-width="5" stroke-linecap="round"/>
+          <path d="M34 46c22-8 34 2 36 14-16 4-30-2-36-14Z M30 104c-22-6-32 6-32 18 16 2 28-6 32-18Z M44 168c22-6 32 6 32 18-16 2-28-6-32-18Z" fill="#4f7a3a" stroke="#2b1d14" stroke-width="2"/>
+          <circle cx="50" cy="80" r="16" fill="url(#tom)" stroke="#2b1d14" stroke-width="2.4"/>
+          <path d="M42 66l8 4 8-4-3 7 7 3-9 1" fill="#4f7a3a" stroke="#2b1d14" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="146" r="13" fill="#e88a3a" stroke="#2b1d14" stroke-width="2.4"/>
+          <circle cx="56" cy="214" r="12" fill="#7fa45a" stroke="#2b1d14" stroke-width="2.4"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span>Homegrown tomatoes</span><span>Strawberries in season</span><span>Green beans</span><span>Cucumbers</span><span>Peppers</span><span>Plants &amp; flowers</span><span>Open year round</span>
+    <span>Homegrown tomatoes</span><span>Strawberries in season</span><span>Green beans</span><span>Cucumbers</span><span>Peppers</span><span>Plants &amp; flowers</span><span>Open year round</span>
+  </div>
+</div>
+
+<section id="stand" class="board grain">
+  <div class="wrap" style="position:relative">
+    <h2 class="sign reveal">What's at the stand</h2>
+    <p class="lede reveal">We grow a lot of it ourselves, and we bring in some favorites we don't, so the stand stays stocked through every season.</p>
+
+    <div class="chalk">
+      <article class="crate star reveal">
+        <svg viewBox="0 0 84 84" aria-hidden="true"><defs><radialGradient id="t2" cx=".35" cy=".35" r=".75"><stop offset="0" stop-color="#ef6a5e"/><stop offset=".6" stop-color="#c8392f"/><stop offset="1" stop-color="#7e1c20"/></radialGradient></defs><circle cx="42" cy="48" r="32" fill="url(#t2)" stroke="#2b1d14" stroke-width="3"/><path d="M28 20l14 8 14-8-5 11 12 4-15 2-6 10-6-10-15-2 12-4z" fill="#4f7a3a" stroke="#2b1d14" stroke-width="2.4" stroke-linejoin="round"/><ellipse cx="30" cy="40" rx="7" ry="4" fill="#fff" opacity=".35" transform="rotate(-30 30 40)"/></svg>
+        <div>
+          <span class="tag">Our biggest seller</span>
+          <h3>Homegrown Grainger County Tomatoes</h3>
+          <p>Vine-ripened, grown right here in Grainger County, the tomatoes this place is known for.</p>
+        </div>
+      </article>
+
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M28 50C14 44 8 30 12 20c4-8 28-8 32 0 4 10-2 24-16 30Z" fill="#c8392f" stroke="#2b1d14" stroke-width="2.4"/><path d="M18 14l10 4 10-4-3 7H21z" fill="#4f7a3a" stroke="#2b1d14" stroke-width="2" stroke-linejoin="round"/><g fill="#f2c56b"><circle cx="20" cy="28" r="1.4"/><circle cx="28" cy="26" r="1.4"/><circle cx="36" cy="28" r="1.4"/><circle cx="24" cy="35" r="1.4"/><circle cx="32" cy="35" r="1.4"/><circle cx="28" cy="42" r="1.4"/></g></svg>
+        <h3>Strawberries</h3><p>Seasonal</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M14 8c-4 14 2 32 18 42M24 6c-2 16 4 30 20 40" fill="none" stroke="#4f7a3a" stroke-width="7" stroke-linecap="round"/><path d="M14 8c-4 14 2 32 18 42M24 6c-2 16 4 30 20 40" fill="none" stroke="#2b1d14" stroke-width="1.6" stroke-linecap="round" opacity=".5"/></svg>
+        <h3>Green Beans</h3><p>Homegrown</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><rect x="8" y="20" width="40" height="16" rx="8" fill="#4f7a3a" stroke="#2b1d14" stroke-width="2.4" transform="rotate(-25 28 28)"/><g fill="#b9d39a" transform="rotate(-25 28 28)"><circle cx="16" cy="26" r="1.3"/><circle cx="24" cy="30" r="1.3"/><circle cx="32" cy="26" r="1.3"/><circle cx="40" cy="30" r="1.3"/></g></svg>
+        <h3>Cucumbers</h3><p>Homegrown</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M30 14c12 2 16 14 12 24-4 10-16 14-24 10-6-3-4-10 0-16 4-6 4-14 12-18Z" fill="#e88a3a" stroke="#2b1d14" stroke-width="2.4"/><path d="M30 14c0-4 2-7 6-8" fill="none" stroke="#4f7a3a" stroke-width="4" stroke-linecap="round"/></svg>
+        <h3>Peppers</h3><p>In season</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M28 10l4 10 10 2-8 7 2 10-8-5-8 5 2-10-8-7 10-2z" fill="#f2c56b" stroke="#2b1d14" stroke-width="2" stroke-linejoin="round"/><path d="M28 36v10" stroke="#4f7a3a" stroke-width="3"/><path d="M16 44h24l-3 8H19z" fill="#c9a878" stroke="#2b1d14" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <h3>Plants &amp; Flowers</h3><p>Vegetable plants too</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="30" r="18" fill="#9cc274" stroke="#2b1d14" stroke-width="2.4"/><path d="M28 12c-6 8-6 28 0 36M28 12c6 8 6 28 0 36M12 26c8 4 24 4 32 0" fill="none" stroke="#4f7a3a" stroke-width="2"/></svg>
+        <h3>Cabbage</h3><p>Ask what's in</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M28 8c8 0 10 12 10 22s-4 18-10 18-10-8-10-18S20 8 28 8Z" fill="#f2c56b" stroke="#2b1d14" stroke-width="2.4"/><path d="M18 30c-6 6-6 14 4 20M38 30c6 6 6 14-4 20" fill="#4f7a3a" stroke="#2b1d14" stroke-width="2"/></svg>
+        <h3>Corn</h3><p>In season</p>
+      </article>
+      <article class="crate reveal">
+        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M22 12c4-2 8-2 10 0 6 10 8 24 0 36-2 2-4 2-5 0-8-10-10-26-5-36Z" fill="#6f9a4a" stroke="#2b1d14" stroke-width="2.4"/><path d="M27 14v32M22 18c-1 8 0 18 4 26M32 18c2 8 1 18-3 26" fill="none" stroke="#355a25" stroke-width="1.6"/><path d="M24 12c0-4 3-6 6-6" fill="none" stroke="#4f7a3a" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Okra</h3><p>Southern staple</p>
+      </article>
+    </div>
+    <p class="note reveal"><strong>What's ripe changes with the season.</strong> Give the stand a call at <a href="tel:+18657672222"><strong>(865) 767-2222</strong></a> to ask what's in today.</p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <h2 class="sign green reveal">Why folks pull over</h2>
+    <p class="lede reveal">A red barn on 11W and a table full of Grainger County, every month of the year.</p>
+    <div class="why-grid">
+      <div class="why reveal"><span class="num">01</span><h3>Family owned &amp; operated</h3><p><q>A small family owned and operated farm in Grainger County, TN</q>, in our own words on Pick Tennessee Products.</p></div>
+      <div class="why reveal"><span class="num">02</span><h3>Grown in tomato country</h3><p>Grainger County tomatoes are an East Tennessee summer staple, and ours are vine-ripened right here in Rutledge.</p></div>
+      <div class="why reveal"><span class="num">03</span><h3>Open all year</h3><p>The produce stand on our farm stays open year round, not just in tomato season.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="rows" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="sign reveal" style="background:var(--cream);color:var(--red)">Come see us</h2>
+    <p class="lede reveal">Right on Highway 11W in Rutledge. Look for the red barn.</p>
+    <div class="visit-grid">
+      <div class="card reveal">
+        <div class="hours-sign">
+          <div class="big">Open Year Round</div>
+          <div class="small">Call ahead for today's hours</div>
+        </div>
+        <ul class="info">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg><div><b>Address</b>2999 Hwy 11W S<br>Rutledge, TN 37861</div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><b>Phone</b><a href="tel:+18657672222">(865) 767-2222</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><b>Email</b><a href="mailto:redbarnproduce@yahoo.com">redbarnproduce@yahoo.com</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg><div><b>Facebook</b><a href="https://www.facebook.com/RedBarnProduceRutledge" target="_blank" rel="noopener">RedBarnProduceRutledge</a></div></li>
+        </ul>
+        <div class="btns">
+          <a class="btn btn-red btn-sm" href="tel:+18657672222">Call the stand</a>
+          <a class="btn btn-cream btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=2999+Hwy+11W+S,+Rutledge,+TN+37861" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Red Barn Produce, 2999 Hwy 11W S, Rutledge TN" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=2999%20Hwy%2011W%20S%2C%20Rutledge%2C%20TN%2037861&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="fbrand">Red Barn Produce</div>
+      <p style="margin:6px 0 0">Family farm stand · Rutledge, Grainger County, Tennessee</p>
+    </div>
+    <div>2999 Hwy 11W S<br>Rutledge, TN 37861<br><a href="tel:+18657672222">(865) 767-2222</a></div>
+    <div><a href="https://www.facebook.com/RedBarnProduceRutledge" target="_blank" rel="noopener">Facebook</a><br><a href="mailto:redbarnproduce@yahoo.com">redbarnproduce@yahoo.com</a></div>
+    <div class="fine">Concept by Code Craft Media, a design preview made for Red Barn Produce. Not an official site.</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="c" href="tel:+18657672222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (865) 767-2222</a>
+  <a class="d" href="https://www.google.com/maps/dir/?api=1&amp;destination=2999+Hwy+11W+S,+Rutledge,+TN+37861" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 22 2l-9 19-2-8z"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){document.documentElement.classList.add('show-all');els.forEach(function(e){e.classList.add('in')})}
+  setTimeout(showAll,1500);
+  if(!('IntersectionObserver' in window)){showAll();return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

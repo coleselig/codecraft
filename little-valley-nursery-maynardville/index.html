@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Little Valley Nursery &amp; Landscaping — Maynardville</title>
+<meta name="description" content="Greenhouse-grown annuals, perennials, tropicals, succulents and vegetable starts, plus mowing and landscaping, in Maynardville, Union County, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --leaf:#1f4a2c; --leaf-2:#2c6340; --leaf-deep:#14321e; --moss:#7fa36a;
+  --petunia:#6d2f8e; --petunia-2:#8f4bb3; --petunia-soft:#efe4f5;
+  --cream:#fbf8f1; --cream-2:#f3eee2; --ink:#1d2a20; --muted:#55645a; --line:#dcd5c4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:Bitter,Georgia,serif;line-height:1.12;margin:0}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.concept{background:var(--leaf-deep);color:#d9e6d6;font-size:12px;text-align:center;padding:7px 12px;line-height:1.35}
+@media(max-width:600px){.concept{font-size:10px;padding:6px 8px;letter-spacing:-.01em}}
+.concept b{color:#fff;font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(251,248,241,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{flex:none}
+.brand span{font-family:Bitter,serif;font-weight:800;font-size:18px;color:var(--leaf);letter-spacing:-.01em;line-height:1.05}
+.brand small{display:block;font-family:Karla,sans-serif;font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--petunia)}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:28px}
+.nav ul a{text-decoration:none;font-weight:500;color:var(--muted)}
+.nav ul a:hover{color:var(--petunia)}
+.nav .callbtn{display:none}
+@media(min-width:900px){.nav ul{display:flex}.nav .callbtn{display:inline-flex}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:Karla,sans-serif;font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--petunia);color:#fff;box-shadow:0 8px 22px -10px rgba(109,47,142,.8)}
+.btn-p:hover{background:var(--petunia-2)}
+.btn-g{border-color:var(--leaf);color:var(--leaf)}
+.btn-g:hover{background:var(--leaf);color:#fff}
+.btn-sm{padding:9px 18px;font-size:15px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%,rgba(143,75,179,.13),transparent 60%),
+  radial-gradient(90% 60% at 0% 100%,rgba(127,163,106,.20),transparent 60%),var(--cream)}
+.hero .wrap{position:relative;display:grid;gap:10px;padding-top:34px;padding-bottom:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--petunia)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--moss);box-shadow:0 0 0 4px rgba(127,163,106,.25)}
+.hero h1{font-size:clamp(38px,10.4vw,66px);font-weight:800;color:var(--leaf);letter-spacing:-.025em;margin-top:12px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--petunia)}
+.hero p.sub{font-size:17.5px;color:var(--muted);max-width:34em;margin:16px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.season-chip{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14.5px;color:var(--ink);max-width:100%}
+.season-chip b{color:var(--leaf)}
+.season-chip .dot{width:10px;height:10px;border-radius:50%;flex:none;background:#c9a24a}
+.season-chip.open .dot{background:#3d9a5a;box-shadow:0 0 0 4px rgba(61,154,90,.2);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(61,154,90,0)}}
+.art{position:relative;margin:0 -20px -40px;height:340px}
+@media(max-width:899px){.hero .cta{flex-wrap:nowrap;gap:10px}.hero .cta .btn{flex:1;padding:13px 12px;font-size:15.5px;white-space:nowrap}.hero h1{margin-top:8px}.hero .wrap{padding-top:24px}}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;padding-top:70px;padding-bottom:80px}
+  .art{height:470px;margin:0;border-radius:32px;overflow:hidden;background:linear-gradient(180deg,#f3ecf7 0%,#eef3e8 70%);box-shadow:0 30px 60px -40px rgba(31,74,44,.45);border:1px solid var(--line)}
+}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 6s ease-in-out infinite}
+.sway.b{animation-delay:-2s;animation-duration:7s}
+.sway.c{animation-delay:-4s;animation-duration:8s}
+@keyframes sway{50%{transform:rotate(2.2deg)}}
+@media(prefers-reduced-motion:reduce){.sway,.season-chip.open .dot{animation:none}}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--petunia);margin-bottom:10px}
+h2{font-size:clamp(30px,7.4vw,46px);font-weight:800;color:var(--leaf);letter-spacing:-.02em}
+.lede{color:var(--muted);max-width:36em;margin:14px 0 0}
+
+/* grow list */
+.grow{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;gap:14px;margin-top:30px}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px;background:var(--cream);transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 34px -24px rgba(31,74,44,.55);border-color:var(--moss)}
+.card svg{width:46px;height:46px;margin-bottom:10px}
+@media(max-width:639px){.card{display:grid;grid-template-columns:52px 1fr;column-gap:14px;padding:18px}.card svg{grid-row:span 2;margin:0;width:52px;height:52px;background:rgba(127,163,106,.14);border-radius:14px;padding:6px}.card.feature svg{background:rgba(255,255,255,.1)}.card p{margin-top:2px}}
+.card h3{font-size:21px;color:var(--leaf);font-weight:700}
+.card p{margin:6px 0 0;color:var(--muted);font-size:15.5px}
+.card.feature{background:var(--leaf);border-color:var(--leaf);color:#e7efe3}
+.card.feature h3{color:#fff}.card.feature p{color:#cfe0c9}
+
+/* produce */
+.produce{margin-top:34px;border-radius:20px;background:var(--petunia-soft);padding:22px}
+.produce h3{font-size:19px;color:var(--petunia)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tags span{background:#fff;border:1px solid #dccbe7;border-radius:999px;padding:6px 13px;font-size:14.5px}
+
+/* yard */
+.yard{background:var(--leaf);color:#e4ede0;position:relative;overflow:hidden}
+.yard h2{color:#fff}
+.yard .lede{color:#c8d9c2}
+.yard .kicker{color:#d6b8ea}
+.yard .wrap{position:relative;display:grid;gap:30px}
+@media(min-width:900px){.yard .wrap{grid-template-columns:1.1fr .9fr;align-items:center}}
+.yard ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.yard li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px}
+.yard li b{color:#fff;display:block;font-family:Bitter,serif;font-size:18px}
+.yard li svg{flex:none;margin-top:3px}
+.yard .btn-p{background:#fff;color:var(--leaf);box-shadow:none}
+.yard .btn-p:hover{background:var(--petunia-soft)}
+.yard-art{max-width:420px;width:100%;justify-self:center}
+@media(max-width:899px){.yard-art{max-width:300px;margin:-10px auto -30px}}
+
+/* why */
+.why{display:grid;gap:14px;margin-top:30px}
+@media(min-width:800px){.why{grid-template-columns:repeat(3,1fr)}}
+.why div{border-left:3px solid var(--petunia);padding:4px 0 4px 18px}
+.why b{font-family:Bitter,serif;font-size:19px;color:var(--leaf);display:block}
+.why p{margin:4px 0 0;color:var(--muted);font-size:15.5px}
+
+/* season */
+.seasonsec{background:var(--cream-2);border-top:1px solid var(--line)}
+.months{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:28px}
+@media(min-width:800px){.months{grid-template-columns:repeat(12,1fr)}}
+.m{border-radius:12px;padding:12px 6px;text-align:center;font-weight:700;font-size:14px;background:#fff;border:1px solid var(--line);color:#9aa39b;position:relative}
+.m small{display:block;font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.m.on{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.m.on small{color:#bcd4b4}
+.m.now{outline:3px solid var(--petunia);outline-offset:2px}
+.m.now::after{content:"now";position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--petunia);color:#fff;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:1px 7px}
+.season-grid{display:grid;gap:16px;margin-top:28px}
+@media(min-width:800px){.season-grid{grid-template-columns:1fr 1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.panel h3{font-size:20px;color:var(--leaf)}
+.panel p{margin:8px 0 0;color:var(--muted)}
+.panel .big{font-family:Bitter,serif;font-size:26px;font-weight:700;color:var(--petunia);margin-top:6px}
+#statusLine{font-weight:700;color:var(--leaf)}
+
+/* visit */
+.visit{display:grid;gap:18px;margin-top:28px}
+@media(min-width:900px){.visit{grid-template-columns:.9fr 1.1fr;align-items:stretch}}
+.map{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:var(--cream-2)}
+.map::before{content:"Maynardville, TN";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Bitter,serif;font-weight:700;color:var(--moss);font-size:20px}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.contact a.tel{font-family:Bitter,serif;font-size:30px;font-weight:800;color:var(--leaf);text-decoration:none;display:inline-block;margin-top:4px}
+.contact a.tel:hover{color:var(--petunia)}
+.contact .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+
+footer{background:var(--leaf-deep);color:#a9bfa5;font-size:14.5px;padding:34px 0 calc(100px + env(safe-area-inset-bottom))}
+@media(min-width:900px){footer{padding-bottom:30px}}
+footer .wrap{display:grid;gap:12px}
+footer b{color:#fff;font-family:Bitter,serif;font-size:18px}
+footer a{color:#d6e5d1}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(20,50,30,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.bar a{flex:1;padding:13px 10px;font-size:15.5px}
+.bar .btn-g{border-color:rgba(255,255,255,.5);color:#fff}
+@media(min-width:900px){.bar{display:none}}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Little Valley Nursery &amp; Landscaping. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Little Valley Nursery home">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1f4a2c"/><g fill="none" stroke="#efe4f5" stroke-width="1.6" stroke-linejoin="round"><path d="M20 12c2.6-3 6.4-2 6.6 1 3.2.4 3.6 4.4.8 5.8 1.6 2.8-1.2 5.6-4 4-.8 3-5.2 3-6 0-2.8 1.6-5.6-1.2-4-4-2.8-1.4-2.4-5.4.8-5.8.2-3 4-4 5.8-1z" fill="#8f4bb3"/><circle cx="20" cy="17.6" r="1.8" fill="#efe4f5" stroke="none"/><path d="M20 24v9M20 30c-2.4-.4-4-2-4.6-4M20 28c2.2-.2 3.8-1.6 4.4-3.4" stroke="#9cc489"/></g></svg>
+      <span>Little Valley<small>Nursery &amp; Landscaping</small></span>
+    </a>
+    <ul>
+      <li><a href="#grow">What we grow</a></li>
+      <li><a href="#yard">Mowing &amp; landscaping</a></li>
+      <li><a href="#season">Season</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-p btn-sm callbtn" href="tel:+18652589926">Call (865) 258-9926</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><i></i>Greenhouse-grown in Union County</div>
+      <h1>Petunias, perennials &amp; starts, <em>grown right here in Little Valley.</em></h1>
+      <p class="sub">A greenhouse in Maynardville growing annuals, perennials, tropicals, succulents and vegetable starts, plus mowing and landscaping when you need the yard done too.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="tel:+18652589926"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call ahead</a>
+        <a class="btn btn-g" href="#grow">What's growing</a>
+      </div>
+      <div class="season-chip" id="chip"><span class="dot"></span><span id="chipText">Greenhouse season: <b>April 15 – July</b> &amp; <b>Sept – Oct</b></span></div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 520 470" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f1e3"/><stop offset="1" stop-color="#d4e4cb"/></linearGradient>
+          <g id="pet">
+            <path d="M0-18c6-8 17-6 17 2 9 0 11 11 3 15 5 7-3 15-10 10-2 8-14 8-15 0-8 4-15-4-10-10-8-4-6-15 3-15 0-8 10-10 12-2z" />
+          </g>
+        </defs>
+        <circle cx="400" cy="92" r="34" fill="#f6e7c7" opacity=".85"/>
+        <g fill="none" stroke="#8f4bb3" stroke-width="1.6" stroke-linecap="round" opacity=".55"><path d="M70 120c18-10 34-6 44 6M86 104c4 10 2 22-6 30"/><path d="M250 70c14-6 26-2 32 8"/><path d="M470 190c-12-8-26-8-36 2"/></g>
+        <g fill="none" stroke="#2c6340" stroke-width="1.4" opacity=".4"><path d="M150 60q20-14 40 0M168 46v14M300 120q16-10 32 0"/></g>
+        <!-- hills -->
+        <path d="M0 360c80-40 150-50 230-28s160 8 290-40v178H0z" fill="#cfe0c6"/>
+        <path d="M0 400c110-36 210-30 300-6s150 10 220-14v90H0z" fill="#b5cfa8"/>
+        <!-- greenhouse -->
+        <g transform="translate(150 150)">
+          <path d="M0 230V110C0 40 60 0 130 0s130 40 130 110v120z" fill="url(#glass)" stroke="#1f4a2c" stroke-width="3"/>
+          <g stroke="#1f4a2c" stroke-width="1.6" fill="none" opacity=".55">
+            <path d="M65 230V46M130 230V0M195 230V46M0 150h260M3 90h254"/>
+            <path d="M30 230V80M100 230V12M160 230V12M230 230V80" opacity=".5"/>
+          </g>
+          <!-- door -->
+          <path d="M108 230v-70a22 22 0 0 1 44 0v70" fill="#fbf8f1" stroke="#1f4a2c" stroke-width="2.4"/>
+          <path d="M130 160v70" stroke="#1f4a2c" stroke-width="1.6"/>
+          <!-- hanging baskets inside -->
+          <g stroke="#1f4a2c" stroke-width="1.2" fill="none">
+            <path d="M48 90v26M212 90v26"/>
+          </g>
+          <g fill="#8f4bb3" stroke="#4d1f66" stroke-width="1"><circle cx="40" cy="122" r="7"/><circle cx="52" cy="120" r="7"/><circle cx="46" cy="130" r="6"/><circle cx="204" cy="122" r="7"/><circle cx="216" cy="120" r="7"/><circle cx="210" cy="130" r="6"/></g>
+          <path d="M34 120q12 14 24 0M198 120q12 14 24 0" fill="#2c6340"/>
+          <!-- benches -->
+          <path d="M14 200h80M166 200h80" stroke="#1f4a2c" stroke-width="3"/>
+          <g fill="#6d2f8e"><circle cx="28" cy="194" r="5"/><circle cx="44" cy="192" r="5"/><circle cx="60" cy="194" r="5"/><circle cx="76" cy="192" r="5"/><circle cx="182" cy="194" r="5"/><circle cx="198" cy="192" r="5"/><circle cx="214" cy="194" r="5"/><circle cx="230" cy="192" r="5"/></g>
+          <g fill="#7fa36a"><circle cx="36" cy="196" r="4"/><circle cx="68" cy="196" r="4"/><circle cx="190" cy="196" r="4"/><circle cx="222" cy="196" r="4"/></g>
+        </g>
+        <!-- foreground petunias, line-art -->
+        <g transform="translate(60 330)"><g class="sway">
+          <g fill="none" stroke="#1f4a2c" stroke-width="2.4" stroke-linecap="round">
+            <path d="M40 140C38 90 44 60 60 20"/><path d="M42 100c-16-6-30-2-38 10 14 6 28 4 38-10z" fill="#2c6340"/>
+            <path d="M48 70c14-10 28-10 38 0-12 10-26 10-38 0z" fill="#2c6340"/>
+          </g>
+          <g transform="translate(60 18) scale(1.6)" fill="#8f4bb3" stroke="#3e1757" stroke-width="1.1"><use href="#pet"/></g>
+          <circle cx="60" cy="16" r="5" fill="#fbf8f1"/>
+          <g fill="none" stroke="#3e1757" stroke-width="1" opacity=".6"><path d="M60 16l-14-18M60 16l18-14M60 16l20 14M60 16l-20 16M60 16l2 24"/></g>
+        </g></g>
+        <g transform="translate(410 300)"><g class="sway b">
+          <g fill="none" stroke="#1f4a2c" stroke-width="2.4" stroke-linecap="round">
+            <path d="M40 170C44 120 34 80 30 40"/><path d="M38 120c16-8 32-4 40 8-16 8-30 4-40-8z" fill="#2c6340"/>
+            <path d="M34 80c-14-8-28-6-36 4 12 8 26 8 36-4z" fill="#2c6340"/>
+          </g>
+          <g transform="translate(30 36) scale(1.35)" fill="#6d2f8e" stroke="#2c0f40" stroke-width="1.1"><use href="#pet"/></g>
+          <circle cx="30" cy="34" r="4.5" fill="#fbf8f1"/>
+        </g></g>
+        <g transform="translate(470 360)"><g class="sway c">
+          <g fill="none" stroke="#1f4a2c" stroke-width="2" stroke-linecap="round"><path d="M20 110C22 80 18 50 14 30"/></g>
+          <g transform="translate(14 26) scale(.95)" fill="#c58ee0" stroke="#4d1f66" stroke-width="1"><use href="#pet"/></g>
+          <circle cx="14" cy="24" r="3.4" fill="#fbf8f1"/>
+        </g></g>
+        <g transform="translate(4 380)"><g class="sway b">
+          <g fill="none" stroke="#1f4a2c" stroke-width="2" stroke-linecap="round"><path d="M24 90C24 66 26 46 30 30"/></g>
+          <g transform="translate(30 26) scale(.9)" fill="#c58ee0" stroke="#4d1f66" stroke-width="1"><use href="#pet"/></g>
+          <circle cx="30" cy="24" r="3.2" fill="#fbf8f1"/>
+        </g></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="grow" id="grow">
+  <div class="wrap">
+    <div class="kicker reveal">From the greenhouse</div>
+    <h2 class="reveal">What's growing at Little Valley</h2>
+    <p class="lede reveal">Little Valley specializes in greenhouse production, right here in Union County. What's ready changes through the season, so call ahead and ask.</p>
+    <div class="cards">
+      <div class="card feature reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#efe4f5" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M24 10c3-4 9-3 9 1 5 0 6 6 2 8 3 4-2 8-5 6-1 4-8 4-8 0-4 2-8-2-6-6-4-2-3-8 2-8 0-4 6-5 6-1z" fill="#8f4bb3"/><circle cx="24" cy="17" r="2.4" fill="#efe4f5" stroke="none"/><path d="M24 26v14M10 40h28"/></svg>
+        <h3>Ornamental annuals</h3>
+        <p>Color for pots, beds and porches, petunias included.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#1f4a2c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 42V20"/><path d="M24 30c-8 0-12-6-12-12 8 0 12 6 12 12zM24 24c6 0 10-5 10-10-6 0-10 5-10 10z" fill="#cfe0c6"/><circle cx="24" cy="12" r="4" fill="#c58ee0"/></svg>
+        <h3>Perennials</h3>
+        <p>Plants that come back year after year in East Tennessee gardens.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#1f4a2c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 42V22"/><path d="M24 22C18 12 8 12 6 16c8-1 14 2 18 6zM24 22c6-10 16-10 18-6-8-1-14 2-18 6zM24 22c-2-10 2-16 6-16-2 6-4 10-6 16z" fill="#cfe0c6"/><path d="M16 42h16l-2-8H18z" fill="#efe4f5"/></svg>
+        <h3>Tropicals</h3>
+        <p>Big, bold foliage and blooms for patios and summer containers.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#1f4a2c" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M24 30c-3-6-3-12 0-16 3 4 3 10 0 16zM24 30c-6-2-10-6-11-11 5 0 9 4 11 11zM24 30c6-2 10-6 11-11-5 0-9 4-11 11z" fill="#cfe0c6"/><path d="M14 32h20l-3 10H17z" fill="#efe4f5"/></svg>
+        <h3>Succulents</h3>
+        <p>Easy-care plants for windowsills, gifts and small pots.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#1f4a2c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="30" width="36" height="10" rx="2" fill="#efe4f5"/><path d="M14 30v-8M24 30v-10M34 30v-8"/><path d="M14 22c-4 0-5-3-5-5 3 0 5 2 5 5zM14 22c3 0 5-3 5-5-3 0-5 2-5 5zM24 20c-4 0-6-3-6-6 4 0 6 3 6 6zM24 20c4 0 6-3 6-6-4 0-6 3-6 6zM34 22c-4 0-5-3-5-5 3 0 5 2 5 5zM34 22c3 0 5-3 5-5-3 0-5 2-5 5z" fill="#cfe0c6"/></svg>
+        <h3>Vegetable starts</h3>
+        <p>Garden-ready transplants to get your vegetable patch going.</p>
+      </div>
+      <div class="card reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#1f4a2c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 18h32l-4 22H12z" fill="#efe4f5"/><path d="M14 18c0-6 4-10 10-10s10 4 10 10"/><circle cx="18" cy="28" r="3" fill="#8f4bb3"/><circle cx="28" cy="27" r="3" fill="#c58ee0"/><path d="M22 34h6"/></svg>
+        <h3>Landscape plants &amp; fresh flowers</h3>
+        <p>Plants for landscaping projects, plus fresh flowers in season.</p>
+      </div>
+    </div>
+
+    <div class="produce reveal">
+      <h3>Also from the farm, in season</h3>
+      <div class="tags">
+        <span>Eggs</span><span>Fresh herbs</span><span>Melons</span><span>Cucumbers</span><span>Eggplant</span><span>Hot peppers</span><span>Sweet peppers</span><span>Pole beans</span><span>Summer squash</span><span>Pumpkins</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="yard" id="yard">
+  <div class="wrap">
+    <div>
+      <div class="kicker reveal">Lawn care</div>
+      <h2 class="reveal">Mowing and landscaping, from the same folks who grow the plants.</h2>
+      <p class="lede reveal">Little Valley started as a mowing business and added greenhouses and landscaping along the way. One call covers the lawn and the flower beds.</p>
+      <ul>
+        <li class="reveal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d6b8ea" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 20h18M5 20v-4M9 20v-6M13 20v-4M17 20v-7M21 20v-3"/></svg><div><b>Mowing &amp; lawn care</b>Keep the yard trimmed through the growing season.</div></li>
+        <li class="reveal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d6b8ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-8M12 13c-4 0-6-3-6-6 4 0 6 3 6 6zM12 13c4 0 6-3 6-6-4 0-6 3-6 6zM4 21h16"/></svg><div><b>Landscaping</b>Beds and plantings using plants grown right here.</div></li>
+      </ul>
+      <div class="cta reveal"><a class="btn btn-p" href="tel:+18652589926">Call about your yard</a></div>
+    </div>
+    <svg class="yard-art reveal" viewBox="0 0 400 300" aria-hidden="true">
+      <g fill="none" stroke="#9cc489" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 250c70-20 140-24 210-10s130 10 190-6" />
+        <path d="M0 272c90-14 190-14 400-4" opacity=".6"/>
+        <!-- mower -->
+        <path d="M120 236h110l14-34H150z" fill="rgba(255,255,255,.06)"/>
+        <circle cx="140" cy="240" r="14" fill="#14321e"/><circle cx="222" cy="240" r="14" fill="#14321e"/>
+        <path d="M244 202l46-70h22"/>
+        <!-- grass tufts -->
+        <path d="M30 250l4-14 4 14M46 248l3-10 3 10M300 246l4-14 4 14M316 248l3-10 3 10M350 244l4-16 4 16"/>
+      </g>
+      <g stroke="#d6b8ea" stroke-width="1.6" fill="#8f4bb3">
+        <path d="M60 90c4-6 12-4 12 1 7 0 8 8 2 10 4 5-2 11-7 7-1 6-10 6-11 0-6 3-11-3-7-7-6-3-4-10 2-10 0-6 7-7 9-1z"/>
+        <path d="M330 70c4-6 12-4 12 1 7 0 8 8 2 10 4 5-2 11-7 7-1 6-10 6-11 0-6 3-11-3-7-7-6-3-4-10 2-10 0-6 7-7 9-1z" fill="#c58ee0"/>
+      </g>
+      <g fill="none" stroke="#9cc489" stroke-width="2" stroke-linecap="round"><path d="M64 118v120M334 98v140M64 170c-12-4-22 0-26 8 10 4 20 2 26-8zM334 150c12-6 24-2 28 6-12 4-22 2-28-6z"/></g>
+    </svg>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="kicker reveal">Why Little Valley</div>
+    <h2 class="reveal">Small farm, grown close to home</h2>
+    <div class="why">
+      <div class="reveal"><b>Greenhouse grown</b><p>Annuals, perennials, tropicals, succulents and vegetable starts, raised in the greenhouse here in Union County.</p></div>
+      <div class="reveal"><b>At the Union County Farmers' Market</b><p>Find Little Valley among the vendors at the Union County Farmers' Market, with seasonal produce alongside the plants.</p></div>
+      <div class="reveal"><b>Farm to Table Outreach</b><p>Fresh produce brought out to area subdivisions through the Outreach Farm to Table Program.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seasonsec" id="season">
+  <div class="wrap">
+    <div class="kicker reveal">Greenhouse season</div>
+    <h2 class="reveal">Two seasons a year</h2>
+    <p class="lede reveal"><span id="statusLine">The greenhouse opens April 15 and runs through July, then opens again September through October.</span></p>
+    <div class="months reveal" id="months"></div>
+    <div class="season-grid">
+      <div class="panel reveal"><h3>Spring &amp; summer</h3><div class="big">April 15 – end of July</div><p>Hanging baskets, potted mixed containers and vegetable starts for planting season.</p></div>
+      <div class="panel reveal"><h3>Fall</h3><div class="big">September – October</div><p>The greenhouse reopens for the fall season.</p></div>
+    </div>
+    <p class="lede reveal" style="margin-top:20px">Days and times vary, so please call ahead for availability: <a href="tel:+18652589926" style="color:var(--petunia);font-weight:700">(865) 258-9926</a>. Credit and debit cards accepted.</p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker reveal">Find us</div>
+    <h2 class="reveal">Little Valley, Maynardville</h2>
+    <div class="visit">
+      <div class="panel contact reveal">
+        <h3>Call ahead</h3>
+        <a class="tel" href="tel:+18652589926">(865) 258-9926</a>
+        <p>Maynardville, TN · Union County</p>
+        <p>Call for directions to the greenhouse and to check what's ready before you drive out.</p>
+        <div class="row">
+          <a class="btn btn-p" href="tel:+18652589926">Tap to call</a>
+          <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&amp;destination=Maynardville%2C%20TN%2037807" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn-g" href="https://www.facebook.com/people/Little-Valley-Nursery/61550750264700/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="map reveal"><iframe title="Map of Maynardville, TN" src="https://www.google.com/maps?q=Maynardville%2C%20TN%2037807&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Little Valley Nursery &amp; Landscaping</b>
+    <div>Maynardville, Tennessee · <a href="tel:+18652589926">(865) 258-9926</a> · <a href="https://www.facebook.com/people/Little-Valley-Nursery/61550750264700/" target="_blank" rel="noopener">Facebook</a></div>
+    <div style="opacity:.75">Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="btn btn-p" href="tel:+18652589926">Call now</a>
+  <a class="btn btn-g" href="https://www.facebook.com/people/Little-Valley-Nursery/61550750264700/" target="_blank" rel="noopener">Facebook</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date(), m=d.getMonth(), day=d.getDate();
+  var names=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var openM={3:1,4:1,5:1,6:1,8:1,9:1};
+  var box=document.getElementById('months');
+  names.forEach(function(n,i){
+    var el=document.createElement('div');
+    el.className='m'+(openM[i]?' on':'')+(i===m?' now':'');
+    el.innerHTML=n+'<small>'+(i===3?'from 15th':(openM[i]?'open':'closed'))+'</small>';
+    box.appendChild(el);
+  });
+  var open = (m===3&&day>=15)||(m>=4&&m<=6)||m===8||m===9;
+  var chip=document.getElementById('chip'), t=document.getElementById('chipText'), s=document.getElementById('statusLine');
+  if(open){chip.classList.add('open');t.innerHTML='<b>The greenhouse is in season.</b> Call ahead for what’s ready.';}
+  else{
+    var next = (m<3||(m===3&&day<15))?'April 15':(m===7?'September':'April 15');
+    t.innerHTML='Greenhouse between seasons. <b>Reopens '+next+'.</b>';
+    s.textContent='The greenhouse is between seasons right now and reopens '+next+'. It runs April 15 through July, then again September through October.';
+  }
+  // reveal
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)) return;
+  els.forEach(function(e){var r=e.getBoundingClientRect(); if(r.top>window.innerHeight) e.classList.add('pre');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre');});},1500);
+})();
+</script>
+</body>
+</html>
