@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>White Fern Head Spa &amp; Skin Studio — Chattanooga</title>
+<meta name="description" content="Head Spa, Mini Head Spa and Customized Facials at 2020 Gunbarrel Rd, Chattanooga. Concept site by Code Craft Media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EEF2EA; --mist2:#E3EADD; --sage:#7F9C82; --sage-d:#5E7D63; --forest:#24362B; --forest2:#1B2A21;
+  --ink:#24362B; --muted:#4E6153; --paper:#F8FAF5; --line:rgba(36,54,43,.14);
+  --serif:'Fraunces',Georgia,serif; --sans:'Nunito Sans',system-ui,-apple-system,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--mist);line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:6px}
+
+/* banner */
+.concept{background:var(--forest2);color:#CFDCCD;font-size:10.5px;letter-spacing:0;text-align:center;padding:6px 8px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(238,242,234,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:26px;height:34px}
+.brand span{font-family:var(--serif);font-size:19px;font-weight:500;letter-spacing:-.01em;line-height:1}
+.brand small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-d);margin-top:3px;font-weight:700}
+.nav ul{display:none;list-style:none;gap:28px;align-items:center}
+.nav ul a{text-decoration:none;font-size:14px;font-weight:600;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--forest)}.nav ul a.btn,.nav ul a.btn:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:800;font-size:15px;
+  text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer;border:0;min-height:48px}
+.btn-dark{background:var(--forest);color:#fff;box-shadow:0 8px 24px -10px rgba(36,54,43,.6)}
+.btn-dark:hover{background:#2f4738;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}
+.btn-ghost:hover{background:var(--forest);color:#fff}
+.btn-sm{padding:9px 18px;font-size:13.5px;min-height:40px}
+.btn:active{transform:scale(.97)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:26px 0 56px}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-d)}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--sage)}
+h1{font-family:var(--serif);font-weight:350;font-size:clamp(42px,11.5vw,88px);line-height:.98;letter-spacing:-.035em;margin:16px 0 18px;font-variation-settings:"opsz" 144}
+h1 em{font-style:italic;font-weight:300;color:var(--sage-d)}
+.lede{font-size:17px;color:var(--muted);max-width:30ch}
+.lede strong{color:var(--forest)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+@media (max-width:759px){.hero .cta .btn{padding:13px 18px;font-size:14.5px}.hero .cta{flex-wrap:nowrap}.hero .cta .btn{flex:1 1 auto;white-space:nowrap}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:13px;font-weight:700;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px rgba(127,156,130,.22)}
+.dot.closed{background:#B0A898;box-shadow:0 0 0 4px rgba(176,168,152,.25)}
+
+/* ripple bowl illustration */
+.art{position:relative;margin:4px auto 0;width:min(88%,420px);aspect-ratio:1/1}
+@media (min-width:760px){.art{width:min(100%,480px)}}
+.ripples{position:absolute;inset:0}
+.ripples i{position:absolute;left:50%;top:58%;width:30%;aspect-ratio:2.6/1;border:1.5px solid var(--sage);border-radius:50%;
+  transform:translate(-50%,-50%) scale(.4);opacity:0;animation:ripple 6s cubic-bezier(.2,.6,.3,1) infinite}
+.ripples i:nth-child(2){animation-delay:1.5s}.ripples i:nth-child(3){animation-delay:3s}.ripples i:nth-child(4){animation-delay:4.5s}
+@keyframes ripple{0%{transform:translate(-50%,-50%) scale(.4);opacity:0}15%{opacity:.75}100%{transform:translate(-50%,-50%) scale(3.1);opacity:0}}
+.art>svg.bowl{z-index:1}.ripples{z-index:2}
+.art .fern{position:absolute;z-index:0;top:4%;width:30%;transform-origin:50% 100%}
+.art .fern.l{left:17%;animation:swayl 9s ease-in-out infinite}
+.art .fern.r{right:17%;animation:swayr 10s ease-in-out infinite}
+.art .fern.c{left:50%;top:14%;width:20%;margin-left:-10%;opacity:.55;animation:swayl 11s ease-in-out infinite}
+@keyframes swayl{0%,100%{transform:rotate(-17deg)}50%{transform:rotate(-12deg)}}
+@keyframes swayr{0%,100%{transform:scaleX(-1) rotate(-15deg)}50%{transform:scaleX(-1) rotate(-20deg)}}
+.drop{position:absolute;z-index:3;left:50%;top:14%;width:9px;height:13px;margin-left:-4.5px;background:var(--forest);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  opacity:0;animation:drop 6s ease-in infinite}
+@keyframes drop{0%{top:14%;opacity:0}6%{opacity:.85}24%{top:55%;opacity:.85}25.5%{opacity:0}100%{top:55%;opacity:0}}
+.art .cap{position:absolute;z-index:3;left:0;right:0;bottom:6%;text-align:center;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--sage-d)}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(60% 45% at 85% 10%,rgba(127,156,130,.22),transparent 70%),radial-gradient(50% 40% at 0% 100%,rgba(127,156,130,.18),transparent 70%)}
+.grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .21 0 0 0 0 .17 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* sections */
+section{position:relative}
+.sec{padding:76px 0}
+.sec-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:30px}
+.sec-head .frond{width:34px;height:64px;flex:none;color:var(--sage)}
+.sec-head .frond path{stroke-dasharray:220;stroke-dashoffset:0;transition:stroke-dashoffset 1.6s ease}
+.js .reveal:not(.in) .frond path{stroke-dashoffset:220}
+h2{font-family:var(--serif);font-weight:380;font-size:clamp(32px,8vw,54px);line-height:1.02;letter-spacing:-.03em}
+h2 em{font-style:italic;color:var(--sage-d);font-weight:300}
+.kicker{font-size:11.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-d);margin-bottom:6px}
+.intro{color:var(--muted);font-size:16.5px;max-width:52ch;margin:-12px 0 30px}
+
+/* services */
+.menu{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;gap:16px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 24px 24px;overflow:hidden;
+  transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(36,54,43,.45);border-color:rgba(127,156,130,.6)}
+.card .num{font-family:var(--serif);font-style:italic;color:var(--sage);font-size:15px}
+.card h3{font-family:var(--serif);font-weight:450;font-size:28px;letter-spacing:-.02em;line-height:1.1;margin:6px 0 10px}
+.card p{color:var(--muted);font-size:15.5px}
+.time{display:inline-flex;align-items:baseline;gap:6px;margin-top:18px;padding:8px 14px;border-radius:999px;background:var(--mist);font-weight:800;color:var(--forest);font-size:14px}
+.time b{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1}
+.card .corner{position:absolute;right:-18px;top:-18px;width:110px;height:110px;opacity:.5;color:var(--mist2)}
+.card.feature{background:var(--forest);color:#E9EFE6;border-color:var(--forest)}
+.card.feature p{color:#BFD0BF}.card.feature .num{color:#A9C2AB}.card.feature .time{background:rgba(255,255,255,.1);color:#fff}
+.card.feature .corner{color:rgba(255,255,255,.06);opacity:1}
+.card a.more{display:inline-block;margin-top:16px;margin-left:10px;font-weight:800;font-size:14px;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:1px}
+.note{margin-top:22px;font-size:13.5px;color:var(--muted)}
+.note a{font-weight:800}
+
+/* about head spa */
+.what{display:grid;gap:26px}
+.steps{list-style:none;display:grid;gap:12px;counter-reset:s}
+.steps li{display:flex;gap:16px;align-items:flex-start;padding:18px 18px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:18px}
+.steps .ic{flex:none;width:44px;height:44px;border-radius:14px;background:var(--forest);color:#DCE7DA;display:grid;place-items:center}
+.steps .ic svg{width:22px;height:22px}
+.steps h4{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.2;margin-bottom:3px}
+.steps p{font-size:14.5px;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--forest);color:#E4ECE2;overflow:hidden}
+.visit h2{color:#fff}.visit h2 em{color:#A9C2AB}.visit .kicker{color:#A9C2AB}
+.visit .sec-head .frond{color:#A9C2AB}
+.visit-grid{display:grid;gap:22px}
+.panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px}
+.panel h3{font-family:var(--serif);font-weight:450;font-size:22px;color:#fff;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.status{font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.04em;padding:5px 11px;border-radius:999px;background:rgba(169,194,171,.18);color:#CFE0CF;white-space:nowrap}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:12px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.07)}
+.hours li:last-child{border-bottom:0}
+.hours-foot{margin-top:14px;font-size:13.5px;color:#A9C2AB}.hours-foot a{color:#fff;font-weight:800}
+.hours li span:last-child{font-variant-numeric:tabular-nums;color:#CBD8C9}
+.hours li.today{background:var(--sage);color:var(--forest2);font-weight:800;border-bottom-color:transparent}
+.hours li.today span:last-child{color:var(--forest2)}
+.hours li.today span:first-child::after{content:" · Today";font-weight:700;font-size:12px;opacity:.8}
+.addr{font-size:17px;color:#fff;line-height:1.45}
+.addr small{display:block;color:#A9C2AB;font-size:13px;margin-top:4px}
+.map{position:relative;margin-top:16px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.15);aspect-ratio:4/3;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px),#2c4234}
+.map::before{content:"2020 Gunbarrel Rd · map loading";position:absolute;inset:0;display:grid;place-items:center;color:#A9C2AB;font-size:13px;font-weight:700}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.02)}
+.row-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.visit .btn-light{background:#EEF2EA;color:var(--forest)}
+.visit .btn-light:hover{background:#fff;transform:translateY(-2px)}
+.visit .btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);background:transparent}
+.visit .btn-line:hover{background:rgba(255,255,255,.1)}
+.policy{margin-top:4px}
+.policy ul{list-style:none;display:grid;gap:10px}
+.policy li{display:flex;gap:12px;font-size:14.5px;color:#D3DED1}
+.policy li::before{content:"";flex:none;width:7px;height:7px;margin-top:8px;border-radius:50%;background:#A9C2AB}
+.policy li b{color:#fff}
+
+/* closing */
+.close{text-align:center;padding:84px 0 80px}
+.close h2{max-width:16ch;margin:0 auto 14px}
+.close p{color:var(--muted);max-width:40ch;margin:0 auto 26px}
+.close .cta{justify-content:center}
+.close .fern-row{display:flex;justify-content:center;gap:10px;color:var(--sage);margin-bottom:18px}
+.close .fern-row svg{width:22px;height:40px}
+.close .fern-row svg:nth-child(2){width:28px;height:52px;margin-top:-10px}
+
+footer{background:var(--forest2);color:#9FB2A0;font-size:13px;padding:30px 0 34px}
+footer .wrap{display:flex;flex-direction:column;gap:12px}
+footer .soc{display:flex;gap:16px}
+footer a{color:#DCE7DA;font-weight:700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(27,42,33,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08)}
+.callbar a{flex:1;min-height:50px;font-size:15px}
+.callbar .btn-call{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.callbar .btn-book{background:var(--sage);color:var(--forest2)}
+.callbar .btn-book:hover{background:#94b097}
+.callbar svg{width:18px;height:18px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero{padding:70px 0 90px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .art{margin:0}
+  .lede{font-size:19px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .what{grid-template-columns:.9fr 1.1fr;align-items:start;gap:56px}
+  .visit-grid{grid-template-columns:1fr 1.2fr}
+  .visit-grid .policy{grid-column:1/-1}
+  footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}
+  .sec{padding:110px 0}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="frond" viewBox="0 0 40 76">
+      <path d="M20 74 C20 52 21 30 24 12 C25 7 23 3 19 3 C15.5 3 14.5 7 17 9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M20.3 64 C14 61 8 61 4 63 M20.5 56 C15 52 9 51 5 53 M21 48 C16 44 11 43 7 44.5 M21.6 40 C17.5 36.5 13 35.5 10 36.5 M22.3 32 C19 29 15.5 28 13 28.8 M23 24 C20.5 21.5 18 21 16 21.5 M20.6 61 C26 57 32 56.5 36 58 M21 53 C26 49 31 48 35 49.5 M21.4 45 C25.5 41 30 40 33.5 41 M22 37 C25.5 33.5 29 32.5 32 33 M22.8 29 C25.5 26 28.5 25 30.5 25.5 M23.5 21 C25.5 19 27.5 18.5 29 18.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for White Fern Head Spa. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="White Fern Head Spa & Skin Studio, home">
+      <svg viewBox="0 0 40 76" style="color:var(--sage-d)"><use href="#frond"/></svg>
+      <div><span>White Fern</span><small>Head Spa &amp; Skin Studio</small></div>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#ritual">Before you book</a></li>
+      <li><a href="#visit">Hours &amp; visit</a></li>
+      <li><a class="btn btn-dark btn-sm" href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">Book online</a></li>
+    </ul>
+    <a class="btn btn-dark btn-sm" href="https://whitefern.glossgenius.com" target="_blank" rel="noopener" style="display:var(--mbook,inline-flex)" id="mbook">Book</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"></div><div class="grain"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Head Spa &amp; Skin · Chattanooga</span>
+      <h1>Forty-five minutes for your <em>scalp</em> to exhale.</h1>
+      <p class="lede">The <strong>Head Spa</strong>, a 20-minute <strong>Mini</strong> and a <strong>1-hour Customized Facial</strong>, inside Suite 118 on Gunbarrel Road.</p>
+      <div class="cta">
+        <a class="btn btn-dark" href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">Book now</a>
+        <a class="btn btn-ghost" href="tel:+14238022480">Call 423-802-2480</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="dot" id="opendot"></i><span id="openstate">Open 7 days a week</span></span>
+        <span>2020 Gunbarrel Rd</span>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg class="fern l" viewBox="0 0 40 76" style="color:#5E7D63"><use href="#frond"/></svg>
+      <svg class="fern r" viewBox="0 0 40 76" style="color:#7F9C82"><use href="#frond"/></svg>
+      <svg class="fern c" viewBox="0 0 40 76" style="color:#7F9C82"><use href="#frond"/></svg>
+      <svg class="bowl" viewBox="0 0 400 400" style="position:absolute;inset:0;width:100%;height:100%">
+        <defs>
+          <radialGradient id="pool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#DCE6D7"/><stop offset="1" stop-color="#EEF2EA" stop-opacity="0"/></radialGradient>
+          <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7F9C82"/><stop offset="1" stop-color="#24362B"/></linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="none" stroke="#7F9C82" stroke-opacity=".25" stroke-dasharray="2 7"/>
+        <ellipse cx="200" cy="232" rx="170" ry="64" fill="url(#pool)"/>
+        <path d="M78 232 C 84 316, 316 316, 322 232 Z" fill="url(#bowl)"/>
+        <ellipse cx="200" cy="232" rx="122" ry="24" fill="#EEF2EA" stroke="#24362B" stroke-width="1.5"/>
+        <ellipse cx="200" cy="232" rx="106" ry="17" fill="#D9E4D5"/>
+        <path d="M120 300 C 160 318, 240 318, 280 300" stroke="#EEF2EA" stroke-opacity=".25" stroke-width="2" fill="none"/>
+      </svg>
+      <div class="ripples"><i></i><i></i><i></i><i></i></div>
+      <span class="drop"></span>
+      <span class="cap">Head Spa · Mini · Facial</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec menu" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <svg class="frond" viewBox="0 0 40 76"><use href="#frond"/></svg>
+      <div><div class="kicker">The menu</div><h2>Three treatments. <em>Each one unhurried.</em></h2></div>
+    </div>
+    <div class="cards">
+      <article class="card feature reveal">
+        <svg class="corner" viewBox="0 0 40 76"><use href="#frond"/></svg>
+        <div class="num">01 · Signature</div>
+        <h3>Head Spa</h3>
+        <p>The full treatment, and the one the studio is named for. Book it when you want the whole forty-five minutes.</p>
+        <span class="time"><b>45</b> minutes</span>
+      </article>
+      <article class="card reveal">
+        <svg class="corner" viewBox="0 0 40 76"><use href="#frond"/></svg>
+        <div class="num">02 · Quick reset</div>
+        <h3>Mini Head Spa</h3>
+        <p>A shorter session for a lunch break or a first visit, if you're curious what a head spa feels like.</p>
+        <span class="time"><b>20</b> minutes</span>
+      </article>
+      <article class="card reveal">
+        <svg class="corner" viewBox="0 0 40 76"><use href="#frond"/></svg>
+        <div class="num">03 · Skin studio</div>
+        <h3>Customized Facial</h3>
+        <p>An hour-long facial, customized for you. It's the "Skin Studio" half of White Fern.</p>
+        <span class="time"><b>1</b> hour</span>
+      </article>
+    </div>
+    <p class="note">See current pricing and open times on <a href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">White Fern's booking page</a>. Memberships are listed there too.</p>
+  </div>
+</section>
+
+<section class="sec" id="ritual">
+  <div class="wrap what">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:18px">
+        <svg class="frond" viewBox="0 0 40 76"><use href="#frond"/></svg>
+        <div><div class="kicker">Before you book</div><h2>Easy to book, <em>easy to plan.</em></h2></div>
+      </div>
+      <p class="intro" style="margin:0">Pick a treatment, choose a time online, and walk into a quiet suite on Gunbarrel Road. Here's what helps to know.</p>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><h4>Evenings until 9 PM</h4><p>Open until 9 PM Monday, Tuesday, Thursday and Friday, so you can come after work.</p></div></li>
+      <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+        <div><h4>Seven days a week</h4><p>There are weekend hours too: Saturday 12–4 and Sunday 1–4.</p></div></li>
+      <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg></span>
+        <div><h4>Book online in a minute</h4><p>Choose your service and time on GlossGenius. A card on file holds your spot.</p></div></li>
+      <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <div><h4>A quiet suite of its own</h4><p>Suite 118 at 2020 Gunbarrel Rd, Chattanooga.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <svg class="frond" viewBox="0 0 40 76"><use href="#frond"/></svg>
+      <div><div class="kicker">Hours &amp; visit</div><h2>Come find <em>the fern.</em></h2></div>
+    </div>
+    <div class="visit-grid">
+      <div class="panel reveal">
+        <h3>Hours <span class="status" id="hstatus">Open 7 days</span></h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9 AM – 4:30 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9 AM – 9 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>12 PM – 4 PM</span></li>
+          <li data-d="0"><span>Sunday</span><span>1 PM – 4 PM</span></li>
+        </ul>
+        <p class="hours-foot">Open evenings until 9 PM four days a week. <a href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">See open times →</a></p>
+      </div>
+      <div class="panel reveal">
+        <h3>Find us</h3>
+        <p class="addr">2020 Gunbarrel Rd, Suite 118<br>Chattanooga, TN 37421<small>Book online or call ahead.</small></p>
+        <div class="map"><iframe title="Map to White Fern Head Spa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=2020%20Gunbarrel%20Rd%2C%20Chattanooga%2C%20TN%2037421&output=embed"></iframe></div>
+        <div class="row-btns">
+          <a class="btn btn-light" href="tel:+14238022480">Call 423-802-2480</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=2020%20Gunbarrel%20Rd%2C%20Chattanooga%2C%20TN%2037421" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="panel policy reveal">
+        <h3>Good to know</h3>
+        <ul>
+          <li><span><b>24 hours' notice</b> is required to cancel or reschedule. Later cancellations incur a 50% fee.</span></li>
+          <li><span><b>No-shows</b> are charged 100% of the service total.</span></li>
+          <li><span>Arriving <b>more than 10 minutes late</b> may shorten or reschedule your service.</span></li>
+          <li><span>A <b>valid card on file</b> is required to reserve an appointment.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap reveal">
+    <div class="fern-row" aria-hidden="true"><svg viewBox="0 0 40 76"><use href="#frond"/></svg><svg viewBox="0 0 40 76"><use href="#frond"/></svg><svg viewBox="0 0 40 76" style="transform:scaleX(-1)"><use href="#frond"/></svg></div>
+    <h2>Your next quiet hour is <em>one tap away.</em></h2>
+    <p>Book a Head Spa, a Mini or a Customized Facial at White Fern in Chattanooga.</p>
+    <div class="cta">
+      <a class="btn btn-dark" href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-ghost" href="tel:+14238022480">Call the studio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© White Fern Head Spa &amp; Skin Studio · Chattanooga, TN</div>
+    <div class="soc"><a href="https://www.instagram.com/whitefern121" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/share/1E5xq1RDkV/" target="_blank" rel="noopener">Facebook</a><a href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">Book</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick actions">
+  <a class="btn btn-call" href="tel:+14238022480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="btn btn-book" href="https://whitefern.glossgenius.com" target="_blank" rel="noopener">Book online</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  // hours: [open, close] in minutes
+  var H={0:[780,960],1:[540,1260],2:[540,1260],3:[540,990],4:[540,1260],5:[540,1260],6:[720,960]};
+  var now=new Date(), d=now.getDay(), m=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var h=H[d], open=m>=h[0]&&m<h[1];
+  function fmt(x){var hh=Math.floor(x/60),mm=x%60,ap=hh>=12?'PM':'AM';hh=hh%12||12;return hh+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap;}
+  var s=open?'Open now · until '+fmt(h[1]):(m<h[0]?'Opens today at '+fmt(h[0]):'Closed now · open 7 days');
+  document.getElementById('openstate').textContent=s;
+  document.getElementById('hstatus').textContent=open?'Open now':'Closed now';
+  if(!open) document.getElementById('opendot').classList.add('closed');
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function show(e){e.classList.add('in');}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  } else els.forEach(show);
+  setTimeout(function(){els.forEach(show);},1500);
+  // hide header Book on desktop (desktop nav has its own)
+  var mq=window.matchMedia('(min-width:760px)');function mb(){document.getElementById('mbook').style.display=mq.matches?'none':'inline-flex';}mb();mq.addListener&&mq.addListener(mb);
+})();
+</script>
+</body>
+</html>

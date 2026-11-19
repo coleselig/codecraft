@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hailey's Homemade Bakes — Soddy Daisy</title>
+<meta name="description" content="Homemade cookies, mini loaves and bread, made from scratch in Soddy Daisy, TN. Pickup Wednesday to Friday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8EC; --cream-2:#F7EBD6; --crust:#C97B4A; --crust-d:#9A5530; --sage:#6B8F71; --sage-d:#4A6A50;
+  --ink:#3B2A20; --ink-2:#6A5446; --line:#E8D6B9; --card:#FFFDF8;
+  --display:'Shrikhand', Georgia, serif; --serif:'Lora', Georgia, serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* concept banner */
+.concept{background:var(--ink);color:#F3E6D2;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.concept b{color:#F6C79F;font-weight:600}
+
+/* gingham */
+.gingham{height:18px;background-color:var(--cream);
+  background-image:
+   linear-gradient(90deg, rgba(107,143,113,.55) 50%, transparent 50%),
+   linear-gradient(rgba(107,143,113,.55) 50%, transparent 50%);
+  background-size:18px 18px;}
+.gingham.crust{background-image:
+   linear-gradient(90deg, rgba(201,123,74,.45) 50%, transparent 50%),
+   linear-gradient(rgba(201,123,74,.45) 50%, transparent 50%);}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:30;background:rgba(255,248,236,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:var(--display);font-size:21px;color:var(--crust-d);text-decoration:none;line-height:1}
+.logo small{display:block;font-family:var(--serif);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-d);margin-top:3px;font-weight:600}
+.nav ul{display:none;list-style:none;gap:26px;align-items:center}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2);transition:color .2s}
+.nav ul a:hover{color:var(--crust-d)}
+.nav ul a.btn,.nav ul a.btn:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .18s ease, box-shadow .18s ease, background .18s;cursor:pointer;border:0}
+.btn:active{transform:scale(.97)}
+.btn-crust{background:var(--crust-d);color:#fff;box-shadow:0 6px 0 #7A4022, 0 12px 24px rgba(154,85,48,.25)}
+.btn-crust:hover{transform:translateY(-2px);box-shadow:0 8px 0 #7A4022, 0 16px 28px rgba(154,85,48,.3)}
+.btn-ghost{background:transparent;color:var(--sage-d);border:2px solid var(--sage)}
+.btn-ghost:hover{background:var(--sage);color:#fff}
+.nav .btn{padding:9px 18px;font-size:14px;box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:26px 0 0;
+  background:
+   radial-gradient(circle at 85% 10%, rgba(201,123,74,.16), transparent 45%),
+   radial-gradient(circle at 0% 90%, rgba(107,143,113,.16), transparent 45%),
+   var(--cream);}
+.hero:before{content:"";position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:radial-gradient(rgba(154,85,48,.22) 1px, transparent 1.4px);background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%)}
+.hero .wrap{position:relative;display:grid;gap:22px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sage-d)}
+.eyebrow svg{width:22px;height:22px}
+h1{font-family:var(--display);font-weight:400;color:var(--crust-d);font-size:clamp(40px,11.2vw,84px);line-height:1.02;letter-spacing:-.005em;margin:10px 0 14px}
+h1 .soft{display:block;font-family:var(--serif);font-style:italic;font-weight:500;color:var(--ink);font-size:.46em;letter-spacing:0;margin-top:10px;line-height:1.25}
+.lede{font-size:18px;color:var(--ink-2);max-width:34em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .cta-row{flex-wrap:nowrap;gap:10px}.hero .cta-row .btn{padding:14px 18px;font-size:15.5px;white-space:nowrap}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{font-size:13.5px;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--ink-2)}
+.chip i{font-style:normal;color:var(--sage-d)}
+
+.hero-art{position:relative;margin:0 auto;width:100%;max-width:440px}
+.hero-art svg{width:100%;height:auto}
+.steam path{stroke-dasharray:6 8;animation:steam 3.2s linear infinite}
+.steam path:nth-child(2){animation-delay:-1.1s}
+.steam path:nth-child(3){animation-delay:-2.1s}
+@keyframes steam{to{stroke-dashoffset:-56}}
+.bob{animation:bob 5s ease-in-out infinite;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-2deg)}}
+.tag-note{position:absolute;right:4%;top:6%;background:var(--card);border:1.5px dashed var(--crust);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--crust-d);transform:rotate(5deg);box-shadow:0 6px 16px rgba(59,42,32,.08)}
+.tag-note span{display:block;font-family:var(--display);font-weight:400;font-size:20px;line-height:1.05}
+
+/* sections */
+section{padding:64px 0}
+.kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sage-d);display:flex;align-items:center;gap:10px}
+.kicker:after{content:"";height:1px;background:var(--line);flex:1;max-width:120px}
+h2{font-family:var(--display);font-weight:400;color:var(--crust-d);font-size:clamp(34px,8.5vw,54px);line-height:1.05;margin:10px 0 12px}
+.sub{color:var(--ink-2);max-width:36em}
+
+/* menu */
+.menu{background:var(--cream-2);position:relative}
+.tabs{display:flex;gap:8px;margin:26px 0 22px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-family:var(--serif);font-size:15px;font-weight:600;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-2);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--crust)}
+.tab[aria-selected="true"]{background:var(--sage-d);border-color:var(--sage-d);color:#fff}
+.cat{margin-bottom:34px}
+.cat-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.cat-h svg{width:38px;height:38px;flex:0 0 auto}
+.cat-h h3{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--ink)}
+.cat-h p{font-size:14px;color:var(--ink-2);font-style:italic}
+.grid{display:grid;gap:14px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;position:relative;transition:transform .2s, box-shadow .2s}
+.item:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(59,42,32,.09)}
+.item h4{font-size:19px;font-weight:700;line-height:1.3}
+.item .note{font-size:14px;color:var(--ink-2);margin-top:4px}
+.badge{display:inline-block;margin-bottom:8px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.b-year{background:rgba(107,143,113,.15);color:var(--sage-d)}
+.b-season{background:rgba(201,123,74,.16);color:var(--crust-d)}
+.b-pop{background:var(--crust-d);color:#fff}
+.b-fav{background:var(--ink);color:#F6C79F}
+.prices{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.price{display:flex;align-items:baseline;gap:8px;border:1.5px dashed var(--line);border-radius:10px;padding:6px 10px;font-size:14px;color:var(--ink-2)}
+.price b{font-size:17px;color:var(--crust-d);font-weight:700}
+.allergen{margin-top:6px;font-size:13px;color:var(--ink-2);background:var(--card);border-left:3px solid var(--sage);border-radius:6px;padding:12px 14px}
+
+/* recipe card about */
+.about .wrap{display:grid;gap:30px;align-items:center}
+.recipe{position:relative;background:#FFFEFA;border-radius:6px;padding:26px 22px 24px;box-shadow:0 1px 0 var(--line), 0 18px 40px rgba(59,42,32,.12);transform:rotate(-1.2deg);
+  background-image:repeating-linear-gradient(180deg, transparent 0 31px, rgba(107,143,113,.22) 31px 32px);background-position:0 70px}
+.recipe:before{content:"";position:absolute;left:0;right:0;top:62px;height:2px;background:rgba(201,123,74,.55)}
+.recipe .pin{position:absolute;top:-14px;left:50%;width:90px;height:28px;margin-left:-45px;background:rgba(201,123,74,.35);transform:rotate(-3deg);border-radius:2px}
+.recipe .rh{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;height:40px}
+.recipe .rh span{font-family:var(--display);color:var(--crust-d);font-size:22px;line-height:1;white-space:nowrap}
+.recipe .rh em{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-d);font-style:normal;font-weight:700;white-space:nowrap}
+.recipe p{font-family:var(--serif);font-style:italic;font-size:17.5px;line-height:32px;margin-top:22px;color:var(--ink)}
+.recipe p + p{margin-top:0}
+.recipe .sig{font-family:var(--display);color:var(--sage-d);font-size:24px;margin-top:10px;text-align:right}
+.why{display:grid;gap:12px;margin-top:22px}
+.why li{list-style:none;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.why svg{width:32px;height:32px;flex:0 0 auto}
+.why b{display:block;font-size:17px}
+.why span{font-size:15px;color:var(--ink-2)}
+
+/* pickup */
+.pickup{background:var(--sage-d);color:#F4EFE4;position:relative;overflow:hidden}
+.pickup h2{color:#FFE2C6}
+.pickup .kicker{color:#CFE0CF}.pickup .kicker:after{background:rgba(255,255,255,.25)}
+.pickup .sub{color:#E3EADF}
+.pk{display:grid;gap:22px;margin-top:26px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{text-align:center;border-radius:12px;padding:10px 0 9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600;color:#C9D6C8}
+.day b{display:block;font-size:15px;color:#fff;margin-bottom:2px}
+.day.open{background:#FFF8EC;color:var(--sage-d);border-color:#FFF8EC}
+.day.open b{color:var(--crust-d)}
+.day.today{outline:3px solid #F6C79F;outline-offset:2px}
+.today-line{margin-top:12px;font-size:15px;color:#FFE2C6;font-weight:600;min-height:1.5em}
+.pk-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px}
+.pk-card dl{display:grid;gap:12px}
+.pk-card dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#CFE0CF;font-weight:700}
+.pk-card dd{font-size:17px;color:#fff}
+.steps{counter-reset:s;display:grid;gap:10px;margin-top:4px}
+.steps li{list-style:none;counter-increment:s;display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.steps li:before{content:counter(s);flex:0 0 30px;height:30px;border-radius:50%;background:#FFF8EC;color:var(--crust-d);font-family:var(--display);display:grid;place-items:center;font-size:16px;line-height:1}
+.map{border-radius:18px;overflow:hidden;border:4px solid rgba(255,248,236,.9);aspect-ratio:4/3;background:#E6EDE3 radial-gradient(circle at 50% 50%,#C97B4A 0 7px,transparent 8px),repeating-linear-gradient(35deg,transparent 0 26px,rgba(74,106,80,.12) 26px 28px),#E6EDE3}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.pk .btn-cream{background:#FFF8EC;color:var(--sage-d)}
+.pk .btn-cream:hover{background:#fff}
+.small{font-size:13.5px;color:#D7E2D4;margin-top:10px}
+
+/* order */
+.order{text-align:center}
+.order .wrap{max-width:720px}
+.order .sub{margin:0 auto}
+.order .cta-row{justify-content:center}
+.wheat-row{display:flex;justify-content:center;margin-bottom:6px}
+.wheat-row svg{width:120px;height:auto}
+
+footer{background:var(--ink);color:#E7D8C3;padding:34px 0 28px;font-size:14px}
+footer .wrap{display:grid;gap:14px}
+footer .logo{color:#F6C79F}
+footer .logo small{color:#B9C9B6}
+footer a{color:#F6C79F}
+footer .fine{font-size:12.5px;color:#B9A894}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(59,42,32,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1.5fr;gap:10px}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:14px;text-decoration:none;font-weight:700;font-size:15.5px}
+.bar .b1{background:transparent;color:#FFF8EC;border:1.5px solid rgba(255,248,236,.35)}
+.bar .b2{background:var(--crust);color:#fff}
+.bar svg{width:19px;height:19px}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal:not(.in){opacity:1;transform:none}html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--crust);outline-offset:3px;border-radius:6px}
+
+@media (min-width:720px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .nav ul{display:flex}
+  .hero{padding:56px 0 20px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:40px}
+  .hero-art{max-width:480px}
+  section{padding:96px 0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .about .wrap{grid-template-columns:1fr 1fr;gap:56px}
+  .pk{grid-template-columns:1.05fr .95fr;align-items:start}
+  .tabs{display:none}
+  #cookies{margin-top:40px}
+  .recipe{padding:30px 30px 28px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Hailey's Homemade Bakes. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Hailey's Homemade Bakes, home">Hailey's<small>Homemade Bakes</small></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Hailey</a></li>
+      <li><a href="#pickup">Pickup</a></li>
+      <li><a class="btn btn-crust" href="https://bakeprofit.com/m/haileyshomemadebakes" target="_blank" rel="noopener">Order now</a></li>
+    </ul>
+  </div>
+</header>
+<div class="gingham" aria-hidden="true"></div>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4A6A50" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 22V6"/><path d="M12 9c-2-1-3.5-3-3.5-5 2 .5 3.5 2.5 3.5 5zM12 9c2-1 3.5-3 3.5-5-2 .5-3.5 2.5-3.5 5zM12 13c-2-1-3.5-3-3.5-5 2 .5 3.5 2.5 3.5 5zM12 13c2-1 3.5-3 3.5-5-2 .5-3.5 2.5-3.5 5zM12 17c-2-1-3.5-3-3.5-5 2 .5 3.5 2.5 3.5 5zM12 17c2-1 3.5-3 3.5-5-2 .5-3.5 2.5-3.5 5z"/></svg>
+        Home bakery · Soddy Daisy, TN
+      </span>
+      <h1>Made from Scratch, Shared with Love<span class="soft">Cookies, mini loaves &amp; fresh bread from Hailey's home kitchen.</span></h1>
+      <p class="lede">Order a few days ahead, then pick up Wednesday through Friday, 9 am to 7 pm, in Soddy Daisy or Hixson.</p>
+      <div class="cta-row">
+        <a class="btn btn-crust" href="https://bakeprofit.com/m/haileyshomemadebakes" target="_blank" rel="noopener">Order for pickup
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="facts">
+        <span class="chip"><i>✓</i> Organic ingredients</span>
+        <span class="chip"><i>✓</i> 10+ years baking</span>
+        
+      </div>
+    </div>
+
+    <div class="hero-art reveal" aria-hidden="true">
+      <div class="tag-note"><span>$18</span>a dozen</div>
+      <svg viewBox="0 0 440 380" role="img">
+        <defs>
+          <pattern id="gh" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="#FFF8EC"/>
+            <rect width="10" height="20" fill="#6B8F71" opacity=".45"/>
+            <rect width="20" height="10" fill="#6B8F71" opacity=".45"/>
+          </pattern>
+          <radialGradient id="ck" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#E9AE72"/><stop offset=".7" stop-color="#C97B4A"/><stop offset="1" stop-color="#A9612F"/></radialGradient>
+          <radialGradient id="sg" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FCEBC8"/><stop offset="1" stop-color="#E7C690"/></radialGradient>
+          <linearGradient id="lf" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#B8693A"/><stop offset="1" stop-color="#8E4E27"/></linearGradient>
+        </defs>
+        <!-- cloth -->
+        <path d="M30 230 Q220 190 410 230 L430 360 Q220 380 10 360 Z" fill="url(#gh)"/>
+        <path d="M30 230 Q220 190 410 230" fill="none" stroke="#4A6A50" stroke-width="2" opacity=".5"/>
+        <!-- loaf -->
+        <g transform="translate(205 120)">
+          <ellipse cx="80" cy="128" rx="98" ry="12" fill="#3B2A20" opacity=".12"/>
+          <path d="M-10 120 Q-18 40 40 22 Q80 8 120 22 Q178 40 170 120 Z" fill="url(#lf)"/>
+          <path d="M20 50 q20 -14 40 0 M60 40 q20 -14 40 0 M100 50 q20 -14 40 0" fill="none" stroke="#F3C99A" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+          <g class="steam" fill="none" stroke="#C97B4A" stroke-width="3" stroke-linecap="round" opacity=".55">
+            <path d="M50 10 c-10 -14 10 -22 0 -38 c-8 -12 6 -20 0 -32"/>
+            <path d="M80 4 c-10 -14 10 -22 0 -38 c-8 -12 6 -20 0 -32"/>
+            <path d="M110 10 c-10 -14 10 -22 0 -38 c-8 -12 6 -20 0 -32"/>
+          </g>
+        </g>
+        <!-- cookies -->
+        <g class="bob">
+          <circle cx="120" cy="240" r="62" fill="url(#ck)"/>
+          <circle cx="120" cy="240" r="62" fill="none" stroke="#9A5530" stroke-width="2" opacity=".35"/>
+          <g fill="#4A2E1E"><ellipse cx="96" cy="220" rx="8" ry="6"/><ellipse cx="135" cy="210" rx="7" ry="6" transform="rotate(20 135 210)"/><ellipse cx="150" cy="248" rx="8" ry="6"/><ellipse cx="108" cy="262" rx="7" ry="5"/><ellipse cx="128" cy="236" rx="5" ry="4"/><ellipse cx="88" cy="246" rx="5" ry="4"/></g>
+        </g>
+        <circle cx="250" cy="300" r="46" fill="url(#sg)"/>
+        <g fill="#C97B4A" opacity=".5"><circle cx="236" cy="290" r="2"/><circle cx="258" cy="284" r="2"/><circle cx="268" cy="306" r="2"/><circle cx="244" cy="314" r="2"/><circle cx="254" cy="298" r="2"/></g>
+        <circle cx="345" cy="292" r="40" fill="#F1D6A6"/>
+        <g fill="#FFFDF5" stroke="#E2C089" stroke-width="1"><circle cx="332" cy="282" r="6"/><circle cx="356" cy="300" r="6"/><circle cx="340" cy="306" r="5"/><circle cx="360" cy="278" r="5"/></g>
+        <!-- wheat sprigs -->
+        <g fill="none" stroke="#6B8F71" stroke-width="2.4" stroke-linecap="round">
+          <path d="M36 200 Q48 120 76 70"/>
+          <path d="M60 96 q-14 -2 -18 -16 q14 2 18 16zM66 82 q10 -10 24 -8 q-8 12 -24 8zM52 120 q-14 -2 -18 -16 q14 2 18 16zM58 106 q10 -10 24 -8 q-8 12 -24 8zM46 146 q-14 -2 -18 -16 q14 2 18 16zM51 132 q10 -10 24 -8 q-8 12 -24 8z" fill="#6B8F71" fill-opacity=".25"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="gingham crust" aria-hidden="true" style="margin-top:12px"></div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">The menu</div>
+      <h2>Fresh from the oven</h2>
+      <p class="sub">Every price here is straight from Hailey's order page. Some favorites are seasonal, so look for the tag.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab" role="tab" aria-selected="true" data-go="cookies">Cookies</button>
+      <button class="tab" role="tab" aria-selected="false" data-go="loaves">Mini loaves</button>
+      <button class="tab" role="tab" aria-selected="false" data-go="bread">Bread</button>
+    </div>
+
+    <div class="cat reveal" id="cookies">
+      <div class="cat-h">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#C97B4A"/><g fill="#4A2E1E"><circle cx="14" cy="15" r="2.4"/><circle cx="24" cy="12" r="2"/><circle cx="27" cy="22" r="2.4"/><circle cx="16" cy="26" r="2"/></g></svg>
+        <div><h3>Cookies</h3><p>By the half dozen or dozen</p></div>
+      </div>
+      <div class="grid">
+        <article class="item"><span class="badge b-year">Year round</span><h4>Classic Chocolate Chip</h4>
+          <div class="prices"><span class="price">Half dozen <b>$10</b></span><span class="price">Dozen <b>$18</b></span></div></article>
+        <article class="item"><span class="badge b-year">Year round</span><h4>Fluffy Sugar</h4>
+          <div class="prices"><span class="price">Half dozen <b>$10</b></span><span class="price">Dozen <b>$18</b></span></div></article>
+        <article class="item"><span class="badge b-fav">Hailey's fave</span><h4>White Chocolate Macadamia Nut</h4>
+          <p class="note">The one Hailey calls her favorite.</p>
+          <div class="prices"><span class="price">Half dozen <b>$20</b></span><span class="price">Dozen <b>$35</b></span></div></article>
+      </div>
+    </div>
+
+    <div class="cat reveal" id="loaves">
+      <div class="cat-h">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="14" width="30" height="18" rx="5" fill="#9A5530"/><path d="M7 18 Q20 4 33 18" fill="#C97B4A"/><path d="M12 15 q4-3 8 0 M20 13 q4-3 8 0" stroke="#F3C99A" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <div><h3>Mini Loaves</h3><p>One for $4, or two for $6</p></div>
+      </div>
+      <div class="grid">
+        <article class="item"><span class="badge b-year">Year round</span><h4>Banana Bread</h4>
+          <div class="prices"><span class="price">1 loaf <b>$4</b></span><span class="price">2 for <b>$6</b></span></div></article>
+        <article class="item"><span class="badge b-season">Spring &amp; summer</span><h4>Blueberry Lemon with Streusel Topping</h4>
+          <div class="prices"><span class="price">1 loaf <b>$4</b></span><span class="price">2 for <b>$6</b></span></div></article>
+      </div>
+    </div>
+
+    <div class="cat reveal" id="bread">
+      <div class="cat-h">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 30 V18 Q6 8 20 8 Q34 8 34 18 V30 Z" fill="#E7C690"/><path d="M6 18 Q6 8 20 8 Q34 8 34 18" fill="none" stroke="#9A5530" stroke-width="3"/></svg>
+        <div><h3>Bread</h3><p>Short ingredient lists, baked at home</p></div>
+      </div>
+      <div class="grid">
+        <article class="item"><span class="badge b-pop">Popular</span><h4>Sandwich Bread</h4>
+          <p class="note">Made with only 6 ingredients.</p>
+          <div class="prices"><span class="price">1 loaf <b>$8</b></span><span class="price">2 for <b>$15</b></span></div></article>
+        <article class="item"><span class="badge b-season">Spring &amp; summer</span><h4>Hamburger Buns</h4>
+          <p class="note">Made with only 8 ingredients. Pack of 8.</p>
+          <div class="prices"><span class="price">No sesame <b>$10</b></span><span class="price">With sesame <b>$12</b></span></div></article>
+      </div>
+    </div>
+
+    <p class="allergen reveal">Made in a home kitchen that is not inspected by the Tennessee Department of Agriculture. May contain milk, eggs, wheat, soy, peanuts and tree nuts.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="recipe reveal">
+      <div class="pin" aria-hidden="true"></div>
+      <div class="rh"><span>From the kitchen</span><em>Recipe No. 1</em></div>
+      <p>“Baking has been a passion of mine for over 10 years, inspired by special memories in the kitchen with my grandma.”</p>
+      <p>“From my favorite white chocolate macadamia nut cookies to every new item I make…”</p>
+      <div class="sig">— Hailey</div>
+    </div>
+    <div class="reveal">
+      <div class="kicker">Meet the baker</div>
+      <h2>Grandma's kitchen, Hailey's oven</h2>
+      <p class="sub">Hailey's Homemade Bakes started as a small home bakery in Soddy Daisy. Hailey bakes homemade cookies and other goods with organic ingredients, and she wants her baking to give back to her community.</p>
+      <ul class="why">
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#6B8F71" opacity=".18"/><path d="M16 24c-5-3-7-7-6-12 4 0 6 3 6 7 0-4 2-7 6-7 1 5-1 9-6 12z" fill="#4A6A50"/></svg><div><b>Organic ingredients</b><span>Hailey's own words: baked goods “made with organic ingredients and lots of love.”</span></div></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#C97B4A" opacity=".18"/><path d="M9 20h14M11 20v-6a5 5 0 0110 0v6" stroke="#9A5530" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><div><b>Over 10 years of baking</b><span>A passion that started in the kitchen with her grandma.</span></div></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#6B8F71" opacity=".18"/><path d="M10 16h12M10 11h12M10 21h7" stroke="#4A6A50" stroke-width="2.2" stroke-linecap="round"/></svg><div><b>Short ingredient lists</b><span>Sandwich bread uses just 6 ingredients, and the buns use 8.</span></div></li>
+        <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#C97B4A" opacity=".18"/><path d="M16 24s-7-4.5-7-9.5A3.8 3.8 0 0116 12a3.8 3.8 0 017 2.5C23 19.5 16 24 16 24z" fill="#9A5530"/></svg><div><b>Made from scratch</b><span>Homemade in Hailey's own kitchen in Soddy Daisy.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pickup" id="pickup">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Pickup</div>
+      <h2>Wednesday to Friday</h2>
+      <p class="sub">Pickup runs 9 am to 7 pm on pickup days, serving the Soddy Daisy and Hixson area.</p>
+    </div>
+    <div class="pk">
+      <div class="reveal">
+        <div class="days" id="days" aria-label="Pickup days">
+          <div class="day" data-d="0"><b>Sun</b>—</div>
+          <div class="day" data-d="1"><b>Mon</b>—</div>
+          <div class="day" data-d="2"><b>Tue</b>—</div>
+          <div class="day open" data-d="3"><b>Wed</b>9–7</div>
+          <div class="day open" data-d="4"><b>Thu</b>9–7</div>
+          <div class="day open" data-d="5"><b>Fri</b>9–7</div>
+          <div class="day" data-d="6"><b>Sat</b>—</div>
+        </div>
+        <p class="today-line" id="todayLine"></p>
+        <div class="pk-card" style="margin-top:16px">
+          <dl>
+            <div><dt>How to order</dt>
+              <dd><ol class="steps">
+                <li>Pick your treats on Hailey's order page.</li>
+                <li>Order 3 or more days ahead.</li>
+                <li>Pick up Wednesday to Friday, 9 am to 7 pm.</li>
+              </ol></dd></div>
+            <div><dt>Pickup area</dt><dd>Soddy Daisy &amp; Hixson, TN</dd></div>
+          </dl>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-cream" href="https://bakeprofit.com/m/haileyshomemadebakes" target="_blank" rel="noopener">Start an order</a>
+          <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="https://www.google.com/maps/dir/?api=1&destination=Soddy-Daisy%2C%20TN" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="map"><iframe title="Map of Soddy Daisy, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Soddy-Daisy%2C%20TN&output=embed"></iframe></div>
+        <p class="small">Serving Soddy Daisy &amp; Hixson, TN.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order">
+  <div class="wrap reveal">
+    <div class="wheat-row" aria-hidden="true">
+      <svg viewBox="0 0 120 40" fill="none" stroke="#6B8F71" stroke-width="2" stroke-linecap="round"><path d="M10 20h40M70 20h40"/><path d="M60 34V8M60 14c-4-2-6-6-6-9 4 1 6 5 6 9zM60 14c4-2 6-6 6-9-4 1-6 5-6 9zM60 22c-4-2-6-6-6-9 4 1 6 5 6 9zM60 22c4-2 6-6 6-9-4 1-6 5-6 9z" fill="#6B8F71" fill-opacity=".25"/></svg>
+    </div>
+    <h2>Something warm for this week?</h2>
+    <p class="sub">Order a dozen cookies, a loaf of sandwich bread, or a little of everything.</p>
+    <div class="cta-row">
+      <a class="btn btn-crust" href="https://bakeprofit.com/m/haileyshomemadebakes" target="_blank" rel="noopener">Order on Hailey's page</a>
+      <a class="btn btn-ghost" href="https://www.facebook.com/HaileysHomemadeBakes" target="_blank" rel="noopener">Say hi on Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="gingham" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top">Hailey's<small>Homemade Bakes · Soddy Daisy, TN</small></a>
+      <p style="margin-top:10px">Made from Scratch, Shared with Love. Pickup Wednesday to Friday, 9 am to 7 pm.</p>
+    </div>
+    <div>
+      <p><a href="https://bakeprofit.com/m/haileyshomemadebakes" target="_blank" rel="noopener">Order page</a> · <a href="https://www.facebook.com/HaileysHomemadeBakes" target="_blank" rel="noopener">Facebook</a></p>
+      <p class="fine">Concept by Code Craft Media</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="b1" href="https://www.facebook.com/HaileysHomemadeBakes" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 01-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1121 12z"/></svg>Message</a>
+  <a class="b2" href="https://bakeprofit.com/m/haileyshomemadebakes" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 016 0"/></svg>Order for pickup</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+
+  var d=new Date().getDay(), el=document.querySelector('.day[data-d="'+d+'"]'), line=document.getElementById('todayLine');
+  if(el) el.classList.add('today');
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  if(line){
+    if(d>=3&&d<=5) line.textContent='Today is '+names[d]+', a pickup day (9 am to 7 pm).';
+    else line.textContent='Today is '+names[d]+'. Next pickups run Wednesday to Friday.';
+  }
+
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(o){o.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');
+    var tgt=document.getElementById(t.dataset.go); if(tgt){var y=tgt.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:y,behavior:'smooth'})}
+  })});
+})();
+</script>
+</body>
+</html>

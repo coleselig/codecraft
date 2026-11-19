@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Laura's Hair Lounge — Chattanooga</title>
+<meta name="description" content="Laura's Hair Lounge: color, highlights, balayage, precision cuts and blowouts with Laura Stone in Suite 22 at Salons by JC, Chattanooga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF4EC; --cream2:#F4E8DA; --honey:#D9A066; --honeyd:#B97F45; --esp:#5B3A29; --espd:#3A2419; --ink:#2E1D14; --muted:#6F5444;
+  --serif:'Libre Caslon Display',Georgia,serif; --sans:'Work Sans',system-ui,sans-serif;
+  --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.banner{background:var(--espd);color:#EBD9C6;font-size:10px;letter-spacing:-.01em;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner b{color:var(--honey);font-weight:600}
+/* nav */
+nav{position:sticky;top:0;z-index:30;background:rgba(251,244,236,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(91,58,41,.1)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--serif);font-size:21px;color:var(--esp);text-decoration:none;letter-spacing:.01em}
+.logo i{color:var(--honeyd);font-style:normal}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-size:14px;color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--esp)}
+.links a.btn{color:var(--cream)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:15px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--esp);color:var(--cream);box-shadow:0 8px 22px -10px rgba(58,36,25,.7)}
+.btn-p:hover{background:var(--espd);transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(58,36,25,.8)}
+.btn-g{border:1.5px solid rgba(91,58,41,.35);color:var(--esp)}
+.btn-g:hover{border-color:var(--esp);background:rgba(91,58,41,.05)}
+.btn-s{padding:10px 18px;font-size:14px}
+@media(max-width:760px){.links a:not(.btn){display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:38px 0 0}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:10px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--honeyd);font-weight:600;display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:26px;height:1.5px;background:var(--honey)}
+h1{font-family:var(--serif);font-weight:400;color:var(--esp);font-size:clamp(44px,12.4vw,92px);line-height:.98;letter-spacing:-.015em;margin:16px 0 18px}
+h1 em{font-style:italic;background:linear-gradient(100deg,var(--esp) 0%,#8A5A3A 38%,var(--honey) 78%,#E9BF8A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.sub{font-size:17px;color:var(--muted);max-width:30em}
+.sub strong{color:var(--esp);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.ctas .btn{padding:14px 20px}
+.loc{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);margin-top:14px}
+.loc svg{flex:none}
+.art{position:relative;margin:22px -22px 0;height:300px}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.strand{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s cubic-bezier(.6,.1,.2,1) forwards}
+.strand:nth-child(2){animation-delay:.15s}.strand:nth-child(3){animation-delay:.3s}.strand:nth-child(4){animation-delay:.45s}.strand:nth-child(5){animation-delay:.6s}.strand:nth-child(6){animation-delay:.75s}.strand:nth-child(7){animation-delay:.9s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.glint{animation:glint 5s ease-in-out infinite}
+@keyframes glint{0%,100%{opacity:.25}50%{opacity:.9}}
+@media(min-width:900px){
+  .hero{padding:70px 0 40px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+  .art{margin-top:0;height:520px}
+}
+/* balayage band */
+.band{height:14px;background:linear-gradient(90deg,var(--espd),var(--esp) 25%,#9A6743 52%,var(--honey) 78%,#EFCB9C);}
+/* sections */
+section{padding:76px 0}
+.kick{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--honeyd);font-weight:600}
+h2{font-family:var(--serif);font-weight:400;color:var(--esp);font-size:clamp(34px,8.6vw,56px);line-height:1.04;margin:10px 0 14px;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--honeyd)}
+.lead{color:var(--muted);font-size:16.5px;max-width:34em}
+/* menu */
+.menu{display:grid;gap:14px;margin-top:36px}
+.svc{position:relative;background:#fff;border:1px solid rgba(91,58,41,.1);border-radius:22px;padding:24px 22px 22px 84px;transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden}
+.svc:hover{transform:translateY(-3px);box-shadow:0 18px 36px -22px rgba(58,36,25,.45);border-color:rgba(217,160,102,.6)}
+.svc .ic{position:absolute;left:20px;top:22px;width:46px;height:46px;border-radius:50%;background:var(--cream2);display:grid;place-items:center}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:25px;color:var(--esp);line-height:1.15}
+.svc p{color:var(--muted);font-size:15px;margin-top:4px}
+.svc.feat{background:linear-gradient(135deg,var(--espd),var(--esp) 55%,#8A5A3A);border:none;color:var(--cream)}
+.svc.feat h3{color:#fff}.svc.feat p{color:#E8D5C2}
+.svc.feat .ic{background:rgba(217,160,102,.22)}
+.svc.feat .tag{display:inline-block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;background:var(--honey);color:var(--espd);font-weight:600;padding:4px 10px;border-radius:99px;margin-bottom:10px}
+.note{font-size:13.5px;color:var(--muted);margin-top:22px;display:flex;gap:10px;align-items:flex-start}
+@media(min-width:760px){.menu{grid-template-columns:repeat(2,1fr)}.svc.feat{grid-row:span 2;padding-top:40px}}
+@media(min-width:1000px){.menu{grid-template-columns:1.2fr 1fr 1fr}}
+/* quote / why */
+.why{background:var(--esp);color:var(--cream);position:relative;overflow:hidden}
+.why h2{color:#fff}.why h2 em{color:var(--honey)}
+.why .lead{color:#E3CDB8}
+.why .kick{color:var(--honey)}
+.pull{font-family:var(--serif);font-style:italic;font-size:clamp(25px,6.4vw,38px);line-height:1.25;color:#fff;border-left:3px solid var(--honey);padding-left:20px;margin:30px 0 8px;max-width:22em}
+.pullsrc{font-size:12.5px;color:#CDB39C;padding-left:23px}
+.pts{display:grid;gap:14px;margin-top:40px}
+.pt{border:1px solid rgba(251,244,236,.16);border-radius:20px;padding:22px;background:rgba(255,255,255,.035);transition:background .25s,border-color .25s}
+.pt:hover{background:rgba(255,255,255,.07);border-color:rgba(217,160,102,.5)}
+.pt .n{font-family:var(--serif);color:var(--honey);font-size:30px;line-height:1}
+.pt h3{font-weight:500;font-size:17.5px;margin:10px 0 4px;color:#fff}
+.pt p{color:#DCC6B1;font-size:15px}
+@media(min-width:760px){.pts{grid-template-columns:repeat(3,1fr)}}
+.swirl{position:absolute;right:-120px;top:-60px;width:420px;opacity:.16;pointer-events:none}
+/* visit */
+.visit-grid{display:grid;gap:18px;margin-top:34px}
+.card{background:#fff;border:1px solid rgba(91,58,41,.1);border-radius:22px;padding:24px}
+.card h3{font-family:var(--serif);font-weight:400;color:var(--esp);font-size:24px;margin-bottom:6px}
+.addr{font-size:16px;color:var(--ink);line-height:1.55}
+.addr b{font-weight:600;color:var(--esp)}
+.today-box{display:grid;gap:2px;margin-top:16px;background:linear-gradient(110deg,var(--esp),#8A5A3A 60%,var(--honey));color:#fff;border-radius:16px;padding:18px 20px}
+.tdl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#F3D3A6;font-weight:600}
+.tdd{font-family:var(--serif);font-size:30px;line-height:1.1}
+.tds{font-size:14px;color:#F1E1D0}
+.days{list-style:none;margin-top:14px;border-top:1px solid rgba(91,58,41,.1)}
+.days li{display:flex;justify-content:space-between;padding:10px 12px;border-bottom:1px solid rgba(91,58,41,.08);font-size:15px;color:var(--muted);border-radius:10px}
+.days li.today{background:var(--cream2);color:var(--esp);font-weight:600;border-bottom-color:transparent}
+.days li.today span:last-child:after{content:" · today";color:var(--honeyd);font-weight:500}
+.map{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(91,58,41,.12);min-height:300px;background:repeating-linear-gradient(45deg,var(--cream2) 0 14px,#F0E1CF 14px 28px)}
+.map:before{content:"255 Northgate Mall Dr · Chattanooga";position:absolute;inset:auto 0 50% 0;text-align:center;font-family:var(--serif);color:var(--esp);font-size:18px}
+.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1fr 1.3fr}.map{grid-row:span 1}}
+/* cta */
+.final{text-align:center;padding:84px 0;background:radial-gradient(120% 90% at 50% 0%,#FFF9F2,var(--cream2))}
+.final h2{max-width:13em;margin-left:auto;margin-right:auto}
+.final .ctas{justify-content:center}
+footer{background:var(--espd);color:#C9AE97;font-size:13.5px;padding:34px 0 30px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer .logo{color:var(--cream)}
+footer a{color:var(--honey);text-decoration:none}
+footer a:hover{text-decoration:underline}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(58,36,25,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 -8px 24px -12px rgba(0,0,0,.4)}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:14px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .15s,filter .2s}
+.bar a:active{transform:scale(.97)}
+.bar .b1{background:var(--honey);color:var(--espd)}
+.bar .b2{background:rgba(251,244,236,.1);color:var(--cream);border:1px solid rgba(251,244,236,.2);flex:.8}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+/* reveal */
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.pre{opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.strand{stroke-dashoffset:0}}
+:focus-visible{outline:2.5px solid var(--honeyd);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for Laura's Hair Lounge. Not live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Laura's <i>Hair Lounge</i></a>
+    <div class="links">
+      <a href="#menu">Services</a><a href="#why">About</a><a href="#visit">Visit</a>
+      <a class="btn btn-p btn-s" href="https://www.vagaro.com/laurastone/services" target="_blank" rel="noopener">Book now</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Northgate · Chattanooga</div>
+      <h1>Color that melts like <em>honey.</em></h1>
+      <p class="sub">Highlights, balayage, precision cuts and blowouts, done by <strong>Laura Stone</strong> in her private suite at Salons by JC.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="https://www.vagaro.com/laurastone/services" target="_blank" rel="noopener">Book with Laura
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="#menu">See services</a>
+      </div>
+      <div class="loc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B97F45" stroke-width="2"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.5"/></svg>255 Northgate Mall Dr, Suite 22</div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3A2419"/><stop offset=".35" stop-color="#5B3A29"/><stop offset=".68" stop-color="#B07A4B"/><stop offset="1" stop-color="#EBC28E"/>
+          </linearGradient>
+          <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5B3A29"/><stop offset=".5" stop-color="#C98E57"/><stop offset="1" stop-color="#F3D3A6"/>
+          </linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F3D3A6" stop-opacity=".9"/><stop offset="1" stop-color="#F3D3A6" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="250" cy="200" r="150" fill="url(#sun)" opacity=".5"/>
+        <circle cx="250" cy="170" r="120" fill="none" stroke="#D9A066" stroke-opacity=".35" stroke-width="1"/>
+        <circle cx="250" cy="170" r="150" fill="none" stroke="#D9A066" stroke-opacity=".2" stroke-width="1" stroke-dasharray="3 7"/>
+        <g fill="none" stroke-linecap="round">
+          <path class="strand" d="M120 -10 C 60 120, 220 200, 140 330 S 110 470, 190 540" stroke="url(#hg)" stroke-width="30"/>
+          <path class="strand" d="M170 -10 C 120 110, 270 210, 190 330 S 170 470, 250 540" stroke="url(#hg2)" stroke-width="22"/>
+          <path class="strand" d="M215 -10 C 170 120, 320 200, 240 330 S 215 470, 300 540" stroke="url(#hg)" stroke-width="26"/>
+          <path class="strand" d="M260 -10 C 225 110, 360 210, 290 330 S 270 470, 350 540" stroke="url(#hg2)" stroke-width="18"/>
+          <path class="strand" d="M300 -10 C 270 120, 400 210, 330 330 S 315 470, 395 540" stroke="url(#hg)" stroke-width="24"/>
+          <path class="strand" d="M145 -10 C 95 115, 245 205, 165 330 S 140 470, 220 540" stroke="#FBF4EC" stroke-opacity=".35" stroke-width="2"/>
+          <path class="strand" d="M240 -10 C 200 115, 340 205, 265 330 S 245 470, 325 540" stroke="#FBF4EC" stroke-opacity=".45" stroke-width="2"/>
+        </g>
+        <g fill="#FFF3DF">
+          <path class="glint" d="M318 92l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>
+          <path class="glint" style="animation-delay:1.6s" d="M110 250l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+          <path class="glint" style="animation-delay:3s" d="M300 420l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+        </g>
+        <g transform="translate(40 400) rotate(-18)">
+          <rect x="0" y="0" width="120" height="16" rx="8" fill="#3A2419"/>
+          <rect x="120" y="4" width="70" height="8" rx="4" fill="#D9A066"/>
+          <g fill="#3A2419">
+            <rect x="8" y="16" width="4" height="12" rx="2"/><rect x="20" y="16" width="4" height="12" rx="2"/><rect x="32" y="16" width="4" height="12" rx="2"/><rect x="44" y="16" width="4" height="12" rx="2"/><rect x="56" y="16" width="4" height="12" rx="2"/><rect x="68" y="16" width="4" height="12" rx="2"/><rect x="80" y="16" width="4" height="12" rx="2"/><rect x="92" y="16" width="4" height="12" rx="2"/><rect x="104" y="16" width="4" height="12" rx="2"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="band"></div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">The menu</div>
+      <h2>Color first. <em>Then the finish.</em></h2>
+      <p class="lead">Laura describes herself as a professional color specialist, so color leads here. Every visit can end with a precision cut or a blowout.</p>
+    </div>
+    <div class="menu">
+      <article class="svc feat rv">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9A066" stroke-width="1.8" stroke-linecap="round"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg></div>
+        <span class="tag">Specialty</span>
+        <h3>Hair Color</h3>
+        <p>Laura's specialty. Book a color appointment on Vagaro and she'll talk through tone, depth and upkeep in the chair.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B97F45" stroke-width="1.8" stroke-linecap="round"><path d="M7 3c-1 6 2 12 0 18M12 3c-1 6 2 12 0 18M17 3c-1 6 2 12 0 18"/></svg></div>
+        <h3>Balayage</h3>
+        <p>Hand-painted color, deeper at the root and lighter toward the ends.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B97F45" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+        <h3>Highlights</h3>
+        <p>Brightness placed exactly where you want it.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B97F45" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg></div>
+        <h3>Precision Cuts</h3>
+        <p>Clean, careful lines, cut with intention.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B97F45" stroke-width="1.8" stroke-linecap="round"><path d="M3 9h11a4 4 0 0 1 0 8H9l-2 4H5l1-4H3z"/><path d="M18 8c1.5-.5 2.5-1.5 3-3M18 12h3"/></svg></div>
+        <h3>Blowouts</h3>
+        <p>Smooth, glossy and full of movement. Good for an event or just a Tuesday.</p>
+      </article>
+    </div>
+    <p class="note rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B97F45" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>See current services, times and pricing on Laura's Vagaro booking page.</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <svg class="swirl" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#D9A066" stroke-width="1.2"><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="90"/></g></svg>
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Why Laura's</div>
+      <h2>Your own stylist, <em>in her own suite.</em></h2>
+    </div>
+    <p class="pull rv">A professional color specialist, with highlights, balayage, precision cuts and blowouts on the menu.</p>
+    <p class="pullsrc rv">From Laura's own description of her work on Vagaro</p>
+    <div class="pts">
+      <div class="pt rv"><div class="n">01</div><h3>One stylist, start to finish</h3><p>You book directly with Laura, the color specialist behind the chair.</p></div>
+      <div class="pt rv"><div class="n">02</div><h3>A private suite</h3><p>Laura's Hair Lounge is Suite 22 at Salons by JC on Northgate Mall Drive, her own private space.</p></div>
+      <div class="pt rv"><div class="n">03</div><h3>Booking that's easy</h3><p>Choose your service and time on Vagaro. No phone tag needed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Visit</div>
+      <h2>Find Suite 22 <em>at Northgate.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card rv">
+        <h3>The lounge</h3>
+        <p class="addr"><b>Laura's Hair Lounge</b><br>Suite 22 at Salons by JC<br>255 Northgate Mall Dr<br>Chattanooga, TN</p>
+        <div class="acts">
+          <a class="btn btn-p btn-s" href="https://www.google.com/maps/dir/?api=1&destination=255+Northgate+Mall+Dr+Chattanooga+TN" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn-g btn-s" href="mailto:lalalynn64@gmail.com">Email Laura</a>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3>Hours</h3>
+        <p class="lead" style="font-size:15px">Laura's chair is by appointment, and her open times are posted live on Vagaro.</p>
+        <div class="today-box"><span class="tdl">Today</span><span class="tdd" id="today">This week</span><span class="tds">Check Laura's openings →</span></div>
+        <div class="acts"><a class="btn btn-p btn-s" href="https://www.vagaro.com/laurastone/services" target="_blank" rel="noopener">See open times</a></div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map to Laura's Hair Lounge" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=255%20Northgate%20Mall%20Dr%2C%20Chattanooga%2C%20TN&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap rv">
+    <div class="kick">Ready when you are</div>
+    <h2>Your next color is <em>a few taps away.</em></h2>
+    <div class="ctas">
+      <a class="btn btn-p" href="https://www.vagaro.com/laurastone/services" target="_blank" rel="noopener">Book on Vagaro</a>
+      <a class="btn btn-g" href="mailto:lalalynn64@gmail.com">Email Laura</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Laura's Hair Lounge</span>
+    <span>Suite 22 · 255 Northgate Mall Dr · Chattanooga, TN</span>
+    <span>Concept by <a href="https://coleselig.github.io/codecraft" target="_blank" rel="noopener">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="b1" href="https://www.vagaro.com/laurastone/services" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book now</a>
+  <a class="b2" href="mailto:lalalynn64@gmail.com"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+</div>
+
+<script>
+(function(){
+  var t=document.getElementById('today');if(t)t.textContent=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date().getDay()];
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js');
+  var vh=window.innerHeight;
+  els.forEach(function(e){if(e.getBoundingClientRect().top>vh*0.92)e.classList.add('pre')});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

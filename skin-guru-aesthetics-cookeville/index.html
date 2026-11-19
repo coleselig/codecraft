@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Skin Guru Aesthetics — Cookeville</title>
+<meta name="description" content="Concept site for Skin Guru Aesthetics, 360 S. Lowe Avenue, Cookeville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ww:#FBF7F1; --ww2:#F4EDE3; --sand:#EADFD0;
+  --sage:#8D9C80; --sage-l:#C9D3BE; --sage-d:#3E4B3A; --ink:#2A3227;
+  --clay:#C48A72; --clay-d:#9A5E47; --clay-l:#EBCDBF;
+  --muted:#5D6858; --line:rgba(62,75,58,.14);
+  --r:22px; --bar:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ww);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+*{min-width:0}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Marcellus,Georgia,serif;font-weight:400;letter-spacing:.005em;line-height:1.08}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:700px){.wrap{padding:0 40px}}
+.eyebrow{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--clay-d)}
+.banner{background:var(--sage-d);color:#E9EEE3;font-size:11.5px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banner .lg{display:none}@media(min-width:520px){.banner .lg{display:inline}.banner .sm{display:none}}
+.banner b{font-weight:600;color:#fff}
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(251,247,241,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.logo span{font-family:Marcellus,serif;font-size:21px;white-space:nowrap}
+.logo small{display:block;font-family:Figtree;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
+.links{display:none;gap:28px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;background:var(--clay);transition:right .3s}
+.links a:hover::after{right:0}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:600;font-size:15.5px;border-radius:999px;padding:14px 24px;transition:transform .25s,box-shadow .25s,background .25s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--sage-d);color:#fff;box-shadow:0 10px 24px -12px rgba(62,75,58,.7)}
+.btn-p:hover{background:#2E392B;transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(62,75,58,.8)}
+.btn-g{background:transparent;color:var(--sage-d);border:1.5px solid rgba(62,75,58,.35)}
+.btn-g:hover{background:#fff;border-color:var(--sage-d);transform:translateY(-2px)}
+.btn-s{padding:10px 18px;font-size:14px}
+.nav .btn-s{display:none}
+@media(min-width:560px){.nav .btn-s{display:inline-flex}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:54px 0 70px;background:radial-gradient(120% 80% at 85% 10%,#EFE3D6 0%,rgba(239,227,214,0) 60%),radial-gradient(90% 70% at 0% 100%,#E3E9DB 0%,rgba(227,233,219,0) 65%),var(--ww)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:40px}
+@media(min-width:900px){.hero{padding:96px 0 110px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center}}
+.glow{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none;z-index:1}
+.g1{width:340px;height:340px;right:-120px;top:-60px;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.95),rgba(235,205,191,.55) 45%,rgba(235,205,191,0) 70%);animation:float 9s ease-in-out infinite}
+.g2{width:220px;height:220px;left:-90px;bottom:40px;background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.9),rgba(201,211,190,.6) 45%,rgba(201,211,190,0) 70%);animation:float 11s ease-in-out infinite reverse}
+.g3{width:90px;height:90px;right:18%;bottom:12%;background:radial-gradient(circle at 35% 30%,#fff,rgba(235,205,191,.5) 50%,rgba(235,205,191,0) 72%);animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translate(10px,-16px) scale(1.04)}}
+.hero h1{font-size:clamp(44px,12.4vw,92px);color:var(--sage-d);margin:14px 0 20px}
+.hero h1 em{font-style:normal;color:var(--clay-d);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:-4%;right:-4%;bottom:.06em;height:.3em;background:radial-gradient(closest-side,rgba(235,205,191,.9),rgba(235,205,191,0));z-index:-1}
+.sub{font-size:18px;color:var(--muted);max-width:33ch}
+@media(min-width:900px){.sub{font-size:20px}}
+.sub strong{color:var(--ink);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ctas .btn{flex:1 1 auto}
+@media(min-width:560px){.ctas .btn{flex:0 0 auto}}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14px;color:var(--muted)}
+.meta span{display:inline-flex;align-items:center;gap:7px}
+.meta i{width:7px;height:7px;border-radius:50%;background:var(--sage)}
+.art{position:relative;max-width:420px;width:100%;margin:0 auto;aspect-ratio:1}
+.art .orb{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0%,#F7EDE5 30%,#EBCDBF 62%,#D9AE9A 100%);box-shadow:inset -20px -30px 60px rgba(154,94,71,.18),inset 20px 20px 50px rgba(255,255,255,.8),0 40px 80px -40px rgba(154,94,71,.5)}
+.art .orb::after{content:"";position:absolute;width:26%;height:16%;left:22%;top:18%;border-radius:50%;background:rgba(255,255,255,.85);filter:blur(10px)}
+.art svg.leaves{position:absolute;inset:0;width:100%;height:100%}
+.sway{transform-origin:50% 100%;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(2.5deg)}}
+.drop{animation:shine 4s ease-in-out infinite}
+@keyframes shine{50%{opacity:.35}}
+.badge{position:absolute;left:0;bottom:6%;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px -20px rgba(42,50,39,.4);font-size:13px;line-height:1.35;max-width:62%}
+.badge b{display:block;font-family:Marcellus,serif;font-weight:400;font-size:17px;color:var(--sage-d)}
+/* sections */
+section{position:relative}
+.sec{padding:84px 0}
+@media(min-width:900px){.sec{padding:120px 0}}
+.head{max-width:640px;margin-bottom:44px}
+.head h2{font-size:clamp(34px,8.4vw,56px);color:var(--sage-d);margin-top:12px}
+.head p{color:var(--muted);margin-top:14px}
+/* services */
+.svc{background:var(--ww2)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+.card{background:var(--ww);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;display:flex;gap:18px;align-items:flex-start;transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 44px -28px rgba(62,75,58,.45);border-color:rgba(196,138,114,.45)}
+.ic{flex:0 0 52px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#fff,var(--sage-l) 80%)}
+.card:nth-child(even) .ic{background:radial-gradient(circle at 35% 30%,#fff,var(--clay-l) 80%)}
+.ic svg{width:26px;height:26px;stroke:var(--sage-d);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:22px;color:var(--sage-d);margin-bottom:4px}
+.card p{font-size:15px;color:var(--muted)}
+.card .tx{min-width:0}
+.note{margin-top:26px;font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.note a{color:var(--clay-d);font-weight:600}
+/* about */
+.about .wrap{display:grid;gap:40px}
+@media(min-width:900px){.about .wrap{grid-template-columns:.9fr 1.1fr;align-items:center;gap:80px}}
+.quote{position:relative;background:var(--sage-d);color:#F1F3EC;border-radius:28px;padding:44px 30px 36px;overflow:hidden}
+.quote::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(201,211,190,.35),rgba(201,211,190,0) 70%)}
+.quote svg{position:absolute;right:-20px;bottom:-30px;width:180px;opacity:.18}
+.quote blockquote{position:relative;font-family:Marcellus,serif;font-size:clamp(25px,6.4vw,34px);line-height:1.22}
+.quote cite{display:block;margin-top:20px;font-style:normal;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-l)}
+.facts{display:grid;gap:14px;margin-top:30px}
+.fact{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--line)}
+.fact .n{flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:Marcellus,serif;font-size:19px;color:var(--clay-d);background:radial-gradient(circle at 35% 30%,#fff,var(--clay-l) 85%)}
+.fact>div:last-child{min-width:0;padding-top:2px}
+.fact h3{font-family:Figtree;font-weight:600;font-size:17px}
+.fact p{font-size:15.5px;color:var(--muted)}
+/* event */
+.event{background:linear-gradient(135deg,#F3E4DA,#EFE6D9 55%,#E5EADD);overflow:hidden}
+.event .wrap{display:grid;gap:26px;padding-top:56px;padding-bottom:56px;align-items:center}
+@media(min-width:800px){.event .wrap{grid-template-columns:auto 1fr auto;gap:40px}}
+.date{width:110px;height:110px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;box-shadow:0 20px 40px -24px rgba(154,94,71,.6);line-height:1.05}
+.date b{font-family:Marcellus,serif;font-weight:400;font-size:44px;color:var(--clay-d);display:block}
+.date small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sage-d)}
+.event h2{font-size:clamp(28px,7vw,42px);color:var(--sage-d)}
+.event p{color:var(--muted);margin-top:8px}
+/* visit */
+.visit .wrap{display:grid;gap:22px}
+@media(min-width:900px){.visit .wrap{grid-template-columns:1fr 1fr;gap:28px}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px}
+.panel h3{font-size:26px;color:var(--sage-d);margin-bottom:16px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-radius:12px;font-size:15.5px}
+.hours li span:last-child{color:var(--muted);text-align:right}
+.hours li.today{background:linear-gradient(90deg,#EEF2E8,#F6ECE4);font-weight:600}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;background:var(--sage-d);color:#fff;border-radius:999px;padding:3px 8px;vertical-align:2px}
+.hnote{margin-top:14px;font-size:14px;color:var(--muted)}
+.hnote a{color:var(--clay-d);font-weight:600}
+.addr{font-size:18px;line-height:1.5;margin-bottom:18px}
+.addr strong{font-family:Marcellus,serif;font-weight:400;font-size:24px;display:block;color:var(--sage-d)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--sand)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.row .btn{flex:1 1 140px}
+.contact{margin-top:18px;font-size:15px;color:var(--muted);word-break:break-word}
+.contact a{color:var(--sage-d);font-weight:600}
+/* footer */
+footer{background:var(--sage-d);color:#D7DECF;padding:56px 0 40px;position:relative;overflow:hidden}
+footer .wrap{display:grid;gap:26px}
+@media(min-width:800px){footer .wrap{grid-template-columns:1.2fr 1fr 1fr}}
+footer h4{font-family:Marcellus,serif;font-weight:400;font-size:26px;color:#fff}
+footer p,footer a{font-size:15px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.fine{border-top:1px solid rgba(255,255,255,.14);margin-top:30px;padding-top:20px;font-size:13px;color:#AEB9A6;grid-column:1/-1}
+/* mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(251,247,241,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}
+.mbar .btn{flex:1 1 0;padding:14px 10px}
+@media(min-width:900px){.mbar{display:none}}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+a:focus-visible{outline:2px solid var(--clay-d);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="banner"><span class="lg">Concept site by <b>Code Craft Media</b>, made for Skin Guru Aesthetics. Not live.</span><span class="sm">Concept by <b>Code Craft Media</b> for Skin Guru Aesthetics. Not live.</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Skin Guru Aesthetics home">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#EEF2E8"/><path d="M20 31C20 22 23 14 30 10C30 20 26 28 20 31Z" fill="#8D9C80"/><path d="M20 31C20 24 17 18 11 15C11 23 14 29 20 31Z" fill="#C48A72"/><path d="M20 31V18" stroke="#3E4B3A" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <div><span>Skin Guru</span><small>Aesthetics · Cookeville</small></div>
+    </a>
+    <nav class="links" aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+    <a class="btn btn-p btn-s" href="tel:+19317047788">Call 931-704-7788</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">New space · 360 S. Lowe Avenue</div>
+      <h1>Skin that glows from the <em>inside out.</em></h1>
+      <p class="sub">Customized facials, peels and lash care with <strong>Brandon Loftis</strong>, nearly two decades in skincare, now in a studio of his own in Cookeville.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="tel:+19317047788"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to book</a>
+        <a class="btn btn-g" href="#services">See services</a>
+      </div>
+      <div class="meta"><span><i></i>Facials &amp; peels</span><span><i></i>Dermaplaning</span><span><i></i>Lash lifts &amp; tints</span></div>
+    </div>
+    <div class="art rv" aria-hidden="true">
+      <div class="orb"></div>
+      <svg class="leaves" viewBox="0 0 400 400">
+        <g class="sway">
+          <path d="M200 380 C196 300 206 230 240 150" stroke="#3E4B3A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M240 150 C232 96 262 54 316 36 C326 92 296 140 240 150Z" fill="#8D9C80"/>
+          <path d="M240 150 C270 110 292 74 316 36" stroke="#C9D3BE" stroke-width="1.6" fill="none"/>
+          <path d="M214 250 C160 250 118 222 98 172 C152 166 196 196 214 250Z" fill="#A9B79C"/>
+          <path d="M214 250 C178 222 136 192 98 172" stroke="#E3E9DB" stroke-width="1.5" fill="none"/>
+          <path d="M224 210 C272 196 318 210 346 248 C298 266 250 252 224 210Z" fill="#6F7F63"/>
+          <path d="M224 210 C266 222 306 234 346 248" stroke="#C9D3BE" stroke-width="1.4" fill="none"/>
+          <path d="M204 312 C168 322 132 312 110 284 C146 270 184 282 204 312Z" fill="#C48A72" opacity=".85"/>
+        </g>
+        <circle class="drop" cx="300" cy="78" r="6" fill="#fff" opacity=".9"/>
+        <circle class="drop" cx="128" cy="190" r="4" fill="#fff" opacity=".8" style="animation-delay:1.3s"/>
+        <circle class="drop" cx="318" cy="236" r="3.5" fill="#fff" opacity=".8" style="animation-delay:2.4s"/>
+      </svg>
+      <div class="badge"><b>Ribbon cutting</b>Tue, Nov. 24 · 12:45 p.m.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">The menu</div>
+      <h2>Treatments, customized to your skin.</h2>
+      <p>Every service starts with a personalized approach. Call or email to ask which treatment fits you.</p>
+    </div>
+    <div class="grid">
+      <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 14c1 1.3 2.2 2 3.5 2s2.5-.7 3.5-2M9 10h.01M15 10h.01"/></svg></div><div class="tx"><h3>Customized Facials</h3><p>A facial built around your skin, not a one-size-fits-all routine.</p></div></article>
+      <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></div><div class="tx"><h3>Chemical Peels</h3><p>Professional peels as part of your customized skincare plan.</p></div></article>
+      <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="9" cy="10" r=".6"/><circle cx="14" cy="9" r=".6"/><circle cx="12" cy="13" r=".6"/><circle cx="15" cy="14.5" r=".6"/><circle cx="9.5" cy="15" r=".6"/></svg></div><div class="tx"><h3>Microdermabrasion</h3><p>Offered at the new S. Lowe Avenue studio.</p></div></article>
+      <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 19L17 7"/><path d="M15 5l4 4"/><path d="M4 20l2-1"/></svg></div><div class="tx"><h3>Dermaplaning</h3><p>Ask Brandon whether it suits your skin.</p></div></article>
+      <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 16c3-6 13-6 16 0"/><path d="M7 12.5L6 10M12 11V8M17 12.5l1-2.5"/></svg></div><div class="tx"><h3>Waxing</h3><p>Waxing services. Ask Brandon which areas he offers.</p></div></article>
+      <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12c2.5 3.5 5.5 5 9 5s6.5-1.5 9-5"/><path d="M6 15.5L4.5 18M10 16.8l-.5 2.7M14 16.8l.5 2.7M18 15.5l1.5 2.5"/></svg></div><div class="tx"><h3>Lash Lifts &amp; Tints</h3><p>Lash lifts and lash tints for your natural lashes.</p></div></article>
+    </div>
+    <p class="note rv">Pricing isn't published yet. <a href="tel:+19317047788">Call 931-704-7788</a> or <a href="mailto:cookevilleskinguru@gmail.com">email</a> for details.</p>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="quote rv">
+      <blockquote>“A personalized approach rooted in trust and lasting results.”</blockquote>
+      <cite>— The Skin Guru approach</cite>
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 95C50 60 60 30 90 10C92 50 76 80 50 95Z" fill="#C9D3BE"/><path d="M50 95C48 66 34 46 10 36C12 66 26 86 50 95Z" fill="#C9D3BE"/></svg>
+    </div>
+    <div class="rv">
+      <div class="eyebrow">Why Skin Guru</div>
+      <div class="head" style="margin-bottom:0"><h2>Cared for, start to finish.</h2>
+      <p>Brandon Loftis has built his career on helping people feel confident and cared for. Now he has a space to match: one made for peace, renewal, and skin that glows.</p></div>
+      <div class="facts">
+        <div class="fact"><div class="n">I</div><div><h3>Nearly two decades</h3><p>Of hands-on skincare experience behind every appointment.</p></div></div>
+        <div class="fact"><div class="n">II</div><div><h3>Customized, not cookie-cutter</h3><p>Treatments tailored to you, from facials to peels to lash care.</p></div></div>
+        <div class="fact"><div class="n">III</div><div><h3>A studio of his own</h3><p>A calm new space at 360 S. Lowe Avenue in Cookeville.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event" aria-label="Ribbon cutting">
+  <div class="wrap rv">
+    <div class="date"><div><small>Nov</small><b>24</b><small>Tue</small></div></div>
+    <div><h2>Come celebrate the new space.</h2><p>Ribbon cutting with the Cookeville-Putnam County Chamber, Tuesday, Nov. 24, 12:45–1:15 p.m. at 360 S. Lowe Avenue. The community is invited.</p></div>
+    <a class="btn btn-p" href="https://www.google.com/maps/dir/?api=1&destination=360+S+Lowe+Ave,+Cookeville,+TN" target="_blank" rel="noopener">Get directions</a>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="panel rv">
+      <div class="eyebrow">Hours</div>
+      <h3 style="margin-top:8px">Plan your visit</h3>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Monday</span><span>Call to confirm</span></li>
+        <li data-d="2"><span>Tuesday</span><span>Call to confirm</span></li>
+        <li data-d="3"><span>Wednesday</span><span>Call to confirm</span></li>
+        <li data-d="4"><span>Thursday</span><span>Call to confirm</span></li>
+        <li data-d="5"><span>Friday</span><span>Call to confirm</span></li>
+        <li data-d="6"><span>Saturday</span><span>Call to confirm</span></li>
+        <li data-d="0"><span>Sunday</span><span>Call to confirm</span></li>
+      </ul>
+      <p class="hnote">Hours aren't posted yet. <a href="tel:+19317047788">Call 931-704-7788</a> to book a time.</p>
+    </div>
+    <div class="panel rv">
+      <div class="eyebrow">Find us</div>
+      <p class="addr" style="margin-top:8px"><strong>360 S. Lowe Avenue</strong>Cookeville, Tennessee</p>
+      <div class="map"><iframe title="Map to Skin Guru Aesthetics" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=360%20S%20Lowe%20Ave%2C%20Cookeville%2C%20TN&output=embed"></iframe></div>
+      <div class="row">
+        <a class="btn btn-p" href="tel:+19317047788">Call 931-704-7788</a>
+        <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&destination=360+S+Lowe+Ave,+Cookeville,+TN" target="_blank" rel="noopener">Directions</a>
+      </div>
+      <p class="contact">Email <a href="mailto:cookevilleskinguru@gmail.com">cookevilleskinguru@gmail.com</a> · <a href="https://www.facebook.com/brandontheskinguru" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><h4>Skin Guru Aesthetics</h4><p style="margin-top:8px">Skin that glows from the inside out.</p></div>
+    <div><p>360 S. Lowe Avenue<br>Cookeville, TN</p></div>
+    <div><p><a href="tel:+19317047788">931-704-7788</a><br><a href="mailto:cookevilleskinguru@gmail.com">cookevilleskinguru@gmail.com</a></p></div>
+    <div class="fine">Concept by Code Craft Media. A design preview made for Skin Guru Aesthetics; not the official site.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-p" href="tel:+19317047788">Call now</a>
+  <a class="btn btn-g" href="mailto:cookevilleskinguru@gmail.com?subject=Appointment%20request">Email to book</a>
+</div>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var root=document.documentElement; root.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else root.classList.add('show-all');
+  setTimeout(function(){root.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

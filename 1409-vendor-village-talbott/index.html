@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>1409 Vendor Village — Talbott</title>
+<meta name="description" content="Concept homepage for 1409 Vendor Village, a vendor market on Old Andrew Johnson Highway in Talbott, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#e6d3b1; --kraft-2:#dcc59e; --kraft-3:#cfb487; --paper:#f6ecd9;
+  --red:#a8322a; --red-d:#7e2219; --mustard:#d9a21b; --mustard-d:#b5850c;
+  --sage:#7f9a78; --sage-d:#4f6b4a; --ink:#2b211a; --ink-2:#5a4636; --cream:#fbf5e8;
+  --slab:"Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --sign:"Zilla Slab", Rockwell, Georgia, serif;
+  --sans:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bar:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body *{min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:hidden}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--kraft);
+  line-height:1.55;font-size:16px;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom));
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 20% 0%, #efdfc0 0, transparent 60%);
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--slab);line-height:1.05;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+
+/* concept banner */
+.concept{background:var(--ink);color:#f3e6cc;font-size:12px;text-align:center;padding:7px 12px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+@media(max-width:480px){.concept{font-family:var(--slab);font-size:11.5px;letter-spacing:0;padding:7px 6px}}@media(max-width:380px){.concept{font-size:10.6px}}
+.concept b{color:var(--mustard);font-weight:600}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:rgba(230,211,177,.92);backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);border-bottom:2px dashed rgba(126,34,25,.35)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{width:42px;height:42px;flex:none}
+.brand span{font-family:var(--slab);font-weight:700;font-size:19px;line-height:1;color:var(--red-d);white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d);margin-top:4px}
+nav.links{display:none;gap:26px;font-weight:600;font-size:14.5px}
+nav.links a{text-decoration:none;position:relative;padding:4px 0}
+nav.links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--mustard);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+nav.links a:hover::after{transform:scaleX(1)}
+.top .call{flex:none;text-decoration:none;font-weight:700;font-size:14px;background:var(--red);color:var(--cream);
+  padding:9px 14px;border-radius:999px;box-shadow:0 3px 0 var(--red-d);transition:transform .15s, box-shadow .15s}
+.top .call:hover{transform:translateY(-1px);box-shadow:0 4px 0 var(--red-d)}
+.top .call:active{transform:translateY(2px);box-shadow:0 1px 0 var(--red-d)}
+@media(min-width:900px){nav.links{display:flex}}
+@media(max-width:380px){.top .call .num{display:none}}
+
+/* bunting */
+.bunting{display:block;width:100%;height:56px;overflow:visible}
+.bunting .flag{transform-origin:top center;animation:sway 4.5s ease-in-out infinite}
+.bunting .flag:nth-child(odd){animation-delay:-1.8s}
+.bunting .flag:nth-child(3n){animation-delay:-3.1s}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+
+/* hero */
+.hero{position:relative;padding:0 0 56px;overflow:hidden}
+.hero .grid{display:grid;gap:28px;align-items:center;margin-top:18px}
+.hero .grid>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-d)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--sage-d)}
+.hero h1{font-size:clamp(44px,12.5vw,80px);font-weight:700;color:var(--ink);margin:14px 0 0}
+.hero h1 .roof{display:inline-block;white-space:nowrap;color:var(--red);position:relative}
+.hero h1 .roof::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.06em;height:.16em;background:var(--mustard);opacity:.55;z-index:-1;border-radius:3px;transform:rotate(-1deg)}
+.hero .sub{font-size:17.5px;color:var(--ink-2);margin-top:18px;max-width:34em}
+.hero .sub strong{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ctas>*{min-width:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:700;font-size:16px;
+  padding:14px 22px;border-radius:12px;transition:transform .15s, box-shadow .15s, background .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-red{background:var(--red);color:var(--cream);box-shadow:0 4px 0 var(--red-d)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--red-d)}
+.btn-red:active{transform:translateY(3px);box-shadow:0 1px 0 var(--red-d)}
+.btn-line{background:var(--cream);color:var(--ink);border:2px solid var(--ink);box-shadow:0 4px 0 var(--ink)}
+.btn-line:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.btn-line:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.addr-chip{display:flex;align-items:flex-start;gap:8px;margin-top:22px;font-size:14px;color:var(--ink-2)}
+.addr-chip svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--red)}
+.scene{position:relative}
+.scene svg{width:100%;height:auto}
+.scene .stamp{position:absolute;right:2%;top:-4%;width:118px;height:118px;transform:rotate(12deg);filter:drop-shadow(0 2px 0 rgba(0,0,0,.08))}
+@media(min-width:900px){
+  .hero{padding-bottom:84px}
+  .hero .grid{grid-template-columns:1.2fr 1fr;gap:48px;margin-top:30px}
+  .scene .stamp{width:140px;height:140px;right:-2%;top:-8%}
+}
+
+/* signs */
+.sign-board{display:inline-block;font-family:var(--sign);font-weight:700;font-size:23px;letter-spacing:.02em;color:var(--cream);background:var(--red);
+  padding:6px 18px 8px;border-radius:6px;transform:rotate(-2deg);box-shadow:0 3px 0 var(--red-d), inset 0 0 0 2px rgba(255,255,255,.18);
+  position:relative;letter-spacing:.01em}
+.sign-board.sage{background:var(--sage-d);box-shadow:0 3px 0 #3a5036, inset 0 0 0 2px rgba(255,255,255,.18)}
+.sign-board.mustard{background:var(--mustard);color:var(--ink);box-shadow:0 3px 0 var(--mustard-d), inset 0 0 0 2px rgba(255,255,255,.25)}
+.sign-board::before,.sign-board::after{content:"";position:absolute;top:-16px;width:2px;height:16px;background:var(--ink-2)}
+.sign-board::before{left:18px;transform:rotate(14deg)}
+.sign-board::after{right:18px;transform:rotate(-14deg)}
+
+section{position:relative}
+.sec{padding:72px 0}
+.sec-head{max-width:720px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(34px,8.6vw,56px);font-weight:700;margin-top:22px}
+.sec-head p{font-size:17px;color:var(--ink-2);margin-top:12px}
+
+/* stitched cards */
+.stitch{background:var(--paper);border-radius:16px;position:relative;padding:26px 22px;
+  box-shadow:0 1px 0 rgba(0,0,0,.05), 0 10px 24px -14px rgba(60,35,10,.45)}
+.stitch::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(126,34,25,.28);border-radius:11px;pointer-events:none}
+
+/* services */
+.services{background:linear-gradient(var(--kraft-2),var(--kraft-2));}
+.services::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(90,60,30,.05) 46px 48px);pointer-events:none}
+.svc-grid{display:grid;gap:18px}
+.svc-grid>*{min-width:0}
+.svc{transition:transform .2s, box-shadow .2s}
+.svc:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 1px 0 rgba(0,0,0,.05), 0 18px 30px -14px rgba(60,35,10,.5)}
+.svc .ico{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px}
+.svc .ico svg{width:32px;height:32px}
+.svc h3{font-size:25px;font-weight:700}
+.svc p{margin-top:8px;color:var(--ink-2);font-size:15.5px}
+.svc .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red-d)}
+@media(min-width:760px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* shows */
+.shows-grid{display:grid;gap:18px}
+.shows-grid>*{min-width:0}
+.ticket{display:grid;grid-template-columns:86px 1fr;background:var(--paper);border-radius:14px;overflow:hidden;
+  box-shadow:0 10px 24px -14px rgba(60,35,10,.45);position:relative;transition:transform .2s}
+.ticket>*{min-width:0}
+.ticket:hover{transform:translateY(-3px)}
+.ticket .date{background:var(--red);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:16px 6px;font-family:var(--slab);text-align:center;position:relative;border-right:3px dotted var(--kraft)}
+.ticket:nth-child(2) .date{background:var(--sage-d)}
+.ticket:nth-child(3) .date{background:var(--mustard);color:var(--ink)}
+.ticket .date .m{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.9}
+.ticket .date .d{font-size:34px;font-weight:700;line-height:1;margin-top:4px}
+.ticket .body{padding:18px 18px 18px 20px}
+.ticket h3{font-size:22px;font-weight:700}
+.ticket p{font-size:14.5px;color:var(--ink-2);margin-top:6px}
+.ticket .pill{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  border:1.5px dashed var(--ink-2);color:var(--ink-2);border-radius:999px;padding:3px 10px}
+.shows-note{margin-top:20px;font-size:14px;color:var(--ink-2)}
+@media(min-width:900px){.shows-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* vendor CTA */
+.vendor{background:var(--red);color:var(--cream);overflow:hidden}
+.vendor::before{content:"";position:absolute;inset:0;opacity:.12;
+  background:repeating-linear-gradient(45deg,#000 0 2px,transparent 2px 14px)}
+.vendor .grid{display:grid;gap:30px;align-items:center;position:relative}
+.vendor .grid>*{min-width:0}
+.vendor h2{font-size:clamp(36px,9vw,62px);font-weight:700;color:var(--cream)}
+.vendor h2 em{font-style:normal;color:var(--mustard)}
+.vendor p{font-size:17px;margin-top:14px;color:#f6e6d2;max-width:32em}
+.vendor .btn-mustard{background:var(--mustard);color:var(--ink);box-shadow:0 4px 0 var(--mustard-d)}
+.vendor .btn-mustard:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--mustard-d)}
+.vendor .btn-ghost{color:var(--cream);border:2px solid rgba(251,245,232,.7)}
+.vendor .btn-ghost:hover{background:rgba(255,255,255,.08)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;background:rgba(0,0,0,.14);border:1.5px dashed rgba(251,245,232,.35);
+  border-radius:12px;padding:14px 16px;font-size:15.5px}
+.steps li>*{min-width:0}
+.steps b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--cream);color:var(--red-d);font-family:var(--slab);font-size:21px}
+.steps a{color:var(--mustard);font-weight:600;overflow-wrap:anywhere}
+@media(min-width:900px){.vendor .grid{grid-template-columns:1.1fr .9fr;gap:56px}}
+
+/* facts */
+.facts-grid{display:grid;gap:16px}
+.facts-grid>*{min-width:0}
+.fact{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.fact>*{min-width:0}
+.fact .badge{width:52px;height:52px}
+.fact h3{font-size:21px;font-weight:700}
+.fact p{font-size:15px;color:var(--ink-2);margin-top:6px}
+.fact cite{display:block;font-style:normal;font-size:12px;color:var(--sage-d);margin-top:8px;font-weight:600;letter-spacing:.04em}
+.quote{margin-top:22px;font-family:var(--slab);font-size:clamp(24px,6vw,36px);line-height:1.2;color:var(--ink);font-weight:500}
+.quote mark{background:linear-gradient(transparent 58%, rgba(217,162,27,.55) 58%);color:inherit;padding:0 .1em}
+@media(min-width:760px){.facts-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* visit */
+.visit{background:var(--kraft-2)}
+.visit .grid{display:grid;gap:20px}
+.visit .grid>*{min-width:0}
+.hours table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15.5px}
+.hours td{padding:11px 10px;border-bottom:1.5px dashed rgba(90,70,54,.28)}
+.hours td:last-child{text-align:right;color:var(--ink-2)}
+.hours tr.today td{background:var(--mustard);color:var(--ink);font-weight:700;border-bottom-color:transparent}
+.hours tr.today td:first-child{border-radius:8px 0 0 8px}
+.hours tr.today td:last-child{border-radius:0 8px 8px 0;color:var(--ink)}
+.hours tr.today td:first-child::after{content:" · today";font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.hours .note{font-size:14px;color:var(--ink-2);margin-top:14px}
+.card-h{font-size:28px;font-weight:700}
+.map{border-radius:16px;overflow:hidden;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--sage-d);height:320px;background:#e9e2cf;background-image:linear-gradient(rgba(79,107,74,.18) 2px,transparent 2px),linear-gradient(90deg,rgba(79,107,74,.18) 2px,transparent 2px),linear-gradient(115deg,transparent 46%,rgba(168,50,42,.35) 46% 49%,transparent 49%);background-size:48px 48px,48px 48px,100% 100%}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.contact-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
+.contact-list li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center}
+.contact-list li>*{min-width:0}
+.contact-list .ci{width:40px;height:40px;border-radius:10px;background:var(--red);color:var(--cream);display:grid;place-items:center}
+.contact-list .ci svg{width:20px;height:20px}
+.contact-list a{font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.contact-list a:hover{color:var(--red)}
+.contact-list small{display:block;font-size:12px;color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.visit .ctas{margin-top:20px}
+@media(min-width:960px){.visit .grid{grid-template-columns:1fr 1.25fr 1fr}.map{height:auto;min-height:420px}}
+
+/* footer */
+footer{background:var(--ink);color:#e9dcc3;padding:44px 0 36px;font-size:14px}
+footer .row{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer .row>*{min-width:0}
+footer .fbrand{font-family:var(--slab);font-size:22px;font-weight:700;color:var(--cream)}
+footer .fine{margin-top:18px;color:#bfae92;font-size:12.5px}
+footer a{color:var(--mustard)}
+
+/* sticky bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.2fr 1fr;gap:10px;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(43,33,26,.96);
+  box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.mbar>*{min-width:0}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:12px;font-weight:700;font-size:15.5px;text-decoration:none;white-space:nowrap;overflow:hidden}
+.mbar a svg{width:18px;height:18px;flex:none}
+.mbar .c{background:var(--red);color:var(--cream)}
+.mbar .v{background:var(--mustard);color:var(--ink)}
+.mbar a:active{transform:scale(.98)}
+@media(min-width:900px){.mbar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease, transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+.js.show-all .reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal,.bunting .flag{transition:none;animation:none}.js .reveal:not(.in){opacity:1;transform:none}html{scroll-behavior:auto}}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--sage-d);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for <b>1409 Vendor Village</b>. Not live.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="1409 Vendor Village home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#a8322a"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="#fbf5e8" stroke-width="1.4" stroke-dasharray="2.4 2.2"/><path d="M11 25 24 14l13 11" fill="none" stroke="#d9a21b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="35" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="11" fill="#fbf5e8">1409</text></svg>
+      <div><span>Vendor Village</span><small>Talbott · Tennessee</small></div>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#inside">Inside</a><a href="#shows">Craft Shows</a><a href="#vendors">Become a Vendor</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="call" href="tel:+14232585824" aria-label="Call 423-258-5824">Call<span class="num"> 423-258-5824</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="bunting" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 6 Q600 30 1200 6" fill="none" stroke="#5a4636" stroke-width="1.6"/>
+    <g>
+      <path class="flag" d="M20 7 L56 9 L37 46Z" fill="#a8322a"/>
+      <path class="flag" d="M90 11 L126 13 L107 50Z" fill="#d9a21b"/>
+      <path class="flag" d="M160 14 L196 15 L177 52Z" fill="#7f9a78"/>
+      <path class="flag" d="M230 16 L266 18 L247 55Z" fill="#fbf5e8"/>
+      <path class="flag" d="M300 19 L336 20 L317 56Z" fill="#a8322a"/>
+      <path class="flag" d="M370 20 L406 21 L387 56Z" fill="#d9a21b"/>
+      <path class="flag" d="M440 21 L476 22 L457 56Z" fill="#7f9a78"/>
+      <path class="flag" d="M510 22 L546 22 L527 56Z" fill="#fbf5e8"/>
+      <path class="flag" d="M580 22 L616 22 L597 56Z" fill="#a8322a"/>
+      <path class="flag" d="M650 22 L686 22 L667 56Z" fill="#d9a21b"/>
+      <path class="flag" d="M720 21 L756 21 L737 56Z" fill="#7f9a78"/>
+      <path class="flag" d="M790 20 L826 20 L807 56Z" fill="#fbf5e8"/>
+      <path class="flag" d="M860 19 L896 18 L877 55Z" fill="#a8322a"/>
+      <path class="flag" d="M930 17 L966 16 L947 53Z" fill="#d9a21b"/>
+      <path class="flag" d="M1000 14 L1036 13 L1017 51Z" fill="#7f9a78"/>
+      <path class="flag" d="M1070 11 L1106 10 L1087 48Z" fill="#fbf5e8"/>
+      <path class="flag" d="M1140 8 L1176 7 L1157 45Z" fill="#a8322a"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="eyebrow">Vendor market · Talbott, TN</span>
+        <h1>Local makers under <span class="roof">one roof.</span></h1>
+        <p class="sub"><strong>1409 Vendor Village</strong> is a vendor market on Old Andrew Johnson Highway in Talbott, known for putting on craft shows.</p>
+        <div class="ctas">
+          <a class="btn btn-red" href="tel:+14232585824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 423-258-5824</a>
+          <a class="btn btn-line" href="#vendors">Become a vendor</a>
+        </div>
+        <p class="addr-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>1028 E Old Andrew Johnson Hwy, Talbott, TN</span></p>
+      </div>
+
+      <div class="scene reveal" aria-hidden="true">
+        <svg viewBox="0 0 520 400">
+          <defs>
+            <pattern id="stripeR" width="28" height="10" patternUnits="userSpaceOnUse"><rect width="14" height="10" fill="#a8322a"/><rect x="14" width="14" height="10" fill="#fbf5e8"/></pattern>
+            <pattern id="stripeS" width="28" height="10" patternUnits="userSpaceOnUse"><rect width="14" height="10" fill="#4f6b4a"/><rect x="14" width="14" height="10" fill="#fbf5e8"/></pattern>
+            <pattern id="stripeM" width="28" height="10" patternUnits="userSpaceOnUse"><rect width="14" height="10" fill="#d9a21b"/><rect x="14" width="14" height="10" fill="#fbf5e8"/></pattern>
+            <pattern id="plank" width="40" height="18" patternUnits="userSpaceOnUse"><rect width="40" height="18" fill="#8f4a2e"/><path d="M0 17.5h40" stroke="#6e3620" stroke-width="1.5"/><path d="M20 0v18" stroke="#6e3620" stroke-width=".8" opacity=".5"/></pattern>
+          </defs>
+          <!-- barn roof -->
+          <ellipse cx="260" cy="382" rx="250" ry="14" fill="#5a4636" opacity=".15"/>
+          <path d="M30 150 L260 34 L490 150 Z" fill="#7e2219"/>
+          <path d="M44 150 L260 46 L476 150" fill="none" stroke="#fbf5e8" stroke-width="3"/>
+          <rect x="52" y="150" width="416" height="226" fill="url(#plank)"/>
+          <rect x="52" y="150" width="416" height="226" fill="none" stroke="#5c2a16" stroke-width="3"/>
+          <!-- roof sign -->
+          <g>
+            <rect x="174" y="92" width="172" height="44" rx="6" fill="#fbf5e8" stroke="#2b211a" stroke-width="2.5"/>
+            <text x="260" y="122" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="25" fill="#a8322a">1409</text>
+          </g>
+          <!-- booths -->
+          <g>
+            <rect x="72" y="214" width="116" height="140" fill="#f6ecd9"/>
+            <path d="M64 196h132v26H64z" fill="url(#stripeR)"/>
+            <path d="M64 222 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0" fill="#a8322a"/>
+            <rect x="80" y="300" width="100" height="10" fill="#8f4a2e"/>
+            <circle cx="98" cy="290" r="9" fill="#d9a21b"/><circle cx="118" cy="292" r="7" fill="#7f9a78"/><rect x="134" y="278" width="14" height="22" rx="3" fill="#a8322a"/><rect x="154" y="283" width="18" height="17" rx="2" fill="#4f6b4a"/>
+            <rect x="84" y="318" width="92" height="36" fill="#dcc59e"/>
+            <g transform="rotate(-4 130 252)"><line x1="108" y1="232" x2="112" y2="246" stroke="#2b211a" stroke-width="1.5"/><line x1="152" y1="232" x2="148" y2="246" stroke="#2b211a" stroke-width="1.5"/><rect x="98" y="246" width="64" height="24" rx="4" fill="#2b211a"/><text x="130" y="263" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="13" fill="#fbf5e8">Handmade</text></g>
+          </g>
+          <g>
+            <rect x="202" y="214" width="116" height="140" fill="#f6ecd9"/>
+            <path d="M194 196h132v26H194z" fill="url(#stripeM)"/>
+            <path d="M194 222 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0" fill="#d9a21b"/>
+            <rect x="210" y="300" width="100" height="10" fill="#8f4a2e"/>
+            <path d="M222 300 l10-22 10 22z" fill="#7f9a78"/><circle cx="258" cy="291" r="9" fill="#a8322a"/><rect x="274" y="282" width="24" height="18" rx="3" fill="#d9a21b"/>
+            <rect x="214" y="318" width="92" height="36" fill="#dcc59e"/>
+            <g transform="rotate(3 260 252)"><line x1="238" y1="232" x2="242" y2="246" stroke="#2b211a" stroke-width="1.5"/><line x1="282" y1="232" x2="278" y2="246" stroke="#2b211a" stroke-width="1.5"/><rect x="228" y="246" width="64" height="24" rx="4" fill="#a8322a"/><text x="260" y="263" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="13" fill="#fbf5e8">Crafts</text></g>
+          </g>
+          <g>
+            <rect x="332" y="214" width="116" height="140" fill="#f6ecd9"/>
+            <path d="M324 196h132v26H324z" fill="url(#stripeS)"/>
+            <path d="M324 222 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0 q11 12 22 0" fill="#4f6b4a"/>
+            <rect x="340" y="300" width="100" height="10" fill="#8f4a2e"/>
+            <rect x="350" y="276" width="16" height="24" rx="7" fill="#d9a21b"/><circle cx="386" cy="291" r="9" fill="#7f9a78"/><rect x="402" y="280" width="26" height="20" rx="3" fill="#a8322a"/>
+            <rect x="344" y="318" width="92" height="36" fill="#dcc59e"/>
+            <g transform="rotate(-3 390 252)"><line x1="368" y1="232" x2="372" y2="246" stroke="#2b211a" stroke-width="1.5"/><line x1="412" y1="232" x2="408" y2="246" stroke="#2b211a" stroke-width="1.5"/><rect x="358" y="246" width="64" height="24" rx="4" fill="#d9a21b"/><text x="390" y="263" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="13" fill="#2b211a">Local</text></g>
+          </g>
+          <!-- string lights -->
+          <path d="M52 172 Q156 192 260 172 T468 172" fill="none" stroke="#2b211a" stroke-width="1.2"/>
+          <g fill="#f4c24a"><circle cx="82" cy="178" r="3.5"/><circle cx="124" cy="184" r="3.5"/><circle cx="166" cy="184" r="3.5"/><circle cx="208" cy="180" r="3.5"/><circle cx="250" cy="173" r="3.5"/><circle cx="292" cy="167" r="3.5"/><circle cx="334" cy="163" r="3.5"/><circle cx="376" cy="163" r="3.5"/><circle cx="418" cy="166" r="3.5"/><circle cx="452" cy="170" r="3.5"/></g>
+        </svg>
+        <svg class="stamp" viewBox="0 0 140 140">
+          <defs><path id="circ" d="M70 70 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0"/></defs>
+          <circle cx="70" cy="70" r="66" fill="#d9a21b"/>
+          <circle cx="70" cy="70" r="60" fill="none" stroke="#2b211a" stroke-width="2" stroke-dasharray="4 3"/>
+          <circle cx="70" cy="70" r="38" fill="none" stroke="#2b211a" stroke-width="1.5"/>
+          <text font-family="Work Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="2.6" fill="#2b211a"><textPath href="#circ">RIBBON CUT · TALBOTT, TN · RIBBON CUT ·</textPath></text>
+          <text x="70" y="66" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="20" fill="#7e2219">SEPT 3</text>
+          <text x="70" y="86" text-anchor="middle" font-family="Zilla Slab, Georgia, serif" font-weight="700" font-size="18" fill="#2b211a">2026</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec services" id="inside">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sign-board sage">What's inside</span>
+      <h2>A village of vendors, a calendar of craft shows.</h2>
+      <p>Booths, shows and a spot for your table. Booth details and what's in this week? Give us a call.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="stitch svc reveal">
+        <div class="ico" style="background:#a8322a"><svg viewBox="0 0 32 32" fill="none" stroke="#fbf5e8" stroke-width="2.2" stroke-linejoin="round"><path d="M4 12 16 4l12 8"/><path d="M6 12v15h20V12"/><path d="M12 27v-8h8v8"/></svg></div>
+        <h3>Vendor market</h3>
+        <p>Local vendors gathered under one roof on Old Andrew Johnson Highway in Talbott.</p>
+        <span class="tag">Stop in · Talbott, TN</span>
+      </article>
+      <article class="stitch svc reveal">
+        <div class="ico" style="background:#d9a21b"><svg viewBox="0 0 32 32" fill="none" stroke="#2b211a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M5 9h22l-3 5H8z"/><path d="M8 14v13M24 14v13M5 27h22"/><path d="M12 19h8"/></svg></div>
+        <h3>Craft shows</h3>
+        <p>The thing 1409 Vendor Village is known for. New show dates go up here first.</p>
+        <span class="tag"><a href="#shows">See upcoming shows →</a></span>
+      </article>
+      <article class="stitch svc reveal">
+        <div class="ico" style="background:#4f6b4a"><svg viewBox="0 0 32 32" fill="none" stroke="#fbf5e8" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="5" y="8" width="22" height="16" rx="2"/><path d="M5 12h22"/><path d="M16 15v6M13 18h6"/></svg></div>
+        <h3>Booth space</h3>
+        <p>Maker, crafter or small seller? Ask Amanda about getting a spot in the village.</p>
+        <span class="tag"><a href="#vendors">How to apply →</a></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="shows">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sign-board">Upcoming craft shows</span>
+      <h2>Mark your calendar.</h2>
+      <p>Show dates, themes and vendor counts would be posted right here, so shoppers never miss one.</p>
+    </div>
+    <div class="shows-grid">
+      <article class="ticket reveal">
+        <div class="date"><span class="m">Date</span><span class="d">TBA</span></div>
+        <div class="body"><h3>Next craft show</h3><p>Details posted soon. Call to ask what's coming up.</p><span class="pill">Placeholder</span></div>
+      </article>
+      <article class="ticket reveal">
+        <div class="date"><span class="m">Date</span><span class="d">TBA</span></div>
+        <div class="body"><h3>Seasonal show</h3><p>Your show title, hours and vendor list go here.</p><span class="pill">Placeholder</span></div>
+      </article>
+      <article class="ticket reveal">
+        <div class="date"><span class="m">Date</span><span class="d">TBA</span></div>
+        <div class="body"><h3>Vendor call-out</h3><p>Booth sign-ups for the next show open here.</p><span class="pill">Placeholder</span></div>
+      </article>
+    </div>
+    <p class="shows-note">Concept note: these cards are placeholders. Real show dates would come from 1409 Vendor Village.</p>
+  </div>
+</section>
+
+<section class="sec vendor" id="vendors">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="sign-board mustard">Become a vendor</span>
+        <h2 style="margin-top:24px">Got something handmade? <em>Bring it to the village.</em></h2>
+        <p>Crafters, makers and small sellers: reach out to ask about booth space and upcoming shows at 1409 Vendor Village.</p>
+        <div class="ctas">
+          <a class="btn btn-mustard" href="mailto:1409vendorvillage@gmail.com?subject=Vendor%20inquiry">Email a vendor inquiry</a>
+          <a class="btn btn-ghost" href="tel:+14232585824">Call 423-258-5824</a>
+        </div>
+      </div>
+      <ol class="steps reveal">
+        <li><b>1</b><span>Email <a href="mailto:1409vendorvillage@gmail.com">1409vendorvillage@gmail.com</a> or call.</span></li>
+        <li><b>2</b><span>Tell us what you make or sell.</span></li>
+        <li><b>3</b><span>Ask about open booths and the next craft show.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sign-board sage">Why stop in</span>
+      <h2>Small-town market, big on craft shows.</h2>
+      <p class="quote">Known for <mark>putting on craft shows.</mark></p>
+      <p style="font-size:13px;margin-top:8px">The Citizen Tribune, September 3, 2026</p>
+    </div>
+    <div class="facts-grid">
+      <div class="stitch fact reveal">
+        <svg class="badge" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#a8322a"/><path d="M14 30c6-10 18-10 24 0" fill="none" stroke="#fbf5e8" stroke-width="2.4"/><path d="M26 16v-4M18 19l-2-3M34 19l2-3" stroke="#d9a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30l-4 10 6-3M32 30l4 10-6-3" fill="#d9a21b"/></svg>
+        <div><h3>Ribbon cut with the Chamber</h3><p>The Chamber of Commerce and 1409 Vendor Village cut the ribbon on Thursday, September 3, 2026.</p><cite>Morristown Area Chamber · Citizen Tribune</cite></div>
+      </div>
+      <div class="stitch fact reveal">
+        <svg class="badge" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#d9a21b"/><path d="M16 22h20l-2 4H18z" fill="#2b211a"/><path d="M18 26v12M34 26v12M14 38h24" stroke="#2b211a" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <div><h3>Known for craft shows</h3><p>Shows full of local vendors are what the village is known for.</p><cite>Citizen Tribune, Sept 3, 2026</cite></div>
+      </div>
+      <div class="stitch fact reveal">
+        <svg class="badge" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#4f6b4a"/><circle cx="26" cy="21" r="6" fill="none" stroke="#fbf5e8" stroke-width="2.4"/><path d="M15 38c2-7 20-7 22 0" fill="none" stroke="#fbf5e8" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <div><h3>Locally owned</h3><p>Owned by Amanda Wilson, right here in Talbott.</p><cite>Morristown Area Chamber, September 2026</cite></div>
+      </div>
+      <div class="stitch fact reveal">
+        <svg class="badge" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#2b211a"/><path d="M26 40s9-8 9-15a9 9 0 1 0-18 0c0 7 9 15 9 15z" fill="#a8322a"/><circle cx="26" cy="25" r="3.2" fill="#fbf5e8"/></svg>
+        <div><h3>Easy to find</h3><p>On Old Andrew Johnson Highway (Old AJ Hwy) in Talbott, Tennessee.</p><cite>1028 E Old Andrew Johnson Hwy</cite></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sign-board">Come visit</span>
+      <h2>Find the village.</h2>
+    </div>
+    <div class="grid">
+      <div class="stitch hours reveal">
+        <h3 class="card-h">Hours</h3>
+        <table aria-label="Weekly hours">
+          <tbody>
+            <tr data-d="1"><td>Monday</td><td>Call ahead</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>Call ahead</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>Call ahead</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>Call ahead</td></tr>
+            <tr data-d="5"><td>Friday</td><td>Call ahead</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>Call ahead</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>Call ahead</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Hours and show times aren't published yet. Call <a href="tel:+14232585824">423-258-5824</a> before you head over.</p>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to 1409 Vendor Village" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=1028%20E%20Old%20Andrew%20Johnson%20Hwy%2C%20Talbott%2C%20TN&output=embed"></iframe>
+      </div>
+      <div class="stitch reveal">
+        <h3 class="card-h">Get in touch</h3>
+        <ul class="contact-list">
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><small>Call</small><a href="tel:+14232585824">423-258-5824</a></div></li>
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>Email</small><a href="mailto:1409vendorvillage@gmail.com">1409vendorvillage@gmail.com</a></div></li>
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Address</small><span style="font-weight:600">1028 E Old Andrew Johnson Hwy, Talbott, TN</span></div></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&amp;destination=1028%20E%20Old%20Andrew%20Johnson%20Hwy%2C%20Talbott%2C%20TN" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div><div class="fbrand">1409 Vendor Village</div><div>1028 E Old Andrew Johnson Hwy · Talbott, TN · <a href="tel:+14232585824">423-258-5824</a></div></div>
+      <div>Concept by Code Craft Media</div>
+    </div>
+    <p class="fine">Concept site by Code Craft Media, made for 1409 Vendor Village. Not live. Show cards are placeholders.</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="c" href="tel:+14232585824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the village</a>
+  <a class="v" href="mailto:1409vendorvillage@gmail.com?subject=Vendor%20inquiry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Vendor inquiry</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var t=new Date().getDay(), row=document.querySelector('.hours tr[data-d="'+t+'"]'); if(row) row.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { d.classList.add('show-all'); }
+  setTimeout(function(){d.classList.add('show-all');els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Ink Room — Cookeville</title>
+<meta name="description" content="Concept site for The Ink Room, a new body art studio at 44 N. Walnut Ave., Cookeville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0d0c0b;--ink2:#171514;--ink3:#211e1c;--bone:#efe8db;--bone2:#cfc6b6;--mute:#9a9184;--red:#a3192b;--red2:#c8283c;--line:rgba(239,232,219,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--bone);font:400 16px/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+.grid>*,.flex>*,.row>*{min-width:0}
+.concept{background:var(--red);color:var(--bone);font-size:10px;letter-spacing:0;text-align:center;padding:6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:40;background:rgba(13,12,11,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:italic 600 22px/1 Fraunces,serif;letter-spacing:-.01em}
+.logo svg{width:30px;height:30px;flex:none}
+.links{display:none;gap:28px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--bone2);transition:color .2s}
+.links a:hover{color:var(--red2)}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:500 15px/1 "Space Grotesk";letter-spacing:.06em;text-transform:uppercase;padding:16px 24px;border-radius:2px;border:1px solid var(--bone);transition:transform .2s,background .2s,color .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--bone)}
+.btn.red:hover{background:var(--red2);border-color:var(--red2)}
+.btn.ghost{color:var(--bone)}
+.btn.ghost:hover{background:var(--bone);color:var(--ink)}
+.nav-cta{padding:11px 16px;font-size:13px}
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:64px;display:grid;gap:40px}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:96px;padding-bottom:110px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red2)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1{font:300 clamp(44px,12.4vw,104px)/.95 Fraunces,serif;letter-spacing:-.03em;margin:20px 0 22px}
+h1 em{font-style:italic;font-weight:400;color:var(--red2)}
+h1 .out{font-style:italic;color:transparent;-webkit-text-stroke:1px var(--bone)}
+.sub{font-size:17px;color:var(--bone2);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ctas .btn{flex:1 1 150px}
+@media(min-width:600px){.ctas .btn{flex:0 0 auto}}
+.addr{margin-top:22px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.sheet{position:relative;aspect-ratio:1/1.1;max-width:440px;width:100%;margin:0 auto;border:1px solid var(--line);background:var(--ink2)}
+.sheet::after{content:"FLASH · No. 01";position:absolute;bottom:10px;right:12px;font-size:10px;letter-spacing:.25em;color:var(--mute)}
+.sheet svg{width:100%;height:100%;display:block}
+.draw path,.draw circle,.draw line,.draw polyline{stroke-dasharray:var(--l,600);stroke-dashoffset:0}
+.js .draw path,.js .draw circle,.js .draw line,.js .draw polyline{animation:draw 2.6s cubic-bezier(.6,.1,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:var(--l,600)}to{stroke-dashoffset:0}}
+.bgline{position:absolute;inset:0;z-index:1;opacity:.07;pointer-events:none}
+.bgline svg{width:100%;height:100%}
+/* marquee */
+.marq{overflow:hidden;border-bottom:1px solid var(--line);background:var(--bone);color:var(--ink)}
+.marq div{display:flex;gap:40px;white-space:nowrap;padding:14px 0;font:italic 400 22px/1 Fraunces,serif;width:max-content;animation:mq 30s linear infinite}
+.marq span{display:inline-flex;align-items:center;gap:40px}
+.marq span::after{content:"✦";font-style:normal;color:var(--red);font-size:14px}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:84px 0;position:relative}
+@media(min-width:900px){section{padding:120px 0}}
+h2{font:300 clamp(38px,9vw,68px)/1 Fraunces,serif;letter-spacing:-.025em;margin:16px 0 18px}
+h2 em{font-style:italic;color:var(--red2)}
+.lede{color:var(--bone2);max-width:56ch;font-size:17px}
+/* studio facts */
+.facts{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+@media(min-width:700px){.facts{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{background:var(--ink);padding:30px 24px;transition:background .3s}
+.fact:hover{background:var(--ink2)}
+.fact svg{width:44px;height:44px;margin-bottom:22px;color:var(--red2)}
+.fact h3{font:italic 400 24px/1.15 Fraunces,serif;margin-bottom:10px}
+.fact p{color:var(--bone2);font-size:15px}
+blockquote{margin-top:56px;border-left:2px solid var(--red);padding:6px 0 6px 22px;font:italic 300 clamp(24px,5.6vw,38px)/1.25 Fraunces,serif;max-width:30ch}
+blockquote cite{display:block;margin-top:14px;font:400 12px/1.4 "Space Grotesk";letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-style:normal}
+/* artists */
+.alt{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.artists{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px}
+@media(min-width:900px){.artists{grid-template-columns:repeat(4,1fr);gap:20px}}
+.artist{border:1px dashed rgba(239,232,219,.28);aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:14px;transition:border-color .25s,transform .25s}
+.artist:hover{border-color:var(--red2);transform:translateY(-3px)}
+.artist svg{width:58%;max-width:120px;color:var(--bone2)}
+.artist b{font:italic 400 18px/1.2 Fraunces,serif}
+.artist small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.note{margin-top:22px;font-size:13px;color:var(--mute)}
+/* flash */
+.flashgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:44px}
+@media(min-width:900px){.flashgrid{grid-template-columns:repeat(6,1fr);gap:12px}}
+.tile{aspect-ratio:1;background:var(--bone);color:var(--ink);display:flex;align-items:center;justify-content:center;position:relative;transition:transform .25s}
+.tile:nth-child(even){background:var(--ink3);color:var(--bone)}
+.tile:hover{transform:rotate(-2deg) scale(1.03)}
+.tile svg{width:62%;height:62%}
+.tile i{position:absolute;left:6px;bottom:4px;font:normal 9px/1 "Space Grotesk";letter-spacing:.14em;opacity:.55}
+.ig{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+/* visit */
+.visit{display:grid;gap:28px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.1fr;gap:48px}}
+.card{border:1px solid var(--line);background:var(--ink2);padding:28px 24px}
+.card h3{font:italic 400 28px/1.1 Fraunces,serif;margin-bottom:18px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 10px;border-bottom:1px solid var(--line);font-size:15px}
+.hours li span:last-child{color:var(--mute)}
+.hours li.today{background:var(--red);border-color:var(--red);color:var(--bone)}
+.hours li.today span:last-child{color:var(--bone)}
+.hours li.today span:first-child::after{content:" · today";font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.contact{display:grid;gap:12px;margin-top:22px}
+.contact a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px 16px;border:1px solid var(--line);transition:border-color .2s,background .2s;overflow-wrap:anywhere}
+.contact a:hover{border-color:var(--red2);background:var(--ink3)}
+.contact svg{width:20px;height:20px;flex:none;color:var(--red2)}
+.map{border:1px solid var(--line);min-height:340px;height:100%;background:var(--ink2);position:relative}.map::before{content:"44 N. Walnut Ave. · Cookeville, TN";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font:italic 400 22px/1.3 Fraunces,serif;color:var(--mute)}.map iframe{position:relative}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(1) invert(.9) contrast(.9)}
+footer{border-top:1px solid var(--line);padding:44px 0 36px;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+footer .logo{color:var(--bone)}footer a{color:var(--bone2)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,12,11,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.callbar .btn{padding:15px 10px;font-size:13px}
+@media(min-width:900px){.callbar{display:none}}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for The Ink Room. Not live.</div>
+
+<nav><div class="wrap flex">
+  <a class="logo" href="#top" aria-label="The Ink Room home">
+    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="20" cy="20" r="18"/><path d="M20 6c4 7 7 10 7 15a7 7 0 0 1-14 0c0-5 3-8 7-15z" stroke="#c8283c"/><path d="M20 30v4"/></svg>
+    The Ink Room
+  </a>
+  <div class="links"><a href="#studio">Studio</a><a href="#artists">Artists</a><a href="#flash">Flash</a><a href="#visit">Visit</a></div>
+  <a class="btn red nav-cta" href="tel:+19315594657">Call</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="bgline" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 4l3 13 13 3-13 3-3 13-3-13-13-3 13-3z" fill="none" stroke="#efe8db" stroke-width=".6"/></pattern></defs><rect width="400" height="400" fill="url(#p)"/></svg></div>
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">New body art studio · Cookeville</span>
+      <h1>A new home for <em>ink</em> on <span class="out">Walnut</span> Ave.</h1>
+      <p class="sub">Tara Knight’s tattoo studio, built next door to The Finery Salon after more than a year of remodeling.</p>
+      <div class="ctas">
+        <a class="btn red" href="tel:+19315594657">Call the studio</a>
+        <a class="btn ghost" href="https://instagram.com/theinkroomtattooofficial" target="_blank" rel="noopener">See Instagram</a>
+      </div>
+      <p class="addr">44 N. Walnut Ave. · Cookeville, TN</p>
+    </div>
+    <div class="sheet" aria-hidden="true">
+      <svg class="draw" viewBox="0 0 400 440" fill="none" stroke="#efe8db" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <!-- dagger through rose -->
+        <g style="--l:900">
+          <path d="M200 40 L212 70 L212 300 L200 330 L188 300 L188 70 Z"/>
+          <path d="M160 300 H240"/><path d="M200 300 V380"/><circle cx="200" cy="392" r="10"/>
+          <path d="M200 70 V290" stroke="#c8283c"/>
+        </g>
+        <g style="--l:700" stroke="#c8283c">
+          <path d="M200 190c-30 0-46 18-46 38s18 34 46 34 46-14 46-34-16-38-46-38z"/>
+          <path d="M200 205c-16 0-26 10-26 22s10 20 26 20 26-8 26-20-10-22-26-22z"/>
+          <path d="M186 228c4-10 24-10 28 0"/>
+          <path d="M154 232c-24 8-40 4-52-8 18-6 34-4 52 8z"/><path d="M246 232c24 8 40 4 52-8-18-6-34-4-52 8z"/>
+        </g>
+        <!-- swallow -->
+        <g style="--l:500"><path d="M60 110c20-14 44-14 60 0-14 2-24 8-30 18 12-4 24-2 34 6-18 4-34 2-46-8l-24 24 8-30z"/><circle cx="104" cy="108" r="2"/></g>
+        <!-- moon -->
+        <g style="--l:400"><path d="M330 90a34 34 0 1 1-30-50 26 26 0 1 0 30 50z"/></g>
+        <!-- stars -->
+        <g style="--l:200"><path d="M80 300l4 14 14 4-14 4-4 14-4-14-14-4 14-4z"/><path d="M330 300l3 10 10 3-10 3-3 10-3-10-10-3 10-3z"/><path d="M300 170l2 7 7 2-7 2-2 7-2-7-7-2 7-2z"/><path d="M110 200l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g>
+        <!-- eye -->
+        <g style="--l:300"><path d="M290 390c14-16 46-16 60 0-14 16-46 16-60 0z"/><circle cx="320" cy="390" r="8"/><path d="M320 368v-8M304 372l-4-6M336 372l4-6"/></g>
+        <!-- banner -->
+        <g style="--l:500"><path d="M40 400h70l-8 10 8 10H40l8-10z"/><path d="M50 384v-6M60 386v-10"/></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div><span>The Ink Room</span><span>44 N. Walnut Ave.</span><span>New body art studio</span><span>Next to The Finery</span><span>Cookeville, Tennessee</span><span>The Ink Room</span><span>44 N. Walnut Ave.</span><span>New body art studio</span><span>Next to The Finery</span><span>Cookeville, Tennessee</span></div></div>
+
+<section id="studio"><div class="wrap">
+  <span class="eyebrow rv">The studio</span>
+  <h2 class="rv">Remodeled for <em>one thing: tattooing.</em></h2>
+  <p class="lede rv">The Finery team spent more than a year remodeling the space next door and turned it into a dedicated home for tattoo artists. The Ink Room celebrated its ribbon cutting in September 2026.</p>
+  <div class="facts grid">
+    <div class="fact rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 42V18L24 6l18 12v24z"/><path d="M18 42V28h12v14"/></svg><h3>A dedicated room</h3><p>A dedicated home for tattoo artists, made from the adjoining space.</p></div>
+    <div class="fact rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 40l6-6 20-20 6 6-20 20-6 6z"/><path d="M30 12l6 6"/><path d="M14 34l4 4"/></svg><h3>A year+ of remodeling</h3><p>The adjoining space took more than a year to build out.</p></div>
+    <div class="fact rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 40s-16-9-16-21a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 12-16 21-16 21z"/></svg><h3>The Finery feeling</h3><p>Designed with the same welcoming atmosphere clients know from The Finery.</p></div>
+    <div class="fact rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="24" cy="20" r="10"/><path d="M24 30v12M18 36h12"/></svg><h3>On North Walnut</h3><p>At 44 N. Walnut Ave., right beside The Finery Salon.</p></div>
+  </div>
+  <blockquote class="rv">“The talented artists inside are passionate, dedicated, and ready to share their craft with this community.”<cite>Upper Cumberland Business Journal, Sept. 21, 2026</cite></blockquote>
+</div></section>
+
+<section class="alt" id="artists"><div class="wrap">
+  <span class="eyebrow rv">The artists</span>
+  <h2 class="rv">Meet the <em>hands</em> behind the ink.</h2>
+  <p class="lede rv">Each artist gets their own card here, with a portrait, specialty and booking link.</p>
+  <div class="artists grid">
+    <div class="artist rv"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="50" cy="38" r="18"/><path d="M18 92c4-20 18-30 32-30s28 10 32 30"/></svg><b>Your artist here</b><small>Specialty</small></div>
+    <div class="artist rv"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="50" cy="38" r="18"/><path d="M18 92c4-20 18-30 32-30s28 10 32 30"/></svg><b>Your artist here</b><small>Specialty</small></div>
+    <div class="artist rv"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="50" cy="38" r="18"/><path d="M18 92c4-20 18-30 32-30s28 10 32 30"/></svg><b>Your artist here</b><small>Specialty</small></div>
+    <div class="artist rv"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="50" cy="38" r="18"/><path d="M18 92c4-20 18-30 32-30s28 10 32 30"/></svg><b>Your artist here</b><small>Specialty</small></div>
+  </div>
+  <p class="note rv">Placeholder cards. Real names and portraits go here once you share them.</p>
+</div></section>
+
+<section id="flash"><div class="wrap">
+  <span class="eyebrow rv">Flash wall</span>
+  <h2 class="rv">Pick from the <em>wall</em>, or bring an idea.</h2>
+  <p class="lede rv">A gallery for your artists’ flash and finished pieces, pulled straight from Instagram. The drawings below are placeholder illustrations.</p>
+  <div class="flashgrid grid" aria-hidden="true">
+    <div class="tile rv"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M30 6l6 18h18l-14 11 5 18-15-11-15 11 5-18L6 24h18z"/></svg><i>01</i></div>
+    <div class="tile rv"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M46 38a20 20 0 1 1-18-30 15 15 0 1 0 18 30z"/></svg><i>02</i></div>
+    <div class="tile rv"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M30 4v40M22 44h16M30 44v8"/><circle cx="30" cy="55" r="3"/><path d="M26 10l4-6 4 6"/></svg><i>03</i></div>
+    <div class="tile rv"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M30 52S8 38 8 22a11 11 0 0 1 22-3 11 11 0 0 1 22 3c0 16-22 30-22 30z"/></svg><i>04</i></div>
+    <div class="tile rv"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 30c8-12 36-12 44 0-8 12-36 12-44 0z"/><circle cx="30" cy="30" r="7"/></svg><i>05</i></div>
+    <div class="tile rv"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M30 6v42M18 18c0 8 24 8 24 0M12 40c4 8 32 8 36 0"/><circle cx="30" cy="8" r="3"/></svg><i>06</i></div>
+  </div>
+  <div class="ig rv"><a class="btn red" href="https://instagram.com/theinkroomtattooofficial" target="_blank" rel="noopener">@theinkroomtattooofficial</a><a class="btn ghost" href="https://www.facebook.com/profile.php?id=61579292657998" target="_blank" rel="noopener">Facebook</a></div>
+</div></section>
+
+<section class="alt" id="visit"><div class="wrap">
+  <span class="eyebrow rv">Visit</span>
+  <h2 class="rv">Find us on <em>North Walnut.</em></h2>
+  <div class="visit grid" style="margin-top:40px">
+    <div class="rv">
+      <div class="card">
+        <h3>Hours</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>Call to confirm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>Call to confirm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>Call to confirm</span></li>
+          <li data-d="4"><span>Thursday</span><span>Call to confirm</span></li>
+          <li data-d="5"><span>Friday</span><span>Call to confirm</span></li>
+          <li data-d="6"><span>Saturday</span><span>Call to confirm</span></li>
+          <li data-d="0"><span>Sunday</span><span>Call to confirm</span></li>
+        </ul>
+        <div class="contact grid">
+          <a href="tel:+19315594657"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>(931) 559-4657</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=44+N+Walnut+Ave+Cookeville+TN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>44 N. Walnut Ave., Cookeville · Directions</a>
+          <a href="mailto:taraknightpmu@icloud.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>taraknightpmu@icloud.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="map rv"><iframe title="Map to The Ink Room" loading="lazy" src="https://www.google.com/maps?q=44%20N%20Walnut%20Ave%2C%20Cookeville%2C%20TN&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap flex">
+  <span class="logo">The Ink Room</span>
+  <span>44 N. Walnut Ave., Cookeville, TN · <a href="tel:+19315594657">(931) 559-4657</a></span>
+  <span>Concept by Code Craft Media</span>
+</div></footer>
+
+<div class="callbar">
+  <a class="btn red" href="tel:+19315594657">Call (931) 559-4657</a>
+  <a class="btn ghost" href="https://instagram.com/theinkroomtattooofficial" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else all();
+  setTimeout(all,1500);
+})();
+</script>
+</body>
+</html>

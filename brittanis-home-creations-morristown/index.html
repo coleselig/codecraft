@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Brittani's Home Creations Sourdough Microbakery — Morristown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--flour:#FAF6EE;--flour2:#F2EADB;--crust:#6B3E1F;--crust-d:#3E2412;--wheat:#C99A3B;--wheat-l:#E8CF8F;--ink:#2B1A0E;--muted:#6E5643}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--flour);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+ background-image:repeating-linear-gradient(0deg,rgba(107,62,31,.05) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(107,62,31,.04) 0 1px,transparent 1px 3px)}
+main,header,footer,.banner{position:relative;z-index:1}
+a{color:inherit}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.08;color:var(--crust-d)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.banner{background:var(--crust-d);color:var(--wheat-l);font-size:11px;line-height:1.35;text-align:center;padding:6px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+nav .brand{font-family:"Young Serif",serif;font-size:19px;color:var(--crust-d);text-decoration:none;min-width:0;display:flex;align-items:center;gap:10px}
+nav .brand svg{flex:none}
+nav .links{display:none;gap:28px;font-weight:500;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav .links a:hover{color:var(--crust)}
+.hero{display:grid;gap:28px;padding-top:20px;padding-bottom:56px;align-items:center}
+.hero>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--crust)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--wheat)}
+.hero h1{font-size:clamp(40px,11vw,84px);margin:14px 0 18px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--wheat);position:relative}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:30em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-p{background:var(--crust);color:var(--flour);box-shadow:0 6px 18px -8px rgba(62,36,18,.6)}
+.btn-p:hover{background:var(--crust-d);transform:translateY(-2px)}
+.btn-s{border:1.5px solid var(--crust);color:var(--crust)}
+.btn-s:hover{background:var(--flour2)}
+.loafart{position:relative;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center}
+.loafart .disc{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 40% 35%,var(--flour2),#EADCC2 70%);border:1px dashed rgba(201,154,59,.6)}
+.loafart svg{position:absolute;inset:0;width:100%;height:100%}
+.score{stroke-dasharray:240;stroke-dashoffset:240;animation:draw 1.6s .3s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sway{transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(3deg)}}
+section{padding:64px 0}
+.sec-h{max-width:640px;margin-bottom:34px}
+.sec-h h2{font-size:clamp(32px,7vw,52px);margin-top:10px}
+.sec-h p{color:var(--muted);margin-top:12px}
+.menu{background:var(--flour2);border-top:1px solid #E5D6B9;border-bottom:1px solid #E5D6B9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.grid>*{min-width:0}
+.card{background:var(--flour);border:1px solid #E3D3B4;border-radius:18px;padding:22px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(62,36,18,.45)}
+.card h3{font-size:24px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.card ul{list-style:none}
+.card li{padding:9px 0;border-top:1px dashed #E0CFAF;display:flex;justify-content:space-between;gap:10px}
+.card li:first-child{border-top:0}
+.card li span{color:var(--muted);font-size:13px}
+.note{margin-top:22px;font-size:14px;color:var(--muted)}
+.why{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.why>*{min-width:0}
+.why div{padding:22px 0;border-top:2px solid var(--wheat)}
+.why b{font-family:"Young Serif",serif;font-weight:400;font-size:22px;color:var(--crust-d);display:block;margin-bottom:6px}
+.why p{color:var(--muted)}
+.visit{display:grid;gap:24px}
+.visit>*{min-width:0}
+.panel{background:var(--crust-d);color:var(--flour);border-radius:22px;padding:28px}
+.panel h3{color:var(--wheat-l);font-size:28px;margin-bottom:12px}
+.panel p{color:#E9DCC6}
+.panel .btn{margin-top:18px}
+.panel .btn-p{background:var(--wheat);color:var(--crust-d)}
+.panel .btn-p:hover{background:var(--wheat-l)}
+.email{word-break:break-all;font-weight:600;color:var(--wheat-l)}
+.days{list-style:none;margin-top:16px}
+.days li{display:flex;justify-content:space-between;padding:7px 10px;border-radius:8px;font-size:15px;color:#E9DCC6}
+.days li.today{background:rgba(232,207,143,.16);color:var(--wheat-l);font-weight:600}
+.map{background:var(--flour2);border-radius:22px;overflow:hidden;border:1px solid #E3D3B4;min-height:320px}
+.map iframe{display:block;width:100%;height:100%;min-height:320px;border:0}
+footer{padding:40px 0 30px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #E5D6B9}
+footer .f{font-family:"Young Serif",serif;font-size:20px;color:var(--crust-d);margin-bottom:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(250,246,238,.94);backdrop-filter:blur(8px);border-top:1px solid #E3D3B4}
+.bar a{flex:1;min-width:0;padding:13px 10px}
+.reveal{transition:opacity .7s,transform .7s}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+@media (min-width:860px){
+ nav .links{display:flex}
+ .hero{grid-template-columns:1.1fr .9fr;padding-top:40px;padding-bottom:90px}
+ .visit{grid-template-columns:.9fr 1.1fr}
+ .bar{display:none}
+ body{padding-bottom:0}
+ section{padding:96px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.score{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Brittani's Home Creations. Not live.</div>
+<header class="wrap">
+ <nav>
+  <a class="brand" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#6B3E1F" stroke-width="2" stroke-linecap="round"><path d="M20 36V10"/><path d="M20 14c-4-1-6-4-6-7 4 1 6 4 6 7zM20 14c4-1 6-4 6-7-4 1-6 4-6 7zM20 22c-4-1-6-4-6-7 4 1 6 4 6 7zM20 22c4-1 6-4 6-7-4 1-6 4-6 7zM20 30c-4-1-6-4-6-7 4 1 6 4 6 7zM20 30c4-1 6-4 6-7-4 1-6 4-6 7z" fill="#E8CF8F"/></svg><span>Brittani's Home Creations</span></a>
+  <div class="links"><a href="#bakes">The bakes</a><a href="#why">About</a><a href="#order">Order</a></div>
+ </nav>
+</header>
+<main id="top">
+ <div class="wrap hero">
+  <div>
+   <span class="eyebrow">Sourdough microbakery · Morristown, TN</span>
+   <h1>Sourdough from a <em>Morristown</em> home kitchen.</h1>
+   <p class="sub">Brittani's Home Creations bakes sourdough, focaccia, sandwich bread and scones right here in Morristown.</p>
+   <div class="ctas">
+    <a class="btn btn-p" href="mailto:schmidtbills1105@protonmail.com?subject=Order%20this%20week's%20bake">Order this week's bake</a>
+    <a class="btn btn-s" href="#bakes">See the bakes</a>
+   </div>
+  </div>
+  <div class="loafart" aria-hidden="true">
+   <div class="disc"></div>
+   <svg viewBox="0 0 400 400" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g class="sway" stroke="#C99A3B" stroke-width="2.5">
+     <path d="M62 360V150"/>
+     <g fill="#E8CF8F"><path d="M62 170c-12-4-18-14-18-26 12 4 18 14 18 26z"/><path d="M62 170c12-4 18-14 18-26-12 4-18 14-18 26z"/><path d="M62 200c-12-4-18-14-18-26 12 4 18 14 18 26z"/><path d="M62 200c12-4 18-14 18-26-12 4-18 14-18 26z"/><path d="M62 230c-12-4-18-14-18-26 12 4 18 14 18 26z"/><path d="M62 230c12-4 18-14 18-26-12 4-18 14-18 26z"/><path d="M62 150c0-12 0-20 0-26"/></g>
+    </g>
+    <g class="sway" style="animation-delay:-2s" stroke="#C99A3B" stroke-width="2.5">
+     <path d="M340 360V170"/>
+     <g fill="#E8CF8F"><path d="M340 190c-12-4-18-14-18-26 12 4 18 14 18 26z"/><path d="M340 190c12-4 18-14 18-26-12 4-18 14-18 26z"/><path d="M340 220c-12-4-18-14-18-26 12 4 18 14 18 26z"/><path d="M340 220c12-4 18-14 18-26-12 4-18 14-18 26z"/></g>
+    </g>
+    <ellipse cx="200" cy="300" rx="132" ry="14" fill="rgba(62,36,18,.12)"/>
+    <path d="M78 262c0-78 56-128 122-128s122 50 122 128c0 26-30 38-122 38S78 288 78 262z" fill="#B87A3E" stroke="#3E2412" stroke-width="3"/>
+    <path d="M96 250c4-60 48-98 104-98s100 38 104 98" stroke="#8A5228" stroke-width="2" opacity=".5"/>
+    <g stroke="#F2E3C2" stroke-width="5">
+     <path class="score" d="M130 236c22-46 48-70 70-80"/>
+     <path class="score" style="animation-delay:.6s" d="M160 262c26-56 58-84 86-96"/>
+     <path class="score" style="animation-delay:.9s" d="M206 270c22-40 46-62 70-72"/>
+    </g>
+    <g fill="#FAF6EE" opacity=".8"><circle cx="150" cy="180" r="2"/><circle cx="240" cy="170" r="2.5"/><circle cx="270" cy="220" r="1.8"/><circle cx="120" cy="250" r="1.6"/></g>
+   </svg>
+  </div>
+ </div>
+
+ <section class="menu" id="bakes">
+  <div class="wrap">
+   <div class="sec-h reveal"><span class="eyebrow">From the oven</span><h2>What Brittani bakes</h2><p>The bakes listed for Brittani's Home Creations, grouped the way you'd shop for them.</p></div>
+   <div class="grid">
+    <div class="card reveal"><h3>Breads</h3><ul><li>Sourdough</li><li>Sandwich bread</li><li>Focaccia</li><li>Quick breads</li></ul></div>
+    <div class="card reveal"><h3>Sweet things</h3><ul><li>Scones</li><li>Cookies</li><li>Cakes</li></ul></div>
+    <div class="card reveal"><h3>For your kitchen</h3><ul><li>Dry mixes</li></ul></div>
+   </div>
+   <p class="note">Ask by email what's on this week's bake and how pickup works.</p>
+  </div>
+ </section>
+
+ <section id="why">
+  <div class="wrap">
+   <div class="sec-h reveal"><span class="eyebrow">Why order here</span><h2>A microbakery, not a factory</h2></div>
+   <div class="why">
+    <div class="reveal"><b>Baked at home</b><p>A home bakery in Morristown, so your bread comes from a neighbor's kitchen.</p></div>
+    <div class="reveal"><b>Sourdough first</b><p>Sourdough is the heart of the bakery, with focaccia and sandwich loaves alongside it.</p></div>
+    <div class="reveal"><b>A Chamber member</b><p>Brittani's Home Creations is listed with the Morristown Area Chamber of Commerce.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="order" style="padding-top:0">
+  <div class="wrap visit">
+   <div class="panel reveal">
+    <h3>Order this week's bake</h3>
+    <p>Email Brittani to ask what's baking and arrange pickup in Morristown.</p>
+    <p style="margin-top:10px"><a class="email" href="mailto:schmidtbills1105@protonmail.com">schmidtbills1105@protonmail.com</a></p>
+    <ul class="days" id="days"></ul>
+    <p style="font-size:13px;margin-top:8px;opacity:.8">Bake days and pickup times are arranged by email.</p>
+    <a class="btn btn-p" href="mailto:schmidtbills1105@protonmail.com?subject=Order%20this%20week's%20bake">Email to order</a>
+   </div>
+   <div class="map reveal"><iframe title="Map of Morristown, TN" loading="lazy" src="https://www.google.com/maps?q=Morristown%2C%20TN&output=embed"></iframe></div>
+  </div>
+ </section>
+</main>
+<footer>
+ <div class="wrap"><div class="f">Brittani's Home Creations Sourdough Microbakery</div><p>Home bakery · Morristown, Tennessee</p><p style="margin-top:14px;font-size:12px">Concept by Code Craft Media</p></div>
+</footer>
+<div class="bar"><a class="btn btn-p" href="mailto:schmidtbills1105@protonmail.com?subject=Order%20this%20week's%20bake">Order this week's bake</a></div>
+<script>
+document.documentElement.classList.add('js');
+(function(){var d=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],t=new Date().getDay(),u=document.getElementById('days'),h='';
+for(var i=1;i<=7;i++){var k=i%7;h+='<li'+(k===t?' class="today"':'')+'><span>'+d[k]+(k===t?' · today':'')+'</span><span>By order</span></li>';}u.innerHTML=h;
+var els=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){o.observe(e)})}
+setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);})();
+</script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Crucible Fitness — Morristown</title>
+<meta name="description" content="Concept homepage for Crucible Fitness, 128 E Morris Blvd, Ste 3, Morristown, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel-900:#0e0f11; --steel-800:#16181b; --steel-700:#1f2226; --steel-600:#2b2f35; --steel-400:#5b616a;
+  --ash:#a9aeb6; --white:#f4f2ee;
+  --molten:#ff4d1a; --ember:#ff7a1f; --glow:#ffb347;
+  --bar-h:68px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--steel-900);color:var(--white);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+/* every grid/flex child */
+.banner>*, .nav>*, .nav-links>*, .hero-grid>*, .hero-cta>*, .facts>*, .tiles>*, .why>*, .hours-grid>*, .hours-list>*, .visit>*, .visit-actions>*, .bar>*, .foot>*, .tile>*, .why-item>*, .row>*, .logo>*, .btn>*, .note>*, .ico>*, .eyebrow>*, .map>*, .card>*{min-width:0}
+.display{font-family:Anton,Impact,'Arial Narrow',sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;line-height:.92}
+.eyebrow{font:700 12px/1 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--molten),var(--glow));flex:none}
+
+/* banner */
+.banner{background:#000;color:var(--ash);font-size:12px;line-height:1.35;text-align:center;padding:7px 12px;border-bottom:1px solid var(--steel-700)}
+.banner b{color:var(--white);font-weight:600}
+@media(max-width:420px){.banner{font-size:10.5px;white-space:nowrap;padding:7px 6px;letter-spacing:-.01em}}
+@media(max-width:380px){.banner{font-size:9.8px}}
+
+/* nav */
+header{position:sticky;top:0;z-index:40;background:rgba(14,15,17,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:30px;height:30px;flex:none}
+.logo span{font-family:Anton,sans-serif;font-size:21px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.logo em{font-style:normal;color:var(--molten)}
+.nav-links{display:none;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ash);transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-call{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--molten);color:#140500!important;font-weight:700!important;font-size:14px;text-decoration:none;white-space:nowrap}
+@media(min-width:900px){.nav-links{display:flex}}
+.nav-call.m{display:inline-flex}
+@media(min-width:900px){.nav-call.m{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:44px 0 56px;background:
+  radial-gradient(120% 70% at 85% 105%,rgba(255,77,26,.40),transparent 60%),
+  radial-gradient(60% 40% at 10% 0%,rgba(255,122,31,.10),transparent 70%),
+  linear-gradient(180deg,var(--steel-900),var(--steel-800))}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:
+  repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 1px,transparent 1px 7px),
+  repeating-linear-gradient(25deg,rgba(0,0,0,.18) 0 2px,transparent 2px 11px)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+@media(min-width:900px){.hero{padding:90px 0 110px}.hero-grid{grid-template-columns:1.15fr .85fr;gap:40px}}
+.hero h1{font-size:clamp(54px,17.5vw,128px);margin:18px 0 18px}
+@media(min-width:900px){.hero h1{font-size:clamp(96px,8.6vw,128px)}}
+.hero h1 .hot{display:block;background:linear-gradient(180deg,var(--glow) 0%,var(--ember) 45%,var(--molten) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(255,77,26,.45))}
+.hero h1 .sm{display:block;font-size:.4em;white-space:nowrap;color:var(--ash);letter-spacing:.04em;margin-top:.25em}
+.lede{font-size:17px;color:#d6d3cd;max-width:34ch}
+.lede strong{color:var(--white)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .18s,box-shadow .25s,background .2s;-webkit-tap-highlight-color:transparent}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-hot{background:linear-gradient(180deg,var(--ember),var(--molten));color:#170600;box-shadow:0 8px 30px -8px rgba(255,77,26,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-hot:hover{transform:translateY(-2px);box-shadow:0 14px 40px -8px rgba(255,77,26,.9),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-steel{background:rgba(255,255,255,.04);border:1px solid var(--steel-600);color:var(--white)}
+.btn-steel:hover{border-color:var(--ember);background:rgba(255,122,31,.08)}
+.btn:active{transform:scale(.97)}
+@media(max-width:520px){.hero-cta .btn{flex:1 1 100%}}
+
+.art{position:relative;width:100%;max-width:440px;margin:0 auto;aspect-ratio:1/1}
+.art svg{width:100%;height:100%;overflow:visible}
+@media(max-width:899px){.art{max-width:300px;margin-top:-6px}}
+.spark{transform-origin:200px 214px;animation:fly 2.6s ease-out infinite}
+.spark:nth-child(2){animation-delay:.4s}.spark:nth-child(3){animation-delay:.9s}.spark:nth-child(4){animation-delay:1.3s}.spark:nth-child(5){animation-delay:1.8s}.spark:nth-child(6){animation-delay:2.2s}.spark:nth-child(7){animation-delay:.7s}.spark:nth-child(8){animation-delay:1.6s}
+@keyframes fly{0%{opacity:0;transform:translate(0,0) scale(.4)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1)}}
+.pour{animation:pour 2.4s ease-in-out infinite}
+@keyframes pour{0%,100%{opacity:.85}50%{opacity:1}}
+.heat{animation:heat 3.2s ease-in-out infinite}
+@keyframes heat{0%,100%{opacity:.55}50%{opacity:.95}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* fact strip */
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--steel-700);border-bottom:1px solid var(--steel-700);background:var(--steel-800)}
+.facts div{padding:18px 20px;border-right:1px solid var(--steel-700);border-bottom:1px solid var(--steel-700)}
+.facts div:nth-child(2n){border-right:0}
+.facts div:nth-last-child(-n+2){border-bottom:0}
+.facts small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel-400);font-weight:700;margin-bottom:4px}
+.facts p{font-weight:600;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+@media(min-width:900px){.facts{grid-template-columns:repeat(4,1fr);padding:0 max(0px,calc((100% - 1180px)/2 + 12px))}.facts div{border-bottom:0!important;border-right:1px solid var(--steel-700)!important;padding:24px 28px}.facts div:last-child{border-right:0!important}}
+
+section{padding:76px 0;position:relative}
+@media(min-width:900px){section{padding:120px 0}}
+.sec-head{max-width:720px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(44px,11vw,88px);margin:16px 0 14px}
+.sec-head h2 em{font-style:normal;color:var(--molten)}
+.sec-head p{color:var(--ash);font-size:16px;max-width:52ch}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:700px){.tiles{grid-template-columns:repeat(3,1fr);gap:18px}}
+.tile{position:relative;display:flex;flex-direction:column;gap:14px;padding:26px 24px 24px;border-radius:16px;background:linear-gradient(160deg,var(--steel-700),var(--steel-800));border:1px solid var(--steel-600);overflow:hidden;transition:transform .25s,border-color .25s}
+.tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,var(--molten),var(--glow),transparent);opacity:.0;transition:opacity .3s}
+.tile:hover{transform:translateY(-4px);border-color:rgba(255,122,31,.5)}
+.tile:hover::after{opacity:1}
+.tile .ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:rgba(255,77,26,.1);border:1px solid rgba(255,77,26,.3)}
+.tile .ico svg{width:30px;height:30px}
+.tile .num{position:absolute;top:16px;right:20px;font-family:Anton,sans-serif;font-size:44px;color:rgba(255,255,255,.05);line-height:1}
+.tile h3{font-family:Anton,sans-serif;font-weight:400;font-size:28px;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tile p{color:var(--ash);font-size:15px}
+.tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px;border-radius:6px;border:1px dashed var(--steel-400);color:var(--ash)}
+.note{margin-top:22px;font-size:14px;color:var(--ash);display:flex;gap:10px;align-items:flex-start;max-width:70ch}
+.note svg{width:18px;height:18px;flex:none;margin-top:3px}
+
+/* why */
+.why-sec{background:linear-gradient(180deg,var(--steel-800),var(--steel-900))}
+.why-sec::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;background:radial-gradient(50% 50% at 100% 0%,rgba(255,77,26,.18),transparent 70%)}
+.why{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--steel-700)}
+@media(min-width:800px){.why{grid-template-columns:1fr 1fr}}
+.why-item{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--steel-700)}
+@media(min-width:800px){.why-item{padding:32px 28px 32px 0}.why-item:nth-child(2n){padding-left:28px;border-left:1px solid var(--steel-700)}}
+.why-item svg{width:44px;height:44px}
+.why-item h3{font-size:19px;font-weight:700;margin-bottom:4px;line-height:1.3}
+.why-item p{color:var(--ash);font-size:15px;overflow-wrap:anywhere}
+.why-item a{color:var(--glow);text-decoration-color:rgba(255,179,71,.4);text-underline-offset:3px}
+.why-item a:hover{color:var(--white)}
+
+/* hours */
+.hours-grid{display:grid;grid-template-columns:1fr;gap:36px}
+@media(min-width:900px){.hours-grid{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}}
+.hours-list{display:flex;flex-direction:column;border:1px solid var(--steel-600);border-radius:16px;overflow:hidden;background:var(--steel-800)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 20px;border-bottom:1px solid var(--steel-700);font-size:15px;transition:background .2s}
+.row:last-child{border-bottom:0}
+.row .d{font-weight:600}
+.row .t{color:var(--ash);text-align:right}
+.row.today{background:linear-gradient(90deg,rgba(255,77,26,.22),rgba(255,77,26,.04));box-shadow:inset 3px 0 0 var(--molten)}
+.row.today .d::after{content:"Today";white-space:nowrap;margin-left:10px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:var(--molten);color:#160500;vertical-align:2px}
+.row.today .t{color:var(--white)}
+.hours-cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1.3fr;gap:28px;align-items:stretch}}
+.card{background:var(--steel-800);border:1px solid var(--steel-600);border-radius:18px;padding:28px 24px}
+.card h3{font-family:Anton,sans-serif;font-weight:400;font-size:34px;text-transform:uppercase;line-height:1;margin-bottom:16px}
+.addr{font-size:18px;font-weight:600;line-height:1.45;margin-bottom:6px}
+.card .muted{color:var(--ash);font-size:15px;overflow-wrap:anywhere}
+.visit-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.visit-actions .btn{width:100%}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--steel-600);min-height:320px;background:var(--steel-800);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+
+/* final */
+.final{text-align:center;padding:90px 0;overflow:hidden;background:radial-gradient(70% 90% at 50% 100%,rgba(255,77,26,.35),transparent 70%),var(--steel-900)}
+.final h2{font-size:clamp(52px,14vw,128px);margin:0 auto 18px;max-width:12ch}
+.final h2 span{color:var(--molten)}
+.final p{color:var(--ash);max-width:44ch;margin:0 auto 28px}
+.final .hero-cta{justify-content:center}
+
+footer{border-top:1px solid var(--steel-700);padding:34px 0 30px;background:#0a0b0c;font-size:13px;color:var(--steel-400)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 24px;align-items:center}
+.foot a{color:var(--ash);text-decoration:none}
+.foot a:hover{color:var(--white)}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,11,12,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--steel-700)}
+.bar .btn{min-height:48px;font-size:15px;padding:0 12px;border-radius:11px}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+.js .reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<div class="banner" role="note">Concept site by <b>Code Craft Media</b>, made for Crucible Fitness. Not live.</div>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="logo" aria-label="Crucible Fitness home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 8h20l-3 15a4 4 0 0 1-4 3h-6a4 4 0 0 1-4-3L6 8Z" stroke="#f4f2ee" stroke-width="2" stroke-linejoin="round"/><path d="M8.6 15h14.8l-1.6 7.6a2.5 2.5 0 0 1-2.5 2H12.7a2.5 2.5 0 0 1-2.5-2L8.6 15Z" fill="#ff4d1a"/><path d="M4 8h24" stroke="#f4f2ee" stroke-width="2" stroke-linecap="round"/><circle cx="21" cy="4" r="1.2" fill="#ffb347"/><circle cx="25" cy="2.6" r=".9" fill="#ff7a1f"/></svg>
+      <span>Crucible <em>Fitness</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#inside">Inside</a>
+      <a href="#why">Why Crucible</a>
+      <a href="#hours">Hours</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-call" href="tel:+18653564659">Call 865-356-4659</a>
+    </div>
+    <a class="nav-call m" href="tel:+18653564659" aria-label="Call Crucible Fitness">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Call
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Gym · Morristown, Tennessee</p>
+      <h1 id="h1" class="display">Forged
+        <span class="hot">in Morristown.</span>
+        <span class="sm">128 E Morris Blvd · Ste 3</span></h1>
+      <p class="lede"><strong>Crucible Fitness</strong> is a gym at 128 E Morris Blvd in Morristown. Call Shawn to come in and see the floor.</p>
+      <div class="hero-cta">
+        <a class="btn btn-hot" href="tel:+18653564659">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call 865-356-4659</a>
+        <a class="btn btn-steel" href="https://www.facebook.com/CrucibleFitness" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#ff7a1f" stop-opacity=".55"/><stop offset="1" stop-color="#ff4d1a" stop-opacity="0"/></radialGradient>
+          <linearGradient id="melt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset=".45" stop-color="#ff7a1f"/><stop offset="1" stop-color="#ff3b12"/></linearGradient>
+        </defs>
+        <circle class="heat" cx="200" cy="250" r="180" fill="url(#g1)"/>
+        <!-- crucible tipping -->
+        <g transform="rotate(30 150 120)">
+          <path d="M92 70h120l-14 92a20 20 0 0 1-20 17h-52a20 20 0 0 1-20-17L92 70Z" stroke="#f4f2ee" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M84 70h136" stroke="#f4f2ee" stroke-width="3" stroke-linecap="round"/>
+          <path d="M104 92h96M106 112h92" stroke="#5b616a" stroke-width="1.5" stroke-dasharray="3 5"/>
+          <path d="M212 70c6 0 10 2 12 6" stroke="#f4f2ee" stroke-width="3" stroke-linecap="round"/><path d="M108 104h88l-8 54a14 14 0 0 1-14 12h-44a14 14 0 0 1-14-12Z" fill="#ff4d1a" opacity=".22"/>
+        </g>
+        <!-- pour stream -->
+        <path class="pour" d="M238 112c4 30 -22 56 -34 94" stroke="url(#melt)" stroke-width="7" stroke-linecap="round"/>
+        <!-- sparks from strike point -->
+        <g>
+          <circle class="spark" style="--dx:-70px;--dy:-60px" cx="200" cy="214" r="3" fill="#ffb347"/>
+          <circle class="spark" style="--dx:80px;--dy:-70px" cx="200" cy="214" r="2.5" fill="#ff7a1f"/>
+          <circle class="spark" style="--dx:110px;--dy:-20px" cx="200" cy="214" r="2" fill="#ffd27a"/>
+          <circle class="spark" style="--dx:-110px;--dy:-10px" cx="200" cy="214" r="2.5" fill="#ff7a1f"/>
+          <circle class="spark" style="--dx:40px;--dy:-110px" cx="200" cy="214" r="2" fill="#ffb347"/>
+          <circle class="spark" style="--dx:-30px;--dy:-115px" cx="200" cy="214" r="2" fill="#ffd27a"/>
+          <circle class="spark" style="--dx:130px;--dy:-60px" cx="200" cy="214" r="1.6" fill="#ff4d1a"/>
+          <circle class="spark" style="--dx:-130px;--dy:-55px" cx="200" cy="214" r="1.6" fill="#ffb347"/>
+        </g>
+        <!-- glowing bar on anvil -->
+        <rect x="150" y="208" width="100" height="10" rx="3" fill="url(#melt)"/>
+        <rect x="150" y="208" width="100" height="10" rx="3" fill="#ff7a1f" opacity=".5" filter="blur(4px)" style="filter:blur(6px)"/>
+        <!-- anvil line art -->
+        <path d="M66 220h220c0 0 34 0 54-14v14c-14 14-40 22-62 24l-26 2c-10 1-16 8-16 18v16h-110v-16c0-10-6-17-16-18l-18-2c-14-2-26-12-26-24Z" stroke="#f4f2ee" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M128 280h-18c-8 0-14 6-14 14v8h188v-8c0-8-6-14-14-14h-18" stroke="#f4f2ee" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M80 318h240" stroke="#5b616a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M100 232h150" stroke="#5b616a" stroke-width="1.5" stroke-dasharray="2 6"/>
+        <!-- barbell plate hint -->
+        <g transform="translate(316 120)">
+          <circle r="34" stroke="#5b616a" stroke-width="2"/><circle r="24" stroke="#5b616a" stroke-width="1.5" stroke-dasharray="4 4"/><circle r="6" stroke="#f4f2ee" stroke-width="2"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="facts" role="list">
+  <div role="listitem"><small>Where</small><p>E Morris Blvd, Morristown</p></div>
+  <div role="listitem"><small>Owner</small><p>Shawn Meinke</p></div>
+  <div role="listitem"><small>Chamber</small><p>Member since June 2026</p></div>
+  <div role="listitem"><small>Call</small><p><a href="tel:+18653564659" style="text-decoration:none">865-356-4659</a></p></div>
+</div>
+
+<section id="inside" aria-labelledby="inside-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What's inside</p>
+      <h2 id="inside-h" class="display">Built for <em>the work.</em></h2>
+      <p>This is where Crucible's real program list goes. The tiles below are layout samples only — they show how your offerings would look once you send them over.</p>
+    </div>
+    <div class="tiles">
+      <article class="tile reveal">
+        <span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linecap="round"><path d="M3 16h26"/><rect x="6" y="9" width="4" height="14" rx="1"/><rect x="22" y="9" width="4" height="14" rx="1"/><path d="M3 12v8M29 12v8"/></svg></div>
+        <span class="tag">Sample tile</span>
+        <h3>Program one</h3>
+        <p>Your first program, in your words — what it is and who it's for.</p>
+      </article>
+      <article class="tile reveal">
+        <span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 7 18h8l-2 11 12-16h-8l0-10Z"/></svg></div>
+        <span class="tag">Sample tile</span>
+        <h3>Program two</h3>
+        <p>A second offering — schedule, format and how to get started.</p>
+      </article>
+      <article class="tile reveal">
+        <span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="10" r="5"/><path d="M6 28c0-6 4.5-10 10-10s10 4 10 10"/></svg></div>
+        <span class="tag">Sample tile</span>
+        <h3>Program three</h3>
+        <p>Room for coaching, memberships or anything else you offer.</p>
+      </article>
+    </div>
+    <p class="note reveal"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb347" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5"/></svg>Programs, pricing and class times aren't published online yet, so they're left blank here rather than guessed. Call 865-356-4659 for current details.</p>
+  </div>
+</section>
+
+<section id="why" class="why-sec" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Why Crucible</p>
+      <h2 id="why-h" class="display">Local. <em>Morristown.</em> Shawn&rsquo;s gym.</h2>
+    </div>
+    <div class="why">
+      <div class="why-item reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linejoin="round"><path d="M22 40s14-11 14-23a14 14 0 0 0-28 0c0 12 14 23 14 23Z"/><circle cx="22" cy="17" r="5"/></svg>
+        <div><h3>Right on E Morris Blvd</h3><p>128 E Morris Blvd, Suite 3, Morristown, TN.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linecap="round"><circle cx="22" cy="14" r="7"/><path d="M8 40c0-8 6-14 14-14s14 6 14 14"/></svg>
+        <div><h3>Shawn Meinke, owner</h3><p>Listed as Crucible's owner with the Morristown Area Chamber. You know who you're calling.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linejoin="round"><path d="M6 38V18l16-12 16 12v20Z"/><path d="M17 38V26h10v12"/></svg>
+        <div><h3>Morristown Area Chamber member</h3><p>Joined in June 2026, listed under Fitness/Wellness and Gyms.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="#ff7a1f" stroke-width="2" stroke-linejoin="round"><rect x="5" y="10" width="34" height="24" rx="3"/><path d="m6 12 16 12 16-12"/></svg>
+        <div><h3>Easy to reach</h3><p>Call <a href="tel:+18653564659">865-356-4659</a>, email <a href="mailto:cruciblefitnessmt@gmail.com">cruciblefitnessmt@gmail.com</a> or find <a href="https://www.facebook.com/CrucibleFitness" target="_blank" rel="noopener">Crucible on Facebook</a>.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" aria-labelledby="hours-h">
+  <div class="wrap hours-grid">
+    <div class="sec-head reveal" style="margin-bottom:0">
+      <p class="eyebrow">Hours</p>
+      <h2 id="hours-h" class="display">When the <em>fire's</em> lit.</h2>
+      <p>Crucible's hours aren't posted online yet. Give the gym a call before you head over.</p>
+      <div class="hours-cta"><a class="btn btn-hot" href="tel:+18653564659">Call for today's hours</a></div>
+    </div>
+    <div class="hours-list reveal" id="hoursList">
+      <div class="row" data-day="1"><span class="d">Monday</span><span class="t">Call to confirm</span></div>
+      <div class="row" data-day="2"><span class="d">Tuesday</span><span class="t">Call to confirm</span></div>
+      <div class="row" data-day="3"><span class="d">Wednesday</span><span class="t">Call to confirm</span></div>
+      <div class="row" data-day="4"><span class="d">Thursday</span><span class="t">Call to confirm</span></div>
+      <div class="row" data-day="5"><span class="d">Friday</span><span class="t">Call to confirm</span></div>
+      <div class="row" data-day="6"><span class="d">Saturday</span><span class="t">Call to confirm</span></div>
+      <div class="row" data-day="0"><span class="d">Sunday</span><span class="t">Call to confirm</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="why-sec" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Visit</p>
+      <h2 id="visit-h" class="display">Find <em>the forge.</em></h2>
+    </div>
+    <div class="visit">
+      <div class="card reveal">
+        <h3>Crucible Fitness</h3>
+        <p class="addr">128 E Morris Blvd, Ste 3<br>Morristown, TN</p>
+        <p class="muted">cruciblefitnessmt@gmail.com</p>
+        <div class="visit-actions">
+          <a class="btn btn-hot" href="tel:+18653564659">Call 865-356-4659</a>
+          <a class="btn btn-steel" href="https://www.google.com/maps/dir/?api=1&amp;destination=128%20E%20Morris%20Blvd%20Ste%203%2C%20Morristown%2C%20TN" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Crucible Fitness, 128 E Morris Blvd, Morristown TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=128%20E%20Morris%20Blvd%2C%20Morristown%2C%20TN&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h" class="display reveal">Step into <span>the crucible.</span></h2>
+    <p class="reveal">One call gets you hours, programs and a look at the gym.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-hot" href="tel:+18653564659">Call 865-356-4659</a>
+      <a class="btn btn-steel" href="mailto:cruciblefitnessmt@gmail.com">Email the gym</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© Crucible Fitness · 128 E Morris Blvd, Ste 3, Morristown, TN</span>
+    <span>Concept by <a href="#top">Code Craft Media</a></span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="btn btn-hot" href="tel:+18653564659">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+    Call</a>
+  <a class="btn btn-steel" href="https://www.facebook.com/CrucibleFitness" target="_blank" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var today=new Date().getDay();
+  var r=document.querySelector('#hoursList .row[data-day="'+today+'"]'); if(r) r.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in');e.classList.remove('pre')});}
+  if(!('IntersectionObserver' in window)){showAll();return;}
+  var vh=window.innerHeight;
+  els.forEach(function(e){ if(e.getBoundingClientRect().top>vh*0.92) e.classList.add('pre'); });
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');x.target.classList.remove('pre');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

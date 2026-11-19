@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Pretty Blue Co. — Morristown</title>
+<meta name="description" content="Pretty Blue Co. — boutique, screen printing and promotional products at 2351 E Morris Blvd, Morristown, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cornflower:#6f8fe0;
+  --cornflower-soft:#a9bdf0;
+  --sky:#e8eefc;
+  --navy:#16244f;
+  --navy-2:#22346b;
+  --ink:#121b3a;
+  --blush:#f3c6c9;
+  --blush-deep:#e39aa2;
+  --cream:#fbf8f4;
+  --muted:#4a5577;
+  --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:'Outfit', system-ui, -apple-system, Segoe UI, sans-serif;
+  --bar-h:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--blush-deep);outline-offset:3px;border-radius:6px}
+
+/* patterns */
+.gingham{
+  background-color:#f7f9ff;
+  background-image:
+    linear-gradient(90deg, rgba(111,143,224,.42) 50%, transparent 50%),
+    linear-gradient(rgba(111,143,224,.42) 50%, transparent 50%);
+  background-size:28px 28px;
+}
+.halftone{
+  background-color:var(--navy);
+  background-image:radial-gradient(circle, rgba(169,189,240,.30) 1.6px, transparent 2px);
+  background-size:11px 11px;
+}
+
+/* banner */
+.concept{background:var(--ink);color:#cfd8f5;font-size:clamp(9.5px,2.75vw,12px);letter-spacing:0;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:var(--blush);font-weight:600}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(251,248,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(22,36,79,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.top .wrap>*{min-width:0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.logo>*{min-width:0}
+.logo .mark{width:34px;height:34px;flex:0 0 34px}
+.logo span{font-family:var(--serif);font-style:italic;font-weight:700;font-size:22px;white-space:nowrap}
+.logo span em{font-style:normal;color:var(--cornflower)}
+nav.links{display:none;gap:26px;font-size:15px;font-weight:500}
+nav.links a{text-decoration:none;color:var(--navy);position:relative}
+nav.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--blush-deep);transition:right .25s}
+nav.links a:hover::after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 22px;transition:transform .18s, box-shadow .18s, background .18s;border:2px solid transparent;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:0 0 18px}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 6px 0 var(--cornflower)}
+.btn-navy:hover{box-shadow:0 8px 0 var(--cornflower)}
+.btn-blush{background:var(--blush);color:var(--navy);box-shadow:0 6px 0 var(--navy)}
+.btn-blush:hover{box-shadow:0 8px 0 var(--navy)}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.top .btn{padding:9px 16px;font-size:14px;box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:36px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
+.hero-grid>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--navy-2);background:var(--sky);border:1px solid rgba(111,143,224,.35);padding:6px 12px;border-radius:999px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--blush-deep);display:block;flex:0 0 8px}
+.hero h1{font-size:clamp(42px, 12vw, 86px);font-weight:800;color:var(--navy);margin:18px 0 16px}
+.hero h1 .script{font-style:italic;font-weight:500;color:var(--cornflower);display:block}
+.hero h1 .amp{font-style:italic;color:var(--blush-deep);font-weight:500}
+.hero .sub{font-size:18px;color:var(--muted);max-width:34ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:16px 12px;margin-top:26px}
+.hero .ctas>*{min-width:0}
+.hero .addr{margin-top:22px;font-size:14.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.hero .addr>*{min-width:0}
+.hero .addr svg{width:16px;height:16px;flex:0 0 16px;color:var(--cornflower)}
+
+/* split art */
+.split{display:grid;grid-template-columns:1fr 1fr;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(22,36,79,.55);border:3px solid var(--navy);position:relative;min-height:340px}
+.split>*{min-width:0}
+.split .side{position:relative;padding:20px 16px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.split .side>*{min-width:0}
+.split .label{font-family:var(--serif);font-weight:700;font-size:clamp(20px,5.6vw,30px);line-height:1.05}
+.split .tag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.side.bou{color:var(--navy)}
+.side.bou .label{font-style:italic}
+.side.bou .tag{color:var(--navy-2)}
+.side.prt{color:#fff}
+.side.prt .tag{color:var(--blush)}
+.side svg.art{width:100%;height:auto;max-height:190px;margin:0 auto}
+.seal{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);width:96px;height:96px;z-index:3;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.split .side .label{max-width:9ch}
+.float{animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+
+/* marquee */
+.ribbon{background:var(--navy);color:#fff;overflow:hidden;border-block:3px solid var(--cornflower)}
+.ribbon .track{display:flex;gap:34px;width:max-content;padding:13px 0;animation:marq 28s linear infinite;font-family:var(--serif);font-style:italic;font-size:20px}
+.ribbon .track span{display:flex;align-items:center;gap:34px;white-space:nowrap}
+.ribbon .track span::after{content:"✦";font-style:normal;color:var(--blush);font-size:14px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:72px 0}
+.kicker{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cornflower)}
+.sec-title{font-size:clamp(34px,8.4vw,56px);color:var(--navy);margin:10px 0 14px;font-weight:700}
+.sec-title em{color:var(--cornflower);font-weight:500}
+.lead{color:var(--muted);max-width:56ch}
+
+.cards{display:grid;grid-template-columns:1fr;gap:20px;margin-top:36px}
+.cards>*{min-width:0}
+.card{position:relative;background:#fff;border:2px solid var(--navy);border-radius:22px;padding:26px 22px 24px;box-shadow:8px 8px 0 var(--cornflower-soft);transition:transform .22s, box-shadow .22s;overflow:hidden}
+.card:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--cornflower)}
+.card .ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;margin-bottom:18px;border:2px solid var(--navy)}
+.card .ic>*{min-width:0}
+.card .ic svg{width:36px;height:36px}
+.card:nth-child(1) .ic{background:var(--blush)}
+.card:nth-child(2) .ic{background:var(--cornflower-soft)}
+.card:nth-child(3) .ic{background:var(--sky)}
+.card h3{font-size:28px;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted)}
+.card .more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--blush-deep);padding-bottom:2px}
+.card .more:hover{color:var(--cornflower)}
+.card .num{position:absolute;right:18px;top:12px;font-family:var(--serif);font-style:italic;font-size:46px;color:rgba(111,143,224,.22);font-weight:700}
+.note{margin-top:24px;font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.note>*{min-width:0}
+.note svg{width:18px;height:18px;flex:0 0 18px;margin-top:3px;color:var(--blush-deep)}
+
+/* quote band */
+.band{position:relative;color:#fff;overflow:hidden}
+.band .wrap{position:relative;z-index:1}
+.band-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+.band-grid>*{min-width:0}
+.band h2{font-size:clamp(34px,8.6vw,58px);font-weight:700}
+.band h2 em{color:var(--blush);font-weight:500}
+.band p{color:#d5def8;margin-top:14px;max-width:46ch}
+.band .ctas{display:flex;flex-wrap:wrap;gap:16px 12px;margin-top:26px}
+.band .ctas>*{min-width:0}
+.band .btn-ghost{color:#fff;border-color:#fff}
+.band .btn-ghost:hover{background:#fff;color:var(--navy)}
+.band .mail{word-break:break-all}
+.screen-art{max-width:420px;width:100%;margin:0 auto}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
+.why-grid>*{min-width:0}
+.why{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:18px;background:#fff;border:1px solid rgba(22,36,79,.12);transition:border-color .2s, transform .2s}
+.why>*{min-width:0}
+.why:hover{border-color:var(--cornflower);transform:translateY(-2px)}
+.why .dot{flex:0 0 46px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--sky);color:var(--navy);font-family:var(--serif);font-weight:700;font-style:italic;font-size:20px}
+.why h3{font-family:var(--sans);font-size:18px;font-weight:600;color:var(--navy);margin-bottom:4px;line-height:1.3}
+.why p{color:var(--muted);font-size:16px}
+
+/* visit */
+.visit{background:var(--sky)}
+.visit-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:34px}
+.visit-grid>*{min-width:0}
+.panel{background:#fff;border:2px solid var(--navy);border-radius:22px;padding:24px 20px;overflow:hidden}
+.panel h3{font-size:26px;color:var(--navy);margin-bottom:6px}
+.hours{list-style:none;margin:14px 0 0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:12px;font-size:16px;color:var(--muted)}
+.hours li>*{min-width:0}
+.hours li+li{border-top:1px dashed rgba(22,36,79,.14)}
+.hours li.today{background:var(--blush);color:var(--navy);font-weight:600;border-top-color:transparent}
+.hours li.today+li{border-top-color:transparent}
+.hours li.today .d::after{content:"Today";margin-left:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--navy);color:#fff;padding:2px 7px;border-radius:999px;vertical-align:2px}
+.hours .t{text-align:right;white-space:nowrap}
+.hours .d{white-space:nowrap}
+.small{font-size:14px;color:var(--muted);margin-top:14px}
+.contact-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px}
+.contact-list>*{min-width:0}
+.contact-list a{display:flex;gap:12px;align-items:center;text-decoration:none;padding:14px;border-radius:14px;border:1px solid rgba(22,36,79,.14);transition:background .2s,border-color .2s}
+.contact-list a>*{min-width:0}
+.contact-list a:hover{background:var(--sky);border-color:var(--cornflower)}
+.contact-list .ci{flex:0 0 40px;width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.contact-list .ci svg{width:20px;height:20px}
+.contact-list b{display:block;color:var(--navy);font-size:16px}
+.contact-list span{display:block;font-size:14.5px;color:var(--muted);overflow-wrap:anywhere}
+.map{border-radius:22px;overflow:hidden;border:2px solid var(--navy);min-height:320px;position:relative;background-color:#eef2fd;background-image:linear-gradient(90deg,rgba(111,143,224,.22) 50%,transparent 50%),linear-gradient(rgba(111,143,224,.22) 50%,transparent 50%);background-size:28px 28px}
+.map .pin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px;color:var(--navy);font-weight:600}
+.map .pin>*{min-width:0}
+.map .pin svg{width:44px;height:44px}
+.map iframe{position:relative;z-index:1}
+.map iframe{display:block;width:100%;height:100%;min-height:320px;border:0}
+
+/* footer */
+footer{background:var(--ink);color:#b9c4e6;padding:48px 0 36px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:22px}
+.foot-grid>*{min-width:0}
+footer .logo{color:#fff}
+footer .logo span em{color:var(--cornflower-soft)}
+footer a{color:#fff}
+footer .fine{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;font-size:13px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+footer .fine>*{min-width:0}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(18,27,58,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:2px solid var(--cornflower)}
+.callbar>*{min-width:0}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:14px;font-weight:600;text-decoration:none;font-size:16px}
+.callbar a svg{width:18px;height:18px;flex:0 0 18px}
+.callbar .c1{background:var(--blush);color:var(--navy)}
+.callbar .c2{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+footer{padding-bottom:calc(108px + env(safe-area-inset-bottom))}
+
+/* reveal: visible by default; JS adds .rv then .in */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width:380px){
+  .logo span{font-size:19px}
+  .top .btn{padding:8px 13px}
+  .btn{padding:13px 18px;font-size:15px}
+  .split .side{padding:16px 12px}
+  .seal{width:80px;height:80px}
+  .eyebrow{letter-spacing:.08em;font-size:11.5px}
+  .hours li{padding:11px 8px}
+  .hours li.today .d::after{margin-left:6px;font-size:10px;padding:2px 6px}
+}
+@media (min-width:760px){
+  .wrap{padding:0 32px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .visit-grid{grid-template-columns:1fr 1fr}
+  .visit-grid .map{grid-column:1 / -1}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (min-width:1000px){
+  nav.links{display:flex}
+  .hero{padding:64px 0 88px}
+  .hero-grid{grid-template-columns:1.1fr 1fr;gap:56px}
+  .hero h1{font-size:clamp(56px,4.6vw,68px)}
+  .split{min-height:560px}
+  .side svg.art{max-height:260px}
+  .split .side{padding:28px 24px}
+  .seal{width:120px;height:120px}
+  .band-grid{grid-template-columns:1.1fr .9fr}
+  .visit-grid{grid-template-columns:1fr 1fr 1.3fr}
+  .visit-grid .map{grid-column:auto}
+  section{padding:100px 0}
+  .callbar{display:none}
+  footer{padding-bottom:36px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept" role="note">Concept site by Code Craft Media, made for <b>Pretty Blue Co.</b> Not live.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Pretty Blue Co. home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#6f8fe0" stroke="#16244f" stroke-width="2"/>
+        <path d="M20 29s-9-5.5-9-11.5A5 5 0 0 1 20 15a5 5 0 0 1 9 2.5C29 23.5 20 29 20 29z" fill="#f3c6c9" stroke="#16244f" stroke-width="1.8"/>
+      </svg>
+      <span>Pretty Blue <em>Co.</em></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#shop">Boutique &amp; Print</a>
+      <a href="#why">Why Pretty Blue</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-navy" href="tel:+14232540099">Call us</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-grid">
+      <div class="rv">
+        <span class="eyebrow"><i></i>Boutique · Screen Printing · Promo</span>
+        <h1 id="h1">Boutique finds <span class="amp">&amp;</span> custom prints <span class="script">in one pretty blue shop.</span></h1>
+        <p class="sub">Pretty Blue Co. is a boutique, screen printer and promotional products shop on E Morris Blvd in Morristown.</p>
+        <div class="ctas">
+          <a class="btn btn-navy" href="tel:+14232540099">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call 423-254-0099</a>
+          <a class="btn btn-blush" href="mailto:prettyblueco@gmail.com?subject=Custom%20printing%20quote">Ask for a quote</a>
+        </div>
+        <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>2351 E Morris Blvd, Morristown, TN 37813</span></p>
+      </div>
+
+      <div class="split rv" aria-label="Two sides of Pretty Blue Co.: boutique, and custom printing and promo">
+        <div class="side bou gingham">
+          <div><div class="tag">Side A</div><div class="label">Boutique</div></div>
+          <svg class="art float" viewBox="0 0 160 170" aria-hidden="true">
+            <!-- shopping bag with bow -->
+            <path d="M30 58h100l-8 100H38z" fill="#fff" stroke="#16244f" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M30 58h100l-2 22H32z" fill="#f3c6c9" stroke="#16244f" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M58 58V44a22 22 0 0 1 44 0v14" fill="none" stroke="#16244f" stroke-width="4" stroke-linecap="round"/>
+            <path d="M80 104c-8-12-26-12-24 0 2 10 24 4 24 0zm0 0c8-12 26-12 24 0-2 10-24 4-24 0z" fill="#6f8fe0" stroke="#16244f" stroke-width="3.5" stroke-linejoin="round"/>
+            <path d="M76 106l-8 22M84 106l8 22" stroke="#16244f" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="80" cy="104" r="5" fill="#16244f"/>
+            <path d="M126 30l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#e39aa2"/>
+            <path d="M24 26l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#16244f"/>
+          </svg>
+        </div>
+        <div class="side prt halftone">
+          <div><div class="tag">Side B</div><div class="label">Custom Printing &amp; Promo</div></div>
+          <svg class="art float" style="animation-delay:-2.5s" viewBox="0 0 160 170" aria-hidden="true">
+            <defs>
+              <pattern id="ht" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="2.1" fill="#e39aa2"/></pattern>
+            </defs>
+            <!-- tee -->
+            <path d="M52 30l-30 16 12 26 14-6v86h64V66l14 6 12-26-30-16c-4 10-14 16-28 16S56 40 52 30z" fill="#fff" stroke="#a9bdf0" stroke-width="4" stroke-linejoin="round"/>
+            <circle cx="80" cy="96" r="24" fill="url(#ht)"/>
+            <circle cx="80" cy="96" r="24" fill="none" stroke="#16244f" stroke-width="3"/>
+            <path d="M80 108s-12-7-12-15a6.5 6.5 0 0 1 12-3 6.5 6.5 0 0 1 12 3c0 8-12 15-12 15z" fill="#6f8fe0" stroke="#16244f" stroke-width="2.5"/>
+            <!-- squeegee -->
+            <g transform="rotate(-18 120 140)">
+              <rect x="92" y="132" width="60" height="12" rx="3" fill="#f3c6c9" stroke="#16244f" stroke-width="3"/>
+              <rect x="94" y="144" width="56" height="6" fill="#16244f"/>
+            </g>
+          </svg>
+        </div>
+        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circ" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs>
+          <circle cx="60" cy="60" r="56" fill="#fbf8f4" stroke="#16244f" stroke-width="3"/>
+          <circle cx="60" cy="60" r="30" fill="#f3c6c9" stroke="#16244f" stroke-width="2.5"/>
+          <text font-family="Outfit, sans-serif" font-size="11.5" font-weight="600" letter-spacing="3.4" fill="#16244f"><textPath href="#circ">PRETTY BLUE CO. ✦ MORRISTOWN TN ✦</textPath></text>
+          <text x="60" y="68" text-anchor="middle" font-family="Playfair Display, serif" font-style="italic" font-weight="700" font-size="24" fill="#16244f">PB</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="track">
+      <span>Boutique</span><span>Screen Printing</span><span>Promotional Products</span><span>E Morris Blvd, Morristown</span>
+      <span>Boutique</span><span>Screen Printing</span><span>Promotional Products</span><span>E Morris Blvd, Morristown</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="shop" aria-labelledby="shop-t">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">What we do</div>
+        <h2 class="sec-title" id="shop-t">Shop the boutique. <em>Print your brand.</em></h2>
+        <p class="lead">Three sides of one Morristown shop — come in to browse, or call about a custom order for your business, team or event.</p>
+      </div>
+      <div class="cards">
+        <article class="card rv">
+          <span class="num" aria-hidden="true">01</span>
+          <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#16244f" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h24l-2 20H10z" fill="#fff"/><path d="M14 14v-3a6 6 0 0 1 12 0v3" stroke-linecap="round"/></svg></div>
+          <h3>Boutique</h3>
+          <p>A boutique you can browse in person at 2351 E Morris Blvd. Call ahead to ask what’s in store right now.</p>
+          <a class="more" href="tel:+14232540099">Call the shop →</a>
+        </article>
+        <article class="card rv">
+          <span class="num" aria-hidden="true">02</span>
+          <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#16244f" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="8" width="28" height="20" rx="2" fill="#fff"/><path d="M11 13h18v10H11z" fill="#f3c6c9"/><path d="M10 33h20" stroke-linecap="round"/></svg></div>
+          <h3>Screen Printing</h3>
+          <p>Custom screen printing done locally. Tell us your design, quantity and deadline, and we’ll talk it through.</p>
+          <a class="more" href="mailto:prettyblueco@gmail.com?subject=Screen%20printing%20quote">Email a quote request →</a>
+        </article>
+        <article class="card rv">
+          <span class="num" aria-hidden="true">03</span>
+          <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#16244f" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 6l4 8 9 1.3-6.5 6.3 1.5 9L20 26.4 12 30.6l1.5-9L7 15.3 16 14z" fill="#fff"/></svg></div>
+          <h3>Promotional Products</h3>
+          <p>Branded promotional products to put your business name out in Morristown and beyond. Ask what we can make for you.</p>
+          <a class="more" href="mailto:prettyblueco@gmail.com?subject=Promotional%20products">Ask about promo →</a>
+        </article>
+      </div>
+      <p class="note rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg><span>Pricing depends on your project — call 423-254-0099 or email prettyblueco@gmail.com for a quote.</span></p>
+    </div>
+  </section>
+
+  <!-- QUOTE BAND -->
+  <section class="band halftone" aria-labelledby="band-t">
+    <div class="wrap band-grid">
+      <div class="rv">
+        <div class="kicker" style="color:var(--blush)">Custom orders</div>
+        <h2 id="band-t">Got a logo, a team or an event? <em>Let’s put it in ink.</em></h2>
+        <p>Reach Pretty Blue Co. by phone or email to start a screen printing or promotional products order.</p>
+        <div class="ctas">
+          <a class="btn btn-blush" href="tel:+14232540099">Call 423-254-0099</a>
+          <a class="btn btn-ghost mail" href="mailto:prettyblueco@gmail.com">prettyblueco@gmail.com</a>
+        </div>
+      </div>
+      <svg class="screen-art rv" viewBox="0 0 420 300" aria-hidden="true">
+        <defs>
+          <pattern id="ht2" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="3.2" fill="#6f8fe0"/></pattern>
+          <pattern id="ht3" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2" fill="#f3c6c9"/></pattern>
+          <pattern id="gg" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#fff"/><rect width="10" height="20" fill="#cbd7f6"/><rect width="20" height="10" fill="#cbd7f6" opacity=".8"/><rect width="10" height="10" fill="#a9bdf0"/></pattern>
+        </defs>
+        <!-- screen frame -->
+        <rect x="40" y="30" width="340" height="220" rx="10" fill="#e8c27a" stroke="#fbf8f4" stroke-width="5"/>
+        <rect x="62" y="52" width="296" height="176" fill="url(#gg)" stroke="#16244f" stroke-width="3"/>
+        <circle cx="210" cy="140" r="70" fill="url(#ht2)"/>
+        <circle cx="236" cy="120" r="52" fill="url(#ht3)"/>
+        <text x="210" y="152" text-anchor="middle" font-family="Playfair Display, serif" font-style="italic" font-weight="700" font-size="38" fill="#16244f">Pretty Blue</text>
+        <!-- squeegee pulling ink -->
+        <g class="float">
+          <rect x="70" y="236" width="280" height="20" rx="5" fill="#f3c6c9" stroke="#fbf8f4" stroke-width="4"/>
+          <rect x="78" y="256" width="264" height="10" fill="#fbf8f4"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" aria-labelledby="why-t">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">Why Pretty Blue</div>
+        <h2 class="sec-title" id="why-t">One stop, <em>two kinds of pretty.</em></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why rv"><div class="dot">1</div><div><h3>Boutique and print shop under one roof</h3><p>Browse the boutique and order custom printing or promo items in the same visit.</p></div></div>
+        <div class="why rv"><div class="dot">2</div><div><h3>Local to Morristown</h3><p>Right on E Morris Blvd, so you can stop in or call and talk your order through.</p></div></div>
+        <div class="why rv"><div class="dot">3</div><div><h3>Owned by Christina Evans</h3><p>A Morristown business with a name and a face behind it.</p></div></div>
+        <div class="why rv"><div class="dot">4</div><div><h3>New on the block</h3><p>Celebrated a ribbon cutting at 2351 E Morris Blvd on February 20, 2026.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" class="visit" aria-labelledby="visit-t">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kicker">Come see us</div>
+        <h2 class="sec-title" id="visit-t">Visit the shop <em>on E Morris Blvd.</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="panel rv">
+          <h3>Hours</h3>
+          <p class="small" style="margin-top:0">Hours aren’t published yet — please call before you come.</p>
+          <ul class="hours" id="hours">
+            <li data-d="1"><span class="d">Monday</span><span class="t">Call to confirm</span></li>
+            <li data-d="2"><span class="d">Tuesday</span><span class="t">Call to confirm</span></li>
+            <li data-d="3"><span class="d">Wednesday</span><span class="t">Call to confirm</span></li>
+            <li data-d="4"><span class="d">Thursday</span><span class="t">Call to confirm</span></li>
+            <li data-d="5"><span class="d">Friday</span><span class="t">Call to confirm</span></li>
+            <li data-d="6"><span class="d">Saturday</span><span class="t">Call to confirm</span></li>
+            <li data-d="0"><span class="d">Sunday</span><span class="t">Call to confirm</span></li>
+          </ul>
+        </div>
+        <div class="panel rv">
+          <h3>Get in touch</h3>
+          <ul class="contact-list">
+            <li><a href="tel:+14232540099"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>Call</b><span>423-254-0099</span></span></a></li>
+            <li><a href="mailto:prettyblueco@gmail.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><b>Email</b><span>prettyblueco@gmail.com</span></span></a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=2351+E+Morris+Blvd,+Morristown,+TN+37813" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><b>Directions</b><span>2351 E Morris Blvd, Morristown, TN 37813</span></span></a></li>
+          </ul>
+        </div>
+        <div class="map rv">
+          <div class="pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#f3c6c9" stroke="#16244f" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="#fff"/></svg><span>2351 E Morris Blvd<br>Morristown, TN 37813</span></div>
+          <iframe title="Map to Pretty Blue Co., 2351 E Morris Blvd, Morristown, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2351%20E%20Morris%20Blvd%2C%20Morristown%2C%20TN%2037813&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#6f8fe0" stroke="#fff" stroke-width="2"/><path d="M20 29s-9-5.5-9-11.5A5 5 0 0 1 20 15a5 5 0 0 1 9 2.5C29 23.5 20 29 20 29z" fill="#f3c6c9" stroke="#16244f" stroke-width="1.8"/></svg><span>Pretty Blue <em>Co.</em></span></a>
+        <p style="margin-top:12px">Boutique · Screen Printing · Promotional Products</p>
+      </div>
+      <div><p>2351 E Morris Blvd<br>Morristown, TN 37813</p></div>
+      <div><p><a href="tel:+14232540099">423-254-0099</a><br><a href="mailto:prettyblueco@gmail.com" style="overflow-wrap:anywhere">prettyblueco@gmail.com</a></p></div>
+    </div>
+    <div class="fine"><span>© Pretty Blue Co.</span><span>Concept by Code Craft Media</span></div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c1" href="tel:+14232540099"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
+  <a class="c2" href="mailto:prettyblueco@gmail.com?subject=Quote%20request"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Get a quote</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]');
+  if(li) li.classList.add('today');
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if(!('IntersectionObserver' in window)){showAll();return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

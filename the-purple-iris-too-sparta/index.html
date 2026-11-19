@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Purple Iris Too — Sparta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--iris:#5b2a86;--iris-d:#3a1859;--lav:#b79ad6;--lav-l:#ece2f6;--leaf:#4f7a3a;--leaf-d:#35562a;--linen:#f6f0e6;--linen-d:#ebe2d2;--ink:#2a1f33;--muted:#5e5468}
+*{box-sizing:border-box;margin:0;padding:0}
+*>*{min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Lato,system-ui,sans-serif;color:var(--ink);background:var(--linen);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.08}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--iris-d);color:#e9dcf7;font-size:clamp(9.5px,2.9vw,12px);text-align:center;padding:7px 8px;white-space:nowrap}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;max-width:1120px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"DM Serif Display",serif;font-size:21px;color:var(--iris-d)}
+.logo svg{flex:none}
+.nav-links{display:none;gap:26px;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+.nav-links a{text-decoration:none;color:var(--muted)}.nav-links a:hover{color:var(--iris)}
+@media(min-width:900px){.nav-links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:900;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(58,24,89,.6)}
+.btn-p{background:var(--iris);color:#fff}.btn-p:hover{background:var(--iris-d)}
+.btn-g{background:transparent;color:var(--iris-d);border:2px solid var(--iris)}
+.btn-l{background:var(--leaf);color:#fff}.btn-l:hover{background:var(--leaf-d)}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:28px 0 64px}
+.hero-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:40px;padding-top:30px}}
+.eyebrow{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf-d);background:#e3ecd9;padding:6px 12px;border-radius:4px;margin-bottom:18px}
+.hero h1{font-size:clamp(40px,11vw,84px);color:var(--iris-d);letter-spacing:-.01em}
+.hero h1 em{color:var(--leaf);font-style:italic}
+.hero p.sub{font-size:18px;color:var(--muted);margin:18px 0 26px;max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;max-width:min(420px,78vw);width:100%;margin:0 auto}
+.hero-art svg{width:100%;height:auto;display:block}
+.petal-draw path{stroke-dasharray:900;stroke-dashoffset:0;animation:draw 3.2s ease-out both}
+@keyframes draw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+.sway{transform-origin:50% 100%;animation:sway 7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg)}}
+.bg-iris{position:absolute;right:-80px;top:-40px;width:340px;opacity:.08;pointer-events:none}
+/* tag */
+.tag{position:relative;background:#fffaf1;border:1.5px solid #d9c9ad;border-radius:6px 18px 18px 6px;padding:22px 22px 22px 40px;box-shadow:0 14px 30px -18px rgba(42,31,51,.35)}
+.tag::before{content:"";position:absolute;left:14px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--linen);border:2px solid #c7b48f}
+.tag-hero{position:absolute;bottom:2%;left:-4%;transform:rotate(-6deg);padding:12px 16px 12px 34px;font-family:"DM Serif Display",serif;font-size:18px;color:var(--iris-d)}
+.tag-hero small{display:block;font-family:Lato;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-d);font-weight:900}
+.tag-hero::after{content:"";position:absolute;left:-46px;top:50%;width:42px;height:1.5px;background:#c7b48f;transform:rotate(14deg)}
+section{padding:72px 0}
+.kicker{font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--leaf)}
+h2{font-size:clamp(32px,7vw,52px);color:var(--iris-d);margin:8px 0 14px}
+.lede{color:var(--muted);font-size:17px;max-width:40em}
+/* locations */
+.locs{background:var(--iris-d);color:#f3ecfa;position:relative;overflow:hidden}
+.locs h2{color:#fff}.locs .lede{color:#d6c6e8}.locs .kicker{color:#b5d69c}
+.loc-grid{display:grid;gap:22px;margin-top:34px}
+@media(min-width:760px){.loc-grid{grid-template-columns:1fr 1fr}}
+.loc{background:#fffaf1;color:var(--ink);transition:transform .25s}
+.loc:hover{transform:translateY(-4px) rotate(-.4deg)}
+.loc .num{font-family:"DM Serif Display",serif;font-size:64px;line-height:1;color:var(--lav)}
+.loc h3{font-size:28px;color:var(--iris-d);margin:4px 0 6px}
+.loc .addr{font-weight:700}
+.loc .note{color:var(--muted);font-size:15px;margin:8px 0 16px}
+.loc .new{display:inline-block;background:var(--leaf);color:#fff;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-left:6px;vertical-align:middle}
+.loc a.dir{font-weight:900;color:var(--leaf-d);text-decoration:none;border-bottom:2px solid currentColor}
+.loc a.dir:hover{color:var(--iris)}
+/* timeline */
+.time{display:grid;gap:18px;margin-top:34px}
+@media(min-width:760px){.time{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border-radius:16px;padding:26px;border:1px solid var(--linen-d);position:relative}
+.step .d{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf)}
+.step h3{font-size:24px;color:var(--iris-d);margin:6px 0}
+.step p{color:var(--muted);font-size:15px}
+.step svg{position:absolute;right:18px;top:18px;opacity:.5}
+blockquote{margin-top:12px;font-family:"DM Serif Display",serif;font-style:italic;font-size:18px;color:var(--iris);line-height:1.35}
+cite{display:block;font-family:Lato;font-style:normal;font-size:12px;color:var(--muted);margin-top:6px}
+/* finds */
+.finds{background:var(--lav-l)}
+.find-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+@media(min-width:760px){.find-grid{grid-template-columns:repeat(4,1fr)}}
+.find{aspect-ratio:1/1.1;border-radius:14px;background:#fffaf1;border:1.5px dashed #c4aee0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;gap:8px;color:var(--muted);font-size:13px;transition:transform .2s,border-color .2s}
+.find:hover{transform:translateY(-3px);border-color:var(--iris)}
+.find b{font-family:"DM Serif Display",serif;font-weight:400;font-size:19px;color:var(--iris-d)}
+.small{font-size:13px;color:var(--muted);margin-top:16px}
+/* hours */
+.hv{display:grid;gap:26px}
+@media(min-width:900px){.hv{grid-template-columns:1fr 1fr;gap:40px}}
+.hours{list-style:none;background:#fff;border-radius:16px;border:1px solid var(--linen-d);overflow:hidden}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:13px 20px;border-bottom:1px solid var(--linen)}
+.hours li:last-child{border:0}
+.hours li span:last-child{color:var(--muted);font-size:14px;text-align:right}
+.hours li.today{background:var(--iris);color:#fff;font-weight:900}
+.hours li.today span:last-child{color:#eadcf8}
+.map{border-radius:16px;overflow:hidden;border:1px solid var(--linen-d);background:#ddd;min-height:320px}
+.map iframe{background:#e7dff0;width:100%;height:100%;min-height:320px;border:0;display:block}
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+footer{background:var(--ink);color:#cbbfd6;padding:48px 0 40px;font-size:14px}
+footer .fg{display:grid;gap:22px}
+@media(min-width:760px){footer .fg{grid-template-columns:2fr 1fr 1fr}}
+footer h3{color:#fff;font-size:24px;margin-bottom:6px}
+footer a{color:#e6d8f5;overflow-wrap:anywhere}
+.credit{margin-top:30px;padding-top:18px;border-top:1px solid #3d3147;font-size:12px;color:#988aa6}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(246,240,230,.94);backdrop-filter:blur(10px);border-top:1px solid var(--linen-d)}
+.bar .btn{padding:13px 10px;font-size:15px}
+@media(min-width:900px){.bar{display:none}}
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for The Purple Iris Too. Not live.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="iris" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 150V78"/><path d="M60 128c-14-6-26-22-28-44 12 8 22 22 28 44z"/><path d="M60 112c12-4 22-16 24-34-10 6-18 16-24 34z"/>
+<path d="M60 78c-6-16-4-34 0-48 4 14 6 32 0 48z"/><path d="M58 74C44 70 26 74 18 90c14 6 30 2 40-16z"/><path d="M62 74c14-4 32 0 40 16-14 6-30 2-40-16z"/>
+<path d="M56 40c-10-6-18-18-14-30 10 4 16 16 14 30zM64 40c10-6 18-18 14-30-10 4-16 16-14 30z"/></g></symbol>
+</defs></svg>
+
+<header>
+<nav>
+ <a class="logo" href="#top"><svg width="30" height="40" style="color:var(--iris)"><use href="#iris"/></svg>The Purple Iris Too</a>
+ <div class="nav-links"><a href="#shops">Two shops</a><a href="#story">Our story</a><a href="#visit">Visit</a></div>
+ <a class="btn btn-p" href="tel:+19317394747" style="padding:10px 18px;font-size:14px">Call</a>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero">
+ <svg class="bg-iris" viewBox="0 0 120 160" style="color:var(--iris)"><use href="#iris"/></svg>
+ <div class="wrap hero-grid">
+  <div>
+   <span class="eyebrow">Sparta, TN · Mose Drive</span>
+   <h1>One iris bloomed.<br>Now there are <em>two.</em></h1>
+   <p class="sub">The Purple Iris Too is the second Purple Iris shop on Mose Drive in Sparta, at 175 Mose Drive.</p>
+   <div class="cta">
+    <a class="btn btn-p" href="tel:+19317394747">Call 931-739-4747</a>
+    <a class="btn btn-g" href="#shops">See both shops</a>
+   </div>
+  </div>
+  <div class="hero-art">
+   <svg viewBox="0 0 400 440" role="img" aria-label="Line drawing of an iris flower">
+    <circle cx="200" cy="210" r="170" fill="#ece2f6"/>
+    <circle cx="200" cy="210" r="170" fill="none" stroke="#b79ad6" stroke-width="1.5" stroke-dasharray="3 7"/>
+    <g class="sway petal-draw" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2">
+     <path stroke="#4f7a3a" d="M200 420V230"/>
+     <path stroke="#4f7a3a" d="M200 370c-40-14-74-60-80-120 34 22 64 62 80 120z"/>
+     <path stroke="#4f7a3a" d="M200 330c34-12 62-46 68-96-28 18-52 44-68 96z"/>
+     <path stroke="#5b2a86" fill="#b79ad6" fill-opacity=".35" d="M196 220c-40-10-92 4-116 52 40 18 92 6 116-52z"/>
+     <path stroke="#5b2a86" fill="#b79ad6" fill-opacity=".35" d="M204 220c40-10 92 4 116 52-40 18-92 6-116-52z"/>
+     <path stroke="#5b2a86" fill="#7a4aa8" fill-opacity=".25" d="M200 224c-18-44-12-96 0-136 12 40 18 92 0 136z"/>
+     <path stroke="#5b2a86" fill="#7a4aa8" fill-opacity=".2" d="M192 112c-30-18-52-52-40-88 28 12 46 48 40 88zM208 112c30-18 52-52 40-88-28 12-46 48-40 88z"/>
+     <path stroke="#c9a33a" stroke-width="2.4" d="M118 258c24-6 48-14 70-32M282 258c-24-6-48-14-70-32"/>
+    </g>
+   </svg>
+   <div class="tag tag-hero"><small>Now open</small>No. 2 · 175 Mose Dr</div>
+  </div>
+ </div>
+</section>
+
+<section class="locs" id="shops">
+ <div class="wrap">
+  <div class="reveal"><span class="kicker">Two shops · one street</span>
+  <h2>The Purple Iris &amp; The Purple Iris Too</h2>
+  <p class="lede">Two Purple Iris shops, both on Mose Drive in Sparta. Plan a visit to one, or make an afternoon of both.</p></div>
+  <div class="loc-grid">
+   <article class="tag loc reveal">
+    <div class="num">01</div>
+    <h3>The Purple Iris Marketplace</h3>
+    <p class="addr">229 Mose Drive, Sparta, TN</p>
+    <p class="note">The original shop, which held its ribbon cutting with the Sparta-White County Chamber in November 2025.</p>
+    <a class="dir" href="https://www.google.com/maps/dir/?api=1&destination=229+Mose+Drive+Sparta+TN" target="_blank" rel="noopener">Get directions →</a>
+   </article>
+   <article class="tag loc reveal">
+    <div class="num">02</div>
+    <h3>The Purple Iris Too <span class="new">New</span></h3>
+    <p class="addr">175 Mose Drive, Sparta, TN</p>
+    <p class="note">"PIT" for short. Celebrated its grand opening with a ribbon cutting in August 2026. Call <a href="tel:+19317394747">931-739-4747</a>.</p>
+    <a class="dir" href="https://www.google.com/maps/dir/?api=1&destination=175+Mose+Drive+Sparta+TN" target="_blank" rel="noopener">Get directions →</a>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="story">
+ <div class="wrap">
+  <div class="reveal"><span class="kicker">Our story so far</span>
+  <h2>From one shop to two in under a year</h2></div>
+  <div class="time">
+   <div class="step reveal"><svg width="34" height="44" style="color:var(--iris)"><use href="#iris"/></svg><span class="d">November 2025</span><h3>The first bloom</h3><p>The Purple Iris Marketplace opens at 229 Mose Drive with a Chamber ribbon cutting.</p><blockquote>"Everyone was excited to see the new shop."<cite>Sparta-White County Chamber, via UCBJ</cite></blockquote></div>
+   <div class="step reveal"><svg width="34" height="44" style="color:var(--leaf)"><use href="#iris"/></svg><span class="d">August 2026</span><h3>A second shop</h3><p>The Purple Iris Too celebrates its grand opening with a ribbon cutting at 175 Mose Drive.</p><blockquote>"Friends, family and community members come together to show their support."<cite>Sparta-White County Chamber, via UCBJ</cite></blockquote></div>
+   <div class="step reveal"><svg width="34" height="44" style="color:var(--lav)"><use href="#iris"/></svg><span class="d">Today</span><h3>Come say hello</h3><p>Stop by either shop on Mose Drive, or follow along on Facebook to see what's new.</p><p style="margin-top:14px"><a class="btn btn-l" href="https://www.facebook.com/profile.php?id=61579830576955" target="_blank" rel="noopener">Follow on Facebook</a></p></div>
+  </div>
+ </div>
+</section>
+
+<section class="finds">
+ <div class="wrap">
+  <div class="reveal"><span class="kicker">On the shelves</span>
+  <h2>Fresh finds, tagged and waiting</h2>
+  <p class="lede">This space would show your newest arrivals, with photos you choose, so people know what to drive over for.</p></div>
+  <div class="find-grid">
+   <div class="find reveal"><svg width="34" height="44" style="color:var(--iris)"><use href="#iris"/></svg><b>Your find here</b>Photo &amp; caption</div>
+   <div class="find reveal"><svg width="34" height="44" style="color:var(--leaf)"><use href="#iris"/></svg><b>Your find here</b>Photo &amp; caption</div>
+   <div class="find reveal"><svg width="34" height="44" style="color:var(--iris)"><use href="#iris"/></svg><b>Your find here</b>Photo &amp; caption</div>
+   <div class="find reveal"><svg width="34" height="44" style="color:var(--leaf)"><use href="#iris"/></svg><b>Your find here</b>Photo &amp; caption</div>
+  </div>
+  <p class="small">Placeholder tiles for the concept. Real products would come from the shop.</p>
+ </div>
+</section>
+
+<section id="visit">
+ <div class="wrap hv">
+  <div class="reveal">
+   <span class="kicker">Visit</span>
+   <h2>Hours &amp; directions</h2>
+   <p class="lede" style="margin-bottom:18px">We haven't published hours here yet. Please call or check Facebook before you head over.</p>
+   <ul class="hours" id="hours">
+    <li data-d="1"><span>Monday</span><span>Call to confirm</span></li>
+    <li data-d="2"><span>Tuesday</span><span>Call to confirm</span></li>
+    <li data-d="3"><span>Wednesday</span><span>Call to confirm</span></li>
+    <li data-d="4"><span>Thursday</span><span>Call to confirm</span></li>
+    <li data-d="5"><span>Friday</span><span>Call to confirm</span></li>
+    <li data-d="6"><span>Saturday</span><span>Call to confirm</span></li>
+    <li data-d="0"><span>Sunday</span><span>Call to confirm</span></li>
+   </ul>
+   <div class="contact">
+    <a class="btn btn-p" href="tel:+19317394747">Call 931-739-4747</a>
+    <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&destination=175+Mose+Drive+Sparta+TN" target="_blank" rel="noopener">Directions</a>
+   </div>
+  </div>
+  <div class="map reveal"><iframe title="Map of 175 Mose Drive, Sparta TN" src="https://www.google.com/maps?q=175%20Mose%20Drive%2C%20Sparta%2C%20TN&output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><h3>The Purple Iris Too</h3><p>175 Mose Drive, Sparta, TN<br>Sister shop: The Purple Iris Marketplace, 229 Mose Drive</p></div>
+   <div><p><a href="tel:+19317394747">931-739-4747</a><br><a href="mailto:thepurpleirismarketplace@gmail.com">thepurpleirismarketplace@gmail.com</a></p></div>
+   <div><p><a href="https://www.facebook.com/profile.php?id=61579830576955" target="_blank" rel="noopener">Facebook</a></p></div>
+  </div>
+  <p class="credit">Concept by Code Craft Media. Not an official website.</p>
+ </div>
+</footer>
+
+<div class="bar">
+ <a class="btn btn-p" href="tel:+19317394747">Call now</a>
+ <a class="btn btn-l" href="https://www.facebook.com/profile.php?id=61579830576955" target="_blank" rel="noopener">Facebook</a>
+</div>
+
+<script>
+(function(){
+ var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');
+ if(li){li.classList.add('today');li.lastElementChild.textContent='Today · call to confirm';}
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window))return;
+ document.documentElement.classList.add('js');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+ els.forEach(function(el){io.observe(el)});
+ setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

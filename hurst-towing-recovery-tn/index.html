@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Hurst Towing &amp; Recovery of TN — Mooresburg</title>
+<meta name="description" content="Concept site for Hurst Towing & Recovery of TN, Mooresburg, Tennessee. 24/7 towing and roadside assistance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B3202A; --red-hi:#D02B36; --red-dk:#8A1820;
+  --navy:#0F1B2D; --navy-2:#162740; --navy-3:#1E3354;
+  --chrome:#C9CED6; --chrome-hi:#EEF1F5; --chrome-dk:#8C94A1;
+  --ink:#0F1B2D; --paper:#F3F4F6;
+  --display:'Archivo Black', 'Arial Black', Impact, sans-serif;
+  --body:'Barlow', system-ui, -apple-system, Segoe UI, sans-serif;
+  --bar:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--navy);color:var(--chrome-hi);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--chrome-hi);outline-offset:3px}
+
+/* concept banner */
+.concept{background:#08111E;color:var(--chrome-dk);font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em;border-bottom:1px solid #1b2a40}
+.concept b{color:var(--chrome);font-weight:600}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(15,27,45,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,206,214,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand .mark{width:36px;height:36px;flex:none}
+.brand span{font-family:var(--display);font-size:15px;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
+.brand small{display:block;font-family:var(--body);font-weight:600;font-size:10.5px;letter-spacing:.2em;color:var(--chrome-dk)}
+.nav ul{display:none;list-style:none;gap:26px;font-weight:600;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--chrome);transition:color .2s}
+.nav ul a:hover{color:#fff}
+.nav-call{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,transform .2s}
+.nav-call:hover{background:var(--red-hi);transform:translateY(-1px)}
+.nav-call svg{width:15px;height:15px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 85% 0%, rgba(179,32,42,.38), transparent 60%),
+  radial-gradient(90% 60% at 0% 100%, rgba(30,51,84,.9), transparent 70%),
+  linear-gradient(180deg,#0F1B2D 0%,#0B1524 100%);
+  padding:34px 0 56px}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg, rgba(201,206,214,.035) 0 2px, transparent 2px 9px);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;gap:8px}
+.hero-grid>*{min-width:0}
+.tag{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--chrome);border:1px solid rgba(201,206,214,.25);padding:7px 12px 7px 10px;border-radius:999px;background:rgba(8,17,30,.5)}
+.tag i{width:9px;height:9px;border-radius:50%;background:#3BD16F;box-shadow:0 0 0 0 rgba(59,209,111,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(59,209,111,.55)}70%{box-shadow:0 0 0 10px rgba(59,209,111,0)}100%{box-shadow:0 0 0 0 rgba(59,209,111,0)}}
+h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(33px,9.7vw,86px);line-height:.94;letter-spacing:-.01em;margin:18px 0 16px;color:#fff}
+h1 .chrome{background:linear-gradient(180deg,#FFFFFF 0%,#C9CED6 48%,#8C94A1 52%,#E2E6EC 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .red{color:var(--red-hi)}
+.sub{font-size:18.5px;color:var(--chrome);max-width:34ch;font-weight:500}
+.sub b{color:#fff;font-weight:700}
+
+/* hero art (winch + hook) */
+.hero-art{position:absolute;right:10px;top:0;width:84px;height:150px;z-index:1;pointer-events:none}
+@media (max-width:399px){.callcard .ring{display:none}}
+.hero-art .cable{stroke-dasharray:6 5;animation:cable 1.6s linear infinite}
+@keyframes cable{to{stroke-dashoffset:-22}}
+.hero-art .hook{transform-origin:150px 0;animation:sway 5s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+
+/* big call */
+.callcard{margin-top:26px;display:block;text-decoration:none;position:relative;border-radius:22px;padding:3px;background:linear-gradient(135deg,#EEF1F5,#8C94A1 40%,#E2E6EC 60%,#7D8592);box-shadow:0 22px 50px -18px rgba(179,32,42,.75);max-width:470px;transition:transform .2s}
+.callcard:hover{transform:translateY(-2px)}
+.callcard:active{transform:scale(.985)}
+.callcard-in{border-radius:19px;background:linear-gradient(160deg,var(--red-hi),var(--red) 45%,var(--red-dk));padding:18px 14px 18px 16px;display:flex;align-items:center;gap:13px;overflow:hidden;position:relative}
+.callcard-in::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+.big247{font-family:var(--display);font-size:clamp(36px,11vw,46px);line-height:.85;color:#fff;letter-spacing:-.02em;flex:none;padding-right:16px;border-right:2px solid rgba(255,255,255,.3)}
+.big247 small{display:block;font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.24em;margin-top:6px;color:rgba(255,255,255,.85)}
+.callcard .lbl{font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.callcard .num{font-family:var(--display);font-size:clamp(19px,5.9vw,26px);color:#fff;letter-spacing:.01em;line-height:1.1;white-space:nowrap}
+.callcard .ring{margin-left:auto;width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;color:var(--red)}
+.callcard .ring svg{width:22px;height:22px;animation:ring 2.4s ease-in-out infinite}
+@keyframes ring{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-14deg)}80%{transform:rotate(14deg)}85%{transform:rotate(-10deg)}90%{transform:rotate(8deg)}}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.ghost{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;color:var(--chrome-hi);padding:11px 16px;border-radius:12px;border:1.5px solid rgba(201,206,214,.35);background:rgba(8,17,30,.4);transition:border-color .2s,background .2s}
+.ghost:hover{border-color:var(--chrome);background:rgba(201,206,214,.08)}
+.ghost svg{width:17px;height:17px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14px;font-weight:600;color:var(--chrome-dk);letter-spacing:.02em}
+.facts span{display:inline-flex;align-items:center;gap:7px}
+.facts span::before{content:"";width:7px;height:7px;background:var(--red-hi);transform:rotate(45deg)}
+
+/* chain divider */
+.chain{height:30px;background:var(--navy);position:relative;overflow:hidden}
+.chain svg{position:absolute;left:0;top:0;width:3840px;max-width:none;height:30px;animation:drag 12s linear infinite}
+@keyframes drag{to{transform:translateX(-640px)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:66px 0}
+.eyebrow{display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--red-hi);margin-bottom:12px}
+.eyebrow::before{content:"";width:26px;height:3px;background:currentColor}
+h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(32px,8.4vw,56px);line-height:.98;color:#fff;margin-bottom:14px}
+.lede{color:var(--chrome);max-width:56ch;font-size:17.5px}
+
+/* services */
+.services{background:linear-gradient(180deg,#0F1B2D,#12213A)}
+.svc-grid{display:grid;gap:14px;margin-top:30px}
+.svc{position:relative;background:linear-gradient(160deg,var(--navy-2),#101E33);border:1px solid rgba(201,206,214,.13);border-radius:18px;padding:22px 20px 22px 20px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-3px);border-color:rgba(201,206,214,.35);box-shadow:0 18px 40px -22px rgba(0,0,0,.8)}
+.svc::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;border:10px solid rgba(201,206,214,.04)}
+.svc .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#EEF1F5,#9AA2AE);color:var(--navy);margin-bottom:16px;box-shadow:inset 0 1px 0 #fff,0 6px 14px -6px rgba(0,0,0,.6)}
+.svc .ico svg{width:28px;height:28px}
+.svc h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:21px;line-height:1.1;color:#fff;margin-bottom:6px}
+.svc p{color:var(--chrome);font-size:16px}
+.svc.feature{background:linear-gradient(150deg,var(--red),var(--red-dk));border-color:rgba(255,255,255,.18)}
+.svc.feature p{color:#FBE3E5}
+.svc.feature .ico{background:#fff;color:var(--red)}
+.pill{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff}
+
+/* U-Haul */
+.uhaul{background:var(--paper);color:var(--ink)}
+.uhaul h2{color:var(--navy)}
+.uhaul .lede{color:#3A4657}
+.uhaul .eyebrow{color:var(--red)}
+.uh-card{margin-top:28px;display:grid;gap:18px;background:#fff;border-radius:22px;padding:24px 22px;box-shadow:0 30px 60px -30px rgba(15,27,45,.35);border:1px solid #DFE3E8;position:relative;overflow:hidden}
+.uh-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:repeating-linear-gradient(180deg,var(--red) 0 14px,var(--navy) 14px 28px)}
+.rating{display:flex;align-items:center;gap:14px}
+.rating .score{font-family:var(--display);font-size:54px;line-height:1;color:var(--navy)}
+.stars{display:flex;gap:2px;color:var(--red)}
+.stars svg{width:20px;height:20px}
+.rating small{display:block;font-size:14px;color:#56627A;font-weight:600;margin-top:3px}
+.uh-list{list-style:none;display:grid;gap:10px}
+.uh-list li{display:flex;gap:10px;align-items:flex-start;font-weight:600;color:#26334A}
+.uh-list li svg{width:20px;height:20px;flex:none;color:var(--red);margin-top:2px}
+.src{font-size:12.5px;color:#6B7689}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;justify-content:center;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:13px 18px;border-radius:12px;transition:background .2s,transform .2s}
+.btn-dark:hover{background:var(--navy-3);transform:translateY(-1px)}
+
+/* why */
+.why{background:linear-gradient(180deg,#0B1524,#0F1B2D)}
+.why-grid{display:grid;gap:0;margin-top:30px;border-top:1px solid rgba(201,206,214,.15)}
+.why-item{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid rgba(201,206,214,.15);align-items:start}
+.why-item .n{font-family:var(--display);font-size:30px;padding-top:2px;line-height:1;background:linear-gradient(180deg,#fff,#8C94A1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.why-item h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:19px;color:#fff;margin-bottom:4px;line-height:1.15}
+.why-item p{color:var(--chrome);font-size:16px}
+
+/* hours */
+.hours{background:#12213A}
+.hrs-grid{display:grid;gap:18px;margin-top:28px}
+.hrs-big{display:flex;flex-direction:column;justify-content:center;border-radius:20px;padding:26px 22px;background:
+  radial-gradient(80% 120% at 100% 0%, rgba(179,32,42,.55), transparent 60%), var(--navy);border:1px solid rgba(201,206,214,.18);position:relative;overflow:hidden}
+.hrs-big .t{font-family:var(--display);font-size:68px;line-height:.9;color:#fff}
+.hrs-big p{color:var(--chrome);margin-top:8px;font-weight:600}
+.hrs-big .now{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#3BD16F}
+.hrs-big .now i{width:8px;height:8px;border-radius:50%;background:#3BD16F}
+.table{border-radius:20px;background:var(--navy);border:1px solid rgba(201,206,214,.15);padding:8px 6px}
+.table h3{font-family:var(--display);font-weight:400;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--chrome);padding:12px 14px 6px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:12px;font-weight:600;color:var(--chrome)}
+.row span:last-child{color:#fff}
+.row.closed span:last-child{color:var(--chrome-dk);font-weight:500}
+.row.today{background:linear-gradient(90deg,rgba(179,32,42,.9),rgba(179,32,42,.55));color:#fff}
+.row.today span:first-child::after{content:"Today";margin-left:8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;background:#fff;color:var(--red);padding:3px 7px;border-radius:999px;vertical-align:2px}
+.note{font-size:13.5px;color:var(--chrome-dk);padding:10px 14px 12px}
+
+/* location */
+.loc{background:var(--navy)}
+.map{margin-top:26px;border-radius:20px;overflow:hidden;border:3px solid transparent;background:linear-gradient(var(--navy),var(--navy)) padding-box,linear-gradient(135deg,#EEF1F5,#8C94A1,#E2E6EC) border-box;aspect-ratio:4/3;max-height:440px}
+.map{position:relative}
+.map::before{content:"306 Hwy 31 · Mooresburg, TN";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:18px;color:var(--chrome-dk);text-transform:uppercase;background:repeating-linear-gradient(0deg,rgba(201,206,214,.06) 0 1px,transparent 1px 28px),repeating-linear-gradient(90deg,rgba(201,206,214,.06) 0 1px,transparent 1px 28px),#132440}
+.map iframe{position:relative;width:100%;height:100%;border:0;display:block;filter:grayscale(.25) contrast(1.05)}
+.loc-row{display:grid;gap:12px;margin-top:18px}
+.addr{font-weight:700;font-size:19px;color:#fff;line-height:1.3}
+.addr small{display:block;font-weight:500;font-size:14.5px;color:var(--chrome-dk);margin-top:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn-red{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:13px 18px;border-radius:12px;transition:background .2s,transform .2s}
+.btn-red:hover{background:var(--red-hi);transform:translateY(-1px)}
+.btn-red svg,.btn-dark svg{width:18px;height:18px}
+
+/* final cta */
+.final{background:linear-gradient(160deg,var(--red),var(--red-dk));text-align:center;padding:62px 0;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(-45deg,rgba(255,255,255,.05) 0 2px,transparent 2px 12px)}
+.final .wrap{position:relative}
+.final h2{font-size:clamp(34px,9vw,64px)}
+.final p{color:#FBE3E5;font-weight:500;max-width:36ch;margin:0 auto}
+.final a.huge{display:inline-flex;align-items:center;gap:12px;margin-top:24px;background:#fff;color:var(--red);font-family:var(--display);font-size:clamp(24px,7vw,36px);text-decoration:none;padding:16px 26px;border-radius:18px;box-shadow:0 18px 40px -16px rgba(0,0,0,.55);transition:transform .2s}
+.final a.huge:hover{transform:translateY(-2px) scale(1.01)}
+.final a.huge svg{width:28px;height:28px}
+
+footer{background:#08111E;color:var(--chrome-dk);padding:34px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:14px}
+footer a{color:var(--chrome);text-decoration:none}
+footer a:hover{color:#fff}
+.foot-brand{font-family:var(--display);color:#fff;text-transform:uppercase;font-size:16px}
+.cc{border-top:1px solid #1b2a40;padding-top:14px;font-size:13px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(8,17,30,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(201,206,214,.18);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr auto;gap:10px}
+.bar a{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:700;border-radius:14px;height:56px}
+.bar .b-call{background:linear-gradient(160deg,var(--red-hi),var(--red));color:#fff;font-size:17px;box-shadow:0 8px 20px -8px rgba(179,32,42,.9)}
+.bar .b-call b{font-family:var(--display);font-weight:400;font-size:13px;background:#fff;color:var(--red);padding:3px 7px;border-radius:7px;letter-spacing:.02em}
+.bar .b-dir{background:var(--navy-3);color:#fff;padding:0 18px;font-size:15px;border:1px solid rgba(201,206,214,.25)}
+.bar svg{width:20px;height:20px}
+
+/* reveal */
+.rv{transition:opacity .7s ease,transform .7s ease}
+.js .rv{opacity:0;transform:translateY(22px)}
+.js .rv.in,.show-all .rv{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .nav ul{display:flex}
+  .hero{padding:70px 0 90px}
+  .hero-art{width:330px;height:560px;right:4%;top:-20px}
+  .sub{font-size:21px;max-width:40ch}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .uh-card{grid-template-columns:1fr 1.2fr;align-items:center;padding:34px 36px 34px 42px}
+  .why-grid{grid-template-columns:repeat(2,1fr);column-gap:40px}
+  .hrs-grid{grid-template-columns:1fr 1.2fr}
+  .loc-row{grid-template-columns:1fr auto;align-items:center}
+  .map{aspect-ratio:21/9;max-height:none}
+  .hrs-big .t{font-size:120px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+  .cc{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .svc.feature{grid-column:span 1}
+  .sec{padding:96px 0}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Hurst Towing &amp; Recovery of TN. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hurst Towing & Recovery of TN, home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="10" fill="#B3202A"/>
+        <path d="M13 9v22M27 9v22M13 20h14" stroke="#fff" stroke-width="4.2" stroke-linecap="round"/>
+        <path d="M27 31c0 3.2-4.6 3.2-4.6 0" fill="none" stroke="#C9CED6" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span>Hurst Towing<small>&amp; RECOVERY OF TN</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#uhaul">U-Haul</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+14232981680"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call 24/7</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 200 340" fill="none" aria-hidden="true">
+    <!-- winch drum -->
+    <g transform="translate(118 6)">
+      <rect x="0" y="0" width="64" height="30" rx="6" fill="#1E3354" stroke="#C9CED6" stroke-width="2"/>
+      <path d="M8 4v22M16 4v22M24 4v22M32 4v22M40 4v22M48 4v22M56 4v22" stroke="#8C94A1" stroke-width="1.4"/>
+      <circle cx="32" cy="15" r="5" fill="#B3202A"/>
+    </g>
+    <g class="hook">
+      <path class="cable" d="M150 36 V232" stroke="#C9CED6" stroke-width="3"/>
+      <path d="M146 36 V232" stroke="#C9CED6" stroke-opacity=".25" stroke-width="1"/>
+      <!-- hook block -->
+      <rect x="136" y="228" width="28" height="22" rx="5" fill="#B3202A" stroke="#EEF1F5" stroke-width="2"/>
+      <circle cx="150" cy="239" r="4" fill="#EEF1F5"/>
+      <path d="M150 250 v14 c0 0 -1 0 0 0" stroke="#C9CED6" stroke-width="5" stroke-linecap="round"/>
+      <path d="M150 264 c0 26 -32 34 -40 12 c-3 -8 2 -14 8 -12" stroke="#EEF1F5" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M150 264 c0 26 -32 34 -40 12" stroke="#8C94A1" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+    <!-- thin line art cable sweep -->
+    <path d="M0 120 C60 110 90 150 120 200 S 180 300 200 330" stroke="#C9CED6" stroke-opacity=".12" stroke-width="1.5"/>
+    <path d="M0 150 C50 140 80 180 110 230 S 170 320 190 340" stroke="#B3202A" stroke-opacity=".35" stroke-width="1.5"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div><span class="tag"><i></i>Towing &amp; roadside · 24/7</span></div>
+      <h1>Stuck near <span class="chrome">Mooresburg?</span><br><span class="red">One call.</span> Day or night.</h1>
+      <p class="sub">Emergency, long-distance and motorcycle towing, plus roadside assistance. <b>Open 24/7</b> from Hwy 31 in Mooresburg.</p>
+    </div>
+
+    <a class="callcard" href="tel:+14232981680" aria-label="Call Hurst Towing 24/7 at 423-298-1680">
+      <div class="callcard-in">
+        <div class="big247">24/7<small>TOWING</small></div>
+        <div>
+          <div class="lbl">Tap to call now</div>
+          <div class="num">(423) 298-1680</div>
+        </div>
+        <div class="ring"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></div>
+      </div>
+    </a>
+    <div class="hero-links">
+      <a class="ghost" href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Our services</a>
+      <a class="ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=306+Hwy+31%2C+Mooresburg%2C+TN+37811" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+    </div>
+    <div class="facts"><span>Founded 2022</span><span>Mooresburg, TN</span><span>U-Haul dealer</span></div>
+  </div>
+</section>
+
+<div class="chain" aria-hidden="true">
+  <svg viewBox="0 0 3840 30" width="3840" height="30">
+    <defs>
+      <pattern id="lnk" width="64" height="30" patternUnits="userSpaceOnUse">
+        <rect x="3" y="7" width="38" height="16" rx="8" fill="none" stroke="#C9CED6" stroke-width="4"/>
+        <rect x="35" y="11.5" width="28" height="7" rx="3.5" fill="none" stroke="#8C94A1" stroke-width="4"/>
+      </pattern>
+    </defs>
+    <rect width="3840" height="30" fill="url(#lnk)"/>
+  </svg>
+</div>
+
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="eyebrow rv">What we do</div>
+    <h2 class="rv">Hooked up.<br>Hauled out.</h2>
+    <p class="lede rv">Everything Hurst Towing &amp; Recovery of TN offers, in one place, so you know exactly who to call.</p>
+    <div class="svc-grid">
+      <article class="svc feature rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3"/><path d="M7 19a5 5 0 0 1 10 0"/><path d="M4 19h16"/></svg></div>
+        <h3>Emergency Towing</h3>
+        <p>Broken down, crashed or stranded: call any hour and get your vehicle off the road.</p>
+        <span class="pill">24/7</span>
+      </article>
+      <article class="svc rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17V8h10v9M13 11h4l4 3v3h-8"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M1 5h6"/></svg></div>
+        <h3>Long-Distance Towing</h3>
+        <p>Need it moved farther than across town? Long-distance tows are part of the lineup.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 10h5l4.5 6.5M9 10 7.5 7H5M14 10l1.5-3H18"/></svg></div>
+        <h3>Motorcycle Towing</h3>
+        <p>Bikes need different handling than cars. Motorcycle towing is on the list.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 21h20z"/><path d="M12 9v5M12 17.5v.5"/></svg></div>
+        <h3>Roadside Assistance</h3>
+        <p>Not every problem needs a tow. Roadside help, around the clock.</p>
+        <span class="pill" style="background:rgba(201,206,214,.12)">24/7</span>
+      </article>
+      <article class="svc rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>Auto Repair</h3>
+        <p>Towed in? Ask about auto repair services, too.</p>
+      </article>
+      <article class="svc rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg></div>
+        <h3>U-Haul Rentals</h3>
+        <p>Moving trucks, trailers and towing gear, plus moving supplies, as a U-Haul neighborhood dealer.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec uhaul" id="uhaul">
+  <div class="wrap">
+    <div class="eyebrow rv">Also on Hwy 31</div>
+    <h2 class="rv">Your local<br>U-Haul dealer.</h2>
+    <p class="lede rv">Moving trucks, trailers &amp; towing equipment and moving supplies, right at the shop in Mooresburg.</p>
+    <div class="uh-card rv">
+      <div>
+        <div class="rating">
+          <div class="score">4.5</div>
+          <div>
+            <div class="stars" aria-label="4.5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24"><defs><linearGradient id="hf"><stop offset="50%" stop-color="#B3202A"/><stop offset="50%" stop-color="#D5D9DF"/></linearGradient></defs><path fill="url(#hf)" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <small>Average of 156 customer reviews</small>
+          </div>
+        </div>
+        <p class="src" style="margin-top:10px">Source: U-Haul location page for Hurst Towing &amp; Recovery, Mooresburg.</p>
+      </div>
+      <div style="display:grid;gap:16px">
+        <ul class="uh-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Moving trucks</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Trailers &amp; towing equipment</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Moving supplies</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>24-hour customer return</li>
+        </ul>
+        <a class="btn-dark" href="https://www.uhaul.com/Locations/Truck-Rentals-near-Mooresburg-TN/012623" target="_blank" rel="noopener">Reserve on U-Haul.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="eyebrow rv">Why Hurst</div>
+    <h2 class="rv">Local. Always on.</h2>
+    <div class="why-grid">
+      <div class="why-item rv"><div class="n">24/7</div><div><h3>Open around the clock</h3><p>Towing and roadside assistance any hour, any day. Breakdowns don't keep office hours, and neither do we.</p></div></div>
+      <div class="why-item rv"><div class="n">2022</div><div><h3>Serving since 2022</h3><p>Founded in 2022 to give the community reliable towing, roadside assistance and auto repair.</p></div></div>
+      <div class="why-item rv"><div class="n">3</div><div><h3>Kinds of tow</h3><p>Emergency, long-distance and motorcycle towing, all from one call.</p></div></div>
+      <div class="why-item rv"><div class="n">1</div><div><h3>One stop for it all</h3><p>Towing, roadside help, auto repair and U-Haul rentals, all from one local business.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec hours" id="hours">
+  <div class="wrap">
+    <div class="eyebrow rv">Hours</div>
+    <h2 class="rv">We pick up.<br>Every hour.</h2>
+    <div class="hrs-grid">
+      <div class="hrs-big rv">
+        <div class="t">24/7</div>
+        <p>Towing &amp; roadside assistance, every day of the year.</p>
+        <div class="now"><i></i>Tow line open now</div>
+      </div>
+      <div class="table rv">
+        <h3>Office hours</h3>
+        <div id="hrs">
+          <div class="row" data-d="1"><span>Monday</span><span>9 AM – 5 PM</span></div>
+          <div class="row" data-d="2"><span>Tuesday</span><span>9 AM – 5 PM</span></div>
+          <div class="row" data-d="3"><span>Wednesday</span><span>9 AM – 5 PM</span></div>
+          <div class="row" data-d="4"><span>Thursday</span><span>9 AM – 5 PM</span></div>
+          <div class="row" data-d="5"><span>Friday</span><span>9 AM – 5 PM</span></div>
+          <div class="row closed" data-d="6"><span>Saturday</span><span>Tow line only</span></div>
+          <div class="row closed" data-d="0"><span>Sunday</span><span>Tow line only</span></div>
+        </div>
+        <p class="note">Towing &amp; roadside are 24/7 regardless of office hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec loc" id="location">
+  <div class="wrap">
+    <div class="eyebrow rv">Find us</div>
+    <h2 class="rv">On Hwy 31<br>in Mooresburg.</h2>
+    <div class="map rv"><iframe title="Map of Hurst Towing & Recovery, Mooresburg TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=306%20Hwy%2031%2C%20Mooresburg%2C%20TN%2037811&amp;output=embed"></iframe></div>
+    <div class="loc-row rv">
+      <div class="addr">306 Hwy 31, Mooresburg, TN 37811<small>Hawkins County, Tennessee</small></div>
+      <div class="btns">
+        <a class="btn-red" href="tel:+14232981680"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (423) 298-1680</a>
+        <a class="btn-dark" style="background:var(--navy-3)" href="https://www.google.com/maps/dir/?api=1&amp;destination=306+Hwy+31%2C+Mooresburg%2C+TN+37811" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 21 3l-8 18-2-8z"/></svg>Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Broke down?<br>Don't wait.</h2>
+    <p>Day, night, weekend or holiday. One tap and you're talking to Hurst.</p>
+    <a class="huge" href="tel:+14232981680"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>(423) 298-1680</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="foot-brand">Hurst Towing &amp; Recovery of TN</div>
+      <div style="margin-top:6px">306 Hwy 31, Mooresburg, TN 37811 · <a href="tel:+14232981680">(423) 298-1680</a></div>
+      <div style="margin-top:4px"><a href="mailto:Hursttowingtn@gmail.com">Hursttowingtn@gmail.com</a> · <a href="https://www.facebook.com/profile.php?id=61554260197439" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div>Open 24/7 for towing &amp; roadside</div>
+    <div class="cc">Concept by Code Craft Media · Knoxville, TN · Not a live site. Phone number and address to be confirmed with the owner.</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="b-call" href="tel:+14232981680"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call for a tow <b>24/7</b></a>
+  <a class="b-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=306+Hwy+31%2C+Mooresburg%2C+TN+37811" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 21 3l-8 18-2-8z"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  // today highlight
+  try{
+    var day=new Date().getDay();
+    var r=document.querySelector('#hrs .row[data-d="'+day+'"]'); if(r) r.classList.add('today');
+  }catch(e){}
+  // reveals
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    els.forEach(function(el){io.observe(el)});
+  } else d.classList.add('show-all');
+  setTimeout(function(){d.classList.add('show-all')},1500);
+})();
+</script>
+</body>
+</html>

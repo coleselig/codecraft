@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>La Dulce Bendicion — Morristown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#E4007C;--rosa-d:#B0005F;--mari:#F5A623;--mari-l:#FFD27A;--cream:#FFF6E8;--cream2:#FCEBD3;--ink:#3A1430;--muted:#6E4A62}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:Poppins,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:"Yeseva One",Georgia,serif;font-weight:400;line-height:1.15}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:#FCEBD3;font-size:12px;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.papel{display:block;width:100%;height:46px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;max-width:1120px;margin:0 auto}
+nav .logo{font-family:"Yeseva One",serif;font-size:20px;color:var(--rosa-d);text-decoration:none;min-width:0}
+nav .links{display:flex;gap:22px;font-size:14px;font-weight:500}
+nav .links a{text-decoration:none}nav .links a:hover{color:var(--rosa)}
+.hero{position:relative;padding:28px 0 56px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-grid>*{min-width:0}
+.eyebrow{display:inline-block;background:#fff;border:2px dashed var(--mari);color:var(--rosa-d);border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;letter-spacing:.04em}
+.hero h1{font-size:clamp(38px,6vw,68px);margin:18px 0 6px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--rosa)}
+.hero .es{font-family:"Yeseva One",serif;color:var(--mari);font-size:clamp(20px,2.6vw,26px);margin-bottom:14px}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:34em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-p{background:var(--rosa);color:#fff;box-shadow:0 6px 0 var(--rosa-d)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--rosa-d)}
+.btn-p:active{transform:translateY(3px);box-shadow:0 2px 0 var(--rosa-d)}
+.btn-s{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.btn-s:hover{background:var(--mari-l)}
+.cake{width:100%;max-width:420px;margin:0 auto;display:block}
+.cake .float{animation:bob 4s ease-in-out infinite;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.spark{animation:tw 2.4s ease-in-out infinite}.spark:nth-child(2n){animation-delay:1.2s}
+@keyframes tw{50%{opacity:.2}}
+.scallop{height:28px;background:radial-gradient(circle at 14px 0,transparent 13px,var(--c,#fff) 14px) 0 0/28px 28px repeat-x}
+section{padding:72px 0}
+.sec-head{text-align:center;margin-bottom:38px}
+.sec-head .es{display:block;font-family:"Yeseva One",serif;color:var(--rosa);font-size:18px;margin-bottom:4px}
+.sec-head h2{font-size:clamp(30px,4.4vw,46px)}
+.sec-head p{color:var(--muted);margin-top:8px}
+.white{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cards>*{min-width:0}
+.card{background:var(--cream);border-radius:24px;padding:30px 26px;border:2px solid var(--cream2);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg);border-color:var(--mari)}
+.card svg{width:64px;height:64px;margin-bottom:14px}
+.card h3{font-size:24px;margin-bottom:2px}
+.card .es{color:var(--rosa-d);font-weight:600;font-size:14px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.note{text-align:center;margin-top:28px;font-size:15px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.gallery>*{min-width:0}
+.ph{aspect-ratio:1;border-radius:20px;display:grid;place-items:center;text-align:center;font-size:13px;color:var(--muted);border:2px dashed #E7B9CF;background:repeating-linear-gradient(45deg,#FFF0F7 0 10px,#FFF8FB 10px 20px);padding:10px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why>*{min-width:0}
+.why div{padding:26px;border-radius:22px;background:#fff;box-shadow:0 10px 30px -18px rgba(58,20,48,.35)}
+.why b{display:block;font-family:"Yeseva One",serif;font-weight:400;font-size:22px;color:var(--rosa-d);margin-bottom:6px}
+.why span{color:var(--muted);font-size:15px}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:stretch}
+.visit>*{min-width:0}
+.panel{background:var(--ink);color:var(--cream);border-radius:26px;padding:32px}
+.panel h3{font-size:28px;color:var(--mari-l);margin-bottom:12px}
+.panel p{margin-bottom:10px}
+.panel a.big{display:block;font-family:"Yeseva One",serif;font-size:30px;color:#fff;text-decoration:none;margin:6px 0 14px;overflow-wrap:anywhere}
+.hours{list-style:none;margin:14px 0 18px;border-top:1px solid rgba(255,255,255,.15)}
+.hours li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;border-radius:8px}
+.hours li.today{background:var(--rosa);color:#fff;font-weight:600}
+.panel .btns{display:flex;flex-wrap:wrap;gap:10px}
+.panel .btn-s{background:transparent;color:#fff;border-color:var(--mari)}
+.panel .btn-s:hover{background:var(--mari);color:var(--ink)}
+.map{border-radius:26px;overflow:hidden;min-height:360px;border:4px solid #fff;box-shadow:0 10px 30px -16px rgba(58,20,48,.4)}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+footer{background:var(--rosa-d);color:#FFE3F1;text-align:center;padding:34px 20px 30px;font-size:14px}
+footer .f-logo{font-family:"Yeseva One",serif;font-size:26px;color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,246,232,.96);backdrop-filter:blur(8px);border-top:2px solid var(--cream2)}
+.bar a{flex:1;min-width:0;text-align:center;padding:13px 8px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px}
+.bar .c{background:var(--rosa);color:#fff}.bar .m{background:var(--ink);color:#fff}
+.reveal{transition:opacity .7s,transform .7s}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+@media (max-width:860px){
+ nav .links{display:none}
+ .hero-grid,.visit{grid-template-columns:1fr}
+ .hero{padding-top:12px}
+ .cake{max-width:300px}
+ .cards,.why{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+ section{padding:56px 0}
+ .bar{display:flex}
+}
+@media (min-width:861px){body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for La Dulce Bendicion. Not live.</div>
+
+<svg class="papel" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true">
+ <path d="M0 2 H1200" stroke="#3A1430" stroke-width="2"/>
+ <g id="flags"></g>
+</svg>
+
+<nav>
+ <a class="logo" href="#top">La Dulce Bendicion</a>
+ <div class="links"><a href="#pasteles">Cakes</a><a href="#nosotros">About</a><a href="#visita">Visit</a><a href="tel:+14233072670">423-307-2670</a></div>
+</nav>
+
+<header class="hero" id="top">
+ <div class="wrap hero-grid">
+  <div class="reveal">
+   <span class="eyebrow">Morristown, TN · Brown Avenue</span>
+   <h1>Custom cakes &amp; desserts, made <em>for your celebration.</em></h1>
+   <div class="es">Pasteles y postres a tu medida</div>
+   <p class="sub">A custom cake and dessert bakery at 121 Brown Avenue in Morristown, run by owner Magaly Leon.</p>
+   <div class="ctas">
+    <a class="btn btn-p" href="tel:+14233072670">Call to order · Llámanos</a>
+    <a class="btn btn-s" href="#visita">Find us</a>
+   </div>
+  </div>
+  <div class="reveal">
+   <svg class="cake" viewBox="0 0 400 420" role="img" aria-label="Illustration of a tiered celebration cake">
+    <g class="spark" fill="#F5A623"><path d="M60 80l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path d="M340 60l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><path d="M350 230l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><path d="M40 260l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+    <ellipse cx="200" cy="392" rx="170" ry="16" fill="#E7B9CF" opacity=".5"/>
+    <g class="float">
+     <rect x="90" y="368" width="220" height="14" rx="7" fill="#F5A623"/>
+     <path d="M190 368 L200 382 L210 368" fill="#C9831A"/>
+     <!-- bottom tier -->
+     <rect x="70" y="270" width="260" height="100" rx="14" fill="#E4007C"/>
+     <path d="M70 290 q16 22 32 0 q16 22 32 0 q16 22 32 0 q16 22 32 0 q16 22 32 0 q16 22 32 0 q16 22 32 0 q16 22 36 0 V270 H70z" fill="#FFF6E8"/>
+     <g fill="#FFD27A">
+      <circle cx="86" cy="362" r="7"/><circle cx="104" cy="362" r="7"/><circle cx="122" cy="362" r="7"/><circle cx="140" cy="362" r="7"/><circle cx="158" cy="362" r="7"/><circle cx="176" cy="362" r="7"/><circle cx="194" cy="362" r="7"/><circle cx="212" cy="362" r="7"/><circle cx="230" cy="362" r="7"/><circle cx="248" cy="362" r="7"/><circle cx="266" cy="362" r="7"/><circle cx="284" cy="362" r="7"/><circle cx="302" cy="362" r="7"/><circle cx="318" cy="362" r="6"/>
+     </g>
+     <g fill="#FFF6E8"><circle cx="130" cy="328" r="6"/><circle cx="200" cy="328" r="6"/><circle cx="270" cy="328" r="6"/></g>
+     <!-- middle tier -->
+     <rect x="105" y="185" width="190" height="88" rx="12" fill="#FFF6E8" stroke="#FCEBD3" stroke-width="3"/>
+     <path d="M105 205 q12 18 24 0 q12 18 24 0 q12 18 24 0 q12 18 24 0 q12 18 24 0 q12 18 24 0 q12 18 24 0 q12 18 22 0 V185 H105z" fill="#F5A623"/>
+     <g fill="#E4007C"><path d="M150 240c-6-10 6-16 10-8 4-8 16-2 10 8l-10 10z"/><path d="M190 240c-6-10 6-16 10-8 4-8 16-2 10 8l-10 10z"/><path d="M230 240c-6-10 6-16 10-8 4-8 16-2 10 8l-10 10z"/></g>
+     <!-- top tier -->
+     <rect x="140" y="112" width="120" height="76" rx="10" fill="#E4007C"/>
+     <path d="M140 130 q10 15 20 0 q10 15 20 0 q10 15 20 0 q10 15 20 0 q10 15 20 0 q10 15 20 0 V112 H140z" fill="#FFF6E8"/>
+     <g fill="#FFD27A"><circle cx="150" cy="182" r="5"/><circle cx="164" cy="182" r="5"/><circle cx="178" cy="182" r="5"/><circle cx="192" cy="182" r="5"/><circle cx="206" cy="182" r="5"/><circle cx="220" cy="182" r="5"/><circle cx="234" cy="182" r="5"/><circle cx="248" cy="182" r="5"/></g>
+     <!-- flower topper -->
+     <g transform="translate(200 92)">
+      <g fill="#F5A623"><circle cx="0" cy="-16" r="11"/><circle cx="15" cy="-5" r="11"/><circle cx="9" cy="13" r="11"/><circle cx="-9" cy="13" r="11"/><circle cx="-15" cy="-5" r="11"/></g>
+      <circle r="9" fill="#B0005F"/>
+     </g>
+     <path d="M178 104 q-22 -6 -30 8 q18 4 30 -8z M222 104 q22 -6 30 8 q-18 4 -30 -8z" fill="#3E8E5A"/>
+    </g>
+   </svg>
+  </div>
+ </div>
+</header>
+
+<div class="scallop" style="--c:#fff;transform:rotate(180deg)"></div>
+<section class="white" id="pasteles">
+ <div class="wrap">
+  <div class="sec-head reveal"><span class="es">Lo que hacemos</span><h2>Cakes &amp; desserts, made to order</h2><p>The Morristown Area Chamber lists La Dulce Bendicion as a bakery for custom cake and desserts.</p></div>
+  <div class="cards">
+   <div class="card reveal">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="30" width="44" height="24" rx="5" fill="#E4007C"/><rect x="18" y="14" width="28" height="18" rx="4" fill="#F5A623"/><path d="M10 36q5.5 6 11 0t11 0 11 0 11 0" stroke="#FFF6E8" stroke-width="4" fill="none"/><rect x="31" y="4" width="2" height="10" fill="#3A1430"/><ellipse cx="32" cy="4" rx="2.5" ry="3.5" fill="#F5A623"/></svg>
+    <h3>Custom cakes</h3><div class="es">Pasteles personalizados</div>
+    <p>Call Magaly to talk through the cake you have in mind.</p>
+   </div>
+   <div class="card reveal">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 30h36l-5 26H19z" fill="#F5A623"/><path d="M12 30c0-10 9-16 20-16s20 6 20 16z" fill="#E4007C"/><path d="M12 30q5 6 10 0t10 0 10 0 10 0" stroke="#FFF6E8" stroke-width="4" fill="none"/><circle cx="32" cy="10" r="5" fill="#B0005F"/></svg>
+    <h3>Desserts</h3><div class="es">Postres</div>
+    <p>Call to ask what desserts are available.</p>
+   </div>
+   <div class="card reveal">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 8h52v6l-6 6-6-6-6 6-6-6-6 6-6-6-6 6-6-6z" fill="#E4007C"/><path d="M6 8h52" stroke="#3A1430" stroke-width="2"/><rect x="14" y="30" width="36" height="26" rx="4" fill="#FFF6E8" stroke="#F5A623" stroke-width="3"/><path d="M22 42h20M22 49h12" stroke="#B0005F" stroke-width="3" stroke-linecap="round"/></svg>
+    <h3>Celebration orders</h3><div class="es">Para tu fiesta</div>
+    <p>Have a celebration coming up? Call to talk through your order.</p>
+   </div>
+  </div>
+  <div class="gallery reveal" aria-label="Photo gallery placeholder">
+   <div class="ph">Your cake photo here</div><div class="ph">Tu pastel aquí</div><div class="ph">Your dessert photo here</div><div class="ph">Tu postre aquí</div>
+  </div>
+  <p class="note">Gallery spots are placeholders for your own photos. Call <a href="tel:+14233072670"><b>423-307-2670</b></a> to order.</p>
+ </div>
+</section>
+<div class="scallop" style="--c:#fff"></div>
+
+<section id="nosotros">
+ <div class="wrap">
+  <div class="sec-head reveal"><span class="es">Una dulce bendición</span><h2>Why order from La Dulce Bendicion</h2></div>
+  <div class="why">
+   <div class="reveal"><b>Made to order</b><span>A custom cake and dessert bakery, so every order starts with your celebration.</span></div>
+   <div class="reveal"><b>On Brown Avenue</b><span>Find us at 121 Brown Ave in Morristown, TN.</span></div>
+   <div class="reveal"><b>Chamber members</b><span>La Dulce Bendicion celebrated its ribbon cutting with the Morristown Area Chamber in November 2025.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="white" id="visita">
+ <div class="wrap">
+  <div class="sec-head reveal"><span class="es">Visítanos</span><h2>Come by or give us a call</h2></div>
+  <div class="visit">
+   <div class="panel reveal">
+    <h3>121 Brown Ave</h3>
+    <p>Morristown, TN 37813</p>
+    <a class="big" href="tel:+14233072670">423-307-2670</a>
+    <p style="font-size:14px;opacity:.85">Hours: please call to confirm before you visit.</p>
+    <ul class="hours" id="hours"></ul>
+    <div class="btns">
+     <a class="btn btn-p" href="tel:+14233072670">Call now</a>
+     <a class="btn btn-s" href="https://www.google.com/maps/dir/?api=1&destination=121+Brown+Ave+Morristown+TN+37813" target="_blank" rel="noopener">Directions</a>
+    </div>
+   </div>
+   <div class="map reveal"><iframe title="Map to La Dulce Bendicion" loading="lazy" src="https://www.google.com/maps?q=121%20Brown%20Ave%2C%20Morristown%2C%20TN%2037813&output=embed"></iframe></div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="f-logo">La Dulce Bendicion</div>
+ <p>Custom cakes &amp; desserts · Pasteles y postres · Morristown, TN</p>
+ <p style="margin-top:12px;opacity:.8">Concept by Code Craft Media</p>
+</footer>
+
+<div class="bar"><a class="c" href="tel:+14233072670">Call · Llamar</a><a class="m" href="https://www.google.com/maps/dir/?api=1&destination=121+Brown+Ave+Morristown+TN+37813">Directions</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var g=document.getElementById('flags'),c=['#E4007C','#F5A623','#FFF6E8','#B0005F','#FFD27A'],s='';
+ for(var i=0;i<30;i++){var x=i*40+4;s+='<path d="M'+x+' 2h32v30l-8-6-8 6-8-6-8 6z" fill="'+c[i%5]+'" stroke="#3A1430" stroke-opacity=".15"/><circle cx="'+(x+16)+'" cy="14" r="4" fill="#FFF6E8" opacity=".7"/>';}
+ g.innerHTML=s;
+ var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],es=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],t=new Date().getDay(),h='';
+ for(var d=1;d<=7;d++){var k=d%7;h+='<li'+(k===t?' class="today"':'')+'><span>'+days[k]+' · '+es[k]+(k===t?' (today)':'')+'</span><span>Call for hours</span></li>';}
+ document.getElementById('hours').innerHTML=h;
+ var els=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}})},{threshold:.1});
+  els.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');io.observe(el);}});
+ }
+ setTimeout(function(){els.forEach(function(el){el.classList.remove('pre')})},1500);
+})();
+</script>
+</body>
+</html>

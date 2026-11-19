@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Brisby's Bed &amp; Biscuits — Morristown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#7cc4e8;--sky-d:#1f6f99;--sky-l:#dff1fb;--tan:#d9a86c;--tan-d:#8a5a26;--cream:#fff8ec;--ink:#2b2a33;--muted:#5d5a63}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:Mulish,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3{font-family:Fredoka,sans-serif;line-height:1.1;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:#f3ede2;font-size:12px;text-align:center;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:12px}
+.logo{font-family:Fredoka;font-weight:700;font-size:22px;color:var(--sky-d);text-decoration:none;display:flex;align-items:center;gap:8px;min-width:0}
+.logo span{white-space:nowrap}
+.navcall{font-weight:800;font-size:14px;text-decoration:none;background:#fff;border:2px solid var(--sky);padding:8px 14px;border-radius:999px;white-space:nowrap;transition:.2s}
+.navcall:hover{background:var(--sky);color:#fff}
+.hero{background:linear-gradient(180deg,var(--sky-l),var(--cream));position:relative;overflow:hidden}
+.paws{position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%231f6f99'%3E%3Cellipse cx='30' cy='38' rx='9' ry='8'/%3E%3Ccircle cx='18' cy='24' r='4'/%3E%3Ccircle cx='26' cy='18' r='4'/%3E%3Ccircle cx='35' cy='18' r='4'/%3E%3Ccircle cx='43' cy='24' r='4'/%3E%3C/g%3E%3Cg fill='%238a5a26' transform='translate(78 84) rotate(-25)'%3E%3Crect x='-14' y='-4' width='28' height='8' rx='4'/%3E%3Ccircle cx='-14' cy='-4' r='5'/%3E%3Ccircle cx='-14' cy='4' r='5'/%3E%3Ccircle cx='14' cy='-4' r='5'/%3E%3Ccircle cx='14' cy='4' r='5'/%3E%3C/g%3E%3C/svg%3E")}
+.hgrid{display:grid;grid-template-columns:1fr;gap:28px;padding:20px 0 56px;position:relative;align-items:center}
+.hgrid>*{min-width:0}
+.eyebrow{display:inline-block;background:#fff;color:var(--tan-d);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;box-shadow:0 2px 0 var(--tan)}
+.hero h1{font-size:clamp(38px,10vw,68px);margin:16px 0 14px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--sky-d)}
+.hero p.sub{font-size:18px;color:var(--muted);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-decoration:none;padding:14px 22px;border-radius:16px;transition:transform .15s,box-shadow .15s}
+.btn.primary{background:var(--sky-d);color:#fff;box-shadow:0 5px 0 #154d6b}
+.btn.ghost{background:#fff;color:var(--tan-d);box-shadow:0 5px 0 var(--tan)}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(3px);box-shadow:none}
+.art svg{width:100%;height:auto;max-width:520px;display:block;margin:0 auto}
+.zz{animation:zz 3s ease-in-out infinite}.zz2{animation-delay:1s}
+@keyframes zz{0%,100%{opacity:0;transform:translateY(6px)}50%{opacity:1;transform:translateY(-6px)}}
+.tail{transform-origin:330px 205px;animation:wag 2.4s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(0)}50%{transform:rotate(10deg)}}
+section{padding:64px 0}
+.h2{font-size:clamp(30px,7vw,44px);margin-bottom:10px}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.cards>*{min-width:0}
+.card{background:#fff;border-radius:24px;padding:26px;border:2px solid #f0e2cc;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--sky)}
+.ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:var(--sky-l);margin-bottom:14px}
+.card h3{font-size:24px;margin-bottom:6px}
+.card p{color:var(--muted)}
+.tag{display:inline-block;margin-top:12px;font-size:13px;font-weight:800;color:var(--tan-d)}
+.bone-div{display:flex;justify-content:center;gap:14px;opacity:.6}
+.why{background:var(--sky-l)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
+.facts>*{min-width:0}
+.fact{background:#fff;border-radius:20px;padding:20px}
+.fact b{font-family:Fredoka;font-size:20px;display:block;color:var(--sky-d)}
+.split{display:grid;grid-template-columns:1fr;gap:24px}
+.split>*{min-width:0}
+.hours{background:#fff;border-radius:24px;padding:22px;border:2px solid #f0e2cc}
+.hours li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:12px}
+.hours li.today{background:var(--sky-l);font-weight:800}
+.hours li span:last-child{color:var(--muted);text-align:right}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+.map{border-radius:24px;overflow:hidden;border:2px solid #f0e2cc;min-height:300px;background:#eee}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.contact .btn{margin-top:4px}
+footer{background:var(--ink);color:#e9e2d4;padding:36px 0;text-align:center;font-size:14px}
+footer a{color:var(--sky)}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,248,236,.96);backdrop-filter:blur(8px);border-top:2px solid #f0e2cc;z-index:50}
+.bar a{flex:1;min-width:0;text-align:center;justify-content:center;padding:13px 10px}
+.reveal{transition:opacity .6s,transform .6s}
+.js .reveal.pre{opacity:0;transform:translateY(18px)}
+@media(min-width:860px){
+ .hgrid{grid-template-columns:1.05fr 1fr;padding:40px 0 80px}
+ .split{grid-template-columns:1fr 1.2fr}
+ .bar{display:none}
+ body{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Brisby's Bed &amp; Biscuits. Not live.</div>
+<header class="hero">
+ <div class="paws" aria-hidden="true"></div>
+ <div class="wrap">
+  <nav>
+   <a class="logo" href="#top" aria-label="Brisby's Bed and Biscuits home">
+    <svg width="34" height="20" viewBox="0 0 34 20" aria-hidden="true"><g fill="#d9a86c"><rect x="7" y="6" width="20" height="8" rx="4"/><circle cx="7" cy="6" r="5"/><circle cx="7" cy="14" r="5"/><circle cx="27" cy="6" r="5"/><circle cx="27" cy="14" r="5"/></g></svg>
+    <span>Brisby's</span>
+   </a>
+   <a class="navcall" href="tel:+14232585544">423-258-5544</a>
+  </nav>
+  <div class="hgrid" id="top">
+   <div>
+    <span class="eyebrow">Morristown, TN</span>
+    <h1>Grooming, day care <em>&amp; spa</em> on Fernwood Church Rd.</h1>
+    <p class="sub">Brisby's Bed &amp; Biscuits, a Morristown Area Chamber member for pet grooming and pet day care.</p>
+    <div class="ctas">
+     <a class="btn primary" href="tel:+14232585544">Call to book a groom</a>
+     <a class="btn ghost" href="#visit">Find us</a>
+    </div>
+   </div>
+   <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 480 360">
+     <ellipse cx="240" cy="318" rx="200" ry="20" fill="#e9d9bf"/>
+     <!-- bed -->
+     <path d="M60 250 Q60 170 140 168 L340 168 Q420 170 420 250 L420 280 Q420 305 395 305 L85 305 Q60 305 60 280Z" fill="#7cc4e8"/>
+     <path d="M90 250 Q95 200 150 198 L330 198 Q385 200 390 250 L390 268 L90 268Z" fill="#fff8ec"/>
+     <path d="M60 250 Q60 170 140 168 L340 168 Q420 170 420 250" fill="none" stroke="#1f6f99" stroke-width="5"/>
+     <g fill="#1f6f99" opacity=".35"><circle cx="110" cy="285" r="5"/><circle cx="170" cy="290" r="5"/><circle cx="240" cy="290" r="5"/><circle cx="310" cy="290" r="5"/><circle cx="370" cy="285" r="5"/></g>
+     <!-- dog -->
+     <g class="tail"><path d="M330 215 Q370 190 360 160" stroke="#c99357" stroke-width="14" fill="none" stroke-linecap="round"/></g>
+     <ellipse cx="270" cy="235" rx="80" ry="38" fill="#d9a86c"/>
+     <ellipse cx="270" cy="250" rx="62" ry="18" fill="#efc993"/>
+     <circle cx="185" cy="222" r="40" fill="#d9a86c"/>
+     <path d="M158 196 Q140 200 142 238 Q150 250 162 232Z" fill="#8a5a26"/>
+     <path d="M206 192 Q228 196 226 232 Q216 246 206 226Z" fill="#8a5a26"/>
+     <ellipse cx="180" cy="240" rx="20" ry="13" fill="#efc993"/>
+     <ellipse cx="180" cy="234" rx="7" ry="5" fill="#2b2a33"/>
+     <path d="M166 216 q6 5 12 0 M190 216 q6 5 12 0" stroke="#2b2a33" stroke-width="3" fill="none" stroke-linecap="round"/>
+     <ellipse cx="140" cy="262" rx="20" ry="10" fill="#efc993"/><ellipse cx="200" cy="268" rx="20" ry="10" fill="#efc993"/>
+     <!-- blanket -->
+     <path d="M230 240 Q300 222 360 246 L352 270 Q290 258 236 268Z" fill="#fff" opacity=".9"/>
+     <path d="M240 252 h100" stroke="#7cc4e8" stroke-width="4" stroke-dasharray="10 8"/>
+     <!-- biscuit -->
+     <g transform="translate(380 120) rotate(-20)"><rect x="-22" y="-7" width="44" height="14" rx="7" fill="#d9a86c"/><circle cx="-22" cy="-7" r="9" fill="#d9a86c"/><circle cx="-22" cy="7" r="9" fill="#d9a86c"/><circle cx="22" cy="-7" r="9" fill="#d9a86c"/><circle cx="22" cy="7" r="9" fill="#d9a86c"/><circle cx="-4" cy="0" r="2" fill="#8a5a26"/><circle cx="6" cy="0" r="2" fill="#8a5a26"/></g>
+     <text class="zz" x="210" y="160" font-family="Fredoka" font-size="30" fill="#1f6f99">z</text>
+     <text class="zz zz2" x="236" y="128" font-family="Fredoka" font-size="40" fill="#1f6f99">Z</text>
+    </svg>
+   </div>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="services">
+ <div class="wrap reveal">
+  <h2 class="h2">What Brisby's offers</h2>
+  <p class="lead">These are the services Brisby's is listed for with the Morristown Area Chamber. For details, pricing and availability, give them a call.</p>
+  <div class="cards">
+   <div class="card"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1f6f99" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg></div><h3>Pet grooming</h3><p>Call to ask which services are available and how to schedule.</p><span class="tag">Pricing: call to ask</span></div>
+   <div class="card"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1f6f99" stroke-width="2" stroke-linecap="round"><path d="M3 18v-6a3 3 0 013-3h12a3 3 0 013 3v6M3 18h18M7 9V6"/></svg></div><h3>Pet day care</h3><p>Call to ask about day care hours, drop-off and what to bring.</p><span class="tag">Details: call to ask</span></div>
+   <div class="card"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1f6f99" stroke-width="2" stroke-linecap="round"><path d="M12 3c3 4 6 6.5 6 10a6 6 0 01-12 0c0-3.5 3-6 6-10z"/></svg></div><h3>Pet spa</h3><p>Listed under Pet Day Care/Spa. Call to ask what spa services are offered.</p><span class="tag">Details: call to ask</span></div>
+  </div>
+ </div>
+</section>
+
+<div class="bone-div" aria-hidden="true">
+ <svg width="40" height="20" viewBox="0 0 34 20"><g fill="#d9a86c"><rect x="7" y="6" width="20" height="8" rx="4"/><circle cx="7" cy="6" r="5"/><circle cx="7" cy="14" r="5"/><circle cx="27" cy="6" r="5"/><circle cx="27" cy="14" r="5"/></g></svg>
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="#7cc4e8"><ellipse cx="12" cy="15" rx="5" ry="4.5"/><circle cx="5.5" cy="9" r="2.3"/><circle cx="9.5" cy="5.5" r="2.3"/><circle cx="14.5" cy="5.5" r="2.3"/><circle cx="18.5" cy="9" r="2.3"/></svg>
+ <svg width="40" height="20" viewBox="0 0 34 20"><g fill="#d9a86c"><rect x="7" y="6" width="20" height="8" rx="4"/><circle cx="7" cy="6" r="5"/><circle cx="7" cy="14" r="5"/><circle cx="27" cy="6" r="5"/><circle cx="27" cy="14" r="5"/></g></svg>
+</div>
+
+<section class="why" style="margin-top:48px">
+ <div class="wrap reveal">
+  <h2 class="h2">Good to know</h2>
+  <p class="lead">The facts, nothing more.</p>
+  <div class="facts">
+   <div class="fact"><b>Grooming + day care, one stop</b>Listed under both Pet Grooming and Pet Day Care/Spa.</div>
+   <div class="fact"><b>Chamber member</b>A new member of the Morristown Area Chamber of Commerce in 2026.</div>
+   <div class="fact"><b>Local to Morristown</b>2134 Fernwood Church Rd, Morristown, TN 37813.</div>
+   <div class="fact"><b>Real person on the phone</b>Call 423-258-5544 or email brisbysbnb@gmail.com.</div>
+  </div>
+ </div>
+</section>
+
+<section id="visit">
+ <div class="wrap split reveal">
+  <div>
+   <h2 class="h2">Hours &amp; visit</h2>
+   <div class="hours">
+    <ul id="hrs">
+     <li data-d="1"><span>Monday</span><span>Call to ask</span></li>
+     <li data-d="2"><span>Tuesday</span><span>Call to ask</span></li>
+     <li data-d="3"><span>Wednesday</span><span>Call to ask</span></li>
+     <li data-d="4"><span>Thursday</span><span>Call to ask</span></li>
+     <li data-d="5"><span>Friday</span><span>Call to ask</span></li>
+     <li data-d="6"><span>Saturday</span><span>Call to ask</span></li>
+     <li data-d="0"><span>Sunday</span><span>Call to ask</span></li>
+    </ul>
+    <p class="note">Placeholder: hours aren't published yet. They'd go here.</p>
+   </div>
+   <div class="contact" style="margin-top:20px">
+    <p style="font-weight:800">2134 Fernwood Church Rd<br>Morristown, TN 37813</p>
+    <div class="ctas" style="margin-top:14px">
+     <a class="btn primary" href="tel:+14232585544">Call 423-258-5544</a>
+     <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=2134%20Fernwood%20Church%20Rd%2C%20Morristown%2C%20TN%2037813" target="_blank" rel="noopener">Directions</a>
+    </div>
+   </div>
+  </div>
+  <div class="map"><iframe title="Map to Brisby's Bed and Biscuits" loading="lazy" src="https://www.google.com/maps?q=2134%20Fernwood%20Church%20Rd%2C%20Morristown%2C%20TN%2037813&amp;output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p style="font-family:Fredoka;font-size:22px;color:#fff">Brisby's Bed &amp; Biscuits</p>
+  <p>Morristown, TN · <a href="tel:+14232585544">423-258-5544</a> · <a href="mailto:brisbysbnb@gmail.com">brisbysbnb@gmail.com</a></p>
+  <p style="margin-top:10px;opacity:.7">Concept by Code Craft Media</p>
+ </div>
+</footer>
+
+<div class="bar">
+ <a class="btn primary" href="tel:+14232585544">Call</a>
+ <a class="btn ghost" href="tel:+14232585544">Book a groom</a>
+</div>
+<script>
+document.documentElement.classList.add('js');
+var d=new Date().getDay();document.querySelectorAll('#hrs li').forEach(function(l){if(+l.dataset.d===d)l.classList.add('today')});
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){els.forEach(function(e){if(e.getBoundingClientRect().top>innerHeight)e.classList.add('pre')});
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+setTimeout(function(){els.forEach(function(e){e.classList.remove('pre')})},1500);
+</script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Buck's Remodeling &amp; Construction — Tennessee</title>
+<meta name="description" content="Concept site for Buck's Remodeling & Construction: custom home builds, construction, renovation and remodeling. Call 423-946-2653.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2F3E46; --slate-d:#1f2a30; --slate-l:#3d5059;
+  --orange:#D97706; --orange-d:#b45f04; --orange-l:#f59e0b;
+  --drywall:#EDE6DB; --drywall-d:#e0d6c6; --ink:#1b2328; --line:rgba(237,230,219,.12);
+  --display:'Anton', Impact, 'Arial Narrow', sans-serif;
+  --body:'Source Sans 3', system-ui, -apple-system, Segoe UI, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--drywall);line-height:1.55;font-size:17px;overflow-x:hidden;
+  padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.concept{background:var(--ink);color:#cfc6b8;font-size:10px;text-align:center;padding:7px 4px;letter-spacing:0}
+.concept b{color:var(--orange-l);font-weight:600}
+
+/* blueprint grid */
+.blueprint{background-color:var(--slate);
+  background-image:
+   linear-gradient(rgba(237,230,219,.09) 1px,transparent 1px),
+   linear-gradient(90deg,rgba(237,230,219,.09) 1px,transparent 1px),
+   linear-gradient(rgba(237,230,219,.04) 1px,transparent 1px),
+   linear-gradient(90deg,rgba(237,230,219,.04) 1px,transparent 1px);
+  background-size:96px 96px,96px 96px,16px 16px,16px 16px;color:var(--drywall)}
+.paper{background-color:var(--drywall);
+  background-image:linear-gradient(rgba(47,62,70,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(47,62,70,.06) 1px,transparent 1px);
+  background-size:24px 24px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(31,42,48,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--drywall);min-width:0}
+.brand .mark{width:36px;height:36px;flex:none}
+.brand span{font-family:var(--display);font-size:19px;letter-spacing:.03em;line-height:1;text-transform:uppercase;white-space:nowrap}
+.brand small{display:block;font-family:var(--body);font-weight:600;font-size:10.5px;letter-spacing:.22em;color:var(--orange-l);margin-top:3px}
+.nav ul{display:none;list-style:none;margin:0;padding:0;gap:26px}
+.nav ul a{text-decoration:none;color:#d8d0c3;font-weight:600;font-size:15px;position:relative;padding:4px 0}
+.nav ul a:after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--orange);transition:width .25s}
+.nav ul a:hover{color:#fff}.nav ul a:hover:after{width:100%}
+.nav .call-sm{flex:none;text-decoration:none;background:var(--orange);color:#fff;font-weight:700;font-size:14px;padding:9px 14px;border-radius:4px;display:inline-flex;gap:7px;align-items:center;transition:background .2s,transform .2s}
+.nav .call-sm:hover{background:var(--orange-d);transform:translateY(-1px)}
+@media(min-width:900px){.nav ul{display:flex}.nav{height:70px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:28px 0 0}
+.hero .tag{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-l);border:1px dashed rgba(245,158,11,.55);padding:6px 10px;border-radius:3px}
+.hero h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(46px,13.4vw,112px);line-height:.95;letter-spacing:.005em;margin:18px 0 0;color:#fff}
+.hero h1 .o{color:var(--orange)}
+.hero h1 .ul{background:linear-gradient(transparent 82%,rgba(217,119,6,.55) 82%);}
+.hero p.lead{font-size:18px;color:#d9d1c4;max-width:34ch;margin:16px 0 0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .ctas{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.hero .ctas .btn{padding:14px 10px;font-size:16px}
+@media(min-width:900px){.hero .ctas{display:flex}.hero .ctas .btn{padding:15px 22px;font-size:17px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:700;font-size:17px;padding:15px 22px;border-radius:5px;transition:transform .2s,box-shadow .2s,background .2s;min-height:52px}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 6px 0 var(--orange-d)}
+.btn-o:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--orange-d)}
+.btn-o:active{transform:translateY(4px);box-shadow:0 2px 0 var(--orange-d)}
+.btn-g{border:2px solid rgba(237,230,219,.45);color:var(--drywall)}
+.btn-g:hover{border-color:var(--drywall);background:rgba(237,230,219,.08)}
+.hero .note{margin-top:16px;font-size:14px;color:#b8b0a3;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite;flex:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero-grid{display:grid;gap:10px}
+.house{margin:14px -12px 0;position:relative}
+.house svg{width:100%;height:auto}
+.draw{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s .3s ease-out forwards}
+.draw2{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.6s 1.4s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.fadein{opacity:0;animation:fi .8s 2s forwards}@keyframes fi{to{opacity:1}}
+@media(min-width:900px){
+  .hero{padding:70px 0 0}
+  .hero-grid{grid-template-columns:1fr 1fr;align-items:end;gap:40px}
+  .hero h1{font-size:clamp(60px,7vw,100px)}
+  .house{transform:scale(1.18);transform-origin:bottom right;margin-bottom:10px}
+  .house{margin:0 0 0 0}
+  .hero .copy{padding-bottom:70px}
+}
+
+/* tape measure divider */
+.tape{height:46px;background:#E9A60F;background:linear-gradient(#f2b51c,#d99a0a);position:relative;border-top:2px solid #a8740a;border-bottom:2px solid #a8740a;overflow:hidden}
+.tape:before{content:"";position:absolute;inset:0;
+ background-image:
+  repeating-linear-gradient(90deg,#1b2328 0 2px,transparent 2px 80px),
+  repeating-linear-gradient(90deg,#1b2328 0 1.5px,transparent 1.5px 40px),
+  repeating-linear-gradient(90deg,#1b2328 0 1px,transparent 1px 10px);
+ background-size:100% 22px,100% 15px,100% 9px;background-repeat:no-repeat;background-position:0 0,0 0,0 0}
+.tape .nums{position:absolute;left:0;right:0;top:20px;display:flex;font-family:var(--display);font-size:15px;color:#1b2328;white-space:nowrap}
+.tape .nums span{flex:0 0 80px;padding-left:5px}
+.tape .nums span:nth-child(4n){color:#b91c1c}
+.tape.slim{height:30px}.tape.slim .nums{top:12px;font-size:12px}
+.tape.slim:before{background-size:100% 12px,100% 8px,100% 5px}
+
+/* sections */
+section{padding:64px 0;position:relative}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange-d);display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:26px;height:2px;background:currentColor}
+.blueprint .eyebrow{color:var(--orange-l)}
+h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(38px,10vw,64px);line-height:.98;margin:12px 0 14px;letter-spacing:.01em;color:var(--slate)}
+.blueprint h2{color:#fff}
+.sub{font-size:18px;max-width:52ch;color:#45535a;margin:0}
+.blueprint .sub{color:#d2cabd}
+
+/* services */
+.svc-grid{display:grid;gap:16px;margin-top:34px}
+@media(min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+.svc{background:#fff;border:1.5px solid var(--slate);border-radius:6px;padding:22px 20px 24px;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:6px 6px 0 var(--slate)}
+.svc:hover{transform:translate(-2px,-2px);box-shadow:9px 9px 0 var(--orange)}
+.svc .num{position:absolute;top:14px;right:16px;font-family:var(--display);font-size:15px;color:#9aa4a9;letter-spacing:.06em}
+.svc .ic{width:58px;height:58px;margin-bottom:14px}
+.svc h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:27px;line-height:1;margin:0 0 8px;color:var(--slate);letter-spacing:.02em}
+.svc p{margin:0;color:#4a575d;font-size:16px}
+.quote-strip{margin-top:34px;border-left:5px solid var(--orange);background:rgba(47,62,70,.06);padding:18px 20px;font-size:18px;color:var(--slate);font-weight:600;border-radius:0 6px 6px 0}
+.quote-strip small{display:block;font-weight:400;font-size:13px;color:#6b767b;margin-top:6px}
+
+/* why */
+.why-grid{display:grid;gap:18px;margin-top:34px}
+@media(min-width:900px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why{border:1px solid rgba(237,230,219,.22);border-radius:6px;padding:24px 22px;background:rgba(31,42,48,.55);position:relative}
+.why:before{content:"";position:absolute;top:-1px;left:22px;width:46px;height:4px;background:var(--orange)}
+.why h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:26px;margin:6px 0 10px;color:#fff;letter-spacing:.02em;line-height:1.05}
+.why p{margin:0;color:#d2cabd}
+.why q{display:block;margin-top:14px;font-size:14px;color:#a9a195;font-style:italic;quotes:none;border-top:1px dashed rgba(237,230,219,.2);padding-top:12px}
+.dims{font-family:var(--display);color:var(--orange-l);font-size:13px;letter-spacing:.12em}
+
+/* process */
+.steps{counter-reset:s;display:grid;gap:14px;margin-top:30px}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border-radius:6px;padding:20px;border:1.5px dashed rgba(47,62,70,.45);display:flex;gap:14px;align-items:flex-start}
+.step b{font-family:var(--display);font-weight:400;font-size:34px;color:var(--orange);line-height:1;min-width:36px}
+.step h4{margin:0 0 4px;font-size:19px;color:var(--slate)}
+.step p{margin:0;font-size:15.5px;color:#4a575d}
+
+/* hours + visit */
+.hv{display:grid;gap:22px;margin-top:30px}
+@media(min-width:900px){.hv{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border-radius:8px;border:1.5px solid var(--slate);overflow:hidden}
+.card-h{background:var(--slate);color:#fff;padding:14px 20px;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:20px;display:flex;justify-content:space-between;align-items:center}
+.status{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:none;padding:4px 10px;border-radius:99px;background:#3d5059}
+.status.open{background:#15803d}.status.closed{background:#7f1d1d}
+.hours{list-style:none;margin:0;padding:6px 0}
+.hours li{display:flex;justify-content:space-between;padding:11px 20px;border-bottom:1px dashed #e3dccf;font-size:16.5px}
+.hours li:last-child{border-bottom:0}
+.hours li.today{background:#fdf1df;font-weight:700;color:var(--slate);box-shadow:inset 5px 0 0 var(--orange)}
+.hours li.today .d:after{content:"Today";margin-left:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:#fff;padding:2px 7px;border-radius:3px;vertical-align:2px}
+.hours .closed{color:#8a8f92}
+.card .foot{padding:14px 20px;background:#f7f3ec;font-size:15px;color:#4a575d;border-top:1px solid #e9e1d4}
+.visit-body{padding:22px 20px}
+.siteplan{position:relative;background:#f4efe6;border:1.5px dashed rgba(47,62,70,.45);border-radius:6px;height:220px;overflow:hidden}
+.siteplan>svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:50%;top:44%;transform:translate(-50%,-100%);text-align:center}
+.pin .lbl{background:var(--slate);color:#fff;font-weight:700;font-size:13px;padding:6px 10px;border-radius:4px;white-space:nowrap;margin-bottom:6px}
+.visit-body p{margin:14px 0 0;color:#4a575d;font-size:15.5px}
+.contact-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+.contact-list a{display:flex;align-items:center;gap:12px;text-decoration:none;padding:13px 14px;border:1.5px solid #e0d6c6;border-radius:6px;font-weight:600;color:var(--slate);transition:border-color .2s,background .2s;overflow-wrap:anywhere;font-size:15.5px}
+.contact-list a:hover{border-color:var(--orange);background:#fdf6ec}
+.contact-list svg{width:22px;height:22px;flex:none;color:var(--orange)}
+
+/* cta band */
+.band{text-align:center;padding:70px 0}
+.band h2{max-width:14ch;margin-left:auto;margin-right:auto}
+.band .ctas{justify-content:center}
+.band .big-num{font-family:var(--display);font-size:clamp(40px,12vw,78px);color:var(--orange-l);text-decoration:none;display:inline-block;margin-top:10px;letter-spacing:.02em;transition:color .2s}
+.band .big-num:hover{color:#fff}
+
+footer{background:var(--ink);color:#a9a195;padding:34px 0 30px;font-size:14px}
+footer .row{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
+footer b{color:var(--drywall);font-family:var(--display);font-weight:400;letter-spacing:.05em;font-size:18px;text-transform:uppercase}
+footer a{color:var(--orange-l)}
+
+/* sticky bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(27,35,40,.97);border-top:3px solid var(--orange);backdrop-filter:blur(6px)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:16px;border-radius:5px;padding:13px 8px;min-height:50px}
+.callbar .c{background:var(--orange);color:#fff}
+.callbar .e{border:1.5px solid rgba(237,230,219,.4);color:var(--drywall)}
+.callbar svg{width:19px;height:19px}
+@media(min-width:900px){.callbar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Buck's Remodeling &amp; Construction. Not live.</div>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Buck's Remodeling & Construction home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="4" fill="#D97706"/><path d="M8 21 20 10l12 11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 19v12h16V19" fill="none" stroke="#fff" stroke-width="3.2" stroke-linejoin="round"/><rect x="18" y="24" width="4" height="7" fill="#fff"/></svg>
+      <span>Buck's<small>REMODELING &amp; CONSTRUCTION</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Buck's</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#hours">Hours</a></li>
+    </ul>
+    <a class="call-sm" href="tel:+14239462653"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero blueprint" aria-label="Introduction">
+  <div class="wrap hero-grid">
+    <div class="copy">
+      <span class="tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 21h18M5 21V10l7-6 7 6v11"/></svg>Custom homes · Renovations</span>
+      <h1>Building your dreams into <span class="o">reality.</span></h1>
+      <p class="lead">Buck's Remodeling &amp; Construction: custom home builds, construction, renovation and remodeling.</p>
+      <div class="ctas">
+        <a class="btn btn-o" href="tel:+14239462653"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call now</a>
+        <a class="btn btn-g" href="mailto:Bucksremodelingtn@gmail.com?subject=Project%20quote%20request">Get a quote</a>
+      </div>
+      <div class="note"><span class="dot" aria-hidden="true"></span>Phone line available 24/7</div>
+    </div>
+    <div class="house" aria-hidden="true">
+      <svg viewBox="0 0 520 360" fill="none">
+        <!-- dimension lines -->
+        <g stroke="#f59e0b" stroke-width="1.2" class="fadein">
+          <path d="M70 330h380M70 324v12M450 324v12"/>
+          <path d="M40 120v190M34 120h12M34 310h12"/>
+        </g>
+        <g class="fadein" fill="#f59e0b" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="1">
+          <text x="236" y="350">42' - 0"</text>
+          <text x="10" y="220" transform="rotate(-90 22 220)">24' - 6"</text>
+        </g>
+        <!-- house outline -->
+        <g stroke="#EDE6DB" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+          <path class="draw" d="M70 310V170L190 80l120 90v140zM310 310V190h140v120M310 190l70-60 70 60"/>
+          <path class="draw2" d="M110 310v-70h50v70M220 200h60v50h-60zM340 220h40v40h-40zM400 220h30v40h-30z"/>
+          <path class="draw2" d="M250 200v50M220 225h60M60 310h400"/>
+          <path class="draw2" d="M230 112V70h28v63"/>
+        </g>
+        <!-- framing studs hint -->
+        <g stroke="rgba(237,230,219,.28)" stroke-width="1" class="fadein">
+          <path d="M90 300V180M130 300v-60M170 300V150M200 300V95M250 300v-50M290 300V160M330 300V200M360 300v-40M420 300v-40"/>
+        </g>
+        <!-- crane/hammer accent -->
+        <g class="fadein">
+          <circle cx="190" cy="80" r="5" fill="#D97706"/>
+          <circle cx="380" cy="130" r="5" fill="#D97706"/>
+          <path d="M460 92l26-26M478 58l16 16-8 8-16-16z" stroke="#D97706" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="tape" aria-hidden="true"><div class="nums" data-tape></div></div>
+</section>
+
+<section id="services" class="paper">
+  <div class="wrap">
+    <div class="eyebrow reveal">What we build</div>
+    <h2 class="reveal">From the slab<br>to the trim.</h2>
+    <p class="sub reveal">"We offer a wide range of contracting services, including construction, renovation, and remodeling."</p>
+    <div class="svc-grid">
+      <article class="svc reveal"><span class="num">01</span>
+        <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="#2F3E46" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M6 30 32 8l26 22"/><path d="M12 26v30h40V26"/><rect x="26" y="38" width="12" height="18" fill="#D97706" stroke="#2F3E46"/><path d="M44 14v8" /></svg>
+        <h3>Custom Home Builds</h3><p>Ground-up homes built around the way you want to live.</p></article>
+      <article class="svc reveal"><span class="num">02</span>
+        <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="#2F3E46" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M8 56h48M14 56V22h36v34"/><path d="M14 22 32 8l18 14"/><path d="M22 30h8v8h-8zM34 30h8v8h-8zM22 44h20" /><path d="M50 22 58 30" stroke="#D97706"/></svg>
+        <h3>Construction</h3><p>New construction handled start to finish.</p></article>
+      <article class="svc reveal"><span class="num">03</span>
+        <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="#2F3E46" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M10 54 34 30"/><path d="M30 18l16 16 8-8-16-16z" fill="#D97706"/><path d="M46 10l8 8"/></svg>
+        <h3>Renovation</h3><p>Bring tired rooms and older homes back to life.</p></article>
+      <article class="svc reveal"><span class="num">04</span>
+        <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="#2F3E46" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="8" y="12" width="48" height="40" rx="2"/><path d="M8 26h48M24 26v26"/><rect x="30" y="32" width="20" height="14" fill="#D97706"/></svg>
+        <h3>Remodeling</h3><p>Rework the layout, finishes and flow of the space you have.</p></article>
+    </div>
+    <div class="quote-strip reveal">"No matter what your project entails, we have the expertise and resources to get the job done right."<small>From Buck's Remodeling &amp; Construction</small></div>
+  </div>
+</section>
+
+<div class="tape slim" aria-hidden="true"><div class="nums" data-tape></div></div>
+
+<section id="why" class="blueprint">
+  <div class="wrap">
+    <div class="eyebrow reveal">Why Buck's</div>
+    <h2 class="reveal">Measured twice.<br>Built right.</h2>
+    <div class="why-grid">
+      <div class="why reveal"><span class="dims">SPEC 01</span><h3>High-quality work, every job</h3><p>Quality is the standard, not an upgrade.</p><q>"We are committed to providing high-quality contracting services to our clients."</q></div>
+      <div class="why reveal"><span class="dims">SPEC 02</span><h3>An experienced, skilled crew</h3><p>People who know the trade, on your project.</p><q>"Our team is made up of experienced and skilled professionals who are dedicated to delivering top-notch results."</q></div>
+      <div class="why reveal"><span class="dims">SPEC 03</span><h3>A phone that gets answered</h3><p>Questions don't wait for office hours.</p><q>"Our phone number at 423-946-2653 is available 24/7, so feel free to call at anytime!"</q></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="paper">
+  <div class="wrap">
+    <div class="eyebrow reveal">How it works</div>
+    <h2 class="reveal">Three steps<br>to a start date.</h2>
+    <div class="steps">
+      <div class="step reveal"><b>1</b><div><h4>Call or email</h4><p>Ring 423-946-2653 or send a note with photos of the space.</p></div></div>
+      <div class="step reveal"><b>2</b><div><h4>Talk it through</h4><p>Walk through what you want built, renovated or remodeled.</p></div></div>
+      <div class="step reveal"><b>3</b><div><h4>Get it built</h4><p>The crew gets to work and gets the job done right.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="tape slim" aria-hidden="true"><div class="nums" data-tape></div></div>
+
+<section id="hours" class="paper">
+  <div class="wrap">
+    <div class="eyebrow reveal">Hours &amp; contact</div>
+    <h2 class="reveal">Come see us.</h2>
+    <div class="hv">
+      <div class="card reveal">
+        <div class="card-h">Office hours <span class="status" id="status">Mon–Fri</span></div>
+        <ul class="hours" id="hoursList">
+          <li data-d="1"><span class="d">Monday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="2"><span class="d">Tuesday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="3"><span class="d">Wednesday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="4"><span class="d">Thursday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="5"><span class="d">Friday</span><span>9:00 am – 5:00 pm</span></li>
+          <li data-d="6"><span class="d">Saturday</span><span class="closed">Closed</span></li>
+          <li data-d="0"><span class="d">Sunday</span><span class="closed">Closed</span></li>
+        </ul>
+        <div class="foot">The phone line is available 24/7, even when the office is closed.</div>
+      </div>
+      <div class="card reveal">
+        <div class="card-h">Visit the shop</div>
+        <div class="visit-body">
+          <div class="siteplan" aria-label="Map placeholder: shop address to be added">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0v20" fill="none" stroke="rgba(47,62,70,.10)"/></pattern></defs>
+              <rect width="400" height="220" fill="url(#g)"/>
+              <path d="M-10 150C80 130 140 170 220 140S360 90 420 110" stroke="#cfc4b2" stroke-width="18" fill="none"/>
+              <path d="M120 -10V230M300 -10V230" stroke="#d8cfbf" stroke-width="12"/>
+              <path d="M-10 150C80 130 140 170 220 140S360 90 420 110" stroke="#fff" stroke-width="2" stroke-dasharray="8 8" fill="none"/>
+              <rect x="150" y="40" width="50" height="34" fill="none" stroke="#2F3E46" stroke-width="1.5"/>
+              <rect x="320" y="150" width="56" height="40" fill="none" stroke="#2F3E46" stroke-width="1.5"/>
+              <rect x="20" y="30" width="70" height="44" fill="none" stroke="#2F3E46" stroke-width="1.5"/>
+            </svg>
+            <div class="pin"><div class="lbl">Your shop address here</div>
+              <svg width="34" height="44" viewBox="0 0 34 44" style="margin:0 auto" aria-hidden="true"><path d="M17 43S2 27 2 16a15 15 0 0 1 30 0c0 11-15 27-15 27z" fill="#D97706" stroke="#fff" stroke-width="2"/><circle cx="17" cy="16" r="5.5" fill="#fff"/></svg></div>
+          </div>
+          <p>"We love our customers, so feel free to visit during normal business hours." A live Google map and one-tap directions drop in here once the address is added.</p>
+          <ul class="contact-list">
+            <li><a href="tel:+14239462653"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>423-946-2653</a></li>
+            <li><a href="mailto:Bucksremodelingtn@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Bucksremodelingtn@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band blueprint">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="justify-content:center">Got a project in mind?</div>
+    <h2 class="reveal">Let's build it.</h2>
+    <a class="big-num reveal" href="tel:+14239462653">423-946-2653</a>
+    <div class="ctas reveal"><a class="btn btn-o" href="tel:+14239462653">Call now</a><a class="btn btn-g" href="mailto:Bucksremodelingtn@gmail.com?subject=Project%20quote%20request">Email for a quote</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div><b>Buck's Remodeling &amp; Construction</b><br>Custom home builds · Construction · Renovation · Remodeling</div>
+    <div>Concept by <a href="https://coleselig.github.io/codecraft">Code Craft Media</a> · Not affiliated, not live</div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="c" href="tel:+14239462653"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call 423-946-2653</a>
+  <a class="e" href="mailto:Bucksremodelingtn@gmail.com?subject=Project%20quote%20request"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Get a quote</a>
+</nav>
+
+<script>
+(function(){
+  // tape numbers
+  document.querySelectorAll('[data-tape]').forEach(function(el){var h='';for(var i=1;i<=40;i++)h+='<span>'+i+'</span>';el.innerHTML=h;});
+  // hours highlight (Eastern Time)
+  var now=new Date(), d=now.getDay(), hr=now.getHours()+now.getMinutes()/60;
+  try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(now);
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6},w,h,m;p.forEach(function(x){if(x.type==='weekday')w=x.value;if(x.type==='hour')h=+x.value%24;if(x.type==='minute')m=+x.value;});
+    if(w in map){d=map[w];hr=h+m/60;}}catch(e){}
+  var li=document.querySelector('#hoursList li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+  var st=document.getElementById('status'), open=d>=1&&d<=5&&hr>=9&&hr<17;
+  if(st){st.textContent=open?'Open now':'Closed now';st.classList.add(open?'open':'closed');}
+  // reveal
+  document.documentElement.classList.add('js');
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>window.innerHeight)e.classList.add('pre');});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre');});},1500);
+})();
+</script>
+</body>
+</html>

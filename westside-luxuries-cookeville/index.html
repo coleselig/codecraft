@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Westside Luxuries — Cookeville</title>
+<meta name="description" content="Concept site for Westside Luxuries: fine fragrances, hand-poured candles, earth-inspired home décor, one-of-a-kind granite pieces and original art by Denice Taylor Rinks. 149 W. Spring Street, Downtown Cookeville.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0c0b; --ink2:#161412; --ink3:#1f1c19;
+  --gold:#d4b98a; --gold2:#b89a66; --goldhi:#efdcb6;
+  --blush:#e9c4bd; --blush2:#c99a92;
+  --cream:#f4ece2; --mute:#a59c90; --line:rgba(212,185,138,.38);
+  --serif:'Bodoni Moda', 'Didot', Georgia, serif;
+  --sans:'Montserrat', system-ui, -apple-system, sans-serif;
+  --bar:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:where(div,section,header,footer,article,li,ul,nav,figure,aside,a,span,p,h1,h2,h3,h4,dl,dt,dd){min-width:0}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 16px}
+@media(min-width:700px){.wrap{padding:0 40px}}
+
+/* grain texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* concept banner */
+.concept{background:var(--blush);color:var(--ink);text-align:center;font-size:min(2.42vw,12px);letter-spacing:.01em;
+  padding:6px 8px;white-space:nowrap;overflow:hidden;font-weight:500}
+.concept b{font-weight:600}
+
+/* masthead */
+.mast{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40;background:rgba(13,12,11,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.mono{width:36px;height:36px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-style:italic;color:var(--gold);font-size:16px;letter-spacing:-.04em;flex:none}
+.logo span{font-family:var(--serif);font-size:15px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav{display:none;gap:28px;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.nav a{text-decoration:none;color:var(--mute);transition:color .25s}
+.nav a:hover{color:var(--gold)}
+.mast .call{font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);color:var(--gold);padding:9px 14px;white-space:nowrap;transition:.25s;flex:none}
+.mast .call:hover{background:var(--gold);color:var(--ink)}
+@media(max-width:420px){.mast .call{display:none}}
+@media(max-width:560px){.ctas .btn{flex:1 1 100%}.kicker{letter-spacing:.2em;font-size:10px}}
+@media(min-width:980px){.nav{display:flex}}
+
+/* edition strip */
+.edition{border-bottom:1px solid var(--line)}
+.edition .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:10px;padding-bottom:10px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.edition .wrap span:nth-child(2){display:none}
+@media(min-width:700px){.edition .wrap span:nth-child(2){display:inline}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::after{content:"";position:absolute;right:-20%;top:10%;width:80vw;height:80vw;max-width:900px;max-height:900px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(233,196,189,.18),rgba(212,185,138,.06) 55%,transparent 72%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:28px;padding-top:34px;padding-bottom:44px}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr;gap:56px;padding-top:72px;padding-bottom:88px;align-items:center}}
+.kicker{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1px;background:var(--gold);flex:none}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,12.4vw,104px);line-height:.95;letter-spacing:-.025em;margin:18px 0 20px}
+h1 em{font-style:italic;color:var(--blush)}
+h1 .g{color:var(--gold)}
+.sub{font-size:15px;line-height:1.7;color:#d9d0c4;max-width:34em;font-weight:300}
+.sub strong{color:var(--cream);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.solid:hover{background:var(--goldhi);transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(212,185,138,.6)}
+.btn.ghost{border:1px solid var(--line);color:var(--cream)}
+.btn.ghost:hover{border-color:var(--blush);color:var(--blush)}
+.btn:active{transform:scale(.98)}
+
+.cover{position:relative;border:1px solid var(--line);padding:12px;background:linear-gradient(160deg,#1a1715,#0d0c0b)}
+.cover svg{width:100%;height:auto}
+.cover figcaption{display:flex;justify-content:space-between;gap:10px;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);padding:12px 4px 2px;border-top:1px solid var(--line);margin-top:12px}
+.flame{transform-origin:200px 196px;animation:flick 3.2s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1,1) rotate(0)}30%{transform:scale(.96,1.05) rotate(-1.5deg)}60%{transform:scale(1.03,.97) rotate(1deg)}}
+.glow{animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.75}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.flame,.glow,.marq-in{animation:none!important}}
+
+/* marquee */
+.marq{border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;background:var(--ink2)}
+.marq-in{display:flex;gap:40px;width:max-content;animation:slide 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold)}
+.marq-in span{white-space:nowrap;display:flex;align-items:center;gap:40px}
+.marq-in span::after{content:"✦";font-style:normal;font-size:11px;color:var(--blush)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section.s{padding:64px 0;border-bottom:1px solid var(--line)}
+@media(min-width:900px){section.s{padding:104px 0}}
+.shead{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:36px}
+@media(min-width:900px){.shead{border-top:1px solid var(--gold);padding-top:22px}.shead .num{align-self:start}}
+@media(min-width:900px){.shead{grid-template-columns:200px 1fr;gap:40px;margin-bottom:56px;align-items:end}}
+.num{font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.num::after{content:"";flex:1;height:1px;background:var(--line)}
+@media(min-width:900px){.num::after{display:none}}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8.6vw,68px);line-height:1;letter-spacing:-.02em}
+h2 em{font-style:italic;color:var(--blush)}
+.lede{color:#cfc6b9;font-weight:300;max-width:38em;margin-top:14px;font-size:15px}
+
+/* collection grid */
+.grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+.item{padding:28px 4px 30px;border-bottom:1px solid var(--line);position:relative;transition:background .35s}
+@media(min-width:640px){.item{padding:34px 28px 36px}.item:nth-child(odd){border-right:1px solid var(--line)}}
+@media(min-width:1000px){.item{border-right:1px solid var(--line)}.item:nth-child(odd){border-right:1px solid var(--line)}.item:nth-child(3n){border-right:0}}
+.item:hover{background:linear-gradient(180deg,rgba(212,185,138,.06),transparent)}
+.item .ic{width:46px;height:46px;color:var(--gold);margin-bottom:18px;transition:transform .4s}
+.item:hover .ic{transform:translateY(-3px) rotate(-3deg)}
+.item h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.15;margin-bottom:8px}
+.item p{color:#c9c0b3;font-size:14px;font-weight:300}
+.item.cta{text-decoration:none;display:block;background:linear-gradient(160deg,rgba(233,196,189,.10),rgba(212,185,138,.04))}
+.item .gold{color:var(--gold);white-space:nowrap}
+.item .tag{position:absolute;top:30px;right:6px;font-family:var(--serif);font-style:italic;color:var(--gold2);font-size:14px}
+@media(min-width:640px){.item .tag{right:28px;top:36px}}
+
+/* brands */
+.brands{background:var(--ink2)}
+.blist{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--gold)}
+@media(min-width:800px){.blist{grid-template-columns:1fr 1fr}}
+.brand{padding:26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px 1fr;gap:14px}
+@media(min-width:800px){.brand{padding:30px 28px 30px 0}.brand:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}}
+.brand .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:22px;line-height:1.2}
+.brand h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.brand .meta{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--blush);margin:6px 0 8px}
+.brand p{color:#c9c0b3;font-size:14px;font-weight:300}
+.note{font-size:12px;color:var(--mute);margin-top:22px;letter-spacing:.02em}
+.note a{color:var(--gold)}
+
+/* story / pull quote */
+.story .cols{display:grid;grid-template-columns:1fr;gap:36px}
+@media(min-width:900px){.story .cols{grid-template-columns:1fr 1fr;gap:72px}}
+.drop p{color:#d6cdc0;font-weight:300;font-size:16px;margin-bottom:16px}
+.drop p:first-child::first-letter{font-family:var(--serif);float:left;font-size:76px;line-height:.82;padding:6px 10px 0 0;color:var(--gold)}
+.pull{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:48px 0 30px;position:relative}
+.pull::before{content:"\201C";font-family:var(--serif);position:absolute;top:-20px;left:0;font-size:72px;line-height:.75;height:54px;overflow:hidden;color:var(--blush);background:var(--ink);padding-right:12px}
+.pull blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(24px,6vw,36px);line-height:1.25;letter-spacing:-.01em}
+.pull cite{display:block;margin-top:18px;font-style:normal;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.facts{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:1px solid var(--line)}
+.facts div{padding:18px 10px 18px 0;border-bottom:1px solid var(--line)}
+.facts div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.facts dt{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.facts dd{font-family:var(--serif);font-size:19px;line-height:1.25;margin-top:6px}
+
+/* artist */
+.artist{background:linear-gradient(180deg,var(--ink) 0%,#141110 100%)}
+.frames{max-width:860px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+@media(min-width:800px){.frames{gap:22px}}
+.frame{aspect-ratio:3/4;border:1px solid var(--gold2);padding:8px;background:#100e0d;position:relative;transition:transform .4s}
+.frame:nth-child(2){transform:translateY(18px)}
+.frame:hover{transform:translateY(-4px)}
+.frame:nth-child(2):hover{transform:translateY(12px)}
+.frame .mat{width:100%;height:100%;border:1px solid rgba(212,185,138,.25);display:grid;place-items:center;overflow:hidden}
+.frame svg{width:100%;height:100%}
+.artist .cap{margin-top:46px;display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:800px){.artist .cap{grid-template-columns:1fr auto;align-items:end}}
+.artist .cap h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,7vw,44px);line-height:1.05}
+.artist .cap h3 em{color:var(--blush)}
+.artist .cap p{color:#c9c0b3;font-weight:300;font-size:14px;max-width:34em;margin-top:8px}
+.small{font-size:11px;color:var(--mute);letter-spacing:.04em}
+
+/* visit */
+.visit .cols{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:900px){.visit .cols{grid-template-columns:.9fr 1.1fr;gap:56px}}
+.card{border:1px solid var(--line);padding:24px 20px;background:var(--ink2)}
+@media(min-width:700px){.card{padding:32px}}
+.card h3{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.addr{font-family:var(--serif);font-size:28px;line-height:1.15}
+.addr small{display:block;font-family:var(--sans);font-size:13px;color:var(--mute);margin-top:6px;letter-spacing:.02em}
+.tel{display:inline-block;font-family:var(--serif);font-size:30px;color:var(--gold);text-decoration:none;margin-top:6px;border-bottom:1px solid transparent;transition:.25s}
+.tel:hover{border-color:var(--gold)}
+.mail{color:var(--blush);font-size:14px;word-break:break-all}
+.sep{height:1px;background:var(--line);margin:22px 0}
+.days{list-style:none;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-top:4px}
+.days li{text-align:center;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:10px 0;border:1px solid var(--line);color:var(--mute)}
+.days li.today{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:600}
+.hrs-note{font-size:14px;color:#d6cdc0;font-weight:300;margin-top:14px}
+.hrs-note b{color:var(--cream);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btns .btn{flex:1 1 140px}
+.map{border:1px solid var(--line);padding:10px;background:var(--ink2);min-height:340px;display:flex;position:relative}
+.map .mapbg{position:absolute;inset:10px;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:22px;color:var(--gold);
+  background:repeating-linear-gradient(0deg,transparent 0 39px,rgba(212,185,138,.08) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,rgba(212,185,138,.08) 39px 40px),#141211}
+.map .mapbg small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-top:6px}
+.map iframe{position:relative;width:100%;min-height:320px;border:0;filter:grayscale(1) invert(.92) contrast(.9) sepia(.25);flex:1}
+
+/* footer */
+footer{padding:54px 0 40px;text-align:center}
+.fmono{font-family:var(--serif);font-style:italic;font-size:64px;color:var(--gold);line-height:1}
+.fname{font-family:var(--serif);letter-spacing:.32em;text-transform:uppercase;font-size:14px;margin-top:10px}
+.frule{width:60px;height:1px;background:var(--gold);margin:22px auto}
+footer p{font-size:12px;color:var(--mute);margin-top:6px}
+footer .cc{margin-top:26px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2)}
+
+/* sticky mobile bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);border-top:1px solid var(--gold);
+  padding-bottom:env(safe-area-inset-bottom)}
+.mbar a{height:var(--bar);display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.mbar a:first-child{background:var(--gold);color:var(--ink)}
+.mbar a:last-child{color:var(--cream)}
+.mbar a:active{opacity:.85}
+.mbar svg{width:16px;height:16px}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveal: visible by default; JS only enhances */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.js .rv.in,.reveal-all .rv{opacity:1!important;transform:none!important}
+a:focus-visible{outline:2px solid var(--blush);outline-offset:3px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="concept" role="note">Concept site by Code Craft Media, made for <b>Westside Luxuries</b>. Not live.</div>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Westside Luxuries home"><span class="mono">WL</span><span>Westside Luxuries</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#collection">The Collection</a><a href="#brands">Fragrance</a><a href="#story">The Story</a><a href="#art">The Art</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="call" href="tel:+19315269115">931-526-9115</a>
+  </div>
+</header>
+
+<div class="edition"><div class="wrap"><span>149 W. Spring St.</span><span>Fragrance · Candles · Décor · Granite · Art</span><span>Downtown Cookeville</span></div></div>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">From the family behind Harris Monuments</div>
+      <h1>Stone&#8209;cut craft, <em>poured</em> into <span class="g">everyday luxury.</span></h1>
+      <p class="sub">Fine fragrances, hand-poured candles, earth-inspired décor and <strong>one-of-a-kind granite pieces</strong>, with original art by Denice Taylor Rinks, at 149 W. Spring Street in Downtown Cookeville.</p>
+      <div class="ctas">
+        <a class="btn solid" href="tel:+19315269115">Call the boutique</a>
+        <a class="btn ghost" href="#visit">Plan a visit</a>
+      </div>
+    </div>
+    <figure class="cover">
+      <svg viewBox="0 0 400 440" role="img" aria-label="Illustration of a lit candle resting on a polished granite slab">
+        <defs>
+          <radialGradient id="halo" cx="50%" cy="42%" r="50%"><stop offset="0" stop-color="#efdcb6" stop-opacity=".55"/><stop offset=".35" stop-color="#e9c4bd" stop-opacity=".22"/><stop offset="1" stop-color="#0d0c0b" stop-opacity="0"/></radialGradient>
+          <linearGradient id="jar" x1="0" x2="1"><stop offset="0" stop-color="#2a2421"/><stop offset=".45" stop-color="#4a3e37"/><stop offset=".55" stop-color="#5a4a40"/><stop offset="1" stop-color="#211c1a"/></linearGradient>
+          <linearGradient id="wax" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f4ece2"/><stop offset="1" stop-color="#e9c4bd"/></linearGradient>
+          <linearGradient id="slabTop" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#3b3735"/><stop offset=".5" stop-color="#1d1b1a"/><stop offset="1" stop-color="#2d2a28"/></linearGradient>
+          <linearGradient id="slabFace" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#191716"/><stop offset="1" stop-color="#0b0a0a"/></linearGradient>
+          <linearGradient id="fl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff6e3"/><stop offset=".55" stop-color="#efdcb6"/><stop offset="1" stop-color="#d4a86a"/></linearGradient>
+          <pattern id="speck" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".9" fill="#8d847b" opacity=".5"/><circle cx="14" cy="9" r=".6" fill="#d4b98a" opacity=".45"/><circle cx="9" cy="17" r="1.1" fill="#5d5650" opacity=".6"/><circle cx="19" cy="19" r=".5" fill="#e9c4bd" opacity=".4"/></pattern>
+          <clipPath id="topclip"><path d="M40 330 L200 290 L360 330 L200 372 Z"/></clipPath>
+        </defs>
+        <rect width="400" height="440" fill="#0f0d0c"/>
+        <g stroke="#d4b98a" stroke-opacity=".22" fill="none"><line x1="20" y1="20" x2="380" y2="20"/><line x1="20" y1="420" x2="380" y2="420"/><line x1="20" y1="20" x2="20" y2="420"/><line x1="380" y1="20" x2="380" y2="420"/></g>
+        <text x="200" y="66" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-style="italic" font-size="44" fill="#d4b98a">WL</text>
+        <line x1="150" y1="80" x2="250" y2="80" stroke="#d4b98a" stroke-opacity=".6"/>
+        <circle class="glow" cx="200" cy="196" r="150" fill="url(#halo)"/>
+        <!-- slab -->
+        <path d="M40 330 L200 290 L360 330 L360 352 L200 394 L40 352 Z" fill="url(#slabFace)"/>
+        <path d="M40 330 L200 290 L360 330 L200 372 Z" fill="url(#slabTop)"/>
+        <g clip-path="url(#topclip)"><rect x="0" y="280" width="400" height="100" fill="url(#speck)"/>
+          <path d="M70 336 C120 318 160 340 210 322 S300 330 340 326" stroke="#d4b98a" stroke-opacity=".35" stroke-width=".8" fill="none"/>
+          <path d="M110 350 C160 336 230 352 290 338" stroke="#e9c4bd" stroke-opacity=".25" stroke-width=".6" fill="none"/></g>
+        <path d="M40 330 L200 372 L360 330" stroke="#d4b98a" stroke-opacity=".7" stroke-width="1" fill="none"/>
+        <path d="M200 372 L200 394" stroke="#d4b98a" stroke-opacity=".35"/>
+        <!-- candle shadow/reflection -->
+        <ellipse cx="200" cy="330" rx="62" ry="12" fill="#000" opacity=".55"/>
+        <!-- jar -->
+        <path d="M146 222 Q146 214 154 214 L246 214 Q254 214 254 222 L254 318 Q254 332 238 332 L162 332 Q146 332 146 318 Z" fill="url(#jar)"/>
+        <ellipse cx="200" cy="218" rx="52" ry="8" fill="url(#wax)"/>
+        <ellipse cx="200" cy="218" rx="40" ry="5" fill="#fff6e3" opacity=".55"/>
+        <rect x="168" y="250" width="64" height="46" fill="none" stroke="#d4b98a" stroke-width=".8"/>
+        <text x="200" y="272" text-anchor="middle" font-family="Bodoni Moda, Georgia, serif" font-style="italic" font-size="15" fill="#d4b98a">WL</text>
+        <text x="200" y="287" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="5.5" letter-spacing="1.6" fill="#e9c4bd">HAND-POURED</text>
+        <path d="M152 226 L152 310" stroke="#fff" stroke-opacity=".12" stroke-width="5" stroke-linecap="round"/>
+        <!-- wick + flame -->
+        <line x1="200" y1="218" x2="200" y2="204" stroke="#2a201b" stroke-width="2"/>
+        <g class="flame"><path d="M200 152 C214 172 216 188 200 204 C184 188 186 172 200 152 Z" fill="url(#fl)"/><path d="M200 176 C206 186 206 194 200 201 C194 194 194 186 200 176 Z" fill="#fff" opacity=".8"/></g>
+        <text x="200" y="412" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="8" letter-spacing="3" fill="#a59c90">CANDLE · GRANITE · GLOW</text>
+      </svg>
+      <figcaption><span>Craftsmanship, now for your home</span><span>WL</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-in">
+  <span>Fine fragrances</span><span>Hand-poured candles</span><span>Earth-inspired décor</span><span>One-of-a-kind granite</span><span>Original local art</span>
+  <span>Fine fragrances</span><span>Hand-poured candles</span><span>Earth-inspired décor</span><span>One-of-a-kind granite</span><span>Original local art</span>
+</div></div>
+
+<section class="s" id="collection">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="num">No. 01</div>
+      <div><h2>The <em>Collection</em></h2><p class="lede">Five things you'll find on the shelves at 149 W. Spring Street, each chosen to feel elevated, warm and welcoming.</p></div>
+    </div>
+    <div class="grid">
+      <article class="item rv"><span class="tag">i.</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="15" y="16" width="18" height="26" rx="2"/><path d="M19 16v-4h10v4M21 12V7h6v5"/><path d="M19 26h10M19 30h10" opacity=".5"/></svg>
+        <h3>Fine Fragrances</h3><p>Fragrance for you and your home, curated for the boutique.</p></article>
+      <article class="item rv"><span class="tag">ii.</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14 20h20v20a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z"/><ellipse cx="24" cy="20" rx="10" ry="2"/><path d="M24 18v-4"/><path d="M24 4c3 4 3 7 0 10c-3-3-3-6 0-10Z"/></svg>
+        <h3>Hand-Poured Candles</h3><p>Small-batch candles, including soy and coconut-soy pours from the fragrance houses below.</p></article>
+      <article class="item rv"><span class="tag">iii.</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 42h16l2-14H14Z"/><path d="M24 28c0-8 4-14 12-17c-1 8-5 13-12 17Z"/><path d="M24 28c0-6-3-10-9-12c1 6 4 9 9 12Z"/></svg>
+        <h3>Earth-Inspired Décor</h3><p>Home pieces in natural tones and materials, made to warm a room.</p></article>
+      <article class="item rv"><span class="tag">iv.</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 30 24 22l18 8-18 8Z"/><path d="M6 30v5l18 8 18-8v-5"/><circle cx="18" cy="30" r=".8" fill="currentColor"/><circle cx="27" cy="28" r=".8" fill="currentColor"/><circle cx="30" cy="33" r=".8" fill="currentColor"/></svg>
+        <h3>One-of-a-Kind Granite</h3><p>Granite luxuries cut with the same craftsmanship and care behind Harris Monuments.</p></article>
+      <article class="item rv"><span class="tag">v.</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="8" y="8" width="32" height="32"/><rect x="13" y="13" width="22" height="22" opacity=".5"/><path d="M13 31l7-8 5 5 4-4 6 7"/><circle cx="29" cy="19" r="2"/></svg>
+        <h3>Original Local Art</h3><p>Original works by local artist Denice Taylor Rinks, sold at the boutique.</p></article>
+      <a class="item cta rv" href="tel:+19315269115"><span class="tag">vi.</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 18h32v22H8Z"/><path d="M6 12h36v6H6Z"/><path d="M24 12v28"/><path d="M24 12c-4-6-10-6-10-2s6 2 10 2c4 0 10 2 10-2s-6-4-10 2Z"/></svg>
+        <h3>Looking for something?</h3><p>Call the boutique at <span class="gold">931-526-9115</span> and ask what is on the shelves today.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="s brands" id="brands">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="num">No. 02</div>
+      <div><h2>The <em>Fragrance</em> Edit</h2><p class="lede">An expanded home-fragrance collection featuring six brands, made for comfort and relaxation. A few of the houses on the shelf:</p></div>
+    </div>
+    <div class="blist">
+      <article class="brand rv"><span class="n">a.</span><div><h3>Cicada</h3><div class="meta">Inspired by the American Southwest</div><p>Small-batch candles and fragrances, hand-poured in a coconut-soy wax blend. Vegan, cruelty-free and phthalate-free.</p></div></article>
+      <article class="brand rv"><span class="n">b.</span><div><h3>Ryan House</h3><div class="meta">Small-batch soy</div><p>Hand-poured soy candles with phthalate-free fragrance oils. Scents include Ranch Water, Orchid Sea Salt and Honey Tonka.</p></div></article>
+      <article class="brand rv"><span class="n">c.</span><div><h3>Big Ass Luxuries</h3><div class="meta">The statement tub</div><p>Oversized 100% soy candles with 100% essential oil and no carriers, rated for an 85+ hour burn.</p></div></article>
+      <article class="brand rv"><span class="n">d.</span><div><h3>Ranger Station</h3><div class="meta">A Nashville fragrance house</div><p>Made-in-USA fragrances and candles inspired by the outdoors.</p></div></article>
+    </div>
+    <p class="note rv">Ask in store for the full line-up and current scents.</p>
+  </div>
+</section>
+
+<section class="s story" id="story">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="num">No. 03</div>
+      <div><h2>A family craft, <em>reimagined</em></h2></div>
+    </div>
+    <div class="cols">
+      <div class="drop rv">
+        <p>Westside Luxuries comes from Lloyd and Gail Harris, lifelong Cookeville locals and the family behind Harris Monuments. The boutique carries the same craftsmanship and care into the pieces people bring home.</p>
+        <p>Fine fragrances share the room with hand-poured candles, earth-inspired décor, one-of-a-kind granite and original art by Denice Taylor Rinks. It's everyday luxury, under one roof on West Spring Street.</p>
+        <dl class="facts">
+          <div><dt>Founded by</dt><dd>Lloyd &amp; Gail Harris</dd></div>
+          <div><dt>Family craft</dt><dd>Harris Monuments</dd></div>
+          <div><dt>Chamber ribbon cutting</dt><dd>Aug. 3, 2026</dd></div>
+          <div><dt>Address</dt><dd>149 W. Spring St.</dd></div>
+        </dl>
+      </div>
+      <div class="rv">
+        <div class="pull">
+          <blockquote>Every piece is thoughtfully curated to feel elevated, warm, and welcoming, much like the community that inspired it.</blockquote>
+          <cite>Cookeville-Putnam County Chamber of Commerce, via UCBJ</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s artist" id="art">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="num">No. 04</div>
+      <div><h2>On the <em>walls</em></h2><p class="lede">Original artwork by local artist Denice Taylor Rinks is sold right here in the boutique.</p></div>
+    </div>
+    <div class="frames rv" aria-hidden="true">
+      <div class="frame"><div class="mat"><svg viewBox="0 0 90 120" preserveAspectRatio="xMidYMid slice"><rect width="90" height="120" fill="#1a1614"/><circle cx="58" cy="38" r="16" fill="#e9c4bd" opacity=".75"/><path d="M0 84 Q22 64 45 78 T90 70 V120 H0Z" fill="#b89a66" opacity=".55"/><path d="M0 98 Q30 84 55 96 T90 92 V120 H0Z" fill="#3b3330"/></svg></div></div>
+      <div class="frame"><div class="mat"><svg viewBox="0 0 90 120" preserveAspectRatio="xMidYMid slice"><rect width="90" height="120" fill="#efe4d6"/><path d="M45 18 C70 40 70 80 45 104 C20 80 20 40 45 18Z" fill="none" stroke="#b89a66" stroke-width="1.2"/><path d="M45 30 C60 48 60 74 45 92 C30 74 30 48 45 30Z" fill="#e9c4bd" opacity=".7"/><line x1="45" y1="10" x2="45" y2="112" stroke="#0d0c0b" stroke-width=".6" opacity=".5"/></svg></div></div>
+      <div class="frame"><div class="mat"><svg viewBox="0 0 90 120" preserveAspectRatio="xMidYMid slice"><rect width="90" height="120" fill="#141211"/><g fill="none" stroke="#d4b98a" stroke-width=".8" opacity=".8"><path d="M10 100 C30 60 60 60 80 20"/><path d="M10 110 C34 72 62 70 86 34" opacity=".5"/></g><rect x="18" y="22" width="26" height="26" fill="#e9c4bd" opacity=".35"/><circle cx="62" cy="86" r="10" fill="#b89a66" opacity=".6"/></svg></div></div>
+    </div>
+    <div class="cap rv">
+      <div><h3>Denice Taylor <em>Rinks</em></h3><p>Come see her originals in person at the boutique. The framed illustrations above are decorative, not her artwork.</p></div>
+      <a class="btn ghost" href="#visit">See it in store</a>
+    </div>
+  </div>
+</section>
+
+<section class="s visit" id="visit">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="num">No. 05</div>
+      <div><h2>Visit <em>Westside</em></h2><p class="lede">Find us downtown on West Spring Street. Call ahead to confirm hours.</p></div>
+    </div>
+    <div class="cols">
+      <div class="card rv">
+        <h3>The Boutique</h3>
+        <p class="addr">149 W. Spring Street<small>Downtown Cookeville, Tennessee</small></p>
+        <div class="sep"></div>
+        <h3>Call</h3>
+        <a class="tel" href="tel:+19315269115">931-526-9115</a>
+        <p class="mail"><a href="mailto:westsideluxuries@gmail.com">westsideluxuries@gmail.com</a></p>
+        <div class="sep"></div>
+        <h3>Hours</h3>
+        <ul class="days" id="days"><li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul>
+        <p class="hrs-note"><b id="todayName">Today</b>: please call 931-526-9115 to confirm hours before you visit.</p>
+        <div class="btns">
+          <a class="btn solid" href="tel:+19315269115">Tap to call</a>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=149%20W%20Spring%20St%2C%20Cookeville%2C%20TN%2038501" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <div class="mapbg" aria-hidden="true"><div>149 W. Spring Street<small>Downtown Cookeville, TN</small></div></div>
+        <iframe title="Map to Westside Luxuries, 149 W. Spring Street, Cookeville" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=149%20W%20Spring%20St%2C%20Cookeville%2C%20TN%2038501&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fmono">WL</div>
+    <div class="fname">Westside Luxuries</div>
+    <div class="frule"></div>
+    <p>149 W. Spring Street · Downtown Cookeville, TN</p>
+    <p><a href="tel:+19315269115">931-526-9115</a> · <a href="mailto:westsideluxuries@gmail.com">westsideluxuries@gmail.com</a></p>
+    <p class="cc">Concept by Code Craft Media</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+19315269115"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=149%20W%20Spring%20St%2C%20Cookeville%2C%20TN%2038501" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  var d=new Date().getDay(),names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var li=document.querySelectorAll('#days li'); if(li[d]){li[d].classList.add('today');li[d].setAttribute('aria-current','date');}
+  var t=document.getElementById('todayName'); if(t)t.textContent=names[d];
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else document.documentElement.classList.add('reveal-all');
+  setTimeout(function(){document.documentElement.classList.add('reveal-all')},1500);
+})();
+</script>
+</body>
+</html>

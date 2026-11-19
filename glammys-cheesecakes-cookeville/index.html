@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<title>Glammy's Cheesecakes — Cookeville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#E5466E; --pink-d:#C22F57; --pink-l:#FFD3DE; --blush:#FFE8EE;
+  --tan:#C89A62; --tan-d:#9C6F3C; --tan-l:#EBD3AE;
+  --cream:#FFF7EC; --cream-2:#FCEEDB; --ink:#4A2A1F; --ink-2:#7A5444;
+  --gold:#E9B949; --white:#fff;
+  --r:22px; --bar:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;overflow-x:hidden;padding-bottom:calc(var(--bar) + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+a[href^="tel:"]{white-space:nowrap}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.script{font-family:'Pacifico',cursive;font-weight:400}
+/* every grid/flex child */
+.flex>*, .grid>*, .hero-grid>*, .menu-grid>*, .why-grid>*, .tl>*, .days>*, .visit-grid>*, .bar>*, .nav>*, .nav-links>*, .ctas>*, .flav-grid>*, .foot-in>*, .chips>*, .item>*, .logo>*, .eyebrow>*, .mini>*, .mini span>*, .stack>*, .bar a>*, .btn>*, .tag>*, .flav>*{min-width:0}
+
+.concept{background:var(--ink);color:#F6DCCB;font-size:12px;text-align:center;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.concept{font-size:clamp(9.5px,2.68vw,12px);letter-spacing:-.01em;padding:6px 8px}
+.concept b{color:var(--pink-l);font-weight:800}
+
+/* nav */
+header{position:sticky;top:0;z-index:40;background:rgba(255,247,236,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,154,98,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo .script{font-size:24px;color:var(--pink);line-height:1;padding-top:4px;white-space:nowrap}
+.logo small{display:block;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--tan-d)}
+.nav-links{display:none;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;font-weight:700;font-size:15px;position:relative}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--pink);transition:right .25s}
+.nav-links a:not(.btn):hover::after{right:0}
+.nav-call{font-weight:800;font-size:14px;text-decoration:none;background:var(--pink);color:#fff;padding:9px 14px;border-radius:999px;white-space:nowrap}
+@media(min-width:900px){.nav-links{display:flex}.nav-call{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;text-decoration:none;border-radius:999px;padding:15px 24px;font-size:16px;transition:transform .2s, box-shadow .2s, background .2s;border:2px solid transparent;white-space:nowrap}
+.btn-pink{background:var(--pink);color:#fff;box-shadow:0 8px 0 var(--pink-d),0 14px 24px rgba(229,70,110,.25)}
+.btn-pink:hover{transform:translateY(-2px);box-shadow:0 10px 0 var(--pink-d),0 18px 28px rgba(229,70,110,.3)}
+.btn-pink:active{transform:translateY(5px);box-shadow:0 3px 0 var(--pink-d)}
+.btn-ghost{background:var(--white);color:var(--ink);border-color:var(--tan-l)}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink-d)}
+.btn-sm{padding:10px 18px;font-size:14px;box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(circle at 85% 10%, var(--pink-l) 0, transparent 40%),
+  radial-gradient(circle at 0% 90%, #FBE3C4 0, transparent 45%), var(--cream)}
+.sprinkles{position:absolute;inset:0;pointer-events:none;opacity:.9;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg stroke-linecap='round' stroke-width='5'%3E%3Cline x1='20' y1='30' x2='32' y2='24' stroke='%23E5466E'/%3E%3Cline x1='120' y1='20' x2='126' y2='32' stroke='%23C89A62'/%3E%3Cline x1='70' y1='90' x2='82' y2='94' stroke='%23F7A8BC'/%3E%3Cline x1='150' y1='110' x2='160' y2='100' stroke='%23E9B949'/%3E%3Cline x1='30' y1='140' x2='36' y2='152' stroke='%23F7A8BC'/%3E%3Cline x1='100' y1='160' x2='112' y2='156' stroke='%23E5466E'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image:linear-gradient(180deg,#000 0,transparent 75%);mask-image:linear-gradient(180deg,#000 0,transparent 75%)}
+.hero-grid{position:relative;display:grid;gap:8px;padding-top:34px;padding-bottom:46px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--pink-l);color:var(--pink-d);font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:999px;max-width:100%}
+.eyebrow span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--pink);flex:none;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(229,70,110,.5)}100%{box-shadow:0 0 0 10px rgba(229,70,110,0)}}
+h1{font-weight:900;font-size:clamp(38px,10.4vw,76px);line-height:1.02;letter-spacing:-.025em;margin:16px 0 14px}
+h1 .script{display:block;color:var(--pink);font-size:.84em;letter-spacing:0;line-height:1.3;margin-top:2px;position:relative;width:fit-content;max-width:100%}
+h1 .script::after{content:"";position:absolute;left:4%;right:2%;bottom:.04em;height:.16em;background:var(--gold);opacity:.35;border-radius:9px;z-index:-1}
+.sub{font-size:17.5px;color:var(--ink-2);max-width:520px}
+.sub b{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.ctas .btn{flex:1 1 auto}
+@media(min-width:520px){.ctas .btn{flex:0 0 auto}}
+.mini{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;font-weight:700;color:var(--ink-2)}
+.mini span{display:inline-flex;gap:6px;align-items:center}
+.mini svg{width:16px;height:16px;color:var(--pink)}
+
+.slice-wrap{position:relative;max-width:440px;width:100%;margin:6px auto 0}
+.slice-wrap .plate{position:absolute;left:6%;right:6%;bottom:4%;height:15%;border-radius:50%;background:radial-gradient(ellipse at center,#fff 0 55%,#F3E2CC 56% 70%,transparent 71%)}
+.slice{position:relative;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-1deg)}}
+.spark{position:absolute;width:26px;height:26px;color:var(--gold);animation:twinkle 2.4s ease-in-out infinite}
+.spark svg{width:100%;height:100%}
+@keyframes twinkle{0%,100%{transform:scale(.5) rotate(0);opacity:.3}50%{transform:scale(1) rotate(45deg);opacity:1}}
+.tag{position:absolute;background:#fff;border-radius:16px;padding:9px 13px;font-weight:800;font-size:13px;box-shadow:0 10px 24px rgba(74,42,31,.12);display:flex;gap:8px;align-items:center;white-space:nowrap}
+.tag em{font-style:normal;font-size:18px}
+.tag.t1{left:0;top:12%;transform:rotate(-5deg)}
+.tag.t2{right:0;bottom:22%;transform:rotate(4deg)}
+@media(min-width:900px){h1{font-size:clamp(56px,5.2vw,74px)}.hero-grid{grid-template-columns:1.25fr .75fr;padding-top:70px;padding-bottom:90px;gap:40px}.slice-wrap{margin:0 0 0 auto}}
+
+/* scalloped divider */
+.scallop{height:22px;background:radial-gradient(circle at 11px 0,transparent 11px,var(--pink) 11.5px) 0 0/22px 22px repeat-x}
+.scallop.tan{background:radial-gradient(circle at 11px 0,transparent 11px,var(--cream-2) 11.5px) 0 0/22px 22px repeat-x}
+
+section{padding:70px 0}
+.kicker{font-family:'Pacifico',cursive;color:var(--pink);font-size:22px;line-height:1.2}
+h2{font-weight:900;font-size:clamp(30px,7.4vw,50px);line-height:1.06;letter-spacing:-.02em;margin:6px 0 12px}
+.lead{color:var(--ink-2);font-size:17px;max-width:600px}
+
+/* timeline */
+.story{background:var(--pink);color:#fff;position:relative;overflow:hidden}
+.story .kicker{color:var(--pink-l)}
+.story .lead{color:#FFE3EA}
+.tl{display:grid;gap:16px;margin-top:34px;counter-reset:s}
+.step{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);border-radius:var(--r);padding:22px;position:relative}
+.step .ic{width:52px;height:52px;border-radius:16px;background:#fff;color:var(--pink);display:grid;place-items:center;margin-bottom:14px}
+.step .ic svg{width:30px;height:30px}
+.step h3{font-size:20px;font-weight:900;line-height:1.2}
+.step p{color:#FFE3EA;font-size:15.5px;margin-top:6px}
+.step .when{display:inline-block;margin-top:12px;background:var(--gold);color:var(--ink);font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.step.now{background:#fff;color:var(--ink)}
+.step.now p{color:var(--ink-2)}
+.step.now .ic{background:var(--pink);color:#fff}
+@media(min-width:800px){.tl{grid-template-columns:repeat(3,1fr)}}
+.src{font-size:12.5px;opacity:.85;margin-top:18px}
+.src a{font-weight:700}
+
+/* menu */
+.menu{background:var(--cream-2)}
+.menu-grid{display:grid;gap:16px;margin-top:34px}
+@media(min-width:620px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.menu-grid{grid-template-columns:repeat(4,1fr)}}
+.item{background:#fff;border-radius:var(--r);padding:20px;display:flex;gap:16px;align-items:center;border:2px solid transparent;transition:transform .25s,border-color .25s,box-shadow .25s}
+.item:hover{transform:translateY(-4px) rotate(-.4deg);border-color:var(--pink-l);box-shadow:0 16px 30px rgba(74,42,31,.1)}
+@media(min-width:980px){.item{flex-direction:column;align-items:flex-start}}
+.item .art{flex:none;width:68px;height:68px;border-radius:20px;background:var(--blush);display:grid;place-items:center}
+.item .art svg{width:52px;height:52px}
+.item h3{font-size:18px;font-weight:900;line-height:1.2}
+.item p{font-size:14.5px;color:var(--ink-2);margin-top:3px}
+.note{margin-top:22px;font-size:14.5px;color:var(--ink-2);background:#fff;border:1.5px dashed var(--tan);border-radius:16px;padding:14px 16px}
+.note b{color:var(--ink)}
+
+/* flavors */
+.flav-grid{display:grid;gap:14px;margin-top:30px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:800px){.flav-grid{grid-template-columns:repeat(4,1fr)}}
+.flav{border-radius:var(--r);padding:18px 16px 20px;background:#fff;border:2px dashed var(--pink-l);text-align:center;position:relative}
+.flav .disc{width:78px;height:78px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center}
+.flav h3{font-family:'Pacifico',cursive;font-weight:400;color:var(--pink);font-size:19px;line-height:1.3}
+.flav p{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--tan-d);margin-top:4px}
+.ph{display:inline-block;margin-top:10px;background:var(--cream-2);border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;color:var(--ink-2)}
+
+/* why */
+.why-grid{display:grid;gap:16px;margin-top:34px}
+@media(min-width:800px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why{padding:24px;border-radius:var(--r);background:linear-gradient(160deg,#fff,var(--blush));border:1.5px solid var(--pink-l)}
+.why .n{font-family:'Pacifico',cursive;color:var(--pink);font-size:34px;line-height:1}
+.why h3{font-weight:900;font-size:19px;margin:8px 0 4px;line-height:1.25}
+.why p{color:var(--ink-2);font-size:15.5px}
+blockquote{margin-top:26px;background:var(--ink);color:var(--cream);border-radius:var(--r);padding:26px 24px;font-size:clamp(20px,5vw,28px);font-weight:800;line-height:1.3;position:relative}
+blockquote .script{color:var(--pink-l);font-size:1.05em}
+blockquote cite{display:block;font-style:normal;font-size:13px;font-weight:700;color:#E8CDBF;margin-top:12px}
+
+/* visit */
+.visit{background:var(--cream-2)}
+.visit-grid{display:grid;gap:18px;margin-top:30px}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.1fr}}
+.card{background:#fff;border-radius:var(--r);padding:24px;box-shadow:0 10px 30px rgba(74,42,31,.06)}
+.card h3{font-weight:900;font-size:20px;margin-bottom:10px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:14px 0 16px}
+.day{text-align:center;border-radius:12px;padding:9px 0;font-weight:800;font-size:13px;background:var(--cream);color:var(--ink-2)}
+.day.today{background:var(--pink);color:#fff;transform:translateY(-3px);box-shadow:0 6px 0 var(--pink-d)}
+.hours-msg{font-size:15.5px;color:var(--ink-2)}
+.hours-msg b{color:var(--ink)}
+.addr{font-size:18px;font-weight:800;line-height:1.35}
+.addr small{display:block;font-size:14px;font-weight:600;color:var(--ink-2);margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.map{position:relative;border-radius:var(--r);overflow:hidden;min-height:320px;background:radial-gradient(circle at 50% 46%,var(--pink-l) 0 34px,transparent 35px),repeating-linear-gradient(0deg,transparent 0 38px,rgba(255,255,255,.55) 38px 44px),repeating-linear-gradient(90deg,transparent 0 58px,rgba(255,255,255,.55) 58px 64px),var(--tan-l);border:4px solid #fff;box-shadow:0 10px 30px rgba(74,42,31,.08)}
+.map .mp{position:absolute;left:50%;top:46%;transform:translate(-50%,-70%);width:42px;height:42px;color:var(--pink)}
+.map iframe{position:relative;width:100%;height:100%;min-height:320px;border:0;display:block}
+.stack{display:grid;gap:18px}
+
+/* final cta */
+.final{background:var(--pink);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{color:#fff}
+.final .lead{color:#FFE3EA;margin:0 auto}
+.final .ctas{justify-content:center}
+.final .btn-pink{background:#fff;color:var(--pink-d);box-shadow:0 8px 0 var(--pink-d)}
+.final .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.final .btn-ghost:hover{background:#fff;color:var(--pink-d)}
+
+footer{background:var(--ink);color:#EBD3C6;padding:34px 0 30px;font-size:14px}
+.foot-in{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer .script{color:var(--pink-l);font-size:22px}
+footer a{color:#fff;font-weight:700}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.2fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,247,236,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--tan-l)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:999px;font-weight:900;text-decoration:none;font-size:15.5px;white-space:nowrap;overflow:hidden}
+.bar .c{background:var(--pink);color:#fff}
+.bar .i{background:#fff;border:2px solid var(--tan-l)}
+.bar svg{width:18px;height:18px;flex:none}
+@media(min-width:900px){.bar{display:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sp" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.5h10A4.5 4.5 0 0 1 21.5 7v10a4.5 4.5 0 0 1-4.5 4.5H7A4.5 4.5 0 0 1 2.5 17V7A4.5 4.5 0 0 1 7 2.5z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="bag" viewBox="0 0 24 24"><path fill="currentColor" d="M6 7V6a6 6 0 0 1 12 0v1h3l-1 15H4L3 7zm2 0h8V6a4 4 0 0 0-8 0z"/></symbol>
+    <!-- mini slice -->
+    <symbol id="wedge" viewBox="0 0 60 60"><path d="M6 38 L54 24 L54 44 L6 50 Z" fill="#FFF3DD"/><path d="M6 46 L54 40 L54 46 L6 52 Z" fill="#C89A62"/><path d="M6 38 L54 24 L54 28 L6 41 Z" fill="#E5466E"/><path d="M6 38 L30 18 L54 24 Z" fill="#FFE9C9"/><path d="M14 36 L30 20 L46 25 Z" fill="#E5466E" opacity=".85"/></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by Code Craft Media, made for <b>Glammy's Cheesecakes</b>. Not live.</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Glammy's Cheesecakes home">
+      <svg width="34" height="34" viewBox="0 0 60 60" aria-hidden="true"><use href="#wedge"/></svg>
+      <span><span class="script">Glammy's</span><small>Cheesecakes</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#story">Our story</a><a href="#menu">Menu</a><a href="#flavors">Flavors</a><a href="#visit">Visit</a>
+      <a class="btn btn-pink btn-sm" href="tel:+19318540036">Call 931-854-0036</a>
+    </nav>
+    <a class="nav-call" href="tel:+19318540036">Call to order</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="sprinkles" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow"><i></i><span>Storefront on S. Jefferson Ave</span></span>
+      <h1>From the cheesecake truck to a storefront<span class="script">in Cookeville.</span></h1>
+      <p class="sub">Handcrafted slices, petite and whole cheesecakes, dipped slices and frozen dipped bananas, for takeout at <b>565 S. Jefferson Ave., Suite C.</b></p>
+      <div class="ctas">
+        <a class="btn btn-pink" href="tel:+19318540036"><svg width="18" height="18"><use href="#phone"/></svg>Call to order</a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="mini">
+        <span><svg><use href="#pin"/></svg>Cookeville, TN</span>
+        <span><svg><use href="#bag"/></svg>Takeout storefront</span>
+        <span><svg><use href="#ig"/></svg>@glammys_cheesecakes</span>
+      </div>
+    </div>
+
+    <div class="slice-wrap rv" aria-hidden="true">
+      <div class="plate"></div>
+      <svg class="slice" viewBox="0 0 420 360">
+        <defs>
+          <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF8EA"/><stop offset="1" stop-color="#F9E6C6"/></linearGradient>
+          <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF4DE"/><stop offset="1" stop-color="#F6DDB5"/></linearGradient>
+          <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D6A86C"/><stop offset="1" stop-color="#A9783F"/></linearGradient>
+          <linearGradient id="dip" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F06A8C"/><stop offset="1" stop-color="#D93A63"/></linearGradient>
+          <pattern id="crumbs" width="14" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.4" fill="#8E6232" opacity=".5"/><circle cx="10" cy="7" r="1" fill="#F1CF9A" opacity=".7"/></pattern>
+        </defs>
+        <!-- side face (front) -->
+        <path d="M40 200 L360 140 L360 262 L40 300 Z" fill="url(#cream)"/>
+        <!-- crust -->
+        <path d="M40 300 L360 262 L360 292 L40 332 Z" fill="url(#crust)"/>
+        <path d="M40 300 L360 262 L360 292 L40 332 Z" fill="url(#crumbs)"/>
+        <!-- back face (side) -->
+        <path d="M360 140 L392 158 L392 278 L360 262 Z" fill="#EBCB9E"/>
+        <path d="M360 262 L392 278 L392 304 L360 292 Z" fill="#94662F"/>
+        <!-- top -->
+        <path d="M40 200 L250 82 L392 158 L360 140 Z" fill="url(#top)"/>
+        <path d="M40 200 L250 82 L392 158 L360 140 Z" fill="#fff" opacity=".2"/>
+        <!-- strawberry dip over the tip and top edge -->
+        <path d="M40 200 L250 82 L392 158 L360 140 L360 178 C350 190 342 168 332 182 C322 200 316 176 304 190 C292 206 286 182 272 196 C258 214 250 190 236 204 C222 222 214 198 200 212 C184 230 178 206 164 220 C150 240 144 212 128 228 C112 248 106 220 92 236 C80 252 72 226 60 240 C52 250 46 238 40 244 Z" fill="url(#dip)"/>
+        <path d="M40 200 L250 82 L392 158 L360 140 Z" fill="url(#dip)"/>
+        <path d="M60 196 L248 92 L360 150" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+        <!-- sprinkles on top -->
+        <g stroke-linecap="round" stroke-width="5">
+          <line x1="120" y1="168" x2="132" y2="162" stroke="#FFF7EC"/><line x1="170" y1="140" x2="176" y2="150" stroke="#E9B949"/>
+          <line x1="215" y1="118" x2="228" y2="120" stroke="#FFF7EC"/><line x1="262" y1="104" x2="268" y2="114" stroke="#C89A62"/>
+          <line x1="300" y1="128" x2="312" y2="124" stroke="#FFF7EC"/><line x1="200" y1="150" x2="208" y2="140" stroke="#E9B949"/>
+          <line x1="150" y1="176" x2="162" y2="178" stroke="#E9B949"/><line x1="250" y1="140" x2="258" y2="132" stroke="#FFF7EC"/>
+          <line x1="330" y1="146" x2="340" y2="150" stroke="#E9B949"/><line x1="90" y1="186" x2="98" y2="178" stroke="#C89A62"/>
+        </g>
+        <!-- strawberry -->
+        <g transform="translate(232 40) rotate(12)">
+          <path d="M30 18 C52 18 60 36 50 60 C44 74 36 82 30 84 C24 82 16 74 10 60 C0 36 8 18 30 18 Z" fill="#E0284F"/>
+          <path d="M30 18 C52 18 60 36 50 60 C47 66 44 70 40 74 C48 54 46 30 30 22 Z" fill="#B71A3C" opacity=".5"/>
+          <g fill="#FFE1A8"><circle cx="20" cy="36" r="1.8"/><circle cx="32" cy="32" r="1.8"/><circle cx="42" cy="40" r="1.8"/><circle cx="24" cy="50" r="1.8"/><circle cx="38" cy="54" r="1.8"/><circle cx="30" cy="66" r="1.8"/><circle cx="16" cy="58" r="1.6"/><circle cx="44" cy="62" r="1.6"/></g>
+          <path d="M30 22 L18 10 L28 14 L30 2 L33 14 L44 8 L36 20 Z" fill="#3E9B5A"/>
+        </g>
+        <!-- whipped dollop -->
+        <g transform="translate(160 92)"><path d="M0 34 C-4 18 14 14 16 22 C16 6 38 6 38 20 C46 12 60 22 52 34 Z" fill="#fff"/><path d="M8 30 C12 24 20 24 24 28" stroke="#F3E2CC" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+      </svg>
+      <span class="spark" style="left:6%;top:4%"><svg><use href="#sp"/></svg></span>
+      <span class="spark" style="right:10%;top:-2%;width:18px;height:18px;animation-delay:.8s"><svg><use href="#sp"/></svg></span>
+      <span class="spark" style="right:2%;top:48%;width:20px;height:20px;animation-delay:1.4s"><svg><use href="#sp"/></svg></span>
+      <span class="spark" style="left:44%;bottom:6%;width:16px;height:16px;animation-delay:.4s;color:#F7A8BC"><svg><use href="#sp"/></svg></span>
+      <div class="tag t1"><svg width="16" height="16" style="color:#E5466E"><use href="#sp"/></svg>Dipped slices</div>
+      <div class="tag t2"><svg width="16" height="16" style="color:#E9B949"><use href="#sp"/></svg>Cold brew too</div>
+    </div>
+  </div>
+  <div class="scallop" aria-hidden="true"></div>
+</section>
+
+<section class="story" id="story" style="padding-top:48px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The Glammy's glow-up</div>
+      <h2>From the truck to the shop</h2>
+      <p class="lead">Sherry Anderson built a following one pop-up at a time. Now Glammy's has a permanent home on S. Jefferson.</p>
+    </div>
+    <div class="tl">
+      <div class="step rv">
+        <div class="ic"><svg><use href="#sp"/></svg></div>
+        <h3>Local events &amp; pop-ups</h3>
+        <p>Gourmet cheesecakes, delighting the Upper Cumberland at local events and pop-ups.</p>
+        <span class="when">Where it started</span>
+      </div>
+      <div class="step rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M2 6h12v9h1V9h4l3 4v4h-2a2.5 2.5 0 0 1-5 0H9a2.5 2.5 0 0 1-5 0H2zm15 5v2h3l-1.5-2zM6.5 16.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zm11 0a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></div>
+        <h3>The cheesecake truck</h3>
+        <p>Glammy's built its name as a beloved food truck before going brick-and-mortar.</p>
+        <span class="when">On the road</span>
+      </div>
+      <div class="step now rv">
+        <div class="ic"><svg><use href="#bag"/></svg></div>
+        <h3>The storefront</h3>
+        <p>First brick-and-mortar shop: permanent takeout at 565 S. Jefferson Ave., Suite C. Chamber ribbon cutting on July 17, 2026.</p>
+        <span class="when">The shop</span>
+      </div>
+    </div>
+    <p class="src">As reported by the <a href="https://www.ucbjournal.com/beloved-food-truck-opens-first-brick-and-mortar-location/" target="_blank" rel="noopener">Upper Cumberland Business Journal</a> &amp; Cookeville-Putnam County Chamber.</p>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">What's in the case</div>
+      <h2>The menu</h2>
+      <p class="lead">Grab a slice for yourself, or a whole cheesecake for the whole table.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><use href="#wedge"/></svg></div><div><h3>Individual slices</h3><p>Your perfect single serving.</p></div></div>
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><ellipse cx="30" cy="42" rx="20" ry="7" fill="#C89A62"/><rect x="10" y="24" width="40" height="18" fill="#FFF3DD"/><ellipse cx="30" cy="24" rx="20" ry="7" fill="#FFE9C9"/><ellipse cx="30" cy="23" rx="14" ry="4.5" fill="#E5466E"/><circle cx="30" cy="17" r="4" fill="#E0284F"/></svg></div><div><h3>Petite cheesecakes</h3><p>Little cakes, big glam.</p></div></div>
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><ellipse cx="30" cy="44" rx="26" ry="9" fill="#C89A62"/><rect x="4" y="26" width="52" height="18" fill="#FFF3DD"/><ellipse cx="30" cy="26" rx="26" ry="9" fill="#FFE9C9"/><path d="M8 26c4 6 6-2 10 4s6-3 10 3 6-3 10 2 6-3 10 2c2-4 4-6 4-11" fill="#E5466E"/><g stroke-width="2.5" stroke-linecap="round"><line x1="20" y1="22" x2="24" y2="21" stroke="#E9B949"/><line x1="34" y1="20" x2="36" y2="24" stroke="#fff"/><line x1="40" y1="25" x2="44" y2="24" stroke="#E9B949"/></g></svg></div><div><h3>Whole cheesecakes</h3><p>With a variety of toppings.</p></div></div>
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><use href="#wedge"/><path d="M6 38 L54 24 L54 34 C48 38 46 32 40 36 C34 40 32 34 26 38 C20 42 18 36 12 40 C9 42 7 41 6 42 Z" fill="#7A3B2A"/></svg></div><div><h3>Dipped cheesecake slices</h3><p>A slice, dipped and dressed up.</p></div></div>
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><rect x="28" y="40" width="4" height="16" rx="2" fill="#C89A62"/><path d="M22 10c0-6 16-6 16 0v30c0 4-16 4-16 0z" fill="#FCE58A"/><path d="M22 8c0-5 16-5 16 0v20c-3 3-5-1-8 2s-5-1-8 1z" fill="#E5466E"/><g stroke-width="2.4" stroke-linecap="round"><line x1="26" y1="12" x2="29" y2="11" stroke="#fff"/><line x1="32" y1="16" x2="34" y2="19" stroke="#E9B949"/><line x1="26" y1="21" x2="28" y2="23" stroke="#fff"/></g></svg></div><div><h3>Frozen dipped bananas</h3><p>A cool, sweet treat.</p></div></div>
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><path d="M14 12h32l-4 40H18z" fill="#fff" stroke="#EBD3AE" stroke-width="2"/><path d="M15.5 24h29l-1 9h-27z" fill="#C89A62"/><path d="M16.4 33h27.2l-1 9H17.4z" fill="#FFF3DD"/><path d="M15 16h30l-.6 8H15.6z" fill="#E5466E"/><path d="M17.4 42h25.2l-.6 6H18z" fill="#C89A62"/><circle cx="30" cy="10" r="5" fill="#E0284F"/></svg></div><div><h3>Cheesecake parfaits</h3><p>Layered up, with rotating flavors.</p></div></div>
+      <div class="item rv"><div class="art"><svg viewBox="0 0 60 60"><path d="M16 14h28l-3 40H19z" fill="#fff" stroke="#EBD3AE" stroke-width="2"/><path d="M17.5 24h25l-2.4 28H19.9z" fill="#5A3324"/><rect x="21" y="27" width="7" height="7" rx="1.5" fill="#fff" opacity=".55"/><rect x="31" y="32" width="6" height="6" rx="1.5" fill="#fff" opacity=".45"/><rect x="33" y="4" width="3" height="22" rx="1.5" fill="#E5466E" transform="rotate(12 34 15)"/><rect x="14" y="11" width="32" height="5" rx="2.5" fill="#E5466E"/></svg></div><div><h3>Cold brew coffee</h3><p>A little something to sip on.</p></div></div>
+      <div class="item rv" style="background:var(--pink);color:#fff"><div class="art" style="background:rgba(255,255,255,.2)"><svg viewBox="0 0 24 24" style="width:36px;height:36px;color:#fff"><use href="#sp"/></svg></div><div><h3>Seasonal flavors</h3><p style="color:#FFE3EA">The lineup changes with the seasons.</p></div></div>
+    </div>
+    <p class="note rv"><b>Pricing &amp; today's flavors:</b> call <a href="tel:+19318540036"><b>931-854-0036</b></a> or check <a href="https://www.instagram.com/glammys_cheesecakes/" target="_blank" rel="noopener"><b>@glammys_cheesecakes</b></a> on Instagram.</p>
+  </div>
+</section>
+
+<section id="flavors">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Rotates with the seasons</div>
+      <h2>This season's flavors</h2>
+      <p class="lead">Concept preview: Glammy's would post its current lineup here, so nobody has to scroll Instagram to find out what's in the case.</p>
+    </div>
+    <div class="flav-grid">
+      <div class="flav rv"><div class="disc" style="background:radial-gradient(circle at 50% 40%,#FFE9C9 0 45%,#E5466E 46% 58%,#C89A62 59%)"></div><h3>Flavor No. 1</h3><p>Seasonal pick</p><span class="ph">Placeholder</span></div>
+      <div class="flav rv"><div class="disc" style="background:radial-gradient(circle at 50% 40%,#FFF3DD 0 45%,#7A3B2A 46% 58%,#C89A62 59%)"></div><h3>Flavor No. 2</h3><p>Seasonal pick</p><span class="ph">Placeholder</span></div>
+      <div class="flav rv"><div class="disc" style="background:radial-gradient(circle at 50% 40%,#FFE9C9 0 45%,#E9B949 46% 58%,#C89A62 59%)"></div><h3>Flavor No. 3</h3><p>Seasonal pick</p><span class="ph">Placeholder</span></div>
+      <div class="flav rv"><div class="disc" style="background:radial-gradient(circle at 50% 40%,#FFF3DD 0 45%,#F7A8BC 46% 58%,#C89A62 59%)"></div><h3>Flavor No. 4</h3><p>Seasonal pick</p><span class="ph">Placeholder</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="scallop tan" aria-hidden="true" style="transform:rotate(180deg)"></div>
+<section class="visit" id="why" style="padding-bottom:0;padding-top:50px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Why it's worth the trip</div>
+      <h2>A little glam in every slice</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div class="n">01</div><h3>Handcrafted desserts</h3><p>Gourmet cheesecakes made by hand, from slices to whole cakes.</p></div>
+      <div class="why rv"><div class="n">02</div><h3>Family-run</h3><p>A local, family-run business, not a chain.</p></div>
+      <div class="why rv"><div class="n">03</div><h3>Built by the community</h3><p>Grown through Upper Cumberland events, pop-ups and the truck before opening the shop.</p></div>
+    </div>
+    <blockquote class="rv">"<span class="script">Heart</span> baked into everything they do."<cite>As described in the Upper Cumberland Business Journal</cite></blockquote>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Come say hi</div>
+      <h2>Visit the shop</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="stack">
+        <div class="card rv">
+          <h3>Hours</h3>
+          <div class="days" id="days">
+            <div class="day">Sun</div><div class="day">Mon</div><div class="day">Tue</div><div class="day">Wed</div><div class="day">Thu</div><div class="day">Fri</div><div class="day">Sat</div>
+          </div>
+          <p class="hours-msg"><b id="todayName">Today</b>: call before you come. Hours aren't published online yet, so <a href="tel:+19318540036"><b>931-854-0036</b></a> or <a href="https://www.instagram.com/glammys_cheesecakes/" target="_blank" rel="noopener"><b>Instagram</b></a> has the latest.</p>
+        </div>
+        <div class="card rv">
+          <h3>Address</h3>
+          <p class="addr">565 S. Jefferson Ave., Suite C<small>Cookeville, Tennessee · takeout storefront</small></p>
+          <div class="chips">
+            <a class="btn btn-pink btn-sm" href="tel:+19318540036"><svg width="16" height="16"><use href="#phone"/></svg>931-854-0036</a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=565%20S%20Jefferson%20Ave%20Suite%20C%2C%20Cookeville%2C%20TN" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#pin"/></svg>Directions</a>
+            <a class="btn btn-ghost btn-sm" href="mailto:glammyscheesecakes@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="map rv"><svg class="mp" aria-hidden="true"><use href="#pin"/></svg><iframe title="Map to Glammy's Cheesecakes" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=565%20S%20Jefferson%20Ave%20Suite%20C%2C%20Cookeville%2C%20TN&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="sprinkles" aria-hidden="true" style="opacity:.35"></div>
+  <div class="wrap" style="position:relative">
+    <div class="kicker" style="color:var(--pink-l)">Treat yourself</div>
+    <h2>Your slice is waiting on S. Jefferson.</h2>
+    <p class="lead">Call ahead for whole cheesecakes and today's flavors.</p>
+    <div class="ctas">
+      <a class="btn btn-pink" href="tel:+19318540036"><svg width="18" height="18"><use href="#phone"/></svg>Call 931-854-0036</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/glammys_cheesecakes/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ig"/></svg>Follow on Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div><span class="script">Glammy's Cheesecakes</span><br>565 S. Jefferson Ave., Suite C · Cookeville, TN · <a href="tel:+19318540036">931-854-0036</a></div>
+    <div>Concept by Code Craft Media</div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="c" href="tel:+19318540036"><svg><use href="#phone"/></svg>Call to order</a>
+  <a class="i" href="https://www.instagram.com/glammys_cheesecakes/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Instagram</a>
+</nav>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=new Date().getDay(); var days=document.querySelectorAll('#days .day');
+  if(days[t]){days[t].classList.add('today');days[t].setAttribute('aria-current','date');}
+  var tn=document.getElementById('todayName'); if(tn) tn.textContent=names[t];
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function showAll(){els.forEach(function(e){e.classList.add('in')});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Peacock Tea Room — Cookeville</title>
+<meta name="description" content="Peacock Tea Room: a private event venue in Cookeville, TN inspired by the timeless tradition of afternoon tea. 85% of proceeds go to Open Heart Rescue and Shriners Children's Hospital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#fbf7ee; --ivory2:#f4ecdb; --paper:#fffdf8;
+  --teal:#0e5e63; --teal-d:#08393d; --teal-l:#1f8a8a;
+  --emerald:#1b6b4a; --emerald-l:#2f8f63;
+  --gold:#b48a3c; --gold-l:#d6b46a; --gold-d:#8a6420;
+  --ink:#1d2b2b; --muted:#4f5d5a;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --barH:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;overflow-x:hidden;
+  padding-bottom:calc(var(--barH) + env(safe-area-inset-bottom) + 8px)}
+@media (min-width:900px){body{padding-bottom:0}}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{text-wrap:balance;font-family:var(--serif);font-weight:500;line-height:1.05;margin:0;letter-spacing:-.005em}
+p{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.wrap>*, .grid>*, .flex>*{min-width:0}
+
+/* subtle paper texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:radial-gradient(rgba(180,138,60,.09) 1px,transparent 1.2px);background-size:22px 22px}
+main,header,footer,.concept{position:relative;z-index:1}
+
+/* concept banner */
+.concept{background:var(--teal-d);color:#e9dcbc;font-size:min(12px,2.7vw);letter-spacing:0;text-align:center;padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.concept b{color:#fff;font-weight:500}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(251,247,238,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(180,138,60,.25)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:62px}
+.top .wrap>*{min-width:0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand>*{min-width:0}
+.brand svg{width:30px;height:38px;flex:none}
+.brand span{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--teal-d);white-space:nowrap;letter-spacing:.01em}
+.nav{display:none;gap:28px;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.nav>*{min-width:0}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--teal)}
+.top .cta-s{font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--teal);border:1px solid var(--gold);padding:8px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
+.top .cta-s:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+@media (min-width:900px){.nav{display:flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:999px;padding:15px 26px;transition:transform .2s,box-shadow .2s,background .2s,color .2s;min-height:52px;text-align:center}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-p{background:var(--teal);color:#fff;box-shadow:0 8px 22px -10px rgba(8,57,61,.7), inset 0 0 0 1px rgba(214,180,106,.5)}
+.btn-p:hover{background:var(--teal-d);transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(8,57,61,.8), inset 0 0 0 1px var(--gold-l)}
+.btn-o{color:var(--teal-d);border:1.5px solid var(--gold);background:rgba(255,253,248,.7)}
+.btn-o:hover{background:var(--gold);color:#fff;transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* eyebrow + ornaments */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--emerald);font-weight:500}
+.eyebrow::before,.eyebrow::after{content:"";width:22px;height:1px;background:var(--gold)}
+.hero .eyebrow{white-space:nowrap}
+@media (max-width:480px){.hero .eyebrow::before,.hero .eyebrow::after{display:none}.hero .eyebrow{letter-spacing:.16em}}
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:14px auto 0}
+.orn::before,.orn::after{content:"";height:1px;width:56px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{transform:scaleX(-1)}
+.orn svg{width:16px;height:16px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 56px}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:12px;
+  background:radial-gradient(circle at 50% 100%,var(--teal-d) 6px,transparent 6.5px) 0 0/16px 12px repeat-x;opacity:.0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+.hero-grid>*{min-width:0}
+.hero h1{font-size:clamp(44px,12.4vw,92px);color:var(--teal-d);margin:16px 0 18px;font-weight:500}
+.hero h1 .ln{display:block;white-space:nowrap}
+.hero h1 em{font-style:italic;color:var(--emerald);font-weight:500}
+.hero h1 .g{color:var(--gold-d);font-style:italic}
+.hero .sub{font-size:18px;color:var(--muted);max-width:34ch;font-weight:300}
+.hero .sub strong{font-weight:500;color:var(--teal)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.ctas>*{min-width:0}
+.ctas .btn{flex:1 1 220px}
+.hero-art{position:relative;max-width:400px;margin:0 auto;width:100%}
+.hero-art .halo{position:absolute;inset:6% 4%;border-radius:50%;background:radial-gradient(circle,rgba(31,138,138,.16),rgba(27,107,74,.07) 55%,transparent 70%)}
+.hero-art svg{position:relative;width:100%;height:auto}
+.steam path{stroke-dasharray:6 7;animation:steam 3.2s linear infinite}
+.steam path:nth-child(2){animation-duration:4s}
+.steam path:nth-child(3){animation-duration:3.6s}
+@keyframes steam{to{stroke-dashoffset:-52}}
+.feather-sway{transform-origin:250px 470px;animation:sway 7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+.eye-glow{animation:glow 4s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.75}50%{opacity:1}}
+.hero-note{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--muted)}
+.hero-note>*{min-width:0}
+.hero-note svg{width:18px;height:18px;flex:none;color:var(--gold)}
+@media (min-width:900px){
+  .hero{padding:80px 0 96px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}
+  .hero-art{max-width:520px}
+  .hero .sub{font-size:20px}
+  .ctas .btn{flex:0 0 auto}
+}
+
+/* mission band */
+.mission{position:relative;background:var(--teal-d);color:#efe6cf;padding:64px 0 60px;overflow:hidden}
+.mission::before,.mission::after{content:"";position:absolute;left:0;right:0;height:12px;
+  background:radial-gradient(circle at 50% 0,var(--ivory) 6px,transparent 6.5px) 0 0/16px 12px repeat-x}
+.mission::before{top:0}
+.mission::after{bottom:0;transform:rotate(180deg)}
+.mission .pattern{position:absolute;inset:0;opacity:.09;pointer-events:none}
+.mission-grid{position:relative;display:grid;grid-template-columns:1fr;gap:26px;align-items:center;text-align:center}
+.mission-grid>*{min-width:0}
+.pct{font-family:var(--serif);font-weight:500;font-size:clamp(108px,34vw,200px);line-height:.85;color:var(--gold-l);letter-spacing:-.02em;
+  background:linear-gradient(180deg,#f0d998,#b48a3c);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.pct small{font-size:.45em;vertical-align:.7em}
+.mission h2{font-size:clamp(30px,7.6vw,46px);color:#fff;font-weight:500}
+.mission h2 em{color:var(--gold-l)}
+.mission p.lead{margin-top:12px;font-size:17px;font-weight:300;color:#d9d0b8;max-width:46ch;margin-left:auto;margin-right:auto}
+.causes{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+.causes>*{min-width:0}
+.cause{display:flex;align-items:center;gap:14px;text-align:left;background:rgba(255,255,255,.05);border:1px solid rgba(214,180,106,.35);border-radius:16px;padding:14px 16px;transition:background .2s,transform .2s}
+.cause:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.cause>*{min-width:0}
+.cause .ic{width:46px;height:46px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(214,180,106,.14);color:var(--gold-l)}
+.cause .ic svg{width:24px;height:24px}
+.cause b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;color:#fff;line-height:1.1}
+.cause span{font-size:13.5px;color:#cfc5aa;letter-spacing:.04em}
+@media (min-width:700px){.causes{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.mission{padding:96px 0 90px}.mission-grid{grid-template-columns:auto 1fr;text-align:left;gap:56px}.mission p.lead{margin-left:0}}
+
+/* sections */
+section.s{padding:72px 0}
+.head{text-align:center;max-width:680px;margin:0 auto 40px}
+.head h2{font-size:clamp(36px,9vw,58px);color:var(--teal-d);margin-top:12px}
+.head h2 em{color:var(--emerald)}
+.head p{margin-top:14px;color:var(--muted);font-weight:300;font-size:17.5px}
+@media (min-width:900px){section.s{padding:104px 0}}
+
+/* lace cards */
+.events{display:grid;grid-template-columns:1fr;gap:30px}
+.events>*{min-width:0}
+@media (min-width:640px){.events{grid-template-columns:1fr 1fr}}
+@media (min-width:1050px){.events{grid-template-columns:repeat(4,1fr);gap:24px}}
+.card{position:relative;background:var(--paper);border-radius:6px;padding:34px 24px 26px;text-align:center;
+  box-shadow:0 1px 0 rgba(180,138,60,.25),0 18px 40px -26px rgba(8,57,61,.45);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.card>*{min-width:0}
+.card::before,.card::after{content:"";position:absolute;left:0;right:0;height:10px;
+  background:radial-gradient(circle at 50% 100%,var(--paper) 6.5px,transparent 7px) center 0/15px 10px repeat-x}
+.card::before{top:-9px}
+.card::after{bottom:-9px;transform:rotate(180deg)}
+.card .inner{position:absolute;inset:9px;border:1px dashed rgba(180,138,60,.45);border-radius:3px;pointer-events:none}
+.card:hover{transform:translateY(-6px) rotate(-.3deg);box-shadow:0 1px 0 rgba(180,138,60,.25),0 28px 50px -26px rgba(8,57,61,.55)}
+.card .badge{width:72px;height:72px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#fff,var(--ivory2));box-shadow:inset 0 0 0 1px rgba(180,138,60,.5),0 0 0 5px var(--paper),0 0 0 6px rgba(14,94,99,.18);color:var(--teal)}
+.card .badge svg{width:38px;height:38px}
+.card h3{font-size:29px;color:var(--teal-d)}
+.card p{margin-top:10px;font-size:15.5px;color:var(--muted);font-weight:300;flex:1}
+.card a.more{margin-top:20px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;text-decoration:none;color:var(--teal);font-weight:500;padding:10px 12px;border-top:1px solid rgba(180,138,60,.35)}
+.card a.more svg{width:16px;height:16px;transition:transform .2s}
+.card a.more:hover{color:var(--emerald)}
+.card a.more:hover svg{transform:translateX(4px)}
+.events-cta{text-align:center;margin-top:44px}
+
+/* experience */
+.exp{background:linear-gradient(180deg,var(--ivory2),var(--ivory));border-top:1px solid rgba(180,138,60,.2);border-bottom:1px solid rgba(180,138,60,.2)}
+.exp-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.exp-grid>*{min-width:0}
+@media (min-width:700px){.exp-grid{grid-template-columns:1fr 1fr;gap:20px}}
+.feat{display:flex;gap:16px;align-items:flex-start;padding:22px 20px;background:rgba(255,253,248,.75);border:1px solid rgba(180,138,60,.25);border-radius:18px;transition:border-color .2s,transform .2s}
+.feat:hover{border-color:var(--gold);transform:translateY(-2px)}
+.feat>*{min-width:0}
+.feat .ic{width:48px;height:48px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--teal);color:var(--gold-l)}
+.feat:nth-child(even) .ic{background:var(--emerald)}
+.feat .ic svg{width:26px;height:26px}
+.feat h3{font-size:25px;color:var(--teal-d)}
+.feat p{margin-top:4px;font-size:15.5px;color:var(--muted);font-weight:300}
+.quote{margin:48px auto 0;max-width:780px;text-align:center;position:relative;padding:0 6px}
+.quote svg.q{width:84px;height:84px;margin:0 auto 6px;color:var(--gold)}
+.quote blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(28px,7vw,44px);line-height:1.15;color:var(--teal-d)}
+.quote cite{display:block;margin-top:16px;font-style:normal;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.quote cite a{color:var(--teal);text-underline-offset:3px}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr;gap:22px}
+.visit-grid>*{min-width:0}
+@media (min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr;gap:28px}}
+.panel{background:var(--paper);border:1px solid rgba(180,138,60,.3);border-radius:22px;padding:26px 22px;box-shadow:0 18px 40px -30px rgba(8,57,61,.5)}
+.panel h3{font-size:30px;color:var(--teal-d)}
+.today{margin-top:16px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;padding:16px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--emerald));color:#fff}
+.today>*{min-width:0}
+.today .day{display:block;font-family:var(--serif);font-size:34px;font-weight:600;line-height:1;color:var(--gold-l)}
+.today small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+.today p{font-size:14.5px;font-weight:300;line-height:1.45}
+.days{display:flex;gap:6px;margin-top:14px;flex-wrap:wrap}
+.days>*{min-width:0}
+.days span{flex:1 1 0;text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 0;border-radius:8px;border:1px solid rgba(180,138,60,.3);color:var(--muted)}
+.days span.on{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:500}
+.panel .note{margin-top:14px;font-size:14.5px;color:var(--muted);font-weight:300}
+.contact{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.contact>*{min-width:0}
+.contact a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:12px 14px;border-radius:14px;border:1px solid rgba(180,138,60,.25);transition:background .2s,border-color .2s}
+.contact a>*{min-width:0}
+.contact a:hover{background:var(--ivory2);border-color:var(--gold)}
+.contact .ic{width:40px;height:40px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--ivory2);color:var(--teal)}
+.contact .ic svg{width:20px;height:20px}
+.contact small{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.contact b{display:block;font-weight:500;color:var(--teal-d);font-size:15.5px;overflow-wrap:break-word}
+.map{border-radius:22px;overflow:hidden;border:1px solid rgba(180,138,60,.35);min-height:340px;background:var(--ivory2);position:relative;box-shadow:0 18px 40px -30px rgba(8,57,61,.5)}
+.map .mfb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:20px;color:var(--teal-d);font-family:var(--serif);font-size:24px;background:radial-gradient(circle,rgba(31,138,138,.12),transparent 70%),var(--ivory2)}
+.map .mfb svg{width:44px;height:58px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85) sepia(.08)}
+
+/* footer */
+footer{background:var(--teal-d);color:#cfc5aa;padding:52px 0 40px;text-align:center;position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:radial-gradient(circle at 50% 0,var(--ivory) 6px,transparent 6.5px) 0 0/16px 12px repeat-x}
+footer .fb{display:flex;flex-direction:column;align-items:center;gap:10px}
+footer .fb svg{width:40px;height:52px}
+footer .fb span{font-family:var(--serif);font-size:28px;color:#fff;font-weight:500}
+footer p{font-size:14px;margin-top:8px}
+footer a{color:var(--gold-l);text-underline-offset:3px}
+footer .small{margin-top:22px;font-size:12px;opacity:.8;letter-spacing:.04em}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(8,57,61,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(214,180,106,.4)}
+.bar>*{min-width:0}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:44px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.04em}
+.bar a svg{width:18px;height:18px;flex:none}
+.bar .c{background:var(--gold);color:#1d1606}
+.bar .e{border:1px solid rgba(214,180,106,.7);color:#fff}
+@media (min-width:900px){.bar{display:none}}
+
+/* reveal (content visible without JS) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in,.reveal-all .rv{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="eyeG" cx="50%" cy="55%" r="50%">
+      <stop offset="0" stop-color="#0b2e4a"/><stop offset=".45" stop-color="#0b2e4a"/>
+      <stop offset=".46" stop-color="#1f8a8a"/><stop offset=".66" stop-color="#1f8a8a"/>
+      <stop offset=".67" stop-color="#d6b46a"/><stop offset=".8" stop-color="#d6b46a"/>
+      <stop offset=".81" stop-color="#2f8f63"/><stop offset="1" stop-color="#1b6b4a"/>
+    </radialGradient>
+    <symbol id="feather" viewBox="0 0 60 80">
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M30 78 V30"/>
+        <path d="M30 70 C18 64 8 50 8 34 C8 16 18 4 30 2 C42 4 52 16 52 34 C52 50 42 64 30 70" opacity=".55"/>
+        <path d="M30 60 L14 52 M30 60 L46 52 M30 52 L10 42 M30 52 L50 42 M30 44 L10 32 M30 44 L50 32" opacity=".5"/>
+      </g>
+      <ellipse cx="30" cy="30" rx="15" ry="19" fill="url(#eyeG)"/>
+      <ellipse cx="30" cy="33" rx="6" ry="8" fill="#0b2e4a"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21z"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="6" cy="10" rx="2.1" ry="2.7"/><ellipse cx="10" cy="6" rx="2.1" ry="2.8"/><ellipse cx="14.5" cy="6" rx="2.1" ry="2.8"/><ellipse cx="18.4" cy="10" rx="2.1" ry="2.7"/><path d="M12.2 11.2c-3 0-6.2 4.6-6.2 6.7 0 1.8 1.6 2.4 3 2.1 1.2-.3 2.1-.8 3.2-.8s2 .5 3.2.8c1.4.3 3-.3 3-2.1 0-2.1-3.2-6.7-6.2-6.7z"/></g></symbol>
+    <symbol id="i-sprig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M12 22V4"/><path d="M12 8c-3 0-5-2-5-4 3 0 5 2 5 4zm0 0c3 0 5-2 5-4-3 0-5 2-5 4zm0 6c-3 0-5-2-5-4 3 0 5 2 5 4zm0 0c3 0 5-2 5-4-3 0-5 2-5 4z"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="concept">Concept site by <b>Code Craft Media</b>, made for Peacock Tea Room. Not live.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Peacock Tea Room home">
+      <svg viewBox="0 0 60 80" style="color:var(--teal)"><use href="#feather"/></svg>
+      <span>Peacock Tea Room</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#mission">Mission</a><a href="#events">Events</a><a href="#experience">The Experience</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="cta-s" href="tel:+19316500460">Call</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="rv">
+        <span class="eyebrow">Private events · Cookeville, TN</span>
+        <h1><span class="ln">Dress up,</span> <span class="ln"><em>slow down</em></span> <span class="ln">&amp; <span class="g">give back.</span></span></h1>
+        <p class="sub">A private event room inspired by the timeless tradition of afternoon tea, where <strong>85% of proceeds</strong> go to Open Heart Rescue and Shriners Children's Hospital.</p>
+        <div class="ctas">
+          <a class="btn btn-p" href="mailto:peacocktearoom03@gmail.com?subject=Inquiring%20about%20a%20date%20at%20Peacock%20Tea%20Room"><svg><use href="#i-mail"/></svg>Inquire about a date</a>
+          <a class="btn btn-o" href="tel:+19316500460"><svg><use href="#i-phone"/></svg>Call 931-650-0460</a>
+        </div>
+        <p class="hero-note"><svg><use href="#i-pin"/></svg><span>1310 Walter Reed Road, Cookeville</span></p>
+      </div>
+
+      <div class="hero-art rv" aria-hidden="true">
+        <div class="halo"></div>
+        <svg viewBox="0 0 500 520" fill="none">
+          <!-- feather behind the cup -->
+          <g class="feather-sway">
+            <path d="M250 470 C246 360 244 250 252 70" stroke="#b48a3c" stroke-width="2.2" stroke-linecap="round"/>
+            <g stroke="#1b6b4a" stroke-width="1.3" stroke-linecap="round" opacity=".7">
+              <path d="M249 420 C220 405 196 384 180 360 M250 420 C280 405 304 384 320 360"/>
+              <path d="M249 390 C214 372 186 344 170 312 M250 390 C286 372 314 344 330 312"/>
+              <path d="M249 360 C210 338 180 300 166 262 M250 360 C290 338 320 300 334 262"/>
+              <path d="M249 330 C208 304 178 258 168 214 M251 330 C292 304 322 258 332 214"/>
+              <path d="M250 300 C212 270 186 220 182 172 M251 300 C290 270 316 220 320 172"/>
+            </g>
+            <path d="M250 300 C186 286 158 222 172 168 C186 112 222 84 252 70 C282 84 318 112 330 168 C342 222 314 286 250 300Z" fill="#1f8a8a" fill-opacity=".10" stroke="#1f8a8a" stroke-width="1.6"/>
+            <g class="eye-glow">
+              <ellipse cx="251" cy="184" rx="52" ry="68" fill="#1b6b4a"/>
+              <ellipse cx="251" cy="188" rx="42" ry="55" fill="#d6b46a"/>
+              <ellipse cx="251" cy="194" rx="32" ry="42" fill="#1f8a8a"/>
+              <ellipse cx="251" cy="202" rx="19" ry="25" fill="#0b2e4a"/>
+              <ellipse cx="244" cy="192" rx="5" ry="7" fill="#fff" opacity=".35"/>
+            </g>
+            <path d="M251 116 C 238 140 236 170 251 202" stroke="#fbf7ee" stroke-width="1" opacity=".4"/>
+          </g>
+          <!-- steam -->
+          <g class="steam" stroke="#b48a3c" stroke-width="2" stroke-linecap="round" opacity=".8">
+            <path d="M200 330 c-14 -20 14 -30 0 -52 s14 -30 0 -50"/>
+            <path d="M300 330 c14 -20 -14 -30 0 -52 s-14 -30 0 -50"/>
+            <path d="M350 320 c-10 -16 10 -24 0 -40"/>
+          </g>
+          <!-- teacup line-art -->
+          <g stroke="#08393d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M120 470 C150 492 350 492 380 470" fill="#fffdf8"/>
+            <ellipse cx="250" cy="468" rx="160" ry="22" fill="#fffdf8"/>
+            <ellipse cx="250" cy="468" rx="108" ry="12" stroke="#b48a3c" stroke-width="1.6"/>
+            <path d="M140 352 C142 420 186 462 250 462 C314 462 358 420 360 352 Z" fill="#fffdf8"/>
+            <path d="M358 372 C404 364 418 404 392 424 C378 435 356 432 342 426" fill="none"/>
+            <path d="M356 386 C384 382 392 404 378 414 C370 420 356 418 348 414" fill="none" stroke-width="1.6"/>
+            <ellipse cx="250" cy="352" rx="110" ry="17" fill="#e9f1ee"/>
+            <ellipse cx="250" cy="353" rx="94" ry="11" fill="#c9a96a" fill-opacity=".35" stroke="none"/>
+          </g>
+          <!-- cup decoration: gold band + mini feather eyes -->
+          <path d="M146 380 C190 396 310 396 354 380" stroke="#b48a3c" stroke-width="1.6"/>
+          <path d="M150 396 C192 412 308 412 350 396" stroke="#b48a3c" stroke-width="1" stroke-dasharray="2 5" stroke-linecap="round"/>
+          <g>
+            <ellipse cx="250" cy="426" rx="11" ry="14" fill="#1b6b4a"/><ellipse cx="250" cy="428" rx="7.5" ry="10" fill="#d6b46a"/><ellipse cx="250" cy="430" rx="4.5" ry="6" fill="#0b2e4a"/>
+            <ellipse cx="200" cy="420" rx="8" ry="10" fill="#1b6b4a"/><ellipse cx="200" cy="422" rx="5" ry="7" fill="#d6b46a"/><ellipse cx="200" cy="423" rx="3" ry="4" fill="#0b2e4a"/>
+            <ellipse cx="300" cy="420" rx="8" ry="10" fill="#1b6b4a"/><ellipse cx="300" cy="422" rx="5" ry="7" fill="#d6b46a"/><ellipse cx="300" cy="423" rx="3" ry="4" fill="#0b2e4a"/>
+          </g>
+          <!-- sparkles -->
+          <g fill="#b48a3c">
+            <path d="M92 250 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/>
+            <path d="M412 196 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/>
+            <path d="M420 300 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission" id="mission">
+    <svg class="pattern" width="100%" height="100%" aria-hidden="true"><defs><pattern id="pf" width="70" height="90" patternUnits="userSpaceOnUse"><use href="#feather" width="34" height="46" x="18" y="22" style="color:#d6b46a"/></pattern></defs><rect width="100%" height="100%" fill="url(#pf)"/></svg>
+    <div class="wrap mission-grid">
+      <div class="pct rv" aria-label="85 percent">85<small>%</small></div>
+      <div class="rv">
+        <span class="eyebrow" style="color:var(--gold-l)">The bigger mission</span>
+        <h2 style="margin-top:12px">Every event here <em>gives back.</em></h2>
+        <p class="lead">85% of proceeds go directly to two causes. Your bridal luncheon or birthday helps support animal rescue and children's care.</p>
+        <div class="causes">
+          <div class="cause"><div class="ic"><svg><use href="#i-paw"/></svg></div><div><b>Open Heart Rescue</b><span>Animal rescue</span></div></div>
+          <div class="cause"><div class="ic"><svg><use href="#i-heart"/></svg></div><div><b>Shriners Children's Hospital</b><span>Care for children</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="events">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Gather here</span>
+        <h2>An afternoon worth <em>dressing up</em> for</h2>
+        <p>A private event facility for the occasions worth slowing down for.</p>
+        <div class="orn"><svg><use href="#i-sprig"/></svg></div>
+      </div>
+      <div class="events">
+        <article class="card rv"><i class="inner"></i>
+          <div class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="23" r="8"/><circle cx="25" cy="23" r="8"/><path d="M17 9l3-4 3 4-3 3z" fill="#d6b46a" stroke="#b48a3c"/></svg></div>
+          <h3>Bridal Luncheons</h3>
+          <p>Celebrate the bride-to-be in an intimate, elegant setting.</p>
+          <a class="more" href="mailto:peacocktearoom03@gmail.com?subject=Bridal%20luncheon%20inquiry">Inquire about a date <svg><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card rv"><i class="inner"></i>
+          <div class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 33h24M10 33V22h20v11M10 26c3 2 6 2 10 0s7-2 10 0"/><path d="M15 22v-5m5 5v-5m5 5v-5"/><path d="M15 14c-1-1 0-3 0-3s1 2 0 3zm5 0c-1-1 0-3 0-3s1 2 0 3zm5 0c-1-1 0-3 0-3s1 2 0 3z" fill="#d6b46a" stroke="#b48a3c"/></svg></div>
+          <h3>Birthdays</h3>
+          <p>Birthday celebrations with a touch of afternoon-tea charm.</p>
+          <a class="more" href="mailto:peacocktearoom03@gmail.com?subject=Birthday%20celebration%20inquiry">Inquire about a date <svg><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card rv"><i class="inner"></i>
+          <div class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12c-4-3-9-3-13-2v20c4-1 9-1 13 2 4-3 9-3 13-2V10c-4-1-9-1-13 2z"/><path d="M20 12v20"/><path d="M27 15v7m-3-4h6" stroke="#b48a3c"/></svg></div>
+          <h3>Bible Studies</h3>
+          <p>A peaceful, unhurried setting to open the Word together.</p>
+          <a class="more" href="mailto:peacocktearoom03@gmail.com?subject=Bible%20study%20inquiry">Inquire about a date <svg><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card rv"><i class="inner"></i>
+          <div class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h17v5a8 8 0 0 1-8 8h-1a8 8 0 0 1-8-8z"/><path d="M26 20c4 0 5 4 1 6h-2"/><path d="M6 33h24"/><path d="M15 14c-2-2 2-3 0-6m5 6c-2-2 2-3 0-6" stroke="#b48a3c"/></svg></div>
+          <h3>Private Gatherings</h3>
+          <p>Your own occasion, in a room made for slowing down.</p>
+          <a class="more" href="mailto:peacocktearoom03@gmail.com?subject=Private%20gathering%20inquiry">Inquire about a date <svg><use href="#i-arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="s exp" id="experience">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">The experience</span>
+        <h2>The art of <em>afternoon tea</em>, made yours</h2>
+        <div class="orn"><svg><use href="#i-sprig"/></svg></div>
+      </div>
+      <div class="exp-grid">
+        <div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6z"/><path d="M16 11c3 0 3 4 0 4"/><path d="M3 21h15M9 7c-1-1 1-2 0-4"/></svg></div><div><h3>A timeless tradition</h3><p>Peacock Tea Room is inspired by the timeless tradition of afternoon tea, in an intimate and elegant setting.</p></div></div>
+        <div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h16M6 14a6 6 0 0 1 12 0M12 6V4M3 18h18"/></svg></div><div><h3>Bring your own catering</h3><p>Guests are welcome to bring their own catering, so the menu is entirely up to you.</p></div></div>
+        <div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M12 2v1.5M12 12.5V14M6 8H4.5M19.5 8H18M7.8 3.8l1 1M16.2 3.8l-1 1"/><path d="M3 18c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 21c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/></svg></div><div><h3>Veranda &amp; pool patio</h3><p>Outdoor seating on the Veranda or pool patio when the weather allows.</p></div></div>
+        <div class="feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 15.2 7 18l1.2-5.6L4 8.6 9.6 8z"/></svg></div><div><h3>Just the beginning</h3><p>Founder Cheryl Vick calls the grand opening the beginning of a larger vision. The full experience is still to come.</p></div></div>
+      </div>
+      <figure class="quote rv">
+        <svg class="q" viewBox="0 0 60 80" style="color:var(--teal)" aria-hidden="true"><use href="#feather"/></svg>
+        <blockquote>“Think dressing up, slowing down, and spending a beautiful afternoon with great company.”</blockquote>
+        <cite>The Cookeville-Putnam County Chamber, via <a href="https://www.ucbjournal.com/this-new-cookeville-venue-is-serving-up-tea-events-and-a-bigger-mission/" target="_blank" rel="noopener">UCBJ</a></cite>
+      </figure>
+    </div>
+  </section>
+
+  <section class="s" id="visit">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Plan your visit</span>
+        <h2>Save a date at <em>the Tea Room</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="panel rv">
+          <h3>Hours &amp; availability</h3>
+          <div class="today"><div><small>Today is</small><span class="day" id="todayName">Today</span></div><p>Peacock Tea Room hosts private events. Call or email to check a date.</p></div>
+          <div class="days" id="days" aria-label="Day of week"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+          <p class="note">Hours and pricing aren't published yet. Reach out and Peacock Tea Room will help you plan.</p>
+          <ul class="contact">
+            <li><a href="tel:+19316500460"><span class="ic"><svg><use href="#i-phone"/></svg></span><span><small>Call</small><b>931-650-0460</b></span></a></li>
+            <li><a href="mailto:peacocktearoom03@gmail.com?subject=Inquiring%20about%20a%20date%20at%20Peacock%20Tea%20Room"><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>peacocktearoom03<wbr>@gmail.com</b></span></a></li>
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=1310%20Walter%20Reed%20Road%2C%20Cookeville%2C%20TN" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Directions</small><b>1310 Walter Reed Road, Cookeville, TN</b></span></a></li>
+          </ul>
+        </div>
+        <div class="map rv">
+          <div class="mfb" aria-hidden="true"><svg viewBox="0 0 60 80" style="color:var(--teal)"><use href="#feather"/></svg>1310 Walter Reed Road<br>Cookeville, TN</div>
+          <iframe title="Map to Peacock Tea Room" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1310%20Walter%20Reed%20Road%2C%20Cookeville%2C%20TN&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb"><svg viewBox="0 0 60 80" style="color:#d6b46a"><use href="#feather"/></svg><span>Peacock Tea Room</span></div>
+    <p>1310 Walter Reed Road, Cookeville, TN · <a href="tel:+19316500460">931-650-0460</a></p>
+    <p>85% of proceeds go to Open Heart Rescue &amp; Shriners Children's Hospital.</p>
+    <p class="small">Concept by Code Craft Media · a design preview, not the official site.</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a class="c" href="tel:+19316500460"><svg><use href="#i-phone"/></svg>Call</a>
+  <a class="e" href="mailto:peacocktearoom03@gmail.com?subject=Inquiring%20about%20a%20date%20at%20Peacock%20Tea%20Room"><svg><use href="#i-mail"/></svg>Inquire</a>
+</nav>
+
+<script>
+(function(){
+  var names=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],d=new Date().getDay();
+  var t=document.getElementById("todayName"); if(t) t.textContent=names[d];
+  var s=document.querySelectorAll("#days span"); if(s[d]){s[d].classList.add("on");s[d].setAttribute("aria-current","date");}
+  var root=document.documentElement;
+  if(!("IntersectionObserver" in window)) return;
+  root.classList.add("js");
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{rootMargin:"0px 0px -8% 0px",threshold:.05});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+  setTimeout(function(){root.classList.add("reveal-all")},1500);
+})();
+</script>
+</body>
+</html>
