@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>WildBeauty — Franklin, TN</title>
+<meta name="description" content="Lived-in custom color by Brittany Small in Franklin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}img,svg{max-width:100%;display:block}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+.cc-banner{font:500 11.5px/1.3 var(--sans);letter-spacing:.02em;text-align:center;padding:7px 12px;background:var(--banner);color:var(--bannerInk);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cc-banner .mf{display:none}@media(min-width:600px){.cc-banner .mf{display:inline}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;padding:15px 24px;border-radius:var(--r);transition:transform .2s,box-shadow .2s,background .2s;min-height:50px}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+.rv{transition:opacity .8s ease,transform .8s ease}.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+section{padding:72px 0}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,7vw,52px);line-height:1.05;margin:12px 0 18px}
+.hours{list-style:none;border-top:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--line);font-size:16px}
+.hours li.today{font-weight:700;color:var(--accent)}
+.hours li.today span:first-child::after{content:' \00b7 today';font-weight:500;font-size:13px}
+.map{width:100%;height:300px;border:0;border-radius:var(--r);background:var(--card);display:block}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--barbg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.callbar a{flex:1;min-height:48px;padding:12px}
+footer{padding:44px 0 30px;font-size:14px;border-top:1px solid var(--line)}
+footer a{text-decoration:underline;text-underline-offset:3px}
+#status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+#status::before{content:'';width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.5}
+#status.open::before{background:#3bb273;opacity:1;box-shadow:0 0 0 4px rgba(59,178,115,.22)}
+.grid2{display:grid;gap:36px}
+@media(min-width:860px){.callbar{display:none}body{padding-bottom:0}.grid2{grid-template-columns:1fr 1fr;align-items:start}section{padding:104px 0}}
+
+:root{--bg:#f6efe4;--ink:#2d2a22;--card:#fffaf2;--accent:#b4532a;--sage:#6f7d5c;--line:rgba(45,42,34,.14);--banner:#2d2a22;--bannerInk:#f6efe4;--barbg:rgba(246,239,228,.9);--r:999px;--serif:'Fraunces',Georgia,serif;--sans:'Outfit',system-ui,sans-serif}
+.b1{background:var(--accent);color:#fff;box-shadow:0 8px 24px -10px rgba(180,83,42,.7)}.b1:hover{background:#9c4521}
+.b2{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:600 24px var(--serif);letter-spacing:-.02em}.logo i{color:var(--accent);font-weight:400}
+nav .links a{margin-left:22px;text-decoration:none;font-weight:500;font-size:15px}nav .links{display:none}
+.hero{position:relative;overflow:hidden;padding:20px 0 64px}
+
+.hero h1{z-index:1;font:400 clamp(46px,12.5vw,104px)/.95 var(--serif);letter-spacing:-.035em;margin:18px 0 20px;position:relative}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero p.lead{font-size:18px;max-width:30ch;margin-bottom:26px;position:relative}
+.hero .row{position:relative}
+.blobs{position:absolute;right:-150px;top:-10px;width:300px;height:300px;opacity:.55;pointer-events:none}
+.blobs path{animation:sway 9s ease-in-out infinite alternate;transform-origin:center}
+@keyframes sway{to{transform:rotate(8deg) scale(1.04)}}
+.chip{display:inline-flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:13px;position:relative}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.strip{background:var(--sage);color:#f6efe4;padding:22px 0;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-block;animation:mq 26s linear infinite;font:italic 400 24px var(--serif)}
+.strip span{margin:0 22px;opacity:.6}
+@keyframes mq{to{transform:translateX(-50%)}}
+.pill-cards{display:grid;gap:14px;margin-top:28px}
+.pc{background:var(--card);border-radius:28px;padding:26px;border:1px solid var(--line)}
+.pc b{font:500 22px var(--serif);display:block;margin-bottom:6px}.pc .price{color:var(--accent);font-weight:600}
+@media(min-width:760px){.pill-cards{grid-template-columns:repeat(3,1fr)}}
+.grp{margin-top:34px}.grp h3{font:italic 400 26px var(--serif);color:var(--sage);margin-bottom:6px}
+.menu{list-style:none}
+.menu li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.menu b{font-weight:500;display:block}.menu small{display:block;font-size:13.5px;opacity:.7;margin-top:2px}
+.menu .p{white-space:nowrap;font-weight:600;color:var(--accent)}
+@media(min-width:860px){.menus{columns:2;column-gap:56px}.grp{break-inside:avoid}}
+.about{background:var(--card)}
+.facts{list-style:none;display:grid;gap:14px;margin-top:10px}
+.facts li{padding-left:34px;position:relative}
+.facts li::before{content:'';position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:60% 40% 55% 45%;background:var(--accent);opacity:.85}
+.small{font-size:14px;opacity:.75}
+@media(min-width:860px){nav .links{display:block}.hero{padding:40px 0 110px}.blobs{width:620px;height:620px;right:-60px;top:-60px}.hero p.lead{font-size:21px}}
+</style></head><body>
+<div class="cc-banner">Concept preview by Code Craft Media <span class="mf">· made for WildBeauty </span>· not live</div>
+
+<header class="wrap"><nav><div class="logo">Wild<i>Beauty</i></div><div class="links"><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a></div></nav></header>
+<div class="hero"><svg class="blobs" viewBox="0 0 400 400" aria-hidden="true">
+<path d="M310 90c50 50 60 140 10 200s-150 80-210 40S20 200 60 130 260 40 310 90z" fill="#e7c9a9"/>
+<path d="M270 150c30 30 30 90-10 120s-110 30-140 0-20-100 20-130 100-20 130 10z" fill="#b4532a" opacity=".85"/>
+<path d="M120 120c40-60 30-90 10-110M150 330c30-40 80-50 120-40M90 260c-30-40-30-90 0-120" stroke="#6f7d5c" stroke-width="5" fill="none" stroke-linecap="round"/>
+<circle cx="300" cy="300" r="14" fill="#6f7d5c"/></svg>
+<div class="wrap"><span class="chip"><span id="status">Franklin, TN</span></span>
+<h1>Color that grows out <em>beautifully.</em></h1>
+<p class="lead">Lived-in custom color by Brittany Small — soft, natural and low-maintenance, in a private studio on Baker's Bridge Ave.</p>
+<div class="row"><a class="btn b1" href="https://square.site/book/M09X3F0VC6P2A/wildbeauty-franklin-tn" target="_blank" rel="noopener">Book your color</a><a class="btn b2" href="tel:+17155290476">Call (715) 529-0476</a></div></div></div>
+<div class="strip" aria-hidden="true"><div>Lived-in color<span>✶</span>Base color<span>✶</span>Foils<span>✶</span>Bleach &amp; tone<span>✶</span>Gloss<span>✶</span>Formal styles<span>✶</span>Lived-in color<span>✶</span>Base color<span>✶</span>Foils<span>✶</span>Bleach &amp; tone<span>✶</span>Gloss<span>✶</span>Formal styles<span>✶</span></div></div>
+<section id="menu"><div class="wrap"><span class="eyebrow">The menu</span><h2>Start with a free consultation.</h2>
+<p style="max-width:56ch">Prices are starting points, as listed on WildBeauty's booking page. Consultations are free (in person or by phone) and required before corrective color and extensions.</p>
+<div class="pill-cards"><div class="pc rv"><b>Lived-In Custom Color</b><span class="price">from $220</span><p class="small">2 hr 30 min · consultation, shampoo &amp; blow dry included</p></div>
+<div class="pc rv"><b>Base Haircolor</b><span class="price">from $110</span><p class="small">Covers gray or richens your base. No foils.</p></div>
+<div class="pc rv"><b>Consultation</b><span class="price">Free</span><p class="small">30 min · in person preferred, or by phone</p></div></div>
+<div class="menus"><div class="grp rv"><h3>Lived-in color</h3><ul class="menu"><li><div><b>Lived-In Custom Color</b><small>2 hr 30 min · soft, natural, low-maintenance color with consultation, shampoo and blow dry</small></div><span class="p">from $220</span></li><li><div><b>Lived-In Custom Color + Women&#x27;s Haircut</b><small>3 hr</small></div><span class="p">from $295</span></li><li><div><b>Bleach and Tone</b><small>2 hr · all-over bleach and toner, treatment and blow dry</small></div><span class="p">from $210</span></li><li><div><b>Bleach and Tone + Women&#x27;s Haircut</b><small>2 hr 30 min</small></div><span class="p">from $285</span></li></ul></div><div class="grp rv"><h3>Base &amp; all-over color</h3><ul class="menu"><li><div><b>Base Haircolor</b><small>1 hr 30 min · single color on outgrowth, no foils</small></div><span class="p">from $110</span></li><li><div><b>Base Color + Women&#x27;s Cut</b><small>2 hr</small></div><span class="p">from $185</span></li><li><div><b>Base Color + Mini Foil</b><small>1 hr 30 min</small></div><span class="p">from $145</span></li><li><div><b>Base Color + Mini Foil + Women&#x27;s Cut</b><small>2 hr</small></div><span class="p">from $220</span></li><li><div><b>Base Color + Partial Highlights</b><small>2 hr</small></div><span class="p">from $175</span></li><li><div><b>Base Color + Partial Highlights + Women&#x27;s Cut</b><small>2 hr 30 min</small></div><span class="p">from $250</span></li><li><div><b>Base Color + Full Foil</b><small>2 hr 30 min</small></div><span class="p">from $220</span></li><li><div><b>Base Color + Full Foil + Women&#x27;s Haircut</b><small>3 hr</small></div><span class="p">from $295</span></li><li><div><b>All Over Hair Color</b><small>1 hr 30 min · root to tip</small></div><span class="p">from $140</span></li><li><div><b>All Over Hair Color + Women&#x27;s Cut</b><small>2 hr</small></div><span class="p">from $205</span></li></ul></div><div class="grp rv"><h3>Foils</h3><ul class="menu"><li><div><b>Mini Foil</b><small>1 hr 30 min · up to 10 foils</small></div><span class="p">from $95</span></li><li><div><b>Mini Foil + Women&#x27;s Haircut</b><small>2 hr</small></div><span class="p">from $170</span></li><li><div><b>Partial Foil</b><small>2 hr</small></div><span class="p">from $130</span></li><li><div><b>Partial Foil + Women&#x27;s Haircut</b><small>2 hr 30 min</small></div><span class="p">from $205</span></li><li><div><b>Full Foil</b><small>2 hr</small></div><span class="p">from $175</span></li><li><div><b>Full Foil + Women&#x27;s Cut</b><small>3 hr</small></div><span class="p">from $250</span></li></ul></div><div class="grp rv"><h3>Gloss, care &amp; styling</h3><ul class="menu"><li><div><b>Gloss/Toner + Blowdry</b><small>1 hr 30 min · refresh 4–6 weeks after highlights</small></div><span class="p">from $110</span></li><li><div><b>Gloss/Toner Add-On</b><small>30 min</small></div><span class="p">from $40</span></li><li><div><b>Deep Conditioning Treatment</b><small>30 min</small></div><span class="p">from $40</span></li><li><div><b>Flat or Curling Iron Add-On</b><small>30 min</small></div><span class="p">$25</span></li><li><div><b>Formal Style</b><small>1 hr · full or half updo; arrive with clean, dry hair</small></div><span class="p">from $150</span></li><li><div><b>Blowout</b><small>45 min</small></div><span class="p">$65</span></li><li><div><b>Consultation</b><small>30 min · in person or by phone</small></div><span class="p">Free</span></li></ul></div><div class="grp rv"><h3>Cuts · current clients</h3><ul class="menu"><li><div><b>Women&#x27;s Haircut</b><small>45 min · guests over 15</small></div><span class="p">$75</span></li><li><div><b>Men&#x27;s Haircut</b><small>30 min · guests over 15</small></div><span class="p">$45</span></li></ul></div></div></div></section>
+<section id="about" class="about"><div class="wrap grid2"><div class="rv"><span class="eyebrow">About the studio</span><h2>One stylist. Your color, start to finish.</h2>
+<p>WildBeauty is Brittany Small's color studio in Franklin — Studio #10 inside 615 Baker's Bridge Ave. Her signature is lived-in custom color designed to grow out softly between visits.</p></div>
+<ul class="facts rv"><li>Every color service includes a consultation, shampoo and blow dry.</li><li>Free consultations — required before corrective color and extensions.</li><li>Gloss/toner refreshes are offered 4–6 weeks after a highlight.</li><li>Formal updos for events: come with clean, dry hair and a button-down shirt.</li><li>Haircut-only appointments are for current clients (guests over 15).</li></ul></div></section>
+<section id="visit"><div class="wrap grid2">
+<div class="rv"><span class="eyebrow">Hours</span><h2>When the chair is open</h2><ul class="hours"><li data-day="1" data-open="-1" data-close="-1"><span>Monday</span><span>Closed</span></li><li data-day="2" data-open="600" data-close="1200" data-ot="10 AM" data-ct="8 PM"><span>Tuesday</span><span>10 AM – 8 PM</span></li><li data-day="3" data-open="600" data-close="1200" data-ot="10 AM" data-ct="8 PM"><span>Wednesday</span><span>10 AM – 8 PM</span></li><li data-day="4" data-open="600" data-close="1200" data-ot="10 AM" data-ct="8 PM"><span>Thursday</span><span>10 AM – 8 PM</span></li><li data-day="5" data-open="600" data-close="1080" data-ot="10 AM" data-ct="6 PM"><span>Friday</span><span>10 AM – 6 PM</span></li><li data-day="6" data-open="540" data-close="960" data-ot="9 AM" data-ct="4 PM"><span>Saturday</span><span>9 AM – 4 PM</span></li><li data-day="0" data-open="-1" data-close="-1"><span>Sunday</span><span>Closed</span></li></ul>
+<p class="small" style="margin-top:14px">Book online 24/7 through Square.</p></div>
+<div class="rv"><span class="eyebrow">Find the studio</span><h2>Studio 10, Baker&#x27;s Bridge</h2>
+<p style="margin-bottom:18px">615 Baker&#x27;s Bridge Ave #145, Studio #10, Franklin, TN 37067</p>
+<iframe class="map" loading="lazy" title="Map to WildBeauty" src="https://www.google.com/maps?q=615%20Baker%27s%20Bridge%20Ave%20%23145%2C%20Studio%20%2310%2C%20Franklin%2C%20TN%2037067&output=embed"></iframe>
+<div class="row"><a class="btn b1" href="https://www.google.com/maps/search/?api=1&query=615%20Baker%27s%20Bridge%20Ave%20%23145%2C%20Studio%20%2310%2C%20Franklin%2C%20TN%2037067" target="_blank" rel="noopener">Get directions</a><a class="btn b2" href="tel:+17155290476">Call (715) 529-0476</a></div>
+</div></div></section>
+<footer><div class="wrap"><p><strong>WildBeauty</strong> · 615 Baker&#x27;s Bridge Ave #145, Studio #10, Franklin, TN 37067 · <a href="tel:+17155290476">(715) 529-0476</a></p>
+<p style="margin-top:10px;opacity:.75">Concept by Code Craft Media — a free design preview, not the official site. Questions or want it live? <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></p></div></footer>
+
+<div class="callbar"><a class="btn b2" href="tel:+17155290476">Call</a><a class="btn b1" href="https://square.site/book/M09X3F0VC6P2A/wildbeauty-franklin-tn" target="_blank" rel="noopener">Book now</a></div>
+
+<script>
+(function(){
+  var d=new Date(), day=d.getDay(), mins=d.getHours()*60+d.getMinutes();
+  document.querySelectorAll('[data-day]').forEach(function(r){
+    if(+r.getAttribute('data-day')===day){ r.classList.add('today');
+      var o=+r.getAttribute('data-open'), c=+r.getAttribute('data-close');
+      var s=document.getElementById('status'); if(!s) return;
+      if(o>=0 && mins>=o && mins<c){ s.textContent='Open today until '+r.getAttribute('data-ct'); s.classList.add('open'); }
+      else if(o>=0 && mins<o){ s.textContent='Opens today at '+r.getAttribute('data-ot'); }
+      else { s.textContent='Closed now · book online anytime'; }
+    }
+  });
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  }
+})();
+</script>
+</body></html>

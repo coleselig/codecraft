@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>CatLashed Inc — Mt. Juliet</title>
+<meta name="description" content="Lash extensions, lash lifts and microblading by Cathy Ho inside MySalonSuites Mt. Juliet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1416; --ink2:#3a2c30; --blush:#f6e6e3; --rose:#e8c3bd; --cream:#fffaf7;
+  --gold:#b88a5a; --gold2:#d9b48a; --muted:#6f5f62; --line:rgba(28,20,22,.12);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.55;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:#f3dcd6;font-size:12px;letter-spacing:.04em;text-align:center;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:520px){.bx{display:none}}
+.banner b{color:var(--gold2);font-weight:500}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,250,247,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:.01em;text-decoration:none}
+.logo i{color:var(--gold);font-style:italic}
+.navlinks{display:none;gap:28px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.navlinks a{text-decoration:none;opacity:.75;transition:opacity .2s}
+.navlinks a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font:500 14px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:0 10px 24px -10px rgba(28,20,22,.6)}
+.btn-dark:hover{background:var(--ink2)}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-sm{padding:10px 16px;font-size:12px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 80% 0%,#f9dcd5 0%,var(--blush) 40%,var(--cream) 100%)}
+.hero .wrap{position:relative;padding-top:34px;padding-bottom:44px;display:grid;gap:26px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,12vw,92px);line-height:.95;letter-spacing:-.01em;margin-top:12px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.sub{font-size:17px;color:var(--ink2);max-width:30em;margin-top:16px;font-weight:300}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:13px;color:var(--muted);background:rgba(255,255,255,.7);border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:#bbb}
+.dot.open{background:#3fa66a;box-shadow:0 0 0 0 rgba(63,166,106,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(63,166,106,0)}100%{box-shadow:0 0 0 0 rgba(63,166,106,0)}}
+.art{position:relative;width:100%;max-width:460px;justify-self:center}
+.art svg{width:100%;height:auto;display:block}
+.lash path{stroke-dasharray:120;stroke-dashoffset:120;animation:draw 1.4s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.blink{transform-origin:50% 55%;animation:blink 6s infinite 2.4s}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.12)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:12px;letter-spacing:.06em;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+
+section{padding:72px 0}
+.h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,8vw,56px);line-height:1.02}
+.h2 em{color:var(--gold)}
+.lead{color:var(--muted);margin-top:10px;max-width:36em;font-weight:300}
+
+/* menu */
+.tabs{display:flex;gap:8px;margin:28px 0 8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:#fff;padding:10px 16px;border-radius:999px;font:500 13px var(--sans);letter-spacing:.06em;cursor:pointer;color:var(--ink);transition:all .2s}
+.tab[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.menu{display:grid;gap:0;margin-top:12px}
+.menu[hidden]{display:none}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.item h3{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.15}
+.item .price{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--gold);white-space:nowrap}
+.item .meta{grid-column:1/-1;font-size:13px;color:var(--muted);letter-spacing:.03em}
+.note{margin-top:18px;font-size:13px;color:var(--muted)}
+
+/* styles */
+.styles{background:var(--ink);color:#f7ece9}
+.styles .lead{color:#cdb8b3}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:18px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold2)}
+.card svg{width:100%;height:64px;display:block;margin-bottom:10px}
+.card h3{font-family:var(--serif);font-size:24px;font-weight:500}
+.card p{font-size:13px;color:#cdb8b3;margin-top:4px}
+
+/* prep */
+.prep{display:grid;gap:14px;margin-top:30px}
+.step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.num{flex:0 0 40px;height:40px;border-radius:50%;background:var(--blush);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:600}
+.step h3{font-size:16px;font-weight:500}
+.step p{font-size:14px;color:var(--muted);margin-top:2px}
+
+/* visit */
+.visit{background:var(--blush)}
+.visit-grid{display:grid;gap:22px;margin-top:30px}
+.panel{background:#fff;border-radius:22px;padding:24px;border:1px solid var(--line)}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:10px 12px;border-radius:10px;font-size:15px}
+.hours li.today{background:var(--ink);color:#fff}
+.hours li.today span:first-child::after{content:" · today";color:var(--gold2);font-size:12px;letter-spacing:.06em}
+.hours .closed{color:var(--muted)}
+.hours li.today .closed{color:#cdb8b3}
+.addr{font-family:var(--serif);font-size:24px;line-height:1.25;font-weight:500}
+.find{font-size:14px;color:var(--muted);margin-top:10px}
+.map{border:0;width:100%;height:280px;border-radius:18px;display:block;margin-top:18px;background:#eee}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+
+footer{background:var(--ink);color:#cdb8b3;padding:44px 0 30px;font-size:14px}
+footer .logo{color:#fff}
+footer a{color:#f3dcd6}
+.fgrid{display:grid;gap:18px}
+.cc{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;letter-spacing:.03em}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,250,247,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.bar .btn{flex:1;padding:14px 10px}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+
+@media (min-width:760px){
+  .navlinks{display:flex}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:70px;padding-bottom:90px}
+  .grid4{grid-template-columns:repeat(4,1fr)}
+  .menu{grid-template-columns:1fr 1fr;column-gap:48px}
+  .prep{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:1fr 1.2fr}
+  .fgrid{grid-template-columns:2fr 1fr 1fr}
+  .bar{display:none}
+  body{padding-bottom:0}
+  section{padding:100px 0}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept preview by <b>Code Craft Media</b><span class="bx">, made for CatLashed Inc</span>. Not live.</div>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Cat<i>Lashed</i></a>
+  <div class="navlinks"><a href="#menu">Menu</a><a href="#styles">Styles</a><a href="#visit">Visit</a></div>
+  <a class="btn btn-dark btn-sm" href="https://square.site/book/0ZKMBFGP1FAWV/catlashed-inc-mt-juliet-tn">Book</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">Lashes &amp; Brows · Mt. Juliet, TN</div>
+    <h1>Lashes made for <em>your</em> eyes.</h1>
+    <p class="sub">Classic, hybrid, volume and mega volume sets by Cathy Ho, plus microblading and lash lifts, inside MySalonSuites on Providence Parkway.</p>
+    <div class="cta">
+      <a class="btn btn-dark" href="https://square.site/book/0ZKMBFGP1FAWV/catlashed-inc-mt-juliet-tn">Book online</a>
+      <a class="btn btn-line" href="tel:+16157677688">Call (615) 767-7688</a>
+    </div>
+    <div class="status" id="status"><span class="dot"></span><span>Mon, Tue, Thu–Sat by appointment</span></div>
+  </div>
+  <div class="art reveal" aria-hidden="true">
+    <svg viewBox="0 0 400 300" fill="none">
+      <defs>
+        <radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f3d2ca"/></radialGradient>
+        <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#b88a5a"/><stop offset="1" stop-color="#e3c39b"/></linearGradient>
+      </defs>
+      <circle cx="200" cy="150" r="140" fill="url(#g1)"/>
+      <circle cx="200" cy="150" r="140" stroke="url(#g2)" stroke-width="1.2"/>
+      <circle cx="200" cy="150" r="118" stroke="#b88a5a" stroke-opacity=".25" stroke-dasharray="2 6"/>
+      <g class="blink">
+        <path d="M90 160 Q200 70 310 160 Q200 220 90 160Z" fill="#fff" stroke="#1c1416" stroke-width="3"/>
+        <circle cx="200" cy="154" r="36" fill="#3a2c30"/>
+        <circle cx="200" cy="154" r="16" fill="#1c1416"/>
+        <circle cx="212" cy="142" r="7" fill="#fff" opacity=".9"/>
+      </g>
+      <g class="lash" stroke="#1c1416" stroke-width="2.6" stroke-linecap="round">
+        <path d="M100 150 Q88 132 70 126"/><path d="M118 135 Q108 112 92 102"/><path d="M138 122 Q132 96 120 82"/>
+        <path d="M160 112 Q158 84 150 66"/><path d="M182 106 Q184 78 180 58"/><path d="M204 104 Q210 76 210 56"/>
+        <path d="M226 106 Q236 80 240 60"/><path d="M248 113 Q262 90 270 72"/><path d="M268 124 Q286 104 298 92"/>
+        <path d="M286 138 Q306 124 322 118"/><path d="M300 152 Q318 146 334 146"/>
+      </g>
+      <g fill="#b88a5a"><circle cx="78" cy="70" r="3"/><circle cx="330" cy="236" r="4"/><circle cx="348" cy="80" r="2"/><circle cx="60" cy="220" r="2"/></g>
+    </svg>
+  </div>
+</div></header>
+
+<section id="menu"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">The menu</div>
+    <h2 class="h2">Every set, <em>every price</em>, up front.</h2>
+    <p class="lead">Prices as listed on CatLashed's booking page. "From" prices can vary with the look you want and what your natural lashes can hold.</p>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="sets">Full sets</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="fills">Fills</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="brows">Brows</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="lift">Lifts &amp; more</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="class">Classes</button>
+  </div>
+  <div class="menu" data-p="sets">
+    <div class="item"><h3>Classic Full Set</h3><span class="price">$180</span><span class="meta">1 hr 30 min</span></div>
+    <div class="item"><h3>Hybrid Full Set</h3><span class="price">$190</span><span class="meta">1 hr 45 min</span></div>
+    <div class="item"><h3>Volume Full Set</h3><span class="price">$200</span><span class="meta">1 hr 45 min</span></div>
+    <div class="item"><h3>Mega Volume Full Set</h3><span class="price">$225</span><span class="meta">1 hr 45 min</span></div>
+    <div class="item"><h3>Cluster Lashes</h3><span class="price">$50</span><span class="meta">30 min</span></div>
+    <div class="item"><h3>Lash Removal</h3><span class="price">$30</span><span class="meta">30 min</span></div>
+  </div>
+  <div class="menu" data-p="fills" hidden>
+    <div class="item"><h3>Classic Fill</h3><span class="price">from $90</span><span class="meta">1 hr 15 min · for a more natural lash look</span></div>
+    <div class="item"><h3>Hybrid Fill</h3><span class="price">from $95</span><span class="meta">1 hr 15 min</span></div>
+    <div class="item"><h3>Volume Fill</h3><span class="price">from $100</span><span class="meta">1 hr 15 min</span></div>
+    <div class="item"><h3>Mega Volume Fill In</h3><span class="price">from $120</span><span class="meta">1 hr 30 min</span></div>
+    <div class="item"><h3>Mini Fill</h3><span class="price">$70</span><span class="meta">1 hr</span></div>
+    <div class="item"><h3>Foreign Classic Fill</h3><span class="price">$100</span><span class="meta">1 hr 30 min</span></div>
+    <div class="item"><h3>Foreign Hybrid Fill</h3><span class="price">$110</span><span class="meta">1 hr 30 min</span></div>
+    <div class="item"><h3>Foreign Volume Fill</h3><span class="price">$120</span><span class="meta">1 hr 30 min</span></div>
+  </div>
+  <div class="menu" data-p="brows" hidden>
+    <div class="item"><h3>Microblading</h3><span class="price">from $400</span><span class="meta">2 hr 30 min</span></div>
+    <div class="item"><h3>Micro Shading</h3><span class="price">$400</span><span class="meta">2 hr 30 min</span></div>
+    <div class="item"><h3>Combo Brows</h3><span class="price">$450</span><span class="meta">2 hr 30 min</span></div>
+    <div class="item"><h3>Brow Touch Up</h3><span class="price">$150</span><span class="meta">1 hr 30 min</span></div>
+  </div>
+  <div class="menu" data-p="lift" hidden>
+    <div class="item"><h3>Korean Lash Lift</h3><span class="price">$125</span><span class="meta">1 hr</span></div>
+    <div class="item"><h3>Lash Lift and Tint</h3><span class="price">$100</span><span class="meta">1 hr 15 min</span></div>
+    <div class="item"><h3>Lash Tint</h3><span class="price">$25</span><span class="meta">30 min</span></div>
+    <div class="item"><h3>Express Spray Tan</h3><span class="price">$65</span><span class="meta">30 min</span></div>
+  </div>
+  <div class="menu" data-p="class" hidden>
+    <div class="item"><h3>Classic Lash Class</h3><span class="price">$1,200</span><span class="meta">1 day</span></div>
+    <div class="item"><h3>Volume Lash Class</h3><span class="price">$1,300</span><span class="meta">1 day</span></div>
+  </div>
+  <p class="note">Gift cards are available through the booking page.</p>
+</div></section>
+
+<section class="styles" id="styles"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">Know your look</div>
+    <h2 class="h2">Four styles. <em>One</em> that's you.</h2>
+    <p class="lead">CatLashed asks new clients to learn the lash styles first, so you can describe exactly the look you want.</p>
+  </div>
+  <div class="grid4">
+    <div class="card reveal"><svg viewBox="0 0 120 60" stroke="#e3c39b" stroke-width="2" stroke-linecap="round" fill="none"><path d="M10 50 Q60 20 110 50" stroke="#fff"/><path d="M25 42l-6-16M45 35l-3-18M65 33l1-18M85 37l5-17M100 44l8-14"/></svg><h3>Classic</h3><p>One extension per lash. The natural look.</p></div>
+    <div class="card reveal"><svg viewBox="0 0 120 60" stroke="#e3c39b" stroke-width="2" stroke-linecap="round" fill="none"><path d="M10 50 Q60 20 110 50" stroke="#fff"/><path d="M25 42l-6-16M30 40l-1-18M45 35l-3-18M55 33l-6-16M65 33l1-18M75 34l4-18M85 37l5-17M100 44l8-14"/></svg><h3>Hybrid</h3><p>A mix of classic and volume.</p></div>
+    <div class="card reveal"><svg viewBox="0 0 120 60" stroke="#e3c39b" stroke-width="2" stroke-linecap="round" fill="none"><path d="M10 50 Q60 20 110 50" stroke="#fff"/><path d="M25 42l-8-14M25 42l-2-18M25 42l4-16M50 34l-6-16M50 34l0-18M50 34l6-16M75 34l-4-18M75 34l2-18M75 34l8-15M98 43l2-17M98 43l9-12"/></svg><h3>Volume</h3><p>Fans of fine lashes for fullness.</p></div>
+    <div class="card reveal"><svg viewBox="0 0 120 60" stroke="#e3c39b" stroke-width="2" stroke-linecap="round" fill="none"><path d="M10 50 Q60 20 110 50" stroke="#fff"/><path d="M22 44l-10-12M22 44l-6-16M22 44l0-18M22 44l5-16M46 35l-8-15M46 35l-3-18M46 35l2-19M46 35l7-16M72 33l-5-18M72 33l0-20M72 33l5-19M72 33l10-15M98 43l0-18M98 43l6-16M98 43l11-11"/></svg><h3>Mega Volume</h3><p>The fullest, most dramatic set.</p></div>
+  </div>
+</div></section>
+
+<section id="prep"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">Before you come in</div>
+    <h2 class="h2">A few <em>simple</em> rules.</h2>
+  </div>
+  <div class="prep">
+    <div class="step reveal"><div class="num">1</div><div><h3>Arrive with a clean face</h3><p>Come with clean skin and clean lashes so your set starts fresh.</p></div></div>
+    <div class="step reveal"><div class="num">2</div><div><h3>Be on time</h3><p>Appointments are time sensitive. More than 20 minutes late may mean a late fee and rescheduling.</p></div></div>
+    <div class="step reveal"><div class="num">3</div><div><h3>Find Suite 303</h3><p>Inside MySalonSuites: head to Suite 201 on the upper level, then CatLashed is suite #303.</p></div></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">Visit</div>
+    <h2 class="h2">Find us in <em>Mt. Juliet</em>.</h2>
+  </div>
+  <div class="visit-grid">
+    <div class="panel reveal">
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Monday</span><span>10 AM – 4 PM</span></li>
+        <li data-d="2"><span>Tuesday</span><span>9 AM – 5 PM</span></li>
+        <li data-d="3"><span>Wednesday</span><span class="closed">Closed</span></li>
+        <li data-d="4"><span>Thursday</span><span>10 AM – 4 PM</span></li>
+        <li data-d="5"><span>Friday</span><span>10 AM – 4 PM</span></li>
+        <li data-d="6"><span>Saturday</span><span>10 AM – 2 PM</span></li>
+        <li data-d="0"><span>Sunday</span><span class="closed">Closed</span></li>
+      </ul>
+    </div>
+    <div class="panel reveal">
+      <p class="addr">1984 Providence Parkway, Suite 303<br>Mt. Juliet, TN 37122</p>
+      <p class="find">Inside MySalonSuites Mt. Juliet · upper level</p>
+      <iframe class="map" title="Map to CatLashed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1984%20Providence%20Parkway%2C%20Mt.%20Juliet%2C%20TN%2037122&output=embed"></iframe>
+      <div class="row">
+        <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=1984%20Providence%20Parkway%2C%20Mt.%20Juliet%2C%20TN%2037122">Directions</a>
+        <a class="btn btn-line" href="tel:+16157677688">Call</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><a class="logo" href="#top">Cat<i>Lashed</i></a><p style="margin-top:8px">Lash extensions, lifts &amp; brows by Cathy Ho.</p></div>
+    <div><a href="tel:+16157677688">(615) 767-7688</a><br><a href="https://www.instagram.com/_catlashed/">Instagram @_catlashed</a></div>
+    <div><a href="https://square.site/book/0ZKMBFGP1FAWV/catlashed-inc-mt-juliet-tn">Book online</a><br>Gift cards available</div>
+  </div>
+  <p class="cc">Concept by Code Craft Media · Knoxville web design · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></p>
+</div></footer>
+
+<div class="bar">
+  <a class="btn btn-line" href="tel:+16157677688">Call</a>
+  <a class="btn btn-dark" href="https://square.site/book/0ZKMBFGP1FAWV/catlashed-inc-mt-juliet-tn">Book now</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var H={0:null,1:[10,16],2:[9,17],3:null,4:[10,16],5:[10,16],6:[10,14]};
+  function fmt(h){var s=h>=12?'PM':'AM';var x=h%12||12;return x+' '+s}
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  var li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var st=document.getElementById('status'),t=H[d];
+  if(t&&h>=t[0]&&h<t[1]){st.innerHTML='<span class="dot open"></span><span>Open today until '+fmt(t[1])+'</span>'}
+  else{for(var i=1;i<=7;i++){var n=(d+i)%7;if(H[n]){var nm=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][n];
+    var same=(t&&h<t[0]);st.innerHTML='<span class="dot"></span><span>Closed now · opens '+(same?'today':(i==1?'tomorrow':nm))+' at '+fmt(same?t[0]:H[n][0])+'</span>';break}}}
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    document.querySelectorAll('.menu').forEach(function(p){p.hidden=p.getAttribute('data-p')!==b.getAttribute('data-t')})})});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+})();
+</script>
+</body>
+</html>

@@ -4,202 +4,357 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Mixx It Up — Clarksville, TN</title>
+<title>Mixx It Up LLC — Clarksville</title>
+<meta name="description" content="Home-based salon in Clarksville, TN: locs, silk press, braids, wigs and color by Deairha Johnson.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--blush:#F7D6D0;--blush2:#FBE7E2;--plum:#4A1942;--plum2:#6B2A60;--cream:#FFF8F0;--ink:#2E1029;--muted:#7A5A73}
+:root{
+  --ink:#1d1220; --plum:#3b1d3f; --plum2:#552a5a; --clay:#d8673f; --clay2:#f08a5d;
+  --gold:#f2c14e; --cream:#fbf3ea; --sand:#f3e4d3; --muted:#6c5a6e; --line:rgba(59,29,63,.14);
+  --r:22px;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.02;letter-spacing:-.02em}
 a{color:inherit}
-.banner{background:var(--plum);color:#EBD3E4;font-size:10px;text-align:center;padding:7px 6px;letter-spacing:.01em;line-height:1.35}
-.banner b{color:#fff}
-header{position:relative;overflow:hidden;background:linear-gradient(170deg,var(--blush2),var(--blush) 70%)}
-.blob{position:absolute;z-index:0;filter:blur(.5px)}
-.b1{width:300px;top:-90px;right:-110px;animation:float 9s ease-in-out infinite}
-.b2{width:240px;bottom:-80px;left:-100px;animation:float 11s ease-in-out infinite reverse}
-@keyframes float{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(10px,14px) rotate(8deg)}}
-.sp{position:absolute;z-index:1;animation:tw 2.8s ease-in-out infinite}
-@keyframes tw{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.1)}}
-nav{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:16px 20px}
-.logo{font-family:Italiana,serif;font-size:26px;color:var(--plum);letter-spacing:.02em}
-.logo i{font-style:normal;color:var(--plum2)}
-.nb{font-size:13px;font-weight:800;text-decoration:none;color:var(--plum);background:#fff;padding:9px 16px;border-radius:99px;box-shadow:0 4px 14px rgba(74,25,66,.12);transition:.2s}
-.nb:hover{background:var(--plum);color:#fff}
-.hero{position:relative;z-index:2;padding:22px 22px 70px;text-align:center}
-.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--plum2);background:rgba(255,255,255,.7);padding:7px 14px;border-radius:99px}
-h1{font-family:Italiana,serif;font-weight:400;color:var(--plum);font-size:clamp(46px,13.5vw,96px);line-height:1;margin:18px 0 16px}
-h1 span{display:block;font-size:.6em;color:var(--plum2);margin-top:6px}
-.sub{max-width:440px;margin:0 auto;color:#5E3557;font-size:16px}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:99px;font-weight:800;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
-.btn.p{background:var(--plum);color:#fff;box-shadow:0 10px 26px rgba(74,25,66,.28)}
-.btn.p:hover{transform:translateY(-2px);background:var(--plum2)}
-.btn.w{background:#fff;color:var(--plum)}
-.btn.w:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(74,25,66,.15)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:30px}
-.chips span{font-size:13px;font-weight:700;color:var(--plum);background:rgba(255,255,255,.65);border:1px solid rgba(74,25,66,.12);padding:6px 13px;border-radius:99px}
-section{padding:64px 20px;position:relative}
-.wrap{max-width:1000px;margin:0 auto;position:relative;z-index:1}
-.head{text-align:center;margin-bottom:30px}
-.head small{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--plum2)}
-h2{font-family:Italiana,serif;font-weight:400;font-size:clamp(38px,10vw,58px);color:var(--plum);line-height:1.05;margin:8px 0 10px}
-.head p{color:var(--muted);max-width:460px;margin:0 auto}
-.grid{display:grid;gap:16px}
-.cat{background:#fff;border-radius:26px;padding:24px 22px;box-shadow:0 10px 30px rgba(74,25,66,.07);position:relative;overflow:hidden}
-.cat:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--blush2);top:-50px;right:-40px}
-.cat h3{position:relative;font-family:Italiana,serif;font-size:30px;font-weight:400;color:var(--plum);margin-bottom:8px}
-.li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #F3E4E0;font-size:15px}
-.li:last-child{border-bottom:0}
-.li b{font-weight:700}
-.li em{font-style:normal;color:var(--muted);font-size:13px;display:block;font-weight:600}
-.li .pr{font-weight:800;color:var(--plum2);white-space:nowrap;text-align:right}
-.note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:20px}
-.why{background:var(--plum);color:#F6E7F1;overflow:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:#e9dbe8;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.02em}
+.banner b{color:var(--gold);font-weight:700}
+nav{position:sticky;top:0;z-index:20;background:rgba(251,243,234,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Bricolage Grotesque";font-weight:800;font-size:22px;text-decoration:none;color:var(--plum);display:flex;align-items:center;gap:8px}
+.logo span{color:var(--clay)}
+.navlinks{display:none;gap:28px;font-weight:500;font-size:15px}
+.navlinks a{text-decoration:none;color:var(--muted)} .navlinks a:hover{color:var(--plum)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-clay{background:var(--clay);color:#fff;box-shadow:0 10px 24px -10px rgba(216,103,63,.8)}
+.btn-clay:hover{background:#c4552f;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.navbook{padding:10px 16px;font-size:14px}
+
+/* HERO */
+.hero{position:relative;background:radial-gradient(120% 90% at 85% 10%,#7a3a6e 0%,var(--plum) 45%,#1f0f22 100%);color:#fff;overflow:hidden}
+.hero .wrap{position:relative;z-index:2;padding-top:36px;padding-bottom:56px;display:grid;gap:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 13px;border-radius:999px;font-size:13px;font-weight:500;margin-top:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#7ee08a;box-shadow:0 0 0 0 rgba(126,224,138,.7);animation:pulse 2s infinite}
+.dot.off{background:#f08a8a;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(126,224,138,0)}100%{box-shadow:0 0 0 0 rgba(126,224,138,0)}}
+.hero h1{font-size:clamp(40px,11.2vw,92px);font-weight:800;margin-top:16px}
+.hero h1 em{font-style:normal;color:var(--clay2);position:relative}
+.hero h1 .u{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:.08em;text-underline-offset:.12em}
+.hero p.sub{font-size:16px;color:#ead9ea;max-width:30em;margin-top:18px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(242,193,78,.12);color:#f8dc95;border:1px solid rgba(242,193,78,.25)}
+.art{position:relative;height:250px}
+.art svg{width:100%;height:100%}
+.strand{animation:sway 6s ease-in-out infinite;transform-origin:50% 0}
+.strand:nth-child(2n){animation-duration:7.5s;animation-delay:-2s}
+.strand:nth-child(3n){animation-duration:8.5s;animation-delay:-4s}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wave{display:block;width:100%;height:40px;margin-top:-1px}
+
+/* SECTIONS */
+section{padding:72px 0}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
+h2{font-size:clamp(34px,8vw,58px);font-weight:800;color:var(--plum);margin-top:10px}
+.lead{color:var(--muted);font-size:17px;max-width:36em;margin-top:14px}
+
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:30px -20px 0;padding:0 20px 6px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;font:600 14px "DM Sans";color:var(--plum);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--clay)}
+.tab[aria-selected="true"]{background:var(--plum);color:#fff;border-color:var(--plum)}
+.menu{margin-top:22px;display:grid;gap:14px}
+.cat{background:#fff;border-radius:var(--r);padding:22px 22px 10px;border:1px solid var(--line);box-shadow:0 20px 40px -32px rgba(59,29,63,.5)}
+.cat h3{font-size:24px;color:var(--plum);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.cat h3 i{width:30px;height:30px;border-radius:9px;background:var(--sand);display:grid;place-items:center;font-style:normal;font-size:16px}
+.item{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-top:1px dashed var(--line)}
+.item:first-of-type{border-top:0}
+.item b{font-weight:600}
+.item small{display:block;color:var(--muted);font-size:13px}
+.price{font-family:"Bricolage Grotesque";font-weight:800;font-size:19px;color:var(--clay);white-space:nowrap}
+.price span{font-family:"DM Sans";font-weight:500;font-size:12px;color:var(--muted);margin-right:3px}
+.allsvc{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;color:var(--muted);font-size:15px}
+.hidden{display:none}
+
+.why{background:var(--plum);color:#fff;border-radius:34px;margin:0 12px;position:relative;overflow:hidden}
 .why h2{color:#fff}
-.why .head small{color:var(--blush)}
-.why .head p{color:#D9BCD1}
-.feat{background:rgba(255,255,255,.07);border:1px solid rgba(247,214,208,.22);border-radius:24px;padding:24px 22px;transition:transform .25s,background .25s}
-.feat:hover{transform:translateY(-3px);background:rgba(255,255,255,.11)}
-.feat svg{width:30px;height:30px;margin-bottom:8px}
-.feat h3{font-family:Italiana,serif;font-weight:400;font-size:28px;color:#fff;line-height:1.15;margin-bottom:6px}
-.feat p{font-size:15px;color:#E3CADB}
-.hours{background:#fff;border-radius:26px;max-width:520px;margin:0 auto;padding:10px;box-shadow:0 10px 30px rgba(74,25,66,.07)}
-.row{display:flex;justify-content:space-between;padding:13px 16px;border-radius:16px;font-size:15px}
-.row .d{font-weight:700}
-.row .t{color:var(--muted);font-weight:600}
-.row.today{background:var(--blush);color:var(--plum)}
-.row.today .t{color:var(--plum);font-weight:800}
-.row.today .d:after{content:"today";font-size:11px;font-weight:800;background:var(--plum);color:#fff;padding:2px 9px;border-radius:99px;margin-left:8px;vertical-align:1px}
-.visit{display:grid;gap:22px}
-.vcard{background:var(--blush2);border-radius:26px;padding:26px 22px}
-.vcard h3{font-family:Italiana,serif;font-weight:400;font-size:34px;color:var(--plum);line-height:1.1}
-.vcard p{color:var(--muted);margin:8px 0 18px}
-.vcard .cta{justify-content:flex-start;margin-top:0}
-.map{border-radius:26px;overflow:hidden;background:var(--blush2);box-shadow:0 10px 30px rgba(74,25,66,.08)}
-.map iframe{display:block;width:100%;height:300px;border:0}
-footer{background:var(--plum);color:#D9BCD1;text-align:center;padding:40px 20px 30px;font-size:14px}
-footer .logo{color:#fff;display:block;margin-bottom:6px}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,248,240,.96);border-top:1px solid #F0DCD6;backdrop-filter:blur(8px)}
-.bar a{flex:1;text-align:center;padding:14px 8px;border-radius:99px;font-weight:800;font-size:15px;text-decoration:none}
-.bar .c{background:#fff;color:var(--plum);border:1.5px solid var(--plum)}
-.bar .b{background:var(--plum);color:#fff}
-.rv{transition:opacity .7s ease,transform .7s ease}
-.js .rv{opacity:0;transform:translateY(18px)}
-.js .rv.in{opacity:1;transform:none}
-@media(min-width:760px){.grid.s{grid-template-columns:repeat(2,1fr)}.grid.f{grid-template-columns:repeat(3,1fr)}.visit{grid-template-columns:1fr 1.2fr;align-items:center}.bar{display:none}body{padding-bottom:0}.hero{padding:40px 22px 100px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+.why .lead{color:#dcc8dc}
+.cards{display:grid;gap:14px;margin-top:30px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:22px;transition:transform .25s,background .25s}
+.card:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.card .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:40px;color:var(--gold);line-height:1}
+.card h3{font-size:21px;margin:10px 0 6px}
+.card p{color:#dcc8dc;font-size:15px}
+
+.visit{display:grid;gap:22px;margin-top:30px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px 22px}
+.hrow{display:flex;justify-content:space-between;padding:13px 0;border-top:1px solid var(--line);font-size:16px}
+.hrow:first-child{border-top:0}
+.hrow.today{color:var(--clay);font-weight:700}
+.hrow.today .d::after{content:"Today";margin-left:8px;font-size:11px;background:var(--clay);color:#fff;padding:2px 8px;border-radius:99px;vertical-align:2px;letter-spacing:.04em}
+.hrow .c{color:var(--muted)}
+.mapbox{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--sand);min-height:280px;display:flex;flex-direction:column}
+.mapbox iframe{border:0;width:100%;flex:1;min-height:240px;display:block}
+.mapinfo{padding:18px 20px;background:#fff;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+.mapinfo b{display:block;color:var(--plum)}
+.mapinfo small{color:var(--muted)}
+.btn-plum{background:var(--plum);color:#fff}.btn-plum:hover{background:var(--plum2)}
+.btn-line{border:1.5px solid var(--plum);color:var(--plum)}.btn-line:hover{background:var(--sand)}
+.notes{margin-top:22px;display:grid;gap:12px}
+.note{background:var(--sand);border-radius:16px;padding:16px 18px;font-size:15px}
+.note b{color:var(--plum)}
+
+.cta{text-align:center;padding:80px 0 60px}
+.cta h2{max-width:14ch;margin:10px auto 0}
+.cta .ctas{justify-content:center}
+footer{background:var(--ink);color:#bfaebf;font-size:14px;padding:36px 0}
+footer .wrap{display:grid;gap:14px}
+footer a{color:#fff}
+footer .cc{border-top:1px solid rgba(255,255,255,.12);padding-top:14px;font-size:13px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(29,18,32,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.bar a{flex:1;padding:14px 10px}
+.bar .call{background:#fff;color:var(--plum)}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal.pre{opacity:0;transform:translateY(22px)}
+
+@media(min-width:760px){
+  .navlinks{display:flex}
+  .hero .wrap{grid-template-columns:1.25fr .9fr;align-items:center;padding-top:70px;padding-bottom:90px}
+  .art{height:440px}
+  .menu{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .visit{grid-template-columns:.9fr 1.1fr}
+  .notes{grid-template-columns:1fr 1fr}
+  .why{margin:0 24px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+  .bar{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="banner">Concept site by <b>Code Craft Media</b>, made for Mixx It Up. Not live.</div>
-<header>
-<svg class="blob b1" viewBox="0 0 200 200" aria-hidden="true"><path fill="#EFB9B0" opacity=".55" d="M44.7,-58.6C57.1,-47.6,65.6,-31.9,69.4,-14.9C73.2,2.2,72.3,20.6,63.8,34.3C55.3,48,39.2,57,21.9,63.6C4.6,70.2,-13.9,74.4,-30.1,68.9C-46.3,63.4,-60.2,48.1,-67.4,30.4C-74.6,12.7,-75.1,-7.4,-67.9,-23.9C-60.7,-40.4,-45.8,-53.3,-29.9,-63.4C-14,-73.5,2.9,-80.8,18.4,-77.4C33.9,-74,32.3,-69.6,44.7,-58.6Z" transform="translate(100 100)"/></svg>
-<svg class="blob b2" viewBox="0 0 200 200" aria-hidden="true"><path fill="#4A1942" opacity=".1" d="M39.5,-52.4C51.9,-44.6,62.7,-32.9,67.2,-18.8C71.7,-4.7,69.9,11.8,62.6,24.9C55.3,38,42.5,47.7,28.3,55.2C14.1,62.7,-1.5,68,-17.3,65.4C-33.1,62.8,-49.1,52.3,-59.3,37.6C-69.5,22.9,-73.9,4,-69.6,-12.3C-65.3,-28.6,-52.3,-42.3,-37.9,-49.6C-23.5,-56.9,-7.7,-57.8,6.4,-66.4C20.5,-75,27.1,-60.2,39.5,-52.4Z" transform="translate(100 100)"/></svg>
-<svg class="sp" style="top:120px;left:22px;width:22px" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4A1942" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg>
-<svg class="sp" style="top:250px;right:26px;width:16px;animation-delay:1s" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6B2A60" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg>
-<svg class="sp" style="bottom:120px;left:38px;width:12px;animation-delay:1.7s" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg>
-<nav><div class="logo">Mixx <i>It Up</i></div><a class="nb" href="#book">Book</a></nav>
-<div class="hero">
-<span class="pill">Home salon · Clarksville, TN</span>
-<h1>Silk presses, locs &amp; braids<span>for every hair type.</span></h1>
-<p class="sub">A home-based Clarksville salon offering professional hair care for all hair types, from first locs to fresh color.</p>
-<div class="cta">
-<a class="btn p" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book Your Appointment</a>
-<a class="btn w" href="tel:+13605505482">Call (360) 550-5482</a>
-</div>
-<div class="chips"><span>Silk Press</span><span>Locs</span><span>Knotless Braids</span><span>Wig Installs</span><span>Color</span></div>
-</div>
+<div class="banner">Concept preview by <b>Code Craft Media</b> · not live</div>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top" aria-label="Mixx It Up home">Mixx<span>It</span>Up</a>
+  <div class="navlinks"><a href="#menu">Services</a><a href="#why">The studio</a><a href="#visit">Hours &amp; location</a></div>
+  <a class="btn btn-clay navbook" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book now</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Home studio · Clarksville, TN</div>
+      <h1>Locs, silk presses &amp; <em>everything</em> <span class="u">in between.</span></h1>
+      <p class="sub">Professional hair care for all hair types, by Deairha Johnson. Starter locs to knotless braids, wig installs to balayage, booked in a minute online.</p>
+      <div class="status" id="status"><span class="dot" id="sdot"></span><span id="stext">Open Sun, Tue–Sat</span></div>
+      <div class="ctas">
+        <a class="btn btn-clay" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book an appointment →</a>
+        <a class="btn btn-ghost" href="tel:+13605505482">Call (360) 550-5482</a>
+      </div>
+      <div class="chips"><span class="chip">Locs &amp; re-twists</span><span class="chip">Silk press</span><span class="chip">Knotless braids</span><span class="chip">Wig installs</span><span class="chip">Color</span></div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 440" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f08a5d"/><stop offset="1" stop-color="#d8673f"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2c14e"/><stop offset="1" stop-color="#d89a2b"/></linearGradient>
+          <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a45a96"/><stop offset="1" stop-color="#6d2f63"/></linearGradient>
+          <pattern id="twist" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="22" height="22" fill="none"/><path d="M0 11h22" stroke="rgba(0,0,0,.22)" stroke-width="5"/></pattern>
+        </defs>
+        <circle cx="210" cy="200" r="170" fill="rgba(255,255,255,.05)"/>
+        <circle cx="210" cy="200" r="120" fill="none" stroke="rgba(242,193,78,.35)" stroke-dasharray="3 9" stroke-width="2"/>
+        <g>
+          <g class="strand"><rect x="70" y="20" width="34" height="330" rx="17" fill="url(#g3)"/><rect x="70" y="20" width="34" height="330" rx="17" fill="url(#twist)"/></g>
+          <g class="strand"><rect x="118" y="0" width="38" height="390" rx="19" fill="url(#g1)"/><rect x="118" y="0" width="38" height="390" rx="19" fill="url(#twist)"/></g>
+          <g class="strand"><rect x="170" y="30" width="34" height="300" rx="17" fill="url(#g2)"/><rect x="170" y="30" width="34" height="300" rx="17" fill="url(#twist)"/></g>
+          <g class="strand"><rect x="218" y="10" width="38" height="410" rx="19" fill="url(#g3)"/><rect x="218" y="10" width="38" height="410" rx="19" fill="url(#twist)"/></g>
+          <g class="strand"><rect x="270" y="40" width="34" height="340" rx="17" fill="url(#g1)"/><rect x="270" y="40" width="34" height="340" rx="17" fill="url(#twist)"/></g>
+          <g class="strand"><rect x="318" y="20" width="30" height="280" rx="15" fill="url(#g2)"/><rect x="318" y="20" width="30" height="280" rx="15" fill="url(#twist)"/></g>
+        </g>
+        <g fill="#f2c14e"><circle cx="137" cy="300" r="7"/><circle cx="237" cy="340" r="7"/><circle cx="187" cy="260" r="6"/><circle cx="287" cy="290" r="6"/></g>
+        <path d="M40 410 Q 210 360 380 410" stroke="rgba(255,255,255,.25)" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 360 0 1080 0 1440 40 Z" fill="#fbf3ea"/></svg>
 </header>
 
+<main>
 <section id="menu">
-<div class="wrap">
-<div class="head rv"><small>The menu</small><h2>Pick your look</h2><p>A selection from the full service list, with prices as published on the booking page.</p></div>
-<div class="grid s">
-<div class="cat rv"><h3>Silk &amp; Style</h3>
-<div class="li"><span><b>Silk press</b><em>Wash, condition, blow-dry, flat-iron · 1 hr 30 min</em></span><span class="pr">from $100</span></div>
-<div class="li"><span><b>Silk press w/ trim</b><em>1 hr 30 min</em></span><span class="pr">$120</span></div>
-<div class="li"><span><b>Wash &amp; blow dry</b><em>1 hr</em></span><span class="pr">$45</span></div>
-<div class="li"><span><b>Sleek ponytail</b><em>2 hr</em></span><span class="pr">$85</span></div>
-<div class="li"><span><b>Perm rod set</b><em>2 hr</em></span><span class="pr">$100</span></div>
-</div>
-<div class="cat rv"><h3>Locs</h3>
-<div class="li"><span><b>Starting Dreadlocks</b><em>2 hr 30 min</em></span><span class="pr">from $125</span></div>
-<div class="li"><span><b>Dreadlocks Re-twist</b><em>1 hr 30 min</em></span><span class="pr">from $80</span></div>
-<div class="li"><span><b>Loc-retwist &amp; basic style</b><em>1 hr 30 min</em></span><span class="pr">$100</span></div>
-<div class="li"><span><b>Micro locs retwist</b><em>3 hr</em></span><span class="pr">$150</span></div>
-<div class="li"><span><b>Loc extensions</b><em>4 hr</em></span><span class="pr">$400</span></div>
-</div>
-<div class="cat rv"><h3>Braids &amp; Installs</h3>
-<div class="li"><span><b>Knotless braids</b><em>Hair not included · 4 hr 30 min</em></span><span class="pr">$200</span></div>
-<div class="li"><span><b>Bohemian knotless braids</b><em>6 hr 30 min</em></span><span class="pr">$275</span></div>
-<div class="li"><span><b>8 feed in braids</b><em>2 hr 30 min</em></span><span class="pr">$140</span></div>
-<div class="li"><span><b>Soft locs</b><em>5 hr</em></span><span class="pr">$200</span></div>
-<div class="li"><span><b>Lacefront wig install</b><em>1 hr 30 min</em></span><span class="pr">$100</span></div>
-</div>
-<div class="cat rv"><h3>Color &amp; Care</h3>
-<div class="li"><span><b>Balayage</b><em>3 hr</em></span><span class="pr">$175</span></div>
-<div class="li"><span><b>Highlights</b><em>3 hr</em></span><span class="pr">$200</span></div>
-<div class="li"><span><b>Toner</b><em>45 min</em></span><span class="pr">$40</span></div>
-<div class="li"><span><b>Olaplex treatment</b><em>30 min</em></span><span class="pr">$15</span></div>
-<div class="li"><span><b>Eyebrow waxing</b><em>30 min</em></span><span class="pr">$10</span></div>
-</div>
-</div>
-<p class="note rv">More than 50 services are listed, including men's cuts, sew-ins and relaxers. <a href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener" style="color:#6B2A60;font-weight:800">See them all →</a></p>
-</div>
+  <div class="wrap">
+    <div class="kicker reveal">The menu</div>
+    <h2 class="reveal">Real prices, no guessing.</h2>
+    <p class="lead reveal">A few favorites from the 50+ services on the booking page. Prices and times are exactly as listed there.</p>
+
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" data-f="all">All</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="locs">Locs</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="press">Silk press &amp; natural</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="braids">Braids</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="wigs">Wigs &amp; weaves</button>
+      <button class="tab" role="tab" aria-selected="false" data-f="color">Color</button>
+    </div>
+
+    <div class="menu">
+      <div class="cat reveal" data-c="locs">
+        <h3><i>➰</i>Locs</h3>
+        <div class="item"><div><b>Starting Dreadlocks</b><small>2 hr 30 min</small></div><div class="price"><span>from</span>$125</div></div>
+        <div class="item"><div><b>Dreadlocks Re-twist</b><small>1 hr 30 min</small></div><div class="price"><span>from</span>$80</div></div>
+        <div class="item"><div><b>Loc re-twist &amp; basic style</b><small>1 hr 30 min</small></div><div class="price">$100</div></div>
+        <div class="item"><div><b>Micro locs retwist</b><small>3 hr</small></div><div class="price">$150</div></div>
+        <div class="item"><div><b>Loc extensions</b><small>4 hr</small></div><div class="price">$400</div></div>
+        <div class="item"><div><b>Loc detox (add-on)</b><small>30 min</small></div><div class="price">$25</div></div>
+      </div>
+      <div class="cat reveal" data-c="press">
+        <h3><i>✦</i>Silk press &amp; natural</h3>
+        <div class="item"><div><b>Silk press</b><small>Wash, condition, blow-dry, flat-iron · 1 hr 30 min</small></div><div class="price"><span>from</span>$100</div></div>
+        <div class="item"><div><b>Silk press w/ trim</b><small>1 hr 30 min</small></div><div class="price">$120</div></div>
+        <div class="item"><div><b>2-strand twist on natural hair</b><small>2 hr</small></div><div class="price">$100</div></div>
+        <div class="item"><div><b>Wash &amp; blow dry</b><small>1 hr</small></div><div class="price">$45</div></div>
+        <div class="item"><div><b>Olaplex treatment</b><small>30 min</small></div><div class="price">$15</div></div>
+      </div>
+      <div class="cat reveal" data-c="braids">
+        <h3><i>⌇</i>Braids</h3>
+        <div class="item"><div><b>Knotless braids</b><small>Come washed &amp; blow-dried; hair not included · 4 hr 30 min</small></div><div class="price">$200</div></div>
+        <div class="item"><div><b>Bohemian knotless braids</b><small>6 hr 30 min</small></div><div class="price">$275</div></div>
+        <div class="item"><div><b>Box Braids</b><small>5 hr</small></div><div class="price"><span>from</span>$200</div></div>
+        <div class="item"><div><b>Soft locs</b><small>5 hr</small></div><div class="price">$200</div></div>
+        <div class="item"><div><b>Cornrows (natural hair)</b><small>1 hr 30 min</small></div><div class="price"><span>from</span>$100</div></div>
+      </div>
+      <div class="cat reveal" data-c="wigs">
+        <h3><i>◐</i>Wigs, weaves &amp; installs</h3>
+        <div class="item"><div><b>Lacefront wig install</b><small>1 hr 30 min</small></div><div class="price">$100</div></div>
+        <div class="item"><div><b>Full closure sew-in ext.</b><small>3 hr</small></div><div class="price">$200</div></div>
+        <div class="item"><div><b>Sew-in with leave out</b><small>3 hr</small></div><div class="price">$170</div></div>
+        <div class="item"><div><b>Crochet style</b><small>3 hr</small></div><div class="price">$150</div></div>
+        <div class="item"><div><b>Take-down</b><small>1 hr</small></div><div class="price">$50</div></div>
+      </div>
+      <div class="cat reveal" data-c="color">
+        <h3><i>◆</i>Color</h3>
+        <div class="item"><div><b>Color service (full color)</b><small>Send a picture of your desired color after booking · 2 hr</small></div><div class="price">$85<span style="margin-left:3px">+</span></div></div>
+        <div class="item"><div><b>Balayage</b><small>3 hr</small></div><div class="price">$175</div></div>
+        <div class="item"><div><b>Highlights</b><small>3 hr</small></div><div class="price">$200</div></div>
+        <div class="item"><div><b>Color for locs</b><small>1 hr</small></div><div class="price">$100</div></div>
+        <div class="item"><div><b>Toner</b><small>45 min</small></div><div class="price">$40</div></div>
+      </div>
+      <div class="cat reveal" data-c="press">
+        <h3><i>✂</i>Cuts &amp; quick extras</h3>
+        <div class="item"><div><b>Haircut</b><small>30 min</small></div><div class="price"><span>from</span>$45</div></div>
+        <div class="item"><div><b>Mens cut</b><small>30 min</small></div><div class="price">$25</div></div>
+        <div class="item"><div><b>Add-on trim</b><small>30 min</small></div><div class="price">$20</div></div>
+        <div class="item"><div><b>Eyebrow waxing</b><small>30 min</small></div><div class="price">$10</div></div>
+        <div class="item"><div><b>Consultation</b><small>30 min</small></div><div class="price">$50</div></div>
+      </div>
+    </div>
+    <div class="allsvc reveal"><a class="btn btn-plum" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">See all 50+ services &amp; book</a><span>Pick a time that works for you.</span></div>
+  </div>
 </section>
 
-<section class="why">
-<div class="wrap">
-<div class="head rv"><small>Why Mixx It Up</small><h2>Made for your texture</h2><p>Straight from the salon's own booking page, nothing added.</p></div>
-<div class="grid f">
-<div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F7D6D0" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg><h3>All hair types</h3><p>Professional hair care for every texture, under one roof.</p></div>
-<div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F7D6D0" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg><h3>A loc specialist's menu</h3><p>Starter locs, retwists, micro locs, loc detox, extensions and color for locs.</p></div>
-<div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F7D6D0" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg><h3>Open on Sundays</h3><p>Sunday appointments from 10 AM to 5 PM, when most salons are closed.</p></div>
-</div>
-</div>
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="kicker reveal" style="color:var(--gold)">The studio</div>
+    <h2 class="reveal">One stylist. Every texture.</h2>
+    <p class="lead reveal">Mixx It Up is a home-based salon offering professional hair care for all hair types.</p>
+    <div class="cards">
+      <div class="card reveal"><div class="n">01</div><h3>Locs, start to finish</h3><p>Starter locs, re-twists, micro locs, loc extensions, color for locs and a loc detox add-on, all on one menu.</p></div>
+      <div class="card reveal"><div class="n">02</div><h3>Range that's rare</h3><p>Silk press, knotless and bohemian braids, sew-ins, lacefront installs, balayage, relaxers and men's cuts.</p></div>
+      <div class="card reveal"><div class="n">03</div><h3>Open six days</h3><p>Including Sundays, 10 to 5. Book online any time; see exact prices before you choose.</p></div>
+    </div>
+  </div>
 </section>
 
-<section id="hours">
-<div class="wrap">
-<div class="head rv"><small>Hours</small><h2>When to come by</h2></div>
-<div class="hours rv" id="hrs">
-<div class="row" data-d="0"><span class="d">Sunday</span><span class="t">10:00 AM – 5:00 PM</span></div>
-<div class="row" data-d="1"><span class="d">Monday</span><span class="t">Closed</span></div>
-<div class="row" data-d="2"><span class="d">Tuesday</span><span class="t">9:00 AM – 5:00 PM</span></div>
-<div class="row" data-d="3"><span class="d">Wednesday</span><span class="t">9:00 AM – 5:00 PM</span></div>
-<div class="row" data-d="4"><span class="d">Thursday</span><span class="t">9:00 AM – 5:00 PM</span></div>
-<div class="row" data-d="5"><span class="d">Friday</span><span class="t">11:00 AM – 5:00 PM</span></div>
-<div class="row" data-d="6"><span class="d">Saturday</span><span class="t">11:00 AM – 5:00 PM</span></div>
-</div>
-</div>
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker reveal">Hours &amp; location</div>
+    <h2 class="reveal">Come see Deairha.</h2>
+    <div class="visit">
+      <div class="hours reveal" id="hours">
+        <div class="hrow" data-d="0"><span class="d">Sunday</span><span>10 AM – 5 PM</span></div>
+        <div class="hrow" data-d="1"><span class="d">Monday</span><span class="c">Closed</span></div>
+        <div class="hrow" data-d="2"><span class="d">Tuesday</span><span>9 AM – 5 PM</span></div>
+        <div class="hrow" data-d="3"><span class="d">Wednesday</span><span>9 AM – 5 PM</span></div>
+        <div class="hrow" data-d="4"><span class="d">Thursday</span><span>9 AM – 5 PM</span></div>
+        <div class="hrow" data-d="5"><span class="d">Friday</span><span>11 AM – 5 PM</span></div>
+        <div class="hrow" data-d="6"><span class="d">Saturday</span><span>11 AM – 5 PM</span></div>
+      </div>
+      <div class="mapbox reveal">
+        <iframe title="Map of Clarksville, TN 37042" loading="lazy" src="https://www.google.com/maps?q=Clarksville%2C%20TN%2037042&amp;output=embed"></iframe>
+        <div class="mapinfo"><div><b>Home studio · Clarksville, TN 37042</b><small>Exact address is shared when you book.</small></div>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Clarksville%2C%20TN%2037042" target="_blank" rel="noopener">Open in Maps</a></div>
+      </div>
+    </div>
+    <div class="notes">
+      <div class="note reveal"><b>Knotless braids:</b> please come washed and blow-dried. Hair not included.</div>
+      <div class="note reveal"><b>Full color:</b> after booking, send a picture of the color you want.</div>
+    </div>
+  </div>
 </section>
 
-<section id="book" style="padding-top:0">
-<div class="wrap visit">
-<div class="vcard rv"><h3>Clarksville, Tennessee</h3><p>A home-based salon in Clarksville. Book online or call for details.</p>
-<div class="cta"><a class="btn p" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book Online</a><a class="btn w" href="tel:+13605505482">Call</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&destination=Clarksville+TN" target="_blank" rel="noopener">Directions</a></div></div>
-<div class="map rv"><iframe title="Map of Clarksville, TN" loading="lazy" src="https://www.google.com/maps?q=Clarksville%2C%20TN&output=embed"></iframe></div>
-</div>
+<section class="cta">
+  <div class="wrap">
+    <div class="kicker reveal">Ready when you are</div>
+    <h2 class="reveal">Your next look starts here.</h2>
+    <div class="ctas">
+      <a class="btn btn-clay" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book online</a>
+      <a class="btn btn-line" href="tel:+13605505482">Call (360) 550-5482</a>
+    </div>
+  </div>
 </section>
+</main>
 
-<footer>
-<span class="logo">Mixx It Up</span>
-<p>Home salon · Clarksville, TN · <a href="tel:+13605505482">(360) 550-5482</a></p>
-<p style="margin-top:14px;font-size:12px;opacity:.75">Concept by Code Craft Media</p>
-</footer>
+<footer><div class="wrap">
+  <div><b style="color:#fff;font-family:'Bricolage Grotesque';font-size:20px">Mixx It Up LLC</b><br>Clarksville, TN 37042 · <a href="tel:+13605505482">(360) 550-5482</a><br>Instagram: <a href="https://www.instagram.com/mixx_it_up_hair/" target="_blank" rel="noopener">@mixx_it_up_hair</a></div>
+  <div class="cc">Concept by Code Craft Media · Knoxville web design · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></div>
+</div></footer>
 
-<div class="bar"><a class="c" href="tel:+13605505482">Call</a><a class="b" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book Now</a></div>
+<div class="bar">
+  <a class="btn call" href="tel:+13605505482">Call</a>
+  <a class="btn btn-clay" href="https://square.site/book/4XYNSN5J6VJXQ/mixx-it-up-llc-clarksville-tn" target="_blank" rel="noopener">Book now</a>
+</div>
 
 <script>
-document.documentElement.classList.add('js');
 (function(){
- var d=new Date().getDay();var r=document.querySelector('#hrs [data-d="'+d+'"]');if(r)r.classList.add('today');
- var els=[].slice.call(document.querySelectorAll('.rv'));
- function all(){els.forEach(function(e){e.classList.add('in')})}
- if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else all();
- setTimeout(all,1500);
+  document.documentElement.classList.add('js');
+  // hours: [open,close] in minutes, null = closed. 0=Sun
+  var H=[[600,1020],null,[540,1020],[540,1020],[540,1020],[660,1020],[660,1020]];
+  var N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var now=new Date(),d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+  var row=document.querySelector('.hrow[data-d="'+d+'"]'); if(row) row.classList.add('today');
+  function fmt(x){var h=Math.floor(x/60),mm=x%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap;}
+  var t=document.getElementById('stext'),dot=document.getElementById('sdot');
+  if(H[d]&&m>=H[d][0]&&m<H[d][1]){t.textContent='Open now · until '+fmt(H[d][1]);}
+  else{dot.classList.add('off');var i=1,nd;while(i<8){nd=(d+i)%7;if(H[nd])break;i++;}
+    if(H[d]&&m<H[d][0]){t.textContent='Closed now · opens today '+fmt(H[d][0]);}
+    else{t.textContent='Closed now · opens '+(i===1?'tomorrow':N[nd])+' '+fmt(H[nd][0]);}}
+  // tabs
+  var tabs=document.querySelectorAll('.tab'),cats=document.querySelectorAll('.cat');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false');});
+    var f=b.getAttribute('data-f');
+    cats.forEach(function(c){c.classList.toggle('hidden',f!=='all'&&c.getAttribute('data-c')!==f);c.classList.remove('pre');});
+  });});
+  // reveal (content visible without JS; fallback after 1.5s)
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top>innerHeight)e.classList.add('pre');});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.remove('pre');io.unobserve(en.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.remove('pre');});},1500);
 })();
 </script>
 </body>
