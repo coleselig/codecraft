@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Prestige Nail Lounge · Chattanooga nail suite</title>
+<meta name="description" content="Russian e-file manicures, sculpted sets and hot stone pedicures in a private suite on Gunbarrel Road, Chattanooga.">
+<meta name="theme-color" content="#4A0D1E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lacquer:#4A0D1E; --lacquer-2:#6E1631; --pearl:#F6EEF0; --blush:#E9CDD3;
+  --chrome:#CFC8D2; --ink:#21151A; --muted:#6F5C63; --line:#E2D3D8;
+  --serif:"Bodoni Moda", "Didot", Georgia, serif;
+  --sans:"Instrument Sans", system-ui, -apple-system, sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--pearl);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lacquer-2);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+
+/* preview note */
+.note{background:var(--ink);color:#F3E6EA;font-size:13px;line-height:1.45;padding:9px 22px;text-align:center}
+.note b{font-weight:600;color:#fff}
+
+/* top nav */
+.top{position:sticky;top:0;z-index:20;background:rgba(246,238,240,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.mark{font:600 20px/1 var(--serif);letter-spacing:.01em;text-decoration:none;color:var(--lacquer)}
+.mark i{font-weight:400}
+.top nav{display:none;gap:28px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.98)}
+.btn-lacquer{background:var(--lacquer);color:#fff}
+.btn-lacquer:hover{background:var(--lacquer-2)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--pearl)}
+.top .btn{min-height:40px;padding:0 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:44px 0 64px}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero h1{font:500 clamp(48px,12vw,104px)/.92 var(--serif);letter-spacing:-.02em;margin:0;color:var(--lacquer)}
+.hero h1 span{display:block;font-style:italic;font-weight:400;color:var(--ink)}
+.hero .lede{font-size:18px;color:var(--muted);max-width:30ch;margin:20px 0 28px}
+.hero .lede strong{color:var(--ink);font-weight:500}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.where{margin-top:22px;font-size:14px;color:var(--muted)}
+
+/* the nail */
+.nail-stage{position:relative;justify-self:center;width:min(78vw,380px);aspect-ratio:3/4}
+.nail-stage svg{width:100%;height:100%;overflow:visible}
+.nail-caption{position:absolute;left:0;right:0;bottom:-6px;text-align:center;font-size:13px;color:var(--muted)}
+.nail-caption em{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink)}
+
+/* sections */
+section{padding:76px 0}
+h2{font:500 clamp(36px,7vw,60px)/1.02 var(--serif);letter-spacing:-.015em;margin:0 0 14px;color:var(--ink)}
+.sub{color:var(--muted);max-width:52ch;margin:0 0 36px}
+
+/* signatures: polish swatches */
+.swatches{display:grid;gap:16px}
+.swatch{position:relative;border-radius:22px;padding:26px 24px 24px;color:#fff;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+.swatch::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bg)}
+.swatch::after{content:"";position:absolute;z-index:-1;width:140%;height:70%;left:-20%;top:-38%;background:radial-gradient(ellipse at center,rgba(255,255,255,.38),rgba(255,255,255,0) 60%);transform:rotate(-8deg)}
+.swatch h3{font:500 30px/1.05 var(--serif);margin:0 0 8px}
+.swatch p{margin:0 0 18px;font-size:15px;opacity:.9;max-width:32ch}
+.swatch .meta{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,255,255,.28);padding-top:14px;font-size:14px}
+.swatch .price{font:500 28px/1 var(--serif)}
+.s1{--bg:linear-gradient(160deg,#6E1631,#3A0816)}
+.s2{--bg:linear-gradient(160deg,#C98D9A,#8E4E5E)}
+.s3{--bg:linear-gradient(160deg,#5C5560,#2A2530)}
+
+/* menu */
+.menu{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:26px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:transparent;border-radius:999px;padding:10px 18px;font:500 15px/1 var(--sans);color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--lacquer);border-color:var(--lacquer);color:#fff}
+.panel{display:none}
+.panel.on{display:block}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .n{font:500 21px/1.25 var(--serif)}
+.row .d{grid-column:1;font-size:14px;color:var(--muted)}
+.row .p{grid-row:1/3;grid-column:2;align-self:center;font:500 22px/1 var(--serif);color:var(--lacquer)}
+.menu-foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;font-size:14px;color:var(--muted)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.shot{aspect-ratio:4/5;border-radius:18px;display:flex;align-items:flex-end;padding:14px;font-size:13px;color:var(--muted);background:
+  repeating-linear-gradient(135deg,rgba(74,13,30,.04) 0 10px,transparent 10px 20px),#EFE3E7;border:1px dashed #D7BFC6}
+.shot:first-child{grid-row:span 2;aspect-ratio:auto}
+
+/* experience */
+.facts{display:grid;gap:0;border-top:1px solid var(--line)}
+.fact{padding:24px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.fact h3{font:500 24px/1.2 var(--serif);margin:0}
+.fact p{margin:0;color:var(--muted);max-width:56ch}
+.quote{margin:56px 0 0;padding:0;border:0}
+.quote p{font:italic 400 clamp(26px,5vw,40px)/1.25 var(--serif);color:var(--lacquer);margin:0 0 14px;max-width:28ch}
+.quote cite{font-style:normal;font-size:15px;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--lacquer);color:#F7E9ED}
+.visit h2{color:#fff}
+.visit .sub{color:#E0C2CA}
+.visit-grid{display:grid;gap:28px}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:16px}
+.hours li.today{color:#fff;font-weight:600}
+.hours li.today span:first-child::after{content:" · today";font-weight:400;color:#E0C2CA}
+.addr{font:500 24px/1.3 var(--serif);color:#fff;margin:0 0 6px}
+.map{width:100%;height:260px;border:0;border-radius:18px;filter:grayscale(.35) contrast(1.05)}
+.policy{font-size:14px;color:#E0C2CA;margin-top:14px}
+.visit .btn-ghost{border-color:#fff;color:#fff}
+.visit .btn-ghost:hover{background:#fff;color:var(--lacquer)}
+.visit .btn-pearl{background:var(--pearl);color:var(--lacquer)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+
+footer{padding:40px 0 120px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+/* mobile action bar */
+.bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:8px;border-radius:999px;background:rgba(33,21,26,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(33,21,26,.25)}
+.bar a{min-height:46px;border-radius:999px;display:flex;align-items:center;justify-content:center;font:600 15px/1 var(--sans);text-decoration:none}
+.bar .call{color:#fff}
+.bar .book{background:var(--pearl);color:var(--lacquer)}
+
+@media (min-width:760px){
+  .top nav{display:flex}
+  .hero{padding:72px 0 96px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:40px}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .facts{grid-template-columns:1fr 1fr;column-gap:48px}
+  .visit-grid{grid-template-columns:1fr 1.1fr;gap:56px}
+  .map{height:100%;min-height:340px}
+  .bar{display:none}
+  footer{padding-bottom:40px}
+}
+</style>
+</head>
+<body>
+
+<div class="note"><b>Preview for Layz.</b> Built by Code Craft Media. Your logo and photos of your sets go into the final version.</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Prestige <i>Nail Lounge</i></a>
+    <nav aria-label="Sections">
+      <a href="#signatures">Signatures</a>
+      <a href="#menu">Menu</a>
+      <a href="#work">Work</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-lacquer" href="https://prestigelounge.glossgenius.com/book">Book</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">Where luxury <span>meets artistry.</span></h1>
+      <p class="lede">Russian e-file manicures, sculpted sets and hot stone pedicures, done one-on-one in a <strong>private suite on Gunbarrel Road</strong>.</p>
+      <div class="ctas">
+        <a class="btn btn-lacquer" href="https://prestigelounge.glossgenius.com/book">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+14235827851">Call 423-582-7851</a>
+      </div>
+      <p class="where">Room 129 inside Phenix Salon Suites · Open until 10 PM Thursdays and Fridays</p>
+    </div>
+
+    <div class="nail-stage" id="nail" aria-hidden="true">
+      <svg viewBox="0 0 300 400" role="img">
+        <defs>
+          <clipPath id="almond"><path d="M150 18 C 214 18, 252 92, 252 186 L 252 330 C 252 362, 230 384, 198 384 L 102 384 C 70 384, 48 362, 48 330 L 48 186 C 48 92, 86 18, 150 18 Z"/></clipPath>
+          <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#7A1A37"/><stop offset=".55" stop-color="#4A0D1E"/><stop offset="1" stop-color="#2B0711"/>
+          </linearGradient>
+          <radialGradient id="cat" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#FFF0F4" stop-opacity="1"/>
+            <stop offset=".16" stop-color="#F4B4C6" stop-opacity=".9"/>
+            <stop offset=".42" stop-color="#C25E79" stop-opacity=".4"/>
+            <stop offset="1" stop-color="#4A0D1E" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g clip-path="url(#almond)">
+          <rect x="0" y="0" width="300" height="400" fill="url(#base)"/>
+          <ellipse id="catband" cx="150" cy="190" rx="52" ry="260" fill="url(#cat)"/>
+          <path d="M92 40 C 82 120, 82 240, 96 360" stroke="url(#gloss)" stroke-width="18" fill="none" opacity=".7"/>
+        </g>
+        <path d="M150 18 C 214 18, 252 92, 252 186 L 252 330 C 252 362, 230 384, 198 384 L 102 384 C 70 384, 48 362, 48 330 L 48 186 C 48 92, 86 18, 150 18 Z" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+      </svg>
+      <p class="nail-caption">Move your finger across it. <em>Cat eye, $4 add-on.</em></p>
+    </div>
+  </div>
+</section>
+
+<section id="signatures" aria-labelledby="sig-title">
+  <div class="wrap">
+    <h2 id="sig-title">The signatures</h2>
+    <p class="sub">The three services people book Layz for most, straight from her booking menu.</p>
+    <div class="swatches">
+      <article class="swatch s1">
+        <h3>Luxury Manicure</h3>
+        <p>E-file shaping, then a scrub, clay mask and massage.</p>
+        <div class="meta"><span>90 minutes</span><span class="price">$100</span></div>
+      </article>
+      <article class="swatch s2">
+        <h3>Sculpted full set</h3>
+        <p>Hand-sculpted extensions, shaped to you.</p>
+        <div class="meta"><span>2 hours</span><span class="price">$150</span></div>
+      </article>
+      <article class="swatch s3">
+        <h3>Hot stone pedicure</h3>
+        <p>A long, warm, unhurried pedicure.</p>
+        <div class="meta"><span>1 hr 45 min</span><span class="price">$100</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <h2 id="menu-title">The menu</h2>
+    <p class="sub">A selection from the full service list. A + means there are several options.</p>
+    <div class="tabs" role="tablist" aria-label="Service categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-mani" id="t-mani">Manicures</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-sets" id="t-sets" tabindex="-1">Sets &amp; extensions</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-pedi" id="t-pedi" tabindex="-1">Pedicures</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-art" id="t-art" tabindex="-1">Art &amp; bridal</button>
+    </div>
+
+    <div class="panel on" id="p-mani" role="tabpanel" aria-labelledby="t-mani">
+      <div class="row"><span class="n">Luxury Manicure (e-file)</span><span class="d">90 min</span><span class="p">$100</span></div>
+      <div class="row"><span class="n">Russian Manicure (e-file)</span><span class="d">60 min</span><span class="p">$75</span></div>
+      <div class="row"><span class="n">Men's Grooming Manicure</span><span class="d">45 min</span><span class="p">$60</span></div>
+      <div class="row"><span class="n">Gel Polish Change</span><span class="d">40 min</span><span class="p">$30</span></div>
+      <div class="row"><span class="n">Soak off or e-file removal</span><span class="d">25+ min</span><span class="p">$25+</span></div>
+    </div>
+    <div class="panel" id="p-sets" role="tabpanel" aria-labelledby="t-sets" hidden>
+      <div class="row"><span class="n">Sculpted Nail Full Set</span><span class="d">120 min</span><span class="p">$150</span></div>
+      <div class="row"><span class="n">Acrygel Full Set</span><span class="d">105 min</span><span class="p">$100</span></div>
+      <div class="row"><span class="n">Signature Full Set Acrylic, large</span><span class="d">90 min</span><span class="p">$85</span></div>
+      <div class="row"><span class="n">Builder Gel</span><span class="d">60 min</span><span class="p">$80</span></div>
+      <div class="row"><span class="n">Gel X Nails</span><span class="d">60+ min</span><span class="p">$80+</span></div>
+      <div class="row"><span class="n">Full Set Acrylic, small</span><span class="d">70 min</span><span class="p">$65</span></div>
+    </div>
+    <div class="panel" id="p-pedi" role="tabpanel" aria-labelledby="t-pedi" hidden>
+      <div class="row"><span class="n">Russian Pedicure</span><span class="d">90 min</span><span class="p">$120</span></div>
+      <div class="row"><span class="n">Hot Stone Pedicure</span><span class="d">105 min</span><span class="p">$100</span></div>
+      <div class="row"><span class="n">Luxury Pedicure</span><span class="d">90 min</span><span class="p">$85</span></div>
+      <div class="row"><span class="n">Deluxe Spa Pedicure</span><span class="d">60 min</span><span class="p">$65</span></div>
+    </div>
+    <div class="panel" id="p-art" role="tabpanel" aria-labelledby="t-art" hidden>
+      <div class="row"><span class="n">Bridal packages</span><span class="d">4 options</span><span class="p">$75+</span></div>
+      <div class="row"><span class="n">Nail Stamping Design</span><span class="d">30 min</span><span class="p">$50</span></div>
+      <div class="row"><span class="n">Nail art designs</span><span class="d">5 options</span><span class="p">$10+</span></div>
+      <div class="row"><span class="n">Cat eye effect</span><span class="d">5 options</span><span class="p">$4+</span></div>
+    </div>
+
+    <div class="menu-foot">
+      <span>A deposit holds your appointment. Live availability, add-ons and the full list are on the booking page.</span>
+      <a class="btn btn-lacquer" href="https://prestigelounge.glossgenius.com/book">See times &amp; book</a>
+    </div>
+  </div>
+</section>
+
+<section id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <h2 id="work-title">Recent sets</h2>
+    <p class="sub">This is where your photos go. Send your favorite sets and they'll fill this wall in the final version.</p>
+    <div class="gallery">
+      <div class="shot">Your favorite set</div>
+      <div class="shot">Photo 2</div>
+      <div class="shot">Photo 3</div>
+      <div class="shot">Photo 4</div>
+      <div class="shot">Photo 5</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <h2 id="exp-title">Why it feels different</h2>
+    <div class="facts">
+      <div class="fact"><h3>A private suite, just for you</h3><p>Every appointment is one-on-one in room 129 at Phenix Salon Suites, not on a busy salon floor.</p></div>
+      <div class="fact"><h3>Russian e-file technique</h3><p>E-file manicures and Russian pedicures for a precise, clean finish around the cuticle.</p></div>
+      <div class="fact"><h3>Late nights, built in</h3><p>Open until 10 PM on Thursdays and Fridays, so a set fits around a work week.</p></div>
+      <div class="fact"><h3>Pay over time</h3><p>Buy Now, Pay Later is offered on bookings from $50 to $4,000.</p></div>
+    </div>
+    <blockquote class="quote">
+      <p>“I'm dedicated to creating beautiful, detailed nails while providing exceptional attention to detail, comfort, and care.”</p>
+      <cite>Layz, Prestige Nail Lounge</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <h2 id="visit-title">Come see Layz</h2>
+    <p class="sub">2020 Gunbarrel Road, inside Phenix Salon Suites.</p>
+    <div class="visit-grid">
+      <div>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>9 AM – 8 PM</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9 AM – 4:30 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9 AM – 8 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9 AM – 10 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>10 AM – 10 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>10 AM – 7 PM</span></li>
+          <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="addr" style="margin-top:26px">2020 Gunbarrel Rd, Suite 194, Room 129<br>Chattanooga, TN 37421</p>
+        <p class="policy">A non-refundable deposit secures every appointment. Please give 24 hours' notice to cancel or reschedule.</p>
+        <div class="actions">
+          <a class="btn btn-pearl" href="https://prestigelounge.glossgenius.com/book">Book online</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=2020%20Gunbarrel%20Rd%20Suite%20194%2C%20Chattanooga%2C%20TN%2037421">Get directions</a>
+        </div>
+      </div>
+      <iframe class="map" title="Map to Prestige Nail Lounge" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2020%20Gunbarrel%20Rd%2C%20Chattanooga%2C%20TN%2037421&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Prestige Nail Lounge · Chattanooga, TN · <a href="tel:+14235827851">423-582-7851</a></span>
+    <span>Site by Code Craft Media</span>
+  </div>
+</footer>
+
+<div class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+14235827851">Call</a>
+  <a class="book" href="https://prestigelounge.glossgenius.com/book">Book a set</a>
+</div>
+
+<script>
+(function(){
+  // today's hours
+  var d=new Date().getDay(), li=document.querySelector('#hours li[data-d="'+d+'"]');
+  if(li) li.classList.add('today');
+
+  // sticky header line
+  var top=document.querySelector('.top');
+  addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
+
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function pick(t){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1;
+      var p=document.getElementById(x.getAttribute('aria-controls'));
+      p.hidden=!on; p.classList.toggle('on',on);
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){pick(t)});
+    t.addEventListener('keydown',function(e){
+      var j=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;
+      if(j===null) return; j=(j+tabs.length)%tabs.length; pick(tabs[j]); tabs[j].focus(); e.preventDefault();
+    });
+  });
+
+  // cat-eye: the shimmer band follows a finger or cursor, like a magnet over the polish
+  var stage=document.getElementById('nail'), band=document.getElementById('catband');
+  if(!stage||!band) return;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur=150, goal=150, raf=null;
+  function step(){ cur+= (goal-cur)*.12; band.setAttribute('cx',cur.toFixed(1)); if(Math.abs(goal-cur)>.3) raf=requestAnimationFrame(step); else raf=null; }
+  function aim(clientX){
+    var r=stage.getBoundingClientRect(); var x=(clientX-r.left)/r.width;
+    goal=60+Math.max(0,Math.min(1,x))*180;
+    if(reduce){cur=goal;band.setAttribute('cx',cur);return}
+    if(!raf) raf=requestAnimationFrame(step);
+  }
+  stage.addEventListener('pointermove',function(e){aim(e.clientX)});
+  stage.addEventListener('touchmove',function(e){if(e.touches[0]) aim(e.touches[0].clientX)},{passive:true});
+  // one gentle sweep on load so people see it move
+  if(!reduce){ setTimeout(function(){goal=210; if(!raf) raf=requestAnimationFrame(step);},700);
+               setTimeout(function(){goal=110; if(!raf) raf=requestAnimationFrame(step);},1700);
+               setTimeout(function(){goal=150; if(!raf) raf=requestAnimationFrame(step);},2700); }
+})();
+</script>
+</body>
+</html>
