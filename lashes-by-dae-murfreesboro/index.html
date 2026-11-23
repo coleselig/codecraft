@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Lashes By Dae | Lash Extensions in Murfreesboro, TN</title>
+<meta name="description" content="Concept site for Lashes By Dae, lash extensions by Asha Dae in Murfreesboro, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0e0d12; --char:#1b1a22; --lilac:#c9b6f2; --lilac2:#e9e1fb; --rose:#f3c6d8; --paper:#f8f6fb; --muted:#6d6878; --line:#e3ddef;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Manrope",system-ui,sans-serif;background:var(--paper);color:var(--black);line-height:1.6;overflow-x:hidden;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+@media(min-width:880px){body{padding-bottom:0}}
+a{color:inherit}
+.serif{font-family:"Italiana",serif;font-weight:400}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.banner{background:var(--lilac2);color:#3b3350;font-size:11px;text-align:center;padding:7px 10px;line-height:1.35}
+.banner b{color:var(--black)}
+nav{position:sticky;top:0;z-index:30;background:rgba(14,13,18,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-family:"Italiana";font-size:24px;text-decoration:none;letter-spacing:.04em;white-space:nowrap}
+.logo span{color:var(--lilac)}
+.links{display:none;gap:28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.7}.links a:hover{opacity:1}
+@media(min-width:880px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:4px;padding:14px 24px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;transition:background .2s,color .2s}
+.btn-lilac{background:var(--lilac);color:var(--black)}.btn-lilac:hover{background:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}.btn-ghost:hover{border-color:var(--lilac);color:var(--lilac)}
+.btn-dark{background:var(--black);color:#fff}.btn-dark:hover{background:#2c2a36}
+.btn-sm{padding:9px 14px;font-size:12px;flex-shrink:0}
+
+.hero{background:var(--black);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:10px;padding-top:36px;padding-bottom:52px;position:relative;z-index:2}
+@media(min-width:880px){.hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:72px;padding-bottom:88px}}
+.tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--lilac)}
+.hero h1{font-family:"Italiana";font-weight:400;font-size:clamp(48px,14vw,104px);line-height:.95;margin:14px 0 18px}
+.hero h1 span{color:var(--lilac)}
+.hero p{color:#cfc9da;max-width:30em;font-size:16.5px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.eye{max-width:380px;width:100%;margin:6px auto 0}
+.eye svg{width:100%;height:auto;display:block}
+.glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,182,242,.28),transparent 65%);right:-160px;top:-120px;z-index:1}
+
+section{padding:64px 0}
+.label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#7a62b8;font-weight:800}
+h2{font-family:"Italiana";font-weight:400;font-size:clamp(38px,10vw,64px);line-height:1;margin:10px 0 14px}
+.sub{color:var(--muted);max-width:36em}
+
+/* density picker */
+.picker{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px;display:grid;gap:22px}
+@media(min-width:880px){.picker{grid-template-columns:1fr 1fr;padding:36px;align-items:center}}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:12px 10px;text-align:left;cursor:pointer;font:600 14px "Manrope",system-ui,sans-serif;color:var(--black)}
+.opt small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+.opt[aria-pressed="true"]{background:var(--black);color:#fff;border-color:var(--black)}
+.opt[aria-pressed="true"] small{color:var(--lilac)}
+.result{text-align:center}
+.result svg{width:100%;max-width:300px;height:auto}
+.result h3{font-family:"Italiana";font-weight:400;font-size:34px;line-height:1.05}
+.result .pr{font-size:15px;color:var(--muted);margin-top:4px}
+.result .pr b{color:var(--black);font-size:20px}
+.result p.d{font-size:14.5px;margin-top:10px;color:#3c3846}
+
+/* menu list */
+.menu{display:grid;gap:0;margin-top:24px;border-top:1px solid var(--black)}
+@media(min-width:880px){.menu{grid-template-columns:1fr 1fr;column-gap:48px;border-top:0}}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:16px 0;border-bottom:1px solid var(--line)}
+@media(min-width:880px){.row:nth-child(1),.row:nth-child(2){border-top:1px solid var(--black)}}
+.row h4{font-size:16px;font-weight:800}
+.row .p{font-family:"Italiana";font-size:24px;line-height:1}
+.row .m{grid-column:1/-1;font-size:13.5px;color:var(--muted)}
+
+.pol{display:grid;gap:12px;margin-top:26px}
+@media(min-width:760px){.pol{grid-template-columns:repeat(3,1fr)}}
+.pc{background:var(--char);color:#e9e5f1;border-radius:14px;padding:20px}
+.pc b{display:block;font-family:"Italiana";font-weight:400;font-size:30px;color:var(--lilac);line-height:1.1}
+.pc span{font-size:14px}
+.prep{margin-top:16px;background:var(--lilac2);border-radius:14px;padding:20px;font-size:15px}
+.prep ul{margin:8px 0 0 18px}
+
+.about{display:grid;gap:24px}
+@media(min-width:880px){.about{grid-template-columns:.8fr 1.2fr;align-items:center}}
+.quote{font-family:"Italiana";font-size:clamp(30px,8vw,46px);line-height:1.1}
+.quote span{color:#7a62b8}
+.contact{display:grid;gap:12px;margin-top:22px}
+@media(min-width:760px){.contact{grid-template-columns:1fr 1fr}}
+.cc{border:1px solid var(--line);background:#fff;border-radius:14px;padding:20px}
+.cc h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7a62b8;margin-bottom:6px}
+.cc a{font-weight:700;word-break:break-word}
+footer{background:var(--black);color:#9c96a8;font-size:13px;padding:34px 0 40px;text-align:center}
+footer b{color:var(--lilac)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(14,13,18,.96)}
+.bar a{flex:1;text-align:center;padding:13px 8px;border-radius:4px;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.bar .em{border:1px solid rgba(255,255,255,.4);color:#fff}
+.bar .bk{background:var(--lilac);color:var(--black)}
+@media(min-width:880px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for <b>Lashes By Dae</b>. Not live.</div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Lashes <span>By Dae</span></a>
+    <div class="links"><a href="#find">Find your set</a><a href="#menu">Menu</a><a href="#policies">Policies</a><a href="#contact">Contact</a></div>
+    <a class="btn btn-lilac btn-sm" href="https://lashesbydae.glossgenius.com/services">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag">Lash extensions · Murfreesboro, TN</span>
+      <h1>Classic to <span>mega</span> volume.</h1>
+      <p>I am Asha Dae, located right here in Murfreesboro TN. Classic, hybrid, volume, mega volume and freestyle sets, with fills to keep them full.</p>
+      <div class="ctas">
+        <a class="btn btn-lilac" href="https://lashesbydae.glossgenius.com/services">Book your set</a>
+        <a class="btn btn-ghost" href="#find">Find your set</a>
+      </div>
+    </div>
+    <div class="eye" aria-hidden="true">
+      <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 140 Q180 40 330 140" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M30 140 Q180 200 330 140" fill="none" stroke="#5d5670" stroke-width="2" stroke-linecap="round"/>
+        <g id="hero-lashes" stroke="#c9b6f2" stroke-width="2" stroke-linecap="round" fill="none"></g>
+        <circle cx="180" cy="142" r="30" fill="#1b1a22" stroke="#c9b6f2" stroke-width="1.5"/>
+        <circle cx="180" cy="142" r="12" fill="#c9b6f2"/>
+        <circle cx="186" cy="136" r="4" fill="#fff"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="find">
+  <div class="wrap">
+    <span class="label">Find your set</span>
+    <h2>How full do you want it?</h2>
+    <p class="sub">Tap a set to see how many extensions go on each natural lash, and what it costs.</p>
+    <div class="picker">
+      <div class="opts" role="group" aria-label="Lash sets">
+        <button class="opt" aria-pressed="true" data-i="0">Classic<small>1 per lash</small></button>
+        <button class="opt" aria-pressed="false" data-i="1">Classic Hybrid<small>3–4 per lash</small></button>
+        <button class="opt" aria-pressed="false" data-i="2">Volume<small>4–8 per lash</small></button>
+        <button class="opt" aria-pressed="false" data-i="3">Hybrid Volume<small>volume + spikes</small></button>
+        <button class="opt" aria-pressed="false" data-i="4">Mega Volume<small>8–11 per lash</small></button>
+        <button class="opt" aria-pressed="false" data-i="5">Freestyle<small>stylist’s choice</small></button>
+      </div>
+      <div class="result" aria-live="polite">
+        <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 110 Q150 30 280 110" fill="none" stroke="#0e0d12" stroke-width="3" stroke-linecap="round"/>
+          <g id="demo-lashes" stroke="#0e0d12" stroke-width="1.6" stroke-linecap="round" fill="none"></g>
+        </svg>
+        <h3 id="r-name">Classic Lash Full Set</h3>
+        <div class="pr"><b id="r-price">$100</b> · <span id="r-time">90 min</span></div>
+        <p class="d" id="r-desc">One individual lash on each natural lash. Subtle and beginner friendly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+  <div class="wrap">
+    <span class="label">Full menu</span>
+    <h2>Sets, fills &amp; extras</h2>
+    <div class="menu">
+      <div class="row"><h4>Classic Lash Full Set</h4><span class="p">$100</span><span class="m">90 min</span></div>
+      <div class="row"><h4>Classic Hybrid Lash Full Set</h4><span class="p">$125</span><span class="m">105 min</span></div>
+      <div class="row"><h4>Volume Lash Extensions Full Set</h4><span class="p">$140</span><span class="m">120 min</span></div>
+      <div class="row"><h4>Hybrid Volume Lash Full Set</h4><span class="p">$140</span><span class="m">125 min</span></div>
+      <div class="row"><h4>Mega Volume Extensions Full Set</h4><span class="p">$155</span><span class="m">130 min</span></div>
+      <div class="row"><h4>Freestyle Lash Extensions</h4><span class="p">$120</span><span class="m">120 min · stylist chooses style &amp; dimension, you choose length, color can be added</span></div>
+      <div class="row"><h4>2 Week Fill (Volume)</h4><span class="p">$90</span><span class="m">90 min · 50–70% of lashes remaining</span></div>
+      <div class="row"><h4>3 Week Fill In (Volume)</h4><span class="p">$100</span><span class="m">70 min</span></div>
+      <div class="row"><h4>Mega Volume Fill In</h4><span class="p">$95</span><span class="m">115 min · 50–65% of original set still on</span></div>
+      <div class="row"><h4>Cream Extension Remover</h4><span class="p">$20</span><span class="m">30 min</span></div>
+      <div class="row"><h4>Extras / Add Ons</h4><span class="p">$10</span><span class="m">Colored lashes, glitter lashes, decals or bottom lashes</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="policies" style="padding-top:0">
+  <div class="wrap">
+    <span class="label">Good to know</span>
+    <h2>Before you book</h2>
+    <div class="pol">
+      <div class="pc"><b>$20 deposit</b><span>Non-transferable and non-refundable, required to book your appointment.</span></div>
+      <div class="pc"><b>10 min grace</b><span>$10 late fee after the grace period. Appointments are cancelled at 15 minutes late.</span></div>
+      <div class="pc"><b>Cash or Zelle</b><span>For final payment. A $5 surcharge applies to other methods.</span></div>
+    </div>
+    <div class="prep"><b>Come lash-ready:</b>
+      <ul><li>Clean face, no makeup</li><li>Comfortable clothing</li><li>No high bun or ponytail</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap about">
+    <p class="quote">“Thank you for choosing <span>lashesbydae_</span> for your lash extension service!”</p>
+    <div>
+      <span class="label">Contact</span>
+      <div class="contact">
+        <div class="cc"><h4>Email</h4><a href="mailto:ashalewis04@gmail.com">ashalewis04@gmail.com</a></div>
+        <div class="cc"><h4>Instagram</h4><a href="https://www.instagram.com/Lashesbydae_">@Lashesbydae_</a></div>
+        <div class="cc"><h4>Location</h4><span>Barfield, Murfreesboro, TN 37128</span><br><a href="https://maps.google.com/?q=Barfield,+Murfreesboro,+TN+37128">Open in Google Maps →</a></div>
+        <div class="cc"><h4>Hours</h4><span>Monday – Saturday · Sundays closed</span></div>
+      </div>
+      <a class="btn btn-dark" style="margin-top:18px" href="https://lashesbydae.glossgenius.com/services">Book on GlossGenius</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Lashes By Dae · Murfreesboro, TN<br><span style="opacity:.8">Concept site by <b>Code Craft Media</b>. Not live.</span></div></footer>
+
+<div class="bar">
+  <a class="em" href="mailto:ashalewis04@gmail.com">Email</a>
+  <a class="bk" href="https://lashesbydae.glossgenius.com/services">Book</a>
+</div>
+
+<script>
+const sets=[
+ {n:"Classic Lash Full Set",p:"$100",t:"90 min",d:"One individual lash on each natural lash. Subtle and beginner friendly.",k:1},
+ {n:"Classic Hybrid Lash Full Set",p:"$125",t:"105 min",d:"Three to four lashes per natural lash for light, flattering volume.",k:3},
+ {n:"Volume Lash Extensions Full Set",p:"$140",t:"120 min",d:"Four to eight lashes per natural lash for full, dark, dramatic volume.",k:6},
+ {n:"Hybrid Volume Lash Full Set",p:"$140",t:"125 min",d:"A volume set with spikes for a wispy look.",k:5,sp:1},
+ {n:"Mega Volume Extensions Full Set",p:"$155",t:"130 min",d:"Eight to eleven lashes per natural lash for dramatic, fluffy volume.",k:10},
+ {n:"Freestyle Lash Extensions",p:"$120",t:"120 min",d:"The stylist chooses the style and dimension, you choose the length, and color can be added.",k:4,sp:1}
+];
+function fan(g,x0,x1,cx,cy,base,count,per,len,spikes){
+  g.innerHTML="";const ns="http://www.w3.org/2000/svg";
+  for(let i=0;i<count;i++){
+    const t=i/(count-1),x=x0+(x1-x0)*t;
+    const y=cy+(base-cy)*(4*(t-.5)*(t-.5)); // follow lid curve
+    const ang=(-90+(t-.5)*110)*Math.PI/180;
+    for(let j=0;j<per;j++){
+      const spread=(j-(per-1)/2)*0.09;
+      const L=len*(spikes&&i%4===0&&j===0?1.35:1)*(0.85+0.15*Math.sin(i+j));
+      const a=ang+spread,ex=x+Math.cos(a)*L,ey=y+Math.sin(a)*L;
+      const p=document.createElementNS(ns,"path");
+      p.setAttribute("d",`M${x.toFixed(1)} ${y.toFixed(1)} Q${(x+Math.cos(a-.25)*L*.6).toFixed(1)} ${(y+Math.sin(a-.25)*L*.6).toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}`);
+      g.appendChild(p);
+    }
+  }
+}
+fan(document.getElementById("hero-lashes"),45,315,180,90,136,22,3,34,true);
+const demo=document.getElementById("demo-lashes");
+function show(i){const s=sets[i];
+  document.getElementById("r-name").textContent=s.n;document.getElementById("r-price").textContent=s.p;
+  document.getElementById("r-time").textContent=s.t;document.getElementById("r-desc").textContent=s.d;
+  fan(demo,32,268,150,70,105,18,s.k,30,s.sp);
+  document.querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-pressed",b.dataset.i==i));
+}
+document.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>show(+b.dataset.i)));
+show(0);
+</script>
+</body>
+</html>
