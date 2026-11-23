@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Rinse &amp; Reset · Head Spa &amp; Blow-Dry · Chattanooga</title>
+<meta name="description" content="Concept site for Rinse & Reset, a woman-owned head spa and blow-dry studio in Chattanooga, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#eef2f0;
+  --foam:#f7f8f5;
+  --stone:#d9e0dc;
+  --sage:#9fb3aa;
+  --lagoon:#5f8a86;
+  --deep:#1d3638;
+  --ink:#22302f;
+  --muted:#4f5f5c;
+  --sand:#c9b79c;
+  --clay:#8a6f4e;
+  --serif:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--foam);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+.concept{background:var(--deep);color:#e6eeeb;font-size:12px;letter-spacing:.04em;text-align:center;padding:7px 14px;line-height:1.4}
+
+/* nav */
+.nav{position:relative;z-index:5;margin-bottom:-64px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.mark{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--deep);text-decoration:none;letter-spacing:.01em}
+.mark i{font-style:italic;color:var(--lagoon)}
+.nav-call{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--deep);border-bottom:1px solid var(--sage);padding-bottom:2px}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,900px);background:
+  radial-gradient(120% 70% at 80% 10%,#ffffff 0%,rgba(255,255,255,0) 60%),
+  linear-gradient(180deg,#f3f5f1 0%,#e4ebe7 55%,#cfdcd7 100%);
+  overflow:hidden;display:flex;align-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.steam{position:absolute;inset:0;pointer-events:none}
+.steam span{position:absolute;bottom:22%;width:180px;height:340px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(255,255,255,.75),rgba(255,255,255,0));filter:blur(18px);opacity:0;animation:rise 14s ease-in-out infinite}
+.steam span:nth-child(1){left:8%;animation-delay:0s}
+.steam span:nth-child(2){left:46%;animation-delay:4.5s;width:240px}
+.steam span:nth-child(3){left:76%;animation-delay:9s}
+@keyframes rise{0%{transform:translateY(60px) scale(.8);opacity:0}30%{opacity:.9}100%{transform:translateY(-320px) scale(1.4);opacity:0}}
+.hero-inner{position:relative;z-index:3;padding-top:120px;padding-bottom:210px;width:100%}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lagoon);font-weight:500}
+.hero h1{font-family:var(--serif);font-weight:400;color:var(--deep);font-size:clamp(50px,13.5vw,124px);line-height:.92;letter-spacing:-.01em;margin:18px 0 22px}
+.hero h1 em{font-style:italic;color:var(--lagoon);display:block;padding-left:.5em}
+.lede{max-width:30em;color:var(--muted);font-size:17px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-family:var(--sans);font-size:14px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .3s,color .3s,transform .3s}
+.btn-primary{background:var(--deep);color:#f4f7f5}
+.btn-primary:hover{background:#2c4f51}
+.btn-ghost{border:1px solid rgba(29,54,56,.35);color:var(--deep);background:rgba(255,255,255,.45)}
+.btn-ghost:hover{background:#fff}
+.btn:focus-visible,.nav-call:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+.tap-hint{margin-top:26px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--deep);opacity:.75}
+
+/* water layer */
+.water{position:absolute;left:0;right:0;bottom:0;height:28%;z-index:2;pointer-events:none;transition:height 2.4s cubic-bezier(.22,.8,.26,1)}
+.water svg{position:absolute;left:0;top:-38px;width:200%;height:40px}
+.water .w1{animation:drift 18s linear infinite}
+.water .w2{animation:drift 26s linear infinite reverse;top:-30px;opacity:.6}
+.water .body{position:absolute;inset:0;background:linear-gradient(180deg,rgba(95,138,134,.55),rgba(29,54,56,.82))}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero.rinsing .water{height:44%}
+.ripple{position:absolute;z-index:2;border:1.5px solid rgba(255,255,255,.85);border-radius:50%;width:16px;height:16px;transform:translate(-50%,-50%) scale(1);pointer-events:none;animation:ripple 2.6s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes ripple{to{transform:translate(-50%,-50%) scale(22);opacity:0;border-width:.5px}}
+
+/* rating strip */
+.strip{background:var(--deep);color:#e8efec;padding:22px 0}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:center;text-align:center}
+.strip b{font-family:var(--serif);font-size:30px;font-weight:500;color:#fff}
+.strip span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#c4d3ce}
+.strip .stars{color:var(--sand);letter-spacing:.2em;font-size:15px}
+
+section{padding:86px 0}
+.kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lagoon);font-weight:500}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,8vw,64px);line-height:1.02;color:var(--deep);margin:12px 0 18px}
+h2 em{font-style:italic;color:var(--lagoon)}
+
+/* waterline reveal */
+.ritual{background:var(--mist);position:relative;overflow:hidden}
+.ritual .grid{display:grid;gap:34px}
+.vessel{position:relative;aspect-ratio:4/5;max-width:420px;width:100%;border-radius:200px 200px 24px 24px;background:linear-gradient(180deg,#fbfcfa,#e6ece9);box-shadow:inset 0 0 0 1px rgba(29,54,56,.12);overflow:hidden;justify-self:center}
+.vessel .fill{position:absolute;left:0;right:0;bottom:0;height:calc(var(--lvl,0)*100%);background:linear-gradient(180deg,rgba(159,179,170,.75),rgba(29,54,56,.9));transition:height .2s linear}
+.vessel .fill svg{position:absolute;top:-18px;left:0;width:200%;height:20px;animation:drift 9s linear infinite}
+.vessel .words{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;font-family:var(--serif);font-size:clamp(30px,7vw,44px);font-style:italic;color:var(--deep);text-align:center;line-height:1.1}
+.vessel .words span{transition:opacity .6s,color .6s;opacity:.25}
+.vessel .words span.on{opacity:1}
+.vessel .words span.under{color:#f4f7f5}
+.vessel .words span.under:not(.on){opacity:.45}
+.vessel .pct{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#e6eeeb;font-style:normal}
+.vessel .pct.low{color:var(--muted)}
+.ritual p{color:var(--muted);max-width:32em;margin-bottom:14px}
+
+/* treatments */
+.menu-list{list-style:none;margin-top:30px;border-top:1px solid var(--stone)}
+.menu-list li{display:grid;grid-template-columns:1fr auto;gap:6px 18px;padding:26px 0;border-bottom:1px solid var(--stone)}
+.menu-list h3{font-family:var(--serif);font-weight:500;font-size:29px;color:var(--deep);line-height:1.1}
+.menu-list .meta{grid-column:1/-1;font-size:14px;color:var(--muted);letter-spacing:.04em}
+.menu-list .price{font-family:var(--serif);font-size:24px;color:var(--clay);white-space:nowrap;align-self:start;padding-top:2px}
+.menu-list .price small{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;text-align:right}
+.note{margin-top:22px;font-size:14px;color:var(--muted)}
+.note a{color:var(--deep);font-weight:500}
+
+/* team */
+.team{background:linear-gradient(180deg,#e7eeea,#f7f8f5)}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}
+.person{background:rgba(255,255,255,.7);border:1px solid var(--stone);border-radius:22px;padding:24px 18px;text-align:center}
+.drop{width:58px;height:58px;margin:0 auto 12px;display:block}
+.person h3{font-family:var(--serif);font-weight:500;font-size:28px;color:var(--deep);line-height:1}
+.person p{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lagoon);margin-top:8px}
+
+/* visit */
+.visit .grid{display:grid;gap:40px}
+.addr{font-family:var(--serif);font-size:25px;line-height:1.3;color:var(--deep);margin:4px 0 18px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+caption{text-align:left;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lagoon);font-weight:500;padding-bottom:12px}
+th,td{padding:13px 14px;border-bottom:1px solid var(--stone);text-align:left;font-weight:300}
+th{font-weight:400;color:var(--deep)}
+td{text-align:right;color:var(--muted)}
+tr.closed td{color:#7a8784;font-style:italic}
+tr.today{background:var(--deep)}
+tr.today th,tr.today td{color:#f4f7f5;border-bottom-color:var(--deep)}
+tr.today th::after{content:"Today";margin-left:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:var(--sand);color:var(--deep);padding:3px 8px;border-radius:99px;vertical-align:2px;font-weight:500}
+
+footer{background:var(--deep);color:#c4d3ce;padding:46px 0 110px;font-size:14px}
+footer .mark{color:#fff}
+footer .mark i{color:var(--sage)}
+footer p{margin-top:10px;max-width:40em}
+
+/* mobile sticky bar */
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;padding:8px;background:rgba(247,248,245,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--stone);border-radius:999px;box-shadow:0 10px 30px rgba(29,54,56,.18)}
+.dock .btn{flex:1;min-height:46px;padding:0 10px;font-size:12px;white-space:nowrap;letter-spacing:.1em}
+.dock{transform:translateY(140%);transition:transform .5s ease}
+.dock.show{transform:none}
+
+@media (min-width:860px){
+  .wrap{padding:0 40px}
+  .hero-inner{padding-top:150px;padding-bottom:280px}
+  .lede{font-size:19px}
+  .ritual .grid{grid-template-columns:1fr 1fr;align-items:center;gap:70px}
+  .menu-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:70px}
+  .menu-list{margin-top:0}
+  .people{grid-template-columns:repeat(4,1fr)}
+  .visit .grid{grid-template-columns:1fr 1fr;gap:80px}
+  .dock{display:none}
+  .water{height:20%}
+  .hero.rinsing .water{height:34%}
+  footer{padding-bottom:46px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .steam span{opacity:.5}
+}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Concept site by Code Craft Media, made for Rinse &amp; Reset. Not live.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top">Rinse <i>&amp;</i> Reset</a>
+    <a class="nav-call" href="tel:+17628875635">Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero" aria-label="Welcome" style="padding:0">
+  <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Head spa &amp; blow-dry · Chattanooga</p>
+    <h1>Rinse,<em>then reset.</em></h1>
+    <p class="lede">A woman-owned studio for scalp and head spa treatments and blow-dry styles, for all hair types, with personal attention from start to finish.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://www.fresha.com/a/rinse-reset-chattanooga-2020-gunbarrel-road-j27myhsd" target="_blank" rel="noopener">Book on Fresha</a>
+      <a class="btn btn-ghost" href="tel:+17628875635">762-887-5635</a>
+    </div>
+    <p class="tap-hint" aria-hidden="true">Tap the water ~</p>
+  </div>
+  <div class="water" aria-hidden="true">
+    <svg class="w2" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q75 4 150 20 T300 20 T450 20 T600 20 T750 20 T900 20 T1050 20 T1200 20 V40 H0Z" fill="rgba(95,138,134,.45)"/></svg>
+    <svg class="w1" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 24 Q100 8 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0Z" fill="rgba(95,138,134,.55)"/></svg>
+    <div class="body"></div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="stars" aria-hidden="true">★★★★★</span>
+    <b>5.0</b>
+    <span>from 153 reviews on Fresha</span>
+  </div>
+</div>
+
+<section class="ritual">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">The ritual</p>
+      <h2>Slow water, <em>quiet mind.</em></h2>
+      <p>Rinse &amp; Reset, in its own words, “elevates hair care and beauty treatments in a serene atmosphere.” That means unhurried head spa rituals, warm stones, and scalp care that feels as good as it works.</p>
+      <p>Finish with a blow-dry style shaped to your hair, whatever its texture.</p>
+    </div>
+    <div class="vessel" id="vessel" aria-hidden="true">
+      <div class="fill"><svg viewBox="0 0 400 20" preserveAspectRatio="none"><path d="M0 12 Q25 2 50 12 T100 12 T150 12 T200 12 T250 12 T300 12 T350 12 T400 12 V20 H0Z" fill="rgba(159,179,170,.75)"/></svg></div>
+      <div class="words"><span data-at=".2">Breathe.</span><span data-at=".45">Rinse.</span><span data-at=".7">Reset.</span></div>
+      <div class="pct">scroll to fill</div>
+    </div>
+  </div>
+</section>
+
+<section id="treatments">
+  <div class="wrap menu-wrap">
+    <div>
+      <p class="kicker">Current specials</p>
+      <h2>Featured <em>treatments</em></h2>
+      <p style="color:var(--muted)">Scalp and head spa rituals, with hot stones on the longer sessions.</p>
+    </div>
+    <div>
+      <ul class="menu-list">
+        <li><h3>The Reset Ritual</h3><p class="price"><small>from</small>$80.10</p><p class="meta">45 min · includes hot stones</p></li>
+        <li><h3>Signature Special</h3><p class="price"><small>from</small>$112.50</p><p class="meta">60 min · includes hot stones</p></li>
+        <li><h3>Autumn Scalp Special</h3><p class="price"><small>from</small>$94.50</p><p class="meta">55 min · seasonal scalp treatment</p></li>
+      </ul>
+      <p class="note">Blow-dry styles and more: <a href="https://www.fresha.com/a/rinse-reset-chattanooga-2020-gunbarrel-road-j27myhsd" target="_blank" rel="noopener">full menu on Fresha</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="wrap">
+    <p class="kicker">The studio</p>
+    <h2>Led by <em>Eden Knutson</em></h2>
+    <p style="color:var(--muted);max-width:34em">A woman-owned studio where every guest gets personalized attention from a small, dedicated team.</p>
+    <div class="people">
+      <div class="person"><svg class="drop" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 6C30 6 12 28 12 39a18 18 0 0 0 36 0C48 28 30 6 30 6Z" fill="#cfdcd7"/><path d="M22 40a8 8 0 0 0 8 8" stroke="#5f8a86" stroke-width="2" fill="none" stroke-linecap="round"/></svg><h3>Eden</h3><p>Owner</p></div>
+      <div class="person"><svg class="drop" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 6C30 6 12 28 12 39a18 18 0 0 0 36 0C48 28 30 6 30 6Z" fill="#dfe6e2"/><path d="M22 40a8 8 0 0 0 8 8" stroke="#5f8a86" stroke-width="2" fill="none" stroke-linecap="round"/></svg><h3>Beana</h3><p>Team</p></div>
+      <div class="person"><svg class="drop" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 6C30 6 12 28 12 39a18 18 0 0 0 36 0C48 28 30 6 30 6Z" fill="#e8dccb"/><path d="M22 40a8 8 0 0 0 8 8" stroke="#8a6f4e" stroke-width="2" fill="none" stroke-linecap="round"/></svg><h3>Alea</h3><p>Esthetician</p></div>
+      <div class="person"><svg class="drop" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 6C30 6 12 28 12 39a18 18 0 0 0 36 0C48 28 30 6 30 6Z" fill="#cfdcd7"/><path d="M22 40a8 8 0 0 0 8 8" stroke="#5f8a86" stroke-width="2" fill="none" stroke-linecap="round"/></svg><h3>Emma</h3><p>Team</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Visit</p>
+      <h2>Find <em>the quiet.</em></h2>
+      <p class="addr">Phenix Salon Suites<br>2020 Gunbarrel Rd, Suite 128<br>Chattanooga, TN 37421</p>
+      <div class="links">
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=2020+Gunbarrel+Rd+Chattanooga+TN+37421" target="_blank" rel="noopener">Open in Maps</a>
+        <a class="btn btn-ghost" href="tel:+17628875635">Call 762-887-5635</a>
+        <a class="btn btn-primary" href="https://www.fresha.com/a/rinse-reset-chattanooga-2020-gunbarrel-road-j27myhsd" target="_blank" rel="noopener">Book on Fresha</a>
+      </div>
+    </div>
+    <table id="hours">
+      <caption>Hours</caption>
+      <tbody>
+        <tr data-d="1"><th scope="row">Monday</th><td>9:00 – 5:30</td></tr>
+        <tr data-d="2" class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr>
+        <tr data-d="3"><th scope="row">Wednesday</th><td>9:00 – 5:00</td></tr>
+        <tr data-d="4"><th scope="row">Thursday</th><td>9:00 – 5:00</td></tr>
+        <tr data-d="5" class="closed"><th scope="row">Friday</th><td>Closed</td></tr>
+        <tr data-d="6"><th scope="row">Saturday</th><td>9:00 – 5:30</td></tr>
+        <tr data-d="0"><th scope="row">Sunday</th><td>9:00 – 5:00</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="#top">Rinse <i>&amp;</i> Reset</a>
+    <p>Head spa &amp; blow-dry studio · Phenix Salon Suites, 2020 Gunbarrel Rd, Suite 128, Chattanooga, TN 37421 · <a href="tel:+17628875635">762-887-5635</a></p>
+    <p style="font-size:12px;opacity:.8">Concept site by Code Craft Media, made for Rinse &amp; Reset. Not live.</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn btn-ghost" href="tel:+17628875635">Call</a>
+  <a class="btn btn-primary" href="https://www.fresha.com/a/rinse-reset-chattanooga-2020-gunbarrel-road-j27myhsd" target="_blank" rel="noopener">Book on Fresha</a>
+</nav>
+
+<script>
+(function(){
+  // highlight today
+  var d=new Date().getDay();
+  var row=document.querySelector('#hours tr[data-d="'+d+'"]');
+  if(row){row.classList.add('today');row.setAttribute('aria-current','date');}
+
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // hero: tap to rinse
+  var hero=document.getElementById('hero'),t;
+  hero.addEventListener('click',function(e){
+    if(e.target.closest('a'))return;
+    hero.classList.add('rinsing');clearTimeout(t);
+    t=setTimeout(function(){hero.classList.remove('rinsing')},3200);
+    if(reduce)return;
+    var r=hero.getBoundingClientRect();
+    for(var i=0;i<3;i++){(function(i){setTimeout(function(){
+      var s=document.createElement('span');s.className='ripple';
+      s.style.left=(e.clientX-r.left)+'px';s.style.top=(e.clientY-r.top)+'px';
+      hero.appendChild(s);setTimeout(function(){s.remove()},2700);
+    },i*260)})(i)}
+  });
+
+  // vessel: waterline rises with scroll
+  var v=document.getElementById('vessel'),words=v.querySelectorAll('.words span'),pct=v.querySelector('.pct');
+  function upd(){
+    var lvl;
+    if(reduce){lvl=.78}else{
+      var r=v.getBoundingClientRect(),vh=window.innerHeight;
+      lvl=Math.min(.82,Math.max(0,(vh-r.top)/(vh+r.height*.4)*1.1-.1));
+    }
+    v.style.setProperty('--lvl',lvl.toFixed(3));
+    var h=v.clientHeight;
+    words.forEach(function(w){
+      var at=+w.dataset.at; w.classList.toggle('on',lvl>=at);
+      var mid=(w.offsetTop+w.offsetHeight/2)/h;
+      w.classList.toggle('under',(1-mid)<lvl);
+    });
+    pct.textContent=lvl>.75?'reset':'scroll to fill';pct.classList.toggle('low',lvl<.08);
+  }
+  upd();
+  var dock=document.querySelector('.dock');function dk(){dock.classList.toggle('show',window.scrollY>hero.offsetHeight*.55)}dk();window.addEventListener('scroll',dk,{passive:true});
+  if(!reduce){window.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});window.addEventListener('resize',upd);}
+})();
+</script>
+</body>
+</html>
