@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Massage Therapy by Jeff Pressley | Harriman, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#17324d;--lake:#2f6f8f;--mist:#eef3f6;--sun:#e8b04a;--ink:#1b2530}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+.concept{background:var(--sun);color:var(--navy);font-size:12px;font-weight:600;text-align:center;padding:6px 10px}
+.top{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.top svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:1080px;margin:0 auto;position:relative}
+nav b{font-weight:800;letter-spacing:.04em;font-size:14px;text-transform:uppercase}
+nav a{color:var(--navy);background:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:8px 16px;border-radius:6px}
+.hero{max-width:1080px;margin:0 auto;padding:30px 20px 170px;position:relative}
+.kicker{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;color:var(--sun);font-size:16px}
+h1{font-size:42px;font-weight:800;line-height:1.05;margin:10px 0 14px;letter-spacing:-.01em}
+.hero p{opacity:.85;max-width:30em}
+.cta{display:inline-block;margin-top:20px;background:var(--sun);color:var(--navy);text-decoration:none;font-weight:800;padding:14px 24px;border-radius:6px}
+.cta.alt{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);margin-left:6px}
+section{max-width:1080px;margin:0 auto;padding:44px 20px}
+h2{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.sub{color:#56636f;margin-bottom:20px}
+.calc{background:var(--mist);border-radius:14px;padding:22px}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.opts button{border:2px solid #cfdbe3;background:#fff;border-radius:10px;padding:14px 6px;font:600 15px 'Archivo',sans-serif;color:var(--navy);cursor:pointer}
+.opts button.on{border-color:var(--navy);background:var(--navy);color:#fff}
+.out{display:flex;align-items:baseline;gap:12px;margin-top:18px;flex-wrap:wrap}
+.out .big{font-size:52px;font-weight:800;color:var(--navy);line-height:1}
+.out .per{color:#56636f}
+.bar{height:10px;background:#d7e2e9;border-radius:9px;margin-top:14px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--lake),var(--sun));transition:width .4s}
+.info{display:grid;gap:18px}
+.box{border:1px solid #e1e8ed;border-radius:14px;padding:22px}
+.row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eef2f5;font-size:15px}
+.row.today{font-weight:800;color:var(--navy)}
+.row .c{color:#8b97a2}
+.pill{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;background:#e6f2ea;color:#22663b}
+.pill.off{background:#f1f1f1;color:#666}
+footer{background:var(--navy);color:#c7d4de;text-align:center;padding:26px 20px;font-size:13px}
+@media(min-width:860px){h1{font-size:64px}.hero{padding:60px 20px 190px}.info{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Massage Therapy by Jeff Pressley. Not live.</div>
+<div class="top">
+ <nav><b>Jeff Pressley Massage</b><a href="https://jpressleylmt.setmore.com/">Book</a></nav>
+ <div class="hero">
+  <div class="kicker">Roane Medical Plaza, Harriman</div>
+  <h1>Massage Therapy by Jeff Pressley</h1>
+  <p>60, 90 and 120 minute massage, weekdays from 10 AM, booked online in a couple of taps.</p>
+  <a class="cta" href="https://jpressleylmt.setmore.com/">Book a massage</a><a class="cta alt" href="tel:+18654388047">Call</a>
+ </div>
+ <svg viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 70 L180 20 L340 80 L520 10 L700 75 L900 25 L1080 85 L1260 30 L1440 70 V150 H0Z" fill="#244a6b"/>
+  <path d="M0 105 C240 80 480 125 720 100 S1200 80 1440 105 V150 H0Z" fill="#2f6f8f"/>
+  <path d="M0 128 C300 112 600 140 900 124 S1300 116 1440 128 V150 H0Z" fill="#fff"/>
+ </svg>
+</div>
+
+<section>
+ <h2>How long do you need?</h2>
+ <p class="sub">Tap a length to see the price.</p>
+ <div class="calc">
+  <div class="opts">
+   <button data-m="60">60 min</button><button data-m="90" class="on">90 min</button><button data-m="120">2 hr</button>
+  </div>
+  <div class="out"><span class="big" id="price">$75</span><span class="per" id="per"></span></div>
+  <div class="bar"><i id="bar"></i></div>
+  <a class="cta" style="background:var(--navy);color:#fff" href="https://jpressleylmt.setmore.com/">Book this length</a>
+ </div>
+</section>
+
+<section>
+ <div class="info">
+  <div class="box">
+   <span class="pill" id="pill">Hours</span>
+   <h2>Hours</h2>
+   <div id="hours"></div>
+  </div>
+  <div class="box">
+   <h2>Location</h2>
+   <p>Roane Medical Plaza<br>2497 S Roane St, Suite 200<br>Harriman, TN 37748</p>
+   <p style="margin-top:12px"><a href="tel:+18654388047" style="color:var(--lake);font-weight:800;text-decoration:none">(865) 438-8047</a></p>
+  </div>
+ </div>
+</section>
+<footer>Massage Therapy by Jeff Pressley &middot; Harriman, TN<br>Concept by Code Craft Media</footer>
+<script>
+const P={60:50,90:75,120:90};
+function pick(m){document.getElementById('price').textContent='$'+P[m];document.getElementById('per').textContent=(m==120?'2 hour':m+' minute')+' massage';document.getElementById('bar').style.width=(m/120*100)+'%'}
+document.querySelectorAll('.opts button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.opts button').forEach(x=>x.classList.remove('on'));b.classList.add('on');pick(+b.dataset.m)});pick(90);
+const N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const d=new Date();const day=d.getDay();const h=d.getHours()+d.getMinutes()/60;let s='';
+[1,2,3,4,5,6,0].forEach(k=>{const open=k>=1&&k<=5;s+=`<div class="row ${k===day?'today':''}"><span>${N[k]}</span><span class="${open?'':'c'}">${open?'10:00 AM to 7:15 PM':'Closed'}</span></div>`});
+document.getElementById('hours').innerHTML=s;
+const pill=document.getElementById('pill');
+if(day>=1&&day<=5&&h>=10&&h<19.25){pill.textContent='Open now until 7:15 PM'}else{pill.textContent='Closed right now';pill.classList.add('off')}
+</script>
+</body>
+</html>
