@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>_precisionblendz · Hermitage, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ecedea;--graphite:#16181b;--steel:#5d636b;--line:#c9ccc6;--blue:#2448ff;--white:#fbfbf9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Space Grotesk",system-ui,sans-serif;background:var(--bg);color:var(--graphite);line-height:1.5;overflow-x:hidden}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.banner{background:var(--graphite);color:#cfd2cc;font:12px "JetBrains Mono",monospace;text-align:center;padding:9px 14px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+header{padding:34px 0 0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:28px 28px}
+.top{display:flex;justify-content:space-between;align-items:center;font:12px "JetBrains Mono",monospace;color:var(--steel)}
+h1{font-weight:700;font-size:clamp(46px,14vw,132px);line-height:.9;letter-spacing:-.045em;margin:40px 0 0;overflow-wrap:anywhere}
+h1 .u{color:var(--blue)}
+.ruler{height:26px;margin-top:18px;background:repeating-linear-gradient(90deg,var(--graphite) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,var(--graphite) 0 2px,transparent 2px 50px);background-size:auto 10px,auto 22px;background-repeat:repeat-x;background-position:bottom,bottom}
+.intro{display:grid;gap:22px;padding:30px 0 44px}
+@media(min-width:820px){.intro{grid-template-columns:1.2fr 1fr;align-items:end}}
+.lines p{font-size:clamp(20px,5vw,28px);font-weight:500;line-height:1.25}
+.lines p:nth-child(2){color:var(--steel)}
+.lines p:nth-child(3){color:var(--blue)}
+.act{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:4px}
+.btn:hover{background:#1636d6}
+.btn.ol{background:transparent;color:var(--graphite);border:2px solid var(--graphite);padding:13px 20px}
+.spec{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--graphite);border-bottom:2px solid var(--graphite);background:var(--white)}
+.spec div{padding:14px 12px;border-right:1px solid var(--line);font:12px "JetBrains Mono",monospace;color:var(--steel)}
+.spec div:last-child{border:0}
+.spec b{display:block;font:700 24px "Space Grotesk",sans-serif;color:var(--graphite)}
+section{padding:56px 0}
+h2{font-size:clamp(32px,8vw,56px);letter-spacing:-.03em;line-height:1;margin-bottom:8px}
+.cap{font:13px "JetBrains Mono",monospace;color:var(--steel);margin-bottom:24px}
+.chair{display:grid;gap:24px}
+@media(min-width:880px){.chair{grid-template-columns:1.4fr 1fr;align-items:start}}
+.tbl{width:100%;border-collapse:collapse;background:var(--white);border:2px solid var(--graphite)}
+.tbl th{font:600 11px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.12em;text-align:left;padding:10px 12px;background:var(--graphite);color:#cfd2cc}
+.tbl td{padding:13px 12px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr.r{cursor:pointer}
+.tbl tr.r:hover td{background:#e3e7ff}
+.tbl tr.sel td{background:var(--blue);color:#fff}
+.tbl tr.sel td small{color:#d6ddff}
+.tbl td small{display:block;color:var(--steel);font-size:12.5px}
+.tbl .num{font-family:"JetBrains Mono",monospace;text-align:right;white-space:nowrap}
+.tbl .grp td{background:var(--bg);font:600 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);padding:8px 12px}
+.ticket{background:var(--graphite);color:#e7e9e4;padding:22px;border-radius:6px;position:sticky;top:16px}
+.ticket .k{font:11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#8e949b}
+.ticket .v{font-size:24px;font-weight:700;margin:4px 0 14px;min-height:30px}
+.ticket .row{display:flex;gap:26px}
+.ticket .btn{display:block;text-align:center;margin-top:8px}
+.ticket hr{border:0;border-top:1px dashed #3b4046;margin:4px 0 16px}
+.rev{background:var(--blue);color:#fff}
+.rev p{font-size:clamp(30px,8vw,60px);font-weight:700;letter-spacing:-.03em;line-height:1.02;max-width:900px}
+.rev cite{display:block;margin-top:16px;font:13px "JetBrains Mono",monospace;font-style:normal;opacity:.85}
+.loc{display:grid;gap:18px}
+@media(min-width:780px){.loc{grid-template-columns:repeat(3,1fr)}}
+.loc div{border-left:3px solid var(--blue);padding-left:14px}
+.loc h3{font:600 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:6px}
+footer{border-top:2px solid var(--graphite);font:12px "JetBrains Mono",monospace;color:var(--steel);text-align:center;padding:24px 18px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for _precisionblendz. Not live.</div>
+<header><div class="wrap">
+<div class="top"><span>HERMITAGE, TN</span><span>5.0 ★ BOOKSY</span></div>
+<h1><span class="u">_</span>precision<br>blendz</h1>
+<div class="ruler" aria-hidden="true"></div>
+<div class="intro">
+<div class="lines"><p>Precision cuts, clean fades, and sharp details.</p><p>Experienced with all hair types and lengths.</p><p>Relaxed vibe with quality you can count on.</p></div>
+<div class="act"><a class="btn" href="https://booksy.com/en-us/1577986_precisionblendz_hair-salon_123099_nashville-davidson" target="_blank" rel="noopener">Book on Booksy</a><a class="btn ol" href="https://www.instagram.com/_precisionblendz/" target="_blank" rel="noopener">@_precisionblendz</a></div>
+</div>
+</div>
+<div class="spec"><div><b>$40</b>men’s cut</div><div><b>30</b>min chair</div><div><b>5.0</b>rating</div></div>
+</header>
+<main>
+<section><div class="wrap">
+<h2>Pick your cut.</h2>
+<p class="cap">// tap a row to load it into your ticket</p>
+<div class="chair">
+<table class="tbl">
+<thead><tr><th>Service</th><th class="num">Time</th><th class="num">Price</th></tr></thead>
+<tbody>
+<tr class="grp"><td colspan="3">Cuts</td></tr>
+<tr class="r" data-s="Mens Haircut" data-t="30 min" data-p="$40"><td>Mens Haircut<small>Consultation, precision cut, edge detailing, light styling</small></td><td class="num">30m</td><td class="num">$40</td></tr>
+<tr class="r" data-s="Haircut and beard" data-t="50 min" data-p="$55"><td>Haircut and beard</td><td class="num">50m</td><td class="num">$55</td></tr>
+<tr class="r" data-s="Women's cut" data-t="30 min" data-p="$40"><td>Women’s cut</td><td class="num">30m</td><td class="num">$40</td></tr>
+<tr class="r" data-s="Mobile Haircut" data-t="45 min" data-p="$75+"><td>Mobile Haircut<small>Travel fee added based on location; contact before booking</small></td><td class="num">45m</td><td class="num">$75+</td></tr>
+<tr class="grp"><td colspan="3">Detail</td></tr>
+<tr class="r" data-s="Beard trim" data-t="15 min" data-p="$20"><td>Beard trim<small>Shaping, lining, detailed finishing</small></td><td class="num">15m</td><td class="num">$20</td></tr>
+<tr class="r" data-s="Line up" data-t="30 min" data-p="$15"><td>Line up</td><td class="num">30m</td><td class="num">$15</td></tr>
+<tr class="r" data-s="Eyebrow wax / threading" data-t="10 min" data-p="$15"><td>Eyebrow wax / threading</td><td class="num">10m</td><td class="num">$15</td></tr>
+<tr class="grp"><td colspan="3">Color &amp; more</td></tr>
+<tr class="r" data-s="Men's grey coverage/blending" data-t="20 min" data-p="$50"><td>Men’s grey coverage / blending</td><td class="num">20m</td><td class="num">$50</td></tr>
+<tr class="r" data-s="Highlights, short hair" data-t="1 hr 30 min" data-p="$90"><td>Highlights, short hair</td><td class="num">1h30</td><td class="num">$90</td></tr>
+<tr class="r" data-s="Cornrows" data-t="1 hr" data-p="$60"><td>Cornrows</td><td class="num">1h</td><td class="num">$60</td></tr>
+<tr class="r" data-s="Steam facial" data-t="30 min" data-p="$40"><td>Steam facial</td><td class="num">30m</td><td class="num">$40</td></tr>
+</tbody>
+</table>
+<aside class="ticket">
+<div class="k">Your ticket</div>
+<div class="v" id="tv">Nothing loaded</div>
+<hr>
+<div class="row"><div><div class="k">Time</div><div class="v mono" id="tt">—</div></div><div><div class="k">Price</div><div class="v mono" id="tp">—</div></div></div>
+<a class="btn" id="book" href="https://booksy.com/en-us/1577986_precisionblendz_hair-salon_123099_nashville-davidson" target="_blank" rel="noopener">Book on Booksy</a>
+</aside>
+</div>
+</div></section>
+<section class="rev"><div class="wrap">
+<p>“She did really good, I really like the haircut.”</p>
+<cite>— Booksy client review</cite>
+</div></section>
+<section><div class="wrap loc">
+<div><h3>Chair</h3><p>4802 Old Hickory Blvd<br>Hermitage, TN 37076</p></div>
+<div><h3>Good to know</h3><p>Parking on site, cards accepted, kids welcome.</p></div>
+<div><h3>Latest cuts</h3><p><a href="https://www.instagram.com/_precisionblendz/" target="_blank" rel="noopener"><b>@_precisionblendz</b></a> on Instagram</p></div>
+</div></section>
+</main>
+<footer>© _precisionblendz · Hermitage, TN<br>Concept site by Code Craft Media. Not live.</footer>
+<script>
+var rows=document.querySelectorAll('tr.r');
+rows.forEach(function(r){r.addEventListener('click',function(){rows.forEach(function(x){x.classList.remove('sel')});r.classList.add('sel');document.getElementById('tv').textContent=r.dataset.s;document.getElementById('tt').textContent=r.dataset.t;document.getElementById('tp').textContent=r.dataset.p;document.getElementById('book').textContent='Book this cut on Booksy'})});
+</script>
+</body>
+</html>
