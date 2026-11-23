@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Matt Garrett, Barber | Fades &amp; Cuts on the Murfreesboro Square</title>
+<meta name="description" content="Concept site for Matt Garrett, barber at 15 S Public Square, Murfreesboro, TN. Detailed fades, basic cuts, beard trims and kids cuts. Tuesday to Saturday, book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9e7e2;--paper:#f6f5f2;--ink:#111;--orange:#ff5a1f;--muted:#5d5b57;--line:#cfccc5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Space Grotesk",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden;padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+@media(min-width:900px){body{padding-bottom:0}}
+a{color:inherit}
+.mono{font-family:"Space Mono",monospace}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+.banner{background:var(--ink);color:#d8d6d0;font-size:11px;text-align:center;padding:7px 10px;line-height:1.35}
+.banner b{color:#fff}
+nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:2px solid var(--ink)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:700;font-size:18px;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:14px;background:var(--orange);display:inline-block;border-radius:50%}
+.links{display:none;gap:26px;font:400 13px "Space Mono";text-transform:uppercase}
+.links a{text-decoration:none}.links a:hover{color:var(--orange)}
+@media(min-width:900px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;font:700 13px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border:2px solid var(--ink);transition:.15s}
+.btn-o{background:var(--orange);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn-o:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.btn-w{background:var(--paper);color:var(--ink)}
+.btn-sm{padding:8px 12px;font-size:12px;box-shadow:3px 3px 0 var(--ink)}
+.hero{border-bottom:2px solid var(--ink)}
+.hero .wrap{display:grid;gap:26px;padding-top:30px;padding-bottom:40px}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.25fr .75fr;align-items:end;padding-top:70px;padding-bottom:70px;gap:50px}}
+.loc{font:400 12px "Space Mono";text-transform:uppercase;letter-spacing:.06em;display:flex;gap:10px;flex-wrap:wrap}
+.loc span{border:1.5px solid var(--ink);padding:4px 8px;background:var(--paper)}
+h1{font-weight:700;font-size:clamp(64px,19vw,148px);line-height:.86;letter-spacing:-.045em;margin:18px 0 18px}
+h1 .o{color:var(--orange)}
+.lede{font-size:18px;max-width:28em;color:var(--muted)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.fade{border:2px solid var(--ink);background:var(--paper);padding:16px}
+.fade svg{display:block;width:100%;height:auto}
+.fade p{font:400 11px "Space Mono";text-transform:uppercase;margin-top:10px;color:var(--muted);display:flex;justify-content:space-between}
+section{padding:60px 0;border-bottom:2px solid var(--ink)}
+.lbl{font:700 12px "Space Mono";text-transform:uppercase;letter-spacing:.08em;color:var(--orange)}
+h2{font-weight:700;font-size:clamp(42px,11vw,76px);line-height:.92;letter-spacing:-.035em;margin:10px 0 14px}
+.sub{color:var(--muted);max-width:36em;font-size:17px}
+.seg{display:inline-flex;border:2px solid var(--ink);margin:26px 0 18px;background:var(--paper);max-width:100%}
+.seg button{font:700 12px "Space Mono";text-transform:uppercase;padding:11px 14px;border:0;background:transparent;cursor:pointer;color:var(--ink)}
+.seg button+button{border-left:2px solid var(--ink)}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.list{list-style:none;border-top:2px solid var(--ink)}
+.list li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:20px 0;border-bottom:1.5px solid var(--line);transition:opacity .2s}
+.list li.dim{opacity:.22}
+.list .no{font:400 13px "Space Mono";color:var(--muted)}
+.list h3{font-size:clamp(20px,5.5vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.1}
+.list .pr{font:700 clamp(22px,6vw,34px) "Space Grotesk";letter-spacing:-.03em}
+.list li:hover .pr{color:var(--orange)}
+.note{font:400 12px "Space Mono";color:var(--muted);margin-top:16px}
+.two{display:grid;gap:28px}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr;gap:60px}}
+.hours{border:2px solid var(--ink);background:var(--paper)}
+.hours div{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1.5px solid var(--line);font:400 14px "Space Mono"}
+.hours div:last-child{border-bottom:0}
+.hours b{font-weight:700}
+.hours .off{color:#9a978f}
+.box{border:2px solid var(--ink);background:var(--paper);padding:20px;margin-top:14px}
+.box h3{font:700 12px "Space Mono";text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.box p{font-size:20px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.box a{text-decoration:none}
+.cta{background:var(--orange);text-align:left}
+.cta .btn-o{background:var(--ink);color:var(--paper);box-shadow:4px 4px 0 var(--paper)}
+.cta .sub{color:var(--ink)}
+footer{background:var(--ink);color:#bdbab3;font:400 12px "Space Mono";padding:30px 0 38px;text-align:center;line-height:1.7}
+footer b{color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:2px solid var(--ink)}
+.bar .btn{flex:1;padding:12px 8px;box-shadow:none}
+@media(min-width:900px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by <b>Code Craft Media</b>, made for <b>Matt Garrett</b>. Not live.</div>
+<nav><div class="wrap">
+  <a class="logo" href="#top"><i></i>Matt Garrett</a>
+  <div class="links"><a href="#menu">Menu</a><a href="#hours">Hours</a><a href="#about">About</a></div>
+  <a class="btn btn-o btn-sm" href="https://square.site/book/2CNWD8X02K5EE/matt-garrett-murfreesboro-tn" target="_blank" rel="noopener">Book now</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="loc"><span>Barber</span><span>15 S Public Square</span><span>Murfreesboro, TN</span></div>
+    <h1>Matt<br>Garrett<span class="o">.</span></h1>
+    <p class="lede">Detailed fades, clean cuts and beard work right on the Murfreesboro square. Tuesday to Saturday, booked online.</p>
+    <div class="ctas">
+      <a class="btn btn-o" href="https://square.site/book/2CNWD8X02K5EE/matt-garrett-murfreesboro-tn" target="_blank" rel="noopener">Book now →</a>
+      <a class="btn btn-w" href="tel:+16153002958">(615) 300-2958</a>
+    </div>
+  </div>
+  <div class="fade" aria-hidden="true">
+    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="300" height="200" fill="#f6f5f2"/>
+      <g fill="#111">
+        <rect x="0" y="0" width="300" height="34"/>
+        <rect x="0" y="40" width="300" height="24" opacity=".85"/>
+        <rect x="0" y="70" width="300" height="18" opacity=".68"/>
+        <rect x="0" y="94" width="300" height="13" opacity=".5"/>
+        <rect x="0" y="113" width="300" height="9" opacity=".36"/>
+        <rect x="0" y="128" width="300" height="6" opacity=".24"/>
+        <rect x="0" y="140" width="300" height="4" opacity=".15"/>
+        <rect x="0" y="150" width="300" height="2" opacity=".09"/>
+      </g>
+      <rect x="0" y="170" width="300" height="3" fill="#ff5a1f"/>
+    </svg>
+    <p><span>Top</span><span>Fade</span><span>Skin</span></p>
+  </div>
+</div></header>
+
+<section id="menu"><div class="wrap">
+  <div class="lbl">01 / Menu</div>
+  <h2>Cuts, fades<br>&amp; beards.</h2>
+  <p class="sub">Prices as listed on Matt's booking page.</p>
+  <div class="seg" role="tablist">
+    <button role="tab" aria-selected="true" data-f="all">All</button>
+    <button role="tab" aria-selected="false" data-f="hair">Hair</button>
+    <button role="tab" aria-selected="false" data-f="beard">Beard</button>
+    <button role="tab" aria-selected="false" data-f="kids">Kids</button>
+  </div>
+  <ul class="list">
+    <li data-c="hair"><span class="no">01</span><h3>Detailed Fades</h3><span class="pr">$35</span></li>
+    <li data-c="hair"><span class="no">02</span><h3>Basic Hair Cut</h3><span class="pr">$30</span></li>
+    <li data-c="hair beard"><span class="no">03</span><h3>Detailed Cut &amp; Beard Trim</h3><span class="pr">$50</span></li>
+    <li data-c="beard"><span class="no">04</span><h3>Beard Trim</h3><span class="pr">$25</span></li>
+    <li data-c="kids"><span class="no">05</span><h3>Kids Basic Haircut</h3><span class="pr">$25</span></li>
+  </ul>
+  <p class="note">// Pick a service and an open time on the booking page.</p>
+</div></section>
+
+<section id="hours"><div class="wrap two">
+  <div>
+    <div class="lbl">02 / Hours</div>
+    <h2>Tuesday<br>to Saturday.</h2>
+    <p class="sub">Exact times and open slots are on the booking page, updated live.</p>
+    <div class="ctas"><a class="btn btn-o" href="https://square.site/book/2CNWD8X02K5EE/matt-garrett-murfreesboro-tn" target="_blank" rel="noopener">See open times →</a></div>
+  </div>
+  <div>
+    <div class="hours">
+      <div class="off"><span>Monday</span><span>Closed</span></div>
+      <div><b>Tuesday</b><span>Open</span></div>
+      <div><b>Wednesday</b><span>Open</span></div>
+      <div><b>Thursday</b><span>Open</span></div>
+      <div><b>Friday</b><span>Open</span></div>
+      <div><b>Saturday</b><span>Open</span></div>
+      <div class="off"><span>Sunday</span><span>Closed</span></div>
+    </div>
+    <div class="box"><h3>Location</h3><p><a href="https://www.google.com/maps/search/?api=1&query=15+S+Public+Square+Murfreesboro+TN+37130" target="_blank" rel="noopener">15 S Public Square<br>Murfreesboro, TN 37130 ↗</a></p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap two">
+  <div>
+    <div class="lbl">03 / About</div>
+    <h2>Short menu.<br>Clear prices.</h2>
+  </div>
+  <div>
+    <p class="sub">Matt Garrett is a barber working on the Public Square in downtown Murfreesboro. His menu is short and focused: detailed fades, basic cuts, beard trims, a cut-and-beard combo and kids cuts, all with clear prices up front.</p>
+    <p class="sub" style="margin-top:14px">Booking is online, so you can see what's open and choose your time without a phone call. Prefer to talk? Call <a href="tel:+16153002958">(615) 300-2958</a>.</p>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <div class="lbl" style="color:var(--ink)">04 / Book</div>
+  <h2>Your next fade<br>is a tap away.</h2>
+  <div class="ctas"><a class="btn btn-o" href="https://square.site/book/2CNWD8X02K5EE/matt-garrett-murfreesboro-tn" target="_blank" rel="noopener">Book now →</a><a class="btn btn-w" href="tel:+16153002958">Call</a></div>
+</div></section>
+
+<footer><div class="wrap"><b>Matt Garrett, Barber</b> · 15 S Public Square, Murfreesboro, TN 37130<br>Concept site by <b>Code Craft Media</b>. Not live.</div></footer>
+
+<div class="bar"><a class="btn btn-w" href="tel:+16153002958">Call</a><a class="btn btn-o" href="https://square.site/book/2CNWD8X02K5EE/matt-garrett-murfreesboro-tn" target="_blank" rel="noopener">Book now</a></div>
+
+<script>
+document.querySelectorAll('.seg button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    var f=b.dataset.f;
+    document.querySelectorAll('.list li').forEach(function(li){li.classList.toggle('dim',!(f==='all'||li.dataset.c.split(' ').indexOf(f)>-1))});
+  });
+});
+</script>
+</body>
+</html>
