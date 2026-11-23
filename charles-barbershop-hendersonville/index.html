@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Charles Barbershop | Hendersonville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#12213a;--red:#b8312f;--cream:#f4ecdc;--paper:#fbf6ec;--ink:#1b1b1b;--mut:#6b645a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Source Serif 4",Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.55}
+.cc{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ink);color:#fff;font:11px/1.4 system-ui,sans-serif;text-align:center;padding:6px 10px}
+.hero{background:var(--navy);color:var(--cream);padding:52px 20px 44px;position:relative;overflow:hidden}
+.pole{position:absolute;right:-14px;top:40px;width:44px;height:340px;border-radius:30px;background:repeating-linear-gradient(-35deg,var(--red) 0 16px,#fff 16px 32px,#2f4f8a 32px 48px,#fff 48px 64px);opacity:.9;border:4px solid var(--cream)}
+.in{max-width:1040px;margin:auto;position:relative}
+.badge{display:inline-block;font:700 12px Oswald,Impact,sans-serif;letter-spacing:3px;text-transform:uppercase;border:1px solid var(--cream);padding:5px 12px}
+h1{font-family:Oswald,Impact,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(40px,11.5vw,120px);line-height:.95;margin:18px 0 10px;max-width:9ch;padding-right:30px}
+.tag{font-style:italic;font-size:22px;color:#e9c7a2}
+.where{margin-top:10px;font-size:15px;opacity:.85;max-width:26ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{font:700 15px Oswald,Impact,sans-serif;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:14px 22px;background:var(--red);color:#fff;border:2px solid var(--red)}
+.btn.o{background:transparent;border-color:var(--cream);color:var(--cream)}
+.status{margin-top:22px;display:inline-flex;align-items:center;gap:8px;font:600 13px system-ui,sans-serif;background:rgba(255,255,255,.08);padding:7px 12px}
+.status i{width:9px;height:9px;border-radius:50%;background:#999}
+.status.open i{background:#5fd38a}
+section{max-width:1040px;margin:auto;padding:46px 20px}
+h2{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;font-size:30px;letter-spacing:1px;margin-bottom:6px}
+.sub{color:var(--mut);margin-bottom:18px}
+.chair{display:grid;gap:8px}
+.chair label{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid #e4d9c4;padding:14px;cursor:pointer}
+.chair input{accent-color:var(--red);width:18px;height:18px;margin-right:10px;flex:none}
+.chair .l{display:flex;align-items:center}
+.chair small{display:block;color:var(--mut);font-size:13px}
+.chair b{font-family:Oswald,Impact,sans-serif;font-size:20px;white-space:nowrap}
+.tally{margin-top:14px;background:var(--navy);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:16px 18px}
+.tally strong{font-family:Oswald,Impact,sans-serif;font-size:30px}
+.notes{display:grid;gap:12px}
+.notes p{border-left:4px solid var(--red);padding:8px 14px;background:var(--cream)}
+.grid{display:grid;gap:18px}
+.card{border:2px solid var(--navy);padding:20px}
+.card h3{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:16px;color:var(--red);margin-bottom:8px}
+footer{text-align:center;padding:28px 20px 40px;color:var(--mut);font-size:14px}
+@media(min-width:860px){.hero{padding:90px 40px 70px}.pole{right:12%;height:420px;width:70px}.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="cc">Concept site by Code Craft Media, made for Charles Barbershop. Not live.</div>
+<div class="hero"><div class="pole" aria-hidden="true"></div><div class="in">
+  <span class="badge">Hendersonville, TN</span>
+  <h1>Charles Barbershop</h1>
+  <p class="tag">&ldquo;CP | A Cute Above&rdquo;</p>
+  <p class="where">Cuts, line ups, shaves and beard work by Charles Petty Jr. on West Main Street.</p>
+  <div class="btns"><a class="btn" href="https://square.site/book/YKN8PW3XBXFDR/charles-barbershop-hendersonville-tn">Book a chair</a><a class="btn o" href="tel:+16155060029">Text or call</a></div>
+  <div class="status" id="status"><i></i><span id="stt">Fri &amp; Sat</span></div>
+</div></div>
+
+<section class="cols">
+  <div>
+    <h2>Plan your visit</h2>
+    <p class="sub">Check what you need and see your total and chair time.</p>
+    <div class="chair" id="chair">
+      <label><span class="l"><input type="checkbox" data-p="25" data-m="30" checked><span>Adult Haircut<small>30 min</small></span></span><b>$25</b></label>
+      <label><span class="l"><input type="checkbox" data-p="25" data-m="30"><span>Children's Haircut (2 to 12)<small>30 min</small></span></span><b>$25</b></label>
+      <label><span class="l"><input type="checkbox" data-p="25" data-m="30"><span>Senior Haircut (65+)<small>30 min</small></span></span><b>$25</b></label>
+      <label><span class="l"><input type="checkbox" data-p="35" data-m="50"><span>Razor Bald Head<small>50 min</small></span></span><b>$35</b></label>
+      <label><span class="l"><input type="checkbox" data-p="25" data-m="30"><span>Beard or Goatee Shave<small>30 min</small></span></span><b>$25</b></label>
+      <label><span class="l"><input type="checkbox" data-p="25" data-m="30"><span>Beard Service<small>30 min</small></span></span><b>$25</b></label>
+      <label><span class="l"><input type="checkbox" data-p="25" data-m="30"><span>Line Up (head only)<small>30 min</small></span></span><b>$25</b></label>
+    </div>
+    <div class="tally"><span id="mins">30 min in the chair</span><strong id="tot">$25</strong></div>
+    <p class="sub" style="margin-top:10px">Haircut with beard or goatee shave is a $45 combo.</p>
+  </div>
+  <div>
+    <h2>Please note</h2>
+    <div class="notes">
+      <p>Kindly arrive 5 to 10 minutes before your appointment.</p>
+      <p>Text (615) 506-0029 to check in.</p>
+      <p>Arriving more than 5 minutes late will result in a cancellation and forfeiture of the full cost of service.</p>
+    </div>
+  </div>
+</section>
+
+<section class="grid">
+  <div class="card"><h3>Shop</h3>313 West Main Street, Suite B<br>Hendersonville, TN 37075</div>
+  <div class="card"><h3>Hours</h3>Friday 9 AM to 5 PM<br>Saturday 9 AM to 3 PM</div>
+  <div class="card"><h3>Book</h3><a class="btn" href="https://square.site/book/YKN8PW3XBXFDR/charles-barbershop-hendersonville-tn">Book on Square</a></div>
+</section>
+<footer>Charles Barbershop &middot; Hendersonville, TN</footer>
+<script>
+const boxes=[...document.querySelectorAll('#chair input')];
+function calc(){let p=0,m=0;const sel=boxes.filter(b=>b.checked);sel.forEach(b=>{p+=+b.dataset.p;m+=+b.dataset.m});
+const hc=boxes[0].checked,sh=boxes[4].checked;if(hc&&sh&&sel.length===2){p=45;m=45}
+document.getElementById('tot').textContent='$'+p;document.getElementById('mins').textContent=m+' min in the chair'}
+boxes.forEach(b=>b.onchange=calc);calc();
+(function(){const n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));const d=n.getDay(),h=n.getHours();
+const open=(d===5&&h>=9&&h<17)||(d===6&&h>=9&&h<15);const s=document.getElementById('stt');
+if(open){document.getElementById('status').classList.add('open');s.textContent='Open now'}else{s.textContent=d===5||d===6?'Closed now':'Next open: Friday 9 AM'}})();
+</script>
+</body>
+</html>

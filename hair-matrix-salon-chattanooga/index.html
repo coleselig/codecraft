@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hair Matrix Salon | Chattanooga, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1020;--panel:#161a33;--line:#2a3060;--teal:#3ee0c8;--violet:#9b7bff;--txt:#e9ecff;--mut:#9aa0c8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+.concept{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal);color:#06231f;font:600 12px Inter,sans-serif;text-align:center;padding:6px 12px}
+.hero{min-height:90vh;padding:80px 22px 46px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:34px 34px;transform:perspective(500px) rotateX(55deg) translateY(-12%) scale(1.8);transform-origin:50% 100%;opacity:.55;-webkit-mask:linear-gradient(transparent,#000 70%);mask:linear-gradient(transparent,#000 70%)}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#9b7bff55,transparent 65%);top:4%;right:-140px}
+.tag{position:relative;display:inline-flex;gap:8px;align-items:center;font:700 13px 'Space Grotesk',sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--teal);color:var(--teal);padding:7px 13px;border-radius:6px;width:max-content}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--mut)}
+.tag.open i{background:var(--teal);box-shadow:0 0 10px var(--teal)}
+h1{position:relative;font-family:'Space Grotesk',sans-serif;font-size:clamp(54px,16vw,128px);line-height:.88;letter-spacing:-.03em;margin:20px 0 16px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--teal),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{position:relative;color:var(--mut);max-width:470px;font-size:17px;margin-bottom:26px}
+.row{position:relative;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--teal),#7fd0ff);color:#06231f;font-weight:700;text-decoration:none;padding:15px 24px;border-radius:10px}
+.btn.alt{background:transparent;color:var(--txt);border:1px solid var(--line)}
+section{max-width:1040px;margin:0 auto;padding:58px 22px}
+h2{font:700 32px 'Space Grotesk',sans-serif;margin-bottom:6px}
+.sub{color:var(--mut);margin-bottom:22px}
+.tabs{display:flex;gap:6px;background:var(--panel);padding:5px;border-radius:12px;width:max-content;max-width:100%;overflow-x:auto;margin-bottom:20px}
+.tabs button{background:none;border:0;color:var(--mut);font:600 14px Inter,sans-serif;padding:9px 14px;border-radius:9px;cursor:pointer;white-space:nowrap}
+.tabs button.on{background:var(--bg);color:var(--teal)}
+.list{display:grid;gap:10px}
+.it{display:grid;grid-template-columns:1fr auto;gap:4px 14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.it b{font-weight:600}
+.it span{color:var(--teal);font:700 17px 'Space Grotesk',sans-serif;text-align:right}
+.it small{color:var(--mut);grid-column:1/-1}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.d{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 4px;text-align:center;font-size:12px;color:var(--mut)}
+.d b{display:block;font:700 14px 'Space Grotesk',sans-serif;color:var(--txt);margin-bottom:6px}
+.d.now{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal) inset}
+.d.off{opacity:.45}
+.contact{background:linear-gradient(135deg,#1b2050,#2a1d5c);border-radius:20px;padding:30px 24px;display:grid;gap:16px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 22px 50px}
+@media(min-width:860px){.list{grid-template-columns:1fr 1fr}.hero{padding-left:7vw}}
+@media(max-width:420px){.week{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Hair Matrix Salon. Not live.</div>
+<header class="hero">
+  <div class="grid"></div><div class="glow"></div>
+  <span class="tag" id="tag"><i></i><span>Hours loading</span></span>
+  <h1>Hair<br><em>Matrix</em><br>Salon</h1>
+  <p class="lede">Cuts, color, relaxers, blowouts, braids and loc styling in Chattanooga, with evening hours on weeknights.</p>
+  <div class="row">
+    <a class="btn" href="https://square.site/book/1QDQES474H3K4/hair-matrix-salon-chattanooga-tn">Book online</a>
+    <a class="btn alt" href="tel:+14234144552">Call (423) 414-4552</a>
+  </div>
+</header>
+
+<section>
+  <h2>Service menu</h2>
+  <p class="sub">Starting prices as listed on the booking page.</p>
+  <div class="tabs" id="tabs">
+    <button class="on" data-c="cut">Cuts &amp; styles</button>
+    <button data-c="chem">Color &amp; relaxers</button>
+    <button data-c="nat">Natural &amp; locs</button>
+    <button data-c="care">Treatments</button>
+  </div>
+  <div class="list" id="list"></div>
+</section>
+
+<section>
+  <h2>After-work friendly</h2>
+  <p class="sub">Weeknights until 10, Fridays until 11. Today is highlighted.</p>
+  <div class="week" id="week"></div>
+</section>
+
+<section>
+  <div class="contact">
+    <h2>Book with Vernique</h2>
+    <p class="sub" style="margin:0">Pick a time on Square or call the salon.</p>
+    <div class="row">
+      <a class="btn" href="https://square.site/book/1QDQES474H3K4/hair-matrix-salon-chattanooga-tn">See open times</a>
+      <a class="btn alt" href="tel:+14234144552">(423) 414-4552</a>
+    </div>
+  </div>
+</section>
+<footer>Hair Matrix Salon · Chattanooga, TN</footer>
+
+<script>
+const S={cut:[["Women's Haircut and Blow Dry","1 hr","from $32"],["Men's Haircut","45 min","from $18"],["Signature Matrix Blowout","1 hr 30 min","from $35"],["Shampoo and Set","1 hr","$26"],["Add-on: haircut or breakage conditioning","30 min","$15"]],
+chem:[["Virgin Relaxer","1 hr 45 min","from $60"],["Relaxer Retouch","1 hr 30 min","from $45"],["Color Treatment","1 hr 45 min","price varies"]],
+nat:[["Natural Styling / Braided Cornrows","1 hr 30 min","from $40"],["Loc Maintenance / Styling","1 hr 30 min","from $60"],["Kinky Twist","4 hr 30 min","from $150"],["Hair Extensions","30 min consult","quoted"]],
+care:[["Dry scalp / dandruff and hair loss treatment","20 min","$25"]]};
+const L=document.getElementById('list');
+const show=c=>L.innerHTML=S[c].map(s=>`<div class="it"><b>${s[0]}</b><span>${s[2]}</span><small>${s[1]}</small></div>`).join('');
+show('cut');
+document.getElementById('tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));show(b.dataset.c)};
+const H=[null,[960,1320],[960,1320],[960,1320],[960,1320],[960,1380],[540,1320]];
+const N=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const f=m=>{let h=Math.floor(m/60),a=h>=12?'p':'a';h=h%12||12;return h+a};
+const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));const d=now.getDay(),t=now.getHours()*60+now.getMinutes();
+document.getElementById('week').innerHTML=[1,2,3,4,5,6,0].map(i=>`<div class="d ${i===d?'now':''} ${H[i]?'':'off'}"><b>${N[i]}</b>${H[i]?f(H[i][0])+'–'+f(H[i][1]):'Closed'}</div>`).join('');
+const tag=document.getElementById('tag'),sp=tag.querySelector('span');
+if(H[d]&&t>=H[d][0]&&t<H[d][1]){tag.classList.add('open');sp.textContent='Open now · until '+f(H[d][1]).replace('p',' PM')}
+else if(H[d]&&t<H[d][0]){sp.textContent='Open tonight · '+f(H[d][0]).replace('p',' PM').replace('a',' AM')+' to '+f(H[d][1]).replace('p',' PM')}
+else{let k=1;while(!H[(d+k)%7])k++;sp.textContent='Closed · opens '+N[(d+k)%7]}
+</script>
+</body>
+</html>

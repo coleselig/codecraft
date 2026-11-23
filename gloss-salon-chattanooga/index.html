@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gloss Salon | Chattanooga, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121212;--champ:#e8d6b8;--shine:#fff7ea;--rose:#c98f7a;--mut:#7b7268;--line:#e6dccd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Jost,system-ui,sans-serif;background:var(--shine);color:var(--ink);line-height:1.55}
+.concept{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ink);color:var(--champ);font-size:12px;text-align:center;padding:6px 12px}
+.hero{min-height:90vh;background:var(--ink);color:var(--shine);padding:74px 22px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.drop{position:absolute;width:300px;height:300px;right:-90px;top:70px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:radial-gradient(circle at 35% 30%,#fff 0 6%,#f3e3c8 14%,#c98f7a 55%,#5b3a2f 100%);opacity:.9}
+.drop.s{width:120px;height:120px;right:150px;top:330px;opacity:.55}
+.in{position:relative;max-width:1060px;margin:0 auto;width:100%}
+.open{display:inline-flex;gap:8px;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--champ)}
+.open i{width:8px;height:8px;border-radius:50%;background:#777}.open.on i{background:#7be0a2}
+h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(70px,22vw,170px);line-height:.85;margin:18px 0 10px;background:linear-gradient(100deg,#fff 10%,#e8d6b8 40%,#fff 55%,#c98f7a 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 small{display:block;font-size:15px;letter-spacing:.4em;font-family:Jost,sans-serif;font-weight:500;color:var(--champ);-webkit-text-fill-color:var(--champ);margin-top:10px}
+.lede{max-width:430px;color:#cfc6b8;font-size:17px;margin:14px 0 26px}
+.btn{display:inline-block;background:var(--champ);color:var(--ink);text-decoration:none;font-weight:600;padding:15px 26px;letter-spacing:.05em;border-radius:40px}
+.btn.o{background:transparent;color:var(--shine);border:1px solid #ffffff55}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+section{max-width:1060px;margin:0 auto;padding:58px 22px}
+h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;line-height:1}
+h2 em{color:var(--rose)}
+.sub{color:var(--mut);margin:8px 0 18px}
+.sort{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.sort button{border:1px solid var(--ink);background:none;padding:8px 14px;border-radius:30px;font:500 14px Jost,sans-serif;cursor:pointer;color:var(--ink)}
+.sort button.on{background:var(--ink);color:var(--shine)}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row b{font-weight:500;font-size:17px}
+.row span{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700}
+.bar{grid-column:1/-1;height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--champ),var(--rose))}
+.row small{grid-column:1/-1;color:var(--mut)}
+.info{display:grid;gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.card p{margin:4px 0}
+.card a{color:var(--rose)}
+.h div{display:flex;justify-content:space-between;padding:6px 0}
+.h .t{font-weight:600;color:var(--rose)}
+footer{text-align:center;padding:30px 22px 50px;color:var(--mut);font-size:13px}
+@media(max-width:600px){.drop{width:220px;height:220px;right:-110px;top:40px;opacity:.55}.drop.s{display:none}}
+@media(min-width:860px){.info{grid-template-columns:1fr 1fr}.hero{padding-left:7vw}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Gloss Salon. Not live.</div>
+<header class="hero">
+  <div class="drop"></div><div class="drop s"></div>
+  <div class="in">
+    <span class="open" id="op"><i></i><span>Hours</span></span>
+    <h1>Gloss<small>SALON · CHATTANOOGA</small></h1>
+    <p class="lede">Color, balayage, color melts, Brazilian Blowout smoothing and updos with Catherine Choate on Cowart Street.</p>
+    <div class="cta">
+      <a class="btn" href="https://square.site/book/9MCFSCN2XMYCG/gloss-salon-chattanooga-tn">Book with Catherine</a>
+      <a class="btn o" href="tel:+14237741459">(423) 774-1459</a>
+    </div>
+  </div>
+</header>
+<section>
+  <h2>The <em>color</em> menu</h2>
+  <p class="sub">Sort by what matters to you today. The bar shows chair time.</p>
+  <div class="sort" id="sort"><button class="on" data-s="menu">Menu order</button><button data-s="price">Price</button><button data-s="time">Shortest visit</button></div>
+  <div id="list"></div>
+</section>
+<section class="info">
+  <div class="card">
+    <h2 style="font-size:32px">Find the chair</h2>
+    <p class="sub">Gloss Salon</p>
+    <p>1405 Cowart Street, #123<br>Chattanooga, TN 37408</p>
+    <p><a href="tel:+14237741459">(423) 774-1459</a></p>
+  </div>
+  <div class="card h" id="hrs"><h2 style="font-size:32px;margin-bottom:10px">Hours</h2></div>
+</section>
+<footer><a class="btn" style="color:var(--ink)" href="https://square.site/book/9MCFSCN2XMYCG/gloss-salon-chattanooga-tn">See open times</a><p style="margin-top:18px">Gloss Salon · Chattanooga, TN</p></footer>
+<script>
+const S=[["Partial Highlight / Balayage",140,150],["All Over Color",120,120],["Color Re Touch",80,90],["Color Melt",140,150],["Toner",75,30],["Shampoo Style",55,45],["Updo's",70,60],["Brazilian Blowout Smoothing Treatment",250,150],["Extensions",null,270]];
+const t=m=>m>=60?Math.floor(m/60)+'h'+(m%60?' '+m%60+'m':''):m+'m';
+function draw(s){let r=[...S];if(s==='price')r.sort((a,b)=>(a[1]??1e9)-(b[1]??1e9));if(s==='time')r.sort((a,b)=>a[2]-b[2]);
+document.getElementById('list').innerHTML=r.map(x=>`<div class="row"><b>${x[0]}</b><span>${x[1]?'$'+x[1]:'Ask'}</span><small>${t(x[2])}</small><div class="bar"><i style="width:${x[2]/270*100}%"></i></div></div>`).join('')}
+draw('menu');
+document.getElementById('sort').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('.sort button').forEach(x=>x.classList.toggle('on',x===b));draw(b.dataset.s)};
+const H=[null,null,null,[600,1080],[600,1080],[600,1080],[600,1080]],N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));const d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+document.getElementById('hrs').insertAdjacentHTML('beforeend',[1,2,3,4,5,6,0].map(i=>`<div class="${i===d?'t':''}"><span>${N[i]}</span><span>${H[i]?'10 AM – 6 PM':'Closed'}</span></div>`).join(''));
+const op=document.getElementById('op'),sp=op.querySelector('span');
+if(H[d]&&m>=H[d][0]&&m<H[d][1]){op.classList.add('on');sp.textContent='Open today until 6 PM'}else if(H[d]&&m<H[d][0])sp.textContent='Opens today at 10 AM';else{let k=1;while(!H[(d+k)%7])k++;sp.textContent='Closed · opens '+N[(d+k)%7]+' 10 AM'}
+</script>
+</body>
+</html>
