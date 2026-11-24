@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Old Bailey Farms — Loudon County, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#9e2a22;--red2:#7a1f19;--mustard:#dba52e;--mustard2:#f3d68a;--denim:#2f4a6d;--denim2:#22374f;--paper:#f8f1e2;--kraft:#ead9b6;--ink:#2a2018;--muted:#6b5b48}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden;font-size:17px}
+body.has-bar{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3,.slab{font-family:'Zilla Slab',Georgia,serif}
+.banner{background:var(--denim2);color:#dfe6ef;font-size:12px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1160px;margin:0 auto}
+.logo{font-family:'Zilla Slab',serif;font-weight:700;font-size:21px;color:var(--red);text-decoration:none;display:flex;gap:9px;align-items:center}
+.logo svg{width:30px;height:30px}
+nav .links{display:flex;gap:22px;font-weight:600;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--red)}
+@media(max-width:720px){nav .links{display:none}}
+/* fence line */
+.fence{height:38px;background:
+ repeating-linear-gradient(90deg,transparent 0 46px,var(--red2) 46px 54px) bottom/100% 38px no-repeat,
+ linear-gradient(var(--red2),var(--red2)) 0 10px/100% 6px no-repeat,
+ linear-gradient(var(--red2),var(--red2)) 0 24px/100% 6px no-repeat}
+.fence.light{background:
+ repeating-linear-gradient(90deg,transparent 0 46px,#c9b48a 46px 54px) bottom/100% 38px no-repeat,
+ linear-gradient(#c9b48a,#c9b48a) 0 10px/100% 6px no-repeat,
+ linear-gradient(#c9b48a,#c9b48a) 0 24px/100% 6px no-repeat}
+.hero{max-width:1160px;margin:0 auto;padding:30px 22px 30px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:18px;padding-top:16px}}
+.tag{display:inline-block;background:var(--mustard2);color:var(--red2);font-weight:700;font-size:13px;border:2px dashed var(--red);padding:5px 12px;letter-spacing:.06em;text-transform:uppercase;transform:rotate(-1.5deg)}
+h1{font-weight:700;font-size:clamp(38px,6.2vw,68px);line-height:1.02;color:var(--red2);margin:18px 0 14px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--denim)}
+.lede{font-size:19px;color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;padding:13px 20px;border-radius:6px;border:2px solid var(--red);font-size:16px;cursor:pointer;font-family:inherit}
+.btn.p{background:var(--red);color:#fff8ec}
+.btn.p:hover{background:var(--red2)}
+.btn.s{background:transparent;color:var(--red)}
+.art{width:100%;max-width:520px;justify-self:center}
+section{max-width:1160px;margin:0 auto;padding:56px 22px}
+h2{font-size:clamp(30px,4.4vw,44px);color:var(--red2);line-height:1.1;margin-bottom:10px}
+.sub{color:var(--muted);max-width:40em;margin-bottom:26px}
+/* seed packet labels */
+.packets{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.packet{background:var(--kraft);border-radius:4px 4px 10px 10px;padding:0 0 16px;position:relative;box-shadow:0 2px 0 #c9b48a;overflow:hidden}
+.packet:before{content:"";display:block;height:14px;background:repeating-linear-gradient(135deg,var(--paper) 0 6px,transparent 6px 12px);opacity:.8}
+.packet .lab{margin:10px 14px 0;background:#fffaf0;border:2px solid var(--ink);padding:12px 14px}
+.packet .no{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--denim)}
+.packet h3{font-size:24px;color:var(--red2);margin:2px 0 6px}
+.packet ul{list-style:none;font-size:15.5px;color:var(--ink)}
+.packet li:before{content:"— ";color:var(--mustard)}
+.why{background:var(--denim);color:#eef2f7;max-width:none}
+.why .in{max-width:1116px;margin:0 auto}
+.why h2{color:var(--mustard2)}
+.why .sub{color:#c9d4e2}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.fact{border:2px solid #4c6a91;border-radius:8px;padding:18px}
+.fact b{display:block;font-family:'Zilla Slab',serif;font-size:26px;color:var(--mustard2);line-height:1.1;margin-bottom:6px}
+/* builder */
+.builder{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+@media(max-width:860px){.builder{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:inherit;font-size:15.5px;font-weight:600;background:#fffaf0;border:2px solid var(--ink);padding:9px 14px;border-radius:4px;cursor:pointer;color:var(--ink);transition:transform .12s}
+.chip:hover{transform:translateY(-2px)}
+.chip.on{background:var(--mustard);border-color:var(--red2);color:var(--ink)}
+.grp{margin-bottom:18px}
+.grp h3{font-size:18px;color:var(--denim);margin-bottom:8px;letter-spacing:.02em}
+.crate{background:var(--red);color:#fff8ec;border-radius:10px;padding:22px;position:relative}
+.crate h3{font-size:26px;color:var(--mustard2)}
+.crate .slats{height:10px;background:repeating-linear-gradient(90deg,var(--red2) 0 30px,transparent 30px 36px);margin:10px 0 14px;border-radius:2px}
+.crate ol{margin:0 0 14px 20px;min-height:48px}
+.crate .empty{opacity:.8;font-style:italic}
+.crate label{display:block;font-size:14px;margin:10px 0 4px;color:#ffe9c4}
+.crate input,.crate select{width:100%;padding:10px;border-radius:5px;border:0;font-family:inherit;font-size:16px}
+.crate .btn{width:100%;justify-content:center;margin-top:14px;background:var(--mustard);color:var(--ink);border-color:var(--mustard)}
+.crate .note{font-size:13px;color:#ffd9c9;margin-top:10px}
+.where{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+@media(max-width:860px){.where{grid-template-columns:1fr}}
+.stall{background:#fffaf0;border-left:8px solid var(--red);padding:16px 18px;margin-bottom:14px}
+.stall h3{font-size:22px;color:var(--red2)}
+.stall p{color:var(--muted);font-size:16px}
+iframe{width:100%;height:340px;border:0;border-radius:10px;filter:saturate(.85)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--kraft);padding:18px;border-radius:8px;text-decoration:none;display:block}
+.card small{display:block;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--denim)}
+.card span{font-family:'Zilla Slab',serif;font-size:22px;color:var(--red2)}
+footer{background:var(--ink);color:#cbbda5;text-align:center;padding:26px 16px;font-size:14px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--denim2);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar a{flex:1;max-width:260px;justify-content:center}
+.bar .btn.s{color:#fff;border-color:#fff}
+@media(min-width:861px){.bar{display:none}}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Old Bailey Farms. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 16 5l12 10v13H4z" fill="#9e2a22"/><path d="M12 28v-8h8v8" fill="#dba52e"/><path d="M4 15 16 5l12 10" fill="none" stroke="#7a1f19" stroke-width="2"/></svg>Old Bailey Farms</a>
+  <div class="links"><a href="#harvest">Harvest</a><a href="#box">Build a box</a><a href="#find">Find us</a><a href="#contact">Contact</a></div>
+</nav>
+<header class="hero" id="top">
+  <div>
+    <span class="tag">Loudon County · family farm since 1918</span>
+    <h1>Honey from a <em>state bee inspector</em>, berries off the fence line.</h1>
+    <p class="lede">Ricky Bailey has kept bees for more than 15 years. He brings honey, beeswax, bee pollen, berries and vegetables from the family farm to East Tennessee markets.</p>
+    <div class="cta"><a class="btn p" href="#box">Build a harvest box</a><a class="btn s" href="#find">Where to find us</a></div>
+  </div>
+  <svg class="art" viewBox="0 0 520 380" role="img" aria-label="Red barn with beehives along a fence line">
+    <rect width="520" height="380" rx="14" fill="#ead9b6"/>
+    <circle cx="420" cy="80" r="40" fill="#dba52e"/>
+    <path d="M0 250 Q130 205 260 235 T520 220 V380 H0z" fill="#5f7a3a"/>
+    <path d="M0 290 Q160 260 300 285 T520 275 V380 H0z" fill="#4b6430"/>
+    <g transform="translate(70 110)">
+      <path d="M0 70 L80 10 L160 70 V170 H0z" fill="#9e2a22"/>
+      <path d="M-8 74 L80 4 L168 74" fill="none" stroke="#7a1f19" stroke-width="10" stroke-linejoin="round"/>
+      <rect x="52" y="100" width="56" height="70" fill="#7a1f19"/>
+      <path d="M52 100 L108 170 M108 100 L52 170" stroke="#f8f1e2" stroke-width="4"/>
+      <rect x="52" y="100" width="56" height="70" fill="none" stroke="#f8f1e2" stroke-width="4"/>
+      <rect x="66" y="44" width="28" height="24" fill="#f8f1e2"/>
+    </g>
+    <g fill="#f3d68a" stroke="#7a1f19" stroke-width="3">
+      <rect x="290" y="220" width="46" height="18"/><rect x="290" y="238" width="46" height="18"/><rect x="290" y="256" width="46" height="18"/><rect x="284" y="212" width="58" height="10" fill="#2f4a6d"/>
+      <rect x="360" y="230" width="46" height="18"/><rect x="360" y="248" width="46" height="18"/><rect x="354" y="222" width="58" height="10" fill="#2f4a6d"/>
+    </g>
+    <g fill="#2a2018"><circle cx="350" cy="190" r="3"/><circle cx="378" cy="176" r="3"/><circle cx="330" cy="168" r="3"/></g>
+    <g stroke="#7a1f19" stroke-width="7" stroke-linecap="square">
+      <path d="M0 318 H520 M0 340 H520"/>
+      <path d="M30 300 V360 M110 300 V360 M190 300 V360 M270 300 V360 M350 300 V360 M430 300 V360 M510 300 V360"/>
+    </g>
+    <g fill="#2f4a6d"><circle cx="460" cy="300" r="6"/><circle cx="472" cy="292" r="6"/><circle cx="476" cy="306" r="6"/><circle cx="66" cy="296" r="6"/><circle cx="78" cy="288" r="6"/></g>
+  </svg>
+</header>
+<div class="fence" aria-hidden="true"></div>
+
+<section id="harvest">
+  <h2 class="rv">What comes off the farm</h2>
+  <p class="sub rv">These are the items Old Bailey Farms lists. What's ready changes with the season, so ask before market day.</p>
+  <div class="packets">
+    <div class="packet rv"><div class="lab"><div class="no">Packet No. 1 · The hives</div><h3>From the bees</h3><ul><li>Honey</li><li>Bee pollen</li><li>Beeswax</li><li>Candles</li></ul></div></div>
+    <div class="packet rv"><div class="lab"><div class="no">Packet No. 2 · The canes</div><h3>Berries</h3><ul><li>Blackberries</li><li>Black raspberries</li><li>Raspberries</li><li>Wineberries</li><li>Blueberries</li></ul></div></div>
+    <div class="packet rv"><div class="lab"><div class="no">Packet No. 3 · The rows</div><h3>Vegetables</h3><ul><li>Green beans</li><li>Summer squash</li><li>Sweet potatoes</li></ul></div></div>
+    <div class="packet rv"><div class="lab"><div class="no">Packet No. 4 · The workbench</div><h3>Handmade</h3><ul><li>Artisan crafts</li></ul></div></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="in">
+    <h2 class="rv">Why buy from the Baileys</h2>
+    <p class="sub rv">All of this is in Ricky's own words on his farm listing.</p>
+    <div class="facts">
+      <div class="fact rv"><b>State bee inspector</b>Ricky is a Tennessee state bee inspector, and he's been in the bee business for over 15 years.</div>
+      <div class="fact rv"><b>Family land since 1918</b>The family farm was bought in 1918. They still raise beef cattle on it.</div>
+      <div class="fact rv"><b>Low spray</b>The farm grows with low-spray practices, and A Dopo Sourdough Pizza buys from them.</div>
+    </div>
+  </div>
+</section>
+
+<section id="box">
+  <h2 class="rv">Build a weekly harvest box</h2>
+  <p class="sub rv">Pick what you'd like, then send it to Ricky as a text. He'll write back with what's ready and when you can pick it up.</p>
+  <div class="builder">
+    <div>
+      <div class="grp"><h3>From the bees</h3><div class="chips" data-g="bees"></div></div>
+      <div class="grp"><h3>Berries</h3><div class="chips" data-g="berries"></div></div>
+      <div class="grp"><h3>Vegetables</h3><div class="chips" data-g="veg"></div></div>
+      <div class="grp"><h3>Handmade</h3><div class="chips" data-g="hand"></div></div>
+    </div>
+    <div class="crate" aria-live="polite">
+      <h3>Your harvest box</h3>
+      <div class="slats"></div>
+      <ol id="list"><li class="empty">Tap items on the left to fill your box.</li></ol>
+      <label for="nm">Your name</label><input id="nm" autocomplete="name" placeholder="First name">
+      <label for="pk">Where you'd pick it up</label>
+      <select id="pk"><option>Lenoir City Farmers Market (Tuesday)</option><option>Market Square Farmers Market</option><option>Whatever works best for you</option></select>
+      <a class="btn" id="send" href="sms:+18652508123">Text this box to Ricky</a>
+      <p class="note">This opens a text to (865) 250-8123 with your list already filled in.</p>
+    </div>
+  </div>
+</section>
+<div class="fence light" aria-hidden="true"></div>
+
+<section id="find">
+  <h2 class="rv">Where to find us</h2>
+  <p class="sub rv">Old Bailey Farms sells at these markets.</p>
+  <div class="where">
+    <div>
+      <div class="stall rv"><h3>Lenoir City Farmers Market</h3><p>Depot Street, Lenoir City. Tuesdays 4:00–7:00 PM. The 2026 season ran May 5 to September 22.</p></div>
+      <div class="stall rv"><h3>Market Square Farmers Market</h3><p>Downtown Knoxville.</p></div>
+      <div class="stall rv"><h3>Market Square Farmers Market — Winter</h3><p>Knoxville's winter market.</p></div>
+    </div>
+    <iframe loading="lazy" title="Map of Lenoir City Farmers Market" src="https://www.google.com/maps?q=Depot%20Street%2C%20Lenoir%20City%2C%20TN%2037771&output=embed"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="rv">Get in touch</h2>
+  <div class="contact">
+    <a class="card rv" href="tel:+18652508123"><small>Call or text</small><span>(865) 250-8123</span></a>
+    <a class="card rv" href="https://www.facebook.com/OldBaileyFarms" target="_blank" rel="noopener"><small>Facebook</small><span>/OldBaileyFarms</span></a>
+    <a class="card rv" href="https://www.instagram.com/OldBaileyFarms" target="_blank" rel="noopener"><small>Instagram</small><span>@OldBaileyFarms</span></a>
+  </div>
+</section>
+
+<footer>Concept by Code Craft Media · Old Bailey Farms, Loudon County, Tennessee</footer>
+<div class="bar" id="bar"><a class="btn p" href="#box">Build a box</a><a class="btn s" href="tel:+18652508123">Call</a></div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var items={bees:['Honey','Bee pollen','Beeswax','Candles'],berries:['Blackberries','Black raspberries','Raspberries','Wineberries','Blueberries'],veg:['Green beans','Summer squash','Sweet potatoes'],hand:['Artisan crafts']};
+  var picked=[];
+  document.querySelectorAll('.chips').forEach(function(c){
+    items[c.dataset.g].forEach(function(n){
+      var b=document.createElement('button');b.type='button';b.className='chip';b.textContent=n;b.setAttribute('aria-pressed','false');
+      b.onclick=function(){var i=picked.indexOf(n);if(i<0){picked.push(n);b.classList.add('on');b.setAttribute('aria-pressed','true')}else{picked.splice(i,1);b.classList.remove('on');b.setAttribute('aria-pressed','false')}render()};
+      c.appendChild(b);
+    });
+  });
+  var list=document.getElementById('list'),send=document.getElementById('send'),nm=document.getElementById('nm'),pk=document.getElementById('pk');
+  function render(){
+    list.innerHTML=picked.length?picked.map(function(n){return '<li>'+n+'</li>'}).join(''):'<li class="empty">Tap items on the left to fill your box.</li>';
+    var who=nm.value.trim();
+    var msg='Hi Ricky'+(who?', this is '+who:'')+'. I found Old Bailey Farms online and I\'d like a harvest box with: '+(picked.length?picked.join(', '):'(whatever is ready)')+'. Pickup: '+pk.value+'. What do you have this week?';
+    send.href='sms:+18652508123?&body='+encodeURIComponent(msg);
+  }
+  nm.oninput=render;pk.onchange=render;render();
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var hero=document.getElementById('top'),bar=document.getElementById('bar');
+  window.addEventListener('scroll',function(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)},{passive:true});
+})();
+</script>
+</body>
+</html>
