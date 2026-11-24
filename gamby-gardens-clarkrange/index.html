@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gamby Gardens &amp; Nursery — Clarkrange, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--loam:#2b1f17;--loam2:#3a2a1f;--sprout:#7fb34a;--leaf:#3f6b2a;--hemp:#f4ecd9;--paper:#fbf7ee;--clay:#c8643b;--ink:#241a13;--muted:#6b5a4b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--loam);color:#e9dcc4;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.02em;}
+@media(max-width:480px){.banner{font-size:11px;padding:6px 10px}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1160px;margin:0 auto}
+.logo{font-family:'Zilla Slab',serif;font-weight:700;font-size:20px;color:var(--loam);text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo svg{width:28px;height:28px}
+nav .links{display:flex;gap:22px;font-weight:500;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--leaf)}
+@media(max-width:720px){nav .links{display:none}}
+.hero{position:relative;padding:34px 22px 0;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:10px;padding-top:20px}}
+.tag{display:inline-flex;gap:8px;align-items:center;background:#e6efd6;color:var(--leaf);font-weight:700;font-size:13px;border-radius:99px;padding:6px 12px;letter-spacing:.03em;text-transform:uppercase}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--sprout);display:block;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(38px,6.4vw,70px);line-height:1.02;color:var(--loam);margin:16px 0 14px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--leaf);position:relative}
+h1 em:after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--sprout);opacity:.35;border-radius:4px;z-index:-1}
+.sub{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--leaf);color:#fff;box-shadow:0 6px 0 #2c4c1d}
+.btn.p:active{transform:translateY(3px);box-shadow:0 2px 0 #2c4c1d}
+.btn.s{background:#fff;color:var(--loam);border:2px solid var(--loam)}
+.art{position:relative}
+.art svg{width:100%;height:auto;display:block}
+.sway{transform-origin:bottom center;animation:sway 5s ease-in-out infinite}
+.sway.b{animation-delay:-2s}
+@keyframes sway{50%{transform:rotate(2.5deg)}}
+.soil{background:var(--loam);color:var(--hemp);position:relative}
+.soil:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#4a3829 1.2px,transparent 1.3px),radial-gradient(#5a4433 1px,transparent 1.1px);background-size:22px 22px,31px 31px;background-position:0 0,11px 7px;opacity:.7;pointer-events:none}
+.wrap{max-width:1160px;margin:0 auto;padding:70px 22px;position:relative}
+.kicker{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--clay)}
+.soil .kicker{color:var(--sprout)}
+h2{font-family:'Zilla Slab',serif;font-size:clamp(30px,4.4vw,46px);line-height:1.08;margin:8px 0 14px;color:inherit}
+.lede{max-width:640px;font-size:17px;opacity:.85}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:34px}
+.card{background:#fff;border-radius:18px;padding:24px;border:1px solid #eadfca;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(43,31,23,.45)}
+.card svg{width:46px;height:46px;margin-bottom:12px}
+.card h3{font-family:'Zilla Slab',serif;font-size:22px;color:var(--loam);margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{background:var(--hemp);border-radius:99px;padding:4px 10px;font-size:13px;color:var(--loam2)}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:30px}
+.why div{border-top:3px solid var(--sprout);padding-top:14px}
+.why b{font-family:'Zilla Slab',serif;font-size:21px;display:block;margin-bottom:4px;color:#fff}
+.why p{color:#d9ccb4;font-size:15.5px}
+/* picker */
+.picker{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:30px}
+@media(max-width:860px){.picker{grid-template-columns:1fr}}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.opt{border:2px solid #e3d6bd;background:#fff;border-radius:14px;padding:12px 12px;text-align:left;font:inherit;cursor:pointer;color:var(--loam);font-weight:500;font-size:15px;transition:all .15s;display:flex;gap:8px;align-items:center}
+.opt:before{content:"";width:18px;height:18px;flex:none;border-radius:6px;border:2px solid #c9b996;background:#fff;transition:all .15s}
+.opt[aria-pressed=true]{border-color:var(--leaf);background:#eef5e3}
+.opt[aria-pressed=true]:before{background:var(--leaf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3 3 7-7' stroke='white' stroke-width='2.4' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;border-color:var(--leaf)}
+.group{font-family:'Zilla Slab',serif;font-size:18px;color:var(--loam);margin:18px 0 8px}
+.group:first-child{margin-top:0}
+.basket{background:var(--loam);color:var(--hemp);border-radius:20px;padding:24px;position:sticky;top:16px;align-self:start}
+.basket h3{font-family:'Zilla Slab',serif;font-size:24px;margin-bottom:6px}
+.basket ul{list-style:none;margin:14px 0;min-height:60px}
+.basket li{padding:7px 0;border-bottom:1px dashed #5a4433;font-size:15px;display:flex;gap:8px}
+.basket li:before{content:"\2022";color:var(--sprout)}
+.basket .empty{color:#b9a88c;font-style:italic}
+.basket textarea{width:100%;border-radius:10px;border:0;padding:10px;font:inherit;font-size:15px;min-height:64px;margin-bottom:12px;background:#fbf7ee;color:var(--ink)}
+.basket .row{display:flex;gap:10px;flex-wrap:wrap}
+.basket .btn{flex:1;justify-content:center}
+.basket .btn.s{background:transparent;color:var(--hemp);border-color:#7a6450}
+.small{font-size:13px;color:#b9a88c;margin-top:10px}
+/* market */
+.market{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;align-items:stretch}
+@media(max-width:860px){.market{grid-template-columns:1fr}}
+.dates{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.date{background:#fff;border:2px solid #e3d6bd;border-radius:14px;padding:10px 14px;text-align:center;min-width:86px}
+.date b{display:block;font-family:'Zilla Slab',serif;font-size:28px;color:var(--loam);line-height:1}
+.date small{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.date.past{opacity:.45}
+.date.next{border-color:var(--clay);background:#fff3ec}
+.date.next small{color:var(--clay);font-weight:700}
+.mapbox{border-radius:18px;overflow:hidden;border:1px solid #e3d6bd;min-height:300px;background:#efe6d3 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23e0d3b8' stroke-width='2'/%3E%3C/svg%3E");position:relative}
+.mapbox:before{content:"W Jackson Ave \00b7  Knoxville";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Zilla Slab',serif;font-size:20px;color:#8a7760;white-space:nowrap}
+.mapbox iframe{position:relative}
+.mapbox iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.contact{display:grid;gap:12px;margin-top:18px}
+.contact a{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid #eadfca;border-radius:14px;padding:14px 16px;text-decoration:none;font-weight:500;word-break:break-word}
+.contact a:hover{border-color:var(--leaf)}
+.contact svg{width:22px;height:22px;flex:none;color:var(--leaf)}
+footer{background:var(--loam);color:#b9a88c;text-align:center;padding:30px 22px;font-size:14px}
+footer b{color:var(--hemp);font-family:'Zilla Slab',serif;font-size:18px;display:block;margin-bottom:4px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(43,31,23,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:10px;font-weight:700;text-decoration:none;color:#fff;background:var(--leaf)}
+.bar a.e{background:transparent;border:2px solid #7a6450;color:var(--hemp)}
+@media(min-width:861px){.bar{display:none}body.has-bar{padding-bottom:0}}
+.rv{transition:opacity .6s,transform .6s}
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body class="has-bar">
+<div class="banner">Concept site by Code Craft Media, made for Gamby Gardens &amp; Nursery. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#3f6b2a"/><path d="M16 25V13" stroke="#f4ecd9" stroke-width="2.4" stroke-linecap="round"/><path d="M16 15c-5 0-7-3-7-7 4 0 7 2 7 7zM16 13c0-5 3-7 8-7 0 5-3 7-8 7z" fill="#7fb34a"/></svg>Gamby Gardens</a>
+  <div class="links"><a href="#grow">What we grow</a><a href="#order">Build an order</a><a href="#market">Find us</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="tag"><i></i>Old City Market &middot; Fall/Winter 2026</span>
+    <h1>No-till food from the <em>Cumberland Plateau</em>, grown clean in Clarkrange.</h1>
+    <p class="sub">A regenerative produce farm off Highway 127: seasonal vegetables, eggs, freeze-dried goods, starter plants and bouquets.</p>
+    <div class="ctas">
+      <a class="btn p" href="#order">Build an order</a>
+      <a class="btn s" href="tel:+18652960712">Call 865-296-0712</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 520 420">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7e9c8"/><stop offset="1" stop-color="#fbf7ee"/></linearGradient>
+        <pattern id="dirt" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#3a2a1f"/><circle cx="3" cy="4" r="1.3" fill="#53402f"/><circle cx="10" cy="10" r="1" fill="#5d4836"/></pattern>
+      </defs>
+      <rect x="10" y="10" width="500" height="300" rx="30" fill="url(#sky)"/>
+      <circle cx="400" cy="90" r="46" fill="#f2c46b" opacity=".9"/>
+      <path d="M10 230 C120 170 210 200 300 175 S450 150 510 190 V310 H10Z" fill="#a9c784" opacity=".55"/>
+      <path d="M10 255 C140 215 260 245 360 220 S470 215 510 235 V310 H10Z" fill="#7fb34a" opacity=".6"/>
+      <rect x="0" y="290" width="520" height="130" rx="22" fill="url(#dirt)"/>
+      <path d="M0 300 Q130 285 260 300 T520 300" stroke="#5d4836" stroke-width="3" fill="none"/>
+      <g class="sway"><path d="M90 300V200" stroke="#3f6b2a" stroke-width="5"/><circle cx="90" cy="230" r="13" fill="#c8643b"/><circle cx="104" cy="252" r="11" fill="#d97a4b"/><circle cx="78" cy="262" r="10" fill="#c8643b"/><path d="M90 210c-22-4-30-18-30-30 18 2 30 12 30 30zM90 220c20-6 30-20 28-32-18 4-28 16-28 32z" fill="#5e9a38"/></g>
+      <g class="sway b"><path d="M180 300v-70" stroke="#3f6b2a" stroke-width="4"/><path d="M180 240c-14-26-4-50 10-60 6 22 2 44-10 60zM180 250c18-18 40-20 52-14-12 16-32 22-52 14z" fill="#7fb34a"/><path d="M168 300c-10-40 0-60 12-70" stroke="#5e9a38" stroke-width="3" fill="none"/></g>
+      <g class="sway"><path d="M270 300v-110" stroke="#3f6b2a" stroke-width="4"/><g fill="#e9b949"><circle cx="270" cy="180" r="9"/><circle cx="258" cy="172" r="7"/><circle cx="282" cy="172" r="7"/><circle cx="262" cy="188" r="7"/><circle cx="278" cy="188" r="7"/></g><circle cx="270" cy="180" r="5" fill="#7a3e1d"/><path d="M270 250c-20-6-28-20-24-30 14 2 24 14 24 30z" fill="#5e9a38"/></g>
+      <g class="sway b"><path d="M352 300c0-30 0-50 0-70" stroke="#3f6b2a" stroke-width="4"/><path d="M352 238c-10-16-30-20-40-14 8 16 26 20 40 14zM352 230c10-18 30-22 40-16-8 18-26 22-40 16z" fill="#7fb34a"/><path d="M340 300l-8-40M364 300l8-42" stroke="#5e9a38" stroke-width="3"/><ellipse cx="332" cy="262" rx="7" ry="16" fill="#3f8a3a" transform="rotate(-14 332 262)"/><ellipse cx="372" cy="262" rx="7" ry="16" fill="#3f8a3a" transform="rotate(14 372 262)"/></g>
+      <g class="sway"><path d="M440 300v-80" stroke="#3f6b2a" stroke-width="4"/><circle cx="440" cy="214" r="16" fill="#d0567a"/><circle cx="440" cy="214" r="9" fill="#e98aa6"/><circle cx="440" cy="214" r="4" fill="#f4ecd9"/><path d="M440 262c16-4 26-16 24-26-14 2-24 12-24 26z" fill="#5e9a38"/></g>
+      <g fill="#f4ecd9" opacity=".9"><ellipse cx="120" cy="350" rx="20" ry="14"/><ellipse cx="160" cy="356" rx="20" ry="14"/><ellipse cx="140" cy="340" rx="20" ry="14"/></g>
+      <text x="260" y="384" text-anchor="middle" font-family="Zilla Slab,serif" font-weight="700" font-size="22" fill="#e9dcc4">Hwy 127 &middot; Clarkrange, TN</text>
+    </svg>
+  </div>
+</header>
+
+<section id="grow" style="margin-top:40px">
+  <div class="wrap">
+    <span class="kicker">What we grow</span>
+    <h2>From the field, the freeze dryer and the greenhouse.</h2>
+    <p class="lede">Seasonal produce and eggs, plus a few things made from the harvest. Availability changes with the season, so ask what's ready.</p>
+    <div class="grid">
+      <article class="card rv"><svg viewBox="0 0 48 48"><circle cx="24" cy="28" r="15" fill="#c8643b"/><path d="M24 13c-4-6-10-6-12-4 4 4 8 5 12 4zm0 0c3-6 9-7 12-5-3 4-8 6-12 5z" fill="#5e9a38"/></svg><h3>Seasonal vegetables</h3><p>Grown no-till for the farmers markets.</p><div class="chips"><span>Tomatoes</span><span>Peppers</span><span>Lettuce</span><span>Spinach</span><span>Beans</span><span>Peas</span><span>Okra</span><span>Cucumbers</span><span>Beets</span><span>Carrots</span><span>Radishes</span><span>Onions</span><span>Collards</span><span>Asparagus</span><span>Herbs</span></div></article>
+      <article class="card rv"><svg viewBox="0 0 48 48"><ellipse cx="18" cy="28" rx="10" ry="13" fill="#f4ecd9" stroke="#c9b996" stroke-width="2"/><ellipse cx="31" cy="30" rx="10" ry="13" fill="#e9d6b4" stroke="#c9b996" stroke-width="2"/></svg><h3>Farm eggs</h3><p>Eggs alongside the seasonal produce.</p></article>
+      <article class="card rv"><svg viewBox="0 0 48 48"><rect x="12" y="8" width="24" height="34" rx="5" fill="#3f6b2a"/><rect x="16" y="16" width="16" height="12" rx="3" fill="#f4ecd9"/><circle cx="21" cy="22" r="2.5" fill="#c8643b"/><circle cx="27" cy="22" r="2.5" fill="#e9b949"/></svg><h3>Freeze-dried goods</h3><p>Value-added products made from the farm's own produce, plus occasional cottage-food spices, baked and canned goods.</p></article>
+      <article class="card rv"><svg viewBox="0 0 48 48"><path d="M14 30h20l-3 12H17z" fill="#c8643b"/><path d="M24 30V16" stroke="#3f6b2a" stroke-width="3"/><path d="M24 20c-7 0-10-4-10-9 6 0 10 3 10 9zm0-2c0-6 4-9 10-9 0 6-4 9-10 9z" fill="#7fb34a"/></svg><h3>Garden starter plants</h3><p>Tomato, pepper and vine starts at the start of the season, sold under a nursery license.</p></article>
+      <article class="card rv"><svg viewBox="0 0 48 48"><path d="M24 44V24M24 30l-8-8M24 30l8-8" stroke="#3f6b2a" stroke-width="3"/><circle cx="24" cy="16" r="7" fill="#d0567a"/><circle cx="14" cy="20" r="5" fill="#e9b949"/><circle cx="34" cy="20" r="5" fill="#e98aa6"/></svg><h3>Seasonal bouquets</h3><p>Cut flowers from the farm, with bouquet orders taken in season.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="soil">
+  <div class="wrap">
+    <span class="kicker">How it's grown</span>
+    <h2>Clean dirt, no tilling, real farmers markets.</h2>
+    <div class="why">
+      <div class="rv"><b>No-till</b><p>The soil stays undisturbed. Beds are built up, not plowed under.</p></div>
+      <div class="rv"><b>Regenerative &amp; clean</b><p>A regenerative, clean produce farm, in its own words.</p></div>
+      <div class="rv"><b>Market regulars</b><p>Cookeville Farmers Market, the Oak Ridge Farmers Market, and Knoxville's Old City Market this fall and winter.</p></div>
+      <div class="rv"><b>Cumberland Plateau</b><p>Grown in Clarkrange, Fentress County, just off Highway 127.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <span class="kicker">Build an order</span>
+    <h2>Fill your basket, then send it straight to Cole.</h2>
+    <p class="lede">Tap what you're after. We'll write the email for you, so Cole can tell you what's ready and where to pick it up.</p>
+    <div class="picker">
+      <div id="opts">
+        <div class="group">From the field</div>
+        <div class="opts">
+          <button class="opt" aria-pressed="false">Tomatoes</button><button class="opt" aria-pressed="false">Peppers</button><button class="opt" aria-pressed="false">Lettuce &amp; spinach</button><button class="opt" aria-pressed="false">Beans &amp; peas</button><button class="opt" aria-pressed="false">Okra</button><button class="opt" aria-pressed="false">Cucumbers</button><button class="opt" aria-pressed="false">Root crops</button><button class="opt" aria-pressed="false">Herbs</button><button class="opt" aria-pressed="false">Farm eggs</button>
+        </div>
+        <div class="group">From the farm kitchen &amp; greenhouse</div>
+        <div class="opts">
+          <button class="opt" aria-pressed="false">Freeze-dried goods</button><button class="opt" aria-pressed="false">Tomato starts</button><button class="opt" aria-pressed="false">Pepper starts</button><button class="opt" aria-pressed="false">Vine starts</button><button class="opt" aria-pressed="false">A seasonal bouquet</button>
+        </div>
+      </div>
+      <aside class="basket">
+        <h3>Your basket</h3>
+        <ul id="list"><li class="empty">Nothing yet. Tap a few things.</li></ul>
+        <textarea id="note" placeholder="Pickup preference, quantities, questions..."></textarea>
+        <div class="row">
+          <a class="btn p" id="send" href="mailto:cgamby1@gmail.com">Email this order</a>
+          <a class="btn s" id="text" href="sms:+18652960712">Text it</a>
+        </div>
+        <p class="small">Opens your own email or messages app. Nothing is sent until you hit send.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="market" style="background:var(--hemp)">
+  <div class="wrap">
+    <span class="kicker">Find us</span>
+    <h2>Old City Market, Knoxville</h2>
+    <div class="market">
+      <div>
+        <p class="lede">Gamby Gardens &amp; Nursery is on the vendor list for the Old City Market Fall/Winter 2026 season on W Jackson Ave, running through December 13.</p>
+        <div class="dates" id="dates">
+          <div class="date" data-d="2026-09-20"><small>Sep</small><b>20</b></div>
+          <div class="date" data-d="2026-10-18"><small>Oct</small><b>18</b></div>
+          <div class="date" data-d="2026-11-28"><small>Nov</small><b>28</b></div>
+        </div>
+        <div class="contact">
+          <a href="tel:+18652960712"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>865-296-0712</a>
+          <a href="mailto:cgamby1@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>cgamby1@gmail.com</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=W+Jackson+Ave+Knoxville+TN+37902" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions to Old City Market</a>
+        </div>
+      </div>
+      <div class="mapbox"><iframe title="Map of W Jackson Ave, Knoxville" loading="lazy" src="https://www.google.com/maps?q=W%20Jackson%20Ave%2C%20Knoxville%2C%20TN%2037902&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Gamby Gardens &amp; Nursery</b>Clarkrange, Tennessee &middot; Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><a href="tel:+18652960712">Call</a><a class="e" href="mailto:cgamby1@gmail.com">Email</a><a class="e" href="#order">Order</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var bar=document.getElementById('bar'),hero=document.getElementById('top');
+  function sb(){bar.classList.toggle('on',window.scrollY>hero.offsetTop+hero.offsetHeight-80)}
+  window.addEventListener('scroll',sb,{passive:true});sb();
+  var picks=[],list=document.getElementById('list'),note=document.getElementById('note'),send=document.getElementById('send'),txt=document.getElementById('text');
+  function upd(){
+    list.innerHTML=picks.length?picks.map(function(p){return '<li>'+p+'</li>'}).join(''):'<li class="empty">Nothing yet. Tap a few things.</li>';
+    var body='Hi Cole,\n\nI\'d like to ask about:\n'+(picks.length?picks.map(function(p){return '- '+p}).join('\n'):'- (your picks)')+(note.value?'\n\n'+note.value:'')+'\n\nWhat\'s ready, and where can I pick it up?\n\nThanks!';
+    send.href='mailto:cgamby1@gmail.com?subject='+encodeURIComponent('Order request from your website')+'&body='+encodeURIComponent(body);
+    txt.href='sms:+18652960712?&body='+encodeURIComponent(body);
+  }
+  [].forEach.call(document.querySelectorAll('.opt'),function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);var t=b.textContent;if(on)picks.push(t);else picks=picks.filter(function(x){return x!==t});upd()})});
+  note.addEventListener('input',upd);upd();
+  var now=new Date();now.setHours(0,0,0,0);var nextSet=false;
+  [].forEach.call(document.querySelectorAll('.date'),function(d){var dt=new Date(d.dataset.d+'T00:00:00');if(dt<now)d.classList.add('past');else if(!nextSet){d.classList.add('next');d.querySelector('small').textContent='Next · '+d.querySelector('small').textContent;nextSet=true}});
+})();
+</script>
+</body>
+</html>
