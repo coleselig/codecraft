@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>StoneLink Designs — Artisan Jewelry, Chattanooga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16141a;--slate:#24212b;--opal:#cfe6e4;--gold:#c9a45c;--pearl:#f6f2ea;--muted:#a59fae;--line:#3a3542}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;background:var(--ink);color:var(--pearl);line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--gold);color:var(--ink);font-size:12px;text-align:center;padding:7px 16px;font-weight:500}
+nav{max-width:1160px;margin:0 auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:.04em;text-decoration:none}
+.logo span{color:var(--gold)}
+nav .links{display:flex;gap:26px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--gold)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{max-width:1160px;margin:0 auto;padding:48px 22px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding:28px 22px 56px;gap:34px}}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(42px,6.4vw,78px);line-height:1.02;margin:14px 0 18px}
+h1 em{color:var(--opal)}
+.lede{color:#d8d2df;font-size:18px;max-width:520px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.ghost{border:1px solid var(--line);color:var(--pearl)}
+.stats{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap}
+.stats b{display:block;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--pearl)}
+.stats span{font-size:13px;color:var(--muted)}
+/* interactive stone */
+.stage{position:relative;aspect-ratio:1/1;max-width:440px;width:100%;margin:0 auto}
+.ring{position:absolute;inset:6%;border-radius:50%;border:1px solid var(--line)}
+.gem{position:absolute;inset:22%;border-radius:50%;transition:background 1s ease, box-shadow 1s ease;box-shadow:0 0 80px rgba(207,230,228,.35)}
+.gem::after{content:"";position:absolute;inset:12% 40% 55% 14%;border-radius:50%;background:rgba(255,255,255,.55);filter:blur(6px)}
+.gem-label{position:absolute;left:0;right:0;bottom:-6px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic}
+.picker{display:flex;justify-content:center;gap:10px;margin-top:30px;flex-wrap:wrap}
+.picker button{width:38px;height:38px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform .2s}
+.picker button[aria-pressed=true]{border-color:var(--gold);transform:scale(1.12)}
+.hint{text-align:center;font-size:13px;color:var(--muted);margin-top:10px}
+section{max-width:1160px;margin:0 auto;padding:70px 22px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,4.4vw,50px);line-height:1.1;margin:10px 0 16px}
+.sub{color:var(--muted);max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;margin-top:34px}
+.card{background:var(--slate);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.swatch{height:120px;border-radius:12px;position:relative;overflow:hidden}
+.swatch::after{content:"";position:absolute;width:60px;height:60px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:inherit;filter:brightness(1.35);box-shadow:0 0 30px rgba(255,255,255,.25)}
+.card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:21px;line-height:1.2}
+.price{color:var(--gold);font-weight:500}
+.card a{font-size:14px;color:var(--opal)}
+.quote{border-left:2px solid var(--gold);padding:8px 0 8px 22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,3.4vw,36px);line-height:1.25;margin:26px 0;max-width:760px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.panel{background:var(--slate);border:1px solid var(--line);border-radius:18px;padding:28px}
+.panel ul{list-style:none;display:grid;gap:12px;margin-top:14px}
+.panel li{display:flex;gap:12px}
+.panel li::before{content:"◆";color:var(--gold);font-size:11px;margin-top:6px}
+.cta{text-align:center;background:linear-gradient(160deg,#24212b,#1b2a2a);border-radius:26px;padding:56px 22px;margin-top:10px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center;padding:30px 22px}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for StoneLink Designs. Not live.</div>
+<nav>
+  <a class="logo" href="#">Stone<span>Link</span> Designs</a>
+  <div class="links"><a href="#pieces">Pieces</a><a href="#story">The Stones</a><a href="#find">Find Liz</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">Artisan jewelry · Chattanooga, TN</div>
+    <h1>Gemstones, pearls &amp; <em>natural stones</em>, set by hand.</h1>
+    <p class="lede">The place when you are looking for that something special. One-of-a-kind earrings and necklaces by Liz, at the Chattanooga Market and online.</p>
+    <div class="btns">
+      <a class="btn gold" href="https://www.etsy.com/shop/StoneLinkDesigns">Shop the collection</a>
+      <a class="btn ghost" href="#find">Find us at the Market</a>
+    </div>
+    <div class="stats">
+      <div><b>10,000+</b><span>Etsy sales</span></div>
+      <div><b>4.9 ★</b><span>Etsy Star Seller</span></div>
+      <div><b>$30–$400</b><span>price range</span></div>
+    </div>
+  </div>
+  <div>
+    <div class="stage" aria-live="polite">
+      <div class="ring"></div>
+      <div class="gem" id="gem"></div>
+      <div class="gem-label" id="gemLabel">Ethiopian opal</div>
+    </div>
+    <div class="picker" id="picker"></div>
+    <p class="hint">Tap a stone</p>
+  </div>
+</header>
+
+<section id="pieces">
+  <div class="eyebrow">From the shop</div>
+  <h2>A few current pieces</h2>
+  <p class="sub">Every piece is made in small numbers, so the shop changes often. These are listed right now.</p>
+  <div class="grid">
+    <div class="card"><div class="swatch" style="background:linear-gradient(135deg,#9fd3c7,#e7b7d1,#f6e7a8)"></div><h3>Ethiopian Opal Earrings, 14k Gold Fill, Silver Hematite Dangle</h3><div class="price">$75</div><a href="https://www.etsy.com/shop/StoneLinkDesigns">View on Etsy →</a></div>
+    <div class="card"><div class="swatch" style="background:linear-gradient(135deg,#d9d6cf,#6f6a64)"></div><h3>Leaf Carved Dendritic Opal Necklace, Oxidized Sterling Silver</h3><div class="price">$95</div><a href="https://www.etsy.com/shop/StoneLinkDesigns">View on Etsy →</a></div>
+    <div class="card"><div class="swatch" style="background:linear-gradient(135deg,#1a1a1f,#4a4a55)"></div><h3>Black Spinel Necklace, Sterling Silver, Petite</h3><div class="price">$80</div><a href="https://www.etsy.com/shop/StoneLinkDesigns">View on Etsy →</a></div>
+    <div class="card"><div class="swatch" style="background:linear-gradient(135deg,#a8c49a,#e9eedc)"></div><h3>Green Keshi Pearl Earrings, 14k Gold Fill</h3><div class="price">$60</div><a href="https://www.etsy.com/shop/StoneLinkDesigns">View on Etsy →</a></div>
+    <div class="card"><div class="swatch" style="background:linear-gradient(135deg,#eceef0,#9aa0a8)"></div><h3>Fine Silver Full Moon Necklace, 2-sided</h3><div class="price">$125</div><a href="https://www.etsy.com/shop/StoneLinkDesigns">View on Etsy →</a></div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="two">
+    <div>
+      <div class="eyebrow">The stones</div>
+      <h2>Rare stones, chosen one at a time</h2>
+      <p class="sub">Liz sets stones sourced mostly from India: opals, spinel, pearls and other natural stones, finished in sterling silver and 14k gold fill.</p>
+      <p class="quote">“It's almost as much chemistry as it is art.”</p>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Why people come back</div>
+      <ul>
+        <li>Over 10,000 orders shipped through Etsy, rated 4.9 stars.</li>
+        <li>Pieces from about $30 to $400, so there's a gift at every budget.</li>
+        <li>Meet Liz and see the stones in person at the Chattanooga Market.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="cta">
+    <div class="eyebrow">Find Liz</div>
+    <h2>At the Chattanooga Market, or online any time</h2>
+    <p class="sub" style="margin:0 auto 26px">Follow along for new pieces and market days.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn gold" href="https://www.etsy.com/shop/StoneLinkDesigns">Etsy shop</a>
+      <a class="btn ghost" href="https://instagram.com/stonelinkdesigns">Instagram</a>
+      <a class="btn ghost" href="https://facebook.com/StoneLinkDesigns">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>© StoneLink Designs · Chattanooga, Tennessee · Concept site by Code Craft Media</footer>
+
+<script>
+const stones=[
+ ["Ethiopian opal","radial-gradient(circle at 35% 30%,#ffffff 0,#cfe6e4 22%,#e7b7d1 48%,#9fd3c7 70%,#6aa7b8 100%)","rgba(207,230,228,.45)"],
+ ["Black spinel","radial-gradient(circle at 35% 30%,#8a8a96 0,#2a2a33 40%,#09090c 100%)","rgba(160,160,190,.25)"],
+ ["Keshi pearl","radial-gradient(circle at 35% 30%,#ffffff 0,#eef2e2 35%,#a8c49a 85%)","rgba(220,235,200,.4)"],
+ ["Dendritic opal","radial-gradient(circle at 35% 30%,#ffffff 0,#e3e0d8 40%,#7d776f 100%)","rgba(230,225,215,.35)"],
+ ["Full moon silver","radial-gradient(circle at 35% 30%,#ffffff 0,#dfe3e7 40%,#8e949c 100%)","rgba(230,235,240,.4)"]];
+const gem=document.getElementById('gem'),lab=document.getElementById('gemLabel'),pk=document.getElementById('picker');
+function pick(i){const s=stones[i];gem.style.background=s[1];gem.style.boxShadow='0 0 90px '+s[2];lab.textContent=s[0];
+ [...pk.children].forEach((b,j)=>b.setAttribute('aria-pressed',j===i));}
+stones.forEach((s,i)=>{const b=document.createElement('button');b.style.background=s[1];b.setAttribute('aria-label',s[0]);b.onclick=()=>pick(i);pk.appendChild(b);});
+pick(0);
+</script>
+</body>
+</html>
