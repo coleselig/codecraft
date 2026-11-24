@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Red Clay Farm — Cleveland, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1f3b2d;--pine2:#2b4d3b;--cran:#b23a48;--cran2:#8f2c39;--cream:#f6efe3;--paper:#fbf7ef;--ink:#1c2620;--muted:#5d675f;--line:#e2d7c3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+.banner{background:var(--pine);color:#dfe8de;font-size:12px;text-align:center;padding:7px 14px}
+.awning{height:22px;background:repeating-linear-gradient(90deg,var(--cran) 0 34px,var(--cream) 34px 68px);position:relative}
+.awning:after{content:"";position:absolute;left:0;right:0;bottom:-11px;height:11px;background:radial-gradient(circle at 17px 0,var(--cran) 11px,transparent 11.5px) 0 0/68px 11px,radial-gradient(circle at 51px 0,var(--cream) 11px,transparent 11.5px) 0 0/68px 11px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 22px 8px;max-width:1160px;margin:0 auto}
+.logo{font-family:Fraunces,serif;font-weight:800;font-size:21px;color:var(--pine);text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo svg{width:30px;height:30px}
+nav .links{display:flex;gap:22px;font-weight:500;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--cran)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{max-width:1160px;margin:0 auto;padding:30px 22px 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+@media(max-width:880px){.hero{grid-template-columns:1fr;gap:18px;padding-top:16px}}
+.tag{display:inline-flex;gap:8px;align-items:center;background:#e7efe5;color:var(--pine);font-weight:700;font-size:12.5px;border-radius:99px;padding:6px 13px;letter-spacing:.05em;text-transform:uppercase}
+.tag b{width:8px;height:8px;border-radius:50%;background:var(--cran);display:block}
+h1{font-size:clamp(38px,6.2vw,72px);font-weight:800;color:var(--pine);margin:16px 0 16px}
+h1 em{font-style:italic;color:var(--cran);font-weight:700}
+.lead{font-size:18px;color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--cran);color:#fff;transition:transform .15s,background .15s}
+.btn:hover{background:var(--cran2);transform:translateY(-2px)}
+.btn.o{background:transparent;color:var(--pine);border:2px solid var(--pine)}
+.art{background:var(--pine);border-radius:28px;padding:22px;position:relative;overflow:hidden}
+.art svg{width:100%;height:auto;display:block}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.facts span{background:var(--cream);border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:14px;font-weight:500}
+section{padding:72px 22px}
+.wrap{max-width:1160px;margin:0 auto}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cran)}
+h2{font-size:clamp(30px,4.4vw,48px);color:var(--pine);margin:8px 0 14px;font-weight:700}
+.sub{color:var(--muted);max-width:40em}
+.grow{background:var(--cream)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+@media(max-width:880px){.cols{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px;position:relative}
+.card h3{font-size:24px;color:var(--pine);margin:10px 0 8px}
+.card p{color:var(--muted);font-size:15.5px}
+.card ul{list-style:none;margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.card li{font-size:13.5px;background:#eef2ec;color:var(--pine);border-radius:8px;padding:4px 9px}
+.card .ic{width:46px;height:46px}
+.mill{background:var(--pine);color:var(--cream)}
+.mill h2{color:var(--cream)}
+.mill .sub{color:#c9d6cb}
+.mill .kicker{color:#f0a3ad}
+.order{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;margin-top:34px}
+@media(max-width:880px){.order{grid-template-columns:1fr}}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.chip{background:var(--pine2);border:2px solid #3e6450;color:var(--cream);border-radius:14px;padding:14px 12px;text-align:left;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:all .15s;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.chip:hover{border-color:#f0a3ad}
+.chip .q{background:var(--cran);color:#fff;border-radius:99px;min-width:24px;height:24px;font-size:13px;display:none;align-items:center;justify-content:center;padding:0 6px}
+.chip.sel{background:var(--cream);color:var(--pine);border-color:var(--cream)}
+.chip.sel .q{display:inline-flex}
+.grp{font-family:Fraunces,serif;font-size:19px;margin:18px 0 10px;color:#f3d9dc}
+.grp:first-child{margin-top:0}
+.basket{background:var(--cream);color:var(--ink);border-radius:22px;padding:24px;align-self:start;position:sticky;top:16px}
+.basket h3{color:var(--pine);font-size:24px}
+.basket ul{list-style:none;margin:14px 0;min-height:60px}
+.basket li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:7px 0;font-size:15px}
+.basket li button{background:none;border:0;color:var(--cran);font-weight:700;cursor:pointer;font-size:15px}
+.basket .empty{color:var(--muted);font-size:14.5px;font-style:italic}
+.basket textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:14.5px;min-height:62px;background:#fff;resize:vertical}
+.basket .btn{width:100%;text-align:center;margin-top:12px;border:0;cursor:pointer;font:inherit;font-weight:700}
+.basket small{display:block;color:var(--muted);margin-top:10px;font-size:12.5px}
+.fiber{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+@media(max-width:880px){.fiber{grid-template-columns:1fr}}
+.animals{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.animals div{background:var(--cream);border-radius:14px;padding:14px 16px;font-weight:600;color:var(--pine);display:flex;gap:10px;align-items:center}
+.find{background:var(--cream)}
+.mkts{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+@media(max-width:880px){.mkts{grid-template-columns:1fr}}
+.mk{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:12px}
+.mk .pin{flex:none;width:40px;height:40px;border-radius:12px;background:var(--pine);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-weight:800}
+.mk h3{font-size:19px;color:var(--pine)}
+.mk p{color:var(--muted);font-size:14.5px}
+iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:18px}
+.contact{text-align:center}
+.contact .cta{justify-content:center}
+footer{background:var(--pine);color:#c9d6cb;text-align:center;padding:28px 20px;font-size:14px}
+footer b{color:var(--cream);font-family:Fraunces,serif}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(31,59,45,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:10px;font-weight:700;text-decoration:none;color:#fff;background:var(--cran)}
+.bar a.e{background:transparent;border:2px solid #5d806c;color:var(--cream)}
+@media(min-width:881px){.bar{display:none}body.has-bar{padding-bottom:0}}
+</style>
+<!-- cc-og h=10a6094e8a -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Red Clay Farm | website concept">
+<meta property="og:description" content="A phone-first website concept made for Red Clay Farm by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/red-clay-farm-cleveland/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/red-clay-farm-cleveland/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Red Clay Farm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body class="has-bar no-js">
+<div class="banner">Concept site by Code Craft Media, made for Red Clay Farm. Not live.</div>
+<div class="awning" aria-hidden="true"></div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4v32M20 10l-8 6M20 10l8 6M20 17l-10 7M20 17l10 7M20 24l-11 7M20 24l11 7" stroke="#1f3b2d" stroke-width="2.6" stroke-linecap="round" fill="none"/><circle cx="29" cy="31" r="3.2" fill="#b23a48"/></svg>Red Clay Farm</a>
+  <div class="links"><a href="#grow">What we grow</a><a href="#mill">Mill &amp; pantry</a><a href="#fiber">Fiber</a><a href="#find">Find us</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="tag"><b></b>Certified organic · Cleveland, TN</span>
+    <h1>Organic greens, <em>stone-ground flour</em> &amp; farm yarn from Bradley County.</h1>
+    <p class="lead">Red Clay Farm grows certified organic produce, mills its own organic grains into flour, cornmeal and grits, and spins fiber from its alpacas, llamas, Jacob sheep and Angora goats. You'll find the stall at Chattanooga-area farmers markets.</p>
+    <div class="cta"><a class="btn" href="#mill">Build a pantry order</a><a class="btn o" href="#find">Where to find us</a></div>
+    <div class="facts"><span>USDA Certified Organic produce</span><span>Stone-ground grains</span><span>CSA</span><span>Alpaca &amp; wool yarn</span></div>
+  </div>
+  <div class="art reveal" aria-hidden="true">
+    <svg viewBox="0 0 420 360">
+      <rect width="420" height="360" rx="18" fill="#1f3b2d"/>
+      <path d="M0 22h420" stroke="none"/>
+      <g>
+        <rect x="40" y="70" width="340" height="30" fill="#b23a48"/>
+        <g fill="#f6efe3"><rect x="80" y="70" width="40" height="30"/><rect x="160" y="70" width="40" height="30"/><rect x="240" y="70" width="40" height="30"/><rect x="320" y="70" width="40" height="30"/></g>
+        <path d="M40 100q20 16 40 0q20 16 40 0q20 16 40 0q20 16 40 0q20 16 40 0q20 16 40 0q20 16 40 0q20 16 40 0q20 16 40 0" fill="#b23a48"/>
+        <path d="M30 70L210 30L390 70Z" fill="#2b4d3b" stroke="#f6efe3" stroke-width="2"/>
+        <rect x="52" y="112" width="5" height="160" fill="#c9b99a"/><rect x="363" y="112" width="5" height="160" fill="#c9b99a"/>
+      </g>
+      <rect x="40" y="240" width="340" height="40" rx="6" fill="#8a6a45"/>
+      <g>
+        <path d="M80 240c-6-30 4-46 22-52c18 6 26 22 20 52z" fill="#e9d8b8" stroke="#6e5536" stroke-width="2"/>
+        <text x="101" y="226" font-family="Fraunces,serif" font-size="11" fill="#6e5536" text-anchor="middle">FLOUR</text>
+        <path d="M140 240c-4-24 4-38 18-44c14 6 22 20 18 44z" fill="#f2c94c" stroke="#8f6f1a" stroke-width="2"/>
+        <text x="158" y="228" font-family="Fraunces,serif" font-size="9.5" fill="#6b5212" text-anchor="middle">GRITS</text>
+        <circle cx="222" cy="226" r="16" fill="#3f7a4f"/><circle cx="236" cy="218" r="13" fill="#5c9a5f"/><circle cx="210" cy="216" r="12" fill="#4b8b56"/>
+        <circle cx="290" cy="225" r="15" fill="#f6efe3"/><path d="M276 222q14 10 28 0M277 230q13 8 26 0" stroke="#b23a48" stroke-width="2" fill="none"/>
+        <circle cx="328" cy="226" r="14" fill="#b23a48"/><path d="M316 222q12 10 24 0" stroke="#f6efe3" stroke-width="2" fill="none"/>
+      </g>
+      <g stroke="#9fc4a6" stroke-width="3" stroke-linecap="round" fill="none">
+        <path d="M60 330l40-26M78 318l-6-12M88 312l-2-13M70 324l-12-4M82 316l-12-2"/>
+        <path d="M360 330l-40-26M342 318l6-12M332 312l2-13M350 324l12-4M338 316l12-2"/>
+      </g>
+      <text x="210" y="322" font-family="Fraunces,serif" font-size="20" font-weight="700" fill="#f6efe3" text-anchor="middle">Red Clay Farm</text>
+      <text x="210" y="342" font-family="Work Sans,sans-serif" font-size="11" fill="#c9d6cb" text-anchor="middle" letter-spacing="2">CLEVELAND · TENNESSEE</text>
+    </svg>
+  </div>
+</header>
+
+<section class="grow" id="grow">
+  <div class="wrap">
+    <div class="kicker">What we grow</div>
+    <h2>Three kinds of goods from one farm</h2>
+    <p class="sub">Produce, pantry and fiber. Our produce is certified organic and grown without GMO seeds.</p>
+    <div class="cols">
+      <div class="card reveal">
+        <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#e7efe5"/><path d="M14 32c4-10 10-16 20-18c-2 10-8 16-20 18zM14 32l12-10" stroke="#1f3b2d" stroke-width="2.4" fill="#5c9a5f" stroke-linecap="round"/></svg>
+        <h3>Organic produce</h3>
+        <p>Seasonal vegetables and berries, USDA Certified Organic.</p>
+        <ul><li>Strawberries</li><li>Blueberries</li><li>Blackberries</li><li>Arugula</li><li>Kale</li><li>Lettuce</li><li>Broccoli</li><li>Carrots</li><li>Beets</li><li>Tomatoes</li><li>Okra</li><li>Herbs</li></ul>
+      </div>
+      <div class="card reveal">
+        <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#f6e3e5"/><path d="M24 10v28M24 16l-6-4M24 16l6-4M24 23l-7-4M24 23l7-4M24 30l-7-4M24 30l7-4" stroke="#b23a48" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+        <h3>Stone-ground grains</h3>
+        <p>Organic grains milled on the farm into flours and breakfast staples.</p>
+        <ul><li>Bread flour</li><li>All-purpose flour</li><li>Pastry flour</li><li>Cornmeal</li><li>Corn grits</li><li>Rye</li><li>Pumpernickel</li><li>Oat flour</li><li>Oat porridge</li><li>Wheat bran</li><li>Oat bran</li><li>Cream of wheat</li></ul>
+      </div>
+      <div class="card reveal">
+        <svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#efe6d3"/><circle cx="24" cy="25" r="11" fill="#f6efe3" stroke="#1f3b2d" stroke-width="2.2"/><path d="M15 21q9 6 18 0M14 27q10 6 20 0M18 16q6 10 2 18" stroke="#1f3b2d" stroke-width="1.8" fill="none"/></svg>
+        <h3>Fiber &amp; yarn</h3>
+        <p>Raw fiber, roving and yarn from the farm's own animals, plus beeswax.</p>
+        <ul><li>Raw fiber</li><li>Roving</li><li>Yarn</li><li>Beeswax</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mill" id="mill">
+  <div class="wrap">
+    <div class="kicker">Holiday baking starts here</div>
+    <h2>Build your pantry order</h2>
+    <p class="sub">Tap what you'd like (tap again to add more), then send the list straight to the farm. We'll write back to confirm what's ready and when to pick it up at market.</p>
+    <div class="order">
+      <div>
+        <div class="grp">Flours</div>
+        <div class="chips" data-g="flour"></div>
+        <div class="grp">Corn &amp; breakfast</div>
+        <div class="chips" data-g="corn"></div>
+        <div class="grp">Fiber</div>
+        <div class="chips" data-g="fiber"></div>
+      </div>
+      <aside class="basket" aria-live="polite">
+        <h3>Your list</h3>
+        <ul id="list"><li class="empty">Nothing yet. Tap a few items.</li></ul>
+        <label for="note" style="font-size:14px;font-weight:600;color:var(--pine)">Name &amp; which market works for you</label>
+        <textarea id="note" placeholder="e.g. Sarah, Sunday at the Chattanooga Market"></textarea>
+        <button class="btn" id="send" type="button">Email this list to the farm</button>
+        <small>Opens your email app with the list filled in, addressed to Red Clay Farm. Nothing is charged.</small>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="fiber">
+  <div class="wrap fiber">
+    <div class="reveal">
+      <svg viewBox="0 0 360 260" aria-hidden="true" style="width:100%;height:auto">
+        <rect width="360" height="260" rx="24" fill="#f6efe3"/>
+        <g fill="#fff" stroke="#1f3b2d" stroke-width="3">
+          <ellipse cx="140" cy="160" rx="62" ry="40"/>
+          <path d="M190 140c10-40 14-70 26-80c14 4 14 20 8 30c-4 30-10 50-18 60"/>
+          <circle cx="226" cy="64" r="16"/>
+        </g>
+        <g stroke="#1f3b2d" stroke-width="5" stroke-linecap="round"><path d="M100 196v34M125 198v34M160 198v34M185 192v34"/></g>
+        <circle cx="231" cy="61" r="2.5" fill="#1f3b2d"/>
+        <path d="M218 48l-4-12M232 47l4-12" stroke="#1f3b2d" stroke-width="3" stroke-linecap="round"/>
+        <g transform="translate(270 170)"><circle r="30" fill="#b23a48"/><path d="M-26 -10q26 18 52 0M-28 4q28 18 56 0M-20 18q20 10 40 0M-10 -27q12 26 4 54" stroke="#f6efe3" stroke-width="2.4" fill="none"/></g>
+        <g stroke="#2b4d3b" stroke-width="3" stroke-linecap="round" fill="none"><path d="M30 240l30-20M44 230l-4-10M52 225l-1-11M38 235l-10-3"/></g>
+      </svg>
+    </div>
+    <div>
+      <div class="kicker">From the barn</div>
+      <h2>Yarn with a name on it</h2>
+      <p class="sub">The farm keeps four kinds of fiber animals and sells their fleece raw, as roving for spinners, and as finished yarn. A good gift for the knitter on your list.</p>
+      <div class="animals">
+        <div>Alpacas</div><div>Llamas</div><div>Jacob sheep</div><div>Angora goats</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div class="kicker">Find the stall</div>
+    <h2>At the market, not online</h2>
+    <p class="sub">Red Clay Farm sells through its CSA and at Chattanooga-area farmers markets. Check the farm's Facebook page for this week's schedule.</p>
+    <div class="mkts">
+      <div>
+        <div class="mk reveal"><div class="pin">1</div><div><h3>Chattanooga Market</h3><p>Downtown Chattanooga. On the market's 2026 Oktoberfest vendor list.</p></div></div>
+        <div class="mk reveal"><div class="pin">2</div><div><h3>Main Street Farmers Market</h3><p>Chattanooga</p></div></div>
+        <div class="mk reveal"><div class="pin">3</div><div><h3>Ooltewah Farmers Market</h3><p>Ooltewah</p></div></div>
+        <div class="mk reveal"><div class="pin">4</div><div><h3>The CSA</h3><p>Seasonal shares of organic produce. Email to ask about the next season.</p></div></div>
+      </div>
+      <iframe title="Map of Cleveland, TN" loading="lazy" src="https://www.google.com/maps?q=Cleveland%2C%20TN&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker">Say hello</div>
+    <h2>Questions about the CSA or a bulk flour order?</h2>
+    <p class="sub" style="margin:0 auto">Email Ron at the farm, or send a message on Facebook.</p>
+    <div class="cta"><a class="btn" href="mailto:rshaffer1959@gmail.com?subject=Hello%20from%20your%20website">rshaffer1959@gmail.com</a><a class="btn o" href="https://www.facebook.com/Redclayfarm" target="_blank" rel="noopener">Facebook</a></div>
+  </div>
+</section>
+
+<footer><b>Red Clay Farm</b> · Cleveland, Tennessee<br>Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><a href="#mill">Build an order</a><a class="e" href="mailto:rshaffer1959@gmail.com">Email</a></div>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var items={flour:['Bread flour','All-purpose flour','Pastry flour','Rye','Pumpernickel','Oat flour'],corn:['Cornmeal','Corn grits','Oat porridge','Cream of wheat','Wheat bran','Oat bran'],fiber:['Yarn','Roving','Raw fiber','Beeswax']};
+  var cart={};
+  document.querySelectorAll('.chips').forEach(function(box){
+    items[box.dataset.g].forEach(function(n){
+      var b=document.createElement('button');b.type='button';b.className='chip';b.innerHTML='<span>'+n+'</span><span class="q"></span>';
+      b.onclick=function(){cart[n]=(cart[n]||0)+1;render()};b.dataset.n=n;box.appendChild(b);
+    });
+  });
+  function render(){
+    var ul=document.getElementById('list'),keys=Object.keys(cart);ul.innerHTML='';
+    if(!keys.length){ul.innerHTML='<li class="empty">Nothing yet. Tap a few items.</li>'}
+    keys.forEach(function(k){var li=document.createElement('li');li.innerHTML='<span>'+cart[k]+' × '+k+'</span>';var x=document.createElement('button');x.textContent='−';x.setAttribute('aria-label','Remove one '+k);x.onclick=function(){cart[k]--;if(cart[k]<=0)delete cart[k];render()};li.appendChild(x);ul.appendChild(li)});
+    document.querySelectorAll('.chip').forEach(function(c){var q=cart[c.dataset.n];c.classList.toggle('sel',!!q);c.querySelector('.q').textContent=q||''});
+  }
+  document.getElementById('send').onclick=function(){
+    var keys=Object.keys(cart),body='Hi Red Clay Farm,\n\nI would like to order:\n';
+    if(!keys.length)body+='(tell us what you need)\n';
+    keys.forEach(function(k){body+='- '+cart[k]+' x '+k+'\n'});
+    var note=document.getElementById('note').value.trim();if(note)body+='\n'+note+'\n';
+    body+='\nThank you!';
+    location.href='mailto:rshaffer1959@gmail.com?subject='+encodeURIComponent('Pantry order request')+'&body='+encodeURIComponent(body);
+  };
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var bar=document.getElementById('bar'),hero=document.getElementById('top');
+  function sb(){bar.classList.toggle('on',window.scrollY>hero.offsetTop+hero.offsetHeight-80)}
+  window.addEventListener('scroll',sb,{passive:true});sb();
+})();
+</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Red Clay Farm"></script><!-- /cc-cta -->
+</body>
+</html>
