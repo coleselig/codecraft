@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Barton Creek Farms — Rock Island, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#4a2545;--plum2:#341831;--gold:#e9a23b;--gold2:#c9821f;--parch:#fbf4e6;--parch2:#f3e6cc;--ink:#2a1528;--muted:#6e5568}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;color:var(--ink);background:var(--parch);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--plum2);color:#f1dcc0;font-size:12px;text-align:center;padding:7px 14px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;max-width:1120px;margin:0 auto}
+.logo{font-family:'Libre Baskerville',serif;font-weight:700;font-size:18px;color:var(--plum);text-decoration:none;display:flex;gap:9px;align-items:center}
+.logo svg{width:30px;height:30px}
+nav .links{display:flex;gap:24px;font-weight:500;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--plum)}
+@media(max-width:720px){nav .links{display:none}}
+.hero{position:relative;text-align:center;padding:30px 22px 70px;overflow:hidden}
+.sun{width:min(330px,78vw);height:auto;display:block;margin:0 auto 6px}
+.kicker{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--gold2)}
+h1{font-family:'Libre Baskerville',serif;font-weight:700;font-size:clamp(34px,6vw,64px);line-height:1.1;color:var(--plum);max-width:880px;margin:12px auto 18px}
+h1 em{color:var(--gold2)}
+.lede{max-width:620px;margin:0 auto;font-size:18px;color:var(--muted)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 24px;border-radius:4px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--plum)}
+.btn.p{background:var(--plum);color:var(--parch)}
+.btn.s{color:var(--plum)}
+.btn:hover{transform:translateY(-1px)}
+.wheat{position:absolute;bottom:0;width:120px;opacity:.9}
+.wheat.l{left:2%}.wheat.r{right:2%;transform:scaleX(-1)}
+@media(max-width:720px){.wheat{width:70px;opacity:.5}}
+.rule{height:14px;background:repeating-linear-gradient(90deg,var(--plum) 0 14px,transparent 14px 22px);opacity:.2;max-width:1120px;margin:0 auto}
+section{padding:72px 22px}
+.wrap{max-width:1120px;margin:0 auto}
+h2{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,42px);color:var(--plum);line-height:1.15;margin-bottom:14px}
+.sub{color:var(--muted);max-width:620px;font-size:17px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;border-top:2px solid var(--plum);border-bottom:2px solid var(--plum)}
+.fact{padding:26px 18px;border-right:1px dashed rgba(74,37,69,.35)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:'Libre Baskerville',serif;font-size:34px;color:var(--plum)}
+.fact span{font-size:14.5px;color:var(--muted)}
+@media(max-width:820px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px dashed rgba(74,37,69,.35)}}
+.dark{background:var(--plum);color:var(--parch)}
+.dark h2{color:var(--parch)}
+.dark .sub{color:#e3cbd9}
+.order{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;margin-top:34px;align-items:start}
+@media(max-width:860px){.order{grid-template-columns:1fr}}
+.cuts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.cuts{grid-template-columns:1fr}}
+.cut{background:var(--plum2);border:2px solid rgba(233,162,59,.35);color:var(--parch);border-radius:6px;padding:18px;text-align:left;cursor:pointer;font:inherit;transition:.15s}
+.cut:hover{border-color:var(--gold)}
+.cut h3{font-family:'Libre Baskerville',serif;font-size:19px;margin-bottom:4px;display:flex;justify-content:space-between;gap:10px}
+.cut h3 i{font-style:normal;width:26px;height:26px;flex:none;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-size:15px;color:var(--gold)}
+.cut p{font-size:14.5px;color:#e3cbd9}
+.cut.on{background:var(--gold);color:var(--plum2);border-color:var(--gold)}
+.cut.on p{color:var(--plum)}
+.cut.on h3 i{background:var(--plum);color:var(--gold);border-color:var(--plum)}
+.ticket{background:var(--parch);color:var(--ink);border-radius:6px;padding:26px;position:relative}
+.ticket:before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:radial-gradient(circle at 6px 8px,var(--parch) 5px,transparent 6px) 0 0/12px 8px}
+.ticket h3{font-family:'Libre Baskerville',serif;color:var(--plum);font-size:20px;margin-bottom:10px}
+.ticket ul{list-style:none;min-height:60px;margin-bottom:14px}
+.ticket li{padding:7px 0;border-bottom:1px dashed #d8c4a6;font-weight:500}
+.ticket .empty{color:var(--muted);font-style:italic}
+.ticket label{font-size:14px;color:var(--muted);display:block;margin-bottom:6px}
+.ticket input{width:100%;padding:11px;border:1px solid #d8c4a6;border-radius:4px;font:inherit;background:#fff;margin-bottom:14px}
+.ticket .btn{width:100%;text-align:center;cursor:pointer}
+.ticket .btn[aria-disabled=true]{opacity:.45;pointer-events:none}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+.timeline{list-style:none;border-left:3px solid var(--gold);padding-left:24px}
+.timeline li{position:relative;margin-bottom:24px}
+.timeline li:before{content:"";position:absolute;left:-33px;top:5px;width:15px;height:15px;border-radius:50%;background:var(--plum);border:3px solid var(--gold)}
+.timeline b{font-family:'Libre Baskerville',serif;color:var(--plum);display:block;font-size:18px}
+blockquote{font-family:'Libre Baskerville',serif;font-style:italic;font-size:clamp(24px,3.4vw,34px);color:var(--plum);line-height:1.35;border-top:2px solid var(--gold);padding-top:20px}
+blockquote cite{display:block;font-family:Karla,sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:12px}
+.find{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:stretch;margin-top:30px}
+@media(max-width:860px){.find{grid-template-columns:1fr}}
+.card{background:var(--parch);border-radius:6px;padding:26px}
+.card h3{font-family:'Libre Baskerville',serif;color:var(--plum);margin-bottom:8px}
+.card p{margin-bottom:12px}
+.card a.line{display:block;font-weight:700;color:var(--plum);margin:6px 0;word-break:break-word}
+iframe{width:100%;min-height:320px;border:0;border-radius:6px;filter:sepia(.25)}
+footer{background:var(--plum2);color:#d9c2d2;text-align:center;padding:30px 22px;font-size:14px}
+footer b{font-family:'Libre Baskerville',serif;color:var(--parch);display:block;font-size:18px;margin-bottom:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--plum);display:flex;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:4px;font-weight:700;text-decoration:none;font-size:15px}
+.bar a.g{background:var(--gold);color:var(--plum2)}
+.bar a.o{border:2px solid var(--gold);color:var(--gold)}
+@media(min-width:861px){.bar{display:none}}
+.rv{opacity:0;transform:translateY(16px);transition:.6s}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+</style>
+<!-- cc-og h=fa93ee6516 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Barton Creek Farms | website concept">
+<meta property="og:description" content="A phone-first website concept made for Barton Creek Farms by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/barton-creek-farms-rock-island/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/barton-creek-farms-rock-island/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Barton Creek Farms">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body class="no-js">
+<div class="banner">Concept site by Code Craft Media, made for Barton Creek Farms. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="8" fill="#e9a23b" stroke="#4a2545" stroke-width="2"/><g stroke="#4a2545" stroke-width="2.4" stroke-linecap="round"><path d="M20 3v6M20 31v6M3 20h6M31 20h6M8 8l4 4M28 28l4 4M32 8l-4 4M12 28l-4 4"/></g></svg>Barton Creek Farms</a>
+  <div class="links"><a href="#order">What we raise</a><a href="#story">Our story</a><a href="#find">Find us</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="sun" viewBox="0 0 300 170" aria-hidden="true">
+    <g stroke="#4a2545" stroke-width="3" stroke-linecap="round">
+      <path d="M150 20v-14M150 20" /><path d="M95 35l-8-11M205 35l8-11M60 70l-12-7M240 70l12-7M45 115H30M255 115h15"/>
+      <path d="M120 25l-4-13M180 25l4-13M75 50l-10-9M225 50l10-9M50 92l-14-4M250 92l14-4"/>
+    </g>
+    <path d="M60 130a90 90 0 0 1 180 0z" fill="#e9a23b" stroke="#4a2545" stroke-width="3"/>
+    <g stroke="#4a2545" stroke-width="2" fill="none" opacity=".55">
+      <path d="M80 122a70 70 0 0 1 140 0"/><path d="M100 120a50 50 0 0 1 100 0"/><path d="M120 118a30 30 0 0 1 60 0"/>
+    </g>
+    <circle cx="128" cy="98" r="3.5" fill="#4a2545"/><circle cx="172" cy="98" r="3.5" fill="#4a2545"/>
+    <path d="M136 112q14 10 28 0" stroke="#4a2545" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M20 132h260" stroke="#4a2545" stroke-width="3"/>
+    <g stroke="#4a2545" stroke-width="1.6" opacity=".6"><path d="M40 142h220M70 152h160M110 162h80"/></g>
+  </svg>
+  <div class="kicker">Rock Island, Tennessee · Family farm</div>
+  <h1>Nose-to-tail beef, raised on <em>1,400 acres</em> the Roller family has farmed for over a century.</h1>
+  <p class="lede">Beef cuts, organs, bones and cow fat from about 350 head of cattle in Warren County, plus custom pork. At the Chattanooga Market since 2010.</p>
+  <div class="cta"><a class="btn p" href="#order">Build an order</a><a class="btn s" href="#find">Where to find us</a></div>
+  <svg class="wheat l" viewBox="0 0 80 200" aria-hidden="true"><g fill="none" stroke="#4a2545" stroke-width="2.5" stroke-linecap="round"><path d="M40 200V40"/><path d="M40 60q-16-6-18-22q16 4 18 22zM40 60q16-6 18-22q-16 4-18 22zM40 85q-16-6-18-22q16 4 18 22zM40 85q16-6 18-22q-16 4-18 22zM40 110q-16-6-18-22q16 4 18 22zM40 110q16-6 18-22q-16 4-18 22zM40 40q-4-18 0-30q4 12 0 30z" fill="#e9a23b"/><path d="M40 150q-20-10-28-34M40 170q18-12 26-30"/></g></svg>
+  <svg class="wheat r" viewBox="0 0 80 200" aria-hidden="true"><g fill="none" stroke="#4a2545" stroke-width="2.5" stroke-linecap="round"><path d="M40 200V40"/><path d="M40 60q-16-6-18-22q16 4 18 22zM40 60q16-6 18-22q-16 4-18 22zM40 85q-16-6-18-22q16 4 18 22zM40 85q16-6 18-22q-16 4-18 22zM40 110q-16-6-18-22q16 4 18 22zM40 110q16-6 18-22q-16 4-18 22zM40 40q-4-18 0-30q4 12 0 30z" fill="#e9a23b"/><path d="M40 150q-20-10-28-34M40 170q18-12 26-30"/></g></svg>
+</header>
+
+<div class="rule"></div>
+
+<section>
+  <div class="wrap">
+    <h2 class="rv">Why folks come back to our booth</h2>
+    <p class="sub rv">No middlemen, no mystery. The family that raises the cattle is the family behind the table.</p>
+    <div class="facts rv">
+      <div class="fact"><b>100+</b><span>years the Roller family has farmed this Rock Island land</span></div>
+      <div class="fact"><b>~1,400</b><span>acres of pasture, hay and trees</span></div>
+      <div class="fact"><b>~350</b><span>head of cattle tended on the farm</span></div>
+      <div class="fact"><b>2010</b><span>the year we started selling at the Chattanooga Market</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="order">
+  <div class="wrap">
+    <h2 class="rv">Nothing wasted. Tap what you're after.</h2>
+    <p class="sub rv">Pick what you'd like and we'll get back to you about what's available. Your note opens as an email to the farm.</p>
+    <div class="order">
+      <div class="cuts" id="cuts">
+        <button class="cut" data-item="Beef cuts" type="button"><h3>Beef cuts <i>+</i></h3><p>Retail beef from our own herd.</p></button>
+        <button class="cut" data-item="Organs" type="button"><h3>Organs <i>+</i></h3><p>The old-fashioned, nutrient-dense parts.</p></button>
+        <button class="cut" data-item="Bones" type="button"><h3>Bones <i>+</i></h3><p>For broth, stock and the dog's bowl.</p></button>
+        <button class="cut" data-item="Cow fat" type="button"><h3>Cow fat <i>+</i></h3><p>Customers render it for cooking and even homemade moisturizer.</p></button>
+        <button class="cut" data-item="Custom pork" type="button"><h3>Custom pork <i>+</i></h3><p>Ask about custom pork orders.</p></button>
+      </div>
+      <div class="ticket">
+        <h3>Your farm ticket</h3>
+        <ul id="list"><li class="empty">Nothing picked yet.</li></ul>
+        <label for="nm">Your name</label>
+        <input id="nm" type="text" placeholder="So we know who's asking" autocomplete="name">
+        <a class="btn p" id="send" aria-disabled="true" href="mailto:jjducks@benlomand.net">Email this to the farm</a>
+        <p class="note">Or call <a href="tel:+19316863326">931-686-3326</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap story">
+    <div>
+      <h2 class="rv">From dairy barn to beef pasture</h2>
+      <ul class="timeline rv">
+        <li><b>1960s</b>Danny Roller is working the property when it's still a dairy farm.</li>
+        <li><b>About ten years later</b>The farm switches over to beef.</li>
+        <li><b>2010</b>Barton Creek starts selling at the Chattanooga Market.</li>
+        <li><b>Today</b>Mary Roller co-owns and runs the farm with her father Danny, Herman Taylor and his son Herman IV.</li>
+      </ul>
+    </div>
+    <blockquote class="rv">"Nose to tail, like back in the day."<cite>Mary Roller, on how the farm sells its beef</cite></blockquote>
+  </div>
+</section>
+
+<section id="find" style="background:var(--parch2)">
+  <div class="wrap">
+    <h2 class="rv">Where to find us</h2>
+    <p class="sub rv">Our farm is in Rock Island, Warren County. Most folks meet us at the Chattanooga Market.</p>
+    <div class="find">
+      <div class="card rv">
+        <h3>Say hello</h3>
+        <p>Questions about beef, organs, bones, fat or custom pork? Reach the farm directly.</p>
+        <a class="line" href="mailto:jjducks@benlomand.net">jjducks@benlomand.net</a>
+        <a class="line" href="tel:+19316863326">931-686-3326</a>
+        <p style="margin-top:14px">Barton Creek Farms · Rock Island, TN</p>
+      </div>
+      <iframe class="rv" title="Map of Rock Island, Tennessee" loading="lazy" src="https://www.google.com/maps?q=Rock%20Island%2C%20TN%2038581&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer><b>Barton Creek Farms</b>Rock Island, Tennessee · Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><a class="g" href="#order">Build an order</a><a class="o" href="tel:+19316863326">Call the farm</a></div>
+
+<script>
+document.body.classList.remove('no-js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var bar=document.getElementById('bar'),hero=document.getElementById('top');
+  function onScroll(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var picked=[],list=document.getElementById('list'),send=document.getElementById('send'),nm=document.getElementById('nm');
+  function render(){
+    list.innerHTML=picked.length?picked.map(function(p){return '<li>'+p+'</li>'}).join(''):'<li class="empty">Nothing picked yet.</li>';
+    send.setAttribute('aria-disabled',picked.length?'false':'true');
+    var body='Hi Barton Creek Farms,\n\nI saw you at the Chattanooga Market and I\'m interested in:\n- '+picked.join('\n- ')+'\n\nWhat do you have available?\n\nThanks,\n'+(nm.value||'');
+    send.href='mailto:jjducks@benlomand.net?subject='+encodeURIComponent('Order question: '+picked.join(', '))+'&body='+encodeURIComponent(body);
+  }
+  [].forEach.call(document.querySelectorAll('.cut'),function(b){
+    b.addEventListener('click',function(){
+      var it=b.getAttribute('data-item'),i=picked.indexOf(it);
+      if(i<0){picked.push(it);b.classList.add('on');b.querySelector('i').textContent='✓'}
+      else{picked.splice(i,1);b.classList.remove('on');b.querySelector('i').textContent='+'}
+      render();
+    });
+  });
+  nm.addEventListener('input',render);
+})();
+</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Barton Creek Farms"></script><!-- /cc-cta -->
+</body>
+</html>
