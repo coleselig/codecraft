@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fall Harvest Farms — Maryville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--pumpkin:#d9642a;--wheat:#e8c872;--barn:#7a2e22;--paper:#fffaf0;--soil:#2b211b;--muted:#6e5a4c;--line:#eadcc0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--paper);color:var(--soil);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:80px}
+a{color:inherit}
+.banner{background:var(--soil);color:var(--wheat);font-size:12px;text-align:center;padding:7px 14px}
+nav{max-width:1140px;margin:0 auto;padding:14px 22px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Bitter,serif;font-weight:800;font-size:20px;color:var(--barn);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo svg{width:30px;height:30px}
+nav .links{display:flex;gap:22px;font-weight:600;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--pumpkin)}
+@media(max-width:720px){nav .links{display:none}}
+.hero{max-width:1140px;margin:0 auto;padding:30px 22px 0;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:16px}}
+.tag{display:inline-block;background:#f8e3cf;color:var(--barn);font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:6px 12px}
+h1{font-family:Bitter,serif;font-weight:800;font-size:clamp(36px,5vw,58px);line-height:1.04;color:var(--barn);margin:14px 0}
+h1 span{color:var(--pumpkin)}
+.sub{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:12px;font-weight:800;text-decoration:none;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--pumpkin);color:#fff;box-shadow:0 5px 0 var(--barn)}
+.btn.s{border:2px solid var(--barn);color:var(--barn);background:#fff}
+.art svg{width:100%;height:auto;display:block}
+.bob{animation:bob 4s ease-in-out infinite;transform-origin:center bottom}
+.bob.b{animation-delay:-1.6s}
+@keyframes bob{50%{transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){.bob{animation:none}}
+.field{display:block;width:100%;height:auto;margin-top:-2px}
+.wrap{max-width:1140px;margin:0 auto;padding:70px 22px}
+.kicker{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--pumpkin)}
+h2{font-family:Bitter,serif;font-weight:800;font-size:clamp(28px,4.2vw,44px);line-height:1.1;margin:8px 0 12px;color:var(--barn)}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.soil{background:var(--soil);color:var(--paper)}
+.soil h2{color:var(--wheat)}
+.soil .lede{color:#d8c8b2}
+/* season switcher */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tab{font:inherit;font-weight:800;font-size:15px;cursor:pointer;border:2px solid #5a4636;background:transparent;color:var(--paper);border-radius:99px;padding:10px 18px;transition:all .15s}
+.tab[aria-selected=true]{background:var(--wheat);border-color:var(--wheat);color:var(--soil)}
+.panel{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;margin-top:26px;background:#3a2d24;border-radius:22px;padding:28px}
+@media(max-width:860px){.panel{grid-template-columns:1fr;padding:22px}}
+.panel h3{font-family:Bitter,serif;font-size:26px;color:var(--wheat);margin-bottom:6px}
+.panel p{color:#d8c8b2}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font:inherit;cursor:pointer;background:#4a3a2e;color:var(--paper);border:2px solid transparent;border-radius:99px;padding:6px 13px;font-size:14.5px;font-weight:600;transition:all .15s}
+.chip[aria-pressed=true]{border-color:var(--pumpkin);background:var(--pumpkin);color:#fff}
+.ask{background:var(--paper);color:var(--soil);border-radius:16px;padding:20px}
+.ask h4{font-family:Bitter,serif;color:var(--barn);font-size:19px;margin-bottom:8px}
+.ask .msg{font-size:14.5px;background:#fff;border:1px dashed var(--line);border-radius:10px;padding:12px;color:var(--muted);min-height:96px;white-space:pre-wrap}
+.ask .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.ask .btn{font-size:15px;padding:11px 16px}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:30px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card svg{width:44px;height:44px;margin-bottom:10px}
+.card h3{font-family:Bitter,serif;font-size:21px;color:var(--barn);margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:28px}
+.why div{border-top:4px solid var(--pumpkin);padding-top:14px}
+.why b{font-family:Bitter,serif;font-size:20px;display:block;color:var(--barn);margin-bottom:4px}
+.why p{color:var(--muted);font-size:15.5px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;align-items:start}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#eee}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.info{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.info dt{font-weight:800;color:var(--barn);margin-top:12px}
+.info dt:first-child{margin-top:0}
+.info dd{color:var(--muted)}
+.note{background:#fbeedd;border-left:4px solid var(--pumpkin);padding:12px 14px;border-radius:8px;margin-top:18px;font-size:15px}
+footer{background:var(--soil);color:#bfae98;text-align:center;padding:28px 22px;font-size:14px}
+footer b{color:var(--wheat);font-family:Bitter,serif}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--barn);display:flex;gap:10px;padding:12px 16px;justify-content:center;transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.on{transform:none}
+.bar a{flex:1;max-width:220px;text-align:center;background:var(--pumpkin);color:#fff;text-decoration:none;font-weight:800;padding:12px;border-radius:10px}
+.bar a.alt{background:var(--paper);color:var(--barn)}
+@media(min-width:861px){.bar{display:none}}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.js .rv.in,.js.all .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Fall Harvest Farms. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="19" rx="12" ry="9" fill="#d9642a"/><path d="M10 12c1 3 1 11 0 15M22 12c-1 3-1 11 0 15M16 10v18" stroke="#7a2e22" stroke-width="1.4" fill="none" opacity=".5"/><path d="M16 10c0-3 1-5 4-6" stroke="#2b211b" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>Fall Harvest Farms</a>
+  <div class="links"><a href="#seasons">Seasons</a><a href="#grow">What we grow</a><a href="#visit">Visit</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="tag">Peppermint Road · Maryville, TN</span>
+    <h1>Pumpkins, mums &amp; <span>everything in between</span> on Peppermint Road.</h1>
+    <p class="sub">A Blount County farm and garden center selling what it grows season to season: spring plants, summer berries and melons, a long list of vegetables, and fall pumpkins, mums, corn stalks and straw. Beef, lamb, pork and eggs too.</p>
+    <div class="ctas">
+      <a class="btn p" href="#seasons">Pick your season</a>
+      <a class="btn s" href="tel:+18652164464">Call 865-216-4464</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 520 360">
+      <circle cx="420" cy="80" r="44" fill="#e8c872" opacity=".7"/>
+      <path d="M0 210 C120 160 240 190 340 170 S480 150 520 160 V360 H0Z" fill="#e8c872" opacity=".55"/>
+      <path d="M0 250 C140 210 260 240 380 220 S500 210 520 214 V360 H0Z" fill="#c9a24e" opacity=".6"/>
+      <!-- barn -->
+      <g transform="translate(300 118)">
+        <path d="M0 50 L60 8 L120 50 V120 H0Z" fill="#7a2e22"/>
+        <path d="M-6 54 L60 4 L126 54" stroke="#2b211b" stroke-width="6" fill="none" stroke-linejoin="round"/>
+        <rect x="42" y="66" width="36" height="54" fill="#fffaf0"/>
+        <path d="M42 66 L78 120 M78 66 L42 120" stroke="#7a2e22" stroke-width="4"/>
+        <rect x="50" y="30" width="20" height="16" fill="#fffaf0"/>
+      </g>
+      <!-- fence -->
+      <g stroke="#fffaf0" stroke-width="5" stroke-linecap="round">
+        <path d="M0 282 H520 M0 304 H520"/>
+        <path d="M30 268 V318 M110 268 V318 M190 268 V318 M270 268 V318 M350 268 V318 M430 268 V318 M510 268 V318"/>
+      </g>
+      <!-- pumpkins -->
+      <g class="bob"><ellipse cx="110" cy="318" rx="46" ry="32" fill="#d9642a"/><path d="M90 292 C84 310 84 330 92 346 M130 292 C136 310 136 330 128 346 M110 288 V350" stroke="#7a2e22" stroke-width="2.5" fill="none" opacity=".45"/><path d="M110 288 C108 276 114 268 124 264" stroke="#2b211b" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+      <g class="bob b"><ellipse cx="200" cy="332" rx="30" ry="22" fill="#e07a3c"/><path d="M200 312 V352" stroke="#7a2e22" stroke-width="2" opacity=".45"/><path d="M200 312 C199 304 203 298 210 296" stroke="#2b211b" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+      <!-- mum -->
+      <g transform="translate(410 300)"><path d="M-26 50 L-20 10 H20 L26 50Z" fill="#7a2e22"/><g fill="#e8c872"><circle cx="-14" cy="0" r="14"/><circle cx="12" cy="-2" r="15"/><circle cx="0" cy="-14" r="14"/></g><g fill="#d9642a" opacity=".55"><circle cx="-8" cy="-6" r="4"/><circle cx="8" cy="-8" r="4"/><circle cx="2" cy="2" r="4"/></g></g>
+    </svg>
+  </div>
+</header>
+<svg class="field" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C240 0 480 70 720 40 S1200 10 1440 40 V90 H0Z" fill="#2b211b"/></svg>
+
+<section class="soil" id="seasons">
+  <div class="wrap">
+    <div class="kicker">Pick your season</div>
+    <h2>2026 fall is in the books. What are you coming back for?</h2>
+    <p class="lede">Choose a season, tap the things you want, and send the farm a quick note asking when they'll have them next year.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-s="spring">Spring plants</button>
+      <button class="tab" role="tab" aria-selected="false" data-s="summer">Summer fruit</button>
+      <button class="tab" role="tab" aria-selected="false" data-s="veg">Garden vegetables</button>
+      <button class="tab" role="tab" aria-selected="false" data-s="fall">Fall decorating</button>
+      <button class="tab" role="tab" aria-selected="false" data-s="farm">Meat &amp; eggs</button>
+    </div>
+    <div class="panel">
+      <div>
+        <h3 id="sTitle">Spring plants</h3>
+        <p id="sText">Garden center season: get your beds and pots started.</p>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="ask">
+        <h4>Your note to the farm</h4>
+        <div class="msg" id="msg"></div>
+        <div class="row">
+          <a class="btn p" id="mail" href="mailto:dcop1958@gmail.com">Email the farm</a>
+          <a class="btn s" id="sms" href="sms:+18652164464">Text instead</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="grow">
+  <div class="wrap">
+    <div class="kicker">What we grow &amp; sell</div>
+    <h2>A garden center and a farm stand in one stop.</h2>
+    <div class="grid">
+      <div class="card rv"><svg viewBox="0 0 44 44"><path d="M22 40V20" stroke="#7a2e22" stroke-width="3"/><path d="M22 24c-8 0-12-6-12-12 8 0 12 5 12 12zM22 20c0-8 5-13 12-13 0 8-5 13-12 13z" fill="#7fa04a"/></svg><h3>Plants</h3><p>Annuals, perennials, vegetable plants, indoor plants and mums.</p></div>
+      <div class="card rv"><svg viewBox="0 0 44 44"><circle cx="16" cy="26" r="9" fill="#b8323a"/><circle cx="29" cy="22" r="8" fill="#5b5fa8"/><path d="M16 17c0-4 3-7 6-8" stroke="#3f6b2a" stroke-width="3" fill="none"/></svg><h3>Fruit</h3><p>Strawberries, blueberries, raspberries, cantaloupes, honeydew and watermelons.</p></div>
+      <div class="card rv"><svg viewBox="0 0 44 44"><path d="M14 8c10 4 18 14 20 28-12-2-22-10-24-24z" fill="#d9642a"/><path d="M14 8l-4-4M14 8l-5 1" stroke="#3f6b2a" stroke-width="3"/></svg><h3>Vegetables</h3><p>Beans, beets, broccoli, cabbage, carrots, corn, cucumbers, kale, okra, peppers, potatoes, sweet potatoes, tomatoes, squash, greens and more.</p></div>
+      <div class="card rv"><svg viewBox="0 0 44 44"><ellipse cx="22" cy="28" rx="15" ry="11" fill="#d9642a"/><path d="M22 17c0-5 2-8 6-9" stroke="#2b211b" stroke-width="3" fill="none"/></svg><h3>Fall decorations</h3><p>Pumpkins, mums, corn stalks and straw.</p></div>
+      <div class="card rv"><svg viewBox="0 0 44 44"><ellipse cx="22" cy="24" rx="10" ry="13" fill="#f3e6cf" stroke="#7a2e22" stroke-width="2"/></svg><h3>From the farm</h3><p>Beef, lamb, pork and eggs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f6ecd8">
+  <div class="wrap">
+    <div class="kicker">Why folks stop by</div>
+    <h2>Grown here, sold here.</h2>
+    <div class="why">
+      <div class="rv"><b>Four seasons of reasons</b><p>Plants in spring, berries and melons in summer, a long vegetable list, then pumpkins and mums in fall.</p></div>
+      <div class="rv"><b>One stop for fall porches</b><p>Blount County's tourism guide sends folks here for pumpkins and seasonal goods without a full farm outing.</p></div>
+      <div class="rv"><b>More than produce</b><p>Farm-raised beef, lamb and pork, plus eggs, alongside the garden center.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker">Find us</div>
+    <h2>Out on Peppermint Road in Maryville.</h2>
+    <div class="visit">
+      <div class="map"><iframe title="Map of Fall Harvest Farms" loading="lazy" src="https://www.google.com/maps?q=1719%20Peppermint%20Road%2C%20Maryville%2C%20TN%2037804&output=embed"></iframe></div>
+      <div class="info" id="contact">
+        <dl>
+          <dt>Address</dt><dd>1719 Peppermint Road, Maryville, TN 37804</dd>
+          <dt>Phone</dt><dd><a href="tel:+18652164464">865-216-4464</a></dd>
+          <dt>Email</dt><dd><a href="mailto:dcop1958@gmail.com">dcop1958@gmail.com</a></dd>
+          <dt>Facebook</dt><dd><a href="https://www.facebook.com/fallharvestfarmsgardencenter" rel="noopener">Fall Harvest Farms Garden Center</a></dd>
+        </dl>
+        <p class="note">The 2026 fall season has wrapped up. Thanks for a great one, and see you next season! Check Facebook or call for current hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Fall Harvest Farms</b> · Maryville, Tennessee<br>Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><a href="tel:+18652164464">Call</a><a class="alt" href="#seasons">Pick a season</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+setTimeout(function(){document.documentElement.classList.add('all')},1500);
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+var bar=document.getElementById('bar'),hero=document.getElementById('top');
+addEventListener('scroll',function(){var on=scrollY>hero.offsetTop+hero.offsetHeight;bar.classList.toggle('on',on);document.body.classList.toggle('has-bar',on)},{passive:true});
+
+var S={
+ spring:{t:'Spring plants',d:'Garden center season: get your beds and pots started.',i:['Annuals','Perennials','Vegetable plants','Indoor plants','Herbs']},
+ summer:{t:'Summer fruit',d:'Berries and melons from the farm.',i:['Strawberries','Blueberries','Raspberries','Cantaloupes','Honeydew','Watermelons']},
+ veg:{t:'Garden vegetables',d:'A long list of vegetables, season by season.',i:['Tomatoes','Corn','Beans','Cucumbers','Peppers','Okra','Squash','Potatoes','Sweet potatoes','Cabbage','Broccoli','Kale','Turnip greens']},
+ fall:{t:'Fall decorating',d:'Everything for the front porch.',i:['Pumpkins','Mums','Corn stalks','Straw','Winter squash']},
+ farm:{t:'Meat & eggs',d:'Raised on the farm.',i:['Beef','Lamb','Pork','Eggs']}
+};
+var cur='spring',picked={};
+var chips=document.getElementById('chips'),msg=document.getElementById('msg'),mail=document.getElementById('mail'),sms=document.getElementById('sms');
+function render(){
+ var s=S[cur];document.getElementById('sTitle').textContent=s.t;document.getElementById('sText').textContent=s.d;
+ chips.innerHTML='';
+ s.i.forEach(function(n){var b=document.createElement('button');b.className='chip';b.type='button';b.textContent=n;b.setAttribute('aria-pressed',picked[n]?'true':'false');b.onclick=function(){picked[n]=!picked[n];render()};chips.appendChild(b)});
+ update();
+}
+function update(){
+ var list=Object.keys(picked).filter(function(k){return picked[k]});
+ var body='Hi Fall Harvest Farms! Thanks for this past season. '+(list.length?'Next season I would love to get: '+list.join(', ')+'. ':'I am planning ahead for next season. ')+'When do you expect to have '+(list.length?'them':'things')+' in? Thanks!';
+ msg.textContent=body;
+ mail.href='mailto:dcop1958@gmail.com?subject='+encodeURIComponent('Next season at Fall Harvest Farms')+'&body='+encodeURIComponent(body);
+ sms.href='sms:+18652164464?&body='+encodeURIComponent(body);
+}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');cur=t.dataset.s;render()}});
+render();
+</script>
+</body>
+</html>
