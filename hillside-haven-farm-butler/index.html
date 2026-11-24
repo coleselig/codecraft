@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hillside Haven Farm — Butler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600;700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--meadow:#6B8E3D;--meadow2:#4f6c2a;--sky:#A8C9E0;--sky2:#dcebf5;--flower:#F2C94C;--paper:#fbfaf4;--ink:#25301a;--muted:#5c6650;--line:#dfe3cf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Josefin Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;font-size:17px}
+a{color:inherit}
+.banner{background:var(--meadow2);color:#eef3e2;font-size:12px;text-align:center;padding:7px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1140px;margin:0 auto}
+.logo{font-family:'Josefin Slab',serif;font-weight:700;font-size:22px;color:var(--meadow2);text-decoration:none;display:flex;gap:9px;align-items:center}
+.logo svg{width:32px;height:32px}
+nav .links{display:flex;gap:22px;font-size:15px;font-weight:600}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--meadow2)}
+@media(max-width:720px){nav .links{display:none}}
+.heroband{background:linear-gradient(180deg,var(--sky2),var(--paper))}
+.hero{max-width:1140px;margin:0 auto;padding:30px 22px 10px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:16px}}
+.tag{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--meadow2);font-weight:700;font-size:13px;border-radius:99px;padding:6px 13px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line)}
+.tag i{width:9px;height:9px;border-radius:50%;background:var(--flower);display:block}
+h1{font-family:'Josefin Slab',serif;font-weight:700;font-size:clamp(38px,6vw,66px);line-height:1.04;color:var(--meadow2);margin:16px 0 14px}
+h1 span{background:linear-gradient(transparent 62%,var(--flower) 62%,var(--flower) 90%,transparent 90%)}
+.sub{font-size:18.5px;color:var(--muted);max-width:530px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s,background .15s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--meadow);color:#fff}
+.btn.p:hover{background:var(--meadow2)}
+.btn.s{background:#fff;color:var(--meadow2);border:2px solid var(--meadow)}
+.art svg{width:100%;height:auto;display:block}
+.sway{transform-origin:bottom center;animation:sway 4.5s ease-in-out infinite}
+.sway.b{animation-delay:-2s}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.wrap{max-width:1140px;margin:0 auto;padding:70px 22px}
+.kicker{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--meadow)}
+h2{font-family:'Josefin Slab',serif;font-size:clamp(30px,4.2vw,44px);line-height:1.1;margin:8px 0 14px;color:var(--meadow2)}
+.lede{max-width:660px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px}
+.card{background:#fff;border-radius:18px;padding:22px;border:1px solid var(--line)}
+.card h3{font-family:'Josefin Slab',serif;font-size:23px;color:var(--meadow2);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.card h3:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--flower);box-shadow:0 0 0 4px #fbefc6}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:#f0f4e6;border-radius:99px;padding:4px 11px;font-size:14px;color:var(--meadow2)}
+.green{background:var(--meadow2);color:#eef3e2}
+.green h2{color:#fff}.green .kicker{color:var(--flower)}.green .lede{color:#d6e0c4}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:30px}
+.why div{background:rgba(255,255,255,.07);border-radius:16px;padding:20px}
+.why b{font-family:'Josefin Slab',serif;font-size:23px;display:block;margin-bottom:4px;color:#fff}
+.why p{color:#d6e0c4;font-size:16px}
+.skyband{background:var(--sky2)}
+.planner{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:30px}
+@media(max-width:860px){.planner{grid-template-columns:1fr}}
+.step{margin-bottom:22px}
+.step h4{font-family:'Josefin Slab',serif;font-size:20px;color:var(--meadow2);margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:2px solid var(--line);background:#fff;border-radius:12px;padding:10px 14px;font:inherit;font-size:15.5px;cursor:pointer;color:var(--ink);transition:all .15s}
+.opt:hover{border-color:var(--meadow)}
+.opt[aria-pressed=true]{background:var(--meadow);border-color:var(--meadow);color:#fff}
+.stepper{display:flex;align-items:center;gap:14px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:2px solid var(--meadow);background:#fff;font-size:22px;color:var(--meadow2);cursor:pointer}
+.stepper output{font-family:'Josefin Slab',serif;font-size:30px;min-width:40px;text-align:center;color:var(--meadow2)}
+.card2{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;align-self:start;position:sticky;top:14px}
+.card2 h3{font-family:'Josefin Slab',serif;font-size:25px;color:var(--meadow2)}
+.meadowbox{height:90px;border-radius:12px;margin:12px 0;background:linear-gradient(var(--sky2),#fff 55%,#cfe0b0 55%);position:relative;overflow:hidden}
+.bloom{position:absolute;bottom:8px;width:14px;height:14px;border-radius:50%;background:var(--flower);box-shadow:0 0 0 3px #fff6d6;animation:grow .4s ease-out}
+.bloom:after{content:"";position:absolute;left:6px;top:14px;width:2px;height:22px;background:var(--meadow)}
+@keyframes grow{from{transform:translateY(30px);opacity:0}}
+.sum{list-style:none;margin:6px 0 14px}
+.sum li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px;font-size:15.5px}
+.sum li span:first-child{color:var(--muted)}
+.card2 textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:15px;min-height:60px;margin-bottom:12px;background:var(--paper)}
+.card2 .row{display:flex;gap:10px;flex-wrap:wrap}
+.card2 .btn{flex:1}
+.small{font-size:13.5px;color:var(--muted);margin-top:10px}
+.market{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+@media(max-width:860px){.market{grid-template-columns:1fr}}
+.days{display:grid;gap:10px;margin:14px 0 18px}
+.day{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.day b{font-family:'Josefin Slab',serif;font-size:20px;color:var(--meadow2);min-width:62px}
+.mapbox{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:320px;background:var(--sky2)}
+.mapbox iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.contact{display:grid;gap:10px}
+.contact a{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 16px;text-decoration:none;font-weight:600;word-break:break-word}
+.contact a:hover{border-color:var(--meadow)}
+.contact svg{width:22px;height:22px;flex:none;color:var(--meadow)}
+footer{background:var(--meadow2);color:#d6e0c4;text-align:center;padding:30px 22px;font-size:14px}
+footer b{color:#fff;font-family:'Josefin Slab',serif;font-size:20px;display:block;margin-bottom:4px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(79,108,42,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar a{flex:1;text-align:center;background:var(--flower);color:var(--ink);text-decoration:none;font-weight:700;padding:12px;border-radius:10px}
+@media(min-width:861px){.bar{display:none}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Hillside Haven Farm. Not live.</div>
+<div class="heroband">
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#A8C9E0"/><path d="M1 22 Q9 14 16 19 T31 17 V24 A15 15 0 0 1 1 24z" fill="#6B8E3D"/><circle cx="21" cy="10" r="3.5" fill="#F2C94C"/></svg>Hillside Haven Farm</a>
+  <div class="links"><a href="#grow">Harvest</a><a href="#csa">CSA</a><a href="#how">How we grow</a><a href="#find">Pickup</a></div>
+</nav>
+<header class="hero" id="top">
+  <div>
+    <span class="tag"><i></i>Butler, Tennessee &middot; Se habla espa&ntilde;ol</span>
+    <h1>Healthy food comes from <span>healthy roots.</span></h1>
+    <p class="sub">Elizabeth and Samuel Echemendia grow a wide variety of naturally grown produce on a hillside in Carter County, with no chemical fertilizers, pesticides or herbicides, and CSA shares that run three seasons a year.</p>
+    <div class="ctas">
+      <a class="btn p" href="#csa">Plan your CSA share</a>
+      <a class="btn s" href="#find">Pickup days</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 520 420">
+      <circle cx="400" cy="90" r="40" fill="#F2C94C"/>
+      <path d="M0 210 L110 110 L190 170 L290 70 L400 175 L520 120 V420 H0z" fill="#8fb1c8"/>
+      <path d="M0 250 Q130 170 260 220 T520 200 V420 H0z" fill="#86a95a"/>
+      <path d="M0 300 Q150 240 300 280 T520 260 V420 H0z" fill="#6B8E3D"/>
+      <g transform="translate(300 214)"><path d="M0 40 V8 L34 -18 L68 8 V40z" fill="#fff" stroke="#4f6c2a" stroke-width="3"/><path d="M6 40 Q34 -6 62 40" fill="none" stroke="#4f6c2a" stroke-width="2"/><path d="M14 40 Q34 6 54 40" fill="none" stroke="#4f6c2a" stroke-width="2" opacity=".6"/></g>
+      <path d="M0 350 Q160 310 320 340 T520 330 V420 H0z" fill="#4f6c2a"/>
+      <g class="sway"><path d="M60 400v-60" stroke="#2f451a" stroke-width="3"/><circle cx="60" cy="336" r="9" fill="#F2C94C"/><circle cx="60" cy="336" r="3.5" fill="#8a5a1a"/></g>
+      <g class="sway b"><path d="M110 405v-48" stroke="#2f451a" stroke-width="3"/><circle cx="110" cy="354" r="8" fill="#fff"/><circle cx="110" cy="354" r="3" fill="#F2C94C"/></g>
+      <g class="sway"><path d="M170 400v-70" stroke="#2f451a" stroke-width="3"/><circle cx="170" cy="326" r="10" fill="#F2C94C"/><circle cx="170" cy="326" r="4" fill="#8a5a1a"/></g>
+      <g class="sway b"><path d="M230 405v-44" stroke="#2f451a" stroke-width="3"/><circle cx="230" cy="358" r="7" fill="#A8C9E0"/></g>
+      <g class="sway"><path d="M420 405v-56" stroke="#2f451a" stroke-width="3"/><circle cx="420" cy="346" r="9" fill="#F2C94C"/><circle cx="420" cy="346" r="3.5" fill="#8a5a1a"/></g>
+      <g class="sway b"><path d="M470 400v-40" stroke="#2f451a" stroke-width="3"/><circle cx="470" cy="357" r="7" fill="#fff"/></g>
+    </svg>
+  </div>
+</header>
+</div>
+
+<section id="grow">
+  <div class="wrap">
+    <span class="kicker">The harvest</span>
+    <h2>Dozens of crops, from early greens to chestnuts</h2>
+    <p class="lede">High tunnels stretch the season, so there is something growing on the hillside most of the year.</p>
+    <div class="grid">
+      <div class="card rv"><h3>Greens</h3><div class="chips"><span>Arugula</span><span>Asian greens</span><span>Kale</span><span>Lettuce</span><span>Salad mix</span><span>Spinach</span><span>Swiss chard</span><span>Collards</span><span>Mustard greens</span><span>Microgreens</span></div></div>
+      <div class="card rv"><h3>Summer</h3><div class="chips"><span>Tomatoes</span><span>Cucumber</span><span>Eggplant</span><span>Okra</span><span>Sweet &amp; hot peppers</span><span>Summer squash</span><span>Green &amp; pole beans</span><span>Peas</span></div></div>
+      <div class="card rv"><h3>Roots &amp; storage</h3><div class="chips"><span>Beets</span><span>Carrots</span><span>Potatoes</span><span>Sweet potato</span><span>Onions</span><span>Turnips</span><span>Radish</span><span>Pumpkins</span><span>Winter squash</span></div></div>
+      <div class="card rv"><h3>And more</h3><div class="chips"><span>Fresh herbs</span><span>Sprouts</span><span>Grapes</span><span>Chestnuts</span><span>Plant starts</span><span>Broccoli</span><span>Cabbage</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="skyband" id="csa">
+  <div class="wrap">
+    <span class="kicker">CSA planner</span>
+    <h2>Pick a season, tell us your household, we'll do the growing</h2>
+    <p class="lede">Shares come in sizes from individuals to large families, and online ordering with "trade outs" lets you customize each week. Build your request below and it goes straight to Elizabeth and Samuel.</p>
+    <div class="planner">
+      <div>
+        <div class="step"><h4>1. Which season?</h4><div class="opts" data-k="season"><button class="opt" aria-pressed="false">Spring: April&ndash;June</button><button class="opt" aria-pressed="false">Summer: July&ndash;September</button><button class="opt" aria-pressed="false">Fall: October&ndash;December</button></div></div>
+        <div class="step"><h4>2. How many people are eating?</h4><div class="stepper"><button type="button" id="minus" aria-label="Fewer">&minus;</button><output id="ppl">2</output><button type="button" id="plus" aria-label="More">+</button></div></div>
+        <div class="step"><h4>3. Where will you pick up?</h4><div class="opts" data-k="pickup"><button class="opt" aria-pressed="false">On the farm (Wednesdays)</button><button class="opt" aria-pressed="false">Mountain City (Thursdays)</button><button class="opt" aria-pressed="false">Elizabethton Farmers Market (Tuesdays)</button><button class="opt" aria-pressed="false">Another drop-off point</button></div></div>
+      </div>
+      <aside class="card2">
+        <h3>Your share request</h3>
+        <div class="meadowbox" id="meadow"></div>
+        <ul class="sum">
+          <li><span>Season</span><span id="sSeason">not chosen</span></li>
+          <li><span>Household</span><span id="sPpl">2 people</span></li>
+          <li><span>Pickup</span><span id="sPick">not chosen</span></li>
+        </ul>
+        <textarea id="note" placeholder="Favorite crops, things you'd trade out, questions..."></textarea>
+        <div class="row">
+          <a class="btn p" id="send" href="mailto:hillsidehavenfarm@gmail.com">Email the farm</a>
+          <a class="btn s" id="text" href="sms:+18287730254">Text it</a>
+        </div>
+        <p class="small">Opens your own email or messages app. Nothing is sent until you press send.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="green" id="how">
+  <div class="wrap">
+    <span class="kicker">How we grow</span>
+    <h2>Soil first, always</h2>
+    <p class="lede">Hillside Haven follows organic (not certified), GMO-free, permaculture and regenerative practices.</p>
+    <div class="why">
+      <div class="rv"><b>Nothing synthetic</b><p>No chemical fertilizers, pesticides, herbicides or additives go on the crops.</p></div>
+      <div class="rv"><b>Living soil</b><p>Composting, rotational and companion planting, and regular soil tests keep the ground healthy.</p></div>
+      <div class="rv"><b>Longer seasons</b><p>High tunnels extend the growing season, which is how the CSA can run from April into December.</p></div>
+      <div class="rv"><b>Open to everyone</b><p>Woman-owned and Spanish-speaking. Credit/debit, EBT/SNAP and SNAP Incentives accepted.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <span class="kicker">Pickup &amp; markets</span>
+    <h2>Where to find the farm</h2>
+    <div class="market">
+      <div>
+        <div class="days">
+          <div class="day"><b>Tue</b>Elizabethton Farmers Market, June&ndash;September</div>
+          <div class="day"><b>Wed</b>On-farm pickup in Butler</div>
+          <div class="day"><b>Thu</b>Pickup in Mountain City</div>
+        </div>
+        <p class="lede" style="margin-bottom:16px">Also at the Beech Mountain Farmers Market, and delivering to restaurants and retail locations. CSA drop-off points are within an hour of Butler.</p>
+        <div class="contact">
+          <a href="tel:+18287730254"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>(828) 773-0254</a>
+          <a href="mailto:hillsidehavenfarm@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hillsidehavenfarm@gmail.com</a>
+          <a href="https://www.facebook.com/hillside.haven.farm.tn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-3a4 4 0 00-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook</a>
+          <a href="https://www.instagram.com/hillside.haven.farm.tn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Instagram</a>
+        </div>
+      </div>
+      <div class="mapbox"><iframe title="Map of Butler, TN" loading="lazy" src="https://www.google.com/maps?q=Butler%2C%20TN%2037640&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Hillside Haven Farm</b>Butler, Tennessee &middot; Concept by Code Craft Media</footer>
+<div class="bar" id="bar"><a href="tel:+18287730254">Call</a><a href="mailto:hillsidehavenfarm@gmail.com">Email</a><a href="#csa">CSA</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var bar=document.getElementById('bar'),hero=document.getElementById('top');
+  function sb(){bar.classList.toggle('on',window.scrollY>hero.offsetTop+hero.offsetHeight-60)}
+  window.addEventListener('scroll',sb,{passive:true});sb();
+  var st={season:'',pickup:''},ppl=2,meadow=document.getElementById('meadow'),note=document.getElementById('note'),send=document.getElementById('send'),txt=document.getElementById('text');
+  function blooms(){meadow.innerHTML='';for(var i=0;i<ppl;i++){var b=document.createElement('span');b.className='bloom';b.style.left=(8+((i*37)%84))+'%';b.style.bottom=(8+(i%3)*10)+'px';b.style.animationDelay=(i*40)+'ms';meadow.appendChild(b)}}
+  function upd(){
+    document.getElementById('sSeason').textContent=st.season||'not chosen';
+    document.getElementById('sPick').textContent=st.pickup||'not chosen';
+    document.getElementById('sPpl').textContent=ppl+(ppl===1?' person':' people');
+    document.getElementById('ppl').textContent=ppl;
+    var body='Hi Elizabeth and Samuel,\n\nI\'m interested in a Hillside Haven CSA share.\n\nSeason: '+(st.season||'(not sure yet)')+'\nHousehold: '+ppl+(ppl===1?' person':' people')+'\nPickup: '+(st.pickup||'(not sure yet)')+(note.value?'\n\n'+note.value:'')+'\n\nWhat share size would you suggest, and is there room?\n\nThank you!';
+    send.href='mailto:hillsidehavenfarm@gmail.com?subject='+encodeURIComponent('CSA share request')+'&body='+encodeURIComponent(body);
+    txt.href='sms:+18287730254?&body='+encodeURIComponent(body);
+  }
+  [].forEach.call(document.querySelectorAll('.opts'),function(g){var k=g.dataset.k;[].forEach.call(g.querySelectorAll('.opt'),function(b){b.addEventListener('click',function(){[].forEach.call(g.querySelectorAll('.opt'),function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');st[k]=b.textContent;upd()})})});
+  document.getElementById('minus').onclick=function(){if(ppl>1){ppl--;blooms();upd()}};
+  document.getElementById('plus').onclick=function(){if(ppl<12){ppl++;blooms();upd()}};
+  note.addEventListener('input',upd);blooms();upd();
+})();
+</script>
+</body>
+</html>

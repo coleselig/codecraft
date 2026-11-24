@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Golden Roots Farm — Johnson City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#3D4B55;--slate2:#2c373f;--teal:#4E9A97;--teal2:#3a7b78;--lime:#EEEAE1;--paper:#f7f5f0;--ink:#232c32;--muted:#5d6a73;--line:#d9d3c6;--gold:#c9a24a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--slate2);color:#d7dee2;font-size:12px;text-align:center;padding:7px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1140px;margin:0 auto}
+.logo{font-family:Spectral,serif;font-weight:700;font-size:21px;color:var(--slate);text-decoration:none;display:flex;gap:9px;align-items:center}
+.logo svg{width:30px;height:30px}
+nav .links{display:flex;gap:22px;font-size:15px;font-weight:500}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--teal2)}
+@media(max-width:720px){nav .links{display:none}}
+.hero{max-width:1140px;margin:0 auto;padding:30px 22px 10px;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:16px}}
+.tag{display:inline-block;background:#dcebea;color:var(--teal2);font-weight:600;font-size:13px;border-radius:6px;padding:5px 11px;letter-spacing:.04em;text-transform:uppercase}
+h1{font-family:Spectral,serif;font-weight:700;font-size:clamp(38px,6vw,66px);line-height:1.04;color:var(--slate);margin:16px 0 14px;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:500;color:var(--teal2)}
+.sub{font-size:18px;color:var(--muted);max-width:530px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:10px;font-weight:600;text-decoration:none;font-size:16px;transition:transform .15s,background .15s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--teal2);color:#fff}
+.btn.p:hover{background:var(--slate)}
+.btn.s{background:transparent;color:var(--slate);border:2px solid var(--slate)}
+.art svg{width:100%;height:auto;display:block}
+.drift{animation:drift 7s ease-in-out infinite}
+@keyframes drift{50%{transform:translateX(14px)}}
+.bob{transform-origin:bottom center;animation:bob 5s ease-in-out infinite}
+.bob.b{animation-delay:-2.4s}
+@keyframes bob{50%{transform:rotate(2deg)}}
+.wrap{max-width:1140px;margin:0 auto;padding:70px 22px;position:relative}
+.kicker{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--teal2)}
+h2{font-family:Spectral,serif;font-size:clamp(30px,4.2vw,44px);line-height:1.1;margin:8px 0 14px;color:inherit}
+.lede{max-width:650px;font-size:17px;color:var(--muted)}
+.stone{background:var(--lime);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px}
+.card{background:#fff;border-radius:16px;padding:22px;border:1px solid var(--line);position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--teal)}
+.card h3{font-family:Spectral,serif;font-size:22px;color:var(--slate);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:var(--lime);border-radius:99px;padding:3px 10px;font-size:13.5px;color:var(--slate)}
+.deep{background:var(--slate);color:#e8ecee}
+.deep .kicker{color:#8fd0cc}
+.deep .lede{color:#c3ccd2}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:30px}
+.why div{border-top:2px solid var(--teal);padding-top:14px}
+.why b{font-family:Spectral,serif;font-size:22px;display:block;margin-bottom:4px;color:#fff}
+.why p{color:#c3ccd2;font-size:15.5px}
+/* bed builder */
+.builder{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:30px}
+@media(max-width:860px){.builder{grid-template-columns:1fr}}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:2px solid var(--line);background:#fff;border-radius:99px;padding:9px 15px;font:inherit;font-size:15px;cursor:pointer;color:var(--slate);transition:all .15s}
+.opt:hover{border-color:var(--teal)}
+.opt[aria-pressed=true]{background:var(--teal2);border-color:var(--teal2);color:#fff}
+.group{font-family:Spectral,serif;font-size:19px;color:var(--slate);margin:20px 0 10px}
+.group:first-child{margin-top:0}
+.bed{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;align-self:start;position:sticky;top:14px}
+.bed h3{font-family:Spectral,serif;font-size:24px;color:var(--slate)}
+.soil{margin:14px 0;height:120px;border-radius:12px;background:linear-gradient(#5b4a3a,#3f3328);position:relative;overflow:hidden;display:flex;align-items:flex-end;gap:4px;padding:0 10px 12px;flex-wrap:wrap;align-content:flex-end}
+.soil:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,255,255,.05) 22px 24px)}
+.soil .empty{color:#cdbfae;font-size:14px;font-style:italic;position:absolute;left:14px;top:14px}
+.sprout{position:relative;background:var(--lime);color:var(--slate);border-radius:8px;padding:3px 8px;font-size:12.5px;font-weight:600;animation:pop .35s ease-out}
+@keyframes pop{from{transform:translateY(20px) scale(.6);opacity:0}}
+.bed textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:15px;min-height:64px;margin-bottom:12px;background:var(--paper)}
+.bed .row{display:flex;gap:10px;flex-wrap:wrap}
+.bed .btn{flex:1;justify-content:center}
+.small{font-size:13px;color:var(--muted);margin-top:10px}
+.market{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+@media(max-width:860px){.market{grid-template-columns:1fr}}
+.when{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}
+.when b{font-family:Spectral,serif;font-size:26px;color:var(--slate);display:block}
+.mapbox{border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:var(--lime)}
+.mapbox iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.contact{display:grid;gap:10px;margin-top:6px}
+.contact a{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 16px;text-decoration:none;font-weight:500;word-break:break-word}
+.contact a:hover{border-color:var(--teal)}
+.contact svg{width:22px;height:22px;flex:none;color:var(--teal2)}
+footer{background:var(--slate2);color:#aab5bc;text-align:center;padding:30px 22px;font-size:14px}
+footer b{color:#fff;font-family:Spectral,serif;font-size:19px;display:block;margin-bottom:4px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(44,55,63,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar a{flex:1;text-align:center;background:var(--teal2);color:#fff;text-decoration:none;font-weight:600;padding:12px;border-radius:10px}
+@media(min-width:861px){.bar{display:none}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Golden Roots Farm. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#4E9A97"/><path d="M16 25V12M16 16c-4 0-6-3-6-6 4 0 6 3 6 6zm0-2c0-4 3-6 6-6 0 4-3 6-6 6z" fill="#EEEAE1" stroke="#EEEAE1" stroke-width="1.5"/><path d="M16 25c-2 1-4 3-5 5M16 25c2 1 4 3 5 5M16 25v5" stroke="#c9a24a" stroke-width="1.6" fill="none"/></svg>Golden Roots Farm</a>
+  <div class="links"><a href="#grow">What we grow</a><a href="#how">How we grow</a><a href="#order">Ask for a bag</a><a href="#find">Find us</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="tag">No-till market garden &middot; East Tennessee</span>
+    <h1>Vegetables grown from <em>healthy soil</em>, not from a bag.</h1>
+    <p class="sub">Golden Roots Farm is a no-till market garden near Johnson City growing crops that suit the Appalachian climate: heirloom tomatoes, sugar snap peas, Thai basil, pawpaws, figs and blackberries.</p>
+    <div class="ctas">
+      <a class="btn p" href="#order">Build a harvest request</a>
+      <a class="btn s" href="#find">Tuesdays in Elizabethton</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 520 420">
+      <rect x="0" y="0" width="520" height="420" rx="26" fill="#EEEAE1"/>
+      <path d="M0 150 Q 90 90 170 130 T 340 110 T 520 120 V0 H0z" fill="#dcebea"/>
+      <g class="drift"><ellipse cx="110" cy="70" rx="44" ry="12" fill="#fff" opacity=".8"/><ellipse cx="380" cy="52" rx="56" ry="13" fill="#fff" opacity=".7"/></g>
+      <path d="M0 190 Q 120 140 240 175 T 520 160 V260 H0z" fill="#3D4B55" opacity=".85"/>
+      <path d="M0 220 Q 140 185 280 210 T 520 200 V280 H0z" fill="#4E9A97"/>
+      <path d="M0 238 Q 160 214 300 232 T 520 226" stroke="#a9dad7" stroke-width="3" fill="none" opacity=".7"/>
+      <rect x="0" y="270" width="520" height="150" fill="#5b4a3a"/>
+      <g stroke="#3f3328" stroke-width="2" opacity=".5"><path d="M0 300h520M0 335h520M0 370h520M0 405h520"/></g>
+      <g fill="#c9a24a" opacity=".85"><path d="M60 285c-4 30-12 60-26 90M60 285c6 28 4 60-4 100M60 285c14 22 22 50 24 82" stroke="#c9a24a" stroke-width="2.5" fill="none"/><path d="M200 285c-6 28-16 52-30 78M200 285c4 30 0 62-6 96M200 285c12 24 22 46 30 70" stroke="#c9a24a" stroke-width="2.5" fill="none"/><path d="M340 285c-4 26-10 56-22 80M340 285c6 30 6 58 0 90M340 285c14 20 26 46 30 74" stroke="#c9a24a" stroke-width="2.5" fill="none"/><path d="M460 285c-6 26-14 50-26 74M460 285c4 28 2 60-4 92" stroke="#c9a24a" stroke-width="2.5" fill="none"/></g>
+      <g class="bob"><path d="M60 285V230" stroke="#3a7b78" stroke-width="4"/><circle cx="48" cy="236" r="13" fill="#b73a3a"/><circle cx="70" cy="226" r="11" fill="#d1553c"/><path d="M60 250c-14-4-22-12-24-24 12 2 22 10 24 24zM60 244c12-6 22-6 30 0-10 8-20 8-30 0z" fill="#4E9A97"/></g>
+      <g class="bob b"><path d="M200 285v-70" stroke="#3a7b78" stroke-width="4"/><path d="M200 230c-18-6-28-18-30-34 16 4 28 16 30 34zM200 250c16-10 30-10 40-2-12 12-26 12-40 2zM200 214c8-14 20-20 32-18-6 14-18 20-32 18z" fill="#4E9A97"/><ellipse cx="214" cy="240" rx="5" ry="14" fill="#8cc07a" transform="rotate(20 214 240)"/><ellipse cx="188" cy="226" rx="5" ry="13" fill="#8cc07a" transform="rotate(-20 188 226)"/></g>
+      <g class="bob"><path d="M340 285v-56" stroke="#3a7b78" stroke-width="4"/><path d="M340 244c-14-2-24-10-28-22 14 0 24 8 28 22zM340 236c10-12 22-16 32-12-8 12-20 16-32 12z" fill="#5a3f7a"/><path d="M340 258c-10-2-18-8-20-16 10 0 18 6 20 16z" fill="#6f4f94"/></g>
+      <g class="bob b"><path d="M460 285v-60" stroke="#3a7b78" stroke-width="4"/><circle cx="450" cy="236" r="7" fill="#2a2a3a"/><circle cx="462" cy="230" r="7" fill="#2a2a3a"/><circle cx="456" cy="244" r="7" fill="#2a2a3a"/><path d="M460 256c12-8 24-8 32 0-10 8-22 8-32 0z" fill="#4E9A97"/></g>
+      <text x="26" y="400" font-family="IBM Plex Sans" font-size="13" fill="#EEEAE1" opacity=".8" letter-spacing="2">ROOTED IN HEALTHY SOIL</text>
+    </svg>
+  </div>
+</header>
+
+<section id="grow">
+  <div class="wrap">
+    <span class="kicker">What we grow</span>
+    <h2>A wide mix, grown for what our neighbors like to eat</h2>
+    <p class="lede">Crop diversity is the point. Here is what Golden Roots Farm lists in ASAP's Local Food Guide.</p>
+    <div class="grid">
+      <div class="card rv"><h3>Vegetables</h3><div class="chips"><span>Heirloom tomatoes</span><span>Peas</span><span>Pole beans</span><span>Green beans</span><span>Okra</span><span>Eggplant</span><span>Sweet peppers</span><span>Cucumber</span><span>Summer squash</span><span>Carrots</span></div></div>
+      <div class="card rv"><h3>Greens</h3><div class="chips"><span>Lettuce</span><span>Spinach</span><span>Collards</span></div></div>
+      <div class="card rv"><h3>Fall harvest</h3><div class="chips"><span>Pumpkins</span><span>Winter squash</span><span>Gourds</span></div></div>
+      <div class="card rv"><h3>Fruit &amp; flowers</h3><div class="chips"><span>Blackberries</span><span>Watermelons</span><span>Fresh flowers</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="deep" id="how">
+  <div class="wrap">
+    <span class="kicker">How we grow</span>
+    <h2>Leave the soil alone, and it feeds you back</h2>
+    <p class="lede">"We're a no-till market garden rooted in healthy soil." Everything else follows from that.</p>
+    <div class="why">
+      <div class="rv"><b>No-till beds</b><p>The soil isn't turned over, so its structure and life stay intact. The goal is nutrient-rich, flavorful vegetables.</p></div>
+      <div class="rv"><b>Grown for these mountains</b><p>Crops chosen to suit the Appalachian climate, from Thai basil and sugar snap peas to pawpaws and figs.</p></div>
+      <div class="rv"><b>Organic practices</b><p>Organic (not certified), low spray and regenerative, as listed with ASAP's Appalachian Grown guide.</p></div>
+      <div class="rv"><b>Local kitchens trust it</b><p>Golden Roots supplies Timber! as well as selling at the Elizabethton Farmers Market.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stone" id="order">
+  <div class="wrap">
+    <span class="kicker">Ask for a bag</span>
+    <h2>Plant your request, then send it to the farm</h2>
+    <p class="lede">The CSA is full for now, but you can message the farm to buy directly when produce is available. Tap what you'd like and watch it sprout in the bed.</p>
+    <div class="builder">
+      <div>
+        <div class="group">Vegetables</div>
+        <div class="opts">
+          <button class="opt" aria-pressed="false">Heirloom tomatoes</button><button class="opt" aria-pressed="false">Peas</button><button class="opt" aria-pressed="false">Pole beans</button><button class="opt" aria-pressed="false">Okra</button><button class="opt" aria-pressed="false">Eggplant</button><button class="opt" aria-pressed="false">Sweet peppers</button><button class="opt" aria-pressed="false">Cucumber</button><button class="opt" aria-pressed="false">Carrots</button>
+        </div>
+        <div class="group">Greens</div>
+        <div class="opts"><button class="opt" aria-pressed="false">Lettuce</button><button class="opt" aria-pressed="false">Spinach</button><button class="opt" aria-pressed="false">Collards</button></div>
+        <div class="group">Fall &amp; fruit</div>
+        <div class="opts"><button class="opt" aria-pressed="false">Pumpkins</button><button class="opt" aria-pressed="false">Winter squash</button><button class="opt" aria-pressed="false">Blackberries</button><button class="opt" aria-pressed="false">Fresh flowers</button></div>
+      </div>
+      <aside class="bed">
+        <h3>Your bed</h3>
+        <div class="soil" id="soil"><span class="empty" id="empty">Nothing planted yet. Tap a crop.</span></div>
+        <textarea id="note" placeholder="When would you like to pick up? Any questions?"></textarea>
+        <div class="row">
+          <a class="btn p" id="send" href="mailto:goldenrootsfarm@gmail.com">Email the farm</a>
+          <a class="btn s" id="text" href="sms:+14235522725">Text it</a>
+        </div>
+        <p class="small">Opens your own email or messages app. Nothing is sent until you press send.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <span class="kicker">Find us</span>
+    <h2>Elizabethton Farmers Market</h2>
+    <div class="market">
+      <div>
+        <div class="when"><b>Tuesdays, 4&ndash;7 pm</b>The 2026 market season ran June 2 to September 29.</div>
+        <div class="contact">
+          <a href="tel:+14235522725"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>(423) 552-2725</a>
+          <a href="mailto:goldenrootsfarm@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>goldenrootsfarm@gmail.com</a>
+          <a href="https://www.facebook.com/goldenrootsfarm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-3a4 4 0 00-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook</a>
+          <a href="https://www.instagram.com/goldenrootsfarm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Instagram</a>
+        </div>
+      </div>
+      <div class="mapbox"><iframe title="Map of Elizabethton, TN" loading="lazy" src="https://www.google.com/maps?q=Elizabethton%20Farmers%20Market%2C%20Elizabethton%2C%20TN&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Golden Roots Farm</b>Johnson City, Tennessee &middot; Concept by Code Craft Media</footer>
+<div class="bar" id="bar"><a href="tel:+14235522725">Call</a><a href="mailto:goldenrootsfarm@gmail.com">Email</a><a href="#order">Request</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var bar=document.getElementById('bar'),hero=document.getElementById('top');
+  function sb(){bar.classList.toggle('on',window.scrollY>hero.offsetTop+hero.offsetHeight-60)}
+  window.addEventListener('scroll',sb,{passive:true});sb();
+  var picks=[],soil=document.getElementById('soil'),empty=document.getElementById('empty'),note=document.getElementById('note'),send=document.getElementById('send'),txt=document.getElementById('text');
+  function upd(){
+    [].slice.call(soil.querySelectorAll('.sprout')).forEach(function(s){s.remove()});
+    empty.style.display=picks.length?'none':'';
+    picks.forEach(function(p){var s=document.createElement('span');s.className='sprout';s.textContent=p;soil.appendChild(s)});
+    var body='Hi Golden Roots Farm,\n\nI\'d love to buy some produce directly from the farm when it\'s available:\n'+(picks.length?picks.map(function(p){return '- '+p}).join('\n'):'- (your picks)')+(note.value?'\n\n'+note.value:'')+'\n\nThank you!';
+    send.href='mailto:goldenrootsfarm@gmail.com?subject='+encodeURIComponent('Produce request')+'&body='+encodeURIComponent(body);
+    txt.href='sms:+14235522725?&body='+encodeURIComponent(body);
+  }
+  [].forEach.call(document.querySelectorAll('.opt'),function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);var t=b.textContent;if(on)picks.push(t);else picks=picks.filter(function(x){return x!==t});upd()})});
+  note.addEventListener('input',upd);upd();
+})();
+</script>
+</body>
+</html>

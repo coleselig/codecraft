@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Moonchild Blooms — Jonesborough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1F2440;--night2:#2a3056;--gold:#E8C872;--pink:#F2C6C2;--cream:#fbf6ef;--ink:#1b1f36;--muted:#5d6080}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Mulish,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:80px}
+a{color:inherit}
+.banner{background:#12162b;color:var(--gold);font-size:12px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.top{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.4px),radial-gradient(var(--gold) 1px,transparent 1.4px);background-size:90px 90px,140px 140px;background-position:10px 20px,60px 80px;opacity:.35;animation:tw 6s ease-in-out infinite;pointer-events:none}
+@keyframes tw{50%{opacity:.15}}
+nav{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;padding:16px 22px}
+.logo{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;text-decoration:none;display:flex;gap:9px;align-items:center;color:#fff}
+.logo svg{width:26px;height:26px}
+nav .links{display:flex;gap:22px;font-size:15px;font-weight:600}
+nav .links a{text-decoration:none;color:#c9cbe4}
+nav .links a:hover{color:var(--gold)}
+@media(max-width:720px){nav .links{display:none}}
+.hero{position:relative;max-width:1140px;margin:0 auto;padding:30px 22px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-bottom:40px;gap:6px}}
+.tag{display:inline-block;border:1px solid rgba(232,200,114,.5);color:var(--gold);border-radius:99px;padding:5px 13px;font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(38px,6.2vw,68px);line-height:1.05;margin:18px 0 16px}
+h1 em{color:var(--pink);font-style:italic}
+.sub{font-size:18px;color:#d3d5ec;max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:14px 22px;border-radius:99px;font-weight:800;text-decoration:none;font-size:15.5px;transition:transform .15s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.g{background:var(--gold);color:var(--night)}
+.btn.o{border:2px solid var(--pink);color:var(--pink);background:transparent}
+.art svg{width:100%;max-width:460px;height:auto;display:block;margin:0 auto}
+.moon{animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{filter:drop-shadow(0 0 18px rgba(232,200,114,.7))}}
+.sway{transform-origin:50% 100%;transform-box:fill-box;animation:sway 6s ease-in-out infinite}
+.sway.b{animation-delay:-3s}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.wrap{max-width:1140px;margin:0 auto;padding:72px 22px}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#b08a2e}
+h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4.2vw,44px);line-height:1.1;margin:8px 0 14px}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:32px}
+.card{background:#fff;border-radius:22px;padding:26px;border:1px solid #eee2d6;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 34px -22px rgba(31,36,64,.5)}
+.card svg{width:44px;height:44px;margin-bottom:10px}
+.card h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.dark{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.dark .kicker{color:var(--gold)}
+.dark .lede{color:#c9cbe4}
+.sched{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+@media(max-width:860px){.sched{grid-template-columns:1fr}}
+.info{background:var(--night2);border-radius:22px;padding:26px;border:1px solid rgba(232,200,114,.25)}
+.info dt{font-weight:800;color:var(--gold);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-top:14px}
+.info dt:first-child{margin-top:0}
+.info dd{font-size:16.5px;color:#eceefa}
+.map{border-radius:22px;overflow:hidden;border:1px solid rgba(232,200,114,.25);min-height:300px}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+/* note builder */
+.builder{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:30px}
+@media(max-width:860px){.builder{grid-template-columns:1fr}}
+.grp{font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 10px}
+.grp:first-child{margin-top:0}
+.opts{display:flex;flex-wrap:wrap;gap:9px}
+.opt{font:inherit;font-weight:600;font-size:15px;border:2px solid #e6d9cc;background:#fff;color:var(--ink);border-radius:99px;padding:9px 16px;cursor:pointer;transition:all .15s;display:inline-flex;gap:8px;align-items:center}
+.opt i{width:12px;height:12px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.15)}
+.opt[aria-pressed=true]{border-color:var(--night);background:var(--night);color:#fff}
+.jar{background:var(--night);color:#fff;border-radius:24px;padding:24px;position:relative}
+.jar svg{width:100%;max-width:240px;height:auto;display:block;margin:0 auto}
+.petal{opacity:0;transform:scale(.3);transform-box:fill-box;transform-origin:50% 100%;transition:all .45s cubic-bezier(.3,1.6,.5,1)}
+.petal.on{opacity:1;transform:scale(1)}
+.note{background:var(--night2);border-radius:14px;padding:14px;font-size:14.5px;color:#e3e5f5;margin-top:14px;min-height:72px;white-space:pre-line}
+.jar .btn{width:100%;text-align:center;margin-top:12px}
+.small{font-size:13px;color:#aeb1cf;margin-top:8px;text-align:center}
+footer{background:#12162b;color:#aeb1cf;text-align:center;padding:30px 22px;font-size:14px}
+footer b{color:var(--gold);font-family:'Playfair Display',serif;font-size:18px;display:block;margin-bottom:4px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--night);border-top:1px solid rgba(232,200,114,.35);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;transform:translateY(110%);transition:transform .3s;z-index:9}
+.bar.show{transform:none}
+.bar span{color:#fff;font-size:14px;font-weight:600}
+.bar .btn{padding:10px 18px;font-size:14px}
+.rv{transition:opacity .7s,transform .7s}
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Moonchild Blooms. Not live.</div>
+
+<header class="top">
+  <div class="stars"></div>
+  <nav>
+    <a class="logo" href="#"><svg viewBox="0 0 32 32"><path d="M20 4a12 12 0 1 0 8 20A10 10 0 0 1 20 4z" fill="#E8C872"/></svg>Moonchild Blooms</a>
+    <div class="links"><a href="#flowers">Flowers</a><a href="#market">Find us</a><a href="#note">Ask for flowers</a></div>
+  </nav>
+  <section class="hero">
+    <div>
+      <span class="tag">Flower farm · Jonesborough Farmers Market</span>
+      <h1>Cut flowers, grown by a <em>moonchild</em>, sold on Saturday mornings.</h1>
+      <p class="sub">Moonchild Blooms Flower Farm brings fresh cut flowers to the Jonesborough Farmers Market, behind the Washington County Courthouse.</p>
+      <div class="ctas"><a class="btn g" href="#note">Ask about flowers</a><a class="btn o" href="#market">Where to find us</a></div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 380">
+        <g class="moon"><path d="M262 40a90 90 0 1 0 60 150A75 75 0 0 1 262 40z" fill="#E8C872"/></g>
+        <g fill="#fff" opacity=".8"><circle cx="70" cy="60" r="2"/><circle cx="120" cy="30" r="1.5"/><circle cx="350" cy="250" r="2"/><circle cx="40" cy="180" r="1.5"/></g>
+        <g class="sway"><path d="M150 380 C150 300 140 250 130 200" stroke="#7d9b7a" stroke-width="4" fill="none"/><path d="M142 290 q-30 -10 -40 -34 q30 4 40 34z" fill="#7d9b7a"/>
+          <g transform="translate(130 190)"><g fill="#F2C6C2"><ellipse rx="14" ry="30" transform="rotate(0)"/><ellipse rx="14" ry="30" transform="rotate(45)"/><ellipse rx="14" ry="30" transform="rotate(90)"/><ellipse rx="14" ry="30" transform="rotate(135)"/></g><circle r="11" fill="#E8C872"/></g></g>
+        <g class="sway b"><path d="M230 380 C232 320 240 290 250 250" stroke="#7d9b7a" stroke-width="4" fill="none"/><path d="M236 330 q28 -6 40 -30 q-30 2 -40 30z" fill="#7d9b7a"/>
+          <g transform="translate(250 240)"><g fill="#fff" opacity=".9"><ellipse rx="10" ry="22"/><ellipse rx="10" ry="22" transform="rotate(60)"/><ellipse rx="10" ry="22" transform="rotate(120)"/></g><circle r="8" fill="#E8C872"/></g></g>
+        <g class="sway"><path d="M195 380 C195 330 192 300 190 280" stroke="#7d9b7a" stroke-width="3" fill="none"/><circle cx="190" cy="272" r="16" fill="#F2C6C2"/><circle cx="190" cy="272" r="9" fill="#e7a9a2"/></g>
+      </svg>
+    </div>
+  </section>
+</header>
+
+<main>
+<section class="wrap" id="flowers">
+  <div class="rv">
+    <div class="kicker">What we bring</div>
+    <h2>Flowers, straight from the farm.</h2>
+    <p class="lede">Moonchild Blooms is a flower farm. The market lists us simply: cut flowers. Stop by the table on a Saturday morning to see what is blooming that week.</p>
+  </div>
+  <div class="grid">
+    <div class="card rv"><svg viewBox="0 0 48 48"><circle cx="24" cy="18" r="8" fill="#F2C6C2"/><circle cx="24" cy="18" r="3.5" fill="#E8C872"/><path d="M24 26v18" stroke="#7d9b7a" stroke-width="3"/></svg><h3>Cut flowers</h3><p>Fresh cut flowers grown on the farm and brought to market.</p></div>
+    <div class="card rv"><svg viewBox="0 0 48 48"><path d="M30 6a16 16 0 1 0 12 26A13 13 0 0 1 30 6z" fill="#E8C872"/></svg><h3>Saturday mornings</h3><p>At the Jonesborough Farmers Market, 8 am to noon, May through October.</p></div>
+    <div class="card rv"><svg viewBox="0 0 48 48"><rect x="10" y="10" width="28" height="28" rx="6" fill="none" stroke="#1F2440" stroke-width="3"/><path d="M16 24h16M24 16v16" stroke="#F2C6C2" stroke-width="3"/></svg><h3>Message the farm</h3><p>Questions about flowers? Send the farm a note on Facebook.</p></div>
+  </div>
+</section>
+
+<section class="dark" id="market">
+  <div class="stars"></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Where to find us</div>
+      <h2>Jonesborough Farmers Market</h2>
+      <p class="lede">We are on the market's 2026 vendor list. The market posts each Saturday's vendors on Facebook and Instagram after 10 am on the Friday before.</p>
+    </div>
+    <div class="sched">
+      <dl class="info rv">
+        <dt>Where</dt><dd>Behind the Washington County Courthouse, downtown Jonesborough, TN</dd>
+        <dt>When</dt><dd>Saturdays, 8 am to 12 pm</dd>
+        <dt>2026 season</dt><dd>May 2 to October 31</dd>
+        <dt>No market</dt><dd>July 4, October 3, and during Jonesborough Days and the Storytelling Festival</dd>
+      </dl>
+      <div class="map rv"><iframe title="Map of Jonesborough, TN" loading="lazy" src="https://www.google.com/maps?q=Washington%20County%20Courthouse%2C%20Jonesborough%2C%20TN&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="note">
+  <div class="rv">
+    <div class="kicker">Ask for flowers</div>
+    <h2>Fill a jar, then send the note.</h2>
+    <p class="lede">Tap what you're looking for. Each choice adds a bloom to the jar and a line to your note. Then copy it and send it to the farm on Facebook.</p>
+  </div>
+  <div class="builder">
+    <div class="rv">
+      <div class="grp">It's for</div>
+      <div class="opts" data-g="occ">
+        <button class="opt" aria-pressed="false" data-v="a birthday">Birthday</button>
+        <button class="opt" aria-pressed="false" data-v="a thank-you">Thank you</button>
+        <button class="opt" aria-pressed="false" data-v="a get-well">Get well</button>
+        <button class="opt" aria-pressed="false" data-v="my own table">My own table</button>
+        <button class="opt" aria-pressed="false" data-v="just because">Just because</button>
+      </div>
+      <div class="grp">Colors I love</div>
+      <div class="opts" data-g="col">
+        <button class="opt" aria-pressed="false" data-v="soft pinks" data-c="#F2C6C2"><i style="background:#F2C6C2"></i>Soft pinks</button>
+        <button class="opt" aria-pressed="false" data-v="whites" data-c="#ffffff"><i style="background:#fff"></i>Whites</button>
+        <button class="opt" aria-pressed="false" data-v="golds and yellows" data-c="#E8C872"><i style="background:#E8C872"></i>Golds</button>
+        <button class="opt" aria-pressed="false" data-v="deep reds" data-c="#a83246"><i style="background:#a83246"></i>Deep reds</button>
+        <button class="opt" aria-pressed="false" data-v="purples" data-c="#8c6bb1"><i style="background:#8c6bb1"></i>Purples</button>
+        <button class="opt" aria-pressed="false" data-v="whatever is blooming" data-c="#f4a76b"><i style="background:#f4a76b"></i>Surprise me</button>
+      </div>
+      <div class="grp">I'd like to</div>
+      <div class="opts" data-g="how">
+        <button class="opt" aria-pressed="false" data-v="pick them up at the Saturday market">Pick up at market</button>
+        <button class="opt" aria-pressed="false" data-v="ask what's blooming this week">Ask what's blooming</button>
+      </div>
+    </div>
+    <div class="jar rv">
+      <svg viewBox="0 0 200 220" aria-hidden="true">
+        <g id="blooms"></g>
+        <path d="M60 120h80l-6 90H66z" fill="rgba(242,198,194,.18)" stroke="#E8C872" stroke-width="2"/>
+        <path d="M56 114h88" stroke="#E8C872" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div class="note" id="noteText">Tap a few choices to start your note.</div>
+      <button class="btn g" id="send">Copy note &amp; open Facebook</button>
+      <p class="small" id="msg">Opens the Moonchild Blooms Facebook page.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><b>Moonchild Blooms</b>Flower farm at the Jonesborough Farmers Market · <a href="https://www.facebook.com/p/Moonchild-Blooms-100090612541121/">Facebook</a><br><br>Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><span>Saturdays, 8 am to noon</span><a class="btn g" href="#note">Ask about flowers</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rv');
+  function showAll(){els.forEach(function(e){e.classList.add('in')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else showAll();
+  setTimeout(showAll,1500);
+  var hero=document.querySelector('.top'),bar=document.getElementById('bar');
+  function onS(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)}
+  window.addEventListener('scroll',onS,{passive:true});onS();
+  var sel={occ:[],col:[],how:[]},colors=[];
+  var spots=[[100,60],[72,78],[128,74],[86,44],[116,40],[60,100],[140,98],[100,90]];
+  function draw(){
+    var g=document.getElementById('blooms');g.innerHTML='';
+    var cs=colors.length?colors:[];
+    var n=sel.occ.length+sel.col.length+sel.how.length;
+    for(var i=0;i<Math.min(n,spots.length);i++){
+      var c=cs.length?cs[i%cs.length]:'#F2C6C2',p=spots[i];
+      var s='<g class="petal" transform="translate(0 0)"><path d="M100 150 Q'+((100+p[0])/2)+' 120 '+p[0]+' '+p[1]+'" stroke="#7d9b7a" stroke-width="2.5" fill="none"/>'+
+        '<g transform="translate('+p[0]+' '+p[1]+')">';
+      for(var k=0;k<5;k++)s+='<ellipse rx="6" ry="13" fill="'+c+'" transform="rotate('+(k*72)+') translate(0 -8)"/>';
+      s+='<circle r="5" fill="#E8C872"/></g></g>';
+      g.insertAdjacentHTML('beforeend',s);
+    }
+    requestAnimationFrame(function(){g.querySelectorAll('.petal').forEach(function(e){e.classList.add('on')})});
+    var t='Hi Moonchild Blooms!';
+    if(sel.occ.length)t+='\nI\'m looking for flowers for '+sel.occ.join(' and ')+'.';
+    if(sel.col.length)t+='\nI love '+sel.col.join(', ')+'.';
+    if(sel.how.length)t+='\nI\'d like to '+sel.how.join(' and ')+'.';
+    document.getElementById('noteText').textContent=n?t:'Tap a few choices to start your note.';
+  }
+  document.querySelectorAll('.opts').forEach(function(box){
+    var g=box.getAttribute('data-g');
+    box.addEventListener('click',function(e){
+      var b=e.target.closest('.opt');if(!b)return;
+      var on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);
+      var v=b.getAttribute('data-v'),c=b.getAttribute('data-c');
+      if(on){sel[g].push(v);if(c)colors.push(c)}else{sel[g]=sel[g].filter(function(x){return x!==v});if(c)colors=colors.filter(function(x){return x!==c})}
+      draw();
+    });
+  });
+  document.getElementById('send').addEventListener('click',function(){
+    var t=document.getElementById('noteText').textContent;
+    try{navigator.clipboard.writeText(t);document.getElementById('msg').textContent='Note copied. Paste it into a message to the farm.'}catch(e){}
+    window.open('https://www.facebook.com/p/Moonchild-Blooms-100090612541121/','_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
