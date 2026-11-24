@@ -284,7 +284,19 @@ html.js .rv-d1{transition-delay:.08s}html.js .rv-d2{transition-delay:.16s}html.j
   html.js .rv{opacity:1;transform:none}
 }
 </style>
-<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style></head>
+<style id="nlbadge-lift">@media (max-width:899px){#nl-badge-frame{bottom:calc(84px + env(safe-area-inset-bottom))!important}}</style><!-- cc-og h=198cc538cb -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Vina Nails | website concept">
+<meta property="og:description" content="A phone-first website concept made for Vina Nails by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/vina-nails/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/vina-nails/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Vina Nails">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
 <body>
 
 <div class="concept" role="note">Concept site by Code Craft Media, made for <b>Vina Nails</b>. Not live.</div>
@@ -645,6 +657,7 @@ html.js .rv-d1{transition-delay:.08s}html.js .rv-d2{transition-delay:.16s}html.j
   if(fan){fan.style.setProperty('--spread',reduce?(window.innerWidth<900?10:12):0);setTimeout(onScroll,reduce?0:350)}
 
   /* tabs */
+  var ready=false; /* the first select() on load must not scroll the page */
   var tabs=[].slice.call(document.querySelectorAll('.tab'));
   function select(id,focus){
     tabs.forEach(function(t){
@@ -652,7 +665,7 @@ html.js .rv-d1{transition-delay:.08s}html.js .rv-d2{transition-delay:.16s}html.j
       t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
       document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
       if(on&&focus)t.focus();
-      if(on)t.scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'});
+      if(on&&ready)t.scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'});
     });
   }
   tabs.forEach(function(t,i){
@@ -663,6 +676,7 @@ html.js .rv-d1{transition-delay:.08s}html.js .rv-d2{transition-delay:.16s}html.j
     });
   });
   select('mani');
+  ready=true;
 
   /* swatches jump to matching menu tab */
   [].slice.call(document.querySelectorAll('.sw')).forEach(function(s){
@@ -690,5 +704,6 @@ html.js .rv-d1{transition-delay:.08s}html.js .rv-d2{transition-delay:.16s}html.j
   }catch(e){}
 })();
 </script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Vina Nails"></script><!-- /cc-cta -->
 </body>
 </html>
