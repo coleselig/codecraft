@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Jaden The Barber | Clarksville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0a;--ink:#f3eee2;--mute:#9a9486;--gold:#d4a934;--gold2:#f0cf6a;--line:#2a2823}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.5;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--gold);color:#111;font-size:12px;text-align:center;padding:7px 16px;font-weight:500}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;line-height:.9;letter-spacing:.005em}
+/* HERO */
+.hero{position:relative;padding:44px 0 56px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+ repeating-linear-gradient(135deg,transparent 0 22px,rgba(212,169,52,.06) 22px 24px);pointer-events:none}
+.kicker{display:flex;gap:10px;align-items:center;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.kicker i{display:block;width:34px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(76px,24vw,180px);margin:18px 0 6px}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--gold)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--mute);font-size:14px;margin:18px 0 26px}
+.meta b{color:var(--ink);font-weight:700}
+.star{color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 26px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:13px;border:2px solid var(--gold)}
+.btn.solid{background:var(--gold);color:#111}
+.btn.solid:hover{background:var(--gold2)}
+.btn.ghost:hover{background:rgba(212,169,52,.12)}
+.pole{position:absolute;right:20px;top:44px;width:54px;height:300px;border-radius:27px;border:2px solid var(--gold);overflow:hidden;display:none}
+.pole:after{content:"";position:absolute;inset:-60px 0;background:repeating-linear-gradient(160deg,var(--gold) 0 14px,#0b0b0a 14px 28px,var(--ink) 28px 34px,#0b0b0a 34px 48px);animation:spin 3s linear infinite}
+@keyframes spin{to{transform:translateY(48px)}}
+@media(prefers-reduced-motion:reduce){.pole:after{animation:none}}
+@media(min-width:900px){.pole{display:block;right:40px;top:70px;height:420px;width:70px;border-radius:35px}.hero{padding:70px 0 80px}}
+/* SECTIONS */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.sec-h h2{font-size:clamp(48px,12vw,110px)}
+.sec-h p{color:var(--mute);font-size:14px;max-width:340px}
+/* picker */
+.grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:900px){.grid{grid-template-columns:1.5fr 1fr;align-items:start}}
+.svc{list-style:none;border-top:1px solid var(--line)}
+.svc li{border-bottom:1px solid var(--line)}
+.svc button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;padding:16px 4px}
+.svc button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.box{width:22px;height:22px;border:2px solid var(--mute);display:grid;place-items:center;transition:.15s}
+.svc .name{font-weight:500;font-size:16px}
+.svc .dur{display:block;color:var(--mute);font-size:13px}
+.svc .price{font-family:Anton,sans-serif;font-size:24px;color:var(--gold)}
+.svc button[aria-pressed=true] .box{background:var(--gold);border-color:var(--gold)}
+.svc button[aria-pressed=true] .box:after{content:"";width:6px;height:11px;border:solid #111;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.svc button[aria-pressed=true] .name{color:var(--gold2)}
+.ticket{position:sticky;top:20px;background:#14130f;border:1px solid var(--gold);padding:24px}
+.ticket h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:28px;letter-spacing:.02em}
+.ticket .sm{color:var(--mute);font-size:13px;margin:4px 0 18px}
+.tot{display:flex;justify-content:space-between;border-top:1px dashed #4a463c;padding-top:14px;margin-top:6px}
+.tot div{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.tot strong{display:block;font-family:Anton,sans-serif;font-size:44px;color:var(--ink);letter-spacing:.01em;line-height:1.05}
+.picked{font-size:14px;min-height:22px;margin-bottom:12px;color:var(--ink)}
+.note{font-size:12px;color:var(--mute);margin:12px 0 16px}
+.ticket .btn{width:100%}
+/* quote */
+.quote{text-align:center;padding:80px 0}
+.quote blockquote{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(46px,13vw,140px);line-height:.92}
+.quote blockquote q{quotes:none}
+.quote blockquote .g{color:var(--gold)}
+.quote cite{display:block;margin-top:20px;font-style:normal;color:var(--mute);letter-spacing:.2em;text-transform:uppercase;font-size:12px}
+/* info */
+.info{display:grid;gap:22px}
+@media(min-width:900px){.info{grid-template-columns:1fr 1fr}}
+.card{border:1px solid var(--line);padding:24px}
+.card h3{color:var(--gold);font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+.card p{font-size:18px}
+.card table{width:100%;border-collapse:collapse;font-size:16px}
+.card td{padding:8px 0;border-bottom:1px solid var(--line)}
+.card td:last-child{text-align:right;color:var(--gold2)}
+.card .sm{color:var(--mute);font-size:13px;margin-top:10px}
+footer{padding:36px 0 110px;color:var(--mute);font-size:13px;text-align:center}
+@media(min-width:768px){footer{padding-bottom:36px}}
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(11,11,10,.94);backdrop-filter:blur(8px);border-top:1px solid var(--gold);transform:translateY(110%);transition:transform .25s}
+.bar.show{transform:none}
+.bar span{font-family:Anton,sans-serif;text-transform:uppercase;font-size:20px;letter-spacing:.02em}
+.bar .btn{padding:12px 20px}
+@media(min-width:768px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Jaden The Barber. Not live.</div>
+
+<header class="hero" id="hero">
+  <div class="pole" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker"><i></i>Clarksville, Tennessee</div>
+    <h1 class="display">Jaden<span>The</span><em>Barber</em></h1>
+    <div class="meta">
+      <span><span class="star">&#9733;</span> <b>5.0</b> on Booksy (149 reviews)</span>
+      <span>127 Franklin Street, Upstairs</span>
+    </div>
+    <div class="btns">
+      <a class="btn solid" href="https://booksy.com/en-us/1270671_jaden-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+      <a class="btn ghost" href="https://www.instagram.com/jadenthebarber1/" target="_blank" rel="noopener">@jadenthebarber1</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-h"><h2 class="display">The<br>Menu</h2><p>Tap the services you want. Your ticket adds up the price and chair time.</p></div>
+    <div class="grid">
+      <ul class="svc" id="svc"></ul>
+      <aside class="ticket" aria-live="polite">
+        <h3>Your Ticket</h3>
+        <p class="sm">Based on Booksy prices</p>
+        <p class="picked" id="picked">Nothing picked yet.</p>
+        <div class="tot">
+          <div>Total<strong id="tp">$0</strong></div>
+          <div style="text-align:right">Chair time<strong id="tt">0 min</strong></div>
+        </div>
+        <p class="note" id="tn">&nbsp;</p>
+        <a class="btn solid" href="https://booksy.com/en-us/1270671_jaden-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book this</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote><q>Always <span class="g">top tier</span> work</q></blockquote>
+    <cite>Brett, Booksy review</cite>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-h"><h2 class="display">Find<br>The Chair</h2></div>
+    <div class="info">
+      <div class="card">
+        <h3>Location</h3>
+        <p>127 Franklin Street, Upstairs, 113<br>Clarksville, TN 37040</p>
+      </div>
+      <div class="card">
+        <h3>Hours</h3>
+        <p>Your live schedule goes here. Today, open slots are on Booksy.</p>
+        <p class="sm">Check Booksy for open slots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Concept by Code Craft Media · 54321coleman@gmail.com</footer>
+
+<div class="bar" id="bar"><span>Jaden The Barber</span><a class="btn solid" href="https://booksy.com/en-us/1270671_jaden-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const S=[
+["Haircut","$40.00+","40 min",40,40,1],
+["Beard Shaping/Line up","$25.00","30 min",25,30],
+["Head Shave (hot towel)","$40.00","30 min",40,30],
+["Haircut and beard","$45.00","45 min",45,45],
+["Kids cut (12 under)","$30.00","30 min",30,30],
+["Hot towel head and beard","$55.00","35 min",55,35],
+["Eyebrows","$5.00","10 min",5,10],
+["Hot towel beard shave","$30.00","30 min",30,30],
+["Design work","Varies","30 min",0,30,2]
+];
+const ul=document.getElementById('svc');
+S.forEach((s,i)=>{const li=document.createElement('li');li.innerHTML=`<button type="button" aria-pressed="false" data-i="${i}"><span class="box"></span><span><span class="name">${s[0]}</span><span class="dur">${s[2]}</span></span><span class="price">${s[1]}</span></button>`;ul.appendChild(li)});
+ul.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');calc()});
+function calc(){let p=0,t=0,plus=false,varies=false,names=[];
+ ul.querySelectorAll('button[aria-pressed=true]').forEach(b=>{const s=S[+b.dataset.i];p+=s[3];t+=s[4];names.push(s[0]);if(s[5]==1)plus=true;if(s[5]==2)varies=true});
+ document.getElementById('tp').textContent='$'+p+(plus||varies?'+':'');
+ document.getElementById('tt').textContent=t+' min';
+ document.getElementById('picked').textContent=names.length?names.join(' + '):'Nothing picked yet.';
+ const n=[];if(plus)n.push('Haircut starts at $40.00.');if(varies)n.push('Design work price varies.');
+ document.getElementById('tn').innerHTML=n.length?n.join(' '):'&nbsp;';}
+const bar=document.getElementById('bar');
+new IntersectionObserver(([e])=>bar.classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('hero'));
+</script>
+</body>
+</html>

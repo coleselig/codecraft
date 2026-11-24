@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dame The Barber | Clarksville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#10151c;--panel:#161d27;--line:#253041;--ink:#e6edf5;--mute:#8291a6;--blue:#2f7bff;--blue2:#66a3ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.5;overflow-x:hidden;
+ background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;background-attachment:fixed}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",monospace}
+.banner{background:var(--blue);color:#fff;font-size:12px;text-align:center;padding:7px 16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.lbl{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase}
+/* hero */
+.hero{padding:56px 0 64px;border-bottom:1px solid var(--line);position:relative}
+.hero-grid{display:grid;gap:36px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.3fr 1fr;align-items:center}.hero{padding:96px 0}}
+.hero h1{font-size:clamp(56px,16vw,128px);line-height:.92;letter-spacing:-.045em;font-weight:700;margin:14px 0 18px}
+.hero h1 .b{color:var(--blue)}
+.hero p.sub{color:var(--mute);font-size:18px;max-width:440px;margin-bottom:26px}
+.stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);margin-bottom:26px;background:var(--panel);max-width:460px}
+.stats div{flex:1 1 140px;padding:14px 16px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font-size:22px}
+.stats span{font-size:12px;color:var(--mute)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;text-decoration:none;font-weight:500;font-size:15px;border:1px solid var(--blue);transition:.15s}
+.btn.solid{background:var(--blue);color:#fff}
+.btn.solid:hover{background:var(--blue2);border-color:var(--blue2)}
+.btn.ghost{background:var(--bg)}
+.btn.ghost:hover{border-color:var(--blue2);color:var(--blue2)}
+.btn .arr{font-family:"JetBrains Mono",monospace}
+.art{position:relative;aspect-ratio:1;max-width:420px;width:100%;justify-self:center;border:1px solid var(--line);background:var(--panel);overflow:hidden}
+.art svg{width:100%;height:100%;display:block}
+.art .tag{position:absolute;left:12px;bottom:10px}
+/* sections */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(36px,9vw,64px);letter-spacing:-.035em;line-height:1;margin:10px 0 14px}
+.lede{color:var(--mute);max-width:520px;margin-bottom:32px}
+.builder{display:grid;gap:24px}
+@media(min-width:900px){.builder{grid-template-columns:1.4fr 1fr;align-items:start}}
+.opts{display:grid;grid-template-columns:1fr;border:1px solid var(--line);background:var(--panel)}
+@media(min-width:560px){.opts{grid-template-columns:1fr 1fr}}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;padding:18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);position:relative;transition:background .15s}
+.opt:focus-visible{outline:2px solid var(--blue2);outline-offset:-2px}
+.opt:hover{background:#1b2431}
+.opt .k{font-size:11px;color:var(--mute)}
+.opt h3{font-size:18px;font-weight:500;margin:4px 0 10px}
+.opt .pp{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:14px}
+.opt .pp b{color:var(--blue2);font-weight:600}
+.opt[aria-pressed=true]{background:rgba(47,123,255,.14);box-shadow:inset 0 0 0 2px var(--blue)}
+.opt[aria-pressed=true] .k{color:var(--blue2)}
+.out{border:1px solid var(--line);background:var(--panel);padding:22px}
+.track{display:flex;height:40px;border:1px solid var(--line);margin:14px 0 8px;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/6 - 1px),var(--line) calc(100%/6 - 1px) calc(100%/6))}
+.seg{height:100%;background:var(--blue);border-right:2px solid var(--panel);display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:11px;color:#fff;transition:flex-basis .25s;white-space:nowrap}
+.seg:nth-child(2){background:var(--blue2);color:#0b1a33}
+.seg:nth-child(3){background:#9cc2ff;color:#0b1a33}
+.scale{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--mute)}
+.totals{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:18px}
+.totals div{padding:14px 0}
+.totals div+div{border-left:1px solid var(--line);padding-left:16px}
+.totals strong{display:block;font-size:40px;letter-spacing:-.03em;line-height:1.1}
+.list{font-size:14px;color:var(--mute);min-height:42px;margin:6px 0 16px}
+.out .btn{width:100%}
+/* reviews */
+.revs{display:grid;gap:0;border:1px solid var(--line);background:var(--panel)}
+@media(min-width:760px){.revs{grid-template-columns:1fr 1fr}}
+.rev{padding:30px 24px;border-bottom:1px solid var(--line)}
+@media(min-width:760px){.rev{border-bottom:0}.rev+.rev{border-left:1px solid var(--line)}}
+.rev p{font-size:clamp(30px,7vw,48px);letter-spacing:-.03em;line-height:1.05}
+.rev p:before{content:"\201C";color:var(--blue)}
+.rev p:after{content:"\201D";color:var(--blue)}
+.rev cite{display:block;margin-top:14px;font-style:normal}
+.loc{display:grid;gap:24px}
+@media(min-width:760px){.loc{grid-template-columns:1fr 1fr;align-items:end}}
+.addr{font-size:24px;line-height:1.3}
+footer{padding:32px 0 110px;text-align:center;color:var(--mute);font-size:13px}
+@media(min-width:768px){footer{padding-bottom:32px}}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(16,21,28,.95);backdrop-filter:blur(8px);border-top:1px solid var(--blue);transform:translateY(110%);transition:transform .25s}
+.bar.show{transform:none}
+.bar .t{font-weight:700}
+.bar .t small{display:block;font-family:"JetBrains Mono",monospace;font-weight:400;color:var(--mute);font-size:11px}
+.bar .btn{padding:12px 18px}
+@media(min-width:768px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Dame The Barber. Not live.</div>
+
+<header class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="lbl">// Clarksville, TN</span>
+      <h1>Dame<br>The <span class="b">Barber.</span></h1>
+      <p class="sub">Clean tapers, sharp edges. Cuts by Dameion Nance.</p>
+      <div class="stats">
+        <div><strong>5.0</strong><span>on Booksy (9 reviews)</span></div>
+        <div><strong class="mono" style="font-size:18px">@cut_by_dame</strong><span>Instagram</span></div>
+      </div>
+      <div class="btns">
+        <a class="btn solid" href="https://booksy.com/en-us/516875_dame-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy <span class="arr">&rarr;</span></a>
+        <a class="btn ghost" href="https://www.instagram.com/cut_by_dame/" target="_blank" rel="noopener">Instagram <span class="arr">&nearr;</span></a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs><pattern id="st" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="40" height="40" fill="#161d27"/><rect width="14" height="40" fill="#2f7bff"/><rect x="20" width="6" height="40" fill="#e6edf5"/></pattern>
+        <clipPath id="c"><rect x="170" y="70" width="60" height="260" rx="30"/></clipPath></defs>
+        <g stroke="#253041"><line x1="0" y1="200" x2="400" y2="200"/><line x1="200" y1="0" x2="200" y2="400"/><circle cx="200" cy="200" r="150" fill="none"/><circle cx="200" cy="200" r="100" fill="none"/></g>
+        <g clip-path="url(#c)"><rect x="100" y="0" width="200" height="400" fill="url(#st)"><animateTransform attributeName="transform" type="translate" from="0 0" to="0 -48.8" dur="2.4s" repeatCount="indefinite"/></rect></g>
+        <rect x="170" y="70" width="60" height="260" rx="30" fill="none" stroke="#66a3ff" stroke-width="2"/>
+        <rect x="160" y="52" width="80" height="18" fill="#e6edf5"/><rect x="160" y="330" width="80" height="18" fill="#e6edf5"/>
+        <text x="20" y="34" fill="#8291a6" font-family="JetBrains Mono,monospace" font-size="12">FIG.01 / POLE</text>
+        <text x="380" y="384" fill="#8291a6" font-family="JetBrains Mono,monospace" font-size="12" text-anchor="end">37042</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <span class="lbl">01 / Services</span>
+    <h2>Build your visit.</h2>
+    <p class="lede">Pick one cut, add any extras. See your total and time in the chair before you book.</p>
+    <div class="builder">
+      <div class="opts" id="opts"></div>
+      <div class="out" aria-live="polite">
+        <span class="lbl">Your visit</span>
+        <div class="track" id="track"></div>
+        <div class="scale"><span>0</span><span>30</span><span>60</span><span>90 min</span></div>
+        <div class="totals"><div><span class="lbl">Total</span><strong id="tp">$0</strong></div><div><span class="lbl">Time</span><strong id="tt">0m</strong></div></div>
+        <p class="list" id="list">Pick a service to start.</p>
+        <a class="btn solid" href="https://booksy.com/en-us/516875_dame-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="lbl">02 / What clients say</span>
+    <h2>From the chair.</h2>
+    <div class="revs" style="margin-top:28px">
+      <div class="rev"><p>fantastic job!</p><cite class="lbl">Jonathan, Booksy review</cite></div>
+      <div class="rev"><p>Good work</p><cite class="lbl">Gabriel, Booksy review</cite></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap loc">
+    <div>
+      <span class="lbl">03 / Location</span>
+      <h2>Find the chair.</h2>
+      <p class="addr">101 Burle Way, Building B, Suite 106<br>Clarksville, TN 37042</p>
+    </div>
+    <div><a class="btn ghost" href="https://booksy.com/en-us/516875_dame-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">See open times on Booksy <span class="arr">&rarr;</span></a></div>
+  </div>
+</section>
+</main>
+
+<footer>Concept by Code Craft Media · 54321coleman@gmail.com</footer>
+
+<div class="bar" id="bar"><div class="t">Dame The Barber<small>5.0 on Booksy</small></div><a class="btn solid" href="https://booksy.com/en-us/516875_dame-the-barber_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book &rarr;</a></div>
+
+<script>
+const S=[
+{n:"Adult Haircut",p:45,ps:"$45.00",t:45,ts:"45 min",g:"cut"},
+{n:"Taper only with edge",p:30,ps:"$30.00",t:30,ts:"30 min",g:"cut"},
+{n:"Kids Cuts (16 & under)",p:35,ps:"$35.00",t:35,ts:"35 min",g:"cut"},
+{n:"Edge-up, no taper",p:20,ps:"$20.00",t:15,ts:"15 min",g:"cut"},
+{n:"Hair wash",p:10,ps:"$10.00",t:10,ts:"10 min",g:"add"},
+{n:"Eyebrow clean-up",p:10,ps:"$10.00",t:30,ts:"30 min",g:"add"}];
+const o=document.getElementById('opts');
+o.innerHTML=S.map((s,i)=>`<button type="button" class="opt" aria-pressed="false" data-i="${i}"><span class="k mono">${s.g==='cut'?'CUT · pick one':'EXTRA · optional'}</span><h3>${s.n}</h3><span class="pp"><b>${s.ps}</b><span>${s.ts}</span></span></button>`).join('');
+o.addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;const s=S[+b.dataset.i];const on=b.getAttribute('aria-pressed')!=='true';
+ if(s.g==='cut'&&on)o.querySelectorAll('.opt').forEach(x=>{if(S[+x.dataset.i].g==='cut')x.setAttribute('aria-pressed','false')});
+ b.setAttribute('aria-pressed',on);calc()});
+function calc(){const sel=[...o.querySelectorAll('.opt[aria-pressed=true]')].map(b=>S[+b.dataset.i]).sort((a,b)=>a.g==='cut'?-1:1);
+ const p=sel.reduce((a,s)=>a+s.p,0),t=sel.reduce((a,s)=>a+s.t,0);
+ document.getElementById('tp').textContent='$'+p;document.getElementById('tt').textContent=t+'m';
+ document.getElementById('list').textContent=sel.length?sel.map(s=>s.n).join(' + '):'Pick a service to start.';
+ document.getElementById('track').innerHTML=sel.map(s=>`<div class="seg" style="flex:0 0 ${s.t/90*100}%" title="${s.n}">${s.t}m</div>`).join('');}
+const bar=document.getElementById('bar');
+new IntersectionObserver(([e])=>bar.classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('hero'));
+</script>
+</body>
+</html>

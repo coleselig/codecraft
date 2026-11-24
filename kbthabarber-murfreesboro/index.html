@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Higher Ground Barbershop | KBthaBarber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0f2a1f; --forest-2:#163a2b; --forest-3:#1f4d39;
+  --brass:#c9a35a; --brass-2:#e2c487; --cream:#f3ecdc; --muted:#a9b8ad;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--forest);color:var(--cream);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:#08170f;color:var(--muted);font-size:12px;text-align:center;padding:7px 16px;letter-spacing:.02em;border-bottom:1px solid rgba(201,163,90,.25)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.02}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brass);color:#14241b;text-decoration:none;font-weight:800;padding:15px 26px;border-radius:999px;letter-spacing:.04em;font-size:15px;transition:transform .2s,background .2s}
+.btn:hover{background:var(--brass-2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(243,236,220,.35)}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass-2)}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;
+  background:radial-gradient(120% 80% at 80% 0%,#24563f 0%,transparent 60%),linear-gradient(180deg,var(--forest-2),var(--forest))}
+.hero .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:200px}
+.hero h1{font-size:clamp(52px,14vw,124px);margin:14px 0 10px;letter-spacing:-.01em}
+.hero h1 em{color:var(--brass);font-style:italic;font-weight:500;display:block;font-size:.62em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:30ch;margin-bottom:28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:14px;color:var(--cream)}
+.rating .stars{color:var(--brass);letter-spacing:2px}
+.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1}
+.mtn path.line{fill:none;stroke:var(--brass);stroke-width:1.6;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.2s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sun{position:absolute;right:12%;bottom:150px;width:120px;height:120px;border-radius:50%;border:1px solid rgba(201,163,90,.5);z-index:1}
+.sun::after{content:"";position:absolute;inset:14px;border-radius:50%;background:radial-gradient(circle,rgba(201,163,90,.35),transparent 70%)}
+
+section{padding:84px 0}
+.sec-head{margin-bottom:36px}
+.sec-head h2{font-size:clamp(38px,8vw,64px);margin-top:8px}
+.divider{display:block;width:100%;max-width:220px;height:24px;margin-top:14px}
+
+/* PICKER */
+.picker{display:grid;gap:28px}
+.svc-list{display:grid;gap:10px}
+.svc{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--forest-2);border:1px solid rgba(201,163,90,.18);color:var(--cream);padding:16px 18px;border-radius:14px;cursor:pointer;font:inherit;transition:border-color .2s,background .2s}
+.svc:hover{border-color:rgba(201,163,90,.55)}
+.svc .box{flex:0 0 22px;height:22px;border-radius:6px;border:1.5px solid var(--brass);display:grid;place-items:center;font-size:14px;color:transparent}
+.svc[aria-pressed="true"]{background:var(--forest-3);border-color:var(--brass)}
+.svc[aria-pressed="true"] .box{background:var(--brass);color:#14241b}
+.svc .nm{flex:1;min-width:0;font-weight:600;font-size:15px}
+.svc .meta{text-align:right;white-space:nowrap}
+.svc .pr{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--brass-2);display:block;line-height:1}
+.svc .tm{font-size:12px;color:var(--muted)}
+.ticket{background:var(--cream);color:#14241b;border-radius:18px;padding:26px;position:relative;align-self:start}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:22px;height:22px;border-radius:50%;background:var(--forest);transform:translateY(-50%)}
+.ticket::before{left:-11px}.ticket::after{right:-11px}
+.ticket h3{font-size:30px}
+.ticket .sel{min-height:48px;margin:14px 0;font-size:14px;color:#3b4a40;border-bottom:1px dashed #b9ad92;padding-bottom:14px}
+.ticket .sel li{list-style:none;display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.ticket .totals{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+.ticket .big{font-family:var(--serif);font-size:54px;font-weight:700;line-height:1}
+.ticket .time{font-size:14px;color:#3b4a40;text-align:right}
+.ticket .time b{display:block;font-size:22px;color:#14241b}
+.ticket .btn{width:100%}
+.ticket small{display:block;margin-top:12px;font-size:12px;color:#5b6a60}
+
+/* REVIEWS */
+.reviews{background:linear-gradient(180deg,var(--forest),#0b2118)}
+.quotes{display:grid;gap:18px}
+blockquote{border-left:2px solid var(--brass);padding:6px 0 6px 22px}
+blockquote p{font-family:var(--serif);font-size:clamp(28px,6vw,40px);font-style:italic;line-height:1.15}
+blockquote cite{display:block;margin-top:10px;font-style:normal;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
+
+/* VISIT */
+.visit-grid{display:grid;gap:18px}
+.card{background:var(--forest-2);border:1px solid rgba(201,163,90,.2);border-radius:18px;padding:26px}
+.card h3{font-size:28px;margin-bottom:8px}
+.card p{color:var(--muted)}
+.card a.lnk{color:var(--brass-2);text-decoration:none;border-bottom:1px solid rgba(226,196,135,.4)}
+
+footer{padding:40px 0 110px;border-top:1px solid rgba(201,163,90,.2);text-align:center;color:var(--muted);font-size:13px}
+footer .mark{font-family:var(--serif);font-size:26px;color:var(--cream);margin-bottom:6px}
+
+/* STICKY */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(10,28,20,.94);backdrop-filter:blur(8px);border:1px solid rgba(201,163,90,.4);border-radius:999px;padding:8px 8px 8px 20px;transform:translateY(140%);transition:transform .35s ease}
+.sticky.show{transform:none}
+.sticky span{font-family:var(--serif);font-size:20px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky .btn{padding:12px 22px}
+
+@media(min-width:860px){
+  .picker{grid-template-columns:1.35fr 1fr;align-items:start}
+  .ticket{position:sticky;top:24px}
+  .quotes{grid-template-columns:1fr 1fr;gap:40px}
+  .visit-grid{grid-template-columns:repeat(3,1fr)}
+  .sticky{display:none}
+  footer{padding-bottom:40px}
+  .hero .wrap{padding-bottom:240px}
+}
+@media(prefers-reduced-motion:reduce){.mtn path.line{animation:none;stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Higher Ground Barbershop. Not live.</div>
+
+<header class="hero" id="top">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">KBthaBarber · Murfreesboro, TN</div>
+    <h1>Higher Ground <em>Barbershop</em></h1>
+    <p class="lead">Kelcey Bond is the owner and operator of Higher Ground Barbershop.</p>
+    <div class="ctas">
+      <a class="btn" href="https://booksy.com/en-us/44086_kbthabarber_barber-shop_36059_murfreesboro" target="_blank" rel="noopener">Book on Booksy</a>
+      <a class="btn ghost" href="https://www.instagram.com/KBthaBarber/" target="_blank" rel="noopener">@KBthaBarber</a>
+    </div>
+    <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span><b>5.0</b> on Booksy · 438 reviews</span></div>
+  </div>
+  <svg class="mtn" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 260 L0 190 L140 120 L230 165 L380 60 L470 120 L560 95 L720 10 L860 120 L950 85 L1080 150 L1200 70 L1320 135 L1440 100 L1440 260 Z" fill="#0c2219" opacity=".8"/>
+    <path d="M0 260 L0 225 L180 170 L320 210 L500 140 L640 195 L800 130 L980 205 L1140 150 L1300 200 L1440 170 L1440 260 Z" fill="#0f2a1f"/>
+    <path class="line" d="M0 190 L140 120 L230 165 L380 60 L470 120 L560 95 L720 10 L860 120 L950 85 L1080 150 L1200 70 L1320 135 L1440 100"/>
+  </svg>
+</header>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Menu</div>
+      <h2>Build your chair time</h2>
+      <svg class="divider" viewBox="0 0 220 24" aria-hidden="true"><path d="M0 20 L40 8 L60 14 L95 2 L120 12 L150 6 L180 16 L220 10" fill="none" stroke="#c9a35a" stroke-width="1.5"/></svg>
+    </div>
+    <div class="picker">
+      <div class="svc-list" id="svcList"></div>
+      <aside class="ticket" aria-live="polite">
+        <div class="eyebrow" style="color:#8a6a2c">Your visit</div>
+        <h3>Ticket</h3>
+        <ul class="sel" id="sel"><li style="color:#7b7a6c">Tap a service to add it.</li></ul>
+        <div class="totals">
+          <div class="big" id="total">$0</div>
+          <div class="time">Chair time<b id="time">0 min</b></div>
+        </div>
+        <a class="btn" href="https://booksy.com/en-us/44086_kbthabarber_barber-shop_36059_murfreesboro" target="_blank" rel="noopener">Book this on Booksy</a>
+        <small>Prices as listed on Booksy. Cuts before or after hours are extra; text ahead for pricing.</small>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">5.0 · 438 reviews on Booksy</div>
+      <h2>Word around town</h2>
+    </div>
+    <div class="quotes">
+      <blockquote><p>“Best barbershop in Murfreesboro!!! Great vibes, these guys are wonderful”</p><cite>Corey</cite></blockquote>
+      <blockquote><p>“Best in Murfreesboro!!”</p><cite>Tim</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Find the shop</div>
+      <h2>Come up to Higher Ground</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card">
+        <h3>Address</h3>
+        <p>1810 Old Fort Parkway, Suite E<br>Murfreesboro, TN 37129</p>
+        <p style="margin-top:12px"><a class="lnk" href="https://maps.google.com/?q=1810+Old+Fort+Parkway+Suite+E+Murfreesboro+TN+37129" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+      <div class="card">
+        <h3>Text ahead</h3>
+        <p>Cuts before or after hours are extra. Text ahead for pricing.</p>
+        <p style="margin-top:12px"><a class="lnk" href="sms:+16153353849">(615) 335-3849</a></p>
+      </div>
+      <div class="card">
+        <h3>House calls</h3>
+        <p>Available upon request. Current hours and openings are on Booksy.</p>
+        <p style="margin-top:12px"><a class="lnk" href="https://booksy.com/en-us/44086_kbthabarber_barber-shop_36059_murfreesboro" target="_blank" rel="noopener">See openings</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">Higher Ground Barbershop</div>
+    <p>Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <span>Higher Ground</span>
+  <a class="btn" href="https://booksy.com/en-us/44086_kbthabarber_barber-shop_36059_murfreesboro" target="_blank" rel="noopener">Book</a>
+</div>
+
+<script>
+const SERVICES=[
+ ["Basic haircut (Shave not included)",50,30],
+ ["Haircut & shave (any facial touch ups)",50,45],
+ ["Speciality cuts (Mohawks, Afros), designs extra",55,45],
+ ["Razor head shave and facial",50,60],
+ ["Edge up, taper, clean up, shape up",50,30],
+ ["Basic Women's haircut",40,30],
+ ["Student/kids Specialty cuts",45,45],
+ ["Kids haircuts (No kids under 5 yrs)",35,30]
+];
+const fmtT=m=>m>=60?(Math.floor(m/60)+" hr"+(m%60?" "+(m%60)+" min":"")):m+" min";
+const list=document.getElementById('svcList'),sel=document.getElementById('sel');
+const picked=new Set();
+SERVICES.forEach((s,i)=>{
+  const b=document.createElement('button');b.className='svc';b.type='button';b.setAttribute('aria-pressed','false');
+  b.innerHTML=`<span class="box">✓</span><span class="nm"></span><span class="meta"><span class="pr">$${s[1]}</span><span class="tm">${fmtT(s[2])}</span></span>`;
+  b.querySelector('.nm').textContent=s[0];
+  b.onclick=()=>{picked.has(i)?picked.delete(i):picked.add(i);b.setAttribute('aria-pressed',picked.has(i));render()};
+  list.appendChild(b);
+});
+let shown=0;
+function render(){
+  let $=0,t=0;sel.innerHTML='';
+  if(!picked.size){sel.innerHTML='<li style="color:#7b7a6c">Tap a service to add it.</li>'}
+  [...picked].sort((a,b)=>a-b).forEach(i=>{const s=SERVICES[i];$+=s[1];t+=s[2];const li=document.createElement('li');li.innerHTML=`<span></span><b>$${s[1]}.00</b>`;li.firstChild.textContent=s[0];sel.appendChild(li)});
+  document.getElementById('time').textContent=fmtT(t);
+  const el=document.getElementById('total'),from=shown,start=performance.now();
+  (function step(n){const p=Math.min(1,(n-start)/350);el.textContent='$'+Math.round(from+($-from)*p);if(p<1)requestAnimationFrame(step)})(start);
+  shown=$;
+}
+const hero=document.getElementById('top'),sticky=document.getElementById('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe(hero);
+</script>
+</body>
+</html>

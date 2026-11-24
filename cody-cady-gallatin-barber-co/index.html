@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gallatin Barber Co | Cody Cady</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Yellowtail&family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13254a; --navy-2:#1b3363; --red:#c8312f; --red-2:#a52523; --paper:#f7f1e3; --ink:#13254a; --cream:#fffaf0; --gold:#e6b950;
+  --slab:'Alfa Slab One',Georgia,serif; --script:'Yellowtail',cursive; --sans:'Work Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--ink);color:#c9d3ea;font-size:12px;text-align:center;padding:7px 16px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+.script{font-family:var(--script);color:var(--red);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;text-decoration:none;font-family:var(--slab);letter-spacing:.06em;text-transform:uppercase;font-size:16px;padding:15px 26px;border-radius:6px;box-shadow:0 4px 0 var(--red-2);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--red-2)}
+.btn.alt{background:var(--cream);color:var(--navy);box-shadow:0 4px 0 #c9bfa6}
+/* stripes */
+.awning{height:26px;background:repeating-linear-gradient(90deg,var(--red) 0 34px,#fff 34px 68px);position:relative}
+.awning::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;background:radial-gradient(circle at 17px 0,var(--red) 12px,transparent 13px) 0 0/68px 12px repeat-x,radial-gradient(circle at 51px 0,#fff 12px,transparent 13px) 0 0/68px 12px repeat-x}
+
+/* HERO */
+.hero{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(255,255,255,.08),transparent 60%),repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 2px,transparent 2px 6px)}
+.hero .wrap{position:relative;padding:60px 18px 64px;text-align:center}
+.sign{display:inline-block;border:3px solid var(--gold);outline:2px solid var(--gold);outline-offset:6px;border-radius:14px;padding:28px 22px 24px;margin:10px auto 0;max-width:640px;width:100%}
+.sign .est{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.sign h1{font-family:var(--slab);font-weight:400;font-size:clamp(46px,13vw,104px);line-height:.92;letter-spacing:.02em;margin:10px 0 2px;text-shadow:3px 3px 0 var(--red)}
+.sign .script{display:block;font-size:clamp(34px,9vw,58px);color:#ff6a5f;line-height:1.1;transform:rotate(-4deg);margin-top:4px}
+.stars-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0 0;font-size:14px}
+.stars-row .st{color:var(--gold);letter-spacing:3px}
+.rule{display:flex;align-items:center;gap:10px;justify-content:center;color:var(--gold);margin:16px 0 0;font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.rule::before,.rule::after{content:"";height:2px;width:40px;background:var(--gold)}
+.hero p.lead{max-width:34ch;margin:22px auto 26px;color:#d7def0;font-size:17px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.pole{position:absolute;top:40px;width:22px;height:150px;border-radius:11px;border:3px solid var(--gold);background:repeating-linear-gradient(45deg,var(--red) 0 10px,#fff 10px 20px,var(--navy-2) 20px 30px,#fff 30px 40px);background-size:100% 56px;animation:spin 2.4s linear infinite;display:none}
+.pole.l{left:6%}.pole.r{right:6%}
+@keyframes spin{to{background-position:0 56px}}
+
+section{padding:76px 0}
+.head{text-align:center;margin-bottom:34px}
+.head .script{font-size:40px;line-height:1}
+.head h2{font-family:var(--slab);font-weight:400;font-size:clamp(34px,8vw,58px);line-height:1;text-transform:uppercase;letter-spacing:.02em}
+
+/* TIME PICKER */
+.clock{background:var(--cream);border:3px solid var(--navy);border-radius:16px;padding:22px;box-shadow:8px 8px 0 var(--navy);max-width:880px;margin:0 auto}
+.clock-q{font-family:var(--slab);font-size:22px;text-align:center;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px}
+.chip{font:600 15px var(--sans);border:2px solid var(--navy);background:#fff;color:var(--navy);padding:9px 14px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff}
+.menu{list-style:none;display:grid;gap:0}
+.menu li{display:flex;align-items:baseline;gap:10px;padding:13px 2px;border-bottom:2px dotted rgba(19,37,74,.25);transition:opacity .25s,transform .25s}
+.menu li:last-child{border-bottom:0}
+.menu .n{font-weight:700;font-size:16px;flex:0 1 auto;min-width:0}
+.menu .dots{flex:1 1 20px;border-bottom:2px dotted rgba(19,37,74,.35);transform:translateY(-4px);min-width:12px}
+.menu .p{font-family:var(--slab);font-size:22px;color:var(--red);white-space:nowrap}
+.menu .t{display:block;font-size:12px;font-weight:600;color:#56627e;letter-spacing:.05em}
+.menu li.out{opacity:.22;transform:scale(.98)}
+.menu li.best .t::after{content:"perfect fit";font:400 17px var(--script);color:var(--red);margin-left:8px;letter-spacing:0}
+.count{text-align:center;margin-top:16px;font-size:14px;color:#56627e}
+.count b{color:var(--navy)}
+.feature{margin:34px auto 0;max-width:880px;background:var(--red);color:#fff;border-radius:16px;padding:24px;display:grid;gap:14px;align-items:center;text-align:center}
+.feature .script{color:#ffe1a8;font-size:34px;line-height:1}
+.feature h3{font-family:var(--slab);font-weight:400;font-size:28px;text-transform:uppercase}
+.feature .pr{font-family:var(--slab);font-size:42px}
+.feature .pr small{display:block;font:600 13px var(--sans);opacity:.85;letter-spacing:.06em}
+
+/* VISIT */
+.visit{background:var(--navy);color:var(--cream)}
+.visit .head h2{color:#fff}
+.visit .head .script{color:#ff6a5f}
+.vgrid{display:grid;gap:16px;max-width:880px;margin:0 auto}
+.vcard{border:2px solid rgba(230,185,80,.6);border-radius:14px;padding:24px;text-align:center}
+.vcard h3{font-family:var(--slab);font-weight:400;font-size:22px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;letter-spacing:.04em}
+.vcard p{color:#d7def0}
+.vcard a.l{color:#fff;font-weight:700;text-underline-offset:4px}
+
+footer{background:#0d1a36;color:#9eabc9;text-align:center;padding:30px 18px 110px;font-size:13px}
+footer .script{font-size:30px;color:#ff6a5f;display:block}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);border-top:4px solid var(--red);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;transform:translateY(110%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .lbl{color:#fff;font-family:var(--slab);font-size:16px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky .lbl small{display:block;font:400 18px var(--script);color:#ff6a5f}
+.sticky .btn{padding:11px 20px;font-size:14px}
+
+@media(min-width:860px){
+  .pole{display:block}
+  .clock{padding:34px 40px}
+  .feature{grid-template-columns:1fr auto auto;text-align:left;padding:26px 34px}
+  .vgrid{grid-template-columns:1fr 1fr 1fr}
+  .sticky{display:none}
+  footer{padding-bottom:30px}
+}
+@media(prefers-reduced-motion:reduce){.pole{animation:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Gallatin Barber Co. Not live.</div>
+<div class="awning" aria-hidden="true"></div>
+
+<header class="hero" id="top">
+  <div class="pole l" aria-hidden="true"></div><div class="pole r" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sign">
+      <div class="est">Gallatin · Tennessee</div>
+      <h1>Gallatin Barber Co</h1>
+      <span class="script">with Cody Cady</span>
+      <div class="stars-row"><span class="st" aria-hidden="true">★★★★★</span><span><b>5.0</b> on Booksy · 231 reviews</span></div>
+    </div>
+    <p class="lead">Haircuts, beard work, designs and the GBC Presidential Service, right on Long Hollow Pike.</p>
+    <div class="ctas">
+      <a class="btn" href="https://booksy.com/en-us/921269_dakota-cody-cady_barber-shop_36107_gallatin" target="_blank" rel="noopener">Book with Cody</a>
+      <a class="btn alt" href="https://facebook.com/gallatinbarberco" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</header>
+<div class="awning" aria-hidden="true"></div>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <div class="head"><div class="script">the menu board</div><h2>How long you got?</h2></div>
+    <div class="clock">
+      <div class="clock-q">Pick your time, see what fits.</div>
+      <div class="chips" id="chips"></div>
+      <ul class="menu" id="menu"></ul>
+      <p class="count" id="count"></p>
+    </div>
+    <div class="feature">
+      <div><div class="script">top of the board</div><h3>GBC Presidential Service</h3></div>
+      <div class="pr">$75.00<small>1 hr 15 min</small></div>
+      <a class="btn alt" href="https://booksy.com/en-us/921269_dakota-cody-cady_barber-shop_36107_gallatin" target="_blank" rel="noopener">Book it</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="head"><div class="script">come on by</div><h2>Find the shop</h2></div>
+    <div class="vgrid">
+      <div class="vcard"><h3>Address</h3><p>1186 Long Hollow Pike<br>Gallatin, TN 37066</p><p style="margin-top:10px"><a class="l" href="https://maps.google.com/?q=1186+Long+Hollow+Pike+Gallatin+TN+37066" target="_blank" rel="noopener">Directions</a></p></div>
+      <div class="vcard"><h3>Book online</h3><p>Openings and current hours are on Booksy.</p><p style="margin-top:10px"><a class="l" href="https://booksy.com/en-us/921269_dakota-cody-cady_barber-shop_36107_gallatin" target="_blank" rel="noopener">See openings</a></p></div>
+      <div class="vcard"><h3>Follow along</h3><p>News and updates from the shop.</p><p style="margin-top:10px"><a class="l" href="https://facebook.com/gallatinbarberco" target="_blank" rel="noopener">facebook.com/gallatinbarberco</a></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="script">Gallatin Barber Co</span>
+  Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="lbl"><small>Gallatin Barber Co</small>5.0 · 231 reviews</div>
+  <a class="btn" href="https://booksy.com/en-us/921269_dakota-cody-cady_barber-shop_36107_gallatin" target="_blank" rel="noopener">Book</a>
+</div>
+
+<script>
+const S=[
+ ["Professional Haircut","$35.00",30],
+ ["Kids Cut","$35.00",30],
+ ["Professional Haircut W/ Beard Maintenance Or Shave","$60.00",60],
+ ["Transformation Cut","$45.00",45],
+ ["Beard Maintenance/Shave ONLY","$35.00",30],
+ ["Professional Haircut W/ Wash","$45.00",45],
+ ["Haircut W/ Custom Design","$45.00",45],
+ ["GBC Presidential Service","$75.00",75],
+ ["Edge Up (Line Up)","$20.00",15],
+ ["Kids Haircut W/ Design","$45.00",45]
+];
+const fmt=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
+const menu=document.getElementById('menu'),chips=document.getElementById('chips'),count=document.getElementById('count');
+const rows=S.map(s=>{const li=document.createElement('li');li.innerHTML='<span class="n"></span><span class="dots"></span><span class="p"></span>';li.querySelector('.n').textContent=s[0];const t=document.createElement('span');t.className='t';t.textContent=fmt(s[2]);li.querySelector('.n').appendChild(t);li.querySelector('.p').textContent=s[1];menu.appendChild(li);return li});
+const opts=[15,30,45,60,75,0];
+function pick(m){
+  [...chips.children].forEach(c=>c.setAttribute('aria-pressed',+c.dataset.m===m));
+  let n=0;S.forEach((s,i)=>{const fit=!m||s[2]<=m;rows[i].classList.toggle('out',!fit);rows[i].classList.toggle('best',!!m&&s[2]===m);if(fit)n++});
+  count.innerHTML=m?`<b>${n}</b> of ${S.length} services fit in ${fmt(m)}.`:`All <b>${S.length}</b> services, straight from Booksy.`;
+}
+opts.forEach(m=>{const b=document.createElement('button');b.type='button';b.className='chip';b.dataset.m=m;b.textContent=m?fmt(m):'Show all';b.onclick=()=>pick(m);chips.appendChild(b)});
+pick(0);
+new IntersectionObserver(([e])=>document.getElementById('sticky').classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('top'));
+</script>
+</body>
+</html>
