@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chariz Cutz | La Vergne, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6f1e7;--sand:#ece3d2;--sage:#5f7a63;--sage-d:#2f4434;--clay:#c0794f;--ink:#1f2a22;--mut:#6b7468}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--sage-d);color:#d8e2d6;font-size:12px;text-align:center;padding:7px 16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.ey{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.serif{font-family:'Fraunces',Georgia,serif}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--sage-d);color:var(--cream);text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:15px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--sage);transform:translateY(-2px)}
+.btn.soft{background:transparent;color:var(--sage-d);border:1.5px solid var(--sage-d)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--sand),var(--cream))}
+.hero .wrap{display:grid;gap:28px;padding-top:44px;padding-bottom:56px;align-items:center}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(58px,16vw,128px);line-height:.92;letter-spacing:-.02em;margin:12px 0 14px;color:var(--sage-d)}
+.hero h1 i{font-weight:400;color:var(--clay)}
+.hero p{font-size:18px;color:var(--mut);max-width:32ch;margin-bottom:24px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.rate{margin-top:24px;font-size:14px;color:var(--mut)}
+.rate b{color:var(--ink);font-size:16px}
+.art{position:relative;max-width:360px;width:100%;margin:0 auto}
+.art svg{width:100%;height:auto;display:block}
+.steam path{fill:none;stroke:var(--sage);stroke-width:3;stroke-linecap:round;opacity:.55;stroke-dasharray:10 14;animation:drift 4s linear infinite}
+.steam path:nth-child(2){animation-duration:5s;opacity:.4}
+.steam path:nth-child(3){animation-duration:6s;opacity:.3}
+@keyframes drift{to{stroke-dashoffset:-96}}
+section{padding:76px 0}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(38px,9vw,64px);line-height:1;letter-spacing:-.01em;margin:10px 0 14px;color:var(--sage-d)}
+.lead{color:var(--mut);max-width:44ch;margin-bottom:30px}
+/* builder */
+.bld{display:grid;gap:20px}
+.opts{display:grid;gap:12px}
+.opt{display:flex;align-items:center;gap:16px;width:100%;text-align:left;font:inherit;background:#fff;border:1.5px solid #e1d8c6;border-radius:20px;padding:18px;cursor:pointer;color:var(--ink);transition:border-color .2s,background .2s}
+.opt .ic{flex:0 0 46px;height:46px;border-radius:50%;background:var(--sand);display:grid;place-items:center;transition:background .2s}
+.opt .ic svg{width:24px;height:24px;stroke:var(--sage-d);fill:none;stroke-width:1.8}
+.opt b{display:block;font-size:16px}
+.opt small{color:var(--mut);font-size:13px}
+.opt .sw{margin-left:auto;flex:0 0 46px;height:26px;border-radius:99px;background:#ddd4c2;position:relative;transition:background .2s}
+.opt .sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s}
+.opt[aria-pressed="true"]{border-color:var(--sage);background:#f3f6f0}
+.opt[aria-pressed="true"] .ic{background:var(--sage)}
+.opt[aria-pressed="true"] .ic svg{stroke:#fff}
+.opt[aria-pressed="true"] .sw{background:var(--sage)}
+.opt[aria-pressed="true"] .sw::after{transform:translateX(20px)}
+.opt.base{cursor:default}
+.opt.base .sw{display:none}
+.out{background:var(--sage-d);color:var(--cream);border-radius:28px;padding:28px;align-self:start;position:relative;overflow:hidden}
+.out::before{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(192,121,79,.45),transparent 70%)}
+.out .nm{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,8vw,46px);font-weight:600;line-height:1;margin:8px 0 10px}
+.out .ds{color:#c9d5c6;font-size:15px;min-height:4.8em}
+.out .pt{display:flex;justify-content:space-between;align-items:flex-end;margin:20px 0;border-top:1px solid rgba(246,241,231,.2);padding-top:18px}
+.out .pr{font-family:'Fraunces',Georgia,serif;font-size:56px;font-weight:800;line-height:1}
+.out .tm{text-align:right;color:#c9d5c6;font-size:13px}
+.out .tm b{display:block;color:var(--cream);font-size:20px}
+.out .btn{background:var(--clay);color:#fff;width:100%}
+.out small{display:block;margin-top:10px;font-size:12px;color:#b6c4b2}
+.menu{display:grid;gap:0;border-top:1px solid #ddd3c0}
+.mi{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:16px 0;border-bottom:1px solid #ddd3c0}
+.mi h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px}
+.mi .p{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;color:var(--clay);text-align:right}
+.mi p{grid-column:1/-1;color:var(--mut);font-size:14px}
+.note{background:var(--sand);border-radius:28px;padding:32px 24px;text-align:center}
+.note q{font-family:'Fraunces',Georgia,serif;font-size:clamp(28px,7vw,44px);font-style:italic;line-height:1.15;color:var(--sage-d);display:block}
+.note .by{margin-top:12px;font-size:13px;color:var(--mut)}
+.vis{display:grid;gap:14px;margin-top:30px}
+.card{background:#fff;border-radius:22px;padding:22px;border:1px solid #e6ddcb}
+.card h3{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:600;color:var(--sage-d);margin-bottom:6px}
+.card p{color:var(--mut)}
+.card a{color:var(--clay);font-weight:700}
+footer{padding:34px 0 110px;text-align:center;color:var(--mut);font-size:13px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;background:rgba(47,68,52,.96);color:var(--cream);border-radius:999px;padding:8px 8px 8px 20px;transform:translateY(150%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky span{font-family:'Fraunces',Georgia,serif;font-size:19px;font-weight:600}
+.sticky .btn{background:var(--clay);padding:11px 20px}
+@media(min-width:860px){
+ .hero .wrap{grid-template-columns:1.3fr 1fr}
+ .bld{grid-template-columns:1.1fr 1fr;gap:32px}
+ .menu{grid-template-columns:1fr 1fr;column-gap:48px}
+ .vis{grid-template-columns:repeat(3,1fr)}
+ .sticky{display:none}footer{padding-bottom:34px}
+}
+@media(prefers-reduced-motion:reduce){.steam path{animation:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Chariz Cutz. Not live.</div>
+<header class="hero" id="top">
+ <div class="wrap">
+  <div>
+   <div class="ey">La Vergne, TN · Barber</div>
+   <h1>Chariz <i>Cutz</i></h1>
+   <p>A precise cut, then the steam towel, the wash and the head massage, if you want them.</p>
+   <div class="ctas">
+    <a class="btn" href="https://booksy.com/en-us/1702540_chariz-cutz_barber-shop_36057_la-vergne" target="_blank" rel="noopener">Book on Booksy</a>
+    <a class="btn soft" href="https://www.instagram.com/charizcutzllc/" target="_blank" rel="noopener">@charizcutzllc</a>
+   </div>
+   <div class="rate"><b>5.0</b> on Booksy · 86 reviews</div>
+  </div>
+  <div class="art" aria-hidden="true">
+   <svg viewBox="0 0 300 300">
+    <circle cx="150" cy="170" r="118" fill="#e4dac6"/>
+    <g class="steam"><path d="M112 120c-14-18 14-30 0-50s14-32 0-52"/><path d="M150 112c-14-18 14-30 0-50s14-32 0-52"/><path d="M188 120c-14-18 14-30 0-50s14-32 0-52"/></g>
+    <rect x="70" y="150" width="160" height="70" rx="35" fill="#5f7a63"/>
+    <rect x="70" y="150" width="160" height="70" rx="35" fill="none" stroke="#2f4434" stroke-width="3"/>
+    <path d="M86 170h128M86 185h128M86 200h128" stroke="#f6f1e7" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+    <path d="M60 248h180" stroke="#c0794f" stroke-width="4" stroke-linecap="round"/>
+   </svg>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="build">
+ <div class="wrap">
+  <div class="ey">Build your visit</div>
+  <h2>Start with the cut. Add the calm.</h2>
+  <p class="lead">Every visit starts with a haircut. Switch on what you want with it, and we'll show you which of Chariz's services that is.</p>
+  <div class="bld">
+   <div class="opts">
+    <div class="opt base" aria-pressed="true"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5 20 18M8.5 16.5 20 6"/></svg></span><span><b>Haircut</b><small>Always included</small></span></div>
+    <button class="opt" type="button" data-k="beard" aria-pressed="false"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 8c0 8 3 12 7 12s7-4 7-12"/><path d="M9 13h6"/></svg></span><span><b>Beard grooming</b><small>Shaping and trimming</small></span><span class="sw"></span></button>
+    <button class="opt" type="button" data-k="wash" aria-pressed="false"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></span><span><b>Wash, steam towel &amp; massage</b><small>Head massage included</small></span><span class="sw"></span></button>
+    <button class="opt" type="button" data-k="cond" aria-pressed="false"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg></span><span><b>Conditioning treatment</b><small>Leaves hair soft (adds the wash)</small></span><span class="sw"></span></button>
+   </div>
+   <div class="out" aria-live="polite">
+    <div class="ey" style="color:#e9b896">Your service</div>
+    <div class="nm" id="nm">Fresh Cut</div>
+    <div class="ds" id="ds"></div>
+    <div class="pt"><div class="pr" id="pr">$26+</div><div class="tm">Chair time<b id="tm">30 min</b></div></div>
+    <a class="btn" href="https://booksy.com/en-us/1702540_chariz-cutz_barber-shop_36057_la-vergne" target="_blank" rel="noopener">Book this on Booksy</a>
+    <small>Starting prices as listed on Booksy.</small>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="ey">The full menu</div>
+  <h2>Services</h2>
+  <div class="menu" id="menu"></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="note"><q>Chariz is awesome as always!</q><div class="by">Stephen · Fresh Cut · from Booksy</div></div>
+  <div class="vis">
+   <div class="card"><h3>Where</h3><p>101 Cheerful Pl<br>La Vergne, TN 37086</p><p style="margin-top:8px"><a href="https://maps.google.com/?q=101+Cheerful+Pl+La+Vergne+TN+37086" target="_blank" rel="noopener">Directions</a></p></div>
+   <div class="card"><h3>Can't find a time?</h3><p>“Just reach out! I'll do my best to fit you in.” Chariz, on Booksy</p></div>
+   <div class="card"><h3>Easy visit</h3><p>Parking, cards accepted, and kids welcome.</p><p style="margin-top:8px"><a href="https://booksy.com/en-us/1702540_chariz-cutz_barber-shop_36057_la-vergne" target="_blank" rel="noopener">See openings</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>Chariz Cutz · Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></footer>
+<div class="sticky" id="sticky"><span>Chariz Cutz</span><a class="btn" href="https://booksy.com/en-us/1702540_chariz-cutz_barber-shop_36057_la-vergne" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const M={
+ fresh:["Fresh Cut",26,30,"A precise, stylish haircut tailored to your preferences. Perfect for a fresh look!"],
+ relax:["Clean & Relax",31,35,"Haircut followed by a wash with steam towel and head massage to leave your hair refreshed."],
+ luxe:["Luxe Cut",36,40,"Haircut followed by a wash and conditioning treatment with steam towel and head massage, leaving your hair soft and manageable."],
+ sharp:["Sharp & Trimmed",50,50,"A sharp haircut paired with expert beard shaping and trimming for a polished look."],
+ groom:["Groom & Refresh",55,55,"Haircut and beard grooming finished with a wash and head massage for a fully refreshed finish."],
+ ult:["Ultimate Groom",60,60,"Haircut, beard grooming, followed by wash and conditioning with steam towel and head massage, the complete grooming experience."],
+ beard:["Beard Detail",20,20,"Professional beard shaping, trimming, and detailing to keep your facial hair looking clean and sharp."],
+ wash:["Refresh Wash",10,10,"Relaxing wash with steam towel and head massage, leaving your hair refreshed and clean."],
+ hyd:["Hydrate & Shine",20,20,"Hydrating wash and conditioning treatment with steam towel and head massage for soft, smooth hair."],
+ fin:["Finishing Touches",10,10,"Precision edge-ups, line-ups, or other specialty finishing touches."]};
+const fT=m=>m>=60?"1 hr":m+" min";
+document.getElementById('menu').innerHTML=Object.values(M).map(s=>`<div class="mi"><h3>${s[0]}</h3><div class="p">$${s[1]}+</div><p>${fT(s[2])} · ${s[3]}</p></div>`).join('');
+const st={beard:false,wash:false,cond:false};
+const btns=document.querySelectorAll('button.opt');
+function pick(){
+ if(st.beard) return st.cond?M.ult:st.wash?M.groom:M.sharp;
+ return st.cond?M.luxe:st.wash?M.relax:M.fresh;
+}
+function render(){
+ btns.forEach(b=>b.setAttribute('aria-pressed',st[b.dataset.k]));
+ const s=pick();
+ nm.textContent=s[0];ds.textContent=s[3];pr.textContent='$'+s[1]+'+';tm.textContent=fT(s[2]);
+}
+btns.forEach(b=>b.onclick=()=>{const k=b.dataset.k;st[k]=!st[k];if(k==='cond'&&st.cond)st.wash=true;if(k==='wash'&&!st.wash)st.cond=false;render()});
+render();
+const sticky=document.getElementById('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('top'));
+</script>
+</body>
+</html>

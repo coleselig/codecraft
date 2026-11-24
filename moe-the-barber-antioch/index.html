@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Moe The Barber | 300 Barbershop, Antioch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#121214;--bg2:#1b1b1f;--bg3:#26262c;--silver:#c9c9d1;--dim:#8a8a96;--ember:#ff6a2b;--ember2:#ffb057;--white:#f5f5f7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:#000;color:var(--dim);font-size:12px;text-align:center;padding:7px 16px;border-bottom:1px solid #2a2a30}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.k{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);font-weight:700}
+.bebas{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-weight:400;letter-spacing:.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--ember),var(--ember2));color:#160a03;text-decoration:none;font-weight:700;padding:15px 24px;border-radius:10px;font-size:15px;transition:filter .2s,transform .2s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--silver);border:1px solid #3a3a42}
+.hero{position:relative;overflow:hidden;min-height:86vh;display:flex;align-items:center;background:radial-gradient(70% 60% at 85% 20%,rgba(255,106,43,.18),transparent 60%),var(--bg)}
+.hero .wrap{position:relative;z-index:2;padding-top:40px;padding-bottom:60px;width:100%}
+.three{position:absolute;right:-6vw;bottom:-6vw;font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(260px,62vw,620px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px rgba(201,201,209,.13);z-index:1;user-select:none}
+.hero h1{font-size:clamp(76px,21vw,180px);line-height:.85;margin:14px 0 4px}
+.hero h1 .o{color:var(--ember)}
+.hero .at{font-size:18px;color:var(--silver);margin-bottom:22px}
+.hero .at b{color:var(--white)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:8px;margin-top:26px;background:var(--bg2);border:1px solid #2e2e35;padding:8px 14px;border-radius:999px;font-size:14px}
+.chip i{font-style:normal;color:var(--ember2)}
+.embers span{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--ember2);opacity:0;animation:rise 6s linear infinite;z-index:1}
+@keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-80vh) translateX(30px);opacity:0}}
+section{padding:76px 0}
+h2{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(48px,12vw,92px);line-height:.9;margin:8px 0 26px}
+/* time filter */
+.tbox{background:var(--bg2);border:1px solid #2c2c33;border-radius:18px;padding:22px}
+.tread{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:12px}
+.tread .big{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(64px,18vw,96px);line-height:.85;color:var(--ember2)}
+.tread small{color:var(--dim);font-size:13px;text-align:right}
+input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--ember) var(--p,0%),var(--bg3) var(--p,0%));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--white);border:5px solid var(--ember);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--white);border:5px solid var(--ember);cursor:pointer}
+.ticks{display:flex;justify-content:space-between;color:var(--dim);font-size:12px;margin-top:8px}
+.list{display:grid;gap:10px;margin-top:22px}
+.svc{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:var(--bg3);border:1px solid transparent;transition:opacity .3s,transform .3s,border-color .3s}
+.svc.off{opacity:.25;transform:scale(.98)}
+.svc.on{border-color:rgba(255,106,43,.5)}
+.svc h3{font-size:16px;font-weight:700}
+.svc p{font-size:13px;color:var(--dim)}
+.svc .r{text-align:right;white-space:nowrap}
+.svc .r b{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:34px;font-weight:400;line-height:1;display:block}
+.svc .r span{font-size:12px;color:var(--dim)}
+.count{margin-top:16px;font-size:14px;color:var(--silver)}
+/* reviews */
+.revs{display:grid;gap:14px}
+.rv{background:var(--bg2);border-left:3px solid var(--ember);border-radius:4px 14px 14px 4px;padding:20px 22px}
+.rv q{font-size:19px;font-weight:500;display:block;quotes:"“" "”"}
+.rv .by{margin-top:10px;font-size:13px;color:var(--dim)}
+.rv .rep{margin-top:8px;font-size:13px;color:var(--ember2)}
+.visit{display:grid;gap:14px}
+.card{background:var(--bg2);border:1px solid #2c2c33;border-radius:16px;padding:22px}
+.card h3{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:32px;line-height:1;margin-bottom:8px}
+.card p{color:var(--silver)}
+.card a.l{color:var(--ember2);font-weight:700;text-decoration:none}
+footer{border-top:1px solid #2a2a30;padding:34px 0 110px;text-align:center;color:var(--dim);font-size:13px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;background:rgba(27,27,31,.95);backdrop-filter:blur(8px);border:1px solid #3a3a42;border-radius:14px;padding:8px 8px 8px 16px;transform:translateY(150%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky span{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:24px}
+.sticky .btn{padding:11px 18px}
+@media(min-width:860px){
+ .split{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
+ .revs{grid-template-columns:1fr 1fr}
+ .visit{grid-template-columns:repeat(3,1fr)}
+ .sticky{display:none}footer{padding-bottom:34px}
+}
+@media(prefers-reduced-motion:reduce){.embers{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Moe The Barber @ 300 Barbershop. Not live.</div>
+<header class="hero" id="top">
+ <div class="three" aria-hidden="true">300</div>
+ <div class="embers" aria-hidden="true" id="embers"></div>
+ <div class="wrap">
+  <div class="k">Antioch · Murfreesboro Pike</div>
+  <h1 class="bebas">M<span class="o">o</span>e<br>the barber</h1>
+  <p class="at">Chairside at <b>300 Barbershop</b>. Detailed cuts, beard work, full service and house calls.</p>
+  <div class="ctas">
+   <a class="btn" href="https://booksy.com/en-us/1770755_moe-the-barber-300-barbershop_barber-shop_123099_nashville-davidson" target="_blank" rel="noopener">Book with Moe</a>
+   <a class="btn ghost" href="https://www.instagram.com/dm_x5/" target="_blank" rel="noopener">@dm_x5</a>
+  </div>
+  <div class="chip"><i>★★★★★</i> 5.0 on Booksy · 34 reviews</div>
+ </div>
+</header>
+
+<main>
+<section id="time">
+ <div class="wrap split">
+  <div>
+   <div class="k">Real talk</div>
+   <h2>How much time you got?</h2>
+   <p style="color:var(--silver);max-width:34ch">Slide to the time you can spare. Everything that fits lights up, with the price straight from Moe's Booksy.</p>
+  </div>
+  <div class="tbox">
+   <div class="tread"><div class="big" id="tv">30 min</div><small>you can spare<br><span id="fitTxt"></span></small></div>
+   <input type="range" id="rng" min="30" max="90" step="15" value="30" aria-label="Minutes available">
+   <div class="ticks"><span>30m</span><span>45m</span><span>1h</span><span>1h15</span><span>1h30</span></div>
+   <div class="list" id="list"></div>
+   <p class="count" id="count"></p>
+  </div>
+ </div>
+</section>
+
+<section style="background:var(--bg2)">
+ <div class="wrap">
+  <div class="k">Straight from Booksy</div>
+  <h2>What the chair says</h2>
+  <div class="revs">
+   <div class="rv"><q>Moe is chill and friendly. Greatt cut and fast with it 🤙🏼</q><div class="by">Mauricio · Detailed Haircut</div><div class="rep">Moe replied: 🔥🩶🩶</div></div>
+   <div class="rv"><q>Booked last minute. Moe did a great job.</q><div class="by">Sawyer · Haircut</div><div class="rep">Moe replied: 🫡💈</div></div>
+   <div class="rv"><q>Moe absolutely rocks and gave me a super cool design.</q><div class="by">Michal · Haircut</div></div>
+   <div class="rv"><q>Thank you so much for the fresh fade. Best barber I've been to since living in Nashville.</q><div class="by">Justin</div></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="k">Find him</div>
+  <h2>300 Barbershop</h2>
+  <div class="visit">
+   <div class="card"><h3>Address</h3><p>3534 Murfreesboro Pike<br>Antioch, TN 37013</p><p style="margin-top:10px"><a class="l" href="https://maps.google.com/?q=3534+Murfreesboro+Pike+Antioch+TN+37013" target="_blank" rel="noopener">Directions →</a></p></div>
+   <div class="card"><h3>House calls</h3><p>Moe comes to you. $100, about 1 hr 30 min. Book it on Booksy.</p></div>
+   <div class="card"><h3>Pay your way</h3><p>Booksy Pay and Klarna accepted. Gift cards available.</p><p style="margin-top:10px"><a class="l" href="https://booksy.com/en-us/1770755_moe-the-barber-300-barbershop_barber-shop_123099_nashville-davidson" target="_blank" rel="noopener">See openings →</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">Moe The Barber @ 300 Barbershop · Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></div></footer>
+<div class="sticky" id="sticky"><span>Moe the barber</span><a class="btn" href="https://booksy.com/en-us/1770755_moe-the-barber-300-barbershop_barber-shop_123099_nashville-davidson" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const S=[
+ ["Detailed Kids Haircut","",35,30],
+ ["Detailed Haircut","",40,30],
+ ["Detailed Men's Haircut, with Beard","",50,45],
+ ["Full Service","Haircut, beard trim, face mask, hair wash, and waxing (face and nose).",80,60],
+ ["House Call","Moe comes to you.",100,90]];
+const fT=m=>m<60?m+" min":(Math.floor(m/60)+" hr"+(m%60?" "+m%60:""));
+const list=document.getElementById('list'),rng=document.getElementById('rng');
+list.innerHTML=S.map(s=>`<div class="svc"><div><h3>${s[0]}</h3>${s[1]?`<p>${s[1]}</p>`:''}</div><div class="r"><b>$${s[2]}</b><span>${fT(s[3])}</span></div></div>`).join('');
+const rows=[...list.children];
+function upd(){
+ const v=+rng.value;let n=0;
+ rng.style.setProperty('--p',((v-30)/60*100)+'%');
+ document.getElementById('tv').textContent=fT(v);
+ rows.forEach((r,i)=>{const ok=S[i][3]<=v;r.classList.toggle('off',!ok);r.classList.toggle('on',ok);if(ok)n++});
+ document.getElementById('count').textContent=n+" of "+S.length+" services fit. Book the one you want on Booksy.";
+}
+rng.addEventListener('input',upd);upd();
+const em=document.getElementById('embers');
+for(let i=0;i<14;i++){const s=document.createElement('span');s.style.left=(Math.random()*100)+'%';s.style.animationDelay=(Math.random()*6)+'s';s.style.animationDuration=(5+Math.random()*4)+'s';em.appendChild(s)}
+const sticky=document.getElementById('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('top'));
+</script>
+</body>
+</html>

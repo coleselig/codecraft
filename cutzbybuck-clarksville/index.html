@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cutzbybuck | Clarksville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f1ec;--ink:#151515;--lime:#c6f432;--gray:#6b6b66;--line:#d9d8d0;--card:#ffffff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--ink);color:var(--bg);font-size:12px;text-align:center;padding:7px 16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.blk{font-family:'Archivo Black',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-weight:700;font-size:14px}
+.top a{text-decoration:none;border-bottom:2px solid var(--lime)}
+.hero{padding:20px 0 56px;border-bottom:2px solid var(--ink)}
+.hgrid{display:grid;gap:28px;align-items:center}
+@media(min-width:820px){.hgrid{grid-template-columns:1.4fr 1fr}}
+h1{font-size:clamp(56px,16.5vw,150px);line-height:.86}
+h1 span{background:var(--lime);padding:0 .08em}
+.sub{font-size:18px;max-width:480px;margin:20px 0 22px;color:#333}
+.meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:26px;font-weight:500}
+.meta b{font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--ink);transition:background .15s,transform .15s}
+.btn.solid{background:var(--ink);color:var(--lime)}
+.btn.solid:hover{transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--lime)}
+.badge{justify-self:center;width:min(72vw,300px);aspect-ratio:1;border-radius:50%;background:var(--ink);display:grid;place-items:center;position:relative}
+.badge svg{width:84%;animation:spin 26s linear infinite}
+.badge .c{position:absolute;color:var(--lime);font-size:clamp(36px,10vw,56px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.badge svg{animation:none}}
+section{padding:68px 0}
+h2{font-size:clamp(36px,9vw,68px);line-height:.95;margin-bottom:12px}
+.lede{max-width:560px;color:#444;margin-bottom:28px}
+/* builder */
+.builder{display:grid;gap:22px}
+@media(min-width:820px){.builder{grid-template-columns:1.3fr 1fr}}
+.step{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin:0 0 10px}
+.opts{display:grid;gap:10px;margin-bottom:22px}
+.opt{display:flex;align-items:center;gap:12px;background:var(--card);border:2px solid var(--line);padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--ink)}
+.opt input{accent-color:var(--ink);width:18px;height:18px;flex:none}
+.opt .n{flex:1;font-weight:700}
+.opt .n small{display:block;font-weight:400;color:var(--gray)}
+.opt .p{font-weight:700;white-space:nowrap}
+.opt:has(input:checked){border-color:var(--ink);background:var(--lime)}
+.ticket{background:var(--ink);color:var(--bg);padding:24px;align-self:start;position:sticky;top:16px}
+.ticket .lab{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#a5a59c}
+.ticket ul{list-style:none;margin:14px 0;border-top:1px dashed #555;border-bottom:1px dashed #555;padding:10px 0;min-height:60px}
+.ticket li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-size:15px}
+.ticket .sum{display:flex;justify-content:space-between;align-items:end;gap:10px}
+.ticket .big{font-family:'Archivo Black',Impact,sans-serif;font-size:56px;line-height:1;color:var(--lime)}
+.ticket .t{text-align:right;font-weight:500}
+.ticket .btn{margin-top:20px;width:100%;background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.ticket .fine{font-size:12px;color:#a5a59c;margin-top:10px}
+.menu{border-top:2px solid var(--ink)}
+.menu .r{display:grid;grid-template-columns:1fr auto auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.menu .d{color:var(--gray);font-size:14px}
+.menu .p{font-weight:700}
+.where{background:var(--lime);border-top:2px solid var(--ink)}
+.where .addr{font-size:clamp(24px,6vw,40px);line-height:1.1;margin:8px 0 22px}
+footer{background:var(--ink);color:#a5a59c;text-align:center;font-size:13px;padding:30px 20px 110px}
+@media(min-width:768px){footer{padding-bottom:30px}}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--ink);color:var(--lime);padding:10px 12px calc(10px + env(safe-area-inset-bottom)) 18px;transform:translateY(110%);transition:transform .25s}
+.bar.show{transform:none}
+.bar span{font-family:'Archivo Black',Impact,sans-serif;text-transform:uppercase}
+.bar .btn{padding:10px 18px;background:var(--lime);color:var(--ink);border-color:var(--lime)}
+@media(min-width:768px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Cutzbybuck. Not live.</div>
+
+<div class="wrap top"><span>CUTZBYBUCK</span><a href="https://www.instagram.com/cutzbybuck/" target="_blank" rel="noopener">@cutzbybuck</a></div>
+
+<header class="hero" id="hero">
+  <div class="wrap hgrid">
+    <div>
+      <h1 class="blk">Cutz<br>by <span>Buck</span></h1>
+      <p class="sub">Leonard Buck, cutting on Needmore Rd in Clarksville. Haircuts, beards, shaves and kids cuts.</p>
+      <div class="meta"><span><b>&#9733; 4.9</b> on Booksy</span><span><b>60</b> reviews</span><span><b>$40</b> haircuts</span></div>
+      <div class="btns">
+        <a class="btn solid" href="https://booksy.com/en-us/732935_cutzbybuck_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+        <a class="btn ghost" href="#build">Build your visit</a>
+      </div>
+    </div>
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><path id="ring" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs><text font-family="Space Grotesk,sans-serif" font-weight="700" font-size="18" letter-spacing="6" fill="#c6f432"><textPath href="#ring">CUTZBYBUCK · CLARKSVILLE TN ·</textPath></text></svg>
+      <span class="c blk">CB</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="build">
+  <div class="wrap">
+    <h2 class="blk">Build your visit</h2>
+    <p class="lede">Pick your cut, add extras, and see the total and chair time before you book.</p>
+    <div class="builder">
+      <div>
+        <p class="step">1 · Your cut</p>
+        <div class="opts" id="base"></div>
+        <p class="step">2 · Extras</p>
+        <div class="opts" id="adds"></div>
+      </div>
+      <div class="ticket" aria-live="polite">
+        <div class="lab">Your ticket</div>
+        <ul id="lines"></ul>
+        <div class="sum"><span class="big" id="sum">$40</span><span class="t" id="time">1 hr</span></div>
+        <a class="btn" href="https://booksy.com/en-us/732935_cutzbybuck_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+        <p class="fine">Prices from the Cutzbybuck Booksy page. Final booking happens on Booksy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="blk">Full menu</h2>
+    <div class="menu" id="menu"></div>
+  </div>
+</section>
+
+<section class="where">
+  <div class="wrap">
+    <h2 class="blk">Where</h2>
+    <p class="addr blk">441 Needmore Rd, #338<br>Clarksville, TN 37040</p>
+    <div class="btns"><a class="btn solid" href="https://booksy.com/en-us/732935_cutzbybuck_barber-shop_35988_clarksville" target="_blank" rel="noopener">See open times</a><a class="btn ghost" href="https://www.instagram.com/cutzbybuck/" target="_blank" rel="noopener">@cutzbybuck</a></div>
+  </div>
+</section>
+</main>
+
+<footer>Concept by Code Craft Media · 54321coleman@gmail.com</footer>
+
+<div class="bar" id="bar"><span>Cutzbybuck</span><a class="btn" href="https://booksy.com/en-us/732935_cutzbybuck_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const B=[["Haircuts",40,60],["Haircut + Beard",50,70],["Haircut + Enhancements",50,75],["Kids Cut",30,45],["No cut, just extras",0,0]];
+const A=[["Beard trim",20,20],["Beard maintenance",15,25],["Shave",20,20],["Eyebrows",12,20]];
+const $=id=>document.getElementById(id);
+const dur=m=>{const h=Math.floor(m/60),r=m%60;return [h?h+' hr':'',r?r+' min':''].filter(Boolean).join(' ')||'0 min'};
+$('base').innerHTML=B.map((s,i)=>`<label class="opt"><input type="radio" name="b" value="${i}" ${i?'':'checked'}><span class="n">${s[0]}${s[1]?`<small>${dur(s[2])}</small>`:''}</span><span class="p">${s[1]?'$'+s[1]:''}</span></label>`).join('');
+$('adds').innerHTML=A.map((s,i)=>`<label class="opt"><input type="checkbox" value="${i}"><span class="n">${s[0]}<small>${dur(s[2])}</small></span><span class="p">+$${s[1]}</span></label>`).join('');
+const M=[["Haircuts",60,40],["Haircut + Beard",70,50],["Haircut + Enhancements",75,50],["Kids Cut",45,30],["Beard trim",20,20],["Beard maintenance",25,15],["Shave",20,20],["Eyebrows",20,12]];
+$('menu').innerHTML=M.map(m=>`<div class="r"><span>${m[0]}</span><span class="d">${dur(m[1])}</span><span class="p">$${m[2]}</span></div>`).join('');
+function up(){const b=B[+document.querySelector('input[name=b]:checked').value];const items=b[1]?[b]:[];
+ document.querySelectorAll('#adds input:checked').forEach(c=>items.push(A[+c.value]));
+ let p=0,t=0;items.forEach(s=>{p+=s[1];t+=s[2]});
+ $('lines').innerHTML=items.length?items.map(s=>`<li><span>${s[0]}</span><span>$${s[1]}</span></li>`).join(''):'<li><span>Pick something</span><span></span></li>';
+ $('sum').textContent='$'+p;$('time').textContent=dur(t);}
+document.querySelector('.builder').addEventListener('change',up);up();
+const bar=$('bar');new IntersectionObserver(([e])=>bar.classList.toggle('show',!e.isIntersecting)).observe($('hero'));
+</script>
+</body>
+</html>

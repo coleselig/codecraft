@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ViceBlendz | Clarksville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1a0b2e;--plum:#2c1250;--pink:#ff3ea5;--teal:#19e3d0;--sun:#ffb347;--white:#fdf6ff;--mute:#bfa9dc}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--white);font-family:Outfit,system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--teal);color:var(--night);font-size:12px;font-weight:600;text-align:center;padding:7px 16px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+.neon{font-family:Monoton,Outfit,sans-serif;font-weight:400}
+.hero{position:relative;overflow:hidden;text-align:center;padding:48px 0 0;background:linear-gradient(180deg,var(--night) 0%,var(--plum) 55%,#5a1a6b 100%)}
+.sunset{width:min(62vw,300px);aspect-ratio:1;margin:0 auto 4px;border-radius:50%;
+ background:repeating-linear-gradient(180deg,var(--sun) 0 9%,var(--pink) 9% 10.5%,transparent 10.5% 12%),linear-gradient(var(--sun),var(--pink));
+ -webkit-mask:linear-gradient(#000 0 52%,transparent 52% 56%,#000 56% 64%,transparent 64% 67%,#000 67% 74%,transparent 74% 76%,#000 76%);mask:linear-gradient(#000 0 52%,transparent 52% 56%,#000 56% 64%,transparent 64% 67%,#000 67% 74%,transparent 74% 76%,#000 76%)}
+.hero .copy{position:relative;z-index:2}
+.eyebrow{font-weight:800;letter-spacing:.3em;font-size:12px;color:var(--teal);text-transform:uppercase}
+h1{font-size:clamp(40px,12vw,104px);line-height:1.05;color:var(--white);margin:16px 0 12px;text-shadow:0 0 12px var(--pink),0 0 32px var(--pink)}
+.quote{max-width:540px;margin:0 auto 18px;font-size:18px}
+.quote b{color:var(--sun)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px}
+.chip{border:1px solid var(--teal);color:var(--teal);border-radius:999px;padding:5px 14px;font-weight:600;font-size:14px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding-bottom:40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border-radius:999px;font-weight:800;text-decoration:none;font-size:16px;transition:transform .15s,box-shadow .15s}
+.btn.solid{background:var(--pink);color:var(--white);box-shadow:0 0 22px rgba(255,62,165,.6)}
+.btn.solid:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(255,62,165,.85)}
+.btn.ghost{border:2px solid var(--teal);color:var(--teal)}
+.grid-floor{height:90px;background:linear-gradient(transparent 0,rgba(25,227,208,.0) 0),repeating-linear-gradient(90deg,rgba(25,227,208,.55) 0 2px,transparent 2px 44px),repeating-linear-gradient(180deg,rgba(25,227,208,.55) 0 2px,transparent 2px 18px);transform:perspective(200px) rotateX(55deg);transform-origin:top;margin-top:-10px}
+section{padding:70px 0}
+h2{font-size:clamp(28px,7.5vw,56px);line-height:1.15;color:var(--teal);text-shadow:0 0 14px rgba(25,227,208,.6);margin-bottom:12px}
+.lede{color:var(--mute);max-width:560px;margin-bottom:28px}
+/* crew calc */
+.calc{display:grid;gap:22px}
+@media(min-width:800px){.calc{grid-template-columns:1.2fr 1fr}}
+.rows{display:grid;gap:12px}
+.row{display:flex;align-items:center;gap:12px;background:var(--plum);border:1px solid rgba(255,62,165,.35);border-radius:18px;padding:14px 14px 14px 18px}
+.row .n{flex:1;font-weight:600}
+.row .n small{display:block;color:var(--mute);font-weight:400}
+.step{display:flex;align-items:center;gap:6px}
+.step button{all:unset;cursor:pointer;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:20px;background:var(--night);color:var(--teal);border:1px solid var(--teal)}
+.step button:focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+.step output{min-width:22px;text-align:center;font-weight:800;font-size:18px}
+.total{background:linear-gradient(160deg,var(--pink),#b5179e 60%,var(--plum));border-radius:24px;padding:26px;align-self:start}
+.total .lab{font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
+.total .big{font-size:64px;font-weight:800;line-height:1;margin:6px 0 4px}
+.total .t{font-weight:600}
+.total .btn{margin-top:18px;background:var(--night);box-shadow:none}
+.after{margin-top:34px;border:1px dashed var(--sun);border-radius:20px;padding:20px;color:var(--sun)}
+.after b{color:var(--white)}
+.visit{text-align:center;background:var(--plum)}
+.addr{font-size:22px;font-weight:800;margin:6px 0 6px}
+.visit p{color:var(--mute);margin-bottom:22px}
+footer{background:#0f0620;color:var(--mute);text-align:center;font-size:13px;padding:30px 20px 110px}
+@media(min-width:768px){footer{padding-bottom:30px}}
+.bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(26,11,46,.92);backdrop-filter:blur(8px);border:1px solid var(--pink);border-radius:999px;padding:8px 8px 8px 20px;transform:translateY(170%);transition:transform .25s}
+.bar.show{transform:none}
+.bar span{font-weight:800;color:var(--pink)}
+.bar .btn{padding:10px 20px}
+@media(min-width:768px){.bar{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for ViceBlendz. Not live.</div>
+
+<header class="hero" id="hero">
+  <div class="sunset" aria-hidden="true"></div>
+  <div class="copy wrap">
+    <p class="eyebrow">305 &rarr; 931 · Clarksville, TN</p>
+    <h1 class="neon">Vice<br>Blendz</h1>
+    <p class="quote">&ldquo;New barber in town from the 305 just trying to bring some <b>Miami heat</b> to the 931.&rdquo;</p>
+    <div class="chips"><span class="chip">&#9733; 5.0 on Booksy (122 reviews)</span><span class="chip">Se habla español</span></div>
+    <div class="btns">
+      <a class="btn solid" href="https://booksy.com/en-us/860347_viceblendz_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+      <a class="btn ghost" href="#crew">Bringing the crew?</a>
+    </div>
+  </div>
+  <div class="grid-floor" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="crew">
+  <div class="wrap">
+    <h2 class="neon">Crew calc</h2>
+    <p class="lede">Coming with your son, your boys or the whole squad? Add everybody and see the total before you book.</p>
+    <div class="calc">
+      <div class="rows" id="rows"></div>
+      <div class="total" aria-live="polite">
+        <div class="lab">Your total</div>
+        <div class="big" id="sum">$40</div>
+        <div class="t" id="time">35 min in the chair</div>
+        <a class="btn solid" href="https://booksy.com/en-us/860347_viceblendz_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book these on Booksy</a>
+      </div>
+    </div>
+    <div class="after"><b>Before / After Hours: $70, 30 min.</b> Per the Booksy page: text ahead to book this one so you're on the same page. (931) 933-4028</div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2 class="neon">Find me</h2>
+    <p class="addr">1289 Northfield Dr<br>Clarksville, TN 37040</p>
+    <p>Se habla español.</p>
+    <div class="btns" style="padding:0">
+      <a class="btn solid" href="https://booksy.com/en-us/860347_viceblendz_barber-shop_35988_clarksville" target="_blank" rel="noopener">See open times</a>
+      <a class="btn ghost" href="https://www.instagram.com/_viceblendz/" target="_blank" rel="noopener">@_viceblendz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Concept by Code Craft Media · 54321coleman@gmail.com</footer>
+
+<div class="bar" id="bar"><span>ViceBlendz</span><a class="btn solid" href="https://booksy.com/en-us/860347_viceblendz_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const S=[["Detailed Haircut",40,35,1],["Haircut & Beard",50,40,0],["Kid's Cut (5-13)",35,35,0],["Head shave & beard",30,30,0]];
+const rows=document.getElementById('rows');
+rows.innerHTML=S.map((s,i)=>`<div class="row"><span class="n">${s[0]}<small>$${s[1]} · ${s[2]} min</small></span><div class="step"><button aria-label="Remove one ${s[0]}" data-i="${i}" data-d="-1">&minus;</button><output id="q${i}">${s[3]}</output><button aria-label="Add one ${s[0]}" data-i="${i}" data-d="1">+</button></div></div>`).join('');
+const q=S.map(s=>s[3]);
+function fmt(m){const h=Math.floor(m/60),r=m%60;return (h?h+' hr ':'')+(r||!h?r+' min':'').trim()}
+function up(){let p=0,t=0;q.forEach((n,i)=>{p+=n*S[i][1];t+=n*S[i][2];document.getElementById('q'+i).textContent=n});
+ document.getElementById('sum').textContent='$'+p;document.getElementById('time').textContent=t?fmt(t)+' in the chair':'Add someone to start';}
+rows.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;q[i]=Math.max(0,Math.min(6,q[i]+ +b.dataset.d));up();});
+up();
+const bar=document.getElementById('bar');new IntersectionObserver(([e])=>bar.classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('hero'));
+</script>
+</body>
+</html>

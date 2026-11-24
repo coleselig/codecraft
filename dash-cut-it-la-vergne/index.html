@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dash cut it | La Vergne, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--asph:#17181a;--asph2:#222427;--asph3:#2e3034;--yel:#ffd21f;--yel2:#fff1a8;--wht:#f2f2ee;--gry:#9a9ca1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--asph);color:var(--wht);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--yel);color:#111;font-size:12px;text-align:center;padding:7px 16px;font-weight:500}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--yel);font-weight:700}
+.anton{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--yel);color:#111;text-decoration:none;font-weight:700;padding:15px 24px;border-radius:2px;font-size:15px;letter-spacing:.04em;text-transform:uppercase;transition:transform .2s}
+.btn:hover{transform:skewX(-6deg)}
+.btn.ln{background:transparent;color:var(--wht);border:2px solid var(--wht)}
+.hero{position:relative;overflow:hidden;padding:48px 0 0}
+.hero h1{font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:clamp(84px,25vw,230px);line-height:.86;text-transform:uppercase;letter-spacing:.005em}
+.hero h1 span{display:block;color:var(--yel);transform:skewX(-8deg);transform-origin:left}
+.hero p{color:var(--gry);font-size:17px;max-width:34ch;margin:18px 0 24px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.meta span{border:1px solid var(--asph3);background:var(--asph2);padding:6px 12px;font-size:13px;border-radius:2px}
+.meta b{color:var(--yel)}
+.road{position:relative;height:110px;margin-top:44px;background:var(--asph2);border-top:4px solid var(--asph3);border-bottom:4px solid var(--asph3);overflow:hidden}
+.road::before{content:"";position:absolute;left:0;right:0;top:50%;height:6px;margin-top:-3px;background:repeating-linear-gradient(90deg,var(--yel) 0 46px,transparent 46px 86px);animation:roll 1.2s linear infinite;background-size:86px 6px;width:200%}
+@keyframes roll{to{transform:translateX(-86px)}}
+section{padding:72px 0}
+h2{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(44px,11vw,84px);line-height:.92;margin:10px 0 24px}
+/* picker */
+.pk{display:grid;gap:22px}
+.chips{display:grid;gap:8px}
+.ch{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--wht);background:var(--asph2);border:2px solid var(--asph3);padding:14px 16px;border-radius:2px;cursor:pointer;transition:border-color .2s}
+.ch:hover{border-color:#55585e}
+.ch[aria-pressed="true"]{border-color:var(--yel);background:#2a2716}
+.ch .n{font-weight:700;font-size:15px;min-width:0}
+.ch .n small{display:block;font-weight:400;color:var(--gry);font-size:12px}
+.ch .p{font-family:'Anton',Impact,sans-serif;font-size:24px;white-space:nowrap}
+.dash{background:var(--wht);color:#111;padding:22px;border-radius:2px;align-self:start;position:relative}
+.dash .nm{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;font-size:clamp(28px,7vw,40px);line-height:1;min-height:2em}
+.dash .pr{font-family:'Anton',Impact,sans-serif;font-size:clamp(70px,20vw,104px);line-height:.95;margin:10px 0 4px}
+.dash .ds{font-size:14px;color:#444;min-height:1.6em}
+.lane{position:relative;margin:22px 0 8px;height:46px;background:#1d1e20;border-radius:2px;overflow:hidden}
+.lane::before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;background:repeating-linear-gradient(90deg,var(--yel) 0 18px,transparent 18px 32px)}
+.car{position:absolute;top:50%;left:0;width:44px;height:22px;margin-top:-11px;transition:left .7s cubic-bezier(.3,1.4,.5,1)}
+.marks{display:flex;justify-content:space-between;font-size:11px;color:#555;margin-bottom:18px}
+.dash .btn{width:100%}
+.dash small{display:block;margin-top:10px;font-size:12px;color:#555}
+.pol{display:grid;gap:12px}
+.pc{border-left:4px solid var(--yel);background:var(--asph2);padding:18px 20px}
+.pc h3{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:24px;margin-bottom:4px}
+.pc p{color:var(--gry)}
+.pc a{color:var(--yel);font-weight:700}
+.rv{background:var(--yel);color:#111;padding:36px 22px}
+.rv q{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;font-size:clamp(30px,8vw,60px);line-height:1;display:block}
+.rv .by{margin-top:14px;font-size:14px}
+footer{padding:34px 0 110px;text-align:center;color:var(--gry);font-size:13px;border-top:1px solid var(--asph3)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#000;border:2px solid var(--yel);padding:8px 8px 8px 16px;transform:translateY(150%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky span{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;font-size:20px}
+.sticky .btn{padding:10px 18px}
+@media(min-width:860px){
+ .pk{grid-template-columns:1.15fr 1fr;gap:36px}
+ .dash{position:sticky;top:20px}
+ .pol{grid-template-columns:repeat(3,1fr)}
+ .sticky{display:none}footer{padding-bottom:34px}
+}
+@media(prefers-reduced-motion:reduce){.road::before{animation:none}.car{transition:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Dash cut it. Not live.</div>
+<header class="hero" id="top">
+ <div class="wrap">
+  <div class="lbl">La Vergne, TN · Madison Square Blvd</div>
+  <h1 style="margin-top:12px">Dash <span>cut it.</span></h1>
+  <p>Sharp cuts, crispy lineups, and a full package with hot towel and face shave. Mobile service available.</p>
+  <div class="ctas">
+   <a class="btn" href="https://booksy.com/en-us/1157353_dash-cut-it_barber-shop_36057_la-vergne" target="_blank" rel="noopener">Book on Booksy</a>
+   <a class="btn ln" href="https://www.instagram.com/dashcutit/" target="_blank" rel="noopener">@dashcutit</a>
+  </div>
+  <div class="meta"><span><b>4.9</b> on Booksy</span><span><b>125</b> reviews</span><span>Booksy Recommended</span></div>
+ </div>
+ <div class="road" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="pick">
+ <div class="wrap">
+  <div class="lbl">Pick your lane</div>
+  <h2>Tap a service. Watch it go.</h2>
+  <div class="pk">
+   <div class="chips" id="chips"></div>
+   <div class="dash" aria-live="polite">
+    <div class="lbl" style="color:#8a7300">You picked</div>
+    <div class="nm" id="nm"></div>
+    <div class="pr" id="pr"></div>
+    <div class="ds" id="ds"></div>
+    <div class="lane"><svg class="car" id="car" viewBox="0 0 44 22" aria-hidden="true"><rect x="2" y="5" width="38" height="12" rx="4" fill="#ffd21f"/><rect x="10" y="1" width="18" height="8" rx="3" fill="#ffd21f"/><rect x="13" y="3" width="12" height="5" rx="1.5" fill="#17181a"/><circle cx="11" cy="18" r="3.4" fill="#f2f2ee"/><circle cx="31" cy="18" r="3.4" fill="#f2f2ee"/></svg></div>
+    <div class="marks"><span>0</span><span>15 min</span><span>30</span><span>45</span><span>1 hr</span></div>
+    <a class="btn" href="https://booksy.com/en-us/1157353_dash-cut-it_barber-shop_36057_la-vergne" target="_blank" rel="noopener">Book this on Booksy</a>
+    <small>List prices from Dash's Booksy page. Booksy may show a discount when you book.</small>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="rv"><div class="wrap"><q>The cuts are always sharp, the lineup is crispy.</q><div class="by">Janae · Male Haircut + enhancement · from Booksy</div></div></div>
+
+<section>
+ <div class="wrap">
+  <div class="lbl">Before you roll up</div>
+  <h2>Know the route.</h2>
+  <div class="pol">
+   <div class="pc"><h3>Where</h3><p>1925 Madison Square Blvd<br>La Vergne, TN 37086</p><p style="margin-top:8px"><a href="https://maps.google.com/?q=1925+Madison+Square+Blvd+La+Vergne+TN+37086" target="_blank" rel="noopener">Directions</a></p></div>
+   <div class="pc"><h3>When you arrive</h3><p>Look for Dash when you arrive.</p></div>
+   <div class="pc"><h3>Early slots</h3><p>$20 deposit for early appointments. After-hours cuts run 6 to 8 pm.</p><p style="margin-top:8px"><a href="https://booksy.com/en-us/1157353_dash-cut-it_barber-shop_36057_la-vergne" target="_blank" rel="noopener">See openings</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>Dash cut it · Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></footer>
+<div class="sticky" id="sticky"><span>Dash cut it</span><a class="btn" href="https://booksy.com/en-us/1157353_dash-cut-it_barber-shop_36057_la-vergne" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const S=[
+ ["Male Haircut + enhancement","",40,40],
+ ["Haircut + beard","",40,40],
+ ["Natural male haircut","No enhancements · $35 cash, $40 card","35",30],
+ ["The Full package Haircut","Hot towel, enhancements, eyebrow, mustache & beard line up, face shave",50,45],
+ ["Haircut + eyebrow + beard trim + hot towel","",40,60],
+ ["Head shave and beard trim","",30,30],
+ ["Kids haircut","",25,30],
+ ["Line up + beard","",30,30],
+ ["Lineup","",20,30],
+ ["After Hours Haircut","6 to 8 pm",50,45]];
+const fT=m=>m>=60?"1 hr":m+" min";
+const chips=document.getElementById('chips');
+S.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.className='ch';b.setAttribute('aria-pressed',i===0);
+ b.innerHTML=`<span class="n"></span><span class="p">$${s[2]}</span>`;b.querySelector('.n').innerHTML=s[0]+`<small>${fT(s[3])}${s[1]?' · '+s[1]:''}</small>`;
+ b.onclick=()=>sel(i);chips.appendChild(b)});
+function sel(i){
+ [...chips.children].forEach((c,j)=>c.setAttribute('aria-pressed',i===j));
+ const s=S[i];nm.textContent=s[0];pr.textContent='$'+s[2];ds.textContent=fT(s[3])+(s[1]?' · '+s[1]:'');
+ const lane=car.parentElement.clientWidth-car.clientWidth;car.style.left=(lane*s[3]/60)+'px';
+}
+sel(0);addEventListener('resize',()=>sel([...chips.children].findIndex(c=>c.getAttribute('aria-pressed')==='true')));
+const sticky=document.getElementById('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe(document.getElementById('top'));
+</script>
+</body>
+</html>
