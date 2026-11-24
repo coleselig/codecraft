@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fiorela Nails · Euclid Ave · Bristol</title>
+<meta name="description" content="Concept site for Fiorela Nails, 2020 Euclid Avenue, Bristol.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cocoa:#3d2620;--mocha:#6b4436;--latte:#ead9c9;--cream:#fbf5ef;--blush:#f2c6bd;--rose:#c9705f;--gold:#b98a4e;--mute:#7c6459;--serif:"Fraunces",Georgia,serif;--sans:"Outfit",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--cocoa);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+button{font-family:inherit}
+.concept{background:var(--cocoa);color:var(--latte);font-size:12px;text-align:center;padding:7px 12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:var(--serif);font-style:italic;font-size:24px;text-decoration:none;color:var(--cocoa)}
+.logo span{font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-left:6px;vertical-align:middle}
+.navbook{background:var(--cocoa);color:var(--cream);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.06em;padding:9px 16px;border-radius:999px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:30px 0 46px;background:radial-gradient(120% 80% at 85% 10%,var(--blush) 0,rgba(242,198,189,0) 60%),var(--cream)}
+.hero .wrap{display:grid;gap:14px}
+.kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);font-weight:700}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,13vw,104px);line-height:.95;letter-spacing:-.02em}
+h1 em{color:var(--rose)}
+.lede{font-size:18px;max-width:30em;color:var(--mocha)}
+.hands{width:100%;max-width:420px;height:auto;display:block;margin:4px 0 0}
+.nail{transition:fill .5s ease}
+.swatches{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--mute)}
+.swatches button{width:26px;height:26px;border-radius:50% 50% 46% 46%/60% 60% 40% 40%;border:2px solid var(--cream);box-shadow:0 0 0 1.5px var(--mocha);cursor:pointer}
+.swatches button[aria-pressed=true]{box-shadow:0 0 0 3px var(--cocoa)}
+.stars{display:inline-flex;gap:10px;align-items:center;background:#fff;border-radius:999px;padding:8px 16px;font-weight:500;font-size:15px;box-shadow:0 2px 0 var(--latte)}
+.stars i{color:var(--gold);font-style:normal;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;border:2px solid var(--cocoa);text-align:center}
+.btn.p{background:var(--cocoa);color:var(--cream)}
+.btn.s{background:transparent}
+section{padding:56px 0}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,7vw,50px);line-height:1.05;margin-bottom:8px}
+h2 em{color:var(--rose)}
+.sub{color:var(--mute);margin-bottom:24px}
+/* builder */
+.builder{background:var(--cocoa);color:var(--cream)}
+.builder .sub{color:var(--latte)}
+.step{margin-top:18px}
+.step p{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blush);margin-bottom:8px;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{background:transparent;color:var(--cream);border:1.5px solid rgba(251,245,239,.35);border-radius:999px;padding:10px 15px;font-size:15px;font-weight:500;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--blush);color:var(--cocoa);border-color:var(--blush)}
+.chips button:disabled{opacity:.3;cursor:not-allowed}
+.receipt{margin-top:22px;background:var(--cream);color:var(--cocoa);border-radius:22px 22px 22px 4px;padding:22px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:end}
+.r-name{font-family:var(--serif);font-size:24px;line-height:1.15}
+.r-time{color:var(--mute);font-weight:500}
+.r-price{font-family:var(--serif);font-size:46px;line-height:1;color:var(--rose);text-align:right}
+.r-note{grid-column:1/-1;color:var(--mocha);font-size:15px;margin-top:6px}
+.receipt .btn{grid-column:1/-1;margin-top:10px}
+/* menu */
+.cols{display:grid;gap:26px}
+.list h3{font-family:var(--serif);font-style:italic;font-weight:400;font-size:26px;margin-bottom:6px;color:var(--mocha)}
+.row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--latte)}
+.row b{font-weight:500}
+.row small{display:block;color:var(--mute);font-size:13px}
+.row .pr{font-family:var(--serif);font-size:20px;white-space:nowrap}
+/* reviews */
+.revs{background:var(--latte)}
+.qgrid{display:grid;gap:14px}
+.q{background:var(--cream);border-radius:22px 22px 22px 4px;padding:20px}
+.q p{font-family:var(--serif);font-size:21px;line-height:1.3}
+.q span{display:block;margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:700}
+/* policies */
+.lang{display:inline-flex;border:1.5px solid var(--cocoa);border-radius:999px;overflow:hidden;margin-bottom:16px}
+.lang button{background:transparent;border:0;padding:8px 16px;font-weight:700;cursor:pointer;color:var(--cocoa)}
+.lang button[aria-pressed=true]{background:var(--cocoa);color:var(--cream)}
+.pol{list-style:none;display:grid;gap:10px}
+.pol li{padding-left:28px;position:relative}
+.pol li:before{content:"";position:absolute;left:4px;top:.45em;width:12px;height:14px;border-radius:50% 50% 45% 45%/62% 62% 38% 38%;background:var(--rose)}
+.card{background:#fff;border-radius:22px;padding:22px;box-shadow:0 2px 0 var(--latte)}
+.closed{background:var(--blush);border-radius:14px;padding:12px 14px;font-weight:700;margin-top:14px}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.amen span{border:1.5px solid var(--mocha);color:var(--mocha);border-radius:999px;padding:4px 12px;font-size:14px}
+footer{background:var(--cocoa);color:var(--latte);padding:34px 0 96px;font-size:14px}
+footer b{color:var(--cream)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;display:flex;justify-content:center;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s}
+.sticky.on{opacity:1;transform:none;pointer-events:auto}
+.sticky a{background:var(--rose);color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:999px;box-shadow:0 8px 24px rgba(61,38,32,.3)}
+@media(min-width:820px){
+ .hero{padding:56px 0 70px}
+ .hero .wrap{grid-template-columns:1.1fr 1fr;align-items:center;column-gap:40px}
+ .hero .art{grid-column:2;grid-row:1/span 6}
+ .hands{max-width:460px;margin-left:auto}
+ .cols{grid-template-columns:1fr 1fr;gap:48px}
+ .qgrid{grid-template-columns:repeat(3,1fr)}
+ .info{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+ .sticky{display:none}
+ footer{padding-bottom:34px}
+}
+@media (prefers-reduced-motion:reduce){.nail{transition:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Fiorela Nails. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">Fiorela<span>nails</span></a><a class="navbook" href="https://booksy.com/en-us/1888003_fiorela-nails_nail-salon_134577_bristol">Book</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">2020 Euclid Ave · Bristol</div>
+  <h1>Nails by <em>Fifi.</em></h1>
+  <p class="lede">Acrylics, Gel X, overlays and spa pedicures, by appointment on Euclid Avenue.</p>
+  <div class="art">
+    <svg class="hands" viewBox="0 0 420 230" role="img" aria-label="Illustration of five painted nails">
+      <defs><linearGradient id="gl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+      <g fill="#ead9c9">
+        <rect x="18" y="96" width="62" height="134" rx="31"/><rect x="100" y="56" width="66" height="174" rx="33"/><rect x="186" y="36" width="68" height="194" rx="34"/><rect x="274" y="58" width="66" height="172" rx="33"/><rect x="358" y="110" width="52" height="120" rx="26"/>
+      </g>
+      <g class="nails" fill="#c9705f">
+        <path class="nail" d="M27 150 C27 112 36 70 49 70 C62 70 71 112 71 150 C71 162 62 168 49 168 C36 168 27 162 27 150Z"/>
+        <path class="nail" d="M110 112 C110 70 119 24 133 24 C147 24 156 70 156 112 C156 125 146 132 133 132 C120 132 110 125 110 112Z"/>
+        <path class="nail" d="M196 92 C196 48 206 2 220 2 C234 2 244 48 244 92 C244 106 234 113 220 113 C206 113 196 106 196 92Z"/>
+        <path class="nail" d="M284 114 C284 72 293 26 307 26 C321 26 330 72 330 114 C330 127 320 134 307 134 C294 134 284 127 284 114Z"/>
+        <path class="nail" d="M366 160 C366 128 374 88 384 88 C394 88 402 128 402 160 C402 170 394 176 384 176 C374 176 366 170 366 160Z"/>
+      </g>
+      <g fill="url(#gl)">
+        <path d="M33 140 C33 112 40 82 47 80 L47 150Z"/><path d="M116 104 C116 72 123 38 131 34 L131 116Z"/><path d="M202 84 C202 50 209 16 218 12 L218 96Z"/><path d="M290 106 C290 74 297 40 305 36 L305 118Z"/><path d="M371 152 C371 128 377 100 382 98 L382 162Z"/>
+      </g>
+    </svg>
+    <div class="swatches" role="group" aria-label="Try a polish color"><span>Try a shade:</span>
+      <button type="button" style="background:#c9705f" data-c="#c9705f" aria-pressed="true" aria-label="Terracotta"></button>
+      <button type="button" style="background:#6b4436" data-c="#6b4436" aria-pressed="false" aria-label="Mocha"></button>
+      <button type="button" style="background:#f2c6bd" data-c="#f2c6bd" aria-pressed="false" aria-label="Blush"></button>
+      <button type="button" style="background:#8e1f2f" data-c="#8e1f2f" aria-pressed="false" aria-label="Cherry"></button>
+      <button type="button" style="background:#fffaf4" data-c="#fffaf4" aria-pressed="false" aria-label="Milky white"></button>
+    </div>
+  </div>
+  <div><span class="stars"><i>★★★★★</i> 5.0 from 10 Booksy reviews</span></div>
+  <div class="btns">
+    <a class="btn p" href="https://booksy.com/en-us/1888003_fiorela-nails_nail-salon_134577_bristol">Book on Booksy</a>
+    <a class="btn s" href="#build">Price my set</a>
+  </div>
+</div></header>
+
+<section class="builder" id="build"><div class="wrap">
+  <h2>Price your <em style="color:var(--blush)">set.</em></h2>
+  <p class="sub">Pick what you want and see the Booksy price and time before you book.</p>
+  <div class="step"><p>1 · Service</p>
+    <div class="chips" id="svc" role="group" aria-label="Service">
+      <button type="button" data-k="acr" aria-pressed="true">Acrylic set</button>
+      <button type="button" data-k="gelx" aria-pressed="false">Gel X</button>
+      <button type="button" data-k="refill" aria-pressed="false">Refill</button>
+      <button type="button" data-k="overlay" aria-pressed="false">Overlay</button>
+      <button type="button" data-k="mani" aria-pressed="false">Manicure + gel</button>
+      <button type="button" data-k="pedi" aria-pressed="false">Spa pedicure</button>
+    </div>
+  </div>
+  <div class="step"><p>2 · Length</p>
+    <div class="chips" id="len" role="group" aria-label="Length">
+      <button type="button" data-l="sm" aria-pressed="true">Small to medium</button>
+      <button type="button" data-l="lg" aria-pressed="false">Long to extra long</button>
+    </div>
+  </div>
+  <div class="step"><p>3 · Extras</p>
+    <div class="chips" role="group" aria-label="Extras">
+      <button type="button" id="art" aria-pressed="false">+ Nail art</button>
+    </div>
+  </div>
+  <div class="receipt" aria-live="polite">
+    <div><div class="r-name" id="rn">Acrylic nails, small to medium</div><div class="r-time" id="rt">1 h 30 min</div></div>
+    <div class="r-price" id="rp">$45</div>
+    <div class="r-note" id="rx">Price varies with length, design and removal.</div>
+    <a class="btn p" href="https://booksy.com/en-us/1888003_fiorela-nails_nail-salon_134577_bristol">Book this with Fifi</a>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <h2>The <em>menu</em></h2>
+  <p class="sub">Prices as listed on Booksy. Nail art, French tips and decorations are extra.</p>
+  <div class="cols">
+    <div class="list"><h3>Nails</h3>
+      <div class="row"><div><b>Acrylic nails, small to medium</b><small>1 h 30 min</small></div><span class="pr">$45</span></div>
+      <div class="row"><div><b>Acrylic nails, long to extra long</b><small>2 h+</small></div><span class="pr">$55</span></div>
+      <div class="row"><div><b>Gel X, small to medium</b><small>1 h 30 min</small></div><span class="pr">$45</span></div>
+      <div class="row"><div><b>Gel X, long to extra long</b><small>1 h 30 min</small></div><span class="pr">$55</span></div>
+      <div class="row"><div><b>Refill</b><small>30 min · acrylic, builder gel or polygel</small></div><span class="pr">$45</span></div>
+      <div class="row"><div><b>Overlay on natural nail</b><small>50 min</small></div><span class="pr">$45</span></div>
+      <div class="row"><div><b>Acrylic coating on natural nails</b><small>1 h</small></div><span class="pr">$35</span></div>
+      <div class="row"><div><b>Manicure + gel, one color</b><small>40 min</small></div><span class="pr">$45</span></div>
+      <div class="row"><div><b>Manicure, one polish color</b><small>30 min</small></div><span class="pr">$30</span></div>
+      <div class="row"><div><b>Nail art</b><small>add-on</small></div><span class="pr">from $5</span></div>
+    </div>
+    <div class="list"><h3>Pedicures</h3>
+      <div class="row"><div><b>Pedicure</b><small>1 h</small></div><span class="pr">$40</span></div>
+      <div class="row"><div><b>Men's pedicure</b><small>40 min</small></div><span class="pr">$40</span></div>
+      <div class="row"><div><b>Clean-up pedicure</b><small>30 min · no polish</small></div><span class="pr">$30</span></div>
+      <div class="row"><div><b>Regular spa pedicure</b><small>1 h 30 min</small></div><span class="pr">$60</span></div>
+      <div class="row"><div><b>Premium spa pedicure</b><small>1 h 30 min</small></div><span class="pr">$100</span></div>
+      <div class="row"><div><b>Kids manicure and pedicure</b><small>30 min</small></div><span class="pr">$50</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="revs"><div class="wrap">
+  <h2>What clients <em>say</em></h2>
+  <p class="sub">From verified Booksy reviews.</p>
+  <div class="qgrid">
+    <div class="q"><p>"Fifi killed it again! I am in love with my nails!"</p><span>Tiffany</span></div>
+    <div class="q"><p>"She did phenomenal and the price was unbeatable"</p><span>Ivy</span></div>
+    <div class="q"><p>"She truly cares about her clients and it shows!"</p><span>Tiffany</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap info">
+  <div>
+    <h2>Before you <em>book</em></h2>
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">English</button><button type="button" data-lang="es" aria-pressed="false">Español</button></div>
+    <ul class="pol" id="pol"></ul>
+  </div>
+  <div class="card">
+    <h2>Find <em>Fifi</em></h2>
+    <p><b>2020 Euclid Avenue</b><br>Bristol 24201</p>
+    <p style="margin-top:8px;color:var(--mute)">Today's hours on Booksy (Mon): 3:30 to 8:00 PM. See Booksy for the full week.</p>
+    <div class="closed">Closed Monday, Dec 7</div>
+    <div class="amen"><span>Parking</span><span>Accessible</span><span>Wi-Fi</span><span>Loyalty program</span></div>
+    <div class="btns" style="margin-top:16px"><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=2020+Euclid+Avenue+Bristol+24201">Directions</a><a class="btn s" href="https://www.facebook.com/share/14vXGNj9s6e/?mibextid=wwXIfr">Facebook</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>Fiorela Nails</b> · 2020 Euclid Avenue, Bristol 24201 · Booking by Booksy<br>Concept site by Code Craft Media. Not live.</div></footer>
+<div class="sticky"><a href="https://booksy.com/en-us/1888003_fiorela-nails_nail-salon_134577_bristol">Book with Fifi</a></div>
+<script>
+const P={
+ acr:{sm:["Acrylic nails, small to medium",45,"1 h 30 min"],lg:["Acrylic nails, long to extra long",55,"2 h+"]},
+ gelx:{sm:["Gel X, small to medium",45,"1 h 30 min"],lg:["Gel X, long to extra long",55,"1 h 30 min"]},
+ refill:{x:["Refill",45,"30 min","Acrylic, builder gel or polygel."]},
+ overlay:{x:["Overlay on natural nail",45,"50 min"]},
+ mani:{x:["Manicure + gel, one color",45,"40 min"]},
+ pedi:{x:["Regular spa pedicure",60,"1 h 30 min","Want the works? Premium spa pedicure is $100."]}
+};
+let k="acr",l="sm",art=false;
+const $=id=>document.getElementById(id);
+function draw(){const s=P[k];const lenOK=!!s.sm;document.querySelectorAll("#len button").forEach(b=>{b.disabled=!lenOK});
+ const d=lenOK?s[l]:s.x;const artOK=k!=="pedi";$("art").disabled=!artOK;const a=art&&artOK;
+ $("rn").textContent=d[0]+(a?" + nail art":"");$("rt").textContent=d[2];$("rp").textContent="$"+d[1]+(a?"+":"");
+ $("rx").textContent=a?"Nail art starts at $5 and depends on the design.":(d[3]||"Price varies with length, design and removal.");}
+function group(sel,fn){document.querySelectorAll(sel).forEach(b=>b.addEventListener("click",()=>{if(b.disabled)return;document.querySelectorAll(sel).forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");fn(b);draw();}));}
+group("#svc button",b=>k=b.dataset.k);group("#len button",b=>l=b.dataset.l);
+$("art").addEventListener("click",()=>{art=!art;$("art").setAttribute("aria-pressed",art);draw();});
+group(".swatches button",b=>document.querySelectorAll(".nail").forEach(n=>n.setAttribute("fill",b.dataset.c)));
+const POL={en:["Pick the right service, and include removal and design.","Cancel or reschedule 24 hours ahead.","15-minute grace period; after that you may need to reschedule.","Please come without kids or guests.","Price varies with length, design and removal.","Tell Fifi about any allergies or injuries.","7-day guarantee on lifting or popping off; doesn't cover bumps or misuse."],
+es:["Elige el servicio correcto e incluye retiro y diseño.","Cancela o reprograma con 24 horas de anticipación.","Tolerancia: 15 minutos; después podría ser necesario reprogramar.","Asiste sin niños ni acompañantes.","El precio varía según largo, diseño y retiro.","Informa sobre alergias o lesiones.","Garantía de 7 días por levantamiento o desprendimiento; no cubre golpes ni mal uso."]};
+function pol(lg){$("pol").innerHTML="";POL[lg].forEach(t=>{const li=document.createElement("li");li.textContent=t;$("pol").appendChild(li)});document.querySelector("#pol").lang=lg;}
+const st=document.querySelector('.sticky');addEventListener('scroll',()=>st.classList.toggle('on',scrollY>420),{passive:true});
+group(".lang button",b=>pol(b.dataset.lang));pol("en");draw();
+</script>
+</body>
+</html>

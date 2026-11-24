@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TCs Cuts N More · 6th St NE · Cleveland, TN</title>
+<meta name="description" content="Concept site for TCs Cuts N More, 865 6th St NE, Suite C, Cleveland, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0e0e10;--coal:#1a1a1e;--gold:#f2b705;--cream:#f4efe4;--steel:#8d8d96;--red:#e0442b;--disp:"Bebas Neue",Impact,sans-serif;--sans:"Barlow",system-ui,sans-serif;--mono:"Share Tech Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:var(--sans);line-height:1.5;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--gold);color:var(--black);font-size:12px;font-weight:600;text-align:center;padding:7px 12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;border-bottom:1px solid #2a2a30}
+.logo{font-family:var(--disp);font-size:28px;letter-spacing:.04em;text-decoration:none;white-space:nowrap}
+@media(max-width:360px){.logo{font-size:22px}}
+.logo b{color:var(--gold);font-weight:400}
+.btn{display:inline-block;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:14px;padding:13px 20px;border-radius:6px;border:2px solid var(--gold)}
+.btn.g{background:var(--gold);color:var(--black)}
+.btn.o{color:var(--gold)}
+.btn.sm{padding:8px 14px;font-size:12px}
+.hero{padding-top:40px;padding-bottom:54px;position:relative;overflow:hidden}
+.stripes{position:absolute;right:-60px;top:20px;width:220px;height:260px;background:repeating-linear-gradient(135deg,var(--gold) 0 14px,transparent 14px 34px);opacity:.14;pointer-events:none}
+.kick{font-family:var(--mono);color:var(--gold);font-size:14px;letter-spacing:.1em}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(68px,20vw,170px);line-height:.85;margin:12px 0 14px;letter-spacing:.01em}
+h1 span{color:var(--gold);display:block}
+.lede{font-size:18px;color:#cfcac0;max-width:30em}
+.stat{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.stat div{background:var(--coal);border:1px solid #2e2e35;border-radius:8px;padding:10px 14px}
+.stat b{font-family:var(--disp);font-size:34px;color:var(--gold);font-weight:400;display:block;line-height:1}
+.stat small{color:var(--steel);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+section{padding:56px 0}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(44px,10vw,72px);line-height:.95;letter-spacing:.01em}
+h2 span{color:var(--gold)}
+.sub{color:var(--steel);margin:6px 0 24px}
+/* scoreboard */
+.sb-sec{background:var(--coal);border-top:4px solid var(--gold);border-bottom:4px solid var(--gold)}
+.plays{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.plays button{font:800 14px var(--sans);text-transform:uppercase;letter-spacing:.04em;text-align:left;background:var(--black);color:var(--cream);border:2px solid #34343c;border-radius:8px;padding:12px;cursor:pointer}
+.plays button[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
+.board{margin-top:18px;background:#050506;border:3px solid #33333a;border-radius:12px;padding:16px;box-shadow:inset 0 0 0 2px #000,0 10px 30px rgba(0,0,0,.4)}
+.board .lbl{font-family:var(--mono);color:var(--steel);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.bname{font-family:var(--disp);font-size:30px;color:var(--cream);margin:2px 0 12px;line-height:1}
+.digits{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cell{background:#111114;border-radius:8px;padding:10px 12px}
+.num{font-family:var(--mono);font-size:44px;color:var(--gold);line-height:1;text-shadow:0 0 12px rgba(242,183,5,.45)}
+.num.t{color:var(--red);text-shadow:0 0 12px rgba(224,68,43,.45)}
+.sunday{display:flex;gap:10px;align-items:center;margin-top:14px;color:#cfcac0;font-weight:600;cursor:pointer}
+.board .btn{display:block;text-align:center;margin-top:14px}
+/* menu */
+.roster{display:grid;gap:0;border:1px solid #2e2e35;border-radius:10px;overflow:hidden}
+.r{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid #26262c;background:var(--coal)}
+.r:nth-child(even){background:#151518}
+.r:last-child{border-bottom:0}
+.r i{font-family:var(--disp);font-style:normal;font-size:26px;color:var(--steel)}
+.r b{font-weight:800}
+.r small{display:block;color:var(--steel);font-size:13px}
+.r span{font-family:var(--disp);font-size:30px;color:var(--gold)}
+.split{display:grid;gap:18px}
+.panel{background:var(--coal);border:1px solid #2e2e35;border-radius:10px;padding:20px}
+.panel h3{font-family:var(--disp);font-weight:400;font-size:32px;color:var(--gold);margin-bottom:8px}
+.sched{display:grid;gap:8px;margin-top:8px}
+.sched div{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:15px;border-bottom:1px dashed #33333a;padding-bottom:6px}
+.sched .x{color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chips span{font-size:13px;font-weight:600;border:1px solid #3a3a42;border-radius:999px;padding:5px 12px;color:#cfcac0}
+footer{border-top:1px solid #2a2a30;color:var(--steel);padding:30px 0 92px;font-size:14px}
+footer b{color:var(--cream)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s;display:flex;justify-content:center}
+.sticky a{background:var(--gold);color:var(--black);text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:14px 26px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+@media(min-width:820px){
+ .plays{grid-template-columns:repeat(3,1fr)}
+ .sb-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+ .board{margin-top:0}
+ .split{grid-template-columns:1fr 1fr}
+ .hero{padding-top:70px;padding-bottom:80px}
+ .stripes{right:0;width:360px;height:380px}
+ .sticky{display:none}
+ footer{padding-bottom:30px}
+}
+.sticky.on{opacity:1;transform:none;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for TCs Cuts N More. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">TCs <b>Cuts N More</b></a><a class="btn g sm" href="https://booksy.com/en-us/406220_tcs-cuts-n-more_barber-shop_35647_cleveland">Book</a></div></nav>
+
+<header class="wrap hero">
+  <div class="stripes" aria-hidden="true"></div>
+  <div class="kick">865 6TH ST NE · SUITE C · CLEVELAND, TN</div>
+  <h1>The Dream <span>Team.</span></h1>
+  <p class="lede">Cuts, beards, shape ups and twists with Terrance Constant, booked straight from your phone.</p>
+  <div class="stat">
+    <div><b>5.0</b><small>Booksy rating</small></div>
+    <div><b>118</b><small>Reviews</small></div>
+    <div><b>114</b><small>Five-star</small></div>
+  </div>
+  <div class="btns">
+    <a class="btn g" href="https://booksy.com/en-us/406220_tcs-cuts-n-more_barber-shop_35647_cleveland">Book a cut</a>
+    <a class="btn o" href="#board">Run the board</a>
+  </div>
+</header>
+
+<section class="sb-sec" id="board"><div class="wrap sb-grid">
+  <div>
+    <h2>Pick your <span>play.</span></h2>
+    <p class="sub">Tap a service and the board shows the price and chair time.</p>
+    <div class="plays" role="group" aria-label="Choose a service">
+      <button type="button" data-k="cut" aria-pressed="true">Haircut</button>
+      <button type="button" data-k="cb" aria-pressed="false">Cut + beard</button>
+      <button type="button" data-k="kid" aria-pressed="false">Kids cut</button>
+      <button type="button" data-k="su" aria-pressed="false">Shape up</button>
+      <button type="button" data-k="beard" aria-pressed="false">Beard trim</button>
+      <button type="button" data-k="twist" aria-pressed="false">Twist</button>
+    </div>
+    <label class="sunday"><input type="checkbox" id="sun"> I can only come on a Sunday</label>
+  </div>
+  <div class="board" aria-live="polite">
+    <div class="lbl">Now booking</div>
+    <div class="bname" id="bn">Haircut Adult</div>
+    <div class="digits">
+      <div class="cell"><div class="lbl">Price</div><div class="num" id="bp">$25</div></div>
+      <div class="cell"><div class="lbl">Time</div><div class="num t" id="bt">30m</div></div>
+    </div>
+    <a class="btn g" href="https://booksy.com/en-us/406220_tcs-cuts-n-more_barber-shop_35647_cleveland">Book this on Booksy</a>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <h2>Full <span>roster</span></h2>
+  <p class="sub">Prices as listed on Booksy.</p>
+  <div class="roster">
+    <div class="r"><i>01</i><div><b>Haircut Adult</b><small>30 min</small></div><span>$25</span></div>
+    <div class="r"><i>02</i><div><b>Cut and Beard</b><small>35 min</small></div><span>$30</span></div>
+    <div class="r"><i>03</i><div><b>Beard trim</b><small>20 min</small></div><span>$7</span></div>
+    <div class="r"><i>04</i><div><b>Kids cuts</b><small>30 min</small></div><span>$20</span></div>
+    <div class="r"><i>05</i><div><b>Shape ups</b><small>20 min</small></div><span>$13</span></div>
+    <div class="r"><i>06</i><div><b>Shape up kids</b><small>15 min</small></div><span>$10</span></div>
+    <div class="r"><i>07</i><div><b>Eye brows</b><small>15 min</small></div><span>$10</span></div>
+    <div class="r"><i>08</i><div><b>Enhancements</b><small>20 min</small></div><span>$10</span></div>
+    <div class="r"><i>09</i><div><b>Twist</b><small>1 h 30 min</small></div><span>Varies</span></div>
+    <div class="r"><i>10</i><div><b>Sunday Cuts w/ Beard</b><small>30 min</small></div><span>$35</span></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap split">
+  <div class="panel">
+    <h3>Thanksgiving week</h3>
+    <p style="color:#cfcac0">Posted on Booksy:</p>
+    <div class="sched">
+      <div><span>Tue Nov 24</span><span>12:00 PM – 5:00 PM</span></div>
+      <div><span>Thu Nov 26</span><span class="x">Closed</span></div>
+    </div>
+    <p style="color:var(--steel);margin-top:10px;font-size:14px">Full week on Booksy.</p>
+  </div>
+  <div class="panel">
+    <h3>Find the shop</h3>
+    <p><b>865 6th St N.E., Suite C</b><br>Cleveland, TN 37311</p>
+    <p style="color:var(--steel);margin-top:12px;font-size:14px">What Booksy reviewers booked:</p>
+    <div class="chips"><span>Haircut Adult</span><span>Shape ups</span><span>Beard trim</span></div>
+    <div class="btns">
+      <a class="btn o sm" href="https://www.google.com/maps/search/?api=1&amp;query=865+6th+St+NE+Suite+C+Cleveland+TN+37311">Directions</a>
+      <a class="btn o sm" href="https://instagram.com/tconstant17">Instagram</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>TCs Cuts N More</b> · 865 6th St N.E., Suite C, Cleveland, TN 37311 · Booking by Booksy<br>Concept site by Code Craft Media. Not live.</div></footer>
+<div class="sticky"><a href="https://booksy.com/en-us/406220_tcs-cuts-n-more_barber-shop_35647_cleveland">Book at TCs</a></div>
+<script>
+const S={cut:["Haircut Adult","$25","30m"],cb:["Cut and Beard","$30","35m"],kid:["Kids cuts","$20","30m"],su:["Shape ups","$13","20m"],beard:["Beard trim","$7","20m"],twist:["Twist","VARIES","1h30"]};
+const SUN={cut:["Sunday Cuts w/ Beard","$35","30m"],cb:["Sunday Cuts w/ Beard","$35","30m"]};
+let k="cut";const sun=document.getElementById("sun");
+function draw(){let d=S[k];if(sun.checked){d=SUN[k]||[S[k][0]+" · ask about Sundays",S[k][1],S[k][2]];}
+document.getElementById("bn").textContent=d[0];const p=document.getElementById("bp");p.textContent=d[1];p.style.fontSize=d[1].length>4?"34px":"";document.getElementById("bt").textContent=d[2];}
+document.querySelectorAll(".plays button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".plays button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");k=b.dataset.k;draw();}));
+sun.addEventListener("change",draw);
+</script>
+<script>(function(){var s=document.querySelector('.sticky');if(!s)return;function f(){s.classList.toggle('on',scrollY>420)}addEventListener('scroll',f,{passive:true});f()})();</script>
+</body>
+</html>

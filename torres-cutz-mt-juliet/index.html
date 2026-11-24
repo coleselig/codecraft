@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Torres Cutz · Barber · Mt. Juliet, TN</title>
+<meta name="description" content="Concept site for Torres Cutz, professional barber at 14665 Lebanon Rd, Old Hickory (Mt. Juliet area), TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141414;--paper:#f4f1ea;--ink:#141414;--green:#2f8f5b;--lime:#c8f169;--grey:#8b877f;--line:#d8d3c8;--disp:"Anton",Impact,sans-serif;--mono:"Space Mono",ui-monospace,monospace;--sans:"Work Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--lime);color:var(--ink);font:700 12px var(--mono);text-align:center;padding:7px 12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:var(--disp);font-size:24px;letter-spacing:.04em;text-decoration:none;text-transform:uppercase}
+.logo b{color:var(--lime);font-weight:400}
+.nb{background:var(--paper);color:var(--ink);text-decoration:none;font:700 13px var(--mono);padding:9px 14px;border-radius:4px}
+.hero{padding:30px 0 50px;position:relative}
+.tag{font:700 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+h1{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(60px,19vw,170px);line-height:.88;margin:14px 0 18px;letter-spacing:.01em}
+h1 .o{-webkit-text-stroke:2px var(--paper);color:transparent}
+.lede{font-size:18px;max-width:31em;color:#d9d5cc}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{font:700 12px var(--mono);border:1.5px solid #444;border-radius:4px;padding:6px 10px;color:#d9d5cc}
+.chips .g{border-color:var(--lime);color:var(--lime)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-block;text-decoration:none;font:700 15px var(--mono);padding:14px 20px;border-radius:4px;border:2px solid var(--paper)}
+.btn.p{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+section{padding:56px 0}
+h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(36px,9vw,64px);line-height:.95;margin-bottom:10px}
+.sub{color:var(--grey);margin-bottom:24px;font-size:16px}
+/* register */
+.reg{background:#1d1d1d;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a}
+.lay{display:grid;gap:26px}
+.keys{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.keys button{font:700 14px var(--mono);text-align:left;background:#262626;color:var(--paper);border:0;border-bottom:4px solid #0b0b0b;border-radius:6px;padding:14px 12px;cursor:pointer;min-height:70px}
+.keys button small{display:block;font-weight:400;color:var(--grey);margin-top:4px}
+.keys button[aria-pressed=true]{background:var(--lime);color:var(--ink);border-bottom-color:#7f9c3c}
+.keys button[aria-pressed=true] small{color:#33421a}
+.adds{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font:400 14px var(--mono);color:#d9d5cc}
+.adds label{display:flex;gap:8px;align-items:center;cursor:pointer}
+.adds input{accent-color:var(--lime);width:18px;height:18px}
+.slot{background:#0b0b0b;border-radius:10px 10px 0 0;height:16px;position:relative}
+.slot:after{content:"";position:absolute;left:14px;right:14px;top:6px;height:4px;background:#333;border-radius:4px}
+.rcpt{background:var(--paper);color:var(--ink);font-family:var(--mono);padding:22px 20px 26px;margin:0 10px 12px;position:relative}
+.rcpt:after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:linear-gradient(-45deg,transparent 7px,var(--paper) 0) 0 0/14px 10px repeat-x,linear-gradient(45deg,transparent 7px,var(--paper) 0) 0 0/14px 10px repeat-x}
+.rcpt.print{animation:pr .45s ease-out}
+@keyframes pr{from{transform:translateY(-18px);opacity:.3}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.rcpt.print{animation:none}}
+.rh{text-align:center;border-bottom:1.5px dashed var(--ink);padding-bottom:12px;margin-bottom:12px}
+.rh b{font-family:var(--disp);font-weight:400;font-size:26px;letter-spacing:.06em}
+.rh div{font-size:12px}
+.ln{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:3px 0}
+.tot{border-top:1.5px dashed var(--ink);margin-top:10px;padding-top:10px;font-weight:700;font-size:20px}
+.stamp{display:inline-block;margin-top:14px;border:2.5px solid var(--green);color:var(--green);font-weight:700;font-size:12px;padding:5px 9px;transform:rotate(-4deg);border-radius:4px}
+.rcpt .btn{display:block;text-align:center;margin-top:16px;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* menu */
+.menu{border-top:2px solid var(--paper)}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:15px 0;border-bottom:1px solid #333}
+.row b{font-size:17px}
+.row .pr{font-family:var(--disp);font-size:26px;color:var(--lime);line-height:1}
+.row small{grid-column:1/-1;color:var(--grey);font-family:var(--mono);font-size:12px}
+.q{font-size:20px;font-weight:600;line-height:1.35}
+.q cite{display:block;font:400 13px var(--mono);color:var(--grey);font-style:normal;margin-top:6px}
+.qs{display:grid;gap:22px}
+.qs>div{border-left:4px solid var(--lime);padding-left:16px}
+.box{background:#1d1d1d;border-radius:10px;padding:22px}
+.hrs .ln{font-family:var(--mono);border-bottom:1px solid #2c2c2c;padding:9px 0}
+.hrs .x{color:#ff8a7a}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.amen span{font:400 12px var(--mono);border:1px solid #444;border-radius:4px;padding:5px 9px;color:#d9d5cc}
+footer{border-top:1px solid #2a2a2a;color:var(--grey);padding:30px 0 96px;font:400 13px var(--mono)}
+footer b{color:var(--paper)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s}
+.sticky a{display:block;text-align:center;background:var(--lime);color:var(--ink);text-decoration:none;font:700 15px var(--mono);padding:15px;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.two>*+*{margin-top:22px}
+@media(min-width:820px){
+ .two>*+*{margin-top:0}
+ .lay{grid-template-columns:1.1fr .9fr;align-items:start}
+ .keys{grid-template-columns:repeat(3,1fr)}
+ .qs{grid-template-columns:repeat(3,1fr)}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+ .hero{padding:60px 0 80px}
+ .sticky{display:none}
+ footer{padding-bottom:30px}
+}
+.sticky.on{opacity:1;transform:none;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Torres Cutz. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">Torres <b>Cutz</b></a><a class="nb" href="https://booksy.com/en-us/1524838_torres-cutz_barber-shop_36167_mount-juliet">Book &rarr;</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="tag">Professional Barber · Mt. Juliet, TN</div>
+  <h1>Fresh<br><span class="o">&amp; clean.</span></h1>
+  <p class="lede">Experienced in all hair types, styles, and precision haircuts, delivering consistent, high-quality results.</p>
+  <div class="chips"><span class="g">★ 5.0 · 291 Booksy reviews</span><span>Cash &amp; Zelle preferred</span><span>Early &amp; after-hours by DM</span></div>
+  <div class="btns">
+    <a class="btn p" href="https://booksy.com/en-us/1524838_torres-cutz_barber-shop_36167_mount-juliet">Book on Booksy</a>
+    <a class="btn" href="#ring">Ring up a cut</a>
+  </div>
+</div></header>
+
+<section class="reg" id="ring"><div class="wrap lay">
+  <div>
+    <h2>Ring it up</h2>
+    <p class="sub">Pick your service, add extras, and see the total and chair time before you book.</p>
+    <div class="keys" role="group" aria-label="Choose a service">
+      <button type="button" data-k="hc" aria-pressed="true">Haircut<small>$40 · 40 min</small></button>
+      <button type="button" data-k="hb" aria-pressed="false">Haircut &amp; Beard<small>$50 · 55 min</small></button>
+      <button type="button" data-k="kid" aria-pressed="false">Kids Haircut<small>8 &amp; under · $30</small></button>
+      <button type="button" data-k="lu" aria-pressed="false">Lineup or Beard Only<small>$20 · 20 min</small></button>
+    </div>
+    <div class="adds">
+      <label><input type="checkbox" id="ad"> + Design ($5)</label>
+      <label><input type="checkbox" id="ae"> + Eyebrow shaping ($5)</label>
+    </div>
+  </div>
+  <div>
+    <div class="slot" aria-hidden="true"></div>
+    <div class="rcpt" id="rc" aria-live="polite">
+      <div class="rh"><b>TORRES CUTZ</b><div>14665 Lebanon Rd · Old Hickory</div></div>
+      <div id="lines"></div>
+      <div class="ln tot"><span>TOTAL</span><span id="tot">$40</span></div>
+      <div class="ln"><span>Chair time</span><span id="tm">40 min</span></div>
+      <span class="stamp">CASH &amp; ZELLE PREFERRED</span>
+      <a class="btn" href="https://booksy.com/en-us/1524838_torres-cutz_barber-shop_36167_mount-juliet">Book this on Booksy</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <h2>Full menu</h2>
+  <p class="sub">Prices as listed on Booksy.</p>
+  <div class="menu">
+    <div class="row"><b>Haircut</b><span class="pr">$40</span><small>40 min</small></div>
+    <div class="row"><b>Haircut &amp; Beard</b><span class="pr">$50</span><small>55 min</small></div>
+    <div class="row"><b>Kids Haircut (8 yrs old &amp; under)</b><span class="pr">$30</span><small>30 min</small></div>
+    <div class="row"><b>Lineup Only or Beard Only</b><span class="pr">$20</span><small>20 min</small></div>
+    <div class="row"><b>Design</b><span class="pr">$5</span><small>10 min</small></div>
+    <div class="row"><b>Eyebrow shaping</b><span class="pr">$5</span><small>5 min</small></div>
+  </div>
+  <p class="sub" style="margin-top:16px">Early and after-hours appointments are available for an additional fee. Message Torres directly to set one up.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>From the chair</h2>
+  <p class="sub">Straight from Booksy reviews.</p>
+  <div class="qs">
+    <div><p class="q">"Best barber I been to always gets me right"</p><cite>Eric · Haircut</cite></div>
+    <div><p class="q">"Just moved here so was worried about having to find a barber but worked out great."</p><cite>Jeremy · Haircut</cite></div>
+    <div><p class="q">"Great dude and great service!"</p><cite>moises · Haircut</cite></div>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div class="box hrs">
+    <h2>This week</h2>
+    <div class="ln"><span>Today (Mon)</span><span>9:00 AM – 6:00 PM</span></div>
+    <div class="ln"><span>Tue Nov 24</span><span>9:00 AM – 8:00 PM</span></div>
+    <div class="ln"><span>Wed Nov 25</span><span>8:00 AM – 8:00 PM</span></div>
+    <div class="ln"><span>Thu Nov 26</span><span class="x">Closed · Thanksgiving</span></div>
+    <p class="sub" style="margin:12px 0 0">Full week on Booksy.</p>
+  </div>
+  <div class="box">
+    <h2>Find the shop</h2>
+    <p><b>14665 Lebanon Rd</b><br>Old Hickory, TN 37138</p>
+    <div class="amen"><span>Parking</span><span>Cards accepted</span><span>Accessible</span><span>Pets allowed</span><span>Wi-Fi</span><span>Loyalty program</span></div>
+    <div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=14665+Lebanon+Rd+Old+Hickory+TN+37138">Directions</a><a class="btn" href="https://www.instagram.com/torrescutzz/">@torrescutzz</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>Torres Cutz</b> · 14665 Lebanon Rd, Old Hickory, TN 37138 · Booking by Booksy<br>Concept site by Code Craft Media. Not live.</div></footer>
+<div class="sticky"><a href="https://booksy.com/en-us/1524838_torres-cutz_barber-shop_36167_mount-juliet">Book with Torres</a></div>
+<script>
+const S={hc:["Haircut",40,40],hb:["Haircut & Beard",50,55],kid:["Kids Haircut (8 & under)",30,30],lu:["Lineup Only or Beard Only",20,20]};
+const A={ad:["Design",5,10],ae:["Eyebrow shaping",5,5]};
+let k="hc";const rc=document.getElementById("rc");
+function fmt(m){return m>=60?Math.floor(m/60)+" h"+(m%60?" "+m%60+" min":""):m+" min"}
+function draw(){const items=[S[k]];for(const id in A){if(document.getElementById(id).checked)items.push(A[id])}
+let p=0,t=0,h="";items.forEach(i=>{p+=i[1];t+=i[2];h+='<div class="ln"><span>'+i[0].replace(/&/g,"&amp;")+'</span><span>$'+i[1]+'</span></div>'});
+document.getElementById("lines").innerHTML=h;document.getElementById("tot").textContent="$"+p;document.getElementById("tm").textContent=fmt(t);
+rc.classList.remove("print");void rc.offsetWidth;rc.classList.add("print");}
+document.querySelectorAll(".keys button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".keys button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");k=b.dataset.k;draw()}));
+document.querySelectorAll(".adds input").forEach(i=>i.addEventListener("change",draw));
+draw();
+</script>
+<script>(function(){var s=document.querySelector('.sticky');if(!s)return;function f(){s.classList.toggle('on',scrollY>420)}addEventListener('scroll',f,{passive:true});f()})();</script>
+</body>
+</html>

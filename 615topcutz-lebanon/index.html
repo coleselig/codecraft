@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>615TopCutz · Barber · Lebanon, TN</title>
+<meta name="description" content="Concept site for 615TopCutz, Lebanon-based barber at 1123 N Castle Heights Ave, Suite K, Lebanon, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&family=Barlow+Condensed:wght@500;700;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--cedar:#0f3a2a;--deep:#0a2a1e;--gold:#f0b429;--cream:#f7f1e1;--ink:#101a15;--led:#ffb627;--mute:#6a7a70;--var:"Graduate",Georgia,serif;--cond:"Barlow Condensed",Impact,sans-serif;--sans:"Barlow",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--gold);color:var(--ink);font:700 13px var(--cond);letter-spacing:.04em;text-align:center;padding:7px 12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.top{background:var(--cedar);color:var(--cream)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:var(--var);font-size:20px;text-decoration:none}
+.logo b{color:var(--gold);font-weight:400}
+.nb{background:var(--gold);color:var(--ink);text-decoration:none;font:800 15px var(--cond);letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:6px}
+.hero{padding:26px 0 56px;position:relative;overflow:hidden}
+.big615{position:absolute;right:-20px;bottom:-40px;font-family:var(--var);font-size:clamp(150px,48vw,380px);line-height:1;color:transparent;-webkit-text-stroke:2px rgba(240,180,41,.22);pointer-events:none;user-select:none}
+.hero .wrap{position:relative}
+.pennant{display:inline-block;background:var(--gold);color:var(--ink);font:800 14px var(--cond);letter-spacing:.14em;text-transform:uppercase;padding:6px 30px 6px 12px;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 50%,100% 100%,0 100%)}
+h1{font-family:var(--var);font-weight:400;font-size:clamp(44px,12.5vw,104px);line-height:.98;margin:16px 0 16px}
+h1 span{color:var(--gold)}
+.lede{font-size:19px;max-width:28em;color:#d8e2db}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.stat{border:2px solid rgba(240,180,41,.6);border-radius:8px;padding:8px 14px;font:700 16px var(--cond);letter-spacing:.04em}
+.stat b{color:var(--gold);font-size:22px;margin-right:4px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-block;text-decoration:none;font:800 17px var(--cond);letter-spacing:.06em;text-transform:uppercase;padding:13px 22px;border-radius:6px;border:2px solid currentColor}
+.btn.p{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.stripe{height:12px;background:repeating-linear-gradient(90deg,var(--gold) 0 40px,var(--cedar) 40px 52px)}
+section{padding:56px 0}
+h2{font-family:var(--var);font-weight:400;font-size:clamp(30px,7.5vw,50px);line-height:1.05;margin-bottom:10px;color:var(--cedar)}
+.sub{color:var(--mute);margin-bottom:24px}
+/* scoreboard */
+.game{display:grid;gap:24px}
+.step{font:800 14px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--cedar);margin:4px 0 8px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg button,.tog button{font:700 18px var(--cond);letter-spacing:.03em;background:#fff;color:var(--ink);border:2px solid var(--cedar);border-radius:8px;padding:12px;cursor:pointer;text-align:left}
+.seg button small,.tog button small{display:block;font:600 13px var(--sans);color:var(--mute)}
+.seg button[aria-pressed=true],.tog button[aria-pressed=true]{background:var(--cedar);color:var(--cream)}
+.seg button[aria-pressed=true] small,.tog button[aria-pressed=true] small{color:var(--gold)}
+.tog{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tog button{font-size:16px;padding:12px 10px}
+.tog button[disabled]{opacity:.4;cursor:not-allowed}
+.board{background:var(--ink);border-radius:14px;padding:16px;border:6px solid #23302a;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.bt{display:flex;justify-content:space-between;align-items:center;color:var(--cream);font:800 14px var(--cond);letter-spacing:.16em;text-transform:uppercase;border-bottom:2px solid #23302a;padding-bottom:10px}
+.bt i{width:10px;height:10px;border-radius:50%;background:#e2483d;box-shadow:0 0 8px #e2483d;display:inline-block}
+.cells{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.cell{background:#050806;border-radius:8px;padding:12px;text-align:center}
+.cell span{display:block;color:#9fb0a6;font:800 12px var(--cond);letter-spacing:.2em}
+.led{font:800 clamp(44px,13vw,64px) var(--cond);color:var(--led);text-shadow:0 0 12px rgba(255,182,39,.6);line-height:1.05;font-variant-numeric:tabular-nums}
+.led.flip{animation:fl .3s}
+@keyframes fl{0%{opacity:.2}100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.led.flip{animation:none}}
+.play{color:#cfd9d3;margin-top:12px;font-size:15px;min-height:2.6em}
+.board .btn{display:block;text-align:center;margin-top:12px}
+/* menu */
+.roster{display:grid;gap:10px}
+.r{display:grid;grid-template-columns:52px 1fr auto;gap:2px 14px;align-items:center;background:#fff;border:2px solid var(--cedar);border-radius:10px;padding:12px 14px}
+.r .no{grid-row:span 2;font-family:var(--var);font-size:24px;color:var(--gold);background:var(--cedar);border-radius:8px;text-align:center;padding:6px 0}
+.r b{font:700 20px var(--cond);letter-spacing:.02em}
+.r .pr{font-family:var(--var);font-size:22px;color:var(--cedar);grid-row:span 2}
+.r small{color:var(--mute)}
+.qs{display:grid;gap:14px}
+.qt{background:var(--cedar);color:var(--cream);border-radius:12px;padding:20px}
+.qt p{font-family:var(--var);font-size:24px;line-height:1.2}
+.qt cite{display:block;font:700 15px var(--cond);letter-spacing:.08em;color:var(--gold);font-style:normal;margin-top:8px;text-transform:uppercase}
+.card{background:#fff;border:2px solid var(--cedar);border-radius:12px;padding:20px}
+.hr{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed #b9c6bd}
+.off{color:#b0362c;font-weight:600}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.amen span{background:var(--cream);border:1.5px solid var(--cedar);border-radius:999px;padding:4px 12px;font-weight:600;font-size:14px}
+footer{background:var(--deep);color:#a9b8af;padding:32px 0 96px;font-size:14px}
+footer b{color:var(--cream)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s}
+.sticky a{display:block;text-align:center;background:var(--gold);color:var(--ink);text-decoration:none;font:800 18px var(--cond);letter-spacing:.08em;text-transform:uppercase;padding:14px;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.two>*+*{margin-top:22px}
+@media(min-width:820px){
+ .two>*+*{margin-top:0}
+ .game{grid-template-columns:1fr 1fr;align-items:start}
+ .roster{grid-template-columns:1fr 1fr}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+ .hero{padding:56px 0 80px}
+ .sticky{display:none}
+ footer{padding-bottom:32px}
+}
+.sticky.on{opacity:1;transform:none;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for 615TopCutz. Not live.</div>
+<div class="top">
+<nav><div class="wrap"><a class="logo" href="#">615<b>TopCutz</b></a><a class="nb" href="https://booksy.com/en-us/1461013_615topcutz_barber-shop_36166_lebanon">Book</a></div></nav>
+<header class="hero"><div class="big615" aria-hidden="true">615</div><div class="wrap">
+  <span class="pennant">Lebanon, TN</span>
+  <h1>Good with <span>all hair texture.</span></h1>
+  <p class="lede">Lebanon based barber. Book now or DM with any questions.</p>
+  <div class="stats"><div class="stat"><b>5.0</b>rating</div><div class="stat"><b>30</b>reviews, all 5-star</div></div>
+  <div class="btns">
+    <a class="btn p" href="https://booksy.com/en-us/1461013_615topcutz_barber-shop_36166_lebanon">Book on Booksy</a>
+    <a class="btn" href="#score">Build your cut</a>
+  </div>
+</div></header>
+</div>
+<div class="stripe" aria-hidden="true"></div>
+
+<section id="score"><div class="wrap game">
+  <div>
+    <h2>Build your cut</h2>
+    <p class="sub">Pick the cut, add extras, and the scoreboard shows the total and time from the Booksy menu.</p>
+    <div class="step">1 · The cut</div>
+    <div class="seg" role="group" aria-label="Choose a cut">
+      <button type="button" data-b="m" aria-pressed="true">Male Haircut<small>$35 · 45 min</small></button>
+      <button type="button" data-b="k" aria-pressed="false">Kids cuts<small>$25 · 30 min</small></button>
+    </div>
+    <div class="step" style="margin-top:16px">2 · Extras</div>
+    <div class="tog" role="group" aria-label="Add extras">
+      <button type="button" data-x="beard" aria-pressed="false">+ Beard<small>Shaping</small></button>
+      <button type="button" data-x="design" aria-pressed="false">+ Design<small>$5</small></button>
+      <button type="button" data-x="brow" aria-pressed="false">+ Brows<small>$5</small></button>
+    </div>
+  </div>
+  <div class="board" aria-live="polite">
+    <div class="bt"><span>615TopCutz</span><span><i></i> Live</span></div>
+    <div class="cells">
+      <div class="cell"><span>TOTAL</span><div class="led" id="pr">$35</div></div>
+      <div class="cell"><span>MINUTES</span><div class="led" id="mn">45</div></div>
+    </div>
+    <p class="play" id="pl">Male Haircut</p>
+    <a class="btn p" href="https://booksy.com/en-us/1461013_615topcutz_barber-shop_36166_lebanon">Book this on Booksy</a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>The lineup</h2>
+  <p class="sub">Prices as listed on Booksy.</p>
+  <div class="roster">
+    <div class="r"><span class="no">01</span><b>Male Haircut</b><span class="pr">$35</span><small>45 min</small></div>
+    <div class="r"><span class="no">02</span><b>Haircut and Beard</b><span class="pr">$40</span><small>1 h 5 min · haircut + beard shaping</small></div>
+    <div class="r"><span class="no">03</span><b>Kids cuts</b><span class="pr">$25</span><small>30 min</small></div>
+    <div class="r"><span class="no">04</span><b>Beard Shaping</b><span class="pr">$15</span><small>20 min</small></div>
+    <div class="r"><span class="no">05</span><b>Eyebrows</b><span class="pr">$5</span><small>5 min</small></div>
+    <div class="r"><span class="no">06</span><b>Design</b><span class="pr">$5</span><small>10 min</small></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap two">
+  <div class="qs">
+    <div class="qt"><p>"Exactly what I asked for!"</p><cite>Ashley · Male Haircut</cite></div>
+    <div class="qt"><p>"Very professional"</p><cite>Cristhian · Haircut and Beard</cite></div>
+  </div>
+  <div class="card">
+    <h2 style="font-size:30px">Find the chair</h2>
+    <p><b>1123 N Castle Heights Ave, Suite K</b><br>Lebanon, TN 37087</p>
+    <div class="hr" style="margin-top:12px"><span>Today (Mon)</span><b>10:00 AM – 6:00 PM</b></div>
+    <div class="hr"><span>Tue Nov 24 – Thu Nov 26</span><span class="off">Closed</span></div>
+    <div class="amen"><span>Parking</span><span>Cards accepted</span><span>Accessible</span><span>Kid-friendly</span><span>Wi-Fi</span></div>
+    <div class="btns" style="color:var(--cedar)"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=1123+N+Castle+Heights+Ave+Lebanon+TN+37087">Directions</a><a class="btn" href="https://www.instagram.com/615.top._cutz/">@615.top._cutz</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>615TopCutz</b> · 1123 N Castle Heights Ave, Suite K, Lebanon, TN 37087 · Booking by Booksy<br>Concept site by Code Craft Media. Not live.</div></footer>
+<div class="sticky"><a href="https://booksy.com/en-us/1461013_615topcutz_barber-shop_36166_lebanon">Book a cut</a></div>
+<script>
+let base="m";const on={beard:false,design:false,brow:false};
+const beardBtn=document.querySelector('[data-x=beard]');
+function draw(){let p,m,names;
+ if(base==="m"&&on.beard){p=40;m=65;names=["Haircut and Beard"]}
+ else if(base==="m"){p=35;m=45;names=["Male Haircut"]}
+ else{p=25;m=30;names=["Kids cuts"]}
+ if(on.design){p+=5;m+=10;names.push("Design")}
+ if(on.brow){p+=5;m+=5;names.push("Eyebrows")}
+ beardBtn.querySelector("small").textContent=base==="m"?(on.beard?"Combo $40":"Shaping"):"Adults";
+ const pr=document.getElementById("pr"),mn=document.getElementById("mn");
+ pr.textContent="$"+p;mn.textContent=m;[pr,mn].forEach(e=>{e.classList.remove("flip");void e.offsetWidth;e.classList.add("flip")});
+ document.getElementById("pl").textContent=names.join(" + ")+(names.length>1?" (each booked as listed on Booksy)":"");}
+document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");base=b.dataset.b;
+ if(base==="k"){on.beard=false;beardBtn.setAttribute("aria-pressed","false");beardBtn.disabled=true}else{beardBtn.disabled=false}draw()}));
+document.querySelectorAll(".tog button").forEach(b=>b.addEventListener("click",()=>{const x=b.dataset.x;on[x]=!on[x];b.setAttribute("aria-pressed",String(on[x]));draw()}));
+draw();
+</script>
+<script>(function(){var s=document.querySelector('.sticky');if(!s)return;function f(){s.classList.toggle('on',scrollY>420)}addEventListener('scroll',f,{passive:true});f()})();</script>
+</body>
+</html>
