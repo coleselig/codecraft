@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Reynolds Farm · Pies, Preserves &amp; Canned Goods · Loudon, TN</title>
+<meta name="description" content="Concept site for Reynolds Farm in Loudon, TN: vegetables grown on the farm and turned into canned goods, preserves, pies and baked goods since 1999.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lora:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--red:#a3282c;--deep:#5e1518;--cream:#fbf4e6;--butter:#f3e3bd;--wood:#8a5a34;--wood2:#6d4426;--ink:#2a1d17;--mute:#6b5a4e;--green:#4c6a3a;
+--disp:"Abril Fatface",Georgia,serif;--serif:"Lora",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#2a0c0d;color:#e9c9c3;font:12px system-ui,sans-serif;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--red);color:var(--cream);position:relative;overflow:hidden;
+ background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 14px,transparent 14px 28px),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 14px,transparent 14px 28px)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:12px}
+.logo{font-family:var(--disp);font-size:25px;text-decoration:none;line-height:1}
+.logo small{display:block;font:600 10.5px system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-top:5px;opacity:.85}
+.navbtn{flex:none;white-space:nowrap;font:700 14px system-ui,sans-serif;text-decoration:none;background:var(--cream);color:var(--red);padding:8px 14px;border-radius:4px}
+.hero{padding:28px 0 34px;display:grid;gap:26px;align-items:end}
+.since{display:inline-block;font:700 12px system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;background:var(--cream);color:var(--red);padding:5px 10px;border-radius:3px}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(44px,12vw,92px);line-height:.98;margin:14px 0 14px}
+.lede{max-width:31em;font-size:18px;opacity:.95}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:13px 20px;border-radius:4px;text-decoration:none;font:700 15px system-ui,sans-serif;border:0;cursor:pointer}
+.btn.cream{background:var(--cream);color:var(--red)}
+.btn.line{border:2px solid var(--cream);color:var(--cream)}
+.btn.red{background:var(--red);color:var(--cream)}
+.shelfart{width:100%;max-width:460px;height:auto;display:block;justify-self:center}
+.strip{background:var(--deep);color:var(--butter);text-align:center;padding:11px 16px;font-size:15.5px;font-style:italic}
+section{padding:62px 0}
+.kicker{font:700 12px system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(32px,8vw,54px);line-height:1.05;margin:6px 0 14px}
+.intro{color:var(--mute);max-width:37em}
+.cols{display:grid;gap:14px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--butter);border-radius:8px;padding:20px;border-top:5px solid var(--red)}
+.card h3{font-family:var(--disp);font-weight:400;font-size:24px;margin-bottom:6px}
+.card p{color:var(--mute);font-size:15.5px}
+/* pantry */
+.pantry{background:var(--butter)}
+.shelf{background:var(--wood);border-radius:8px;padding:18px 14px 0;margin-top:24px;box-shadow:inset 0 -14px 0 var(--wood2)}
+.jars{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 10px;padding-bottom:22px}
+.jar{width:96px;border:0;background:transparent;cursor:pointer;font:600 12.5px system-ui,sans-serif;color:var(--cream);text-align:center;padding:0}
+.jar .body{display:block;height:92px;border-radius:10px 10px 14px 14px;position:relative;margin:0 auto 6px;width:72px;border:3px solid rgba(255,255,255,.55);transition:transform .2s}
+.jar .lid{display:block;width:60px;height:12px;margin:0 auto -2px;border-radius:3px;background:#c9a24a}
+.jar .lab{position:absolute;left:8px;right:8px;top:34px;height:26px;background:var(--cream);border-radius:3px}
+.jar[aria-pressed="true"] .body{transform:translateY(-8px);box-shadow:0 0 0 4px var(--cream)}
+.jar[aria-pressed="true"]{color:#fff}
+.basket{background:#fff;border-radius:8px;padding:20px;margin-top:18px}
+.basket p{color:var(--mute);font-size:15px}
+.basket strong{color:var(--ink)}
+.basket textarea{width:100%;min-height:70px;border:1px solid #e3d5b8;border-radius:6px;padding:10px;font:15px var(--serif);margin:12px 0}
+footer{background:var(--deep);color:var(--butter);padding:34px 0;font-size:15px}
+footer a{color:#fff}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--red);color:var(--cream);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;transform:translateY(110%);transition:transform .3s;z-index:20;font:600 14px system-ui,sans-serif}
+.sticky.on{transform:none}
+@media(min-width:800px){.hero{grid-template-columns:1.2fr 1fr}.cols{grid-template-columns:repeat(3,1fr)}.jar{width:110px}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Reynolds Farm. Not live.</div>
+<header>
+ <nav><div class="wrap"><a class="logo" href="#">Reynolds Farm<small>Loudon, Tennessee</small></a><a class="navbtn" href="#pantry">Email us</a></div></nav>
+ <div class="wrap hero">
+  <div>
+   <span class="since">Since 1999</span>
+   <h1>From our rows to your pantry.</h1>
+   <p class="lede">We grow vegetables in Loudon County and turn them into canned goods, preserves and pies, made with our own produce.</p>
+   <div class="actions"><a class="btn cream" href="#pantry">Fill a pantry shelf</a><a class="btn line" href="#make">What we make</a></div>
+  </div>
+  <svg class="shelfart" viewBox="0 0 460 300" aria-hidden="true">
+   <rect x="0" y="232" width="460" height="18" fill="#8a5a34"/><rect x="0" y="250" width="460" height="10" fill="#6d4426"/>
+   <g><rect x="22" y="128" width="84" height="104" rx="14" fill="#7d1f3a" stroke="#fbf4e6" stroke-width="4"/><rect x="30" y="112" width="68" height="18" rx="3" fill="#c9a24a"/><rect x="34" y="166" width="60" height="30" rx="3" fill="#fbf4e6"/></g>
+   <g><rect x="124" y="98" width="96" height="134" rx="14" fill="#c4772a" stroke="#fbf4e6" stroke-width="4"/><rect x="134" y="82" width="76" height="18" rx="3" fill="#c9a24a"/><rect x="138" y="148" width="68" height="34" rx="3" fill="#fbf4e6"/></g>
+   <g><rect x="238" y="140" width="78" height="92" rx="12" fill="#5f7d33" stroke="#fbf4e6" stroke-width="4"/><rect x="246" y="124" width="62" height="18" rx="3" fill="#c9a24a"/><rect x="250" y="172" width="54" height="28" rx="3" fill="#fbf4e6"/></g>
+   <!-- pie -->
+   <g transform="translate(334 176)"><ellipse cx="56" cy="44" rx="58" ry="14" fill="#6d4426"/><path d="M0 40 Q56 -12 112 40Z" fill="#e2a85a"/><path d="M14 30 Q56 2 98 30" stroke="#b97a33" stroke-width="3" fill="none"/><path d="M40 20 l6 8 M60 16 l2 9 M78 20 l-4 8" stroke="#8a5a34" stroke-width="3"/></g>
+  </svg>
+ </div>
+</header>
+<div class="strip">Salsa · Pickles · Jams &amp; preserves · Breads, cookies &amp; pastries · Pies</div>
+
+<section id="make"><div class="wrap">
+ <div class="kicker">What we make</div>
+ <h2>Grown here, put up here.</h2>
+ <p class="intro">Our jams, jellies and baked goods are made in a state-inspected commercial kitchen, and we're licensed as a food manufacturer.</p>
+ <div class="cols">
+  <div class="card"><h3>Canned goods</h3><p>Salsa, including black bean and corn salsa, plus pickles, from vegetables we grow.</p></div>
+  <div class="card"><h3>Jams &amp; preserves</h3><p>Preserves and jams made in our inspected kitchen.</p></div>
+  <div class="card"><h3>Pies &amp; baked goods</h3><p>Pies made with our produce, along with breads, cookies and pastries.</p></div>
+ </div>
+ <p class="intro" style="margin-top:26px">You'll find us at Market Square Farmers Market in downtown Knoxville, and we've been doing farmers markets and regional festivals since 1999.</p>
+</div></section>
+
+<section class="pantry" id="pantry"><div class="wrap">
+ <div class="kicker">Fill a pantry shelf</div>
+ <h2>Tap the jars you'd like to ask about.</h2>
+ <p class="intro">We'll put your picks into an email to the farm. No prices or ordering here, just a quick note to start the conversation.</p>
+ <div class="shelf"><div class="jars" id="jars">
+  <button class="jar" aria-pressed="false" data-v="Black bean and corn salsa"><span class="lid"></span><span class="body" style="background:#b4532a"><span class="lab"></span></span>Salsa</button>
+  <button class="jar" aria-pressed="false" data-v="Pickles"><span class="lid"></span><span class="body" style="background:#5f7d33"><span class="lab"></span></span>Pickles</button>
+  <button class="jar" aria-pressed="false" data-v="Preserves and jams"><span class="lid"></span><span class="body" style="background:#7d1f3a"><span class="lab"></span></span>Preserves</button>
+  <button class="jar" aria-pressed="false" data-v="Pies"><span class="lid"></span><span class="body" style="background:#e2a85a"><span class="lab"></span></span>Pies</button>
+  <button class="jar" aria-pressed="false" data-v="Breads"><span class="lid"></span><span class="body" style="background:#c9965a"><span class="lab"></span></span>Breads</button>
+  <button class="jar" aria-pressed="false" data-v="Cookies and pastries"><span class="lid"></span><span class="body" style="background:#9a6a3c"><span class="lab"></span></span>Cookies</button>
+ </div></div>
+ <div class="basket">
+  <p><strong>Your shelf:</strong> <span id="list">nothing yet</span></p>
+  <textarea id="msg" placeholder="Anything else? (an event, a holiday order, a question)"></textarea>
+  <a class="btn red" id="send" href="mailto:reynoldsfarmtn@hotmail.com">Email Reynolds Farm</a>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <p><strong>Reynolds Farm</strong> · Loudon, TN 37774</p>
+ <p><a href="mailto:reynoldsfarmtn@hotmail.com">reynoldsfarmtn@hotmail.com</a></p>
+</div></footer>
+<div class="sticky" id="sticky"><span>Pies &amp; preserves from Loudon</span><a class="btn cream" href="#pantry" style="padding:9px 14px">Email us</a></div>
+<script>
+const jars=[...document.querySelectorAll('.jar')],list=document.getElementById('list'),msg=document.getElementById('msg'),send=document.getElementById('send');
+function upd(){const p=jars.filter(j=>j.getAttribute('aria-pressed')==='true').map(j=>j.dataset.v);
+ list.textContent=p.length?p.join(', '):'nothing yet';
+ const body="Hi Reynolds Farm,\n\nI'd like to ask about: "+(p.length?p.join(', '):'your canned goods and baked goods')+".\n\n"+(msg.value?msg.value+"\n\n":"")+"Thank you!";
+ send.href="mailto:reynoldsfarmtn@hotmail.com?subject="+encodeURIComponent("Question about Reynolds Farm goods")+"&body="+encodeURIComponent(body)}
+jars.forEach(j=>j.onclick=()=>{j.setAttribute('aria-pressed',j.getAttribute('aria-pressed')!=='true');upd()});msg.oninput=upd;upd();
+const st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('on',scrollY>innerHeight*.9&&(innerHeight+scrollY)<document.body.scrollHeight-200),{passive:true});
+</script>
+</body>
+</html>

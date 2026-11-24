@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Capernaum Creek Farms · Pasture-Raised Poultry, Eggs &amp; Forest-Fed Pork · Robbins, TN</title>
+<meta name="description" content="Concept site for Capernaum Creek Farms, a 10.5-acre sustainable farm in Robbins, TN raising pasture-raised poultry, eggs and forest-fed pork.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,700;0,800;1,600&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#22382a;--moss:#4d6b3c;--grass:#8aa860;--clay:#b8582f;--cream:#f6f0e3;--oat:#ebe1cb;--ink:#1d221c;--mute:#5b5f54;--sun:#f0c45a;
+--serif:"Bitter",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#111c14;color:#c3cfb8;font-size:12px;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--forest);color:var(--cream);position:relative;overflow:hidden}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:12px}
+.logo{font-family:var(--serif);font-weight:800;font-size:21px;text-decoration:none;line-height:1.05}
+.logo small{display:block;font:700 10px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sun);margin-top:4px}
+.navbtn{flex:none;white-space:nowrap;font-weight:700;font-size:14px;text-decoration:none;background:var(--sun);color:var(--forest);padding:8px 14px;border-radius:6px}
+.hero{padding:30px 0 0;position:relative;z-index:1}
+.eyebrow{font:700 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--sun)}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,11vw,84px);line-height:.98;margin:10px 0 16px;letter-spacing:-.015em}
+h1 em{font-style:italic;font-weight:600;color:var(--grass)}
+.lede{color:#dbe2d0;max-width:33em}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:13px 20px;border-radius:6px;text-decoration:none;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:var(--sans)}
+.btn.sun{background:var(--sun);color:var(--forest)}
+.btn.line{border:2px solid var(--cream);color:var(--cream)}
+.btn.clay{background:var(--clay);color:#fff}
+.field{display:block;width:100%;height:clamp(140px,26vw,300px);margin-top:28px}
+.strip{background:var(--clay);color:#fff;text-align:center;font-weight:600;padding:11px 16px;font-size:15px}
+section{padding:62px 0}
+.kicker{font:700 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--clay)}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(30px,7.6vw,50px);line-height:1.05;margin:6px 0 14px}
+.intro{color:var(--mute);max-width:37em}
+.grid{display:grid;gap:14px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--oat);border-radius:10px;padding:20px}
+.card h3{font-family:var(--serif);font-size:22px;line-height:1.15;margin-bottom:6px}
+.card p{color:var(--mute);font-size:15.5px}
+.card .ico{width:44px;height:44px;margin-bottom:10px}
+/* rotation */
+.rot{background:var(--oat)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 16px}
+.steps button{font:700 14px var(--sans);padding:10px 14px;border-radius:999px;border:2px solid var(--forest);background:transparent;color:var(--forest);cursor:pointer}
+.steps button[aria-pressed="true"]{background:var(--forest);color:var(--cream)}
+.paddock{background:#fff;border-radius:12px;padding:18px;display:grid;gap:16px;align-items:center}
+.paddock svg{width:100%;height:auto;display:block;border-radius:8px}
+.paddock h3{font-family:var(--serif);font-size:24px}
+.paddock p{color:var(--mute)}
+/* order */
+.order{background:var(--forest);color:var(--cream);border-radius:14px;padding:24px;margin-top:10px}
+.picks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.picks label{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.18);border-radius:8px;padding:12px;cursor:pointer;font-weight:600}
+.picks input{accent-color:var(--sun);width:18px;height:18px}
+.order textarea{width:100%;min-height:80px;border-radius:8px;border:0;padding:12px;font:15px var(--sans);margin-bottom:14px}
+.order .note{font-size:13.5px;color:#b8c4ad;margin-top:10px}
+footer{background:#111c14;color:#c3cfb8;padding:34px 0;font-size:14.5px}
+footer a{color:var(--sun)}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--forest);color:var(--cream);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;transform:translateY(110%);transition:transform .3s;z-index:20;font-size:14px}
+.sticky.on{transform:none}
+.sticky a{flex:none}
+@media(min-width:800px){
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .paddock{grid-template-columns:1.2fr 1fr;padding:26px}
+ .picks{grid-template-columns:repeat(4,1fr)}
+ .order{padding:34px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Capernaum Creek Farms. Not live.</div>
+<header>
+ <nav><div class="wrap"><a class="logo" href="#">Capernaum Creek<small>Farms · Robbins, TN</small></a><a class="navbtn" href="#order">Ask about an order</a></div></nav>
+ <div class="wrap hero">
+  <div class="eyebrow">10.5 acres · Morgan County</div>
+  <h1>Raised on grass, <em>moved paddock by paddock.</em></h1>
+  <p class="lede">A sustainable farm in the hills of Robbins, Tennessee, specializing in pasture-raised poultry, eggs and forest-fed pork.</p>
+  <div class="actions"><a class="btn sun" href="#order">Build an order note</a><a class="btn line" href="#rotation">How we rotate</a></div>
+ </div>
+ <svg class="field" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <circle cx="980" cy="80" r="44" fill="#f0c45a" opacity=".9"/>
+  <path d="M0 170 Q200 90 420 150 T820 120 T1200 140 V300 H0Z" fill="#35513a"/>
+  <path d="M0 210 Q260 150 520 200 T1000 180 T1200 195 V300 H0Z" fill="#4d6b3c"/>
+  <g fill="#2a432f"><path d="M80 175 l18 -48 18 48z"/><path d="M110 178 l14 -38 14 38z"/><path d="M1040 170 l18 -52 18 52z"/><path d="M1075 176 l14 -40 14 40z"/></g>
+  <path d="M0 250 Q300 215 600 245 T1200 240 V300 H0Z" fill="#8aa860"/>
+  <!-- chicken tractor -->
+  <g transform="translate(330 214)"><path d="M0 40 L30 0 H130 L160 40Z" fill="none" stroke="#f6f0e3" stroke-width="4"/><path d="M30 0 V40 M80 0 V40 M130 0 V40" stroke="#f6f0e3" stroke-width="2" opacity=".6"/><rect x="-4" y="38" width="168" height="6" fill="#b8582f"/></g>
+  <g fill="#f6f0e3"><ellipse cx="380" cy="246" rx="10" ry="7"/><ellipse cx="420" cy="248" rx="10" ry="7"/><ellipse cx="455" cy="245" rx="10" ry="7"/></g>
+  <!-- pig -->
+  <g transform="translate(720 222)"><ellipse cx="40" cy="20" rx="40" ry="22" fill="#e8a08a"/><circle cx="80" cy="14" r="14" fill="#e8a08a"/><ellipse cx="91" cy="16" rx="6" ry="5" fill="#d4826b"/><rect x="12" y="34" width="8" height="14" fill="#d4826b"/><rect x="56" y="34" width="8" height="14" fill="#d4826b"/></g>
+ </svg>
+</header>
+<div class="strip">Pasture-raised chicken, turkey &amp; eggs · Forest-fed pork · Nubian goats in the woods</div>
+
+<section id="raise"><div class="wrap">
+ <div class="kicker">What we raise</div>
+ <h2>What comes off the farm.</h2>
+ <p class="intro">Our chicken is raised without antibiotics, hormones or GMO corn and soy.</p>
+ <div class="grid">
+  <div class="card"><svg class="ico" viewBox="0 0 44 44"><ellipse cx="22" cy="25" rx="13" ry="16" fill="#ebe1cb" stroke="#22382a" stroke-width="2"/></svg><h3>Eggs</h3><p>Fresh eggs from our farm in Robbins.</p></div>
+  <div class="card"><svg class="ico" viewBox="0 0 44 44"><ellipse cx="20" cy="26" rx="14" ry="10" fill="#f6f0e3" stroke="#22382a" stroke-width="2"/><circle cx="33" cy="16" r="6" fill="#f6f0e3" stroke="#22382a" stroke-width="2"/><path d="M33 9 l2 -4 2 4" fill="#b8582f"/></svg><h3>Chicken &amp; turkey</h3><p>Pasture-raised poultry, no antibiotics, hormones or GMO corn and soy.</p></div>
+  <div class="card"><svg class="ico" viewBox="0 0 44 44"><ellipse cx="20" cy="24" rx="15" ry="10" fill="#e8a08a" stroke="#22382a" stroke-width="2"/><circle cx="35" cy="21" r="6" fill="#e8a08a" stroke="#22382a" stroke-width="2"/></svg><h3>Forest-fed pork</h3><p>Pigs rotationally grazed through the woods, paddock by paddock.</p></div>
+ </div>
+</div></section>
+
+<section class="rot" id="rotation"><div class="wrap">
+ <div class="kicker">The rotation</div>
+ <h2>Pigs first. Chickens follow.</h2>
+ <p class="intro">Tap through how a paddock is used on the farm.</p>
+ <div class="steps" role="group" aria-label="Rotation steps">
+  <button aria-pressed="true" data-s="0">1 · Pigs graze</button><button aria-pressed="false" data-s="1">2 · Chicken tractors</button><button aria-pressed="false" data-s="2">3 · Goats in the woods</button>
+ </div>
+ <div class="paddock">
+  <svg id="pv" viewBox="0 0 400 220" aria-hidden="true"><rect width="400" height="220" fill="#8aa860"/><g id="layer"></g></svg>
+  <div><h3 id="pt"></h3><p id="pd"></p></div>
+ </div>
+</div></section>
+
+<section id="order"><div class="wrap">
+ <div class="kicker">Get in touch</div>
+ <h2>Tell Sade what you're after.</h2>
+ <p class="intro">The farm is closed to the public for biosecurity, with private tours offered quarterly. Pick what you're interested in and we'll open an email for you.</p>
+ <div class="order">
+  <div class="picks" id="picks">
+   <label><input type="checkbox" value="Eggs">Eggs</label>
+   <label><input type="checkbox" value="Chicken">Chicken</label>
+   <label><input type="checkbox" value="Turkey">Turkey</label>
+   <label><input type="checkbox" value="Forest-fed pork">Pork</label>
+   <label><input type="checkbox" value="A quarterly private tour">Private tour</label>
+  </div>
+  <textarea id="msg" placeholder="Anything else? (quantity, timing, questions)"></textarea>
+  <a class="btn sun" id="send" href="mailto:capernaumcreekfarms@yahoo.com">Open my email</a>
+  <p class="note">Sends to capernaumcreekfarms@yahoo.com</p>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <p><strong>Capernaum Creek Farms</strong> · Robbins, TN 37852</p>
+ <p><a href="mailto:capernaumcreekfarms@yahoo.com">capernaumcreekfarms@yahoo.com</a> · <a href="https://www.instagram.com/capernaumcreekfarms/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=100083781480287">Facebook</a></p>
+</div></footer>
+<div class="sticky" id="sticky"><span>Pasture-raised in Robbins, TN</span><a class="btn sun" href="#order" style="padding:9px 14px">Email the farm</a></div>
+<script>
+const S=[
+ {t:"Pigs graze the paddock",d:"The pigs are rotationally grazed, working through a paddock in the woods before moving on.",a:'<rect x="0" y="0" width="400" height="60" fill="#35513a"/><g fill="#2a432f"><path d="M30 60 l16 -46 16 46z"/><path d="M300 60 l16 -46 16 46z"/><path d="M350 60 l12 -36 12 36z"/></g>'+[[90,140],[210,110],[290,160]].map(([x,y])=>`<g transform="translate(${x} ${y})"><ellipse cx="30" cy="16" rx="30" ry="17" fill="#e8a08a"/><circle cx="60" cy="11" r="11" fill="#e8a08a"/><ellipse cx="68" cy="13" rx="4" ry="3.5" fill="#d4826b"/></g>`).join('')},
+ {t:"Chicken tractors follow",d:"Once the pigs move on, the chicken tractors follow behind them over the same ground.",a:'<g transform="translate(110 90)"><path d="M0 70 L40 0 H140 L180 70Z" fill="rgba(246,240,227,.25)" stroke="#f6f0e3" stroke-width="4"/><rect x="-4" y="68" width="188" height="7" fill="#b8582f"/></g>'+[[150,150],[190,145],[230,152],[270,147]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="10" ry="7" fill="#f6f0e3"/>`).join('')},
+ {t:"Goats through the woodland",d:"Nubian goats are rotationally grazed through the woodland too.",a:'<rect width="400" height="220" fill="#4d6b3c"/><g fill="#22382a">'+[20,90,160,250,330].map(x=>`<path d="M${x} 200 l26 -150 26 150z"/>`).join('')+'</g>'+[[120,160],[240,170]].map(([x,y])=>`<g transform="translate(${x} ${y})"><ellipse cx="22" cy="10" rx="22" ry="11" fill="#c9a27a"/><circle cx="46" cy="0" r="8" fill="#c9a27a"/><path d="M42 4 l-2 14" stroke="#8c6a4a" stroke-width="5"/></g>`).join('')}
+];
+const L=document.getElementById('layer'),T=document.getElementById('pt'),D=document.getElementById('pd'),bs=document.querySelectorAll('.steps button');
+function show(i){L.innerHTML=S[i].a;T.textContent=S[i].t;D.textContent=S[i].d;bs.forEach(b=>b.setAttribute('aria-pressed',b.dataset.s==i))}
+bs.forEach(b=>b.onclick=()=>show(+b.dataset.s));show(0);
+const send=document.getElementById('send'),msg=document.getElementById('msg');
+function upd(){const p=[...document.querySelectorAll('#picks input:checked')].map(i=>i.value);
+ let body="Hi Sade,\n\nI'm interested in: "+(p.length?p.join(", "):"(not sure yet)")+".\n\n"+(msg.value?msg.value+"\n\n":"")+"Thanks!";
+ send.href="mailto:capernaumcreekfarms@yahoo.com?subject="+encodeURIComponent("Order question for Capernaum Creek Farms")+"&body="+encodeURIComponent(body)}
+document.querySelectorAll('#picks input').forEach(i=>i.onchange=upd);msg.oninput=upd;upd();
+const st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('on',scrollY>innerHeight*.9&&(innerHeight+scrollY)<document.body.scrollHeight-200),{passive:true});
+</script>
+</body>
+</html>
