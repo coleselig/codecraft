@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chris Posterli · Licensed Barber · Mt. Juliet, TN</title>
+<meta name="description" content="Concept site for Chris Posterli, licensed barber with 10+ years experience at 282 Nonaville Road, Mt. Juliet, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#17213a;--navy2:#1f2b48;--chalk:#f3efe6;--brass:#c9a24b;--tape:#f2cf52;--ink:#1a1a1a;--mute:#9aa3b8;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--chalk);font-family:var(--sans);line-height:1.6;overflow-x:hidden;
+background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 22px)}
+a{color:inherit}
+.concept{background:var(--brass);color:var(--navy);font:500 12px var(--mono);text-align:center;padding:7px 12px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font:800 21px var(--serif);text-decoration:none;letter-spacing:.01em}
+.logo i{color:var(--brass);font-weight:600}
+.nb{border:1.5px solid var(--brass);color:var(--brass);text-decoration:none;font:700 13px var(--sans);padding:8px 14px;border-radius:999px}
+.hero{padding:26px 0 54px}
+.label{display:inline-flex;align-items:center;gap:10px;font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.label:before{content:"";width:28px;height:1.5px;background:var(--brass)}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(50px,15vw,128px);line-height:.92;margin:16px 0 18px;letter-spacing:-.01em}
+h1 i{font-weight:600;color:var(--brass)}
+.stitch{border-top:2px dashed rgba(201,162,75,.55);margin:22px 0}
+.lede{font-size:18px;max-width:30em;color:#d8d6cf}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.facts span{font:500 12px var(--mono);border:1px solid #3a4769;border-radius:999px;padding:6px 12px;color:#d8d6cf}
+.facts .b{border-color:var(--brass);color:var(--brass)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-block;text-decoration:none;font:700 15px var(--sans);padding:14px 22px;border-radius:999px;border:1.5px solid var(--chalk)}
+.btn.p{background:var(--brass);border-color:var(--brass);color:var(--navy)}
+section{padding:56px 0}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(34px,8.5vw,58px);line-height:1;margin-bottom:10px}
+h2 i{color:var(--brass);font-weight:600}
+.sub{color:var(--mute);margin-bottom:24px}
+/* fitting */
+.fit{background:var(--chalk);color:var(--ink);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.03) 0 1px,transparent 1px 22px)}
+.fit .sub{color:#5d6475}
+.opts{display:grid;gap:10px}
+.opts button{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;font:500 16px var(--sans);background:#fff;color:var(--ink);border:1.5px solid #d9d3c4;border-radius:12px;padding:14px 16px;cursor:pointer}
+.opts button b{font:800 20px var(--serif)}
+.opts button[aria-pressed=true]{background:var(--navy);color:var(--chalk);border-color:var(--navy)}
+.opts button[aria-pressed=true] b{color:var(--brass)}
+.gauge{margin-top:26px;position:relative}
+.win{position:relative;height:86px;overflow:hidden;border-radius:6px;background:var(--tape);box-shadow:inset 0 -3px 0 rgba(0,0,0,.12),0 8px 24px rgba(23,33,58,.18)}
+.strip{position:absolute;top:0;left:0;height:100%;width:1300px;transition:transform .9s cubic-bezier(.2,.9,.25,1.05);
+background:
+ repeating-linear-gradient(90deg,#1a1a1a 0 2px,transparent 2px 100px) 0 0/100% 40px no-repeat,
+ repeating-linear-gradient(90deg,#1a1a1a 0 1.5px,transparent 1.5px 50px) 0 0/100% 26px no-repeat,
+ repeating-linear-gradient(90deg,#1a1a1a 0 1px,transparent 1px 10px) 0 0/100% 14px no-repeat}
+.strip span{position:absolute;top:42px;font:500 15px var(--mono);transform:translateX(-50%)}
+.needle{position:absolute;left:50%;top:-10px;bottom:-10px;width:3px;background:#c0392b;transform:translateX(-50%);z-index:2;border-radius:2px}
+.needle:before{content:"";position:absolute;top:-2px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top:10px solid #c0392b}
+@media (prefers-reduced-motion:reduce){.strip{transition:none}}
+.read{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin-top:18px;flex-wrap:wrap}
+.read .big{font:800 46px var(--serif);line-height:1}
+.read .big small{font:500 14px var(--mono);color:#5d6475;margin-left:6px}
+.read .nt{font-size:14px;color:#5d6475;max-width:22em}
+.fit .btn{border-color:var(--navy);background:var(--navy);color:var(--chalk);margin-top:18px}
+.lay{display:grid;gap:28px}
+/* menu */
+.menu .row{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:16px 0;border-bottom:1px dashed #3a4769}
+.menu .row b{font-size:17px;font-weight:700}
+.menu .pr{font:800 26px var(--serif);color:var(--brass);line-height:1}
+.menu small{grid-column:1/-1;color:var(--mute);font:500 12px var(--mono)}
+.qs{display:grid;gap:18px}
+.card{background:var(--navy2);border-radius:14px;padding:24px;position:relative;border:1px solid #2c3a5e}
+.card p{font:600 italic 22px/1.35 var(--serif)}
+.card cite{display:block;margin-top:12px;font:500 12px var(--mono);color:var(--brass);font-style:normal}
+.box{background:var(--navy2);border:1px solid #2c3a5e;border-radius:14px;padding:22px}
+.hr{display:flex;justify-content:space-between;gap:12px;font:500 14px var(--mono);padding:10px 0;border-bottom:1px dashed #3a4769}
+.hr .x{color:#ff9a8a}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.amen span{font:500 12px var(--mono);border:1px solid #3a4769;border-radius:999px;padding:5px 10px;color:#d8d6cf}
+.two>*+*{margin-top:22px}
+footer{border-top:1px solid #2c3a5e;color:var(--mute);padding:30px 0 96px;font:500 13px var(--mono)}
+footer b{color:var(--chalk)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s}
+.sticky a{display:block;text-align:center;background:var(--brass);color:var(--navy);text-decoration:none;font:700 15px var(--sans);padding:15px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.sticky.on{opacity:1;transform:none;pointer-events:auto}
+@media(min-width:820px){
+ .hero{padding:64px 0 84px}
+ .lay{grid-template-columns:.9fr 1.1fr;align-items:start}
+ .qs{grid-template-columns:1fr 1fr}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+ .two>*+*{margin-top:0}
+ .sticky{display:none}
+ footer{padding-bottom:30px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Chris Posterli. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">Chris <i>Posterli</i></a><a class="nb" href="https://booksy.com/en-us/405942_chris-posterli_barber-shop_36167_mount-juliet">Book</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="label">Licensed Barber · Mt. Juliet, TN</div>
+  <h1>Cut to<br><i>measure.</i></h1>
+  <div class="stitch"></div>
+  <p class="lede">Mt. Juliet licensed barber with 10+ years of experience. Basic cuts, bald and skin fades, beard work and kids' cuts at 282 Nonaville Road.</p>
+  <div class="facts"><span class="b">★ 5.0 · 284 Booksy reviews</span><span>10+ years experience</span><span>Kids 4–10 welcome</span></div>
+  <div class="btns">
+    <a class="btn p" href="https://booksy.com/en-us/405942_chris-posterli_barber-shop_36167_mount-juliet">Book on Booksy</a>
+    <a class="btn" href="#fit">Take your measure</a>
+  </div>
+</div></header>
+
+<section class="fit" id="fit"><div class="wrap lay">
+  <div>
+    <h2>The <i>fitting</i></h2>
+    <p class="sub">Pick a service. The tape measures your chair time, straight from Booksy.</p>
+    <div class="opts" role="group" aria-label="Choose a service">
+      <button type="button" data-i="0" aria-pressed="true">Basic Haircut <b>$35</b></button>
+      <button type="button" data-i="1" aria-pressed="false">Bald or Skin Fade <b>$40</b></button>
+      <button type="button" data-i="2" aria-pressed="false">Haircut &amp; Beard <b>$50</b></button>
+      <button type="button" data-i="3" aria-pressed="false">Kid Haircut (4–10) <b>$35</b></button>
+      <button type="button" data-i="4" aria-pressed="false">Beard Trim <b>$35</b></button>
+    </div>
+  </div>
+  <div class="gauge">
+    <div class="win" aria-hidden="true"><div class="strip" id="strip"></div><div class="needle"></div></div>
+    <div class="read" aria-live="polite">
+      <div class="big" id="mins">30<small>min</small></div>
+      <p class="nt" id="note">Not for bald or skin fades.</p>
+    </div>
+    <a class="btn" href="https://booksy.com/en-us/405942_chris-posterli_barber-shop_36167_mount-juliet">Book this on Booksy</a>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <h2>The <i>menu</i></h2>
+  <p class="sub">Prices as listed on Booksy.</p>
+  <div class="menu">
+    <div class="row"><b>Basic Haircut</b><span class="pr">$35</span><small>30 min · not for bald or skin fades</small></div>
+    <div class="row"><b>Bald or Skin Fade</b><span class="pr">$40</span><small>40 min · includes bald taper and burst fade</small></div>
+    <div class="row"><b>Haircut &amp; Beard</b><span class="pr">$50</span><small>55 min · note in your booking if you want a hot towel</small></div>
+    <div class="row"><b>Kid Haircut (ages 4–10)</b><span class="pr">$35</span><small>30 min</small></div>
+    <div class="row"><b>Beard Trim</b><span class="pr">$35</span><small>30 min</small></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Word in the <i>chair</i></h2>
+  <p class="sub">From Booksy reviews.</p>
+  <div class="qs">
+    <div class="card"><p>"Solid, consistent with every cut. My go to guy when I need a touch up"</p><cite>Justin · Haircut &amp; Beard</cite></div>
+    <div class="card"><p>"Chris is great! Highly recommend."</p><cite>John · Basic Haircut</cite></div>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div class="box">
+    <h2>This <i>week</i></h2>
+    <div class="hr"><span>Today (Mon)</span><span>10:00 AM – 4:00 PM</span></div>
+    <div class="hr"><span>Wed Nov 25</span><span>9:00 AM – 12:30 PM</span></div>
+    <div class="hr"><span>Thu Nov 26</span><span class="x">Closed</span></div>
+    <div class="hr"><span>Fri Nov 27</span><span class="x">Closed</span></div>
+    <p class="sub" style="margin:12px 0 0">Full week and open slots on Booksy.</p>
+  </div>
+  <div class="box">
+    <h2>Find <i>Chris</i></h2>
+    <p><b>282 Nonaville Road</b><br>Mount Juliet, TN 37122</p>
+    <div class="amen"><span>Parking</span><span>Cards accepted</span><span>Wheelchair accessible</span><span>Kid friendly</span><span>Tools disinfected between clients</span></div>
+    <div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=282+Nonaville+Road+Mount+Juliet+TN+37122">Directions</a><a class="btn" href="https://www.instagram.com/the_chris_tailor/">@the_chris_tailor</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>Chris Posterli</b> · 282 Nonaville Road, Mount Juliet, TN 37122 · Booking by Booksy<br>Concept site by Code Craft Media. Not live.</div></footer>
+<div class="sticky"><a href="https://booksy.com/en-us/405942_chris-posterli_barber-shop_36167_mount-juliet">Book with Chris</a></div>
+<script>
+const S=[[30,"Not for bald or skin fades."],[40,"Includes bald taper and burst fade."],[55,"Want a hot towel? Add a note when you book."],[30,"For ages 4 to 10."],[30,"Beard shaped and cleaned up."]];
+const strip=document.getElementById("strip"),win=strip.parentElement;
+for(let m=0;m<=120;m+=10){const s=document.createElement("span");s.style.left=(m*10)+"px";s.textContent=m;strip.appendChild(s)}
+function go(i){const m=S[i][0];const off=win.clientWidth/2-m*10;strip.style.transform="translateX("+off+"px)";
+document.getElementById("mins").innerHTML=m+"<small>min</small>";document.getElementById("note").textContent=S[i][1]}
+document.querySelectorAll(".opts button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".opts button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");go(+b.dataset.i)}));
+strip.style.transition="none";go(0);requestAnimationFrame(()=>requestAnimationFrame(()=>strip.style.transition=""));
+addEventListener("resize",()=>go(+document.querySelector('.opts [aria-pressed=true]').dataset.i));
+</script>
+<script>(function(){var s=document.querySelector('.sticky');if(!s)return;function f(){s.classList.toggle('on',scrollY>420)}addEventListener('scroll',f,{passive:true});f()})();</script>
+</body>
+</html>

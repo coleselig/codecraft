@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ColeClippz · Antonio Cole · Barber · Franklin, TN</title>
+<meta name="description" content="Concept site for Antonio &quot;ColeClippz&quot; Cole, barber at 202 S. Margin Street, Franklin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6eddc;--paper:#fffaf0;--ox:#6b1d2a;--ox2:#4e1420;--gold:#e0a526;--ink:#26160f;--mute:#7a6857;--line:#e3d5bc;--blk:"Archivo Black",Impact,sans-serif;--ser:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--ink);color:var(--gold);font:600 12px var(--sans);text-align:center;padding:7px 12px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font:400 20px var(--blk);text-decoration:none;color:var(--ox);letter-spacing:.01em}
+.logo span{color:var(--gold)}
+.nb{background:var(--ox);color:var(--paper);text-decoration:none;font:800 13px var(--sans);padding:9px 15px;border-radius:8px}
+.hero{position:relative;overflow:hidden;padding:30px 0 60px}
+.rays{position:absolute;right:-180px;top:-120px;width:520px;height:520px;border-radius:50%;opacity:.5;pointer-events:none;
+background:repeating-conic-gradient(from 0deg,rgba(224,165,38,.35) 0 6deg,transparent 6deg 15deg);
+-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);mask:radial-gradient(circle,#000 30%,transparent 70%)}
+.hero .wrap{position:relative}
+.kick{font:800 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ox)}
+h1{font:400 clamp(54px,16vw,140px)/.9 var(--blk);color:var(--ox);margin:14px 0 6px;letter-spacing:-.01em}
+.h1b{font:500 italic clamp(28px,7vw,54px)/1.05 var(--ser);color:var(--ink);margin-bottom:18px}
+.h1b em{color:var(--gold);font-style:italic}
+.lede{font-size:18px;max-width:31em;color:#4a382c}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{font:600 12px var(--sans);background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:6px 11px}
+.chips .g{background:var(--gold);border-color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-block;text-decoration:none;font:800 15px var(--sans);padding:14px 22px;border-radius:10px;border:2px solid var(--ox);color:var(--ox)}
+.btn.p{background:var(--ox);color:var(--paper)}
+section{padding:58px 0}
+h2{font:400 clamp(34px,8.5vw,60px)/1 var(--blk);color:var(--ox);margin-bottom:10px}
+.sub{color:var(--mute);margin-bottom:22px}
+/* day switch */
+.week{background:var(--ox);color:var(--paper)}
+.week h2{color:var(--paper)}
+.week .sub{color:#e9c9cf}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:520px}
+.days button{font:800 13px var(--sans);background:var(--ox2);color:#f2d9dd;border:0;border-radius:8px;padding:12px 0;cursor:pointer}
+.days button[aria-pressed=true]{background:var(--gold);color:var(--ink)}
+.days button.su{outline:2px dashed var(--gold);outline-offset:-4px}
+.flip{perspective:1200px;margin-top:22px}
+.board{background:var(--paper);color:var(--ink);border-radius:16px;padding:22px 20px;transition:transform .5s;transform-style:preserve-3d;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.board.turn{animation:tn .55s ease}
+@keyframes tn{0%{transform:rotateX(0)}50%{transform:rotateX(88deg)}100%{transform:rotateX(0)}}
+@media (prefers-reduced-motion:reduce){.board.turn{animation:none}}
+.bh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px;flex-wrap:wrap}
+.bh b{font:400 22px var(--blk);color:var(--ox)}
+.bh span{font:600 13px var(--sans);color:var(--mute)}
+.ln{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:11px 0;border-bottom:1px solid var(--line)}
+.ln b{font-weight:600}
+.ln .pr{font:700 20px var(--ser);color:var(--ox)}
+.ln small{grid-column:1/-1;color:var(--mute);font-size:12.5px}
+.bless{margin-top:14px;background:#fff1cf;border-left:4px solid var(--gold);padding:12px 14px;border-radius:6px;font:500 italic 16px var(--ser)}
+.board .btn{display:block;text-align:center;margin-top:16px}
+.lay{display:grid;gap:28px}
+/* reviews */
+.stat{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:22px}
+.stat .n{font:400 64px/1 var(--blk);color:var(--ox)}
+.bars div{display:grid;grid-template-columns:22px 1fr 34px;gap:8px;align-items:center;font:600 12px var(--sans);color:var(--mute);margin:3px 0}
+.bars i{display:block;height:8px;border-radius:4px;background:var(--line);position:relative;overflow:hidden}
+.bars i:after{content:"";position:absolute;inset:0;width:var(--w);background:var(--gold);border-radius:4px}
+.box{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:22px}
+.hr{display:flex;justify-content:space-between;gap:12px;font:600 14px var(--sans);padding:10px 0;border-bottom:1px solid var(--line)}
+.hr .x{color:#b3261e}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.amen span{font:600 12px var(--sans);border:1.5px solid var(--line);border-radius:8px;padding:5px 10px}
+.two>*+*{margin-top:22px}
+.pol{font-size:14px;color:var(--mute);margin-top:14px}
+footer{border-top:1.5px solid var(--line);color:var(--mute);padding:30px 0 96px;font:500 13px var(--sans)}
+footer b{color:var(--ink)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s}
+.sticky a{display:block;text-align:center;background:var(--ox);color:var(--paper);text-decoration:none;font:800 15px var(--sans);padding:15px;border-radius:12px;box-shadow:0 10px 30px rgba(38,22,15,.35)}
+.sticky.on{opacity:1;transform:none;pointer-events:auto}
+@media(min-width:820px){
+ .hero{padding:64px 0 90px}
+ .rays{right:-60px;top:-80px;width:640px;height:640px}
+ .lay{grid-template-columns:.9fr 1.1fr;align-items:start}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+ .two>*+*{margin-top:0}
+ .sticky{display:none}
+ footer{padding-bottom:30px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Antonio "ColeClippz" Cole. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">COLE<span>CLIPPZ</span></a><a class="nb" href="https://booksy.com/en-us/502483_antonio-coleclippz-cole_barber-shop_35955_columbia">Book</a></div></nav>
+
+<header class="hero"><div class="rays" aria-hidden="true"></div><div class="wrap">
+  <div class="kick">Antonio Cole · Barber · Franklin, TN</div>
+  <h1>Cuts &amp;<br>Blessings.</h1>
+  <p class="h1b">Fades, tapers &amp; clean lineups. <em>Sundays too.</em></p>
+  <p class="lede">Bald fades, tapered cuts, beard work and kids' cuts at 202 S. Margin Street in Franklin, with mobile service available.</p>
+  <div class="chips"><span class="g">★ 4.9 · 288 Booksy reviews</span><span>Mobile service</span><span>Sunday appointments</span></div>
+  <div class="btns">
+    <a class="btn p" href="https://booksy.com/en-us/502483_antonio-coleclippz-cole_barber-shop_35955_columbia">Book on Booksy</a>
+    <a class="btn" href="#week">Pick your day</a>
+  </div>
+</div></header>
+
+<section class="week" id="week"><div class="wrap lay">
+  <div>
+    <h2>Pick your day</h2>
+    <p class="sub">Sunday is Antonio's only day off, so Sunday cuts work a little different. Tap a day and the board flips to that day's menu. Weekday prices as listed on Booksy.</p>
+    <div class="days" role="group" aria-label="Choose a day">
+      <button type="button" data-d="Monday">Mon</button><button type="button" data-d="Tuesday" aria-pressed="true">Tue</button><button type="button" data-d="Wednesday">Wed</button><button type="button" data-d="Thursday">Thu</button><button type="button" data-d="Friday">Fri</button><button type="button" data-d="Saturday">Sat</button><button type="button" data-d="Sunday" class="su">Sun</button>
+    </div>
+  </div>
+  <div class="flip"><div class="board" id="board" aria-live="polite">
+    <div class="bh"><b id="bd">TUESDAY</b><span id="bs">Regular menu</span></div>
+    <div id="rows"></div>
+    <p class="bless" id="bn" hidden>Sundays are by appointment only. All Sunday cuts start at $40, and other services like face or beard shaves and razor work carry a Sunday upcharge.</p>
+    <a class="btn p" href="https://booksy.com/en-us/502483_antonio-coleclippz-cole_barber-shop_35955_columbia">Book this on Booksy</a>
+  </div></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>288 reviews deep</h2>
+  <p class="sub">Booksy rating breakdown.</p>
+  <div class="stat">
+    <div class="n">4.9</div>
+    <div class="bars">
+      <div>5★<i style="--w:95.8%"></i>276</div>
+      <div>4★<i style="--w:2.4%"></i>7</div>
+      <div>3★<i style="--w:.4%"></i>1</div>
+      <div>2★<i style="--w:.7%"></i>2</div>
+      <div>1★<i style="--w:.7%"></i>2</div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div class="box">
+    <h2>This week</h2>
+    <div class="hr"><span>Today (Mon)</span><span>9:30 AM – 6:30 PM</span></div>
+    <div class="hr"><span>Wed Nov 25</span><span>9:30 AM – 6:30 PM</span></div>
+    <div class="hr"><span>Thu Nov 26</span><span class="x">Closed</span></div>
+    <div class="hr"><span>Fri Nov 27</span><span class="x">Closed</span></div>
+    <p class="pol">Please cancel at least an hour ahead. Late cancellations and no-shows are a $25 charge.</p>
+  </div>
+  <div class="box">
+    <h2>Find the chair</h2>
+    <p><b>202 S. Margin Street</b><br>Franklin, TN 37067</p>
+    <div class="amen"><span>Mobile service</span><span>Cards accepted</span><span>Accessible</span><span>Kid friendly</span><span>Wi-Fi</span></div>
+    <div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=202+S+Margin+Street+Franklin+TN+37067">Directions</a><a class="btn" href="https://www.instagram.com/mothaboi22/">@mothaboi22</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>Antonio "ColeClippz" Cole</b> · 202 S. Margin Street, Franklin, TN 37067 · Booking by Booksy<br>Concept site by Code Craft Media. Not live.</div></footer>
+<div class="sticky"><a href="https://booksy.com/en-us/502483_antonio-coleclippz-cole_barber-shop_35955_columbia">Book with Antonio</a></div>
+<script>
+const M=[["Faded/Tapered Cutz","$35","35 min · bald fade or taper, blended and detailed",1],["Basic Haircut","$30","30 min · even all-over cut with a line up, or an afro with taper",1],["Kids Cut (12 & under)","$25","30 min",1],["Beard trim","$20","15 min · facial cutting with a razor finish",0],["Shave","$40","35 min",0],["Eyebrow arch w/ razor","$10","15 min",0],["Designs w/ cut","$10+","15 min",0],["Razor add-on","$5","5 min",0],["Wash and condition","$15","10 min",0]];
+const esc=s=>s.replace(/&/g,"&amp;");
+function rows(sun){return M.map(r=>'<div class="ln"><b>'+esc(r[0])+'</b><span class="pr">'+(sun?(r[3]?"$40+":"+ upcharge"):r[1])+'</span><small>'+esc(r[2])+'</small></div>').join("")}
+const board=document.getElementById("board");
+function show(d){const sun=d==="Sunday";document.getElementById("bd").textContent=d.toUpperCase();
+document.getElementById("bs").textContent=sun?"Appointment only":"Regular menu";
+document.getElementById("rows").innerHTML=rows(sun);document.getElementById("bn").hidden=!sun;
+board.classList.remove("turn");void board.offsetWidth;board.classList.add("turn")}
+document.querySelectorAll(".days button").forEach(b=>{if(!b.hasAttribute("aria-pressed"))b.setAttribute("aria-pressed","false");b.addEventListener("click",()=>{document.querySelectorAll(".days button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");show(b.dataset.d)})});
+show("Tuesday");board.classList.remove("turn");
+</script>
+<script>(function(){var s=document.querySelector('.sticky');if(!s)return;function f(){s.classList.toggle('on',scrollY>420)}addEventListener('scroll',f,{passive:true});f()})();</script>
+</body>
+</html>
