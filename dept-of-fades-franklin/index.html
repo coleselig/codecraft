@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dept. of Fades · Private Barber Suite · Franklin, TN</title>
+<meta name="description" content="Concept site for Dept. of Fades, Alex Ramirez's private barber suite inside Phenix Salon Suites in Cool Springs, Franklin, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f1113;
+  --steel:#1b1f23;
+  --plate:#262b30;
+  --line:#3a4148;
+  --paper:#eceae4;
+  --fog:#a7adb3;
+  --amber:#f2a33a;
+  --red:#d6452f;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --disp:"Archivo Black","Arial Black",sans-serif;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.concept{background:var(--amber);color:#1a1206;font:500 12px/1.4 var(--mono);text-align:center;padding:7px 12px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;border-bottom:1px solid var(--line)}
+.logo{font-family:var(--disp);font-size:18px;text-decoration:none;letter-spacing:.02em}
+.logo span{color:var(--amber)}
+.call{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--amber);color:var(--amber);padding:7px 11px;border-radius:2px}
+
+/* hero */
+.hero{padding:34px 0 56px;position:relative}
+.dept{font:500 12px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--fog)}
+.dept b{color:var(--amber)}
+h1{font-family:var(--disp);font-size:clamp(54px,16vw,150px);line-height:.86;letter-spacing:-.02em;margin:16px 0 14px;text-transform:uppercase}
+h1 .fade{display:block;background:linear-gradient(180deg,var(--paper) 0%,var(--paper) 30%,#6b7178 75%,#2a2f34 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:32em;color:#cfd2d4;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;text-decoration:none;font:700 13px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:14px 20px;border-radius:2px}
+.btn.solid{background:var(--amber);color:#1a1206}
+.btn.ghost{border:1px solid var(--line);color:var(--paper)}
+.grid{display:grid;gap:30px}
+/* badge card */
+.badge{background:var(--steel);border:1px solid var(--line);border-radius:6px;padding:20px;font-family:var(--mono);position:relative;overflow:hidden}
+.badge:before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:repeating-linear-gradient(90deg,var(--red) 0 22px,var(--paper) 22px 44px,#2f5fa8 44px 66px,var(--paper) 66px 88px)}
+.badge h3{font:700 12px var(--mono);letter-spacing:.2em;color:var(--fog);text-transform:uppercase;margin:8px 0 14px}
+.row{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dashed var(--line);padding:9px 0;font-size:13.5px}
+.row span:first-child{color:var(--fog)}
+.row span:last-child{text-align:right}
+.stamp{display:inline-block;margin-top:16px;border:2px solid var(--amber);color:var(--amber);font:700 13px var(--mono);letter-spacing:.14em;padding:6px 10px;transform:rotate(-4deg);text-transform:uppercase}
+.pole{position:absolute;right:-30px;top:40px;width:22px;height:220px;border-radius:12px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--paper) 14px 28px,#2f5fa8 28px 42px,var(--paper) 42px 56px);opacity:.18;animation:spin 3s linear infinite;background-size:100% 79px}
+@keyframes spin{to{background-position:0 79px}}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+.sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.sec-h .no{font:700 12px var(--mono);color:var(--amber);letter-spacing:.2em}
+h2{font-family:var(--disp);font-size:clamp(30px,7vw,52px);line-height:1;text-transform:uppercase}
+
+/* services */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:transparent;color:var(--fog);border:1px solid var(--line);padding:9px 13px;border-radius:2px;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.svc{display:grid;gap:12px}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 16px;background:var(--steel);border:1px solid var(--line);border-left:4px solid var(--amber);padding:16px;border-radius:3px}
+.item h4{font-size:17px;font-weight:800}
+.item .p{font:700 20px var(--mono);color:var(--amber)}
+.item .d{grid-column:1/-1;font:400 13px var(--mono);color:var(--fog)}
+.item.hide{display:none}
+.item.hol{border-left-color:var(--red)}
+.note{margin-top:16px;font:400 13px var(--mono);color:var(--fog)}
+
+/* intake */
+.cards{display:grid;gap:14px}
+.card{background:var(--steel);border:1px solid var(--line);padding:18px;border-radius:3px}
+.card h4{font:700 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+.card p{color:#cfd2d4;font-size:15px}
+.quote{font-family:var(--disp);font-size:clamp(26px,6vw,40px);line-height:1.1;text-transform:uppercase}
+.quote small{display:block;font:400 13px var(--mono);color:var(--fog);text-transform:none;margin-top:10px}
+.score{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.score b{font:700 56px var(--mono);color:var(--amber);line-height:1}
+
+/* visit */
+.map{background:var(--steel);border:1px solid var(--line);border-radius:4px;padding:18px;font-family:var(--mono);font-size:13px}
+.map svg{width:100%;height:auto;display:block;margin-bottom:12px}
+footer{border-top:1px solid var(--line);padding:30px 0 90px;font:400 12px var(--mono);color:var(--fog)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;display:flex;gap:10px;z-index:9}
+.sticky a{flex:1;text-align:center}
+@media(min-width:820px){
+  .hero .grid{grid-template-columns:1.35fr 1fr;align-items:end}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .svc{grid-template-columns:1fr 1fr}
+  .visit{grid-template-columns:1fr 1fr}
+  .sticky{display:none}
+  footer{padding-bottom:30px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Dept. of Fades. Not live.</div>
+<nav><div class="wrap">
+  <a class="logo" href="#top">DEPT.<span>/</span>FADES</a>
+  <a class="call" href="tel:+19097345139">Call / Text</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap grid">
+  <div>
+    <div class="dept">Franklin, TN · <b>Room 122</b> · Cool Springs</div>
+    <h1>Dept. of <span class="fade">Fades</span></h1>
+    <p class="lede">Franklin's private barber suite specializing in precision fades, tapers, beard grooming and classic cuts. One chair, one barber: Alex Ramirez.</p>
+    <div class="btns">
+      <a class="btn solid" href="https://booksy.com/en-us/1804401_dept-of-fades_barber-shop_36162_franklin">Book on Booksy</a>
+      <a class="btn ghost" href="#services">See the menu</a>
+    </div>
+  </div>
+  <aside class="badge" aria-label="Shop details">
+    <div class="pole" aria-hidden="true"></div>
+    <h3>Department file</h3>
+    <div class="row"><span>Barber</span><span>Alex Ramirez</span></div>
+    <div class="row"><span>Location</span><span>Phenix Salon Suites, Rm 122</span></div>
+    <div class="row"><span>Landmark</span><span>Next to Nordstrom Rack</span></div>
+    <div class="row"><span>Booksy rating</span><span>4.9 / 57 reviews</span></div>
+    <div class="row"><span>Booking</span><span>Prepaid online</span></div>
+    <span class="stamp">Approved: fresh</span>
+  </aside>
+</div></header>
+
+<section id="services"><div class="wrap">
+  <div class="sec-h"><span class="no">01</span><h2>The menu</h2></div>
+  <div class="tabs" role="group" aria-label="Filter services">
+    <button class="tab" aria-pressed="true" data-f="all">All</button>
+    <button class="tab" aria-pressed="false" data-f="core">Everyday</button>
+    <button class="tab" aria-pressed="false" data-f="hol">Holiday</button>
+    <button class="tab" aria-pressed="false" data-f="vip">After hours</button>
+  </div>
+  <div class="svc">
+    <div class="item" data-c="core"><h4>Fades / Tapers</h4><span class="p">$38</span><span class="d">30 min</span></div>
+    <div class="item" data-c="core"><h4>Haircut &amp; Beard</h4><span class="p">$55</span><span class="d">1 hr</span></div>
+    <div class="item hol" data-c="hol"><h4>Thanksgiving Week Holiday Haircut</h4><span class="p">$55</span><span class="d">30 min · holiday pricing Nov 24 to 26, 2026</span></div>
+    <div class="item hol" data-c="hol"><h4>Holiday Haircut &amp; Beard</h4><span class="p">$65</span><span class="d">45 min</span></div>
+    <div class="item" data-c="vip"><h4>After-Hours VIP Haircut</h4><span class="p">$150</span><span class="d">30 min · includes after-hours fee</span></div>
+  </div>
+  <p class="note">Prices as listed on Booksy. A $5 processing fee applies to all services.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-h"><span class="no">02</span><h2>Standard procedure</h2></div>
+  <div class="cards">
+    <div class="card"><h4>Book &amp; prepay</h4><p>Every appointment is booked and fully prepaid on Booksy. Need to cancel? Give 24 hours notice.</p></div>
+    <div class="card"><h4>Be on time</h4><p>Arriving 5 or more minutes late counts as a no-show, so plan for Cool Springs traffic.</p></div>
+    <div class="card"><h4>After 7 PM</h4><p>The main entrance locks at 7 PM Monday to Saturday and 4 PM Sunday. Doors locked? Call or text <a href="tel:+19097345139">(909) 734-5139</a>.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap grid visit">
+  <div>
+    <div class="score"><b>4.9</b><span style="font-family:var(--mono);color:var(--fog);font-size:13px">57 reviews on Booksy</span></div>
+    <p class="quote">"Alex is fantastic!"<small>Joe, Fades / Tapers, confirmed Booksy client</small></p>
+  </div>
+  <div class="map">
+    <svg viewBox="0 0 320 150" role="img" aria-label="Simple map: Phenix Salon Suites beside Nordstrom Rack in Cool Springs Market">
+      <rect x="0" y="0" width="320" height="150" fill="#1b1f23"/>
+      <rect x="0" y="118" width="320" height="16" fill="#2c3237"/>
+      <text x="8" y="130" fill="#a7adb3" font-family="IBM Plex Mono" font-size="9">MALLORY LN</text>
+      <rect x="30" y="30" width="110" height="64" fill="#262b30" stroke="#3a4148"/>
+      <text x="44" y="66" fill="#a7adb3" font-family="IBM Plex Mono" font-size="10">NORDSTROM RACK</text>
+      <rect x="150" y="30" width="130" height="64" fill="#262b30" stroke="#f2a33a" stroke-width="2"/>
+      <text x="162" y="58" fill="#eceae4" font-family="IBM Plex Mono" font-size="10">PHENIX SALON SUITES</text>
+      <text x="162" y="76" fill="#f2a33a" font-family="IBM Plex Mono" font-size="10">ROOM 122</text>
+    </svg>
+    2000 Mallory Ln, Ste 340, Rm 122<br>Franklin, TN 37067<br><br>
+    <a href="tel:+19097345139">(909) 734-5139</a> · parking, card payments, Wi-Fi, accessible
+  </div>
+</div></section>
+
+<footer><div class="wrap">Dept. of Fades · Alex Ramirez · Franklin, TN<br>Concept by Code Craft Media. Booking handled by Booksy.</div></footer>
+
+<div class="sticky">
+  <a class="btn ghost" style="background:var(--ink)" href="tel:+19097345139">Call</a>
+  <a class="btn solid" href="https://booksy.com/en-us/1804401_dept-of-fades_barber-shop_36162_franklin">Book</a>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
+  document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-pressed','false')});
+  t.setAttribute('aria-pressed','true');var f=t.dataset.f;
+  document.querySelectorAll('.item').forEach(function(i){i.classList.toggle('hide',f!=='all'&&i.dataset.c!==f)});
+})});
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Solomito Esthetics · Facials, Lash Lifts &amp; Waxing · Hendersonville, TN</title>
+<meta name="description" content="Concept site for Solomito Esthetics, Abby Solomito's esthetics studio inside Phenix Salon Suites in Hendersonville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#eef1ec;
+  --sage:#b9c6b3;
+  --moss:#5f7258;
+  --pine:#2f3d2d;
+  --clay:#d8b8a2;
+  --blush:#f3e4da;
+  --ink:#283126;
+  --muted:#5d6a5a;
+  --white:#fbfcfa;
+  --serif:"Cormorant",Georgia,serif;
+  --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--mist);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{background:var(--pine);color:#e4ebe1;font-size:12px;text-align:center;padding:7px 14px;letter-spacing:.03em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:var(--serif);font-size:24px;text-decoration:none;letter-spacing:.02em}
+.logo span{font-style:italic;color:var(--moss)}
+nav a.tel{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--moss)}
+
+.hero{position:relative;padding:28px 0 64px;overflow:hidden}
+.hero .wrap{display:grid;gap:30px;align-items:center}
+.orb{position:relative;width:min(78vw,380px);aspect-ratio:1;margin:0 auto;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--white) 0 18%,var(--blush) 38%,var(--clay) 70%,#c49c84 100%);
+  box-shadow:0 30px 60px -30px rgba(47,61,45,.45), inset -20px -30px 60px rgba(95,114,88,.18)}
+.orb::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--sage)}
+.orb::after{content:"";position:absolute;inset:-34px;border-radius:50%;border:1px dashed rgba(95,114,88,.35)}
+.orb svg{position:absolute;inset:0;width:100%;height:100%}
+.kicker{font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--moss)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,12vw,88px);line-height:.95;margin:12px 0 16px;color:var(--pine)}
+h1 i{color:var(--moss)}
+.lede{color:var(--muted);max-width:31em;font-size:16.5px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.04em}
+.btn.solid{background:var(--pine);color:var(--white)}
+.btn.ghost{border:1.5px solid var(--pine);color:var(--pine)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{font-size:12.5px;background:var(--white);border:1px solid var(--sage);padding:5px 12px;border-radius:999px;color:var(--moss)}
+
+section{padding:64px 0}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,8vw,52px);line-height:1.05;color:var(--pine);margin-bottom:14px}
+h2 i{color:var(--moss)}
+.intro{color:var(--muted);max-width:36em}
+
+.menu{background:var(--white)}
+.tabs{display:flex;gap:8px;margin:26px 0 22px;overflow-x:auto;padding-bottom:4px}
+.tabs button{flex:0 0 auto;font:600 13.5px var(--sans);border:1.5px solid var(--sage);background:transparent;color:var(--moss);padding:9px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:var(--white)}
+.grid{display:grid;gap:14px}
+.card{border-radius:22px;padding:24px;background:var(--mist);position:relative;overflow:hidden}
+.card h3{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--pine);line-height:1.1}
+.card p{color:var(--muted);font-size:15px;margin-top:8px}
+.card .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--moss)}
+.card::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 70%)}
+.card[hidden]{display:none}
+.note{font-size:13.5px;color:var(--muted);margin-top:20px}
+
+.about .wrap{display:grid;gap:30px}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(28px,7vw,40px);line-height:1.15;color:var(--pine);border-left:3px solid var(--clay);padding-left:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.fact{background:var(--white);border-radius:18px;padding:18px}
+.fact b{display:block;font-family:var(--serif);font-size:34px;font-weight:500;color:var(--moss);line-height:1}
+.fact small{color:var(--muted);font-size:13px}
+
+.visit{background:var(--pine);color:#e7ede4}
+.visit h2{color:var(--white)}
+.visit h2 i{color:var(--clay)}
+.visit .grid{margin-top:22px}
+.vcard{border:1px solid rgba(231,237,228,.25);border-radius:20px;padding:22px}
+.vcard h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.vcard a{color:var(--white)}
+.visit .btn.solid{background:var(--clay);color:var(--pine)}
+.visit .btn.ghost{border-color:#e7ede4;color:#e7ede4}
+footer{background:var(--pine);color:#a9b7a5;font-size:12.5px;text-align:center;padding:0 20px 34px}
+
+@media(min-width:820px){
+  .hero{padding:56px 0 90px}
+  .hero .wrap{grid-template-columns:1.15fr 1fr}
+  .orb{order:2}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .about .wrap{grid-template-columns:1fr 1fr;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Solomito Esthetics. Not live.</div>
+
+<nav><div class="wrap">
+  <a class="logo" href="#">Solomito <span>Esthetics</span></a>
+  <a class="tel" href="tel:+19013599350">Call / Text</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="kicker">Esthetics in Hendersonville, TN</div>
+    <h1>Skin, lashes &amp; brows, <i>done gently.</i></h1>
+    <p class="lede">Hi friends! I'm Abby, owner of Solomito Esthetics. I specialize in facials, lash lifts and face and body waxing, from a private suite inside Phenix Salon Suites on Indian Lake Blvd.</p>
+    <div class="actions">
+      <a class="btn solid" href="https://www.vagaro.com/solomitoesthetics">Book on Vagaro</a>
+      <a class="btn ghost" href="#menu">See services</a>
+    </div>
+    <div class="chips"><span>Facials</span><span>Lash lifts</span><span>Brows</span><span>Waxing</span><span>Body care</span></div>
+  </div>
+  <div class="orb" aria-hidden="true">
+    <svg viewBox="0 0 200 200"><g fill="none" stroke="#5f7258" stroke-width="1.2" opacity=".55">
+      <path d="M100 150c-22-18-34-38-34-58 0-14 10-24 22-24 6 0 10 3 12 7 2-4 6-7 12-7 12 0 22 10 22 24 0 20-12 40-34 58z"/>
+      <path d="M100 150V76"/><path d="M100 120c-10-6-18-14-22-24"/><path d="M100 104c8-4 14-10 18-18"/>
+    </g></svg>
+  </div>
+</div></header>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="kicker">The menu</div>
+  <h2>Find your <i>treatment</i></h2>
+  <p class="intro">Abby wants Solomito Esthetics to be a one-stop shop for beauty services. Tap a category to narrow it down, then book your time on Vagaro.</p>
+  <div class="tabs" role="group" aria-label="Filter services">
+    <button aria-pressed="true" data-f="all">All</button>
+    <button aria-pressed="false" data-f="skin">Skin</button>
+    <button aria-pressed="false" data-f="eyes">Lashes &amp; brows</button>
+    <button aria-pressed="false" data-f="wax">Waxing</button>
+  </div>
+  <div class="grid">
+    <article class="card" data-c="skin"><div class="tag">Skin care</div><h3>Facials</h3><p>One of Abby's specialties. Unhurried skin care in a private suite.</p></article>
+    <article class="card" data-c="eyes"><div class="tag">Lashes</div><h3>Lash lifts</h3><p>A lift for your natural lashes, another of Abby's specialties.</p></article>
+    <article class="card" data-c="eyes"><div class="tag">Brows</div><h3>Brow services</h3><p>Shaping and brow care to frame the face.</p></article>
+    <article class="card" data-c="wax"><div class="tag">Hair removal</div><h3>Face waxing</h3><p>Face waxing, one of Abby's specialties.</p></article>
+    <article class="card" data-c="wax"><div class="tag">Hair removal</div><h3>Body waxing</h3><p>Body waxing in a private, comfortable room.</p></article>
+    <article class="card" data-c="skin"><div class="tag">Body care</div><h3>Body care</h3><p>Care that goes beyond the face. Ask Abby what fits you.</p></article>
+  </div>
+  <p class="note">Current services, times and pricing live on Abby's Vagaro page.</p>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <div>
+    <div class="kicker">Meet Abby</div>
+    <h2>Your Hendersonville <i>esthetician</i></h2>
+    <p class="intro">Abby Solomito has been practicing esthetics for more than four and a half years, working from her suite at Phenix Salon Suites in Hendersonville.</p>
+    <div class="facts">
+      <div class="fact"><b>4.5+</b><small>years practicing</small></div>
+      <div class="fact"><b>5.0</b><small>rating on Vagaro</small></div>
+    </div>
+  </div>
+  <p class="quote">"I specialize in a variety of services including facials, lash lifts, and face/body waxing."</p>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="kicker" style="color:var(--clay)">Visit</div>
+  <h2>Come see <i>Abby</i></h2>
+  <div class="grid">
+    <div class="vcard"><h3>Where</h3><p>Phenix Salon Suites, Suite 119<br>217 Indian Lake Blvd, Suite 300<br>Hendersonville, TN 37075</p></div>
+    <div class="vcard"><h3>Call or text</h3><p><a href="tel:+19013599350">901-359-9350</a></p></div>
+    <div class="vcard"><h3>Email</h3><p><a href="mailto:solomitoesthetics@gmail.com">solomitoesthetics@gmail.com</a></p></div>
+  </div>
+  <div class="actions" style="margin-top:28px">
+    <a class="btn solid" href="https://www.vagaro.com/solomitoesthetics">Book on Vagaro</a>
+    <a class="btn ghost" href="tel:+19013599350">Call 901-359-9350</a>
+  </div>
+</div></section>
+<footer>Solomito Esthetics · Hendersonville, Tennessee</footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    var f=b.dataset.f;
+    document.querySelectorAll('.card').forEach(function(c){c.hidden=!(f==='all'||c.dataset.c===f)});
+  });
+});
+</script>
+</body>
+</html>
