@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Starry Point Homestead — Hawkins County</title>
+<meta name="description" content="A woman-owned homestead in the Clinch Mountains of Hawkins County, Tennessee. Duck, chicken and quail eggs and fresh flowers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--meadow:#2f5d3a;--meadow2:#3f7a4b;--deep:#1d3a25;--cream:#f7f1e3;--cream2:#efe5cf;--rust:#b5532a;--rust2:#d06a3b;--ink:#22301f;--muted:#5f6b57;--night:#1b2a3a;
+--serif:"Fraunces",Georgia,serif;--sans:"Karla",system-ui,-apple-system,Segoe UI,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+svg{display:block;max-width:100%}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.concept{background:var(--deep);color:var(--cream);font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+header.nav{background:var(--cream);border-bottom:1px solid #e3d8bd}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:14px}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none}
+.brand b{font-family:var(--serif);font-weight:800;font-size:21px;color:var(--meadow);line-height:1}
+.brand small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust)}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--rust)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-rust{background:var(--rust);color:#fff;box-shadow:0 10px 24px -12px rgba(181,83,42,.8)}
+.btn-rust:hover{background:var(--rust2)}
+.btn-line{border:1.5px solid var(--meadow);color:var(--meadow);background:transparent}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--night) 0%,#2b4057 46%,#d89a6a 78%,#f0c79a 100%);color:#fff;padding:64px 0 0}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:end}
+.stars{position:absolute;inset:0 0 40% 0;pointer-events:none}
+.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.3}50%{opacity:1}}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#ffd8a8}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,6.4vw,76px);line-height:1;letter-spacing:-.015em;margin:16px 0 20px}
+h1 em{font-style:italic;font-weight:400;color:#ffd8a8}
+.lede{font-size:clamp(16px,1.6vw,19px);max-width:33em;color:#f3ead8}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 56px}
+.hero .btn-line{border-color:#ffd8a8;color:#ffd8a8}
+.hero-art{align-self:end}
+.ridge{display:block;width:100%;height:auto;margin-top:-1px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{font-size:13px;border:1px solid rgba(255,216,168,.5);border-radius:999px;padding:5px 12px;color:#ffe7c8}
+section{padding:90px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.kick{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--rust)}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(32px,4.4vw,52px);line-height:1.05;margin-top:12px;color:var(--deep)}
+h2 em{font-style:italic;font-weight:400;color:var(--rust)}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+.goods{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.good{background:#fff;border:1px solid #e6dbc2;border-radius:24px;padding:26px 22px;transition:transform .3s,box-shadow .3s}
+.good:hover{transform:translateY(-5px);box-shadow:0 22px 40px -24px rgba(29,58,37,.45)}
+.good svg{width:64px;height:64px;margin-bottom:14px}
+.good h3{font-family:var(--serif);font-size:23px;line-height:1.15;color:var(--deep);margin-bottom:6px}
+.good p{font-size:15px;color:var(--muted)}
+.carton-sec{background:var(--meadow);color:var(--cream)}
+.carton-sec h2{color:#fff}.carton-sec h2 em{color:#ffd8a8}.carton-sec .kick{color:#ffd8a8}.carton-sec .sec-head p{color:#d9e5d2}
+.builder{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.pick{display:grid;gap:12px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px 16px}
+.opt b{font-family:var(--serif);font-size:20px;font-weight:600}
+.opt small{display:block;color:#cfe0c6;font-size:13px}
+.step{display:flex;align-items:center;gap:8px}
+.step button{width:38px;height:38px;border-radius:50%;border:1.5px solid #ffd8a8;background:transparent;color:#ffd8a8;font-size:20px;font-weight:700;cursor:pointer;font-family:inherit}
+.step button:hover{background:rgba(255,216,168,.15)}
+.step output{min-width:22px;text-align:center;font-weight:700;font-size:18px}
+.carton{background:var(--cream);color:var(--ink);border-radius:26px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.carton h3{font-family:var(--serif);font-size:24px;color:var(--deep)}
+.slots{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:16px 0;background:#d8c7a0;padding:12px;border-radius:16px}
+.slot{aspect-ratio:1;border-radius:50%;background:#c4b088;box-shadow:inset 0 3px 6px rgba(0,0,0,.18);display:grid;place-items:center}
+.slot span{width:78%;height:92%;border-radius:50% 50% 46% 46%/58% 58% 42% 42%;animation:pop .35s ease}
+@keyframes pop{from{transform:scale(.3)}to{transform:scale(1)}}
+.e-chicken{background:radial-gradient(circle at 35% 30%,#f9e2c6,#d9a774)}
+.e-duck{background:radial-gradient(circle at 35% 30%,#f4f6ee,#cfd8c4)}
+.e-quail{width:58%!important;height:70%!important;background:#efe3cf;background-image:radial-gradient(circle at 30% 40%,#6b4f35 0 9%,transparent 10%),radial-gradient(circle at 65% 62%,#6b4f35 0 11%,transparent 12%),radial-gradient(circle at 55% 25%,#6b4f35 0 7%,transparent 8%),radial-gradient(circle at 25% 75%,#6b4f35 0 6%,transparent 7%)}
+.msg{background:#fff;border:1px dashed #cbbb95;border-radius:14px;padding:14px;font-size:14.5px;color:#3a4535;min-height:84px;white-space:pre-line}
+.carton .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.hint{font-size:13px;color:var(--muted);margin-top:10px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why div{border-top:3px solid var(--rust);padding-top:18px}
+.why h3{font-family:var(--serif);font-size:24px;color:var(--deep);margin-bottom:6px}
+.why p{color:var(--muted)}
+.find{background:var(--cream2)}
+.find .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:stretch}
+.card{background:#fff;border-radius:26px;padding:34px 30px;border:1px solid #e3d6b8}
+.card dl{display:grid;gap:14px;margin-top:22px}
+.card dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);font-weight:700}
+.card dd{font-size:16px}
+.map{border-radius:26px;overflow:hidden;min-height:360px;border:1px solid #e3d6b8;background:#e6dcc4}
+.map iframe{display:block;width:100%;height:100%;min-height:360px;border:0}
+footer{background:var(--deep);color:#cfd9c9;padding:44px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer b{font-family:var(--serif);font-size:22px;color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(29,58,37,.96);transform:translateY(110%);transition:transform .35s}
+.bar.on{transform:none}
+.bar .btn{width:100%}
+@media (max-width:899px){
+ .nav ul{display:none}
+ .hero .wrap,.builder,.find .wrap{grid-template-columns:1fr}
+ .goods{grid-template-columns:1fr 1fr}
+ .why{grid-template-columns:1fr}
+ section{padding:70px 0}
+ .bar{display:block}
+ .hero-art{max-width:320px;margin:0 auto}
+}
+@media (max-width:420px){.goods{grid-template-columns:1fr}.cta .btn{flex:1 1 100%}.nav .btn{display:none}.slots{gap:6px;padding:10px}}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Starry Point Homestead. Not live.</div>
+<header class="nav"><div class="wrap">
+ <a class="brand" href="#top"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 32 L16 16 L22 23 L28 14 L37 32Z" fill="#2f5d3a"/><path d="M28 4 L29.6 8.4 L34 10 L29.6 11.6 L28 16 L26.4 11.6 L22 10 L26.4 8.4Z" fill="#b5532a"/></svg><div><b>Starry Point</b><small>Homestead</small></div></a>
+ <ul><li><a href="#goods">From the farm</a></li><li><a href="#carton">Build a carton</a></li><li><a href="#find">Find us</a></li></ul>
+ <a class="btn btn-rust" href="https://www.instagram.com/starrypointhomestead" target="_blank" rel="noopener">Instagram</a>
+</div></header>
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+ <div class="stars" id="stars" aria-hidden="true"></div>
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">Hawkins County, Tennessee</span>
+   <h1>Eggs from under the <em>Clinch Mountain stars.</em></h1>
+   <p class="lede">A woman-owned homestead raising chickens, ducks and quail, with fresh flowers alongside. Organically raised, and brought down the mountain to Knoxville&rsquo;s Market Square.</p>
+   <div class="tags"><span class="tag">Duck eggs</span><span class="tag">Chicken eggs</span><span class="tag">Quail eggs</span><span class="tag">Fresh flowers</span></div>
+   <div class="cta"><a class="btn btn-rust" href="#carton">Build your egg carton</a><a class="btn btn-line" href="#find">Where to find us</a></div>
+  </div>
+  <div class="hero-art rv" aria-hidden="true">
+   <svg viewBox="0 0 400 300">
+    <circle cx="300" cy="70" r="26" fill="#fbe7c4"/><circle cx="312" cy="62" r="24" fill="#2b4057" opacity=".0"/>
+    <path d="M80 60 L83 70 L93 73 L83 76 L80 86 L77 76 L67 73 L77 70Z" fill="#ffd8a8"/>
+    <!-- coop -->
+    <path d="M120 300 V190 L200 130 L280 190 V300Z" fill="#b5532a"/>
+    <path d="M110 196 L200 124 L290 196" fill="none" stroke="#7a3618" stroke-width="12" stroke-linecap="round"/>
+    <rect x="178" y="220" width="44" height="80" rx="6" fill="#5a2a14"/>
+    <circle cx="200" cy="180" r="14" fill="#f7f1e3"/><path d="M200 168 L202.5 176 L210 178 L202.5 180 L200 188 L197.5 180 L190 178 L197.5 176Z" fill="#b5532a"/>
+    <!-- hen -->
+    <g transform="translate(300 250)"><ellipse cx="0" cy="0" rx="30" ry="22" fill="#f7f1e3"/><circle cx="24" cy="-20" r="12" fill="#f7f1e3"/><path d="M34 -21 L44 -18 L34 -15Z" fill="#e0a43a"/><path d="M20 -33 q4 -8 8 0 q4 -8 7 2" fill="#c0392b"/><circle cx="27" cy="-22" r="1.8" fill="#22301f"/><path d="M-28 -6 q-14 -16 -4 -24 q6 10 10 14" fill="#f7f1e3"/></g>
+    <!-- duck -->
+    <g transform="translate(72 262)"><ellipse cx="0" cy="0" rx="26" ry="16" fill="#fff"/><circle cx="-20" cy="-16" r="10" fill="#fff"/><path d="M-29 -16 L-41 -13 L-29 -10Z" fill="#e0a43a"/><circle cx="-22" cy="-18" r="1.6" fill="#22301f"/></g>
+   </svg>
+  </div>
+ </div>
+ <svg class="ridge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 V70 L120 40 L260 64 L400 22 L560 58 L700 30 L860 66 L1000 26 L1160 60 L1300 34 L1440 56 V120Z" fill="#2f5d3a"/><path d="M0 120 V92 Q360 62 720 88 T1440 80 V120Z" fill="#f7f1e3"/></svg>
+</section>
+
+<section id="goods">
+ <div class="wrap">
+  <div class="sec-head rv"><span class="kick">From the homestead</span><h2>Three kinds of eggs, <em>and flowers too.</em></h2><p>Everything here comes from the homestead&rsquo;s own flocks and garden in the Clinch Mountains.</p></div>
+  <div class="goods">
+   <article class="good rv"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="35" rx="18" ry="23" fill="#f4f6ee" stroke="#2f5d3a" stroke-width="2"/></svg><h3>Duck eggs</h3><p>Big, rich eggs from the homestead&rsquo;s ducks.</p></article>
+   <article class="good rv"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="35" rx="16" ry="21" fill="#e6b98a" stroke="#2f5d3a" stroke-width="2"/></svg><h3>Chicken eggs</h3><p>Everyday eggs from an organically raised flock.</p></article>
+   <article class="good rv"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="36" rx="11" ry="14" fill="#efe3cf" stroke="#2f5d3a" stroke-width="2"/><circle cx="28" cy="32" r="2.4" fill="#6b4f35"/><circle cx="36" cy="40" r="3" fill="#6b4f35"/><circle cx="34" cy="28" r="1.8" fill="#6b4f35"/></svg><h3>Quail eggs</h3><p>Tiny speckled eggs from the homestead&rsquo;s quail.</p></article>
+   <article class="good rv"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 58 V30" stroke="#2f5d3a" stroke-width="3"/><path d="M32 44 q-12 -2 -14 -12 q10 0 14 8" fill="#3f7a4b"/><g fill="#b5532a"><circle cx="32" cy="18" r="7"/><circle cx="23" cy="22" r="6"/><circle cx="41" cy="22" r="6"/><circle cx="27" cy="12" r="5"/><circle cx="37" cy="12" r="5"/></g><circle cx="32" cy="18" r="4" fill="#ffd8a8"/></svg><h3>Fresh flowers</h3><p>Cut flowers grown on the homestead, in season.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="carton-sec" id="carton">
+ <div class="wrap">
+  <div class="sec-head rv"><span class="kick">Build a carton</span><h2>Mix your dozen, <em>then send it over.</em></h2><p>Tap to fill a carton with duck, chicken and quail eggs. We&rsquo;ll write the message for you to send by Instagram DM.</p></div>
+  <div class="builder">
+   <div class="pick rv">
+    <div class="opt"><div><b>Duck eggs</b><small>large &amp; rich</small></div><div class="step"><button type="button" data-k="duck" data-d="-1" aria-label="Fewer duck eggs">&minus;</button><output id="n-duck">0</output><button type="button" data-k="duck" data-d="1" aria-label="More duck eggs">+</button></div></div>
+    <div class="opt"><div><b>Chicken eggs</b><small>the everyday egg</small></div><div class="step"><button type="button" data-k="chicken" data-d="-1" aria-label="Fewer chicken eggs">&minus;</button><output id="n-chicken">0</output><button type="button" data-k="chicken" data-d="1" aria-label="More chicken eggs">+</button></div></div>
+    <div class="opt"><div><b>Quail eggs</b><small>small &amp; speckled</small></div><div class="step"><button type="button" data-k="quail" data-d="-1" aria-label="Fewer quail eggs">&minus;</button><output id="n-quail">0</output><button type="button" data-k="quail" data-d="1" aria-label="More quail eggs">+</button></div></div>
+    <label class="opt" style="cursor:pointer"><div><b>Add fresh flowers</b><small>when in season</small></div><input type="checkbox" id="flowers" style="width:22px;height:22px;accent-color:#b5532a"></label>
+   </div>
+   <div class="carton rv">
+    <h3>Your carton <span id="count" style="font-family:var(--sans);font-size:15px;color:var(--muted);font-weight:500">0 / 12</span></h3>
+    <div class="slots" id="slots"></div>
+    <div class="msg" id="msg">Tap + to start filling your carton.</div>
+    <div class="row"><button class="btn btn-rust" type="button" id="send">Copy &amp; open Instagram</button><button class="btn btn-line" type="button" id="clear">Start over</button></div>
+    <p class="hint" id="hint">Availability depends on what the flocks are laying. Ask before you count on it.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="sec-head rv"><span class="kick">Why Starry Point</span><h2>Organically raised, <em>mountain grown.</em></h2></div>
+  <div class="why">
+   <div class="rv"><h3>Raised organically</h3><p>The chickens, ducks and quail are raised with organic practices on the homestead.</p></div>
+   <div class="rv"><h3>Woman-owned</h3><p>A homestead run by a woman farmer, nestled in the Clinch Mountains of Hawkins County.</p></div>
+   <div class="rv"><h3>Cards welcome</h3><p>Credit and debit accepted, so you never miss eggs for lack of cash.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="find" id="find">
+ <div class="wrap">
+  <div class="card rv">
+   <span class="kick">Where to find us</span>
+   <h2>Market Square, <em>Knoxville.</em></h2>
+   <dl>
+    <dt>Market</dt><dd>Market Square Farmers Market, downtown Knoxville</dd>
+    <dt>2026 market season</dt><dd>May 2 &ndash; October 31, 2026<br>Wednesdays 10am&ndash;1pm &middot; Saturdays 9am&ndash;1pm</dd>
+    <dt>Off-season</dt><dd>Message on Instagram to ask what&rsquo;s laying.</dd>
+    <dt>The homestead</dt><dd>Clinch Mountains, Hawkins County, TN</dd>
+   </dl>
+   <div class="cta" style="margin:26px 0 0"><a class="btn btn-rust" href="https://www.instagram.com/starrypointhomestead" target="_blank" rel="noopener">@starrypointhomestead</a></div>
+  </div>
+  <div class="map rv"><iframe title="Map of Hawkins County, Tennessee" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hawkins%20County%2C%20TN&amp;output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap"><div><b>Starry Point Homestead</b><br>Eggs &amp; flowers from the Clinch Mountains &middot; Hawkins County, TN</div><div>Concept by Code Craft Media</div></div></footer>
+<div class="bar" id="bar"><a class="btn btn-rust" href="#carton">Build your egg carton</a></div>
+<script>
+(function(){
+ var d=document.documentElement;d.classList.add('js');
+ var st=document.getElementById('stars');for(var i=0;i<60;i++){var s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*4+'s';st.appendChild(s);}
+ var els=[].slice.call(document.querySelectorAll('.rv'));function show(){els.forEach(function(e){e.classList.add('in')})}
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}else show();
+ setTimeout(show,1500);
+ var bar=document.getElementById('bar'),hero=document.querySelector('.hero');
+ function sb(){bar.classList.toggle('on',hero.getBoundingClientRect().bottom<0)}window.addEventListener('scroll',sb,{passive:true});sb();
+ var n={duck:0,chicken:0,quail:0},names={duck:'duck',chicken:'chicken',quail:'quail'};
+ var slots=document.getElementById('slots'),msg=document.getElementById('msg'),cnt=document.getElementById('count'),fl=document.getElementById('flowers'),hint=document.getElementById('hint');
+ function total(){return n.duck+n.chicken+n.quail}
+ function text(){var p=[];['duck','chicken','quail'].forEach(function(k){if(n[k])p.push(n[k]+' '+names[k]+' egg'+(n[k]>1?'s':''))});
+  if(!p.length&&!fl.checked)return '';
+  return 'Hi Starry Point Homestead! Could I get '+(p.length?p.join(', '):'some eggs')+(fl.checked?', plus some fresh flowers':'')+'?\nWhat works for pickup?'}
+ function draw(){slots.innerHTML='';var order=[];['duck','chicken','quail'].forEach(function(k){for(var i=0;i<n[k];i++)order.push(k)});
+  for(var i=0;i<12;i++){var s=document.createElement('div');s.className='slot';if(order[i]){var e=document.createElement('span');e.className='e-'+order[i];s.appendChild(e)}slots.appendChild(s)}
+  cnt.textContent=total()+' / 12';var t=text();msg.textContent=t||'Tap + to start filling your carton.'}
+ document.querySelectorAll('.step button').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.k,dl=+b.dataset.d;if(dl>0&&total()>=12)return;n[k]=Math.max(0,n[k]+dl);draw()})});
+ fl.addEventListener('change',draw);
+ document.getElementById('clear').addEventListener('click',function(){n={duck:0,chicken:0,quail:0};fl.checked=false;draw()});
+ document.getElementById('send').addEventListener('click',function(){var t=text()||'Hi Starry Point Homestead! What eggs do you have this week?';
+  try{navigator.clipboard.writeText(t);hint.textContent='Message copied. Paste it into your DM on Instagram.'}catch(e){}
+  window.open('https://ig.me/m/starrypointhomestead','_blank','noopener')});
+ draw();
+})();
+</script>
+</body>
+</html>

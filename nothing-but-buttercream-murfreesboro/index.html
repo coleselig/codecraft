@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nothing But Buttercream — Murfreesboro, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500;1,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blush:#f7dcd8;--blush2:#efc3bd;--rose:#c9606a;--rose2:#a8474f;--sage:#8fa98b;--sage2:#5d7a5a;--sagel:#e3ebdf;--cream:#fffaf6;--ink:#3a2b2c;--muted:#7d6667}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--sage2);color:#f2f6ef;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.02em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1140px;margin:0 auto}
+.logo{font-family:Lora,serif;font-weight:700;font-size:20px;color:var(--ink);text-decoration:none;display:flex;gap:9px;align-items:center}
+.logo i{font-style:italic;color:var(--rose)}
+.logo svg{width:30px;height:30px;flex:none}
+nav .links{display:flex;gap:22px;font-weight:700;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--rose)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{position:relative;background:linear-gradient(180deg,var(--blush) 0%,#fbe9e6 100%);overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:34px;background:radial-gradient(circle at 17px -4px,transparent 18px,var(--cream) 19px) 0 0/34px 34px repeat-x}
+.hin{max-width:1140px;margin:0 auto;padding:36px 22px 70px;display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+@media(max-width:860px){.hin{grid-template-columns:1fr;gap:8px;padding:24px 20px 60px}}
+.tag{display:inline-flex;gap:8px;align-items:center;background:#fff;color:var(--sage2);font-weight:800;font-size:12px;border-radius:99px;padding:6px 13px;letter-spacing:.1em;text-transform:uppercase}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--sage);display:block}
+h1{font-family:Lora,serif;font-weight:700;font-size:clamp(38px,6vw,68px);line-height:1.04;color:var(--ink);margin:16px 0 14px;letter-spacing:-.01em}
+h1 em{color:var(--rose);font-style:italic}
+.sub{font-size:18px;color:#5e4a4b;max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px;transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--rose);color:#fff;box-shadow:0 6px 16px -6px rgba(168,71,79,.7)}
+.btn.s{background:#fff;color:var(--ink);border:2px solid var(--blush2)}
+.mini{font-size:14px;color:var(--muted)}
+.art svg{width:100%;max-width:470px;height:auto;display:block;margin:0 auto}
+.bob{animation:bob 4s ease-in-out infinite;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.spr{animation:tw 2.4s ease-in-out infinite}
+.spr:nth-child(2){animation-delay:-.8s}.spr:nth-child(3){animation-delay:-1.6s}
+@keyframes tw{50%{opacity:.25}}
+.wrap{max-width:1140px;margin:0 auto;padding:70px 22px;position:relative}
+@media(max-width:600px){.wrap{padding:54px 20px}}
+.kicker{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--sage2)}
+h2{font-family:Lora,serif;font-size:clamp(30px,4.3vw,46px);line-height:1.1;margin:8px 0 14px;font-weight:700}
+h2 em{color:var(--rose);font-style:italic}
+.lede{max-width:640px;font-size:17px;color:#5e4a4b}
+.season{display:flex;gap:12px;align-items:center;background:var(--sagel);border-radius:16px;padding:14px 18px;margin-top:24px;max-width:640px}
+.season svg{width:34px;height:34px;flex:none}
+.season b{color:var(--sage2)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:30px}
+.item{background:#fff;border:1px solid #f1dfdb;border-radius:20px;padding:22px;transition:transform .2s,box-shadow .2s}
+.item:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(168,71,79,.5)}
+.item h3{font-family:Lora,serif;font-size:21px;margin-bottom:2px}
+.price{font-weight:800;color:var(--rose2);font-size:15px}
+.item p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.item ul{list-style:none;margin-top:8px;font-size:14.5px;color:#5e4a4b}
+.item li{display:flex;justify-content:space-between;border-bottom:1px dashed #efd9d5;padding:4px 0}
+.about{background:var(--sagel)}
+.ab{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+@media(max-width:860px){.ab{grid-template-columns:1fr;gap:20px}}
+.ab svg{width:100%;max-width:340px;display:block;margin:0 auto}
+.facts{display:grid;gap:14px;margin-top:20px}
+.facts div{background:#fff;border-radius:16px;padding:14px 18px;border-left:5px solid var(--sage)}
+.facts b{font-family:Lora,serif;font-size:18px;display:block}
+.facts span{color:var(--muted);font-size:15px}
+blockquote{font-family:Lora,serif;font-style:italic;font-size:22px;color:var(--rose2);margin-top:22px}
+blockquote small{display:block;font:600 13px 'Nunito Sans',sans-serif;color:var(--muted);font-style:normal;margin-top:4px}
+/* quote builder */
+.qb{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;margin-top:28px;align-items:start}
+@media(max-width:860px){.qb{grid-template-columns:1fr}}
+.step{background:#fff;border-radius:20px;padding:20px;border:1px solid #f1dfdb;margin-bottom:14px}
+.step h3{font-family:Lora,serif;font-size:19px;margin-bottom:10px}
+.step h3 span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--rose);color:#fff;font:800 13px 'Nunito Sans',sans-serif;margin-right:8px;vertical-align:2px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:2px solid var(--blush2);background:var(--cream);border-radius:12px;padding:9px 12px;font:700 14px 'Nunito Sans',sans-serif;cursor:pointer;color:var(--ink);text-align:left;transition:all .15s}
+.opt small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.opt[aria-pressed=true]{background:var(--rose);border-color:var(--rose);color:#fff}
+.opt[aria-pressed=true] small{color:#ffe3e0}
+.sub2{margin-top:12px}
+.step input,.step textarea{width:100%;border:2px solid #f1dfdb;border-radius:12px;padding:11px 12px;font:inherit;font-size:15px;background:var(--cream);color:var(--ink)}
+.step textarea{min-height:70px;resize:vertical;margin-top:10px}
+.ticket{background:var(--ink);color:#fbeeea;border-radius:22px;padding:24px;position:sticky;top:16px}
+.ticket h3{font-family:Lora,serif;font-size:23px;color:#fff}
+.tl{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #6a5254;font-size:15px}
+.tl b{color:#fff;text-align:right}
+.big{font-family:Lora,serif;font-size:40px;color:#fff;line-height:1;margin:16px 0 2px}
+.big small{font:600 14px 'Nunito Sans',sans-serif;color:#cdb3b0}
+.flag{margin-top:12px;border-radius:12px;padding:10px 12px;font-size:14px;background:#4c3a3b;display:none}
+.flag.on{display:block}
+.flag.warn{background:#7a3d43}
+.flag.ok{background:#3f5a3d}
+.ticket .btn{width:100%;justify-content:center;margin-top:16px}
+.fine{font-size:12.5px;color:#cdb3b0;margin-top:10px}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:26px;margin-top:26px}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:20px;padding:24px;border:1px solid #f1dfdb}
+.card h3{font-family:Lora,serif;font-size:20px;margin:14px 0 4px}
+.card h3:first-child{margin-top:0}
+.card p{color:#5e4a4b}
+.contact a{display:flex;gap:10px;align-items:center;text-decoration:none;font-weight:700;padding:7px 0;word-break:break-all}
+.contact svg{width:20px;height:20px;flex:none;color:var(--rose)}
+.map{border-radius:20px;overflow:hidden;min-height:300px;border:3px solid var(--blush2)}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+footer{background:var(--sage2);color:#e8efe5;text-align:center;padding:26px 20px;font-size:14px}
+footer b{color:#fff;font-family:Lora,serif}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(58,43,44,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:12px;font-weight:800;text-decoration:none;color:#fff;background:var(--rose)}
+.bar a.e{background:transparent;border:2px solid #7d6667}
+@media(min-width:861px){.bar{display:none}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Nothing But Buttercream. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 22h24l-3 14H11z" fill="#8fa98b"/><path d="M11 22c-4 0-5-6 0-7 0-6 7-8 9-4 2-4 9-2 9 4 5 1 4 7 0 7z" fill="#f7dcd8" stroke="#c9606a" stroke-width="2"/><circle cx="20" cy="8" r="3" fill="#c9606a"/></svg><span>Nothing But <i>Buttercream</i></span></a>
+  <div class="links"><a href="#menu">Menu</a><a href="#lexi">Meet Lexi</a><a href="#quote">Price my order</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hin">
+    <div>
+      <span class="tag"><i></i>Home bakery · Murfreesboro, TN</span>
+      <h1>Pastry-school cakes, <em>baked at home</em> in Murfreesboro.</h1>
+      <p class="sub">Lexi trained in Baking &amp; Pastry Arts and now runs her own home bakery: custom cakes, cupcakes, cheesecakes and cookies, made to order.</p>
+      <div class="ctas">
+        <a class="btn p" href="#quote">Price my order</a>
+        <a class="btn s" href="#menu">See the menu</a>
+      </div>
+      <p class="mini">Book about 2 weeks ahead. $35 order minimum.</p>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 460 420">
+        <g fill="#c9606a"><path class="spr" d="M70 80l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/><path class="spr" d="M392 60l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/><path class="spr" d="M404 250l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/></g>
+        <ellipse cx="230" cy="384" rx="170" ry="22" fill="#3a2b2c" opacity=".08"/>
+        <rect x="104" y="356" width="252" height="14" rx="7" fill="#8fa98b"/>
+        <path d="M150 356h160l-18 14H168z" fill="#5d7a5a"/>
+        <g class="bob">
+          <rect x="112" y="250" width="236" height="106" rx="14" fill="#fff" stroke="#3a2b2c" stroke-width="4"/>
+          <path d="M112 286c20 14 40 14 59 0s40-14 59 0 40 14 59 0 40-14 59 0" fill="none" stroke="#c9606a" stroke-width="4"/>
+          <g fill="#f7dcd8" stroke="#3a2b2c" stroke-width="3"><circle cx="134" cy="342" r="9"/><circle cx="168" cy="344" r="9"/><circle cx="202" cy="342" r="9"/><circle cx="236" cy="344" r="9"/><circle cx="270" cy="342" r="9"/><circle cx="304" cy="344" r="9"/><circle cx="330" cy="342" r="8"/></g>
+          <rect x="146" y="166" width="168" height="86" rx="12" fill="#f7dcd8" stroke="#3a2b2c" stroke-width="4"/>
+          <path d="M146 196c14 12 28 12 42 0s28-12 42 0 28 12 42 0 28-12 42 0" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+          <g fill="#fff" stroke="#3a2b2c" stroke-width="3"><path d="M156 166c0-14 22-14 22 0"/><path d="M186 166c0-14 22-14 22 0"/><path d="M216 166c0-14 22-14 22 0"/><path d="M246 166c0-14 22-14 22 0"/><path d="M276 166c0-14 22-14 22 0"/></g>
+          <g transform="translate(230 128)"><path d="M0 34c-16-6-26-24-12-32C-2-4 0 10 0 10s2-14 12-8c14 8 4 26-12 32z" fill="#c9606a" stroke="#3a2b2c" stroke-width="3"/><path d="M0 34c4-10 14-12 22-8-6 8-14 10-22 8z" fill="#8fa98b" stroke="#3a2b2c" stroke-width="2.5"/></g>
+        </g>
+        <g transform="translate(46 248)"><path d="M10 50h44l-6 42H16z" fill="#8fa98b" stroke="#3a2b2c" stroke-width="3"/><path d="M14 50c-10 0-10-14 0-15 0-14 16-18 18-8 4-10 20-6 18 8 10 1 10 15 0 15z" fill="#fff" stroke="#3a2b2c" stroke-width="3"/><circle cx="32" cy="18" r="6" fill="#c9606a"/></g>
+        <g transform="translate(364 268)"><path d="M8 40h40l-5 36H13z" fill="#efc3bd" stroke="#3a2b2c" stroke-width="3"/><path d="M12 40c-9 0-9-12 0-13 0-12 14-15 16-7 4-9 18-5 16 7 9 1 9 13 0 13z" fill="#e3ebdf" stroke="#3a2b2c" stroke-width="3"/></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <span class="kicker">The menu</span>
+    <h2 class="rv">Cakes, cupcakes, cheesecakes <em>&amp; cookies.</em></h2>
+    <p class="lede rv">Everything is made to order. Prices are Lexi's published starting prices.</p>
+    <div class="season rv"><svg viewBox="0 0 40 40"><path d="M20 10c-10 0-15 6-15 14s6 12 15 12 15-4 15-12-5-14-15-14z" fill="#e5904a"/><path d="M20 10c-3 0-5 8-5 14s2 12 5 12 5-6 5-12-2-14-5-14z" fill="#d27a36"/><path d="M20 10c0-4 2-6 5-7" stroke="#5d7a5a" stroke-width="3" fill="none"/></svg><div><b>In season:</b> Pumpkin Chai cupcakes (September to November), plus Pumpkin Chai and Apple Spice in Bento Boxes and custom cakes (October to December).</div></div>
+    <div class="menu">
+      <div class="item rv"><h3>Assorted Cupcakes</h3><span class="price">$36 / dozen</span><ul><li>1 flavor<b>$36</b></li><li>2 flavors<b>$37</b></li><li>3 flavors<b>$38</b></li></ul></div>
+      <div class="item rv"><h3>Custom Cakes</h3><span class="price">Round, by size &amp; layers</span><ul><li>6" round, 2 / 3 layer<b>$75 / $90</b></li><li>8" round, 2 / 3 layer<b>$105 / $120</b></li><li>10" round, 2 / 3 layer<b>$135 / $150</b></li><li>12" round, 2 / 3 layer<b>$160 / $175</b></li></ul></div>
+      <div class="item rv"><h3>Bento Box</h3><span class="price">Starting at $45</span><ul><li>with 2 cupcakes<b>$45</b></li><li>with 5 cupcakes<b>$55</b></li><li>with 8 cupcakes<b>$65</b></li></ul></div>
+      <div class="item rv"><h3>9 Inch Cheesecake</h3><span class="price">$65</span><p>Seasonal Pumpkin and Peppermint cheesecakes too. Keep it refrigerated (2 hours out, max).</p></div>
+      <div class="item rv"><h3>Cookie Cakes</h3><span class="price">Starting at $45</span><p>A big 11.5-inch cookie cake for the party.</p></div>
+      <div class="item rv"><h3>Assorted Cookies</h3><span class="price">$29</span><p>Choose 2 flavors per dozen.</p></div>
+      <div class="item rv"><h3>Starbucks Cupcakes</h3><span class="price">$48–$51</span><p>Depending on 1 to 3 flavors.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="lexi">
+  <div class="wrap ab">
+    <svg viewBox="0 0 320 300" aria-hidden="true">
+      <circle cx="160" cy="150" r="130" fill="#fff"/>
+      <rect x="92" y="96" width="136" height="104" rx="8" fill="#f7dcd8" stroke="#3a2b2c" stroke-width="4"/>
+      <path d="M92 96l68-44 68 44" fill="#fff" stroke="#3a2b2c" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="146" y="148" width="28" height="52" rx="4" fill="#8fa98b" stroke="#3a2b2c" stroke-width="3"/>
+      <rect x="106" y="120" width="30" height="26" rx="3" fill="#fff" stroke="#3a2b2c" stroke-width="3"/><rect x="184" y="120" width="30" height="26" rx="3" fill="#fff" stroke="#3a2b2c" stroke-width="3"/>
+      <path d="M64 230h192" stroke="#5d7a5a" stroke-width="5" stroke-linecap="round"/>
+      <g transform="translate(206 32) rotate(12)"><path d="M0 30l40-30 10 14-40 30z" fill="#3a2b2c"/><path d="M0 30l-8 16 18-2z" fill="#3a2b2c"/><rect x="-6" y="-6" width="16" height="10" rx="2" fill="#c9606a" transform="rotate(-36)"/></g>
+      <text x="160" y="268" text-anchor="middle" font-family="Lora,serif" font-style="italic" font-size="20" fill="#a8474f">baked at home, trained at school</text>
+    </svg>
+    <div>
+      <span class="kicker">Meet the baker</span>
+      <h2 class="rv">Hey, <em>I'm Lexi.</em></h2>
+      <p class="lede rv">She decided as a high school sophomore that she'd become a pastry chef, and did exactly that. Now it's her very own home business.</p>
+      <div class="facts">
+        <div class="rv"><b>Pastry-trained</b><span>Associate of Science in Baking &amp; Pastry Arts from Sullivan University.</span></div>
+        <div class="rv"><b>Started early</b><span>Started at Sullivan University less than two months after graduating high school.</span></div>
+        <div class="rv"><b>Designs to order</b><span>Cakes, cupcakes, cheesecakes and cookies, designed for your day.</span></div>
+      </div>
+      <blockquote class="rv">"Lexi is the best! Delicious and moist desserts!!"<small>A recent customer review</small></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap">
+    <span class="kicker">Price my order</span>
+    <h2 class="rv">Build it, see the price, <em>send it to Lexi.</em></h2>
+    <p class="lede rv">Pick a treat and your date. You'll see the starting price, the 50% deposit, and whether the date needs a rush fee. Then it opens as an email to Lexi, ready to send.</p>
+    <div class="qb">
+      <div>
+        <div class="step"><h3><span>1</span>What are we baking?</h3><div class="opts" id="kind"></div><div class="opts sub2" id="size"></div></div>
+        <div class="step"><h3><span>2</span>When do you need it?</h3><input type="date" id="date" aria-label="Pickup date"></div>
+        <div class="step"><h3><span>3</span>Tell Lexi about it</h3><input id="name" placeholder="Your name"><textarea id="note" placeholder="Flavors, colors, theme, the occasion..."></textarea></div>
+      </div>
+      <aside class="ticket">
+        <h3>Your order</h3>
+        <div class="tl"><span>Treat</span><b id="tItem">Pick one</b></div>
+        <div class="tl"><span>Pickup</span><b id="tDate">Pick a date</b></div>
+        <div class="big" id="tPrice">$0<small> starting</small></div>
+        <div class="tl"><span>50% deposit to book</span><b id="tDep">$0</b></div>
+        <div class="flag" id="flag"></div>
+        <a class="btn p" id="send" href="mailto:nothingbutbuttercream@gmail.com">Email this to Lexi</a>
+        <p class="fine">Starting prices only. Final price depends on the design. Deposit is due on booking day and is non-refundable; balance due at pickup.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--blush)" id="contact">
+  <div class="wrap">
+    <span class="kicker">Say hello</span>
+    <h2 class="rv">Ordering from <em>Murfreesboro.</em></h2>
+    <div class="visit">
+      <div class="card rv">
+        <h3>How ordering works</h3>
+        <p>Typical lead time is 2 weeks. Orders a week or less before your date include a rush fee. $35 minimum, 50% deposit secures your date and pickup time.</p>
+        <h3>Get in touch</h3>
+        <div class="contact">
+          <a href="mailto:nothingbutbuttercream@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>nothingbutbuttercream@gmail.com</a>
+          <a href="https://www.facebook.com/nothingbutbuttercream"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>facebook.com/nothingbutbuttercream</a>
+          <a href="https://www.tiktok.com/@nothingbutbuttercream"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.4 2.4 2 4 4.5 4.2v3.2c-1.7 0-3.2-.5-4.5-1.4v6.6A5.6 5.6 0 1 1 10.4 10v3.3a2.4 2.4 0 1 0 2.4 2.4V3z"/></svg>TikTok: nothingbutbuttercream</a>
+        </div>
+      </div>
+      <div class="map rv"><iframe title="Map of Murfreesboro, TN" loading="lazy" src="https://www.google.com/maps?q=Murfreesboro%2C%20TN&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Nothing But Buttercream</b> · Home bakery in Murfreesboro, Tennessee<br>Concept by Code Craft Media</footer>
+<div class="bar" id="bar"><a href="#quote">Price my order</a><a class="e" href="mailto:nothingbutbuttercream@gmail.com">Email Lexi</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var bar=document.getElementById('bar'),hero=document.getElementById('top');
+  function sb(){bar.classList.toggle('on',window.scrollY>hero.offsetTop+hero.offsetHeight-80)}
+  window.addEventListener('scroll',sb,{passive:true});sb();
+
+  var M={
+    'Cupcakes (dozen)':[['1 flavor',36],['2 flavors',37],['3 flavors',38]],
+    'Custom cake':[['6" · 2 layer',75],['6" · 3 layer',90],['8" · 2 layer',105],['8" · 3 layer',120],['10" · 2 layer',135],['10" · 3 layer',150],['12" · 2 layer',160],['12" · 3 layer',175]],
+    'Bento Box':[['2 cupcakes',45],['5 cupcakes',55],['8 cupcakes',65]],
+    '9" Cheesecake':[['9 inch',65]],
+    'Cookie cake':[['11.5 inch',45]],
+    'Cookies (dozen)':[['2 flavors',29]],
+    'Starbucks Cupcakes':[['1 flavor',48],['3 flavors',51]]
+  };
+  var kind=null,size=null,kEl=document.getElementById('kind'),sEl=document.getElementById('size'),dEl=document.getElementById('date');
+  kEl.innerHTML=Object.keys(M).map(function(k){return '<button type="button" class="opt" aria-pressed="false" data-k="'+k.replace(/"/g,'&quot;')+'">'+k+'<small>from $'+M[k][0][1]+'</small></button>'}).join('');
+  function sizes(){sEl.innerHTML=kind?M[kind].map(function(s,i){return '<button type="button" class="opt" aria-pressed="'+(i===size)+'" data-s="'+i+'">'+s[0]+'<small>$'+s[1]+'</small></button>'}).join(''):''}
+  kEl.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;kind=b.dataset.k;size=0;[].forEach.call(kEl.children,function(x){x.setAttribute('aria-pressed',x===b)});sizes();upd()});
+  sEl.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;size=+b.dataset.s;sizes();upd()});
+  var today=new Date();today.setHours(0,0,0,0);
+  function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  dEl.min=iso(today);
+  function upd(){
+    var price=kind?M[kind][size][1]:0,label=kind?(kind+' · '+M[kind][size][0]):'Pick one';
+    document.getElementById('tItem').textContent=label;
+    document.getElementById('tPrice').innerHTML='$'+price+'<small> starting</small>';
+    document.getElementById('tDep').textContent='$'+(price/2).toFixed(price%2?2:0);
+    var f=document.getElementById('flag'),ds='';f.className='flag';
+    if(dEl.value){var d=new Date(dEl.value+'T00:00:00');ds=d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});var days=Math.round((d-today)/864e5);
+      if(days<=7){f.className='flag on warn';f.textContent='That\'s '+days+' day'+(days===1?'':'s')+' away, so a rush fee applies. Lexi will confirm if she can fit it in.'}
+      else if(days<14){f.className='flag on';f.textContent=days+' days out. A little under the usual 2-week lead time, so send it soon.'}
+      else{f.className='flag on ok';f.textContent=days+' days out. Plenty of time, no rush fee.'}}
+    document.getElementById('tDate').textContent=ds||'Pick a date';
+    var nm=document.getElementById('name').value,nt=document.getElementById('note').value;
+    var body='Hi Lexi,\n\nI\'d like to order:\n- '+(kind?label+' (starting at $'+price+')':'(my treat)')+'\n- Pickup: '+(ds||'(date)')+(nt?'\n\nDetails: '+nt:'')+'\n\nCould you let me know if that date works and how to pay the deposit?\n\nThanks!'+(nm?'\n'+nm:'');
+    document.getElementById('send').href='mailto:nothingbutbuttercream@gmail.com?subject='+encodeURIComponent('Order request: '+(kind||'treats'))+'&body='+encodeURIComponent(body);
+  }
+  kind='Cupcakes (dozen)';size=0;kEl.children[0].setAttribute('aria-pressed','true');sizes();
+  dEl.addEventListener('input',upd);document.getElementById('name').addEventListener('input',upd);document.getElementById('note').addEventListener('input',upd);upd();
+})();
+</script>
+</body>
+</html>

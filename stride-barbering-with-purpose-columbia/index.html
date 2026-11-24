@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Stride Barbering With Purpose — Columbia</title>
+<meta name="description" content="Haircuts with a mission in Columbia, TN. Every service supports wellness initiatives, community outreach and mentorship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#26323f;--slate2:#334252;--deep:#1a232d;--mint:#7fe3c3;--mint2:#b8f2df;--paper:#f3f6f5;--ink:#1a232d;--muted:#5c6b78;
+--sans:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}svg{display:block;max-width:100%}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.concept{background:var(--mint);color:var(--deep);font-size:12.5px;text-align:center;padding:7px 14px;font-weight:500}
+header.nav{background:var(--slate);color:#fff}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:66px;gap:12px}
+.brand{font-weight:800;font-size:22px;letter-spacing:.12em;text-decoration:none}
+.brand span{color:var(--mint)}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:14.5px;font-weight:500}
+.nav ul a{text-decoration:none;color:#c8d3dc}.nav ul a:hover{color:var(--mint)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:12px;font-weight:700;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-mint{background:var(--mint);color:var(--deep)}.btn-mint:hover{background:var(--mint2)}
+.btn-line{border:1.5px solid var(--mint);color:var(--mint);background:transparent}
+.hero{background:var(--slate);color:#fff;padding:70px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--mint);font-weight:700}
+h1{font-weight:800;font-size:clamp(42px,6.4vw,80px);line-height:1;letter-spacing:-.03em;margin:16px 0 22px}
+h1 span{color:var(--mint)}
+.lede{font-size:clamp(16px,1.6vw,19px);color:#c8d3dc;max-width:32em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.steps-art{width:100%;max-width:380px;margin-inline:auto}
+.steps-art .s{animation:rise 3.6s ease-in-out infinite}
+.steps-art .s2{animation-delay:.3s}.steps-art .s3{animation-delay:.6s}.steps-art .s4{animation-delay:.9s}
+@keyframes rise{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+section{padding:90px 0}
+.kick{font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:#1e8e6c;font-weight:700}
+h2{font-weight:800;font-size:clamp(32px,4.6vw,54px);line-height:1.05;letter-spacing:-.025em;margin-top:10px}
+h2 span{color:#1e8e6c}
+.sec-head{max-width:640px;margin-bottom:40px}.sec-head p{margin-top:14px;color:var(--muted);font-size:17px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pil{background:#fff;border-radius:20px;padding:28px 24px;border:1px solid #dde6e3}
+.pil .n{width:48px;height:48px;border-radius:14px;background:var(--slate);color:var(--mint);display:grid;place-items:center;font-weight:800;font-size:20px;margin-bottom:16px}
+.pil h3{font-size:21px;font-weight:800;margin-bottom:6px}
+.pil p{color:var(--muted)}
+.book{background:var(--deep);color:#fff}
+.book h2{color:#fff}.book h2 span{color:var(--mint)}.book .kick{color:var(--mint)}.book .sec-head p{color:#aebbc6}
+.picker{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.opts{display:grid;gap:10px}
+.opt{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px 18px;border-radius:14px;background:var(--slate);border:1.5px solid transparent;color:#fff;font-family:inherit;font-size:16px;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
+.opt b{font-weight:700}.opt small{display:block;color:#aebbc6;font-size:13px}
+.opt .pr{font-weight:800;color:var(--mint);white-space:nowrap}
+.opt[aria-pressed="true"]{border-color:var(--mint);background:var(--slate2)}
+.panel{background:var(--paper);color:var(--ink);border-radius:20px;padding:26px}
+.panel h3{font-size:22px;font-weight:800}
+.panel .price{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:8px 0 4px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:18px 0 8px}
+.day{border-radius:10px;padding:8px 2px;text-align:center;font-size:12px;font-weight:700;background:#e3e9e7;color:#8a98a3}
+.day.open{background:var(--mint);color:var(--deep)}
+.hrs{font-size:14px;color:var(--muted);min-height:44px}
+.panel .btn{width:100%;margin-top:14px;background:var(--slate);color:#fff}
+.note{font-size:13px;color:#aebbc6;margin-top:14px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:#fff;border-radius:20px;padding:24px;border:1px solid #dde6e3}
+.rev p{font-size:16.5px}
+.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:700;color:#1e8e6c;font-size:14px}
+.visit .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:28px}
+.card{background:var(--slate);color:#fff;border-radius:20px;padding:32px 28px}
+.card h2{color:#fff}.card h2 span{color:var(--mint)}.card .kick{color:var(--mint)}
+.card dl{display:grid;gap:12px;margin-top:20px}
+.card dt{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);font-weight:700}
+.map{border-radius:20px;overflow:hidden;min-height:360px;background:#dde6e3}
+.map iframe{display:block;width:100%;height:100%;min-height:360px;border:0}
+footer{background:var(--deep);color:#aebbc6;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer b{color:#fff;font-size:19px;letter-spacing:.08em}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(26,35,45,.96);transform:translateY(110%);transition:transform .35s}
+.bar.on{transform:none}.bar .btn{width:100%}
+@media (max-width:899px){.nav ul{display:none}.hero .wrap,.picker,.visit .wrap{grid-template-columns:1fr}.pillars,.revs{grid-template-columns:1fr}section{padding:70px 0}.bar{display:block}.steps-art{max-width:260px}}
+@media (max-width:420px){.cta .btn{flex:1 1 100%}.nav .btn{display:none}}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Stride Barbering With Purpose. Not live.</div>
+<header class="nav"><div class="wrap">
+ <a class="brand" href="#top">STRIDE<span>.</span></a>
+ <ul><li><a href="#mission">Mission</a></li><li><a href="#book">Services</a></li><li><a href="#visit">Visit</a></li></ul>
+ <a class="btn btn-mint" href="https://www.fresha.com/a/stride-barbering-with-purpose-columbia-521-ykld2nf5" target="_blank" rel="noopener">Book</a>
+</div></header>
+<main id="top">
+<section class="hero">
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">Barbering with purpose &middot; Columbia, TN</span>
+   <h1>A fresh cut that <span>gives back.</span></h1>
+   <p class="lede">STRIDE is dedicated to community impact and transformation. Every service helps support wellness initiatives, community outreach and mentorship, one chair at a time.</p>
+   <div class="cta"><a class="btn btn-mint" href="#book">Find your service</a><a class="btn btn-line" href="#mission">Our mission</a></div>
+  </div>
+  <div class="rv" aria-hidden="true">
+   <svg class="steps-art" viewBox="0 0 380 300">
+    <g fill="#334252"><rect class="s" x="20" y="210" width="80" height="70" rx="10"/><rect class="s s2" x="105" y="160" width="80" height="120" rx="10"/><rect class="s s3" x="190" y="110" width="80" height="170" rx="10"/><rect class="s s4" x="275" y="60" width="80" height="220" rx="10"/></g>
+    <g fill="#7fe3c3"><rect class="s" x="20" y="210" width="80" height="8" rx="4"/><rect class="s s2" x="105" y="160" width="80" height="8" rx="4"/><rect class="s s3" x="190" y="110" width="80" height="8" rx="4"/><rect class="s s4" x="275" y="60" width="80" height="8" rx="4"/></g>
+    <g stroke="#7fe3c3" stroke-width="4" fill="none" stroke-linecap="round"><circle cx="300" cy="28" r="12"/><circle cx="330" cy="28" r="12"/><path d="M310 22 L355 0 M310 34 L355 56" /></g>
+   </svg>
+  </div>
+ </div>
+</section>
+
+<section id="mission">
+ <div class="wrap">
+  <div class="sec-head rv"><span class="kick">The mission</span><h2>Every service helps <span>the community.</span></h2><p>When you sit in Larissa&rsquo;s chair, your cut supports the movement and the mission to give back.</p></div>
+  <div class="pillars">
+   <div class="pil rv"><div class="n">01</div><h3>Wellness initiatives</h3><p>Larissa is a barber, educator and wellness coach, and wellness is part of the mission.</p></div>
+   <div class="pil rv"><div class="n">02</div><h3>Community outreach</h3><p>Every service helps support the mission to give back through community outreach.</p></div>
+   <div class="pil rv"><div class="n">03</div><h3>Mentorship</h3><p>Mentorship is one of the ways STRIDE gives back, toward community transformation.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="book" id="book">
+ <div class="wrap">
+  <div class="sec-head rv"><span class="kick">Find your service</span><h2>Pick a cut, <span>see when you can come in.</span></h2><p>Tap a service for the price and the days the chair is open.</p></div>
+  <div class="picker">
+   <div class="opts rv" id="opts"></div>
+   <div class="panel rv" aria-live="polite">
+    <h3 id="pname">Classic | 12+</h3>
+    <div class="price" id="pprice">from $50</div>
+    <div id="ptime" style="color:var(--muted);font-weight:500">45 min</div>
+    <div class="days" id="days"></div>
+    <p class="hrs">Thursday 10:30am&ndash;12:30pm &amp; 4&ndash;7pm &middot; Friday 10:30am&ndash;7pm &middot; Sunday 4&ndash;7pm</p>
+    <a class="btn" href="https://www.fresha.com/a/stride-barbering-with-purpose-columbia-521-ykld2nf5" target="_blank" rel="noopener">Book on Fresha</a>
+   </div>
+  </div>
+  <p class="note rv">More services are listed on Fresha.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="sec-head rv"><span class="kick">From the chair</span><h2>What clients <span>are saying.</span></h2></div>
+  <div class="revs">
+   <div class="rev rv"><p>&ldquo;Experience, Quality of cut. Attention to details and 100% Top Craftmanship&rdquo;</p><cite>Charles H., on Fresha</cite></div>
+   <div class="rev rv"><p>&ldquo;My son had been growing his locs for a few years and decided to restart&hellip; Larissa did a lovely job. We will be back again and again&hellip;and again..&rdquo;</p><cite>Courtney M., on Fresha</cite></div>
+   <div class="rev rv"><p>&ldquo;The vibe, the service, the cut!! Absolutely enjoyed my experience can&rsquo;t wait to Book again!!&rdquo;</p><cite>Alannah B., on Fresha</cite></div>
+  </div>
+ </div>
+</section>
+
+<section class="visit" id="visit" style="padding-top:0">
+ <div class="wrap">
+  <div class="card rv">
+   <span class="kick">Visit</span><h2>See Larissa in <span>Columbia.</span></h2>
+   <dl>
+    <dt>Where</dt><dd>Columbia, TN 38401</dd>
+    <dt>Hours</dt><dd>Thu 10:30am&ndash;12:30pm, 4&ndash;7pm<br>Fri 10:30am&ndash;7pm<br>Sun 4&ndash;7pm</dd>
+    <dt>Booking</dt><dd>Online on Fresha</dd>
+   </dl>
+   <div class="cta"><a class="btn btn-mint" href="https://www.fresha.com/a/stride-barbering-with-purpose-columbia-521-ykld2nf5" target="_blank" rel="noopener">Book a cut</a></div>
+  </div>
+  <div class="map rv"><iframe title="Map of Columbia, TN" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Columbia%2C%20TN%2038401&amp;output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap"><div><b>STRIDE Barbering With Purpose</b><br>Columbia, TN</div><div>Concept by Code Craft Media</div></div></footer>
+<div class="bar" id="bar"><a class="btn btn-mint" href="https://www.fresha.com/a/stride-barbering-with-purpose-columbia-521-ykld2nf5" target="_blank" rel="noopener">Book on Fresha</a></div>
+<script>
+(function(){
+ document.documentElement.classList.add('js');
+ var S=[["Classic | 12+","from $50","45 min"],["Classic Jr.","from $40","45 min"],["Haircut + Facial Hair","$60","1 hr"],["Haircut + Design","$60","1 hr"],["2 Classic Jr Haircuts","$70","1 hr"],["Signature","from $70","1 hr"]];
+ var D=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],open={Thu:1,Fri:1,Sun:1},dd=document.getElementById('days');
+ D.forEach(function(d){var e=document.createElement('div');e.className='day'+(open[d]?' open':'');e.textContent=d;dd.appendChild(e)});
+ var box=document.getElementById('opts'),bs=[];
+ S.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.className='opt';b.setAttribute('aria-pressed',i?'false':'true');
+  b.innerHTML='<span><b>'+s[0]+'</b><small>'+s[2]+'</small></span><span class="pr">'+s[1]+'</span>';
+  b.addEventListener('click',function(){bs.forEach(function(x,j){x.setAttribute('aria-pressed',j===i?'true':'false')});document.getElementById('pname').textContent=s[0];document.getElementById('pprice').textContent=s[1];document.getElementById('ptime').textContent=s[2]});bs.push(b);box.appendChild(b)});
+ var els=[].slice.call(document.querySelectorAll('.rv'));function show(){els.forEach(function(e){e.classList.add('in')})}
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}else show();
+ setTimeout(show,1500);
+ var bar=document.getElementById('bar'),hero=document.querySelector('.hero');function sb(){bar.classList.toggle('on',hero.getBoundingClientRect().bottom<0)}window.addEventListener('scroll',sb,{passive:true});sb();
+})();
+</script>
+</body>
+</html>
