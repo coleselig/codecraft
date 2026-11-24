@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dirt Poor Farm — Sweetwater, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#6b5b95;--lav2:#8a7bb3;--lavpale:#e7e1f0;--linen:#f6f1ea;--linen2:#ede5d8;--olive:#5b6b3a;--olive2:#7d8c55;--ink:#1d1b22;--muted:#5c5766}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--linen);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.banner{background:var(--ink);color:#d9d2e6;font-size:12px;text-align:center;padding:7px 14px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;max-width:1160px;margin:0 auto}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:22px;text-decoration:none;color:var(--lav);display:flex;gap:8px;align-items:center}
+.logo svg{width:26px;height:26px}
+nav .links{display:flex;gap:24px;font-size:14px;font-weight:500}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--lav)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{max-width:1160px;margin:0 auto;padding:30px 22px 50px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:12px}}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);font-weight:700;border-bottom:1px solid var(--olive2);padding-bottom:4px}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(42px,6.6vw,78px);line-height:.98;margin:16px 0 16px;letter-spacing:-.01em}
+h1 em{color:var(--lav);font-style:italic}
+.sub{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--lav);color:#fff}
+.btn.p:hover{background:#5a4b83}
+.btn.s{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.art svg{width:100%;height:auto;display:block}
+.sway{transform-origin:50% 92%;animation:sway 6s ease-in-out infinite}
+.sway.b{animation-delay:-2s}.sway.c{animation-delay:-4s}
+@keyframes sway{50%{transform:rotate(2deg)}}
+@media(prefers-reduced-motion:reduce){.sway{animation:none}}
+.strip{background:var(--olive);color:#f1eedf;overflow:hidden}
+.strip ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;padding:16px 22px;max-width:1160px;margin:0 auto;font-size:14px;font-weight:500}
+.strip li:before{content:"\273F";margin-right:8px;color:#d6cfe6}
+section{padding:72px 22px}
+.wrap{max-width:1100px;margin:0 auto}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(34px,4.6vw,52px);line-height:1.05;margin:10px 0 14px}
+h2 em{color:var(--lav)}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:#fffdf9;border:1px solid var(--linen2);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.card svg{width:54px;height:54px;margin-bottom:10px}
+.card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+.press{background:var(--lavpale)}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:860px){.why{grid-template-columns:1fr}}
+.why ul{list-style:none;display:grid;gap:14px;margin-top:8px}
+.why li{background:#fff;border-radius:14px;padding:16px 18px 16px 52px;position:relative;font-size:15px}
+.why li b{display:block;font-size:16px}
+.why li:before{content:"";position:absolute;left:18px;top:19px;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 50% 50%,var(--lav) 0 35%,transparent 36%),var(--lavpale);border:1.5px solid var(--lav)}
+/* bundle builder */
+.builder{background:var(--ink);color:var(--linen)}
+.builder h2 em{color:#b9abdc}
+.builder .lead{color:#bfb8c9}
+.bgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;margin-top:30px;align-items:start}
+@media(max-width:860px){.bgrid{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:transparent;border:1.5px solid #4a4555;color:var(--linen);border-radius:999px;padding:11px 16px;font:500 15px Manrope,system-ui,sans-serif;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:8px}
+.chip:hover{border-color:#b9abdc}
+.chip[aria-pressed=true]{background:var(--lav);border-color:var(--lav);color:#fff}
+.chip span{font-size:17px}
+.tie{background:var(--linen);color:var(--ink);border-radius:20px;padding:22px;position:relative}
+.tie h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600}
+.bundle svg{width:100%;max-width:240px;display:block;margin:4px auto 6px}
+.stem{transform-origin:120px 200px;transition:transform .5s cubic-bezier(.3,1.5,.5,1),opacity .3s;opacity:0;transform:scale(.4)}
+.stem.on{opacity:1;transform:scale(1)}
+#picked{font-size:14px;color:var(--muted);min-height:22px;margin-bottom:12px}
+.tie label{font-size:13px;font-weight:700;display:block;margin:6px 0 4px}
+.tie input{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #d6ccbd;font:15px Manrope,system-ui,sans-serif;background:#fff}
+.tie .btn{width:100%;justify-content:center;margin-top:12px}
+.tie .note{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+.find{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:stretch}
+@media(max-width:860px){.find{grid-template-columns:1fr}}
+.spot{background:#fffdf9;border:1px solid var(--linen2);border-radius:16px;padding:20px;margin-bottom:14px}
+.spot h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:600}
+.spot p{color:var(--muted);font-size:15px}
+.spot .when{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;color:var(--olive)}
+iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:18px;filter:saturate(.75)}
+.contact{background:var(--lav);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .lead{color:#e3dcf2;margin:0 auto}
+.contact .ctas{justify-content:center}
+.contact .btn.p{background:#fff;color:var(--lav)}
+.contact .btn.s{border-color:#fff;color:#fff}
+footer{background:var(--ink);color:#a9a2b6;text-align:center;font-size:13px;padding:26px 22px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(29,27,34,.96);display:flex;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px}
+.bar a.p{background:var(--lav);color:#fff}.bar a.s{border:1.5px solid #6b6577;color:#fff}
+@media(min-width:861px){.bar{display:none}}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.js .rv.in,.js.shown .rv{opacity:1;transform:none}
+</style>
+<style>
+.cal{margin-top:30px;background:#fff;border-radius:18px;padding:18px;overflow-x:auto}
+.cal table{border-collapse:collapse;width:100%;min-width:300px;font-size:13px}
+.cal th{font-weight:700;color:var(--muted);padding:4px 0;font-size:11px}
+.cal td{padding:5px 1px}
+.cal td.n{white-space:nowrap;padding-right:10px;width:1%;font-weight:700;font-size:13px}
+.cal td:not(.n),.cal th:not(:first-child){width:7.6%}
+.cal td i{display:block;height:14px;border-radius:4px;background:var(--linen2)}
+.cal td i.on{background:var(--lav)}
+.cal td i.ol{background:var(--olive)}
+@media(max-width:560px){.cal th{font-size:9px}.cal td.n{font-size:12px}}
+.basket svg{width:100%;max-width:260px;display:block;margin:0 auto 6px}
+.veg{transform-origin:130px 120px;transition:transform .45s cubic-bezier(.3,1.5,.5,1),opacity .3s;opacity:0;transform:translateY(-40px) scale(.6)}
+.veg.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Dirt Poor Farm. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 20h20" stroke="#1d1b22" stroke-width="1.6"/><path d="M13 20V9" stroke="#5b6b3a" stroke-width="1.6"/><ellipse cx="9" cy="10" rx="4" ry="2.4" fill="#5b6b3a" transform="rotate(-30 9 10)"/><ellipse cx="17" cy="8" rx="4" ry="2.4" fill="#7d8c55" transform="rotate(30 17 8)"/></svg>Dirt Poor Farm</a>
+  <div class="links"><a href="#grow">What we grow</a><a href="#seasons">Seasons</a><a href="#basket">Fill a basket</a><a href="#visit">Find us</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="eyebrow">Sweetwater, Tennessee &middot; McMinn County</span>
+    <h1>Thirty acres of <em>real food</em>, grown in Sweetwater.</h1>
+    <p class="sub">A 30+ acre, woman-owned produce farm growing since 2016. Strawberries to sweet potatoes, a CSA, a pumpkin patch and U-pick rows, plus Knoxville's Market Square Farmers Market.</p>
+    <div class="ctas">
+      <a class="btn p" href="#basket">Fill your basket</a>
+      <a class="btn s" href="#visit">Where to find us</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 480 440">
+      <circle cx="250" cy="215" r="190" fill="#e7e1f0"/>
+      <path d="M40 46H460" stroke="#1d1b22" stroke-width="2"/>
+      <!-- hanging garlic braid -->
+      <g class="sway"><path d="M120 46v20" stroke="#1d1b22" stroke-width="1.4"/>
+        <g fill="#f6f1ea" stroke="#1d1b22" stroke-width="1.4"><path d="M120 72c-12 4-14 20 0 24 14-4 12-20 0-24z"/><path d="M120 98c-12 4-14 20 0 24 14-4 12-20 0-24z"/><path d="M120 124c-12 4-14 20 0 24 14-4 12-20 0-24z"/></g>
+        <path d="M120 66v8" stroke="#5b6b3a" stroke-width="3"/></g>
+      <!-- hanging herb bundle -->
+      <g class="sway b"><path d="M380 46v18" stroke="#1d1b22" stroke-width="1.4"/>
+        <g transform="translate(380 64)"><path d="M0 0v110M0 0l-14 100M0 0l14 100" stroke="#7d8c55" stroke-width="2"/><g fill="#5b6b3a"><ellipse cx="-14" cy="70" rx="5" ry="10" transform="rotate(30 -14 70)"/><ellipse cx="14" cy="84" rx="5" ry="10" transform="rotate(-30 14 84)"/><ellipse cx="-6" cy="104" rx="4" ry="9"/><ellipse cx="10" cy="54" rx="5" ry="10" transform="rotate(-25 10 54)"/><ellipse cx="-12" cy="42" rx="4" ry="9" transform="rotate(25 -12 42)"/></g><rect x="-9" y="2" width="18" height="8" rx="2" fill="#6b5b95"/></g></g>
+      <!-- crate of produce -->
+      <g transform="translate(250 300)">
+        <g class="sway c"><path d="M-70 0c-6-40 8-70 20-80" stroke="#5b6b3a" stroke-width="3" fill="none"/><ellipse cx="-48" cy="-84" rx="16" ry="8" fill="#7d8c55" transform="rotate(-30 -48 -84)"/></g>
+        <circle cx="-62" cy="-8" r="26" fill="#c8643b"/><path d="M-62 -34l-4 -8M-62 -34l6 -6" stroke="#5b6b3a" stroke-width="3"/>
+        <ellipse cx="-10" cy="-18" rx="34" ry="30" fill="#d98a2b"/><path d="M-30 -40c6 10 6 34 0 46M-10 -48v60M10 -40c-6 10-6 34 0 46" stroke="#b56f1e" stroke-width="2" fill="none"/><path d="M-10 -48c0-10 6-14 10-14" stroke="#5b6b3a" stroke-width="4" fill="none"/>
+        <g class="sway"><path d="M40 -6c4-30 12-60 22-74M48 -6c8-26 22-48 36-58" stroke="#5b6b3a" stroke-width="3" fill="none"/></g>
+        <path d="M30 -4c8-26 40-26 46 0z" fill="#6b5b95"/>
+        <rect x="-110" y="0" width="220" height="70" rx="6" fill="#f6f1ea" stroke="#1d1b22" stroke-width="2"/>
+        <path d="M-110 24h220M-110 46h220" stroke="#1d1b22" stroke-width="1.2" stroke-opacity=".4"/>
+        <text x="0" y="40" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-weight="700" fill="#5b6b3a" letter-spacing="3">SWEETWATER, TN</text>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<div class="strip"><ul><li>30+ acres since 2016</li><li>Summer &amp; fall CSA</li><li>U-pick rows</li><li>Pumpkin patch</li><li>EBT/SNAP accepted</li></ul></div>
+
+<section id="grow">
+  <div class="wrap">
+    <span class="eyebrow rv">From the field</span>
+    <h2 class="rv">What comes out of <em>the dirt</em></h2>
+    <p class="lead rv">Organic practices (not certified), low spray and GMO-free, alongside conventional growing. Here is what the farm lists.</p>
+    <div class="grid">
+      <div class="card rv"><h3>Fruit &amp; berries</h3><p>Strawberries, blueberries, blackberries, peaches, apples, muscadines, cantaloupes, melons and watermelons.</p></div>
+      <div class="card rv"><h3>Greens</h3><p>Kale, collards, Swiss chard, mustard greens, arugula, Asian greens, lettuce, salad greens and salad mix.</p></div>
+      <div class="card rv"><h3>Roots &amp; alliums</h3><p>Carrots, beets, potatoes, sweet potatoes, parsnips, radish, daikon, turnips, garlic, onions, green onions and shallots.</p></div>
+      <div class="card rv"><h3>Summer vegetables</h3><p>Tomatoes, sweet corn, okra, cucumber, eggplant, summer squash, sweet and hot peppers, chiles, green beans and pole beans.</p></div>
+      <div class="card rv"><h3>Cool-season crops</h3><p>Broccoli, Brussels sprouts, cabbage, kohlrabi and peas, plus dry beans for the pantry.</p></div>
+      <div class="card rv"><h3>Fall &amp; flowers</h3><p>Pumpkins, winter squash and gourds, fresh herbs and fresh flowers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="press" id="seasons">
+  <div class="wrap">
+    <span class="eyebrow rv">Through the year</span>
+    <h2 class="rv">When to <em>come pick</em></h2>
+    <p class="lead rv">The farm's published seasons for its CSA, pumpkin patch and U-pick rows.</p>
+    <div class="cal rv"><table>
+      <tr><th></th><th>J</th><th>F</th><th>M</th><th>A</th><th>M</th><th>J</th><th>J</th><th>A</th><th>S</th><th>O</th><th>N</th><th>D</th></tr>
+      <tr><td class="n">Summer CSA</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i class="on"></i></td><td><i class="on"></i></td><td><i class="on"></i></td><td><i class="on"></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td class="n">Fall CSA</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i class="on"></i></td><td><i class="on"></i></td><td><i class="on"></i></td></tr>
+      <tr><td class="n">U-pick beans</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td class="n">U-pick flowers</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i></i></td><td><i></i></td><td><i></i></td></tr>
+      <tr><td class="n">Pumpkin patch</td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i class="ol"></i></td><td><i></i></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="builder" id="basket">
+  <div class="wrap">
+    <span class="eyebrow rv" style="color:#c9d29f;border-color:#7d8c55">Fill a basket</span>
+    <h2 class="rv">Tap it in, <em>send it over</em></h2>
+    <p class="lead rv">Pick what you're after this week. Each tap drops it in the basket, then send your list straight to the farm.</p>
+    <div class="bgrid">
+      <div class="chips" id="chips">
+        <button class="chip" aria-pressed="false" data-i="0">Strawberries</button>
+        <button class="chip" aria-pressed="false" data-i="1">Tomatoes</button>
+        <button class="chip" aria-pressed="false" data-i="2">Sweet corn</button>
+        <button class="chip" aria-pressed="false" data-i="3">Kale &amp; greens</button>
+        <button class="chip" aria-pressed="false" data-i="4">Sweet potatoes</button>
+        <button class="chip" aria-pressed="false" data-i="5">Peaches</button>
+        <button class="chip" aria-pressed="false" data-i="6">Pumpkins</button>
+        <button class="chip" aria-pressed="false" data-i="7">Garlic</button>
+        <button class="chip" aria-pressed="false" data-i="8">Fresh flowers</button>
+        <button class="chip" aria-pressed="false" data-i="9">CSA share</button>
+      </div>
+      <div class="tie">
+        <h3>Your basket</h3>
+        <div class="basket" aria-hidden="true">
+          <svg viewBox="0 0 260 190"><g id="vegs"></g>
+            <path d="M30 110h200l-22 70H52z" fill="#c9a877" stroke="#1d1b22" stroke-width="2"/>
+            <path d="M40 132h180M46 154h168" stroke="#1d1b22" stroke-opacity=".35"/>
+            <path d="M70 110c0-70 120-70 120 0" stroke="#1d1b22" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+        <div id="picked">Basket's empty.</div>
+        <label for="nm">Your name</label>
+        <input id="nm" placeholder="First name" autocomplete="given-name">
+        <a class="btn p" id="send" href="mailto:dirtpoorfarm@outlook.com">Send my list to the farm</a>
+        <p class="note">Opens an email to dirtpoorfarm@outlook.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <span class="eyebrow rv">Where to find us</span>
+    <h2 class="rv">At the farm, at market, <em>at your door</em></h2>
+    <div class="find" style="margin-top:28px">
+      <div>
+        <div class="spot rv"><h3>Market Square Farmers Market</h3><p>Downtown Knoxville. Dirt Poor Farm is listed among the market's farms.</p><span class="when">2026 season: May 2 &ndash; Oct 31</span></div>
+        <div class="spot rv"><h3>More farmers markets</h3><p>Dixie Lee Farmers Market, Historic Oak Ridge Farmers Market and the Chattanooga Farmers Market (Sundays).</p></div>
+        <div class="spot rv"><h3>The farm in Sweetwater</h3><p>Onsite farm store, CSA pickup and farm tours by appointment. Farm pickup orders need 24 hours' notice. Credit/debit, EBT/SNAP and SNAP incentives accepted.</p></div>
+        <div class="spot rv"><h3>Delivered by Market Wagon</h3><p>Thursday delivery (order by Tuesday) across Knox, Blount, Loudon, McMinn, Hamilton, Bradley and more East Tennessee counties.</p></div>
+      </div>
+      <iframe class="rv" title="Map of Sweetwater, TN" loading="lazy" src="https://www.google.com/maps?q=Sweetwater%2C%20TN%2037874&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Hungry for something real?</h2>
+    <p class="lead">Ask about the CSA, U-pick days, the pumpkin patch or a farm tour.</p>
+    <div class="ctas">
+      <a class="btn p" href="mailto:dirtpoorfarm@outlook.com">dirtpoorfarm@outlook.com</a>
+      <a class="btn s" href="tel:+16063044917">(606) 304-4917</a>
+      <a class="btn s" href="https://www.facebook.com/dirtpoorfarm">Facebook</a>
+      <a class="btn s" href="https://www.instagram.com/dirt.poor.farm">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>Dirt Poor Farm &middot; Sweetwater, TN &middot; Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><a class="p" href="#basket">Fill a basket</a><a class="s" href="tel:+16063044917">Call</a></div>
+
+<script>
+(function(){
+  var d=document.documentElement;d.classList.add('js');
+  setTimeout(function(){d.classList.add('shown')},1500);
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  } else d.classList.add('shown');
+  var hero=document.getElementById('top'),bar=document.getElementById('bar');
+  function sc(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)}
+  addEventListener('scroll',sc,{passive:true});sc();
+
+  var names=['Strawberries','Tomatoes','Sweet corn','Kale & greens','Sweet potatoes','Peaches','Pumpkins','Garlic','Fresh flowers','CSA share'];
+  var cols=['#c8343b','#d9482b','#e2c04a','#5b6b3a','#a8604a','#f0a060','#d98a2b','#f6f1ea','#8a7bb3','#6b5b95'];
+  var vegs=document.getElementById('vegs'),picked=document.getElementById('picked'),send=document.getElementById('send'),nm=document.getElementById('nm');
+  var NS='http://www.w3.org/2000/svg',sel=[];
+  names.forEach(function(n,i){
+    var g=document.createElementNS(NS,'g');g.setAttribute('class','veg');g.id='v'+i;
+    var x=48+(i%5)*41,y=i<5?96:78,r=i==6?22:i==9?18:15;
+    g.innerHTML='<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+cols[i]+'" stroke="#1d1b22" stroke-width="1.4"/><path d="M'+x+' '+(y-r)+'l-3 -7M'+x+' '+(y-r)+'l4 -6" stroke="#5b6b3a" stroke-width="2.4"/>';
+    vegs.appendChild(g);
+  });
+  function upd(){
+    picked.textContent=sel.length?sel.map(function(i){return names[i]}).join(' · '):"Basket's empty.";
+    var who=nm.value.trim();
+    var body='Hi Dirt Poor Farm,\n\nI\'d love to get:\n'+(sel.length?sel.map(function(i){return '- '+names[i]}).join('\n'):'- (tell us what you\'d like)')+'\n\nWhat do you have this week, and where can I pick it up?\n\nThanks,\n'+(who||'');
+    send.href='mailto:dirtpoorfarm@outlook.com?subject='+encodeURIComponent('Basket request'+(who?' from '+who:''))+'&body='+encodeURIComponent(body);
+  }
+  document.getElementById('chips').addEventListener('click',function(e){
+    var b=e.target.closest('.chip');if(!b)return;var i=+b.dataset.i,on=b.getAttribute('aria-pressed')!=='true';
+    b.setAttribute('aria-pressed',on);document.getElementById('v'+i).classList.toggle('on',on);
+    if(on)sel.push(i);else sel=sel.filter(function(x){return x!==i});upd();
+  });
+  nm.addEventListener('input',upd);[0,1,3].forEach(function(i){document.querySelector('.chip[data-i="'+i+'"]').click()});
+})();
+</script>
+</body>
+</html>

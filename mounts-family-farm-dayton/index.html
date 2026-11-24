@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mounts Family Farm — Dayton, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--navy2:#1d2d52;--brass:#c9a227;--ivory:#faf6ec;--brick:#8c2f1b;--ink:#1a2238;--muted:#5d6475;--line:#e6dcc4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.55;overflow-x:hidden}
+body.has-bar{padding-bottom:84px}
+a{color:inherit}
+.banner{background:var(--brick);color:#fbe9d8;font-size:12px;text-align:center;padding:7px 14px}
+.top{background:var(--navy);color:var(--ivory)}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1160px;margin:0 auto;padding:14px 22px}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:20px;text-decoration:none;color:var(--ivory)}
+.logo span{color:var(--brass)}
+nav .links{display:flex;gap:22px;font-size:14px;font-weight:500}
+nav .links a{text-decoration:none;opacity:.85}
+nav .links a:hover{color:var(--brass);opacity:1}
+@media(max-width:720px){nav .links{display:none}}
+.lights{display:block;width:100%;height:46px}
+.bulb{animation:tw 3s ease-in-out infinite}
+.bulb:nth-child(3n){animation-delay:-1s}.bulb:nth-child(3n+1){animation-delay:-2s}
+@keyframes tw{50%{opacity:.45}}
+.hero{max-width:1160px;margin:0 auto;padding:18px 22px 0;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:end}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:8px}}
+.kick{display:inline-block;border:1px solid var(--brass);color:var(--brass);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:99px;font-weight:700}
+h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(38px,6.2vw,72px);line-height:1.02;margin:16px 0 14px;color:var(--ivory)}
+h1 em{color:var(--brass);font-style:italic;font-weight:600}
+.sub{color:#d9dceb;font-size:17px;max-width:540px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 34px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--brass);color:var(--navy)}
+.btn.s{border:2px solid rgba(250,246,236,.5);color:var(--ivory)}
+.stall svg{width:100%;height:auto;display:block}
+section{padding:72px 22px}
+.wrap{max-width:1160px;margin:0 auto}
+.eyebrow{color:var(--brick);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4.2vw,46px);line-height:1.1;margin:8px 0 14px;color:var(--navy)}
+.lead{color:var(--muted);max-width:640px;font-size:17px}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
+.crate{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;position:relative;overflow:hidden}
+.crate:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(90deg,var(--brick) 0 22px,var(--ivory) 22px 44px)}
+.crate h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin:8px 0 8px}
+.crate p{color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{font-size:13px;background:var(--ivory);border:1px solid var(--line);border-radius:99px;padding:4px 10px}
+.why{background:var(--navy);color:var(--ivory)}
+.why h2{color:var(--ivory)}
+.why .lead{color:#c9cede}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.fact{border-top:2px solid var(--brass);padding-top:14px}
+.fact b{display:block;font-family:'Playfair Display',serif;font-size:21px;color:var(--brass);margin-bottom:6px}
+.fact p{color:#d4d8e6;font-size:15px}
+.builder{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;margin-top:30px}
+@media(max-width:860px){.builder{grid-template-columns:1fr}}
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.pick{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px;font:inherit;font-size:15px;font-weight:500;text-align:left;cursor:pointer;color:var(--ink);transition:all .15s}
+.pick small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+.pick.on{border-color:var(--brick);background:#fbeee8}
+.pick.on:after{content:" ✓";color:var(--brick);font-weight:700}
+.ticket{background:var(--navy);color:var(--ivory);border-radius:18px;padding:24px;position:relative}
+.ticket h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--brass)}
+.ticket ul{list-style:none;margin:14px 0 18px;min-height:60px}
+.ticket li{padding:6px 0;border-bottom:1px dashed rgba(250,246,236,.25);font-size:15px}
+.ticket .empty{opacity:.6;font-style:italic}
+.ticket .btn{width:100%;justify-content:center}
+.ticket .btn[aria-disabled=true]{opacity:.45;pointer-events:none}
+.find{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+@media(max-width:860px){.find{grid-template-columns:1fr}}
+.stop{background:#fff;border:1px solid var(--line);border-left:6px solid var(--brass);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.stop h3{font-family:'Playfair Display',serif;color:var(--navy);font-size:20px}
+.stop p{color:var(--muted);font-size:15px}
+iframe{width:100%;height:340px;border:0;border-radius:16px}
+.contact{background:var(--brick);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .lead{color:#f6dfd6;margin:0 auto}
+.contact .ctas{justify-content:center}
+.contact .btn.p{background:var(--ivory);color:var(--brick)}
+.contact .btn.s{border-color:rgba(255,255,255,.6);color:#fff}
+footer{background:var(--navy);color:#aeb4c8;text-align:center;font-size:13px;padding:26px 22px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--navy);display:flex;gap:10px;padding:12px 16px;transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px}
+.bar a:first-child{background:var(--brass);color:var(--navy)}
+.bar a:last-child{border:1px solid rgba(250,246,236,.5);color:var(--ivory)}
+@media(min-width:861px){.bar{display:none}}
+.rv{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(18px);transition:all .6s}
+.js .rv.in,.js.all .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Mounts Family Farm. Not live.</div>
+<div class="top">
+<nav><a class="logo" href="#">Mounts <span>Family Farm</span></a>
+<div class="links"><a href="#raise">What we raise</a><a href="#why">Our way</a><a href="#box">Build an order</a><a href="#find">Find us</a></div></nav>
+<svg class="lights" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 6 Q150 40 300 8 T600 8 T900 8 T1200 6" fill="none" stroke="#3a4a72" stroke-width="2"/>
+<g fill="#c9a227"><circle class="bulb" cx="60" cy="20" r="5"/><circle class="bulb" cx="150" cy="25" r="5"/><circle class="bulb" cx="240" cy="16" r="5"/><circle class="bulb" cx="360" cy="18" r="5"/><circle class="bulb" cx="450" cy="25" r="5"/><circle class="bulb" cx="540" cy="16" r="5"/><circle class="bulb" cx="660" cy="18" r="5"/><circle class="bulb" cx="750" cy="25" r="5"/><circle class="bulb" cx="840" cy="16" r="5"/><circle class="bulb" cx="960" cy="18" r="5"/><circle class="bulb" cx="1050" cy="25" r="5"/><circle class="bulb" cx="1140" cy="16" r="5"/></g>
+</svg>
+<div class="hero">
+<div>
+<span class="kick">Dayton, TN · Market Square, Knoxville</span>
+<h1>Born on our land, <em>raised on grass</em>, brought to your market table.</h1>
+<p class="sub">A small non-GMO family farm in Dayton raising 100% grass fed and finished cattle from birth to market, plus pastured poultry, heritage Berkshire pork and free-range eggs.</p>
+<div class="ctas"><a class="btn p" href="#box">Build your order</a><a class="btn s" href="#find">Find our stall</a></div>
+</div>
+<div class="stall">
+<svg viewBox="0 0 420 300" aria-hidden="true">
+<rect x="40" y="70" width="10" height="230" fill="#0c1529"/><rect x="370" y="70" width="10" height="230" fill="#0c1529"/>
+<path d="M20 60 L210 18 L400 60 Z" fill="#8c2f1b"/>
+<g><path d="M20 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#faf6ec"/><path d="M58 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#8c2f1b"/><path d="M96 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#faf6ec"/><path d="M134 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#8c2f1b"/><path d="M172 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#faf6ec"/><path d="M210 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#8c2f1b"/><path d="M248 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#faf6ec"/><path d="M286 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#8c2f1b"/><path d="M324 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#faf6ec"/><path d="M362 60 h38 v22 a19 19 0 0 1 -38 0z" fill="#8c2f1b"/></g>
+<rect x="150" y="30" width="120" height="24" rx="4" fill="#c9a227"/><text x="210" y="47" text-anchor="middle" font-family="Playfair Display,serif" font-weight="800" font-size="13" fill="#14213d">MOUNTS FARM</text>
+<rect x="30" y="215" width="360" height="85" fill="#c9a227"/><rect x="30" y="215" width="360" height="10" fill="#a7861d"/>
+<g fill="#faf6ec"><ellipse cx="90" cy="205" rx="14" ry="11"/><ellipse cx="116" cy="207" rx="14" ry="11"/><ellipse cx="103" cy="195" rx="14" ry="11"/></g>
+<g fill="#d8cdb0"><ellipse cx="150" cy="207" rx="11" ry="8"/><ellipse cx="170" cy="207" rx="11" ry="8"/></g>
+<rect x="205" y="178" width="70" height="38" rx="6" fill="#8c2f1b"/><text x="240" y="202" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#faf6ec">GRASS FED</text>
+<g fill="#3c5aa6"><circle cx="305" cy="206" r="6"/><circle cx="318" cy="208" r="6"/><circle cx="330" cy="205" r="6"/><circle cx="312" cy="198" r="6"/><circle cx="324" cy="197" r="6"/></g>
+<rect x="290" y="208" width="54" height="10" fill="#6b4a2b"/>
+</svg>
+</div>
+</div>
+</div>
+
+<section id="raise"><div class="wrap">
+<div class="eyebrow rv">What we raise</div>
+<h2 class="rv">Everything at our stall comes off our own pasture and woods.</h2>
+<p class="lead rv">Our pigs, rabbits, ducks and cattle are all born on the farm. Here's what we raise and grow.</p>
+<div class="shelf">
+<div class="crate rv"><h3>Meat &amp; poultry</h3><p>Grass fed and finished beef, plus pasture-raised birds and heritage pork.</p><div class="chips"><span>Beef</span><span>Pork</span><span>Chicken</span><span>Turkey</span><span>Duck</span><span>Rabbit</span><span>Goat</span><span>Quail</span></div></div>
+<div class="crate rv"><h3>Eggs</h3><p>Free-range eggs from our pastured flocks.</p><div class="chips"><span>Chicken eggs</span><span>Duck eggs</span><span>Quail eggs</span></div></div>
+<div class="crate rv"><h3>From the garden</h3><p>Seasonal vegetables and fruit grown on the farm.</p><div class="chips"><span>Tomatoes</span><span>Peppers</span><span>Green beans</span><span>Okra</span><span>Squash</span><span>Pumpkins</span><span>Ginger</span><span>Blueberries</span><span>Grapes</span><span>Watermelons</span><span>Cantaloupes</span></div></div>
+<div class="crate rv"><h3>For the dog</h3><p>Gluten-free dog treats, raw dog food and dehydrated dog treats made from our farm-raised animals.</p><div class="chips"><span>Dog treats</span><span>Raw dog food</span></div></div>
+</div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+<div class="eyebrow rv" style="color:var(--brass)">Our way</div>
+<h2 class="rv">No chemicals, no hormones, no antibiotics.</h2>
+<p class="lead rv">We're a small non-GMO family farm in Dayton, living on and sustaining our land by pasture raising our animals.</p>
+<div class="facts">
+<div class="fact rv"><b>Birth to market</b><p>We raise our 100% grass fed and finished cattle from birth to market.</p></div>
+<div class="fact rv"><b>Woodland pigs</b><p>Our heritage breed Berkshire pigs are raised in the farm's woodlands.</p></div>
+<div class="fact rv"><b>Pasture birds</b><p>Chickens, turkeys, rabbits and ducks are pasture raised. Our chicken and duck eggs are free range.</p></div>
+<div class="fact rv"><b>Born here</b><p>All of our pigs, rabbits, ducks and cattle are born on the farm.</p></div>
+</div>
+</div></section>
+
+<section id="box"><div class="wrap">
+<div class="eyebrow rv">Build an order</div>
+<h2 class="rv">Tap what you'd like and we'll get back to you.</h2>
+<p class="lead rv">Pick a few items and send the list straight to Rene by email. We'll confirm what's on hand and set a pickup at market.</p>
+<div class="builder">
+<div class="picks" id="picks">
+<button class="pick" data-i="Grass fed beef">Grass fed beef<small>100% grass fed &amp; finished</small></button>
+<button class="pick" data-i="Berkshire pork">Berkshire pork<small>woodland raised</small></button>
+<button class="pick" data-i="Pastured chicken">Pastured chicken</button>
+<button class="pick" data-i="Turkey">Turkey</button>
+<button class="pick" data-i="Duck">Duck</button>
+<button class="pick" data-i="Rabbit">Rabbit</button>
+<button class="pick" data-i="Chicken eggs">Chicken eggs<small>free range</small></button>
+<button class="pick" data-i="Duck eggs">Duck eggs</button>
+<button class="pick" data-i="Quail eggs">Quail eggs</button>
+<button class="pick" data-i="Dog treats">Dog treats<small>gluten-free</small></button>
+<button class="pick" data-i="Raw dog food">Raw dog food</button>
+<button class="pick" data-i="Goat">Goat</button>
+</div>
+<div class="ticket">
+<h3>Your market order</h3>
+<ul id="list"><li class="empty">Nothing picked yet. Tap an item.</li></ul>
+<a class="btn p" id="send" href="mailto:mountsfamilyfarm@gmail.com" aria-disabled="true">Email this order</a>
+</div>
+</div>
+</div></section>
+
+<section id="find" style="background:#f2ecdc"><div class="wrap find">
+<div>
+<div class="eyebrow rv">Find us</div>
+<h2 class="rv">Look for us in Knoxville, all winter long.</h2>
+<div class="stop rv"><h3>Market Square Farmers Market – Winter</h3><p>Market Square, downtown Knoxville. Season: November 7, 2026 to March 27, 2027.</p></div>
+<div class="stop rv"><h3>Market Square Farmers Market</h3><p>Downtown Knoxville. 2026 season: May 2 to October 31.</p></div>
+<div class="stop rv"><h3>The farm</h3><p>Dayton, Tennessee (Rhea County).</p></div>
+</div>
+<iframe title="Map of Market Square, Knoxville" loading="lazy" src="https://www.google.com/maps?q=Market%20Square%2C%20Knoxville%2C%20TN&output=embed"></iframe>
+</div></section>
+
+<section class="contact"><div class="wrap">
+<h2 class="rv">Questions before market day?</h2>
+<p class="lead rv">Reach Rene Mounts directly.</p>
+<div class="ctas"><a class="btn p" href="mailto:mountsfamilyfarm@gmail.com">mountsfamilyfarm@gmail.com</a><a class="btn s" href="tel:+14236673199">(423) 667-3199</a></div>
+</div></section>
+
+<footer>Concept by Code Craft Media · Mounts Family Farm, Dayton, TN</footer>
+<div class="bar" id="bar"><a href="#box">Build an order</a><a href="tel:+14236673199">Call</a></div>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+var root=document.documentElement;
+var els=[].slice.call(document.querySelectorAll('.rv'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}else root.classList.add('all');
+setTimeout(function(){root.classList.add('all')},1500);
+var picked=[],list=document.getElementById('list'),send=document.getElementById('send');
+document.getElementById('picks').addEventListener('click',function(e){var b=e.target.closest('.pick');if(!b)return;var i=b.dataset.i,k=picked.indexOf(i);if(k<0){picked.push(i);b.classList.add('on')}else{picked.splice(k,1);b.classList.remove('on')}render()});
+function render(){if(!picked.length){list.innerHTML='<li class="empty">Nothing picked yet. Tap an item.</li>';send.setAttribute('aria-disabled','true');return}
+list.innerHTML=picked.map(function(p){return '<li>'+p+'</li>'}).join('');send.removeAttribute('aria-disabled');
+var body='Hi Rene,\n\nI would like to order:\n- '+picked.join('\n- ')+'\n\nCould I pick up at Market Square? Thanks!';
+send.href='mailto:mountsfamilyfarm@gmail.com?subject='+encodeURIComponent('Market order')+'&body='+encodeURIComponent(body)}
+var hero=document.querySelector('.top'),bar=document.getElementById('bar');
+window.addEventListener('scroll',function(){var s=window.scrollY>hero.offsetHeight;bar.classList.toggle('show',s);document.body.classList.toggle('has-bar',s)},{passive:true});
+})();
+</script>
+</body>
+</html>

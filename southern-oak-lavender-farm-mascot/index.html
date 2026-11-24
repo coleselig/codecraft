@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Southern Oak Lavender Farm — Mascot, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#6b5b95;--lav2:#8a7bb3;--lavpale:#e7e1f0;--linen:#f6f1ea;--linen2:#ede5d8;--olive:#5b6b3a;--olive2:#7d8c55;--ink:#1d1b22;--muted:#5c5766}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--linen);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.banner{background:var(--ink);color:#d9d2e6;font-size:12px;text-align:center;padding:7px 14px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;max-width:1160px;margin:0 auto}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:22px;text-decoration:none;color:var(--lav);display:flex;gap:8px;align-items:center}
+.logo svg{width:26px;height:26px}
+nav .links{display:flex;gap:24px;font-size:14px;font-weight:500}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--lav)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{max-width:1160px;margin:0 auto;padding:30px 22px 50px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:12px}}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);font-weight:700;border-bottom:1px solid var(--olive2);padding-bottom:4px}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(42px,6.6vw,78px);line-height:.98;margin:16px 0 16px;letter-spacing:-.01em}
+h1 em{color:var(--lav);font-style:italic}
+.sub{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--lav);color:#fff}
+.btn.p:hover{background:#5a4b83}
+.btn.s{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.art svg{width:100%;height:auto;display:block}
+.sway{transform-origin:50% 92%;animation:sway 6s ease-in-out infinite}
+.sway.b{animation-delay:-2s}.sway.c{animation-delay:-4s}
+@keyframes sway{50%{transform:rotate(2deg)}}
+@media(prefers-reduced-motion:reduce){.sway{animation:none}}
+.strip{background:var(--olive);color:#f1eedf;overflow:hidden}
+.strip ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;padding:16px 22px;max-width:1160px;margin:0 auto;font-size:14px;font-weight:500}
+.strip li:before{content:"\273F";margin-right:8px;color:#d6cfe6}
+section{padding:72px 22px}
+.wrap{max-width:1100px;margin:0 auto}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(34px,4.6vw,52px);line-height:1.05;margin:10px 0 14px}
+h2 em{color:var(--lav)}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:#fffdf9;border:1px solid var(--linen2);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.card svg{width:54px;height:54px;margin-bottom:10px}
+.card h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+.press{background:var(--lavpale)}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:860px){.why{grid-template-columns:1fr}}
+.why ul{list-style:none;display:grid;gap:14px;margin-top:8px}
+.why li{background:#fff;border-radius:14px;padding:16px 18px 16px 52px;position:relative;font-size:15px}
+.why li b{display:block;font-size:16px}
+.why li:before{content:"";position:absolute;left:18px;top:19px;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 50% 50%,var(--lav) 0 35%,transparent 36%),var(--lavpale);border:1.5px solid var(--lav)}
+/* bundle builder */
+.builder{background:var(--ink);color:var(--linen)}
+.builder h2 em{color:#b9abdc}
+.builder .lead{color:#bfb8c9}
+.bgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;margin-top:30px;align-items:start}
+@media(max-width:860px){.bgrid{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:transparent;border:1.5px solid #4a4555;color:var(--linen);border-radius:999px;padding:11px 16px;font:500 15px Manrope,system-ui,sans-serif;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:8px}
+.chip:hover{border-color:#b9abdc}
+.chip[aria-pressed=true]{background:var(--lav);border-color:var(--lav);color:#fff}
+.chip span{font-size:17px}
+.tie{background:var(--linen);color:var(--ink);border-radius:20px;padding:22px;position:relative}
+.tie h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600}
+.bundle svg{width:100%;max-width:240px;display:block;margin:4px auto 6px}
+.stem{transform-origin:120px 200px;transition:transform .5s cubic-bezier(.3,1.5,.5,1),opacity .3s;opacity:0;transform:scale(.4)}
+.stem.on{opacity:1;transform:scale(1)}
+#picked{font-size:14px;color:var(--muted);min-height:22px;margin-bottom:12px}
+.tie label{font-size:13px;font-weight:700;display:block;margin:6px 0 4px}
+.tie input{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #d6ccbd;font:15px Manrope,system-ui,sans-serif;background:#fff}
+.tie .btn{width:100%;justify-content:center;margin-top:12px}
+.tie .note{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+.find{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:stretch}
+@media(max-width:860px){.find{grid-template-columns:1fr}}
+.spot{background:#fffdf9;border:1px solid var(--linen2);border-radius:16px;padding:20px;margin-bottom:14px}
+.spot h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:600}
+.spot p{color:var(--muted);font-size:15px}
+.spot .when{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;color:var(--olive)}
+iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:18px;filter:saturate(.75)}
+.contact{background:var(--lav);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .lead{color:#e3dcf2;margin:0 auto}
+.contact .ctas{justify-content:center}
+.contact .btn.p{background:#fff;color:var(--lav)}
+.contact .btn.s{border-color:#fff;color:#fff}
+footer{background:var(--ink);color:#a9a2b6;text-align:center;font-size:13px;padding:26px 22px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(29,27,34,.96);display:flex;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px}
+.bar a.p{background:var(--lav);color:#fff}.bar a.s{border:1.5px solid #6b6577;color:#fff}
+@media(min-width:861px){.bar{display:none}}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.js .rv.in,.js.shown .rv{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Southern Oak Lavender Farm. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 25V8" stroke="#5b6b3a" stroke-width="1.6"/><g fill="#6b5b95"><ellipse cx="13" cy="4" rx="2" ry="3"/><ellipse cx="10.5" cy="8" rx="1.8" ry="2.6" transform="rotate(-20 10.5 8)"/><ellipse cx="15.5" cy="8" rx="1.8" ry="2.6" transform="rotate(20 15.5 8)"/><ellipse cx="10.8" cy="12.5" rx="1.6" ry="2.3" transform="rotate(-20 10.8 12.5)"/><ellipse cx="15.2" cy="12.5" rx="1.6" ry="2.3" transform="rotate(20 15.2 12.5)"/></g></svg>Southern Oak Lavender</a>
+  <div class="links"><a href="#grow">What we grow</a><a href="#bundle">Build a bundle</a><a href="#visit">Visit</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="eyebrow">Mascot, Tennessee &middot; Knox County</span>
+    <h1>Cut your own <em>lavender</em> &amp; flowers, all summer long.</h1>
+    <p class="sub">A naturally grown, woman-owned farm in Mascot, one of the few local farms open to the public all summer for U-Cut flowers. Take home fresh stems, dried bundles, and handmade salves and soap.</p>
+    <div class="ctas">
+      <a class="btn p" href="#bundle">Build your bundle</a>
+      <a class="btn s" href="#visit">Plan a visit</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 480 440">
+      <defs>
+        <g id="bud"><ellipse cx="0" cy="0" rx="4.2" ry="6.4"/></g>
+        <g id="spike">
+          <path d="M0 0V-150" stroke="#5b6b3a" stroke-width="2.4" fill="none"/>
+          <g fill="#6b5b95"><use href="#bud" x="0" y="-160"/><use href="#bud" x="-5" y="-150" transform="rotate(-18 -5 -150)"/><use href="#bud" x="5" y="-150" transform="rotate(18 5 -150)"/><use href="#bud" x="-5" y="-138" transform="rotate(-18 -5 -138)"/><use href="#bud" x="5" y="-138" transform="rotate(18 5 -138)"/><use href="#bud" x="-5" y="-126" transform="rotate(-18 -5 -126)"/><use href="#bud" x="5" y="-126" transform="rotate(18 5 -126)"/></g>
+          <g fill="#8a7bb3"><use href="#bud" x="0" y="-116"/><use href="#bud" x="-4" y="-108"/><use href="#bud" x="4" y="-108"/></g>
+        </g>
+      </defs>
+      <circle cx="250" cy="210" r="190" fill="#e7e1f0"/>
+      <circle cx="250" cy="210" r="150" fill="none" stroke="#6b5b95" stroke-opacity=".25" stroke-dasharray="3 7"/>
+      <!-- hanging dried bundles -->
+      <path d="M40 40 H460" stroke="#1d1b22" stroke-width="2"/>
+      <g class="sway"><path d="M110 40v26" stroke="#1d1b22" stroke-width="1.4"/>
+        <g transform="translate(110 66) rotate(180)"><use href="#spike" transform="scale(.7) rotate(-8)"/><use href="#spike" transform="scale(.7)"/><use href="#spike" transform="scale(.7) rotate(8)"/></g>
+        <rect x="101" y="70" width="18" height="8" rx="2" fill="#5b6b3a"/></g>
+      <g class="sway b"><path d="M390 40v20" stroke="#1d1b22" stroke-width="1.4"/>
+        <g transform="translate(390 60) rotate(180)"><path d="M0 0V-120M0 0L-12 -110M0 0L12 -110" stroke="#7d8c55" stroke-width="2"/><g fill="#5b6b3a"><ellipse cx="-14" cy="-80" rx="5" ry="10" transform="rotate(-30 -14 -80)"/><ellipse cx="14" cy="-90" rx="5" ry="10" transform="rotate(30 14 -90)"/><ellipse cx="-8" cy="-112" rx="4" ry="9" transform="rotate(-20 -8 -112)"/><ellipse cx="10" cy="-60" rx="5" ry="10" transform="rotate(25 10 -60)"/><ellipse cx="-12" cy="-50" rx="4" ry="9" transform="rotate(-25 -12 -50)"/></g></g>
+        <rect x="381" y="64" width="18" height="8" rx="2" fill="#6b5b95"/></g>
+      <!-- standing bunch in a crock -->
+      <g transform="translate(250 380)">
+        <g class="sway"><use href="#spike" transform="rotate(-22)"/></g>
+        <g class="sway c"><use href="#spike" transform="rotate(-11) scale(1.08)"/></g>
+        <g class="sway b"><use href="#spike" transform="scale(1.18)"/></g>
+        <g class="sway"><use href="#spike" transform="rotate(11) scale(1.08)"/></g>
+        <g class="sway c"><use href="#spike" transform="rotate(22)"/></g>
+        <path d="M-58 -10h116l-12 66h-92z" fill="#f6f1ea" stroke="#1d1b22" stroke-width="2"/>
+        <path d="M-52 10h104" stroke="#6b5b95" stroke-width="5"/>
+        <path d="M-50 22h100" stroke="#6b5b95" stroke-width="1.5"/>
+      </g>
+      <!-- pressed sprig -->
+      <g transform="translate(70 330) rotate(-25)" opacity=".85"><path d="M0 0v-70" stroke="#5b6b3a" stroke-width="1.6"/><g fill="#7d8c55"><ellipse cx="-7" cy="-20" rx="4" ry="9" transform="rotate(-35 -7 -20)"/><ellipse cx="7" cy="-34" rx="4" ry="9" transform="rotate(35 7 -34)"/><ellipse cx="-7" cy="-48" rx="3.6" ry="8" transform="rotate(-35 -7 -48)"/><ellipse cx="0" cy="-70" rx="3.5" ry="7"/></g></g>
+    </svg>
+  </div>
+</header>
+
+<div class="strip"><ul><li>U-Cut flowers all summer</li><li>Dried &amp; edible flowers</li><li>Handmade salves &amp; soap</li><li>Outdoor event pavilion</li><li>Woman-owned</li></ul></div>
+
+<section id="grow">
+  <div class="wrap">
+    <span class="eyebrow rv">From the field</span>
+    <h2 class="rv">What grows at <em>Southern Oak</em></h2>
+    <p class="lead rv">Naturally grown, organic practices (not certified), low spray. Here is what the farm offers.</p>
+    <div class="grid">
+      <div class="card rv"><svg viewBox="0 0 54 54"><path d="M27 52V18" stroke="#5b6b3a" stroke-width="2"/><g fill="#6b5b95"><ellipse cx="27" cy="9" rx="3" ry="5"/><ellipse cx="23" cy="15" rx="3" ry="4.5"/><ellipse cx="31" cy="15" rx="3" ry="4.5"/><ellipse cx="23" cy="22" rx="2.6" ry="4"/><ellipse cx="31" cy="22" rx="2.6" ry="4"/></g></svg><h3>Fresh flowers</h3><p>Cut them yourself in the field. Southern Oak is one of the few local farms open to the public all summer for U-Cut flowers.</p></div>
+      <div class="card rv"><svg viewBox="0 0 54 54"><path d="M8 12h38" stroke="#1d1b22" stroke-width="1.6"/><path d="M27 12v6" stroke="#1d1b22"/><g fill="#8a7bb3"><path d="M20 22l7-4 7 4-3 26h-8z"/></g><rect x="21" y="17" width="12" height="5" rx="1" fill="#5b6b3a"/></svg><h3>Dried flowers</h3><p>Lavender and flowers hung and dried for bundles, wreaths and the pantry shelf.</p></div>
+      <div class="card rv"><svg viewBox="0 0 54 54"><circle cx="27" cy="30" r="16" fill="#f6f1ea" stroke="#1d1b22" stroke-width="1.6"/><g fill="#6b5b95"><circle cx="21" cy="27" r="2.4"/><circle cx="30" cy="24" r="2"/><circle cx="33" cy="33" r="2.4"/><circle cx="24" cy="35" r="2"/></g><path d="M27 14c3-6 9-7 12-6" stroke="#5b6b3a" stroke-width="1.6" fill="none"/></svg><h3>Edible flowers</h3><p>Blooms grown for the plate as well as the vase.</p></div>
+      <div class="card rv"><svg viewBox="0 0 54 54"><rect x="12" y="22" width="30" height="22" rx="4" fill="#e7e1f0" stroke="#1d1b22" stroke-width="1.6"/><rect x="10" y="16" width="34" height="8" rx="3" fill="#6b5b95"/><path d="M20 33h14" stroke="#5b6b3a" stroke-width="2"/></svg><h3>Salves</h3><p>Handmade skin care, sold from the farm store during flower season.</p></div>
+      <div class="card rv"><svg viewBox="0 0 54 54"><rect x="10" y="18" width="34" height="22" rx="6" fill="#f6f1ea" stroke="#1d1b22" stroke-width="1.6"/><path d="M27 22v14" stroke="#5b6b3a" stroke-width="1.4"/><g fill="#6b5b95"><ellipse cx="27" cy="22" rx="2" ry="3"/><ellipse cx="25" cy="26" rx="1.6" ry="2.4"/><ellipse cx="29" cy="26" rx="1.6" ry="2.4"/></g></svg><h3>Soap</h3><p>Handmade bars to take a little of the field home with you.</p></div>
+      <div class="card rv"><svg viewBox="0 0 54 54"><path d="M27 48V20" stroke="#5b6b3a" stroke-width="2"/><g fill="#1d1b22"><circle cx="22" cy="16" r="3"/><circle cx="27" cy="13" r="3"/><circle cx="32" cy="16" r="3"/><circle cx="27" cy="19" r="3"/><circle cx="24" cy="22" r="2.6"/><circle cx="30" cy="22" r="2.6"/></g><ellipse cx="18" cy="34" rx="7" ry="3.5" fill="#7d8c55" transform="rotate(-30 18 34)"/></svg><h3>Blackberries</h3><p>Fruit trees and berries were planted in the fall of 2022.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="press">
+  <div class="wrap why">
+    <div>
+      <span class="eyebrow rv">Why Southern Oak</span>
+      <h2 class="rv">A farm you can <em>walk into</em>, not just buy from.</h2>
+      <p class="lead rv">Visitors of all ages are invited to explore the lavender and flowers. Come for an afternoon in the rows, a guided tour, or a celebration under the pavilion.</p>
+    </div>
+    <ul>
+      <li class="rv"><b>Open all summer for U-Cut</b>One of the few local farms that opens to the public for U-Cut flowers through the summer.</li>
+      <li class="rv"><b>Naturally grown</b>Organic practices (not certified) and low spray.</li>
+      <li class="rv"><b>Woman-owned, new farm</b>A woman-owned New and Beginning Farmer, operating ten years or less.</li>
+      <li class="rv"><b>Events, tours &amp; field trips</b>An outdoor pavilion for weddings, parties and festivals, plus guided farm tours and school field trips.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="builder" id="bundle">
+  <div class="wrap">
+    <span class="eyebrow rv" style="color:#c9d29f;border-color:#7d8c55">Tie a bundle</span>
+    <h2 class="rv">Build your <em>farm bundle</em></h2>
+    <p class="lead rv">Tap what you'd like. Each pick adds a stem to the bundle, then send it to the farm in one tap.</p>
+    <div class="bgrid">
+      <div class="chips" id="chips">
+        <button class="chip" aria-pressed="false" data-i="0"><span>&#10047;</span>U-Cut flower visit</button>
+        <button class="chip" aria-pressed="false" data-i="1"><span>&#10048;</span>Dried lavender</button>
+        <button class="chip" aria-pressed="false" data-i="2"><span>&#10049;</span>Dried flowers</button>
+        <button class="chip" aria-pressed="false" data-i="3"><span>&#10050;</span>Edible flowers</button>
+        <button class="chip" aria-pressed="false" data-i="4"><span>&#9670;</span>Salve</button>
+        <button class="chip" aria-pressed="false" data-i="5"><span>&#9673;</span>Handmade soap</button>
+        <button class="chip" aria-pressed="false" data-i="6"><span>&#9679;</span>Blackberries</button>
+        <button class="chip" aria-pressed="false" data-i="7"><span>&#9750;</span>Guided farm tour</button>
+        <button class="chip" aria-pressed="false" data-i="8"><span>&#9733;</span>Pavilion event</button>
+      </div>
+      <div class="tie">
+        <h3>Your bundle</h3>
+        <div class="bundle" aria-hidden="true">
+          <svg viewBox="0 0 240 230" id="bsvg">
+            <g id="stems"></g>
+            <path d="M104 186h32l-4 12h-24z" fill="#5b6b3a"/>
+            <path d="M100 190c-14 10-18 22-10 26M140 190c14 10 18 22 10 26" stroke="#6b5b95" stroke-width="3" fill="none"/>
+            <path d="M112 198l-4 26M120 198v28M128 198l4 26" stroke="#5b6b3a" stroke-width="2.4"/>
+          </svg>
+        </div>
+        <div id="picked">Nothing tied in yet.</div>
+        <label for="nm">Your name</label>
+        <input id="nm" placeholder="First name" autocomplete="given-name">
+        <a class="btn p" id="send" href="mailto:southernoaklavenderfarm@gmail.com">Send bundle to the farm</a>
+        <p class="note">Opens an email to southernoaklavenderfarm@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <span class="eyebrow rv">Where to find us</span>
+    <h2 class="rv">At the farm &amp; at <em>Market Square</em></h2>
+    <div class="find" style="margin-top:28px">
+      <div>
+        <div class="spot rv"><h3>The farm in Mascot</h3><p>U-Cut flowers through the summer. Farm store with handmade skin care and lavender during flower season (credit and debit accepted), plus a cash-only honor-system roadside stand.</p></div>
+        <div class="spot rv"><h3>Market Square Farmers Market</h3><p>Downtown Knoxville. Southern Oak is listed among the market's farms.</p><span class="when">2026 season: May 2 &ndash; Oct 31</span></div>
+        <div class="spot rv"><h3>Smoky Mountain Flea Market</h3><p>Also listed as one of the farm's market spots.</p></div>
+      </div>
+      <iframe class="rv" title="Map of Mascot, TN" loading="lazy" src="https://www.google.com/maps?q=Mascot%2C%20TN%2037806&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Come cut some lavender.</h2>
+    <p class="lead">Questions about U-Cut days, tours, field trips or booking the pavilion? Reach the farm directly.</p>
+    <div class="ctas">
+      <a class="btn p" href="mailto:southernoaklavenderfarm@gmail.com">southernoaklavenderfarm@gmail.com</a>
+      <a class="btn s" href="tel:+18654096494">(865) 409-6494</a>
+      <a class="btn s" href="https://www.instagram.com/southernoaklavenderfarm">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>Southern Oak Lavender Farm &middot; Mascot, TN &middot; Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar"><a class="p" href="#bundle">Build a bundle</a><a class="s" href="tel:+18654096494">Call</a></div>
+
+<script>
+(function(){
+  var d=document.documentElement;d.classList.add('js');
+  setTimeout(function(){d.classList.add('shown')},1500);
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  } else d.classList.add('shown');
+  var hero=document.getElementById('top'),bar=document.getElementById('bar');
+  function sc(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)}
+  addEventListener('scroll',sc,{passive:true});sc();
+
+  var names=['U-Cut flower visit','Dried lavender','Dried flowers','Edible flowers','Salve','Handmade soap','Blackberries','Guided farm tour','Pavilion event'];
+  var cols=['#6b5b95','#8a7bb3','#b38a9a','#c7a24a','#5b6b3a','#9a8cc0','#1d1b22','#7d8c55','#6b5b95'];
+  var stems=document.getElementById('stems'),picked=document.getElementById('picked'),send=document.getElementById('send'),nm=document.getElementById('nm');
+  var NS='http://www.w3.org/2000/svg',sel=[];
+  names.forEach(function(n,i){
+    var g=document.createElementNS(NS,'g');g.setAttribute('class','stem');g.id='s'+i;
+    var a=-40+i*10,html='<g transform="rotate('+a+' 120 200)"><path d="M120 200V'+(60+(i%3)*12)+'" stroke="#5b6b3a" stroke-width="2.2"/>';
+    for(var k=0;k<5;k++){var y=60+(i%3)*12+k*11;html+='<ellipse cx="'+(120+(k%2?4:-4))+'" cy="'+y+'" rx="4" ry="6.5" fill="'+cols[i]+'"/>'}
+    g.innerHTML=html+'</g>';stems.appendChild(g);
+  });
+  function upd(){
+    picked.textContent=sel.length?sel.map(function(i){return names[i]}).join(' · '):'Nothing tied in yet.';
+    var who=nm.value.trim();
+    var body='Hi Southern Oak Lavender Farm,\n\nI\'m interested in:\n'+(sel.length?sel.map(function(i){return '- '+names[i]}).join('\n'):'- (tell us what you\'d like)')+'\n\nWhen could I come by or pick these up?\n\nThanks,\n'+(who||'');
+    send.href='mailto:southernoaklavenderfarm@gmail.com?subject='+encodeURIComponent('Bundle request'+(who?' from '+who:''))+'&body='+encodeURIComponent(body);
+  }
+  document.getElementById('chips').addEventListener('click',function(e){
+    var b=e.target.closest('.chip');if(!b)return;var i=+b.dataset.i,on=b.getAttribute('aria-pressed')!=='true';
+    b.setAttribute('aria-pressed',on);document.getElementById('s'+i).classList.toggle('on',on);
+    if(on)sel.push(i);else sel=sel.filter(function(x){return x!==i});upd();
+  });
+  nm.addEventListener("input",upd);[0,1,2].forEach(function(i){document.querySelector(".chip[data-i=\""+i+"\"]").click()});
+})();
+</script>
+</body>
+</html>

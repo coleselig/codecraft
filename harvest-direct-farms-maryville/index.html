@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Harvest Direct Farms — Maryville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#1d5c63;--teal2:#164a50;--mist:#eef3f1;--terra:#c8693f;--soil:#3b2f2a;--muted:#5d6b68}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lora',Georgia,serif;color:var(--soil);background:var(--mist);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:80px}
+a{color:inherit}
+.banner{background:var(--soil);color:#efe6df;font:500 12px/1.4 'Space Grotesk',system-ui,sans-serif;text-align:center;padding:7px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1160px;margin:0 auto;font-family:'Space Grotesk',system-ui,sans-serif}
+.logo{font-weight:700;font-size:18px;color:var(--teal);text-decoration:none;display:flex;gap:9px;align-items:center}
+.logo svg{width:28px;height:28px;flex:none}
+nav .links{display:flex;gap:22px;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{padding:28px 22px 50px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:18px;padding-top:16px}}
+.tag{display:inline-block;font:700 12px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);border:1.5px dashed var(--terra);padding:5px 11px;border-radius:4px}
+h1{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;font-size:clamp(34px,6vw,64px);line-height:1.04;letter-spacing:-.02em;color:var(--teal);margin:16px 0}
+h1 em{font-style:normal;color:var(--terra)}
+.sub{font-size:18px;color:var(--muted);max-width:540px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{font:700 16px 'Space Grotesk',system-ui,sans-serif;text-decoration:none;padding:14px 20px;border-radius:10px;display:inline-flex;gap:8px;align-items:center;border:0;cursor:pointer;transition:transform .15s;max-width:100%;overflow-wrap:anywhere}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--terra);color:#fff;box-shadow:0 5px 0 #9c4f2d}
+.btn.s{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+.art svg{width:100%;height:auto;display:block;max-height:420px}
+.pane{animation:glint 6s ease-in-out infinite}
+@keyframes glint{50%{opacity:.55}}
+.sprout{transform-origin:bottom center;transform-box:fill-box;animation:sway 4.5s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.wrap{max-width:1160px;margin:0 auto;padding:68px 22px}
+.kicker{font:700 13px 'Space Grotesk',system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+h2{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(28px,4.2vw,44px);line-height:1.1;letter-spacing:-.01em;margin:8px 0 12px;color:var(--teal)}
+.dark{background:var(--teal);color:var(--mist);background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:56px 56px}
+.dark h2{color:#fff}.dark .kicker{color:#f2b18f}
+.lede{max-width:660px;font-size:17px;opacity:.9}
+.packets{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;margin-top:30px}
+.pk{position:relative;background:#fff;border:2px solid var(--soil);border-radius:6px 6px 10px 10px;padding:30px 14px 40px;text-align:left;cursor:pointer;font:inherit;color:var(--soil);transition:transform .18s,box-shadow .18s;min-height:120px}
+.pk:before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:repeating-linear-gradient(90deg,var(--soil) 0 6px,transparent 6px 10px);opacity:.18}
+.pk:hover{transform:translateY(-3px) rotate(-1deg);box-shadow:0 10px 0 -4px var(--teal)}
+.pk b{display:block;font:700 16px/1.2 'Space Grotesk',system-ui,sans-serif;margin-bottom:4px}
+.pk small{color:var(--muted);font-size:13px}
+.pk .plus{position:absolute;right:10px;bottom:10px;width:28px;height:28px;border-radius:50%;background:var(--mist);color:var(--teal);display:grid;place-items:center;font:700 18px 'Space Grotesk',sans-serif;transition:.2s}
+.pk[aria-pressed=true]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.pk[aria-pressed=true] small{color:#cfe3e0}
+.pk[aria-pressed=true] .plus{background:var(--terra);color:#fff;transform:rotate(45deg)}
+.cat{margin-top:34px}
+.cat h3{font:700 19px 'Space Grotesk',system-ui,sans-serif;color:var(--soil);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{background:#fff;border:1px solid #cfdcd8;border-radius:99px;padding:4px 11px;font-size:14px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:30px}
+.why div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:22px}
+.why b{display:block;font:700 20px 'Space Grotesk',system-ui,sans-serif;color:#fff;margin-bottom:6px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin-top:26px}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+.where{background:#fff;border-radius:14px;padding:24px;border:1px solid #d6e2de}
+.where h3{font:700 20px 'Space Grotesk',system-ui,sans-serif;color:var(--teal);margin:14px 0 4px}
+.where h3:first-child{margin-top:0}
+.map{border-radius:14px;overflow:hidden;border:2px solid var(--teal);min-height:300px;background:#dfe8e5}
+.map iframe{width:100%;height:340px;border:0;display:block}
+.order{background:var(--soil);color:#f3ece6;border-radius:16px;padding:24px;margin-top:30px}
+.order h3{font:700 20px 'Space Grotesk',system-ui,sans-serif;margin-bottom:8px}
+.order ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;min-height:30px;margin:10px 0 16px}
+.order li{background:var(--terra);color:#fff;border-radius:6px;padding:3px 10px;font:500 14px 'Space Grotesk',sans-serif}
+.order li.empty{background:none;padding:0;opacity:.65;font-style:italic}
+.contact{text-align:center}
+.contact .ctas{justify-content:center}
+footer{background:var(--soil);color:#cdbfb6;text-align:center;padding:26px 16px;font:14px 'Space Grotesk',system-ui,sans-serif}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--teal);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 18px;font:600 15px 'Space Grotesk',system-ui,sans-serif;transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar a{background:var(--terra);color:#fff;text-decoration:none;padding:9px 14px;border-radius:8px;white-space:nowrap}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Harvest Direct Farms. Not live.</div>
+<nav><a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 28V14L16 5l13 9v14z" fill="#eef3f1" stroke="#1d5c63" stroke-width="2.4"/><path d="M16 26v-8m0 3q-5-1-6-6m6 4q5-1 6-6" stroke="#c8693f" stroke-width="2.4" fill="none"/></svg>Harvest Direct Farms</a><div class="links"><a href="#grow">What we grow</a><a href="#why">Why us</a><a href="#find">Find us</a><a href="#contact">Contact</a></div></nav>
+<header class="hero" id="top">
+<div><span class="tag">Brothers-run · Blount County</span><h1>Heirloom tomatoes from <em>the Laine brothers</em> in Maryville.</h1><p class="sub">A local family farm founded in 2022 by brothers Elijah and Noah Laine, growing heirloom tomatoes and a long list of vegetables, with berries next on the plan.</p>
+<div class="ctas"><a class="btn p" href="#grow">Fill your basket</a><a class="btn s" href="#find">Where to find us</a></div></div>
+<div class="art"><svg viewBox="0 0 480 400" role="img" aria-label="Greenhouse with seedlings and seed packets">
+<rect x="20" y="370" width="440" height="22" rx="4" fill="#3b2f2a"/>
+<path d="M60 370 V170 L240 60 L420 170 V370Z" fill="#fff" stroke="#1d5c63" stroke-width="6"/>
+<g stroke="#1d5c63" stroke-width="3" opacity=".55"><path d="M120 370V134M180 370V97M240 370V60M300 370V97M360 370V134M60 250H420M60 170H420"/></g>
+<path class="pane" d="M188 100 l40-25 v80 h-40z" fill="#bfe0dc" opacity=".8"/><path class="pane" d="M306 108 l46 30 v30 h-46z" fill="#bfe0dc" opacity=".6" style="animation-delay:-3s"/>
+<rect x="100" y="300" width="280" height="24" rx="4" fill="#3b2f2a"/>
+<g class="sprout"><path d="M160 300 q-4-50 6-80" stroke="#3b6e3a" stroke-width="5" fill="none"/><circle cx="150" cy="250" r="16" fill="#c8693f"/><circle cx="176" cy="232" r="13" fill="#e0a43b"/></g><g class="sprout"><path d="M250 300 v-70" stroke="#3b6e3a" stroke-width="5"/><circle cx="238" cy="248" r="15" fill="#a83a2c"/><circle cx="264" cy="238" r="12" fill="#c8693f"/></g><g class="sprout"><path d="M335 300 q4-40 -2-62" stroke="#3b6e3a" stroke-width="5" fill="none"/><circle cx="322" cy="258" r="12" fill="#e66a7a"/></g>
+<g transform="rotate(-9 52 300)"><rect x="12" y="250" width="80" height="108" rx="4" fill="#c8693f" stroke="#3b2f2a" stroke-width="3"/><rect x="22" y="262" width="60" height="46" rx="3" fill="#eef3f1"/><path d="M52 300 v-26 m0 10 q-12-6-14-16 m14 10 q10-4 14-14" stroke="#1d5c63" stroke-width="3" fill="none"/><rect x="22" y="318" width="60" height="6" fill="#eef3f1" opacity=".8"/><rect x="22" y="330" width="40" height="6" fill="#eef3f1" opacity=".8"/></g>
+<g transform="rotate(8 430 300)"><rect x="392" y="256" width="76" height="102" rx="4" fill="#1d5c63" stroke="#3b2f2a" stroke-width="3"/><rect x="401" y="266" width="58" height="42" rx="3" fill="#eef3f1"/><circle cx="430" cy="288" r="11" fill="#c8693f"/><rect x="401" y="318" width="58" height="6" fill="#eef3f1" opacity=".8"/></g>
+</svg></div>
+</header>
+<section id="grow"><div class="wrap">
+<span class="kicker">Seed-packet picker</span><h2>Fill your basket</h2><p class="lede">Tap the packets for what you want. We&#x27;ll write the message for you and open the farm&#x27;s Instagram so you can send it.</p>
+<div class="packets"><button class="pk" type="button" aria-pressed="false" data-item="Heirloom tomatoes"><b>Heirloom tomatoes</b><small>The farm&#x27;s specialty</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Strawberries"><b>Strawberries</b><small>Fruit</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Melons"><b>Melons</b><small>Cantaloupe &amp; watermelon</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Sweet corn"><b>Sweet corn</b><small>Summer crop</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Eggs"><b>Eggs</b><small>Farm fresh</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Sweet potatoes"><b>Sweet potatoes</b><small>Plus potatoes</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Peppers"><b>Peppers</b><small>Sweet, hot &amp; chiles</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Salad greens"><b>Salad greens</b><small>Plus lettuce &amp; spinach</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Ginger &amp; turmeric"><b>Ginger &amp; turmeric</b><small>Specialty roots</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Plant starts"><b>Plant starts</b><small>For your garden</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Fresh herbs"><b>Fresh herbs</b><small>Plus edible flowers</small><span class="plus">+</span></button><button class="pk" type="button" aria-pressed="false" data-item="Wheat grass"><b>Wheat grass</b><small>Sprouts</small><span class="plus">+</span></button></div>
+<div class="order" id="order"><h3>Your basket</h3><ul id="list"><li class="empty">Tap a packet above to add it.</li></ul><button class="btn p" id="send" type="button">Copy &amp; DM on Instagram</button><p id="note" style="margin-top:10px;font-size:14px;opacity:.8">Copies your list and opens @harvest_direct_farms on Instagram.</p></div>
+<div class="cat rv"><h3>Everything on the list</h3><div class="chips"><span>beets</span><span>broccoli</span><span>brussels sprouts</span><span>cabbage</span><span>carrots</span><span>cauliflower</span><span>chiles</span><span>cucumber</span><span>daikon</span><span>eggplant</span><span>garlic</span><span>ginger</span><span>green beans</span><span>green onions</span><span>hot peppers</span><span>kale</span><span>kohlrabi</span><span>lettuce</span><span>okra</span><span>onions</span><span>peas</span><span>pole beans</span><span>potatoes</span><span>pumpkins</span><span>radish</span><span>salad greens</span><span>salad mix</span><span>spinach</span><span>summer squash</span><span>sweet corn</span><span>sweet peppers</span><span>sweet potato</span><span>Swiss chard</span><span>tomatillos</span><span>tomatoes</span><span>turmeric</span><span>turnips</span><span>winter squash</span><span>cantaloupes</span><span>melons</span><span>strawberries</span><span>watermelons</span><span>eggs</span><span>plant starts</span><span>fresh herbs</span><span>edible flowers</span><span>fresh flowers</span><span>wheat grass</span></div></div>
+</div></section>
+<section class="dark" id="why"><div class="wrap"><span class="kicker">Why Harvest Direct Farms</span><h2>Young farm, big list</h2><div class="why"><div class="rv"><b>Family-run</b><p>Founded in 2022 by brothers Elijah and Noah Laine.</p></div><div class="rv"><b>Grown organically</b><p>Organic practices (not certified) with Integrated Pest Management.</p></div><div class="rv"><b>Come see it</b><p>Guided farm tours and school field trips. Se habla español.</p></div></div></div></section>
+<section id="find"><div class="wrap"><span class="kicker">Find us</span><h2>Farm store and two markets</h2>
+<div class="cols"><div class="where rv"><h3>On-farm store</h3><p>Open February 14 &ndash; December 19, 2026, Monday&ndash;Saturday, 9 AM&ndash;6 PM.</p><h3>Market Square Farmers Market</h3><p>Knoxville &middot; on the 2026 supplier list (season May 2 &ndash; Oct 31, 2026).</p><h3>Maryville Farmers Market</h3><p>Maryville, Blount County.</p></div><div class="map"><iframe title="Map of Maryville, TN" loading="lazy" src="https://www.google.com/maps?q=Maryville%2C%20TN&amp;output=embed"></iframe></div></div></div></section>
+<section id="contact" class="contact"><div class="wrap"><span class="kicker">Say hello</span><h2>Message the farm</h2><div class="ctas"><a class="btn p" href="https://www.instagram.com/harvest_direct_farms">@harvest_direct_farms</a></div></div></section>
+<footer>Concept by Code Craft Media &middot; Harvest Direct Farms, Maryville, TN</footer>
+<div class="bar" id="bar"><span id="barTxt">Heirloom tomatoes from Maryville</span><a href="#grow">Pick yours</a></div>
+<script>
+(function(){
+var C={"mode": "ig", "to": "", "ig": "https://www.instagram.com/harvest_direct_farms", "biz": "Harvest Direct Farms", "bar": "Heirloom tomatoes from Maryville"};document.documentElement.classList.add('js');
+var els=[].slice.call(document.querySelectorAll('.rv'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+var picked=[],list=document.getElementById('list');
+function draw(){list.innerHTML=picked.length?picked.map(function(p){return '<li>'+p.replace(/</g,'&lt;')+'</li>'}).join(''):'<li class="empty">Tap a packet above to add it.</li>';
+document.getElementById('barTxt').textContent=picked.length?picked.length+' picked, send it over':C.bar}
+[].forEach.call(document.querySelectorAll('.pk'),function(b){b.addEventListener('click',function(){var n=b.getAttribute('data-item'),i=picked.indexOf(n);if(i<0){picked.push(n);b.setAttribute('aria-pressed','true')}else{picked.splice(i,1);b.setAttribute('aria-pressed','false')}draw()})});
+document.getElementById('send').addEventListener('click',function(){
+var msg='Hi '+C.biz+'! I would love to get: '+(picked.length?picked.join(', '):'(still deciding)')+'. When and where can I pick up?';
+if(C.mode==='mail'){location.href='mailto:'+C.to+'?subject='+encodeURIComponent('Order request from your website')+'&body='+encodeURIComponent(msg)}
+else{try{navigator.clipboard.writeText(msg)}catch(e){}document.getElementById('note').textContent='Message copied. Paste it into the Instagram DM that just opened.';window.open(C.ig,'_blank')}
+});
+var hero=document.querySelector('.hero'),bar=document.getElementById('bar');
+window.addEventListener('scroll',function(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)},{passive:true});
+})();
+</script>
+</body>
+</html>
