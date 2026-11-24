@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tito Blndz | Manchester, TN</title>
+<meta name="description" content="Tito Blndz: haircuts, fades, beards and designs by Miguel Lopez at 707 Hillsboro Blvd, Manchester, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111312;--panel:#1b1e1c;--line:#2c312e;--ink:#eef1ec;--mut:#9aa49d;--lime:#c6ff3d;--lime2:#9fd61a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.5;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--lime);color:#111;font-size:12px;font-weight:700;text-align:center;padding:7px 16px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.an{font-family:'Anton',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+nav .logo{font-size:22px}
+nav .logo b{color:var(--lime);font-weight:400}
+nav a.ig{font-size:14px;color:var(--mut);text-decoration:none}
+nav a.ig:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--lime);color:#111;text-decoration:none;font-weight:700;font-size:16px;padding:15px 26px;border-radius:4px;transition:transform .15s,background .15s}
+.btn:hover{background:#d8ff74;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.hero{padding:34px 0 56px;position:relative}
+.hero h1{font-size:clamp(76px,22vw,210px);line-height:.86}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--lime)}
+.stripes{height:10px;margin:26px 0;background:repeating-linear-gradient(90deg,var(--lime) 0 14px,transparent 14px 28px);opacity:.85}
+.hero p.lead{font-size:18px;color:var(--mut);max-width:520px;margin-bottom:24px}
+.hero p.lead strong{color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:40px}
+.facts div{padding:18px 8px;text-align:center}
+.facts div+div{border-left:1px solid var(--line)}
+.facts .an{font-size:30px;color:var(--lime);display:block}
+.facts small{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.1em}
+section{padding:56px 0}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:8px}
+h2{font-size:clamp(40px,9vw,72px);line-height:.95;margin-bottom:12px}
+.sub{color:var(--mut);max-width:560px;margin-bottom:28px}
+/* builder */
+.builder{display:grid;gap:22px}
+.base{display:grid;gap:10px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;background:var(--panel);border:1px solid var(--line);color:var(--ink);font:inherit;text-align:left;padding:16px 18px;border-radius:4px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:#4a524d}
+.opt .n{font-weight:700;font-size:17px}
+.opt .d{font-size:13px;color:var(--mut)}
+.opt .p{font-family:'Anton',Impact,sans-serif;font-size:22px;white-space:nowrap}
+.opt[aria-pressed="true"]{border-color:var(--lime);background:#20261a}
+.opt[aria-pressed="true"] .p{color:var(--lime)}
+.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin:6px 0 2px}
+.ticket{background:var(--lime);color:#111;padding:24px;border-radius:4px;position:relative;overflow:hidden}
+.ticket:before{content:"";position:absolute;inset:auto -20px -20px auto;width:120px;height:120px;border:14px solid rgba(0,0,0,.08);border-radius:50%}
+.ticket .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.ticket .tot{font-size:64px;line-height:1}
+.ticket .tm{font-size:15px;font-weight:700}
+.ticket ul{list-style:none;margin:14px 0 18px;font-size:14px;min-height:40px}
+.ticket li{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(0,0,0,.25);padding:5px 0}
+.ticket .btn{background:#111;color:var(--lime);width:100%}
+.ticket .note{font-size:12px;margin-top:10px;opacity:.75}
+.bump{animation:bump .35s ease}
+@keyframes bump{40%{transform:scale(1.08)}}
+/* menu */
+.menu{border-top:1px solid var(--line)}
+.menu li{list-style:none;display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.menu .n{font-weight:700}
+.menu .t{font-size:13px;color:var(--mut)}
+.menu .p{font-family:'Anton',Impact,sans-serif;font-size:22px;grid-row:span 2;align-self:center}
+.reviews{display:grid;gap:14px}
+.big{font-size:clamp(90px,24vw,180px);line-height:.85;color:var(--lime)}
+.stars{font-size:26px;letter-spacing:4px;color:var(--lime)}
+.find{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px}
+.find address{font-style:normal;font-size:20px;font-weight:700;margin:6px 0 18px}
+footer{padding:36px 0 110px;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(17,19,18,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .an{font-size:20px}
+.sticky .an b{color:var(--lime);font-weight:400}
+.sticky .btn{padding:12px 20px}
+@media(min-width:860px){
+ .builder{grid-template-columns:1.3fr 1fr;align-items:start}
+ .ticket{position:sticky;top:24px}
+ .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+ .hero{padding:50px 0 70px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Tito Blndz. Not live.</div>
+
+<header class="wrap">
+ <nav>
+  <div class="an logo">Tito <b>Blndz</b></div>
+  <a class="ig" href="https://www.instagram.com/tito_blndz/" target="_blank" rel="noopener">@tito_blndz</a>
+ </nav>
+ <div class="hero">
+  <h1 class="an">Tito<span>Blndz</span></h1>
+  <div class="stripes" aria-hidden="true"></div>
+  <p class="lead">Haircuts, fades, beards and designs by <strong>Miguel Lopez</strong> at 707 Hillsboro Blvd in <strong>Manchester, TN</strong>.</p>
+  <div class="cta">
+   <a class="btn" href="https://booksy.com/en-us/1513260_tito-blndz_barber-shop_35708_manchester" target="_blank" rel="noopener">Book on Booksy</a>
+   <a class="btn ghost" href="#build">Build your cut</a>
+  </div>
+  <div class="facts">
+   <div><span class="an">5.0</span><small>Rating</small></div>
+   <div><span class="an">50</span><small>Reviews</small></div>
+   <div><span class="an">$30</span><small>Cuts from</small></div>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="build">
+ <div class="wrap">
+  <p class="eyebrow">Build your cut</p>
+  <h2 class="an">Stack it up</h2>
+  <p class="sub">Pick your cut, add a design if you want one, and see the starting price and chair time before you book.</p>
+  <div class="builder">
+   <div>
+    <p class="label">1. The cut</p>
+    <div class="base" id="base">
+     <button class="opt" aria-pressed="true" data-n="Tito's Haircut" data-p="30" data-m="35"><span><span class="n">Tito's Haircut</span><br><span class="d">35 min</span></span><span class="p">$30+</span></button>
+     <button class="opt" aria-pressed="false" data-n="Tito's Haircut/Beard" data-p="45" data-m="45"><span><span class="n">Haircut + Beard</span><br><span class="d">45 min</span></span><span class="p">$45+</span></button>
+     <button class="opt" aria-pressed="false" data-n="Kid's Cut" data-p="30" data-m="30"><span><span class="n">Kid's Cut</span><br><span class="d">30 min</span></span><span class="p">$30+</span></button>
+     <button class="opt" aria-pressed="false" data-n="Line up" data-p="20" data-m="20"><span><span class="n">Line Up</span><br><span class="d">20 min</span></span><span class="p">$20+</span></button>
+     <button class="opt" aria-pressed="false" data-n="Beard" data-p="20" data-m="15"><span><span class="n">Beard</span><br><span class="d">15 min</span></span><span class="p">$20+</span></button>
+    </div>
+    <p class="label" style="margin-top:18px">2. Extra</p>
+    <div class="base">
+     <button class="opt" id="design" aria-pressed="false" data-m="10"><span><span class="n">Add a Design</span><br><span class="d">10 min</span></span><span class="p" style="font-size:16px">Varies</span></button>
+    </div>
+   </div>
+   <div class="ticket" aria-live="polite">
+    <div class="row"><span class="an" style="font-size:20px">Your ticket</span><span class="tm" id="tm">35 min</span></div>
+    <ul id="lines"></ul>
+    <div class="row"><span style="font-weight:700">From</span><span class="an tot" id="tot">$30</span></div>
+    <a class="btn" style="margin-top:18px" href="https://booksy.com/en-us/1513260_tito-blndz_barber-shop_35708_manchester" target="_blank" rel="noopener">Book this on Booksy</a>
+    <p class="note" id="note">Starting prices from Booksy. Final price is set in the chair.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+ <div class="wrap two">
+  <div>
+   <p class="eyebrow">Full menu</p>
+   <h2 class="an">Services</h2>
+   <p class="sub">Straight from the Booksy menu. Prices are starting prices.</p>
+  </div>
+  <ul class="menu">
+   <li><span class="n">Tito's Haircut</span><span class="p">$30+</span><span class="t">35 min</span></li>
+   <li><span class="n">Tito's Haircut/Beard</span><span class="p">$45+</span><span class="t">45 min</span></li>
+   <li><span class="n">Kid's Cut</span><span class="p">$30+</span><span class="t">30 min</span></li>
+   <li><span class="n">Line Up</span><span class="p">$20+</span><span class="t">20 min</span></li>
+   <li><span class="n">Beard</span><span class="p">$20+</span><span class="t">15 min</span></li>
+   <li><span class="n">Design</span><span class="p" style="font-size:16px">Varies</span><span class="t">10 min</span></li>
+  </ul>
+ </div>
+</section>
+
+<section>
+ <div class="wrap two">
+  <div>
+   <p class="eyebrow">Booksy reviews</p>
+   <div class="an big">5.0</div>
+   <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+   <p class="sub" style="margin-top:10px">50 reviews on Booksy, every one of them five stars.</p>
+  </div>
+  <div class="find">
+   <p class="eyebrow">Find the chair</p>
+   <address>707 Hillsboro Blvd<br>Manchester, TN 37355</address>
+   <p class="sub" style="margin-bottom:18px">Parking on site. Cards accepted.</p>
+   <div class="cta">
+    <a class="btn" href="https://booksy.com/en-us/1513260_tito-blndz_barber-shop_35708_manchester" target="_blank" rel="noopener">Book on Booksy</a>
+    <a class="btn ghost" href="https://www.instagram.com/tito_blndz/" target="_blank" rel="noopener">See the cuts</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">Tito Blndz, 707 Hillsboro Blvd, Manchester, TN 37355. Instagram <a href="https://www.instagram.com/tito_blndz/" target="_blank" rel="noopener">@tito_blndz</a>.<br>Concept site by Code Craft Media. Not affiliated with or published by Tito Blndz.</div>
+</footer>
+
+<div class="sticky" id="sticky">
+ <span class="an">Tito <b>Blndz</b></span>
+ <a class="btn" href="https://booksy.com/en-us/1513260_tito-blndz_barber-shop_35708_manchester" target="_blank" rel="noopener">Book</a>
+</div>
+
+<script>
+(function(){
+ var base=document.querySelectorAll('#base .opt'),design=document.getElementById('design'),
+  lines=document.getElementById('lines'),tot=document.getElementById('tot'),tm=document.getElementById('tm'),note=document.getElementById('note');
+ function render(){
+  var sel=document.querySelector('#base .opt[aria-pressed="true"]'),p=+sel.dataset.p,m=+sel.dataset.m,h='<li><span>'+sel.dataset.n+'</span><span>$'+p+'+</span></li>';
+  if(design.getAttribute('aria-pressed')==='true'){m+=10;h+='<li><span>Design</span><span>varies</span></li>';note.textContent='Design price varies. Bring a pic of the design you want.'}
+  else note.textContent='Starting prices from Booksy. Final price is set in the chair.';
+  lines.innerHTML=h;tot.textContent='$'+p;tm.textContent=m+' min';
+  tot.classList.remove('bump');void tot.offsetWidth;tot.classList.add('bump');
+ }
+ base.forEach(function(b){b.addEventListener('click',function(){base.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');render()})});
+ design.addEventListener('click',function(){design.setAttribute('aria-pressed',design.getAttribute('aria-pressed')==='true'?'false':'true');render()});
+ render();
+ var s=document.getElementById('sticky'),hero=document.querySelector('.hero');
+ function onScroll(){s.classList.toggle('on',window.scrollY>hero.offsetTop+hero.offsetHeight-80)}
+ window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+</body>
+</html>
