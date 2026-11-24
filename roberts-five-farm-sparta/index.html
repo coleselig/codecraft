@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Roberts Five Farm · U-Pick Tulips · Sparta, TN</title>
+<meta name="description" content="Concept site for Roberts Five Farm, a family u-pick tulip farm on Board Valley Road in Sparta, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff8ef;--blush:#ffe3e3;--tulip:#e23b4e;--coral:#ff7a59;--sun:#ffc145;--plum:#5a2142;--leaf:#2f7a4f;--leaf2:#9fd39b;--ink:#2b1a24;--muted:#6f5662;
+--serif:"Fraunces",Georgia,serif;--sans:"Nunito Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--plum);color:#f6d9e4;font-size:12px;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:12px}
+.logo{font-family:var(--serif);font-weight:800;font-size:21px;text-decoration:none;color:var(--plum);line-height:1}
+.logo small{display:block;font:800 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--tulip);margin-top:4px}
+.call{flex:none;white-space:nowrap;background:var(--plum);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:8px 15px;border-radius:99px}
+.hero{background:linear-gradient(180deg,var(--blush),var(--cream) 70%);padding:22px 0 0;overflow:hidden}
+.tag{display:inline-block;background:#fff;border:2px solid var(--plum);color:var(--plum);font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(44px,13vw,96px);line-height:.95;color:var(--plum);margin:14px 0 14px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--tulip)}
+.lede{font-size:18px;color:var(--muted);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;font-size:15.5px;padding:13px 20px;border-radius:99px}
+.btn.red{background:var(--tulip);color:#fff}
+.btn.out{border:2px solid var(--plum);color:var(--plum)}
+.field{display:block;width:100%;height:clamp(150px,30vw,340px);margin-top:20px}
+section{padding:60px 0}
+.kicker{font-weight:800;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--tulip)}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(32px,8.5vw,54px);line-height:1.02;color:var(--plum);margin:6px 0 12px}
+.intro{color:var(--muted);max-width:34em}
+.tips{display:grid;gap:12px;margin-top:22px}
+.tip{background:#fff;border-radius:18px;padding:18px;border:2px solid #f3d6d6}
+.tip h3{font-family:var(--serif);font-size:21px;color:var(--plum);line-height:1.15;margin-bottom:4px}
+.tip p{font-size:15.5px;color:var(--muted)}
+.tip .ico{width:38px;height:38px;margin-bottom:8px}
+.year{background:var(--plum);color:#fff}
+.year h2{color:#fff}.year .kicker{color:var(--sun)}.year .intro{color:#ecc9d8}
+.dial{margin-top:22px;display:grid;gap:18px}
+.months{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.months button{border:2px solid rgba(255,255,255,.35);background:none;color:#fff;font:800 14.5px var(--sans);padding:12px 4px;border-radius:14px;cursor:pointer}
+.months button[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:var(--plum)}
+.card{background:var(--cream);color:var(--ink);border-radius:22px;padding:20px;display:grid;gap:14px;grid-template-columns:96px 1fr;align-items:center;min-height:170px}
+.card svg{width:96px;height:120px}
+.card h3{font-family:var(--serif);font-size:24px;color:var(--plum);line-height:1.1}
+.card p{font-size:15.5px;color:var(--muted);margin-top:4px}
+.card .when{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tulip)}
+.card a{color:var(--tulip);font-weight:800}
+.note{font-size:13.5px;color:#ecc9d8;margin-top:6px}
+.events{display:grid;gap:10px;margin-top:20px}
+.ev{display:flex;gap:14px;align-items:center;background:#fff;border-radius:16px;padding:14px 16px;border:2px solid #f3d6d6}
+.ev .d{flex:none;width:58px;text-align:center;background:var(--blush);border-radius:12px;padding:6px 0;font-weight:800;color:var(--plum);line-height:1.1}
+.ev .d small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tulip)}
+.ev b{display:block;font-size:16px;line-height:1.25}
+.ev span{font-size:13.5px;color:var(--muted)}
+.visit{background:var(--leaf);color:#fff}
+.visit h2{color:#fff}.visit .kicker{color:var(--sun)}
+.vgrid{display:grid;gap:10px;margin-top:20px}
+.vgrid a,.vgrid div{display:block;text-decoration:none;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:14px 16px;border-radius:16px;overflow-wrap:anywhere}
+.vgrid b{display:block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sun)}
+footer{background:var(--plum);color:#ecc9d8;text-align:center;font-size:13.5px;padding:22px 20px 96px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;display:flex;gap:8px;transform:translateY(150%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky a{flex:1;text-align:center;text-decoration:none;font-weight:800;padding:14px 8px;border-radius:99px;background:var(--tulip);color:#fff;box-shadow:0 6px 20px rgba(90,33,66,.3);font-size:15px}
+.sticky a+a{background:var(--plum)}
+@media(min-width:860px){
+ .hero{padding-top:50px}
+ .tips{grid-template-columns:repeat(3,1fr);gap:20px}
+ .dial{grid-template-columns:1fr 1.2fr;align-items:center}
+ .card{grid-template-columns:130px 1fr;padding:28px}
+ .card svg{width:130px;height:160px}
+ .events{grid-template-columns:1fr 1fr}
+ .vgrid{grid-template-columns:repeat(4,1fr)}
+ .sticky{left:auto;width:380px;right:24px;bottom:20px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Roberts Five Farm. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">Roberts Five Farm<small>U-pick tulips · Sparta, TN</small></a><a class="call" href="tel:+19312672408">Call the farm</a></div></nav>
+<header class="hero"><div class="wrap">
+  <span class="tag">Board Valley Road · White County</span>
+  <h1>Pick your own <em>tulips</em> in Sparta</h1>
+  <p class="lede">A family u-pick tulip farm just outside Cookeville. Come walk the rows in early spring, fill your arms with stems, and stay for the markets and farm days the Roberts family hosts through the year.</p>
+  <div class="actions">
+    <a class="btn red" href="#year">What's happening when</a>
+    <a class="btn out" href="mailto:robertsfivefarm@gmail.com?subject=Tulip%20season">Email the farm</a>
+  </div>
+</div>
+<svg class="field" viewBox="0 0 400 140" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <circle cx="330" cy="34" r="20" fill="#ffc145"/>
+  <path d="M0 70Q80 50 160 64T320 58 400 62V140H0z" fill="#9fd39b"/>
+  <path d="M0 92Q100 80 200 90T400 86V140H0z" fill="#2f7a4f"/>
+  <g id="rowA">
+    <g fill="#e23b4e"><path d="M10 100c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M40 98c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M70 101c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/></g>
+    <g fill="#ffc145"><path d="M100 99c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M130 101c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M160 98c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/></g>
+    <g fill="#ff7a59"><path d="M190 100c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M220 99c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M250 101c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/></g>
+    <g fill="#f7a8c4"><path d="M280 98c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M310 100c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M340 99c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/><path d="M370 101c0-8 3-12 6-12s6 4 6 12-6 6-6 6-6 2-6-6z"/></g>
+  </g>
+  <g fill="#e23b4e"><path d="M4 128c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/><path d="M84 130c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/><path d="M244 129c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/></g>
+  <g fill="#ffc145"><path d="M44 131c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/><path d="M204 131c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/><path d="M364 130c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/></g>
+  <g fill="#f7a8c4"><path d="M124 129c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/><path d="M284 131c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/></g>
+  <g fill="#ff7a59"><path d="M164 130c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/><path d="M324 129c0-10 4-15 8-15s8 5 8 15-8 8-8 8-8 2-8-8z"/></g>
+</svg>
+</header>
+
+<section><div class="wrap">
+  <div class="kicker">Before you come</div>
+  <h2>A u-pick morning, done right</h2>
+  <p class="intro">Tulips are picked in early spring, roughly March into April, and bloom time always depends on the weather. Opening day and field updates go out on the farm's Facebook and Instagram first.</p>
+  <div class="tips">
+    <div class="tip"><svg class="ico" viewBox="0 0 38 38"><path d="M8 30h16l4-6V8h-8v14H8z" fill="#5a2142"/><rect x="6" y="30" width="24" height="4" rx="2" fill="#e23b4e"/></svg><h3>Wear boots</h3><p>The rows are real fields. Boots, or at least closed-toe shoes, make the walk a lot more fun.</p></div>
+    <div class="tip"><svg class="ico" viewBox="0 0 38 38"><circle cx="19" cy="19" r="15" fill="#ffc145"/><path d="M19 10v10l6 4" stroke="#5a2142" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3>Check bloom first</h3><p>Spring weather moves the calendar. Peek at the latest post before you load up the car.</p></div>
+    <div class="tip"><svg class="ico" viewBox="0 0 38 38"><path d="M12 22c0-9 4-14 7-14s7 5 7 14-7 7-7 7-7 2-7-7z" fill="#e23b4e"/><path d="M19 29v7" stroke="#2f7a4f" stroke-width="3"/></svg><h3>Priced by the stem</h3><p>There's a small admission, and tulips are priced per stem. Current prices are posted with each season's opening.</p></div>
+  </div>
+</div></section>
+
+<section class="year" id="year"><div class="wrap">
+  <div class="kicker">The farm year</div>
+  <h2>Tap a season to see what's growing</h2>
+  <p class="intro">Tulips are the headline, but the farm stays busy well past spring.</p>
+  <div class="dial">
+    <div class="months" role="group" aria-label="Season">
+      <button data-s="0" aria-pressed="true">Spring</button>
+      <button data-s="1" aria-pressed="false">May</button>
+      <button data-s="2" aria-pressed="false">Fall</button>
+      <button data-s="3" aria-pressed="false">Winter</button>
+    </div>
+    <div class="card" aria-live="polite">
+      <svg id="art" viewBox="0 0 96 120"></svg>
+      <div><div class="when" id="when"></div><h3 id="title"></h3><p id="body"></p></div>
+    </div>
+  </div>
+  <p class="note">Based on the farm's 2026 season. Dates change every year, so follow along on Facebook.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Farm days in 2026</div>
+  <h2>More than a tulip field</h2>
+  <p class="intro">A look back at what the farm hosted this year at 463 Board Valley Road.</p>
+  <div class="events">
+    <div class="ev"><div class="d"><small>Mar</small>28</div><div><b>Easter Egg Hunt &amp; Market at the Tulip Farm</b><span>Spring kickoff in the rows</span></div></div>
+    <div class="ev"><div class="d"><small>Apr</small>3</div><div><b>Mini Market</b><span>For young entrepreneurs, 17 and under</span></div></div>
+    <div class="ev"><div class="d"><small>May</small>16</div><div><b>3rd Annual Tulip Bulb Dig Day</b><span>Digging the bulbs after bloom</span></div></div>
+    <div class="ev"><div class="d"><small>Sep</small>6</div><div><b>Praise in the Petals</b><span>At Roberts Five Farm</span></div></div>
+    <div class="ev"><div class="d"><small>Sep</small>12</div><div><b>Fall Mini Market</b><span>Young entrepreneurs, 17 and under</span></div></div>
+    <div class="ev"><div class="d"><small>Sep</small>26</div><div><b>Hello Fall Market</b><span>Fall market on the farm</span></div></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="kicker">Find the farm</div>
+  <h2>Come see the rows</h2>
+  <div class="vgrid">
+    <a href="https://maps.google.com/?q=463+Board+Valley+Rd+Sparta+TN"><b>Address</b>463 Board Valley Rd, Sparta, TN</a>
+    <a href="tel:+19312672408"><b>Phone</b>931-267-2408</a>
+    <a href="mailto:robertsfivefarm@gmail.com"><b>Email</b>robertsfivefarm@gmail.com</a>
+    <a href="https://www.instagram.com/roberts5_farm"><b>Instagram</b>@roberts5_farm</a>
+  </div>
+</div></section>
+<footer>Roberts Five Farm · Sparta, Tennessee</footer>
+<div class="sticky" id="sticky"><a href="mailto:robertsfivefarm@gmail.com?subject=Tulip%20season">Email the farm</a><a href="tel:+19312672408">Call</a></div>
+
+<script>
+var S=[
+ {w:"About March to April",t:"U-pick tulip season",b:"Rows of tulips open for picking. Bring boots and pick your own stems. Bloom time depends on the weather, so opening day is announced on Facebook.",c:["#e23b4e","#ffc145","#f7a8c4"],k:"bloom"},
+ {w:"May",t:"Tulip Bulb Dig Day",b:"After the blooms fade, the bulbs come up. In 2026 the farm held its 3rd annual Bulb Dig Day.",c:["#8a5a3c","#c48a5a","#e8c39e"],k:"bulb"},
+ {w:"September",t:"Fall markets on the farm",b:"Fall brings markets back to Board Valley Road, including the Hello Fall Market and a mini market for young entrepreneurs.",c:["#ff7a59","#ffc145","#c2410c"],k:"leaf"},
+ {w:"Winter",t:"Waiting on spring",b:"The field rests and the farm plans next season. Email to ask about the next tulip opening.",c:["#9fb8d6","#dfe9f5","#5a2142"],k:"snow"}];
+function art(s){var c=s.c,g='';
+ if(s.k==='bloom'){g='<path d="M48 118V60" stroke="#2f7a4f" stroke-width="5"/><path d="M48 92c-14-4-22-16-22-26 10 2 20 10 22 26z" fill="#2f7a4f"/><path d="M26 44c0-20 10-30 22-30s22 10 22 30-22 18-22 18-22 2-22-18z" fill="'+c[0]+'"/><path d="M36 30c4-10 8-14 12-14s8 4 12 14l-12 10z" fill="'+c[2]+'" opacity=".7"/><circle cx="16" cy="20" r="6" fill="'+c[1]+'"/>'}
+ if(s.k==='bulb'){g='<rect x="0" y="70" width="96" height="50" fill="#5a3a28"/><path d="M48 30c-16 0-24 18-20 32 3 10 10 14 20 14s17-4 20-14c4-14-4-32-20-32z" fill="'+c[1]+'"/><path d="M48 30c0-8 0-16 2-24" stroke="#2f7a4f" stroke-width="4" fill="none"/><path d="M36 76l-4 12M48 76v14M60 76l4 12" stroke="'+c[2]+'" stroke-width="3"/>'}
+ if(s.k==='leaf'){g='<path d="M48 10c22 14 30 40 18 62-6 10-14 14-18 14s-12-4-18-14C18 50 26 24 48 10z" fill="'+c[0]+'"/><path d="M48 18v96" stroke="#5a2142" stroke-width="3"/><path d="M48 46l14-10M48 62l-14-10M48 76l12-8" stroke="#5a2142" stroke-width="2"/><circle cx="18" cy="100" r="8" fill="'+c[1]+'"/><circle cx="80" cy="96" r="6" fill="'+c[2]+'"/>'}
+ if(s.k==='snow'){g='<rect x="0" y="92" width="96" height="28" fill="'+c[1]+'"/><g stroke="'+c[0]+'" stroke-width="4" stroke-linecap="round"><path d="M48 18v56M24 32l48 28M72 32L24 60"/></g><circle cx="48" cy="46" r="6" fill="'+c[2]+'"/>'}
+ return g}
+function show(i){var s=S[i];document.getElementById('when').textContent=s.w;document.getElementById('title').textContent=s.t;document.getElementById('body').textContent=s.b;document.getElementById('art').innerHTML=art(s);
+ document.querySelectorAll('.months button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.s==i)})}
+document.querySelectorAll('.months button').forEach(function(b){b.onclick=function(){show(+b.dataset.s)}});
+show(0);
+var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('show',scrollY>innerHeight*.8)},{passive:true});
+</script>
+</body>
+</html>

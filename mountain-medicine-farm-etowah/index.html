@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mountain Medicine Farm · Herbs, Teas &amp; Salves · Etowah, TN</title>
+<meta name="description" content="Concept site for Mountain Medicine Farm, a women-owned herb farm near Starr Mountain in Etowah, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#20202e;--dusk:#33314a;--lav:#9c8fd0;--lav2:#d9d2f2;--sage:#7f9a7a;--sage2:#dfe7d8;--paper:#f6f2ea;--amber:#c99a4b;--ink:#25222c;--muted:#5e5a68;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#15151f;color:var(--lav2);font-size:12px;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background:var(--night);color:var(--paper);position:relative;overflow:hidden}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;gap:12px}
+.logo{font-family:var(--serif);font-weight:700;font-size:22px;text-decoration:none;line-height:1}
+.logo small{display:block;font:500 10.5px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--lav);margin-top:4px}
+.pill{flex:none;white-space:nowrap;border:1px solid var(--lav);color:var(--lav2);text-decoration:none;font-size:13.5px;font-weight:700;padding:7px 14px;border-radius:99px}
+.hero{padding:26px 0 0;position:relative}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);font-weight:700}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(44px,12.5vw,92px);line-height:.95;margin:12px 0 16px}
+h1 i{color:var(--lav)}
+.lede{color:#cfcadc;max-width:31em;font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:13px 20px;border-radius:4px}
+.btn.lav{background:var(--lav);color:var(--night)}
+.btn.out{border:1px solid var(--paper);color:var(--paper)}
+.mtn{display:block;width:100%;height:clamp(130px,26vw,320px);margin-top:16px}
+section{padding:62px 0}
+.kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#6f63aa;font-weight:700}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(34px,8.5vw,56px);line-height:1;margin:6px 0 14px}
+.intro{color:var(--muted);max-width:35em}
+.facts{display:grid;gap:12px;margin-top:24px}
+.fact{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid #ddd6c8}
+.fact svg{flex:none;width:40px;height:40px}
+.fact h3{font-family:var(--serif);font-size:23px;line-height:1.1}
+.fact p{font-size:15px;color:var(--muted)}
+.shelf{background:var(--sage2)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 16px}
+.filters button{border:1px solid var(--dusk);background:none;color:var(--dusk);font:700 14px var(--sans);padding:8px 14px;border-radius:99px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--dusk);color:var(--paper)}
+.cols{display:grid;gap:22px}
+.jars{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.jar{position:relative;background:var(--paper);border:1px solid #c9d3c2;border-radius:6px;padding:14px 12px 12px;text-align:center;cursor:pointer;font:inherit;color:inherit}
+.jar[hidden]{display:none}
+.jar svg{width:52px;height:60px;display:block;margin:0 auto 6px}
+.jar b{display:block;font-family:var(--serif);font-size:20px;line-height:1.1}
+.jar small{color:var(--muted);font-size:12.5px}
+.jar[aria-pressed=true]{border-color:var(--dusk);box-shadow:inset 0 0 0 2px var(--dusk)}
+.jar[aria-pressed=true]::after{content:"\2713";position:absolute;top:6px;right:8px;width:22px;height:22px;border-radius:50%;background:var(--dusk);color:#fff;font-size:13px;line-height:22px}
+.label{background:var(--paper);border:1px solid var(--dusk);border-radius:6px;padding:20px;outline:1px solid var(--dusk);outline-offset:-6px}
+.label h3{font-family:var(--serif);font-size:26px;text-align:center}
+.label .sub{text-align:center;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#6f63aa;font-weight:700}
+.label ul{list-style:none;margin:14px 0;min-height:3em;border-top:1px dashed #b9b2a4;border-bottom:1px dashed #b9b2a4;padding:10px 0}
+.label li{font-family:var(--serif);font-size:19px;padding:2px 0}
+.label li.none{font-family:var(--sans);font-size:14.5px;color:var(--muted)}
+.label textarea{width:100%;min-height:62px;border:1px solid #c9c1b2;background:#fffdf8;border-radius:4px;padding:10px;font:15px var(--sans);resize:vertical}
+.label .btn{display:block;text-align:center;margin-top:12px;background:var(--dusk);color:var(--paper)}
+.label .fine{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
+.market{background:var(--dusk);color:var(--paper)}
+.market .kicker{color:var(--amber)}
+.mgrid{display:grid;gap:10px;margin-top:20px}
+.mgrid a,.mgrid div{display:block;text-decoration:none;border:1px solid rgba(217,210,242,.25);border-radius:6px;padding:14px 16px;overflow-wrap:anywhere}
+.mgrid b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--lav)}
+footer{background:#15151f;color:#b9b3c9;text-align:center;font-size:13.5px;padding:22px 20px 96px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;transform:translateY(100%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:16px 8px;background:var(--night);color:var(--paper);font-size:15px}
+.sticky a:first-child{background:var(--lav);color:var(--night)}
+@media(min-width:860px){
+ .hero{padding-top:48px}
+ .facts{grid-template-columns:repeat(3,1fr);gap:28px}
+ .cols{grid-template-columns:1.4fr 1fr;align-items:start}
+ .jars{grid-template-columns:repeat(3,1fr)}
+ .label{position:sticky;top:20px}
+ .mgrid{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;right:24px;bottom:20px;width:380px;border-radius:6px;overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Mountain Medicine Farm. Not live.</div>
+<div class="top">
+<nav><div class="wrap"><a class="logo" href="#">Mountain Medicine<small>Farm · Etowah, TN</small></a><a class="pill" href="mailto:mountainmedicinefarm2023@gmail.com">Email us</a></div></nav>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Starr Mountain · McMinn County</div>
+  <h1>Grown on the mountain, <i>made by hand</i></h1>
+  <p class="lede">A women-owned herb farm in the Starr Mountain area of Etowah, run by three generations of women. Teas, tinctures, salves and bath products, grown and made right here.</p>
+  <div class="actions">
+    <a class="btn lav" href="#shelf">Build a market list</a>
+    <a class="btn out" href="#market">Where to find us</a>
+  </div>
+</div>
+<svg class="mtn" viewBox="0 0 400 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <circle cx="300" cy="30" r="14" fill="#d9d2f2" opacity=".85"/>
+  <g fill="#fff" opacity=".7"><circle cx="60" cy="20" r="1.2"/><circle cx="120" cy="36" r="1"/><circle cx="210" cy="14" r="1.3"/><circle cx="360" cy="44" r="1"/></g>
+  <path d="M0 80L50 52 90 66 150 30 200 60 250 40 300 64 350 46 400 62V130H0z" fill="#33314a"/>
+  <path d="M0 98Q60 84 130 94T260 90 400 92V130H0z" fill="#4a4566"/>
+  <g stroke="#7f9a7a" stroke-width="2" fill="none" id="rows">
+    <path d="M10 130Q14 112 12 100M30 130Q34 112 32 102M50 130Q54 112 52 100M70 130Q74 112 72 102M90 130Q94 112 92 100M110 130Q114 112 112 102M130 130Q134 112 132 100M150 130Q154 112 152 102M170 130Q174 112 172 100M190 130Q194 112 192 102M210 130Q214 112 212 100M230 130Q234 112 232 102M250 130Q254 112 252 100M270 130Q274 112 272 102M290 130Q294 112 292 100M310 130Q314 112 312 102M330 130Q334 112 332 100M350 130Q354 112 352 102M370 130Q374 112 372 100M390 130Q394 112 392 102"/>
+  </g>
+  <g fill="#9c8fd0"><rect x="9" y="94" width="6" height="12" rx="3"/><rect x="29" y="96" width="6" height="12" rx="3"/><rect x="49" y="94" width="6" height="12" rx="3"/><rect x="69" y="96" width="6" height="12" rx="3"/><rect x="89" y="94" width="6" height="12" rx="3"/><rect x="109" y="96" width="6" height="12" rx="3"/><rect x="129" y="94" width="6" height="12" rx="3"/><rect x="149" y="96" width="6" height="12" rx="3"/><rect x="169" y="94" width="6" height="12" rx="3"/><rect x="189" y="96" width="6" height="12" rx="3"/><rect x="209" y="94" width="6" height="12" rx="3"/><rect x="229" y="96" width="6" height="12" rx="3"/><rect x="249" y="94" width="6" height="12" rx="3"/><rect x="269" y="96" width="6" height="12" rx="3"/><rect x="289" y="94" width="6" height="12" rx="3"/><rect x="309" y="96" width="6" height="12" rx="3"/><rect x="329" y="94" width="6" height="12" rx="3"/><rect x="349" y="96" width="6" height="12" rx="3"/><rect x="369" y="94" width="6" height="12" rx="3"/><rect x="389" y="96" width="6" height="12" rx="3"/></g>
+</svg>
+</header>
+</div>
+
+<section><div class="wrap">
+  <div class="kicker">The farm</div>
+  <h2>Three generations, one hillside</h2>
+  <p class="intro">Mountain Medicine Farm grows its own herbs near Starr Mountain and turns them into nourishing, handmade goods.</p>
+  <div class="facts">
+    <div class="fact"><svg viewBox="0 0 40 40"><path d="M20 38V16" stroke="#7f9a7a" stroke-width="2.5"/><g fill="#9c8fd0"><ellipse cx="20" cy="8" rx="3" ry="5"/><ellipse cx="15" cy="14" rx="3" ry="4.5"/><ellipse cx="25" cy="14" rx="3" ry="4.5"/><ellipse cx="20" cy="18" rx="3" ry="4"/></g></svg><div><h3>Over 1,000 lavender plants</h3><p>Lavender grown on the farm is the base of the skincare line.</p></div></div>
+    <div class="fact"><svg viewBox="0 0 40 40"><circle cx="11" cy="16" r="5" fill="#c99a4b"/><circle cx="20" cy="12" r="5" fill="#9c8fd0"/><circle cx="29" cy="16" r="5" fill="#7f9a7a"/><path d="M4 36c2-9 6-13 7-13s5 4 7 13M13 36c2-11 6-16 7-16s5 5 7 16M22 36c2-9 6-13 7-13s5 4 7 13" fill="#33314a"/></svg><div><h3>Women-owned</h3><p>Owned and operated by three generations of women.</p></div></div>
+    <div class="fact"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="#7f9a7a" stroke-width="2.5"/><path d="M13 20l5 5 9-10" stroke="#33314a" stroke-width="3" fill="none" stroke-linecap="round"/></svg><div><h3>Certified Naturally Grown</h3><p>Herbs grown with care for the land they come from.</p></div></div>
+  </div>
+</div></section>
+
+<section class="shelf" id="shelf"><div class="wrap">
+  <div class="kicker">The apothecary shelf</div>
+  <h2>Pick from the shelf, we'll set it aside</h2>
+  <p class="intro">Tap what you're after, add a note, and send the list before market day. We'll reply with what's on hand.</p>
+  <div class="filters" role="group" aria-label="Filter">
+    <button data-f="all" aria-pressed="true">Everything</button>
+    <button data-f="drink" aria-pressed="false">To drink</button>
+    <button data-f="skin" aria-pressed="false">For skin</button>
+    <button data-f="bath" aria-pressed="false">For the bath</button>
+  </div>
+  <div class="cols">
+    <div class="jars" id="jars"></div>
+    <div class="label">
+      <div class="sub">Market list for</div>
+      <h3>Mountain Medicine Farm</h3>
+      <ul id="list"><li class="none">Tap a jar to add it.</li></ul>
+      <textarea id="note" placeholder="Your name, and anything we should know (optional)"></textarea>
+      <a class="btn" id="send" href="mailto:mountainmedicinefarm2023@gmail.com">Email this list</a>
+      <p class="fine">For pickup at Farmers On First, Cleveland. Message ahead to confirm the day.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="market" id="market"><div class="wrap">
+  <div class="kicker">Find us</div>
+  <h2>Find us at Farmers On First</h2>
+  <p class="intro" style="color:#d3cde3">Find us at the Farmers On First market at First Street Square in downtown Cleveland. Send a note before market day and we'll set your list aside.</p>
+  <div class="mgrid">
+    <a href="https://maps.google.com/?q=220+1st+St+NE+Cleveland+TN"><b>Market</b>First Street Square, 220 1st St NE, Cleveland</a>
+    <a href="mailto:mountainmedicinefarm2023@gmail.com"><b>Email</b>mountainmedicinefarm2023@gmail.com</a>
+    <a href="tel:+18505985903"><b>Phone</b>850-598-5903</a>
+  </div>
+</div></section>
+<footer>Mountain Medicine Farm · Etowah, Tennessee</footer>
+<div class="sticky" id="sticky"><a href="#shelf">Build a list</a><a href="mailto:mountainmedicinefarm2023@gmail.com">Email</a></div>
+
+<script>
+var I=[["Herbal teas","Farm-grown herbs","drink","#c99a4b"],["Tinctures","Farm-grown herbs","drink","#7a4a2a"],["Salves","Handmade","skin","#c9b26b"],["Lavender skincare","From our lavender","skin","#9c8fd0"],["Soap","Handmade bars","bath","#e8dcc6"],["Bath products","Handmade","bath","#7f9a7a"]];
+var sel={},J=document.getElementById('jars');
+function jarSvg(c,t){if(t==='drink')return '<svg viewBox="0 0 52 60"><rect x="16" y="2" width="20" height="8" rx="2" fill="#33314a"/><path d="M12 14h28v40a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4z" fill="'+c+'"/><rect x="16" y="26" width="20" height="16" fill="#f6f2ea"/></svg>';
+ if(t==='skin')return '<svg viewBox="0 0 52 60"><rect x="8" y="18" width="36" height="8" rx="3" fill="#33314a"/><rect x="8" y="26" width="36" height="28" rx="5" fill="'+c+'"/><rect x="14" y="34" width="24" height="12" fill="#f6f2ea"/></svg>';
+ return '<svg viewBox="0 0 52 60"><rect x="6" y="22" width="40" height="26" rx="6" fill="'+c+'" stroke="#33314a" stroke-width="1.5"/><path d="M12 30q14 8 28 0" stroke="#33314a" stroke-width="1.2" fill="none"/></svg>'}
+I.forEach(function(it,i){var b=document.createElement('button');b.className='jar';b.dataset.f=it[2];b.setAttribute('aria-pressed','false');
+ b.innerHTML=jarSvg(it[3],it[2])+'<b>'+it[0]+'</b><small>'+it[1]+'</small>';
+ b.onclick=function(){sel[i]=!sel[i];b.setAttribute('aria-pressed',!!sel[i]);upd()};J.appendChild(b)});
+function upd(){var L=[];I.forEach(function(it,i){if(sel[i])L.push(it[0])});
+ var ul=document.getElementById('list');ul.innerHTML=L.length?L.map(function(x){return '<li>'+x+'</li>'}).join(''):'<li class="none">Tap a jar to add it.</li>';
+ var n=document.getElementById('note').value.trim();
+ var msg='Hello! Could you set these aside for me at Farmers On First?\n'+(L.length?L.map(function(x){return '- '+x}).join('\n'):'(my list)')+(n?'\n\n'+n:'')+'\n\nThank you!';
+ document.getElementById('send').href='mailto:mountainmedicinefarm2023@gmail.com?subject='+encodeURIComponent('My market list')+'&body='+encodeURIComponent(msg)}
+document.getElementById('note').oninput=upd;
+document.querySelectorAll('.filters button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+ document.querySelectorAll('.jar').forEach(function(j){j.hidden=!(b.dataset.f==='all'||j.dataset.f===b.dataset.f)})}});
+upd();
+var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('show',scrollY>innerHeight*.8)},{passive:true});
+</script>
+</body>
+</html>
