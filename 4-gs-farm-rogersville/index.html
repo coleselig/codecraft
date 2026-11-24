@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>4 G's Farm · Honey, Jams, Produce &amp; Meats · Rogersville, TN</title>
+<meta name="description" content="Concept site for 4 G's Farm in Hawkins County, TN: honey, jams, fresh produce, and pork, chicken, quail, pheasant and rabbit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--barn:#b3362b;--mustard:#e2a72e;--denim:#2d4f7c;--sage:#7d9a6a;--paper:#fbf6ea;--ink:#231b16;--mute:#6a5d52;
+--disp:"Alfa Slab One",Georgia,serif;--sans:"Nunito",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#1c2a40;color:#d6dfee;font:12px system-ui,sans-serif;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--denim);color:var(--paper);overflow:hidden;
+ background-image:radial-gradient(rgba(255,255,255,.08) 1.5px,transparent 1.6px);background-size:16px 16px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-size:22px;text-decoration:none;line-height:1}
+.logo svg{flex:none}
+.logo small{display:block;font:800 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-top:5px;color:var(--mustard)}
+.navbtn{flex:none;white-space:nowrap;font:800 14px var(--sans);text-decoration:none;background:var(--mustard);color:var(--ink);padding:8px 14px;border-radius:6px}
+.hero{padding:22px 0 40px;display:grid;gap:26px;align-items:center}
+.tag{display:inline-block;font:800 12px var(--sans);letter-spacing:.18em;text-transform:uppercase;background:var(--barn);padding:5px 10px;border-radius:4px}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(40px,11vw,82px);line-height:1.02;margin:14px 0 12px}
+h1 span{color:var(--mustard)}
+.lede{max-width:31em;font-size:18px;opacity:.95}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:13px 20px;border-radius:6px;text-decoration:none;font:800 15px var(--sans);border:0;cursor:pointer}
+.btn.mus{background:var(--mustard);color:var(--ink)}
+.btn.line{border:2px solid var(--paper);color:var(--paper)}
+.btn.barn{background:var(--barn);color:#fff}
+.quilt{width:100%;max-width:220px;height:auto;justify-self:center;display:block;filter:drop-shadow(0 10px 0 rgba(0,0,0,.18))}
+.strip{background:var(--barn);color:#fff;text-align:center;padding:11px 16px;font-weight:800;font-size:15px;letter-spacing:.02em}
+section{padding:60px 0}
+.kicker{font:800 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--barn)}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(30px,8vw,50px);line-height:1.06;margin:6px 0 14px;color:var(--denim)}
+.intro{color:var(--mute);max-width:38em}
+/* quilt picker */
+.patch{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:26px}
+.blk{border:0;border-radius:10px;padding:16px 14px 14px;text-align:left;color:#fff;position:relative;overflow:hidden}
+.blk h3{font-family:var(--disp);font-weight:400;font-size:20px;margin-bottom:8px;position:relative}
+.blk:before{content:"";position:absolute;right:-24px;top:-24px;width:70px;height:70px;transform:rotate(45deg);background:rgba(255,255,255,.14)}
+.b1{background:var(--mustard);color:var(--ink)}.b2{background:var(--sage)}.b3{background:var(--barn)}.b4{background:var(--denim)}
+.items{display:flex;flex-wrap:wrap;gap:6px;position:relative}
+.it{border:2px solid currentColor;background:transparent;color:inherit;font:700 13.5px var(--sans);padding:5px 10px;border-radius:999px;cursor:pointer}
+.it[aria-pressed="true"]{background:#fff;color:var(--ink);border-color:#fff}
+.b1 .it[aria-pressed="true"]{background:var(--ink);color:var(--mustard);border-color:var(--ink)}
+.basket{background:#fff;border:2px dashed #d8c9a6;border-radius:10px;padding:20px;margin-top:18px}
+.basket p{color:var(--mute);font-size:15px}.basket strong{color:var(--ink)}
+.count{display:inline-block;min-width:26px;text-align:center;background:var(--barn);color:#fff;border-radius:999px;font-weight:800;font-size:13px;padding:1px 8px;margin-left:4px}
+.basket textarea{width:100%;min-height:70px;border:1px solid #e0d4b8;border-radius:6px;padding:10px;font:15px var(--sans);margin:12px 0}
+.where{background:#efe5cc}
+.cols{display:grid;gap:14px;margin-top:24px}
+.card{background:#fff;border-radius:10px;padding:20px;border-left:6px solid var(--mustard)}
+.card h3{font-family:var(--disp);font-weight:400;font-size:21px;color:var(--denim);margin-bottom:4px}
+.card p{color:var(--mute);font-size:15.5px}
+footer{background:var(--denim);color:#d6dfee;padding:34px 0;font-size:15px}
+footer a{color:#fff}footer p+p{margin-top:4px}
+@media(min-width:800px){.quilt{max-width:340px}.hero{grid-template-columns:1.3fr 1fr}.patch{grid-template-columns:repeat(4,1fr)}.cols{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for 4 G's Farm. Not live.</div>
+<header>
+ <nav><div class="wrap"><a class="logo" href="#"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" fill="#fbf6ea"/><path d="M0 0H20V20H0Z" fill="#e2a72e"/><path d="M20 20H40V40H20Z" fill="#b3362b"/><path d="M20 0L40 20H20Z" fill="#7d9a6a"/><path d="M0 20L20 40V20Z" fill="#2d4f7c"/></svg><span>4 G's Farm<small>Hawkins County, TN</small></span></a><a class="navbtn" href="#basket">Email us</a></div></nav>
+ <div class="wrap hero">
+  <div>
+   <span class="tag">A new farm with a little of everything</span>
+   <h1>Honey, jams, <span>fresh produce</span> &amp; farm-raised meats.</h1>
+   <p class="lede">From strawberries and sweet corn to pork, quail and rabbit, 4 G's Farm raises a wide variety, and you'll find us at the Johnson City and Rogersville farmers markets.</p>
+   <div class="actions"><a class="btn mus" href="#basket">Piece together a basket</a><a class="btn line" href="#where">Where to find us</a></div>
+  </div>
+  <svg class="quilt" viewBox="0 0 200 200" aria-hidden="true">
+   <rect width="200" height="200" fill="#fbf6ea" stroke="#231b16" stroke-width="6"/>
+   <g stroke="#231b16" stroke-width="3">
+    <path d="M3 3H100V100H3Z" fill="#e2a72e"/><path d="M3 3L100 100H3Z" fill="#c78b18"/>
+    <path d="M100 3H197V100H100Z" fill="#7d9a6a"/><path d="M197 3L100 100V3Z" fill="#5f7e4f"/>
+    <path d="M3 100H100V197H3Z" fill="#2d4f7c"/><path d="M3 197L100 100V197Z" fill="#203b5f"/>
+    <path d="M100 100H197V197H100Z" fill="#b3362b"/><path d="M197 197L100 100H197Z" fill="#8e2820"/>
+    <path d="M100 52L148 100L100 148L52 100Z" fill="#fbf6ea"/>
+   </g>
+   <text x="100" y="114" text-anchor="middle" font-family="Alfa Slab One,Georgia,serif" font-size="40" fill="#231b16">4G</text>
+  </svg>
+ </div>
+</header>
+<div class="strip">Honey · Jams &amp; preserves · Strawberries · Sweet corn · Pork · Chicken · Quail · Rabbit</div>
+
+<section id="basket"><div class="wrap">
+ <div class="kicker">Piece together a basket</div>
+ <h2>Four patches, one farm.</h2>
+ <p class="intro">Tap anything you'd like to ask about. We'll stitch your picks into an email to the farm. Availability changes, so it's a question, not an order.</p>
+ <div class="patch" id="patch">
+  <div class="blk b1"><h3>Pantry</h3><div class="items"><button class="it" aria-pressed="false">Honey</button><button class="it" aria-pressed="false">Jam</button><button class="it" aria-pressed="false">Preserves</button></div></div>
+  <div class="blk b2"><h3>Garden</h3><div class="items"><button class="it" aria-pressed="false">Strawberries</button><button class="it" aria-pressed="false">Sweet corn</button><button class="it" aria-pressed="false">Green beans</button><button class="it" aria-pressed="false">Broccoli</button><button class="it" aria-pressed="false">Collards</button><button class="it" aria-pressed="false">Sweet peppers</button><button class="it" aria-pressed="false">Hot peppers</button></div></div>
+  <div class="blk b3"><h3>Meats</h3><div class="items"><button class="it" aria-pressed="false">Pork</button><button class="it" aria-pressed="false">Chicken</button><button class="it" aria-pressed="false">Quail</button><button class="it" aria-pressed="false">Pheasant</button><button class="it" aria-pressed="false">Rabbit</button></div></div>
+  <div class="blk b4"><h3>Fiber</h3><div class="items"><button class="it" aria-pressed="false">Wool</button></div></div>
+ </div>
+ <div class="basket">
+  <p><strong>Your basket<span class="count" id="count">0</span></strong> <span id="list">empty for now</span></p>
+  <textarea id="msg" placeholder="Anything else? (a question, which market you'll be at)"></textarea>
+  <a class="btn barn" id="send" href="mailto:dgouhin@gmail.com">Email 4 G's Farm</a>
+ </div>
+</div></section>
+
+<section class="where" id="where"><div class="wrap">
+ <div class="kicker">Where to find us</div>
+ <h2>At the market, or give us a call.</h2>
+ <div class="cols">
+  <div class="card"><h3>Johnson City Farmers' Market</h3><p>Saturdays in season at the pavilion, 105 West Main St, downtown Johnson City.</p></div>
+  <div class="card"><h3>Rogersville Farmers Market</h3><p>You'll find us at the Rogersville market, too.</p></div>
+ </div>
+ <p class="intro" style="margin-top:22px">We also raise hair sheep. For our farm share, call for availability.</p>
+</div></section>
+
+<footer><div class="wrap">
+ <p><strong>4 G's Farm</strong> · Hawkins County, Tennessee</p>
+ <p><a href="tel:+14237656915">(423) 765-6915</a> · <a href="mailto:dgouhin@gmail.com">dgouhin@gmail.com</a></p>
+</div></footer>
+<script>
+const its=[...document.querySelectorAll('.it')],list=document.getElementById('list'),cnt=document.getElementById('count'),msg=document.getElementById('msg'),send=document.getElementById('send'),E='dgouhin@gmail.com';
+function upd(){const p=its.filter(i=>i.getAttribute('aria-pressed')==='true').map(i=>i.textContent);
+ cnt.textContent=p.length;list.textContent=p.length?p.join(', '):'empty for now';
+ const body="Hi 4 G's Farm,\n\nI'd like to ask about: "+(p.length?p.join(', '):'what you have available')+".\n\n"+(msg.value?msg.value+"\n\n":"")+"Thank you!";
+ send.href="mailto:"+E+"?subject="+encodeURIComponent("Question for 4 G's Farm")+"&body="+encodeURIComponent(body)}
+its.forEach(i=>i.onclick=()=>{i.setAttribute('aria-pressed',i.getAttribute('aria-pressed')!=='true');upd()});msg.oninput=upd;upd();
+</script>
+</body>
+</html>

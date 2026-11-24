@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Whitt Farm · Vegetables, Melons &amp; Strawberries · Rutledge, TN</title>
+<meta name="description" content="Concept site for Whitt Farm in Rutledge, TN: a family farm raising a wide variety of vegetables, melons and strawberries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--tomato:#d8432b;--soil:#4a2f22;--soil2:#6b4532;--leaf:#4f8a3c;--sun:#f4c542;--crate:#d9a868;--crate2:#b98545;--sky:#fff3df;--ink:#2a1a12;--mute:#6d5a4c;
+--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"Libre Franklin",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--sky);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#2a1a12;color:#f1d9c6;font:12px system-ui,sans-serif;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--sky);position:relative;overflow:hidden}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{font-family:var(--disp);font-weight:800;font-size:26px;text-decoration:none;line-height:1;color:var(--soil)}
+.logo i{font-style:normal;color:var(--tomato)}
+.logo small{display:block;font:700 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-top:4px;color:var(--leaf)}
+.navbtn{flex:none;white-space:nowrap;font:700 14px var(--sans);text-decoration:none;background:var(--tomato);color:#fff;padding:9px 15px;border-radius:10px}
+.hero{padding:16px 0 0;position:relative}
+.sunball{position:absolute;right:-60px;top:-30px;width:220px;height:220px;border-radius:50%;background:var(--sun);opacity:.55;z-index:0}
+.hero>div:not(.sunball){position:relative;z-index:1}
+.loc{font:700 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--leaf)}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(44px,12.5vw,100px);line-height:.92;margin:10px 0 14px;color:var(--soil);letter-spacing:-.02em}
+h1 span{color:var(--tomato)}
+.lede{max-width:30em;font-size:18px;color:var(--mute)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;text-decoration:none;font:700 15px var(--sans);border:0;cursor:pointer}
+.btn.tom{background:var(--tomato);color:#fff}
+.btn.soil{background:var(--soil);color:var(--sky)}
+.btn.out{border:2px solid var(--soil);color:var(--soil)}
+.rows{display:block;width:100%;height:auto;margin-top:22px}
+section{padding:60px 0}
+.kicker{font:700 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--tomato)}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(32px,8.5vw,54px);line-height:1;margin:6px 0 14px;color:var(--soil);letter-spacing:-.01em}
+.intro{color:var(--mute);max-width:38em}
+/* field */
+.field{background:var(--soil);color:var(--sky)}
+.field h2{color:var(--sky)}.field .kicker{color:var(--sun)}.field .intro{color:#e7cfbd}
+.plot{margin-top:24px;border-radius:14px;overflow:hidden;border:3px solid var(--soil2)}
+.row{display:flex;align-items:center;gap:12px;width:100%;border:0;background:var(--soil2);color:var(--sky);padding:10px 14px;cursor:pointer;text-align:left;font:600 16px var(--sans);border-bottom:2px dashed #5a3a2a;min-height:52px}
+.row:nth-child(even){background:#5e3d2c}
+.row:last-child{border-bottom:0}
+.row .seed{flex:1;height:14px;background:radial-gradient(circle,#8a5f47 3px,transparent 3.5px) 0 50%/22px 14px repeat-x;transition:background .3s}
+.row .nm{width:118px;flex:none}
+.row .ck{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--crate);display:grid;place-items:center;font-size:14px;color:var(--soil)}
+.row[aria-pressed="true"] .seed{background:radial-gradient(circle,var(--c) 6px,transparent 6.5px) 0 50%/22px 14px repeat-x}
+.row[aria-pressed="true"] .ck{background:var(--sun);border-color:var(--sun)}
+.row[aria-pressed="true"] .ck:after{content:"\2713"}
+.crate{margin-top:18px;background:var(--crate);border-radius:12px;padding:18px;color:var(--ink);box-shadow:inset 0 -10px 0 var(--crate2);
+ background-image:repeating-linear-gradient(180deg,transparent 0 30px,rgba(0,0,0,.07) 30px 33px)}
+.crate p{font-size:15px}
+.crate textarea{width:100%;min-height:70px;border:0;border-radius:8px;padding:10px;font:15px var(--sans);margin:12px 0;background:#fff8ec}
+.cols{display:grid;gap:14px;margin-top:24px}
+.card{background:#fff;border-radius:14px;padding:20px;border:2px solid #f0dcc2}
+.card h3{font-family:var(--disp);font-weight:800;font-size:22px;color:var(--soil);margin-bottom:4px}
+.card p{color:var(--mute);font-size:15.5px}
+footer{background:var(--leaf);color:#eaf5e2;padding:34px 0 90px;font-size:15px}
+footer a{color:#fff}footer p+p{margin-top:4px}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--tomato);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;transform:translateY(110%);transition:transform .3s;z-index:20;font:700 14px var(--sans)}
+.sticky.on{transform:none}
+.sticky a{background:#fff;color:var(--tomato);padding:8px 14px;border-radius:8px;text-decoration:none;white-space:nowrap}
+@media(min-width:800px){.cols{grid-template-columns:repeat(2,1fr)}.row .nm{width:170px}.hero{padding-top:36px}.sunball{width:380px;height:380px;right:-40px}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Whitt Farm. Not live.</div>
+<header>
+ <nav><div class="wrap"><a class="logo" href="#">Whitt <i>Farm</i><small>Rutledge, Tennessee</small></a><a class="navbtn" href="#field">Email us</a></div></nav>
+ <div class="wrap hero">
+  <div class="sunball" aria-hidden="true"></div>
+  <div>
+   <div class="loc">Family farm · Grainger County</div>
+   <h1>Row after row of <span>good stuff.</span></h1>
+   <p class="lede">We raise a wide variety of vegetables, along with melons and strawberries, on our family farm in Rutledge.</p>
+   <div class="actions"><a class="btn tom" href="#field">Pick your rows</a><a class="btn out" href="#markets">Find us at market</a></div>
+  </div>
+ </div>
+ <svg class="rows" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <rect y="60" width="1200" height="140" fill="#4a2f22"/>
+  <g fill="#6b4532"><path d="M0 80 H1200 V96 H0Z"/><path d="M0 118 H1200 V136 H0Z"/><path d="M0 160 H1200 V180 H0Z"/></g>
+  <g fill="#4f8a3c">
+   <g id="pl"><circle cx="40" cy="74" r="14"/><circle cx="58" cy="68" r="11"/></g>
+  </g>
+  <g fill="#4f8a3c"><circle cx="60" cy="74" r="14"/><circle cx="180" cy="72" r="15"/><circle cx="300" cy="74" r="13"/><circle cx="420" cy="72" r="15"/><circle cx="540" cy="74" r="14"/><circle cx="660" cy="72" r="15"/><circle cx="780" cy="74" r="13"/><circle cx="900" cy="72" r="15"/><circle cx="1020" cy="74" r="14"/><circle cx="1140" cy="72" r="15"/></g>
+  <g fill="#d8432b"><circle cx="70" cy="80" r="7"/><circle cx="310" cy="80" r="7"/><circle cx="550" cy="82" r="7"/><circle cx="790" cy="80" r="7"/><circle cx="1030" cy="82" r="7"/></g>
+  <g fill="#3f7330"><ellipse cx="120" cy="112" rx="22" ry="12"/><ellipse cx="360" cy="112" rx="22" ry="12"/><ellipse cx="600" cy="112" rx="22" ry="12"/><ellipse cx="840" cy="112" rx="22" ry="12"/><ellipse cx="1080" cy="112" rx="22" ry="12"/></g>
+  <g fill="#f4c542"><rect x="236" y="140" width="10" height="26" rx="5"/><rect x="476" y="140" width="10" height="26" rx="5"/><rect x="716" y="140" width="10" height="26" rx="5"/><rect x="956" y="140" width="10" height="26" rx="5"/></g>
+ </svg>
+</header>
+
+<section class="field" id="field"><div class="wrap">
+ <div class="kicker">Pick your rows</div>
+ <h2>Walk the field, fill a crate.</h2>
+ <p class="intro">Tap the rows you're after. We'll put them in an email to the farm so you can ask what's ready. No prices or ordering here.</p>
+ <div class="plot" id="plot">
+  <button class="row" aria-pressed="false" style="--c:#d8432b"><span class="nm">Tomatoes</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#e85a6a"><span class="nm">Strawberries</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#7fbf5a"><span class="nm">Melons</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#f4c542"><span class="nm">Sweet corn</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#5aa04a"><span class="nm">Green beans</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#4a9e50"><span class="nm">Cucumbers</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#e8c24a"><span class="nm">Summer squash</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#6aa84f"><span class="nm">Okra</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#e2733a"><span class="nm">Sweet peppers</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#c22e1e"><span class="nm">Hot peppers</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#a8d08d"><span class="nm">Cabbage</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#9ccc65"><span class="nm">Lettuce</span><span class="seed"></span><span class="ck"></span></button>
+  <button class="row" aria-pressed="false" style="--c:#e9d8a6"><span class="nm">Onions</span><span class="seed"></span><span class="ck"></span></button>
+ </div>
+ <div class="crate">
+  <p><strong>In your crate:</strong> <span id="list">nothing yet</span></p>
+  <textarea id="msg" placeholder="Anything else? (how much, which market, a question)"></textarea>
+  <a class="btn soil" id="send" href="mailto:chadwhitt246@gmail.com">Email Whitt Farm</a>
+ </div>
+</div></section>
+
+<section id="markets"><div class="wrap">
+ <div class="kicker">Find us at market</div>
+ <h2>Two markets, one family farm.</h2>
+ <div class="cols">
+  <div class="card"><h3>Downtown Morristown Farmers Market</h3><p>W Morris Blvd at S Henry St, Morristown.</p></div>
+  <div class="card"><h3>New Harvest Farmers Market</h3><p>Look for our vegetables, melons and strawberries here too.</p></div>
+ </div>
+ <p class="intro" style="margin-top:22px">Not sure what's ready this week? Call or email before you head out.</p>
+</div></section>
+
+<footer><div class="wrap">
+ <p><strong>Whitt Farm</strong> · 220 Metcalf Rd, Rutledge, TN 37861</p>
+ <p><a href="tel:+18657129623">(865) 712-9623</a> · <a href="mailto:chadwhitt246@gmail.com">chadwhitt246@gmail.com</a></p>
+</div></footer>
+<div class="sticky" id="sticky"><span>Fresh from Rutledge</span><a href="#field">Fill a crate</a></div>
+<script>
+const rows=[...document.querySelectorAll('.row')],list=document.getElementById('list'),msg=document.getElementById('msg'),send=document.getElementById('send'),E='chadwhitt246@gmail.com';
+function upd(){const p=rows.filter(r=>r.getAttribute('aria-pressed')==='true').map(r=>r.querySelector('.nm').textContent);
+ list.textContent=p.length?p.join(', '):'nothing yet';
+ const body="Hi Whitt Farm,\n\nI'd like to ask about: "+(p.length?p.join(', '):'what you have ready')+".\n\n"+(msg.value?msg.value+"\n\n":"")+"Thank you!";
+ send.href="mailto:"+E+"?subject="+encodeURIComponent("Question for Whitt Farm")+"&body="+encodeURIComponent(body)}
+rows.forEach(r=>r.onclick=()=>{r.setAttribute('aria-pressed',r.getAttribute('aria-pressed')!=='true');upd()});msg.oninput=upd;upd();
+const st=document.getElementById('sticky'),fld=document.getElementById('field');
+addEventListener('scroll',()=>{const r=fld.getBoundingClientRect();st.classList.toggle('on',scrollY>innerHeight*.9&&!(r.top<innerHeight&&r.bottom>0))},{passive:true});
+</script>
+</body>
+</html>

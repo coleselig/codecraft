@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gaddis Vineyard · Muscadines &amp; American Grapes · Jefferson County, TN</title>
+<meta name="description" content="Concept site for Gaddis Vineyard in Jefferson County, TN: muscadines and seeded and seedless American grapes, sold at Market Square in Knoxville and a stand in Dandridge in August and September.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3a1838;--plum2:#5b2a55;--bronze:#c08a2e;--gold:#e8c46a;--vine:#55692c;--leaf:#7d9440;--paper:#f7f0e2;--ink:#24141f;--mute:#6a5662;
+--disp:"Fraunces",Georgia,serif;--sans:"Karla",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#170915;color:#d9c2d4;font:12px system-ui,sans-serif;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{background:var(--plum);color:var(--paper);position:relative;overflow:hidden}
+header:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(232,196,106,.10) 46px 48px);pointer-events:none}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:12px;position:relative}
+.logo{font-family:var(--disp);font-weight:800;font-size:23px;text-decoration:none;line-height:1}
+.logo small{display:block;font:700 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-top:5px;color:var(--gold)}
+.navbtn{flex:none;white-space:nowrap;font:700 14px var(--sans);text-decoration:none;background:var(--gold);color:var(--plum);padding:8px 14px;border-radius:999px}
+.hero{padding:20px 18px 0;display:grid;gap:18px;align-items:end;position:relative}
+.tag{display:inline-block;font:700 12px var(--sans);letter-spacing:.18em;text-transform:uppercase;border:1.5px solid var(--gold);color:var(--gold);padding:5px 11px;border-radius:999px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(42px,11.5vw,88px);line-height:.98;margin:14px 0;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{max-width:30em;font-size:18px;opacity:.92}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:13px 20px;border-radius:999px;text-decoration:none;font:700 15px var(--sans);border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--plum)}
+.btn.line{border:2px solid var(--paper);color:var(--paper)}
+.btn.plum{background:var(--plum);color:var(--paper)}
+.vineart{width:100%;max-width:440px;height:auto;display:block;justify-self:center}
+.strip{background:var(--vine);color:var(--paper);text-align:center;padding:11px 16px;font-weight:600;font-size:15px;letter-spacing:.02em}
+section{padding:60px 0}
+.kicker{font:700 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--plum2)}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(31px,8vw,52px);line-height:1.05;margin:6px 0 14px}
+.intro{color:var(--mute);max-width:36em}
+.cols{display:grid;gap:14px;margin-top:26px}
+.card{background:#fff;border-radius:14px;padding:20px 20px 20px 64px;position:relative;box-shadow:0 1px 0 rgba(58,24,56,.08)}
+.card i{position:absolute;left:18px;top:20px;width:32px;height:32px;border-radius:50%}
+.card h3{font-family:var(--disp);font-weight:800;font-size:22px;margin-bottom:4px}
+.card p{color:var(--mute);font-size:15.5px}
+.where{background:#efe4cf}
+.spots{display:grid;gap:14px;margin-top:24px}
+.spot{background:var(--paper);border:2px solid var(--plum);border-radius:14px;padding:20px}
+.spot b{display:block;font-family:var(--disp);font-size:22px;margin-bottom:4px}
+.spot span{color:var(--mute);font-size:15.5px}
+.months{display:flex;gap:6px;margin-top:22px;flex-wrap:wrap}
+.months span{flex:1 1 0;min-width:22px;text-align:center;font:700 11px var(--sans);padding:8px 0;border-radius:6px;background:#e2d5bd;color:#8a7a70}
+.months span.on{background:var(--plum);color:var(--gold)}
+/* crate */
+.crate{background:var(--plum);color:var(--paper)}
+.crate .kicker{color:var(--gold)}
+.crate .intro{color:#d8c4d2}
+.bunches{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.bunch{background:rgba(255,255,255,.06);border:2px solid rgba(232,196,106,.35);border-radius:14px;color:var(--paper);padding:12px 6px 12px;cursor:pointer;font:700 13.5px var(--sans);text-align:center;transition:border-color .2s,transform .2s}
+.bunch svg{width:64px;height:84px;display:block;margin:0 auto 6px;transition:transform .25s}
+.bunch:active svg{transform:scale(.92)}
+.bunch .n{display:inline-block;min-width:26px;margin-top:6px;padding:2px 8px;border-radius:999px;background:var(--gold);color:var(--plum);font-size:12px;visibility:hidden}
+.bunch.has{border-color:var(--gold)}
+.bunch.has .n{visibility:visible}
+.box{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;margin-top:18px}
+.box p{font-size:15.5px;color:var(--mute)}
+.box strong{color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{border:2px solid var(--plum);background:transparent;color:var(--plum);border-radius:999px;padding:7px 13px;font:700 13.5px var(--sans);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--plum);color:var(--gold)}
+.clear{background:none;border:0;color:var(--plum2);font:600 14px var(--sans);text-decoration:underline;cursor:pointer;margin-left:6px}
+footer{background:#170915;color:#d9c2d4;padding:34px 0 90px;font-size:15px}
+footer a{color:var(--gold)}
+footer p+p{margin-top:6px}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--gold);color:var(--plum);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;transform:translateY(110%);transition:transform .3s;z-index:20;font:700 14px var(--sans)}
+.sticky.on{transform:none}
+@media(min-width:800px){.hero{grid-template-columns:1.15fr 1fr;padding-top:34px}.cols{grid-template-columns:repeat(3,1fr)}.spots{grid-template-columns:1fr 1fr}.bunch svg{width:84px;height:110px}.bunch{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Gaddis Vineyard. Not live.</div>
+<header>
+ <nav><div class="wrap"><a class="logo" href="#">Gaddis Vineyard<small>Jefferson County, Tennessee</small></a><a class="navbtn" href="#crate">Email Bobby</a></div></nav>
+ <div class="wrap hero">
+  <div>
+   <span class="tag">August &amp; September</span>
+   <h1>Muscadines &amp; <em>grapes</em>, straight off the vine.</h1>
+   <p class="lede">We grow muscadines and seeded and seedless American grapes in East Tennessee, and bring them to Knoxville's Market Square most weekends in late summer.</p>
+   <div class="actions"><a class="btn gold" href="#crate">Fill a crate</a><a class="btn line" href="#where">Where to find us</a></div>
+  </div>
+  <svg class="vineart" viewBox="0 0 440 300" aria-hidden="true">
+   <path d="M-10 40 C80 10 150 70 230 40 S380 10 450 44" stroke="#7d9440" stroke-width="7" fill="none" stroke-linecap="round"/>
+   <path d="M-10 40 H450" stroke="#c08a2e" stroke-width="3" opacity=".6"/>
+   <g fill="#7d9440"><path d="M70 30 c-20 -6 -34 6 -30 22 c14 0 26 -6 30 -22z"/><path d="M300 30 c18 -8 36 2 34 20 c-16 2 -28 -4 -34 -20z"/><path d="M190 52 c-6 18 4 32 20 30 c0 -14 -6 -26 -20 -30z"/></g>
+   <g id="cl1" transform="translate(110 48)"><path d="M0 0 v20" stroke="#55692c" stroke-width="4"/>
+    <g fill="#6d2d66" stroke="#2a0f28" stroke-width="2"><circle cx="-22" cy="34" r="15"/><circle cx="0" cy="32" r="15"/><circle cx="22" cy="34" r="15"/><circle cx="-12" cy="58" r="15"/><circle cx="12" cy="58" r="15"/><circle cx="-22" cy="80" r="14"/><circle cx="2" cy="82" r="15"/><circle cx="20" cy="80" r="13"/><circle cx="-8" cy="104" r="14"/><circle cx="12" cy="104" r="13"/><circle cx="2" cy="126" r="13"/></g>
+    <g fill="#fff" opacity=".35"><circle cx="-5" cy="27" r="4"/><circle cx="7" cy="52" r="4"/><circle cx="-3" cy="76" r="4"/></g></g>
+   <g transform="translate(250 44)"><path d="M0 0 v18" stroke="#55692c" stroke-width="4"/>
+    <g fill="#c08a2e" stroke="#7a5418" stroke-width="2"><circle cx="-26" cy="38" r="19"/><circle cx="12" cy="36" r="19"/><circle cx="-8" cy="70" r="19"/><circle cx="28" cy="70" r="17"/><circle cx="8" cy="102" r="18"/></g>
+    <g fill="#fff" opacity=".4"><circle cx="-31" cy="31" r="5"/><circle cx="6" cy="29" r="5"/><circle cx="-13" cy="63" r="5"/></g></g>
+   <g transform="translate(360 46)"><path d="M0 0 v18" stroke="#55692c" stroke-width="4"/>
+    <g fill="#9fb35a" stroke="#55692c" stroke-width="2"><ellipse cx="-14" cy="34" rx="10" ry="13"/><ellipse cx="6" cy="34" rx="10" ry="13"/><ellipse cx="-4" cy="58" rx="10" ry="13"/><ellipse cx="16" cy="56" rx="9" ry="12"/><ellipse cx="-18" cy="58" rx="9" ry="12"/><ellipse cx="0" cy="82" rx="10" ry="13"/><ellipse cx="-14" cy="80" rx="8" ry="11"/><ellipse cx="2" cy="104" rx="9" ry="12"/></g></g>
+   <path d="M0 296 Q220 250 440 296" fill="#55692c"/>
+  </svg>
+ </div>
+</header>
+<div class="strip">Muscadines · Seeded American grapes · Seedless American grapes</div>
+
+<section id="grow"><div class="wrap">
+ <div class="kicker">What we grow</div>
+ <h2>Three kinds of grape, one short season.</h2>
+ <p class="intro">We grow grapes in Jefferson County and sell them fresh in August and September.</p>
+ <div class="cols">
+  <div class="card"><i style="background:#6d2d66"></i><h3>Muscadines</h3><p>Grown on our vines in Jefferson County.</p></div>
+  <div class="card"><i style="background:#c08a2e"></i><h3>Seeded American grapes</h3><p>American grapes, with seeds.</p></div>
+  <div class="card"><i style="background:#9fb35a"></i><h3>Seedless American grapes</h3><p>American grapes, without seeds.</p></div>
+ </div>
+</div></section>
+
+<section class="where" id="where"><div class="wrap">
+ <div class="kicker">Where to find us</div>
+ <h2>Two places, while the grapes last.</h2>
+ <div class="spots">
+  <div class="spot"><b>Market Square Farmers Market</b><span>Downtown Knoxville. We're there most weekends in August and September.</span></div>
+  <div class="spot"><b>Our stand in Dandridge</b><span>Hwy 92 and Indian Creek Rd., during August and September.</span></div>
+ </div>
+ <div class="months" aria-label="Season: August and September">
+  <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span class="on">A</span><span class="on">S</span><span>O</span><span>N</span><span>D</span>
+ </div>
+ <p class="intro" style="margin-top:14px">We take credit and debit cards.</p>
+</div></section>
+
+<section class="crate" id="crate"><div class="wrap">
+ <div class="kicker">Fill a crate</div>
+ <h2>Tap a bunch to add it.</h2>
+ <p class="intro">Tap as many times as you like, pick where you'd collect, and we'll turn it into an email to Bobby. No prices here, just a note to ask what's ripe.</p>
+ <div class="bunches">
+  <button class="bunch" data-v="Muscadines"><svg viewBox="0 0 84 110"><path d="M42 2v14" stroke="#7d9440" stroke-width="4"/><g fill="#6d2d66" stroke="#170915" stroke-width="2"><circle cx="24" cy="30" r="12"/><circle cx="42" cy="28" r="12"/><circle cx="60" cy="30" r="12"/><circle cx="32" cy="50" r="12"/><circle cx="52" cy="50" r="12"/><circle cx="42" cy="70" r="12"/><circle cx="26" cy="68" r="10"/><circle cx="58" cy="68" r="10"/><circle cx="42" cy="92" r="11"/></g></svg>Muscadines<br><span class="n">0</span></button>
+  <button class="bunch" data-v="Seeded American grapes"><svg viewBox="0 0 84 110"><path d="M42 2v14" stroke="#7d9440" stroke-width="4"/><g fill="#c08a2e" stroke="#5b3a10" stroke-width="2"><circle cx="26" cy="32" r="15"/><circle cx="58" cy="32" r="15"/><circle cx="42" cy="58" r="15"/><circle cx="24" cy="62" r="11"/><circle cx="60" cy="62" r="11"/><circle cx="42" cy="88" r="14"/></g></svg>Seeded<br><span class="n">0</span></button>
+  <button class="bunch" data-v="Seedless American grapes"><svg viewBox="0 0 84 110"><path d="M42 2v14" stroke="#7d9440" stroke-width="4"/><g fill="#9fb35a" stroke="#3d4d1c" stroke-width="2"><ellipse cx="30" cy="30" rx="9" ry="12"/><ellipse cx="54" cy="30" rx="9" ry="12"/><ellipse cx="42" cy="30" rx="8" ry="11"/><ellipse cx="34" cy="52" rx="9" ry="12"/><ellipse cx="52" cy="52" rx="9" ry="12"/><ellipse cx="22" cy="50" rx="7" ry="10"/><ellipse cx="62" cy="50" rx="7" ry="10"/><ellipse cx="42" cy="74" rx="9" ry="12"/><ellipse cx="42" cy="96" rx="8" ry="11"/></g></svg>Seedless<br><span class="n">0</span></button>
+ </div>
+ <div class="box">
+  <p><strong>Your crate:</strong> <span id="list">empty</span><button class="clear" id="clear" type="button">clear</button></p>
+  <div class="row" id="pick">
+   <button class="chip" type="button" aria-pressed="true" data-v="at Market Square in Knoxville">Market Square</button>
+   <button class="chip" type="button" aria-pressed="false" data-v="at the Dandridge stand (Hwy 92 &amp; Indian Creek Rd.)">Dandridge stand</button>
+  </div>
+  <a class="btn plum" id="send" href="mailto:bobbygaddis1@gmail.com">Email Gaddis Vineyard</a>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <p><strong>Gaddis Vineyard</strong> · Jefferson County, TN</p>
+ <p><a href="mailto:bobbygaddis1@gmail.com">bobbygaddis1@gmail.com</a> · <a href="tel:+18658501006">(865) 850-1006</a></p>
+</div></footer>
+<div class="sticky" id="sticky"><span>Muscadines, Aug &amp; Sept</span><a class="btn plum" href="#crate" style="padding:9px 14px">Fill a crate</a></div>
+<script>
+const counts={},bunches=[...document.querySelectorAll('.bunch')],list=document.getElementById('list'),send=document.getElementById('send'),chips=[...document.querySelectorAll('.chip')];
+let where=chips[0].dataset.v;
+function upd(){const items=Object.keys(counts).filter(k=>counts[k]>0).map(k=>counts[k]+' x '+k);
+ list.textContent=items.length?items.join(', '):'empty';
+ bunches.forEach(b=>{const c=counts[b.dataset.v]||0;b.classList.toggle('has',c>0);b.querySelector('.n').textContent=c;});
+ const body="Hi Bobby,\n\nI'd like to ask about grapes "+where+".\n\n"+(items.length?"What I'm hoping for:\n- "+items.join("\n- ")+"\n\n":"")+"What's ripe right now?\n\nThanks!";
+ send.href="mailto:bobbygaddis1@gmail.com?subject="+encodeURIComponent("Grapes from Gaddis Vineyard")+"&body="+encodeURIComponent(body);}
+bunches.forEach(b=>b.addEventListener('click',()=>{counts[b.dataset.v]=(counts[b.dataset.v]||0)+1;upd();}));
+document.getElementById('clear').addEventListener('click',()=>{for(const k in counts)counts[k]=0;upd();});
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true');where=c.dataset.v;upd();}));
+const st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('on',scrollY>500),{passive:true});
+upd();
+</script>
+</body>
+</html>
