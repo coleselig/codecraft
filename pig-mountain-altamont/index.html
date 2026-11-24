@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dayspring Farm &amp; Pig Mountain · Pasture Pork &amp; Handmade Soap · Altamont, TN</title>
+<meta name="description" content="Concept site for Dayspring Farm and Pig Mountain in Altamont, TN: outdoor-raised heritage pork, beef and handmade soap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@700;800&family=Alegreya+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1d281f;--pine:#2c3b2e;--moss:#55684a;--bark:#3b2b20;--paper:#efe5d2;--paper2:#e3d6bd;--rust:#a8432a;--gold:#d2a54e;--fog:#b9c2ad;--ink:#241a13;
+--sc:"Alegreya SC",Georgia,serif;--sans:"Alegreya Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#111811;color:var(--fog);font-size:12px;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background:var(--forest);color:var(--paper)}
+nav .wrap{gap:12px;display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-family:var(--sc);font-weight:800;font-size:20px;text-decoration:none;letter-spacing:.03em;line-height:1}
+.logo small{display:block;font:500 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:3px;letter-spacing:.12em}
+nav a.txt{white-space:nowrap;flex:none;font-weight:800;font-size:14px;text-decoration:none;color:var(--forest);background:var(--gold);padding:7px 14px;border-radius:3px}
+.hero{position:relative;overflow:hidden;padding:18px 0 0}
+.hero .wrap{position:relative;z-index:1}
+.est{font:800 12px var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px}
+.est::before,.est::after{content:"";height:1px;width:26px;background:var(--gold)}
+h1{font-family:var(--sc);font-weight:800;font-size:clamp(42px,12.5vw,90px);line-height:.92;margin:12px 0 14px;letter-spacing:.01em}
+h1 span{color:var(--gold)}
+.lede{font-size:17.5px;color:#d9d6c4;max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:13px 20px;border-radius:3px;text-decoration:none;font-weight:800;font-size:15.5px;letter-spacing:.02em}
+.btn.gold{background:var(--gold);color:var(--forest)}
+.btn.line{border:2px solid var(--paper);color:var(--paper)}
+.btn.rust{background:var(--rust);color:var(--paper)}
+.ridge{display:block;width:100%;height:clamp(110px,22vw,320px);margin-top:18px}
+.soapnote{background:var(--rust);color:var(--paper);text-align:center;font-weight:800;padding:10px 16px;font-size:15px;letter-spacing:.03em}
+section{padding:60px 0}
+.kicker{font:800 12px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--rust)}
+h2{font-family:var(--sc);font-weight:800;font-size:clamp(32px,8.4vw,52px);line-height:1;margin:6px 0 12px}
+.intro{color:#5b4a3c;max-width:36em}
+.way{display:grid;gap:12px;margin-top:22px}
+.pt{border-left:3px solid var(--moss);padding:4px 0 4px 16px}
+.pt h3{font-family:var(--sc);font-size:21px;line-height:1.15}
+.pt p{font-size:15.5px;color:#5b4a3c}
+.breeds{background:var(--pine);color:var(--paper)}
+.breeds .kicker{color:var(--gold)}
+.blist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.breed{border:1px solid rgba(239,229,210,.25);padding:16px 14px;border-radius:3px;text-align:center}
+.breed svg{width:60px;height:36px;display:block;margin:0 auto 8px}
+.breed b{font-family:var(--sc);font-size:19px;display:block}
+.breed small{color:var(--fog);font-size:13px}
+.order{background:var(--paper2)}
+.ocols{display:grid;gap:22px;margin-top:18px}
+.tabs{display:flex;gap:6px;margin-bottom:12px}
+.tabs button{flex:1;border:2px solid var(--bark);background:none;font:800 14px var(--sans);padding:9px 6px;border-radius:3px;cursor:pointer;color:var(--bark)}
+.tabs button[aria-pressed=true]{background:var(--bark);color:var(--paper)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--paper);padding:12px 12px 12px 14px;border-radius:3px;margin-bottom:8px;border-bottom:2px solid #cdbd9e}
+.row[hidden]{display:none}
+.row b{font-size:16.5px;display:block;line-height:1.2}
+.row small{color:#6d5b4b;font-size:13px}
+.step{display:flex;align-items:center;gap:4px;flex:none}
+.step button{width:34px;height:34px;border-radius:50%;border:2px solid var(--bark);background:none;font:800 18px/1 var(--sans);cursor:pointer;color:var(--bark)}
+.step span{min-width:22px;text-align:center;font-weight:800}
+.ticket{background:var(--paper);border:2px dashed var(--bark);padding:18px;border-radius:3px;position:relative}
+.ticket h3{font-family:var(--sc);font-size:23px}
+.ticket pre{white-space:pre-wrap;font:500 15px/1.5 var(--sans);color:#4a3a2d;margin:10px 0 12px;min-height:3em}
+.ticket textarea{width:100%;border:1px solid #cdbd9e;background:#fbf6ec;font:15px var(--sans);padding:10px;border-radius:3px;min-height:64px;resize:vertical}
+.ticket .btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.ticket .btn{text-align:center;padding:12px 8px}
+.ticket .fine{font-size:13px;color:#6d5b4b;margin-top:10px}
+.visit{background:var(--forest);color:var(--paper)}
+.visit .kicker{color:var(--gold)}
+.vgrid{display:grid;gap:10px;margin-top:20px}
+.vgrid a,.vgrid div{display:block;text-decoration:none;border:1px solid rgba(239,229,210,.22);padding:14px 16px;border-radius:3px;overflow-wrap:anywhere}
+.vgrid b{display:block;font:800 11.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+footer{background:#111811;color:var(--fog);text-align:center;font-size:13.5px;padding:22px 20px 92px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;transform:translateY(100%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky a{flex:1;text-align:center;text-decoration:none;font-weight:800;padding:16px 8px;background:var(--forest);color:var(--paper);font-size:15px}
+.sticky a:first-child{background:var(--gold);color:var(--forest)}
+@media(min-width:860px){
+ .hero{padding-top:44px}
+ .way{grid-template-columns:repeat(3,1fr);gap:24px}
+ .blist{grid-template-columns:repeat(4,1fr)}
+ .ocols{grid-template-columns:1.3fr 1fr;align-items:start}
+ .ticket{position:sticky;top:20px}
+ .vgrid{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;right:24px;bottom:20px;width:400px;border-radius:3px;overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Dayspring Farm and Pig Mountain. Not live.</div>
+<div class="top">
+<nav><div class="wrap"><a class="logo" href="#">Pig Mountain<small>Dayspring Farm · Altamont, TN</small></a><a class="txt" href="sms:+19014919929">Text us</a></div></nav>
+<header class="hero"><div class="wrap">
+  <div class="est">Grundy County, Tennessee</div>
+  <h1>Raised outdoors on <span>Pig Mountain</span></h1>
+  <p class="lede">Pasture-and-woodlot pork, beef, sausage and bacon from Richard and Christia Crook, plus handmade soap. Preorder by text or email and pick up at Main Street Farmers Market, Chattanooga.</p>
+  <div class="actions">
+    <a class="btn gold" href="#order">Build a preorder</a>
+    <a class="btn line" href="mailto:pigmountain.tn@gmail.com">Email the farm</a>
+  </div>
+</div>
+<svg class="ridge" viewBox="0 0 400 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <path d="M0 70L40 46 70 60 110 30 150 56 190 38 230 62 270 28 310 50 350 36 400 58V120H0z" fill="#2c3b2e"/>
+  <g fill="#1d281f"><path d="M30 120V84l8-22 8 22v36z"/><path d="M60 120V90l7-20 7 20v30z"/><path d="M330 120V80l9-26 9 26v40z"/><path d="M362 120V88l7-20 7 20v32z"/><path d="M300 120V94l6-18 6 18v26z"/></g>
+  <path d="M0 96Q100 82 200 92T400 88V120H0z" fill="#55684a"/>
+  <g transform="translate(176 76)" fill="#a8432a"><ellipse cx="18" cy="12" rx="20" ry="11"/><circle cx="38" cy="8" r="7"/><rect x="40" y="6" width="6" height="6" rx="2"/><path d="M33 1l3-5 3 6z"/><rect x="4" y="18" width="4" height="9"/><rect x="26" y="18" width="4" height="9"/><path d="M-2 10q-4-4 0-6" stroke="#a8432a" stroke-width="2" fill="none"/></g>
+</svg>
+</header>
+</div>
+<div class="soapnote">"Soaps are back in stock": bars, sampler sets and loofah soaps</div>
+
+<section><div class="wrap">
+  <div class="kicker">How our hogs live</div>
+  <h2>Pasture, woodlot, repeat</h2>
+  <p class="intro">At Dayspring Farm our hogs live outdoors year-round, rotated between pasture and woodlot on the mountain.</p>
+  <div class="way">
+    <div class="pt"><h3>Outdoors all year</h3><p>Hogs rotate between open pasture and woodlot through every season.</p></div>
+    <div class="pt"><h3>Local non-GMO feed</h3><p>Their feed is supplemented with local non-GMO corn, barley and soybean meal.</p></div>
+    <div class="pt"><h3>Nothing added</h3><p>No hormones and no antibiotics.</p></div>
+  </div>
+</div></section>
+
+<section class="breeds"><div class="wrap">
+  <div class="kicker">On the mountain</div>
+  <h2>Our breeds</h2>
+  <p class="intro" style="color:var(--fog)">A mix of heritage and classic hogs.</p>
+  <div class="blist">
+    <div class="breed"><svg viewBox="0 0 60 36"><g fill="#a8432a"><ellipse cx="26" cy="18" rx="20" ry="11"/><circle cx="46" cy="14" r="7"/><rect x="12" y="24" width="4" height="9"/><rect x="34" y="24" width="4" height="9"/></g></svg><b>Red Wattle</b><small>Heritage breed</small></div>
+    <div class="breed"><svg viewBox="0 0 60 36"><g fill="#efe5d2"><ellipse cx="26" cy="18" rx="20" ry="11"/><circle cx="46" cy="14" r="7"/><rect x="12" y="24" width="4" height="9"/><rect x="34" y="24" width="4" height="9"/></g></svg><b>Yorkshire</b><small>Raised outdoors</small></div>
+    <div class="breed"><svg viewBox="0 0 60 36"><g fill="#16120f"><ellipse cx="26" cy="18" rx="20" ry="11"/><circle cx="46" cy="14" r="7"/><rect x="12" y="24" width="4" height="9"/><rect x="34" y="24" width="4" height="9"/></g><path d="M20 8h10v20H20z" fill="#efe5d2"/></svg><b>Hampshire</b><small>Raised outdoors</small></div>
+    <div class="breed"><svg viewBox="0 0 60 36"><g fill="#8a4a2a"><ellipse cx="26" cy="18" rx="20" ry="11"/><circle cx="46" cy="14" r="7"/><rect x="12" y="24" width="4" height="9"/><rect x="34" y="24" width="4" height="9"/></g></svg><b>Duroc</b><small>Outdoors year-round</small></div>
+  </div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div class="kicker">Preorder for market pickup</div>
+  <h2>Write your order ticket</h2>
+  <p class="intro">Pick what you'd like, add a note about cuts, and send it to the Crooks by text or email. They'll confirm what's available.</p>
+  <div class="ocols">
+  <div>
+    <div class="tabs" role="group" aria-label="Category">
+      <button aria-pressed="true" data-t="meat">Meat</button>
+      <button aria-pressed="false" data-t="soap">Soap</button>
+    </div>
+    <div id="rows"></div>
+  </div>
+  <div class="ticket">
+    <h3>Order ticket</h3>
+    <pre id="sum">Nothing on the ticket yet.</pre>
+    <textarea id="note" placeholder="Which cuts? Any questions? (optional)"></textarea>
+    <div class="btns">
+      <a class="btn gold" id="sms" href="sms:+19014919929">Text order</a>
+      <a class="btn rust" id="mail" href="mailto:pigmountain.tn@gmail.com">Email order</a>
+    </div>
+    <p class="fine">Pickup at Main Street Farmers Market, Chattanooga. Cash, card or tap accepted; 3.5% fee on non-cash payments.</p>
+  </div>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <div class="kicker">Get in touch</div>
+  <h2>Text, email or find us at market</h2>
+  <div class="vgrid">
+    <a href="sms:+19014919929"><b>Text</b>901-491-9929</a>
+    <a href="mailto:pigmountain.tn@gmail.com"><b>Email</b>pigmountain.tn@gmail.com</a>
+    <a href="https://www.facebook.com/pigmountain"><b>Facebook</b>facebook.com/pigmountain</a>
+  </div>
+</div></section>
+<footer>Dayspring Farm and Pig Mountain · Altamont, Tennessee</footer>
+<div class="sticky" id="sticky"><a href="sms:+19014919929">Text 901-491-9929</a><a href="#order">Preorder</a></div>
+
+<script>
+var I=[["Pork cuts","Outdoor-raised pork","meat"],["Beef cuts","Ask what's available","meat"],["Sausage","Pork sausage","meat"],["Bacon","Outdoor-raised pork","meat"],["Soap bars","Handmade","soap"],["Soap sampler set","Try a few","soap"],["Loofah soap","Handmade","soap"]];
+var q={},R=document.getElementById('rows');
+I.forEach(function(it,i){var d=document.createElement('div');d.className='row';d.dataset.t=it[2];d.hidden=it[2]!=='meat';
+d.innerHTML='<div><b>'+it[0]+'</b><small>'+it[1]+'</small></div><div class="step"><button aria-label="Less">&minus;</button><span>0</span><button aria-label="More">+</button></div>';
+var bs=d.querySelectorAll('button'),sp=d.querySelector('span');
+bs[0].onclick=function(){q[i]=Math.max(0,(q[i]||0)-1);sp.textContent=q[i];upd()};
+bs[1].onclick=function(){q[i]=(q[i]||0)+1;sp.textContent=q[i];upd()};R.appendChild(d)});
+function upd(){var L=[];Object.keys(q).forEach(function(i){if(q[i])L.push(q[i]+' x '+I[i][0])});
+var n=document.getElementById('note').value.trim();
+document.getElementById('sum').textContent=L.length?L.join('\n'):'Nothing on the ticket yet.';
+var msg='Hi Richard and Christia! Preorder for pickup at Main Street Farmers Market:\n'+(L.length?L.join('\n'):'(my list)')+(n?'\nNote: '+n:'')+'\nName:';
+document.getElementById('sms').href='sms:+19014919929?&body='+encodeURIComponent(msg);
+document.getElementById('mail').href='mailto:pigmountain.tn@gmail.com?subject='+encodeURIComponent('Market preorder')+'&body='+encodeURIComponent(msg)}
+document.getElementById('note').oninput=upd;
+document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+document.querySelectorAll('.row').forEach(function(r){r.hidden=r.dataset.t!==b.dataset.t})}});
+upd();
+var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('show',scrollY>innerHeight*.8)},{passive:true});
+</script>
+</body>
+</html>

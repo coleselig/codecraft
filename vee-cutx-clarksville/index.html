@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Vee Cutx | Clarksville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f0;--ink:#1d2a3a;--teal:#0f8b8d;--teal2:#d6f1ef;--sun:#ffb627;--cor:#ff6b57;--mut:#5d6b7a;--card:#ffffff;--line:#efe3d3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--teal);color:#fff;font-size:12px;text-align:center;padding:7px 16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.fr{font-family:'Fredoka',system-ui,sans-serif}
+.tag{display:inline-block;background:var(--teal2);color:var(--teal);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--cor);color:#fff;text-decoration:none;font-family:'Fredoka',sans-serif;font-weight:600;font-size:17px;padding:14px 26px;border-radius:16px;box-shadow:0 5px 0 #c94a39;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 #c94a39}
+.btn.alt{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line);border:2px solid var(--line)}
+.hero{padding:40px 0 56px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;z-index:-1}
+.b1{width:340px;height:340px;background:var(--sun);opacity:.35;right:-120px;top:-60px}
+.b2{width:220px;height:220px;background:var(--teal2);left:-90px;bottom:-40px}
+.hero h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(68px,20vw,168px);line-height:.88;margin:16px 0 14px;letter-spacing:-.02em}
+.hero h1 .x{color:var(--cor);display:inline-block;transform:rotate(-8deg)}
+.hero p{font-size:18px;color:var(--mut);max-width:36ch;margin-bottom:24px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pills span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.pills b{color:var(--cor)}
+section{padding:60px 0}
+h2{font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(38px,9.5vw,66px);line-height:1;margin:12px 0 12px}
+.sub{color:var(--mut);max-width:50ch;margin-bottom:26px}
+.age{background:var(--card);border:2px solid var(--line);border-radius:28px;padding:24px 20px;display:grid;gap:22px;box-shadow:0 12px 30px -18px rgba(29,42,58,.35)}
+.face{display:flex;align-items:center;gap:16px}
+.face svg{width:86px;height:86px;flex:none}
+.agen{font-family:'Fredoka',sans-serif;font-size:56px;font-weight:700;line-height:1}
+.agen small{font-size:18px;color:var(--mut);font-weight:500}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:14px;border-radius:999px;background:linear-gradient(90deg,var(--sun),var(--cor),var(--teal));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;background:#fff;border:4px solid var(--ink);cursor:grab}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:4px solid var(--ink);cursor:grab}
+input[type=range]:focus-visible{box-shadow:0 0 0 4px var(--teal2)}
+.scale{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-top:6px;font-weight:600}
+.res{background:var(--teal2);border-radius:20px;padding:20px}
+.res .k{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.res .n{font-family:'Fredoka',sans-serif;font-size:28px;font-weight:600;line-height:1.1;margin:4px 0}
+.res .p{font-family:'Fredoka',sans-serif;font-size:60px;font-weight:700;color:var(--ink);line-height:1}
+.res .d{color:var(--mut);font-size:14px;margin:4px 0 12px}
+.res ul{list-style:none;display:grid;gap:6px;font-size:15px}
+.res li{display:flex;justify-content:space-between;gap:8px;background:#fff;border-radius:10px;padding:8px 12px}
+.res li b{font-family:'Fredoka',sans-serif}
+.when{display:flex;gap:6px;flex-wrap:wrap}
+.when button{font:inherit;font-weight:700;font-size:14px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:12px;padding:9px 14px;cursor:pointer}
+.when button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.note{font-size:14px;color:var(--mut);min-height:2.8em}
+.age .btn{width:100%}
+.menu{display:grid;gap:10px}
+.mi{display:flex;justify-content:space-between;gap:12px;background:#fff;border:2px solid var(--line);border-radius:16px;padding:13px 16px}
+.mi span{font-weight:700}
+.mi small{display:block;color:var(--mut);font-weight:400;font-size:13px}
+.mi b{font-family:'Fredoka',sans-serif;font-size:20px;white-space:nowrap}
+.kind{background:var(--ink);color:#fff;border-radius:28px;padding:34px 22px;text-align:center}
+.kind .big{font-family:'Fredoka',sans-serif;font-size:clamp(28px,7vw,48px);font-weight:600;line-height:1.1;max-width:22ch;margin:10px auto}
+.kind p{color:#b9c4d0;max-width:48ch;margin:0 auto}
+.info{display:grid;gap:12px}
+.ic{background:#fff;border:2px solid var(--line);border-radius:20px;padding:20px}
+.ic h3{font-family:'Fredoka',sans-serif;font-size:22px;margin-bottom:4px}
+.ic p{color:var(--mut)}
+.ic a{color:var(--teal);font-weight:800}
+footer{padding:30px 0 110px;text-align:center;color:var(--mut);font-size:13px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:2px solid var(--ink);border-radius:20px;padding:8px 8px 8px 18px;transform:translateY(160%);transition:transform .35s;box-shadow:0 10px 30px -10px rgba(0,0,0,.3)}
+.sticky.show{transform:none}
+.sticky span{font-family:'Fredoka',sans-serif;font-weight:700;font-size:20px}
+.sticky .btn{padding:10px 20px;font-size:16px}
+@media(min-width:860px){
+ .age{grid-template-columns:1fr 1fr;padding:34px;gap:34px}
+ .menu{grid-template-columns:1fr 1fr}
+ .info{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;width:340px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Vee Cutx. Not live.</div>
+<header class="hero" id="top">
+ <div class="blob b1"></div><div class="blob b2"></div>
+ <div class="wrap">
+  <span class="tag">Vibez Barber Lounge · Clarksville</span>
+  <h1>Vee Cut<span class="x">x</span></h1>
+  <p>Cuts for the whole family, from first haircuts to seniors. Early bird and after-hours chairs when your day is packed.</p>
+  <div class="ctas">
+   <a class="btn" href="https://booksy.com/en-us/1311848_vee-cutx-vibez-barber-lounge_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+   <a class="btn alt" href="https://www.instagram.com/veecutx/" target="_blank" rel="noopener">@veecutx</a>
+  </div>
+  <div class="pills"><span><b>5.0</b> on Booksy</span><span><b>16</b> reviews</span><span>Booksy Recommended</span></div>
+ </div>
+</header>
+
+<main>
+<section id="age">
+ <div class="wrap">
+  <span class="tag">Who's in the chair?</span>
+  <h2>Slide to their age.</h2>
+  <p class="sub">Vee prices by age, so drag the slider and the right cut, price and time pop up. Starting prices from Vee's Booksy page.</p>
+  <div class="age">
+   <div>
+    <div class="face">
+     <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="54" r="34" fill="#ffd9b8"/><path id="hair" d="M16 50 Q18 14 50 14 Q82 14 84 50 Q74 30 50 30 Q26 30 16 50Z" fill="#1d2a3a"/><circle cx="38" cy="54" r="4" fill="#1d2a3a"/><circle cx="62" cy="54" r="4" fill="#1d2a3a"/><path id="smile" d="M38 68 Q50 78 62 68" stroke="#1d2a3a" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+     <div class="agen"><span id="ageN">8</span> <small>years old</small></div>
+    </div>
+    <div style="margin-top:20px">
+     <input type="range" id="slider" min="3" max="80" value="8" aria-label="Age of the person getting the cut">
+     <div class="scale"><span>3</span><span>13</span><span>18</span><span>65</span><span>80</span></div>
+    </div>
+    <div style="margin-top:22px">
+     <div class="res" style="background:#fff8f0;padding:16px 18px">
+      <div class="k">When do you need it?</div>
+      <div class="when" id="when" style="margin-top:10px">
+       <button type="button" data-w="early" aria-pressed="false">Before 10 AM</button>
+       <button type="button" data-w="reg" aria-pressed="true">Regular hours</button>
+       <button type="button" data-w="late" aria-pressed="false">After 7 PM</button>
+      </div>
+      <p class="note" id="note" style="margin-top:10px"></p>
+     </div>
+    </div>
+   </div>
+   <div aria-live="polite">
+    <div class="res">
+     <div class="k" id="grp">Kids</div>
+     <div class="n" id="nm">Kids Haircut</div>
+     <div class="p" id="pr">$25+</div>
+     <div class="d" id="du">30 min</div>
+     <ul id="extra"></ul>
+    </div>
+    <a class="btn" style="margin-top:16px" href="https://booksy.com/en-us/1311848_vee-cutx-vibez-barber-lounge_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book this with Vee</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="kind">
+   <span class="tag" style="background:#2c3d52;color:var(--sun)">What parents keep saying</span>
+   <div class="big">Patient with kids. Warm with everyone.</div>
+   <p>Most of Vee's recent Booksy reviews are from parents and grandparents booking kids' cuts, including families who needed extra patience and care in the chair.</p>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <span class="tag">Full menu</span>
+  <h2>Everything Vee does.</h2>
+  <div class="menu" id="menu"></div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap info">
+  <div class="ic"><h3>Where</h3><p>Vibez Barber Lounge<br>2243 Lowes Dr, Suite D<br>Clarksville, TN 37040</p><p style="margin-top:8px"><a href="https://maps.google.com/?q=2243+Lowes+Dr+Clarksville+TN+37040" target="_blank" rel="noopener">Directions</a></p></div>
+  <div class="ic"><h3>Early & late</h3><p>Before 10 AM or after 7 PM adds $20. Emergency appointments add $60. Call or text Vee for those.</p></div>
+  <div class="ic"><h3>Follow along</h3><p><a href="https://www.instagram.com/veecutx/" target="_blank" rel="noopener">Instagram @veecutx</a><br><a href="https://www.facebook.com/vee.cutx" target="_blank" rel="noopener">Facebook vee.cutx</a></p></div>
+ </div>
+</section>
+</main>
+
+<footer>Vee Cutx · Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></footer>
+<div class="sticky" id="sticky"><span>Vee Cutx</span><a class="btn" href="https://booksy.com/en-us/1311848_vee-cutx-vibez-barber-lounge_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const M=[["Male Haircut","$40+",30],["Haircut & Beard Shaping","$50+",45],["Beard Shaping","$20+",20],["Head Shave","$55+",40],["Haircut & Mustache","$45+",40],["Haircut, Beard & Razor Shave","$65+","1 hr"],["Senior Haircut","$35+",30,"65+"],["Teen Haircut","$30+",30,"13 to 17"],["Kids Haircut","$25+",30,"3 to 12"],["Female Short Cut","$50+",30],["Female Long Haircut","$70+",45,"Layers or bob"],["Men's / Seniors Lineup","$15+",15],["Kids & Teens Lineup","$10+",15],["Early Hours Haircut","$65",30],["After Hours Haircut","$65",30],["Early Hours Haircut & Beard","$75",45],["After Hours Haircut & Beard","$75",45]];
+const menu=document.getElementById('menu');
+M.forEach(m=>{const d=document.createElement('div');d.className='mi';d.innerHTML=`<span></span><b>${m[1]}</b>`;d.querySelector('span').innerHTML=m[0]+`<small>${typeof m[2]==='number'?m[2]+' min':m[2]}${m[3]?' · '+m[3]:''}</small>`;menu.appendChild(d)});
+const G=[
+ {max:12,g:"Kids · 3 to 12",n:"Kids Haircut",p:"$25+",d:"30 min",x:[["Kids & Teens Lineup","$10+"]]},
+ {max:17,g:"Teens · 13 to 17",n:"Teen Haircut",p:"$30+",d:"30 min",x:[["Kids & Teens Lineup","$10+"]]},
+ {max:64,g:"Adults",n:"Male Haircut",p:"$40+",d:"30 min",x:[["Haircut & Beard Shaping","$50+"],["Female Short Cut","$50+"],["Men's Lineup","$15+"]]},
+ {max:200,g:"Seniors · 65+",n:"Senior Haircut",p:"$35+",d:"30 min",x:[["Men's / Seniors Lineup","$15+"]]}];
+let when='reg';
+const $=id=>document.getElementById(id);
+function upd(){
+ const a=+$('slider').value;$('ageN').textContent=a;
+ const g=G.find(g=>a<=g.max);
+ $('grp').textContent=g.g;$('nm').textContent=g.n;$('pr').textContent=g.p;$('du').textContent=g.d;
+ $('extra').innerHTML=g.x.map(x=>`<li><span>${x[0]}</span><b>${x[1]}</b></li>`).join('');
+ const s=Math.min(1,(a-3)/60);$('hair').setAttribute('fill',a>=65?'#b9c0c8':'#1d2a3a');
+ $('smile').setAttribute('d',`M38 68 Q50 ${78-s*6} 62 68`);
+ $('note').textContent=when==='reg'?'Standard pricing during regular hours.':(when==='early'?'Early bird (before 10 AM) adds $20 to the cut.':'After hours (after 7 PM) adds $20 to the cut.');
+}
+$('slider').addEventListener('input',upd);
+$('when').querySelectorAll('button').forEach(b=>b.onclick=()=>{when=b.dataset.w;$('when').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));upd()});
+upd();
+const sticky=$('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe($('top'));
+</script>
+</body>
+</html>

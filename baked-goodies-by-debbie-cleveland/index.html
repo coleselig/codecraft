@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Baked Goodies by Debbie · 100% Gluten-Free Bakery · Cleveland, TN</title>
+<meta name="description" content="Concept site for Baked Goodies by Debbie, a completely gluten-free home bakery in Cleveland, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff7ec;--butter:#fde9c4;--pink:#f6b8c4;--rose:#d9667f;--berry:#9c2f4b;--cocoa:#4a2b22;--crust:#c98a4b;--muted:#7a5a4e;--white:#fffdf9;
+--serif:"Fraunces",Georgia,serif;--sans:"Nunito",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--cocoa);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--berry);color:#ffe4ea;font-size:12px;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-family:var(--serif);font-weight:700;font-size:clamp(17px,5.4vw,21px);white-space:nowrap;text-decoration:none;line-height:1}
+.logo i{color:var(--rose);font-weight:500}
+nav a.pill{white-space:nowrap;font-size:13px;font-weight:800;text-decoration:none;background:var(--cocoa);color:var(--cream);padding:8px 14px;border-radius:999px}
+.hero{padding:14px 0 56px;background:radial-gradient(circle at 50% 0,var(--butter),transparent 70%)}
+.hero .wrap{display:grid;gap:20px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:2px dashed var(--pink);border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:800;color:var(--berry)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,76px);line-height:1;margin:14px 0 14px;letter-spacing:-.01em}
+h1 i{font-weight:500;color:var(--rose)}
+.lede{color:var(--muted);font-size:16.5px;max-width:31em}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:13px 22px;border-radius:14px;text-decoration:none;font-weight:800;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn.solid{background:var(--rose);color:#fff;box-shadow:0 4px 0 var(--berry)}
+.btn.ghost{background:var(--white);border:2px solid var(--cocoa)}
+.art{width:min(58vw,300px);margin:0 auto;order:-1}
+.art svg{width:100%;height:auto;display:block}
+section{padding:60px 0}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(32px,8vw,48px);line-height:1.05;margin:6px 0 12px}
+h2 i{font-weight:500;color:var(--rose)}
+.intro{color:var(--muted);max-width:36em}
+.story{background:var(--white)}
+.story .wrap{display:grid;gap:26px}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(23px,5.6vw,32px);line-height:1.3;color:var(--berry);border-left:4px solid var(--pink);padding-left:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.fact{background:var(--cream);border-radius:16px;padding:16px}
+.fact b{font-family:var(--serif);font-size:30px;display:block;line-height:1;color:var(--cocoa)}
+.fact small{color:var(--muted);font-size:13px}
+.seasons{display:inline-flex;background:var(--butter);border-radius:999px;padding:4px;margin:16px 0 18px}
+.seasons button{border:0;background:none;font:800 14px var(--sans);padding:8px 16px;border-radius:999px;cursor:pointer;color:var(--cocoa)}
+.seasons button[aria-pressed=true]{background:var(--cocoa);color:var(--cream)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.item{background:var(--white);border:2px solid #f3dccb;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:6px;text-align:left;font-family:inherit;color:inherit;cursor:pointer;transition:transform .15s,border-color .15s}
+.item:active{transform:scale(.97)}
+.item b{font-size:15px;line-height:1.25}
+.item span{font-size:12.5px;color:var(--muted)}
+.item .q{align-self:flex-start;font-size:12px;font-weight:800;background:var(--cream);border-radius:999px;padding:2px 10px;color:var(--rose)}
+.item.on{border-color:var(--rose);background:#fff0f3}
+.item.on .q{background:var(--rose);color:#fff}
+.item[hidden]{display:none}
+.box{margin-top:22px;background:var(--cocoa);color:var(--cream);border-radius:20px;padding:20px}
+.box h3{font-family:var(--serif);font-size:23px;margin-bottom:6px}
+.box ul{list-style:none;margin:10px 0;font-size:15px}
+.box li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(255,247,236,.25);padding:6px 0}
+.box li button{background:none;border:0;color:var(--pink);font:800 13px var(--sans);cursor:pointer}
+.box .empty{opacity:.7;font-size:14px}
+.diet{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.diet label{font-size:13px;background:rgba(255,247,236,.12);border-radius:999px;padding:5px 12px;cursor:pointer}
+.diet input{accent-color:var(--rose);margin-right:5px}
+.box .btn{width:100%;text-align:center;margin-top:8px}
+.box small{display:block;margin-top:10px;opacity:.75;font-size:12.5px}
+.how{display:grid;gap:12px;margin-top:20px;counter-reset:s}
+.step{background:var(--white);border-radius:16px;padding:18px 18px 18px 62px;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--pink);color:var(--berry);font:700 17px/32px var(--serif);text-align:center}
+.step h3{font-size:16px}
+.step p{font-size:14.5px;color:var(--muted)}
+footer{background:var(--cocoa);color:#e8d6c9;text-align:center;font-size:13px;padding:26px 20px 90px}
+footer a{color:var(--pink)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;display:flex;gap:8px;transform:translateY(140%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky a{flex:1;text-align:center;background:var(--rose);color:#fff;text-decoration:none;font-weight:800;padding:14px;border-radius:14px;box-shadow:0 6px 20px rgba(74,43,34,.3)}
+.sticky a+a{background:var(--cocoa);flex:.6}
+@media(min-width:860px){
+ .hero{padding:30px 0 80px}
+ .hero .wrap{grid-template-columns:1.15fr .85fr}
+ .art{order:0;width:100%}
+ .story .wrap{grid-template-columns:1fr 1fr;align-items:center}
+ .order .cols{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:start}
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .box{margin-top:0;position:sticky;top:20px}
+ .how{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;width:380px;right:24px}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Baked Goodies by Debbie. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">Baked Goodies <i>by Debbie</i></a><a class="pill" href="#order">Pre-order</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="badge">&#10003; 100% gluten-free kitchen</span>
+    <h1>Gluten-free treats, <i>baked with love</i></h1>
+    <p class="lede">Cookies, donuts, cupcakes, breads and custom cakes from Debbie's completely gluten-free home kitchen in Cleveland, TN. Pre-order and pick up at Main Street Farmers Market, Chattanooga.</p>
+    <div class="actions">
+      <a class="btn solid" href="#order">Build my order</a>
+      <a class="btn ghost" href="mailto:bakedgoodiesbydebbie@gmail.com">Email Debbie</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 300 260">
+      <ellipse cx="150" cy="236" rx="128" ry="14" fill="#f3dccb"/>
+      <rect x="40" y="200" width="220" height="30" rx="15" fill="#fff" stroke="#e9cdb7" stroke-width="3"/>
+      <g transform="translate(70 120)"><path d="M-30 30h60l-8 58h-44z" fill="#f6b8c4"/><path d="M-22 30v58M-8 30v58M8 30v58M22 30v58" stroke="#d9667f" stroke-width="2" opacity=".5"/>
+      <path d="M-36 32c-6-22 10-36 22-34 2-16 26-20 32-4 16-4 28 14 18 38z" fill="#fff7ec" stroke="#f3dccb" stroke-width="3"/>
+      <circle cx="0" cy="-14" r="9" fill="#d9667f"/><path d="M0-22c2-8 8-12 14-12" stroke="#4a2b22" stroke-width="2" fill="none"/></g>
+      <g transform="translate(190 150)"><circle r="48" fill="#c98a4b"/><circle r="44" fill="#f6b8c4"/><circle r="15" fill="#fff7ec"/>
+      <g stroke-width="5" stroke-linecap="round"><path d="M-26-18l6 3" stroke="#fff"/><path d="M14-30l6-4" stroke="#fde9c4"/><path d="M28 6l4 6" stroke="#fff"/><path d="M-30 14l-3 6" stroke="#9c2f4b"/><path d="M4 28l6 2" stroke="#fde9c4"/><path d="M-6-34l-5-3" stroke="#9c2f4b"/></g></g>
+      <g transform="translate(250 70)"><circle r="26" fill="#c98a4b"/><circle cx="-8" cy="-6" r="4" fill="#4a2b22"/><circle cx="8" cy="4" r="4" fill="#4a2b22"/><circle cx="-4" cy="12" r="3" fill="#4a2b22"/><circle cx="10" cy="-12" r="3" fill="#4a2b22"/></g>
+      <text x="36" y="40" font-family="Fraunces,serif" font-style="italic" font-size="22" fill="#9c2f4b">gluten-free</text>
+    </svg>
+  </div>
+</div></header>
+
+<section class="story"><div class="wrap">
+  <div>
+    <div class="kicker">Debbie's story</div>
+    <h2>Why it's <i>all</i> gluten-free</h2>
+    <p class="intro">Debbie has been baking gluten-free for more than 28 years, ever since her youngest daughter was diagnosed with celiac disease. Her kitchen is completely gluten-free, so there's no cross-contamination to worry about.</p>
+    <div class="facts">
+      <div class="fact"><b>28+</b><small>years baking gluten-free</small></div>
+      <div class="fact"><b>0</b><small>gluten in the kitchen, ever</small></div>
+    </div>
+  </div>
+  <p class="quote">"I am a gluten free bakery making all kinds of baked goods."</p>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div class="kicker">Pre-order</div>
+  <h2>Fill your <i>bakery box</i></h2>
+  <p class="intro">Tap treats to add them, then send the list to Debbie. Order by email by Monday at 6 PM for pickup at the market.</p>
+  <div class="cols">
+  <div>
+    <div class="seasons" role="group" aria-label="Season">
+      <button aria-pressed="true" data-s="all">All treats</button>
+      <button aria-pressed="false" data-s="fall">Fall</button>
+      <button aria-pressed="false" data-s="winter">Winter</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div class="box">
+    <h3>Your box</h3>
+    <ul id="list"><li class="empty">Nothing yet. Tap a treat to add it.</li></ul>
+    <div class="diet" aria-label="Dietary requests">
+      <label><input type="checkbox" value="vegan">Vegan</label>
+      <label><input type="checkbox" value="dairy-free">Dairy-free</label>
+      <label><input type="checkbox" value="sugar-free">Sugar-free</label>
+      <label><input type="checkbox" value="egg-free">Egg-free</label>
+    </div>
+    <a class="btn solid" id="send" href="mailto:bakedgoodiesbydebbie@gmail.com">Email my order to Debbie</a>
+    <small>Opens your email app with the list filled in. Debbie confirms by reply.</small>
+  </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">How pickup works</div>
+  <h2>Three easy <i>steps</i></h2>
+  <div class="how">
+    <div class="step"><h3>Choose your treats</h3><p>Cookies, breads, muffins, donuts, fudge, brownies and more, plus custom cakes and cheesecakes.</p></div>
+    <div class="step"><h3>Email by Monday, 6 PM</h3><p>Send your order to bakedgoodiesbydebbie@gmail.com.</p></div>
+    <div class="step"><h3>Pick up at the market</h3><p>Grab your box at Main Street Farmers Market in Chattanooga.</p></div>
+  </div>
+</div></section>
+
+<footer>Baked Goodies by Debbie · Cleveland, Tennessee · <a href="mailto:bakedgoodiesbydebbie@gmail.com">bakedgoodiesbydebbie@gmail.com</a></footer>
+<div class="sticky" id="sticky"><a href="#order">Build my order</a><a href="mailto:bakedgoodiesbydebbie@gmail.com">Email</a></div>
+
+<script>
+var T=[["Almond joy cookies","GF cookie","all"],["Chocolate chip cookies","GF cookie","all"],["Cowboy cookies","GF cookie","all"],["Peanut butter cookies","GF cookie","all"],["Pecan sandies","GF cookie","all"],["Donuts","Gluten-free","all"],["Cupcakes","Gluten-free","all"],["Muffins","Gluten-free","all"],["Bread","Gluten-free","all"],["Brownies","Gluten-free","all"],["Fudge","Gluten-free","all"],["Lemon squares","Gluten-free","all"],["Lactation baked goods","For new moms","all"],["Custom cake","Ask Debbie","all"],["Cheesecake","Ask Debbie","all"],["Apple cider donuts","Fall","fall"],["Pumpkin spice donuts","Fall","fall"],["Gingerbread","Winter","winter"],["Christmas cookies","Winter","winter"],["Peppermint donuts","Winter","winter"]];
+var box={},g=document.getElementById('grid');
+T.forEach(function(t,i){var b=document.createElement('button');b.className='item';b.dataset.s=t[2];b.dataset.i=i;
+b.innerHTML='<span class="q">+ Add</span><b>'+t[0]+'</b><span>'+t[1]+'</span>';b.onclick=function(){box[i]=(box[i]||0)+1;draw()};g.appendChild(b)});
+function draw(){var l=document.getElementById('list'),h='',lines=[];
+Object.keys(box).forEach(function(i){h+='<li><span>'+box[i]+' &times; '+T[i][0]+'</span><button data-r="'+i+'" aria-label="Remove">remove</button></li>';lines.push(box[i]+' x '+T[i][0])});
+l.innerHTML=h||'<li class="empty">Nothing yet. Tap a treat to add it.</li>';
+document.querySelectorAll('.item').forEach(function(b){var n=box[b.dataset.i];b.classList.toggle('on',!!n);b.querySelector('.q').textContent=n?n+' in box':'+ Add'});
+l.querySelectorAll('[data-r]').forEach(function(r){r.onclick=function(){var i=r.dataset.r;box[i]--;if(!box[i])delete box[i];draw()}});
+var d=[].slice.call(document.querySelectorAll('.diet input:checked')).map(function(c){return c.value});
+var body='Hi Debbie,\n\nI would like to pre-order for pickup at Main Street Farmers Market:\n\n'+(lines.length?'- '+lines.join('\n- '):'(my list)')+(d.length?'\n\nPlease make it: '+d.join(', '):'')+'\n\nName:\nPhone:\n\nThank you!';
+document.getElementById('send').href='mailto:bakedgoodiesbydebbie@gmail.com?subject='+encodeURIComponent('Pre-order for market pickup')+'&body='+encodeURIComponent(body)}
+document.querySelectorAll('.diet input').forEach(function(c){c.onchange=draw});
+document.querySelectorAll('.seasons button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.seasons button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+var s=b.dataset.s;document.querySelectorAll('.item').forEach(function(it){it.hidden=s!=='all'&&it.dataset.s!==s})}});
+draw();
+var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('show',scrollY>innerHeight*.8)},{passive:true});
+</script>
+</body>
+</html>

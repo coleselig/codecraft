@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Carlostyle Barbershop | Clarksville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bk:#0d0d0c;--bk2:#171614;--bk3:#26241f;--gold:#c9a45c;--gold2:#ead9b0;--txt:#f1ede4;--mut:#9c958a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--txt);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--gold);color:var(--bk);font-size:12px;text-align:center;padding:7px 16px;font-weight:600}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.cg{font-family:'Cormorant Garamond',Georgia,serif}
+.k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--bk);text-decoration:none;font-weight:800;padding:15px 28px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;transition:background .2s}
+.btn:hover{background:var(--gold2)}
+.btn.o{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn.o:hover{background:rgba(201,164,92,.12)}
+.hero{min-height:84vh;display:flex;align-items:center;padding:56px 0;position:relative;text-align:center;background:radial-gradient(circle at 50% 30%,#1f1c16,var(--bk) 70%)}
+.hero .frame{border:1px solid var(--bk3);padding:40px 18px;position:relative}
+.hero .frame::before,.hero .frame::after{content:"";position:absolute;width:26px;height:26px;border-color:var(--gold);border-style:solid}
+.hero .frame::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.hero .frame::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clamp(56px,15vw,140px);line-height:.9;letter-spacing:-.01em;margin:16px 0 4px}
+.hero h1 i{font-weight:500;color:var(--gold)}
+.hero .tl{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(20px,5vw,28px);color:var(--gold2);margin:16px auto 28px;max-width:28ch}
+.ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.stars{margin-top:30px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+.stars b{display:block;font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);line-height:1}
+section{padding:72px 0}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clamp(40px,10vw,76px);line-height:.95;margin:12px 0 14px}
+h2 i{font-weight:500;color:var(--gold)}
+.sub{color:var(--mut);max-width:50ch;margin-bottom:30px}
+.rit{display:grid;gap:28px;border:1px solid var(--bk3);background:var(--bk2);padding:26px 20px}
+.rit .pr{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:700;color:var(--gold);line-height:1}
+.rit .du{color:var(--mut);font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.steps{list-style:none;display:grid;gap:4px;position:relative}
+.st{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--bk3);opacity:.35;transition:opacity .5s}
+.st.on{opacity:1}
+.st .n{width:36px;height:36px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);transition:background .4s,color .4s}
+.st.on .n{background:var(--gold);color:var(--bk)}
+.st .t{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;line-height:1.1}
+.bar{height:3px;background:var(--bk3);margin:20px 0 14px;position:relative;overflow:hidden}
+.bar span{position:absolute;inset:0;width:0;background:var(--gold);transition:width .55s linear}
+.clock{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);letter-spacing:.1em}
+.go{font:inherit;cursor:pointer;width:100%;margin-top:18px}
+.tabs{display:flex;gap:0;flex-wrap:wrap;border-bottom:1px solid var(--bk3);margin-bottom:8px}
+.tabs button{font:inherit;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;background:none;border:0;color:var(--mut);padding:12px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected=true]{color:var(--gold);border-color:var(--gold)}
+.list{display:grid}
+.row{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px solid var(--bk3)}
+.row .nm{font-weight:600}
+.row .nm small{display:block;color:var(--mut);font-weight:400;font-size:13px}
+.row .dots{flex:1;border-bottom:1px dotted #4a463e;transform:translateY(-4px);min-width:16px}
+.row .p{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--gold);white-space:nowrap}
+.say{text-align:center;padding:64px 16px;border-top:1px solid var(--bk3);border-bottom:1px solid var(--bk3)}
+.say p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(30px,7vw,56px);line-height:1.1}
+.say small{display:block;margin-top:14px;color:var(--mut);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.vis{display:grid;gap:1px;background:var(--bk3);border:1px solid var(--bk3)}
+.vc{background:var(--bk);padding:24px 20px}
+.vc h3{font-family:'Cormorant Garamond',serif;font-size:28px;margin-bottom:6px}
+.vc p{color:var(--mut)}
+.vc a{color:var(--gold);font-weight:600}
+footer{padding:30px 0 110px;text-align:center;color:var(--mut);font-size:13px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;background:rgba(13,13,12,.94);border:1px solid var(--gold);padding:8px 8px 8px 18px;transform:translateY(160%);transition:transform .35s;backdrop-filter:blur(6px)}
+.sticky.show{transform:none}
+.sticky span{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}
+.sticky .btn{padding:11px 20px}
+@media(min-width:860px){
+ .hero .frame{padding:64px 48px}
+ .rit{grid-template-columns:1fr 1.2fr;padding:40px;gap:48px}
+ .list{grid-template-columns:1fr 1fr;column-gap:48px}
+ .vis{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;width:380px}
+}
+@media(prefers-reduced-motion:reduce){.st,.bar span,.st .n{transition:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Carlostylebarbershop. Not live.</div>
+<header class="hero" id="top">
+ <div class="wrap" style="width:100%">
+  <div class="frame">
+   <div class="k">Carlos Bautista · Clarksville, Tennessee</div>
+   <h1>Carlo<i>style</i></h1>
+   <p class="tl">A unique style for your image, in professional hands.</p>
+   <div class="ctas">
+    <a class="btn" href="https://booksy.com/en-us/834323_carlostylebarbershop_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+    <a class="btn o" href="https://www.instagram.com/carlostylebarbershop/" target="_blank" rel="noopener">@carlostylebarbershop</a>
+   </div>
+   <div class="stars"><div><b>5.0</b>Booksy rating</div><div><b>270</b>Reviews</div><div><b>265</b>Five-star</div></div>
+  </div>
+ </div>
+</header>
+
+<main>
+<section>
+ <div class="wrap">
+  <div class="k">The signature</div>
+  <h2>The <i>Carlostyle</i>, step by step.</h2>
+  <p class="sub">Seven services, one chair, an hour and a half. Press play and walk through the package the way it happens.</p>
+  <div class="rit">
+   <div>
+    <div class="pr">$130</div>
+    <div class="du">1 hr 30 min · one appointment</div>
+    <div class="bar"><span id="bar"></span></div>
+    <div class="clock"><span>0:00</span><span id="now" aria-live="polite">Ready</span><span>1:30</span></div>
+    <button class="btn go" type="button" id="go">Play the Carlostyle</button>
+    <a class="btn o" style="width:100%;margin-top:10px" href="https://booksy.com/en-us/834323_carlostylebarbershop_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book the package</a>
+   </div>
+   <ol class="steps" id="steps"></ol>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="k">The full menu</div>
+  <h2>Every service.</h2>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="list" id="list"></div>
+  <p style="color:var(--mut);font-size:13px;margin-top:14px">Prices from Carlos's Booksy page. "+" means starting price.</p>
+ </div>
+</section>
+
+<div class="say"><p>"Good team of barbers."</p><small>James · repeat client · Booksy</small></div>
+
+<section>
+ <div class="wrap">
+  <div class="vis">
+   <div class="vc"><h3>Where</h3><p>101 Burle Way, Building B, Suite 106<br>Clarksville, TN 37042</p><p style="margin-top:8px"><a href="https://maps.google.com/?q=101+Burle+Way+Clarksville+TN+37042" target="_blank" rel="noopener">Directions</a></p></div>
+   <div class="vc"><h3>Kids welcome</h3><p>Kid's cuts for ages 1 to 12, with basic designs available.</p></div>
+   <div class="vc"><h3>Follow</h3><p><a href="https://www.instagram.com/carlostylebarbershop/" target="_blank" rel="noopener">Instagram @carlostylebarbershop</a><br><a href="https://www.facebook.com/carlos.bautista.184" target="_blank" rel="noopener">Facebook</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>Carlostylebarbershop · Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></footer>
+<div class="sticky" id="sticky"><span>Carlostyle</span><a class="btn" href="https://booksy.com/en-us/834323_carlostylebarbershop_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const R=["Haircut","Beard trim","Head wash","Facial steam","Nose wax","Ear wax","Eyebrows"];
+$('steps').innerHTML=R.map((r,i)=>`<li class="st"><span class="n">${i+1}</span><span class="t">${r}</span></li>`).join('');
+let tm=null;
+$('go').onclick=()=>{
+ clearInterval(tm);const st=[...document.querySelectorAll('.st')];st.forEach(s=>s.classList.remove('on'));$('bar').style.width='0';
+ let i=0;$('go').textContent='Playing...';
+ const tick=()=>{if(i>=R.length){clearInterval(tm);$('now').textContent='Done · 1:30';$('go').textContent='Play it again';return}
+  st[i].classList.add('on');i++;$('bar').style.width=(i/R.length*100)+'%';$('now').textContent=R[i-1];};
+ tick();tm=setInterval(tick,650);
+};
+const M={
+ "Cuts":[["Men's haircut","$50+","30 min"],["Taper (no beard)","$40+","30 min"],["Haircut and wash","$55+","35 min"],["Haircut and eyebrows","$55+","35 min"],["Haircut and eyebrows with line","$60+","35 min"],["Haircut and nose wax","$60","40 min"],["Line-up (no taper or beard)","$25+","20 min"],["Basic design","$35+","30 min"]],
+ "Beard":[["Haircut, beard trim and hot towel","$60+","35 min"],["Haircut, beard trim and head wash","$70+","30 min"],["Beard trim with facial steamer","$75+","45 min"],["Beard trim, hot towel","$40+","35 min"],["Beard trim (no hot towel)","$35","25 min"]],
+ "Kids":[["Kid's cut (ages 1 to 12)","$40+","30 min"],["Kid's cut with basic design","$70+","40 min"]],
+ "Extras":[["Ear wax","$10","15 min"],["Carlostyle package","$130","1 hr 30 min"],["Before/after appointment service","$100+","45 min"]]};
+const tabs=$('tabs');
+Object.keys(M).forEach((k,i)=>{const b=document.createElement('button');b.type='button';b.role='tab';b.textContent=k;b.setAttribute('aria-selected',i===0);b.onclick=()=>show(k);tabs.appendChild(b)});
+function show(k){[...tabs.children].forEach(b=>b.setAttribute('aria-selected',b.textContent===k));
+ $('list').innerHTML=M[k].map(r=>`<div class="row"><span class="nm">${r[0]}<small>${r[2]}</small></span><span class="dots"></span><span class="p">${r[1]}</span></div>`).join('')}
+show('Cuts');
+const sticky=$('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe($('top'));
+</script>
+</body>
+</html>

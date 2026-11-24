@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chop'N Screwed Stylez | Clarksville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120a1c;--bg2:#1c1029;--bg3:#2a1a3d;--lean:#a259ff;--lean2:#d6b8ff;--pink:#ff4fa3;--txt:#efe7fa;--mut:#a597b8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Outfit',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--lean);color:#120a1c;font-size:12px;text-align:center;padding:7px 16px;font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.bg{font-family:'Bungee',Impact,sans-serif;font-weight:400}
+.k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lean2);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(90deg,var(--lean),var(--pink));color:#fff;text-decoration:none;font-weight:800;padding:15px 26px;border-radius:10px;font-size:15px;letter-spacing:.06em;text-transform:uppercase;transition:filter .2s}
+.btn:hover{filter:brightness(1.15)}
+.btn.o{background:transparent;border:2px solid var(--bg3)}
+.hero{padding:46px 0 50px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 0%,rgba(162,89,255,.35),transparent 60%)}
+.hero h1{font-family:'Bungee',Impact,sans-serif;font-weight:400;font-size:clamp(50px,14vw,128px);line-height:.92;margin:14px 0 18px;text-shadow:3px 3px 0 var(--pink),6px 6px 0 rgba(162,89,255,.6)}
+.hero h1 em{font-style:normal;display:block;font-size:.5em;color:var(--lean2);text-shadow:none;letter-spacing:.06em}
+.hero p{color:var(--mut);font-size:18px;max-width:38ch;margin-bottom:24px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.meta span{background:var(--bg2);border:1px solid var(--bg3);padding:6px 12px;border-radius:8px;font-size:13px}
+.meta b{color:var(--pink)}
+.eq{display:flex;gap:4px;align-items:flex-end;height:36px;margin-top:30px}
+.eq i{width:6px;background:var(--lean);border-radius:2px;animation:eq 2.4s ease-in-out infinite}
+@keyframes eq{0%,100%{height:20%}50%{height:100%}}
+section{padding:64px 0}
+h2{font-family:'Bungee',Impact,sans-serif;font-weight:400;font-size:clamp(34px,9vw,64px);line-height:1;margin:10px 0 14px}
+.sub{color:var(--mut);max-width:48ch;margin-bottom:28px}
+.deck{display:grid;gap:26px}
+.tt{background:var(--bg2);border:1px solid var(--bg3);border-radius:18px;padding:22px;position:relative;overflow:hidden}
+.plat{position:relative;width:min(300px,78vw);aspect-ratio:1;margin:6px auto 0}
+.rec{position:absolute;inset:0;border-radius:50%;background:repeating-radial-gradient(circle,#0b0612 0 2px,#1a1124 2px 4px);box-shadow:0 0 0 6px #08040d,0 20px 40px -10px rgba(162,89,255,.5)}
+.rec .lbl{position:absolute;inset:34%;border-radius:50%;background:linear-gradient(135deg,var(--lean),var(--pink));display:grid;place-items:center;text-align:center;font-family:'Bungee',sans-serif;font-size:clamp(10px,3vw,13px);line-height:1.1;color:#fff;padding:6px}
+.rec .lbl::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#08040d}
+.spin{animation:spin var(--spd,6s) linear infinite}
+.paused{animation-play-state:paused}
+@keyframes spin{to{transform:rotate(360deg)}}
+.arm{position:absolute;right:-2%;top:-4%;width:34%;height:70%;transform-origin:80% 8%;transform:rotate(-24deg);transition:transform .6s cubic-bezier(.4,1.4,.5,1)}
+.arm.on{transform:rotate(4deg)}
+.now{margin-top:22px;text-align:center;min-height:120px}
+.now .n{font-family:'Bungee',sans-serif;font-size:clamp(22px,6vw,30px);line-height:1.1}
+.now .p{font-family:'Bungee',sans-serif;font-size:clamp(50px,14vw,72px);color:var(--pink);line-height:1;margin:6px 0}
+.now .d{color:var(--mut);font-size:14px}
+.pitch{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:12px;color:var(--mut);letter-spacing:.12em;text-transform:uppercase}
+.pitch input{flex:1;accent-color:var(--lean)}
+.tracks{display:grid;gap:8px;counter-reset:t}
+.tr{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:var(--txt);background:var(--bg2);border:1px solid var(--bg3);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .2s,background .2s}
+.tr:hover{border-color:#4a3166}
+.tr[aria-pressed=true]{border-color:var(--lean);background:#24153a}
+.tr .no{font-family:'Bungee',sans-serif;color:var(--lean2);font-size:14px}
+.tr .nm{font-weight:600}
+.tr .nm small{display:block;color:var(--mut);font-weight:400;font-size:13px}
+.tr .pr{font-family:'Bungee',sans-serif;font-size:18px}
+.tt .btn{width:100%;margin-top:18px}
+.lyric{background:linear-gradient(90deg,var(--lean),var(--pink));color:#fff;padding:52px 16px;text-align:center}
+.lyric p{font-family:'Bungee',sans-serif;font-size:clamp(24px,6.4vw,48px);line-height:1.1;max-width:22ch;margin:0 auto}
+.lyric small{display:block;margin-top:14px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.liner{display:grid;gap:12px}
+.lc{background:var(--bg2);border:1px solid var(--bg3);border-radius:14px;padding:20px}
+.lc h3{font-family:'Bungee',sans-serif;font-weight:400;font-size:20px;margin-bottom:6px;color:var(--lean2)}
+.lc p{color:var(--mut)}
+.lc a{color:var(--pink);font-weight:600}
+footer{padding:30px 0 110px;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--bg3)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0b0612;border:1px solid var(--lean);border-radius:14px;padding:8px 8px 8px 16px;transform:translateY(160%);transition:transform .35s}
+.sticky.show{transform:none}
+.sticky span{font-family:'Bungee',sans-serif;font-size:15px}
+.sticky .btn{padding:10px 18px}
+@media(min-width:860px){
+ .deck{grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+ .tt{position:sticky;top:20px}
+ .liner{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;width:380px}
+}
+@media(prefers-reduced-motion:reduce){.spin,.eq i{animation:none}.arm{transition:none}}
+</style>
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Chop'N Screwed Stylez. Not live.</div>
+<header class="hero" id="top">
+ <div class="wrap">
+  <div class="k">Daniel Mitchell · Vibez Barber Lounge · Clarksville</div>
+  <h1>Chop'N Screwed<em>Stylez</em></h1>
+  <p>Fades, tapers, clipper and shear cuts, done with precision and creativity in a relaxed room.</p>
+  <div class="ctas">
+   <a class="btn" href="https://booksy.com/en-us/1584592_chopn-screwed-stylez-vibez-barber-lounge_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book on Booksy</a>
+   <a class="btn o" href="https://www.instagram.com/chopnscrewedstylez/" target="_blank" rel="noopener">@chopnscrewedstylez</a>
+  </div>
+  <div class="meta"><span><b>5.0</b> on Booksy</span><span><b>24</b> reviews, all 5 stars</span></div>
+  <div class="eq" id="eq" aria-hidden="true"></div>
+ </div>
+</header>
+
+<main>
+<section>
+ <div class="wrap">
+  <div class="k">Side A · The menu</div>
+  <h2>Drop the needle.</h2>
+  <p class="sub">Every service is a track. Tap one to put it on the deck, then slow it down if you want it screwed.</p>
+  <div class="deck">
+   <div class="tracks" id="tracks"></div>
+   <div class="tt">
+    <div class="plat">
+     <div class="rec spin paused" id="rec"><div class="lbl" id="lbl">CHOP'N<br>SCREWED</div></div>
+     <svg class="arm" id="arm" viewBox="0 0 60 120" aria-hidden="true"><circle cx="48" cy="10" r="9" fill="#3a2852" stroke="#d6b8ff" stroke-width="2"/><path d="M48 10 L40 96 L30 110" stroke="#d6b8ff" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="22" y="104" width="16" height="10" rx="2" fill="#ff4fa3" transform="rotate(-30 30 110)"/></svg>
+    </div>
+    <div class="now" aria-live="polite">
+     <div class="k" id="st">Ready</div>
+     <div class="n" id="nm">Pick a track</div>
+     <div class="p" id="pr"></div>
+     <div class="d" id="ds"></div>
+    </div>
+    <label class="pitch">Pitch<input type="range" id="pitch" min="2" max="14" value="6" aria-label="Turntable speed"><span id="pv">33 rpm</span></label>
+    <a class="btn" href="https://booksy.com/en-us/1584592_chopn-screwed-stylez-vibez-barber-lounge_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book this on Booksy</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="lyric"><p>"Every cut is more than just a haircut. It's an experience."</p><small>From the Chop'N Screwed Stylez Booksy page</small></div>
+
+<section>
+ <div class="wrap">
+  <div class="k">Liner notes</div>
+  <h2>Find the lounge.</h2>
+  <div class="liner">
+   <div class="lc"><h3>Where</h3><p>Vibez Barber Lounge<br>2243 Lowes Dr, Suite D<br>Clarksville, TN 37040</p><p style="margin-top:8px"><a href="https://maps.google.com/?q=2243+Lowes+Dr+Clarksville+TN+37040" target="_blank" rel="noopener">Directions</a></p></div>
+   <div class="lc"><h3>The reviews</h3><p>All 24 Booksy reviews are five stars, and Daniel answers them personally.</p></div>
+   <div class="lc"><h3>Follow</h3><p><a href="https://www.instagram.com/chopnscrewedstylez/" target="_blank" rel="noopener">Instagram @chopnscrewedstylez</a><br><a href="https://www.facebook.com/share/1ACo8Ab5Pe/" target="_blank" rel="noopener">Facebook</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>Chop'N Screwed Stylez · Concept by Code Craft Media · <a href="mailto:54321coleman@gmail.com">54321coleman@gmail.com</a></footer>
+<div class="sticky" id="sticky"><span>Chop'N Screwed</span><a class="btn" href="https://booksy.com/en-us/1584592_chopn-screwed-stylez-vibez-barber-lounge_barber-shop_35988_clarksville" target="_blank" rel="noopener">Book</a></div>
+
+<script>
+const T=[["Haircut","$40+","45 min","Fades, tapers, clipper cut, shear cut"],["Haircut & beard","$50+","1 hr","Haircut plus beard trim and grooming"],["Beard","$20","25 min",""],["Kid's haircut","$30+","40 min",""],["Line up","$15","15 min",""]];
+const $=id=>document.getElementById(id),tr=$('tracks');
+const eq=$('eq');for(let i=0;i<28;i++){const b=document.createElement('i');b.style.animationDelay=(-(i*0.37)%2.4)+'s';b.style.animationDuration=(1.8+(i%5)*.3)+'s';eq.appendChild(b)}
+T.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.className='tr';b.setAttribute('aria-pressed','false');
+ b.innerHTML=`<span class="no">${String(i+1).padStart(2,'0')}</span><span class="nm"></span><span class="pr">${t[1]}</span>`;
+ b.querySelector('.nm').innerHTML=t[0]+`<small>${t[2]}${t[3]?' · '+t[3]:''}</small>`;b.onclick=()=>play(i);tr.appendChild(b)});
+function play(i){
+ [...tr.children].forEach((c,j)=>c.setAttribute('aria-pressed',i===j));
+ const t=T[i];$('arm').classList.add('on');$('rec').classList.remove('paused');
+ $('st').textContent='Now playing · Track '+String(i+1).padStart(2,'0');$('nm').textContent=t[0];$('pr').textContent=t[1];$('ds').textContent=t[2]+(t[3]?' · '+t[3]:'');
+ $('lbl').innerHTML=t[0].toUpperCase().replace(' & ','<br>&amp; ');
+}
+function pitch(){const v=+$('pitch').value;$('rec').style.setProperty('--spd',v+'s');const rpm=Math.round(200/v);$('pv').textContent=(v>=10?'Screwed · ':'')+rpm+' rpm'}
+$('pitch').addEventListener('input',pitch);pitch();
+const sticky=$('sticky');
+new IntersectionObserver(([e])=>sticky.classList.toggle('show',!e.isIntersecting)).observe($('top'));
+</script>
+</body>
+</html>

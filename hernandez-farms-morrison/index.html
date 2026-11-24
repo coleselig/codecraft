@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hernández Farms · Farm-Grown Produce · Morrison, TN</title>
+<meta name="description" content="Concept site for Hernández Farms, a produce farm in Morrison, TN: CSA, farmers markets, on-farm sales and wholesale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--kraft:#efe4cf;--paper:#f8f2e6;--field:#2f5d2a;--leaf:#6c9a3b;--sprout:#c8dc8f;--soil:#3b2a1d;--tomato:#d4472b;--squash:#e59b2f;--muted:#6b5a48;
+--slab:"Zilla Slab",Georgia,serif;--sans:"Archivo",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--soil);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--soil);color:var(--sprout);font-size:12px;text-align:center;padding:7px 14px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+nav{background:var(--field);color:var(--paper)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-family:var(--slab);font-weight:700;font-size:22px;text-decoration:none;letter-spacing:.01em}
+.logo small{display:block;font:600 10px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--sprout)}
+nav a.call{white-space:nowrap;font-weight:800;font-size:13px;text-decoration:none;border:2px solid var(--sprout);color:var(--sprout);padding:6px 12px;border-radius:6px}
+.hero{background:var(--field);color:var(--paper);position:relative;overflow:hidden}
+.hero .wrap{padding-top:22px;padding-bottom:0;display:grid;gap:8px}
+.stamp{display:inline-block;font:800 11.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;border:2px solid var(--squash);color:var(--squash);padding:4px 10px;border-radius:4px;transform:rotate(-2deg)}
+h1{font-family:var(--slab);font-weight:700;font-size:clamp(42px,12vw,84px);line-height:.95;margin:14px 0 14px}
+h1 span{color:var(--sprout)}
+.lede{font-size:16.5px;max-width:32em;color:#e3ecd6}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:800;font-size:15px}
+.btn.solid{background:var(--squash);color:var(--soil)}
+.btn.line{border:2px solid var(--paper);color:var(--paper)}
+.rows{display:block;width:100vw;margin-left:calc(50% - 50vw);height:clamp(90px,17vw,250px);margin-top:26px}
+section{padding:60px 0}
+.kicker{font:800 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--leaf)}
+h2{font-family:var(--slab);font-weight:700;font-size:clamp(32px,8vw,50px);line-height:1.02;margin:6px 0 12px}
+.intro{color:var(--muted);max-width:36em}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.way{background:var(--kraft);border-radius:10px;padding:16px;border-top:5px solid var(--leaf)}
+.way:nth-child(2){border-color:var(--tomato)}.way:nth-child(3){border-color:var(--squash)}.way:nth-child(4){border-color:var(--soil)}
+.way h3{font-family:var(--slab);font-size:20px;line-height:1.1}
+.way p{font-size:13.5px;color:var(--muted);margin-top:4px}
+.field{background:var(--kraft)}
+.toggle{display:flex;border:3px solid var(--soil);border-radius:10px;overflow:hidden;max-width:420px;margin:18px 0 6px}
+.toggle button{flex:1;border:0;background:var(--paper);font:800 14px var(--sans);padding:12px 8px;cursor:pointer;color:var(--soil)}
+.toggle button[aria-pressed=true]{background:var(--soil);color:var(--sprout)}
+.hint{font-size:13px;color:var(--muted)}
+.crates{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+.crate{position:relative;background:var(--paper);border:2px solid #d8c8a8;border-radius:10px;padding:12px 12px 12px 54px;text-align:left;font:600 15px var(--sans);color:var(--soil);cursor:pointer;min-height:62px;animation:pop .35s both}
+.crate i{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%}
+.crate small{display:block;font-size:11.5px;color:var(--muted);font-weight:600}
+.crate.on{border-color:var(--field);background:#e9f1dc}
+.crate.on::after{content:"\2713";position:absolute;right:10px;top:8px;color:var(--field);font-weight:800}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.basket{margin-top:20px;background:var(--field);color:var(--paper);border-radius:12px;padding:18px}
+.basket h3{font-family:var(--slab);font-size:22px}
+.basket p{font-size:14px;color:#dbe7cb;margin:6px 0 12px;min-height:1.6em}
+.basket .btn{display:block;text-align:center}
+.family .wrap{display:grid;gap:24px}
+.quote{font-family:var(--slab);font-size:clamp(24px,6vw,34px);line-height:1.2;color:var(--field);background:var(--kraft);padding:22px;border-radius:10px;position:relative}
+.quote small{display:block;font:600 13px var(--sans);color:var(--muted);margin-top:10px}
+.contact{background:var(--soil);color:var(--paper)}
+.contact .kicker{color:var(--squash)}
+.cgrid{display:grid;gap:10px;margin-top:20px}
+.cgrid a{display:block;text-decoration:none;background:rgba(248,242,230,.08);border:1px solid rgba(248,242,230,.2);border-radius:10px;padding:14px 16px;overflow-wrap:anywhere}
+.cgrid b{display:block;font:800 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--sprout)}
+footer{background:var(--soil);color:#bfae96;border-top:1px solid rgba(248,242,230,.15);text-align:center;font-size:13px;padding:22px 20px 90px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;background:var(--soil);transform:translateY(100%);transition:transform .3s;box-shadow:0 -4px 20px rgba(0,0,0,.25)}
+.sticky.show{transform:none}
+.sticky a{flex:1;text-align:center;color:var(--paper);text-decoration:none;font-weight:800;padding:16px 8px;font-size:14.5px}
+.sticky a:first-child{background:var(--squash);color:var(--soil)}
+@media(min-width:860px){
+ .hero .wrap{padding-top:50px}
+ .ways{grid-template-columns:repeat(4,1fr)}
+ .fcols{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+ .crates{grid-template-columns:repeat(3,1fr)}
+ .basket{margin-top:16px;position:sticky;top:20px}
+ .family .wrap{grid-template-columns:1fr 1fr;align-items:center}
+ .cgrid{grid-template-columns:repeat(3,1fr)}
+ .sticky{left:auto;right:24px;bottom:20px;width:420px;border-radius:10px;overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Hernández Farms. Not live.</div>
+<nav><div class="wrap"><a class="logo" href="#">Hernández Farms<small>Morrison · Tennessee</small></a><a class="call" href="tel:+19316071490">Call</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="stamp">Grown in Warren County</span>
+    <h1>Fresh from the <span>Viola Valley</span></h1>
+    <p class="lede">Hernández Farms grows vegetables and fruit in Morrison, TN, and brings them to you by CSA, at the farmers market, on the farm and wholesale.</p>
+    <div class="actions">
+      <a class="btn solid" href="#field">What's in the field</a>
+      <a class="btn line" href="mailto:Hernandezfamilyorganics@gmail.com">Email to preorder</a>
+    </div>
+  </div>
+  <svg class="rows" viewBox="0 0 400 110" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <path d="M0 40Q100 20 200 34T400 26V110H0z" fill="#6c9a3b"/>
+    <path d="M0 62Q120 44 220 58T400 50V110H0z" fill="#3b2a1d"/>
+    <g fill="#c8dc8f"><path d="M30 60c-4-12 2-18 6-20 2 6 0 14-6 20z"/><path d="M34 60c6-10 14-12 18-10-2 6-10 10-18 10z"/>
+    <path d="M110 54c-4-12 2-18 6-20 2 6 0 14-6 20z"/><path d="M114 54c6-10 14-12 18-10-2 6-10 10-18 10z"/>
+    <path d="M200 58c-4-12 2-18 6-20 2 6 0 14-6 20z"/><path d="M204 58c6-10 14-12 18-10-2 6-10 10-18 10z"/>
+    <path d="M290 54c-4-12 2-18 6-20 2 6 0 14-6 20z"/><path d="M294 54c6-10 14-12 18-10-2 6-10 10-18 10z"/>
+    <path d="M370 50c-4-12 2-18 6-20 2 6 0 14-6 20z"/><path d="M374 50c6-10 14-12 18-10-2 6-10 10-18 10z"/></g>
+    <circle cx="160" cy="44" r="9" fill="#e59b2f"/><circle cx="330" cy="40" r="7" fill="#d4472b"/>
+    <path d="M0 84Q140 70 240 82T400 76" stroke="#5a4130" stroke-width="3" fill="none"/>
+    <path d="M0 100Q140 88 240 98T400 92" stroke="#5a4130" stroke-width="3" fill="none"/>
+  </svg>
+</div></header>
+
+<section><div class="wrap">
+  <div class="kicker">How to get our produce</div>
+  <h2>Four ways to eat from our farm</h2>
+  <div class="ways">
+    <div class="way"><h3>CSA</h3><p>A share of the harvest from our fields.</p></div>
+    <div class="way"><h3>Farmers market</h3><p>Find us at Main Street Farmers Market, Chattanooga.</p></div>
+    <div class="way"><h3>On the farm</h3><p>On-farm sales in Morrison, TN.</p></div>
+    <div class="way"><h3>Wholesale</h3><p>For restaurants and stores. Call or email.</p></div>
+  </div>
+</div></section>
+
+<section class="field" id="field"><div class="wrap">
+  <div class="kicker">The harvest board</div>
+  <h2>What's in the field?</h2>
+  <p class="intro">Flip between what's coming in now and what's ahead in season. Tap anything you want, and we'll put it on a preorder email for market pickup.</p>
+  <div class="fcols">
+  <div>
+    <div class="toggle" role="group" aria-label="Harvest">
+      <button aria-pressed="true" data-k="now">Harvesting now</button>
+      <button aria-pressed="false" data-k="season">In season</button>
+    </div>
+    <p class="hint" id="hint">Cool-weather crops from the field right now.</p>
+    <div class="crates" id="crates"></div>
+  </div>
+  <div class="basket">
+    <h3>Your preorder</h3>
+    <p id="picks">Tap produce to add it.</p>
+    <a class="btn solid" id="send" href="mailto:Hernandezfamilyorganics@gmail.com">Email preorder</a>
+  </div>
+  </div>
+</div></section>
+
+<section class="family"><div class="wrap">
+  <div>
+    <div class="kicker">Meet the farm</div>
+    <h2>Grown in the Viola Valley</h2>
+    <p class="intro">Jennifer Hernandez farms in Morrison, in the Viola Valley area of Warren County, raising everything from leafy greens and beets to berries, melons and pumpkins.</p>
+  </div>
+  <p class="quote">"Preorder by email and pick up at the market."<small>How to skip the line at Main Street Farmers Market, Chattanooga</small></p>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="kicker">Get in touch</div>
+  <h2>CSA, wholesale or a market preorder</h2>
+  <div class="cgrid">
+    <a href="tel:+19316071490"><b>Call</b>931-607-1490</a>
+    <a href="mailto:Hernandezfamilyorganics@gmail.com"><b>Email</b>Hernandezfamilyorganics@gmail.com</a>
+    <a href="https://www.instagram.com/hernandezfarmstn/"><b>Instagram</b>@hernandezfarmstn</a>
+  </div>
+</div></section>
+<footer>Hernández Farms · Morrison, Tennessee</footer>
+<div class="sticky" id="sticky"><a href="mailto:Hernandezfamilyorganics@gmail.com">Email preorder</a><a href="tel:+19316071490">Call 931-607-1490</a></div>
+
+<script>
+var P={now:[["Leafy greens","#6c9a3b"],["Root vegetables","#b5651d"],["Beets with greens","#8e1f4a"],["Potatoes","#c9a46b"],["Onions","#e8d39a"],["Winter squashes","#e59b2f"]],
+season:[["Blackberries","#2b1b3a"],["Blueberries","#3f5aa8"],["Strawberries","#d4472b"],["Cantaloupe","#f0a35e"],["Watermelon","#3f8a3a"],["Tomatoes","#c9301c"],["Peppers","#4d8b2a"],["Okra","#7fa650"],["Sweet potatoes","#b45a3c"],["Pumpkins","#e57f1f"]]};
+var H={now:"Cool-weather crops from the field right now.",season:"Coming in when the season turns. Ask about the CSA."};
+var pick=[],c=document.getElementById('crates');
+function show(k){c.innerHTML='';document.getElementById('hint').textContent=H[k];
+P[k].forEach(function(p,i){var b=document.createElement('button');b.className='crate'+(pick.indexOf(p[0])>-1?' on':'');b.style.animationDelay=i*40+'ms';
+b.innerHTML='<i style="background:'+p[1]+'"></i>'+p[0]+'<small>'+(k==='now'?'Now':'In season')+'</small>';
+b.onclick=function(){var j=pick.indexOf(p[0]);if(j>-1)pick.splice(j,1);else pick.push(p[0]);b.classList.toggle('on');upd()};c.appendChild(b)})}
+function upd(){document.getElementById('picks').textContent=pick.length?pick.join(', '):'Tap produce to add it.';
+var body='Hi Jennifer,\n\nI would like to preorder for pickup at Main Street Farmers Market:\n\n'+(pick.length?'- '+pick.join('\n- '):'(my list)')+'\n\nName:\nPhone:\n\nThank you!';
+document.getElementById('send').href='mailto:Hernandezfamilyorganics@gmail.com?subject='+encodeURIComponent('Market preorder')+'&body='+encodeURIComponent(body)}
+document.querySelectorAll('.toggle button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.toggle button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});show(b.dataset.k)}});
+show('now');upd();
+var st=document.getElementById('sticky');addEventListener('scroll',function(){st.classList.toggle('show',scrollY>innerHeight*.8)},{passive:true});
+</script>
+</body>
+</html>
