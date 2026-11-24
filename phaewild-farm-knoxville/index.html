@@ -1,0 +1,108 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Phaewild Farm — Knoxville</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#5B3A5E;--peach:#F4B69C;--mist:#F3EEF0;--ink:#2a1d2b}
+*{box-sizing:border-box}html,body{margin:0;overflow-x:hidden}body{font-family:Figtree,sans-serif;background:var(--mist);color:var(--ink);line-height:1.55}
+h1,h2,h3{font-family:Gloock,serif;font-weight:400;line-height:1.1;margin:0 0 .5em}
+.banner{background:var(--ink);color:var(--mist);font-size:13px;text-align:center;padding:8px 14px}
+.hero{background:linear-gradient(180deg,var(--plum) 0%,#8a5a7a 55%,var(--peach) 100%);color:#fff;padding:56px 22px 0;position:relative;overflow:hidden}
+.hero .in{max-width:1100px;margin:0 auto;position:relative;z-index:2;padding-left:0}
+.hero h1{font-size:clamp(38px,7vw,76px);max-width:14ch;padding-left:0}
+.hero p{font-size:19px;max-width:36ch;opacity:.95}
+.btn{display:inline-block;background:var(--peach);color:var(--ink);padding:13px 22px;border-radius:40px;font-weight:700;text-decoration:none;margin:6px 8px 6px 0;border:0;font-size:16px;cursor:pointer}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+.hero svg{display:block;width:100%;height:auto;margin-top:30px}
+section{padding:64px 22px}.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.chip{background:#fff;border:2px solid transparent;border-radius:18px;padding:18px;text-align:left;font:inherit;cursor:pointer;transition:.2s}
+.chip b{font-family:Gloock,serif;font-size:21px;font-weight:400;display:block;color:var(--plum)}
+.chip small{color:#6d5a6e}
+.chip.on{border-color:var(--plum);background:#fbe9e1}
+.chip.on::after{content:"✓ in your basket";display:block;font-size:13px;color:var(--plum);font-weight:700;margin-top:6px}
+.dev{opacity:.85}
+.basket{position:sticky;top:10px;background:var(--plum);color:#fff;border-radius:18px;padding:18px;margin-top:20px}
+.basket p{margin:.2em 0 .7em}
+.why{background:#fff}.why ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.why li{border-top:3px solid var(--peach);padding-top:12px}
+.where{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+iframe{width:100%;height:320px;border:0;border-radius:18px}
+.card{background:#fff;border-radius:18px;padding:20px;margin-bottom:14px}
+footer{background:var(--ink);color:var(--mist);text-align:center;padding:30px 20px;font-size:14px}
+footer a{color:var(--peach)}
+.reveal{transition:opacity .7s,transform .7s}.js .reveal{opacity:0;transform:translateY(18px)}.js .reveal.show{opacity:1;transform:none}
+@media(max-width:760px){.where{grid-template-columns:1fr}section{padding:48px 18px}.hero{padding:44px 20px 0}}
+</style></head><body>
+<div class="banner">Concept site by Code Craft Media, made for Phaewild Farm. Not live.</div>
+<header class="hero"><div class="in">
+<div class="eyebrow" style="color:var(--peach)">Spore-to-supper · Knoxville, TN</div>
+<h1>Lion's Mane, King Oyster &amp; Reishi, grown in Knoxville from spore</h1>
+<p>Phaewild is a small, independent mushroom farm and foraging operation. Find the booth at the market, or set up local pickup and custom orders.</p>
+<a class="btn" href="#basket">Build a mushroom order</a><a class="btn ghost" href="#where">Where to find us</a>
+</div>
+<svg viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 170 L180 80 L330 150 L520 40 L700 140 L880 70 L1050 140 L1200 90 V260 H0Z" fill="#7b4f73" opacity=".55"/>
+<path d="M0 210 L220 130 L420 200 L640 110 L860 190 L1040 130 L1200 180 V260 H0Z" fill="#5B3A5E" opacity=".8"/>
+<circle cx="960" cy="60" r="38" fill="#F4B69C" opacity=".9"/>
+<g fill="#F3EEF0"><path d="M300 250 q0-40 -6-60 h12 q-6 20-6 60z"/><ellipse cx="300" cy="190" rx="44" ry="20"/><path d="M380 250 q0-28-4-42h9q-4 14-5 42z"/><ellipse cx="380" cy="208" rx="30" ry="13"/><path d="M860 250 q0-34-5-50h10q-5 16-5 50z"/><ellipse cx="860" cy="200" rx="38" ry="17"/></g>
+<rect y="248" width="1200" height="12" fill="#F3EEF0"/></svg>
+</header>
+
+<section id="basket"><div class="wrap">
+<div class="eyebrow">What's growing</div>
+<h2>Tap the mushrooms you want</h2>
+<p>These are the varieties Phaewild lists as currently growing. Pick a few and we'll start an email to the farm for you.</p>
+<div class="grid" id="grid">
+<button class="chip" data-n="Lion's Mane"><b>Lion's Mane</b><small>Currently growing</small></button>
+<button class="chip" data-n="Coral Tooth"><b>Coral Tooth</b><small>Currently growing</small></button>
+<button class="chip" data-n="Bear's Head"><b>Bear's Head</b><small>Currently growing</small></button>
+<button class="chip" data-n="Train Wrecker"><b>Train Wrecker</b><small>Currently growing</small></button>
+<button class="chip" data-n="Enoki"><b>Enoki</b><small>Currently growing</small></button>
+<button class="chip" data-n="Gray Oyster"><b>Gray Oyster</b><small>Currently growing</small></button>
+<button class="chip" data-n="Blue Oyster"><b>Blue Oyster</b><small>Currently growing</small></button>
+<button class="chip" data-n="King Oyster"><b>King Oyster</b><small>Currently growing</small></button>
+<button class="chip" data-n="Turkey Tail"><b>Turkey Tail</b><small>Currently growing</small></button>
+<button class="chip" data-n="Oregon Reishi"><b>Oregon Reishi</b><small>Currently growing</small></button>
+<button class="chip" data-n="Reishi"><b>Reishi</b><small>Currently growing</small></button>
+</div>
+<div class="basket"><p id="sum">Your basket is empty. Tap a mushroom above.</p>
+<a class="btn" id="send" href="mailto:knoxmushrooms@gmail.com?subject=Mushroom%20order">Email this order to Phaewild</a></div>
+<p class="dev" style="margin-top:22px"><strong>In development:</strong> Wood Ear, Fried Chicken Mushroom, Cauliflower Mushroom, Shimeji, Shiitake (two strains), Cordyceps militaris and Dryad Saddle.</p>
+<p class="dev"><strong>Also from the farm:</strong> koji-grown gourmet products like garum, miso and mushroom teas, plus plant starts, medicinal herbs and landscape plants.</p>
+</div></section>
+
+<section class="why"><div class="wrap reveal">
+<div class="eyebrow">Why Phaewild</div><h2>Grown for flavor and learning, not mass production</h2>
+<ul>
+<li><h3>Spore to supper</h3>A mushroom farm and foraging operation in Knoxville that runs the whole process itself.</li>
+<li><h3>Biodiversity first</h3>Independent and focused on many varieties, with more in development.</li>
+<li><h3>Grown with care</h3>Organic (not certified), GMO-free, IPM, permaculture and regenerative practices.</li>
+<li><h3>Everyone's welcome</h3>Takes credit/debit, EBT/SNAP, WIC FMNP, Senior FMNP and SNAP Incentives.</li>
+<li><h3>Chef-trusted</h3>Supplies Bistro By the Tracks and Jesse's Butcher Shop.</li>
+<li><h3>Follow the experiments</h3>The farm documents its growing experiments on YouTube at Phaewild.</li>
+</ul></div></section>
+
+<section id="where"><div class="wrap where">
+<div class="reveal"><div class="eyebrow">Where to find us</div><h2>At the market, or pick up local</h2>
+<div class="card"><h3>Winter Farmers Market by Grow Oak Ridge</h3>Season runs December 5, 2026 to March 27, 2027.</div>
+<div class="card"><h3>Market Square Farmers Market</h3>Downtown Knoxville.</div>
+<div class="card"><h3>Local pickup &amp; custom orders</h3>Email or call to arrange.</div></div>
+<iframe loading="lazy" title="Map of Knoxville, TN" src="https://www.google.com/maps?q=Knoxville%2C%20TN&output=embed"></iframe>
+</div></section>
+
+<section style="background:#fff"><div class="wrap reveal" style="text-align:center">
+<h2>Say hello to the farm</h2><p>Questions, custom orders or pickup times.</p>
+<a class="btn" style="background:var(--plum);color:#fff" href="mailto:knoxmushrooms@gmail.com">knoxmushrooms@gmail.com</a>
+<a class="btn" href="tel:+18652450895">(865) 245-0895</a>
+</div></section>
+<footer>Phaewild Farm · Knoxville, TN<br>Concept by Code Craft Media</footer>
+<script>
+document.documentElement.classList.add('js');
+var io='IntersectionObserver' in window?new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('show')})},{threshold:.1}):null;
+document.querySelectorAll('.reveal').forEach(function(el){io?io.observe(el):el.classList.add('show')});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('show')})},1500);
+var sel=[];document.querySelectorAll('.chip').forEach(function(c){c.onclick=function(){var n=c.dataset.n,i=sel.indexOf(n);if(i<0)sel.push(n);else sel.splice(i,1);c.classList.toggle('on');upd()}});
+function upd(){var s=document.getElementById('sum'),a=document.getElementById('send');if(!sel.length){s.textContent='Your basket is empty. Tap a mushroom above.';a.href='mailto:knoxmushrooms@gmail.com?subject=Mushroom%20order';return}
+s.textContent='In your basket: '+sel.join(', ')+'.';a.href='mailto:knoxmushrooms@gmail.com?subject='+encodeURIComponent('Mushroom order')+'&body='+encodeURIComponent('Hi Phaewild! I\'d love to order: '+sel.join(', ')+'.\nCould I arrange pickup or grab them at the market?\n\nThanks!')}
+</script></body></html>
