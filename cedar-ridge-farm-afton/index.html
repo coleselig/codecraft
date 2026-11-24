@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cedar Ridge Farm · Raw Wildflower Honey · Afton, TN</title>
+<meta name="description" content="Concept site for Cedar Ridge Farm, a small veteran-owned farm in Northeast Greene County, Tennessee, selling raw local wildflower honey and beeswax.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#d98e04;--gold:#f2b632;--comb:#fbe3a1;--cedar:#3d4a2f;--cedar2:#283120;--paper:#fffaf0;--ink:#2b2414;--mute:#6a5f48;
+--disp:"Fraunces",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#14180f;color:#e8dcb5;font:12px system-ui,sans-serif;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--cedar);color:var(--paper);position:relative;overflow:hidden}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:12px}
+.logo{font-family:var(--disp);font-weight:800;font-size:23px;text-decoration:none;line-height:1}
+.logo small{display:block;font:600 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-top:5px;color:var(--gold)}
+.navbtn{flex:none;white-space:nowrap;font:700 14px var(--sans);text-decoration:none;background:var(--gold);color:var(--cedar2);padding:8px 14px;border-radius:30px}
+.hero{padding:26px 20px 40px;display:grid;gap:24px;align-items:center}
+.tag{display:inline-block;font:700 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;border:1.5px solid var(--gold);color:var(--gold);padding:5px 11px;border-radius:30px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(42px,11.5vw,88px);line-height:.98;margin:14px 0;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{max-width:31em;font-size:18px;opacity:.95}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:13px 20px;border-radius:30px;text-decoration:none;font:700 15px var(--sans);border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--cedar2)}
+.btn.line{border:2px solid var(--paper);color:var(--paper)}
+.btn.dark{background:var(--cedar);color:var(--paper)}
+.art{width:100%;max-width:420px;height:auto;display:block;justify-self:center}
+.strip{background:var(--amber);color:var(--cedar2);text-align:center;padding:11px 16px;font-weight:600}
+section{padding:62px 0}
+.kicker{font:700 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(32px,8vw,52px);line-height:1.05;margin:6px 0 14px}
+.intro{color:var(--mute);max-width:37em}
+.cols{display:grid;gap:14px;margin-top:26px}
+.card{background:#fff;border-radius:14px;padding:20px;border:1px solid #f0e2bd}
+.card h3{font-family:var(--disp);font-size:22px;margin-bottom:6px}
+.card p{color:var(--mute);font-size:15.5px}
+.hex{width:34px;height:30px;display:block;margin-bottom:10px}
+.pick{background:var(--comb)}
+.combs{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:26px}
+.cell{width:150px;height:166px;border:0;cursor:pointer;background:var(--gold);color:var(--cedar2);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center;font:700 15px var(--sans);transition:transform .2s,background .2s}
+.cell span{font-weight:400;font-size:12.5px;margin-top:4px}
+.cell[aria-pressed="true"]{background:var(--cedar);color:var(--gold);transform:scale(1.05)}
+.jarbox{background:#fff;border-radius:14px;padding:20px;margin-top:22px}
+.jarbox p{color:var(--mute);font-size:15px}
+.jarbox strong{color:var(--ink)}
+.jarbox textarea{width:100%;min-height:70px;border:1px solid #ecd9a6;border-radius:8px;padding:10px;font:15px var(--sans);margin:12px 0}
+.facts{display:grid;gap:10px;margin-top:22px}
+.fact{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:12px;padding:14px 16px;border-left:5px solid var(--amber)}
+footer{background:var(--cedar2);color:var(--comb);padding:34px 0;font-size:15px}
+footer a{color:#fff}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--cedar2);color:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;transform:translateY(110%);transition:transform .3s;z-index:9}
+.sticky.on{transform:none}
+.sticky a{flex:none;background:var(--gold);color:var(--cedar2);text-decoration:none;font-weight:700;padding:9px 14px;border-radius:30px;font-size:14px}
+@media(min-width:820px){.hero{grid-template-columns:1.15fr .85fr;padding:50px 20px 64px}.cols{grid-template-columns:repeat(3,1fr)}.facts{grid-template-columns:1fr 1fr}.sticky{display:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Cedar Ridge Farm. Not live.</div>
+<header>
+<nav><div class="wrap"><a class="logo" href="#">Cedar Ridge Farm<small>Afton · Greene County, TN</small></a><a class="navbtn" href="#honey">Ask for honey</a></div></nav>
+<div class="wrap hero">
+<div>
+<span class="tag">Veteran-owned · 45 acres</span>
+<h1>Raw <em>wildflower</em> honey from Northeast Greene County.</h1>
+<p class="lede">Cedar Ridge Farm is a small, veteran-owned farm where Paul and Anne Vale keep bees and harvest wildflower honey through the growing season: 100% pure raw local honey, plus beeswax.</p>
+<div class="actions"><a class="btn gold" href="#honey">Build a honey request</a><a class="btn line" href="tel:+14232340186">Call (423) 234-0186</a></div>
+</div>
+<svg class="art" viewBox="0 0 400 380" role="img" aria-label="Illustration of a honey jar beside honeycomb and a bee">
+<g fill="#f2b632" stroke="#283120" stroke-width="4">
+<polygon points="300,40 336,60 336,100 300,120 264,100 264,60"/>
+<polygon points="350,110 386,130 386,170 350,190 314,170 314,130" fill="#d98e04"/>
+<polygon points="300,180 336,200 336,240 300,260 264,240 264,200"/>
+<polygon points="350,250 386,270 386,310 350,330 314,310 314,270" fill="#fbe3a1"/>
+</g>
+<rect x="70" y="110" width="170" height="230" rx="34" fill="#d98e04" stroke="#fffaf0" stroke-width="6"/>
+<rect x="88" y="80" width="134" height="40" rx="8" fill="#fffaf0"/>
+<path d="M88 100h134" stroke="#283120" stroke-width="3"/>
+<rect x="92" y="180" width="126" height="90" rx="10" fill="#fffaf0"/>
+<text x="155" y="215" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="22" fill="#3d4a2f">RAW</text>
+<text x="155" y="245" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="700" font-size="13" fill="#3d4a2f" letter-spacing="2">WILDFLOWER</text>
+<path d="M110 140q20 -18 40 0" stroke="#fbe3a1" stroke-width="6" fill="none" stroke-linecap="round" opacity=".7"/>
+<g transform="translate(250 60) rotate(-15)">
+<ellipse cx="0" cy="-14" rx="14" ry="10" fill="#fffaf0" opacity=".85"/>
+<ellipse cx="14" cy="-12" rx="12" ry="9" fill="#fffaf0" opacity=".7"/>
+<ellipse cx="6" cy="4" rx="20" ry="13" fill="#f2b632" stroke="#283120" stroke-width="3"/>
+<path d="M0 -8v24M10 -8v24" stroke="#283120" stroke-width="5"/>
+</g>
+</svg>
+</div>
+</header>
+<div class="strip">Find us at the Greeneville Year-Round Farmers' Market.</div>
+
+<section>
+<div class="wrap">
+<p class="kicker">The farm</p>
+<h2>Small farm, busy bees.</h2>
+<p class="intro">Forty-five acres in Northeast Greene County, kept by a veteran-owned family. The bees work the wildflowers all season long, and every so often an unusual honey shows up early in the year.</p>
+<div class="cols">
+<div class="card"><svg class="hex" viewBox="0 0 34 30"><polygon points="17,1 32,8.5 32,21.5 17,29 2,21.5 2,8.5" fill="#f2b632"/></svg><h3>Wildflower honey</h3><p>Harvested through the growing season and sold as 100% pure raw local honey.</p></div>
+<div class="card"><svg class="hex" viewBox="0 0 34 30"><polygon points="17,1 32,8.5 32,21.5 17,29 2,21.5 2,8.5" fill="#d98e04"/></svg><h3>Beeswax</h3><p>From the same hives as the honey.</p></div>
+<div class="card"><svg class="hex" viewBox="0 0 34 30"><polygon points="17,1 32,8.5 32,21.5 17,29 2,21.5 2,8.5" fill="#3d4a2f"/></svg><h3>Wild harvested</h3><p>The farm lists its practices as organic (not certified), GMO-free and wild harvested.</p></div>
+</div>
+</div>
+</section>
+
+<section class="pick" id="honey">
+<div class="wrap">
+<p class="kicker">Tap the comb</p>
+<h2>What can we save for you?</h2>
+<p class="intro">Tap what you're after and we'll write the email for you. Paul and Anne can let you know what's available.</p>
+<div class="combs" id="combs">
+<button class="cell" type="button" aria-pressed="false" data-item="Raw wildflower honey">Wildflower honey<span>raw, local</span></button>
+<button class="cell" type="button" aria-pressed="false" data-item="Early-season honey (if you have any)">Early-season honey<span>when the bees surprise us</span></button>
+<button class="cell" type="button" aria-pressed="false" data-item="Beeswax">Beeswax<span>from our hives</span></button>
+</div>
+<div class="jarbox">
+<p><strong id="sel">Nothing picked yet.</strong> Tap a cell above, add a note, then send.</p>
+<textarea id="note" aria-label="Note to the farm" placeholder="How much, and whether you'll pick up at the Greeneville market..."></textarea>
+<a class="btn dark" id="send" href="mailto:cedarridgefarm@earthlink.net">Email Cedar Ridge Farm</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="kicker">Where to find us</p>
+<h2>Market &amp; contact</h2>
+<div class="facts">
+<div class="fact"><div><strong>Greeneville Year-Round Farmers' Market</strong><br><span style="color:var(--mute)">Cedar Ridge honey is listed with the Greeneville year-round market.</span></div></div>
+<div class="fact"><div><strong>Call</strong><br><a href="tel:+14232340186">(423) 234-0186</a> · cell <a href="tel:+14235889400">(423) 588-9400</a></div></div>
+<div class="fact"><div><strong>Email</strong><br><a href="mailto:cedarridgefarm@earthlink.net">cedarridgefarm@earthlink.net</a></div></div>
+<div class="fact"><div><strong>Paying</strong><br><span style="color:var(--mute)">Credit and debit cards accepted.</span></div></div>
+</div>
+</div>
+</section>
+
+<footer><div class="wrap">Cedar Ridge Farm · Afton, Greene County, Tennessee · Paul &amp; Anne Vale<br><a href="https://www.facebook.com/profile.php?id=100057668820253">Facebook</a> · <a href="mailto:cedarridgefarm@earthlink.net">cedarridgefarm@earthlink.net</a></div></footer>
+<div class="sticky" id="sticky"><span>Raw wildflower honey</span><a href="#honey">Ask for a jar</a></div>
+<script>
+(function(){
+var cells=document.querySelectorAll('.cell'),sel=document.getElementById('sel'),note=document.getElementById('note'),send=document.getElementById('send');
+function upd(){var items=[];cells.forEach(function(c){if(c.getAttribute('aria-pressed')==='true')items.push(c.dataset.item)});
+sel.textContent=items.length?('Your request: '+items.join(', ')+'.'):'Nothing picked yet.';
+var body='Hi Paul and Anne,\n\nI\'d like to ask about:\n'+(items.length?items.map(function(i){return '- '+i}).join('\n'):'- (honey)')+'\n\n'+(note.value?note.value+'\n\n':'')+'Thank you!';
+send.href='mailto:cedarridgefarm@earthlink.net?subject='+encodeURIComponent('Honey request')+'&body='+encodeURIComponent(body);}
+cells.forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true');upd()})});
+note.addEventListener('input',upd);upd();
+var st=document.getElementById('sticky');window.addEventListener('scroll',function(){st.classList.toggle('on',window.scrollY>500)},{passive:true});
+})();
+</script>
+</body>
+</html>
