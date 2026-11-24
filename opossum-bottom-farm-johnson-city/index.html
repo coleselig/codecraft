@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Opossum Bottom Farm &amp; Market Garden · Exotic Tomatoes · Johnson City, TN</title>
+<meta name="description" content="Concept site for Opossum Bottom Farm &amp; Market Garden in Johnson City, TN: naturally grown vegetables, specializing in exotic tomatoes, at the Johnson City Farmers' Market.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--soil:#2b2118;--soil2:#463427;--tom:#d9442b;--sun:#f2b134;--grn:#3f7a3a;--leaf:#8fbf5a;--cream:#fbf4e6;--ink:#231a13;--mute:#6c5d50;
+--disp:"Bricolage Grotesque",Georgia,serif;--sans:"Public Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#14100b;color:#e6d6c2;font:12px system-ui,sans-serif;text-align:center;padding:7px 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--soil);color:var(--cream);position:relative;overflow:hidden}
+header:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 22px,rgba(143,191,90,.07) 22px 24px);pointer-events:none}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px;position:relative}
+.logo{font-family:var(--disp);font-weight:800;font-size:22px;text-decoration:none;line-height:1}
+.logo small{display:block;font:700 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-top:5px;color:var(--leaf)}
+.navbtn{flex:none;white-space:nowrap;font:700 14px var(--sans);text-decoration:none;background:var(--tom);color:#fff;padding:8px 14px;border-radius:10px}
+.hero{padding:18px 20px 0;display:grid;gap:14px;align-items:end;position:relative}
+.tag{display:inline-block;font:700 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;background:var(--grn);color:#fff;padding:5px 11px;border-radius:6px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(44px,12vw,92px);line-height:.95;margin:14px 0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--sun)}
+.lede{max-width:30em;font-size:18px;opacity:.92}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;text-decoration:none;font:700 15px var(--sans);border:0;cursor:pointer}
+.btn.tom{background:var(--tom);color:#fff}
+.btn.line{border:2px solid var(--cream);color:var(--cream)}
+.btn.soil{background:var(--soil);color:var(--cream)}
+.art{width:100%;max-width:460px;height:auto;display:block;justify-self:center}
+.strip{background:var(--tom);color:#fff;text-align:center;padding:11px 16px;font-weight:700;font-size:15px}
+section{padding:60px 0}
+.kicker{font:700 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--grn)}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(32px,8vw,54px);line-height:1.02;margin:6px 0 14px}
+.intro{color:var(--mute);max-width:36em}
+.cards{display:grid;gap:14px;margin-top:26px}
+.card{background:#fff;border:2px solid var(--soil);border-radius:14px;padding:20px;box-shadow:5px 5px 0 var(--soil)}
+.card h3{font-family:var(--disp);font-size:23px;margin-bottom:4px}
+.card p{color:var(--mute)}
+.pick{background:var(--soil2);color:var(--cream)}
+.pick .kicker{color:var(--leaf)}
+.pick .intro{color:#d8c9b6}
+.bins{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.bin{background:var(--soil);border:2px solid #6b5341;border-radius:14px;padding:16px;text-align:left;color:var(--cream);cursor:pointer;font:600 16px var(--sans);transition:transform .15s,border-color .15s}
+.bin:active{transform:scale(.97)}
+.bin.on{border-color:var(--sun);background:#3a2b1f}
+.bin svg{width:46px;height:46px;display:block;margin-bottom:8px}
+.bin b{display:block;font-family:var(--disp);font-size:19px}
+.bin span{font-size:13px;opacity:.8}
+.basket{margin-top:20px;background:var(--cream);color:var(--ink);border-radius:14px;padding:18px}
+.basket ul{list-style:none;margin:8px 0 14px;min-height:24px}
+.basket li{display:inline-block;background:var(--sun);border-radius:6px;padding:3px 10px;margin:0 6px 6px 0;font-weight:700;font-size:14px}
+.empty{color:var(--mute);font-size:15px}
+.facts{display:grid;gap:12px;margin-top:20px}
+.fact{border-left:5px solid var(--tom);padding:4px 0 4px 14px}
+.fact b{display:block;font-family:var(--disp);font-size:20px}
+footer{background:var(--soil);color:var(--cream);padding:46px 0 90px}
+footer h2{color:var(--sun)}
+footer p{margin-top:8px}
+.small{font-size:13px;opacity:.7;margin-top:22px}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--sun);color:var(--soil);display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;transform:translateY(110%);transition:transform .3s;z-index:20;font:700 14px var(--sans)}
+.sticky.on{transform:none}
+@media(min-width:820px){.hero{grid-template-columns:1.15fr 1fr;padding:30px 20px 0;max-width:1080px;margin:0 auto}.cards{grid-template-columns:repeat(3,1fr)}.bins{grid-template-columns:repeat(4,1fr)}.facts{grid-template-columns:repeat(3,1fr)}.sticky{display:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by Code Craft Media, made for Opossum Bottom Farm &amp; Market Garden. Not live.</div>
+<header>
+ <nav><div class="wrap"><a class="logo" href="#">Opossum Bottom<small>Farm &amp; Market Garden</small></a><a class="navbtn" href="#pick">Fill a basket</a></div></nav>
+ <div class="hero">
+  <div>
+   <span class="tag">Johnson City, TN</span>
+   <h1>Exotic <em>tomatoes</em>, grown naturally.</h1>
+   <p class="lede">We grow all kinds of vegetables, but our specialty is exotic tomatoes. Find us at the Johnson City Farmers' Market.</p>
+   <div class="actions"><a class="btn tom" href="#pick">Build a basket</a><a class="btn line" href="#find">Where to find us</a></div>
+  </div>
+  <svg class="art" viewBox="0 0 460 330" role="img" aria-label="Illustration of a row of tomatoes on the vine with a small opossum peeking from the bottom">
+   <path d="M0 290 Q115 262 230 286 T460 280 V330 H0Z" fill="#463427"/>
+   <path d="M60 300 C60 200 70 120 90 40" stroke="#8fbf5a" stroke-width="6" fill="none"/>
+   <path d="M230 300 C230 210 220 130 240 30" stroke="#8fbf5a" stroke-width="6" fill="none"/>
+   <path d="M390 300 C390 210 400 140 380 50" stroke="#8fbf5a" stroke-width="6" fill="none"/>
+   <path d="M90 90 q30 -20 50 4 q-26 14 -50 -4Z M240 80 q-34 -18 -52 6 q28 12 52 -6Z M384 110 q30 -18 46 6 q-26 12 -46 -6Z" fill="#3f7a3a"/>
+   <circle cx="110" cy="150" r="34" fill="#d9442b"/><circle cx="62" cy="200" r="26" fill="#f2b134"/>
+   <ellipse cx="205" cy="140" rx="30" ry="26" fill="#7a2f4a"/><circle cx="262" cy="190" r="36" fill="#e2702e"/>
+   <circle cx="350" cy="140" r="28" fill="#5a8f3a"/><path d="M350 116 v48 M330 128 q20 12 40 0" stroke="#3a6a2a" stroke-width="3" fill="none"/>
+   <circle cx="410" cy="200" r="30" fill="#d9442b"/><circle cx="180" cy="215" r="14" fill="#f2b134"/><circle cx="200" cy="232" r="12" fill="#d9442b"/>
+   <g fill="#3f7a3a"><path d="M100 118 l10 8 10-8 -4 12 -12 -3z"/><path d="M252 156 l10 8 10-8 -4 12 -12 -3z"/><path d="M400 172 l10 8 10-8 -4 12 -12 -3z"/></g>
+   <g transform="translate(300 262)"><ellipse cx="0" cy="20" rx="46" ry="24" fill="#b8aea4"/><ellipse cx="-38" cy="8" rx="22" ry="17" fill="#efe9e2"/><path d="M-58 10 l-10 4 10 2z" fill="#e7a3a8"/><circle cx="-44" cy="4" r="3" fill="#14100b"/><circle cx="-30" cy="-8" r="7" fill="#2b2118"/><path d="M44 24 q30 -2 40 -26" stroke="#e7a3a8" stroke-width="5" fill="none"/></g>
+  </svg>
+ </div>
+ <div class="strip">Naturally grown · Low spray · GMO-free · Saturdays at the Johnson City Farmers' Market</div>
+</header>
+
+<section>
+ <div class="wrap">
+  <p class="kicker">What we grow</p>
+  <h2>A market garden built around tomatoes.</h2>
+  <p class="intro">We have been naturally growing vegetables for four years. We grow all kinds of vegetables, and we specialize in exotic tomatoes, with a large variety of other produce available.</p>
+  <div class="cards">
+   <div class="card"><h3>Exotic tomatoes</h3><p>Our specialty, grown naturally in Johnson City.</p></div>
+   <div class="card"><h3>All kinds of vegetables</h3><p>A large variety of other produce from our Johnson City market garden.</p></div>
+   <div class="card"><h3>Grown with care</h3><p>Organic practices (not certified), low spray, and GMO-free.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="pick" id="pick">
+ <div class="wrap">
+  <p class="kicker">Fill a basket</p>
+  <h2>Tap what you're after.</h2>
+  <p class="intro">Pick what you'd like and we'll write the email for you. Ask Chris what is ready this week.</p>
+  <div class="bins" id="bins">
+   <button class="bin" data-item="Exotic tomatoes"><svg viewBox="0 0 46 46"><circle cx="23" cy="26" r="16" fill="#d9442b"/><path d="M14 12 l9 7 9-7 -3 10 -12 -2z" fill="#3f7a3a"/></svg><b>Exotic tomatoes</b><span>Our specialty</span></button>
+   <button class="bin" data-item="A mix of tomato colors"><svg viewBox="0 0 46 46"><circle cx="15" cy="28" r="10" fill="#f2b134"/><circle cx="31" cy="28" r="10" fill="#7a2f4a"/><circle cx="23" cy="16" r="9" fill="#5a8f3a"/></svg><b>Tomato mix</b><span>Surprise me</span></button>
+   <button class="bin" data-item="Other seasonal vegetables"><svg viewBox="0 0 46 46"><path d="M10 34 q13 -30 26 0z" fill="#8fbf5a"/><rect x="10" y="32" width="26" height="6" rx="3" fill="#463427"/></svg><b>Other vegetables</b><span>Whatever's in</span></button>
+   <button class="bin" data-item="Earth Faire / wholesale question"><svg viewBox="0 0 46 46"><rect x="8" y="16" width="30" height="20" rx="3" fill="#f2b134"/><path d="M8 16 l15 -9 15 9" fill="none" stroke="#fbf4e6" stroke-width="3"/></svg><b>Wholesale</b><span>Ask about supply</span></button>
+  </div>
+  <div class="basket">
+   <strong>Your basket</strong>
+   <ul id="list"><li class="empty" style="background:none;padding:0">Nothing yet. Tap a bin above.</li></ul>
+   <a class="btn soil" id="send" href="mailto:opossumbottomfarm@gmail.com">Email Opossum Bottom</a>
+  </div>
+ </div>
+</section>
+
+<section id="find">
+ <div class="wrap">
+  <p class="kicker">Find us</p>
+  <h2>Saturdays in Johnson City.</h2>
+  <div class="facts">
+   <div class="fact"><b>Johnson City Farmers' Market</b>2026 season: May 2 to October 31, Saturdays 8:00 AM to 1:00 PM.</div>
+   <div class="fact"><b>Earth Faire</b>Our produce also goes to Earth Faire.</div>
+   <div class="fact"><b>The farm</b>2108 David Miller Rd, Johnson City, TN 37604. Card payments welcome.</div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <h2>Say hello.</h2>
+  <p>Chris Theis, owner</p>
+  <p><a href="mailto:opossumbottomfarm@gmail.com">opossumbottomfarm@gmail.com</a> · <a href="tel:+14232312093">(423) 231-2093</a></p>
+  <p class="small">Concept site by Code Craft Media. Not affiliated with or published by Opossum Bottom Farm &amp; Market Garden.</p>
+ </div>
+</footer>
+<div class="sticky" id="sticky"><span>Exotic tomatoes, Saturdays</span><a class="btn soil" href="#pick" style="padding:9px 14px">Fill a basket</a></div>
+<script>
+const picked=new Set(),list=document.getElementById('list'),send=document.getElementById('send');
+function render(){
+ list.innerHTML=picked.size?[...picked].map(i=>'<li>'+i+'</li>').join(''):'<li class="empty" style="background:none;padding:0">Nothing yet. Tap a bin above.</li>';
+ const body="Hi Chris,\n\nI'd like to ask about:\n"+[...picked].map(i=>"- "+i).join("\n")+"\n\nWhat's ready this week, and can I pick it up at the Johnson City Farmers' Market?\n\nThanks!";
+ send.href="mailto:opossumbottomfarm@gmail.com?subject="+encodeURIComponent("Basket from Opossum Bottom")+"&body="+encodeURIComponent(picked.size?body:"Hi Chris,\n\n");
+}
+document.querySelectorAll('.bin').forEach(b=>b.addEventListener('click',()=>{const i=b.dataset.item;picked.has(i)?picked.delete(i):picked.add(i);b.classList.toggle('on',picked.has(i));render();}));
+render();
+const st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('on',scrollY>500),{passive:true});
+</script>
+</body>
+</html>
