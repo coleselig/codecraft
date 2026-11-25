@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sweet Beets Naturals — Middle Tennessee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--burg:#6d1f2f;--burg2:#4f1521;--pine:#2e4a3a;--pine2:#22382c;--ivory:#fbf7ee;--gold:#c8a24a;--ink:#2a1a1d;--muted:#6a5a55;--line:#eadfc8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.6;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--pine2);color:#efe6cf;font-size:12px;text-align:center;padding:7px 14px}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;padding:14px 22px}
+.logo{display:flex;align-items:center;gap:9px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;color:var(--burg);text-decoration:none}
+.logo svg{width:30px;height:30px}
+nav .links{display:flex;gap:22px;font-weight:600;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--burg)}
+@media(max-width:720px){nav .links{display:none}}
+.hero{max-width:1140px;margin:0 auto;padding:26px 22px 50px;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:18px;padding-top:12px}}
+.ribbon{display:inline-block;position:relative;background:var(--burg);color:var(--ivory);font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:7px 20px}
+.ribbon:before,.ribbon:after{content:"";position:absolute;top:0;border:15px solid var(--burg);border-top-width:15.5px;border-bottom-width:15.5px}
+.ribbon:before{left:-14px;border-left-color:transparent}
+.ribbon:after{right:-14px;border-right-color:transparent}
+.ribbon.g{background:var(--gold);color:var(--ink)}
+.ribbon.g:before,.ribbon.g:after{border-color:var(--gold)}
+.ribbon.g:before{border-left-color:transparent}.ribbon.g:after{border-right-color:transparent}
+.hero .ribbon{margin-left:14px;white-space:nowrap}
+@media(max-width:480px){.ribbon{font-size:10.5px;letter-spacing:.08em;padding:8px 14px}}
+h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(42px,6.6vw,76px);line-height:1;color:var(--burg);margin:18px 0 16px}
+h1 em{color:var(--pine);font-style:italic}
+.sub{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--burg);color:var(--ivory);box-shadow:0 5px 0 var(--burg2)}
+.btn.s{background:transparent;color:var(--pine);border:2px solid var(--pine)}
+.art svg{width:100%;height:auto;display:block}
+.swing{transform-origin:200px 40px;animation:swing 4s ease-in-out infinite}
+@keyframes swing{50%{transform:rotate(3deg)}}
+.holly{position:relative;height:28px;background:
+ radial-gradient(circle at 50% 50%,var(--burg) 4px,transparent 5px) 0 0/56px 28px,
+ linear-gradient(var(--line),var(--line)) center/100% 1px no-repeat}
+.wrap{max-width:1140px;margin:0 auto;padding:70px 22px}
+.kicker{font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.6vw,50px);line-height:1.05;color:var(--burg);margin:8px 0 14px}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:32px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;position:relative;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(109,31,47,.5)}
+.card svg{width:48px;height:48px;margin-bottom:10px}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--pine);margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+.card .note{display:inline-block;margin-top:12px;font-size:13px;font-weight:800;color:var(--burg);background:#f4e9d0;border-radius:99px;padding:4px 11px}
+.pine{background:var(--pine);color:var(--ivory);position:relative;overflow:hidden}
+.pine h2{color:var(--ivory)}
+.pine .lede{color:#d8e0d6}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:30px}
+.why div{border-top:3px solid var(--gold);padding-top:14px}
+.why b{font-family:'Cormorant Garamond',serif;font-size:24px;display:block;margin-bottom:4px}
+.why p{color:#d8e0d6;font-size:15.5px}
+/* builder */
+.builder{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;margin-top:30px;align-items:start}
+@media(max-width:860px){.builder{grid-template-columns:1fr}}
+.preview{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.preview svg{width:100%;height:auto;display:block}
+.step{margin-bottom:20px}
+.step h4{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--pine);margin-bottom:8px}
+.sw{display:flex;flex-wrap:wrap;gap:10px}
+.sw button{width:44px;height:44px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer;transition:transform .15s}
+.sw button:hover{transform:scale(1.08)}
+.sw button.on{box-shadow:0 0 0 3px var(--burg)}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font-family:inherit;font-weight:700;font-size:14px;padding:9px 14px;border-radius:99px;border:2px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.seg button.on{border-color:var(--pine);background:var(--pine);color:var(--ivory)}
+.picked{font-size:15px;color:var(--muted);margin:6px 0 16px}
+.where{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;margin-top:28px;align-items:start}
+@media(max-width:860px){.where{grid-template-columns:1fr}}
+.event{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+.event h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--burg);line-height:1.1;margin:12px 0 8px}
+.event p{color:var(--muted);margin-bottom:8px}
+.event strong{color:var(--ink)}
+iframe{width:100%;height:340px;border:0;border-radius:16px;display:block}
+.contact{background:var(--burg);color:var(--ivory)}
+.contact h2{color:var(--ivory)}
+.contact .lede{color:#ecd8d8}
+.mail{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
+.mail a{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:20px;text-decoration:none;overflow-wrap:anywhere}
+.mail a:hover{background:rgba(255,255,255,.14)}
+.mail small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:4px}
+.mail span{font-size:17px;font-weight:700}
+footer{background:var(--pine2);color:#cdd6cc;text-align:center;font-size:13px;padding:26px 16px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ivory);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;transform:translateY(110%);transition:transform .3s}
+.bar.show{transform:none}
+.bar .btn{flex:1;max-width:260px;justify-content:center;padding:12px 14px;font-size:15px}
+@media(min-width:861px){.bar{display:none}}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+</style>
+<!-- cc-og h=aaf31de5df -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Sweet Beets Naturals | website concept">
+<meta property="og:description" content="A phone-first website concept made for Sweet Beets Naturals by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/sweet-beets-naturals-middle-tn/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/sweet-beets-naturals-middle-tn/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Sweet Beets Naturals">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Sweet Beets Naturals. Not live.</div>
+<nav>
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c-4 4-10 6-10 13a10 10 0 0 0 20 0C26 10 20 8 16 4z" fill="#6d1f2f"/><path d="M16 4c2-3 6-3 8-2-2 2-5 3-8 2z" fill="#2e4a3a"/></svg>Sweet Beets Naturals</a>
+  <div class="links"><a href="#make">What we make</a><a href="#build">Custom rope</a><a href="#find">Find us</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="ribbon">White Oak Holiday Bazaar · 2026</span>
+    <h1>Handmade ropes, <em>made to play.</em></h1>
+    <p class="sub">Sweet Beets Naturals handcrafts beautiful, playful pieces from natural materials, "meant to inspire happiness and appreciation for life." Custom colors? Just ask.</p>
+    <div class="ctas">
+      <a class="btn p" href="#build">Design a jump rope</a>
+      <a class="btn s" href="#find">See us in Woodbury</a>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 400 340">
+      <rect x="20" y="20" width="360" height="300" rx="26" fill="#f4ead3"/>
+      <g fill="#2e4a3a"><path d="M60 52c10-10 24-6 28 4-10-2-14 6-24 2 6 8-4 14-12 6 6-2 4-8 8-12z"/><path d="M340 52c-10-10-24-6-28 4 10-2 14 6 24 2-6 8 4 14 12 6-6-2-4-8-8-12z"/></g>
+      <g fill="#6d1f2f"><circle cx="72" cy="66" r="6"/><circle cx="82" cy="70" r="5"/><circle cx="328" cy="66" r="6"/><circle cx="318" cy="70" r="5"/></g>
+      <path d="M40 40h320l-14 18 14 18H40l14-18z" fill="#6d1f2f" opacity="0"/>
+      <g class="swing">
+        <path id="heroRope" d="M110 70 C 90 200, 160 300, 200 300 S 310 200, 290 70" fill="none" stroke="#c8a24a" stroke-width="12" stroke-linecap="round"/>
+        <path d="M110 70 C 90 200, 160 300, 200 300 S 310 200, 290 70" fill="none" stroke="#6d1f2f" stroke-width="12" stroke-linecap="round" stroke-dasharray="14 14"/>
+        <rect x="96" y="30" width="28" height="56" rx="12" fill="#8a5a36"/>
+        <rect x="276" y="30" width="28" height="56" rx="12" fill="#8a5a36"/>
+        <rect x="100" y="74" width="20" height="8" rx="3" fill="#2e4a3a"/>
+        <rect x="280" y="74" width="20" height="8" rx="3" fill="#2e4a3a"/>
+      </g>
+      <g transform="translate(200 190)">
+        <path d="M-70 -18h140l-16 18 16 18h-140l16-18z" fill="#2e4a3a"/>
+        <text x="0" y="6" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="20" fill="#fbf7ee">handcrafted</text>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<div class="holly" aria-hidden="true"></div>
+
+<section class="wrap reveal" id="make">
+  <p class="kicker">What we make</p>
+  <h2>From the craft table and the garden bed</h2>
+  <p class="lede">Two sides of one small Tennessee operation: Sweet Beets Naturals for handcrafted pieces, and Sweet Beets Farm, a small family farm growing food.</p>
+  <div class="grid">
+    <div class="card">
+      <svg viewBox="0 0 48 48"><rect x="6" y="6" width="9" height="18" rx="4" fill="#8a5a36"/><rect x="33" y="6" width="9" height="18" rx="4" fill="#8a5a36"/><path d="M10 24c0 18 28 18 28 0" fill="none" stroke="#6d1f2f" stroke-width="4" stroke-dasharray="5 4"/></svg>
+      <h3>Jump ropes</h3>
+      <p>Handmade jump ropes, with custom colors on request by email.</p>
+      <span class="note">Allow 1–2 weeks to process</span>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path d="M8 34c8-20 24-20 32 0" fill="none" stroke="#2e4a3a" stroke-width="5" stroke-linecap="round"/><path d="M8 34c8-20 24-20 32 0" fill="none" stroke="#c8a24a" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 6"/></svg>
+      <h3>Custom rope</h3>
+      <p>Rope made to order in the colors you choose.</p>
+      <span class="note">Allow 1–2 weeks to process</span>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" fill="#f4e9d0"/><path d="M24 10l3 9h9l-7 6 3 9-8-5-8 5 3-9-7-6h9z" fill="#c8a24a"/></svg>
+      <h3>Handcrafted pieces</h3>
+      <p>Playful pieces made from natural materials. Custom orders welcome.</p>
+      <span class="note">Custom orders: 4–6 weeks</span>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 48 48"><path d="M24 14c-6 5-12 7-12 15a12 12 0 0 0 24 0c0-8-6-10-12-15z" fill="#6d1f2f"/><path d="M24 14c3-5 8-5 11-3-3 3-7 4-11 3z" fill="#2e4a3a"/></svg>
+      <h3>Sweet Beets Farm</h3>
+      <p>A wide variety of produce, inspired by cuisines from around the world.</p>
+      <span class="note">Farm questions by email</span>
+    </div>
+  </div>
+</section>
+
+<section class="pine">
+  <div class="wrap reveal">
+    <p class="kicker">How it's grown and made</p>
+    <h2>Clean food, healthy land, good community</h2>
+    <p class="lede">The farm side of Sweet Beets is about clean food, healing the land, and supporting the community.</p>
+    <div class="why">
+      <div><b>No-till beds</b><p>Regenerative methods: no tilling, crop rotation and intercropping.</p></div>
+      <div><b>Worm &amp; tea composts</b><p>Soil fed with compost instead of artificial chemical fertilizers.</p></div>
+      <div><b>Diversity over spray</b><p>Diverse garden beds help keep pests down, with no artificial chemical pest control.</p></div>
+      <div><b>Natural materials</b><p>Handcrafted pieces made from natural materials, one order at a time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal" id="build">
+  <p class="kicker">Try it</p>
+  <h2>Design your jump rope</h2>
+  <p class="lede">Pick two colors, a pattern and a size. We'll write the email for you, and Sweet Beets Naturals can reply about what they can make.</p>
+  <div class="builder">
+    <div class="preview">
+      <svg viewBox="0 0 400 230" id="ropeSvg" role="img" aria-label="Preview of your jump rope">
+        <rect x="40" y="18" width="30" height="64" rx="13" fill="#8a5a36"/>
+        <rect x="330" y="18" width="30" height="64" rx="13" fill="#8a5a36"/>
+        <path id="rA" d="M55 82 C 50 200, 150 215, 200 215 S 350 200, 345 82" fill="none" stroke="#6d1f2f" stroke-width="13" stroke-linecap="round"/>
+        <path id="rB" d="M55 82 C 50 200, 150 215, 200 215 S 350 200, 345 82" fill="none" stroke="#c8a24a" stroke-width="13" stroke-linecap="round" stroke-dasharray="16 16"/>
+      </svg>
+      <p class="picked" id="summary" aria-live="polite">Burgundy + gold, striped, kid size.</p>
+    </div>
+    <div>
+      <div class="step"><h4>1 · Main color</h4><div class="sw" data-k="a"></div></div>
+      <div class="step"><h4>2 · Accent color</h4><div class="sw" data-k="b"></div></div>
+      <div class="step"><h4>3 · Pattern</h4><div class="seg" data-k="pat"><button class="on" data-v="striped">Striped</button><button data-v="speckled">Speckled</button><button data-v="solid">Solid</button></div></div>
+      <div class="step"><h4>4 · Size</h4><div class="seg" data-k="size"><button class="on" data-v="kid size">Kid</button><button data-v="teen size">Teen</button><button data-v="adult size">Adult</button></div></div>
+      <a class="btn p" id="sendBtn" href="mailto:SweetBeetsNaturals@gmail.com">Email this design</a>
+    </div>
+  </div>
+</section>
+
+<div class="holly" aria-hidden="true"></div>
+
+<section class="wrap reveal" id="find">
+  <p class="kicker">Where to find us</p>
+  <h2>This holiday season in Woodbury</h2>
+  <div class="where">
+    <div class="event">
+      <span class="ribbon g" style="margin-left:14px">Holiday market</span>
+      <h3>White Oak Holiday Bazaar</h3>
+      <p>Sweet Beets Naturals is on the 2026 vendor list at the Arts Center of Cannon County.</p>
+      <p><strong>November 28 – December 19, 2026</strong></p>
+      <p>Open House: Saturday, November 28, 10 AM–12 PM.</p>
+      <p>Arts Center of Cannon County, Woodbury, TN</p>
+    </div>
+    <iframe title="Map to the Arts Center of Cannon County" loading="lazy" src="https://www.google.com/maps?q=Arts%20Center%20of%20Cannon%20County%2C%20Woodbury%2C%20TN&output=embed"></iframe>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <p class="kicker">Get in touch</p>
+    <h2>Two inboxes, one sweet operation</h2>
+    <p class="lede">Questions about custom colors go to Sweet Beets Naturals. Questions about the farm go to Sweet Beets Farm.</p>
+    <div class="mail">
+      <a href="mailto:SweetBeetsNaturals@gmail.com?subject=Custom%20colors%20question"><small>Custom colors &amp; questions</small><span>SweetBeetsNaturals@gmail.com</span></a>
+      <a href="mailto:BeetsSoSweet@gmail.com?subject=Farm%20question"><small>Farm questions</small><span>BeetsSoSweet@gmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>Concept by Code Craft Media</footer>
+
+<div class="bar" id="bar">
+  <a class="btn p" href="#build">Design a rope</a>
+  <a class="btn s" href="mailto:SweetBeetsNaturals@gmail.com">Email</a>
+</div>
+
+<script>
+(function(){
+  var colors=[["burgundy","#6d1f2f"],["pine green","#2e4a3a"],["gold","#c8a24a"],["ivory","#efe6cf"],["sky blue","#6fa8c9"],["sunflower","#e8b830"],["berry pink","#c9577d"],["charcoal","#3b3b3b"]];
+  var st={a:0,b:2,pat:"striped",size:"kid size"};
+  document.querySelectorAll('.sw').forEach(function(box){
+    var k=box.getAttribute('data-k');
+    colors.forEach(function(c,i){
+      var b=document.createElement('button');b.style.background=c[1];b.setAttribute('aria-label',c[0]);b.title=c[0];
+      if(st[k]===i)b.className='on';
+      b.onclick=function(){st[k]=i;box.querySelectorAll('button').forEach(function(x){x.className=''});b.className='on';draw()};
+      box.appendChild(b);
+    });
+  });
+  document.querySelectorAll('.seg').forEach(function(box){
+    var k=box.getAttribute('data-k');
+    box.querySelectorAll('button').forEach(function(b){
+      b.onclick=function(){st[k]=b.getAttribute('data-v');box.querySelectorAll('button').forEach(function(x){x.className=''});b.className='on';draw()};
+    });
+  });
+  function draw(){
+    var A=colors[st.a],B=colors[st.b];
+    var rA=document.getElementById('rA'),rB=document.getElementById('rB');
+    rA.setAttribute('stroke',A[1]);rB.setAttribute('stroke',B[1]);
+    rB.style.display=st.pat==='solid'?'none':'';
+    rB.setAttribute('stroke-dasharray',st.pat==='speckled'?'3 12':'16 16');
+    rB.setAttribute('stroke-width',st.pat==='speckled'?'7':'13');
+    var desc=st.pat==='solid'?A[0]+', solid':A[0]+' + '+B[0]+', '+st.pat;
+    document.getElementById('summary').textContent=desc.charAt(0).toUpperCase()+desc.slice(1)+', '+st.size+'.';
+    var body="Hi Sweet Beets Naturals!\n\nI'd love a custom jump rope:\n- Main color: "+A[0]+(st.pat==='solid'?'':"\n- Accent color: "+B[0])+"\n- Pattern: "+st.pat+"\n- Size: "+st.size+"\n\nCould you let me know if that's possible?\n\nThanks!";
+    document.getElementById('sendBtn').href='mailto:SweetBeetsNaturals@gmail.com?subject='+encodeURIComponent('Custom jump rope request')+'&body='+encodeURIComponent(body);
+  }
+  draw();
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var hero=document.getElementById('top'),bar=document.getElementById('bar');
+  function onS(){var past=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',past);document.body.classList.toggle('has-bar',past)}
+  window.addEventListener('scroll',onS,{passive:true});onS();
+})();
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Sweet Beets Naturals"></script><!-- /cc-cta -->
+</body>
+</html>

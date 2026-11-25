@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Candle with a Handle — Nashville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--smoke:#2b2b2b;--smoke2:#3a3836;--wax:#f4ead8;--wax2:#fbf6ec;--amber:#e58a2b;--amber2:#c96f14;--ink:#1f1d1b;--muted:#6d655b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--wax2);line-height:1.55;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:#111;color:#e9dcc4;font-size:12px;text-align:center;padding:7px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1160px;margin:0 auto}
+.logo{font-family:Syne,sans-serif;font-weight:800;font-size:20px;text-decoration:none;color:var(--wax);display:flex;gap:8px;align-items:center}
+.logo svg{width:22px;height:28px}
+nav .links{display:flex;gap:22px;font-size:15px;font-weight:500}
+nav .links a{text-decoration:none;color:#cfc4b2}
+nav .links a:hover{color:var(--amber)}
+@media(max-width:720px){nav .links{display:none}}
+.top{background:var(--smoke);color:var(--wax);position:relative;overflow:hidden}
+.top:before{content:"";position:absolute;width:620px;height:620px;right:-140px;top:-120px;background:radial-gradient(circle,rgba(229,138,43,.28),transparent 62%);pointer-events:none}
+.hero{position:relative;max-width:1160px;margin:0 auto;padding:30px 22px 60px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:14px}}
+.tag{display:inline-flex;gap:8px;align-items:center;border:1px solid #5a554f;border-radius:99px;padding:6px 12px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#e6d9c3}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--amber);display:block;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(38px,6.6vw,74px);line-height:1;letter-spacing:-.02em;margin:18px 0 16px}
+h1 em{font-style:normal;color:var(--amber)}
+.sub{font-size:18px;color:#d5cab8;max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 6px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--amber);color:#1b1208}
+.btn.s{border:2px solid var(--wax);color:var(--wax);background:transparent}
+.art svg{width:100%;max-width:460px;height:auto;display:block;margin:0 auto}
+.flame{transform-origin:50% 100%;animation:flick 1.3s ease-in-out infinite alternate}
+.flame.b{animation-duration:1.7s;animation-delay:-.6s}
+@keyframes flick{0%{transform:scale(1,1) rotate(-2deg)}40%{transform:scale(.94,1.08) rotate(2deg)}70%{transform:scale(1.04,.95) rotate(-1deg)}100%{transform:scale(.97,1.05) rotate(1.5deg)}}
+.glow{animation:glow 2.2s ease-in-out infinite alternate}
+@keyframes glow{to{opacity:.55}}
+.wrap{max-width:1160px;margin:0 auto;padding:72px 22px;position:relative}
+.kicker{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber2)}
+h2{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(30px,4.6vw,48px);line-height:1.05;letter-spacing:-.01em;margin:8px 0 14px}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px}
+.card{background:#fff;border:1px solid #eadfcb;border-radius:20px;padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(43,43,43,.5)}
+.card h3{font-family:Syne,sans-serif;font-size:19px;line-height:1.2;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+.price{font-family:Syne,sans-serif;font-weight:800;color:var(--amber2);font-size:22px;margin-top:10px}
+.card svg{width:54px;height:54px;margin-bottom:10px}
+.dark{background:var(--smoke);color:var(--wax)}
+.dark .lede{color:#cfc4b2}
+.dark .kicker{color:var(--amber)}
+.lab{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:30px;align-items:center}
+@media(max-width:860px){.lab{grid-template-columns:1fr}}
+.step{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#a99d8a;margin:18px 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{background:var(--smoke2);color:var(--wax);border:1px solid #57524c;border-radius:999px;padding:9px 14px;font:inherit;font-size:14.5px;cursor:pointer;transition:all .15s}
+.opt:hover{border-color:var(--amber)}
+.opt.on{background:var(--amber);color:#1b1208;border-color:var(--amber);font-weight:700}
+.stage{background:radial-gradient(circle at 50% 40%,#3d3a36,#222 70%);border-radius:24px;padding:20px;text-align:center;min-height:360px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.stage svg{width:240px;max-width:80%;height:auto;cursor:pointer}
+#litFlame{opacity:0;transition:opacity .4s}
+.lit #litFlame{opacity:1}
+#litGlow{opacity:0;transition:opacity .6s}
+.lit #litGlow{opacity:1}
+.hint{font-size:14px;color:#bfb4a2;margin-top:10px}
+.sum{font-family:Syne,sans-serif;font-size:20px;margin-top:8px;min-height:28px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:30px}
+.why div{border-top:3px solid var(--amber);padding-top:14px}
+.why b{font-family:Syne,sans-serif;font-size:20px;display:block;margin-bottom:4px}
+.why p{color:var(--muted)}
+.find{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;margin-top:28px;align-items:stretch}
+@media(max-width:860px){.find{grid-template-columns:1fr}}
+.find iframe{width:100%;min-height:300px;border:0;border-radius:20px}
+.box{background:#fff;border:1px solid #eadfcb;border-radius:20px;padding:24px}
+.box h3{font-family:Syne,sans-serif;font-size:21px;margin-bottom:8px}
+.box p{color:var(--muted);margin-bottom:12px}
+.box a.l{display:block;font-weight:700;color:var(--amber2);margin:6px 0;text-decoration:none}
+footer{background:#111;color:#a99d8a;text-align:center;padding:26px 22px;font-size:14px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(43,43,43,.96);backdrop-filter:blur(6px);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar .btn{padding:12px 18px;font-size:15px}
+.r{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.flame,.glow,.tag i{animation:none}.r{opacity:1;transform:none}}
+</style>
+<!-- cc-og h=d8c93b5068 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Candle with a Handle | website concept">
+<meta property="og:description" content="A phone-first website concept made for Candle with a Handle by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/candle-with-a-handle-nashville/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/candle-with-a-handle-nashville/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Candle with a Handle">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Candle with a Handle. Not live.</div>
+<div class="top">
+<nav>
+ <a class="logo" href="#"><svg viewBox="0 0 22 28"><path class="flame" d="M11 2c4 6 7 9 7 14a7 7 0 0 1-14 0c0-5 3-8 7-14z" fill="#e58a2b"/><path d="M11 12c2 3 3 5 3 7a3 3 0 0 1-6 0c0-2 1-4 3-7z" fill="#f4ead8"/></svg>Candle with a Handle</a>
+ <div class="links"><a href="#shop">Candles</a><a href="#light">Light one</a><a href="#story">Our story</a><a href="#find">Find us</a></div>
+</nav>
+<header class="hero">
+ <div>
+  <span class="tag"><i></i>Nashville, TN · handpoured</span>
+  <h1>Vintage mugs &amp; teacups, <em>reborn as candles.</em></h1>
+  <p class="sub">Sam and Chad turn upcycled tea cups, Pyrex mugs, cowboy boots and soup cans into one-of-a-kind candles. When the wax is gone, you keep the cup.</p>
+  <div class="ctas">
+   <a class="btn p" href="#light">Light a candle &rarr;</a>
+   <a class="btn s" href="https://CandleWithaHandle.etsy.com" target="_blank" rel="noopener">Shop on Etsy</a>
+  </div>
+ </div>
+ <div class="art" aria-hidden="true">
+  <svg viewBox="0 0 460 380">
+   <ellipse class="glow" cx="230" cy="150" rx="190" ry="140" fill="#e58a2b" opacity=".18"/>
+   <!-- teacup -->
+   <g transform="translate(40 150)">
+    <path class="flame" d="M90 0c14 22 24 34 24 50a24 24 0 0 1-48 0c0-16 10-28 24-50z" fill="#e58a2b"/>
+    <path class="flame b" d="M90 26c6 10 10 16 10 24a10 10 0 0 1-20 0c0-8 4-14 10-24z" fill="#ffd9a0"/>
+    <rect x="88" y="72" width="4" height="18" fill="#222"/>
+    <path d="M20 90h140l-14 84a20 20 0 0 1-20 16H54a20 20 0 0 1-20-16z" fill="#f4ead8"/>
+    <path d="M24 108h132" stroke="#e58a2b" stroke-width="5"/>
+    <path d="M156 110c34 0 34 50 0 50" fill="none" stroke="#f4ead8" stroke-width="12"/>
+    <ellipse cx="90" cy="196" rx="96" ry="12" fill="#cfc2ad"/>
+   </g>
+   <!-- boot mug -->
+   <g transform="translate(260 110)">
+    <path class="flame b" d="M70 0c12 20 20 30 20 44a20 20 0 0 1-40 0c0-14 8-24 20-44z" fill="#e58a2b"/>
+    <path class="flame" d="M70 22c5 8 8 13 8 20a8 8 0 0 1-16 0c0-7 3-12 8-20z" fill="#ffd9a0"/>
+    <rect x="68" y="62" width="4" height="16" fill="#222"/>
+    <path d="M30 78h80v120c0 10 6 14 30 22 14 5 14 30-6 30H20c-6 0-10-4-10-10z" fill="#b8763d"/>
+    <path d="M40 110l20 10 20-10 20 10" fill="none" stroke="#f4ead8" stroke-width="4"/>
+    <path d="M40 140l20 10 20-10 20 10" fill="none" stroke="#f4ead8" stroke-width="4" opacity=".7"/>
+    <ellipse cx="70" cy="80" rx="40" ry="7" fill="#f4ead8"/>
+   </g>
+  </svg>
+ </div>
+</header>
+</div>
+
+<section id="shop" class="wrap r">
+ <span class="kicker">From the Etsy shop</span>
+ <h2>Every vessel is a secondhand find</h2>
+ <p class="lede">A few pieces from the current shop. Most come with "Choose Your Fragrance," and one-of-a-kind cups sell out fast.</p>
+ <div class="grid">
+  <div class="card"><svg viewBox="0 0 54 54"><path d="M8 20h34l-4 20a6 6 0 0 1-6 5H18a6 6 0 0 1-6-5z" fill="#f4ead8" stroke="#2b2b2b" stroke-width="2"/><path d="M42 23c8 0 8 12 0 12" fill="none" stroke="#2b2b2b" stroke-width="2"/><ellipse cx="25" cy="47" rx="20" ry="3" fill="#e58a2b"/></svg><h3>Candle in teacup WITH Saucer</h3><p>Choose your fragrance. Upcycled vintage teacup.</p><div class="price">$30.00</div></div>
+  <div class="card"><svg viewBox="0 0 54 54"><path d="M16 10h18v28c0 3 2 4 8 6 4 1 4 7-2 7H12c-2 0-3-1-3-3z" fill="#b8763d" stroke="#2b2b2b" stroke-width="2"/></svg><h3>Candle in cowboy boot mug</h3><p>Choose your fragrance. A Nashville favorite.</p><div class="price">$38.00</div></div>
+  <div class="card"><svg viewBox="0 0 54 54"><rect x="12" y="12" width="26" height="32" rx="4" fill="#f4ead8" stroke="#2b2b2b" stroke-width="2"/><path d="M38 18c8 0 8 16 0 16" fill="none" stroke="#2b2b2b" stroke-width="2"/><path d="M14 24h22" stroke="#3f6d9c" stroke-width="4"/></svg><h3>Candle in Pyrex Mug Cup</h3><p>Choose your fragrance. Classic Pyrex, refilled with wax.</p><div class="price">$26.00</div></div>
+  <div class="card"><svg viewBox="0 0 54 54"><rect x="14" y="10" width="26" height="36" rx="3" fill="#c8312b" stroke="#2b2b2b" stroke-width="2"/><rect x="14" y="22" width="26" height="10" fill="#f4ead8"/></svg><h3>Candle in Campbell's Tomato Soup Can</h3><p>Choose your fragrance. Pop-art on your shelf.</p><div class="price">$20.00</div></div>
+  <div class="card"><svg viewBox="0 0 54 54"><path d="M8 26a19 14 0 0 1 38 0z" fill="#c8312b" stroke="#2b2b2b" stroke-width="2"/><circle cx="20" cy="20" r="3" fill="#fff"/><circle cx="32" cy="18" r="2.5" fill="#fff"/><rect x="14" y="26" width="26" height="20" rx="4" fill="#f4ead8" stroke="#2b2b2b" stroke-width="2"/></svg><h3>Candle in Mushroom Mug Cup</h3><p>Choose your fragrance. Cottagecore and cozy.</p><div class="price">$37.00</div></div>
+  <div class="card"><svg viewBox="0 0 54 54"><rect x="12" y="8" width="30" height="38" rx="2" fill="#2b2b2b"/><rect x="16" y="12" width="22" height="30" fill="#f4ead8"/><path d="M20 20h14M20 26h14M20 32h9" stroke="#2b2b2b" stroke-width="2"/></svg><h3>Novel MATCHBOOKS</h3><p>Boxes of matches disguised as miniature books: Pride and Prejudice, Dracula, Twilight and more.</p><div class="price">$20.00</div></div>
+ </div>
+</section>
+
+<section id="light" class="dark">
+ <div class="wrap r">
+  <span class="kicker">Try it</span>
+  <h2>Pick a cup. Pick a scent. Light it.</h2>
+  <p class="lede">Scents below are ones the shop has poured. Build your candle, then tap the wick.</p>
+  <div class="lab">
+   <div>
+    <div class="step">1 · The vessel</div>
+    <div class="opts" id="vessels">
+     <button class="opt on" data-v="teacup" data-n="Teacup with saucer" data-p="$30.00">Teacup + saucer</button>
+     <button class="opt" data-v="boot" data-n="Cowboy boot mug" data-p="$38.00">Cowboy boot mug</button>
+     <button class="opt" data-v="pyrex" data-n="Pyrex mug" data-p="$26.00">Pyrex mug</button>
+     <button class="opt" data-v="can" data-n="Soup can" data-p="$20.00">Soup can</button>
+    </div>
+    <div class="step">2 · The scent</div>
+    <div class="opts" id="scents">
+     <button class="opt on" data-c="#c96f14">Leaves</button>
+     <button class="opt" data-c="#d9a35a">Cider</button>
+     <button class="opt" data-c="#6f9a7a">Sugared Spruce</button>
+     <button class="opt" data-c="#8db4c2">Sea Minerals</button>
+     <button class="opt" data-c="#e99ab4">Pink Starburst</button>
+     <button class="opt" data-c="#b9a37a">Cottagecore</button>
+    </div>
+    <div class="ctas"><a class="btn p" id="ask" href="https://CandleWithaHandle.etsy.com" target="_blank" rel="noopener">Find it on Etsy &rarr;</a></div>
+   </div>
+   <div class="stage" id="stage">
+    <svg viewBox="0 0 240 240" id="cand" role="button" aria-label="Tap to light the candle">
+     <ellipse id="litGlow" cx="120" cy="70" rx="100" ry="70" fill="#e58a2b" opacity=".25"/>
+     <g id="litFlame"><path class="flame" d="M120 20c12 20 20 30 20 44a20 20 0 0 1-40 0c0-14 8-24 20-44z" fill="#e58a2b"/><path class="flame b" d="M120 42c5 8 8 13 8 20a8 8 0 0 1-16 0c0-7 3-12 8-20z" fill="#ffd9a0"/></g>
+     <rect x="118" y="82" width="4" height="22" fill="#111"/>
+     <g id="vessel"></g>
+    </svg>
+    <div class="sum" id="sum">Teacup with saucer · Leaves</div>
+    <div class="hint" id="hint">Tap the wick to light it</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="story" class="wrap r">
+ <span class="kicker">Our story</span>
+ <h2>Started in a Nashville apartment</h2>
+ <div class="why">
+  <div><b>Since 2020</b><p>Sam started Candle with a Handle in 2020 out of an apartment in Nashville. Chad joined in 2021.</p></div>
+  <div><b>Upcycled, not mass-made</b><p>Every candle is poured into a vintage or secondhand cup or mug, so no two are quite the same.</p></div>
+  <div><b>1,451 Etsy sales</b><p>Shipped from Middle Tennessee to candle lovers everywhere.</p></div>
+  <div><b>Quality control by cats</b><p>Toot and Jeff supervise every pour.</p></div>
+ </div>
+</section>
+
+<section id="find" class="wrap r" style="padding-top:0">
+ <span class="kicker">Find us</span>
+ <h2>Nashville, Tennessee</h2>
+ <div class="find">
+  <div class="box">
+   <h3>Markets &amp; online</h3>
+   <p>Seen on the vendor list for Markets for Makers Nashville, November 2026. Shop anytime on Etsy, and follow along on Instagram for the next market.</p>
+   <a class="l" href="https://CandleWithaHandle.etsy.com" target="_blank" rel="noopener">CandleWithaHandle.etsy.com &rarr;</a>
+   <a class="l" href="https://instagram.com/CandleWithaHandle" target="_blank" rel="noopener">@CandleWithaHandle on Instagram &rarr;</a>
+  </div>
+  <iframe title="Map of Nashville, TN" loading="lazy" src="https://www.google.com/maps?q=Nashville%2C%20TN&output=embed"></iframe>
+ </div>
+</section>
+
+<footer>Concept by Code Craft Media</footer>
+<div class="bar" id="bar"><a class="btn p" href="#light">Light a candle</a><a class="btn s" href="https://CandleWithaHandle.etsy.com" target="_blank" rel="noopener">Etsy shop</a></div>
+
+<script>
+(function(){
+ var V={
+  teacup:'<path d="M50 104h140l-12 70a18 18 0 0 1-18 14H80a18 18 0 0 1-18-14z" fill="#f4ead8"/><path d="M186 112c30 0 30 44 0 44" fill="none" stroke="#f4ead8" stroke-width="10"/><ellipse cx="120" cy="196" rx="96" ry="12" fill="#cfc2ad"/>',
+  boot:'<path d="M80 104h80v90c0 8 4 10 24 16 12 4 12 22-4 22H72c-6 0-8-4-8-8V104z" fill="#b8763d"/><path d="M88 130l16 8 16-8 16 8 16-8" fill="none" stroke="#f4ead8" stroke-width="4"/>',
+  pyrex:'<rect x="70" y="104" width="100" height="110" rx="12" fill="#f4ead8"/><path d="M170 120c36 0 36 70 0 70" fill="none" stroke="#f4ead8" stroke-width="12"/><path d="M72 140h96M72 170h96" stroke="#3f6d9c" stroke-width="7"/>',
+  can:'<rect x="74" y="104" width="92" height="118" rx="6" fill="#c8312b"/><rect x="74" y="140" width="92" height="40" fill="#f4ead8"/><ellipse cx="120" cy="104" rx="46" ry="6" fill="#ddd"/>'
+ };
+ var cur={v:'teacup',n:'Teacup with saucer',s:'Leaves',c:'#c96f14'};
+ var vg=document.getElementById('vessel'),st=document.getElementById('stage'),sum=document.getElementById('sum'),hint=document.getElementById('hint');
+ function draw(){vg.innerHTML=V[cur.v]+'<ellipse cx="120" cy="106" rx="44" ry="6" fill="'+cur.c+'"/>';sum.textContent=cur.n+' · '+cur.s;}
+ function pick(id,fn){var b=document.querySelectorAll('#'+id+' .opt');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.classList.remove('on')});x.classList.add('on');fn(x);st.classList.remove('lit');hint.textContent='Tap the wick to light it';draw();})});}
+ pick('vessels',function(x){cur.v=x.dataset.v;cur.n=x.dataset.n});
+ pick('scents',function(x){cur.s=x.textContent;cur.c=x.dataset.c});
+ document.getElementById('cand').addEventListener('click',function(){st.classList.toggle('lit');hint.textContent=st.classList.contains('lit')?'Lit. Every one is one-of-a-kind, so ask Sam & Chad what\'s on the shelf.':'Tap the wick to light it';});
+ draw();
+ var els=document.querySelectorAll('.r');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+ setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+ var bar=document.getElementById('bar'),hero=document.querySelector('.hero');
+ window.addEventListener('scroll',function(){var s=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',s);document.body.classList.toggle('has-bar',s)},{passive:true});
+})();
+</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Candle with a Handle"></script><!-- /cc-cta -->
+</body>
+</html>

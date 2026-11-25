@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>GRETCH Ceramics — Nashville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--clay:#b86b4b;--clay2:#94523a;--glaze:#3f6d8c;--glaze2:#2c5069;--bisque:#f2e9dc;--paper:#faf5ee;--ink:#2a211c;--muted:#6f6158}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden}
+body.has-bar{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.banner{background:var(--ink);color:var(--bisque);font-size:12px;text-align:center;padding:7px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;max-width:1160px;margin:0 auto}
+.logo{font-family:Gloock,serif;font-size:22px;text-decoration:none;color:var(--ink);letter-spacing:.06em;display:flex;gap:8px;align-items:center}
+.logo svg{width:26px;height:26px}
+nav .links{display:flex;gap:22px;font-size:15px;font-weight:500}
+nav .links a{text-decoration:none;color:var(--muted)}
+nav .links a:hover{color:var(--glaze)}
+@media(max-width:720px){nav .links{display:none}}
+.top{background:var(--bisque);position:relative;overflow:hidden}
+.hero{max-width:1160px;margin:0 auto;padding:30px 22px 56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:6px;padding-top:14px}}
+.tag{display:inline-flex;gap:8px;align-items:center;background:#fff;border-radius:99px;padding:6px 12px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--clay2)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--glaze);display:block}
+h1{font-family:Gloock,serif;font-weight:400;font-size:clamp(38px,6.4vw,72px);line-height:1.02;margin:18px 0 16px}
+h1 em{font-style:italic;color:var(--glaze)}
+.sub{font-size:18px;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 6px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--clay);color:#fff;box-shadow:0 5px 0 var(--clay2)}
+.btn.s{border:2px solid var(--ink);color:var(--ink);background:transparent}
+.art svg{width:100%;max-width:480px;height:auto;display:block;margin:0 auto}
+.spin{transform-box:fill-box;transform-origin:center;animation:wob 4s ease-in-out infinite}
+.spin.b{animation-delay:-1.3s}.spin.c{animation-delay:-2.6s}
+@keyframes wob{50%{transform:translateY(-6px)}}
+.wrap{max-width:1160px;margin:0 auto;padding:72px 22px;position:relative}
+.kicker{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
+h2{font-family:Gloock,serif;font-weight:400;font-size:clamp(30px,4.6vw,48px);line-height:1.08;margin:8px 0 14px}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:32px}
+.card{background:#fff;border:1px solid #ecdfcd;border-radius:22px;padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(42,33,28,.45)}
+.card svg{width:60px;height:60px;margin-bottom:10px}
+.card h3{font-family:Gloock,serif;font-weight:400;font-size:20px;line-height:1.2;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+.price{font-weight:700;color:var(--glaze);font-size:20px;margin-top:10px}
+.blue{background:var(--glaze2);color:var(--bisque)}
+.blue .lede{color:#cfdbe4}.blue .kicker{color:#f0b89c}
+.lab{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:30px;align-items:center}
+@media(max-width:860px){.lab{grid-template-columns:1fr}}
+.step{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#a9c0d0;margin:18px 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{background:transparent;color:var(--bisque);border:1px solid #6d8ea6;border-radius:999px;padding:9px 14px;font:inherit;font-size:14.5px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.opt i{width:14px;height:14px;border-radius:50%;display:block;border:1px solid rgba(255,255,255,.5)}
+.opt.on{background:var(--bisque);color:var(--ink);font-weight:700}
+.stage{background:var(--bisque);border-radius:26px;padding:22px;text-align:center;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink)}
+.stage svg{width:260px;max-width:85%;height:auto}
+#pot{transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.throw #pot{animation:throw .7s ease}
+@keyframes throw{0%{transform:scale(.6,1.3)}60%{transform:scale(1.08,.94)}100%{transform:none}}
+#wheel path{animation:whl .8s linear infinite}
+@keyframes whl{to{stroke-dashoffset:-16}}
+.match{font-family:Gloock,serif;font-size:22px;margin-top:6px}
+.mp{color:var(--glaze);font-weight:700}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:30px}
+.why div{border-top:3px solid var(--clay);padding-top:14px}
+.why b{font-family:Gloock,serif;font-weight:400;font-size:21px;display:block;margin-bottom:4px}
+.why p{color:var(--muted)}
+.find{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;margin-top:28px}
+@media(max-width:860px){.find{grid-template-columns:1fr}}
+.find iframe{width:100%;min-height:300px;border:0;border-radius:22px}
+.box{background:#fff;border:1px solid #ecdfcd;border-radius:22px;padding:24px}
+.box h3{font-family:Gloock,serif;font-weight:400;font-size:22px;margin-bottom:8px}
+.box p{color:var(--muted);margin-bottom:12px}
+.box a.l{display:block;font-weight:700;color:var(--glaze);margin:6px 0;text-decoration:none}
+footer{background:var(--ink);color:#bfae9d;text-align:center;padding:26px 22px;font-size:14px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(242,233,220,.97);border-top:1px solid #e0d2bf;padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;transform:translateY(110%);transition:transform .3s;z-index:20}
+.bar.show{transform:none}
+.bar .btn{padding:12px 18px;font-size:15px}
+.r{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.spin,#wheel{animation:none}.r{opacity:1;transform:none}}
+</style>
+<!-- cc-og h=bd05b74eee -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="GRETCH Ceramics | website concept">
+<meta property="og:description" content="A phone-first website concept made for GRETCH Ceramics by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/gretch-ceramics-nashville/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/gretch-ceramics-nashville/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for GRETCH Ceramics">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for GRETCH Ceramics. Not live.</div>
+<div class="top">
+<nav>
+ <a class="logo" href="#"><svg viewBox="0 0 26 26"><path d="M8 3h10v3c0 2 5 5 5 11a10 8 0 0 1-20 0c0-6 5-9 5-11z" fill="#b86b4b"/><path d="M4 16h18" stroke="#3f6d8c" stroke-width="3"/></svg>GRETCH</a>
+ <div class="links"><a href="#work">Work</a><a href="#wheel-lab">At the wheel</a><a href="#about">About</a><a href="#find">Find</a></div>
+</nav>
+<header class="hero">
+ <div>
+  <span class="tag"><i></i>Handmade ceramics · Nashville, TN</span>
+  <h1>Teapots, raku vases &amp; <em>little clay oddities.</em></h1>
+  <p class="sub">GRETCH Ceramics is Gretchen Calder's handmade pottery: thrown teapots and bud vases, spider-web mugs, ghosts, pumpkins and spoon rests with a sense of humor.</p>
+  <div class="ctas">
+   <a class="btn p" href="#wheel-lab">Throw a pot &rarr;</a>
+   <a class="btn s" href="https://www.etsy.com/shop/GretchCeramicsShop" target="_blank" rel="noopener">Shop on Etsy</a>
+  </div>
+ </div>
+ <div class="art" aria-hidden="true">
+  <svg viewBox="0 0 480 360">
+   <circle cx="250" cy="170" r="150" fill="#fff" opacity=".55"/>
+   <g class="spin"><path d="M70 120h50v16c0 10 34 26 34 74a59 48 0 0 1-118 0c0-48 34-64 34-74z" fill="#3f6d8c"/><path d="M40 210h108" stroke="#f2e9dc" stroke-width="5" opacity=".7"/></g>
+   <g class="spin b"><path d="M218 60h34v30c0 20 52 40 52 110 0 50-30 80-69 80s-69-30-69-80c0-70 52-90 52-110z" fill="#b86b4b"/><path d="M188 150c20 10 74 10 94 0" fill="none" stroke="#3f6d8c" stroke-width="10"/></g>
+   <g class="spin c"><path d="M330 180h110l-8 90a12 12 0 0 1-12 10h-70a12 12 0 0 1-12-10z" fill="#e8d6bd"/><path d="M440 196c26 0 26 50 0 50" fill="none" stroke="#e8d6bd" stroke-width="10"/><path d="M336 210c30 14 70 14 100 0" fill="none" stroke="#b86b4b" stroke-width="6"/></g>
+   <ellipse cx="250" cy="300" rx="210" ry="12" fill="#e3d4bf"/>
+  </svg>
+ </div>
+</header>
+</div>
+
+<section id="work" class="wrap r">
+ <span class="kicker">From the Etsy shop</span>
+ <h2>Recent pieces</h2>
+ <p class="lede">A sampling of what's listed on Etsy right now, with prices as listed.</p>
+ <div class="grid">
+  <div class="card"><svg viewBox="0 0 60 60"><path d="M16 26h28a14 14 0 0 1-28 0z" fill="#3f6d8c"/><path d="M44 30c6-2 10-8 12-12" stroke="#3f6d8c" stroke-width="3" fill="none"/><path d="M16 30c-6 0-8-6-6-10" stroke="#3f6d8c" stroke-width="3" fill="none"/><path d="M24 20h12v6H24z" fill="#b86b4b"/><ellipse cx="30" cy="54" rx="18" ry="2" fill="#e3d4bf"/></svg><h3>Handmade Ceramic Teapot</h3><p>Wheel-made teapot, one of a kind.</p><div class="price">$75.00</div></div>
+  <div class="card"><svg viewBox="0 0 60 60"><path d="M24 8h12v8c0 4 10 10 10 24a16 14 0 0 1-32 0c0-14 10-20 10-24z" fill="#2a211c"/><path d="M20 40c6-6 14 6 20-2" stroke="#d9a35a" stroke-width="2" fill="none"/></svg><h3>Raku Ceramic Vase</h3><p>Raku-fired, so every surface is unrepeatable.</p><div class="price">$85.00</div></div>
+  <div class="card"><svg viewBox="0 0 60 60"><path d="M26 8h8v10c0 4 8 8 8 22a12 12 0 0 1-24 0c0-14 8-18 8-22z" fill="#f2c4c8"/><path d="M26 18v8M30 18v12M34 18v6" stroke="#d98a96" stroke-width="2"/></svg><h3>Bud Vase | Blush Pink Drips</h3><p>Small bud vase with a drippy blush glaze.</p><div class="price">$38.00</div></div>
+  <div class="card"><svg viewBox="0 0 60 60"><path d="M12 14h30l-3 34a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4z" fill="#f2c4c8"/><path d="M42 20c10 0 10 18 0 18" stroke="#f2c4c8" stroke-width="4" fill="none"/><path d="M27 14v38M14 30h26M18 20l18 24M36 20L18 44" stroke="#2a211c" stroke-width="1.2" opacity=".6"/></svg><h3>Ceramic Spider Web Mugs | Pink</h3><p>Pink mugs with a spider-web pattern.</p><div class="price">$50.00</div></div>
+  <div class="card"><svg viewBox="0 0 60 60"><ellipse cx="30" cy="36" rx="24" ry="10" fill="#b86b4b"/><path d="M14 30c4-14 28-14 32 0" fill="#3f6d8c"/><circle cx="24" cy="22" r="2" fill="#fff"/></svg><h3>Ceramic Spoon Rests</h3><p>Roosters, Farm House, Birds and Clouds, Mountain Bubble Glaze and more.</p><div class="price">$20.00–$25.00</div></div>
+  <div class="card"><svg viewBox="0 0 60 60"><path d="M18 50V26a12 12 0 0 1 24 0v24l-4-4-4 4-4-4-4 4-4-4z" fill="#fff" stroke="#2a211c" stroke-width="2"/><circle cx="25" cy="26" r="2" fill="#2a211c"/><circle cx="35" cy="26" r="2" fill="#2a211c"/></svg><h3>Handmade Ceramix Ghosts</h3><p>Small clay ghosts for the shelf.</p><div class="price">$30.00</div></div>
+ </div>
+</section>
+
+<section id="wheel-lab" class="blue">
+ <div class="wrap r">
+  <span class="kicker">Try the wheel</span>
+  <h2>Pick a form, pick a glaze</h2>
+  <p class="lede">Tap a shape and watch it come off the wheel, then dip it in a glaze. Each one matches something Gretchen has actually made.</p>
+  <div class="lab">
+   <div>
+    <div class="step">1 · The form</div>
+    <div class="opts" id="forms">
+     <button class="opt on" data-f="bud">Bud vase</button>
+     <button class="opt" data-f="tea">Teapot</button>
+     <button class="opt" data-f="mug">Travel mug</button>
+     <button class="opt" data-f="soap">Soap dispenser</button>
+    </div>
+    <div class="step">2 · The glaze</div>
+    <div class="opts" id="glazes">
+     <button class="opt on" data-g="#f2c4c8" data-n="Blush Pink Drips"><i style="background:#f2c4c8"></i>Blush pink</button>
+     <button class="opt" data-g="#4f88a8" data-n="Coastal Blue and Cream"><i style="background:#4f88a8"></i>Coastal blue</button>
+     <button class="opt" data-g="#22304a" data-n="Midnight"><i style="background:#22304a"></i>Midnight</button>
+     <button class="opt" data-g="#6e2233" data-n="Deep Burgundy"><i style="background:#6e2233"></i>Burgundy</button>
+     <button class="opt" data-g="#9b8a6c" data-n="Speckled Blue and Brown"><i style="background:#9b8a6c"></i>Speckled</button>
+    </div>
+    <div class="ctas"><a class="btn p" href="https://www.etsy.com/shop/GretchCeramicsShop" target="_blank" rel="noopener">See it on Etsy &rarr;</a></div>
+   </div>
+   <div class="stage" id="stage">
+    <svg viewBox="0 0 260 260">
+     <g id="pot"></g>
+     <g id="wheel"><ellipse cx="130" cy="232" rx="90" ry="12" fill="#cdbba4"/><path d="M60 232h140" stroke="#b86b4b" stroke-width="2" stroke-dasharray="6 10"/></g>
+    </svg>
+    <div class="match" id="match">Bud vase</div>
+    <div class="mp" id="mp">Bud Vase | Blush Pink Drips · $38.00</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="about" class="wrap r">
+ <span class="kicker">About</span>
+ <h2>Made by hand in Nashville</h2>
+ <div class="why">
+  <div><b>One maker</b><p>Everything in the shop is made by Gretchen Calder.</p></div>
+  <div><b>Wheel to raku</b><p>From thrown teapots and lamp bases to raku-fired vases.</p></div>
+  <div><b>Useful and a little weird</b><p>Soap dispensers and coasters sit next to ghosts, black cats and a ceramic phone speaker.</p></div>
+ </div>
+</section>
+
+<section id="find" class="wrap r" style="padding-top:0">
+ <span class="kicker">Find GRETCH</span>
+ <h2>Nashville, Tennessee</h2>
+ <div class="find">
+  <div class="box">
+   <h3>Markets &amp; online</h3>
+   <p>On the vendor list for Markets for Makers Nashville, November 2026. Shop the rest on Etsy and follow along on Instagram.</p>
+   <a class="l" href="https://www.etsy.com/shop/GretchCeramicsShop" target="_blank" rel="noopener">GretchCeramicsShop on Etsy &rarr;</a>
+   <a class="l" href="https://instagram.com/gretchceramic" target="_blank" rel="noopener">@gretchceramic on Instagram &rarr;</a>
+  </div>
+  <iframe title="Map of Nashville, TN" loading="lazy" src="https://www.google.com/maps?q=Nashville%2C%20TN&output=embed"></iframe>
+ </div>
+</section>
+
+<footer>Concept by Code Craft Media</footer>
+<div class="bar" id="bar"><a class="btn p" href="#wheel-lab">Throw a pot</a><a class="btn s" href="https://www.etsy.com/shop/GretchCeramicsShop" target="_blank" rel="noopener">Etsy shop</a></div>
+
+<script>
+(function(){
+ var F={
+  bud:{n:'Bud vase',d:'<path d="M116 40h28v26c0 14 34 36 34 90 0 40-22 66-48 66s-48-26-48-66c0-54 34-76 34-90z" fill="G"/><path d="M116 66c6 18 4 30 0 40M130 66c4 22 4 38 0 52M144 66c-4 18-4 26 0 34" stroke="#fff" stroke-width="4" opacity=".35" fill="none"/>',
+   m:{'Blush Pink Drips':'Bud Vase | Blush Pink Drips · $38.00','*':'Bud Vase | Marbled · $25.00'}},
+  tea:{n:'Teapot',d:'<path d="M60 120h140a70 64 0 0 1-140 0z" fill="G"/><path d="M196 140c24-6 36-34 42-50" stroke="G" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M64 140c-30 0-34-40-10-46" stroke="G" stroke-width="10" fill="none"/><rect x="104" y="100" width="52" height="20" rx="6" fill="G"/><circle cx="130" cy="94" r="8" fill="G"/>',
+   m:{'*':'Handmade Ceramic Teapot · $58.00 / $75.00'}},
+  mug:{n:'Travel mug',d:'<path d="M84 60h92l-8 160H92z" fill="G"/><rect x="78" y="48" width="104" height="18" rx="6" fill="#e8d6bd"/><circle cx="110" cy="120" r="3" fill="#fff" opacity=".6"/><circle cx="140" cy="160" r="3" fill="#fff" opacity=".6"/><circle cx="124" cy="190" r="2" fill="#fff" opacity=".6"/>',
+   m:{'Speckled Blue and Brown':'Travel Mug | Speckled Blue and Brown Tumbler · $25.00','*':'Handmade Ceramic Travel Mug · $25.00'}},
+  soap:{n:'Soap dispenser',d:'<path d="M90 100h80v100a20 20 0 0 1-20 20h-40a20 20 0 0 1-20-20z" fill="G"/><path d="M90 150h80" stroke="#f2e9dc" stroke-width="6"/><rect x="122" y="70" width="16" height="30" fill="#bbb"/><path d="M118 70h40v-10h-40z" fill="#999"/>',
+   m:{'Coastal Blue and Cream':'Soap Dispenser | Coastal Blue and Cream · $35.00','*':'Soap Dispenser | Blue and Earthy Green · $30.00'}}
+ };
+ var cur={f:'bud',g:'#f2c4c8',n:'Blush Pink Drips'};
+ var pot=document.getElementById('pot'),st=document.getElementById('stage'),m=document.getElementById('match'),mp=document.getElementById('mp');
+ function draw(anim){var f=F[cur.f];pot.innerHTML=f.d.replace(/G/g,cur.g);m.textContent=f.n+' · '+cur.n;mp.textContent='Closest in the shop: '+(f.m[cur.n]||f.m['*']);if(anim){st.classList.remove('throw');void st.offsetWidth;st.classList.add('throw');}}
+ function pick(id,fn){var b=document.querySelectorAll('#'+id+' .opt');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.classList.remove('on')});x.classList.add('on');fn(x);draw(true);})});}
+ pick('forms',function(x){cur.f=x.dataset.f});
+ pick('glazes',function(x){cur.g=x.dataset.g;cur.n=x.dataset.n});
+ draw(false);
+ var els=document.querySelectorAll('.r');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
+ setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+ var bar=document.getElementById('bar'),hero=document.querySelector('.hero');
+ window.addEventListener('scroll',function(){var s=hero.getBoundingClientRect().bottom<0;bar.classList.toggle('show',s);document.body.classList.toggle('has-bar',s)},{passive:true});
+})();
+</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="GRETCH Ceramics"></script><!-- /cc-cta -->
+</body>
+</html>
