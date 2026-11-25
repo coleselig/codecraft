@@ -101,7 +101,7 @@ footer b{color:var(--cream)}
 }
 @media (prefers-reduced-motion:reduce){.nail{transition:none}}
 </style>
-<!-- cc-og h=71bcd18cf2 -->
+<!-- cc-og h=ffba4d08fc -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Fiorela Nails | website concept">
@@ -266,6 +266,7 @@ function pol(lg){$("pol").innerHTML="";POL[lg].forEach(t=>{const li=document.cre
 const st=document.querySelector('.sticky');addEventListener('scroll',()=>st.classList.toggle('on',scrollY>420),{passive:true});
 group(".lang button",b=>pol(b.dataset.lang));pol("en");draw();
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Fiorela Nails"></script><!-- /cc-cta -->
 </body>
 </html>
