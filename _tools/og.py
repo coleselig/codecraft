@@ -11,6 +11,7 @@ For each concept / preview / check-up page it
   3. writes the og tags into <head> between <!-- cc-og --> markers, and
   4. adds the "Want it live?" script tag (cc.js) before </body> on concept and preview pages.
 A hash of the page is kept in the marker, so unchanged pages are skipped on later runs.
+It installs the pages' real fonts first (_tools/fonts.py), because this workspace cannot load Google Fonts.
 Needs: playwright (chromium or /usr/bin/google-chrome) and Pillow. Nothing is uploaded anywhere.
 """
 import argparse, asyncio, base64, hashlib, html, io, os, re, sys
@@ -239,6 +240,13 @@ async def main():
     root = os.getcwd()
     if not os.path.exists(os.path.join(root, 'cc.js')):
         sys.exit('run this from the repo root (cc.js not found here)')
+    # Real fonts first: without them Chrome draws every page in fallback fonts and the cards are wrong.
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import fonts
+        fonts.ensure(root)
+    except Exception as ex:
+        print('fonts: skipped (%s)' % str(ex)[:120])
     todo = []
     for rel, kind in find_pages(root, set(a.slugs)):
         h = open(os.path.join(root, rel), encoding='utf-8', errors='replace').read()
