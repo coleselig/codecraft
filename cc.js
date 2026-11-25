@@ -23,7 +23,7 @@
     steps: [
       'Tap Email Cole. The message is already written, so you just hit send. Instagram works too.',
       'Your logo and photos can come later. Cole swaps them in and makes your changes (two rounds of edits are included).',
-      'You approve the finished site first. Only then do you pay, one time. No monthly fees.'
+      'You approve the finished site first. Only then do you pay: one time, from $149. No monthly fees.'
     ],
     subj: 'Go ahead with the ' + biz + ' website',
     body: 'Hi Cole,\n\nI looked at the preview. Go ahead and make it live.\n\n' + url + '\n'
@@ -36,7 +36,7 @@
     steps: [
       'Tap Email Cole. The message is already written, so you just hit send. Instagram works too.',
       'Cole puts in your logo and photos and makes your changes (two rounds of edits are included).',
-      'You approve the finished site first. Only then do you pay, one time. No monthly fees.'
+      'You approve the finished site first. Only then do you pay: one time, from $149. No monthly fees.'
     ],
     subj: 'Interested in the ' + biz + ' website',
     body: 'Hi Cole,\n\nI saw the site you made for ' + biz + " and I'm interested. What are the next steps?\n\n" + url + '\n'
