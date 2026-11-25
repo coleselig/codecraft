@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Divine Purity — Chattanooga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ch:#222222;--bone:#f3eee6;--red:#c8402f;--mus:#e0a526;--line:rgba(34,34,34,.15)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+body{background:var(--bone);color:var(--ch);font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit}
+.banner{background:var(--ch);color:var(--bone);font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;max-width:1120px;margin:0 auto;gap:12px}
+.logo{font-family:"Archivo Black";font-size:20px}
+.logo span{color:var(--red)}
+.top a.btn{font-size:14px}
+.btn{display:inline-block;background:var(--red);color:var(--bone);text-decoration:none;font-weight:700;padding:12px 20px;border-radius:4px;border:0;cursor:pointer;font-family:Karla;font-size:16px}
+.btn.alt{background:transparent;color:var(--ch);border:2px solid var(--ch)}
+/* hero: chalkboard */
+.hero{padding:24px 0 56px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:center}
+.board{background:var(--ch);color:var(--bone);border:10px solid #6b4a2f;border-radius:6px;padding:34px 28px;position:relative;box-shadow:0 14px 0 -6px rgba(0,0,0,.18)}
+.board .chalk{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--mus);font-weight:700}
+.board h1{font-size:clamp(30px,8.4vw,64px);margin:12px 0 16px}
+.board h1 em{font-style:normal;color:var(--mus)}
+.board p{max-width:34em;opacity:.92}
+.board .actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.board .btn.alt{color:var(--bone);border-color:var(--bone)}
+.art svg{width:100%;height:auto;display:block}
+/* ticket strip */
+.stamps{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stamp{border:2px dashed var(--mus);color:var(--mus);font-weight:700;font-size:13px;padding:4px 10px;transform:rotate(-2deg);text-transform:uppercase;letter-spacing:.08em}
+section{padding:64px 0}
+.kicker{color:var(--red);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px}
+h2{font-size:clamp(28px,6vw,46px);margin:8px 0 18px}
+.lead{max-width:40em}
+/* shelf */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:16px;margin-top:28px}
+.item{background:#fff;border:2px solid var(--ch);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:6px;position:relative}
+.item .tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--red)}
+.item h3{font-size:19px}
+.item button{margin-top:auto;align-self:flex-start;background:var(--bone);border:2px solid var(--ch);font-family:Karla;font-weight:700;padding:7px 12px;border-radius:999px;cursor:pointer;font-size:14px}
+.item.on{background:var(--mus)}
+.item.on button{background:var(--ch);color:var(--bone)}
+/* scent list */
+.scents{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.scents span{background:var(--ch);color:var(--bone);padding:6px 12px;border-radius:999px;font-size:14px}
+/* story */
+.story{background:var(--ch);color:var(--bone)}
+.story .kicker{color:var(--mus)}
+.timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.ticket{background:var(--bone);color:var(--ch);border-radius:6px;padding:20px;position:relative;border-left:8px dotted var(--ch)}
+.ticket .yr{font-family:"Archivo Black";font-size:34px;color:var(--red)}
+/* list ticket */
+.listbox{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.receipt{background:#fff;border:2px solid var(--ch);padding:22px;border-radius:4px;font-size:16px;position:relative}
+.receipt h3{font-size:20px;margin-bottom:10px}
+.receipt ul{list-style:none;min-height:60px}
+.receipt li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:6px 0;gap:10px}
+.receipt .empty{color:#777;font-style:italic}
+.receipt .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.small{font-size:14px;color:#555}
+.where{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.map{border:2px solid var(--ch);border-radius:6px;overflow:hidden;min-height:300px}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+footer{background:var(--ch);color:var(--bone);text-align:center;padding:28px 16px;font-size:14px}
+.reveal{opacity:0;transform:translateY(14px);transition:.6s}
+.reveal.in{opacity:1;transform:none}
+.nojs .reveal{opacity:1;transform:none}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;background:var(--ch);color:var(--bone);border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;transform:translateY(140%);opacity:0;visibility:hidden;transition:.3s;z-index:9;max-width:520px;margin:0 auto}
+.sticky.show{transform:none;opacity:1;visibility:visible}
+.sticky .btn{padding:8px 14px;font-size:14px}
+@media (max-width:820px){.hero-grid,.listbox,.where{grid-template-columns:minmax(0,1fr)}.timeline{grid-template-columns:minmax(0,1fr)}.art{max-width:320px;margin:0 auto}.board{padding:26px 18px;border-width:8px}}
+</style>
+<!-- cc-og h=5ad0f3ebe0 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Divine Purity | website concept">
+<meta property="og:description" content="A phone-first website concept made for Divine Purity by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/divine-purity-chattanooga/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/divine-purity-chattanooga/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Divine Purity">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body class="nojs">
+<div class="banner">Concept site by Code Craft Media, made for Divine Purity. Not live.</div>
+<header class="top">
+  <div class="logo">Divine <span>Purity</span></div>
+  <a class="btn alt" href="https://www.facebook.com/DivinePurityCo/" target="_blank" rel="noopener">Follow along</a>
+</header>
+
+<section class="hero" style="padding-top:8px">
+  <div class="wrap hero-grid">
+    <div class="board reveal">
+      <div class="chalk">Today at the market stall</div>
+      <h1>Handmade calm, <em>poured in Chattanooga.</em></h1>
+      <p>Divine Purity Aurapothecary makes candles, incense, mists, soaps, lip balm and shower steamers in small batches. Every product is handmade right here in Chattanooga by Cassandra and Ray Tucker.</p>
+      <div class="actions">
+        <a class="btn" href="#shelf">Browse the shelf</a>
+        <a class="btn alt" href="#list">Build a market list</a>
+      </div>
+      <div class="stamps"><span class="stamp">Handmade</span><span class="stamp">Small batch</span><span class="stamp">Chattanooga Market vendor since 2014</span></div>
+    </div>
+    <div class="art reveal" aria-hidden="true">
+      <svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="30" width="280" height="330" rx="10" fill="#c8402f"/>
+        <rect x="36" y="46" width="248" height="298" rx="6" fill="#f3eee6" stroke="#222" stroke-width="3" stroke-dasharray="8 6"/>
+        <text x="160" y="92" text-anchor="middle" font-family="Archivo Black,Impact" font-size="22" fill="#222">ADMIT ONE</text>
+        <text x="160" y="116" text-anchor="middle" font-family="Karla,sans-serif" font-size="13" fill="#c8402f" letter-spacing="3">CALM · SCENT · SOAP</text>
+        <!-- candle -->
+        <rect x="118" y="190" width="84" height="110" rx="8" fill="#222"/>
+        <rect x="126" y="208" width="68" height="40" rx="3" fill="#e0a526"/>
+        <text x="160" y="233" text-anchor="middle" font-family="Archivo Black,Impact" font-size="12" fill="#222">DIVINE</text>
+        <line x1="160" y1="190" x2="160" y2="172" stroke="#222" stroke-width="3"/>
+        <path d="M160 132 C176 152 172 168 160 172 C148 168 144 152 160 132Z" fill="#e0a526"/>
+        <path d="M160 146 C166 156 165 164 160 166 C155 164 154 156 160 146Z" fill="#c8402f"/>
+        <!-- incense smoke -->
+        <path d="M70 300 L92 170" stroke="#222" stroke-width="3"/>
+        <path d="M92 170 C80 150 104 138 90 118 C78 100 100 88 92 70" stroke="#222" stroke-width="2" fill="none" opacity=".5"/>
+        <!-- soap -->
+        <rect x="216" y="262" width="62" height="38" rx="10" fill="#e0a526" stroke="#222" stroke-width="3"/>
+        <circle cx="238" cy="250" r="7" fill="none" stroke="#222" stroke-width="2"/>
+        <circle cx="256" cy="240" r="4" fill="none" stroke="#222" stroke-width="2"/>
+        <text x="160" y="330" text-anchor="middle" font-family="Karla,sans-serif" font-weight="700" font-size="13" fill="#222">No. 2014 · Chattanooga, TN</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="shelf" style="background:#fff;border-top:2px solid var(--ch);border-bottom:2px solid var(--ch)">
+  <div class="wrap">
+    <div class="kicker">The shelf</div>
+    <h2>What's on the table</h2>
+    <p class="lead">Tap "Add" on anything you want set aside, and it lands on your market list below.</p>
+    <div class="shelf" id="shelfGrid">
+      <div class="item" data-n="Candles"><span class="tag">Candles</span><h3>Hand-poured candles</h3><p class="small">Including the Patience Candle.</p><button type="button">Add</button></div>
+      <div class="item" data-n="Incense"><span class="tag">Incense</span><h3>Small-batch incense</h3><p class="small">A dozen blends, from Lavender Chamomile to "Chattanooga."</p><button type="button">Add</button></div>
+      <div class="item" data-n="Aroma mist"><span class="tag">Mists</span><h3>Aroma mists</h3><p class="small">Lemongrass, Earth and Gratitude.</p><button type="button">Add</button></div>
+      <div class="item" data-n="Handmade soap"><span class="tag">Soap</span><h3>Soaps made in-house</h3><p class="small">Made start to finish in the Tucker workshop.</p><button type="button">Add</button></div>
+      <div class="item" data-n="Lip balm"><span class="tag">Lips</span><h3>Lip balm</h3><p class="small">A pocket-size market favorite.</p><button type="button">Add</button></div>
+      <div class="item" data-n="Shower steamers"><span class="tag">Shower</span><h3>Shower steamers</h3><p class="small">Aromatherapy for your morning shower.</p><button type="button">Add</button></div>
+      <div class="item" data-n="Cocoa Amber Sugar Scrub"><span class="tag">Body</span><h3>Cocoa Amber Sugar Scrub</h3><p class="small">A raw sugar scrub.</p><button type="button">Add</button></div>
+      <div class="item" data-n="Herbal Muscle Balm"><span class="tag">Body</span><h3>Herbal Muscle Balm</h3><p class="small">Also: Unscented Lotion Bar and Natural Insect Repellent.</p><button type="button">Add</button></div>
+    </div>
+    <h3 style="margin-top:36px;font-size:20px">Incense blends</h3>
+    <div class="scents"><span>Simplicity</span><span>Profound</span><span>Harmony</span><span>Cocoa Amber</span><span>Love</span><span>Gratitude</span><span>Dapper</span><span>Lavender Chamomile</span><span>Noel</span><span>Chattanooga</span><span>Positivity</span><span>Equinox</span></div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="kicker">Why Divine Purity</div>
+    <h2>A family workshop that went all in</h2>
+    <p class="lead">Cassandra Tucker started Divine Purity in 2012. Two years later she left her job as a loan processor to sell at the Chattanooga Market, and a year after that her husband Ray joined her full-time. Shops that stock their goods on Faire give the brand a 5.0 rating across 34 reviews.</p>
+    <div class="timeline">
+      <div class="ticket reveal"><div class="yr">2012</div><p>Cassandra founds Divine Purity Aurapothecary.</p></div>
+      <div class="ticket reveal"><div class="yr">2014</div><p>First season at the Chattanooga Market. The loan-processing job goes.</p></div>
+      <div class="ticket reveal"><div class="yr">2015</div><p>Ray leaves his job to work on the business with her.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="list">
+  <div class="wrap listbox">
+    <div>
+      <div class="kicker">Your market list</div>
+      <h2>Show it at the booth</h2>
+      <p class="lead">Pick from the shelf, then copy your list or send it to Divine Purity on Facebook so they can set things aside before you walk up.</p>
+      <p class="small" style="margin-top:12px">Divine Purity has been a Chattanooga Market vendor since 2014 and is featured in the Market's 25th Season vendor profile series.</p>
+    </div>
+    <div class="receipt" aria-live="polite">
+      <h3>Ticket No. <span id="tno">0001</span></h3>
+      <ul id="ticket"><li class="empty">Nothing yet. Tap "Add" on the shelf.</li></ul>
+      <div class="actions">
+        <button class="btn" id="copy" type="button">Copy my list</button>
+        <a class="btn alt" href="https://www.facebook.com/DivinePurityCo/" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+      <p class="small" id="copied" style="margin-top:10px"></p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap where">
+    <div>
+      <div class="kicker">Where to find them</div>
+      <h2>Chattanooga, TN</h2>
+      <p>Look for the Divine Purity table at the Chattanooga Market. Follow on Facebook or Instagram for this week's stock.</p>
+      <p style="margin-top:14px"><a href="https://www.facebook.com/DivinePurityCo/" target="_blank" rel="noopener">Facebook: @DivinePurityCo</a><br><a href="https://www.instagram.com/divinepurity/" target="_blank" rel="noopener">Instagram: @divinepurity</a></p>
+    </div>
+    <div class="map"><iframe title="Map of Chattanooga, TN" loading="lazy" src="https://www.google.com/maps?q=Chattanooga%2C%20TN&output=embed"></iframe></div>
+  </div>
+</section>
+
+<div class="sticky" id="sticky"><span><b id="cnt">0</b> on your list</span><a class="btn" href="#list">View ticket</a></div>
+<footer>Concept by Code Craft Media</footer>
+
+<script>
+document.body.classList.remove('nojs');
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});els.forEach(function(e){io.observe(e)});}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var picks=[];var ul=document.getElementById('ticket');var cnt=document.getElementById('cnt');
+  function render(){ul.innerHTML='';if(!picks.length){ul.innerHTML='<li class="empty">Nothing yet. Tap "Add" on the shelf.</li>';}
+    picks.forEach(function(p,i){var li=document.createElement('li');li.innerHTML='<span>'+p+'</span><span>#'+(i+1)+'</span>';ul.appendChild(li);});
+    cnt.textContent=picks.length;document.getElementById('tno').textContent=String(1000+picks.length*37).padStart(4,'0');}
+  document.querySelectorAll('.item').forEach(function(it){it.querySelector('button').addEventListener('click',function(){var n=it.dataset.n;var i=picks.indexOf(n);
+    if(i>-1){picks.splice(i,1);it.classList.remove('on');this.textContent='Add';}else{picks.push(n);it.classList.add('on');this.textContent='Added';}render();});});
+  document.getElementById('copy').addEventListener('click',function(){var t='Hi Divine Purity! Could you set these aside for me at the market? '+(picks.length?picks.join(', '):'(nothing picked yet)');
+    var m=document.getElementById('copied');if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){m.textContent='Copied. Paste it into a Facebook message.';},function(){m.textContent=t;});}else{m.textContent=t;}});
+  var hero=document.querySelector('.hero');var st=document.getElementById('sticky');
+  window.addEventListener('scroll',function(){st.classList.toggle('show',hero.getBoundingClientRect().bottom<0&&picks.length>0);},{passive:true});
+})();
+</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Divine Purity"></script><!-- /cc-cta -->
+</body>
+</html>

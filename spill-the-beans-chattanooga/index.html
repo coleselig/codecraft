@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Spill the Beans — Chattanooga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ch:#222222;--bone:#f3eee6;--red:#c8402f;--mus:#e0a526}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+body{background:var(--ch);color:var(--bone);font-family:Karla,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;line-height:1.02}
+a{color:inherit}
+.banner{background:var(--mus);color:var(--ch);font-size:13px;text-align:center;padding:8px 16px;font-weight:700}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;background:var(--red);color:var(--bone);text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;font-family:Karla;font-size:16px}
+.btn.ghost{background:transparent;border:2px solid var(--bone)}
+/* hero: centered menu-board */
+.hero{text-align:center;padding:48px 0 72px;position:relative}
+.hero .chalk{display:inline-block;border:2px solid var(--mus);color:var(--mus);padding:4px 14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(34px,10.5vw,96px);margin:20px auto 18px;max-width:11ch}
+.hero h1 span{color:var(--red)}
+.hero p{max-width:36em;margin:0 auto;opacity:.9}
+.hero .actions{margin-top:28px;display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.truck{max-width:520px;margin:40px auto 0}
+.truck svg{width:100%;height:auto;display:block}
+/* tickets band */
+.band{background:var(--bone);color:var(--ch);padding:64px 0}
+.kicker{color:var(--red);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px}
+h2{font-size:clamp(28px,6.4vw,50px);margin:8px 0 18px}
+.stubs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:30px}
+.stub{background:#fff;border:2px solid var(--ch);border-radius:8px;padding:18px 16px;position:relative}
+.stub::before,.stub::after{content:"";position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:var(--bone);border:2px solid var(--ch);transform:translateY(-50%)}
+.stub::before{left:-11px;border-left-color:transparent;border-bottom-color:transparent;transform:translateY(-50%) rotate(45deg)}
+.stub::after{right:-11px;border-right-color:transparent;border-top-color:transparent;transform:translateY(-50%) rotate(45deg)}
+.stub .yr{font-family:"Archivo Black";font-size:30px;color:var(--red)}
+/* why */
+.why{padding:64px 0}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.why ul{list-style:none;display:grid;gap:14px}
+.why li{border-left:6px solid var(--mus);padding:6px 0 6px 14px}
+.why .kicker{color:var(--mus)}
+/* booking ticket */
+.book{background:var(--red);padding:64px 0}
+.book .kicker{color:var(--bone)}
+.tk{background:var(--bone);color:var(--ch);border-radius:10px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);overflow:hidden;margin-top:20px}
+.tk .main{padding:26px}
+.tk .side{background:var(--mus);padding:26px;border-left:3px dashed var(--ch);display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.tk label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font-family:Karla;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;border:2px solid var(--ch);background:#fff;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ch);color:var(--bone)}
+.tk input{width:100%;font-family:Karla;font-size:16px;padding:10px;border:2px solid var(--ch);border-radius:6px;background:#fff}
+.stampbig{font-family:"Archivo Black";font-size:clamp(22px,5vw,30px);border:3px solid var(--red);color:var(--red);padding:6px 10px;transform:rotate(-6deg);display:inline-block;align-self:flex-start}
+#preview{font-size:15px;white-space:pre-wrap}
+.where{padding:64px 0}
+.where-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+.map{border:3px solid var(--mus);border-radius:8px;overflow:hidden}
+.map iframe{width:100%;height:320px;border:0;display:block}
+footer{border-top:1px solid rgba(243,238,230,.2);text-align:center;padding:26px 16px;font-size:14px}
+.reveal{opacity:0;transform:translateY(14px);transition:.6s}
+.reveal.in,.nojs .reveal{opacity:1;transform:none}
+@media (max-width:860px){.stubs{grid-template-columns:repeat(2,minmax(0,1fr))}.why-grid,.where-grid,.tk{grid-template-columns:minmax(0,1fr)}.tk .side{border-left:0;border-top:3px dashed var(--ch)}}
+@media (max-width:420px){.stubs{grid-template-columns:minmax(0,1fr)}.hero{text-align:left}.hero .actions{justify-content:flex-start}.hero h1{margin-left:0}}
+</style>
+<!-- cc-og h=c428c4c721 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Spill the Beans | website concept">
+<meta property="og:description" content="A phone-first website concept made for Spill the Beans by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/spill-the-beans-chattanooga/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/spill-the-beans-chattanooga/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Spill the Beans">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body class="nojs">
+<div class="banner">Concept site by Code Craft Media, made for Spill the Beans. Not live.</div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="chalk">Chattanooga's mobile coffee truck</span>
+    <h1>Good coffee, <span>parked</span> where you are.</h1>
+    <p>Spill the Beans started as a weekend trailer by Coolidge Park. Today it's a full-time coffee truck serving Chattanooga markets, ballgames and races, with beans roasted locally by Chattanooga Roasting Company.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Book the truck</a>
+      <a class="btn ghost" href="https://www.facebook.com/SpillTheBeansChattanooga/" target="_blank" rel="noopener">Find us this week</a>
+    </div>
+    <div class="truck reveal" aria-hidden="true">
+      <svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="228" width="520" height="6" fill="#e0a526"/>
+        <rect x="40" y="70" width="330" height="150" rx="14" fill="#f3eee6"/>
+        <path d="M370 110 h70 l50 50 v60 h-120z" fill="#c8402f"/>
+        <rect x="388" y="122" width="56" height="40" rx="4" fill="#222"/>
+        <rect x="70" y="96" width="180" height="76" rx="6" fill="#222"/>
+        <text x="160" y="126" text-anchor="middle" font-family="Archivo Black,Impact" font-size="18" fill="#e0a526">SPILL THE</text>
+        <text x="160" y="152" text-anchor="middle" font-family="Archivo Black,Impact" font-size="22" fill="#f3eee6">BEANS</text>
+        <path d="M60 70 l20 -26 h250 l20 26z" fill="#c8402f"/>
+        <path d="M80 44 h250" stroke="#f3eee6" stroke-width="4" stroke-dasharray="20 14"/>
+        <rect x="270" y="96" width="80" height="100" rx="6" fill="#e0a526"/>
+        <circle cx="310" cy="146" r="16" fill="#222"/>
+        <path d="M302 146 q8 -10 16 0 q-8 10 -16 0z" fill="#e0a526"/>
+        <circle cx="120" cy="226" r="26" fill="#222" stroke="#f3eee6" stroke-width="5"/>
+        <circle cx="420" cy="226" r="26" fill="#222" stroke="#f3eee6" stroke-width="5"/>
+        <path d="M300 60 c-10 -14 10 -20 0 -34" stroke="#f3eee6" stroke-width="3" fill="none" opacity=".6"/>
+        <path d="M318 60 c-10 -14 10 -20 0 -34" stroke="#f3eee6" stroke-width="3" fill="none" opacity=".4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="kicker">The route so far</div>
+    <h2>From a trailer to a truck</h2>
+    <div class="stubs">
+      <div class="stub reveal"><div class="yr">Day one</div><p>A stationary trailer by Coolidge Park, open on weekends.</p></div>
+      <div class="stub reveal"><div class="yr">2015</div><p>Founder Lisa Dunny buys a truck and the coffee goes mobile.</p></div>
+      <div class="stub reveal"><div class="yr">2019</div><p>Spill the Beans becomes a full-time business.</p></div>
+      <div class="stub reveal"><div class="yr">2022</div><p>In October, Danielle Phillips takes over the truck.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="kicker">Why book Spill the Beans</div>
+      <h2>Chattanooga coffee, roasted by the founder</h2>
+      <p>Lisa Dunny now runs Chattanooga Roasting Company full-time, and she still roasts Spill the Beans' coffee. You get the same cup that built the truck, poured by Danielle and Josh Phillips.</p>
+    </div>
+    <ul>
+      <li><b>A regular at the Chattanooga Market.</b> The truck is featured in the Market's 25th Season vendor profile series.</li>
+      <li><b>Big-crowd ready.</b> They've served events around town, including Finley Stadium and the Head of the Hooch regatta each November.</li>
+      <li><b>Fully mobile.</b> A truck since 2015, so it comes to your lot, field or venue.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="kicker">Event ticket</div>
+    <h2>Book the truck in 20 seconds</h2>
+    <div class="tk">
+      <div class="main">
+        <label>What's the occasion?</label>
+        <div class="chips" data-k="event">
+          <button type="button" aria-pressed="false">Wedding</button><button type="button" aria-pressed="false">Office morning</button><button type="button" aria-pressed="false">Race or game day</button><button type="button" aria-pressed="false">School or church</button><button type="button" aria-pressed="false">Private party</button>
+        </div>
+        <label>About how many people?</label>
+        <div class="chips" data-k="size">
+          <button type="button" aria-pressed="false">Under 50</button><button type="button" aria-pressed="false">50 to 150</button><button type="button" aria-pressed="false">150+</button>
+        </div>
+        <label for="date">Date</label>
+        <input id="date" type="date">
+      </div>
+      <div class="side">
+        <span class="stampbig">ADMIT COFFEE</span>
+        <div id="preview">Pick an occasion and a crowd size to fill your ticket.</div>
+        <div>
+          <button class="btn" id="copy" type="button" style="background:var(--ch)">Copy &amp; message</button>
+          <p id="msg" style="font-size:14px;margin-top:8px"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="where">
+  <div class="wrap where-grid">
+    <div>
+      <div class="kicker" style="color:var(--mus)">Where's the truck?</div>
+      <h2>Chattanooga, TN</h2>
+      <p>Catch Spill the Beans at the Chattanooga Market and at events around the city. The weekly schedule goes up on Facebook and Instagram.</p>
+      <p style="margin-top:14px"><a href="https://www.facebook.com/SpillTheBeansChattanooga/" target="_blank" rel="noopener">Facebook: Spill the Beans Chattanooga</a><br><a href="https://www.instagram.com/spillthebeanschattanooga/" target="_blank" rel="noopener">Instagram: @spillthebeanschattanooga</a></p>
+    </div>
+    <div class="map"><iframe title="Map of Chattanooga, TN" loading="lazy" src="https://www.google.com/maps?q=Chattanooga%2C%20TN&output=embed"></iframe></div>
+  </div>
+</section>
+
+<footer>Concept by Code Craft Media</footer>
+<script>
+document.body.classList.remove('nojs');
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});els.forEach(function(e){io.observe(e)});}
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
+  var st={event:'',size:''};var pv=document.getElementById('preview');var dt=document.getElementById('date');
+  function text(){return 'Hi Spill the Beans! I\'d love to book the truck.\nOccasion: '+(st.event||'?')+'\nCrowd: '+(st.size||'?')+'\nDate: '+(dt.value||'TBD');}
+  function upd(){pv.textContent=text();}
+  document.querySelectorAll('.chips').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');st[g.dataset.k]=b.textContent;upd();});});
+  dt.addEventListener('change',upd);
+  document.getElementById('copy').addEventListener('click',function(){var t=text();var m=document.getElementById('msg');
+    var go=function(){m.textContent='Copied. Paste it into a Facebook message.';window.open('https://www.facebook.com/SpillTheBeansChattanooga/','_blank','noopener');};
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(go,function(){m.textContent=t;});}else{m.textContent=t;}});
+})();
+</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Spill the Beans"></script><!-- /cc-cta -->
+</body>
+</html>
