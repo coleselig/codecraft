@@ -185,7 +185,8 @@ footer .credit{color:var(--muted);font-family:var(--mono);font-size:.68rem;lette
 .js-reveal .draw.in path,.js-reveal .draw.in circle,.js-reveal .draw.in line{animation:draw 2.2s ease forwards}
 @keyframes draw{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
 </style>
-<!-- cc-og h=752afeea60 -->
+<style>/* eye fix 11/25: under 900px the hero line drawing showed at full strength on top of the kicker and tagline, because the scroll-reveal rule (.rv.in, opacity 1) beat its faint .11 backdrop opacity */ @media(max-width:899px){.js-reveal .hero-art.rv.in{opacity:.11}} @media(max-width:899px) and (prefers-reduced-motion:reduce){.js-reveal .hero-art.rv{opacity:.11}} </style>
+<!-- cc-og h=d6c3ed6e05 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Alter Ego Tattoo &amp; Piercing | website concept">
