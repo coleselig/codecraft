@@ -151,7 +151,20 @@
     note.style.setProperty('align-items', 'baseline', 'important');
     note.style.setProperty('white-space', 'nowrap', 'important');
     note.style.setProperty('max-width', '100%', 'important');
-    if (linkOk(note, a) && note.getBoundingClientRect().height <= h0 + 1 && wrap.getBoundingClientRect().width > 90) return;
+    /* If the full wording does not fit on the line, use a shorter wording that still says it is not live,
+       instead of letting the ellipsis cut off the business name or "Not live". */
+    var orig = null;
+    if (wrap.scrollWidth > wrap.clientWidth + 1) {
+      orig = [];
+      while (wrap.firstChild) orig.push(wrap.removeChild(wrap.firstChild));
+      var shorts = kind === 'preview' ? ['Preview for ' + biz + '.', 'Preview.'] : ['Concept for ' + biz + '. Not live.', 'Concept, not live.'];
+      for (var k = 0; k < shorts.length; k++) {
+        wrap.textContent = shorts[k];
+        if (wrap.scrollWidth <= wrap.clientWidth + 1) break;
+      }
+    }
+    if (linkOk(note, a) && note.getBoundingClientRect().height <= h0 + 1 && wrap.getBoundingClientRect().width > 50) return;
+    if (orig) { wrap.textContent = ''; for (var m = 0; m < orig.length; m++) wrap.appendChild(orig[m]); }
 
     /* 3. Neither fits: put the note back exactly as it was and use a strip at the end of the page. */
     note.removeChild(a);
