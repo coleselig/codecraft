@@ -166,7 +166,7 @@ footer a{color:var(--cyan);text-decoration:none}
   section{padding:104px 0}
 }
 </style>
-<!-- cc-og h=019d7d7530 -->
+<!-- cc-og h=0efd365e84 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Chopped and Faded | website concept">
@@ -414,6 +414,7 @@ footer a{color:var(--cyan);text-decoration:none}
   else{st.lastElementChild.textContent=(d>=1&&d<=5&&h<8)?'Opens today at 8:00 AM':'Closed now · opens '+((d===5&&h>=17)||d===6||d===0?'Monday':'tomorrow')+' at 8:00 AM'}
 })();
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Chopped and Faded"></script><!-- /cc-cta -->
 </body>
 </html>

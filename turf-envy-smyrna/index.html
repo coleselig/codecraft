@@ -189,7 +189,7 @@ footer a{color:var(--mint)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1 em svg path{stroke-dashoffset:0}}
 </style>
 <style>/* small-phone fit: no sideways scroll at 360px */@media (max-width:400px){.vgrid{grid-template-columns:minmax(0,1fr)}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}}</style>
-<!-- cc-og h=6b9b82e63a -->
+<!-- cc-og h=e2733ebc3e -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Turf Envy | website concept">
@@ -355,6 +355,7 @@ footer a{color:var(--mint)}
   setTimeout(showAll,1500);
 })();
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Turf Envy"></script><!-- /cc-cta -->
 </body>
 </html>

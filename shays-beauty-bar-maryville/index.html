@@ -102,7 +102,7 @@ footer small{opacity:.6;flex-basis:100%}
 .js .rv{opacity:0;transform:translateY(22px)}
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.draw{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
-</style><!-- cc-og h=8d2539fa17 -->
+</style><!-- cc-og h=a22a7dad31 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Shay&#x27;s Beauty Bar | website concept">
@@ -147,5 +147,6 @@ var els=document.querySelectorAll('.rv');function show(){els.forEach(function(e)
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else show();
 setTimeout(show,1500);})();
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Shay&#x27;s Beauty Bar"></script><!-- /cc-cta -->
 </body></html>

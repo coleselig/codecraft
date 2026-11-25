@@ -124,7 +124,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--butter)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.float{animation:none}}
 </style>
-<!-- cc-og h=ff9f08f880 -->
+<!-- cc-og h=4447ca4619 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Heidi&#x27;s Bakery | website concept">
@@ -270,6 +270,7 @@ document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{doc
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Heidi&#x27;s Bakery"></script><!-- /cc-cta -->
 </body>
 </html>

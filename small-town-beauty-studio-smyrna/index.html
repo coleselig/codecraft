@@ -92,7 +92,7 @@ footer a{color:#e8a58f}
 @media(max-width:819px){.hours li.today:after{display:none}.hours li{font-size:15px}nav .links{display:none}.visit .grid{grid-template-columns:1fr}.leaf{width:170px;right:-40px;opacity:.55}section{padding:56px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-<!-- cc-og h=10be3639af -->
+<!-- cc-og h=eeb75668fe -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Small Town Beauty Studio | website concept">
@@ -206,6 +206,7 @@ var els=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}
 setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},1500);
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Small Town Beauty Studio"></script><!-- /cc-cta -->
 </body>
 </html>

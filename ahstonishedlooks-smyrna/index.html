@@ -163,7 +163,7 @@ footer a{color:var(--saffron);text-decoration:none}
 
 /* cc banner wrap fix 11/24 */.banner,.banner *{white-space:normal!important;text-overflow:clip!important;overflow:visible!important;height:auto!important;max-height:none!important}
 </style>
-<!-- cc-og h=f2c9a092d9 -->
+<!-- cc-og h=782736bf25 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="AhstonishedLooks | website concept">
@@ -418,6 +418,7 @@ footer a{color:var(--saffron);text-decoration:none}
   setTimeout(showAll,1500);
 })();
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="AhstonishedLooks"></script><!-- /cc-cta -->
 </body>
 </html>

@@ -48,7 +48,7 @@ h1{font-weight:400;font-size:clamp(70px,24vw,190px);line-height:.82}h1 em{font-s
 .big{font-family:'Bebas Neue';font-size:clamp(90px,30vw,240px);line-height:.8;color:var(--ac)}.big small{display:block;font-family:'Space Grotesk';font-size:15px;color:var(--tx);opacity:.75;letter-spacing:.04em;margin-top:12px}
 .svc{border-width:0 0 1.5px 0;background:transparent}.svc.on{box-shadow:none;background:#1a1f10}
 </style>
-<!-- cc-og h=73a1ff6e23 -->
+<!-- cc-og h=4c3fbdcfe3 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Code Craft Media">
 <meta property="og:title" content="Navinbiiincuts | website concept">
@@ -96,6 +96,7 @@ document.querySelectorAll('.svc.on').forEach(function(x){x.classList.remove('on'
 var s=document.getElementById('sel');s.innerHTML='';var b=document.createElement('b');b.textContent=r.dataset.s;s.appendChild(b);s.appendChild(document.createTextNode(r.dataset.p+' · book it on Booksy'));
 document.getElementById('dockbtn').textContent='Book '+r.dataset.p;});});
 </script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
 <!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Navinbiiincuts"></script><!-- /cc-cta -->
 </body>
 </html>
