@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Roan Valley Tree Farm — Johnson City, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6f1e7;--mist:#dfe6e8;--ridge1:#9fb3bd;--ridge2:#6f8a97;--fir:#24443a;--fir2:#335c4e;--berry:#b2453b;--ink:#1d2a28;--muted:#5d6b68;--line:#e2dacb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--fir);color:#eef2ec;font-size:12px;text-align:center;padding:7px 14px}
+.sky{background:linear-gradient(#cfdde3,#eef0ea 70%);position:relative}
+nav{max-width:1120px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'DM Serif Display',serif;font-size:22px;color:var(--fir);text-decoration:none}
+nav .links{display:flex;gap:22px;font-weight:500;font-size:15px}
+nav .links a{text-decoration:none;color:var(--fir2)}
+@media(max-width:760px){nav .links{display:none}}
+.hero{max-width:1120px;margin:0 auto;padding:26px 20px 0;position:relative;z-index:2}
+.pill{display:inline-block;background:#fff;color:var(--berry);font-weight:700;font-size:13px;padding:6px 13px;border-radius:99px;letter-spacing:.04em}
+h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,7vw,80px);line-height:1;color:var(--fir);margin:14px 0 12px;max-width:760px}
+h1 em{color:var(--berry)}
+.sub{font-size:18px;color:var(--muted);max-width:560px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit}
+.btn.p{background:var(--fir);color:#fff}
+.btn.s{background:#fff;color:var(--fir);border:2px solid var(--fir)}
+.btn.b{background:var(--berry);color:#fff}
+.ridges{display:block;width:100%;height:auto;margin-top:-10px}
+.facts{background:var(--fir);color:#e8eee9}
+.facts .in{max-width:1120px;margin:0 auto;padding:16px 20px;display:flex;gap:10px 30px;flex-wrap:wrap;font-size:15px}
+.facts b{color:#f2c9a8}
+.wrap{max-width:1120px;margin:0 auto;padding:64px 20px}
+.kick{font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:12.5px;color:var(--berry)}
+h2{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,4.6vw,46px);line-height:1.08;margin:8px 0 12px;color:var(--fir)}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+/* size tool */
+.tool{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;margin-top:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+@media(max-width:820px){.tool{grid-template-columns:minmax(0,1fr)}}
+.tool label{font-weight:700;display:block;margin-bottom:8px}
+.tool input[type=range]{width:100%;accent-color:var(--berry)}
+.out{font-family:'DM Serif Display',serif;font-size:44px;color:var(--fir);line-height:1.1;margin-top:10px}
+.out small{display:block;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--muted)}
+.room svg{width:100%;height:auto;display:block}
+.kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px;margin-top:26px}
+.k{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.k h3{font-family:'DM Serif Display',serif;font-weight:400;font-size:22px;color:var(--fir)}
+.k p{color:var(--muted);font-size:15px}
+.k .t{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--berry)}
+.review{background:var(--mist)}
+.stars{color:var(--berry);font-size:22px;letter-spacing:3px}
+blockquote{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.4vw,34px);line-height:1.25;color:var(--fir);max-width:760px;margin-top:10px}
+.cite{margin-top:10px;color:var(--muted);font-size:15px}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin-top:24px}
+.tip{border-top:3px solid var(--berry);background:#fff;border-radius:6px 6px 16px 16px;padding:18px}
+.tip h3{font-size:17px;color:var(--fir)}
+.tip p{color:var(--muted);font-size:15px}
+footer{text-align:center;font-size:13px;color:var(--muted);padding:26px 20px 92px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;display:flex;gap:10px;z-index:50}
+.bar a{flex:1;text-align:center;padding:13px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--fir);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.bar a.s{background:var(--berry)}
+@media(min-width:861px){.bar{display:none}}
+</style>
+<!-- cc-og h=4100357404 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code Craft Media">
+<meta property="og:title" content="Roan Valley Tree Farm | website concept">
+<meta property="og:description" content="A phone-first website concept made for Roan Valley Tree Farm by Code Craft Media, a UTK student-run web studio in Knoxville. Tap to take a look.">
+<meta property="og:url" content="https://coleselig.github.io/codecraft/roan-valley-tree-farm-johnson-city/">
+<meta property="og:image" content="https://coleselig.github.io/codecraft/roan-valley-tree-farm-johnson-city/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phone showing the website concept made for Roan Valley Tree Farm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /cc-og -->
+</head>
+<body>
+<div class="banner">Concept site by Code Craft Media, made for Roan Valley Tree Farm. Not live.</div>
+<div class="sky" id="top">
+  <nav><a class="logo" href="#top">Roan Valley Tree Farm</a><div class="links"><a href="#size">Tree sizer</a><a href="#trees">Trees</a><a href="#visit">Visit</a></div></nav>
+  <header class="hero">
+    <span class="pill">Open Thanksgiving weekend through December 20</span>
+    <h1>Fraser firs, grown <em>by a family</em> in Carter County.</h1>
+    <p class="sub">Choose and cut your tree on Okolona Road in Johnson City. Hayrides, wreaths and boughs, and your tree bagged and tied for the ride home.</p>
+    <div class="ctas"><a class="btn p" href="#visit">Plan your trip</a><a class="btn s" href="#size">What size fits my room?</a></div>
+  </header>
+  <svg class="ridges" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 120 L120 70 L220 100 L340 40 L460 92 L560 58 L700 110 L820 50 L960 96 L1080 62 L1200 100 L1200 220 L0 220Z" fill="#9fb3bd"/>
+    <path d="M0 160 L140 110 L260 140 L400 96 L520 140 L660 104 L800 150 L940 112 L1060 146 L1200 120 L1200 220 L0 220Z" fill="#6f8a97"/>
+    <g fill="#24443a"><path d="M60 220 L90 150 L120 220Z"/><path d="M110 220 L150 132 L190 220Z"/><path d="M980 220 L1020 136 L1060 220Z"/><path d="M1040 220 L1074 156 L1108 220Z"/><path d="M1100 220 L1140 140 L1180 220Z"/><path d="M520 220 L548 166 L576 220Z"/></g>
+    <rect y="200" width="1200" height="20" fill="#f6f1e7"/>
+  </svg>
+</div>
+<div class="facts"><div class="in"><span><b>Farm:</b> 440 Okolona Road, Johnson City</span><span><b>Season:</b> Thanksgiving weekend to Dec 20</span><span><b>Pay:</b> cash or check</span></div></div>
+
+<section class="wrap" id="size">
+  <div class="kick">Before you drive out</div>
+  <h2>What size tree fits your room?</h2>
+  <p class="lede">Slide to your ceiling height. Leave room for the stand and a topper, and the sizer shows the tree to look for in the field.</p>
+  <div class="tool">
+    <div>
+      <label for="ceil">My ceiling is <span id="cv">8</span> feet</label>
+      <input id="ceil" type="range" min="7" max="14" step="1" value="8">
+      <div class="out" id="out">Look for a 6–7 ft tree<small>About a foot under the ceiling, plus the stand and your topper.</small></div>
+    </div>
+    <div class="room"><svg id="roomsvg" viewBox="0 0 300 260" role="img" aria-label="A room with a tree sized to the ceiling"></svg></div>
+  </div>
+</section>
+
+<section class="wrap" id="trees" style="padding-top:0">
+  <div class="kick">In the field</div>
+  <h2>Our trees</h2>
+  <div class="kinds">
+    <div class="k"><span class="t">Choose &amp; cut</span><h3>Fraser Fir</h3><p>The Appalachian classic, cut fresh right in the field.</p></div>
+    <div class="k"><span class="t">Also growing</span><h3>Concolor &amp; Nordmann Fir</h3><p>Two more firs on the farm list, alongside Norway Spruce and Hemlock.</p></div>
+    <div class="k"><span class="t">Living trees</span><h3>Colorado Blue &amp; Norway Spruce</h3><p>Living trees you can plant in the yard after Christmas.</p></div>
+    <div class="k"><span class="t">For the door</span><h3>Wreaths, boughs &amp; garland</h3><p>Fresh greenery, plus free tree trimmings to take home.</p></div>
+  </div>
+</section>
+
+<section class="wrap review">
+  <div class="stars" aria-label="4.4 stars">★★★★☆</div>
+  <blockquote>"Such a wonderful locally owned family tree farm with the best trees and the best prices!"</blockquote>
+  <p class="cite">LeaAnna Baker, review · 4.4 stars from 123 Google &amp; Facebook reviews</p>
+</section>
+
+<section class="wrap" id="visit">
+  <div class="kick">Visit</div>
+  <h2>Come early in the season</h2>
+  <p class="lede">The best Fraser firs go first, so the opening days are the time to come.</p>
+  <div class="tips">
+    <div class="tip"><h3>Hayride out</h3><p>Ride out to the rows and pick your tree.</p></div>
+    <div class="tip"><h3>Bagged &amp; tied</h3><p>We bag and tie your tree for the drive home.</p></div>
+    <div class="tip"><h3>Bring cash or a check</h3><p>That's how we take payment at the farm.</p></div>
+  </div>
+  <div class="ctas"><a class="btn p" href="https://maps.google.com/?q=440+Okolona+Road+Johnson+City+TN+37601">Directions to the farm</a><a class="btn b" href="tel:+18286882675">Call (828) 688-2675</a></div>
+</section>
+
+<footer>Roan Valley Tree Farm · 440 Okolona Road, Johnson City, TN 37601 · Concept by Code Craft Media</footer>
+<div class="bar"><a href="https://maps.google.com/?q=440+Okolona+Road+Johnson+City+TN+37601">Directions</a><a class="s" href="tel:+18286882675">Call</a></div>
+
+<script>
+(function(){
+  var r=document.getElementById('ceil'),svg=document.getElementById('roomsvg');
+  function draw(){
+    var c=+r.value,lo=c-2,hi=c-1;
+    document.getElementById('cv').textContent=c;
+    document.getElementById('out').innerHTML='Look for a '+lo+'–'+hi+' ft tree<small>About a foot under the ceiling, plus the stand and your topper.</small>';
+    var floor=240,top=20,px=(floor-top)/14,ceilY=floor-c*px,th=hi*px,ty=floor-14-th;
+    var g='<rect x="0" y="0" width="300" height="260" fill="#f6f1e7"/>';
+    g+='<rect x="20" y="'+ceilY+'" width="260" height="'+(floor-ceilY)+'" fill="#fff" stroke="#e2dacb"/>';
+    g+='<line x1="20" y1="'+ceilY+'" x2="280" y2="'+ceilY+'" stroke="#b2453b" stroke-width="2" stroke-dasharray="6 5"/>';
+    g+='<text x="276" y="'+(ceilY-6)+'" font-size="12" text-anchor="end" fill="#b2453b" font-family="DM Sans,sans-serif">'+c+' ft ceiling</text>';
+    g+='<rect x="140" y="'+(floor-14)+'" width="20" height="14" fill="#7a5a3c"/>';
+    var w=th*0.62;
+    g+='<path d="M150 '+ty+' L'+(150+w*.36)+' '+(ty+th*.4)+' L'+(150+w*.2)+' '+(ty+th*.4)+' L'+(150+w*.5)+' '+(ty+th)+' L'+(150-w*.5)+' '+(ty+th)+' L'+(150-w*.2)+' '+(ty+th*.4)+' L'+(150-w*.36)+' '+(ty+th*.4)+'Z" fill="#24443a"/>';
+    g+='<path d="M150 '+(ty-9)+' l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6-4.5-4 6-1z" fill="#e2b04a"/>';
+    g+='<line x1="20" y1="'+floor+'" x2="280" y2="'+floor+'" stroke="#1d2a28" stroke-width="2"/>';
+    svg.innerHTML=g;
+  }
+  r.addEventListener('input',draw);draw();
+})();
+</script>
+<script>/* cc sticky fix 11/25: bottom bar slides in after the hero */(function(){var ih=innerHeight,bars=[];document.querySelectorAll('body *').forEach(function(el){var cs=getComputedStyle(el);if(cs.position!=='fixed')return;var r=el.getBoundingClientRect();if(r.height>=30&&r.height<=160&&r.width>=200&&r.top>ih-170&&cs.display!=='none')bars.push(el)});bars.forEach(function(b){b.style.transition=(b.style.transition?b.style.transition+',':'')+'translate .3s ease'});function u(){var s=window.scrollY>160;bars.forEach(function(b){b.style.translate=s?'':'0 140%'})}addEventListener('scroll',u,{passive:true});u()})();</script>
+<!-- cc-cta --><script src="/codecraft/cc.js" defer data-kind="concept" data-biz="Roan Valley Tree Farm"></script><!-- /cc-cta -->
+</body>
+</html>
